@@ -1,14 +1,9 @@
 {
   "npmScope": "asn1-typescript-libraries",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -17,15 +12,29 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": {}
+  "projects": {
+    "x500": { "tags": [] },
+    "ansi-x9-42": { "tags": [] },
+    "ansi-x9-62": { "tags": [] },
+    "cms": { "tags": [] },
+    "pkcs": { "tags": [] },
+    "qc": { "tags": [] },
+    "ocsp": { "tags": [] },
+    "tsp": { "tags": [] },
+    "sio": { "tags": [] },
+    "spkac": { "tags": [] },
+    "crmf": { "tags": [] },
+    "ess": { "tags": [] },
+    "cmp": { "tags": [] },
+    "kerberos5": { "tags": [] },
+    "scvp": { "tags": [] },
+    "tal": { "tags": [] },
+    "ldap": { "tags": [] },
+    "cmip": { "tags": [] },
+    "rose": { "tags": [] },
+    "acse": { "tags": [] }
+  }
 }

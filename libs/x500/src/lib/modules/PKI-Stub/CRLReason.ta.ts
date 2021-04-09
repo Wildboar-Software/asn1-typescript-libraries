@@ -1,0 +1,17 @@
+export {
+    CRLReason,
+    CRLReason_aACompromise,
+    CRLReason_affiliationChanged,
+    CRLReason_cACompromise,
+    CRLReason_certificateHold,
+    CRLReason_cessationOfOperation,
+    CRLReason_keyCompromise,
+    CRLReason_privilegeWithdrawn,
+    CRLReason_removeFromCRL,
+    CRLReason_superseded,
+    CRLReason_unspecified,
+    CRLReason_weakAlgorithmOrKey,
+    _decode_CRLReason,
+    _encode_CRLReason,
+    _enum_for_CRLReason,
+} from "../CertificateExtensions/CRLReason.ta";

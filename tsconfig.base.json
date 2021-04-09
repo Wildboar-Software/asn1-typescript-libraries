@@ -14,7 +14,28 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@wildboar/x500/*": ["libs/x500/*"],
+      "@wildboar/ansi-x9-42/*": ["libs/ansi-x9-42/*"],
+      "@wildboar/ansi-x9-62/*": ["libs/ansi-x9-62/*"],
+      "@wildboar/cms/*": ["libs/cms/*"],
+      "@wildboar/pkcs/*": ["libs/pkcs/*"],
+      "@wildboar/qc/*": ["libs/qc/*"],
+      "@wildboar/ocsp/*": ["libs/ocsp/*"],
+      "@wildboar/tsp/*": ["libs/tsp/*"],
+      "@wildboar/sio/*": ["libs/sio/*"],
+      "@wildboar/spkac/*": ["libs/spkac/*"],
+      "@wildboar/crmf/*": ["libs/crmf/*"],
+      "@wildboar/ess/*": ["libs/ess/*"],
+      "@wildboar/cmp": ["libs/cmp/*"],
+      "@wildboar/kerberos5/*": ["libs/kerberos5/*"],
+      "@wildboar/scvp/*": ["libs/scvp/*"],
+      "@wildboar/tal/*": ["libs/tal/*"],
+      "@wildboar/ldap/*": ["libs/ldap/*"],
+      "@wildboar/cmip/*": ["libs/cmip/*"],
+      "@wildboar/rose/*": ["libs/rose/*"],
+      "@wildboar/acse/*": ["libs/acse/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
