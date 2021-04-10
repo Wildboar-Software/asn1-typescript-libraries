@@ -44,8 +44,8 @@
 - [x] ISO-9798-3-SASL
 - [x] USM
 - [ ] RFC5915-ECPrivateKey
-- [ ] DeviceOwnerAttribute
-- [ ] ClearanceSponsorAttribute
+- [x] DeviceOwnerAttribute
+- [x] ClearanceSponsorAttribute
 - [ ] SEC1
 - [ ] TPM (Needs formatting and compilation)
 - [ ] [CSTA](https://www.ecma-international.org/wp-content/uploads/ECMA-285_4th_edition_december_2011.pdf)

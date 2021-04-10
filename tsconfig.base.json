@@ -55,6 +55,9 @@
       "@wildboar/usm": ["libs/usm/src/index.ts"],
       "@wildboar/ClearanceSponsorAttribute": [
         "libs/clearance-sponsor-attribute/src/index.ts"
+      ],
+      "@wildboar/DeviceOwnerAttribute": [
+        "libs/device-owner-attribute/src/index.ts"
       ]
     }
   },

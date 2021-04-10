@@ -54,6 +54,7 @@
     "t38": { "tags": [] },
     "iso-9798-3-sasl": { "tags": [] },
     "usm": { "tags": [] },
-    "clearance-sponsor-attribute": { "tags": [] }
+    "clearance-sponsor-attribute": { "tags": [] },
+    "device-owner-attribute": { "tags": [] }
   }
 }

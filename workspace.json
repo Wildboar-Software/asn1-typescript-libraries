@@ -1172,6 +1172,38 @@
           }
         }
       }
+    },
+    "device-owner-attribute": {
+      "root": "libs/device-owner-attribute",
+      "sourceRoot": "libs/device-owner-attribute/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/device-owner-attribute/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/device-owner-attribute"],
+          "options": {
+            "jestConfig": "libs/device-owner-attribute/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/device-owner-attribute",
+            "tsConfig": "libs/device-owner-attribute/tsconfig.lib.json",
+            "packageJson": "libs/device-owner-attribute/package.json",
+            "main": "libs/device-owner-attribute/src/index.ts",
+            "assets": ["libs/device-owner-attribute/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
