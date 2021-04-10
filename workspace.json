@@ -810,6 +810,66 @@
           }
         }
       }
+    },
+    "isis": {
+      "root": "libs/isis",
+      "sourceRoot": "libs/isis/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/isis/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/isis"],
+          "options": {
+            "jestConfig": "libs/isis/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/isis",
+            "tsConfig": "libs/isis/tsconfig.lib.json",
+            "packageJson": "libs/isis/package.json",
+            "main": "libs/isis/src/index.ts",
+            "assets": ["libs/isis/*.md"]
+          }
+        }
+      }
+    },
+    "bip": {
+      "root": "libs/bip",
+      "sourceRoot": "libs/bip/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/bip/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bip"],
+          "options": {
+            "jestConfig": "libs/bip/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/bip",
+            "tsConfig": "libs/bip/tsconfig.lib.json",
+            "packageJson": "libs/bip/package.json",
+            "main": "libs/bip/src/index.ts",
+            "assets": ["libs/bip/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

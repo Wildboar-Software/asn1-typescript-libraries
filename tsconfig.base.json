@@ -41,7 +41,9 @@
       "@wildboar/iso19785": ["libs/iso19785/src/index.ts"],
       "@wildboar/m3100": ["libs/m3100/src/index.ts"],
       "@wildboar/cinf": ["libs/cinf/src/index.ts"],
-      "@wildboar/rinf": ["libs/rinf/src/index.ts"]
+      "@wildboar/rinf": ["libs/rinf/src/index.ts"],
+      "@wildboar/isis": ["libs/isis/src/index.ts"],
+      "@wildboar/bip": ["libs/bip/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

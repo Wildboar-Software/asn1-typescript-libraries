@@ -28,5 +28,7 @@ module.exports = {
     '<rootDir>/libs/m3100',
     '<rootDir>/libs/cinf',
     '<rootDir>/libs/rinf',
+    '<rootDir>/libs/isis',
+    '<rootDir>/libs/bip',
   ],
 };

@@ -31,9 +31,9 @@
 - [ ] F515 (No artifact for this...)
 - [x] CINF
 - [x] RINF
-- [ ] CAP
-- [ ] ISIS
-- [ ] BIP
+- [ ] CAP (I already have code out there for this.)
+- [ ] ISIS (Break NLM into separate library.)
+- [x] BIP
 - [ ] CMAIL
 - [ ] GULS
 - [ ] CCR
@@ -53,3 +53,9 @@
 - [ ] `README.md` for each
 - [ ] Remove unused imports
 - [ ] Refactor `AlgorithmInformation-2009` into a separate package
+- [ ] Implement XER for CINF
+- [ ] Implement XER for RINF
+
+## Notes
+
+- CINF and RINF may be useful for the OID registry.

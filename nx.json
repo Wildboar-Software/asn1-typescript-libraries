@@ -42,6 +42,8 @@
     "iso19785": { "tags": [] },
     "m3100": { "tags": [] },
     "cinf": { "tags": [] },
-    "rinf": { "tags": [] }
+    "rinf": { "tags": [] },
+    "isis": { "tags": [] },
+    "bip": { "tags": [] }
   }
 }
