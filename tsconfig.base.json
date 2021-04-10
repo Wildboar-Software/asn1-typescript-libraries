@@ -45,7 +45,8 @@
       "@wildboar/isis": ["libs/isis/src/index.ts"],
       "@wildboar/bip": ["libs/bip/src/index.ts"],
       "@wildboar/cmail": ["libs/cmail/src/index.ts"],
-      "@wildboar/guls": ["libs/guls/src/index.ts"]
+      "@wildboar/guls": ["libs/guls/src/index.ts"],
+      "@wildboar/ccr": ["libs/ccr/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

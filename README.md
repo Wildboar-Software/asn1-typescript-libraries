@@ -35,8 +35,8 @@
 - [ ] ISIS (Break NLM into separate library.)
 - [x] BIP
 - [x] CMAIL (Break XSD into separate library.)
-- [ ] GULS (Should this be split into SESE?)
-- [ ] CCR
+- [x] GULS (Should this be split into SESE?)
+- [x] CCR
 - [ ] FastInfoset
 - [ ] ASN1SOAP
 - [ ] TCAP

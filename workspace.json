@@ -930,6 +930,36 @@
           }
         }
       }
+    },
+    "ccr": {
+      "root": "libs/ccr",
+      "sourceRoot": "libs/ccr/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/ccr/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ccr"],
+          "options": {
+            "jestConfig": "libs/ccr/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/ccr",
+            "tsConfig": "libs/ccr/tsconfig.lib.json",
+            "packageJson": "libs/ccr/package.json",
+            "main": "libs/ccr/src/index.ts",
+            "assets": ["libs/ccr/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
