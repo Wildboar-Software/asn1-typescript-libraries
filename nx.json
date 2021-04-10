@@ -48,6 +48,7 @@
     "cmail": { "tags": [] },
     "guls": { "tags": [] },
     "ccr": { "tags": [] },
-    "fast-infoset": { "tags": [] }
+    "fast-infoset": { "tags": [] },
+    "asn1soap": { "tags": [] }
   }
 }

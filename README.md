@@ -38,7 +38,7 @@
 - [x] GULS (Should this be split into SESE?)
 - [x] CCR
 - [x] FastInfoset
-- [ ] ASN1SOAP
+- [x] ASN1SOAP
 - [ ] TCAP
 - [ ] T38
 - [ ] ISO-9798-3-SASL

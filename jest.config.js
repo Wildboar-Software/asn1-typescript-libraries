@@ -34,5 +34,6 @@ module.exports = {
     '<rootDir>/libs/guls',
     '<rootDir>/libs/ccr',
     '<rootDir>/libs/fast-infoset',
+    '<rootDir>/libs/asn1soap',
   ],
 };

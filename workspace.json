@@ -990,6 +990,36 @@
           }
         }
       }
+    },
+    "asn1soap": {
+      "root": "libs/asn1soap",
+      "sourceRoot": "libs/asn1soap/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/asn1soap/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/asn1soap"],
+          "options": {
+            "jestConfig": "libs/asn1soap/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/asn1soap",
+            "tsConfig": "libs/asn1soap/tsconfig.lib.json",
+            "packageJson": "libs/asn1soap/package.json",
+            "main": "libs/asn1soap/src/index.ts",
+            "assets": ["libs/asn1soap/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
