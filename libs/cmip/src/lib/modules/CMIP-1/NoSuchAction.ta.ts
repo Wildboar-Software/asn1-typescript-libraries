@@ -80,6 +80,11 @@ import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca';
 export { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca';
 import { ActionSet } from '../CMIP-1/ActionSet.osa';
 export { ActionSet } from '../CMIP-1/ActionSet.osa';
+import {
+    ActionTypeId,
+    _decode_ActionTypeId,
+    _encode_ActionTypeId,
+} from '../CMIP-1/ActionTypeId.ta';
 
 /* START_OF_SYMBOL_DEFINITION NoSuchAction */
 /**

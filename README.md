@@ -23,7 +23,7 @@
 - [x] ACSE
 - [x] RTSE
 - [x] ROSE
-- [ ] CMIP (Dependent on ROSE)
+- [x] CMIP (Dependent on ROSE)
 - [x] FTAM
 - [ ] CBEFF
 - [ ] ISO19785

@@ -70,12 +70,7 @@ import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
-export {
-  InvokeId,
-  _decode_InvokeId,
-  _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
 
 /* START_OF_SYMBOL_DEFINITION InvokeIDType */
 /**

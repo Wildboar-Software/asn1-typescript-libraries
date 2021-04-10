@@ -70,12 +70,7 @@ import {
   ROS,
   _decode_ROS,
   _encode_ROS,
-} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta';
-export {
-  ROS,
-  _decode_ROS,
-  _encode_ROS,
-} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta';
 
 /* START_OF_SYMBOL_DEFINITION ROSEapdus */
 /**

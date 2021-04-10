@@ -66,30 +66,30 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 import {
   DeleteArgument,
   _decode_DeleteArgument,
@@ -128,6 +128,7 @@ import { syncNotSupported } from '../CMIP-1/syncNotSupported.oa';
 export { syncNotSupported } from '../CMIP-1/syncNotSupported.oa';
 import { m_Linked_Reply } from '../CMIP-1/m-Linked-Reply.oa';
 export { m_Linked_Reply } from '../CMIP-1/m-Linked-Reply.oa';
+import { accessDenied } from '../CMIP-1/accessDenied.oa';
 
 /* START_OF_SYMBOL_DEFINITION m_Delete */
 /**

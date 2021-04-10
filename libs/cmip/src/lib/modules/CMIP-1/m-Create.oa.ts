@@ -66,30 +66,30 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 import {
   CreateArgument,
   _decode_CreateArgument,
@@ -126,6 +126,10 @@ import { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa';
 export { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa';
 import { processingFailure } from '../CMIP-1/processingFailure.oa';
 export { processingFailure } from '../CMIP-1/processingFailure.oa';
+import { accessDenied } from '../CMIP-1/accessDenied.oa';
+import { invalidAttributeValue } from '../CMIP-1/invalidAttributeValue.oa';
+import { noSuchAttribute } from '../CMIP-1/noSuchAttribute.oa';
+
 
 /* START_OF_SYMBOL_DEFINITION m_Create */
 /**

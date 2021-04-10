@@ -70,22 +70,22 @@ import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 import {
   Attribute,
   _decode_Attribute,
@@ -96,8 +96,8 @@ export {
   _decode_Attribute,
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
 
 /* START_OF_SYMBOL_DEFINITION invalidAttributeValue */
 /**

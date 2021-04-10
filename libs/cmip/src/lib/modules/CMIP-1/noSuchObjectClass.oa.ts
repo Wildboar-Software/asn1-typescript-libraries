@@ -70,22 +70,22 @@ import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
 import {
   ObjectClass,
   _decode_ObjectClass,
@@ -96,8 +96,8 @@ export {
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
 
 /* START_OF_SYMBOL_DEFINITION noSuchObjectClass */
 /**

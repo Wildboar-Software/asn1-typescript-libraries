@@ -66,8 +66,8 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
 import { m_Action } from '../CMIP-1/m-Action.oa';
 export { m_Action } from '../CMIP-1/m-Action.oa';
 import { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa';

@@ -109,6 +109,9 @@ export {
 import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta';
 export { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta';
 import {
+    Scope_namedNumbers_baseObject,
+} from '../CMIP-1/Scope-namedNumbers.ta';
+import {
   CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
@@ -275,7 +278,7 @@ export class SetArgument {
    * @method
    */
   public static get _default_value_for_scope() {
-    return { namedNumbers: baseObject };
+    return { namedNumbers: Scope_namedNumbers_baseObject };
   }
   /**
    * @summary Getter that returns the default value for `filter`.

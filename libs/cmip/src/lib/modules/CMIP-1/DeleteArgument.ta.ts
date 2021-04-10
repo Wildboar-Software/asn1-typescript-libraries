@@ -138,6 +138,9 @@ export {
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta';
+import {
+    Scope_namedNumbers_baseObject,
+} from '../CMIP-1/Scope-namedNumbers.ta';
 
 /* START_OF_SYMBOL_DEFINITION DeleteArgument */
 /**
@@ -247,7 +250,7 @@ export class DeleteArgument {
    * @method
    */
   public static get _default_value_for_scope() {
-    return { namedNumbers: baseObject };
+    return { namedNumbers: Scope_namedNumbers_baseObject };
   }
   /**
    * @summary Getter that returns the default value for `filter`.

@@ -80,6 +80,11 @@ import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca';
 export { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca';
 import { EventSet } from '../CMIP-1/EventSet.osa';
 export { EventSet } from '../CMIP-1/EventSet.osa';
+import {
+    EventTypeId,
+    _decode_EventTypeId,
+    _encode_EventTypeId,
+} from '../CMIP-1/EventTypeId.ta';
 
 /* START_OF_SYMBOL_DEFINITION NoSuchArgument_eventId */
 /**
