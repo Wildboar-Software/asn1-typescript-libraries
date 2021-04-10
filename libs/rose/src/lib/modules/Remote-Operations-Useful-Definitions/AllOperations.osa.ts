@@ -67,23 +67,30 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
+import { ConsumerPerforms } from './ConsumerPerforms.osa';
+import { SupplierPerforms } from './SupplierPerforms.osa';
 
-/* START_OF_SYMBOL_DEFINITION Forward */
+/* START_OF_SYMBOL_DEFINITION AllOperations */
 /**
- * @summary Forward
+ * @summary AllOperations
  * @description
+ *
+ * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * Forward{OPERATION:OperationSet} OPERATION ::= {OperationSet | OperationSet.&Linked.&Linked |
- *    OperationSet.&Linked.&Linked.&Linked.&Linked}
+ * AllOperations{OPERATION-PACKAGE:package} OPERATION ::= {ConsumerPerforms{package} | SupplierPerforms{package}}
  * ```
- *
- * @type {OPERATION}
  */
-export type Forward = OPERATION; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION Forward */
+export
+function AllOperations (package_: OPERATION_PACKAGE): OPERATION[] {
+    return [
+        ...ConsumerPerforms(package_),
+        ...SupplierPerforms(package_),
+    ];
+}
+/* END_OF_SYMBOL_DEFINITION AllOperations */
 
 /* eslint-enable */

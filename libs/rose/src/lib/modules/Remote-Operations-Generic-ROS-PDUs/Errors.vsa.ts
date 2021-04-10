@@ -68,6 +68,7 @@ import {
 import * as $ from 'asn1-ts/dist/node/functional';
 import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
 export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 
 /* START_OF_SYMBOL_DEFINITION Errors */
 /**
@@ -82,33 +83,8 @@ export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
  *
  * @type {ERROR}
  */
-export type Errors = ERROR; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION Errors */
-
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Errors */
-let _cached_decoder_for_Errors: $.ASN1Decoder<Errors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Errors */
-
-/* START_OF_SYMBOL_DEFINITION _decode_Errors */
-export function _decode_Errors(el: _Element) {
-  if (!_cached_decoder_for_Errors) {
-    _cached_decoder_for_Errors = _decode_ERROR;
-  }
-  return _cached_decoder_for_Errors(el);
+function Errors (Operations: OPERATION[]): ERROR[] {
+    return Operations.flatMap((op: OPERATION) => op["&Errors"] ?? []);
 }
-/* END_OF_SYMBOL_DEFINITION _decode_Errors */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Errors */
-let _cached_encoder_for_Errors: $.ASN1Encoder<Errors> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Errors */
-
-/* START_OF_SYMBOL_DEFINITION _encode_Errors */
-export function _encode_Errors(value: Errors, elGetter: $.ASN1Encoder<Errors>) {
-  if (!_cached_encoder_for_Errors) {
-    _cached_encoder_for_Errors = _encode_ERROR;
-  }
-  return _cached_encoder_for_Errors(value, elGetter);
-}
-/* END_OF_SYMBOL_DEFINITION _encode_Errors */
 
 /* eslint-enable */

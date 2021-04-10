@@ -69,49 +69,36 @@ import * as $ from 'asn1-ts/dist/node/functional';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 
-/* START_OF_SYMBOL_DEFINITION AllOperations */
+/* START_OF_SYMBOL_DEFINITION Forward */
 /**
- * @summary AllOperations
+ * @summary Forward
  * @description
+ *
+ * **This production was manually written in TypeScript.**
  *
  * ### ASN.1 Definition:
  *
  * ```asn1
- * AllOperations{OPERATION-PACKAGE:package} OPERATION ::= {ConsumerPerforms{package} | SupplierPerforms{package}}
+ * Forward{OPERATION:OperationSet} OPERATION ::= {OperationSet | OperationSet.&Linked.&Linked |
+ *    OperationSet.&Linked.&Linked.&Linked.&Linked}
  * ```
  *
  * @type {OPERATION}
  */
-export type AllOperations = OPERATION; // VALUE_SET_TYPE
-/* END_OF_SYMBOL_DEFINITION AllOperations */
-
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AllOperations */
-let _cached_decoder_for_AllOperations: $.ASN1Decoder<AllOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AllOperations */
-
-/* START_OF_SYMBOL_DEFINITION _decode_AllOperations */
-export function _decode_AllOperations(el: _Element) {
-  if (!_cached_decoder_for_AllOperations) {
-    _cached_decoder_for_AllOperations = _decode_OPERATION;
-  }
-  return _cached_decoder_for_AllOperations(el);
+export
+function Forward (OperationSet: OPERATION[]): OPERATION[] {
+    return [
+        ...OperationSet,
+        ...OperationSet
+            .flatMap((op1: OPERATION) => op1["&Linked"]
+                ?.flatMap((op2: OPERATION) => op2["&Linked"] ?? []) ?? []),
+        ...OperationSet
+            .flatMap((op1: OPERATION) => op1["&Linked"]
+                ?.flatMap((op2: OPERATION) => op2["&Linked"]
+                    ?.flatMap((op3: OPERATION) => op3["&Linked"]
+                        ?.flatMap((op4: OPERATION) => op4["&Linked"]) ?? []) ?? []) ?? []),
+    ];
 }
-/* END_OF_SYMBOL_DEFINITION _decode_AllOperations */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AllOperations */
-let _cached_encoder_for_AllOperations: $.ASN1Encoder<AllOperations> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AllOperations */
-
-/* START_OF_SYMBOL_DEFINITION _encode_AllOperations */
-export function _encode_AllOperations(
-  value: AllOperations,
-  elGetter: $.ASN1Encoder<AllOperations>
-) {
-  if (!_cached_encoder_for_AllOperations) {
-    _cached_encoder_for_AllOperations = _encode_OPERATION;
-  }
-  return _cached_encoder_for_AllOperations(value, elGetter);
-}
-/* END_OF_SYMBOL_DEFINITION _encode_AllOperations */
+/* END_OF_SYMBOL_DEFINITION Forward */
 
 /* eslint-enable */

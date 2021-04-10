@@ -22,9 +22,9 @@
 - [ ] SNMPv3 (No formal module.)
 - [x] ACSE
 - [x] RTSE
-- [ ] ROSE (This one is going to take a LOT of work.)
+- [x] ROSE
 - [ ] CMIP (Dependent on ROSE)
-- [ ] FTAM
+- [x] FTAM
 - [ ] CBEFF
 - [ ] ISO19785
 - [ ] M3100

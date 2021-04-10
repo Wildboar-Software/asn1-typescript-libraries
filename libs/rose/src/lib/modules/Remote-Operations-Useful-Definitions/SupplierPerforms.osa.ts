@@ -66,9 +66,36 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
+import { Forward } from './Forward.osa';
+import { Reverse } from './Reverse.osa';
 
-/* START_OF_SYMBOL_DEFINITION REALIZATION */
-export type REALIZATION <Type> = TYPE_IDENTIFIER <Type>;
-/* END_OF_SYMBOL_DEFINITION REALIZATION */
+/* START_OF_SYMBOL_DEFINITION SupplierPerforms */
+/**
+ * @summary SupplierPerforms
+ * @description
+ *
+ * **This production was manually written in TypeScript.**
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * SupplierPerforms{OPERATION-PACKAGE:package} OPERATION ::= {Forward{{package.&Supplier}} | Forward{{package.&Both}} |
+ *    Reverse{{package.&Consumer}} | Reverse{{package.&Both}}}
+ * ```
+ *
+ * @type {OPERATION}
+ */
+export
+function SupplierPerforms (package_: OPERATION_PACKAGE): OPERATION[] {
+    return [
+        ...Forward(package_['&Supplier'] ?? []),
+        ...Forward(package_['&Both'] ?? []),
+        ...Reverse(package_['&Consumer'] ?? []),
+        ...Reverse(package_['&Both'] ?? []),
+    ];
+ }
 
 /* eslint-enable */

@@ -139,11 +139,11 @@ export interface APPLICATION_CONTEXT {
   /**
    * @summary &associationRealization
    */
-  readonly '&associationRealization'?: REALIZATION;
+  readonly '&associationRealization'?: REALIZATION <any>;
   /**
    * @summary &transferRealization
    */
-  readonly '&transferRealization'?: REALIZATION;
+  readonly '&transferRealization'?: REALIZATION <any>;
   /**
    * @summary &AbstractSyntaxes
    */

@@ -66,9 +66,28 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { Forward } from './Forward.osa';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 
-/* START_OF_SYMBOL_DEFINITION REALIZATION */
-export type REALIZATION <Type> = TYPE_IDENTIFIER <Type>;
-/* END_OF_SYMBOL_DEFINITION REALIZATION */
+/* START_OF_SYMBOL_DEFINITION Reverse */
+/**
+ * @summary Reverse
+ * @description
+ *
+ * **This production was manually written in TypeScript.**
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * Reverse{OPERATION:OperationSet} OPERATION ::= {Forward{{OperationSet.&Linked}}}
+ * ```
+ *
+ * @type {OPERATION}
+ */
+export
+function Reverse (OperationSet: OPERATION[]): OPERATION[] {
+    return Forward(OperationSet.flatMap((op: OPERATION) => op["&Linked"] ?? []));
+}
 
 /* eslint-enable */

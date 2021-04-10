@@ -66,9 +66,35 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
+import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import { Forward } from './Forward.osa';
+import { Reverse } from './Reverse.osa';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 
-/* START_OF_SYMBOL_DEFINITION REALIZATION */
-export type REALIZATION <Type> = TYPE_IDENTIFIER <Type>;
-/* END_OF_SYMBOL_DEFINITION REALIZATION */
+/* START_OF_SYMBOL_DEFINITION ConsumerPerforms */
+/**
+ * @summary ConsumerPerforms
+ * @description
+ *
+ * **This production was manually written in TypeScript.**
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * ConsumerPerforms{OPERATION-PACKAGE:package} OPERATION ::= {Forward{{package.&Consumer}} | Forward{{package.&Both}} |
+ *    Reverse{{package.&Supplier}} | Reverse{{package.&Both}}}
+ * ```
+ */
+export
+function ConsumerPerforms (package_: OPERATION_PACKAGE): OPERATION[] {
+    return [
+        ...Forward(package_['&Consumer'] ?? []),
+        ...Forward(package_['&Both'] ?? []),
+        ...Reverse(package_['&Supplier'] ?? []),
+        ...Reverse(package_['&Both'] ?? []),
+    ];
+}
+/* END_OF_SYMBOL_DEFINITION ConsumerPerforms */
 
 /* eslint-enable */
