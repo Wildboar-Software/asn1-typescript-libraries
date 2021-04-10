@@ -86,33 +86,4 @@ export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oc
 export type Forward = OPERATION; // VALUE_SET_TYPE
 /* END_OF_SYMBOL_DEFINITION Forward */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Forward */
-let _cached_decoder_for_Forward: $.ASN1Decoder<Forward> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Forward */
-
-/* START_OF_SYMBOL_DEFINITION _decode_Forward */
-export function _decode_Forward(el: _Element) {
-  if (!_cached_decoder_for_Forward) {
-    _cached_decoder_for_Forward = _decode_OPERATION;
-  }
-  return _cached_decoder_for_Forward(el);
-}
-/* END_OF_SYMBOL_DEFINITION _decode_Forward */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Forward */
-let _cached_encoder_for_Forward: $.ASN1Encoder<Forward> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Forward */
-
-/* START_OF_SYMBOL_DEFINITION _encode_Forward */
-export function _encode_Forward(
-  value: Forward,
-  elGetter: $.ASN1Encoder<Forward>
-) {
-  if (!_cached_encoder_for_Forward) {
-    _cached_encoder_for_Forward = _encode_OPERATION;
-  }
-  return _cached_encoder_for_Forward(value, elGetter);
-}
-/* END_OF_SYMBOL_DEFINITION _encode_Forward */
-
 /* eslint-enable */

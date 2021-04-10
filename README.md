@@ -20,9 +20,10 @@
 - [x] Trust Anchor List
 - [x] LDAPv3
 - [ ] SNMPv3 (No formal module.)
-- [ ] ACSE
-- [ ] ROSE
-- [ ] CMIP
+- [x] ACSE
+- [x] RTSE
+- [ ] ROSE (This one is going to take a LOT of work.)
+- [ ] CMIP (Dependent on ROSE)
 - [ ] FTAM
 - [ ] CBEFF
 - [ ] ISO19785
@@ -31,7 +32,6 @@
 - [ ] CINF
 - [ ] RINF
 - [ ] CAP
-- [ ] RTSE
 - [ ] ISIS
 - [ ] BIP
 - [ ] CMAIL

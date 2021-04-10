@@ -154,6 +154,11 @@ export {
   _decode_RejectProblem,
   _encode_RejectProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta';
+import {
+    Code,
+    _decode_Code,
+    _encode_Code,
+} from '../Remote-Operations-Information-Objects/Code.ta';
 
 /* START_OF_SYMBOL_DEFINITION ReturnResult_result */
 /**

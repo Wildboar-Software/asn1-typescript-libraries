@@ -35,6 +35,8 @@
     "ldap": { "tags": [] },
     "cmip": { "tags": [] },
     "rose": { "tags": [] },
-    "acse": { "tags": [] }
+    "acse": { "tags": [] },
+    "rtse": { "tags": [] },
+    "ftam": { "tags": [] }
   }
 }

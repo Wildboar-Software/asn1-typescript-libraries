@@ -96,6 +96,21 @@ export {
   _decode_RTABapdu,
   _encode_RTABapdu,
 } from '../Remote-Operations-Abstract-Syntaxes/RTABapdu.ta';
+import {
+    RTORQapdu,
+    _decode_RTORQapdu,
+    _encode_RTORQapdu,
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta';
+import {
+    RTOACapdu,
+    _decode_RTOACapdu,
+    _encode_RTOACapdu,
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta';
+import {
+    RTORJapdu,
+    _decode_RTORJapdu,
+    _encode_RTORJapdu,
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta';
 
 /* START_OF_SYMBOL_DEFINITION RTSE_apdus */
 /**

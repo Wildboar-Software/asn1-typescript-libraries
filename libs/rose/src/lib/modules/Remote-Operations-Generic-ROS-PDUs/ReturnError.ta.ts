@@ -67,6 +67,11 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import {
+    Code,
+    _decode_Code,
+    _encode_Code,
+} from '../Remote-Operations-Information-Objects/Code.ta';
+import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,

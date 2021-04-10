@@ -68,7 +68,9 @@ import {
 import * as $ from 'asn1-ts/dist/node/functional';
 import {
     ACSE_apdu,
-} from '@wildboar/acse/src/lib/modules';
+    _decode_ACSE_apdu,
+    _encode_ACSE_apdu,
+} from '@wildboar/acse/src/lib/modules/ACSE-1/ACSE-apdu.ta';
 
 /* START_OF_SYMBOL_DEFINITION acse_abstract_syntax */
 /**

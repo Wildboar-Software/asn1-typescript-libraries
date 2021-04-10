@@ -600,6 +600,66 @@
           }
         }
       }
+    },
+    "rtse": {
+      "root": "libs/rtse",
+      "sourceRoot": "libs/rtse/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/rtse/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rtse"],
+          "options": {
+            "jestConfig": "libs/rtse/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/rtse",
+            "tsConfig": "libs/rtse/tsconfig.lib.json",
+            "packageJson": "libs/rtse/package.json",
+            "main": "libs/rtse/src/index.ts",
+            "assets": ["libs/rtse/*.md"]
+          }
+        }
+      }
+    },
+    "ftam": {
+      "root": "libs/ftam",
+      "sourceRoot": "libs/ftam/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/ftam/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ftam"],
+          "options": {
+            "jestConfig": "libs/ftam/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/ftam",
+            "tsConfig": "libs/ftam/tsconfig.lib.json",
+            "packageJson": "libs/ftam/package.json",
+            "main": "libs/ftam/src/index.ts",
+            "assets": ["libs/ftam/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

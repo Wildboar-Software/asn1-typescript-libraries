@@ -21,5 +21,7 @@ module.exports = {
     '<rootDir>/libs/cmip',
     '<rootDir>/libs/rose',
     '<rootDir>/libs/acse',
+    '<rootDir>/libs/rtse',
+    '<rootDir>/libs/ftam',
   ],
 };

@@ -34,7 +34,9 @@
       "@wildboar/ldap/*": ["libs/ldap/*"],
       "@wildboar/cmip/*": ["libs/cmip/*"],
       "@wildboar/rose/*": ["libs/rose/*"],
-      "@wildboar/acse/*": ["libs/acse/*"]
+      "@wildboar/acse/*": ["libs/acse/*"],
+      "@wildboar/rtse/*": ["libs/rtse/*"],
+      "@wildboar/ftam": ["libs/ftam/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

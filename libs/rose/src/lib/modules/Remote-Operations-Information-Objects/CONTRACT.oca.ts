@@ -67,9 +67,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import { CONNECTION_PACKAGE } from '../Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '../Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
 import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-export { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
 
 /* START_OF_SYMBOL_DEFINITION CONTRACT */
 /**

@@ -174,6 +174,11 @@ export {
 } from '../Remote-Operations-Generic-ROS-PDUs/Invoke-linkedId.ta';
 import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
 export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import {
+    Code,
+    _decode_Code,
+    _encode_Code,
+} from '../Remote-Operations-Information-Objects/Code.ta';
 
 /* START_OF_SYMBOL_DEFINITION Invoke */
 /**
