@@ -660,6 +660,36 @@
           }
         }
       }
+    },
+    "cbeff": {
+      "root": "libs/cbeff",
+      "sourceRoot": "libs/cbeff/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/cbeff/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cbeff"],
+          "options": {
+            "jestConfig": "libs/cbeff/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/cbeff",
+            "tsConfig": "libs/cbeff/tsconfig.lib.json",
+            "packageJson": "libs/cbeff/package.json",
+            "main": "libs/cbeff/src/index.ts",
+            "assets": ["libs/cbeff/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

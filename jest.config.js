@@ -23,5 +23,6 @@ module.exports = {
     '<rootDir>/libs/acse',
     '<rootDir>/libs/rtse',
     '<rootDir>/libs/ftam',
+    '<rootDir>/libs/cbeff',
   ],
 };

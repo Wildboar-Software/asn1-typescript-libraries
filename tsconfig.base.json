@@ -36,7 +36,8 @@
       "@wildboar/rose/*": ["libs/rose/*"],
       "@wildboar/acse/*": ["libs/acse/*"],
       "@wildboar/rtse/*": ["libs/rtse/*"],
-      "@wildboar/ftam": ["libs/ftam/src/index.ts"]
+      "@wildboar/ftam": ["libs/ftam/src/index.ts"],
+      "@wildboar/cbeff": ["libs/cbeff/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

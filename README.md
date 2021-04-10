@@ -25,7 +25,7 @@
 - [x] ROSE
 - [x] CMIP (Dependent on ROSE)
 - [x] FTAM
-- [ ] CBEFF
+- [x] CBEFF
 - [ ] ISO19785
 - [ ] M3100
 - [ ] F515
