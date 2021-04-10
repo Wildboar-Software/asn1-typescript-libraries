@@ -30,5 +30,6 @@ module.exports = {
     '<rootDir>/libs/rinf',
     '<rootDir>/libs/isis',
     '<rootDir>/libs/bip',
+    '<rootDir>/libs/cmail',
   ],
 };

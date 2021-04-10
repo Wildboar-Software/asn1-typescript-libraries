@@ -870,6 +870,36 @@
           }
         }
       }
+    },
+    "cmail": {
+      "root": "libs/cmail",
+      "sourceRoot": "libs/cmail/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/cmail/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cmail"],
+          "options": {
+            "jestConfig": "libs/cmail/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/cmail",
+            "tsConfig": "libs/cmail/tsconfig.lib.json",
+            "packageJson": "libs/cmail/package.json",
+            "main": "libs/cmail/src/index.ts",
+            "assets": ["libs/cmail/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

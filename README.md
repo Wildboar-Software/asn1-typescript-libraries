@@ -34,7 +34,7 @@
 - [ ] CAP (I already have code out there for this.)
 - [ ] ISIS (Break NLM into separate library.)
 - [x] BIP
-- [ ] CMAIL
+- [x] CMAIL (Break XSD into separate library.)
 - [ ] GULS
 - [ ] CCR
 - [ ] FastInfoset
