@@ -26,11 +26,11 @@
 - [x] CMIP (Dependent on ROSE)
 - [x] FTAM
 - [x] CBEFF
-- [ ] ISO19785
+- [ ] ISO19785 (I think the GH workflow for this is identical to CBEFF...)
 - [ ] M3100
-- [ ] F515
-- [ ] CINF
-- [ ] RINF
+- [ ] F515 (No artifact for this...)
+- [x] CINF
+- [x] RINF
 - [ ] CAP
 - [ ] ISIS
 - [ ] BIP

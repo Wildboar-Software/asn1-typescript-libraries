@@ -38,6 +38,10 @@
     "acse": { "tags": [] },
     "rtse": { "tags": [] },
     "ftam": { "tags": [] },
-    "cbeff": { "tags": [] }
+    "cbeff": { "tags": [] },
+    "iso19785": { "tags": [] },
+    "m3100": { "tags": [] },
+    "cinf": { "tags": [] },
+    "rinf": { "tags": [] }
   }
 }

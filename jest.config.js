@@ -24,5 +24,9 @@ module.exports = {
     '<rootDir>/libs/rtse',
     '<rootDir>/libs/ftam',
     '<rootDir>/libs/cbeff',
+    '<rootDir>/libs/iso19785',
+    '<rootDir>/libs/m3100',
+    '<rootDir>/libs/cinf',
+    '<rootDir>/libs/rinf',
   ],
 };
