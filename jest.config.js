@@ -37,5 +37,6 @@ module.exports = {
     '<rootDir>/libs/asn1soap',
     '<rootDir>/libs/tcap',
     '<rootDir>/libs/t38',
+    '<rootDir>/libs/iso-9798-3-sasl',
   ],
 };

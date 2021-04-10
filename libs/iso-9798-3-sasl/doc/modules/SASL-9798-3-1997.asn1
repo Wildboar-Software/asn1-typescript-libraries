@@ -1,0 +1,90 @@
+SASL-9798-3-1997
+
+DEFINITIONS IMPLICIT TAGS ::=
+
+BEGIN
+
+-- EXPORTS ALL --
+
+IMPORTS
+
+AlgorithmIdentifier, Name, Certificate
+    FROM PKIX1Explicit93 {iso(1) identified-organization(3) dod(6)
+    internet(1) security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-pkix1-explicit-93(3)}
+
+GeneralNames
+    FROM PKIX1Implicit93 {iso(1) identified-organization(3) dod(6)
+    internet(1) security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-pkix1-implicit-93(4)};
+
+TokenBA1 ::= SEQUENCE {
+    randomB   RandomNumber,
+    entityB   [0] GeneralNames OPTIONAL,
+    certPref  [1] SEQUENCE SIZE (1..MAX) OF TrustedAuth OPTIONAL
+}
+
+TokenAB ::= SEQUENCE {
+    randomA   RandomNumber,
+    entityB   [0] GeneralNames OPTIONAL,
+    certA     [1] CertData,
+    authID    [2] GeneralNames OPTIONAL,
+    signature SIGNATURE { TBSDataAB }
+}(CONSTRAINED BY {-- The entityB and authID fields shall be included
+    -- in TokenAB if and only if they are also included in TBSDataAB.
+    -- The entityB field SHOULD be present in TokenAB whenever the
+    -- client believes it knows the identity of the server.--})
+
+TBSDataAB ::= SEQUENCE {
+    randomA RandomNumber,
+    randomB RandomNumber,
+    entityB [0] GeneralNames OPTIONAL,
+    authID  [1] GeneralNames OPTIONAL
+}
+
+TokenBA2 ::= SEQUENCE {
+    randomC   RandomNumber,
+    entityA   [0] GeneralNames OPTIONAL,
+    certB     [1] CertData,
+    signature SIGNATURE { TBSDataBA }
+}(CONSTRAINED BY {-- The entityA field shall be included in TokenBA2
+    -- if and only if it is also included in TBSDataBA.  The entityA
+    -- field SHOULD be present and MUST contain the client's name
+    -- from their X.509 certificate.--})
+
+TBSDataBA ::= SEQUENCE {
+    randomB RandomNumber,
+    randomA RandomNumber,
+    randomC RandomNumber,
+    entityA GeneralNames OPTIONAL
+}
+
+TrustedAuth ::= CHOICE {
+    authorityName         [0] Name,
+            -- SubjectName from CA certificate
+    issuerNameHash        [1] OCTET STRING,
+            -- SHA-1 hash of Authority's DN
+    issuerKeyHash         [2] OCTET STRING,
+            -- SHA-1 hash of Authority's public key
+    authorityCertificate  [3] Certificate,
+            -- CA certificate
+    pkcs15KeyHash         [4] OCTET STRING
+            -- PKCS #15 key hash
+}
+
+CertData ::= CHOICE {
+    certificateSet     SET SIZE (1..MAX) OF Certificate,
+    certURL            IA5String,
+    ... -- For future extensions
+}
+
+RandomNumber ::= OCTET STRING (SIZE(8..MAX))
+
+SIGNATURE { ToBeSigned } ::= SEQUENCE {
+    algorithm AlgorithmIdentifier,
+    signature BIT STRING
+}(CONSTRAINED BY {-- Must be the result of applying the signing
+    -- operation indicated in "algorithm" to the DER-encoded octets of
+    -- a value of type -- ToBeSigned })
+
+END

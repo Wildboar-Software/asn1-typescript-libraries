@@ -51,6 +51,7 @@
     "fast-infoset": { "tags": [] },
     "asn1soap": { "tags": [] },
     "tcap": { "tags": [] },
-    "t38": { "tags": [] }
+    "t38": { "tags": [] },
+    "iso-9798-3-sasl": { "tags": [] }
   }
 }

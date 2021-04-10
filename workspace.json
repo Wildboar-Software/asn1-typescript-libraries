@@ -1080,6 +1080,36 @@
           }
         }
       }
+    },
+    "iso-9798-3-sasl": {
+      "root": "libs/iso-9798-3-sasl",
+      "sourceRoot": "libs/iso-9798-3-sasl/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/iso-9798-3-sasl/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/iso-9798-3-sasl"],
+          "options": {
+            "jestConfig": "libs/iso-9798-3-sasl/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/iso-9798-3-sasl",
+            "tsConfig": "libs/iso-9798-3-sasl/tsconfig.lib.json",
+            "packageJson": "libs/iso-9798-3-sasl/package.json",
+            "main": "libs/iso-9798-3-sasl/src/index.ts",
+            "assets": ["libs/iso-9798-3-sasl/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
