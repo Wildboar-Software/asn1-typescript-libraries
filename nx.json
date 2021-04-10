@@ -52,6 +52,7 @@
     "asn1soap": { "tags": [] },
     "tcap": { "tags": [] },
     "t38": { "tags": [] },
-    "iso-9798-3-sasl": { "tags": [] }
+    "iso-9798-3-sasl": { "tags": [] },
+    "usm": { "tags": [] }
   }
 }

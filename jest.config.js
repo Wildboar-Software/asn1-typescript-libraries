@@ -38,5 +38,6 @@ module.exports = {
     '<rootDir>/libs/tcap',
     '<rootDir>/libs/t38',
     '<rootDir>/libs/iso-9798-3-sasl',
+    '<rootDir>/libs/usm',
   ],
 };

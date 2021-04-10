@@ -1110,6 +1110,36 @@
           }
         }
       }
+    },
+    "usm": {
+      "root": "libs/usm",
+      "sourceRoot": "libs/usm/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/usm/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/usm"],
+          "options": {
+            "jestConfig": "libs/usm/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/usm",
+            "tsConfig": "libs/usm/tsconfig.lib.json",
+            "packageJson": "libs/usm/package.json",
+            "main": "libs/usm/src/index.ts",
+            "assets": ["libs/usm/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

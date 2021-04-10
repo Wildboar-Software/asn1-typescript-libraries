@@ -41,8 +41,8 @@
 - [x] ASN1SOAP
 - [x] TCAP
 - [x] T38
-- [ ] ISO-9798-3-SASL
-- [ ] USM
+- [x] ISO-9798-3-SASL
+- [x] USM
 - [ ] RFC5915-ECPrivateKey
 - [ ] DeviceOwnerAttribute
 - [ ] ClearanceSponsorAttribute
