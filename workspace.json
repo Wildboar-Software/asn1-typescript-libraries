@@ -960,6 +960,36 @@
           }
         }
       }
+    },
+    "fast-infoset": {
+      "root": "libs/fast-infoset",
+      "sourceRoot": "libs/fast-infoset/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/fast-infoset/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fast-infoset"],
+          "options": {
+            "jestConfig": "libs/fast-infoset/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/fast-infoset",
+            "tsConfig": "libs/fast-infoset/tsconfig.lib.json",
+            "packageJson": "libs/fast-infoset/package.json",
+            "main": "libs/fast-infoset/src/index.ts",
+            "assets": ["libs/fast-infoset/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

@@ -37,7 +37,7 @@
 - [x] CMAIL (Break XSD into separate library.)
 - [x] GULS (Should this be split into SESE?)
 - [x] CCR
-- [ ] FastInfoset
+- [x] FastInfoset
 - [ ] ASN1SOAP
 - [ ] TCAP
 - [ ] T38

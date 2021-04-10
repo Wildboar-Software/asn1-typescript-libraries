@@ -47,6 +47,7 @@
     "bip": { "tags": [] },
     "cmail": { "tags": [] },
     "guls": { "tags": [] },
-    "ccr": { "tags": [] }
+    "ccr": { "tags": [] },
+    "fast-infoset": { "tags": [] }
   }
 }

@@ -33,5 +33,6 @@ module.exports = {
     '<rootDir>/libs/cmail',
     '<rootDir>/libs/guls',
     '<rootDir>/libs/ccr',
+    '<rootDir>/libs/fast-infoset',
   ],
 };
