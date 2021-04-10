@@ -27,7 +27,7 @@
 - [x] FTAM
 - [x] CBEFF
 - [ ] ISO19785 (I think the GH workflow for this is identical to CBEFF...)
-- [ ] M3100
+- [ ] M3100 (Very big and very broken.)
 - [ ] F515 (No artifact for this...)
 - [x] CINF
 - [x] RINF
