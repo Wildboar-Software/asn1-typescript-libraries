@@ -900,6 +900,36 @@
           }
         }
       }
+    },
+    "guls": {
+      "root": "libs/guls",
+      "sourceRoot": "libs/guls/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/guls/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/guls"],
+          "options": {
+            "jestConfig": "libs/guls/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/guls",
+            "tsConfig": "libs/guls/tsconfig.lib.json",
+            "packageJson": "libs/guls/package.json",
+            "main": "libs/guls/src/index.ts",
+            "assets": ["libs/guls/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

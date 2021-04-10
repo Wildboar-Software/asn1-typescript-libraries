@@ -31,5 +31,6 @@ module.exports = {
     '<rootDir>/libs/isis',
     '<rootDir>/libs/bip',
     '<rootDir>/libs/cmail',
+    '<rootDir>/libs/guls',
   ],
 };

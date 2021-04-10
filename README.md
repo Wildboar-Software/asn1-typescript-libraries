@@ -35,7 +35,7 @@
 - [ ] ISIS (Break NLM into separate library.)
 - [x] BIP
 - [x] CMAIL (Break XSD into separate library.)
-- [ ] GULS
+- [ ] GULS (Should this be split into SESE?)
 - [ ] CCR
 - [ ] FastInfoset
 - [ ] ASN1SOAP
@@ -55,6 +55,8 @@
 - [ ] Refactor `AlgorithmInformation-2009` into a separate package
 - [ ] Implement XER for CINF
 - [ ] Implement XER for RINF
+- [ ] Implement XER for CMAIL
+- [ ] Break AlgorithmIdentifier into separate package?
 
 ## Notes
 
