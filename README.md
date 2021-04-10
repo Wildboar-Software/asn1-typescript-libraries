@@ -40,7 +40,7 @@
 - [x] FastInfoset
 - [x] ASN1SOAP
 - [x] TCAP
-- [ ] T38
+- [x] T38
 - [ ] ISO-9798-3-SASL
 - [ ] USM
 - [ ] RFC5915-ECPrivateKey

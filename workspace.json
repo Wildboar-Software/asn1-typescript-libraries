@@ -1050,6 +1050,36 @@
           }
         }
       }
+    },
+    "t38": {
+      "root": "libs/t38",
+      "sourceRoot": "libs/t38/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/t38/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/t38"],
+          "options": {
+            "jestConfig": "libs/t38/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/t38",
+            "tsConfig": "libs/t38/tsconfig.lib.json",
+            "packageJson": "libs/t38/package.json",
+            "main": "libs/t38/src/index.ts",
+            "assets": ["libs/t38/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

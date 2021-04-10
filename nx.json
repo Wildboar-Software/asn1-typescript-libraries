@@ -50,6 +50,7 @@
     "ccr": { "tags": [] },
     "fast-infoset": { "tags": [] },
     "asn1soap": { "tags": [] },
-    "tcap": { "tags": [] }
+    "tcap": { "tags": [] },
+    "t38": { "tags": [] }
   }
 }
