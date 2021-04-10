@@ -39,5 +39,6 @@ module.exports = {
     '<rootDir>/libs/t38',
     '<rootDir>/libs/iso-9798-3-sasl',
     '<rootDir>/libs/usm',
+    '<rootDir>/libs/clearance-sponsor-attribute',
   ],
 };

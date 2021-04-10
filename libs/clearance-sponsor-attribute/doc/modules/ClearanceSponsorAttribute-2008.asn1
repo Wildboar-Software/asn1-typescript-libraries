@@ -1,0 +1,55 @@
+ClearanceSponsorAttribute-2008
+    { joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101)
+    dod(2) infosec(1) modules(0)
+    id-clearanceSponsorAttribute-2008(35) }
+
+DEFINITIONS IMPLICIT TAGS ::=
+
+BEGIN
+
+-- EXPORTS ALL --
+
+IMPORTS
+
+-- Imports from New PKIX ASN.1 [RFC5912]
+
+    DirectoryString
+    PKIX1Explicit-2009
+        { iso(1) identified-organization(3) dod(6) internet(1)
+        security(5) mechanisms(5) pkix(7) id-mod(0)
+        id-pkix1-explicit-02(51) }
+
+-- Imports from New PKIX ASN.1 [RFC5912]
+
+    ATTRIBUTE
+    FROM PKIX-CommonTypes-2009
+        { iso(1) identified-organization(3) dod(6) internet(1)
+        security(5) mechanisms(5) pkix(7) id-mod(0)
+        id-mod-pkixCommon-02(57) }
+
+-- Imports from ITU-T X.520 [X.520]
+
+    caseIgnoreMatch
+    FROM SelectedAttributeTypes
+        { joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 4 }
+
+;
+
+-- sponsor attribute OID and syntax
+
+id-clearanceSponsor OBJECT IDENTIFIER ::= {
+    joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101)
+    dod(2) infosec(1) attributes(5) 68
+
+}
+
+at-clearanceSponsor ATTRIBUTE ::= {
+    TYPE                   DirectoryString { ub-clearance-sponsor }
+                        ( WITH COMPONENTS { utf8String PRESENT } )
+    EQUALITY MATCHING RULE caseIgnoreMatch
+    IDENTIFIED BY          id-clearanceSponsor
+}
+
+ub-clearance-sponsor INTEGER ::= 64
+
+END

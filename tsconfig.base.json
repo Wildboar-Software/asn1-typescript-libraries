@@ -52,7 +52,10 @@
       "@wildboar/tcap": ["libs/tcap/src/index.ts"],
       "@wildboar/t38": ["libs/t38/src/index.ts"],
       "@wildboar/iso-9798-3-sasl": ["libs/iso-9798-3-sasl/src/index.ts"],
-      "@wildboar/usm": ["libs/usm/src/index.ts"]
+      "@wildboar/usm": ["libs/usm/src/index.ts"],
+      "@wildboar/ClearanceSponsorAttribute": [
+        "libs/clearance-sponsor-attribute/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

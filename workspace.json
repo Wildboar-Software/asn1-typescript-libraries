@@ -1140,6 +1140,38 @@
           }
         }
       }
+    },
+    "clearance-sponsor-attribute": {
+      "root": "libs/clearance-sponsor-attribute",
+      "sourceRoot": "libs/clearance-sponsor-attribute/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/clearance-sponsor-attribute/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/clearance-sponsor-attribute"],
+          "options": {
+            "jestConfig": "libs/clearance-sponsor-attribute/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/clearance-sponsor-attribute",
+            "tsConfig": "libs/clearance-sponsor-attribute/tsconfig.lib.json",
+            "packageJson": "libs/clearance-sponsor-attribute/package.json",
+            "main": "libs/clearance-sponsor-attribute/src/index.ts",
+            "assets": ["libs/clearance-sponsor-attribute/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
