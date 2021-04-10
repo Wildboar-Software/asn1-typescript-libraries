@@ -1020,6 +1020,36 @@
           }
         }
       }
+    },
+    "tcap": {
+      "root": "libs/tcap",
+      "sourceRoot": "libs/tcap/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/tcap/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tcap"],
+          "options": {
+            "jestConfig": "libs/tcap/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/tcap",
+            "tsConfig": "libs/tcap/tsconfig.lib.json",
+            "packageJson": "libs/tcap/package.json",
+            "main": "libs/tcap/src/index.ts",
+            "assets": ["libs/tcap/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

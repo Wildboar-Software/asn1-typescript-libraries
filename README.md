@@ -39,7 +39,7 @@
 - [x] CCR
 - [x] FastInfoset
 - [x] ASN1SOAP
-- [ ] TCAP
+- [x] TCAP
 - [ ] T38
 - [ ] ISO-9798-3-SASL
 - [ ] USM

@@ -49,6 +49,7 @@
     "guls": { "tags": [] },
     "ccr": { "tags": [] },
     "fast-infoset": { "tags": [] },
-    "asn1soap": { "tags": [] }
+    "asn1soap": { "tags": [] },
+    "tcap": { "tags": [] }
   }
 }

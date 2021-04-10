@@ -35,5 +35,6 @@ module.exports = {
     '<rootDir>/libs/ccr',
     '<rootDir>/libs/fast-infoset',
     '<rootDir>/libs/asn1soap',
+    '<rootDir>/libs/tcap',
   ],
 };

@@ -48,7 +48,8 @@
       "@wildboar/guls/*": ["libs/guls/*"],
       "@wildboar/ccr/*": ["libs/ccr/*"],
       "@wildboar/asn1soap/*": ["libs/asn1soap/*"],
-      "@wildboar/fast-infoset/*": ["libs/fast-infoset/*"]
+      "@wildboar/fast-infoset/*": ["libs/fast-infoset/*"],
+      "@wildboar/tcap": ["libs/tcap/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
