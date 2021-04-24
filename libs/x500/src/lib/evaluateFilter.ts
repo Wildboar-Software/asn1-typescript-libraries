@@ -60,6 +60,9 @@ type SubstringsFunction = (
 ) => boolean;
 
 export
+type ContextMatcher = (assertion: ASN1Element, value: ASN1Element) => boolean;
+
+export
 interface FilterEntryOptions {
     /**
      * The attributes that will be recognized by the filter.
@@ -69,6 +72,7 @@ interface FilterEntryOptions {
     equalityMatchingRuleMatchers: Record<string, MatcherFunction>;
     orderingMatchingRuleMatchers: Record<string, OrderingFunction>;
     substringsMatchingRuleMatchers: Record<string, SubstringsFunction>;
+    contextMatchers: Record<string, ContextMatcher>;
 
     /**
      * Referenced in ITU Recommendation X.511, Section 7.8.2.g, this option
@@ -102,26 +106,31 @@ function getAttributesFromEntry (entry: EntryInformation): Attribute[] {
 }
 
 export
-function evaluateContextAssertion (assertion: ContextAssertion, contextsPresent: Context[]): boolean {
+function evaluateContextAssertion (
+    assertion: ContextAssertion,
+    contextsPresent: Context[],
+    options: FilterEntryOptions,
+): boolean {
+    const assertionType = assertion.contextType.toString();
     const relevantContexts: Context[] = contextsPresent
-        .filter((cp: Context): boolean => cp.contextType.toString() === assertion.contextType.toString());
+        .filter((cp: Context): boolean => cp.contextType.toString() === assertionType);
     if (relevantContexts.length === 0) {
         return true;
     }
-
+    const matcher = options.contextMatchers[assertionType];
     const matchingContext: Context | undefined = relevantContexts
         .find((cp: Context): boolean => {
             for (const cpv of cp.contextValues) {
                 for (const acv of assertion.contextValues) {
-                    if (compareUint8Arrays(cpv.deconstruct(""), acv.deconstruct(""))) {
-                        // TODO: Add more comparison logic later.
+                    if (matcher) {
+                        return matcher(acv, cpv);
+                    } else if (compareUint8Arrays(cpv.deconstruct(""), acv.deconstruct(""))) {
                         return true;
                     }
                 }
             }
             return false;
         });
-
     if (!matchingContext) {
         const fallbackContext: Context | undefined = relevantContexts.find((ctx) => ctx.fallback);
         if (fallbackContext) {
@@ -150,7 +159,7 @@ function evaluateEquality (ava: AttributeValueAssertion, entry: EntryInformation
                                 return ava
                                     .assertedContexts
                                     .selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList))
+                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options))
                             } else {
                                 throw new Error();
                             }
@@ -199,7 +208,7 @@ function evaluateOrdering (
                                 return ava
                                     .assertedContexts
                                     .selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList))
+                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options))
                             } else {
                                 throw new Error();
                             }
@@ -240,7 +249,8 @@ function evaluateSubstring (sub: FilterItem_substrings, entry: EntryInformation,
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => (attr.values
         .some((value): boolean => (assertions
-        .every(([ assertion, selection ]): boolean => matcher(assertion, value, selection))))));
+        .every(([ assertion, selection ]): boolean => (matcher && matcher(assertion, value, selection))
+    )))));
 }
 
 export
@@ -293,7 +303,7 @@ function evaluateMatchingRuleAssertion (
 }
 
 export
-function evaluateAttributeTypeAssertion (ata: AttributeTypeAssertion, entry: EntryInformation): boolean {
+function evaluateAttributeTypeAssertion (ata: AttributeTypeAssertion, entry: EntryInformation, options: FilterEntryOptions): boolean {
     const attributes = getAttributesFromEntry(entry);
     const oid = ata.type_.toString();
     const relevantAttributes = attributes.filter((attr: Attribute): boolean => attr.type_.toString() === oid);
@@ -307,7 +317,7 @@ function evaluateAttributeTypeAssertion (ata: AttributeTypeAssertion, entry: Ent
         .some((attr: Attribute): boolean => attr.valuesWithContext // Check that there are some attributes...
         .some((vwc): boolean => ata.assertedContexts // That have some values...
         // ... for which every context assertion evaluates to TRUE.
-        .every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList))));
+        .every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList, options))));
 }
 
 export
@@ -327,7 +337,7 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
     } else if ("extensibleMatch" in filterItem) {
         return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options);
     } else if ("contextPresent" in filterItem) {
-        return evaluateAttributeTypeAssertion(filterItem.contextPresent, entry);
+        return evaluateAttributeTypeAssertion(filterItem.contextPresent, entry, options);
     } else {
         throw new Error();
     }
