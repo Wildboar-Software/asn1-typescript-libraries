@@ -19,6 +19,9 @@ import type {
 import type {
     AttributeTypeAssertion,
 } from "./modules/InformationFramework/AttributeTypeAssertion.ta";
+import type {
+    MatchingRuleAssertion,
+} from "./modules/DirectoryAbstractService/MatchingRuleAssertion.ta";
 import {
     Attribute,
 } from "./modules/InformationFramework/Attribute.ta";
@@ -37,6 +40,12 @@ import { ASN1Element } from "asn1-ts";
 // FIXME: Return `undefined` from some search queries.
 // REVIEW: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
 
+enum SubstringSelection {
+    any_,
+    initial,
+    final,
+}
+
 export
 type MatcherFunction = (assertion: ASN1Element, value: ASN1Element) => boolean;
 
@@ -44,7 +53,11 @@ export
 type OrderingFunction = (assertion: ASN1Element, value: ASN1Element) => number;
 
 export
-type SubstringsFunction = (assertion: ASN1Element, value: ASN1Element) => boolean;
+type SubstringsFunction = (
+    assertion: ASN1Element,
+    value: ASN1Element,
+    selection?: SubstringSelection,
+) => boolean;
 
 export
 interface FilterEntryOptions {
@@ -210,11 +223,24 @@ export
 function evaluateSubstring (sub: FilterItem_substrings, entry: EntryInformation, options: FilterEntryOptions): boolean {
     const attributes = getAttributesFromEntry(entry);
     const soughtAfterOID: string = sub.type_.toString();
+    const matcher = options.substringsMatchingRuleMatchers[soughtAfterOID];
+    const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings.map((str) => {
+        if ("initial" in str) {
+            return [ str.initial, SubstringSelection.initial ];
+        } else if ("any_" in str) {
+            return [ str.any_, SubstringSelection.any_ ];
+        } else if ("final" in str) {
+            return [ str.final, SubstringSelection.final ];
+        } else {
+            // Control attributes will not be supported. These are way too complex.
+            throw new Error();
+        }
+    });
     return attributes
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
-        .some((attr): boolean => {
-            // How should you handle initial, any, final, etc.?
-        });
+        .some((attr): boolean => (attr.values
+        .some((value): boolean => (assertions
+        .every(([ assertion, selection ]): boolean => matcher(assertion, value, selection))))));
 }
 
 export
@@ -222,6 +248,48 @@ function evaluateAttributePresence (attributeType: AttributeType, entry: EntryIn
     const attributes = getAttributesFromEntry(entry);
     const oid = attributeType.toString();
     return attributes.some((attr: Attribute): boolean => attr.type_.toString() === oid);
+}
+
+export
+function evaluateMatchingRuleAssertion (
+    mra: MatchingRuleAssertion,
+    entry: EntryInformation,
+    options: FilterEntryOptions,
+): boolean {
+    if (mra.matchingRule.length !== 1) {
+        return undefined; // DSA does not know how to combine rules.
+    }
+    const attrOid: string | undefined = mra.type_?.toString();
+    const mroids: string[] = mra.matchingRule.map((mr) => mr.toString());
+    const matchers = mroids.map((mroid) => (
+            options.equalityMatchingRuleMatchers[mroid]
+            // REVIEW: How do you know if you are ordering GTE or LTE?
+            // ?? options.orderingMatchingRuleMatchers[mroid]
+            ?? options.substringsMatchingRuleMatchers[mroid]
+        )).filter((m) => !!m);
+    /**
+     * From ITU Recommendation X.511, Section 7.8.2.g:
+     * "If several matching rules are given, the way in which these rules are
+     * combined into a new rule is unspecified..."
+     */
+    if (matchers.length !== 1) {
+        return undefined; // DSA does not support the one matching rule supplied.
+    }
+    const relevantAttributes = (mra.type_)
+        ? getAttributesFromEntry(entry)
+            .filter((attr: Attribute): boolean => attr.type_.toString() === attrOid)
+        : getAttributesFromEntry(entry);
+    if (relevantAttributes.length === 0) {
+        return false; // There are no applicable attributes to match.
+    }
+    const matcher = matchers[0];
+    return relevantAttributes.some((attr: Attribute): boolean => (
+        attr.values.some((value) => matcher(mra.matchValue, value))
+        || attr
+            .valuesWithContext
+            .map((vwc) => vwc.value)
+            .some((value) => matcher(mra.matchValue, value))
+    ));
 }
 
 export
@@ -257,7 +325,7 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
     } else if ("approximateMatch" in filterItem) {
         return evaluateEquality(filterItem.approximateMatch, entry, options); // FIXME:
     } else if ("extensibleMatch" in filterItem) {
-        return undefined; // FIXME:
+        return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options);
     } else if ("contextPresent" in filterItem) {
         return evaluateAttributeTypeAssertion(filterItem.contextPresent, entry);
     } else {
