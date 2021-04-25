@@ -131,7 +131,9 @@ function evaluateContextAssertion (
             }
             return false;
         });
-    if (!matchingContext) {
+    if (matchingContext) {
+        return true;
+    } else {
         const fallbackContext: Context | undefined = relevantContexts.find((ctx) => ctx.fallback);
         if (fallbackContext) {
             return true;
@@ -153,7 +155,7 @@ function evaluateEquality (ava: AttributeValueAssertion, entry: EntryInformation
                 return (
                     attr.values.some((value) => (matcher && matcher(ava.assertion, value)))
                     || attr.valuesWithContext
-                        .filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
+                        ?.filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
                         .some((vwc): boolean => {
                             if ("selectedContexts" in ava.assertedContexts) {
                                 return ava
@@ -170,7 +172,7 @@ function evaluateEquality (ava: AttributeValueAssertion, entry: EntryInformation
                     return (
                         attr.values.some((a) => matcher(ava.assertion, a))
                         || attr.valuesWithContext
-                            .some((vwc) => matcher(ava.assertion, vwc.value))
+                            ?.some((vwc) => matcher(ava.assertion, vwc.value))
                     );
                 } else { // We do not know how to equate the assertion with the value.
                     return undefined;
@@ -195,14 +197,14 @@ function evaluateOrdering (
                 .orderingMatchingRuleMatchers[attr.type_.toString()];
             const ordered = orderer
                 ? gte
-                    ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0)
-                    : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
+                    ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
+                    : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0)
                 : () => undefined; // REVIEW:
             if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
                 return (
                     attr.values.some((value) => ordered(ava.assertion, value))
                     || attr.valuesWithContext
-                        .filter((vwc) => ordered(ava.assertion, vwc.value))
+                        ?.filter((vwc) => ordered(ava.assertion, vwc.value))
                         .some((vwc): boolean => {
                             if ("selectedContexts" in ava.assertedContexts) {
                                 return ava
@@ -219,7 +221,7 @@ function evaluateOrdering (
                     return (
                         attr.values.some((a) => ordered(ava.assertion, a))
                         || attr.valuesWithContext
-                            .some((vwc) => ordered(ava.assertion, vwc.value))
+                            ?.some((vwc) => ordered(ava.assertion, vwc.value))
                     );
                 } else { // We do not know how to order the assertion with the value.
                     return undefined;
@@ -297,7 +299,7 @@ function evaluateMatchingRuleAssertion (
         attr.values.some((value) => matcher(mra.matchValue, value))
         || attr
             .valuesWithContext
-            .map((vwc) => vwc.value)
+            ?.map((vwc) => vwc.value)
             .some((value) => matcher(mra.matchValue, value))
     ));
 }
@@ -315,7 +317,7 @@ function evaluateAttributeTypeAssertion (ata: AttributeTypeAssertion, entry: Ent
     }
     return relevantAttributes
         .some((attr: Attribute): boolean => attr.valuesWithContext // Check that there are some attributes...
-        .some((vwc): boolean => ata.assertedContexts // That have some values...
+        ?.some((vwc): boolean => ata.assertedContexts // That have some values...
         // ... for which every context assertion evaluates to TRUE.
         .every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList, options))));
 }
@@ -329,7 +331,7 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
     } else if ("greaterOrEqual" in filterItem) {
         return evaluateOrdering(true, filterItem.greaterOrEqual, entry, options);
     } else if ("lessOrEqual" in filterItem) {
-        return evaluateOrdering(true, filterItem.lessOrEqual, entry, options);
+        return evaluateOrdering(false, filterItem.lessOrEqual, entry, options);
     } else if ("present" in filterItem) {
         return evaluateAttributePresence(filterItem.present, entry);
     } else if ("approximateMatch" in filterItem) {
@@ -344,16 +346,16 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
 }
 
 export
-function filterEntry (filter: Filter, entry: EntryInformation, options: FilterEntryOptions): boolean | undefined {
+function evaluateFilter (filter: Filter, entry: EntryInformation, options: FilterEntryOptions): boolean | undefined {
     if ("item" in filter) {
         return evaluateFilterItem(filter.item, entry, options);
     } else if ("and" in filter) {
         // Array.every() returns `true` when `Array.length` is 0.
-        return filter.and.every((subfilter) => filterEntry(subfilter, entry, options));
+        return filter.and.every((subfilter) => evaluateFilter(subfilter, entry, options));
     } else if ("or" in filter) {
-        return filter.or.some((subfilter) => filterEntry(subfilter, entry, options));
+        return filter.or.some((subfilter) => evaluateFilter(subfilter, entry, options));
     } else if ("not" in filter) {
-        return (filterEntry(filter.not, entry, options) === false); // undefined should be omitted.
+        return (evaluateFilter(filter.not, entry, options) === false); // undefined should be omitted.
     } else {
         throw new Error();
     }
