@@ -20,7 +20,7 @@ import type {
 import {
     AttributeTypeAssertion,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAssertion.ta";
-import type {
+import {
     MatchingRuleAssertion,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/MatchingRuleAssertion.ta";
 import {
@@ -42,7 +42,7 @@ import type {
     Name,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
 import { evaluateFilter, FilterEntryOptions, MatcherFunction, OrderingFunction } from "@wildboar/x500/src/lib/evaluateFilter";
-import { FALSE } from "asn1-ts";
+import { FALSE, TRUE } from "asn1-ts";
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
@@ -83,6 +83,10 @@ const FILLER_ATTRIBUTE_TYPE_3 = new asn1.ObjectIdentifier([1, 3, 3, 3]);
 const FILLER_CONTEXT_TYPE_1 = new asn1.ObjectIdentifier([2, 1, 1, 1]);
 const FILLER_CONTEXT_TYPE_2 = new asn1.ObjectIdentifier([2, 2, 2, 2]);
 const FILLER_CONTEXT_TYPE_3 = new asn1.ObjectIdentifier([2, 3, 3, 3]);
+
+const FILLER_MATCHING_RULE_TYPE_1 = new asn1.ObjectIdentifier([0, 1, 1, 1]);
+const FILLER_MATCHING_RULE_TYPE_2 = new asn1.ObjectIdentifier([0, 2, 2, 2]);
+const FILLER_MATCHING_RULE_TYPE_3 = new asn1.ObjectIdentifier([0, 3, 3, 3]);
 
 const BOOLEAN_EQUALITY_MATCHING_RULE: MatcherFunction = (assertion, value) => (assertion.value[0] === value.value[0]);
 
@@ -128,7 +132,7 @@ describe("evaluateFilter", () => {
         const options: FilterEntryOptions = {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {
-                "1.1.1.1": BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
             },
             orderingMatchingRuleMatchers: {},
             substringsMatchingRuleMatchers: {},
@@ -165,7 +169,7 @@ describe("evaluateFilter", () => {
         const options: FilterEntryOptions = {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {
-                "1.1.1.1": BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
             },
             orderingMatchingRuleMatchers: {},
             substringsMatchingRuleMatchers: {},
@@ -224,8 +228,8 @@ describe("evaluateFilter", () => {
         const options: FilterEntryOptions = {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {
-                "1.1.1.1": BOOLEAN_EQUALITY_MATCHING_RULE,
-                "1.2.2.2": BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_2.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
             },
             orderingMatchingRuleMatchers: {},
             substringsMatchingRuleMatchers: {},
@@ -284,8 +288,8 @@ describe("evaluateFilter", () => {
         const options: FilterEntryOptions = {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {
-                "1.1.1.1": BOOLEAN_EQUALITY_MATCHING_RULE,
-                "1.2.2.2": BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_2.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
             },
             orderingMatchingRuleMatchers: {},
             substringsMatchingRuleMatchers: {},
@@ -329,7 +333,7 @@ describe("evaluateFilter", () => {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {},
             orderingMatchingRuleMatchers: {
-                "1.1.1.1": INTEGER_ORDERING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: INTEGER_ORDERING_RULE,
             },
             substringsMatchingRuleMatchers: {},
             contextMatchers: {},
@@ -370,7 +374,7 @@ describe("evaluateFilter", () => {
             recognizedAttributes: [],
             equalityMatchingRuleMatchers: {},
             orderingMatchingRuleMatchers: {
-                "1.1.1.1": INTEGER_ORDERING_RULE,
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: INTEGER_ORDERING_RULE,
             },
             substringsMatchingRuleMatchers: {},
             contextMatchers: {},
@@ -413,7 +417,48 @@ describe("evaluateFilter", () => {
     });
 
     // approximateMatch is currently the same as equality.
-    test.todo("extensibleMatch");
+    test("evaluates a extensibleMatch filter item", () => {
+        const filter: Filter = {
+            item: {
+                extensibleMatch: new MatchingRuleAssertion(
+                    [ FILLER_MATCHING_RULE_TYPE_1 ],
+                    FILLER_ATTRIBUTE_TYPE_1,
+                    TRUE_ELEMENT,
+                    false,
+                    undefined,
+                ),
+            },
+        };
+
+        const entry: EntryInformation = new EntryInformation(
+            FILLER_NAME,
+            true,
+            [
+                {
+                    attribute: new Attribute(
+                        FILLER_ATTRIBUTE_TYPE_1,
+                        [ TRUE_ELEMENT ],
+                        undefined,
+                    ),
+                },
+            ],
+            false,
+            false,
+            false,
+        );
+
+        const options: FilterEntryOptions = {
+            recognizedAttributes: [],
+            equalityMatchingRuleMatchers: {
+                [FILLER_MATCHING_RULE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
+            },
+            orderingMatchingRuleMatchers: {},
+            substringsMatchingRuleMatchers: {},
+            contextMatchers: {},
+        };
+
+        expect(evaluateFilter(filter, entry, options)).toBeTruthy();
+    });
 
     test("evaluates a contextPresent filter item", () => {
         const filter: Filter = {

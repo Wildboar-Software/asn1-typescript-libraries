@@ -284,9 +284,13 @@ function evaluateMatchingRuleAssertion (
      * "If several matching rules are given, the way in which these rules are
      * combined into a new rule is unspecified..."
      */
-    if (matchers.length !== 1) {
+    if (matchers.length === 0) {
         return undefined; // DSA does not support the one matching rule supplied.
     }
+    if (matchers.length > 1) {
+        return undefined; // DSA does not know what to do.
+    }
+    const matcher = matchers[0];
     const relevantAttributes = (mra.type_)
         ? getAttributesFromEntry(entry)
             .filter((attr: Attribute): boolean => attr.type_.toString() === attrOid)
@@ -294,7 +298,6 @@ function evaluateMatchingRuleAssertion (
     if (relevantAttributes.length === 0) {
         return false; // There are no applicable attributes to match.
     }
-    const matcher = matchers[0];
     return relevantAttributes.some((attr: Attribute): boolean => (
         attr.values.some((value) => matcher(mra.matchValue, value))
         || attr
