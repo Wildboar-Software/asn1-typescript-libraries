@@ -36,32 +36,14 @@ import type {
 } from "./modules/DirectoryAbstractService/FilterItem-substrings.ta";
 import compareUint8Arrays from "./comparators/compareUint8Arrays";
 import { ASN1Element } from "asn1-ts";
+import EqualityMatcher from "./types/EqualityMatcher";
+import OrderingMatcher from "./types/OrderingMatcher";
+import SubstringsMatcher from "./types/SubstringsMatcher";
+import ContextMatcher from "./types/ContextMatcher";
+import SubstringSelection from "./types/SubstringSelection";
 
 // FIXME: Return `undefined` from some search queries.
 // REVIEW: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
-
-export
-enum SubstringSelection {
-    any_,
-    initial,
-    final,
-}
-
-export
-type MatcherFunction = (assertion: ASN1Element, value: ASN1Element) => boolean;
-
-export
-type OrderingFunction = (assertion: ASN1Element, value: ASN1Element) => number;
-
-export
-type SubstringsFunction = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    selection?: SubstringSelection,
-) => boolean;
-
-export
-type ContextMatcher = (assertion: ASN1Element, value: ASN1Element) => boolean;
 
 export
 interface FilterEntryOptions {
@@ -70,9 +52,9 @@ interface FilterEntryOptions {
      */
     recognizedAttributes: ATTRIBUTE[];
 
-    equalityMatchingRuleMatchers: Record<string, MatcherFunction>;
-    orderingMatchingRuleMatchers: Record<string, OrderingFunction>;
-    substringsMatchingRuleMatchers: Record<string, SubstringsFunction>;
+    equalityMatchingRuleMatchers: Record<string, EqualityMatcher>;
+    orderingMatchingRuleMatchers: Record<string, OrderingMatcher>;
+    substringsMatchingRuleMatchers: Record<string, SubstringsMatcher>;
     contextMatchers: Record<string, ContextMatcher>;
 
     /**
@@ -150,7 +132,7 @@ function evaluateEquality (ava: AttributeValueAssertion, entry: EntryInformation
     return attributes
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => {
-            const matcher: MatcherFunction | undefined = options
+            const matcher: EqualityMatcher | undefined = options
                 .equalityMatchingRuleMatchers[attr.type_.toString()];
             if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
                 return (
@@ -194,7 +176,7 @@ function evaluateOrdering (
     return attributes
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => {
-            const orderer: OrderingFunction | undefined = options
+            const orderer: OrderingMatcher | undefined = options
                 .orderingMatchingRuleMatchers[attr.type_.toString()];
             const ordered = orderer
                 ? gte

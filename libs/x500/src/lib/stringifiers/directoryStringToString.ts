@@ -11,7 +11,7 @@ export default function directoryStringToString(
     ds: UnboundedDirectoryString
 ): string {
     if ("teletexString" in ds) {
-        return "[Cannot display TeletexString]";
+        return "[Cannot display TeletexString]"; // FIXME:
     } else if ("printableString" in ds) {
         return ds.printableString;
     } else if ("bmpString" in ds) {
