@@ -35,13 +35,13 @@ import {
 import {
     EntryInformation,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta";
-import type {
+import {
     FilterItem_substrings,
 } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FilterItem-substrings.ta";
 import type {
     Name,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
-import { evaluateFilter, FilterEntryOptions, MatcherFunction, OrderingFunction } from "@wildboar/x500/src/lib/evaluateFilter";
+import { evaluateFilter, FilterEntryOptions, MatcherFunction, OrderingFunction, SubstringsFunction, SubstringSelection } from "@wildboar/x500/src/lib/evaluateFilter";
 import { FALSE, TRUE } from "asn1-ts";
 
 const TRUE_ELEMENT = new asn1.DERElement(
@@ -72,6 +72,13 @@ const INT_7 = new asn1.DERElement(
     7,
 );
 
+const HELLO_WORLD_STRING = new asn1.DERElement(
+    asn1.ASN1TagClass.universal,
+    asn1.ASN1Construction.primitive,
+    asn1.ASN1UniversalType.utf8String,
+    "Hello World",
+);
+
 const FILLER_NAME: Name = {
     rdnSequence: [],
 };
@@ -92,6 +99,25 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: MatcherFunction = (assertion, value) => (a
 
 // This will only work for INTEGERs within [0,127].
 const INTEGER_ORDERING_RULE: OrderingFunction = (assertion, value) => (assertion.value[0] - value.value[0]);
+
+const UTF8_SUBSTRING_RULE: SubstringsFunction = (assertion, value, selection) => {
+    switch (selection) {
+    case (SubstringSelection.initial): {
+        return (value.utf8String.startsWith(assertion.utf8String));
+    }
+    case (SubstringSelection.any_): {
+        return (value.utf8String.indexOf(assertion.utf8String) > -1);
+    }
+    case (SubstringSelection.final): {
+        const val = value.utf8String;
+        const ass = assertion.utf8String;
+        return (val.indexOf(ass) === (val.length - ass.length - 1));
+    }
+    default: {
+        throw new Error();
+    }
+    }
+};
 
 const BASIC_BOOLEAN_FILTER_ITEM: FilterItem = {
     equality: new AttributeValueAssertion(
@@ -299,7 +325,56 @@ describe("evaluateFilter", () => {
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
     });
 
-    test.todo("substrings");
+    it("evaluates a basic substrings filter item", () => {
+        const hellString = new asn1.DERElement(
+            asn1.ASN1TagClass.universal,
+            asn1.ASN1Construction.primitive,
+            asn1.ASN1UniversalType.utf8String,
+            "Hell",
+        );
+
+        const filter: Filter = {
+            item: {
+                substrings: new FilterItem_substrings(
+                    FILLER_ATTRIBUTE_TYPE_1,
+                    [
+                        {
+                            initial: hellString,
+                        },
+                    ],
+                ),
+            },
+        };
+
+        const entry: EntryInformation = new EntryInformation(
+            FILLER_NAME,
+            true,
+            [
+                {
+                    attribute: new Attribute(
+                        FILLER_ATTRIBUTE_TYPE_1,
+                        [ HELLO_WORLD_STRING ],
+                        undefined,
+                    ),
+                },
+            ],
+            false,
+            false,
+            false,
+        );
+
+        const options: FilterEntryOptions = {
+            recognizedAttributes: [],
+            equalityMatchingRuleMatchers: {},
+            orderingMatchingRuleMatchers: {},
+            substringsMatchingRuleMatchers: {
+                [FILLER_ATTRIBUTE_TYPE_1.toString()]: UTF8_SUBSTRING_RULE,
+            },
+            contextMatchers: {},
+        };
+
+        expect(evaluateFilter(filter, entry, options)).toBeTruthy();
+    });
 
     it("evaluates a greaterOrEqual filter item", () => {
         const filter: Filter = {

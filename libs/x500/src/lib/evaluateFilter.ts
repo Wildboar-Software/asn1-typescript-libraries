@@ -40,6 +40,7 @@ import { ASN1Element } from "asn1-ts";
 // FIXME: Return `undefined` from some search queries.
 // REVIEW: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
 
+export
 enum SubstringSelection {
     any_,
     initial,
