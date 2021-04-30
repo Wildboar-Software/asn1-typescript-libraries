@@ -12,8 +12,18 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (
         (a.construction === ASN1Construction.primitive)
         && (b.construction === ASN1Construction.primitive)
-        && compareUint8Arrays(a.value, b.value)
     ) {
-        return true;
+        return compareUint8Arrays(a.value, b.value);
+    }
+    else if (
+        (a.construction === ASN1Construction.constructed)
+        && (b.construction === ASN1Construction.constructed)
+    ) {
+        return compareUint8Arrays(a.value, b.value);
+    }
+    else {
+        return false;
     }
 }
+
+export default compareElements;
