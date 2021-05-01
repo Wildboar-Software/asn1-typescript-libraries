@@ -3,6 +3,26 @@
 ## To Do
 
 - [x] X500
+  - [ ] Selecting info via `EntryInformationSelection`
+  - [ ] Context Matching
+    - [ ] languageContext
+    - [ ] temporalContext
+    - [ ] localeContext
+    - [ ] ldapAttributeOptionContext
+  - [ ] Matching Rules
+    - [ ] timeSpecificationMatch
+    - [ ] accessPointMatch
+    - [ ] masterAndShadowAccessPointsMatch
+    - [ ] supplierOrConsumerInformationMatch
+    - [ ] supplierAndConsumersMatch
+    - [ ] jidMatch
+    - [ ] intEmailMatch
+    - [ ] caseExactIA5Match
+    - [ ] caseIgnoreIA5Match
+    - [ ] caseIgnoreIA5SubstringsMatch
+  - [ ] Joins?
+  - [ ] Password Policy Evaluation
+  - [ ] Basic Access Control?
 - [x] CMS
 - [x] PKCS
 - [x] QC
