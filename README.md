@@ -9,17 +9,17 @@
     - [ ] temporalContext
     - [ ] localeContext
     - [ ] ldapAttributeOptionContext
-  - [ ] Matching Rules
-    - [ ] timeSpecificationMatch
-    - [ ] accessPointMatch
-    - [ ] masterAndShadowAccessPointsMatch
-    - [ ] supplierOrConsumerInformationMatch
-    - [ ] supplierAndConsumersMatch
-    - [ ] jidMatch
-    - [ ] intEmailMatch
-    - [ ] caseExactIA5Match
-    - [ ] caseIgnoreIA5Match
-    - [ ] caseIgnoreIA5SubstringsMatch
+  - [x] Matching Rules
+    - [x] timeSpecificationMatch
+    - [x] accessPointMatch
+    - [x] masterAndShadowAccessPointsMatch
+    - [x] supplierOrConsumerInformationMatch
+    - [x] supplierAndConsumersMatch
+    - [x] jidMatch
+    - [x] intEmailMatch
+    - [x] caseExactIA5Match
+    - [x] caseIgnoreIA5Match
+    - [x] caseIgnoreIA5SubstringsMatch
   - [ ] Joins?
   - [ ] Password Policy Evaluation
   - [ ] Basic Access Control?
