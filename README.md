@@ -5,10 +5,10 @@
 - [x] X500
   - [ ] Selecting info via `EntryInformationSelection`
   - [ ] Context Matching
-    - [ ] languageContext
+    - [x] languageContext
     - [ ] temporalContext
-    - [ ] localeContext
-    - [ ] ldapAttributeOptionContext
+    - [x] localeContext
+    - [x] ldapAttributeOptionContext
   - [x] Matching Rules
     - [x] timeSpecificationMatch
     - [x] accessPointMatch
@@ -23,6 +23,8 @@
   - [ ] Joins?
   - [ ] Password Policy Evaluation
   - [ ] Basic Access Control?
+  - [ ] `timeRangeFromPeriod(): IteratableIterator<[Date, Date]>`
+  - [ ] `timeRangeFromPeriodAndPoint(): [Date, Date] | null`
 - [x] CMS
 - [x] PKCS
 - [x] QC
