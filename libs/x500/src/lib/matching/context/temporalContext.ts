@@ -33,22 +33,6 @@ function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
 }
 
-function getOccurrenceFromXDayOf (x: XDayOf): number {
-    if ("first" in x) {
-        return 1;
-    } else if ("second" in x) {
-        return 2;
-    } else if ("third" in x) {
-        return 3;
-    } else if ("fourth" in x) {
-        return 4;
-    } else if ("fifth" in x) {
-        return 5;
-    } else {
-        throw new Error();
-    }
-}
-
 function destructureXDayOf (x: XDayOf): [ number, NamedDay ] {
     if ("first" in x) {
         return [ 1, x.first ];
