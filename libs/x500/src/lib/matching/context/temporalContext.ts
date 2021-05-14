@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher";
-import { ASN1Element, TRUE_BIT } from "asn1-ts";
+import { ASN1Element } from "asn1-ts";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
@@ -17,94 +17,16 @@ import type {
 import {
     DayTime,
 } from "../../modules/SelectedAttributeTypes/DayTime.ta";
-import { add, sub, startOfMonth, endOfMonth, getWeekOfMonth, getWeek, subWeeks, startOfWeek, addDays, getISODay, getDay, subDays, getDayOfYear, getDaysInMonth, lastDayOfMonth } from "date-fns";
-import { XDayOf } from "../../modules/SelectedAttributeTypes/XDayOf.ta";
-import { NamedDay } from "../../modules/SelectedAttributeTypes/NamedDay.ta";
+import { add, sub, startOfMonth, endOfMonth, addHours, getDayOfYear } from "date-fns";
 
 // TODO: Do I need to use ISO equivalent of the date-fns
 // TODO: Check that the max number of days, weeks, months, etc. are not exceeded when using SET OF INTEGER.
 
 const MIN_DATE: Date = new Date(-8640000000000000);
 const MAX_DATE: Date = new Date(8640000000000000);
-const ALL_WEEKS_IN_YEAR: Set<number> = new Set(Array(53).fill(0).map((_, i) => (i + 1)));
-const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);
 
 function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
-}
-
-function destructureXDayOf (x: XDayOf): [ number, NamedDay ] {
-    if ("first" in x) {
-        return [ 1, x.first ];
-    } else if ("second" in x) {
-        return [ 2, x.second ];
-    } else if ("third" in x) {
-        return [ 3, x.third ];
-    } else if ("fourth" in x) {
-        return [ 4, x.fourth ];
-    } else if ("fifth" in x) {
-        return [ 5, x.fifth ];
-    } else {
-        throw new Error();
-    }
-}
-
-function getDaysOfWeekWhitelist (nd: NamedDay): Set<number> {
-    if ("intNamedDays" in nd) {
-        return new Set([ (nd.intNamedDays - 1) ]);
-    } else {
-        return new Set(
-            nd.bitNamedDays
-                .map((b: number, i: number): number => (b === TRUE_BIT) ? i : -1)
-                .filter((d: number): boolean => (d > -1))
-        );
-    }
-}
-
-function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> {
-    const [ occurrence, nd ] = destructureXDayOf(x);
-    const daysOfWeekWhitelist = getDaysOfWeekWhitelist(nd);
-    const ret: Set<number> = new Set([]);
-    if (occurrence === 5) {
-        const lastDay = lastDayOfMonth(point);
-        let i = 0;
-        while (i < 7) {
-            const a = subDays(lastDay, i);
-            if (daysOfWeekWhitelist.has(getDay(a))) {
-                ret.add(a.getUTCDate());
-            }
-            i++;
-        }
-    } else {
-        const daysInMonth = getDaysInMonth(point);
-        let d = (((occurrence - 1) * 7) + 1);
-        let i = 0;
-        while ((d < daysInMonth) && (i < 7)) {
-            const a = new Date(point);
-            a.setUTCDate(d);
-            if (daysOfWeekWhitelist.has(getDay(a))) {
-                ret.add(d);
-            }
-            d++;
-            i++;
-        }
-        return ret;
-    }
-}
-
-/**
- * @deprecated
- */
-function addHours (date: Date, hours: number): Date {
-    return new Date(date.getTime() + (hours * 60 * 60 * 1000));
-}
-
-// Credit to: https://stackoverflow.com/a/40975730/6562635
-/**
- * @deprecated
- */
-function daysIntoYear (date: Date) {
-    return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
 }
 
 function weeksIntoYear (date: Date): number {
@@ -161,7 +83,7 @@ function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0
                     return false;
                 }
             } else if (period.years) {
-                if (!period.days.intDay.some((day: number) => (day === daysIntoYear(time)))) {
+                if (!period.days.intDay.some((day: number) => (day === getDayOfYear(time)))) {
                     return false;
                 }
             } else {
@@ -367,175 +289,6 @@ function timeRangeFromPeriodAndPoint (period: Period, point: Date): [ Date, Date
     }
 
     return [ currentMin, currentMax ];
-}
-
-function startOfPeriod (period: Period, point: Date): Date | null {
-    let currentMin: Date = MIN_DATE;
-    const whitelistedYears: Set<number> = new Set(period.years ?? []);
-
-    if (period.years) {
-        const year = point.getUTCFullYear();
-        if (!whitelistedYears.has(year)) {
-            return null; // The point is not in an acceptable year at all.
-        } else {
-            currentMin = new Date(year, 0, 0, 0, 0, 0);
-            let y: number = year;
-            while (whitelistedYears.has(--y)) {
-                currentMin = new Date(y, 0, 0, 0, 0, 0);
-            }
-        }
-    }
-
-    if (period.months) {
-        const whitelistedMonths: Set<number> = ((): Set<number> => {
-            if ("intMonth" in period.months) {
-                return new Set(period.months.intMonth);
-            } else if ("bitMonth" in period.months) {
-                return new Set(
-                    period.months.bitMonth
-                        .map((b, i) => ((b === TRUE_BIT) ? (i + 1) : 0))
-                        .filter((v) => Boolean(v))
-                );
-            } else if ("allMonths" in period.months) {
-                return new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]);
-            } else {
-                throw new Error();
-            }
-        })();
-        const month = point.getUTCMonth() + 1;
-        if (!whitelistedMonths.has(month)) {
-            return null;
-        } else {
-            currentMin = new Date(currentMin.getUTCFullYear(), (month - 1), 0, 0, 0, 0);
-            let m: number = month;
-            while (whitelistedYears.has(--m)) {
-                currentMin = new Date(currentMin.getUTCFullYear(), (m - 1), 0, 0, 0, 0);
-            }
-        }
-    }
-
-    if (period.weeks) {
-        const whitelistedWeeks: Set<number> = ((): Set<number> => {
-            if ("intWeek" in period.weeks) {
-                return new Set(period.weeks.intWeek);
-            } else if ("bitWeek" in period.weeks) {
-                return new Set(
-                    period.weeks.bitWeek
-                        .map((b, i) => ((b === TRUE_BIT) ? (i + 1) : 0))
-                        .filter((v) => Boolean(v))
-                );
-            } else if ("allWeeks" in period.weeks) {
-                if (period.months) {
-                    return ALL_WEEKS_IN_MONTH;
-                } else {
-                    return ALL_WEEKS_IN_YEAR;
-                }
-            } else {
-                throw new Error();
-            }
-        })();
-
-        const week: number = (period.months)
-            ? getWeekOfMonth(point)
-            : getWeek(point);
-
-        if (!whitelistedWeeks.has(week)) {
-            return null;
-        } else {
-            if (period.months) {
-                currentMin.setUTCDate((week - 1) * 7);
-            } else {
-                currentMin = addDays(currentMin, ((week - 1) * 7));
-            }
-            let w: number = week;
-            while (whitelistedYears.has(--w)) { // This could be done more efficiently.
-                currentMin = startOfWeek(subWeeks(currentMin, 1));
-            }
-        }
-    }
-
-    if (period.days && ("dayOf" in period.days)) {
-        const dayOf = period.days.dayOf;
-        const dayOfWhitelist: Set<number> = getDayOfMonthWhitelistFromXDayOf(dayOf, point);
-        if (!dayOfWhitelist.has(point.getUTCDate())) {
-            return null;
-        } else {
-            let d: number = point.getUTCDate();
-            currentMin = new Date(currentMin);
-            currentMin.setUTCDate(d);
-            while (dayOfWhitelist.has(--d)) {
-                currentMin = subDays(currentMin, 1);
-            }
-        }
-    } else if (period.days) {
-        const whitelistedDays: Set<number> = ((): Set<number> => {
-            if ("intDay" in period.days) {
-                return new Set(period.days.intDay);
-            } else if ("bitDay" in period.days) {
-                return new Set(
-                    period.days.bitDay
-                        .map((b, i) => ((b === TRUE_BIT) ? (i + 1) : 0))
-                        .filter((v) => Boolean(v))
-                );
-            } else {
-                throw new Error();
-            }
-        })();
-
-        if (period.weeks) {
-            const day: number = getISODay(point) + 1;
-            if (!whitelistedDays.has(day)) {
-                return null;
-            } else {
-                currentMin = addDays(currentMin, (day - (getDay(currentMin) + 1)));
-                let d: number = day;
-                while (whitelistedYears.has(--d)) {
-                    currentMin = subDays(currentMin, 1);
-                }
-            }
-        } else if (period.months) {
-            const day: number = point.getUTCDate();
-            if (!whitelistedDays.has(day)) {
-                return null;
-            } else {
-                currentMin.setUTCDate(day);
-                let d: number = day;
-                while (whitelistedYears.has(--d)) {
-                    currentMin = subDays(currentMin, 1);
-                }
-            }
-        } else if (period.years) {
-            const day: number = getDayOfYear(point);
-            if (!whitelistedDays.has(day)) {
-                return null;
-            } else {
-                currentMin = addDays(new Date(currentMin.getUTCFullYear(), 0, 1, 0, 0, 0), (day - 1));
-                let d: number = day;
-                while (whitelistedYears.has(--d)) {
-                    currentMin = subDays(currentMin, 1);
-                }
-            }
-        } else {
-            throw new Error();
-        }
-    }
-
-    if (period.timesOfDay && (period.timesOfDay.length > 0)) {
-        const earliestDayTimeBand: DayTimeBand = period.timesOfDay.sort((a, b) => (
-            ((a.startDayTime.hour * 3600) + (a.startDayTime.minute * 60) + (a.startDayTime.second))
-            - ((b.startDayTime.hour * 3600) + (b.startDayTime.minute * 60) + (b.startDayTime.second))
-        ))[0];
-        currentMin = new Date(
-            currentMin.getUTCFullYear(),
-            currentMin.getUTCMonth(),
-            currentMin.getUTCDate(),
-            earliestDayTimeBand.startDayTime.hour,
-            earliestDayTimeBand.startDayTime.minute,
-            earliestDayTimeBand.startDayTime.second,
-        );
-    }
-
-    return currentMin;
 }
 
 export
