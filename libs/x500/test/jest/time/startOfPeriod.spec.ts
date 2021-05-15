@@ -526,19 +526,19 @@ describe("startOfPeriod()", () => {
         expect(() => startOfPeriod(p, d)).toThrow();
     });
 
-    it("throws when encountering a Period with days, but no coarser unit of time", () => {
-        const p = new Period(
-            undefined,
-            {
-                intDay: [ 1 ],
-            },
-            undefined,
-            undefined,
-            undefined,
-        );
-        const d = new Date(2021, 0, 6, 13, 45, 58);
-        expect(() => startOfPeriod(p, d)).toThrow();
-    });
+    // it("throws when encountering a Period with days, but no coarser unit of time", () => {
+    //     const p = new Period(
+    //         undefined,
+    //         {
+    //             intDay: [ 1 ],
+    //         },
+    //         undefined,
+    //         undefined,
+    //         undefined,
+    //     );
+    //     const d = new Date(2021, 0, 6, 13, 45, 58);
+    //     expect(() => startOfPeriod(p, d)).toThrow();
+    // });
 
     it("throws when encountering a Period with weeks, but no coarser unit of time", () => {
         const p = new Period(
@@ -833,6 +833,53 @@ describe("startOfPeriod()", () => {
         expect(s.getHours()).toBe(18);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        const p2 = new Period(
+            [
+                new DayTimeBand( // Starts the day
+                    new DayTime(
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                    new DayTime(
+                        16,
+                        0,
+                        0,
+                    ),
+                ),
+                new DayTimeBand( // Ends the day
+                    new DayTime(
+                        18,
+                        0,
+                        0,
+                    ),
+                    new DayTime(
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                ),
+            ],
+            {
+                intDay: [ 16, 17 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d2 = new Date(2021, 4, 17, 12, 34, 56);
+        const s2 = startOfPeriod(p2, d2);
+        console.log(s2);
+        expect(s2).not.toBeNull();
+        expect(s2.getFullYear()).toBe(2021);
+        expect(s2.getMonth()).toBe(4);
+        expect(s2.getDate()).toBe(16);
+        expect(s2.getHours()).toBe(18);
+        expect(s2.getMinutes()).toBe(0);
+        expect(s2.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of days that partially spans two years", () => {
@@ -1020,6 +1067,30 @@ describe("startOfPeriod()", () => {
         expect(s.getSeconds()).toBe(0);
     });
 
+    it("rolls back to the beginning of a span of weeks that does NOT partially "
+        + "because the fifth week is disabled", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 1, 2, 4 ],
+            },
+            {
+                intMonth: [ 4, 5 ],
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
     it("rolls back to the beginning of a span of weeks that does NOT partially span two years", () => {
         const p = new Period(
             undefined,
@@ -1110,29 +1181,88 @@ describe("startOfPeriod()", () => {
         expect(s.getSeconds()).toBe(0);
     });
 
-    it("corrects 5-week overflow into next year", () => {
-        const p = new Period(
+    it("defaults daytime start times correctly", () => {
+        const p1 = new Period(
+            [
+                new DayTimeBand(
+                    undefined,
+                    new DayTime(
+                        15,
+                        13,
+                        11,
+                    ),
+                ),
+            ],
             undefined,
-            {
-                intDay: [ 1, 2, 6, 7 ],
-            },
-            {
-                intWeek: [ 2 ],
-            },
-            {
-                allMonths: null,
-            },
-            [ 2021 ],
+            undefined,
+            undefined,
+            undefined,
         );
-        const d = new Date(2021, 11, 10, 12, 34, 56);
-        const s = startOfPeriod(p, d);
-        expect(s).not.toBeNull();
-        expect(s.getFullYear()).toBe(2021);
-        expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(9);
-        expect(s.getHours()).toBe(0);
-        expect(s.getMinutes()).toBe(0);
-        expect(s.getSeconds()).toBe(0);
+        const d1 = new Date(2021, 4, 10, 12, 34, 56);
+        const s1 = startOfPeriod(p1, d1);
+        expect(s1).not.toBeNull();
+
+        const p2 = new Period(
+            [
+                new DayTimeBand(
+                    undefined,
+                    new DayTime(
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                ),
+            ],
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const d2 = new Date(2021, 4, 10, 12, 34, 56);
+        const s2 = startOfPeriod(p2, d2);
+        expect(s2).not.toBeNull();
+    });
+
+    it("defaults daytime end times correctly", () => {
+        const p1 = new Period(
+            [
+                new DayTimeBand(
+                    new DayTime(
+                        12,
+                        34,
+                        56,
+                    ),
+                    undefined,
+                ),
+            ],
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const d1 = new Date(2021, 4, 10, 12, 34, 56);
+        const s1 = startOfPeriod(p1, d1);
+        expect(s1).not.toBeNull();
+
+        const p2 = new Period(
+            [
+                new DayTimeBand(
+                    new DayTime(
+                        undefined,
+                        undefined,
+                        undefined,
+                    ),
+                    undefined,
+                ),
+            ],
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const d2 = new Date(2021, 4, 10, 12, 34, 56);
+        const s2 = startOfPeriod(p2, d2);
+        expect(s2).not.toBeNull();
     });
 
     test.todo("Test dayOf without months specified...");

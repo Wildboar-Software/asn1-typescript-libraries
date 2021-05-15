@@ -35,10 +35,8 @@ function destructurePoint (period: Period, point: Date): DestructuredPoint {
             return getDay(point) + 1;
         } else if (period.months) {
             return point.getDate();
-        } else if (period.years) {
-            return getDayOfYear(point);
         } else {
-            throw new Error();
+            return getDayOfYear(point);
         }
     })();
     return {
@@ -48,9 +46,6 @@ function destructurePoint (period: Period, point: Date): DestructuredPoint {
         day,
     };
 }
-
-// TODO: Check non-sense numbers (0, negative, or too large)
-// TODO: Check non-sense sets (13 months to a year, etc.)
 
 /**
  * ### Assumptions
@@ -64,6 +59,11 @@ function destructurePoint (period: Period, point: Date): DestructuredPoint {
  */
 export
 function startOfPeriod (period: Period, point: Date): Date | null {
+
+    // TODO: Check non-sense numbers (0, negative, or too large)
+    // TODO: Check non-sense sets (13 months to a year, etc.)
+    // TODO: Check for days with no coarser units
+    // TODO: Check for weeks with no coarser units
 
     const whitelistedYears: Set<number> | null = period.years
         ? new Set(period.years)
@@ -133,17 +133,15 @@ function startOfPeriod (period: Period, point: Date): Date | null {
     const startOfDayBand: DayTimeBand | undefined = period.timesOfDay
         ?.find((tod: DayTimeBand): boolean => (
             ((tod.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour) === 0)
-            && ((tod.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute) === 0)
-            && ((tod.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second) === 0)
+            && ((tod.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute ?? 0) === 0)
+            && ((tod.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second ?? 0) === 0)
         ));
     const endOfDayBand: DayTimeBand | undefined = period.timesOfDay
         ?.find((tod: DayTimeBand): boolean => (
             ((tod.endDayTime?.hour ?? DayTimeBand._default_value_for_endDayTime.hour) === 23)
-            && ((tod.endDayTime?.minute ?? DayTimeBand._default_value_for_endDayTime.minute) === 59)
-            && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second) === 59)
+            && ((tod.endDayTime?.minute ?? DayTimeBand._default_value_for_endDayTime.minute ?? 59) === 59)
+            && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
         ));
-    const startOfDayPermitted = startOfDayBand ?? !period.timesOfDay;
-    const endOfDayPermitted = endOfDayBand ?? !period.timesOfDay;
 
     const {
         year: pointYear,
@@ -169,21 +167,9 @@ function startOfPeriod (period: Period, point: Date): Date | null {
      * This block finds the most precise unit of time specified by the period,
      * and counts downward in that unit, checking if that particular value of
      * that unit is permitted by the period.
-     *
-     * This is not true when `timesOfDay` is the most specific unit specified.
-     * In this case, we can just return the lower bound of the applicable
-     * time band, unless the timeband touches the lower boundary of the day
-     * (and therefore has the possibility of continuing to the previous day)
      */
     if (applicableTimeband) {
-        if (startOfDayPermitted) {
-            /**
-             * This involves checking that not only the previous day is
-             * whitelisted, but also that, if the previous week, month, and
-             * year are, if we rollover to a previous unit. For instance, if the
-             * point is January 1st, 2021, we have to check that December, 31st,
-             * 2020 is permitted.
-             */
+        if (startOfDayBand) {
             const prev: Date = subDays(point, 1);
             const {
                 year: yesterYear,
@@ -197,14 +183,14 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                 && (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
                 && (!whitelistedYears || whitelistedYears.has(yesterYear))
             );
-            if (previousDayIsPermitted && endOfDayPermitted) {
+            if (previousDayIsPermitted && endOfDayBand) {
                 return new Date(
                     prev.getFullYear(),
                     prev.getMonth(),
                     prev.getDate(),
-                    endOfDayBand?.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour,
-                    endOfDayBand?.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute,
-                    endOfDayBand?.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second,
+                    endOfDayBand.startDayTime?.hour ?? 0,
+                    endOfDayBand.startDayTime?.minute ?? 0,
+                    endOfDayBand.startDayTime?.second ?? 0,
                 );
             }
         }
@@ -212,9 +198,9 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             point.getFullYear(),
             point.getMonth(),
             point.getDate(),
-            applicableTimeband.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour,
-            applicableTimeband.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute,
-            applicableTimeband.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second,
+            applicableTimeband.startDayTime?.hour ?? 0,
+            applicableTimeband.startDayTime?.minute ?? 0,
+            applicableTimeband.startDayTime?.second ?? 0,
         );
     } else if (whitelistedDays) {
         let currentMin = startOfDay(point);
@@ -358,14 +344,16 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             i--;
         }
         return currentMin;
-    } else {
+    } else if (whitelistedYears) {
         let currentMin = startOfYear(point);
         let i: number = pointYear;
-        while (whitelistedYears?.has(i - 1)) {
+        while (whitelistedYears.has(i - 1)) {
             currentMin = startOfYear(subMonths(currentMin, 1));
             i--;
         }
         return currentMin;
+    } else {
+        throw new Error();
     }
 }
 
