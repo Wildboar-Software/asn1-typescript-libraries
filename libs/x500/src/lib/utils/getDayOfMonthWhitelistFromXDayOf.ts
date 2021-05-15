@@ -43,7 +43,7 @@ function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> 
         while (i < 7) {
             const a = subDays(lastDay, i);
             if (daysOfWeekWhitelist.has(getDay(a))) {
-                ret.add(a.getUTCDate());
+                ret.add(a.getDate());
             }
             i++;
         }
@@ -53,15 +53,15 @@ function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> 
         let i = 0;
         while ((d < daysInMonth) && (i < 7)) {
             const a = new Date(point);
-            a.setUTCDate(d);
+            a.setDate(d);
             if (daysOfWeekWhitelist.has(getDay(a))) {
                 ret.add(d);
             }
             d++;
             i++;
         }
-        return ret;
     }
+    return ret;
 }
 
 export default getDayOfMonthWhitelistFromXDayOf;
