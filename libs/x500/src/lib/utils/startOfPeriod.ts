@@ -2,10 +2,11 @@ import { TRUE_BIT } from "asn1-ts";
 import type {
     Period,
 } from "../modules/SelectedAttributeTypes/Period.ta";
-import type {
+import {
+    DayTime,
     DayTimeBand,
 } from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
-import { startOfDay, endOfMonth, addMonths, getWeekOfMonth, getWeek, subWeeks, startOfWeek, addDays, addWeeks, getDay, subDays, getDayOfYear, startOfYear, subYears, subMonths, getDaysInMonth, getDaysInYear, startOfMonth, addYears, endOfYear } from "date-fns";
+import { startOfDay, endOfMonth, addMonths, getWeekOfMonth, getWeek, subWeeks, startOfWeek, addDays, addWeeks, getDay, subDays, getDayOfYear, startOfYear, subYears, subMonths, getDaysInMonth, getDaysInYear, startOfMonth, addYears, endOfYear, endOfDay } from "date-fns";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand";
 
@@ -50,8 +51,6 @@ function destructurePoint (period: Period, point: Date): DestructuredPoint {
 
 // TODO: Check non-sense numbers (0, negative, or too large)
 // TODO: Check non-sense sets (13 months to a year, etc.)
-// TODO: Fix bitDay
-// TODO: Fix bitWeek
 
 /**
  * ### Assumptions
@@ -133,15 +132,15 @@ function startOfPeriod (period: Period, point: Date): Date | null {
 
     const startOfDayBand: DayTimeBand | undefined = period.timesOfDay
         ?.find((tod: DayTimeBand): boolean => (
-            (tod.startDayTime.hour === 0)
-            && (tod.startDayTime.minute === 0)
-            && (tod.startDayTime.second === 0)
+            ((tod.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour) === 0)
+            && ((tod.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute) === 0)
+            && ((tod.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second) === 0)
         ));
     const endOfDayBand: DayTimeBand | undefined = period.timesOfDay
         ?.find((tod: DayTimeBand): boolean => (
-            (tod.endDayTime.hour === 23)
-            && (tod.endDayTime.minute === 59)
-            && (tod.endDayTime.second === 59)
+            ((tod.endDayTime?.hour ?? DayTimeBand._default_value_for_endDayTime.hour) === 23)
+            && ((tod.endDayTime?.minute ?? DayTimeBand._default_value_for_endDayTime.minute) === 59)
+            && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second) === 59)
         ));
     const startOfDayPermitted = startOfDayBand ?? !period.timesOfDay;
     const endOfDayPermitted = endOfDayBand ?? !period.timesOfDay;
@@ -152,7 +151,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
         week: pointWeek,
         day: pointDay,
     } = destructurePoint(period, point);
-    const applicableTimeband: DayTimeBand = period.timesOfDay
+    const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
 
@@ -203,9 +202,9 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                     prev.getFullYear(),
                     prev.getMonth(),
                     prev.getDate(),
-                    endOfDayBand.startDayTime.hour,
-                    endOfDayBand.startDayTime.minute,
-                    endOfDayBand.startDayTime.second,
+                    endOfDayBand?.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour,
+                    endOfDayBand?.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute,
+                    endOfDayBand?.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second,
                 );
             }
         }
@@ -213,9 +212,9 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             point.getFullYear(),
             point.getMonth(),
             point.getDate(),
-            applicableTimeband.startDayTime.hour,
-            applicableTimeband.startDayTime.minute,
-            applicableTimeband.startDayTime.second,
+            applicableTimeband.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour,
+            applicableTimeband.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute,
+            applicableTimeband.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second,
         );
     } else if (whitelistedDays) {
         let currentMin = startOfDay(point);
@@ -267,7 +266,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                 i--;
             }
             return currentMin;
-        } else if (period.years) {
+        } else {
             const prev = subYears(currentMin, 1);
             const {
                 year: yesterYear,
@@ -282,23 +281,11 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                 i--;
             }
             return currentMin;
-        } else {
-            throw new Error();
         }
     } else if (whitelistedWeeks) {
         let currentMin = period.months
             ? addWeeks(startOfMonth(point), (pointWeek - 1))
             : addWeeks(startOfYear(point), (pointWeek - 1));
-        /**
-         * This can happen because week 5 can cause February (a short month) to
-         * loop around to the next month. If this happens, we want the current
-         * minimum to be the end of the month minus one week.
-         */
-        if (currentMin.getFullYear() > point.getFullYear()) {
-            currentMin = subWeeks(endOfYear(subMonths(currentMin, 1)), 1);
-        } else if (currentMin.getMonth() > point.getMonth()) {
-            currentMin = subWeeks(endOfMonth(subMonths(currentMin, 1)), 1);
-        }
         // Look for the smallest of the contiguous days, looping back if
         let i: number = pointWeek;
         while (whitelistedWeeks.has(i - 1)) { // We need to check for rollover.
@@ -367,20 +354,18 @@ function startOfPeriod (period: Period, point: Date): Date | null {
         }
         i = MAX_MONTH;
         while (whitelistedMonths.has(i)) {
-            currentMin = addMonths(startOfYear(yesterYear), (i - 1));
-            i--;
-        }
-        return currentMin;
-    } else if (whitelistedYears) {
-        let currentMin = startOfYear(point);
-        let i: number = pointYear;
-        while (whitelistedYears.has(i - 1)) {
-            currentMin = startOfYear(subMonths(currentMin, 1));
+            currentMin = addMonths(startOfYear(prev), (i - 1));
             i--;
         }
         return currentMin;
     } else {
-        throw new Error();
+        let currentMin = startOfYear(point);
+        let i: number = pointYear;
+        while (whitelistedYears?.has(i - 1)) {
+            currentMin = startOfYear(subMonths(currentMin, 1));
+            i--;
+        }
+        return currentMin;
     }
 }
 

@@ -7,6 +7,9 @@
   - [ ] Context Matching
     - [x] languageContext
     - [ ] temporalContext
+      - [ ] `startOfPeriod()`
+      - [ ] `endOfPeriod()`
+      - [ ] `periodAtPoint()`
     - [x] localeContext
     - [x] ldapAttributeOptionContext
   - [x] Matching Rules

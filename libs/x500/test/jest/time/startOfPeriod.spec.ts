@@ -712,7 +712,7 @@ describe("startOfPeriod()", () => {
             undefined,
             undefined,
             {
-                bitMonth: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT ]), // Jan and Feb.
+                bitMonth: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Jan and Feb.
             },
             [ 2016 ],
         );
@@ -736,7 +736,7 @@ describe("startOfPeriod()", () => {
             undefined,
             undefined,
             {
-                bitWeek: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT ]),
+                bitWeek: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, FALSE_BIT ]),
             },
             {
                 allMonths: null,
@@ -762,7 +762,7 @@ describe("startOfPeriod()", () => {
         const p = new Period(
             undefined,
             {
-                bitDay: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT ]), // Sunday and Monday
+                bitDay: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Sunday and Monday
             },
             {
                 allWeeks: null,
@@ -932,6 +932,29 @@ describe("startOfPeriod()", () => {
         expect(s.getSeconds()).toBe(59);
     });
 
+    it("rolls back to the beginning of a span of weeks that partially spans two months", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 1, 2, 4, 5 ],
+            },
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(3);
+        expect(s.getDate()).toBe(22);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
     it("rolls back to the beginning of a span of weeks that partially spans two years", () => {
         const p = new Period(
             undefined,
@@ -953,30 +976,164 @@ describe("startOfPeriod()", () => {
         expect(s.getSeconds()).toBe(0);
     });
 
-    // it("rolls back to the beginning of a span of weeks that partially spans two months", () => {
-    //     const p = new Period(
-    //         undefined,
-    //         undefined,
-    //         {
-    //             intWeek: [ 1, 5 ],
-    //         },
-    //         {
-    //             allMonths: null,
-    //         },
-    //         [ 2021 ],
-    //     );
-    //     const d = new Date(2021, 4, 3, 12, 34, 56);
-    //     const s = startOfPeriod(p, d);
-    //     console.log(s);
-    //     expect(s).not.toBeNull();
-    //     expect(s.getFullYear()).toBe(2021);
-    //     expect(s.getMonth()).toBe(3);
-    //     expect(s.getDate()).toBe(23);
-    //     expect(s.getHours()).toBe(0);
-    //     expect(s.getMinutes()).toBe(0);
-    //     expect(s.getSeconds()).toBe(0);
-    // });
+    it("rolls back to the beginning of a span of months that partially spans two years", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            undefined,
+            {
+                intMonth: [ 1, 2, 11, 12 ],
+            },
+            [ 2020, 2021 ],
+        );
+        const d = new Date(2021, 1, 3, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2020);
+        expect(s.getMonth()).toBe(10);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
 
+    it("rolls back to the beginning of a span of weeks that does NOT partially span two months", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 1, 2, 4, 5 ],
+            },
+            {
+                intMonth: [ 5 ],
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
+    it("rolls back to the beginning of a span of weeks that does NOT partially span two years", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 1, 2, 52, 53 ],
+            },
+            undefined,
+            [ 2021 ],
+        );
+        const d = new Date(2021, 0, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
+    it("rolls back to the beginning of a span of days that does NOT partially span two years", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 365, 366 ],
+            },
+            undefined,
+            undefined,
+            [ 2021 ],
+        );
+        const d = new Date(2021, 0, 1, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
+    it("rolls back to the beginning of a span of days that does NOT partially span two months", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 30, 31 ],
+            },
+            undefined,
+            {
+                intMonth: [ 5 ],
+            },
+            undefined,
+        );
+        const d = new Date(2021, 4, 1, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
+    it("rolls back to the beginning of a span of days that does NOT partially span two weeks", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 2, 6, 7 ],
+            },
+            {
+                intWeek: [ 2 ],
+            },
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(9);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
+
+    it("corrects 5-week overflow into next year", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 2, 6, 7 ],
+            },
+            {
+                intWeek: [ 2 ],
+            },
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 11, 10, 12, 34, 56);
+        const s = startOfPeriod(p, d);
+        expect(s).not.toBeNull();
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(9);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+    });
 
     test.todo("Test dayOf without months specified...");
 });
