@@ -1243,6 +1243,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of weeks that partially spans two years", () => {
@@ -1265,6 +1272,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(8);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of months that partially spans two years", () => {
@@ -1287,6 +1301,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(28);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of weeks that does NOT partially span two months", () => {
@@ -1311,6 +1332,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of weeks that does NOT partially "
@@ -1336,6 +1364,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of weeks that does NOT partially span two years", () => {
@@ -1358,6 +1393,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of days that does NOT partially span two years", () => {
@@ -1380,13 +1422,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(1);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of days that does NOT partially span two months", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 1, 30, 31 ],
+                intDay: [ 1, 2, 30, 31 ],
             },
             undefined,
             {
@@ -1404,13 +1453,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(2);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of days that does NOT partially span two weeks", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 1, 2, 6, 7 ],
+                intDay: [ 1, 2, 3, 6, 7 ],
             },
             {
                 intWeek: [ 2 ],
@@ -1430,6 +1486,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(11);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("defaults daytime start times correctly", () => {
