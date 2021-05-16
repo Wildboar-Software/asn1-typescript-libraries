@@ -6,9 +6,24 @@ import {
     DayTime,
     DayTimeBand,
 } from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
-import { startOfDay, endOfMonth, addMonths, getWeekOfMonth, getWeek, subWeeks, startOfWeek, addDays, addWeeks, getDay, subDays, getDayOfYear, startOfYear, subYears, subMonths, getDaysInMonth, getDaysInYear, startOfMonth, addYears, endOfYear, endOfDay } from "date-fns";
+import {
+    startOfDay,
+    endOfMonth,
+    addMonths,
+    subWeeks,
+    addWeeks,
+    subDays,
+    startOfYear,
+    subYears,
+    subMonths,
+    getDaysInMonth,
+    getDaysInYear,
+    startOfMonth,
+} from "date-fns";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand";
+import validatePeriod from "./validatePeriod";
+import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties";
 
 const MAX_DAY_OF_WEEK = 7;
 const MAX_WEEK_OF_YEAR = 53;
@@ -17,53 +32,51 @@ const ALL_WEEKS_IN_YEAR: Set<number> = new Set(Array(53).fill(0).map((_, i) => (
 const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);
 const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]);
 
-interface DestructuredPoint {
-    year: number,
-    month: number,
-    week: number,
-    day: number,
-}
-
-function destructurePoint (period: Period, point: Date): DestructuredPoint {
-    const year: number = point.getFullYear();
-    const month: number = point.getMonth() + 1;
-    const week: number = (period.months)
-        ? Math.ceil(point.getDate() / 7)
-        : Math.ceil(getDayOfYear(point) / 7);
-    const day: number = ((): number => {
-        if (period.weeks) {
-            return getDay(point) + 1;
-        } else if (period.months) {
-            return point.getDate();
-        } else {
-            return getDayOfYear(point);
-        }
-    })();
-    return {
-        year,
-        month,
-        week,
-        day,
-    };
-}
-
 /**
  * ### Assumptions
  *
  * - Not all possible values for a given unit of precision in a `Period` are specified.
  * - `DayTimeBand`s do not overlap.
+ * - `DayTimeBand`s are not adjacent (other than at minima and maxima)
  *
- * @param period
- * @param point
- * @returns
+ * ### Algorithm
+ *
+ * 1. Validation.
+ * 2. Decode the `Period`'s properties into `Set`s of `number`s.
+ * 3. Determine if the point in time falls within any occurrence of the period
+ *    at all.
+ * 4. Set the point in time to the current minimum; this number will serve as
+ *    the currently identified lowest we can go while still staying within the
+ *    bounds of an occurrence of the period.
+ * 5. We _assume_ that all values for a given unit (e.g. values 1 through 12 for
+ *    `months`) are not present (why even specify it if so?). Given this
+ *    assumption, it would not be possible to advance more than 1 unit of the
+ *    next most coarse denomination of time, which means that the most precise
+ *    denomination of time will define the lower bound of the occurrence.
+ * 6. With the most precise denomination identified, iterate downwards through
+ *    its possible values, updating the current lower bound until the next value
+ *    is not permitted.
+ * 7. If this countdown results in us reaching 1 for the most precise
+ *    denomination of time, we have to keep going, because the span may still be
+ *    contiguous into a lower value of a coarser denomination. For instance, if
+ *    months 1, 2 and 12 are permitted for all years, and `point` has a month of
+ *    2, the occurrence of the period really begins on month 12 of the previous
+ *    year. To perform this "rolling back," we check if this "rolled-back" value
+ *    still satisfies all of the constraints of the `Period`. If it does, we
+ *    continue counting down through the previous day / week / month / year.
+ *
+ * @param period {Period} The `Period` data structure that defines the period itself.
+ * @param point {Date} The point in time used to select an occurence of the `Period`
+ * @returns {Date | null} A `Date` whose value is the lower bound of the
+ *  period's occurrence if the point in time falls within the bounds of an
+ *  occurrence or `null` if it does not fall within the bounds of any occurrence.
  */
 export
 function startOfPeriod (period: Period, point: Date): Date | null {
 
-    // TODO: Check non-sense numbers (0, negative, or too large)
-    // TODO: Check non-sense sets (13 months to a year, etc.)
-    // TODO: Check for days with no coarser units
-    // TODO: Check for weeks with no coarser units
+    if (!validatePeriod(period)) {
+        throw new Error();
+    }
 
     const whitelistedYears: Set<number> | null = period.years
         ? new Set(period.years)
@@ -148,7 +161,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
         month: pointMonth,
         week: pointWeek,
         day: pointDay,
-    } = destructurePoint(period, point);
+    } = destructureDateIntoPeriodProperties(period, point);
     const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
@@ -176,7 +189,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                 month: yesterMonth,
                 week: yesterWeek,
                 day: yesterDay,
-            } = destructurePoint(period, prev);
+            } = destructureDateIntoPeriodProperties(period, prev);
             const previousDayIsPermitted = (
                 (!whitelistedDays || whitelistedDays.has(yesterDay))
                 && (!whitelistedWeeks || whitelistedWeeks.has(yesterWeek))
@@ -218,7 +231,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
                 year: yesterYear,
                 month: yesterMonth,
                 week: yesterWeek,
-            } = destructurePoint(period, prev);
+            } = destructureDateIntoPeriodProperties(period, prev);
             const previousWeekPermitted = (
                 (!whitelistedWeeks || whitelistedWeeks.has(yesterWeek))
                 && (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
@@ -238,7 +251,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             const {
                 year: yesterYear,
                 month: yesterMonth,
-            } = destructurePoint(period, prev);
+            } = destructureDateIntoPeriodProperties(period, prev);
             const previousMonthPermitted = (
                 (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
                 && (!whitelistedYears || whitelistedYears.has(yesterYear))
@@ -256,7 +269,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             const prev = subYears(currentMin, 1);
             const {
                 year: yesterYear,
-            } = destructurePoint(period, prev);
+            } = destructureDateIntoPeriodProperties(period, prev);
             const previousYearPermitted = (!whitelistedYears || whitelistedYears.has(yesterYear));
             if (!previousYearPermitted) {
                 return currentMin;
@@ -272,7 +285,6 @@ function startOfPeriod (period: Period, point: Date): Date | null {
         let currentMin = period.months
             ? addWeeks(startOfMonth(point), (pointWeek - 1))
             : addWeeks(startOfYear(point), (pointWeek - 1));
-        // Look for the smallest of the contiguous days, looping back if
         let i: number = pointWeek;
         while (whitelistedWeeks.has(i - 1)) { // We need to check for rollover.
             currentMin = subWeeks(currentMin, 1);
@@ -286,7 +298,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             const {
                 year: yesterYear,
                 month: yesterMonth,
-            } = destructurePoint(period, prev);
+            } = destructureDateIntoPeriodProperties(period, prev);
             const previousMonthPermitted = (
                 (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
                 && (!whitelistedYears || whitelistedYears.has(yesterYear))
@@ -308,7 +320,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             return currentMin;
         } else if (period.years) {
             const prev = subYears(currentMin, 1);
-            const { year: yesterYear } = destructurePoint(period, prev);
+            const { year: yesterYear } = destructureDateIntoPeriodProperties(period, prev);
             const previousYearPermitted = (!whitelistedYears || whitelistedYears.has(yesterYear));
             if (!previousYearPermitted) {
                 return currentMin;
@@ -333,7 +345,7 @@ function startOfPeriod (period: Period, point: Date): Date | null {
             return currentMin;
         }
         const prev = subMonths(currentMin, 1);
-        const { year: yesterYear } = destructurePoint(period, prev);
+        const { year: yesterYear } = destructureDateIntoPeriodProperties(period, prev);
         const previousYearPermitted = (!whitelistedYears || whitelistedYears.has(yesterYear));
         if (!previousYearPermitted) {
             return currentMin;

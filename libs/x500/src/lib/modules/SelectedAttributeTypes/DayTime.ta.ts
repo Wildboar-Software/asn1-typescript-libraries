@@ -50,7 +50,30 @@ export class DayTime {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (
+            !Number.isSafeInteger(this.hour)
+            || ((this.minute !== undefined) && !Number.isSafeInteger(this.minute))
+            || ((this.second !== undefined) && !Number.isSafeInteger(this.second))
+            || (this.hour < 0)
+            || (this.hour > 23)
+            || ((this.minute ?? 0) < 0)
+            || ((this.minute ?? 0) > 59)
+            || ((this.second ?? 0) < 0)
+            || ((this.second ?? 0) > 59)
+        ) {
+            console.log("1:", !Number.isSafeInteger(this.hour));
+            // console.log("2:", !Number.isSafeInteger(this.minute));
+            // console.log("3:", !Number.isSafeInteger(this.second));
+            // console.log("4:", (this.hour < 0));
+            // console.log("5:", (this.hour > 23));
+            // console.log("6:", ((this.minute ?? 0) < 0));
+            // console.log("7:", ((this.minute ?? 0) > 59));
+            // console.log("8:", ((this.second ?? 0) < 0));
+            // console.log("9:", ((this.second ?? 0) > 59));
+            throw new Error();
+        }
+    }
 
     /**
      * @summary Restructures an object into a DayTime
