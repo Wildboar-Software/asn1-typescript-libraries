@@ -10,6 +10,7 @@
       - [ ] `startOfPeriod()`
       - [ ] `endOfPeriod()`
       - [ ] `periodAtPoint()`
+      - [ ] Document treatment of time zones
     - [x] localeContext
     - [x] ldapAttributeOptionContext
   - [x] Matching Rules

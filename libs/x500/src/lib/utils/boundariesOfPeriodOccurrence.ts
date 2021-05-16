@@ -238,6 +238,15 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     endOfDayBand.startDayTime?.minute ?? 0,
                     endOfDayBand.startDayTime?.second ?? 0,
                 );
+            } else {
+                min = new Date(
+                    point.getFullYear(),
+                    point.getMonth(),
+                    point.getDate(),
+                    applicableTimeband.startDayTime?.hour ?? 0,
+                    applicableTimeband.startDayTime?.minute ?? 0,
+                    applicableTimeband.startDayTime?.second ?? 0,
+                );
             }
         } else {
             min = new Date(
@@ -258,20 +267,29 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 week: nextWeek,
                 day: nextDay,
             } = destructureDateIntoPeriodProperties(period, next);
-            const previousDayIsPermitted = (
-                (!whitelistedDays || whitelistedDays.has(nextYear))
+            const nextDayIsPermitted = (
+                (!whitelistedDays || whitelistedDays.has(nextDay))
                 && (!whitelistedWeeks || whitelistedWeeks.has(nextWeek))
                 && (!whitelistedMonths || whitelistedMonths.has(nextMonth))
-                && (!whitelistedYears || whitelistedYears.has(nextDay))
+                && (!whitelistedYears || whitelistedYears.has(nextYear))
             );
-            if (previousDayIsPermitted && endOfDayBand) {
+            if (nextDayIsPermitted && startOfDayBand) {
                 max = new Date(
                     next.getFullYear(),
                     next.getMonth(),
                     next.getDate(),
-                    endOfDayBand.endDayTime?.hour ?? 23,
-                    endOfDayBand.endDayTime?.minute ?? 59,
-                    endOfDayBand.endDayTime?.second ?? 59,
+                    startOfDayBand.endDayTime?.hour ?? 23,
+                    startOfDayBand.endDayTime?.minute ?? 59,
+                    startOfDayBand.endDayTime?.second ?? 59,
+                );
+            } else {
+                max = new Date(
+                    point.getFullYear(),
+                    point.getMonth(),
+                    point.getDate(),
+                    applicableTimeband.endDayTime?.hour ?? 23,
+                    applicableTimeband.endDayTime?.minute ?? 59,
+                    applicableTimeband.endDayTime?.second ?? 59,
                 );
             }
         } else {

@@ -263,7 +263,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of years if there is a month selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of years if there is a month selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -271,7 +271,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
             {
                 intMonth: [ 6 ],
             },
-            [ 2015, 2016 ],
+            [ 2015, 2016, 2017 ],
         );
         const d = new Date(2016, 5, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
@@ -283,9 +283,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(5);
+        expect(e.getDate()).toBe(30);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of years if there is a week selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of years if there is a week selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -293,7 +300,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
                 intWeek: [ 2 ],
             },
             undefined,
-            [ 2015, 2016 ],
+            [ 2015, 2016, 2017 ],
         );
         const d = new Date(2016, 0, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
@@ -305,13 +312,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
-    it("does not return the lowest of a contiguous span of years if there is a day selected that will break it", () => {
+    it("does not return the lowest of a contiguous span of years if there is a day selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 12, 11, 10 ],
+                intDay: [ 10, 11, 12, 13, 14 ],
             },
             undefined,
             undefined,
@@ -327,9 +341,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(14);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of years if there is a time of day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of years if there is a time of day selected that will break the continuity", () => {
         const p = new Period(
             [
                 GENERIC_DAY_TIME_BAND,
@@ -349,17 +370,24 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(12);
         expect(s.getMinutes()).toBe(34);
         expect(s.getSeconds()).toBe(56);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(12);
+        expect(e.getHours()).toBe(15);
+        expect(e.getMinutes()).toBe(13);
+        expect(e.getSeconds()).toBe(11);
     });
 
-    it("does not return the lowest of a contiguous span of months if there is a week selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of months if there is a week of the month selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             undefined,
             {
-                intWeek: [ 1, 2, 3 ],
+                intWeek: [ 2, 3 ],
             },
             {
-                intMonth: [ 5, 6 ],
+                intMonth: [ 5, 6, 7 ],
             },
             undefined,
         );
@@ -369,21 +397,28 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
-        expect(s.getDate()).toBe(1);
+        expect(s.getDate()).toBe(8);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(5);
+        expect(e.getDate()).toBe(22);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
-    it("does not return the lowest of a contiguous span of months if there is a day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of months if there is a day selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 15, 14, 13 ],
+                intDay: [ 13, 14, 15, 16, 17 ],
             },
             undefined,
             {
-                intMonth: [ 5, 6 ],
+                intMonth: [ 5, 6, 7 ],
             },
             undefined,
         );
@@ -397,9 +432,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(5);
+        expect(e.getDate()).toBe(17);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of months if there is a time of day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of months if there is a time of day selected that will break the continuity", () => {
         const p = new Period(
             [
                 GENERIC_DAY_TIME_BAND,
@@ -407,7 +449,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
             undefined,
             undefined,
             {
-                intMonth: [ 5, 6 ],
+                intMonth: [ 5, 6, 7 ],
             },
             undefined,
         );
@@ -421,15 +463,22 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(12);
         expect(s.getMinutes()).toBe(34);
         expect(s.getSeconds()).toBe(56);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(5);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(15);
+        expect(e.getMinutes()).toBe(13);
+        expect(e.getSeconds()).toBe(11);
     });
 
     // TODO: What if weeks are the coarsest unit?
 
-    it("does not return the lowest of a contiguous span of weeks of the month if there is a day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of weeks of the month if there is a day selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 5, 6, 7 ],
+                intDay: [ 3, 4, 5, 6, 7 ],
             },
             {
                 intWeek: [ 1, 2 ],
@@ -439,23 +488,30 @@ describe("boundariesOfPeriodOccurrence()", () => {
             },
             undefined,
         );
-        const d = new Date(2021, 5, 12, 12, 34, 56);
+        const d = new Date(2021, 5, 10, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
         const [ s, e ] = r;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(5);
-        expect(s.getDate()).toBe(10);
+        expect(s.getDate()).toBe(8);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(5);
+        expect(e.getDate()).toBe(12);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of weeks of the year if there is a day selected that will break it", () => {
+    it("does not return the lowest of a contiguous span of weeks of the year if there is a day selected that will break the continuity", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 2, 3 ],
+                intDay: [ 2, 3, 4 ],
             },
             {
                 intWeek: [ 1, 2 ],
@@ -473,15 +529,22 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(13);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("does not return the lowest of a contiguous span of days of the year if there is a time of day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of days of the year if there is a time of day selected that will break the continuity", () => {
         const p = new Period(
             [
                 GENERIC_DAY_TIME_BAND,
             ],
             {
-                intDay: [ 4, 5, 6 ],
+                intDay: [ 4, 5, 6, 7 ],
             },
             undefined,
             undefined,
@@ -497,15 +560,22 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(12);
         expect(s.getMinutes()).toBe(34);
         expect(s.getSeconds()).toBe(56);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(6);
+        expect(e.getHours()).toBe(15);
+        expect(e.getMinutes()).toBe(13);
+        expect(e.getSeconds()).toBe(11);
     });
 
-    it("does not return the lowest of a contiguous span of days of the month if there is a time of day selected that will break it", () => {
+    it("does not return the bounds of a contiguous span of days of the month if there is a time of day selected that will break the continuity", () => {
         const p = new Period(
             [
                 GENERIC_DAY_TIME_BAND,
             ],
             {
-                intDay: [ 4, 5, 6 ],
+                intDay: [ 4, 5, 6, 7, 8 ],
             },
             undefined,
             {
@@ -523,9 +593,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(12);
         expect(s.getMinutes()).toBe(34);
         expect(s.getSeconds()).toBe(56);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(6);
+        expect(e.getHours()).toBe(15);
+        expect(e.getMinutes()).toBe(13);
+        expect(e.getSeconds()).toBe(11);
     });
 
-    it("does not return the lowest of a contiguous span of days of the week if there is a time of day selected that will break it", () => {
+    it("does not return the lowest of a contiguous span of days of the week if there is a time of day selected that will break the continuity", () => {
         const p = new Period(
             [
                 GENERIC_DAY_TIME_BAND,
@@ -551,6 +628,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(12);
         expect(s.getMinutes()).toBe(34);
         expect(s.getSeconds()).toBe(56);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(6);
+        expect(e.getHours()).toBe(15);
+        expect(e.getMinutes()).toBe(13);
+        expect(e.getSeconds()).toBe(11);
     });
 
     it("throws when encountering an unrecognized month format", () => {
@@ -741,6 +825,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(14);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+
         const nonMatch = new Date(2021, 4, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, nonMatch);
         expect(s2).toBeNull();
@@ -756,7 +847,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
                             FALSE_BIT,
                             FALSE_BIT,
                             FALSE_BIT,
-                            FALSE_BIT,
+                            TRUE_BIT, // Wednesday
                             TRUE_BIT, // Thursday
                             TRUE_BIT, // Friday
                             FALSE_BIT,
@@ -770,16 +861,23 @@ describe("boundariesOfPeriodOccurrence()", () => {
             },
             undefined,
         );
-        const d = new Date(2021, 4, 14, 12, 34, 56);
+        const d = new Date(2021, 4, 13, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
         const [ s, e ] = r;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(13);
+        expect(s.getDate()).toBe(12);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(14);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
 
         const nonMatch = new Date(2021, 4, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, nonMatch);
@@ -792,7 +890,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
             undefined,
             undefined,
             {
-                bitMonth: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Jan and Feb.
+                bitMonth: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Jan, Feb, and Mar
             },
             [ 2016 ],
         );
@@ -806,6 +904,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(2);
+        expect(e.getDate()).toBe(31);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
 
         const d2 = new Date(2016, 4, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, d2);
@@ -835,6 +940,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+
         const d2 = new Date(2016, 1, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, d2);
         expect(s2).toBeNull();
@@ -844,7 +956,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const p = new Period(
             undefined,
             {
-                bitDay: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Sunday and Monday
+                bitDay: new Uint8ClampedArray([ TRUE_BIT, TRUE_BIT, TRUE_BIT, FALSE_BIT ]), // Sunday, Monday, and Tuesday
             },
             {
                 allWeeks: null,
@@ -865,7 +977,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
-        const d2 = new Date(2021, 4, 18, 12, 34, 56);
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(18);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+
+        const d2 = new Date(2021, 4, 19, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, d2);
         expect(s2).toBeNull();
     });
@@ -918,10 +1037,18 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
+        console.log(e.toLocaleString());
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(17);
+        expect(e.getHours()).toBe(16);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+
         const p2 = new Period(
             [
                 new DayTimeBand( // Starts the day
-                    undefined,
+                    undefined, // Testing defaulting
                     new DayTime(
                         16,
                         0,
@@ -934,7 +1061,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
                         0,
                         0,
                     ),
-                    undefined,
+                    undefined, // Testing defaulting
                 ),
             ],
             {
@@ -956,13 +1083,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s2.getHours()).toBe(18);
         expect(s2.getMinutes()).toBe(0);
         expect(s2.getSeconds()).toBe(0);
+
+        expect(e2.getFullYear()).toBe(2021);
+        expect(e2.getMonth()).toBe(4);
+        expect(e2.getDate()).toBe(17);
+        expect(e2.getHours()).toBe(16);
+        expect(e2.getMinutes()).toBe(0);
+        expect(e2.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of days that partially spans two years", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 1, 365, 366 ],
+                intDay: [ 1, 2, 365, 366 ],
             },
             undefined,
             undefined,
@@ -978,13 +1112,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(2);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of days that partially spans two months", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 1, 30, 31 ],
+                intDay: [ 1, 2, 30, 31 ],
             },
             undefined,
             {
@@ -1002,13 +1143,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(2);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of days that partially spans two weeks", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 1, 6, 7 ],
+                intDay: [ 1, 2, 6, 7 ],
             },
             {
                 allWeeks: null,
@@ -1028,6 +1176,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(17);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("rolls back to the beginning of a span of weeks that partially spans two months", () => {
@@ -1035,7 +1190,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
             undefined,
             undefined,
             {
-                intWeek: [ 1, 5 ],
+                intWeek: [ 1, 2, 5 ],
             },
             {
                 allMonths: null,
@@ -1057,6 +1212,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(23);
         expect(s.getMinutes()).toBe(59);
         expect(s.getSeconds()).toBe(59);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
     it("rolls back to the beginning of a span of weeks that partially spans two months", () => {

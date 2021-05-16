@@ -25,7 +25,7 @@ function getDaysOfWeekWhitelist (nd: NamedDay): Set<number> {
         return new Set([ (nd.intNamedDays - 1) ]);
     } else {
         return new Set(
-            nd.bitNamedDays
+            Array.from(nd.bitNamedDays)
                 .map((b: number, i: number): number => (b === TRUE_BIT) ? i : -1)
                 .filter((d: number): boolean => (d > -1))
         );
@@ -41,7 +41,7 @@ function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> 
         const lastDay = lastDayOfMonth(point);
         let i = 0;
         while (i < 7) {
-            const a = subDays(lastDay, i);
+            const a: Date = subDays(lastDay, i);
             if (daysOfWeekWhitelist.has(getDay(a))) {
                 ret.add(a.getDate());
             }
@@ -52,7 +52,7 @@ function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> 
         let d = (((occurrence - 1) * 7) + 1);
         let i = 0;
         while ((d < daysInMonth) && (i < 7)) {
-            const a = new Date(point);
+            const a: Date = new Date(point);
             a.setDate(d);
             if (daysOfWeekWhitelist.has(getDay(a))) {
                 ret.add(d);
