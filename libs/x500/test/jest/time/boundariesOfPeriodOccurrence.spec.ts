@@ -44,18 +44,25 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(11);
+        expect(e.getDate()).toBe(31);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+
         const d2 = new Date(2017, 6, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, d2);
         expect(s2).toBeNull();
     });
 
-    it("returns the lowest of a contiguous span of years", () => {
+    it("returns the bounds of a contiguous span of years", () => {
         const p = new Period(
             undefined,
             undefined,
             undefined,
             undefined,
-            [ 2015, 2016 ],
+            [ 2015, 2016, 2017 ],
         );
         const d = new Date(2016, 6, 15, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
@@ -67,15 +74,22 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2017);
+        expect(e.getMonth()).toBe(11);
+        expect(e.getDate()).toBe(31);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("returns the lowest of a contiguous span of months", () => {
+    it("returns the bounds of a contiguous span of months", () => {
         const p = new Period(
             undefined,
             undefined,
             undefined,
             {
-                intMonth: [ 3, 4, 5, 6, 7 ],
+                intMonth: [ 3, 4, 5, 6, 7, 8, 9 ],
             },
             undefined,
         );
@@ -89,9 +103,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(8);
+        expect(e.getDate()).toBe(30);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("returns the lowest of a contiguous span of weeks of the year", () => {
+    it("returns the bounds of a contiguous span of weeks of the year", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -111,9 +132,16 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
-    it("returns the lowest of a contiguous span of weeks of the month", () => {
+    it("returns the bounds of a contiguous span of weeks of the month", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -135,13 +163,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(3);
+        expect(e.getDate()).toBe(22);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
     });
 
-    it("returns the lowest of a contiguous span of days of the year", () => {
+    it("returns the bounds of a contiguous span of days of the year", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 16, 17, 18 ]
+                intDay: [ 16, 17, 18, 19, 20 ]
             },
             undefined,
             undefined,
@@ -157,13 +192,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(20);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("returns the lowest of a contiguous span of days of the month", () => {
+    it("returns the bounds of a contiguous span of days of the month", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 16, 17, 18 ]
+                intDay: [ 16, 17, 18, 19, 20 ]
             },
             undefined,
             {
@@ -181,13 +223,20 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(3);
+        expect(e.getDate()).toBe(20);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
-    it("returns the lowest of a contiguous span of days of the week", () => {
+    it("returns the bounds of a contiguous span of days of the week", () => {
         const p = new Period(
             undefined,
             {
-                intDay: [ 4, 5, 6 ], // Wed, Thu, Fri
+                intDay: [ 4, 5, 6, 7 ],
             },
             {
                 allWeeks: null,
@@ -205,6 +254,13 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(16);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
     });
 
     it("does not return the lowest of a contiguous span of years if there is a month selected that will break it", () => {
@@ -1019,7 +1075,6 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
         const [ s, e ] = r;
-        console.log(s.toLocaleDateString());
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
         expect(s.getDate()).toBe(22);

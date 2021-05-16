@@ -37,6 +37,16 @@ const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);
 const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]);
 
 /**
+ * ### Architecture
+ *
+ * This function used to be split into two functions: `startOfPeriod()` and
+ * `endOfPeriod()`, but it was merged into one, because there is a somewhat
+ * large overhead before the function actually begins traversing the timespan,
+ * and because you usually want the end of the period whenever you want the
+ * start of the period, anyway.
+ *
+ * This function returns bounds that may be inaccurate by one second.
+ *
  * ### Assumptions
  *
  * - Not all possible values for a given unit of precision in a `Period` are specified.
@@ -44,6 +54,11 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  * - `DayTimeBand`s are not adjacent (other than at minima and maxima)
  *
  * ### Algorithm
+ *
+ * For simplicity, the following will describe only the algorithm for
+ * determining the lower bound of an occurrence of a period, since finding the
+ * upper bound will be essentially the same, except we increment instead of
+ * decrement.
  *
  * 1. Validation.
  * 2. Decode the `Period`'s properties into `Set`s of `number`s.
