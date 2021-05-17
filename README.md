@@ -11,6 +11,7 @@
       - [ ] `endOfPeriod()`
       - [ ] `periodAtPoint()`
       - [ ] Document treatment of time zones
+      - [ ] Assertions
     - [x] localeContext
     - [x] ldapAttributeOptionContext
   - [x] Matching Rules

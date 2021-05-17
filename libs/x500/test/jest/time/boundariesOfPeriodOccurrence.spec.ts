@@ -257,7 +257,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(4);
-        expect(e.getDate()).toBe(16);
+        expect(e.getDate()).toBe(15);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1037,7 +1037,6 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
-        console.log(e.toLocaleString());
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(4);
         expect(e.getDate()).toBe(17);
@@ -1482,7 +1481,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(9);
+        expect(s.getDate()).toBe(7);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
@@ -1580,4 +1579,354 @@ describe("boundariesOfPeriodOccurrence()", () => {
     });
 
     test.todo("Test dayOf without months specified...");
+
+    it("rolls forward to the end of a timespan that spans midnight", () => {
+        const p = new Period(
+            [
+                new DayTimeBand( // Starts the day
+                    new DayTime(
+                        0,
+                        0,
+                        0,
+                    ),
+                    new DayTime(
+                        16,
+                        0,
+                        0,
+                    ),
+                ),
+                new DayTimeBand( // Ends the day
+                    new DayTime(
+                        18,
+                        0,
+                        0,
+                    ),
+                    new DayTime(
+                        23,
+                        59,
+                        59,
+                    ),
+                ),
+            ],
+            {
+                intDay: [ 17, 18 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 17, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(17);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(18);
+        expect(e.getHours()).toBe(16);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+
+        const p2 = new Period(
+            [
+                new DayTimeBand( // Starts the day
+                    undefined, // Testing defaulting
+                    new DayTime(
+                        16,
+                        0,
+                        0,
+                    ),
+                ),
+                new DayTimeBand( // Ends the day
+                    new DayTime(
+                        18,
+                        0,
+                        0,
+                    ),
+                    undefined, // Testing defaulting
+                ),
+            ],
+            {
+                intDay: [ 17, 18 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d2 = new Date(2021, 4, 17, 12, 34, 56);
+        const r2 = boundariesOfPeriodOccurrence(p2, d2);
+        expect(r2).not.toBeNull();
+        const [ s2, e2 ] = r2;
+        expect(s2.getFullYear()).toBe(2021);
+        expect(s2.getMonth()).toBe(4);
+        expect(s2.getDate()).toBe(17);
+        expect(s2.getHours()).toBe(0);
+        expect(s2.getMinutes()).toBe(0);
+        expect(s2.getSeconds()).toBe(0);
+
+        expect(e2.getFullYear()).toBe(2021);
+        expect(e2.getMonth()).toBe(4);
+        expect(e2.getDate()).toBe(18);
+        expect(e2.getHours()).toBe(16);
+        expect(e2.getMinutes()).toBe(0);
+        expect(e2.getSeconds()).toBe(0);
+    });
+
+    it("carries over to the next day of the week if the next week is supported", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 2, 6, 7 ],
+            },
+            {
+                allWeeks: null,
+            },
+            undefined,
+            undefined,
+        );
+        const d = new Date(2021, 4, 14, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(4);
+        expect(s.getDate()).toBe(14);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(4);
+        expect(e.getDate()).toBe(17);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("carries over to the next day of the month if the next month is supported", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 31, 1, 2 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            undefined,
+        );
+        const d = new Date(2016, 0, 31, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2016);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(31);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2016);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(2);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("carries over to the next day of the year if the next year is supported", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 365, 366, 1, 2 ],
+            },
+            undefined,
+            undefined,
+            [ 2021, 2022 ],
+        );
+        const d = new Date(2021, 11, 31, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(11);
+        expect(s.getDate()).toBe(31);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2022);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(2);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("carries over to the next week of the month if the next month is supported", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 4, 5, 1 ],
+            },
+            {
+                allMonths: null,
+            },
+            undefined,
+        );
+        const d = new Date(2021, 0, 28, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(22);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(8);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+    });
+
+    it("carries over to the next week of the year if the next year is supported", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            {
+                intWeek: [ 52, 53, 1, 2 ],
+            },
+            undefined,
+            [ 2021, 2022 ],
+        );
+        const d = new Date(2021, 11, 28, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(11);
+        expect(s.getDate()).toBe(24);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2022);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(15);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+    });
+
+    it("carries over to the next month of the year if the next year is supported", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            undefined,
+            {
+                intMonth: [ 1, 2, 12 ],
+            },
+            [ 2021, 2022 ],
+        );
+        const d = new Date(2021, 11, 28, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(11);
+        expect(s.getDate()).toBe(1);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2022);
+        expect(e.getMonth()).toBe(2);
+        expect(e.getDate()).toBe(1);
+        expect(e.getHours()).toBe(0);
+        expect(e.getMinutes()).toBe(0);
+        expect(e.getSeconds()).toBe(0);
+    });
+
+    it("does not overflow into the next month prior to checking that the next month is allowed", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ // Every day except the 30th.
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+                    18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31,
+                ],
+            },
+            undefined,
+            {
+                intMonth: [ 1, 2 ],
+            },
+            undefined,
+        );
+        const d = new Date(2021, 0, 31, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(31);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(28);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("does not overflow into the next month if the max day in the whitelist exceeds the max day of the month", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                    18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+                ],
+            },
+            undefined,
+            {
+                intMonth: [ 2, 3 ],
+            },
+            undefined,
+        );
+        const d = new Date(2021, 1, 20, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(1);
+        expect(s.getDate()).toBe(18);
+        expect(s.getHours()).toBe(0);
+        expect(s.getMinutes()).toBe(0);
+        expect(s.getSeconds()).toBe(0);
+
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(2);
+        expect(e.getDate()).toBe(10);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
 });

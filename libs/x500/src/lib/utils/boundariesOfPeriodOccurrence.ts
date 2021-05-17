@@ -23,6 +23,7 @@ import {
     addDays,
     addYears,
     endOfYear,
+    getWeeksInMonth,
 } from "date-fns";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand";
@@ -175,18 +176,6 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
         ));
 
-    const maxDay: number = ((): number => {
-        if (period.weeks) {
-            return 7;
-        } else if (period.months) {
-            return 31;
-        } else {
-            return 366;
-        }
-    })();
-
-    const maxWeek: number = (period.months ? 5 : 53);
-
     const {
         year: pointYear,
         month: pointMonth,
@@ -196,6 +185,18 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
     const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
+
+    const maxDay: number = ((): number => {
+        if (period.weeks) {
+            return 7;
+        } else if (period.months) {
+            return getDaysInMonth(pointMonth);
+        } else {
+            return getDaysInYear(pointYear);
+        }
+    })();
+
+    const maxWeek: number = (period.months ? 5 : 53);
 
     if (
         (whitelistedYears && !whitelistedYears.has(pointYear))
@@ -318,8 +319,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             j++;
         }
         if (i === 1) {
+            const prev = subDays(min, 1);
             if (period.weeks) {
-                const prev = subWeeks(min, 1);
                 const {
                     year: yesterYear,
                     month: yesterMonth,
@@ -338,7 +339,6 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     }
                 }
             } else if (period.months) {
-                const prev = subMonths(min, 1);
                 const {
                     year: yesterYear,
                     month: yesterMonth,
@@ -355,7 +355,6 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     }
                 }
             } else {
-                const prev = subYears(min, 1);
                 const {
                     year: yesterYear,
                 } = destructureDateIntoPeriodProperties(period, prev);
@@ -370,8 +369,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             }
         }
         if (j >= maxDay) {
+            const next = addDays(max, 1);
             if (period.weeks) {
-                const next = addWeeks(max, 1);
                 const {
                     year: nextYear,
                     month: nextMonth,
@@ -383,14 +382,20 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     && (!whitelistedYears || whitelistedYears.has(nextYear))
                 );
                 if (nextWeekPermitted) {
-                    i = MAX_DAY_OF_WEEK;
-                    while (whitelistedDays.has(i)) {
+                    j = 1;
+                    while (whitelistedDays.has(j)) {
                         max = addDays(max, 1);
-                        i++;
+                        j++;
                     }
                 }
             } else if (period.months) {
-                const next = addMonths(max, 1);
+                /**
+                 * Overflow is possible, because the whitelist may contain more
+                 * whitelisted days than the month has.
+                 */
+                if ((max.getMonth() + 1) > pointMonth) {
+                    max = endOfMonth(subWeeks(max, 1)); // TODO: Code coverage
+                }
                 const {
                     year: nextYear,
                     month: nextMonth,
@@ -400,23 +405,31 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     && (!whitelistedYears || whitelistedYears.has(nextYear))
                 );
                 if (nextMonthPermitted) {
-                    i = getDaysInMonth(next);
-                    while (whitelistedDays.has(i)) {
+                    const daysInNextMonth: number = getDaysInMonth(next);
+                    j = 1;
+                    while (whitelistedDays.has(j) && (j <= daysInNextMonth)) {
                         max = addDays(max, 1);
-                        i++;
+                        j++;
                     }
                 }
             } else {
-                const next = addYears(max, 1);
+                /**
+                 * Overflow is possible, because the whitelist may contain more
+                 * whitelisted days than the year has.
+                 */
+                if (max.getFullYear() > pointYear) {
+                    max = endOfYear(subMonths(max, 1));
+                }
                 const {
                     year: nextYear,
                 } = destructureDateIntoPeriodProperties(period, next);
                 const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
                 if (nextYearPermitted) {
-                    i = getDaysInYear(next);
-                    while (whitelistedDays.has(i)) {
+                    const daysInNextYear: number = getDaysInYear(next);
+                    j = 1;
+                    while (whitelistedDays.has(j) && (j <= daysInNextYear)) {
                         max = addDays(max, 1);
-                        i++;
+                        j++;
                     }
                 }
             }
@@ -473,6 +486,13 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         if (j >= maxWeek) {
             if (period.months) {
+                /**
+                 * Overflow is possible, because the whitelist may contain more
+                 * whitelisted weeks than the month has.
+                 */
+                if ((max.getMonth() + 1) > pointMonth) {
+                    max = endOfMonth(subWeeks(max, 2)); // TODO: Code Coverage
+                }
                 const next = addMonths(max, 1);
                 const {
                     year: nextYear,
@@ -483,26 +503,33 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     && (!whitelistedYears || whitelistedYears.has(nextYear))
                 );
                 if (nextMonthPermitted) {
+                    const weeksInNextMonth: number = getWeeksInMonth(next);
                     j = 1;
-                    while (whitelistedWeeks.has(j)) {
-                        max = addWeeks(startOfMonth(max), (j - 1));
+                    while (whitelistedWeeks.has(j) && (j <= weeksInNextMonth)) {
+                        max = addWeeks(startOfMonth(next), j);
                         j++;
                     }
                 }
             } else {
+                /**
+                 * Overflow is possible, because the whitelist may contain more
+                 * whitelisted weeks than the year has.
+                 */
+                if (max.getFullYear() > pointYear) {
+                    max = endOfYear(subMonths(max, 1));
+                }
                 const next = addYears(max, 1);
                 const { year: nextYear } = destructureDateIntoPeriodProperties(period, next);
                 const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
                 if (nextYearPermitted) {
                     j = 1;
                     while (whitelistedWeeks.has(j)) {
-                        max = addWeeks(startOfYear(max), (j - 1));
+                        max = addWeeks(startOfYear(next), j);
                         j++;
                     }
                 }
             }
         }
-
     } else if (whitelistedMonths) {
         min = startOfMonth(point);
         max = endOfMonth(point);
@@ -529,7 +556,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             }
         }
         if (j >= MAX_MONTH) {
-            const next = subMonths(min, 1);
+            const next = addMonths(min, 1);
             const { year: nextYear } = destructureDateIntoPeriodProperties(period, next);
             const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
             if (nextYearPermitted) {
