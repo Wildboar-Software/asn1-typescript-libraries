@@ -3,29 +3,6 @@
 ## To Do
 
 - [x] X500
-  - [ ] Selecting info via `EntryInformationSelection`
-  - [ ] Context Matching
-    - [x] languageContext
-    - [ ] temporalContext
-      - [ ] Document treatment of time zones
-    - [x] localeContext
-    - [x] ldapAttributeOptionContext
-  - [x] Matching Rules
-    - [x] timeSpecificationMatch
-    - [x] accessPointMatch
-    - [x] masterAndShadowAccessPointsMatch
-    - [x] supplierOrConsumerInformationMatch
-    - [x] supplierAndConsumersMatch
-    - [x] jidMatch
-    - [x] intEmailMatch
-    - [x] caseExactIA5Match
-    - [x] caseIgnoreIA5Match
-    - [x] caseIgnoreIA5SubstringsMatch
-  - [ ] Joins?
-  - [ ] Password Policy Evaluation
-  - [ ] Basic Access Control?
-  - [ ] `timeRangeFromPeriod(): IteratableIterator<[Date, Date]>`
-  - [ ] `timeRangeFromPeriodAndPoint(): [Date, Date] | null`
 - [x] CMS
 - [x] PKCS
 - [x] QC
