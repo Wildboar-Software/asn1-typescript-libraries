@@ -472,8 +472,6 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getSeconds()).toBe(11);
     });
 
-    // TODO: What if weeks are the coarsest unit?
-
     it("does not return the bounds of a contiguous span of weeks of the month if there is a day selected that will break the continuity", () => {
         const p = new Period(
             undefined,
@@ -688,7 +686,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
     });
 
     it("throws when encountering a Period with days, but no coarser unit of time", () => {
-        const p = new Period(
+        expect(() => new Period(
             undefined,
             {
                 intDay: [ 1 ],
@@ -696,13 +694,11 @@ describe("boundariesOfPeriodOccurrence()", () => {
             undefined,
             undefined,
             undefined,
-        );
-        const d = new Date(2021, 0, 6, 13, 45, 58);
-        expect(() => boundariesOfPeriodOccurrence(p, d)).toThrow();
+        )).toThrow();
     });
 
     it("throws when encountering a Period with weeks, but no coarser unit of time", () => {
-        const p = new Period(
+        expect(() => new Period(
             undefined,
             undefined,
             {
@@ -710,9 +706,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
             },
             undefined,
             undefined,
-        );
-        const d = new Date(2021, 0, 6, 13, 45, 58);
-        expect(() => boundariesOfPeriodOccurrence(p, d)).toThrow();
+        )).toThrow();
     });
 
     it("dayOf.*.intNamedDays works", () => {

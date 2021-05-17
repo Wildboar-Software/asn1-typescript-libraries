@@ -27,7 +27,6 @@ import {
 } from "date-fns";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand";
-import validatePeriod from "./validatePeriod";
 import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties";
 
 const MAX_DAY_OF_WEEK = 7;
@@ -38,6 +37,16 @@ const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);
 const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]);
 
 /**
+ * @function boundariesOfPeriodOccurrence
+ * @summary Returns the bounds of the occurrence in a period in which a point in time occurs.
+ * @description
+ *
+ * This function returns the upper and lower bounds of an occurrence (one of a
+ * recurring series of time intervals) in a `Period`, where the specific
+ * occurrence is selected by the `point` argument. If the `point` in time does
+ * not fall within the bounds of any occurrence of the `Period`, this function
+ * returns `null`.
+ *
  * ### Architecture
  *
  * This function used to be split into two functions: `startOfPeriod()` and
@@ -47,6 +56,8 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  * start of the period, anyway.
  *
  * This function returns bounds that may be inaccurate by one second.
+ *
+ * This function uses local time exclusively.
  *
  * ### Assumptions
  *
@@ -93,10 +104,6 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  */
 export
 function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Date ] | null {
-
-    if (!validatePeriod(period)) {
-        throw new Error();
-    }
 
     const whitelistedYears: Set<number> | null = period.years
         ? new Set(period.years)
@@ -394,7 +401,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                  * whitelisted days than the month has.
                  */
                 if ((max.getMonth() + 1) > pointMonth) {
-                    max = endOfMonth(subWeeks(max, 1)); // TODO: Code coverage
+                    max = endOfMonth(subWeeks(max, 1));
                 }
                 const {
                     year: nextYear,
@@ -491,7 +498,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                  * whitelisted weeks than the month has.
                  */
                 if ((max.getMonth() + 1) > pointMonth) {
-                    max = endOfMonth(subWeeks(max, 2)); // TODO: Code Coverage
+                    max = endOfMonth(subWeeks(max, 2));
                 }
                 const next = addMonths(max, 1);
                 const {

@@ -46,6 +46,7 @@ export {
     _decode_Period_weeks,
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta";
+import isPositionalInt from "../../utils/isPositionalInt";
 
 /* START_OF_SYMBOL_DEFINITION Period */
 /**
@@ -140,7 +141,93 @@ export class Period {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (
+            (
+                this.days
+                && ("intDay" in this.days)
+                && (
+                    (
+                        this.weeks
+                        && (
+                            (this.days.intDay.length > 7)
+                            || !this.days.intDay.every(isPositionalInt(7))
+                        )
+                    )
+                    || (
+                        this.months
+                        && (
+                            (this.days.intDay.length > 31)
+                            || !this.days.intDay.every(isPositionalInt(31))
+                        )
+                    )
+                    || (
+                        this.years
+                        && (
+                            (this.days.intDay.length > 366)
+                            || !this.days.intDay.every(isPositionalInt(366))
+                        )
+                    )
+                )
+            )
+            || (
+                this.days
+                && ("bitDay" in this.days)
+                && (this.days.bitDay.length > 7)
+            )
+            || (
+                this.weeks
+                && ("intWeek" in this.weeks)
+                && (
+                    (
+                        this.months
+                        && (
+                            (this.weeks.intWeek.length > 5)
+                            || !this.weeks.intWeek.every(isPositionalInt(5))
+                        )
+                    )
+                    || (
+                        this.years
+                        && (
+                            (this.weeks.intWeek.length > 53)
+                            || !this.weeks.intWeek.every(isPositionalInt(53))
+                        )
+                    )
+                    || (
+                        !this.months
+                        && !this.years
+                    )
+                )
+            )
+            || (
+                this.weeks
+                && ("bitWeek" in this.weeks)
+                && (this.weeks.bitWeek.length > 5)
+            )
+            || (
+                this.months
+                && ("intMonth" in this.months)
+                && (
+                    (this.months.intMonth.length > 12)
+                    || !this.months.intMonth.every(isPositionalInt(12))
+                )
+            || (
+                this.months
+                && ("bitMonth" in this.months)
+                && (this.months.bitMonth.length > 12)
+            )
+            ) || (
+                this.days
+                && !(
+                    this.weeks
+                    ?? this.months
+                    ?? this.years
+                )
+            )
+        ) {
+            throw new Error();
+        }
+    }
 
     /**
      * @summary Restructures an object into a Period

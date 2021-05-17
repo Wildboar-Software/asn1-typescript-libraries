@@ -11,156 +11,26 @@ import {
 import type {
     Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta";
-import type {
-    DayTimeBand,
-} from "../../modules/SelectedAttributeTypes/DayTimeBand.ta";
-import {
-    DayTime,
-} from "../../modules/SelectedAttributeTypes/DayTime.ta";
-import { add, sub, startOfMonth, endOfMonth, addHours, getDayOfYear } from "date-fns";
+import { addHours } from "date-fns";
+import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence";
 
-// TODO: Do I need to use ISO equivalent of the date-fns
-// TODO: Check that the max number of days, weeks, months, etc. are not exceeded when using SET OF INTEGER.
-
-const MIN_DATE: Date = new Date(-8640000000000000);
 const MAX_DATE: Date = new Date(8640000000000000);
 
 function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
 }
 
-function weeksIntoYear (date: Date): number {
-    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-    const dayNum = (d.getUTCDay() || 7);
-    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-    return Math.ceil((((d.valueOf() - yearStart.valueOf()) / 86400000) + 1) / 7);
-}
-
-function timeFallsWithinTimeOfDay (time: Date, timeOfDay: DayTimeBand, timezone: number = 0): boolean {
-    const timeZoneCorrectedHourStart = ((timeOfDay.startDayTime.hour - timezone) % 24);
-    const timeZoneCorrectedHourEnd = ((timeOfDay.endDayTime.hour - timezone) % 24);
-
-    const start = new DayTime(
-        (timeZoneCorrectedHourStart < 0)
-            ? (24 - timeZoneCorrectedHourStart)
-            : timeZoneCorrectedHourStart,
-        timeOfDay.startDayTime.minute,
-        timeOfDay.startDayTime.second,
-    );
-    const end = new DayTime(
-        (timeZoneCorrectedHourEnd < 0)
-            ? (24 - timeZoneCorrectedHourEnd)
-            : timeZoneCorrectedHourEnd,
-        timeOfDay.endDayTime.minute,
-        timeOfDay.endDayTime.second,
-    );
-
-    return (
-        (time.getUTCHours() <= end.hour)
-        && (time.getUTCHours() >= start.hour)
-        && (time.getUTCMinutes() <= end.minute)
-        && (time.getUTCMinutes() >= start.minute)
-        && (time.getUTCSeconds() <= end.minute)
-        && (time.getUTCSeconds() >= start.minute)
-    );
-}
-
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0): boolean {
-    if (period.timesOfDay) {
-        if (!period.timesOfDay.some((tod) => timeFallsWithinTimeOfDay(time, tod, timezone))) {
-            return false;
-        }
+    const adjustedTime = addHours(time, timezone); // TODO: I am not sure this is correct.
+    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
+    if (!boundaries) {
+        return false;
     }
-    if (period.days) {
-        if ("intDay" in period.days) {
-            if (period.weeks) {
-                if (!period.days.intDay.some((day: number) => (day === (time.getUTCDay() + 1)))) {
-                    return false;
-                }
-            } else if (period.months) {
-                if (!period.days.intDay.some((day: number) => (day === (time.getUTCMonth() + 1)))) {
-                    return false;
-                }
-            } else if (period.years) {
-                if (!period.days.intDay.some((day: number) => (day === getDayOfYear(time)))) {
-                    return false;
-                }
-            } else {
-                throw new Error();
-            }
-        } else if ("bitDay" in period.days) {
-            if (!period.days.bitDay[time.getUTCDay()]) {
-                return false;
-            }
-        } else if ("dayOf" in period.days) {
-            if ("first" in period.days.dayOf) {
-                const dayOf = period.days.dayOf.first;
-                // FIXME:
-            } else if ("second" in period.days.dayOf) {
-                const dayOf = period.days.dayOf.second;
-                // FIXME:
-            } else if ("third" in period.days.dayOf) {
-                const dayOf = period.days.dayOf.third;
-                // FIXME:
-            } else if ("fourth" in period.days.dayOf) {
-                const dayOf = period.days.dayOf.fourth;
-                // FIXME:
-            } else if ("fifth" in period.days.dayOf) {
-                const dayOf = period.days.dayOf.fifth;
-                // FIXME:
-            } else {
-                throw new Error();
-            }
-            return false;
-        } else {
-            return false; // Not understood.
-        }
-    }
-    if (period.weeks) {
-        if ("intWeek" in period.weeks) {
-            if (period.months) {
-                const weekIntoMonth: number = Math.floor(time.getUTCDate() / 7) + 1;
-                if (!period.weeks.intWeek.some((week: number) => (week === weekIntoMonth))) {
-                    return false;
-                }
-            } else if (period.years) {
-                const weekIntoTheYear: number = weeksIntoYear(time);
-                if (!period.weeks.intWeek.some((week: number) => (week === weekIntoTheYear))) {
-                    return false;
-                }
-            }
-        } else if ("bitWeek" in period.weeks) {
-            const weekIntoMonth: number = Math.floor(time.getUTCDate() / 7);
-            if (!period.weeks.bitWeek[weekIntoMonth]) {
-                return false;
-            }
-        } else if (!("allWeeks" in period.weeks)) {
-            return false; // Not understood.
-        }
-    }
-    if (period.months) {
-        if ("intMonth" in period.months) {
-            const storedMonth = time.getUTCMonth() + 1;
-            if (!period.months.intMonth.some((month: number) => (month === storedMonth))) {
-                return false;
-            }
-        } else if ("bitMonth" in period.months) {
-            const storedMonth = time.getUTCMonth();
-            if (!period.months.bitMonth[storedMonth]) {
-                return false;
-            }
-        } else if (!("allMonths" in period.months)) {
-            return false; // Not understood.
-        }
-    }
-    if (period.years) {
-        const storedYear = time.getUTCFullYear();
-        if (!period.years.some((year) => (year === storedYear))) {
-            return false;
-        }
-    }
-    return true;
+    const [ lower, upper ] = boundaries;
+    return (
+        (adjustedTime.valueOf() >= lower.valueOf())
+        && (adjustedTime.valueOf() <= upper.valueOf())
+    );
 }
 
 function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification): boolean {
@@ -198,97 +68,33 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
                 ));
             }
         } else if ("periodic" in spec.time) {
-            return false; // FIXME:
-            // return spec.time.periodic.some((period) => timeFallsWithinPeriod(time, period, spec.timeZone));
+            return spec.time.periodic.some((period) => {
+                const adjustedStart = addHours(start, spec.timeZone); // TODO: I am not sure this is correct.
+                const adjustedEnd = addHours(end, spec.timeZone); // TODO: I am not sure this is correct.
+                const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
+                if (!boundaries) {
+                    return false;
+                }
+                const [ lower, upper ] = boundaries;
+                const startWithinBounds: boolean = (
+                    (adjustedStart.valueOf() >= lower.valueOf())
+                    && (adjustedStart.valueOf() <= upper.valueOf())
+                );
+                const endWithinBounds: boolean = (
+                    (adjustedEnd.valueOf() >= lower.valueOf())
+                    && (adjustedEnd.valueOf() <= upper.valueOf())
+                );
+                return (
+                    entirely
+                        ? (startWithinBounds && endWithinBounds)
+                        : (startWithinBounds || endWithinBounds)
+                );
+            });
         } else {
             throw new Error(); // There is no other option.
         }
     })();
     return xor(result, spec.notThisTime);
-}
-
-// If period only has years, range should be Jan 1st - Dec 31st.
-function timeRangeFromPeriodAndPoint (period: Period, point: Date): [ Date, Date ] | null {
-    let currentMin: Date = MIN_DATE;
-    let currentMax: Date = MAX_DATE;
-    const whitelistedYears: Set<number> = new Set(period.years ?? []);
-
-    if (period.years) {
-        const sortedYears: number[] = period.years.sort();
-        const year: number | undefined = sortedYears
-            .find((y) => (y === point.getUTCFullYear()));
-        if (!year) {
-            return null; // The point is not in an acceptable year at all.
-        } else {
-            currentMin = new Date(year,  0,  0, 0, 0, 0);
-            currentMax = new Date(year, 11, 31, 23, 59, 59);
-            if (
-                !period.months
-                && !period.weeks
-                && !period.days
-                && !period.timesOfDay
-            ) {
-                return [ currentMin, currentMax ];
-            }
-        }
-    }
-
-    if (period.months) {
-        if ("intMonth" in period.months) {
-            const months: Set<number> = new Set(period.months.intMonth);
-            const month: number = point.getUTCMonth() + 1;
-            if (!months.has(month)) {
-                return null;
-            }
-            if ( // If months are as precise as we get.
-                !period.weeks
-                && !period.days
-                && !period.timesOfDay
-            ) { // Return the contiguous span of months.
-                let minMonth = new Date(point);
-                let maxMonth = new Date(point);
-                let x = sub(minMonth, {
-                    months: 1,
-                });
-                while (
-                    months.has(x.getUTCMonth() + 1)
-                    && (currentMin.getUTCFullYear() <= x.getUTCFullYear())
-                ) {
-                    currentMin = x;
-                    x = sub(x, {
-                        months: 1,
-                    });
-                }
-                x = maxMonth;
-                while (
-                    months.has(x.getUTCMonth() + 1)
-                    && (currentMax.getUTCFullYear() >= x.getUTCFullYear())
-                ) {
-                    currentMax = x;
-                    x = add(x, {
-                        months: 1,
-                    });
-                }
-                currentMin = startOfMonth(currentMin);
-                currentMax = endOfMonth(currentMax);
-                return [ currentMin, currentMax ];
-            } else {
-                // TODO: What if something spans a month?
-                // TODO: I think this will require `isSecondPermittedByPeriod(period: Period, second: number): boolean`
-                // Then you can check if the last X of each modular denomination of time is supported.
-                currentMin.setUTCMonth(point.getUTCMonth());
-                currentMax.setUTCMonth(point.getUTCMonth());
-            }
-        } else if ("bitMonth" in period.months) {
-            // const storedMonth = point.getUTCMonth();
-            // period.months.bitMonth
-            // if (!period.months.bitMonth[storedMonth]) {
-            //     return false;
-            // }
-        }
-    }
-
-    return [ currentMin, currentMax ];
 }
 
 export
@@ -304,12 +110,7 @@ const evaluateTemporalContext: EqualityMatcher = (
     } else if ("at" in a) {
         return timeFallsWithinTimeSpecification(a.at, v);
     } else if ("between" in a) {
-        // if (a.between.entirely) {
-
-        // } else {
-        //     return timeSpecificationFallsWithin(v, a.between.startTime, a.between.endTime);
-        // }
-        return false; // FIXME: This will be hard to implement...
+        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
     } else {
         return false;
     }
