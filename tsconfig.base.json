@@ -53,10 +53,10 @@
       "@wildboar/t38": ["libs/t38/src/index.ts"],
       "@wildboar/iso-9798-3-sasl": ["libs/iso-9798-3-sasl/src/index.ts"],
       "@wildboar/usm": ["libs/usm/src/index.ts"],
-      "@wildboar/ClearanceSponsorAttribute": [
+      "@wildboar/clearance-sponsor-attribute": [
         "libs/clearance-sponsor-attribute/src/index.ts"
       ],
-      "@wildboar/DeviceOwnerAttribute": [
+      "@wildboar/device-owner-attribute": [
         "libs/device-owner-attribute/src/index.ts"
       ]
     }

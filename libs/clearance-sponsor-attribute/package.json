@@ -1,5 +1,5 @@
 {
-    "name": "@wildboar/ClearanceSponsorAttribute",
+    "name": "@wildboar/clearance-sponsor-attribute",
     "version": "1.0.0",
     "description": "The Clearance Sponsor attribute defined in IETF RFC 5917 in TypeScript",
     "keywords": [
