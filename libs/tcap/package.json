@@ -1,4 +1,36 @@
 {
-  "name": "@wildboar/tcap",
-  "version": "0.0.1"
+    "name": "@wildboar/tcap",
+    "version": "1.0.0",
+    "description": "Transaction Capabilities Application Part PDUs in TypeScript",
+    "keywords": [
+        "tcap",
+        "transaction",
+        "capabilities",
+        "application",
+        "part",
+        "pstn",
+        "ss7"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
 }
+

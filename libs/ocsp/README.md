@@ -1,7 +1,16 @@
-# ocsp
+# Online Certificate Status Protocol
 
-This library was generated with [Nx](https://nx.dev).
+ASN.1 data structures and PDUs based on the ASN.1 definitions in
+[IETF RFC 6960](https://datatracker.ietf.org/doc/html/rfc6960), which defines
+the Online Certificate Status Protocol (OCSP).
 
-## Running unit tests
+These libraries were generated entirely or in part by the
+[ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
+offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1
+compiler itself is closed-source and proprietary, but some of the libraries
+produced with it are released publicly under the
+[MIT license](https://mit-license.org/).
 
-Run `nx test ocsp` to execute the unit tests via [Jest](https://jestjs.io).
+If you would like to see additional ASN.1 libraries in TypeScript or other
+programming languages, or if you have any other questions, please contact us at
+[contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).

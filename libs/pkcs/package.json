@@ -1,4 +1,37 @@
 {
-  "name": "@wildboar/pkcs",
-  "version": "0.0.1"
+    "name": "@wildboar/pkcs",
+    "version": "1.0.0",
+    "description": "Public Key Cryptography Standard PDUs in TypeScript",
+    "keywords": [
+        "pkcs",
+        "public",
+        "key",
+        "cryptography",
+        "standard",
+        "crypto",
+        "rsa",
+        "csr",
+        "pfx"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
 }

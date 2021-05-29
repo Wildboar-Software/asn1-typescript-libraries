@@ -1,4 +1,34 @@
 {
-  "name": "@wildboar/ldap",
-  "version": "0.0.1"
+    "name": "@wildboar/ldap",
+    "version": "1.0.0",
+    "description": "Lightweight Directory Access Protocol PDUs in TypeScript",
+    "keywords": [
+        "ldap",
+        "lightweight",
+        "directory",
+        "access",
+        "protocol"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
 }
+

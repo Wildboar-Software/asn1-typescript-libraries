@@ -1,4 +1,15 @@
 {
-  "name": "@wildboar/x500",
-  "version": "0.0.1"
+    "name": "@wildboar/x500",
+    "version": "1.0.0",
+    "keywords": [
+        "X.500",
+        "X500",
+        "Directory",
+        "X.509",
+        "TLS",
+        "Certificate",
+        "LDAP",
+        "CRL"
+    ],
+    "license": "MIT"
 }

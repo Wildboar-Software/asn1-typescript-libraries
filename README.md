@@ -1,51 +1,25 @@
 # ASN.1 TypeScript Libraries
 
+These libraries were generated entirely or in part by the
+[ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
+offered by [Wildboar Software](https://wildboarsoftware.com). The ASN.1
+compiler itself is closed-source and proprietary, but some of the libraries
+produced with it are released publicly under the
+[MIT license](https://mit-license.org/).
+
+If you would like to see additional ASN.1 libraries in TypeScript or other
+programming languages, or if you have any other questions, please contact us at
+[contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
 ## To Do
 
-- [x] X500
-- [x] CMS
-- [x] PKCS
-- [x] QC
-- [x] OCSP
-- [x] SIO
-- [x] SPKAC
-- [x] TSP
-- [x] CMP
-- [x] ESS
-- [x] Kerberos5
-- [x] SCVP
-- [x] CRMF
-- [x] ansi-x9-42
-- [x] ansi-x9-62
-- [x] Trust Anchor List
-- [x] LDAPv3
 - [ ] SNMPv3 (No formal module.)
-- [x] ACSE
-- [x] RTSE
-- [x] ROSE
-- [x] CMIP (Dependent on ROSE)
-- [x] FTAM
-- [x] CBEFF
 - [ ] ISO19785 (I think the GH workflow for this is identical to CBEFF...)
 - [ ] M3100 (Very big and very broken.)
 - [ ] F515 (No artifact for this...)
-- [x] CINF
-- [x] RINF
 - [ ] CAP (I already have code out there for this.)
 - [ ] ISIS (Break NLM into separate library.)
-- [x] BIP
-- [x] CMAIL (Break XSD into separate library.)
-- [x] GULS (Should this be split into SESE?)
-- [x] CCR
-- [x] FastInfoset
-- [x] ASN1SOAP
-- [x] TCAP
-- [x] T38
-- [x] ISO-9798-3-SASL
-- [x] USM
 - [ ] RFC5915-ECPrivateKey
-- [x] DeviceOwnerAttribute
-- [x] ClearanceSponsorAttribute
 - [ ] SEC1
 - [ ] TPM (Needs formatting and compilation)
 - [ ] [CSTA](https://www.ecma-international.org/wp-content/uploads/ECMA-285_4th_edition_december_2011.pdf)
@@ -57,6 +31,29 @@
 - [ ] Implement XER for RINF
 - [ ] Implement XER for CMAIL
 - [ ] Break AlgorithmIdentifier into separate package?
+
+## Usage
+
+These libraries expose few or no imports directly from the main file. Instead,
+users must "deep-import" symbols from these libraries.
+
+```typescript
+// This will not work.
+import { Certificate } from "@wildboar/x500";
+
+// This will work.
+import {
+    Certificate,
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+```
+
+## Libraries that must not be published publicly
+
+This is due to copyright concerns.
+
+- CBEFF
+- FTAM
+- ISIS
 
 ## Notes
 

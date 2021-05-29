@@ -1,4 +1,33 @@
 {
-  "name": "@wildboar/acse",
-  "version": "0.0.1"
+    "name": "@wildboar/acse",
+    "version": "1.0.0",
+    "description": "Association Control Service Element PDUs in TypeScript",
+    "keywords": [
+        "acse",
+        "association",
+        "control",
+        "service",
+        "element"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
 }

@@ -721,36 +721,6 @@
         }
       }
     },
-    "m3100": {
-      "root": "libs/m3100",
-      "sourceRoot": "libs/m3100/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/m3100/**/*.ts"] }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/m3100"],
-          "options": {
-            "jestConfig": "libs/m3100/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "executor": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/m3100",
-            "tsConfig": "libs/m3100/tsconfig.lib.json",
-            "packageJson": "libs/m3100/package.json",
-            "main": "libs/m3100/src/index.ts",
-            "assets": ["libs/m3100/*.md"]
-          }
-        }
-      }
-    },
     "cinf": {
       "root": "libs/cinf",
       "sourceRoot": "libs/cinf/src",
