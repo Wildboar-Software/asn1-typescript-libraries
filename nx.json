@@ -62,6 +62,7 @@
     "sec1": { "tags": [] },
     "cades": { "tags": [] },
     "ec-private-key": { "tags": [] },
-    "acbio": { "tags": [] }
+    "acbio": { "tags": [] },
+    "x1080": { "tags": [] }
   }
 }

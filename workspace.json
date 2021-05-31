@@ -1418,6 +1418,36 @@
           }
         }
       }
+    },
+    "x1080": {
+      "root": "libs/x1080",
+      "sourceRoot": "libs/x1080/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/x1080",
+            "tsConfig": "libs/x1080/tsconfig.lib.json",
+            "packageJson": "libs/x1080/package.json",
+            "main": "libs/x1080/src/index.ts",
+            "assets": ["libs/x1080/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/x1080/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/x1080"],
+          "options": {
+            "jestConfig": "libs/x1080/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

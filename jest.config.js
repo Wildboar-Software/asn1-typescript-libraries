@@ -51,5 +51,6 @@ module.exports = {
     '<rootDir>/libs/cades',
     '<rootDir>/libs/ec-private-key',
     '<rootDir>/libs/acbio',
+    '<rootDir>/libs/x1080',
   ],
 };

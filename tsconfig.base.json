@@ -65,7 +65,8 @@
       "@wildboar/sec1/*": ["libs/sec1/*"],
       "@wildboar/cades/*": ["libs/cades/*"],
       "@wildboar/ec-private-key/*": ["libs/ec-private-key/*"],
-      "@wildboar/acbio": ["libs/acbio/src/index.ts"]
+      "@wildboar/acbio": ["libs/acbio/src/index.ts"],
+      "@wildboar/x1080": ["libs/x1080/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
