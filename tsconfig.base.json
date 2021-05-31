@@ -49,16 +49,23 @@
       "@wildboar/ccr/*": ["libs/ccr/*"],
       "@wildboar/asn1soap/*": ["libs/asn1soap/*"],
       "@wildboar/fast-infoset/*": ["libs/fast-infoset/*"],
-      "@wildboar/tcap": ["libs/tcap/src/index.ts"],
-      "@wildboar/t38": ["libs/t38/src/index.ts"],
-      "@wildboar/iso-9798-3-sasl": ["libs/iso-9798-3-sasl/src/index.ts"],
-      "@wildboar/usm": ["libs/usm/src/index.ts"],
-      "@wildboar/clearance-sponsor-attribute": [
-        "libs/clearance-sponsor-attribute/src/index.ts"
+      "@wildboar/tcap/*": ["libs/tcap/*"],
+      "@wildboar/t38/*": ["libs/t38/*"],
+      "@wildboar/iso-9798-3-sasl/*": ["libs/iso-9798-3-sasl/*"],
+      "@wildboar/usm/*": ["libs/usm/*"],
+      "@wildboar/clearance-sponsor-attribute/*": [
+        "libs/clearance-sponsor-attribute/*"
       ],
-      "@wildboar/device-owner-attribute": [
-        "libs/device-owner-attribute/src/index.ts"
-      ]
+      "@wildboar/device-owner-attribute/*": ["libs/device-owner-attribute/*"],
+      "@wildboar/attribute-asn1module/*": ["libs/attribute-asn1module/*"],
+      "@wildboar/gmi-attributemodule/*": ["libs/gmi-attributemodule/*"],
+      "@wildboar/nlm/*": ["libs/nlm/*"],
+      "@wildboar/ers/*": ["libs/ers/*"],
+      "@wildboar/pc/*": ["libs/pc/*"],
+      "@wildboar/sec1/*": ["libs/sec1/*"],
+      "@wildboar/cades/*": ["libs/cades/*"],
+      "@wildboar/ec-private-key/*": ["libs/ec-private-key/*"],
+      "@wildboar/acbio": ["libs/acbio/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

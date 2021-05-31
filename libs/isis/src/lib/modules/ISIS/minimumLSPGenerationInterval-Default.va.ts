@@ -67,15 +67,10 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import {
-  Timer,
-  _decode_Timer,
-  _encode_Timer,
-} from '../GMI-AttributeModule/Timer.ta';
-export {
-  Timer,
-  _decode_Timer,
-  _encode_Timer,
-} from '../GMI-AttributeModule/Timer.ta';
+    Timer,
+    _decode_Timer,
+    _encode_Timer,
+} from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta";
 
 /* START_OF_SYMBOL_DEFINITION minimumLSPGenerationInterval_Default */
 /**

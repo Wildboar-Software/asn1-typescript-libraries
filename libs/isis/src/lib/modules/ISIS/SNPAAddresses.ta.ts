@@ -70,12 +70,7 @@ import {
   SNPAAddress,
   _decode_SNPAAddress,
   _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
-export {
-  SNPAAddress,
-  _decode_SNPAAddress,
-  _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
+} from '@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta';
 
 /* START_OF_SYMBOL_DEFINITION SNPAAddresses */
 /**

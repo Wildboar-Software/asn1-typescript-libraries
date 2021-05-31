@@ -39,7 +39,6 @@
     "rtse": { "tags": [] },
     "ftam": { "tags": [] },
     "cbeff": { "tags": [] },
-    "iso19785": { "tags": [] },
     "cinf": { "tags": [] },
     "rinf": { "tags": [] },
     "isis": { "tags": [] },
@@ -54,6 +53,15 @@
     "iso-9798-3-sasl": { "tags": [] },
     "usm": { "tags": [] },
     "clearance-sponsor-attribute": { "tags": [] },
-    "device-owner-attribute": { "tags": [] }
+    "device-owner-attribute": { "tags": [] },
+    "attribute-asn1module": { "tags": [] },
+    "gmi-attributemodule": { "tags": [] },
+    "nlm": { "tags": [] },
+    "ers": { "tags": [] },
+    "pc": { "tags": [] },
+    "sec1": { "tags": [] },
+    "cades": { "tags": [] },
+    "ec-private-key": { "tags": [] },
+    "acbio": { "tags": [] }
   }
 }

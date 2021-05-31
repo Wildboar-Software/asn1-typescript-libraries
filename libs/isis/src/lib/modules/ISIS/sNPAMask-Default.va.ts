@@ -70,12 +70,7 @@ import {
   NAddress,
   _decode_NAddress,
   _encode_NAddress,
-} from '../NLM/NAddress.ta';
-export {
-  NAddress,
-  _decode_NAddress,
-  _encode_NAddress,
-} from '../NLM/NAddress.ta';
+} from '@wildboar/nlm/src/lib/modules/NLM/NAddress.ta';
 
 /* START_OF_SYMBOL_DEFINITION sNPAMask_Default */
 /**

@@ -66,8 +66,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
-import { nl } from '../NLM/nl.va';
-export { nl } from '../NLM/nl.va';
+import { nl } from "@wildboar/nlm/src/lib/modules/NLM/nl.va";
 
 /* START_OF_SYMBOL_DEFINITION isisoi */
 /**

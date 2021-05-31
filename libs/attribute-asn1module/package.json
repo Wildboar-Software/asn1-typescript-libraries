@@ -1,0 +1,32 @@
+{
+    "name": "@wildboar/attribute-asn1module",
+    "version": "1.0.0",
+    "description": "ITU X.721 Attribute-ASN1Module ASN.1 data structures defined in TypeScript",
+    "keywords": [
+        "x721",
+        "attribute",
+        "asn1",
+        "cmip"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
+}

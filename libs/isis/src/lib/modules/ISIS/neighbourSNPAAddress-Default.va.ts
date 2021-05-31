@@ -70,14 +70,10 @@ import {
   SNPAAddress,
   _decode_SNPAAddress,
   _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
-export {
-  SNPAAddress,
-  _decode_SNPAAddress,
-  _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
-import { sNPADTEAddress } from '../NLM/sNPADTEAddress.va';
-export { sNPADTEAddress } from '../NLM/sNPADTEAddress.va';
+} from "@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta";
+import {
+    sNPADTEAddress,
+} from "@wildboar/nlm/src/lib/modules/NLM/sNPADTEAddress.va";
 
 /* START_OF_SYMBOL_DEFINITION neighbourSNPAAddress_Default */
 /**
@@ -93,7 +89,7 @@ export { sNPADTEAddress } from '../NLM/sNPADTEAddress.va';
  * @constant
  */
 export const neighbourSNPAAddress_Default: SNPAAddress = SNPAAddress._from_object(
-  { type_: NLM.sNPADTEAddress, address: new Uint8Array(0) }
+  { type_: sNPADTEAddress, address: new Uint8Array(0) }
 );
 /* END_OF_SYMBOL_DEFINITION neighbourSNPAAddress_Default */
 

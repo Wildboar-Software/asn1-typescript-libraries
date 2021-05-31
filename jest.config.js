@@ -1,5 +1,5 @@
 module.exports = {
-  coverageReporters: [ 'text' ],
+  coverageReporters: ['text'],
   projects: [
     ,
     '<rootDir>/libs/x500',
@@ -42,5 +42,14 @@ module.exports = {
     '<rootDir>/libs/usm',
     '<rootDir>/libs/clearance-sponsor-attribute',
     '<rootDir>/libs/device-owner-attribute',
+    '<rootDir>/libs/attribute-asn1module',
+    '<rootDir>/libs/gmi-attributemodule',
+    '<rootDir>/libs/nlm',
+    '<rootDir>/libs/ers',
+    '<rootDir>/libs/pc',
+    '<rootDir>/libs/sec1',
+    '<rootDir>/libs/cades',
+    '<rootDir>/libs/ec-private-key',
+    '<rootDir>/libs/acbio',
   ],
 };

@@ -1,0 +1,310 @@
+-- Sourced from: https://trustedcomputinggroup.org/wp-content/uploads/IWG_Platform_Certificate_Profile_v1p1_r19_pub_fixed.pdf
+-- This was not even a real module when I found it, and it had several issues.
+
+PlatformCertificateProfile
+DEFINITIONS ::=
+BEGIN
+
+-- EXPORTS ALL --
+
+IMPORTS
+
+    AlgorithmIdentifier
+        FROM AuthenticationFramework
+            {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+            WITH SUCCESSORS
+
+    ATTRIBUTE
+        FROM InformationFramework
+            {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+            WITH SUCCESSORS
+    ;
+
+strmax INTEGER ::= 256
+urimax INTEGER ::= 1024
+
+-- TCG specific OIDs
+tcg OBJECT IDENTIFIER ::= {
+joint-iso-itu-t(2) international-organizations(23) tcg(133) }
+
+tcg-tcpaSpecVersion OBJECT IDENTIFIER ::= {tcg 1}
+tcg-attribute OBJECT IDENTIFIER ::= {tcg 2}
+tcg-protocol OBJECT IDENTIFIER ::= {tcg 3}
+tcg-algorithm OBJECT IDENTIFIER ::= {tcg 4}
+tcg-platformClass OBJECT IDENTIFIER ::= {tcg 5}
+tcg-ce OBJECT IDENTIFIER ::= {tcg 6}
+tcg-kp OBJECT IDENTIFIER ::= {tcg 8}
+tcg-address OBJECT IDENTIFIER ::= {tcg 17}
+tcg-registry OBJECT IDENTIFIER ::= {tcg 18}
+
+-- TCG Attribute OIDs
+tcg-at-tpmManufacturer OBJECT IDENTIFIER ::= {tcg-attribute 1}
+tcg-at-tpmModel OBJECT IDENTIFIER ::= {tcg-attribute 2}
+tcg-at-tpmVersion OBJECT IDENTIFIER ::= {tcg-attribute 3}
+tcg-at-securityQualities OBJECT IDENTIFIER ::= {tcg-attribute 10}
+tcg-at-tpmProtectionProfile OBJECT IDENTIFIER ::= {tcg-attribute 11}
+tcg-at-tpmSecurityTarget OBJECT IDENTIFIER ::= {tcg-attribute 12}
+tcg-at-tbbProtectionProfile OBJECT IDENTIFIER ::= {tcg-attribute 13}
+tcg-at-tbbSecurityTarget OBJECT IDENTIFIER ::= {tcg-attribute 14}
+tcg-at-tpmIdLabel OBJECT IDENTIFIER ::= {tcg-attribute 15}
+tcg-at-tpmSpecification OBJECT IDENTIFIER ::= {tcg-attribute 16}
+tcg-at-tcgPlatformSpecification OBJECT IDENTIFIER ::= {tcg-attribute 17}
+tcg-at-tpmSecurityAssertions OBJECT IDENTIFIER ::= {tcg-attribute 18}
+tcg-at-tbbSecurityAssertions OBJECT IDENTIFIER ::= {tcg-attribute 19}
+tcg-at-tcgCredentialSpecification OBJECT IDENTIFIER ::= {tcg-attribute 23}
+tcg-at-tcgCredentialType OBJECT IDENTIFIER ::= {tcg-attribute 25}
+
+-- TCG Platform Class Common OIDs
+tcg-common OBJECT IDENTIFIER ::= { tcg-platformClass 1}
+
+-- TCG Common Attribute OIDs
+tcg-at-platformManufacturerStr OBJECT IDENTIFIER ::= {tcg-common 1}
+tcg-at-platformManufacturerId OBJECT IDENTIFIER ::= {tcg-common 2}
+tcg-at-platformConfigUri OBJECT IDENTIFIER ::= {tcg-common 3}
+tcg-at-platformModel OBJECT IDENTIFIER ::= {tcg-common 4}
+tcg-at-platformVersion OBJECT IDENTIFIER ::= {tcg-common 5}
+tcg-at-platformSerial OBJECT IDENTIFIER ::= { tcg-common 6}
+tcg-at-platformConfiguration OBJECT IDENTIFIER ::= {tcg-common 7}
+
+-- TCG Platform Configuration OIDs
+tcg-at-platformConfiguration-v1 OBJECT IDENTIFIER ::= {tcg-at-platformConfiguration 1}
+tcg-at-platformConfiguration-v2 OBJECT IDENTIFIER ::= {tcg-at-platformConfiguration 2}
+
+
+-- TCG Algorithm OIDs
+tcg-algorithm-null OBJECT IDENTIFIER ::= {tcg-algorithm 1}
+
+-- TCG Key Purposes OIDs
+tcg-kp-EKCertificate OBJECT IDENTIFIER ::= {tcg-kp 1}
+tcg-kp-PlatformAttributeCertificate OBJECT IDENTIFIER ::= {tcg-kp 2}
+tcg-kp-AIKCertificate OBJECT IDENTIFIER ::= {tcg-kp 3}
+tcg-kp-PlatformKeyCertificate OBJECT IDENTIFIER ::= {tcg-kp 4}
+tcg-kp-DeltaPlatformAttributeCertificate OBJECT IDENTIFIER ::= {tcg-kp 5}
+
+-- TCG Certificate Extensions
+tcg-ce-relevantCredentials OBJECT IDENTIFIER ::= {tcg-ce 2}
+tcg-ce-relevantManifests OBJECT IDENTIFIER ::= {tcg-ce 3}
+tcg-ce-virtualPlatformAttestationService OBJECT IDENTIFIER ::= {tcg-ce 4}
+tcg-ce-migrationControllerAttestationService OBJECT IDENTIFIER ::= (tcg-ce 5}
+tcg-ce-migrationControllerRegistrationService OBJECT IDENTIFIER ::= (tcg-ce 6}
+tcg-ce-virtualPlatformBackupService OBJECT IDENTIFIER ::= (tcg-ce 7}
+
+-- TCG Protocol OIDs
+tcg-prt-tpmIdProtocol OBJECT IDENTIFIER ::= {tcg-protocol 1}
+
+-- TCG Address OIDs
+tcg-address-ethernetmac OBJECT IDENTIFIER ::= {tcg-address 1}
+tcg-address-wlanmac OBJECT IDENTIFIER ::= {tcg-address 2}
+tcg-address-bluetoothmac OBJECT IDENTIFIER ::= {tcg-address 3}
+
+-- TCG Registry OIDs
+tcg-registry-componentClass OBJECT IDENTIFIER ::= {tcg-registry 3}
+tcg-registry-componentClass-tcg OBJECT IDENTIFIER ::= {tcg-registry-componentClass 1}
+tcg-registry-componentClass-ietf OBJECT IDENTIFIER ::= {tcg-registry-componentClass 2}
+tcg-registry-componentClass-dmtf OBJECT IDENTIFIER ::= {tcg-registry-componentClass 3}
+
+-- tcg specification attributes for platform
+tCGPlatformSpecification ATTRIBUTE ::= {
+    WITH SYNTAX     TCGPlatformSpecification
+    ID              tcg-at-tcgPlatformSpecification }
+
+TCGSpecificationVersion ::= SEQUENCE {
+    majorVersion    INTEGER,
+    minorVersion    INTEGER,
+    revision        INTEGER }
+
+TCGPlatformSpecification ::= SEQUENCE {
+    version             TCGSpecificationVersion,
+    platformClass       OCTET STRING SIZE(4) }
+
+-- TCG Credential type attribute
+tCGCredentialType ATTRIBUTE ::= {
+    WITH SYNTAX     TCGCredentialType
+    ID              tcg-at-tcgCredentialType }
+
+TCGCredentialType::= SEQUENCE {
+    certificateType     CredentialType }
+
+CredentialType ::= OBJECT IDENTIFIER (
+    tcg-kp-PlatformAttributeCertificate
+    | tcg-kp-DeltaPlatformAttributeCertificate )
+
+-- manufacturer implementation model and version attributes
+platformManufacturerStr ATTRIBUTE ::= {
+    WITH SYNTAX     UTF8String (SIZE (1..strmax))
+    ID              tcg-at-platformManufacturerStr }
+
+platformModel ATTRIBUTE ::= {
+    WITH SYNTAX     UTF8String (SIZE (1..strmax))
+    ID              tcg-at-platformModel }
+
+platformVersion ATTRIBUTE ::= {
+    WITH SYNTAX     UTF8String (SIZE (1..strmax))
+    ID              tcg-at-platformVersion }
+
+platformSerial ATTRIBUTE ::= {
+    WITH SYNTAX     UTF8String (SIZE (1..strmax))
+    ID              tcg-at-platformSerial }
+
+platformManufacturerId ATTRIBUTE ::= {
+    WITH SYNTAX     ManufacturerId
+    ID              tcg-at-platformManufacturerId }
+
+ManufacturerId ::= SEQUENCE {
+    manufacturerIdentifier  PrivateEnterpriseNumber }
+
+enterprise OBJECT IDENTIFIER ::= {
+    iso(1)
+    identified-organization(3)
+    dod(6)
+    internet(1)
+    private(4)
+    enterprise(1) }
+
+-- This is incorrect.
+-- PrivateEnterpriseNumber OBJECT IDENTIFIER ::= { enterprise private-enterprise-number }
+PrivateEnterpriseNumber ::= OBJECT IDENTIFIER
+
+-- platform tbb security assertions
+
+tBBSecurityAssertions ATTRIBUTE ::= {
+    WITH SYNTAX     TBBSecurityAssertions
+    ID              tcg-at-tbbSecurityAssertions }
+
+TBBSecurityAssertions ::= SEQUENCE {
+    version             Version DEFAULT v1,
+    ccInfo              [0] IMPLICIT CommonCriteriaMeasures OPTIONAL,
+    fipsLevel           [1] IMPLICIT FIPSLevel OPTIONAL,
+    rtmType             [2] IMPLICIT MeasurementRootType OPTIONAL,
+    iso9000Certified    BOOLEAN DEFAULT FALSE,
+    iso9000Uri          IA5String (SIZE (1..urimax)) OPTIONAL }
+
+
+-- Hybrid means the measurement root is capable of static AND dynamic
+-- Physical means that the root is anchored by a physical TPM
+-- Virtual means the TPM is virtualized (possibly running in a VMM)
+
+-- TPMs or RTMs might leverage other lower layer RTMs to virtualize the
+-- the capabilities of the platform.
+MeasurementRootType ::= ENUMERATED {
+    static (0),
+    dynamic (1),
+    nonHost (2),
+    hybrid (3),
+    physical (4),
+    virtual (5) }
+
+-- common criteria evaluation
+CommonCriteriaMeasures ::= SEQUENCE {
+    version             IA5String (SIZE (1..strmax)), -- “2.2” or “3.1”; future syntax defined by CC
+    assurancelevel      EvaluationAssuranceLevel,
+    evaluationStatus    EvalutionStatus,
+    plus                BOOLEAN DEFAULT FALSE,
+    strengthOfFunction  [0] IMPLICIT StrengthOfFunction OPTIONAL,
+    profileOid          [1] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    profileUri          [2] IMPLICIT URIReference OPTIONAL,
+    targetOid           [3] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    targetUri           [4] IMPLICIT URIReference OPTIONAL }
+
+EvaluationAssuranceLevel ::= ENUMERATED {
+    levell (1),
+    level2 (2),
+    level3 (3),
+    level4 (4),
+    level5 (5),
+    level6 (6),
+    level7 (7) }
+
+StrengthOfFunction ::= ENUMERATED {
+    basic (0),
+    medium (1),
+    high (2) }
+
+URIReference ::= SEQUENCE {
+    uniformResourceIdentifier   IA5String (SIZE (1..urimax)),
+    hashAlgorithm               AlgorithmIdentifier OPTIONAL,
+    hashValue                   BIT STRING OPTIONAL }
+
+EvaluationStatus ::= ENUMERATED {
+    designedToMeet (0),
+    evaluationInProgress (1),
+    evaluationCompleted (2) }
+
+-- fips evaluation
+FIPSLevel ::= SEQUENCE {
+    version         IA5String (SIZE (1..strmax)), -- “140-1”, “140-2”, or “140-3”
+    level           SecurityLevel,
+    plus            BOOLEAN DEFAULT FALSE }
+
+SecurityLevel ::= ENUMERATED {
+    level1 (1),
+    level2 (2),
+    level3 (3),
+    level4 (4) }
+
+-- platform configuration
+platformConfiguration ATTRIBUTE ::= {
+    WITH SYNTAX     PlatformConfiguration
+    ID              tcg-at-platformConfiguration-v2 }
+
+PlatformConfiguration ::= SEQUENCE {
+    componentIdentifiers        [0] IMPLICIT SEQUENCE(SIZE(1..MAX)) OF ComponentIdentifier OPTIONAL,
+    componentIdentifiersUri     [1] IMPLICIT URIReference OPTIONAL,
+    platformProperties          [2] IMPLICIT SEQUENCE(SIZE(1..MAX)) OF Properties OPTIONAL,
+    platformPropertiesUri       [3] IMPLICIT URIReference OPTIONAL }
+
+ComponentIdentifier ::= SEQUENCE {
+    componentClass              ComponentClass,
+    componentManufacturer       UTF8String (SIZE (1..strmax)),
+    componentModel              UTF8String (SIZE (1..strmax)),
+    componentSerial             [0] IMPLICIT UTF8String (SIZE (1..strmax)) OPTIONAL,
+    componentRevision           [1] IMPLICIT UTF8String (SIZE (1..strmax)) OPTIONAL,
+    componentManufacturerId     [2] IMPLICIT PrivateEnterpriseNumber OPTIONAL,
+    fieldReplaceable            [3] IMPLICIT BOOLEAN OPTIONAL,
+    componentAddresses          [4] IMPLICIT SEQUENCE(SIZE(1.. MAX)) OF ComponentAddress OPTIONAL
+    componentPlatformCert       [5] IMPLICIT CertificateIdentifier OPTIONAL,
+    componentPlatformCertUri    [6] IMPLICIT URIReference OPTIONAL,
+    status                      [7] IMPLICIT AttributeStatus OPTIONAL }
+
+ComponentClass ::= SEQUENCE {
+    componentClassRegistry      ComponentClassRegistry,
+    componentClassValue         OCTET STRING SIZE(4) }
+
+ComponentClassRegistry ::= OBJECT IDENTIFIER (
+    tcg-registry-componentClass-tcg
+    | tcg-registry-componentClass-ietf
+    | tcg-registry-componentClass-dmtf )
+
+ComponentAddress ::= SEQUENCE {
+    addressType     AddressType,
+    addressValue    UTF8String (SIZE (1..strmax)) }
+
+AddressType ::= OBJECT IDENTIFIER (
+    tcg-address-ethernetmac
+    | tcg-address-wlanmac
+    | tcg-address-bluetoothmac )
+
+Properties ::= SEQUENCE {
+    propertyName        UTF8String (SIZE (1..strmax)),
+    propertyValue       UTF8String (SIZE (1..strmax)),
+    status              [0] IMPLICIT AttributeStatus OPTIONAL }
+
+CertificateIdentifier::= SEQUENCE {
+    attributeCertIdentifier     [0] IMPLICIT AttributeCertificateIdentifier OPTIONAL,
+    genericCertIdentifier       [1] IMPLICIT IssuerSerial OPTIONAL }
+
+AttributeCertificateIdentifier ::= SEQUENCE {
+    hashAlgorithm               AlgorithmIdentifier,
+    hashOverSignatureValue      OCTET STRING }
+
+AttributeStatus ::= ENUMERATED {
+    added (0),
+    modified (1),
+    removed (2) }
+
+-- platform configuration Uri attribute
+platformConfigUri ATTRIBUTE ::= {
+    WITH SYNTAX     URIReference
+    ID              tcg-at-platformConfigUri }
+
+END
