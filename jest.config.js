@@ -52,5 +52,7 @@ module.exports = {
     '<rootDir>/libs/ec-private-key',
     '<rootDir>/libs/acbio',
     '<rootDir>/libs/x1080',
+    '<rootDir>/libs/x400',
+    '<rootDir>/libs/safecurves-pkix-18',
   ],
 };

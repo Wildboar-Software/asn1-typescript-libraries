@@ -66,7 +66,9 @@
       "@wildboar/cades/*": ["libs/cades/*"],
       "@wildboar/ec-private-key/*": ["libs/ec-private-key/*"],
       "@wildboar/acbio": ["libs/acbio/src/index.ts"],
-      "@wildboar/x1080": ["libs/x1080/src/index.ts"]
+      "@wildboar/x1080": ["libs/x1080/src/index.ts"],
+      "@wildboar/x400": ["libs/x400/src/index.ts"],
+      "@wildboar/safecurves-pkix-18": ["libs/safecurves-pkix-18/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

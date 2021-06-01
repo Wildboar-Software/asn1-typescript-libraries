@@ -63,6 +63,8 @@
     "cades": { "tags": [] },
     "ec-private-key": { "tags": [] },
     "acbio": { "tags": [] },
-    "x1080": { "tags": [] }
+    "x1080": { "tags": [] },
+    "x400": { "tags": [] },
+    "safecurves-pkix-18": { "tags": [] }
   }
 }

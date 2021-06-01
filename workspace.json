@@ -1448,6 +1448,66 @@
           }
         }
       }
+    },
+    "x400": {
+      "root": "libs/x400",
+      "sourceRoot": "libs/x400/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/x400",
+            "tsConfig": "libs/x400/tsconfig.lib.json",
+            "packageJson": "libs/x400/package.json",
+            "main": "libs/x400/src/index.ts",
+            "assets": ["libs/x400/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/x400/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/x400"],
+          "options": {
+            "jestConfig": "libs/x400/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "safecurves-pkix-18": {
+      "root": "libs/safecurves-pkix-18",
+      "sourceRoot": "libs/safecurves-pkix-18/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/safecurves-pkix-18",
+            "tsConfig": "libs/safecurves-pkix-18/tsconfig.lib.json",
+            "packageJson": "libs/safecurves-pkix-18/package.json",
+            "main": "libs/safecurves-pkix-18/src/index.ts",
+            "assets": ["libs/safecurves-pkix-18/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/safecurves-pkix-18/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/safecurves-pkix-18"],
+          "options": {
+            "jestConfig": "libs/safecurves-pkix-18/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }
