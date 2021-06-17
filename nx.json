@@ -1,9 +1,14 @@
 {
   "npmScope": "asn1-typescript-libraries",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -12,64 +17,179 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "x500": { "tags": [] },
-    "ansi-x9-42": { "tags": [] },
-    "ansi-x9-62": { "tags": [] },
-    "cms": { "tags": [] },
-    "pkcs": { "tags": [] },
-    "qc": { "tags": [] },
-    "ocsp": { "tags": [] },
-    "tsp": { "tags": [] },
-    "sio": { "tags": [] },
-    "spkac": { "tags": [] },
-    "crmf": { "tags": [] },
-    "ess": { "tags": [] },
-    "cmp": { "tags": [] },
-    "kerberos5": { "tags": [] },
-    "scvp": { "tags": [] },
-    "tal": { "tags": [] },
-    "ldap": { "tags": [] },
-    "cmip": { "tags": [] },
-    "rose": { "tags": [] },
-    "acse": { "tags": [] },
-    "rtse": { "tags": [] },
-    "ftam": { "tags": [] },
-    "cbeff": { "tags": [] },
-    "cinf": { "tags": [] },
-    "rinf": { "tags": [] },
-    "isis": { "tags": [] },
-    "bip": { "tags": [] },
-    "cmail": { "tags": [] },
-    "guls": { "tags": [] },
-    "ccr": { "tags": [] },
-    "fast-infoset": { "tags": [] },
-    "asn1soap": { "tags": [] },
-    "tcap": { "tags": [] },
-    "t38": { "tags": [] },
-    "iso-9798-3-sasl": { "tags": [] },
-    "usm": { "tags": [] },
-    "clearance-sponsor-attribute": { "tags": [] },
-    "device-owner-attribute": { "tags": [] },
-    "attribute-asn1module": { "tags": [] },
-    "gmi-attributemodule": { "tags": [] },
-    "nlm": { "tags": [] },
-    "ers": { "tags": [] },
-    "pc": { "tags": [] },
-    "sec1": { "tags": [] },
-    "cades": { "tags": [] },
-    "ec-private-key": { "tags": [] },
-    "acbio": { "tags": [] },
-    "x1080": { "tags": [] },
-    "x400": { "tags": [] },
-    "safecurves-pkix-18": { "tags": [] },
-    "casscam": { "tags": [] },
-    "copp": { "tags": [] },
-    "clacse": { "tags": [] },
-    "m3100": { "tags": [] },
-    "x700": { "tags": [] }
+    "x500": {
+      "tags": []
+    },
+    "ansi-x9-42": {
+      "tags": []
+    },
+    "ansi-x9-62": {
+      "tags": []
+    },
+    "cms": {
+      "tags": []
+    },
+    "pkcs": {
+      "tags": []
+    },
+    "qc": {
+      "tags": []
+    },
+    "ocsp": {
+      "tags": []
+    },
+    "tsp": {
+      "tags": []
+    },
+    "sio": {
+      "tags": []
+    },
+    "spkac": {
+      "tags": []
+    },
+    "crmf": {
+      "tags": []
+    },
+    "ess": {
+      "tags": []
+    },
+    "cmp": {
+      "tags": []
+    },
+    "kerberos5": {
+      "tags": []
+    },
+    "scvp": {
+      "tags": []
+    },
+    "tal": {
+      "tags": []
+    },
+    "ldap": {
+      "tags": []
+    },
+    "cmip": {
+      "tags": []
+    },
+    "rose": {
+      "tags": []
+    },
+    "acse": {
+      "tags": []
+    },
+    "rtse": {
+      "tags": []
+    },
+    "ftam": {
+      "tags": []
+    },
+    "cbeff": {
+      "tags": []
+    },
+    "cinf": {
+      "tags": []
+    },
+    "rinf": {
+      "tags": []
+    },
+    "isis": {
+      "tags": []
+    },
+    "bip": {
+      "tags": []
+    },
+    "cmail": {
+      "tags": []
+    },
+    "guls": {
+      "tags": []
+    },
+    "ccr": {
+      "tags": []
+    },
+    "fast-infoset": {
+      "tags": []
+    },
+    "asn1soap": {
+      "tags": []
+    },
+    "tcap": {
+      "tags": []
+    },
+    "t38": {
+      "tags": []
+    },
+    "iso-9798-3-sasl": {
+      "tags": []
+    },
+    "usm": {
+      "tags": []
+    },
+    "clearance-sponsor-attribute": {
+      "tags": []
+    },
+    "device-owner-attribute": {
+      "tags": []
+    },
+    "attribute-asn1module": {
+      "tags": []
+    },
+    "gmi-attributemodule": {
+      "tags": []
+    },
+    "nlm": {
+      "tags": []
+    },
+    "ers": {
+      "tags": []
+    },
+    "pc": {
+      "tags": []
+    },
+    "sec1": {
+      "tags": []
+    },
+    "cades": {
+      "tags": []
+    },
+    "ec-private-key": {
+      "tags": []
+    },
+    "acbio": {
+      "tags": []
+    },
+    "x1080": {
+      "tags": []
+    },
+    "x400": {
+      "tags": []
+    },
+    "safecurves-pkix-18": {
+      "tags": []
+    },
+    "casscam": {
+      "tags": []
+    },
+    "copp": {
+      "tags": []
+    },
+    "clacse": {
+      "tags": []
+    },
+    "m3100": {
+      "tags": []
+    },
+    "x700": {
+      "tags": []
+    },
+    "docs": {
+      "tags": []
+    }
   }
 }
