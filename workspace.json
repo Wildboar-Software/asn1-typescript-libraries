@@ -1508,6 +1508,156 @@
           }
         }
       }
+    },
+    "casscam": {
+      "root": "libs/casscam",
+      "sourceRoot": "libs/casscam/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/casscam",
+            "tsConfig": "libs/casscam/tsconfig.lib.json",
+            "packageJson": "libs/casscam/package.json",
+            "main": "libs/casscam/src/index.ts",
+            "assets": ["libs/casscam/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/casscam/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/casscam"],
+          "options": {
+            "jestConfig": "libs/casscam/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "copp": {
+      "root": "libs/copp",
+      "sourceRoot": "libs/copp/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/copp",
+            "tsConfig": "libs/copp/tsconfig.lib.json",
+            "packageJson": "libs/copp/package.json",
+            "main": "libs/copp/src/index.ts",
+            "assets": ["libs/copp/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/copp/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/copp"],
+          "options": {
+            "jestConfig": "libs/copp/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "clacse": {
+      "root": "libs/clacse",
+      "sourceRoot": "libs/clacse/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/clacse",
+            "tsConfig": "libs/clacse/tsconfig.lib.json",
+            "packageJson": "libs/clacse/package.json",
+            "main": "libs/clacse/src/index.ts",
+            "assets": ["libs/clacse/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/clacse/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/clacse"],
+          "options": {
+            "jestConfig": "libs/clacse/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "m3100": {
+      "root": "libs/m3100",
+      "sourceRoot": "libs/m3100/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/m3100",
+            "tsConfig": "libs/m3100/tsconfig.lib.json",
+            "packageJson": "libs/m3100/package.json",
+            "main": "libs/m3100/src/index.ts",
+            "assets": ["libs/m3100/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/m3100/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/m3100"],
+          "options": {
+            "jestConfig": "libs/m3100/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "x700": {
+      "root": "libs/x700",
+      "sourceRoot": "libs/x700/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/x700",
+            "tsConfig": "libs/x700/tsconfig.lib.json",
+            "packageJson": "libs/x700/package.json",
+            "main": "libs/x700/src/index.ts",
+            "assets": ["libs/x700/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/x700/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/x700"],
+          "options": {
+            "jestConfig": "libs/x700/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": { "defaultCollection": "@nrwl/workspace" }

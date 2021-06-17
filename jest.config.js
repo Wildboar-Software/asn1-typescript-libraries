@@ -54,5 +54,10 @@ module.exports = {
     '<rootDir>/libs/x1080',
     '<rootDir>/libs/x400',
     '<rootDir>/libs/safecurves-pkix-18',
+    '<rootDir>/libs/in',
+    '<rootDir>/libs/casscam',
+    '<rootDir>/libs/copp',
+    '<rootDir>/libs/clacse',
+    '<rootDir>/libs/x700',
   ],
 };

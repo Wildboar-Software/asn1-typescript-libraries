@@ -1,0 +1,37 @@
+{
+    "name": "@wildboar/copp",
+    "version": "1.0.0",
+    "description": "Connection-oriented presentation protocol (COPP) data structures and business logic in TypeScript",
+    "keywords": [
+        "copp",
+        "connection",
+        "oriented",
+        "presentation",
+        "protocol",
+        "x226",
+        "network",
+        "osi"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
+}
+

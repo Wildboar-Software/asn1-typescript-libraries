@@ -1,0 +1,118 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from 'asn1-ts';
+import * as $ from 'asn1-ts/dist/node/functional';
+import {
+    EnforcementAction,
+    _enum_for_EnforcementAction,
+    EnforcementAction_denyWithResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_denyWithoutResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithoutResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_abortAssociation /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    abortAssociation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_denyWithFalseResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithFalseResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_allow /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    allow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_EnforcementAction,
+    _encode_EnforcementAction,
+} from '../AccessControl-ASN1Module/EnforcementAction.ta';
+export {
+    EnforcementAction,
+    _enum_for_EnforcementAction,
+    EnforcementAction_denyWithResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_denyWithoutResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithoutResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_abortAssociation /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    abortAssociation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_denyWithFalseResponse /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    denyWithFalseResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    EnforcementAction_allow /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    allow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_EnforcementAction,
+    _encode_EnforcementAction,
+} from '../AccessControl-ASN1Module/EnforcementAction.ta';
+
+/* START_OF_SYMBOL_DEFINITION deny */
+/**
+ * @summary deny
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * deny EnforcementAction ::= denyWithResponse
+ * ```
+ *
+ * @constant
+ */
+export const deny: EnforcementAction = EnforcementAction_denyWithResponse;
+/* END_OF_SYMBOL_DEFINITION deny */
+
+/* eslint-enable */

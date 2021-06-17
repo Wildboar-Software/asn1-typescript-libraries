@@ -65,6 +65,11 @@
     "acbio": { "tags": [] },
     "x1080": { "tags": [] },
     "x400": { "tags": [] },
-    "safecurves-pkix-18": { "tags": [] }
+    "safecurves-pkix-18": { "tags": [] },
+    "casscam": { "tags": [] },
+    "copp": { "tags": [] },
+    "clacse": { "tags": [] },
+    "m3100": { "tags": [] },
+    "x700": { "tags": [] }
   }
 }
