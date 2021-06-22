@@ -14,7 +14,7 @@ import {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "../PKI-Stub/AvlSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta";
 export {
     InvokeID,
     _decode_InvokeID,
@@ -24,7 +24,7 @@ export {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "../PKI-Stub/AvlSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta";
 
 /* START_OF_SYMBOL_DEFINITION DeleteAvlReq */
 /**

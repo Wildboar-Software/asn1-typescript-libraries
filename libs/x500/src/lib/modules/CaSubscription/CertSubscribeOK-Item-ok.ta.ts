@@ -15,13 +15,13 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../PKI-Stub/CRLReason.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta";
 export {
     CertStatus,
     CertStatus_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -40,7 +40,7 @@ export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_ok */
 /**

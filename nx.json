@@ -23,7 +23,10 @@
     }
   },
   "projects": {
-    "x500": {
+    "acbio": {
+      "tags": []
+    },
+    "acse": {
       "tags": []
     },
     "ansi-x9-42": {
@@ -32,19 +35,130 @@
     "ansi-x9-62": {
       "tags": []
     },
+    "asn1soap": {
+      "tags": []
+    },
+    "attribute-asn1module": {
+      "tags": []
+    },
+    "bip": {
+      "tags": []
+    },
+    "cades": {
+      "tags": []
+    },
+    "casscam": {
+      "tags": []
+    },
+    "cbeff": {
+      "tags": []
+    },
+    "ccr": {
+      "tags": []
+    },
+    "cinf": {
+      "tags": []
+    },
+    "clacse": {
+      "tags": []
+    },
+    "clearance-sponsor-attribute": {
+      "tags": []
+    },
+    "cmail": {
+      "tags": []
+    },
+    "cmip": {
+      "tags": []
+    },
+    "cmp": {
+      "tags": []
+    },
     "cms": {
       "tags": []
     },
-    "pkcs": {
+    "copp": {
       "tags": []
     },
-    "qc": {
+    "crmf": {
+      "tags": []
+    },
+    "device-owner-attribute": {
+      "tags": []
+    },
+    "docs": {
+      "tags": []
+    },
+    "ec-private-key": {
+      "tags": []
+    },
+    "ers": {
+      "tags": []
+    },
+    "ess": {
+      "tags": []
+    },
+    "fast-infoset": {
+      "tags": []
+    },
+    "ftam": {
+      "tags": []
+    },
+    "gmi-attributemodule": {
+      "tags": []
+    },
+    "guls": {
+      "tags": []
+    },
+    "isis": {
+      "tags": []
+    },
+    "iso-9798-3-sasl": {
+      "tags": []
+    },
+    "kerberos5": {
+      "tags": []
+    },
+    "ldap": {
+      "tags": []
+    },
+    "m3100": {
+      "tags": []
+    },
+    "nlm": {
       "tags": []
     },
     "ocsp": {
       "tags": []
     },
-    "tsp": {
+    "pc": {
+      "tags": []
+    },
+    "pkcs": {
+      "tags": []
+    },
+    "pki-stub": {
+      "tags": []
+    },
+    "qc": {
+      "tags": []
+    },
+    "rinf": {
+      "tags": []
+    },
+    "rose": {
+      "tags": []
+    },
+    "rtse": {
+      "tags": []
+    },
+    "safecurves-pkix-18": {
+      "tags": []
+    },
+    "scvp": {
+      "tags": []
+    },
+    "sec1": {
       "tags": []
     },
     "sio": {
@@ -53,115 +167,19 @@
     "spkac": {
       "tags": []
     },
-    "crmf": {
-      "tags": []
-    },
-    "ess": {
-      "tags": []
-    },
-    "cmp": {
-      "tags": []
-    },
-    "kerberos5": {
-      "tags": []
-    },
-    "scvp": {
+    "t38": {
       "tags": []
     },
     "tal": {
       "tags": []
     },
-    "ldap": {
-      "tags": []
-    },
-    "cmip": {
-      "tags": []
-    },
-    "rose": {
-      "tags": []
-    },
-    "acse": {
-      "tags": []
-    },
-    "rtse": {
-      "tags": []
-    },
-    "ftam": {
-      "tags": []
-    },
-    "cbeff": {
-      "tags": []
-    },
-    "cinf": {
-      "tags": []
-    },
-    "rinf": {
-      "tags": []
-    },
-    "isis": {
-      "tags": []
-    },
-    "bip": {
-      "tags": []
-    },
-    "cmail": {
-      "tags": []
-    },
-    "guls": {
-      "tags": []
-    },
-    "ccr": {
-      "tags": []
-    },
-    "fast-infoset": {
-      "tags": []
-    },
-    "asn1soap": {
-      "tags": []
-    },
     "tcap": {
       "tags": []
     },
-    "t38": {
-      "tags": []
-    },
-    "iso-9798-3-sasl": {
+    "tsp": {
       "tags": []
     },
     "usm": {
-      "tags": []
-    },
-    "clearance-sponsor-attribute": {
-      "tags": []
-    },
-    "device-owner-attribute": {
-      "tags": []
-    },
-    "attribute-asn1module": {
-      "tags": []
-    },
-    "gmi-attributemodule": {
-      "tags": []
-    },
-    "nlm": {
-      "tags": []
-    },
-    "ers": {
-      "tags": []
-    },
-    "pc": {
-      "tags": []
-    },
-    "sec1": {
-      "tags": []
-    },
-    "cades": {
-      "tags": []
-    },
-    "ec-private-key": {
-      "tags": []
-    },
-    "acbio": {
       "tags": []
     },
     "x1080": {
@@ -170,25 +188,10 @@
     "x400": {
       "tags": []
     },
-    "safecurves-pkix-18": {
-      "tags": []
-    },
-    "casscam": {
-      "tags": []
-    },
-    "copp": {
-      "tags": []
-    },
-    "clacse": {
-      "tags": []
-    },
-    "m3100": {
+    "x500": {
       "tags": []
     },
     "x700": {
-      "tags": []
-    },
-    "docs": {
       "tags": []
     }
   }

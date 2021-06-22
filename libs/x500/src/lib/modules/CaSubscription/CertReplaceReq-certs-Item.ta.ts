@@ -9,22 +9,22 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../PKI-Stub/CertificateSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../PKI-Stub/CertificateSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceReq_certs_Item */
 /**

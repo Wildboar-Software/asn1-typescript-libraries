@@ -70,7 +70,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
 import { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta";
 export { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta";
 import { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta";

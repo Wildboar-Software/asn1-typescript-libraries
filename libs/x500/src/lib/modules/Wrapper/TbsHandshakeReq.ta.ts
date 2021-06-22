@@ -11,12 +11,12 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
 import {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "../PKI-Stub/AlgorithmWithInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
 import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
 import {
     DER_AttributeCertificate,
@@ -53,12 +53,12 @@ export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
 export {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "../PKI-Stub/AlgorithmWithInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
 export { SupportedProtSet } from "../ProtProtocols/SupportedProtSet.osa";
 export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
 export {

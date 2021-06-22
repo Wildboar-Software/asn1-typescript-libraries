@@ -5,14 +5,14 @@ import {
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
 } from "../CryptoTools/MultipleIcvAlgo.ta";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 export { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va";
 export {
     MultipleIcvAlgo,
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
 } from "../CryptoTools/MultipleIcvAlgo.ta";
-export { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 
 /* START_OF_SYMBOL_DEFINITION multipleIcvAlgo */
 /**

@@ -14,12 +14,12 @@ import {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "../PKI-Stub/AvlSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta";
 import {
     CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
-} from "../PKI-Stub/CertAVL.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta";
 export {
     InvokeID,
     _decode_InvokeID,
@@ -29,12 +29,12 @@ export {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "../PKI-Stub/AvlSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta";
 export {
     CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
-} from "../PKI-Stub/CertAVL.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta";
 
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlReq */
 /**

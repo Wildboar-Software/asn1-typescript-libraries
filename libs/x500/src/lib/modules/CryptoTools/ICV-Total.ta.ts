@@ -10,12 +10,12 @@ import {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "../PKI-Stub/AlgorithmWithInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
 export {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "../PKI-Stub/AlgorithmWithInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
 
 /* START_OF_SYMBOL_DEFINITION ICV_Total */
 /**

@@ -9,12 +9,12 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
 
 /* START_OF_SYMBOL_DEFINITION CertOK */
 /**

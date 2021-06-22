@@ -10,12 +10,12 @@ import {
     AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
-} from "../PKI-Stub/AlgoInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta";
 export {
     AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
-} from "../PKI-Stub/AlgoInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta";
 
 /* START_OF_SYMBOL_DEFINITION ICV_Invoke */
 /**

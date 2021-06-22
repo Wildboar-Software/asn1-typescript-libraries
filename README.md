@@ -13,24 +13,34 @@ programming languages, or if you have any other questions, please contact us at
 
 ## To Do
 
+- [ ] Documentation
+- [ ] Single-module exports
+- [ ] Deduplicate `COMPONENTS OF` spec arrays
 - [ ] SNMPv3 (No formal module.)
-- [ ] ISO19785 (I think the GH workflow for this is identical to CBEFF...)
-- [ ] M3100 (Very big and very broken.)
+- [x] M3100 (Very big and very broken.)
 - [ ] F515 (No artifact for this...)
 - [ ] CAP (I already have code out there for this.)
-- [ ] ISIS (Break NLM into separate library.)
+- [x] ISIS (Break NLM into separate library.)
 - [ ] RFC5915-ECPrivateKey
-- [ ] SEC1
+- [x] SEC1
 - [ ] TPM (Needs formatting and compilation)
 - [ ] [CSTA](https://www.ecma-international.org/wp-content/uploads/ECMA-285_4th_edition_december_2011.pdf)
-- [ ] `package.json` for each
-- [ ] `README.md` for each
+- [x] `package.json` for each
+- [x] `README.md` for each
 - [ ] Remove unused imports
+- [ ] Remove unused exports
+- [ ] Prettify
 - [ ] Refactor `AlgorithmInformation-2009` into a separate package
 - [ ] Implement XER for CINF
 - [ ] Implement XER for RINF
 - [ ] Implement XER for CMAIL
-- [ ] Break AlgorithmIdentifier into separate package?
+- [ ] Refactor some of X.500 into smaller libraries
+  - This has already been done partially by introducing the PKI-Stub module
+  - `sio` could be weaned from direct dependency on x500 if you just add SAT/DirectoryString
+  - `iso-9798-3-sasl` could be weaned from x500 if you add SIGNATURE
+  - Many could be weaned if the info object classes could be refactored into a library (scvp, crmf)
+  - `acbio` could be weaned if CertificateList were included
+  - `cades` could be weaned if PolicyInformation were included in PKI-Stub (ess too)
 
 ## Usage
 

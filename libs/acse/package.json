@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/acse",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Association Control Service Element PDUs in TypeScript",
     "keywords": [
         "acse",

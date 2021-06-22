@@ -25,32 +25,8 @@ import {
     LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
-} from "../Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export {
-    LDAPMessage,
-    _decode_LDAPMessage,
-    _encode_LDAPMessage,
-} from "../Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
+} from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
+import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta";
 
 /* START_OF_SYMBOL_DEFINITION LdapResultData */
 /**
@@ -200,34 +176,7 @@ export const _root_component_type_list_1_spec_for_LdapResultData: $.ComponentSpe
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LdapResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LdapResultData */
 

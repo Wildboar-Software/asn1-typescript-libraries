@@ -2,4 +2,4 @@ export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta';
+} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/RelativeDistinguishedName.ta';

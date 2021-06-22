@@ -10,7 +10,7 @@ import {
     _decode_Payload14,
     _encode_Payload14,
 } from "../GenAlgo/Payload14.ta";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 export {
     Group14,
     _decode_Group14,
@@ -22,7 +22,7 @@ export {
     _decode_Payload14,
     _encode_Payload14,
 } from "../GenAlgo/Payload14.ta";
-export { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 
 /* START_OF_SYMBOL_DEFINITION dhModpGr14Hkdf256Algo */
 /**

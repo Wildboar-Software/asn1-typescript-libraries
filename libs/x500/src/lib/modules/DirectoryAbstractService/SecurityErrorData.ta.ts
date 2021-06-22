@@ -36,63 +36,7 @@ import {
     _decode_SPKM_ERROR,
     _encode_SPKM_ERROR,
 } from "../SpkmGssTokens/SPKM-ERROR.ta";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta";
-export {
-    EncPwdInfo,
-    _decode_EncPwdInfo,
-    _encode_EncPwdInfo,
-} from "../DirectoryAbstractService/EncPwdInfo.ta";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export {
-    blockedCredentials /* IMPORTED_SHORT_NAMED_INTEGER */,
-    inappropriateAlgorithms /* IMPORTED_SHORT_NAMED_INTEGER */,
-    inappropriateAuthentication /* IMPORTED_SHORT_NAMED_INTEGER */,
-    insufficientAccessRights /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidCredentials /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidSignature /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noInformation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    passwordExpired /* IMPORTED_SHORT_NAMED_INTEGER */,
-    protectionRequired /* IMPORTED_SHORT_NAMED_INTEGER */,
-    SecurityProblem,
-    SecurityProblem_blockedCredentials /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_inappropriateAlgorithms /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_inappropriateAuthentication /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_insufficientAccessRights /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_invalidCredentials /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_invalidSignature /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_noInformation /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_passwordExpired /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_protectionRequired /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_spkmError /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityProblem_unsupportedAuthenticationMethod /* IMPORTED_LONG_NAMED_INTEGER */,
-    spkmError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unsupportedAuthenticationMethod /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_SecurityProblem,
-    _encode_SecurityProblem,
-} from "../DirectoryAbstractService/SecurityProblem.ta";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export {
-    SPKM_ERROR,
-    _decode_SPKM_ERROR,
-    _encode_SPKM_ERROR,
-} from "../SpkmGssTokens/SPKM-ERROR.ta";
+import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta";
 
 /* START_OF_SYMBOL_DEFINITION SecurityErrorData */
 /**
@@ -248,34 +192,7 @@ export const _root_component_type_list_1_spec_for_SecurityErrorData: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityErrorData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityErrorData */
 

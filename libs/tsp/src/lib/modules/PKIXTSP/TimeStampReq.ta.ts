@@ -11,7 +11,7 @@ import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
 import {
     MessageImprint,
     _decode_MessageImprint,
@@ -23,28 +23,6 @@ import {
     _encode_TimeStampReq_version,
 } from "../PKIXTSP/TimeStampReq-version.ta";
 import {
-    TSAPolicyId,
-    _decode_TSAPolicyId,
-    _encode_TSAPolicyId,
-} from "../PKIXTSP/TSAPolicyId.ta";
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
-export {
-    MessageImprint,
-    _decode_MessageImprint,
-    _encode_MessageImprint,
-} from "../PKIXTSP/MessageImprint.ta";
-export {
-    TimeStampReq_version,
-    TimeStampReq_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TimeStampReq_version,
-    _encode_TimeStampReq_version,
-} from "../PKIXTSP/TimeStampReq-version.ta";
-export {
     TSAPolicyId,
     _decode_TSAPolicyId,
     _encode_TSAPolicyId,

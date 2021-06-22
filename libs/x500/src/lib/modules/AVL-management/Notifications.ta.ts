@@ -5,12 +5,12 @@ import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../PKI-Stub/Attribute.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../PKI-Stub/Attribute.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta";
 
 /* START_OF_SYMBOL_DEFINITION Notifications */
 /**

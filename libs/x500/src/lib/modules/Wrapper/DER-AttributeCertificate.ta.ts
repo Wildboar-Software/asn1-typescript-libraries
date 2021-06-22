@@ -5,7 +5,7 @@ export {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "../PKI-Stub/AttributeCertificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AttributeCertificate.ta";
 export { der } from "../Wrapper/der.va";
 
 /* START_OF_SYMBOL_DEFINITION DER_AttributeCertificate */

@@ -1,0 +1,34 @@
+{
+    "name": "@wildboar/pki-stub",
+    "version": "1.0.0",
+    "description": "X.510 PKI-Stub ASN.1 data structures in TypeScript",
+    "keywords": [
+        "x500",
+        "x510",
+        "pki",
+        "x509",
+        "certificate",
+        "avl"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
+}

@@ -12,12 +12,12 @@ import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta";
 import {
     Accuracy,
     _decode_Accuracy,
@@ -35,38 +35,6 @@ import {
 } from "../PKIXTSP/TSAPolicyId.ta";
 import {
     TSTInfo_version,
-    _decode_TSTInfo_version,
-    _encode_TSTInfo_version,
-} from "../PKIXTSP/TSTInfo-version.ta";
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta";
-export {
-    Accuracy,
-    _decode_Accuracy,
-    _encode_Accuracy,
-} from "../PKIXTSP/Accuracy.ta";
-export {
-    MessageImprint,
-    _decode_MessageImprint,
-    _encode_MessageImprint,
-} from "../PKIXTSP/MessageImprint.ta";
-export {
-    TSAPolicyId,
-    _decode_TSAPolicyId,
-    _encode_TSAPolicyId,
-} from "../PKIXTSP/TSAPolicyId.ta";
-export {
-    TSTInfo_version,
-    TSTInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TSTInfo_version,
     _encode_TSTInfo_version,
 } from "../PKIXTSP/TSTInfo-version.ta";

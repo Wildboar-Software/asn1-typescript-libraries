@@ -17,7 +17,7 @@ export {
     _get_decoder_for_MULTY_SIGNED_parmeters_sign,
     _get_encoder_for_MULTY_SIGNED_parmeters_sign,
 } from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta";
-export { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 
 /* START_OF_SYMBOL_DEFINITION MULTY_SIGNED */
 /**

@@ -41,6 +41,7 @@ export {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta";
+import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta";
 
 /* START_OF_SYMBOL_DEFINITION RemoveEntryResultData */
 /**
@@ -150,34 +151,7 @@ export const _root_component_type_list_1_spec_for_RemoveEntryResultData: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_RemoveEntryResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_RemoveEntryResultData */
 

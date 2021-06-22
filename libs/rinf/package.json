@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/rinf",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "object Identifier Resolution (ORS) Registration Information (RINF) data structures in TypeScript",
     "keywords": [
         "rinf",

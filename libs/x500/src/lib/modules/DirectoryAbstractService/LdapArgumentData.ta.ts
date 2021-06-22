@@ -60,90 +60,10 @@ import {
     LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
-} from "../Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
-export {
-    CommonArgumentsSeq,
-    _decode_CommonArgumentsSeq,
-    _encode_CommonArgumentsSeq,
+} from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
+import {
+    _root_component_type_list_1_spec_for_CommonArgumentsSeq,
 } from "../DirectoryAbstractService/CommonArgumentsSeq.ta";
-export {
-    ContextSelection,
-    _decode_ContextSelection,
-    _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
-export {
-    compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    FamilyGrouping,
-    FamilyGrouping_compoundEntry /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_multiStrand /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_strands /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    multiStrand /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    strands /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FamilyGrouping,
-    _encode_FamilyGrouping,
-    _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
-export {
-    LinkId,
-    _decode_LinkId,
-    _encode_LinkId,
-} from "../DirectoryAbstractService/LinkId.ta";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export {
-    ServiceControls,
-    _decode_ServiceControls,
-    _encode_ServiceControls,
-} from "../DirectoryAbstractService/ServiceControls.ta";
-export {
-    Exclusions,
-    _decode_Exclusions,
-    _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
-export {
-    OperationProgress,
-    _decode_OperationProgress,
-    _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
-export {
-    cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    immediateSuperior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonSpecificSubordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReferenceType,
-    ReferenceType_cross /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_ditBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_immediateSuperior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_nonSpecificSubordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_self /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_subordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_supplier /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    self /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    subordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    supplier /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReferenceType,
-    _encode_ReferenceType,
-    _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export {
-    LDAPMessage,
-    _decode_LDAPMessage,
-    _encode_LDAPMessage,
-} from "../Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
 
 /* START_OF_SYMBOL_DEFINITION LdapArgumentData */
 /**
@@ -408,90 +328,7 @@ export const _root_component_type_list_1_spec_for_LdapArgumentData: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_LdapArgumentData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "serviceControls",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "requestor",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "operationProgress",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasedRDNs",
-        true,
-        $.hasTag(_TagClass.context, 26),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "criticalExtensions",
-        true,
-        $.hasTag(_TagClass.context, 25),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "referenceType",
-        true,
-        $.hasTag(_TagClass.context, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "entryOnly",
-        true,
-        $.hasTag(_TagClass.context, 23),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "exclusions",
-        true,
-        $.hasTag(_TagClass.context, 22),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "nameResolveOnMaster",
-        true,
-        $.hasTag(_TagClass.context, 21),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "operationContexts",
-        true,
-        $.hasTag(_TagClass.context, 20),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "familyGrouping",
-        true,
-        $.hasTag(_TagClass.context, 19),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonArgumentsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_LdapArgumentData */
 

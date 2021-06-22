@@ -5,7 +5,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
 import {
     TbsHandshakeReq_encr_mode_non_aead,
     _decode_TbsHandshakeReq_encr_mode_non_aead,
@@ -15,7 +15,7 @@ export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
 export {
     TbsHandshakeReq_encr_mode_non_aead,
     _decode_TbsHandshakeReq_encr_mode_non_aead,

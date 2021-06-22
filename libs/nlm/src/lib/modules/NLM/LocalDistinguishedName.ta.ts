@@ -74,7 +74,7 @@ import {
 import {
     _decode_RDNSequence,
     _encode_RDNSequence,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/RDNSequence.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/RDNSequence.ta";
 
 /* START_OF_SYMBOL_DEFINITION LocalDistinguishedName */
 /**

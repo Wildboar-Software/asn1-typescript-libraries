@@ -5,7 +5,7 @@ export {
     PkiPath,
     _decode_PkiPath,
     _encode_PkiPath,
-} from "../PKI-Stub/PkiPath.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/PkiPath.ta";
 export { der } from "../Wrapper/der.va";
 
 /* START_OF_SYMBOL_DEFINITION DER_PkiPath */

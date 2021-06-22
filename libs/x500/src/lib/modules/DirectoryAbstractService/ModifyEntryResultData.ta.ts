@@ -26,31 +26,7 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta";
-export {
-    EntryInformation,
-    _decode_EntryInformation,
-    _encode_EntryInformation,
-} from "../DirectoryAbstractService/EntryInformation.ta";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta";
 
 /* START_OF_SYMBOL_DEFINITION ModifyEntryResultData */
 /**
@@ -176,34 +152,7 @@ export const _root_component_type_list_1_spec_for_ModifyEntryResultData: $.Compo
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyEntryResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyEntryResultData */
 

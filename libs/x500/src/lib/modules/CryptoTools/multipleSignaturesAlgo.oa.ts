@@ -5,14 +5,14 @@ import {
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
 } from "../CryptoTools/MultipleSignaturesAlgo.ta";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 export { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va";
 export {
     MultipleSignaturesAlgo,
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
 } from "../CryptoTools/MultipleSignaturesAlgo.ta";
-export { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
 
 /* START_OF_SYMBOL_DEFINITION multipleSignaturesAlgo */
 /**

@@ -10,7 +10,7 @@ import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta";
 
 /* START_OF_SYMBOL_DEFINITION PublicKeyAndChallenge */
 /**

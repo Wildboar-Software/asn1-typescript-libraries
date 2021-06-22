@@ -36,63 +36,7 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export {
-    fullUpdateRequired /* IMPORTED_SHORT_NAMED_INTEGER */,
-    inactiveAgreement /* IMPORTED_SHORT_NAMED_INTEGER */,
-    insufficientResources /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidAgreementID /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidInformationReceived /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidSequencing /* IMPORTED_SHORT_NAMED_INTEGER */,
-    missedPrevious /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ShadowProblem,
-    ShadowProblem_fullUpdateRequired /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_inactiveAgreement /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_insufficientResources /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_invalidAgreementID /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_invalidInformationReceived /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_invalidSequencing /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_missedPrevious /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_unsuitableTiming /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_unsupportedStrategy /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_unwillingToPerform /* IMPORTED_LONG_NAMED_INTEGER */,
-    ShadowProblem_updateAlreadyReceived /* IMPORTED_LONG_NAMED_INTEGER */,
-    unsuitableTiming /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unsupportedStrategy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unwillingToPerform /* IMPORTED_SHORT_NAMED_INTEGER */,
-    updateAlreadyReceived /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ShadowProblem,
-    _encode_ShadowProblem,
-} from "../DirectoryShadowAbstractService/ShadowProblem.ta";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta";
-export {
-    UpdateWindow,
-    _decode_UpdateWindow,
-    _encode_UpdateWindow,
-} from "../DirectoryShadowAbstractService/UpdateWindow.ta";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta";
 
 /* START_OF_SYMBOL_DEFINITION ShadowErrorData */
 /**
@@ -248,34 +192,7 @@ export const _root_component_type_list_1_spec_for_ShadowErrorData: $.ComponentSp
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ShadowErrorData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ShadowErrorData */
 
