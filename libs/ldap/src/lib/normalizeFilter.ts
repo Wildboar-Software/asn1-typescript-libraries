@@ -38,14 +38,14 @@ function normalizeFilter (filter: Filter): Filter {
             .map((sub) => normalizeFilter(sub)); // It may be necessary again.
         // I think you only have to do this for one or:{} in the and:{}.
         const orsubIndex = subfilters.findIndex((sf) => ("or" in sf));
-        if (orsubIndex) {
+        if (orsubIndex > -1) {
             const orsub = subfilters.splice(orsubIndex, 1)[0];
             if (!("or" in orsub)) {
                 throw new Error(); // This should never happen.
             }
             return normalizeFilter({
                 or: orsub.or.map((subsub) => ({
-                    and: [ ...subfilters, subsub ],
+                    and: [ subsub, ...subfilters ],
                 })),
             });
         } else {
@@ -54,9 +54,9 @@ function normalizeFilter (filter: Filter): Filter {
             };
         }
     } else if ("or" in filter) {
-        if (filter.or.some((subfilter) => ("or" in subfilter) && (subfilter.or.length === 0))) {
-            return { // One of the subfilters is always false, so this filter is always false.
-                or: [],
+        if (filter.or.some((subfilter) => ("and" in subfilter) && (subfilter.and.length === 0))) {
+            return { // One of the subfilters is always true, so this filter is always true.
+                and: [],
             };
         }
         return {
@@ -65,6 +65,8 @@ function normalizeFilter (filter: Filter): Filter {
                 .flatMap((sub) => ("or" in sub) ? sub.or : [ sub ])
                 .map((sub) => normalizeFilter(sub)),
         };
+    } else {
+        return filter;
     }
 }
 

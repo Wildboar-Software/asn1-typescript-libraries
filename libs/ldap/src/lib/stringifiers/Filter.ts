@@ -36,7 +36,7 @@ function stringifyFilter (filter: Filter): string {
         // There is only supposed to be one initial and final.
         const initial = filter.substrings.substrings.find((sub) => ("initial" in sub));
         const final = filter.substrings.substrings.find((sub) => ("final" in sub));
-        const anys = filter.substrings.substrings.filter((sub) => ("any" in sub));
+        const anys = filter.substrings.substrings.filter((sub) => ("any_" in sub));
         let value = "";
         if (initial && ("initial" in initial)) {
             const s = initial.initial;

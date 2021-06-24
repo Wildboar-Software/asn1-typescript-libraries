@@ -60,6 +60,7 @@ function parseFilter (state: ParserState): ParserState {
             while (char === "(") {
                 s = parseFilter(s);
                 subs.push(s.filter);
+                char = s.input[s.index];
             }
             s.index++;
             return {
@@ -77,6 +78,7 @@ function parseFilter (state: ParserState): ParserState {
             while (char === "(") {
                 s = parseFilter(s);
                 subs.push(s.filter);
+                char = s.input[s.index];
             }
             s.index++;
             return {

@@ -1,11 +1,13 @@
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
 import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta";
+import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
 import type EqualityMatcher from "../lib/types/EqualityMatcher";
 import SubstringSelection from "../lib/types/SubstringSelection";
 import type SubstringsMatcher from "../lib/types/SubstringsMatcher";
 import type OrderingMatcher from "../lib/types/OrderingMatcher";
 import type ApproxMatcher from "../lib/types/ApproxMatcher";
+import encodeLDAPOID from "./encodeLDAPOID";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,
@@ -47,9 +49,14 @@ interface EvaluateFilterOptions {
 }
 
 export
-function evaluateFilter (filter: Filter, entry: PartialAttributeList, options: EvaluateFilterOptions): boolean | undefined {
+function evaluateFilter (
+    filter: Filter,
+    dn: AttributeTypeAndValue[][],
+    entry: PartialAttributeList,
+    options: EvaluateFilterOptions,
+): boolean | undefined {
     if ("and" in filter) {
-        const results = filter.and.map((subfilter: Filter): boolean => evaluateFilter(subfilter, entry, options));
+        const results = filter.and.map((subfilter: Filter): boolean => evaluateFilter(subfilter, dn, entry, options));
         const allPassed = results.every((result) => result);
         if (allPassed) {
             return true;
@@ -58,7 +65,7 @@ function evaluateFilter (filter: Filter, entry: PartialAttributeList, options: E
             ? undefined
             : false;
     } else if ("or" in filter) {
-        const results = filter.or.map((subfilter: Filter): boolean => evaluateFilter(subfilter, entry, options));
+        const results = filter.or.map((subfilter: Filter): boolean => evaluateFilter(subfilter, dn, entry, options));
         const anyMatched = results.some((result) => result);
         if (anyMatched) {
             return true;
@@ -67,7 +74,7 @@ function evaluateFilter (filter: Filter, entry: PartialAttributeList, options: E
             ? undefined
             : false;
     } else if ("not" in filter) {
-        const result = evaluateFilter(filter.not, entry, options);
+        const result = evaluateFilter(filter.not, dn, entry, options);
         if (result === false) {
             return true;
         } else if (result === true) {
@@ -145,14 +152,20 @@ function evaluateFilter (filter: Filter, entry: PartialAttributeList, options: E
         if (!matcher) {
             return undefined;
         }
-        return entry
-            .filter((attr) =>  mra.type_
-                ? options.isSubtype(attr.type_, mra.type_)
-                : true
-            )
-            .some((attr) => attr.vals
-                .some((val) => matcher(mra.matchValue, val)));
-        // dnAttributes is ignored.
+        return (
+            entry
+                .filter((attr) => mra.type_
+                    ? options.isSubtype(attr.type_, mra.type_)
+                    : true
+                )
+                .some((attr) => attr.vals
+                    .some((val) => matcher(mra.matchValue, val)))
+            || (mra.dnAttributes && dn
+                .some((rdn) => rdn
+                    .some((atav) => mra.type_
+                        ? options.isSubtype(encodeLDAPOID(atav[0]), mra.type_)
+                        : true)))
+        );
     } else {
         return undefined;
     }
