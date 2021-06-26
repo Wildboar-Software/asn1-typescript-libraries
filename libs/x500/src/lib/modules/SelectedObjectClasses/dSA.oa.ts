@@ -49,7 +49,7 @@ export const dSA: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [applicationEntity] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [knowledgeInformation] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["dSA"],
     "&id": id_oc_dSA /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

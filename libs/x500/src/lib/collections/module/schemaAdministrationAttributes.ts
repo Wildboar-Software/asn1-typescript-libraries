@@ -1,0 +1,12 @@
+export { dITStructureRules } from "../../modules/SchemaAdministration/dITStructureRules.oa";
+export { dITContentRules } from "../../modules/SchemaAdministration/dITContentRules.oa";
+export { matchingRules } from "../../modules/SchemaAdministration/matchingRules.oa";
+export { attributeTypes } from "../../modules/SchemaAdministration/attributeTypes.oa";
+export { objectClasses } from "../../modules/SchemaAdministration/objectClasses.oa";
+export { nameForms } from "../../modules/SchemaAdministration/nameForms.oa";
+export { matchingRuleUse } from "../../modules/SchemaAdministration/matchingRuleUse.oa";
+export { structuralObjectClass } from "../../modules/SchemaAdministration/structuralObjectClass.oa";
+export { governingStructureRule } from "../../modules/SchemaAdministration/governingStructureRule.oa";
+export { contextTypes } from "../../modules/SchemaAdministration/contextTypes.oa";
+export { dITContextUse } from "../../modules/SchemaAdministration/dITContextUse.oa";
+export { friends } from "../../modules/SchemaAdministration/friends.oa";

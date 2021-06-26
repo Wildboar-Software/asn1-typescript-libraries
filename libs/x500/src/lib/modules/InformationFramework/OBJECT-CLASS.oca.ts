@@ -95,7 +95,7 @@ export interface OBJECT_CLASS {
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
 }
 /* END_OF_SYMBOL_DEFINITION OBJECT_CLASS */
 

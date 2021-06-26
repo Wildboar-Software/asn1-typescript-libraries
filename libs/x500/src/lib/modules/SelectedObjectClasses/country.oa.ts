@@ -59,7 +59,7 @@ export const country: OBJECT_CLASS = {
         description,
         searchGuide,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["country"],
     "&id": id_oc_country /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

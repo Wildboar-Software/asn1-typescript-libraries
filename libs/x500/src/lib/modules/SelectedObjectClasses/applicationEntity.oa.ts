@@ -81,7 +81,7 @@ export const applicationEntity: OBJECT_CLASS = {
         seeAlso,
         supportedApplicationContext,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["applicationEntity"],
     "&id": id_oc_applicationEntity /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

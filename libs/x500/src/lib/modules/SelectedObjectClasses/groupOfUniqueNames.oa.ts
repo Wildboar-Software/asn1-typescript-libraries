@@ -81,7 +81,7 @@ export const groupOfUniqueNames: OBJECT_CLASS = {
         seeAlso,
         businessCategory,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["groupOfUniqueNames"],
     "&id": id_oc_groupOfUniqueNames /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

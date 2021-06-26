@@ -67,7 +67,7 @@ export const applicationProcess: OBJECT_CLASS = {
         organizationalUnitName,
         seeAlso,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["applicationProcess"],
     "&id": id_oc_applicationProcess /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

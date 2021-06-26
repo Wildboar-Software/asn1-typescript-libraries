@@ -52,8 +52,8 @@ export const strongAuthenticationUser: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [userCertificate] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
-    "&ldapDesc": undefined,
+    "&ldapName": ["strongAuthenticationUser"],
+    "&ldapDesc": "X.521 strong authentication user",
     "&id": id_oc_strongAuthenticationUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION strongAuthenticationUser */

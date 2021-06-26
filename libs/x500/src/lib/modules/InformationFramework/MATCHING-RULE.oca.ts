@@ -89,7 +89,7 @@ export interface MATCHING_RULE<
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
 }
 /* END_OF_SYMBOL_DEFINITION MATCHING_RULE */
 

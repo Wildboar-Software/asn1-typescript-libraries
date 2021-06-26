@@ -1,0 +1,12 @@
+export { userCertificate } from "../../modules/AuthenticationFramework/userCertificate.oa";
+export { cACertificate } from "../../modules/AuthenticationFramework/cACertificate.oa";
+export { crossCertificatePair } from "../../modules/AuthenticationFramework/crossCertificatePair.oa";
+export { certificateRevocationList } from "../../modules/AuthenticationFramework/certificateRevocationList.oa";
+export { eepkCertificateRevocationList } from "../../modules/AuthenticationFramework/eepkCertificateRevocationList.oa";
+export { authorityRevocationList } from "../../modules/AuthenticationFramework/authorityRevocationList.oa";
+export { deltaRevocationList } from "../../modules/AuthenticationFramework/deltaRevocationList.oa";
+export { supportedAlgorithms } from "../../modules/AuthenticationFramework/supportedAlgorithms.oa";
+export { certificationPracticeStmt } from "../../modules/AuthenticationFramework/certificationPracticeStmt.oa";
+export { certificatePolicy } from "../../modules/AuthenticationFramework/certificatePolicy.oa";
+export { pkiPath } from "../../modules/AuthenticationFramework/pkiPath.oa";
+export { userPassword } from "../../modules/AuthenticationFramework/userPassword.oa";

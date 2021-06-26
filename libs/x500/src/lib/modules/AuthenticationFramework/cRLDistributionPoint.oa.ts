@@ -70,7 +70,7 @@ export const cRLDistributionPoint: OBJECT_CLASS = {
         authorityRevocationList,
         deltaRevocationList,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["cRLDistributionPoint"],
     "&ldapDesc": "X.509 CRL distribution point" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cRLDistributionPoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };

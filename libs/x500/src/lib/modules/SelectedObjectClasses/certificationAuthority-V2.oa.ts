@@ -52,8 +52,8 @@ export const certificationAuthority_V2: OBJECT_CLASS = {
     "&Superclasses": [certificationAuthority] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [deltaRevocationList] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
-    "&ldapDesc": undefined,
+    "&ldapName": ["certificationAuthority-V2"],
+    "&ldapDesc": "X.509 certificate authority, version 2",
     "&id": id_oc_certificationAuthority_V2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION certificationAuthority_V2 */

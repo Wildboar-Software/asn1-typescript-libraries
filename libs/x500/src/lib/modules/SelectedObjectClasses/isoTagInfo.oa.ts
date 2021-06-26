@@ -73,7 +73,7 @@ export const isoTagInfo: OBJECT_CLASS = {
         contentUrl,
         tagLocation,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["isoTagInfo"],
     "&id": id_oc_isoTagInfo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION isoTagInfo */

@@ -68,7 +68,7 @@ export const attributeCertificateRevocationList: ATTRIBUTE<CertificateList> = {
     },
     "&equality-match": certificateListExactMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": x509CertificateList["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["AttrCertificateRevocationList"],
     "&ldapDesc":
         "X.509 Attr certificate revocation list" /* OBJECT_FIELD_SETTING */,
     "&id": id_at_attributeCertificateRevocationList /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -8,7 +8,7 @@ import {
     _encodeIA5String,
     _encodePrintableString,
 } from "asn1-ts/dist/node/functional";
-import * as selat from "../collections/selectedAttributeTypeAttributes";
+import * as selat from "../collections/module/selectedAttributeTypeAttributes";
 import { AttributeTypeAndValue as ATAV } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
 import { RelativeDistinguishedName as RDN } from "../modules/InformationFramework/RelativeDistinguishedName.ta";
 import { _encode_UnboundedDirectoryString as _encode_UBS } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";

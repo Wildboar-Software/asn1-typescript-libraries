@@ -71,7 +71,7 @@ export const description: ATTRIBUTE<UnboundedDirectoryString> = {
     "&equality-match": caseIgnoreMatch /* OBJECT_FIELD_SETTING */,
     "&substrings-match": caseIgnoreSubstringsMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["description"],
     "&id": id_at_description /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

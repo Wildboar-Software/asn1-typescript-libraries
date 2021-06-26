@@ -52,7 +52,7 @@ export const pkiCertPath: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [pkiPath] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pkiCertPath"],
     "&ldapDesc": "PKI Certification Path" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pkiCertPath /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };

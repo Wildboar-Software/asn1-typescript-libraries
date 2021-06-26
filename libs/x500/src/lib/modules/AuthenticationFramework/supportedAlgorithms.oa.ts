@@ -68,7 +68,7 @@ export const supportedAlgorithms: ATTRIBUTE<SupportedAlgorithm> = {
     },
     "&equality-match": algorithmIdentifierMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": x509SupportedAlgorithm["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["supportedAlgorithms"],
     "&ldapDesc": "X.509 support algorithms" /* OBJECT_FIELD_SETTING */,
     "&id": id_at_supportedAlgorithms /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

@@ -47,7 +47,7 @@ export const top: OBJECT_CLASS = {
     encoderFor: {},
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["top"],
     "&id": id_oc_top /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION top */

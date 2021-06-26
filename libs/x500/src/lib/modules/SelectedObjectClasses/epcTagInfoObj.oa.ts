@@ -65,7 +65,7 @@ export const epcTagInfoObj: OBJECT_CLASS = {
         contentUrl,
         tagLocation,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["epcTagInfoObj"],
     "&id": id_oc_epcTagInfoObj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION epcTagInfoObj */

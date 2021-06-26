@@ -52,7 +52,7 @@ export const deltaCRL: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [deltaRevocationList] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["deltaCRL"],
     "&ldapDesc": "X.509 delta CRL" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_deltaCRL /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };

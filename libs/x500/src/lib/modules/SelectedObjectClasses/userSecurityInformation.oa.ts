@@ -52,8 +52,8 @@ export const userSecurityInformation: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [supportedAlgorithms] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
-    "&ldapDesc": undefined,
+    "&ldapName": ["userSecurityInformation"],
+    "&ldapDesc": "X.521 user security information",
     "&id": id_oc_userSecurityInformation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION userSecurityInformation */

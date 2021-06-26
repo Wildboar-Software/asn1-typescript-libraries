@@ -89,7 +89,7 @@ export const subschema: OBJECT_CLASS = {
         matchingRuleUse,
         ldapSyntaxes,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["subschema"],
     "&id": id_soc_subschema /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION subschema */

@@ -75,7 +75,7 @@ export interface CONTEXT<
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
 }
 /* END_OF_SYMBOL_DEFINITION CONTEXT */
 

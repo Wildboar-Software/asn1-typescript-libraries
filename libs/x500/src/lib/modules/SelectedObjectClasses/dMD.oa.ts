@@ -55,7 +55,7 @@ export const dMD: OBJECT_CLASS = {
     "&OptionalAttributes": [
         ...OrganizationalAttributeSet,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["dmd"],
     "&id": id_oc_dmd /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

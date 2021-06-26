@@ -73,7 +73,7 @@ export const modifiersName: ATTRIBUTE<DistinguishedName> = {
     "&no-user-modification": false /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": dn["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["modifiersName"],
     "&id": id_oa_modifiersName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

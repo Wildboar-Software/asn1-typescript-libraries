@@ -63,7 +63,7 @@ export const enhancedSearchGuide: ATTRIBUTE<EnhancedGuide> = {
         "&Type": _encode_EnhancedGuide,
     },
     "&ldapSyntax": enhancedGuide["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["enhancedSearchGuide"],
     "&id": id_at_enhancedSearchGuide /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

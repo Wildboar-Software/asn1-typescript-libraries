@@ -68,7 +68,7 @@ export const eepkCertificateRevocationList: ATTRIBUTE<CertificateList> = {
     },
     "&equality-match": certificateListExactMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": x509CertificateList["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["eepkCertificateRevocationList"],
     "&ldapDesc":
         "X.509 EEPK certificate revocation list" /* OBJECT_FIELD_SETTING */,
     "&id": id_at_eepkCertificateRevocationList /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

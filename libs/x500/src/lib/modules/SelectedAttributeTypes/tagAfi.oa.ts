@@ -59,7 +59,7 @@ export const tagAfi: ATTRIBUTE<OCTET_STRING> = {
     },
     "&equality-match": octetStringMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": octetString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["tagAfi"],
     "&id": id_at_tagAfi /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

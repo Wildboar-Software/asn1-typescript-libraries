@@ -49,7 +49,7 @@ export const urnCobj: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [urnC] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["urnCobj"],
     "&id": id_oc_urnCobj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

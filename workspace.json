@@ -1396,6 +1396,38 @@
         }
       }
     },
+    "scrypt-0": {
+      "root": "libs/scrypt-0",
+      "sourceRoot": "libs/scrypt-0/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/scrypt-0",
+            "tsConfig": "libs/scrypt-0/tsconfig.lib.json",
+            "packageJson": "libs/scrypt-0/package.json",
+            "main": "libs/scrypt-0/src/index.ts",
+            "assets": ["libs/scrypt-0/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/scrypt-0/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/scrypt-0"],
+          "options": {
+            "jestConfig": "libs/scrypt-0/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "scvp": {
       "root": "libs/scvp",
       "sourceRoot": "libs/scvp/src",

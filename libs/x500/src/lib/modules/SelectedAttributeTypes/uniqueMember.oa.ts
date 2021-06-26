@@ -67,7 +67,7 @@ export const uniqueMember: ATTRIBUTE<NameAndOptionalUID> = {
     },
     "&equality-match": uniqueMemberMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": nameAndOptionalUID["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["uniqueMember"],
     "&id": id_at_uniqueMember /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

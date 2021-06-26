@@ -66,8 +66,8 @@ export const certificationAuthority: OBJECT_CLASS = {
         authorityRevocationList,
     ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [crossCertificatePair] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
-    "&ldapDesc": undefined,
+    "&ldapName": ["certificationAuthority"],
+    "&ldapDesc": "X.509 certificate authority",
     "&id": id_oc_certificationAuthority /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION certificationAuthority */

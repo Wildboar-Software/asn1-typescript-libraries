@@ -59,7 +59,7 @@ export const uii: ATTRIBUTE<BIT_STRING> = {
     },
     "&equality-match": bitStringMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": bitString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["uii"],
     "&id": id_at_uii /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -63,7 +63,7 @@ export const locality: OBJECT_CLASS = {
         ...LocaleAttributeSet,
         seeAlso,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["locality"],
     "&id": id_oc_locality /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

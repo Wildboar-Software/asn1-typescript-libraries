@@ -69,7 +69,7 @@ export const matchingRuleUse: ATTRIBUTE<MatchingRuleUseDescription> = {
     "&equality-match": objectIdentifierFirstComponentMatch /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": matchingRuleUseDescription["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["matchingRuleUse"],
     "&id": id_soa_matchingRuleUse /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

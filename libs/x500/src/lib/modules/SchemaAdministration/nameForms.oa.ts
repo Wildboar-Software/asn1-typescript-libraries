@@ -69,7 +69,7 @@ export const nameForms: ATTRIBUTE<NameFormDescription> = {
     "&equality-match": objectIdentifierFirstComponentMatch /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": nameFormDescription["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["nameForms"],
     "&id": id_soa_nameForms /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

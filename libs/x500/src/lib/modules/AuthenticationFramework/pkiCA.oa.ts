@@ -70,7 +70,7 @@ export const pkiCA: OBJECT_CLASS = {
         authorityRevocationList,
         crossCertificatePair,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pkiCA"],
     "&ldapDesc": "X.509 PKI Certificate Authority" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pkiCA /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };

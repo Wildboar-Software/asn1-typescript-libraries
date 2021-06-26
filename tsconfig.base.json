@@ -61,6 +61,7 @@
       "@wildboar/rose/*": ["libs/rose/*"],
       "@wildboar/rtse/*": ["libs/rtse/*"],
       "@wildboar/safecurves-pkix-18/*": ["libs/safecurves-pkix-18/*"],
+      "@wildboar/scrypt-0": ["libs/scrypt-0/src/index.ts"],
       "@wildboar/scvp/*": ["libs/scvp/*"],
       "@wildboar/sec1/*": ["libs/sec1/*"],
       "@wildboar/sio/*": ["libs/sio/*"],

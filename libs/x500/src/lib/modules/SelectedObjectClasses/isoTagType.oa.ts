@@ -61,7 +61,7 @@ export const isoTagType: OBJECT_CLASS = {
         tagAfi,
         uiiFormat,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["isoTagType"],
     "&id": id_oc_isoTagType /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION isoTagType */

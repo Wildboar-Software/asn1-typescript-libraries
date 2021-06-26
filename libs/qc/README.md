@@ -2,7 +2,7 @@
 
 ASN.1 data structures based on the ASN.1 definitions in
 [IETF RFC 3739](https://datatracker.ietf.org/doc/html/rfc3739), which defines
-the the Qualified Certificates (QC) profile for X.509 public-key certificates.
+the Qualified Certificates (QC) profile for X.509 public-key certificates.
 
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)

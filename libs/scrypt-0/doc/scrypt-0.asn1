@@ -1,0 +1,31 @@
+-- Heavily modified from RFC 7914, which was missing definition of ALGORITHM-IDENTIFIER.
+Scrypt-0 {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+    enterprise(1) 11591 4 10}
+DEFINITIONS ::= BEGIN
+
+IMPORTS
+
+    ALGORITHM
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+
+    ;
+
+id-scrypt OBJECT IDENTIFIER ::= {iso(1) identified-organization(3) dod(6)
+    internet(1) private(4) enterprise(1) 11591 4 11}
+
+Scrypt-params ::= SEQUENCE {
+    salt                        OCTET STRING,
+    costParameter               INTEGER (1..MAX),
+    blockSize                   INTEGER (1..MAX),
+    parallelizationParameter    INTEGER (1..MAX),
+    keyLength                   INTEGER (1..MAX) OPTIONAL }
+
+scrypt ALGORITHM ::= {
+    PARMS Scrypt-params
+    IDENTIFIED BY id-scrypt }
+
+PBES2-KDFs ALGORITHM ::= { scrypt, ... }
+
+END

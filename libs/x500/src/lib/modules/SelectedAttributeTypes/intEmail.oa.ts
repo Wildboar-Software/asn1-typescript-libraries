@@ -69,7 +69,7 @@ export const intEmail: ATTRIBUTE<IntEmail> = {
     "&equality-match": intEmailMatch /* OBJECT_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": intEmailString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["Internationalized Email"],
     "&id": id_at_intEmail /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

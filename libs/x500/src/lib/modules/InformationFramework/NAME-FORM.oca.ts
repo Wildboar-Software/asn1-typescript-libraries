@@ -58,11 +58,11 @@ export interface NAME_FORM {
     /**
      * @summary &namedObjectClass
      */
-    readonly "&namedObjectClass"?: OBJECT_CLASS;
+    readonly "&namedObjectClass": OBJECT_CLASS;
     /**
      * @summary &MandatoryAttributes
      */
-    readonly "&MandatoryAttributes"?: ATTRIBUTE[];
+    readonly "&MandatoryAttributes": ATTRIBUTE[];
     /**
      * @summary &OptionalAttributes
      */
@@ -78,7 +78,7 @@ export interface NAME_FORM {
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
 }
 /* END_OF_SYMBOL_DEFINITION NAME_FORM */
 

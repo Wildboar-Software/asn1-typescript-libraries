@@ -51,7 +51,7 @@ export const epcTagTypeObj: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [uiiFormat] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["epcTagTypeObj"],
     "&id": id_oc_epcTagTypeObj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION epcTagTypeObj */

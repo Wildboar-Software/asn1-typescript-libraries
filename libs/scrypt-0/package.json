@@ -1,0 +1,37 @@
+{
+    "name": "@wildboar/scrypt-0",
+    "version": "1.0.0",
+    "description": "Scrypt ASN.1 Algorithm Identifier in TypeScript",
+    "keywords": [
+        "scrypt",
+        "asn1",
+        "algorithm",
+        "identifier",
+        "cryptography",
+        "pkix",
+        "pki",
+        "pbkdf"
+    ],
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    }
+}
+

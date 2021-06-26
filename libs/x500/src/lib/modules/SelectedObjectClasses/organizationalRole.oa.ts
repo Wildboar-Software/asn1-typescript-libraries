@@ -83,7 +83,7 @@ export const organizationalRole: OBJECT_CLASS = {
         seeAlso,
         ...TelecommunicationAttributeSet,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["organizationalRole"],
     "&id": id_oc_organizationalRole /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

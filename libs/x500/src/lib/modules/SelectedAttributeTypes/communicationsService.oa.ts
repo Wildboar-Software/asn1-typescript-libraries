@@ -67,7 +67,7 @@ export const communicationsService: ATTRIBUTE<CommunicationsService> = {
     },
     "&equality-match": objectIdentifierMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["communicationsService"],
     "&id": id_at_communicationsService /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

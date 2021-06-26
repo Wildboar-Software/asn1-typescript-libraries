@@ -58,7 +58,7 @@ export const collectiveTelephoneNumber: ATTRIBUTE = {
     "&derivation": telephoneNumber /* OBJECT_FIELD_SETTING */,
     "&collective": false /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": printableString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["c-TelephoneNumber"],
     "&id": id_at_collectiveTelephoneNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

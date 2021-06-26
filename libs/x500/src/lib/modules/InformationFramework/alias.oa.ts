@@ -49,7 +49,7 @@ export const alias: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [aliasedEntryName] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["alias"],
     "&id": id_oc_alias /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

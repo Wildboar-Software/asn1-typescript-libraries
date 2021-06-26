@@ -1,0 +1,12 @@
+export { role } from "../../modules/AttributeCertificateDefinitions/role.oa";
+export { permission } from "../../modules/AttributeCertificateDefinitions/permission.oa";
+export { attributeCertificateAttribute } from "../../modules/AttributeCertificateDefinitions/attributeCertificateAttribute.oa";
+export { aACertificate } from "../../modules/AttributeCertificateDefinitions/aACertificate.oa";
+export { attributeDescriptorCertificate } from "../../modules/AttributeCertificateDefinitions/attributeDescriptorCertificate.oa";
+export { attributeCertificateRevocationList } from "../../modules/AttributeCertificateDefinitions/attributeCertificateRevocationList.oa";
+export { eeAttrCertificateRevocationList } from "../../modules/AttributeCertificateDefinitions/eeAttrCertificateRevocationList.oa";
+export { attributeAuthorityRevocationList } from "../../modules/AttributeCertificateDefinitions/attributeAuthorityRevocationList.oa";
+export { delegationPath } from "../../modules/AttributeCertificateDefinitions/delegationPath.oa";
+export { privPolicy } from "../../modules/AttributeCertificateDefinitions/privPolicy.oa";
+export { protPrivPolicy } from "../../modules/AttributeCertificateDefinitions/protPrivPolicy.oa";
+export { xmlPrivPolicy } from "../../modules/AttributeCertificateDefinitions/xmlPrivPolicy.oa";

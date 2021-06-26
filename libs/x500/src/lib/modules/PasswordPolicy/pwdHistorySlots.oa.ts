@@ -67,7 +67,7 @@ export const pwdHistorySlots: ATTRIBUTE<INTEGER> = {
     "&single-valued": false /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": integer["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pwdHistorySlots"],
     "&id": id_oa_pwdHistorySlots /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

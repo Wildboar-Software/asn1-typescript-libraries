@@ -68,7 +68,7 @@ export const userCertificate: ATTRIBUTE<Certificate> = {
     },
     "&equality-match": certificateExactMatch /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": x509Certificate["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["userCertificate"],
     "&ldapDesc": "X.509 user certificate" /* OBJECT_FIELD_SETTING */,
     "&id": id_at_userCertificate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

@@ -49,7 +49,7 @@ export const oidC1obj: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [oidC] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["oidC1obj"],
     "&id": id_oc_oidC1obj /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

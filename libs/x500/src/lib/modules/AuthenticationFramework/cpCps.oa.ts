@@ -58,7 +58,7 @@ export const cpCps: OBJECT_CLASS = {
         certificatePolicy,
         certificationPracticeStmt,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["cpCps"],
     "&ldapDesc":
         "Certificate Policy and Certification Practice Statement" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cpCps /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

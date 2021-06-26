@@ -55,7 +55,7 @@ export const organizationalUnit: OBJECT_CLASS = {
     "&OptionalAttributes": [
         ...OrganizationalAttributeSet,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["organizationalUnit"],
     "&id": id_oc_organizationalUnit /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

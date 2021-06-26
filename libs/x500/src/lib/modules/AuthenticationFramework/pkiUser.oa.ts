@@ -52,7 +52,7 @@ export const pkiUser: OBJECT_CLASS = {
     "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [userCertificate] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pkiUser"],
     "&ldapDesc": "X.509 PKI User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pkiUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
