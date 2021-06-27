@@ -1,6 +1,6 @@
-import type { AttributeValue } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
+import { ASN1Element } from "asn1-ts";
 
 export
-type ApproxMatcher = (assertion: AttributeValue, value: AttributeValue) => boolean;
+type ApproxMatcher = (assertion: ASN1Element, value: ASN1Element) => boolean;
 
 export default ApproxMatcher;

@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/ldap",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Lightweight Directory Access Protocol PDUs in TypeScript",
     "keywords": [
         "ldap",

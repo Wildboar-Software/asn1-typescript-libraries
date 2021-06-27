@@ -1,7 +1,5 @@
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
-import { hasUncaughtExceptionCaptureCallback } from "node:process";
 import destringifyRDNSequence from "../lib/destringifiers/RDNSequence";
-import AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
 import type StringDecoderGetter from "../lib/types/StringDecoderGetter";
 
 function utf8Element (str: string): BERElement {
@@ -12,11 +10,6 @@ function utf8Element (str: string): BERElement {
         str,
     );
 }
-
-// const COUNTRY_NAME = new ObjectIdentifier([ 2, 5, 4, 6 ]);
-// const STATE_NAME = new ObjectIdentifier([ 2, 5, 4, 8 ]);
-// const GIVEN_NAME = new ObjectIdentifier([ 2, 5, 4, 42 ]);
-// const SURNAME = new ObjectIdentifier([ 2, 5, 4, 4 ]);
 
 describe("destringifyRDNSequence()", () => {
 

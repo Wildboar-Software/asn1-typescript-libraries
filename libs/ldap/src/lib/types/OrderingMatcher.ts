@@ -1,6 +1,6 @@
-import type { AttributeValue } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
+import { ASN1Element } from "asn1-ts";
 
 export
-type OrderingMatcher = (assertion: AttributeValue, value: AttributeValue) => number;
+type OrderingMatcher = (assertion: ASN1Element, value: ASN1Element) => number;
 
 export default OrderingMatcher;

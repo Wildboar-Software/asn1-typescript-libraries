@@ -7,7 +7,7 @@ import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Acce
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta";
 import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
-import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "asn1-ts";
+import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "asn1-ts";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta";
 import SubstringSelection from "../lib/types/SubstringSelection";
 
@@ -82,16 +82,28 @@ const TEST_FILTER: Filter = {
     present: encodeLDAPOID(serialNumber),
 };
 
+const getLDAPSyntaxDecoder = (ad: LDAPString): (value: Uint8Array) => ASN1Element => {
+    return (value: Uint8Array): ASN1Element => {
+        return new BERElement(
+            ASN1TagClass.universal,
+            ASN1Construction.primitive,
+            ASN1UniversalType.utf8String,
+            Buffer.from(value).toString("utf-8"),
+        );
+    };
+};
+
 const options: EvaluateFilterOptions = {
+    getLDAPSyntaxDecoder,
     getEqualityMatcher: (ad: LDAPString) => {
-        return function (assertion: Uint8Array, value: Uint8Array): boolean {
-            return (Buffer.from(assertion).toString("utf-8") === Buffer.from(value).toString("utf-8"));
+        return function (assertion: ASN1Element, value: ASN1Element): boolean {
+            return (assertion.utf8String === value.utf8String);
         };
     },
     getSubstringsMatcher: (ad: LDAPString) => {
-        return function (assertion: Uint8Array, value: Uint8Array, selection: SubstringSelection): boolean {
-            const a = Buffer.from(assertion).toString("utf-8");
-            const v = Buffer.from(value).toString("utf-8");
+        return function (assertion: ASN1Element, value: ASN1Element, selection: SubstringSelection): boolean {
+            const a = assertion.utf8String;
+            const v = value.utf8String;
             switch (selection) {
             case (SubstringSelection.initial): {
                 return v.startsWith(a);
@@ -109,16 +121,16 @@ const options: EvaluateFilterOptions = {
         };
     },
     getOrderingMatcher: (ad: LDAPString) => {
-        return function (assertion: Uint8Array, value: Uint8Array): number {
-            const a = Array.from(assertion).reduce((p, c) => p + c, 0);
-            const v = Array.from(value).reduce((p, c) => p + c, 0);
+        return function (assertion: ASN1Element, value: ASN1Element): number {
+            const a = Array.from(assertion.octetString).reduce((p, c) => p + c, 0);
+            const v = Array.from(value.octetString).reduce((p, c) => p + c, 0);
             return (v - a);
         };
     },
     getApproxMatcher: (ad: LDAPString) => {
-        return function (assertion: Uint8Array, value: Uint8Array): boolean {
-            const a = Buffer.from(assertion).toString("utf-8");
-            const v = Buffer.from(value).toString("utf-8");
+        return function (assertion: ASN1Element, value: ASN1Element): boolean {
+            const a = assertion.utf8String;
+            const v = value.utf8String;
             return (v.indexOf(a) > -1);
         };
     },

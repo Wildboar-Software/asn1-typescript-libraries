@@ -1,10 +1,10 @@
-import type { AttributeValue } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
+import { ASN1Element } from "asn1-ts";
 import SubstringSelection from "./SubstringSelection";
 
 export
 type SubstringsFunction = (
-    assertion: AttributeValue,
-    value: AttributeValue,
+    assertion: ASN1Element,
+    value: ASN1Element,
     selection?: SubstringSelection,
 ) => boolean;
 

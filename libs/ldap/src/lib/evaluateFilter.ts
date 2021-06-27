@@ -7,6 +7,7 @@ import SubstringSelection from "../lib/types/SubstringSelection";
 import type SubstringsMatcher from "../lib/types/SubstringsMatcher";
 import type OrderingMatcher from "../lib/types/OrderingMatcher";
 import type ApproxMatcher from "../lib/types/ApproxMatcher";
+import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder";
 import encodeLDAPOID from "./encodeLDAPOID";
 
 // Filter ::= CHOICE {
@@ -39,8 +40,21 @@ import encodeLDAPOID from "./encodeLDAPOID";
 //     dnAttributes  [4]  BOOLEAN DEFAULT FALSE
 // }
 
+function compareUint8Arrays (a: Uint8Array, b: Uint8Array): boolean {
+    if (a.length !== b.length) {
+        return false;
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 export
 interface EvaluateFilterOptions {
+    readonly getLDAPSyntaxDecoder: (ad: LDAPString) => LDAPSyntaxDecoder | undefined;
     readonly getEqualityMatcher: (ad: LDAPString) => EqualityMatcher | undefined;
     readonly getSubstringsMatcher: (ad: LDAPString) => SubstringsMatcher | undefined;
     readonly getOrderingMatcher: (ad: LDAPString) => OrderingMatcher | undefined;
@@ -83,89 +97,190 @@ function evaluateFilter (
             return undefined;
         }
     } else if ("equalityMatch" in filter) {
-        const ava = filter.equalityMatch;
-        const matcher = options.getEqualityMatcher(ava.attributeDesc);
-        if (!matcher) {
+        try {
+            const ava = filter.equalityMatch;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
+            const matcher = options.getEqualityMatcher(ava.attributeDesc);
+            if (!matcher) {
+                return undefined;
+            }
+            return entry
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .some((attr) => attr.vals
+                    .some((val) => {
+                        const decode = assertionDecoder
+                            ? assertionDecoder
+                            : options.getLDAPSyntaxDecoder(attr.type_);
+                        if (!decode) {
+                            // Unless the assertion syntax differs from the
+                            // attribute syntax, a byte-for-byte comparison should
+                            // always determine equality.
+                            return compareUint8Arrays(ava.assertionValue, val);
+                        }
+                        const decodedAssertion = decode(ava.assertionValue);
+                        const decodedValue = decode(val);
+                        return matcher(decodedAssertion, decodedValue);
+                    }));
+        } catch {
             return undefined;
         }
-        return entry
-            .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
-            .some((attr) => attr.vals
-                .some((val) => matcher(ava.assertionValue, val)));
     } else if ("substrings" in filter) {
-        const sf = filter.substrings;
-        const matcher = options.getSubstringsMatcher(sf.type_);
-        if (!matcher) {
+        try {
+            const sf = filter.substrings;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(sf.type_);
+            const matcher = options.getSubstringsMatcher(sf.type_);
+            if (!matcher) {
+                return undefined;
+            }
+            return entry
+                .filter((attr) => options.isSubtype(attr.type_, sf.type_))
+                .some((attr) => attr.vals
+                    .some((val) => sf.substrings
+                        .every((ss) => {
+                            const decode = assertionDecoder
+                                ? assertionDecoder
+                                : options.getLDAPSyntaxDecoder(attr.type_);
+                            if (!decode) {
+                                return undefined;
+                            }
+                            const decodedValue = decode(val);
+                            if ("initial" in ss) {
+                                const decodedAssertion = decode(ss.initial);
+                                return matcher(decodedAssertion, decodedValue, SubstringSelection.initial);
+                            } else if ("any_" in ss) {
+                                const decodedAssertion = decode(ss.any_);
+                                return matcher(decodedAssertion, decodedValue, SubstringSelection.any_);
+                            } else if ("final" in ss) {
+                                const decodedAssertion = decode(ss.final);
+                                return matcher(decodedAssertion, decodedValue, SubstringSelection.final);
+                            } else {
+                                return undefined;
+                            }
+                        })));
+        } catch {
             return undefined;
         }
-        return entry
-            .filter((attr) => options.isSubtype(attr.type_, sf.type_))
-            .some((attr) => attr.vals
-                .some((val) => sf.substrings
-                    .every((ss) => {
-                        if ("initial" in ss) {
-                            return matcher(ss.initial, val, SubstringSelection.initial);
-                        } else if ("any_" in ss) {
-                            return matcher(ss.any_, val, SubstringSelection.any_);
-                        } else if ("final" in ss) {
-                            return matcher(ss.final, val, SubstringSelection.final);
-                        } else {
+    } else if ("greaterOrEqual" in filter) {
+        try {
+            const ava = filter.greaterOrEqual;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
+            const matcher = options.getOrderingMatcher(ava.attributeDesc);
+            if (!matcher) {
+                return undefined;
+            }
+            return entry
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .some((attr) => attr.vals
+                    .some((val) => {
+                        const decode = assertionDecoder
+                            ? assertionDecoder
+                            : options.getLDAPSyntaxDecoder(attr.type_);
+                        if (!decode) {
                             return undefined;
                         }
-                    })));
-    } else if ("greaterOrEqual" in filter) {
-        const ava = filter.greaterOrEqual;
-        const matcher = options.getOrderingMatcher(ava.attributeDesc);
-        if (!matcher) {
+                        const decodedValue = decode(val);
+                        const decodedAssertion = decode(ava.assertionValue);
+                        return (matcher(decodedAssertion, decodedValue) >= 0);
+                    }));
+        } catch {
             return undefined;
         }
-        return entry
-            .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
-            .some((attr) => attr.vals
-                .some((val) => (matcher(ava.assertionValue, val) >= 0)));
     } else if ("lessOrEqual" in filter) {
-        const ava = filter.lessOrEqual;
-        const matcher = options.getOrderingMatcher(ava.attributeDesc);
-        if (!matcher) {
-            return undefined;
-        }
-        return entry
-            .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
-            .some((attr) => attr.vals
-                .some((val) => (matcher(ava.assertionValue, val) <= 0)));
-    } else if ("present" in filter) {
-        return entry.some((attr) => options.isSubtype(attr.type_, filter.present));
-    } else if ("approxMatch" in filter) {
-        const ava = filter.approxMatch;
-        const matcher = options.getApproxMatcher(ava.attributeDesc);
-        if (!matcher) {
-            return undefined;
-        }
-        return entry
-            .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
-            .some((attr) => attr.vals
-                .some((val) => matcher(ava.assertionValue, val)));
-    } else if ("extensibleMatch" in filter) {
-        const mra = filter.extensibleMatch;
-        const mr = mra.matchingRule ?? mra.type_;
-        const matcher = options.getEqualityMatcher(mr);
-        if (!matcher) {
-            return undefined;
-        }
-        return (
-            entry
-                .filter((attr) => mra.type_
-                    ? options.isSubtype(attr.type_, mra.type_)
-                    : true
-                )
+        try {
+            const ava = filter.lessOrEqual;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
+            const matcher = options.getOrderingMatcher(ava.attributeDesc);
+            if (!matcher) {
+                return undefined;
+            }
+            return entry
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
                 .some((attr) => attr.vals
-                    .some((val) => matcher(mra.matchValue, val)))
-            || (mra.dnAttributes && dn
-                .some((rdn) => rdn
-                    .some((atav) => mra.type_
-                        ? options.isSubtype(encodeLDAPOID(atav[0]), mra.type_)
-                        : true)))
-        );
+                .some((val) => {
+                    const decode = assertionDecoder
+                        ? assertionDecoder
+                        : options.getLDAPSyntaxDecoder(attr.type_);
+                    if (!decode) {
+                        return undefined;
+                    }
+                    const decodedValue = decode(val);
+                    const decodedAssertion = decode(ava.assertionValue);
+                    return (matcher(decodedAssertion, decodedValue) <= 0);
+                }));
+        } catch {
+            return undefined;
+        }
+    } else if ("present" in filter) {
+        try {
+            return entry.some((attr) => options.isSubtype(attr.type_, filter.present));
+        } catch {
+            return undefined;
+        }
+    } else if ("approxMatch" in filter) {
+        try {
+            const ava = filter.approxMatch;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(ava.attributeDesc);
+            const matcher = options.getApproxMatcher(ava.attributeDesc);
+            if (!matcher) {
+                return undefined;
+            }
+            return entry
+                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .some((attr) => attr.vals
+                    .some((val) => {
+                        const decode = assertionDecoder
+                            ? assertionDecoder
+                            : options.getLDAPSyntaxDecoder(attr.type_);
+                        if (!decode) {
+                            // Unless the assertion syntax differs from the
+                            // attribute syntax, a byte-for-byte comparison should
+                            // always determine equality.
+                            return compareUint8Arrays(ava.assertionValue, val);
+                        }
+                        const decodedAssertion = decode(ava.assertionValue);
+                        const decodedValue = decode(val);
+                        return matcher(decodedAssertion, decodedValue);
+                    }));
+        } catch {
+            return undefined;
+        }
+    } else if ("extensibleMatch" in filter) {
+        try {
+            const mra = filter.extensibleMatch;
+            const mr = mra.matchingRule ?? mra.type_;
+            const assertionDecoder = options.getLDAPSyntaxDecoder(mr);
+            if (!assertionDecoder) {
+                return undefined;
+            }
+            const decodedAssertion = assertionDecoder(mra.matchValue);
+            const matcher = options.getEqualityMatcher(mr);
+            if (!matcher) {
+                return undefined;
+            }
+            return (
+                entry
+                    .filter((attr) => mra.type_
+                        ? options.isSubtype(attr.type_, mra.type_)
+                        : true
+                    )
+                    .some((attr) => attr.vals
+                        .some((val) => {
+                            const valueDecoder = options.getLDAPSyntaxDecoder(attr.type_);
+                            if (!valueDecoder) {
+                                return undefined;
+                            }
+                            const decodedValue = valueDecoder(val);
+                            return matcher(decodedAssertion, decodedValue);
+                        }))
+                || (mra.dnAttributes && dn
+                    .some((rdn) => rdn
+                        .some((atav) => mra.type_
+                            ? options.isSubtype(encodeLDAPOID(atav[0]), mra.type_)
+                            : true)))
+            );
+        } catch {
+            return undefined;
+        }
     } else {
         return undefined;
     }

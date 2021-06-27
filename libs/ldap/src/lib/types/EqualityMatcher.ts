@@ -1,6 +1,6 @@
-import type { AttributeValue } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
+import { ASN1Element } from "asn1-ts";
 
 export
-type EqualityMatcher = (assertion: AttributeValue, value: AttributeValue) => boolean;
+type EqualityMatcher = (assertion: ASN1Element, value: ASN1Element) => boolean;
 
 export default EqualityMatcher;
