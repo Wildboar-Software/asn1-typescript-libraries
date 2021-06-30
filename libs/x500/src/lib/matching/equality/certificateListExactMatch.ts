@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import { ASN1Element, DERElement } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import { ASN1Element, DERElement, OBJECT_IDENTIFIER } from "asn1-ts";
 import compareName from "../../comparators/compareName";
 import {
     CertificateListExactAssertion,
@@ -29,10 +29,11 @@ export
 const certificateListExactMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: CertificateListExactAssertion = _decode_CertificateListExactAssertion(assertion);
     const v: CertificateList = _decode_CertificateList(value);
-    if (!compareName(v.toBeSigned.issuer, a.issuer)) {
+    if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher ?? (() => undefined))) {
         return false;
     }
     const time = ((): Date => {
@@ -56,7 +57,7 @@ const certificateListExactMatch: EqualityMatcher = (
             if (!("fullName" in a.distributionPoint)) {
                 return false;
             }
-            if (!compareGeneralNames(stored.fullName, stored.fullName)) {
+            if (!compareGeneralNames(stored.fullName, stored.fullName, getEqualityMatcher ?? (() => undefined))) {
                 return false;
             }
         } else if ("nameRelativeToCRLIssuer" in stored) {
@@ -66,6 +67,7 @@ const certificateListExactMatch: EqualityMatcher = (
             if (!compareRelativeDistinguishedName(
                 stored.nameRelativeToCRLIssuer,
                 a.distributionPoint.nameRelativeToCRLIssuer,
+                getEqualityMatcher ?? (() => undefined),
             )) {
                 return false;
             }

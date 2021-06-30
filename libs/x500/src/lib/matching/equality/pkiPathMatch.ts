@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import type { ASN1Element } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     PkiPath,
     _decode_PkiPath,
@@ -17,14 +17,15 @@ export
 const pkiPathMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: PkiPathMatchSyntax = _decode_PkiPathMatchSyntax(assertion);
     const v: PkiPath = _decode_PkiPath(value);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
     return (
-        compareName(a.firstIssuer, firstCert.toBeSigned.issuer)
-        && compareName(a.lastSubject, lastCert.toBeSigned.subject)
+        compareName(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)
+        && compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher)
     );
 }
 

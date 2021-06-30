@@ -105,7 +105,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => {
                         const decode = assertionDecoder
@@ -133,7 +133,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(attr.type_, sf.type_))
+                .filter((attr) => options.isSubtype(sf.type_, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => sf.substrings
                         .every((ss) => {
@@ -169,7 +169,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => {
                         const decode = assertionDecoder
@@ -194,7 +194,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                 .some((val) => {
                     const decode = assertionDecoder
@@ -212,7 +212,7 @@ function evaluateFilter (
         }
     } else if ("present" in filter) {
         try {
-            return entry.some((attr) => options.isSubtype(attr.type_, filter.present));
+            return entry.some((attr) => options.isSubtype(filter.present, attr.type_));
         } catch {
             return undefined;
         }
@@ -225,7 +225,7 @@ function evaluateFilter (
                 return undefined;
             }
             return entry
-                .filter((attr) => options.isSubtype(attr.type_, ava.attributeDesc))
+                .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => {
                         const decode = assertionDecoder
@@ -260,7 +260,7 @@ function evaluateFilter (
             return (
                 entry
                     .filter((attr) => mra.type_
-                        ? options.isSubtype(attr.type_, mra.type_)
+                        ? options.isSubtype(mra.type_, attr.type_)
                         : true
                     )
                     .some((attr) => attr.vals
@@ -275,7 +275,7 @@ function evaluateFilter (
                 || (mra.dnAttributes && dn
                     .some((rdn) => rdn
                         .some((atav) => mra.type_
-                            ? options.isSubtype(encodeLDAPOID(atav[0]), mra.type_)
+                            ? options.isSubtype(mra.type_, encodeLDAPOID(atav[0]))
                             : true)))
             );
         } catch {

@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher";
-import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT } from "asn1-ts";
+import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
 import compareName from "../../comparators/compareName";
 import {
     CertificateListAssertion,
@@ -44,6 +44,7 @@ export
 const certificateListMatch : EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: CertificateListAssertion = _decode_CertificateListAssertion(assertion);
     const v: CertificateList = _decode_CertificateList(value);
@@ -67,7 +68,7 @@ const certificateListMatch : EqualityMatcher = (
         })()
         : undefined;
 
-    if (a.issuer && !compareName(a.issuer, v.toBeSigned.issuer)) {
+    if (a.issuer && !compareName(a.issuer, v.toBeSigned.issuer, getEqualityMatcher ?? (() => undefined))) {
         return false;
     }
 
@@ -125,7 +126,7 @@ const certificateListMatch : EqualityMatcher = (
                 !a.distributionPoint.fullName.some((dpn1) => (
                     ("fullName" in idp.distributionPoint)
                     && (idp.distributionPoint.fullName
-                        .some((dpn2): boolean => compareGeneralName(dpn1, dpn2)))
+                        .some((dpn2): boolean => compareGeneralName(dpn1, dpn2, getEqualityMatcher ?? (() => undefined))))
             ))) {
                 return false;
             }
@@ -135,6 +136,7 @@ const certificateListMatch : EqualityMatcher = (
             && !compareRelativeDistinguishedName(
                 a.distributionPoint.nameRelativeToCRLIssuer,
                 idp.distributionPoint.nameRelativeToCRLIssuer,
+                getEqualityMatcher ?? (() => undefined),
             )
         ) {
             return false;

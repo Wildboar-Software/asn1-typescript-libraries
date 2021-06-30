@@ -1,3 +1,5 @@
+import type EqualityMatcher from "../types/EqualityMatcher";
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     AuthorityKeyIdentifier,
 } from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta";
@@ -5,7 +7,11 @@ import compareGeneralNames from "./compareGeneralNames";
 import compareUint8Arrays from "./compareUint8Arrays";
 
 export
-function compareAttCertIssuer (a: AuthorityKeyIdentifier, b: AuthorityKeyIdentifier): boolean {
+function compareAttCertIssuer (
+    a: AuthorityKeyIdentifier,
+    b: AuthorityKeyIdentifier,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (Boolean(a.keyIdentifier) !== Boolean(b.keyIdentifier)) {
         return false;
     }
@@ -25,7 +31,7 @@ function compareAttCertIssuer (a: AuthorityKeyIdentifier, b: AuthorityKeyIdentif
     if (
         a.authorityCertIssuer
         && b.authorityCertIssuer
-        && !compareGeneralNames(a.authorityCertIssuer, b.authorityCertIssuer)
+        && !compareGeneralNames(a.authorityCertIssuer, b.authorityCertIssuer, getEqualityMatcher)
     ) {
         return false;
     }

@@ -108,9 +108,9 @@ describe("Comparators", () => {
     ];
 
     test("can compare two DNs", () => {
-        expect(compareRDNSequence(dn1, dn2)).toBe(true);
-        expect(compareRDNSequence(dn1, dn3)).toBe(false);
-        expect(compareRDNSequence(dn1, dn4)).toBe(false);
-        expect(compareRDNSequence(dn1, dn5)).toBe(false);
+        expect(compareRDNSequence(dn1, dn2, () => undefined)).toBe(true);
+        expect(compareRDNSequence(dn1, dn3, () => undefined)).toBe(false);
+        expect(compareRDNSequence(dn1, dn4, () => undefined)).toBe(false);
+        expect(compareRDNSequence(dn1, dn5, () => undefined)).toBe(false);
     });
 });

@@ -1,4 +1,4 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     AttributeCertificateAssertion,
@@ -18,6 +18,7 @@ export
 const attributeCertificateMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: AttributeCertificateAssertion = _decode_AttributeCertificateAssertion(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
@@ -26,19 +27,23 @@ const attributeCertificateMatch: EqualityMatcher = (
             if (!v.toBeSigned.holder.baseCertificateID) {
                 return false;
             }
-            if (!compareIssuerSerial(a.holder.baseCertificateID, v.toBeSigned.holder.baseCertificateID)) {
+            if (!compareIssuerSerial(
+                a.holder.baseCertificateID,
+                v.toBeSigned.holder.baseCertificateID,
+                getEqualityMatcher
+            )) {
                 return false;
             }
         } else if ("holderName" in a.holder) {
             if (!v.toBeSigned.holder.entityName) {
                 return false;
             }
-            if (!compareGeneralNames(a.holder.holderName, v.toBeSigned.holder.entityName)) {
+            if (!compareGeneralNames(a.holder.holderName, v.toBeSigned.holder.entityName, getEqualityMatcher)) {
                 return false;
             }
         }
     }
-    if (a.issuer && (!compareGeneralNames(a.issuer, v.toBeSigned.issuer.issuerName))) {
+    if (a.issuer && (!compareGeneralNames(a.issuer, v.toBeSigned.issuer.issuerName, getEqualityMatcher))) {
         return false;
     }
     if (

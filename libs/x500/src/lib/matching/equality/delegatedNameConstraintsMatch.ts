@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import type { ASN1Element } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     id_ce_delegatedNameConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va";
@@ -23,6 +23,7 @@ export
 const delegatedNameConstraintsMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: NameConstraintsSyntax = _decode_NameConstraintsSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
@@ -34,7 +35,7 @@ const delegatedNameConstraintsMatch: EqualityMatcher = (
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
     const storedValue: NameConstraintsSyntax = _decode_NameConstraintsSyntax(el);
-    return compareNameConstraintsSyntax(a, storedValue);
+    return compareNameConstraintsSyntax(a, storedValue, getEqualityMatcher);
 }
 
 export default delegatedNameConstraintsMatch;

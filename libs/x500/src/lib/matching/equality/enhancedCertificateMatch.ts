@@ -1,4 +1,4 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
 import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import compareName from "../../comparators/compareName";
@@ -90,12 +90,13 @@ export
 function evaluateEnhancedCertificateAssertion (
     assertion: EnhancedCertificateAssertion,
     value: Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && !compareUint8Arrays(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
-    if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer)) {
+    if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer, getEqualityMatcher)) {
         return false;
     }
     if (assertion.subjectKeyIdentifier) {
@@ -191,7 +192,7 @@ function evaluateEnhancedCertificateAssertion (
         el.fromBytes(sanExt.extnValue);
         const sans: GeneralNames = _decode_GeneralNames(el);
         if (assertion.subjectAltName.altNameValue) {
-            if (!sans.some((san): boolean => compareGeneralName(san, assertion.subjectAltName.altNameValue))) {
+            if (!sans.some((san): boolean => compareGeneralName(san, assertion.subjectAltName.altNameValue, getEqualityMatcher))) {
                 return false;
             }
         } else if ("builtinNameForm" in assertion.subjectAltName.altnameType) {
@@ -332,7 +333,7 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.subject) {
-        if (!compareName(assertion.subject, tbs.subject)) {
+        if (!compareName(assertion.subject, tbs.subject, getEqualityMatcher)) {
             return false;
         }
     }

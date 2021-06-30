@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import { ASN1Element, DERElement, FALSE_BIT } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
 import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import compareName from "../../comparators/compareName";
 import {
@@ -88,12 +88,13 @@ export
 function evaluateCertificateAssertion (
     assertion: CertificateAssertion,
     value: Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && !compareUint8Arrays(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
-    if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer)) {
+    if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer, getEqualityMatcher)) {
         return false;
     }
     if (assertion.subjectKeyIdentifier) {
@@ -316,7 +317,7 @@ function evaluateCertificateAssertion (
     }
 
     if (assertion.subject) {
-        if (!compareName(assertion.subject, tbs.subject)) {
+        if (!compareName(assertion.subject, tbs.subject, getEqualityMatcher)) {
             return false;
         }
     }

@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import type { ASN1Element } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     id_ce_roleSpecCertIdentifier,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-roleSpecCertIdentifier.va";
@@ -23,6 +23,7 @@ export
 const roleSpecCertIdMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: RoleSpecCertIdentifierSyntax = _decode_RoleSpecCertIdentifierSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
@@ -38,7 +39,7 @@ const roleSpecCertIdMatch: EqualityMatcher = (
         return false;
     }
     for (let i = 0; i < a.length; i++) {
-        if (!compareRoleSpecCertIdentifier(a[i], storedValue[i])) {
+        if (!compareRoleSpecCertIdentifier(a[i], storedValue[i], getEqualityMatcher)) {
             return false;
         }
     }

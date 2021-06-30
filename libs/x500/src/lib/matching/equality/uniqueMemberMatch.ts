@@ -1,4 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type { ASN1Element, BIT_STRING } from "asn1-ts";
 import {
     NameAndOptionalUID,
@@ -10,10 +11,11 @@ export
 const uniqueMemberMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: NameAndOptionalUID = _decode_NameAndOptionalUID(assertion);
     const v: NameAndOptionalUID = _decode_NameAndOptionalUID(value);
-    const distinguishedNamesAreTheSame: boolean = compareDistinguishedName(a.dn, v.dn);
+    const distinguishedNamesAreTheSame: boolean = compareDistinguishedName(a.dn, v.dn, getEqualityMatcher);
     if (!distinguishedNamesAreTheSame) {
         return false;
     }

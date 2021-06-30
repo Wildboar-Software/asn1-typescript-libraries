@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import type { ASN1Element } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     id_ce_basicAttConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va";
@@ -23,6 +23,7 @@ export
 const authAttIdMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const ass: AuthorityAttributeIdentifierSyntax = _decode_AuthorityAttributeIdentifierSyntax(assertion);
     const val: AttributeCertificate = _decode_AttributeCertificate(value);
@@ -46,7 +47,7 @@ const authAttIdMatch: EqualityMatcher = (
     const aSorted = ass.sort((a, b) => (
         a.serial.reduce((p, c) => (p + c), 0) - b.serial.reduce((p, c) => (p + c), 0)
     ));
-    return aSorted.every((a, i) => compareIssuerSerial(a, bSorted[i]));
+    return aSorted.every((a, i) => compareIssuerSerial(a, bSorted[i], getEqualityMatcher));
 }
 
 export default authAttIdMatch;

@@ -1,6 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher";
-import { ASN1Element, DERElement, FALSE_BIT } from "asn1-ts";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
+import { ASN1Element } from "asn1-ts";
 import { evaluateCertificateAssertion } from "./certificateMatch";
 import {
     CertificatePairAssertion,

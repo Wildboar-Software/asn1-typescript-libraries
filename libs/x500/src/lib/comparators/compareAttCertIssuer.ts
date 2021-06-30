@@ -1,3 +1,5 @@
+import type EqualityMatcher from "../types/EqualityMatcher";
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     AttCertIssuer,
 } from "../modules/AttributeCertificateDefinitions/AttCertIssuer.ta";
@@ -7,7 +9,11 @@ import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier";
 import compareBitStrings from "./compareBitStrings";
 
 export
-function compareAttCertIssuer (a: AttCertIssuer, b: AttCertIssuer): boolean {
+function compareAttCertIssuer (
+    a: AttCertIssuer,
+    b: AttCertIssuer,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (Boolean(a.baseCertificateID) !== Boolean(b.baseCertificateID)) {
         return false;
     }
@@ -17,10 +23,10 @@ function compareAttCertIssuer (a: AttCertIssuer, b: AttCertIssuer): boolean {
     if (Boolean(a.objectDigestInfo) !== Boolean(b.objectDigestInfo)) {
         return false;
     }
-    if (a.baseCertificateID && b.baseCertificateID && !compareIssuerSerial(a.baseCertificateID, b.baseCertificateID)) {
+    if (a.baseCertificateID && b.baseCertificateID && !compareIssuerSerial(a.baseCertificateID, b.baseCertificateID, getEqualityMatcher)) {
         return false;
     }
-    if (a.issuerName && b.issuerName && !compareGeneralNames(a.issuerName, b.issuerName)) {
+    if (a.issuerName && b.issuerName && !compareGeneralNames(a.issuerName, b.issuerName, getEqualityMatcher)) {
         return false;
     }
     if (a.objectDigestInfo && b.objectDigestInfo) {

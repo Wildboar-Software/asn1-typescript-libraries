@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
-import type { ASN1Element } from "asn1-ts";
+import type EqualityMatcher from "../../types/EqualityMatcher";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     ConsumerInformation,
     _decode_ConsumerInformation,
@@ -14,6 +14,7 @@ export
 const supplierOrConsumerInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: AssertionType = _decode_AssertionType(assertion);
     /**
@@ -25,7 +26,7 @@ const supplierOrConsumerInformationMatch: EqualityMatcher = (
     if (a.agreement_identifier !== v.agreementID.identifier) {
         return false;
     }
-    return compareName(a.ae_title, v.ae_title);
+    return compareName(a.ae_title, v.ae_title, getEqualityMatcher ?? (() => undefined));
 }
 
 export default supplierOrConsumerInformationMatch;

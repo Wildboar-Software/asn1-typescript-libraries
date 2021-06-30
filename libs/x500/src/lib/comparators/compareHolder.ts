@@ -1,3 +1,5 @@
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
+import type EqualityMatcher from "../types/EqualityMatcher";
 import type {
     Holder,
 } from "../modules/AttributeCertificateDefinitions/Holder.ta";
@@ -7,7 +9,11 @@ import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier";
 import compareBitStrings from "./compareBitStrings";
 
 export
-function compareHolder (a: Holder, b: Holder): boolean {
+function compareHolder (
+    a: Holder,
+    b: Holder,
+    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (Boolean(a.baseCertificateID) !== Boolean(b.baseCertificateID)) {
         return false;
     }
@@ -17,10 +23,18 @@ function compareHolder (a: Holder, b: Holder): boolean {
     if (Boolean(a.objectDigestInfo) !== Boolean(b.objectDigestInfo)) {
         return false;
     }
-    if (a.baseCertificateID && b.baseCertificateID && !compareIssuerSerial(a.baseCertificateID, b.baseCertificateID)) {
+    if (
+        a.baseCertificateID
+        && b.baseCertificateID
+        && !compareIssuerSerial(a.baseCertificateID, b.baseCertificateID, getEqualityMatcher)
+    ) {
         return false;
     }
-    if (a.entityName && b.entityName && !compareGeneralNames(a.entityName, b.entityName)) {
+    if (
+        a.entityName
+        && b.entityName
+        && !compareGeneralNames(a.entityName, b.entityName, getEqualityMatcher)
+    ) {
         return false;
     }
     if (a.objectDigestInfo && b.objectDigestInfo) {

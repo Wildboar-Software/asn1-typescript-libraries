@@ -1,3 +1,4 @@
+import type EqualityMatcher from "../types/EqualityMatcher";
 import type {
     GeneralName,
 } from "../modules/CertificateExtensions/GeneralName.ta";
@@ -11,10 +12,15 @@ import {
 import {
     ASN1Element,
     DERElement,
+    OBJECT_IDENTIFIER,
 } from "asn1-ts";
 
 export
-function compareGeneralName (a: GeneralName, b: GeneralName): boolean {
+function compareGeneralName (
+    a: GeneralName,
+    b: GeneralName,
+    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if ("otherName" in a) {
         if (!("otherName" in b)) {
             return false;
@@ -80,7 +86,7 @@ function compareGeneralName (a: GeneralName, b: GeneralName): boolean {
         if (!("directoryName" in b)) {
             return false;
         }
-        return compareName(a.directoryName, b.directoryName);
+        return compareName(a.directoryName, b.directoryName, getEqualityMatcher ?? (() => undefined));
     }
     else if ("ediPartyName" in a) {
         if (!("ediPartyName" in b)) {

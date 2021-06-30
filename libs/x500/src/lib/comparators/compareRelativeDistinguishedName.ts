@@ -1,26 +1,27 @@
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
 import type { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta";
+import type EqualityMatcher from "../types/EqualityMatcher";
 import compareAttributeTypeAndValue from "./compareAttributeTypeAndValue";
 
 export default function compare(
     a: RelativeDistinguishedName,
-    b: RelativeDistinguishedName
+    b: RelativeDistinguishedName,
+    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (a.length !== b.length) {
         return false;
     }
-    const atavs: Record<string, AttributeTypeAndValue> = {};
-    a.forEach((atav) => {
-        atavs[atav.type_.toString()] = atav;
-    });
+    const avalues: Map<string, AttributeTypeAndValue> = new Map(
+        a.map((atav) => [ atav.type_.toString(), atav ]),
+    );
     for (let i = 0; i < a.length; i++) {
-        const atav_b = b[i];
-        const atav_a: AttributeTypeAndValue | undefined =
-            atavs[atav_b.type_.toString()];
-        if (atav_a === undefined) {
+        const bvalue = b[i];
+        const avalue: AttributeTypeAndValue | undefined = avalues.get(bvalue.type_.toString());
+        if (!avalue) {
             return false;
         }
-        if (!compareAttributeTypeAndValue(atav_a, atav_b)) {
+        if (!compareAttributeTypeAndValue(avalue, bvalue, getEqualityMatcher)) {
             return false;
         }
     }

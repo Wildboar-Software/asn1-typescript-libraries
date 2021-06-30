@@ -6,6 +6,7 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (
         (a.tagClass !== b.tagClass)
         || (a.tagNumber !== b.tagNumber)
+        || (a.value.length !== b.value.length)
     ) {
         return false;
     }
@@ -21,7 +22,7 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     ) {
         return compareUint8Arrays(a.value, b.value);
     }
-    else {
+    else { // If one is constructed and the other is not, all bets are off.
         return false;
     }
 }
