@@ -1,3 +1,4 @@
+import { TRUE_BIT } from "asn1-ts";
 import type ACDFTuple from "../types/ACDFTuple";
 import type ProtectedItem from "../types/ProtectedItem";
 import type {
@@ -11,6 +12,9 @@ import type {
 import type {
     NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+import type {
+    GrantsAndDenials,
+} from "../modules/BasicAccessControl/GrantsAndDenials.ta";
 import userWithinACIUserClass from "./userWithinACIUserClass";
 import itemIsProtected from "./itemIsProtected";
 
@@ -29,7 +33,7 @@ function deniesAccess (tuple: ACDFTuple): boolean {
  * @param user The distinguished name (and optional unique identifier) of the requestor.
  * @param entry
  * @param request
- * @param requestedPermissionBit
+ * @param operations
  * @param getEqualityMatcher
  * @param isMemberOfGroup
  * @returns
@@ -41,10 +45,18 @@ function discardNonRelevantACDFTuples (
     user: NameAndOptionalUID,
     entry: DistinguishedName,
     request: ProtectedItem,
-    requestedPermissionBit: number,
+    operations: number[],
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
 ): ACDFTuple[] {
+
+    function operationPermitted (gad: GrantsAndDenials): boolean {
+        return (
+            operations.every((op) => gad[op] === TRUE_BIT) // Every required "grant" bit is set.
+            && !operations.some((op) => gad[op + 1]) // None of the corresponding "deny" bits are set.
+        );
+    }
+
     return tuples
         .filter((tuple) => {
             if (!("basicLevels" in tuple[1]) || !("basicLevels" in authLevel)) {
@@ -68,14 +80,8 @@ function discardNonRelevantACDFTuples (
             );
         })
         .filter((tuple) => itemIsProtected(request, tuple[2], getEqualityMatcher))
-        // WARNING: Step 3 is skipped.
-        .filter((tuple) => {
-            const permissions = tuple[3];
-            return (
-                Boolean(permissions[requestedPermissionBit]) // The grant
-                || Boolean(permissions[requestedPermissionBit + 1]) // The deny
-            );
-        });
+        // WARNING: Step 3 is skipped. I don't understand it.
+        .filter((tuple) => operationPermitted(tuple[3]));
 }
 
 export default discardNonRelevantACDFTuples;

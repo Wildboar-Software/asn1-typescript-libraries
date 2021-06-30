@@ -91,7 +91,6 @@ function bacACDF (
     entry: DistinguishedName,
     request: ProtectedItem,
     operations: number[], // Index of bits in GrantsAndDenials / 2.
-    requestedPermissionBit: number,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
 ): boolean {
@@ -118,7 +117,7 @@ function bacACDF (
         user,
         entry,
         request,
-        requestedPermissionBit,
+        operations,
         getEqualityMatcher,
         isMemberOfGroup,
     );
@@ -192,3 +191,5 @@ function bacACDF (
     return tuplesThatSurvivedStage3
         .every((tuple) => operationPermitted(tuple[3]));
 }
+
+export default bacACDF;
