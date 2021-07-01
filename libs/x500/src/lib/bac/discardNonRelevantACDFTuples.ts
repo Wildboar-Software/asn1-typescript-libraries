@@ -21,7 +21,7 @@ import itemIsProtected from "./itemIsProtected";
 function deniesAccess (tuple: ACDFTuple): boolean {
     const permissions = tuple[3];
     // All the odd bits are denials.
-    return Array.from(permissions).some((perm, index) => (index % 2) ? perm : false);
+    return Array.from(permissions).some((perm, index) => (index % 2) ? Boolean(perm) : false);
 }
 
 /**
@@ -52,31 +52,37 @@ function discardNonRelevantACDFTuples (
 
     function operationPermitted (gad: GrantsAndDenials): boolean {
         return (
-            operations.every((op) => gad[op] === TRUE_BIT) // Every required "grant" bit is set.
-            && !operations.some((op) => gad[op + 1]) // None of the corresponding "deny" bits are set.
+            operations.every((op) => gad[(op * 2)] === TRUE_BIT) // Every required "grant" bit is set.
+            && !operations.some((op) => gad[(op * 2) + 1] === TRUE_BIT) // None of the corresponding "deny" bits are set.
         );
     }
 
     return tuples
+        .filter((tuple) => (userWithinACIUserClass(
+            tuple[0],
+            user,
+            entry,
+            getEqualityMatcher,
+            isMemberOfGroup,
+        ) > -1))
         .filter((tuple) => {
-            if (!("basicLevels" in tuple[1]) || !("basicLevels" in authLevel)) {
+            const aci = tuple[1];
+            if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
                 return false; // We do not know how to compare EXTERNALs.
             }
+            const aciBL = aci.basicLevels;
+            const userBL = authLevel.basicLevels;
+            const denies = deniesAccess(tuple);
+            const userLQ = userBL.localQualifier ?? 0;
+            const aciLQ = aciBL.localQualifier ?? 0;
+            const sufficientAuthentication = (
+                (userBL.level >= aci.basicLevels.level) // User's auth level meets the threshold.
+                && (userLQ >= aciLQ) // User's local qualifier meets the minimum.
+                && (!aciBL.signed || (Boolean(aciBL.signed) === Boolean(userBL.signed))) // Signing requirements met.
+            );
             return (
-                (
-                    userWithinACIUserClass(
-                        tuple[0],
-                        user,
-                        entry,
-                        getEqualityMatcher,
-                        isMemberOfGroup,
-                    )
-                    && (tuple[1].basicLevels.level <= authLevel.basicLevels.level)
-                )
-                || (
-                    deniesAccess(tuple)
-                    && (tuple[1].basicLevels.level > authLevel.basicLevels.level)
-                )
+                (!denies && sufficientAuthentication)
+                || (denies && !sufficientAuthentication)
             );
         })
         .filter((tuple) => itemIsProtected(request, tuple[2], getEqualityMatcher))

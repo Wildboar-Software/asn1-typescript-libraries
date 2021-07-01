@@ -17,16 +17,13 @@ import type {
  * @function
  */
 export
-function getACDFTuplesFromACIItem (
-    aci: ACIItem,
-    authLevel: AuthenticationLevel,
-): ACDFTuple[] {
+function getACDFTuplesFromACIItem (aci: ACIItem): ACDFTuple[] {
     if ("userFirst" in aci.itemOrUserFirst) {
         const userFirst = aci.itemOrUserFirst.userFirst;
         return userFirst.userPermissions
             .map((user) => [
                 userFirst.userClasses,
-                authLevel,
+                aci.authenticationLevel,
                 user.protectedItems,
                 user.grantsAndDenials,
                 user.precedence,
@@ -36,7 +33,7 @@ function getACDFTuplesFromACIItem (
         return itemFirst.itemPermissions
             .map((item) => [
                 item.userClasses,
-                authLevel,
+                aci.authenticationLevel,
                 itemFirst.protectedItems,
                 item.grantsAndDenials,
                 item.precedence,

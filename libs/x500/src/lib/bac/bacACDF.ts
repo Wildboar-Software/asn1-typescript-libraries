@@ -82,6 +82,17 @@ export const PERMISSION_CATEGORY_COMPARE: number = 10;
 export const PERMISSION_CATEGORY_FILTER_MATCH: number = 11;
 export const PERMISSION_CATEGORY_INVOKE: number = 12;
 
+interface ACDFReturn {
+    readonly authorized: boolean;
+}
+
+interface BACACDFReturn extends ACDFReturn {
+    readonly relevantTuples: ACDFTuple[];
+    readonly precedentTuples?: ACDFTuple[];
+    readonly mostUserSpecificTuples?: ACDFTuple[];
+    readonly mostItemSpecificTuples?: ACDFTuple[];
+}
+
 // Performance advice: ensure all precedence values are unique.
 export
 function bacACDF (
@@ -93,17 +104,17 @@ function bacACDF (
     operations: number[], // Index of bits in GrantsAndDenials / 2.
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
-): boolean {
+): BACACDFReturn {
 
     function operationPermitted (gad: GrantsAndDenials): boolean {
         return (
-            operations.every((op) => gad[op] === TRUE_BIT) // Every required "grant" bit is set.
-            && !operations.some((op) => gad[op + 1]) // None of the corresponding "deny" bits are set.
+            operations.every((op) => gad[(op * 2)] === TRUE_BIT) // Every required "grant" bit is set.
+            && !operations.some((op) => gad[(op * 2) + 1] === TRUE_BIT) // None of the corresponding "deny" bits are set.
         );
     }
 
     const tuples: ACDFTuple[] = acis
-        .flatMap((aci) => getACDFTuplesFromACIItem(aci, authLevel))
+        .flatMap((aci) => getACDFTuplesFromACIItem(aci))
         .flatMap((aci) => splitGrantsAndDenials(aci[3]).map((gad): ACDFTuple => [
             aci[0],
             aci[1],
@@ -128,7 +139,10 @@ function bacACDF (
      * > Grant access if and only if one or more tuples remain[...]
      */
     if (relevantTuples.length === 0) {
-        return false;
+        return {
+            authorized: false,
+            relevantTuples,
+        };
     }
 
     // SORT BY PRECEDENCE
@@ -139,9 +153,15 @@ function bacACDF (
         ? sortedByDescendingPrecedence // All were of the same precedence.
         : sortedByDescendingPrecedence.slice(0, betaIndex); // Select the most precedent.
 
-    if (tuplesThatSurvivedStage1.length === 1) {
-        return tuplesThatSurvivedStage1
-            .every((tuple) => operationPermitted(tuple[3]));
+    if (tuplesThatSurvivedStage1.length <= 1) {
+        return {
+            authorized: (
+                (tuplesThatSurvivedStage1.length === 1)
+                && operationPermitted(tuplesThatSurvivedStage1[0][3])
+            ),
+            relevantTuples,
+            precedentTuples: tuplesThatSurvivedStage1,
+        };
     }
 
     // SORT BY USER CLASS SPECIFICITY
@@ -169,8 +189,13 @@ function bacACDF (
         .map(([ tuple, ]) => tuple);
 
     if (tuplesThatSurvivedStage2.length === 1) {
-        return tuplesThatSurvivedStage2
-            .every((tuple) => operationPermitted(tuple[3]));
+        return {
+            authorized: tuplesThatSurvivedStage2
+                .every((tuple) => operationPermitted(tuple[3])),
+            relevantTuples,
+            precedentTuples: tuplesThatSurvivedStage1,
+            mostUserSpecificTuples: tuplesThatSurvivedStage2,
+        };
     }
 
     // SORT BY PROTECTED ITEM SPECIFICITY
@@ -188,8 +213,14 @@ function bacACDF (
         : sortedByDescedingProtectedItemSpecificity.slice(0, deltaIndex)) // Select the most specific.
         .map(([ tuple, ]) => tuple);
 
-    return tuplesThatSurvivedStage3
-        .every((tuple) => operationPermitted(tuple[3]));
+    return {
+        authorized: tuplesThatSurvivedStage3
+            .every((tuple) => operationPermitted(tuple[3])),
+        relevantTuples,
+        precedentTuples: tuplesThatSurvivedStage1,
+        mostUserSpecificTuples: tuplesThatSurvivedStage2,
+        mostItemSpecificTuples: tuplesThatSurvivedStage3,
+    };
 }
 
 export default bacACDF;

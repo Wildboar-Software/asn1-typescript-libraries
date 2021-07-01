@@ -20,30 +20,27 @@ function itemIsProtected (
         }
     } else if ("attributeType" in request) {
         return (
-            protectedItems.allUserAttributeTypes
+            (protectedItems.allUserAttributeTypes === null)
             || protectedItems.attributeType
                 ?.some((at) => at.toString() === request.attributeType.toString())
             || protectedItems.allAttributeValues
                 ?.some((av) => av.toString() === request.attributeType.toString())
-            || protectedItems.allUserAttributeTypesAndValues
+            || (protectedItems.allUserAttributeTypesAndValues === null)
             || protectedItems.attributeValue
                 ?.some((av) => av.type_.toString() === request.attributeType.toString())
-            || protectedItems.selfValue
-                ?.some((sv) => sv.toString() === request.attributeType.toString())
+            // || protectedItems.selfValue // TODO:
+            //     ?.some((sv) => sv.toString() === request.attributeType.toString())
             // || protectedItems.rangeOfValues // TODO: Check if its within the range.
-            || protectedItems.maxValueCount
-                ?.some((mvc) => mvc.type_.toString() === request.attributeType.toString())
-            || protectedItems.restrictedBy
-                ?.some((rb) => rb.type_.toString() === request.attributeType.toString())
+            // || protectedItems.maxValueCount // TODO: I don't know how to implement this.
+            //     ?.some((mvc) => mvc.type_.toString() === request.attributeType.toString())
+            // || protectedItems.restrictedBy // TODO:
+            //     ?.some((rb) => rb.type_.toString() === request.attributeType.toString())
         );
     } else if ("value" in request) {
         return (
-            protectedItems.allUserAttributeTypes
-            || protectedItems.attributeType
-                ?.some((at) => at.toString() === request.value.type_.toString())
-            || protectedItems.allAttributeValues
+            protectedItems.allAttributeValues
                 ?.some((av) => av.toString() === request.value.type_.toString())
-            || protectedItems.allUserAttributeTypesAndValues
+            || (protectedItems.allUserAttributeTypesAndValues === null)
             || protectedItems.attributeValue
                 ?.some((av) => {
                     if (av.type_.toString() !== request.value.type_.toString()) {
@@ -55,14 +52,14 @@ function itemIsProtected (
                     }
                     return matcher(av.value, request.value.value);
                 })
-            || protectedItems.selfValue
-                ?.some((sv) => sv.toString() === request.value.type_.toString())
+            // || protectedItems.selfValue
+            //     ?.some((sv) => sv.toString() === request.value.type_.toString())
             // || protectedItems.rangeOfValues // TODO: Check if its within the range.
-            || protectedItems.maxValueCount
-                ?.some((mvc) => mvc.type_.toString() === request.value.type_.toString())
-            || protectedItems.restrictedBy
-                ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
-            || Boolean(protectedItems.contexts)
+            // || protectedItems.maxValueCount // TODO: I don't know how to implement this.
+            //     ?.some((mvc) => mvc.type_.toString() === request.value.type_.toString())
+            // || protectedItems.restrictedBy
+            //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
+            // || Boolean(protectedItems.contexts)
         );
     } else {
         return false; // For lack of knowing what to do.
