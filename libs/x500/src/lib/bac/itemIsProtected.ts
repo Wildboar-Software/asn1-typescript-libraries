@@ -3,7 +3,7 @@ import type EqualityMatcher from "../types/EqualityMatcher";
 import type {
     ProtectedItems,
 } from "../modules/BasicAccessControl/ProtectedItems.ta";
-import objectClassesWithinRefinement from "./objectClassesWithinRefinement";
+import objectClassesWithinRefinement from "../utils/objectClassesWithinRefinement";
 import type ProtectedItem from "../types/ProtectedItem";
 
 export

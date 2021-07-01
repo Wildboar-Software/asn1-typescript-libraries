@@ -23,6 +23,9 @@ import userWithinACIUserClass from "./userWithinACIUserClass";
 import getACDFTuplesFromACIItem from "./getACDFTuplesFromACIItem";
 import splitGrantsAndDenials from "./splitGrantsAndDenials";
 import type { GrantsAndDenials } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
+// import type {
+//     OBJECT_CLASS,
+// } from "../modules/InformationFramework/OBJECT-CLASS.oca";
 
 // * As ITU Recommendation X.501 (2016), Section 18.8.4 specifies, the order of
 // * specificity is as such (in order of ascending specificity):
@@ -96,10 +99,11 @@ interface BACACDFReturn extends ACDFReturn {
 // Performance advice: ensure all precedence values are unique.
 export
 function bacACDF (
+    administrativePoint: DistinguishedName,
     acis: ACIItem[],
     authLevel: AuthenticationLevel,
     user: NameAndOptionalUID,
-    entry: DistinguishedName,
+    entryDN: DistinguishedName,
     request: ProtectedItem,
     operations: number[], // Index of bits in GrantsAndDenials / 2.
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
@@ -123,10 +127,11 @@ function bacACDF (
             aci[4],
         ]));
     const relevantTuples: ACDFTuple[] = discardNonRelevantACDFTuples(
+        administrativePoint,
         tuples,
         authLevel,
         user,
-        entry,
+        entryDN,
         request,
         operations,
         getEqualityMatcher,
@@ -167,9 +172,10 @@ function bacACDF (
     // SORT BY USER CLASS SPECIFICITY
     const sortedByDescendingUserClassSpecificity: [ ACDFTuple, number ][] = tuplesThatSurvivedStage1
         .map((tuple): [ ACDFTuple, number ] => [ tuple, userWithinACIUserClass(
+            administrativePoint,
             tuple[0],
             user,
-            entry,
+            entryDN,
             getEqualityMatcher,
             isMemberOfGroup,
         )])

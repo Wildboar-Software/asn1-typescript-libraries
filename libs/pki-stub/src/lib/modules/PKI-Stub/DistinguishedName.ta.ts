@@ -82,6 +82,9 @@ export {
  * @summary DistinguishedName
  * @description
  *
+ * A sequence of relative distinguished names in an order that descends from the
+ * root of the DIT.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

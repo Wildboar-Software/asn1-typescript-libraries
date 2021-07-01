@@ -40,6 +40,7 @@ function deniesAccess (tuple: ACDFTuple): boolean {
  */
 export
 function discardNonRelevantACDFTuples (
+    administrativePoint: DistinguishedName,
     tuples: ACDFTuple[],
     authLevel: AuthenticationLevel,
     user: NameAndOptionalUID,
@@ -59,6 +60,7 @@ function discardNonRelevantACDFTuples (
 
     return tuples
         .filter((tuple) => (userWithinACIUserClass(
+            administrativePoint,
             tuple[0],
             user,
             entry,

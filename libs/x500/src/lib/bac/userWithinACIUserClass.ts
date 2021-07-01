@@ -9,9 +9,12 @@ import type {
 import type {
     UserClasses,
 } from "../modules/BasicAccessControl/UserClasses.ta";
+import type {
+    OBJECT_CLASS,
+} from "../modules/InformationFramework/OBJECT-CLASS.oca";
 import compareDistinguishedName from "../comparators/compareDistinguishedName";
 import compareBitStrings from "../comparators/compareBitStrings";
-import dnWithinSubtree from "../utils/dnWithinSubtree";
+import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification";
 
 /**
  * Determines if a user is within a user class as specified in
@@ -53,15 +56,16 @@ import dnWithinSubtree from "../utils/dnWithinSubtree";
  */
 export
 function userWithinACIUserClass (
+    administrativePoint: DistinguishedName,
     userClass: UserClasses,
     user: NameAndOptionalUID,
-    entry: DistinguishedName,
+    entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
 ): 0 | 1 | 2 | 3 | 4 | -1 {
     if (
         (userClass.thisEntry === null)
-        && compareDistinguishedName(user.dn, entry, getEqualityMatcher)
+        && compareDistinguishedName(user.dn, entryDN, getEqualityMatcher)
     ) {
         return 1;
     }
@@ -85,11 +89,11 @@ function userWithinACIUserClass (
     }
     if (
         (userClass.subtree && (userClass.subtree.length > 0))
-        && userClass.subtree.map((st) => dnWithinSubtree(
+        && userClass.subtree.some((subtree) => dnWithinSubtreeSpecification(
             user.dn,
-            st.base,
-            st.minimum,
-            st.maximum,
+            [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
+            subtree,
+            administrativePoint,
             getEqualityMatcher,
         ))
     ) {
