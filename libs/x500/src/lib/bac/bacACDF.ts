@@ -182,7 +182,6 @@ function bacACDF (
         .filter(([ , tagThatMatched ]) => (tagThatMatched > -1))
         .map(([ tuple, matchedTag ]): [ ACDFTuple, number ] => [
             tuple,
-            // matchedTag,
             rankOfTagOfMatchingUserClass(matchedTag),
         ])
         .sort((a, b) => b[1] - a[1]);
@@ -206,7 +205,7 @@ function bacACDF (
 
     // SORT BY PROTECTED ITEM SPECIFICITY
     const sortedByDescedingProtectedItemSpecificity: [ ACDFTuple, number ][] = tuplesThatSurvivedStage2
-        .map((tuple): [ ACDFTuple, number] => [
+        .map((tuple): [ ACDFTuple, number ] => [
             tuple,
             specificityOfProtectedItem(request, tuple[2]),
         ])

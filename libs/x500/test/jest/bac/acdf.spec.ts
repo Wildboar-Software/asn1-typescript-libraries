@@ -1707,4 +1707,184 @@ describe("bacACDF()", () => {
 
     //#endregion
 
+    //#region Multiple ACIItem tests
+
+    it("prefers ACI items of higher precedence", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                251,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        PROTECTED_ITEMS_ENTRY,
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        PROTECTED_ITEMS_ENTRY,
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = [];
+        const request: ProtectedItem = {
+            entry: [],
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeTruthy();
+    });
+
+    it("prefers ACI items of higher user class specificity", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        PROTECTED_ITEMS_ENTRY,
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        PROTECTED_ITEMS_ENTRY,
+                        [
+                            new ItemPermission(
+                                255,
+                                new UserClasses(
+                                    undefined,
+                                    null,
+                                    undefined,
+                                    undefined,
+                                    undefined,
+                                ),
+                                ALL_GRANTS,
+                            )
+                        ],
+                        [],
+                    ),
+                },
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = MOCK_USER.dn;
+        const request: ProtectedItem = {
+            entry: [],
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+            mostUserSpecificTuples,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeTruthy();
+        expect(mostUserSpecificTuples).toBeDefined();
+    });
+
+    it("prefers ACI items of higher protected item specificity", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        new ProtectedItems(
+                            undefined,
+                            null,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                        ),
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        new ProtectedItems(
+                            undefined,
+                            undefined,
+                            [ID_COMMON_NAME],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                        ),
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = MOCK_USER.dn;
+        const request: ProtectedItem = {
+            attributeType: ID_COMMON_NAME,
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+            mostItemSpecificTuples,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeTruthy();
+        expect(mostItemSpecificTuples).toBeDefined();
+    });
+
+    //#endregion
+
 });
