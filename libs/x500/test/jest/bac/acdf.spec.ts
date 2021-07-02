@@ -13,7 +13,18 @@ import bacACDF, {
     PERMISSION_CATEGORY_FILTER_MATCH,
     PERMISSION_CATEGORY_INVOKE,
 } from "../../../src/lib/bac/bacACDF";
-import { TRUE_BIT, OBJECT_IDENTIFIER, FALSE_BIT, ObjectIdentifier, DERElement, ASN1TagClass, ASN1ConstructionError, ASN1Construction, ASN1UniversalType, ASN1Element } from "asn1-ts";
+import {
+    TRUE_BIT,
+    OBJECT_IDENTIFIER,
+    FALSE_BIT,
+    ObjectIdentifier,
+    DERElement,
+    ASN1TagClass,
+    ASN1Construction,
+    ASN1UniversalType,
+    ASN1Element,
+    External,
+} from "asn1-ts";
 // import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples";
 import type ACDFTuple from "../../../src/lib/types/ACDFTuple";
 import type ProtectedItem from "../../../src/lib/types/ProtectedItem";
@@ -40,14 +51,24 @@ import {
     NameAndOptionalUID,
 } from "../../../src/lib/modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
 import {
-    ACIItem, ACIItem_itemOrUserFirst, UnboundedDirectoryString, _encode_UnboundedDirectoryString,
+    ACIItem, ACIItem_itemOrUserFirst
 } from "../../../src/lib/modules/BasicAccessControl/ACIItem.ta";
+import {
+    UnboundedDirectoryString,
+    _encode_UnboundedDirectoryString,
+} from "../../../src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
 import {
     ACIItem_itemOrUserFirst_itemFirst,
 } from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta";
 import {
+    ACIItem_itemOrUserFirst_userFirst,
+} from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta";
+import {
     ItemPermission,
 } from "../../../src/lib/modules/BasicAccessControl/ItemPermission.ta";
+import {
+    UserPermission,
+} from "../../../src/lib/modules/BasicAccessControl/UserPermission.ta";
 import {
     SubtreeSpecification,
     UserClasses,
@@ -56,6 +77,9 @@ import type { GrantsAndDenials } from "../../../src/lib/modules/BasicAccessContr
 import {
     AttributeTypeAndValue,
 } from "../../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta";
+import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials";
+import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem";
+import itemIsProtected from "../../../src/lib/bac/itemIsProtected";
 
 const ADM_POINT: DistinguishedName = [];
 
@@ -308,6 +332,7 @@ const UTF8_EQUAL: EqualityMatcherGetter = () => (
     assertion: ASN1Element,
     value: ASN1Element,
 ) => (assertion.utf8String.toLowerCase() === value.utf8String.toLowerCase());
+const ALWAYS_UNRECOGNIZED: EqualityMatcherGetter = () => undefined;
 const ALWAYS_MEMBER: MembershipChecker = () => true;
 const ALWAYS_NON_MEMBER: MembershipChecker = () => false;
 
@@ -348,6 +373,70 @@ const ALL_DENY_ALL_USERS = new ItemPermission(
     ALL_DENIALS,
 );
 
+describe("splitGrantsAndDenials()", () => {
+    it("works", () => {
+        const gad: GrantsAndDenials = new Uint8ClampedArray([
+            TRUE_BIT,
+            TRUE_BIT,
+            FALSE_BIT,
+            FALSE_BIT,
+            TRUE_BIT,
+            TRUE_BIT,
+        ]);
+        const split = splitGrantsAndDenials(gad);
+        expect(split.length).toBe(2);
+        if (split.length === 2) {
+            // These get padded to 24 bits.
+            expect(split[0].toString().indexOf("1,0,0,0,1,0")).toBe(0);
+            expect(split[1].toString().indexOf("0,1,0,0,0,1")).toBe(0);
+        }
+    });
+});
+
+describe("getACDFTuplesFromACIItem()", () => {
+    it("returns an empty array when the type of ACIItem.itemOrUserFirst is unrecognized", () => {
+        const aci = new ACIItem(
+            WHATEVER_LABEL,
+            255,
+            AUTH_LEVEL_NONE,
+            new DERElement(),
+        )
+        expect(getACDFTuplesFromACIItem(aci)).toHaveLength(0);
+    });
+});
+
+describe("itemIsProtected()", () => {
+    it("works with the 'classes' alternative", () => {
+        const pi = new ProtectedItems(
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            {
+                item: new ObjectIdentifier([ 2, 5, 4, 3 ]),
+            },
+        );
+        const protected_ = itemIsProtected({
+            entry: [ new ObjectIdentifier([ 2, 5, 4, 3 ]) ],
+        }, pi, () => () => true);
+        expect(protected_).toBe(true);
+    });
+
+    it("does not return true for an unrecognized request type", () => {
+        const pi = PROTECTED_ITEMS_ENTRY;
+        const protected_ = itemIsProtected({} as ProtectedItem, pi, () => () => true);
+        expect(protected_).toBe(false);
+    });
+});
+
 describe("bacACDF()", () => {
     it("prohibits access when there are no applicable ACIItems", () => {
         const acis: ACIItem[] = [];
@@ -368,7 +457,46 @@ describe("bacACDF()", () => {
         expect(authorized).toBeFalsy();
     });
 
-    it("permits access when there is one applicable ACIItem that permits access", () => {
+    it("prohibits access when the user's authorization level uses the 'other' option", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                {
+                    other: new External(
+                        undefined,
+                        undefined,
+                        undefined,
+                        new Uint8Array(),
+                    ),
+                },
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        PROTECTED_ITEMS_ENTRY,
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = [];
+        const request: ProtectedItem = {
+            entry: [],
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeFalsy();
+    });
+
+    it("permits access when there is one applicable ACIItem (itemFirst) that permits access", () => {
         const acis: ACIItem[] = [
             new ACIItem(
                 WHATEVER_LABEL,
@@ -385,6 +513,49 @@ describe("bacACDF()", () => {
                         PROTECTED_ITEMS_ENTRY,
                         [ALL_GRANT_ALL_USERS],
                         [],
+                    ),
+                },
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = [];
+        const request: ProtectedItem = {
+            entry: [],
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeTruthy();
+    });
+
+    it("permits access when there is one applicable ACIItem (userFirst) that permits access", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                {
+                    basicLevels: new AuthenticationLevel_basicLevels(
+                        AuthenticationLevel_basicLevels_level_none,
+                        0,
+                        false,
+                    ),
+                },
+                {
+                    userFirst: new ACIItem_itemOrUserFirst_userFirst(
+                        ALL_USERS,
+                        [
+                            new UserPermission(
+                                255,
+                                PROTECTED_ITEMS_ENTRY,
+                                ALL_GRANTS,
+                            ),
+                        ],
                     ),
                 },
             )
@@ -529,7 +700,7 @@ describe("bacACDF()", () => {
 
     //#region ProtectedItems testing
 
-    it("ProtectedItems.allUserAttributeTypes can be determine authorization", () => {
+    it("ProtectedItems.allUserAttributeTypes can be used to determine authorization", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -585,7 +756,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.attributeType can be determine authorization", () => {
+    it("ProtectedItems.attributeType can be used to determine authorization", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -641,7 +812,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.allAttributeValues can be determine authorization to access all attribute types", () => {
+    it("ProtectedItems.allAttributeValues can be used to determine authorization to access all attribute types", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -697,7 +868,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.allUserAttributeTypesAndValues can be determine authorization to access all attribute types", () => {
+    it("ProtectedItems.allUserAttributeTypesAndValues can be used to determine authorization to access all attribute types", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -753,7 +924,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.attributeValue can be determine authorization to access an attribute types", () => {
+    it("ProtectedItems.attributeValue can be used to determine authorization to access an attribute type", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -809,7 +980,101 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.allAttributeValues can be determine authorization to access an attribute values", () => {
+    it("ProtectedItems.attributeValue can be used to reject access to an attribute value", () => {
+        const itemOrUserFirst: ACIItem_itemOrUserFirst = {
+            itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                new ProtectedItems(
+                    undefined, // entry
+                    undefined, // allUserAttributeTypes
+                    undefined, // attributeType
+                    undefined, // allAttributeValues
+                    undefined, // allUserAttributeTypesAndValues
+                    [COMMON_NAME], // attributeValue
+                    undefined, // selfValue
+                    undefined, // rangeOfValues
+                    undefined, // maxValueCount
+                    undefined, // maxImmSub
+                    undefined, // restrictedBy
+                    undefined, // contexts
+                    undefined, // classes
+                ),
+                [ALL_GRANT_ALL_USERS],
+                [],
+            ),
+        };
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                itemOrUserFirst,
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = [];
+        const request: ProtectedItem = {
+            value: ORG_NAME,
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = UTF8_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBe(false);
+    });
+
+    it("ProtectedItems.attributeValue rejects access when the equality matcher is not understood", () => {
+        const itemOrUserFirst: ACIItem_itemOrUserFirst = {
+            itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                new ProtectedItems(
+                    undefined, // entry
+                    undefined, // allUserAttributeTypes
+                    undefined, // attributeType
+                    undefined, // allAttributeValues
+                    undefined, // allUserAttributeTypesAndValues
+                    [COMMON_NAME], // attributeValue
+                    undefined, // selfValue
+                    undefined, // rangeOfValues
+                    undefined, // maxValueCount
+                    undefined, // maxImmSub
+                    undefined, // restrictedBy
+                    undefined, // contexts
+                    undefined, // classes
+                ),
+                [ALL_GRANT_ALL_USERS],
+                [],
+            ),
+        };
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                itemOrUserFirst,
+            ),
+        ];
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = [];
+        const request: ProtectedItem = {
+            value: COMMON_NAME,
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_UNRECOGNIZED;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBe(false);
+    });
+
+    it("ProtectedItems.allAttributeValues can be used to determine authorization to access an attribute's values", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -865,7 +1130,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.allUserAttributeTypes can be determine authorization to access an attribute values", () => {
+    it("ProtectedItems.allUserAttributeTypes can be used to determine authorization to access an attribute's values", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -921,7 +1186,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.attributeValue can be determine authorization to access an attribute values", () => {
+    it("ProtectedItems.attributeValue can be used to determine authorization to access an attribute's values", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -977,7 +1242,7 @@ describe("bacACDF()", () => {
         }
     });
 
-    it("ProtectedItems.attributeValue can be determine authorization to access an attribute values", () => {
+    it("ProtectedItems.attributeValue can be used to determine authorization to access an attribute's values", () => {
         const itemOrUserFirst: ACIItem_itemOrUserFirst = {
             itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
                 new ProtectedItems(
@@ -1441,4 +1706,5 @@ describe("bacACDF()", () => {
     });
 
     //#endregion
+
 });
