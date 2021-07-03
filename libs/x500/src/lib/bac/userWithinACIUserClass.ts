@@ -9,14 +9,14 @@ import type {
 import type {
     UserClasses,
 } from "../modules/BasicAccessControl/UserClasses.ta";
-import type {
-    OBJECT_CLASS,
-} from "../modules/InformationFramework/OBJECT-CLASS.oca";
 import compareDistinguishedName from "../comparators/compareDistinguishedName";
 import compareBitStrings from "../comparators/compareBitStrings";
 import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification";
 
 /**
+ * @summary Determines if a user falls within an ACI item's `UserClasses`.
+ * @description
+ *
  * Determines if a user is within a user class as specified in
  * ITU Recommendation X.501 (2016), Section 18.4.2.4.b.
  *
@@ -52,6 +52,25 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  *   subtree    [4]  SET SIZE (1..MAX) OF SubtreeSpecification OPTIONAL,
  *   ... }
  * ```
+ *
+ * ### Parameters
+ *
+ * @param {DistinguishedName} administrativePoint The distinguished name of the
+ *  administrative point in which the user resides.
+ * @param {UserClasses} userClass The data structure that identifies which users
+ *  an ACI item applies to.
+ * @param {NameAndOptionalUID} user The distinguished name and optional unique
+ *  identifier of the user whose authorization is determined by the ACDF.
+ * @param {DistinguishedName} entry The entry that is the predicate of the
+ *  ACDF, or whose attributes are. The entry to whose entirety or whose
+ *  attributes the subject is seeking authorization.
+ * @param {function} getEqualityMatcher A function that takes an object
+ *  identifier and returns another function (if one can be found) that can be
+ *  used to compare two values of the same attribute type.
+ * @param {function} isMemberOfGroup A function that takes a user group and user
+ *  and returns a `boolean` indicating whether the user is a member of the group.
+ * @returns The tag number of the most specific `UserClasses` component by
+ *  which this user was targeted, or `-1` if the user did not match.
  * @function
  */
 export

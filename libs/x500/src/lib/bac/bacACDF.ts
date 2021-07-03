@@ -1,4 +1,4 @@
-import { TRUE_BIT } from "asn1-ts";
+import { OBJECT_IDENTIFIER, TRUE_BIT } from "asn1-ts";
 import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples";
 import type ACDFTuple from "../types/ACDFTuple";
 import type ProtectedItem from "../types/ProtectedItem";
@@ -8,7 +8,6 @@ import type {
 import type {
     AuthenticationLevel,
 } from "../modules/BasicAccessControl/AuthenticationLevel.ta";
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type EqualityMatcher from "../types/EqualityMatcher";
 import type {
     DistinguishedName,
@@ -19,9 +18,6 @@ import type {
 import userWithinACIUserClass from "./userWithinACIUserClass";
 import splitGrantsAndDenials from "./splitGrantsAndDenials";
 import type { GrantsAndDenials } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
-// import type {
-//     OBJECT_CLASS,
-// } from "../modules/InformationFramework/OBJECT-CLASS.oca";
 
 // * As ITU Recommendation X.501 (2016), Section 18.8.4 specifies, the order of
 // * specificity is as such (in order of ascending specificity):
@@ -81,18 +77,114 @@ export const PERMISSION_CATEGORY_COMPARE: number = 10;
 export const PERMISSION_CATEGORY_FILTER_MATCH: number = 11;
 export const PERMISSION_CATEGORY_INVOKE: number = 12;
 
+/**
+ * The return type of an Access Control Decision Function (ACDF).
+ */
+export
 interface ACDFReturn {
+    /**
+     * Whether the ACDF authorized the request.
+     */
     readonly authorized: boolean;
 }
 
+/**
+ * The return type of the Basic Access Control (BAC) / Simplified Access Control
+ * (SAC) ACDF.
+ */
+export
 interface BACACDFReturn extends ACDFReturn {
+    /**
+     * The ACDF tuples that were determined by the function to be relevant.
+     */
     readonly relevantTuples: ACDFTuple[];
+    /**
+     * The subset of ACDF tuples selected by being of the highest precedence.
+     */
     readonly precedentTuples?: ACDFTuple[];
+    /**
+     * The subset of ACDF tuples selected by targeting the most specific user
+     * class.
+     */
     readonly mostUserSpecificTuples?: ACDFTuple[];
+    /**
+     * The subset of ACDF tuples selected by targeting the most specific items.
+     */
     readonly mostItemSpecificTuples?: ACDFTuple[];
 }
 
-// Performance advice: ensure all precedence values are unique.
+/**
+ * @summary The Access Control Decision Function for X.501 Basic Access Control.
+ * @description
+ *
+ * This function is an implementation of the Access Control Decision Function
+ * (ACDF) defined in the International Telecommunication Union's (ITU)
+ * Recommendation X.501 (2016 version), Section 18.8. This function can be used
+ * to implement both Basic Access Control and Simplified Access Control.
+ *
+ * ### Performance
+ *
+ * Because this function may be called dozens of times for a single request to
+ * an entry and all of its attributes, it is important for it to be performant.
+ * For this reason, this function does not accept ACI items directly, but the
+ * pre-processed ACDF tuples that are trivially produced from ACI items to avoid
+ * recomputing these tuples. In addition, this function can avoid checking that
+ * the ACDF tuples apply to the user by setting the
+ * `tuplesAreAlreadyFilteredByUser` argument to `true`. This is implemented
+ * so that the tuples can be filtered by their applicability to the current user
+ * one time and re-used between calls to this function.
+ *
+ * **Performance Tip: Ensure that all precedence values for all ACI items are
+ * unique to avoid the more computationally-expensive code paths.**
+ *
+ * This function is implemented almost exactly as it is defined in ITU
+ * Recommendation X.501 (2016), section 18.8. As you read that recommendation,
+ * the code of this function should clearly correspond.
+ *
+ * ### Compliance
+ *
+ * This function deviates from the specification in these ways:
+ *
+ * - The function `discardNonRelevantACDFTuples()`, which is called by this
+ *   function, does not observe the `maxValueCount`, `maxImmSub`, `restrictedBy`
+ *   or `contexts` constraints.
+ * - If the authorization level is anything other than `basicLevels`, access is
+ *   denied (because there's no way to know the semantics of any other option in
+ *   advance).
+ *
+ * ### Parameters
+ *
+ * @param {DistinguishedName} administrativePoint The distinguished name of the
+ *  administrative point in which the user resides.
+ * @param {ACDFTuple[]} tuples The tuples of inputs to the ACDF as described in
+ *  ITU Recommendation X.501, Section 18.8.2. An array of five items:
+ *  `( userClasses, authenticationLevel, protectedItems, grantsAndDenials, precedence )`
+ * @param {AuthenticationLevel} authLevel The authentication level of the user.
+ * @param {NameAndOptionalUID} user The distinguished name and optional unique
+ *  identifier of the user whose authorization is determined by this function.
+ * @param {DistinguishedName} entryDN The entry that is the predicate of the
+ *  ACDF, or whose attributes are. The entry to whose entirety or whose
+ *  attributes the subject is seeking authorization.
+ * @param {ProtectedItem} request The thing that is being requested, which can
+ *  be an entry, attribute type, or attribute value.
+ * @param {number[]} operations The bit indices of the permissions that are
+ *  being requested, divided by two. The permissions come from the definition of
+ *  `GrantsAndDenials`. For clarification, an operation of 3 indicates a request
+ *  for the remove permission.
+ * @param {function} getEqualityMatcher A function that takes an object
+ *  identifier and returns another function (if one can be found) that can be
+ *  used to compare two values of the same attribute type.
+ * @param {function} isMemberOfGroup A function that takes a user group and user
+ *  and returns a `boolean` indicating whether the user is a member of the group.
+ * @param {boolean} tuplesAreAlreadyFilteredByUser Whether all of the tuples
+ *  supplied to this function are already filtered to be only those related to
+ *  the current user.
+ * @returns An object whose `authorized` property is a `boolean` that indicates
+ *  whether the request was authorized by this ACDF. All other properties of
+ *  this object are for diagnostic purposes.
+ *
+ * @function
+ */
 export
 function bacACDF (
     administrativePoint: DistinguishedName,

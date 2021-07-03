@@ -6,6 +6,26 @@ import type {
 import objectClassesWithinRefinement from "../utils/objectClassesWithinRefinement";
 import type ProtectedItem from "../types/ProtectedItem";
 
+/**
+ * @summary Whether the requested item is protected by the `ProtectedItems`.
+ * @description
+ *
+ * This function determines whether the requested item is targeted by the
+ * `ProtectedItems`.
+ *
+ * ### Parameters
+ *
+ * @param {object} request The aspect of the entry to which authorization is
+ *  being requested.
+ * @param {ProtectedItems} protectedItems The data structure that defines what
+ *  is protected by the ACI item.
+ * @param {function} getEqualityMatcher A function that takes an object
+ *  identifier and returns another function (if one can be found) that can be
+ *  used to compare two values of the same attribute type.
+ * @returns {boolean} A `boolean` that is `true` if the requested item is
+ *  protected by the `ProtectedItems` and `false` if it is not.
+ * @function
+ */
 export
 function itemIsProtected (
     request: ProtectedItem,

@@ -3,6 +3,26 @@ import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
 
+/**
+ * @summary Splits `GrantsAndDenials` into up to two `GrantsAndDenials` into
+ *  those that grant and deny access separately.
+ * @description
+ *
+ * Splits a single `GrantsAndDenials`, which may contain bits that grant access
+ * and bits that deny access, into two separate `GrantsAndDenials`, one of which
+ * has only the corresponding grant bits set and another that has only the
+ * corresponding deny bits set. If the input `GrantsAndDenials` exclusively
+ * grants or denies from the start, this function returns that input
+ * `GrantsAndDenials` as the only element of a one-element array.
+ *
+ * ### Parameters
+ *
+ * @param {GrantsAndDenials} gad The `GrantsAndDenials` that is to be split into
+ *  one or two `GrantsAndDenials`.
+ * @returns {GrantsAndDenials[]} An array of `GrantsAndDenials`, separated into
+ *  those that exclusively grant and those that exclusively deny.
+ * @function
+ */
 export
 function splitGrantsAndDenials (gad: GrantsAndDenials): [ GrantsAndDenials ] | [ GrantsAndDenials, GrantsAndDenials ] {
     const grants: GrantsAndDenials = new Uint8ClampedArray(24);
