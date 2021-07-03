@@ -1,4 +1,4 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
+import { ASN1Element, OBJECT_IDENTIFIER, DERElement } from "asn1-ts";
 import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta";
 import type { Context } from "../modules/InformationFramework/Context.ta";
@@ -28,10 +28,41 @@ import {
 import groupByOID from "./groupByOID";
 import { strict as assert } from "assert";
 import evaluateContextAssertion from "./evaluateContextAssertion";
+import {
+    family_information,
+} from "../modules/DirectoryAbstractService/family-information.oa";
+import {
+    FamilyEntries,
+    _decode_FamilyEntries,
+    _encode_FamilyEntries,
+} from "../modules/DirectoryAbstractService/FamilyEntries.ta";
+import {
+    FamilyEntry,
+} from "../modules/DirectoryAbstractService/FamilyEntry.ta";
 
 type ATVAC = [ OBJECT_IDENTIFIER, ASN1Element | undefined, Context[] ];
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
+
+function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
+    return new FamilyEntries(
+        entries.family_class,
+        entries.familyEntries.map((entry) => {
+            return new FamilyEntry(
+                entry.rdn,
+                entry.information.map((info) => {
+                    if (!("attribute" in info)) {
+                        return info;
+                    }
+                    return {
+                        attributeType: info.attribute.type_,
+                    };
+                }),
+                entry.family_info?.map((fi) => useAttributeTypesInFamilyEntries(fi)),
+            );
+        }),
+    );
+}
 
 /**
  * @summary selectFromEntry
@@ -280,6 +311,40 @@ function selectFromEntry (
     const infos: EntryInformation_information_Item[] = Object.values(protoAttributes)
         .map((attrs: ATVAC[]): EntryInformation_information_Item | undefined => {
             if (eis.infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
+                /**
+                 * From ITU Recommendation X.511, Section 7.6:
+                 *
+                 * > If an attribute is of a type that is a carrier of other attributes, e.g., a family-information
+                 * > attribute, then the value(s) shall be returned independent of the setting of the infoTypes
+                 * > component, but the infoTypes specification shall be applied to the contained attributes.
+                 */
+                if ((attrs[0][0].toString() === family_information["&id"].toString())) {
+                    return {
+                        attribute: new Attribute(
+                            attrs[0][0],
+                            attrs
+                                .filter((attr): boolean => (eis.returnContexts ? (attr[2].length === 0) : true))
+                                .map((attr: ATVAC) => {
+                                    if (!attr[1]) {
+                                        return attr[1];
+                                    }
+                                    const familyEntries = _decode_FamilyEntries(attr[1]);
+                                    const newFamilyEntries = useAttributeTypesInFamilyEntries(familyEntries);
+                                    return _encode_FamilyEntries(newFamilyEntries, () => new DERElement());
+                                })
+                                .filter((value: ASN1Element | undefined): value is ASN1Element => !!value),
+                            (eis.returnContexts)
+                                ? attrs
+                                    .filter((attr): boolean => Boolean(attr[1]) && (attr[2].length > 0))
+                                    .map((attr) => new Attribute_valuesWithContext_Item(
+                                        attr[1]!,
+                                        attr[2],
+                                    ))
+                                : undefined,
+                            undefined,
+                        ),
+                    };
+                }
                 return {
                     attributeType: attrs[0][0],
                 };
@@ -308,7 +373,7 @@ function selectFromEntry (
         })
         .filter((info): info is EntryInformation_information_Item => !!info);
 
-    const newEntryInformation: EntryInformation = new EntryInformation(
+    return new EntryInformation(
         entry.name,
         entry.fromEntry,
         infos,
@@ -317,8 +382,6 @@ function selectFromEntry (
         entry.derivedEntry,
         entry._unrecognizedExtensionsList,
     );
-
-    return newEntryInformation;
 }
 
 export default selectFromEntry;

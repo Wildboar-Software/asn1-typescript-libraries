@@ -33,10 +33,20 @@ import {
 import {
     Attribute_valuesWithContext_Item,
 } from "../../src/lib/modules/InformationFramework/Attribute-valuesWithContext-Item.ta";
-import type ContextMatcher from "../../src/lib/types/ContextMatcher";
 import {
     id_oa_allAttributeTypes,
 } from "../../src/lib/modules/InformationFramework/id-oa-allAttributeTypes.va";
+import {
+    FamilyEntries,
+    _encode_FamilyEntries,
+    _decode_FamilyEntries,
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntries.ta";
+import {
+    FamilyEntry,
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntry.ta";
+import {
+    id_at_family_information,
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/id-at-family-information.va";
 
 const EMPTY_NAME: Name = {
     rdnSequence: [],
@@ -183,9 +193,6 @@ describe("selectFromEntry()", () => {
         expect(entryAfter.information.length).toBe(entryBefore.information.length);
     });
 
-    // TODO: Recurse into family-information
-    // TODO: Document noSubtypeSelection
-    // TODO: Document dontSelectFriends
     it("only returns attribute types when they are requested", () => {
         const entryBefore: EntryInformation = createTestEntry([
             {
@@ -790,5 +797,61 @@ describe("selectFromEntry()", () => {
         expect(attr.values.length).toBe(2); // Two values total should have matched.
         expect(attr.values[0].utf8String).toBe("jwilbur");
         expect(attr.values[1].utf8String).toBe("le jwilbur");
+    });
+
+    it("recurses into the family-entries, converting attributes to attribute types", () => {
+        const familyEntries: FamilyEntries = new FamilyEntries(
+            new ObjectIdentifier([ 2, 5, 32, 23 ]),
+            [
+                new FamilyEntry(
+                    [],
+                    [
+                        {
+                            attribute: COMMON_NAME,
+                        },
+                    ],
+                    [],
+                ),
+            ],
+        );
+        const encodedFamilyEntries = _encode_FamilyEntries(familyEntries, () => new DERElement());
+        const entryBefore: EntryInformation = createTestEntry([
+            {
+                attribute: new Attribute(
+                    id_at_family_information,
+                    [
+                        encodedFamilyEntries,
+                    ],
+                    undefined,
+                ),
+            },
+        ]);
+        const selection: EntryInformationSelection = new EntryInformationSelection(
+            undefined,
+            EntryInformationSelection_infoTypes_attributeTypesOnly,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const entryAfter = selectFromEntry(
+            selection,
+            entryBefore,
+            NEVER_OPERATIONAL,
+            NO_SUPERTYPES,
+            ALWAYS_MATCHES,
+        );
+        expect(entryAfter.information.length).toBe(entryBefore.information.length);
+        if (!("attribute" in entryAfter.information[0])) {
+            expect(false).toBeTruthy();
+            return;
+        }
+        const attr = entryAfter.information[0].attribute;
+        const decodedFamilyEntries = _decode_FamilyEntries(attr.values[0]);
+        expect(
+            decodedFamilyEntries.familyEntries
+                .every((fe) => fe.information
+                    .every((info) => ("attributeType" in info))),
+        ).toBeTruthy();
     });
 });
