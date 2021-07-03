@@ -49,6 +49,7 @@ function discardNonRelevantACDFTuples (
     operations: number[],
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
+    tuplesAreAlreadyFilteredByUser: boolean = false,
 ): ACDFTuple[] {
 
     function operationPermitted (gad: GrantsAndDenials): boolean {
@@ -58,15 +59,19 @@ function discardNonRelevantACDFTuples (
         );
     }
 
-    return tuples
-        .filter((tuple) => (userWithinACIUserClass(
-            administrativePoint,
-            tuple[0],
-            user,
-            entry,
-            getEqualityMatcher,
-            isMemberOfGroup,
-        ) > -1))
+    const relevantTuples = tuplesAreAlreadyFilteredByUser
+        ? tuples
+        : tuples
+            .filter((tuple) => (userWithinACIUserClass(
+                administrativePoint,
+                tuple[0],
+                user,
+                entry,
+                getEqualityMatcher,
+                isMemberOfGroup,
+            ) > -1));
+
+    return relevantTuples
         .filter((tuple) => {
             const aci = tuple[1];
             if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {

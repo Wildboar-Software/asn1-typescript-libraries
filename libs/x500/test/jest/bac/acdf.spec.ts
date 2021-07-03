@@ -440,6 +440,7 @@ describe("itemIsProtected()", () => {
 describe("bacACDF()", () => {
     it("prohibits access when there are no applicable ACIItems", () => {
         const acis: ACIItem[] = [];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -453,7 +454,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -479,6 +480,7 @@ describe("bacACDF()", () => {
                 },
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -492,7 +494,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -517,6 +519,7 @@ describe("bacACDF()", () => {
                 },
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -530,7 +533,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeTruthy();
     });
 
@@ -560,6 +563,7 @@ describe("bacACDF()", () => {
                 },
             )
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -573,7 +577,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeTruthy();
     });
 
@@ -603,6 +607,7 @@ describe("bacACDF()", () => {
                 },
             )
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -616,7 +621,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -641,6 +646,7 @@ describe("bacACDF()", () => {
                 },
             )
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -654,7 +660,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -679,6 +685,7 @@ describe("bacACDF()", () => {
                 },
             )
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -692,7 +699,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -730,6 +737,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -744,14 +752,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -786,6 +795,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -800,14 +810,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -842,6 +853,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -856,14 +868,16 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+                relevantTuples,
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -898,6 +912,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -912,14 +927,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -954,6 +970,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -968,14 +985,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1010,6 +1028,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1023,7 +1042,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBe(false);
     });
 
@@ -1057,6 +1076,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1070,7 +1090,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBe(false);
     });
 
@@ -1104,6 +1124,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1118,14 +1139,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1160,6 +1182,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1174,14 +1197,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1216,6 +1240,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1230,14 +1255,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1272,6 +1298,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1285,7 +1312,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -1321,6 +1348,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = MOCK_USER.dn;
@@ -1335,14 +1363,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1375,6 +1404,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = MOCK_USER.dn;
@@ -1388,7 +1418,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -1420,6 +1450,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1434,14 +1465,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1474,6 +1506,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1487,7 +1520,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -1519,6 +1552,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1533,14 +1567,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1573,6 +1608,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1586,7 +1622,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_NON_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -1626,6 +1662,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1640,14 +1677,15 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
+        const tuples2: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         {
             const {
                 authorized,
-            } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+            } = bacACDF(ADM_POINT, tuples2, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
             expect(authorized).toBeFalsy();
         }
     });
@@ -1688,6 +1726,7 @@ describe("bacACDF()", () => {
                 itemOrUserFirst,
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER_2;
         const entry: DistinguishedName = [];
@@ -1701,7 +1740,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_NON_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeFalsy();
     });
 
@@ -1736,6 +1775,7 @@ describe("bacACDF()", () => {
                 },
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = [];
@@ -1749,7 +1789,7 @@ describe("bacACDF()", () => {
         const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
         const {
             authorized,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeTruthy();
     });
 
@@ -1792,6 +1832,7 @@ describe("bacACDF()", () => {
                 },
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = MOCK_USER.dn;
@@ -1806,12 +1847,12 @@ describe("bacACDF()", () => {
         const {
             authorized,
             mostUserSpecificTuples,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeTruthy();
         expect(mostUserSpecificTuples).toBeDefined();
     });
 
-    it("prefers ACI items of higher protected item specificity", () => {
+    it("prefers ACI items of higher protected item specificity when an attribute type is requested", () => {
         const acis: ACIItem[] = [
             new ACIItem(
                 WHATEVER_LABEL,
@@ -1866,6 +1907,7 @@ describe("bacACDF()", () => {
                 },
             ),
         ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
         const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const user: NameAndOptionalUID = MOCK_USER;
         const entry: DistinguishedName = MOCK_USER.dn;
@@ -1880,7 +1922,82 @@ describe("bacACDF()", () => {
         const {
             authorized,
             mostItemSpecificTuples,
-        } = bacACDF(ADM_POINT, acis, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
+        expect(authorized).toBeTruthy();
+        expect(mostItemSpecificTuples).toBeDefined();
+    });
+
+    it("prefers ACI items of higher protected item specificity when a value is requested", () => {
+        const acis: ACIItem[] = [
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        new ProtectedItems(
+                            undefined,
+                            undefined,
+                            undefined,
+                            [ID_COMMON_NAME],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                        ),
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+            new ACIItem(
+                WHATEVER_LABEL,
+                255,
+                AUTH_LEVEL_NONE,
+                {
+                    itemFirst: new ACIItem_itemOrUserFirst_itemFirst(
+                        new ProtectedItems(
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            [COMMON_NAME],
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                            undefined,
+                        ),
+                        [ALL_GRANT_ALL_USERS],
+                        [],
+                    ),
+                },
+            ),
+        ];
+        const tuples: ACDFTuple[] = acis.flatMap((aci) => getACDFTuplesFromACIItem(aci));
+        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
+        const user: NameAndOptionalUID = MOCK_USER;
+        const entry: DistinguishedName = MOCK_USER.dn;
+        const request: ProtectedItem = {
+            value: COMMON_NAME,
+        };
+        const operations: number[] = [
+            PERMISSION_CATEGORY_ADD,
+        ];
+        const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
+        const isMemberOfGroup: MembershipChecker = ALWAYS_MEMBER;
+        const {
+            authorized,
+            mostItemSpecificTuples,
+        } = bacACDF(ADM_POINT, tuples, authLevel, user, entry, request, operations, getEqualityMatcher, isMemberOfGroup);
         expect(authorized).toBeTruthy();
         expect(mostItemSpecificTuples).toBeDefined();
     });

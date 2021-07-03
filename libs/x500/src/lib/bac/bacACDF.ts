@@ -16,11 +16,7 @@ import type {
 import type {
     NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
-import type {
-    ACIItem,
-} from "../modules/BasicAccessControl/ACIItem.ta";
 import userWithinACIUserClass from "./userWithinACIUserClass";
-import getACDFTuplesFromACIItem from "./getACDFTuplesFromACIItem";
 import splitGrantsAndDenials from "./splitGrantsAndDenials";
 import type { GrantsAndDenials } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
 // import type {
@@ -100,7 +96,7 @@ interface BACACDFReturn extends ACDFReturn {
 export
 function bacACDF (
     administrativePoint: DistinguishedName,
-    acis: ACIItem[],
+    tuples: ACDFTuple[],
     authLevel: AuthenticationLevel,
     user: NameAndOptionalUID,
     entryDN: DistinguishedName,
@@ -108,6 +104,7 @@ function bacACDF (
     operations: number[], // Index of bits in GrantsAndDenials / 2.
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
+    tuplesAreAlreadyFilteredByUser: boolean = false,
 ): BACACDFReturn {
 
     function operationPermitted (gad: GrantsAndDenials): boolean {
@@ -117,18 +114,18 @@ function bacACDF (
         );
     }
 
-    const tuples: ACDFTuple[] = acis
-        .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-        .flatMap((aci) => splitGrantsAndDenials(aci[3]).map((gad): ACDFTuple => [
-            aci[0],
-            aci[1],
-            aci[2],
-            gad,
-            aci[4],
-        ]));
+    const tuplesSplitByGrantOrDenial = tuples
+        .flatMap((tuple) => splitGrantsAndDenials(tuple[3])
+            .map((gad): ACDFTuple => [
+                tuple[0],
+                tuple[1],
+                tuple[2],
+                gad,
+                tuple[4],
+            ]));
     const relevantTuples: ACDFTuple[] = discardNonRelevantACDFTuples(
         administrativePoint,
-        tuples,
+        tuplesSplitByGrantOrDenial,
         authLevel,
         user,
         entryDN,
@@ -136,6 +133,7 @@ function bacACDF (
         operations,
         getEqualityMatcher,
         isMemberOfGroup,
+        tuplesAreAlreadyFilteredByUser,
     );
 
     /**

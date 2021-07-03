@@ -26,7 +26,7 @@ function getACDFTuplesFromACIItem (aci: ACIItem): ACDFTuple[] {
                 aci.authenticationLevel,
                 user.protectedItems,
                 user.grantsAndDenials,
-                user.precedence,
+                user.precedence ?? aci.precedence,
             ]);
     } else if ("itemFirst" in aci.itemOrUserFirst) {
         const itemFirst = aci.itemOrUserFirst.itemFirst;
@@ -36,7 +36,7 @@ function getACDFTuplesFromACIItem (aci: ACIItem): ACDFTuple[] {
                 aci.authenticationLevel,
                 itemFirst.protectedItems,
                 item.grantsAndDenials,
-                item.precedence,
+                item.precedence ?? aci.precedence,
             ]);
     } else {
         return []; // We just ignore other options.
