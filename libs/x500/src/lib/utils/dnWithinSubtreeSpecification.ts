@@ -79,7 +79,7 @@ function dnWithinSubtreeSpecification (
     if (sts.specificationFilter && !objectClassesWithinRefinement(entryObjectClasses, sts.specificationFilter)) {
         return false;
     }
-    const baseMatches = compareDistinguishedName(base, entryDN.slice(0, base.length), getEqualityMatcher);
+    const baseMatches = compareDistinguishedName(base, entryDN.slice(0, base.length), getEqualityMatcher ?? (() => () => false));
     if (!baseMatches) {
         return false;
     }
@@ -90,7 +90,7 @@ function dnWithinSubtreeSpecification (
                     ...administrativePoint,
                     ...se.chopBefore,
                 ];
-                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher);
+                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
                 if (chopMatches) {
                     return false;
                 }
@@ -99,7 +99,7 @@ function dnWithinSubtreeSpecification (
                     ...administrativePoint,
                     ...se.chopAfter,
                 ];
-                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher);
+                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
                 if (chopMatches && (entryDN.length >= (chop.length + 1))) {
                     return false;
                 }

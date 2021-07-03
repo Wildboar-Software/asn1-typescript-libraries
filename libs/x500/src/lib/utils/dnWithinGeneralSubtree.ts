@@ -69,7 +69,7 @@ function dnWithinGeneralSubtree (
         return compareDistinguishedName(
             base,
             entry.slice(0, base.length),
-            getEqualityMatcher,
+            getEqualityMatcher ?? (() => () => false),
         );
     } else if (("registeredID" in gn) && ("registeredID" in subtree.base)) {
         return (gn.registeredID.toString().endsWith(subtree.base.registeredID.toString()));
