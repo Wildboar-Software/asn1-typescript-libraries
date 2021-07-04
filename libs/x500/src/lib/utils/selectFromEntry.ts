@@ -39,8 +39,7 @@ import {
 import {
     FamilyEntry,
 } from "../modules/DirectoryAbstractService/FamilyEntry.ta";
-
-type ATVAC = [ OBJECT_IDENTIFIER, ASN1Element | undefined, Context[] ];
+import type ATVAC from "../types/AttributeTypeValueAndContextsTuple";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 
