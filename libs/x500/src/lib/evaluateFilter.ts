@@ -8,9 +8,6 @@ import type {
     AttributeValueAssertion,
 } from "./modules/InformationFramework/AttributeValueAssertion.ta";
 import type {
-    Context,
-} from "./modules/InformationFramework/Context.ta";
-import type {
     ContextAssertion,
 } from "./modules/InformationFramework/ContextAssertion.ta";
 import type {
@@ -25,44 +22,39 @@ import type {
 import {
     Attribute,
 } from "./modules/InformationFramework/Attribute.ta";
-import {
-    ATTRIBUTE,
-} from "./modules/InformationFramework/ATTRIBUTE.oca";
 import type {
     EntryInformation,
 } from "./modules/DirectoryAbstractService/EntryInformation.ta";
 import type {
     FilterItem_substrings,
 } from "./modules/DirectoryAbstractService/FilterItem-substrings.ta";
-import compareUint8Arrays from "./comparators/compareUint8Arrays";
-import { ASN1Element } from "asn1-ts";
+import compareElements from "./comparators/compareElements";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import EqualityMatcher from "./types/EqualityMatcher";
 import OrderingMatcher from "./types/OrderingMatcher";
 import SubstringsMatcher from "./types/SubstringsMatcher";
+import ApproxMatcher from "./types/ApproxMatcher";
 import ContextMatcher from "./types/ContextMatcher";
 import SubstringSelection from "./types/SubstringSelection";
+import evaluateContextAssertion from "./utils/evaluateContextAssertion";
 
-// FIXME: Return `undefined` from some search queries.
 // REVIEW: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
+// TODO: Support id-mr-nullMatch?
 
 export
 interface FilterEntryOptions {
-    /**
-     * The attributes that will be recognized by the filter.
-     */
-    recognizedAttributes: ATTRIBUTE[];
-
-    equalityMatchingRuleMatchers: Record<string, EqualityMatcher>;
-    orderingMatchingRuleMatchers: Record<string, OrderingMatcher>;
-    substringsMatchingRuleMatchers: Record<string, SubstringsMatcher>;
-    contextMatchers: Record<string, ContextMatcher>;
+    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined;
+    getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => OrderingMatcher | undefined;
+    getSubstringsMatcher: (attributeType: OBJECT_IDENTIFIER) => SubstringsMatcher | undefined;
+    getApproximateMatcher: (attributeType: OBJECT_IDENTIFIER) => ApproxMatcher | undefined;
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined;
 
     /**
      * Referenced in ITU Recommendation X.511, Section 7.8.2.g, this option
      * determines whether the attributes of the distinguished name may be used
      * for the matching. This only applies to `extensibleMatch`.
      */
-    dnAttributes?: boolean;
+    dnAttributes?: boolean; // TODO:
 
     /**
      * Referenced in ITU Recommendation X.511, Section 7.8.2.g, this option
@@ -71,95 +63,87 @@ interface FilterEntryOptions {
      * can be understood or if none are compatible with the specified attribute
      * type.
      */
-    performExactly?: boolean;
+    performExactly?: boolean; // TODO:
 
     /**
      * Referenced in ITU Recommendation X.511, Section 7.8.2.h, this option
      * determines whether the filter will apply to subtypes.
      */
-    noSubtypeMatch?: boolean;
+    noSubtypeMatch?: boolean; // TODO:
 }
 
 export
 function getAttributesFromEntry (entry: EntryInformation): Attribute[] {
     return entry
         .information
-        .map((info): Attribute | undefined => (("attribute" in info) ? info.attribute : undefined))
-        .filter((attr: Attribute | undefined): boolean => !!attr);
+        ?.map((info): Attribute | undefined => (("attribute" in info) ? info.attribute : undefined))
+        .filter((attr: Attribute | undefined): attr is Attribute => !!attr) ?? [];
 }
 
 export
-function evaluateContextAssertion (
-    assertion: ContextAssertion,
-    contextsPresent: Context[],
+function evaluateEquality (
+    ava: AttributeValueAssertion,
+    entry: EntryInformation,
     options: FilterEntryOptions,
-): boolean {
-    const assertionType = assertion.contextType.toString();
-    const relevantContexts: Context[] = contextsPresent
-        .filter((cp: Context): boolean => cp.contextType.toString() === assertionType);
-    if (relevantContexts.length === 0) {
-        return true;
-    }
-    const matcher = options.contextMatchers[assertionType];
-    const matchingContext: Context | undefined = relevantContexts
-        .find((cp: Context): boolean => {
-            for (const cpv of cp.contextValues) {
-                for (const acv of assertion.contextValues) {
-                    if (matcher) {
-                        return matcher(acv, cpv);
-                    } else if (compareUint8Arrays(cpv.deconstruct(""), acv.deconstruct(""))) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        });
-    if (matchingContext) {
-        return true;
-    } else {
-        const fallbackContext: Context | undefined = relevantContexts.find((ctx) => ctx.fallback);
-        if (fallbackContext) {
-            return true;
-        }
-    }
-    return false;
-}
-
-export
-function evaluateEquality (ava: AttributeValueAssertion, entry: EntryInformation, options: FilterEntryOptions): boolean {
+): boolean | undefined {
     const attributes = getAttributesFromEntry(entry);
     const soughtAfterOID: string = ava.type_.toString();
     return attributes
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => {
-            const matcher: EqualityMatcher | undefined = options
-                .equalityMatchingRuleMatchers[attr.type_.toString()];
+            const matcher: EqualityMatcher = options.getEqualityMatcher(attr.type_) ?? compareElements;
             if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+                const selectedContexts = ava.assertedContexts.selectedContexts;
                 return (
                     attr.values.some((value) => (matcher && matcher(ava.assertion, value)))
-                    || attr.valuesWithContext
+                    || (attr.valuesWithContext
                         ?.filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
                         .some((vwc): boolean => {
-                            if ("selectedContexts" in ava.assertedContexts) {
-                                return ava
-                                    .assertedContexts
-                                    .selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options))
-                            } else {
-                                throw new Error();
-                            }
-                        })
+                                return selectedContexts
+                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))
+                        }) ?? false)
                 );
             } else {
-                if (matcher) {
-                    return (
-                        attr.values.some((a) => matcher(ava.assertion, a))
-                        || attr.valuesWithContext
-                            ?.some((vwc) => matcher(ava.assertion, vwc.value))
-                    );
-                } else { // We do not know how to equate the assertion with the value.
-                    return undefined;
-                }
+                return (
+                    attr.values.some((a) => matcher(ava.assertion, a))
+                    || (attr.valuesWithContext
+                        ?.some((vwc) => matcher(ava.assertion, vwc.value)) ?? false)
+                );
+            }
+        });
+}
+
+export
+function evaluateApprox (
+    ava: AttributeValueAssertion,
+    entry: EntryInformation,
+    options: FilterEntryOptions,
+): boolean | undefined {
+    const attributes = getAttributesFromEntry(entry);
+    const soughtAfterOID: string = ava.type_.toString();
+    return attributes
+        .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
+        .some((attr): boolean => {
+            const matcher: EqualityMatcher = options.getApproximateMatcher(attr.type_)
+                ?? options.getEqualityMatcher(attr.type_)
+                ?? compareElements;
+            if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+                const selectedContexts = ava.assertedContexts.selectedContexts;
+                return (
+                    attr.values.some((value) => (matcher && matcher(ava.assertion, value)))
+                    || (attr.valuesWithContext
+                        ?.filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
+                        .some((vwc): boolean => {
+                                return selectedContexts
+                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))
+                        }) ?? false)
+                );
+            } else {
+                return (
+                    attr.values.some((a) => matcher(ava.assertion, a))
+                    || (attr.valuesWithContext
+                        ?.some((vwc) => matcher(ava.assertion, vwc.value)) ?? false)
+                );
             }
         });
 }
@@ -170,45 +154,35 @@ function evaluateOrdering (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: FilterEntryOptions,
-): boolean {
+): boolean | undefined {
     const attributes = getAttributesFromEntry(entry);
     const soughtAfterOID: string = ava.type_.toString();
     return attributes
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => {
-            const orderer: OrderingMatcher | undefined = options
-                .orderingMatchingRuleMatchers[attr.type_.toString()];
+            const orderer: OrderingMatcher | undefined = options.getOrderingMatcher(attr.type_);
             const ordered = orderer
                 ? gte
                     ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
                     : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0)
                 : () => undefined; // REVIEW:
             if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+                const selectedContexts = ava.assertedContexts.selectedContexts;
                 return (
                     attr.values.some((value) => ordered(ava.assertion, value))
-                    || attr.valuesWithContext
+                    || (attr.valuesWithContext
                         ?.filter((vwc) => ordered(ava.assertion, vwc.value))
-                        .some((vwc): boolean => {
-                            if ("selectedContexts" in ava.assertedContexts) {
-                                return ava
-                                    .assertedContexts
-                                    .selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options))
-                            } else {
-                                throw new Error();
-                            }
-                        })
+                        .some((vwc): boolean => selectedContexts
+                            .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))) ?? false)
                 );
-            } else {
-                if (orderer) {
-                    return (
-                        attr.values.some((a) => ordered(ava.assertion, a))
-                        || attr.valuesWithContext
-                            ?.some((vwc) => ordered(ava.assertion, vwc.value))
-                    );
-                } else { // We do not know how to order the assertion with the value.
-                    return undefined;
-                }
+            } else if (orderer) {
+                return (
+                    attr.values.some((a) => ordered(ava.assertion, a))
+                    || (attr.valuesWithContext
+                        ?.some((vwc) => ordered(ava.assertion, vwc.value)) ?? false)
+                );
+            } else { // We do not know how to order the assertion with the value, so we assume it is not a match.
+                return false;
             }
         });
 }
@@ -217,7 +191,7 @@ export
 function evaluateSubstring (sub: FilterItem_substrings, entry: EntryInformation, options: FilterEntryOptions): boolean {
     const attributes = getAttributesFromEntry(entry);
     const soughtAfterOID: string = sub.type_.toString();
-    const matcher = options.substringsMatchingRuleMatchers[soughtAfterOID];
+    const matcher = options.getSubstringsMatcher(sub.type_);
     const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings.map((str) => {
         if ("initial" in str) {
             return [ str.initial, SubstringSelection.initial ];
@@ -234,7 +208,7 @@ function evaluateSubstring (sub: FilterItem_substrings, entry: EntryInformation,
         .filter((attr): boolean => (attr.type_.toString() === soughtAfterOID))
         .some((attr): boolean => (attr.values
         .some((value): boolean => (assertions
-        .every(([ assertion, selection ]): boolean => (matcher && matcher(assertion, value, selection))
+        .every(([ assertion, selection ]): boolean => (Boolean(matcher) && matcher!(assertion, value, selection))
     )))));
 }
 
@@ -250,17 +224,17 @@ function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
     options: FilterEntryOptions,
-): boolean {
+): boolean | undefined {
     if (mra.matchingRule.length !== 1) {
         return undefined; // DSA does not know how to combine rules.
     }
     const attrOid: string | undefined = mra.type_?.toString();
-    const mroids: string[] = mra.matchingRule.map((mr) => mr.toString());
-    const matchers = mroids.map((mroid) => (
-            options.equalityMatchingRuleMatchers[mroid]
+    // const mroids: string[] = mra.matchingRule.map((mr) => mr.toString());
+    const matchers = mra.matchingRule.map((mroid) => (
+            options.getEqualityMatcher(mroid)
             // REVIEW: How do you know if you are ordering GTE or LTE?
             // ?? options.orderingMatchingRuleMatchers[mroid]
-            ?? options.substringsMatchingRuleMatchers[mroid]
+            ?? options.getSubstringsMatcher(mroid)
         )).filter((m) => !!m);
     /**
      * From ITU Recommendation X.511, Section 7.8.2.g:
@@ -282,11 +256,11 @@ function evaluateMatchingRuleAssertion (
         return false; // There are no applicable attributes to match.
     }
     return relevantAttributes.some((attr: Attribute): boolean => (
-        attr.values.some((value) => matcher(mra.matchValue, value))
-        || attr
+        attr.values.some((value) => matcher!(mra.matchValue, value))
+        || (attr
             .valuesWithContext
             ?.map((vwc) => vwc.value)
-            .some((value) => matcher(mra.matchValue, value))
+            .some((value) => matcher!(mra.matchValue, value)) ?? false)
     ));
 }
 
@@ -302,10 +276,10 @@ function evaluateAttributeTypeAssertion (ata: AttributeTypeAssertion, entry: Ent
         return true;
     }
     return relevantAttributes
-        .some((attr: Attribute): boolean => attr.valuesWithContext // Check that there are some attributes...
-        ?.some((vwc): boolean => ata.assertedContexts // That have some values...
-        // ... for which every context assertion evaluates to TRUE.
-        .every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList, options))));
+        .some((attr: Attribute): boolean | undefined => attr.valuesWithContext // Check that there are some attributes...
+            ?.some((vwc): boolean | undefined => ata.assertedContexts // That have some values...
+                // ... for which every context assertion evaluates to TRUE.
+                ?.every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList, options.getContextMatcher) ?? false))) ?? false; // TODO: REVIEW
 }
 
 export
@@ -321,13 +295,13 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
     } else if ("present" in filterItem) {
         return evaluateAttributePresence(filterItem.present, entry);
     } else if ("approximateMatch" in filterItem) {
-        return evaluateEquality(filterItem.approximateMatch, entry, options); // FIXME:
+        return evaluateApprox(filterItem.approximateMatch, entry, options);
     } else if ("extensibleMatch" in filterItem) {
         return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options);
     } else if ("contextPresent" in filterItem) {
         return evaluateAttributeTypeAssertion(filterItem.contextPresent, entry, options);
     } else {
-        throw new Error();
+        return undefined;
     }
 }
 
@@ -343,6 +317,6 @@ function evaluateFilter (filter: Filter, entry: EntryInformation, options: Filte
     } else if ("not" in filter) {
         return (evaluateFilter(filter.not, entry, options) === false); // undefined should be omitted.
     } else {
-        throw new Error();
+        return undefined;
     }
 }

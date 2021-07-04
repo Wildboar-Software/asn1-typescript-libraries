@@ -148,13 +148,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -185,13 +183,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -244,14 +240,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-                [FILLER_ATTRIBUTE_TYPE_2.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -304,14 +297,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-                [FILLER_ATTRIBUTE_TYPE_2.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -356,13 +346,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {},
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: UTF8_SUBSTRING_RULE,
-            },
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => UTF8_SUBSTRING_RULE,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -397,13 +385,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {},
-            orderingMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: INTEGER_ORDERING_RULE,
-            },
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => INTEGER_ORDERING_RULE,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -438,13 +424,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {},
-            orderingMatchingRuleMatchers: {
-                [FILLER_ATTRIBUTE_TYPE_1.toString()]: INTEGER_ORDERING_RULE,
-            },
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => INTEGER_ORDERING_RULE,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -473,11 +457,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {},
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -515,13 +499,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {
-                [FILLER_MATCHING_RULE_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {},
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -575,13 +557,11 @@ describe("evaluateFilter", () => {
         );
 
         const options: FilterEntryOptions = {
-            recognizedAttributes: [],
-            equalityMatchingRuleMatchers: {},
-            orderingMatchingRuleMatchers: {},
-            substringsMatchingRuleMatchers: {},
-            contextMatchers: {
-                [FILLER_CONTEXT_TYPE_1.toString()]: BOOLEAN_EQUALITY_MATCHING_RULE,
-            },
+            getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getOrderingMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+            getContextMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getApproximateMatcher: () => undefined,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
