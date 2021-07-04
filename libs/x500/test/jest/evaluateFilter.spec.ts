@@ -40,6 +40,7 @@ import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher";
 import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher";
 import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher";
 import SubstringSelection from "@wildboar/x500/src/lib/types/SubstringSelection";
+import { OBJECT_IDENTIFIER } from "asn1-ts";
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
@@ -111,6 +112,12 @@ const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => 
     }
 };
 
+const ALWAYS_COMPATIBLE: FilterEntryOptions["isMatchingRuleCompatibleWithAttributeType"] = () => true;
+const NO_SUBTYPING: FilterEntryOptions["isAttributeSubtype"] = (
+    at: OBJECT_IDENTIFIER,
+    parent: OBJECT_IDENTIFIER,
+) => (at.toString() === parent.toString());
+
 const BASIC_BOOLEAN_FILTER_ITEM: FilterItem = {
     equality: new AttributeValueAssertion(
         FILLER_ATTRIBUTE_TYPE_1,
@@ -153,6 +160,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -188,6 +197,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -245,6 +256,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -302,6 +315,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -351,6 +366,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => UTF8_SUBSTRING_RULE,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -390,6 +407,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -429,6 +448,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -462,6 +483,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -504,6 +527,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -562,6 +587,8 @@ describe("evaluateFilter", () => {
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getApproximateMatcher: () => undefined,
+            isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
+            isAttributeSubtype: NO_SUBTYPING,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
