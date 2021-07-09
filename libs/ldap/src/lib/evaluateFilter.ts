@@ -1,6 +1,7 @@
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
 import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta";
+import type { AttributeValue } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
 import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
 import type EqualityMatcher from "../lib/types/EqualityMatcher";
 import SubstringSelection from "../lib/types/SubstringSelection";
@@ -9,36 +10,6 @@ import type OrderingMatcher from "../lib/types/OrderingMatcher";
 import type ApproxMatcher from "../lib/types/ApproxMatcher";
 import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder";
 import encodeLDAPOID from "./encodeLDAPOID";
-
-// Filter ::= CHOICE {
-//     and              [0]  SET SIZE (1..MAX) OF filter Filter,
-//     or               [1]  SET SIZE (1..MAX) OF filter Filter,
-//     not              [2]  Filter,
-//     equalityMatch    [3]  AttributeValueAssertion,
-//     substrings       [4]  SubstringFilter,
-//     greaterOrEqual   [5]  AttributeValueAssertion,
-//     lessOrEqual      [6]  AttributeValueAssertion,
-//     present          [7]  AttributeDescription,
-//     approxMatch      [8]  AttributeValueAssertion,
-//     extensibleMatch  [9]  MatchingRuleAssertion,
-//     ...
-// }
-
-// SubstringFilter ::= SEQUENCE {
-//     type        AttributeDescription,
-//     substrings
-//         SEQUENCE SIZE (1..MAX) OF substring
-//         CHOICE {initial  [0]  AssertionValue, -- can occur at most once--
-//                 any      [1]  AssertionValue,
-//                 final    [2]  AssertionValue} -- can occur at most once
-// }
-
-// MatchingRuleAssertion ::= SEQUENCE {
-//     matchingRule  [1]  MatchingRuleId OPTIONAL,
-//     type          [2]  AttributeDescription OPTIONAL,
-//     matchValue    [3]  AssertionValue,
-//     dnAttributes  [4]  BOOLEAN DEFAULT FALSE
-// }
 
 function compareUint8Arrays (a: Uint8Array, b: Uint8Array): boolean {
     if (a.length !== b.length) {
@@ -54,14 +25,127 @@ function compareUint8Arrays (a: Uint8Array, b: Uint8Array): boolean {
 
 export
 interface EvaluateFilterOptions {
+
+    /**
+     * A function that accepts an attribute description and returns a function
+     * that can convert the LDAP-encoding of an attribute into an equivalent
+     * ASN.1 data type / data structure.
+     *
+     * @readonly
+     * @property
+     */
     readonly getLDAPSyntaxDecoder: (ad: LDAPString) => LDAPSyntaxDecoder | undefined;
+
+    /**
+     * A function that accepts an attribute description and returns a function
+     * that can perform an equality comparison on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
     readonly getEqualityMatcher: (ad: LDAPString) => EqualityMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute description and returns a function
+     * that can perform a substrings matching on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
     readonly getSubstringsMatcher: (ad: LDAPString) => SubstringsMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute description and returns a function
+     * that can perform a ordering matching on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
     readonly getOrderingMatcher: (ad: LDAPString) => OrderingMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute description and returns a function
+     * that can perform an approximate matching on an asserted value against an
+     * attribute value.
+     */
     readonly getApproxMatcher: (ad: LDAPString) => ApproxMatcher | undefined;
+
+    /**
+     * A function that accepts two attribute descriptions, one for an attribute
+     * and one for a potential parent attribute type. This function returns a
+     * `boolean` indicating whether the attribute type is a subtype of `parent`.
+     *
+     * @readonly
+     * @property
+     */
     readonly isSubtype: (ad: LDAPString, parent: LDAPString) => boolean;
+
+    /**
+     * A function that accepts an attribute description and optionally an
+     * attribute value. If only an attribute type is supplied, this function
+     * returns a `boolean` indicating whether the user is permitted to filter
+     * on that attribute type. If the attribute value is supplied as well, this
+     * function returns a `boolean` indicating whether the user is permitted to
+     * filter on that attribute type and value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly permittedToMatch: (ad: LDAPString, value?: AttributeValue) => boolean;
 }
 
+/**
+ * @summary Implementation of LDAP filtering, as specified in IETF RFC 4511.
+ * @description
+ *
+ * This function filters an entry according to a `Filter` as specified in
+ * IETF RFC 4511.
+ *
+ * ### Relevant ASN.1 Definitions
+ *
+ * ```asn1
+ * Filter ::= CHOICE {
+ *     and              [0]  SET SIZE (1..MAX) OF filter Filter,
+ *     or               [1]  SET SIZE (1..MAX) OF filter Filter,
+ *     not              [2]  Filter,
+ *     equalityMatch    [3]  AttributeValueAssertion,
+ *     substrings       [4]  SubstringFilter,
+ *     greaterOrEqual   [5]  AttributeValueAssertion,
+ *     lessOrEqual      [6]  AttributeValueAssertion,
+ *     present          [7]  AttributeDescription,
+ *     approxMatch      [8]  AttributeValueAssertion,
+ *     extensibleMatch  [9]  MatchingRuleAssertion,
+ *     ...
+ * }
+ *
+ * SubstringFilter ::= SEQUENCE {
+ *     type        AttributeDescription,
+ *     substrings
+ *         SEQUENCE SIZE (1..MAX) OF substring
+ *         CHOICE {initial  [0]  AssertionValue, -- can occur at most once--
+ *                 any      [1]  AssertionValue,
+ *                 final    [2]  AssertionValue} -- can occur at most once
+ * }
+ *
+ * MatchingRuleAssertion ::= SEQUENCE {
+ *     matchingRule  [1]  MatchingRuleId OPTIONAL,
+ *     type          [2]  AttributeDescription OPTIONAL,
+ *     matchValue    [3]  AssertionValue,
+ *     dnAttributes  [4]  BOOLEAN DEFAULT FALSE
+ * }
+ * ```
+ *
+ * @param filter The LDAP Filter by which to filter the entry.
+ * @param dn The distinguished name of the entry. // TODO: Order
+ * @param entry The attributes of the entry.
+ * @param options Despite the name, all fields of this object are not optional.
+ * @returns `true` if the entry matched, `false` if it does not, or `undefined`
+ *  if it could not be determined whether the entry matches or not.
+ * @function
+ */
 export
 function evaluateFilter (
     filter: Filter,
@@ -70,7 +154,8 @@ function evaluateFilter (
     options: EvaluateFilterOptions,
 ): boolean | undefined {
     if ("and" in filter) {
-        const results = filter.and.map((subfilter: Filter): boolean => evaluateFilter(subfilter, dn, entry, options));
+        const results = filter.and
+            .map((subfilter: Filter): boolean | undefined => evaluateFilter(subfilter, dn, entry, options));
         const allPassed = results.every((result) => result);
         if (allPassed) {
             return true;
@@ -79,7 +164,8 @@ function evaluateFilter (
             ? undefined
             : false;
     } else if ("or" in filter) {
-        const results = filter.or.map((subfilter: Filter): boolean => evaluateFilter(subfilter, dn, entry, options));
+        const results = filter.or
+            .map((subfilter: Filter): boolean | undefined => evaluateFilter(subfilter, dn, entry, options));
         const anyMatched = results.some((result) => result);
         if (anyMatched) {
             return true;
@@ -104,10 +190,16 @@ function evaluateFilter (
             if (!matcher) {
                 return undefined;
             }
+            if (!options.permittedToMatch(ava.attributeDesc)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
-                    .some((val) => {
+                    .some((val): boolean => {
+                        if (!options.permittedToMatch(attr.type_, val)) {
+                            return false;
+                        }
                         const decode = assertionDecoder
                             ? assertionDecoder
                             : options.getLDAPSyntaxDecoder(attr.type_);
@@ -132,11 +224,17 @@ function evaluateFilter (
             if (!matcher) {
                 return undefined;
             }
+            if (!options.permittedToMatch(sf.type_)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(sf.type_, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => sf.substrings
                         .every((ss) => {
+                            if (!options.permittedToMatch(sf.type_, val)) {
+                                return false;
+                            }
                             const decode = assertionDecoder
                                 ? assertionDecoder
                                 : options.getLDAPSyntaxDecoder(attr.type_);
@@ -168,10 +266,16 @@ function evaluateFilter (
             if (!matcher) {
                 return undefined;
             }
+            if (!options.permittedToMatch(ava.attributeDesc)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => {
+                        if (!options.permittedToMatch(attr.type_, val)) {
+                            return false;
+                        }
                         const decode = assertionDecoder
                             ? assertionDecoder
                             : options.getLDAPSyntaxDecoder(attr.type_);
@@ -193,10 +297,16 @@ function evaluateFilter (
             if (!matcher) {
                 return undefined;
             }
+            if (!options.permittedToMatch(ava.attributeDesc)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                 .some((val) => {
+                    if (!options.permittedToMatch(attr.type_, val)) {
+                        return false;
+                    }
                     const decode = assertionDecoder
                         ? assertionDecoder
                         : options.getLDAPSyntaxDecoder(attr.type_);
@@ -211,6 +321,9 @@ function evaluateFilter (
             return undefined;
         }
     } else if ("present" in filter) {
+        if (!options.permittedToMatch(filter.present)) {
+            return undefined;
+        }
         try {
             return entry.some((attr) => options.isSubtype(filter.present, attr.type_));
         } catch {
@@ -224,10 +337,16 @@ function evaluateFilter (
             if (!matcher) {
                 return undefined;
             }
+            if (!options.permittedToMatch(ava.attributeDesc)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(ava.attributeDesc, attr.type_))
                 .some((attr) => attr.vals
                     .some((val) => {
+                        if (!options.permittedToMatch(attr.type_, val)) {
+                            return false;
+                        }
                         const decode = assertionDecoder
                             ? assertionDecoder
                             : options.getLDAPSyntaxDecoder(attr.type_);
@@ -248,6 +367,9 @@ function evaluateFilter (
         try {
             const mra = filter.extensibleMatch;
             const mr = mra.matchingRule ?? mra.type_;
+            if (!mr) {
+                return undefined;
+            }
             const assertionDecoder = options.getLDAPSyntaxDecoder(mr);
             if (!assertionDecoder) {
                 return undefined;
@@ -255,6 +377,9 @@ function evaluateFilter (
             const decodedAssertion = assertionDecoder(mra.matchValue);
             const matcher = options.getEqualityMatcher(mr);
             if (!matcher) {
+                return undefined;
+            }
+            if (mra.type_ && !options.permittedToMatch(mra.type_)) {
                 return undefined;
             }
             return (
@@ -265,6 +390,9 @@ function evaluateFilter (
                     )
                     .some((attr) => attr.vals
                         .some((val) => {
+                            if (!options.permittedToMatch(attr.type_, val)) {
+                                return false;
+                            }
                             const valueDecoder = options.getLDAPSyntaxDecoder(attr.type_);
                             if (!valueDecoder) {
                                 return undefined;

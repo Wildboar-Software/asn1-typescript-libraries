@@ -2,6 +2,9 @@ import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3
 import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta";
 import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta";
 import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta";
+import type {
+    SubstringFilter_substrings_substring,
+} from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta";
 
 const mustBeEscaped = new Set([
     "\x00",
@@ -151,7 +154,7 @@ function parseFilter (state: ParserState): ParserState {
                                     ...anys.map((a) => ({
                                         any_: Buffer.from(a, "utf-8"),
                                     })),
-                                ].filter((s) => !!s),
+                                ].filter((s): s is any => !!s),
                             ),
                         },
                     };

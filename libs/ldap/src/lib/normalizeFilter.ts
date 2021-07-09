@@ -24,6 +24,8 @@ function normalizeFilter (filter: Filter): Filter {
                     not: subsubfilter,
                 })),
             };
+        } else {
+            return filter;
         }
     } else if ("and" in filter) {
         if (filter.and.some((subfilter) => ("or" in subfilter) && (subfilter.or.length === 0))) {

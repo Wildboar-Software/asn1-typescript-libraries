@@ -56,7 +56,7 @@ export
 function stringifyAttributeTypeAndValue (
     atav: AttributeTypeAndValue,
     getEncoder: StringEncoderGetter,
-    typeNameGetter: (type: OBJECT_IDENTIFIER) => string,
+    typeNameGetter: (type: OBJECT_IDENTIFIER) => string | undefined,
 ): string {
     const encoder = getEncoder(atav[0]);
     const type_ = typeNameGetter(atav[0]) ?? atav[0].toString();

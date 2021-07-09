@@ -137,6 +137,7 @@ const options: EvaluateFilterOptions = {
     isSubtype: (ad: LDAPString, parent: LDAPString) => {
         return (ad.toString() === parent.toString());
     },
+    permittedToMatch: () => true,
 };
 
 describe("evaluateFilter()", () => {

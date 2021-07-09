@@ -51,6 +51,9 @@ whatToDo[id_at_generationQualifier.toString()] = stringifyDirectoryString;
 const domainComponentID = "0.9.2342.19200300.100.1.25"; // Defined in https://tools.ietf.org/html/rfc4519#section-2.4.
 whatToDo[domainComponentID] = stringifyIA5String;
 
+/**
+ * @deprecated
+ */
 export default function attributeTypeAndValueToString(
     atav: AttributeTypeAndValue
 ): string {

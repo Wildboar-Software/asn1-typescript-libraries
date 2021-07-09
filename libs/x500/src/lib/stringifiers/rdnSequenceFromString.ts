@@ -33,6 +33,9 @@ const encodeIA5String = (str: string): ASN1Element => {
     return _encodeIA5String(str, () => new DERElement());
 };
 
+/**
+ * @deprecated
+ */
 export const nameToAttribute = new Map<
     string,
     [OBJECT_IDENTIFIER, (str: string) => ASN1Element]
@@ -66,6 +69,9 @@ export const nameToAttribute = new Map<
  */
 const oidRegex = /^(0|1|2)\.\d+(?:\.\d+)+$/;
 
+/**
+ * @deprecated
+ */
 export function atavFromString(
     str: string,
     encodingMap: Map<
@@ -99,6 +105,9 @@ export function atavFromString(
     }
 }
 
+/**
+ * @deprecated
+ */
 export function* rdnFromString(
     str: string,
     escape: number = "\\".charCodeAt(0),
@@ -136,6 +145,9 @@ export function* rdnFromString(
     yield atavFromString(escapedATAVString, encodingMap);
 }
 
+/**
+ * @deprecated
+ */
 export default function* rdnSequenceFromString(
     str: string,
     escape: number = "\\".charCodeAt(0),

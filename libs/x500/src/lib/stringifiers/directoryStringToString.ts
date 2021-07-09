@@ -7,6 +7,9 @@ import type { UnboundedDirectoryString } from "../modules/SelectedAttributeTypes
 //     | { universalString: asn1.UniversalString } /* CHOICE_ALT_ROOT */
 //     | { uTF8String: asn1.UTF8String } /* CHOICE_ALT_ROOT */;
 
+/**
+ * @deprecated
+ */
 export default function directoryStringToString(
     ds: UnboundedDirectoryString
 ): string {

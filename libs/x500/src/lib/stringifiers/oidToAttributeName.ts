@@ -29,4 +29,8 @@ ret[id_at_givenName.toString()] = "gn";
 ret[id_at_initials.toString()] = "initials";
 ret[id_at_pseudonym.toString()] = "pseudonym";
 ret[id_at_generationQualifier.toString()] = "generationQualifier";
+
+/**
+ * @deprecated
+ */
 export default ret;
