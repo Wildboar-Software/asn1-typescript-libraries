@@ -17,8 +17,6 @@ import type {
 import { DERElement } from "asn1-ts";
 import compareIssuerSerial from "../../comparators/compareIssuerSerial";
 
-const SOUGHT_OID: string = id_ce_basicAttConstraints.toString();
-
 export
 const authAttIdMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -28,7 +26,7 @@ const authAttIdMatch: EqualityMatcher = (
     const ass: AuthorityAttributeIdentifierSyntax = _decode_AuthorityAttributeIdentifierSyntax(assertion);
     const val: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = val.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_OID));
+        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
         return false;
     }

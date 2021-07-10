@@ -6,7 +6,7 @@ const objectIdentifierMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    return (assertion.objectIdentifier.toString() === value.objectIdentifier.toString());
+    return assertion.objectIdentifier.isEqualTo(value.objectIdentifier);
 }
 
 export default objectIdentifierMatch;

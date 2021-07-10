@@ -14,7 +14,7 @@ const evaluateLocaleContext: EqualityMatcher = (
     const a: LocaleContextSyntax = _decode_LocaleContextSyntax(assertion);
     const v: LocaleContextSyntax = _decode_LocaleContextSyntax(value);
     if (("localeID1" in a) && ("localeID1" in v)) {
-        return (a.localeID1.toString() === v.localeID1.toString());
+        return (a.localeID1.isEqualTo(v.localeID1));
     } else if (("localeID2" in a) && ("localeID2" in v)) {
         return (directoryStringToString(a.localeID2) === directoryStringToString(v.localeID2));
     } else {

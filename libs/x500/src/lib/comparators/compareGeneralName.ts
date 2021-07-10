@@ -121,7 +121,7 @@ function compareGeneralName (
         if (!("registeredID" in b)) {
             return false;
         }
-        return (a.registeredID.toString() === b.registeredID.toString());
+        return (a.registeredID.isEqualTo(b.registeredID));
     } else {
         if (!("tagClass" in b)) {
             return false;

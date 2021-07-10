@@ -35,7 +35,7 @@ import {
 import type {
     Name,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
-import { evaluateFilter, FilterEntryOptions } from "@wildboar/x500/src/lib/evaluateFilter";
+import { evaluateFilter, EvaluateFilterSettings } from "@wildboar/x500/src/lib/evaluateFilter";
 import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher";
 import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher";
 import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher";
@@ -112,11 +112,12 @@ const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => 
     }
 };
 
-const ALWAYS_COMPATIBLE: FilterEntryOptions["isMatchingRuleCompatibleWithAttributeType"] = () => true;
-const NO_SUBTYPING: FilterEntryOptions["isAttributeSubtype"] = (
+const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
+const NO_SUBTYPING: EvaluateFilterSettings["isAttributeSubtype"] = (
     at: OBJECT_IDENTIFIER,
     parent: OBJECT_IDENTIFIER,
 ) => (at.toString() === parent.toString());
+const ALWAYS_PERMITTED: EvaluateFilterSettings["permittedToMatch"] = () => true;
 
 const BASIC_BOOLEAN_FILTER_ITEM: FilterItem = {
     equality: new AttributeValueAssertion(
@@ -154,7 +155,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -162,6 +163,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -191,7 +193,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -199,6 +201,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -250,7 +253,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -258,6 +261,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -309,7 +313,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -317,6 +321,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -360,7 +365,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => UTF8_SUBSTRING_RULE,
@@ -368,6 +373,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -401,7 +407,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => INTEGER_ORDERING_RULE,
             getSubstringsMatcher: () => undefined,
@@ -409,6 +415,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -442,7 +449,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => INTEGER_ORDERING_RULE,
             getSubstringsMatcher: () => undefined,
@@ -450,6 +457,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeFalsy();
@@ -477,7 +485,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -485,6 +493,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -521,7 +530,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -529,6 +538,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();
@@ -581,7 +591,7 @@ describe("evaluateFilter", () => {
             false,
         );
 
-        const options: FilterEntryOptions = {
+        const options: EvaluateFilterSettings = {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
@@ -589,6 +599,7 @@ describe("evaluateFilter", () => {
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
+            permittedToMatch: ALWAYS_PERMITTED,
         };
 
         expect(evaluateFilter(filter, entry, options)).toBeTruthy();

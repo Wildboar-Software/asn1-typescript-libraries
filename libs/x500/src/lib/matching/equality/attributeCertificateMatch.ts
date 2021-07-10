@@ -59,7 +59,7 @@ const attributeCertificateMatch: EqualityMatcher = (
         a.attType
         && !a.attType
             .every((at: OBJECT_IDENTIFIER): boolean => v.toBeSigned.attributes
-            .some((attr: Attribute): boolean => (attr.type_.toString() === at.toString())))
+            .some((attr: Attribute): boolean => (attr.type_.isEqualTo(at))))
     ) {
         return false;
     }

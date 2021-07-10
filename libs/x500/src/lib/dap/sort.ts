@@ -72,10 +72,10 @@ function sort (
         }
 
         const relevantAValues: ASN1Element[] = avalues
-            .filter(([ type_ ]) => (type_.toString() === key.type_.toString()))
+            .filter(([ type_ ]) =>key.type_.isEqualTo(type_))
             .map(([ , value ]) => value);
         const relevantBValues: ASN1Element[] = bvalues
-            .filter(([ type_ ]) => (type_.toString() === key.type_.toString()))
+            .filter(([ type_ ]) => key.type_.isEqualTo(type_))
             .map(([ , value ]) => value);
 
         const lowestAValue: ASN1Element = relevantAValues.sort((a, b) => orderer(a, b))[0];

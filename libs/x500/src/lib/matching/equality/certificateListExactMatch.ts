@@ -48,7 +48,7 @@ const certificateListExactMatch: EqualityMatcher = (
     }
     if (a.distributionPoint) {
         const ext: Extension = v.toBeSigned.crlExtensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_EXTENSION_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
         const el: DERElement = new DERElement();
         el.fromBytes(ext.extnValue);
         const ips: IssuingDistPointSyntax = _decode_IssuingDistPointSyntax(el);

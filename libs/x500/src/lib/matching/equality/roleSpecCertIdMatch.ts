@@ -17,8 +17,6 @@ import type {
 import compareRoleSpecCertIdentifier from "../../comparators/compareRoleSpecCertIdentifier";
 import { DERElement } from "asn1-ts";
 
-const SOUGHT_OID: string = id_ce_roleSpecCertIdentifier.toString();
-
 export
 const roleSpecCertIdMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -28,7 +26,7 @@ const roleSpecCertIdMatch: EqualityMatcher = (
     const a: RoleSpecCertIdentifierSyntax = _decode_RoleSpecCertIdentifierSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const rsci: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_OID));
+        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {
         return false;
     }

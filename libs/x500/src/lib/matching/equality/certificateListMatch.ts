@@ -35,11 +35,6 @@ import {
 import compareGeneralName from "../../comparators/compareGeneralName";
 import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName";
 
-const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();
-const CRLN_OID: string = id_ce_cRLNumber.toString();
-const IDP_OID: string = id_ce_issuingDistributionPoint.toString();
-
-
 export
 const certificateListMatch : EqualityMatcher = (
     assertion: ASN1Element,
@@ -49,9 +44,9 @@ const certificateListMatch : EqualityMatcher = (
     const a: CertificateListAssertion = _decode_CertificateListAssertion(assertion);
     const v: CertificateList = _decode_CertificateList(value);
     const crlNumberExt: Extension | undefined = v.toBeSigned.crlExtensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === CRLN_OID));
+        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
     const idpExt: Extension | undefined = v.toBeSigned.crlExtensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === IDP_OID));
+        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
     const idp: IssuingDistPointSyntax | undefined = idpExt
         ? ((): IssuingDistPointSyntax => {
             const el: DERElement = new DERElement();
@@ -145,7 +140,7 @@ const certificateListMatch : EqualityMatcher = (
 
     if (a.authorityKeyIdentifier) {
         const aki: Extension | undefined = v.toBeSigned.crlExtensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === AKI_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }

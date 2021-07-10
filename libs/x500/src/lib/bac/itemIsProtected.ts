@@ -42,9 +42,9 @@ function itemIsProtected (
         return (
             (protectedItems.allUserAttributeTypes === null)
             || protectedItems.attributeType
-                ?.some((at) => at.toString() === request.attributeType.toString())
+                ?.some((at) => request.attributeType.isEqualTo(at))
             || protectedItems.allAttributeValues
-                ?.some((av) => av.toString() === request.attributeType.toString())
+                ?.some((av) => request.attributeType.isEqualTo(av))
             || (protectedItems.allUserAttributeTypesAndValues === null)
             || protectedItems.attributeValue
                 ?.some((av) => av.type_.toString() === request.attributeType.toString())
@@ -59,11 +59,11 @@ function itemIsProtected (
     } else if ("value" in request) {
         return (
             protectedItems.allAttributeValues
-                ?.some((av) => av.toString() === request.value.type_.toString())
+                ?.some((av) => request.value.type_.isEqualTo(av))
             || (protectedItems.allUserAttributeTypesAndValues === null)
             || protectedItems.attributeValue
                 ?.some((av) => {
-                    if (av.type_.toString() !== request.value.type_.toString()) {
+                    if (!request.value.type_.isEqualTo(av.type_)) {
                         return false;
                     }
                     const matcher = getEqualityMatcher(av.type_);

@@ -212,7 +212,7 @@ const timeSpecificationMatch: EqualityMatcher = (
 ): boolean => {
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_OID));
+        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_timeSpecification));
     if (!ext) {
         return false;
     }

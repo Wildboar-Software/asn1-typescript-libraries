@@ -6,7 +6,7 @@ import compareElements from "./compareElements";
 export
 function compareAlgorithmIdentifier (a: AlgorithmIdentifier, b: AlgorithmIdentifier): boolean {
     return (
-        (a.algorithm.toString() === b.algorithm.toString())
+        (a.algorithm.isEqualTo(b.algorithm))
         && (
             (a.parameters === b.parameters)
             || compareElements(a.parameters, b.parameters)

@@ -33,7 +33,7 @@ const extensionPresenceMatch: EqualityMatcher = (
         ));
     if (pkcExt) { // It is a public key certificate.
         const exts: Extensions = _decode_Extensions(pkcExt.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.toString() === a.toString()));
+        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
     }
     const lastElement: ASN1Element = tbs.sequence[tbs.sequence.length - 1];
     if (
@@ -42,14 +42,14 @@ const extensionPresenceMatch: EqualityMatcher = (
         && (lastElement.tagNumber === 0)
     ) {
         const exts: Extensions = _decode_Extensions(lastElement.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.toString() === a.toString()));
+        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
     } else if (
         (lastElement.tagClass === ASN1TagClass.universal)
         && (lastElement.construction === ASN1Construction.constructed)
         && (lastElement.tagNumber === ASN1UniversalType.sequence)
     ) {
         const exts: Extensions = _decode_Extensions(lastElement.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.toString() === a.toString()));
+        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
     }
     return false;
 }

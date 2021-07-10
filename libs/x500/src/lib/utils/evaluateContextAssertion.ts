@@ -11,7 +11,6 @@ function evaluateContextAssertion (
     contexts: Context[],
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
 ): boolean {
-    const CONTEXT_TYPE: string = ca.contextType.toString();
     const matcher = getContextMatcher(ca.contextType);
     if (!matcher) {
         // The specification does not say what to do if a context type is unrecognized.
@@ -19,7 +18,7 @@ function evaluateContextAssertion (
         return false;
     }
     const relevantContexts = contexts
-        .filter((c) => c.contextType.toString() === CONTEXT_TYPE);
+        .filter((c) => c.contextType.isEqualTo(ca.contextType));
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
     if (relevantContexts.length === 0) {

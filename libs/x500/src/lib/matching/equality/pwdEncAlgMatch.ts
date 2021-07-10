@@ -22,7 +22,7 @@ const pwdEncAlgMatch: EqualityMatcher = (
     }
     const alg = v.encrypted.algorithmIdentifier;
     return (
-        (alg.algorithm.toString() === a.algorithm.toString())
+        (alg.algorithm.isEqualTo(a.algorithm))
         && (
             (alg.parameters === a.parameters)
             || compareElements(alg.parameters, a.parameters)

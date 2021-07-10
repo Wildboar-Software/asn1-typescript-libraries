@@ -99,7 +99,7 @@ function evaluateCertificateAssertion (
     }
     if (assertion.subjectKeyIdentifier) {
         const ski: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === SKI_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
         if (!ski) {
             return false;
         }
@@ -111,7 +111,7 @@ function evaluateCertificateAssertion (
     }
     if (assertion.authorityKeyIdentifier) {
         const aki: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === AKI_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }
@@ -137,7 +137,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.privateKeyValid) {
         const pkupExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === PKUP_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
         if (pkupExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(pkupExt.extnValue);
@@ -165,7 +165,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.keyUsage) {
         const kuExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === KU_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
         if (!kuExt) {
             return false;
         }
@@ -182,7 +182,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.subjectAltName) {
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === SAN_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (!sanExt) {
             return false;
         }
@@ -249,7 +249,7 @@ function evaluateCertificateAssertion (
                 if (!("otherName" in san)) {
                     return false;
                 }
-                return (san.otherName.directReference.toString() === assertion.subjectAltName.otherNameForm.toString());
+                return (san.otherName.directReference.isEqualTo(assertion.subjectAltName.otherNameForm));
             })) {
                 return false;
             }
@@ -260,7 +260,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.policy) {
         const cpExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === CP_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
         if (!cpExt) {
             return false;
         }
@@ -272,7 +272,7 @@ function evaluateCertificateAssertion (
         );
         if ( // We only need to check if either the stored or presented policies do not have anyPolicy.
             !policiesHad.has(ANY_POLICY_OID)
-            && assertion.policy.some((policy) => (policy.toString() === ANY_POLICY_OID))
+            && assertion.policy.some((policy) => (policy.isEqualTo(anyPolicy)))
         ) {
             if (!assertion.policy.some((policy): boolean => (policiesHad.has(policy.toString())))) {
                 return false;
@@ -282,7 +282,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.pathToName) {
         const ncExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === NC_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
         if (ncExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(ncExt.extnValue);
@@ -352,7 +352,7 @@ function evaluateCertificateAssertion (
         }
 
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.toString() === SAN_OID));
+            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (sanExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(sanExt.extnValue);

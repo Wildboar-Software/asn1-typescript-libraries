@@ -17,8 +17,6 @@ import type {
 import { DERElement } from "asn1-ts";
 import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax";
 
-const SOUGHT_OID: string = id_ce_delegatedNameConstraints.toString();
-
 export
 const delegatedNameConstraintsMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -28,7 +26,7 @@ const delegatedNameConstraintsMatch: EqualityMatcher = (
     const a: NameConstraintsSyntax = _decode_NameConstraintsSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_OID));
+        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_delegatedNameConstraints)));
     if (!ext) {
         return false;
     }

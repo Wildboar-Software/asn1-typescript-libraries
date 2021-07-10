@@ -31,7 +31,7 @@ const attDescriptor: EqualityMatcher = (
         return false;
     }
 
-    if (a.dominationRule.privilegePolicy.toString() === v.dominationRule.privilegePolicy.toString()) {
+    if (a.dominationRule.privilegePolicy.isEqualTo(v.dominationRule.privilegePolicy)) {
         return false;
     }
 

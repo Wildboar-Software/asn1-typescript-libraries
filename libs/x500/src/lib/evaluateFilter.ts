@@ -14,6 +14,9 @@ import type {
     AttributeType,
 } from "./modules/InformationFramework/AttributeType.ta";
 import type {
+    AttributeValue,
+} from "./modules/InformationFramework/AttributeValue.ta";
+import type {
     AttributeTypeAssertion,
 } from "./modules/InformationFramework/AttributeTypeAssertion.ta";
 import type {
@@ -39,17 +42,88 @@ import SubstringSelection from "./types/SubstringSelection";
 import evaluateContextAssertion from "./utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "./modules/SelectedAttributeTypes/id-mr-nullMatch.va";
 
-const NULL_MATCH: string = id_mr_nullMatch.toString();
-
 export
-interface FilterEntryOptions {
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined;
-    getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => OrderingMatcher | undefined;
-    getSubstringsMatcher: (attributeType: OBJECT_IDENTIFIER) => SubstringsMatcher | undefined;
-    getApproximateMatcher: (attributeType: OBJECT_IDENTIFIER) => ApproxMatcher | undefined;
-    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined;
-    isMatchingRuleCompatibleWithAttributeType: (mr: OBJECT_IDENTIFIER, at: OBJECT_IDENTIFIER) => boolean;
-    isAttributeSubtype: (attributeType: OBJECT_IDENTIFIER, parentType: OBJECT_IDENTIFIER) => boolean;
+interface EvaluateFilterSettings {
+
+    /**
+     * A function that accepts an attribute type and returns a function
+     * that can perform an equality comparison on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute type and returns a function
+     * that can perform a ordering matching on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => OrderingMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute type and returns a function
+     * that can perform a substrings matching on an asserted value against an
+     * attribute value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly getSubstringsMatcher: (attributeType: OBJECT_IDENTIFIER) => SubstringsMatcher | undefined;
+
+    /**
+     * A function that accepts an attribute type and returns a function
+     * that can perform an approximate matching on an asserted value against an
+     * attribute value.
+     */
+    readonly getApproximateMatcher: (attributeType: OBJECT_IDENTIFIER) => ApproxMatcher | undefined;
+
+    /**
+     * A function that takes a context type object identifier and returns a
+     * function that can perform a context matching with an asserted context
+     * value and the actual context value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined;
+
+    /**
+     * A function that takes a matching rule object identifier and an attribute
+     * type object identifier and returns `true` if the attribute type is
+     * compatible with the identified matching rule and `false` if it is not.
+     *
+     * @readonly
+     * @property
+     */
+    readonly isMatchingRuleCompatibleWithAttributeType: (mr: OBJECT_IDENTIFIER, at: OBJECT_IDENTIFIER) => boolean;
+
+    /**
+     * A function that accepts two attribute types, one for an attribute
+     * and one for a potential parent attribute type. This function returns a
+     * `boolean` indicating whether the attribute type is a subtype of `parent`.
+     *
+     * @readonly
+     * @property
+     */
+    readonly isAttributeSubtype: (attributeType: OBJECT_IDENTIFIER, parentType: OBJECT_IDENTIFIER) => boolean;
+
+    /**
+     * A function that accepts an attribute description and optionally an
+     * attribute value. If only an attribute type is supplied, this function
+     * returns a `boolean` indicating whether the user is permitted to filter
+     * on that attribute type. If the attribute value is supplied as well, this
+     * function returns a `boolean` indicating whether the user is permitted to
+     * filter on that attribute type and value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly permittedToMatch: (attributeType: OBJECT_IDENTIFIER, value?: AttributeValue) => boolean;
 
     /**
      * Referenced in ITU Recommendation X.511, Section 7.8.2.g, this option
@@ -57,8 +131,30 @@ interface FilterEntryOptions {
      * if none of the matching rules specified in a `FilterItem.extensibleMatch`
      * can be understood or if none are compatible with the specified attribute
      * type.
+     *
+     * @readonly
+     * @property
      */
-    performExactly?: boolean;
+    readonly performExactly?: boolean;
+}
+
+type AnyFunction = (...args: any[]) => any;
+
+function handleErrors (matcher: AnyFunction | undefined): AnyFunction | undefined {
+    if (!matcher) {
+        return undefined;
+    }
+    return (
+        assertion: ASN1Element,
+        value: ASN1Element,
+        ...other: any[]
+    ): boolean | undefined => {
+        try {
+            return matcher(assertion, value, ...other);
+        } catch {
+            return undefined;
+        }
+    };
 }
 
 export
@@ -84,79 +180,106 @@ export
 function evaluateEquality (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
-    options: FilterEntryOptions,
+    options: EvaluateFilterSettings,
 ): boolean | undefined {
     const attributes = getAttributesFromEntry(entry);
-    const results = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_))
-        .map((attr): boolean | undefined => {
-            const matcher: EqualityMatcher | undefined = options.getEqualityMatcher(attr.type_);
-            if (!matcher) {
-                return undefined;
+    const relevantAttributes = attributes
+        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+    for (const attr of relevantAttributes) {
+        const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(attr.type_));
+        if (!matcher || !options.permittedToMatch(attr.type_)) {
+            continue;
+        }
+        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+            const selectedContexts = ava.assertedContexts.selectedContexts;
+            const match: boolean = Boolean(
+                attr.values.some((value) => (
+                    options.permittedToMatch(attr.type_, value)
+                    && matcher!(ava.assertion, value)
+                ))
+                || attr.valuesWithContext
+                    ?.filter((vwc): boolean => (
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && matcher!(ava.assertion, vwc.value)
+                    ))
+                    .some((vwc): boolean => selectedContexts
+                        .every((sc) => evaluateContextAssertion(
+                            sc, vwc.contextList, options.getContextMatcher)) ?? false)
+            );
+            if (match) {
+                return true;
             }
-            if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-                const selectedContexts = ava.assertedContexts.selectedContexts;
-                return (
-                    attr.values.some((value) => (matcher && matcher(ava.assertion, value)))
-                    || (attr.valuesWithContext
-                        ?.filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
-                        .some((vwc): boolean => {
-                                return selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))
-                        }) ?? false)
-                );
-            } else {
-                return (
-                    attr.values.some((a) => matcher(ava.assertion, a))
-                    || (attr.valuesWithContext
-                        ?.some((vwc) => matcher(ava.assertion, vwc.value)) ?? false)
-                );
+        } else {
+            const match = (
+                attr.values.some((a) =>
+                    options.permittedToMatch(attr.type_, a)
+                    && matcher(ava.assertion, a)
+                )
+                || (attr.valuesWithContext
+                    ?.some((vwc) =>
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && matcher(ava.assertion, vwc.value)
+                    ) ?? false)
+            );
+            if (match) {
+                return true;
             }
-        });
-    if (results.some((result) => (result === undefined))) {
-        return undefined;
+        }
     }
-    return results.some((result) => (result === true));
+    return false;
 }
 
 export
 function evaluateApprox (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
-    options: FilterEntryOptions,
+    options: EvaluateFilterSettings,
 ): boolean | undefined {
     const attributes = getAttributesFromEntry(entry);
-    const results = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_))
-        .map((attr): boolean | undefined => {
-            const matcher: EqualityMatcher | undefined = options.getApproximateMatcher(attr.type_)
-                ?? options.getEqualityMatcher(attr.type_);
-            if (!matcher) {
-                return undefined;
+    const relevantAttributes = attributes
+        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+    for (const attr of relevantAttributes) {
+        const matcher: ApproxMatcher | undefined = handleErrors(options.getApproximateMatcher(attr.type_));
+        if (!matcher || !options.permittedToMatch(attr.type_)) {
+            continue;
+        }
+        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+            const selectedContexts = ava.assertedContexts.selectedContexts;
+            const match: boolean = Boolean(
+                attr.values.some((value) => (
+                    options.permittedToMatch(attr.type_, value)
+                    && matcher!(ava.assertion, value)
+                ))
+                || attr.valuesWithContext
+                    ?.filter((vwc): boolean => (
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && matcher!(ava.assertion, vwc.value)
+                    ))
+                    .some((vwc): boolean => selectedContexts
+                        .every((sc) => evaluateContextAssertion(
+                            sc, vwc.contextList, options.getContextMatcher)) ?? false)
+            );
+            if (match) {
+                return true;
             }
-            if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-                const selectedContexts = ava.assertedContexts.selectedContexts;
-                return (
-                    attr.values.some((value) => (matcher && matcher(ava.assertion, value)))
-                    || (attr.valuesWithContext
-                        ?.filter((vwc) => (matcher && matcher(ava.assertion, vwc.value)))
-                        .some((vwc): boolean => {
-                                return selectedContexts
-                                    .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))
-                        }) ?? false)
-                );
-            } else {
-                return (
-                    attr.values.some((a) => matcher(ava.assertion, a))
-                    || (attr.valuesWithContext
-                        ?.some((vwc) => matcher(ava.assertion, vwc.value)) ?? false)
-                );
+        } else {
+            const match = (
+                attr.values.some((a) =>
+                    options.permittedToMatch(attr.type_, a)
+                    && matcher(ava.assertion, a)
+                )
+                || (attr.valuesWithContext
+                    ?.some((vwc) =>
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && matcher(ava.assertion, vwc.value)
+                    ) ?? false)
+            );
+            if (match) {
+                return true;
             }
-        });
-    if (results.some((result) => (result === undefined))) {
-        return undefined;
+        }
     }
-    return results.some((result) => (result === true));
+    return false;
 }
 
 export
@@ -164,50 +287,68 @@ function evaluateOrdering (
     gte: boolean,
     ava: AttributeValueAssertion,
     entry: EntryInformation,
-    options: FilterEntryOptions,
+    options: EvaluateFilterSettings,
 ): boolean | undefined {
     const attributes = getAttributesFromEntry(entry);
-    const results = attributes
+    const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_))
-        .map((attr): boolean | undefined => {
-            const orderer: OrderingMatcher | undefined = options.getOrderingMatcher(attr.type_);
-            if (!orderer) {
-                return undefined;
+    for (const attr of relevantAttributes) {
+        const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(attr.type_));
+        if (!orderer || !options.permittedToMatch(attr.type_)) {
+            continue;
+        }
+        const ordered = gte
+            ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
+            : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
+        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
+            const selectedContexts = ava.assertedContexts.selectedContexts;
+            const match: boolean = Boolean(
+                attr.values.some((value) =>
+                    options.permittedToMatch(attr.type_, value)
+                    && ordered(ava.assertion, value)
+                )
+                || (attr.valuesWithContext
+                    ?.filter((vwc) =>
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && ordered(ava.assertion, vwc.value)
+                    )
+                    .some((vwc): boolean => selectedContexts
+                        .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))) ?? false)
+            );
+            if (match) {
+                return true;
             }
-            const ordered = gte
-                ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
-                : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
-            if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-                const selectedContexts = ava.assertedContexts.selectedContexts;
-                return (
-                    attr.values.some((value) => ordered(ava.assertion, value))
-                    || (attr.valuesWithContext
-                        ?.filter((vwc) => ordered(ava.assertion, vwc.value))
-                        .some((vwc): boolean => selectedContexts
-                            .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))) ?? false)
-                );
-            } else {
-                return (
-                    attr.values.some((a) => ordered(ava.assertion, a))
-                    || (attr.valuesWithContext
-                        ?.some((vwc) => ordered(ava.assertion, vwc.value)) ?? false)
-                );
+        } else {
+            const match = Boolean(
+                attr.values.some((a) =>
+                    options.permittedToMatch(attr.type_, a)
+                    && ordered(ava.assertion, a)
+                )
+                || (attr.valuesWithContext
+                    ?.some((vwc) =>
+                        options.permittedToMatch(attr.type_, vwc.value)
+                        && ordered(ava.assertion, vwc.value)
+                    ) ?? false)
+            );
+            if (match) {
+                return true;
             }
-        });
-    if (results.some((result) => (result === undefined))) {
-        return undefined;
+        }
     }
-    return results.some((result) => (result === true));
+    return false;
 }
 
 export
 function evaluateSubstring (
     sub: FilterItem_substrings,
     entry: EntryInformation,
-    options: FilterEntryOptions,
+    options: EvaluateFilterSettings,
 ): boolean | undefined {
+    if (!options.permittedToMatch(sub.type_)) {
+        return undefined;
+    }
     const attributes = getAttributesFromEntry(entry);
-    const matcher = options.getSubstringsMatcher(sub.type_);
+    const matcher = handleErrors(options.getSubstringsMatcher(sub.type_));
     const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings
         .map((str) => {
             if ("initial" in str) {
@@ -229,23 +370,31 @@ function evaluateSubstring (
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, sub.type_))
         .some((attr): boolean => (attr.values
             .some((value): boolean => (assertions
-                .every(([ assertion, selection ]): boolean => (matcher!(assertion, value, selection))
+                .every(([ assertion, selection ]): boolean => (
+                    options.permittedToMatch(attr.type_, value)
+                    && matcher!(assertion, value, selection)
+                )
     )))));
 }
 
 export
-function evaluateAttributePresence (attributeType: AttributeType, entry: EntryInformation): boolean {
+function evaluateAttributePresence (attributeType: AttributeType, entry: EntryInformation, options: EvaluateFilterSettings): boolean {
     const attributes = getAttributesFromEntry(entry);
-    const oid = attributeType.toString();
-    return attributes.some((attr: Attribute): boolean => attr.type_.toString() === oid);
+    return attributes.some((attr: Attribute): boolean => (
+        options.permittedToMatch(attr.type_)
+        && attr.type_.isEqualTo(attributeType)
+    ));
 }
 
 export
 function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
-    options: FilterEntryOptions,
+    options: EvaluateFilterSettings,
 ): boolean | undefined {
+    if (mra.type_ && !options.permittedToMatch(mra.type_)) {
+        return undefined;
+    }
     if (mra.matchingRule.length !== 1) {
         if (options.performExactly) {
             throw new Error(
@@ -277,18 +426,19 @@ function evaluateMatchingRuleAssertion (
      * > If type is omitted, the match is made against all attribute types which
      * > are compatible with that matching rule.
      */
-    const relevantAttributes = (mra.type_)
+    const relevantAttributes = ((mra.type_)
         ? attributes
             .filter((attr): boolean => options.isAttributeSubtype(attr.type_, mra.type_!))
         : attributes
             .filter((attr: Attribute): boolean => options.isMatchingRuleCompatibleWithAttributeType(
                 mra.matchingRule[0],
                 attr.type_,
-            ));
+            )))
+            .filter((attr) => options.permittedToMatch(attr.type_));
     if (relevantAttributes.length === 0) {
         if (options.performExactly && !mra.type_ && (attributes.length > 0)) {
             // None of the attributes were compatible with the matching rule.
-            throw new Error(
+            throw new Error( // TODO: Convert this to a specific error type.
                 "BAEB4660-3432-48FE-85EE-6625A6DCC41B: CANNOT_PERFORM_EXACTLY_NO_ATTRIBUTES_COMPATIBLE: "
                 + mra.matchingRule[0].toString()
             );
@@ -296,11 +446,17 @@ function evaluateMatchingRuleAssertion (
         return false; // There are no applicable attributes to match.
     }
     return relevantAttributes.some((attr: Attribute): boolean => (
-        attr.values.some((value) => matcher!(mra.matchValue, value))
+        attr.values.some((value) =>
+            options.permittedToMatch(attr.type_, value)
+            && matcher!(mra.matchValue, value)
+        )
         || (attr
             .valuesWithContext
             ?.map((vwc) => vwc.value)
-            .some((value) => matcher!(mra.matchValue, value)) ?? false)
+            .some((value) =>
+                options.permittedToMatch(attr.type_, value)
+                && matcher!(mra.matchValue, value)
+            ) ?? false)
     ));
 }
 
@@ -308,11 +464,17 @@ export
 function evaluateAttributeTypeAssertion (
     ata: AttributeTypeAssertion,
     entry: EntryInformation,
-    options: FilterEntryOptions,
-): boolean {
+    options: EvaluateFilterSettings,
+): boolean | undefined {
+    if (!options.permittedToMatch(ata.type_)) {
+        return undefined;
+    }
     const attributes = getAttributesFromEntry(entry);
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ata.type_));
+        .filter((attr): boolean =>
+            options.permittedToMatch(attr.type_)
+            && options.isAttributeSubtype(attr.type_, ata.type_)
+        );
     if (relevantAttributes.length === 0) {
         return false;
     }
@@ -327,7 +489,7 @@ function evaluateAttributeTypeAssertion (
 }
 
 export
-function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, options: FilterEntryOptions): boolean | undefined {
+function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, options: EvaluateFilterSettings): boolean | undefined {
     if ("equality" in filterItem) {
         return evaluateEquality(filterItem.equality, entry, options);
     } else if ("substrings" in filterItem) {
@@ -337,12 +499,11 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
     } else if ("lessOrEqual" in filterItem) {
         return evaluateOrdering(false, filterItem.lessOrEqual, entry, options);
     } else if ("present" in filterItem) {
-        return evaluateAttributePresence(filterItem.present, entry);
+        return evaluateAttributePresence(filterItem.present, entry, options);
     } else if ("approximateMatch" in filterItem) {
         return evaluateApprox(filterItem.approximateMatch, entry, options);
     } else if ("extensibleMatch" in filterItem) {
-        const MR = filterItem.extensibleMatch.matchingRule[0]?.toString();
-        if (MR === NULL_MATCH) {
+        if (filterItem.extensibleMatch.matchingRule[0]?.isEqualTo(id_mr_nullMatch)) {
             return true;
         }
         return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options);
@@ -387,7 +548,7 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
  * @function
  */
 export
-function evaluateFilter (filter: Filter, entry: EntryInformation, options: FilterEntryOptions): boolean | undefined {
+function evaluateFilter (filter: Filter, entry: EntryInformation, options: EvaluateFilterSettings): boolean | undefined {
     if ("item" in filter) {
         return evaluateFilterItem(filter.item, entry, options);
     } else if ("and" in filter) {
@@ -413,7 +574,7 @@ function evaluateFilter (filter: Filter, entry: EntryInformation, options: Filte
         if (
             ("item" in filter.not)
             && ("extensibleMatch" in filter.not.item)
-            && (filter.not.item.extensibleMatch.matchingRule[0]?.toString() === NULL_MATCH)
+            && (filter.not.item.extensibleMatch.matchingRule[0]?.isEqualTo(id_mr_nullMatch))
         ) {
             return true;
         }

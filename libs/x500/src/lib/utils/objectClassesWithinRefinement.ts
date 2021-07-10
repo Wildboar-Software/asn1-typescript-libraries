@@ -14,7 +14,7 @@ function objectClassesWithinRefinement (
     } else if ("not" in refinement) {
         return !objectClassesWithinRefinement(classes, refinement.not);
     } else if ("item" in refinement) {
-        return classes.some((c) => c.toString() === refinement.item.toString());
+        return classes.some((c) => refinement.item.isEqualTo(c));
     } else {
         return false;
     }

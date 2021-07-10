@@ -8,7 +8,7 @@ const objectIdentifierFirstComponentMatch: EqualityMatcher = (
 ): boolean => {
     const a: OBJECT_IDENTIFIER = assertion.objectIdentifier;
     const v: OBJECT_IDENTIFIER = value.sequence[0].objectIdentifier;
-    return (a.toString() === v.toString());
+    return a.isEqualTo(v);
 }
 
 export default objectIdentifierFirstComponentMatch;

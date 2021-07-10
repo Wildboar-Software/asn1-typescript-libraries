@@ -12,7 +12,7 @@ const policyMatch: EqualityMatcher = (
 ): boolean => {
     const a: OBJECT_IDENTIFIER = assertion.objectIdentifier;
     const v: PolicySyntax = _decode_PolicySyntax(value);
-    return (v.policyIdentifier.toString() === a.toString());
+    return v.policyIdentifier.isEqualTo(a);
 }
 
 export default policyMatch;

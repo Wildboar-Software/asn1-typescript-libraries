@@ -16,8 +16,6 @@ import type {
 } from "../../modules/AuthenticationFramework/Extension.ta";
 import { DERElement } from "asn1-ts";
 
-const SOUGHT_OID: string = id_ce_acceptableCertPolicies.toString();
-
 export
 const acceptableCertPoliciesMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -26,14 +24,14 @@ const acceptableCertPoliciesMatch: EqualityMatcher = (
     const a: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.toString() === SOUGHT_OID));
+        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_acceptableCertPolicies));
     if (!ext) {
         return false;
     }
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
     const storedValue: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(el);
-    return a.every((oid, index) => (oid.toString() === storedValue[index]?.toString()));
+    return a.every((oid, index) => storedValue[index]?.isEqualTo(oid));
 }
 
 export default acceptableCertPoliciesMatch;

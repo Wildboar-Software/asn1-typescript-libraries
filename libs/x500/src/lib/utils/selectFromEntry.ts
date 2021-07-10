@@ -317,7 +317,7 @@ function selectFromEntry (
                  * > attribute, then the value(s) shall be returned independent of the setting of the infoTypes
                  * > component, but the infoTypes specification shall be applied to the contained attributes.
                  */
-                if ((attrs[0][0].toString() === family_information["&id"].toString())) {
+                if ((family_information["&id"].isEqualTo(attrs[0][0]))) {
                     return {
                         attribute: new Attribute(
                             attrs[0][0],
