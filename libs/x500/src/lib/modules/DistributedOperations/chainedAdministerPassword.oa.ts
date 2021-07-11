@@ -1,16 +1,7 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
 import { administerPassword } from "../DirectoryAbstractService/administerPassword.oa";
 import { chained } from "../DistributedOperations/chained.oa";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { administerPassword } from "../DirectoryAbstractService/administerPassword.oa";
-export { chained } from "../DistributedOperations/chained.oa";
+import type { ChainedOperation } from "./chained.oa";
 
 /* START_OF_SYMBOL_DEFINITION chainedAdministerPassword */
 /**
@@ -27,7 +18,7 @@ export { chained } from "../DistributedOperations/chained.oa";
  * @type {OPERATION}
  * @implements {OPERATION}
  */
-export const chainedAdministerPassword: OPERATION = chained(administerPassword);
+export const chainedAdministerPassword: ChainedOperation = chained(administerPassword);
 /* END_OF_SYMBOL_DEFINITION chainedAdministerPassword */
 
 /* eslint-enable */

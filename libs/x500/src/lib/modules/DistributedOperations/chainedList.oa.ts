@@ -1,16 +1,7 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
 import { list } from "../DirectoryAbstractService/list.oa";
 import { chained } from "../DistributedOperations/chained.oa";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { list } from "../DirectoryAbstractService/list.oa";
-export { chained } from "../DistributedOperations/chained.oa";
+import type { ChainedOperation } from "./chained.oa";
 
 /* START_OF_SYMBOL_DEFINITION chainedList */
 /**
@@ -27,7 +18,7 @@ export { chained } from "../DistributedOperations/chained.oa";
  * @type {OPERATION}
  * @implements {OPERATION}
  */
-export const chainedList: OPERATION = chained(list);
+export const chainedList: ChainedOperation = chained(list);
 /* END_OF_SYMBOL_DEFINITION chainedList */
 
 /* eslint-enable */

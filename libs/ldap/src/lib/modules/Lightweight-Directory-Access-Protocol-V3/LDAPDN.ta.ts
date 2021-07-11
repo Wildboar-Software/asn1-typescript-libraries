@@ -82,6 +82,9 @@ export {
  * @summary LDAPDN
  * @description
  *
+ * Note that LDAP DNs are _reversed_. In X.500 protocols, the RDNs are arranged
+ * in order of descending superiority, but in LDAP, it is the opposite.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

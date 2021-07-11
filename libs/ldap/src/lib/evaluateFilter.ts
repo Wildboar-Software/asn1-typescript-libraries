@@ -10,18 +10,7 @@ import type OrderingMatcher from "../lib/types/OrderingMatcher";
 import type ApproxMatcher from "../lib/types/ApproxMatcher";
 import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder";
 import encodeLDAPOID from "./encodeLDAPOID";
-
-function compareUint8Arrays (a: Uint8Array, b: Uint8Array): boolean {
-    if (a.length !== b.length) {
-        return false;
-    }
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            return false;
-        }
-    }
-    return true;
-}
+import compareUint8Arrays from "./utils/compareUint8Arrays";
 
 export
 interface EvaluateFilterOptions {

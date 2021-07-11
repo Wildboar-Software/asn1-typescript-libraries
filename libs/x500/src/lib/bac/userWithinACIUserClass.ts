@@ -20,14 +20,6 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  * Determines if a user is within a user class as specified in
  * ITU Recommendation X.501 (2016), Section 18.4.2.4.b.
  *
- * This implementation returns `-1` if the user is not within the class, otherwise
- * this returns the tag number of the component by which it matched. This may
- * seem strange, but knowledge of which component the user matched on is
- * critical for later. If there is a stalemate in precedence between two ACI
- * items, we have to fallback on the more specific of the user classes that
- * matched. This also explains another peculiarity of how this function works:
- * you will notice that the more specific membership tests are applied first.
- *
  * As ITU Recommendation X.501 (2016), Section 18.8.4 specifies, the order of
  * specificity is as such (in order of ascending specificity):
  *
@@ -35,9 +27,6 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  * - `subtree`
  * - `userGroup`
  * - `name` and `thisEntry` (both having equal precedence)
- *
- * This means that, if you have to sort `UserClasses`, sort them by return
- * values in this order of precedence: `1 = 2 > 3 > 4 > 0`.
  *
  * ### ASN.1 Definitions:
  *
@@ -68,25 +57,29 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  *  identifier and returns another function (if one can be found) that can be
  *  used to compare two values of the same attribute type.
  * @param {function} isMemberOfGroup A function that takes a user group and user
- *  and returns a `boolean` indicating whether the user is a member of the group.
- * @returns The tag number of the most specific `UserClasses` component by
- *  which this user was targeted, or `-1` if the user did not match.
+ *  and resolves a `boolean` indicating whether the user is a member of the
+ *  group or `undefined` if it could not be determined.
+ * @returns A `number` that ascends with increasing specificity of the match, or
+ *  `0` if it did not match. This number will be non-integral if group
+ *  membership was checked, but group membership could not be determined.
+ *
  * @function
  */
 export
-function userWithinACIUserClass (
+async function userWithinACIUserClass (
     administrativePoint: DistinguishedName,
     userClass: UserClasses,
     user: NameAndOptionalUID,
     entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-    isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => boolean | undefined,
-): 0 | 1 | 2 | 3 | 4 | -1 {
+    isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
+): Promise<number> {
+    let couldNotDetermineGroupMembership: boolean = false;
     if (
         (userClass.thisEntry === null)
         && compareDistinguishedName(user.dn, entryDN, getEqualityMatcher)
     ) {
-        return 1;
+        return 4;
     }
     if (
         (userClass.name && (userClass.name.length > 0))
@@ -98,13 +91,20 @@ function userWithinACIUserClass (
             )
         )))
     ) {
-        return 2;
+        return 4;
     }
     if (
         (userClass.userGroup && (userClass.userGroup.length > 0))
         && userClass.userGroup.some((ug) => isMemberOfGroup(ug, user))
     ) {
-        return 3;
+        for (const ug of userClass.userGroup) {
+            const isMember = await isMemberOfGroup(ug, user);
+            if (isMember === undefined) {
+                couldNotDetermineGroupMembership = true;
+            } else if (isMember) {
+                return 3;
+            }
+        }
     }
     if (
         (userClass.subtree && (userClass.subtree.length > 0))
@@ -116,12 +116,21 @@ function userWithinACIUserClass (
             getEqualityMatcher,
         ))
     ) {
-        return 4;
+        if (couldNotDetermineGroupMembership) {
+            return 2.5;
+        }
+        return 2;
     }
     if (userClass.allUsers === null) {
-        return 0;
+        if (couldNotDetermineGroupMembership) {
+            return 1.5;
+        }
+        return 1;
     }
-    return -1;
+    if (couldNotDetermineGroupMembership) {
+        return 0.5;
+    }
+    return 0;
 }
 
 export default userWithinACIUserClass;

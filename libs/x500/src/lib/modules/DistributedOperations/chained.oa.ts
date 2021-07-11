@@ -15,6 +15,12 @@ import {
     _encode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
 } from "./Chained-ResultType-OPTIONALLY-PROTECTED-Parameter1.ta";
 
+export
+type ChainedOperation = OPERATION<
+    OPTIONALLY_PROTECTED<Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1>,
+    OPTIONALLY_PROTECTED<Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1>
+>;
+
 // chained{OPERATION:operation} OPERATION ::= {
 //     ARGUMENT             OPTIONALLY-PROTECTED {SET {
 //       chainedArgument      ChainingArguments,
@@ -27,11 +33,8 @@ import {
 //     CODE                 operation.&operationCode }
 
 export const chained = (
-    operation: OPERATION
-): OPERATION<
-    OPTIONALLY_PROTECTED<typeof operation["&ArgumentType"]>,
-    OPTIONALLY_PROTECTED<typeof operation["&ResultType"]>
-> => {
+    operation: OPERATION,
+): ChainedOperation => {
     return {
         class: "OPERATION",
         decoderFor: {

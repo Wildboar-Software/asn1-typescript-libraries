@@ -1,16 +1,7 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
 import { linkedLDAP } from "../DirectoryAbstractService/linkedLDAP.oa";
 import { chained } from "../DistributedOperations/chained.oa";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { linkedLDAP } from "../DirectoryAbstractService/linkedLDAP.oa";
-export { chained } from "../DistributedOperations/chained.oa";
+import type { ChainedOperation } from "./chained.oa";
 
 /* START_OF_SYMBOL_DEFINITION chainedLinkedLDAP */
 /**
@@ -27,7 +18,7 @@ export { chained } from "../DistributedOperations/chained.oa";
  * @type {OPERATION}
  * @implements {OPERATION}
  */
-export const chainedLinkedLDAP: OPERATION = chained(linkedLDAP);
+export const chainedLinkedLDAP: ChainedOperation = chained(linkedLDAP);
 /* END_OF_SYMBOL_DEFINITION chainedLinkedLDAP */
 
 /* eslint-enable */
