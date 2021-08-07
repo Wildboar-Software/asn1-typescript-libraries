@@ -107,7 +107,10 @@ import {
     _decode_RelaxationPolicy,
     _encode_RelaxationPolicy,
 } from "../ServiceAdministration/RelaxationPolicy.ta";
-import { _root_component_type_list_1_spec_for_CommonArguments } from "../DirectoryAbstractService/CommonArguments.ta";
+import {
+    CommonArguments,
+    _root_component_type_list_1_spec_for_CommonArguments,
+} from "../DirectoryAbstractService/CommonArguments.ta";
 
 /* START_OF_SYMBOL_DEFINITION SearchArgumentData */
 /**
@@ -146,7 +149,7 @@ import { _root_component_type_list_1_spec_for_CommonArguments } from "../Directo
  *
  * @class
  */
-export class SearchArgumentData {
+export class SearchArgumentData extends CommonArguments {
     constructor(
         /**
          * @summary `baseObject`.
@@ -316,7 +319,22 @@ export class SearchArgumentData {
          * @readonly
          */
         readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        super(
+            serviceControls,
+            securityParameters,
+            requestor,
+            operationProgress,
+            aliasedRDNs,
+            criticalExtensions,
+            referenceType,
+            entryOnly,
+            exclusions,
+            nameResolveOnMaster,
+            operationContexts,
+            familyGrouping,
+        );
+    }
 
     /**
      * @summary Restructures an object into a SearchArgumentData

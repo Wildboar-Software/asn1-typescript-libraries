@@ -70,8 +70,7 @@ DsaReferralData ::= SET {
 ChainingArguments ::= SET {
   originator                 [0]  DistinguishedName OPTIONAL,
   targetObject               [1]  DistinguishedName OPTIONAL,
-  operationProgress          [2]  OperationProgress
-                               DEFAULT {nameResolutionPhase notStarted},
+  operationProgress          [2]  OperationProgress DEFAULT {nameResolutionPhase notStarted},
   traceInformation           [3]  TraceInformation,
   aliasDereferenced          [4]  BOOLEAN DEFAULT FALSE,
   aliasedRDNs                [5]  INTEGER OPTIONAL,

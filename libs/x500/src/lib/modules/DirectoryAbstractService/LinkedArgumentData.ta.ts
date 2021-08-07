@@ -62,6 +62,7 @@ import {
     _encode_LDAPMessage,
 } from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
 import {
+    CommonArgumentsSeq,
     _root_component_type_list_1_spec_for_CommonArgumentsSeq,
 } from "../DirectoryAbstractService/CommonArgumentsSeq.ta";
 
@@ -85,7 +86,7 @@ import {
  *
  * @class
  */
-export class LinkedArgumentData {
+export class LinkedArgumentData extends CommonArgumentsSeq {
     constructor(
         /**
          * @summary `object`.
@@ -189,7 +190,22 @@ export class LinkedArgumentData {
          * @readonly
          */
         readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        super(
+            serviceControls,
+            securityParameters,
+            requestor,
+            operationProgress,
+            aliasedRDNs,
+            criticalExtensions,
+            referenceType,
+            entryOnly,
+            exclusions,
+            nameResolveOnMaster,
+            operationContexts,
+            familyGrouping,
+        );
+    }
 
     /**
      * @summary Restructures an object into a LinkedArgumentData

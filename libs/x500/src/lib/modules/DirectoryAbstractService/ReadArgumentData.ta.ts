@@ -61,7 +61,10 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta";
-import { _root_component_type_list_1_spec_for_CommonArguments } from "../DirectoryAbstractService/CommonArguments.ta";
+import {
+    CommonArguments,
+    _root_component_type_list_1_spec_for_CommonArguments,
+} from "../DirectoryAbstractService/CommonArguments.ta";
 
 /* START_OF_SYMBOL_DEFINITION ReadArgumentData */
 /**
@@ -82,7 +85,7 @@ import { _root_component_type_list_1_spec_for_CommonArguments } from "../Directo
  *
  * @class
  */
-export class ReadArgumentData {
+export class ReadArgumentData extends CommonArguments {
     constructor(
         /**
          * @summary `object`.
@@ -180,7 +183,22 @@ export class ReadArgumentData {
          * @readonly
          */
         readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {}
+    ) {
+        super(
+            serviceControls,
+            securityParameters,
+            requestor,
+            operationProgress,
+            aliasedRDNs,
+            criticalExtensions,
+            referenceType,
+            entryOnly,
+            exclusions,
+            nameResolveOnMaster,
+            operationContexts,
+            familyGrouping,
+        );
+    }
 
     /**
      * @summary Restructures an object into a ReadArgumentData

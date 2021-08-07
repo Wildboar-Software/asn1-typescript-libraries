@@ -123,6 +123,7 @@
     "@wildboar/ocsp": "dist/libs/ocsp",
     "@wildboar/pc": "dist/libs/pc",
     "@wildboar/pkcs": "dist/libs/pkcs",
+    "@wildboar/pki-stub": "dist/libs/pki-stub",
     "@wildboar/qc": "dist/libs/qc",
     "@wildboar/rinf": "dist/libs/rinf",
     "@wildboar/rose": "dist/libs/rose",

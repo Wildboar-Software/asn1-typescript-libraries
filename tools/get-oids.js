@@ -39,7 +39,7 @@ async function main () {
                     (v instanceof asn1.ObjectIdentifier)
                     || (v && (typeof v === "object") && ("constructor" in v) && (v.constructor?.name === "ObjectIdentifier"))
                 ))
-                .map(([ k, v ]) => `${asn1module},${k.replace(/_/, "-")},${v.toString()}`),
+                .map(([ k, v ]) => `${asn1module},${k.replace(/_/g, "-")},${v.toString()}`),
         ];
     }
     const output = oids.join("\r\n");
