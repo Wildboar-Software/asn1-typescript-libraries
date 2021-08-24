@@ -212,7 +212,13 @@ export class EntryInformationSelection {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_EntryInformationSelection: $.ComponentSpec[] = [
-    new $.ComponentSpec("attributes", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'attributes',
+        true,
+        $.or($.hasTag(_TagClass.context, 0), $.hasTag(_TagClass.context, 1)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "infoTypes",
         true,
@@ -223,14 +229,17 @@ export const _root_component_type_list_1_spec_for_EntryInformationSelection: $.C
     new $.ComponentSpec(
         "extraAttributes",
         true,
-        $.hasAnyTag,
+        $.or($.hasTag(_TagClass.context, 3), $.hasTag(_TagClass.context, 4)),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        "contextSelection",
+        'contextSelection',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 5),
+            $.hasTag(_TagClass.universal, 17)
+        ),
         undefined,
         undefined
     ),
