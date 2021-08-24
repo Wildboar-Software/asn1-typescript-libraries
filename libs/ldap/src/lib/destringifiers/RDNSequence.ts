@@ -11,6 +11,9 @@ export default function* rdnSequenceFromString(
     rdnDelimiter: number = ",".charCodeAt(0),
     atavDelimiter: number = "+".charCodeAt(0),
 ): IterableIterator<RDN> {
+    if (str.length === 0) { // Without this, rdnFromString() will crash when trying to parse the root DSE DN.
+        return;
+    }
     let start: number = 0;
     for (let i: number = 0; i < str.length; i++) {
         const char: number = str.charCodeAt(i);
