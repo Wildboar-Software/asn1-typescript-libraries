@@ -190,7 +190,13 @@ export class ListResultData_listInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ListResultData_listInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("name", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'name',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "subordinates",
         false,
