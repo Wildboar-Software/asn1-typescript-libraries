@@ -170,7 +170,17 @@ export const _root_component_type_list_1_spec_for_TerminateOperationalBindingArg
         undefined,
         undefined
     ),
-    new $.ComponentSpec("initiator", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'initiator',
+        true,
+        $.or(
+            $.hasTag(_TagClass.context, 3),
+            $.hasTag(_TagClass.context, 4),
+            $.hasTag(_TagClass.context, 5),
+        ),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "terminateAt",
         true,

@@ -199,7 +199,13 @@ export class CompareResultData {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CompareResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec("name", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'name',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "matched",
         false,

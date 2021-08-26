@@ -95,9 +95,13 @@ export const _root_component_type_list_1_spec_for_UserNotice: $.ComponentSpec[] 
         undefined
     ),
     new $.ComponentSpec(
-        "explicitText",
+        'explicitText',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 26),
+            $.hasTag(_TagClass.universal, 30),
+            $.hasTag(_TagClass.universal, 12)
+        ),
         undefined,
         undefined
     ),

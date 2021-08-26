@@ -94,7 +94,7 @@ export class IncrementalStepRefresh {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_IncrementalStepRefresh: $.ComponentSpec[] = [
-    new $.ComponentSpec("sDSEChanges", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("sDSEChanges", true, $.not($.hasTag(_TagClass.universal, 16)), undefined, undefined),
     new $.ComponentSpec(
         "subordinateUpdates",
         true,

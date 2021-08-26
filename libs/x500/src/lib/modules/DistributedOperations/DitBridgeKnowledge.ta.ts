@@ -99,9 +99,15 @@ export class DitBridgeKnowledge {
  */
 export const _root_component_type_list_1_spec_for_DitBridgeKnowledge: $.ComponentSpec[] = [
     new $.ComponentSpec(
-        "domainLocalID",
+        'domainLocalID',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 20),
+            $.hasTag(_TagClass.universal, 19),
+            $.hasTag(_TagClass.universal, 30),
+            $.hasTag(_TagClass.universal, 28),
+            $.hasTag(_TagClass.universal, 12)
+        ),
         undefined,
         undefined
     ),

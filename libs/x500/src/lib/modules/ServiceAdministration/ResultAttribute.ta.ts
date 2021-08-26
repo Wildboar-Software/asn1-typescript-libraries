@@ -120,9 +120,12 @@ export const _root_component_type_list_1_spec_for_ResultAttribute: $.ComponentSp
         undefined
     ),
     new $.ComponentSpec(
-        "outputValues",
+        'outputValues',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 16),
+            $.hasTag(_TagClass.universal, 5)
+        ),
         undefined,
         undefined
     ),

@@ -143,7 +143,7 @@ export const _root_component_type_list_1_spec_for_ShadowingAgreementInfo: $.Comp
         undefined,
         undefined
     ),
-    new $.ComponentSpec("updateMode", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("updateMode", true, $.not($.or($.hasTag(_TagClass.universal, 17), $.hasTag(_TagClass.context, 2))), undefined, undefined),
     new $.ComponentSpec(
         "master",
         true,

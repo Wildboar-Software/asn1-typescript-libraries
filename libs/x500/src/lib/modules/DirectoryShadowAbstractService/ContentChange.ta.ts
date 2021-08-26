@@ -174,11 +174,23 @@ export class ContentChange {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ContentChange: $.ComponentSpec[] = [
-    new $.ComponentSpec("rename", true, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec(
-        "attributeChanges",
+        'rename',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 17),
+            $.hasTag(_TagClass.universal, 16)
+        ),
+        undefined,
+        undefined
+    ),
+    new $.ComponentSpec(
+        'attributeChanges',
+        true,
+        $.or(
+            $.hasTag(_TagClass.context, 0),
+            $.hasTag(_TagClass.context, 1)
+        ),
         undefined,
         undefined
     ),

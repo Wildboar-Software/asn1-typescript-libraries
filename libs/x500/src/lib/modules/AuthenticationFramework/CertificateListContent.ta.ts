@@ -207,8 +207,26 @@ export const _root_component_type_list_1_spec_for_CertificateListContent: $.Comp
         undefined
     ),
     new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("thisUpdate", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("nextUpdate", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        "thisUpdate",
+        false,
+        $.or(
+            $.hasTag(_TagClass.universal, 23),
+            $.hasTag(_TagClass.universal, 24)
+        ),
+        undefined,
+        undefined
+    ),
+    new $.ComponentSpec(
+        'nextUpdate',
+        true,
+        $.or(
+            $.hasTag(_TagClass.universal, 23),
+            $.hasTag(_TagClass.universal, 24)
+        ),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "revokedCertificates",
         true,

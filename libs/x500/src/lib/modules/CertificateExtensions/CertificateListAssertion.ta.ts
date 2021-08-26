@@ -202,7 +202,13 @@ export class CertificateListAssertion {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertificateListAssertion: $.ComponentSpec[] = [
-    new $.ComponentSpec("issuer", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'issuer',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "minCRLNumber",
         true,
@@ -224,7 +230,16 @@ export const _root_component_type_list_1_spec_for_CertificateListAssertion: $.Co
         undefined,
         undefined
     ),
-    new $.ComponentSpec("dateAndTime", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'dateAndTime',
+        true,
+        $.or(
+            $.hasTag(_TagClass.universal, 23),
+            $.hasTag(_TagClass.universal, 24)
+        ),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "distributionPoint",
         true,

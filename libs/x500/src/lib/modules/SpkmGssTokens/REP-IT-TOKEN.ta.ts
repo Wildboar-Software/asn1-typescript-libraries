@@ -162,7 +162,13 @@ export const _root_component_type_list_1_spec_for_REP_IT_TOKEN: $.ComponentSpec[
         undefined
     ),
     new $.ComponentSpec("targ-name", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("src-name", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'src-name',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "key-estb-rep",
         true,

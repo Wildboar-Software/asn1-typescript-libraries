@@ -102,7 +102,7 @@ export class AttributeValueIntegrityInfoContent {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AttributeValueIntegrityInfoContent: $.ComponentSpec[] = [
-    new $.ComponentSpec("signer", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("signer", true, $.not($.hasTag(_TagClass.universal, 16)), undefined, undefined),
     new $.ComponentSpec(
         "aVIHash",
         false,

@@ -195,9 +195,12 @@ export const _root_component_type_list_1_spec_for_UnitOfReplication: $.Component
         undefined
     ),
     new $.ComponentSpec(
-        "contextSelection",
+        'contextSelection',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 5),
+            $.hasTag(_TagClass.universal, 17)
+        ),
         undefined,
         undefined
     ),

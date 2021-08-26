@@ -121,7 +121,7 @@ export class AttributeIntegrityInfoContent {
  */
 export const _root_component_type_list_1_spec_for_AttributeIntegrityInfoContent: $.ComponentSpec[] = [
     new $.ComponentSpec("scope", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("signer", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("signer", true, $.not($.hasTag(_TagClass.universal, 16)), undefined, undefined),
     new $.ComponentSpec(
         "attribsHash",
         false,

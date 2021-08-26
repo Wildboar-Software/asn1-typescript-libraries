@@ -97,7 +97,7 @@ export class SpecificallyIdentified {
  */
 export const _root_component_type_list_1_spec_for_SpecificallyIdentified: $.ComponentSpec[] = [
     new $.ComponentSpec("name", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec("issuer", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("issuer", true, $.hasTagClass(_TagClass.context), undefined, undefined),
     new $.ComponentSpec(
         "serial",
         true,

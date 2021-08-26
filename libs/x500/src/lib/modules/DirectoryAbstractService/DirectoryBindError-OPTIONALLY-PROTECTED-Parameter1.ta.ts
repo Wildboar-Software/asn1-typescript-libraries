@@ -142,7 +142,16 @@ export const _root_component_type_list_1_spec_for_DirectoryBindError_OPTIONALLY_
         undefined,
         undefined
     ),
-    new $.ComponentSpec("error", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'error',
+        false,
+        $.or(
+            $.hasTag(_TagClass.context, 1),
+            $.hasTag(_TagClass.context, 2)
+        ),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "securityParameters",
         true,

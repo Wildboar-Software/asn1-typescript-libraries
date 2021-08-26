@@ -115,9 +115,12 @@ export const _root_component_type_list_1_spec_for_AttributeValueAssertion: $.Com
     ),
     new $.ComponentSpec("assertion", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec(
-        "assertedContexts",
+        'assertedContexts',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.context, 0),
+            $.hasTag(_TagClass.context, 1)
+        ),
         undefined,
         undefined
     ),

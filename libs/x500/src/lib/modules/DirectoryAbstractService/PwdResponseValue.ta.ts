@@ -107,7 +107,7 @@ export class PwdResponseValue {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PwdResponseValue: $.ComponentSpec[] = [
-    new $.ComponentSpec("warning", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("warning", true, $.not($.hasTag(_TagClass.universal, 10)), undefined, undefined),
     new $.ComponentSpec(
         "error",
         true,

@@ -245,7 +245,17 @@ export const _root_component_type_list_1_spec_for_PartialOutcomeQualifier: $.Com
         undefined,
         undefined
     ),
-    new $.ComponentSpec("entryCount", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'entryCount',
+        true,
+        $.or(
+            $.hasTag(_TagClass.context, 7),
+            $.hasTag(_TagClass.context, 8),
+            $.hasTag(_TagClass.context, 9)
+        ),
+        undefined,
+        undefined
+    ),
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PartialOutcomeQualifier */
 

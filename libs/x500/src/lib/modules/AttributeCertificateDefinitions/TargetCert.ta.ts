@@ -115,7 +115,7 @@ export const _root_component_type_list_1_spec_for_TargetCert: $.ComponentSpec[] 
         undefined,
         undefined
     ),
-    new $.ComponentSpec("targetName", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("targetName", true, $.hasTagClass(_TagClass.context), undefined, undefined),
     new $.ComponentSpec(
         "certDigestInfo",
         true,

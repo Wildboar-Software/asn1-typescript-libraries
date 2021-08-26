@@ -206,7 +206,13 @@ export class SearchResultData_searchInfo {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SearchResultData_searchInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec("name", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'name',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "entries",
         false,

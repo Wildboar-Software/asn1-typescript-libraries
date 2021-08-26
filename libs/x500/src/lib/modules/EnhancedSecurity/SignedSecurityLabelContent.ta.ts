@@ -155,7 +155,13 @@ export const _root_component_type_list_1_spec_for_SignedSecurityLabelContent: $.
         undefined,
         undefined
     ),
-    new $.ComponentSpec("issuer", true, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'issuer',
+        true,
+        $.or($.hasTag(_TagClass.universal, 16)),
+        undefined,
+        undefined
+    ),
     new $.ComponentSpec(
         "keyIdentifier",
         true,

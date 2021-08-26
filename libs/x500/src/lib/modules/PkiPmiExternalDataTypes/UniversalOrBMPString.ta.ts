@@ -84,9 +84,12 @@ export class UniversalOrBMPString {
  */
 export const _root_component_type_list_1_spec_for_UniversalOrBMPString: $.ComponentSpec[] = [
     new $.ComponentSpec(
-        "character-encoding",
+        'character-encoding',
         false,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 30),
+            $.hasTag(_TagClass.universal, 28)
+        ),
         undefined,
         undefined
     ),

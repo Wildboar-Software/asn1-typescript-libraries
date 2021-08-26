@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OPTIONAL } from "asn1-ts";
+import { ASN1Element as _Element, OPTIONAL, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
 import {
     UnboundedDirectoryString,
@@ -86,9 +86,15 @@ export class ContextInformation {
 export const _root_component_type_list_1_spec_for_ContextInformation: $.ComponentSpec[] = [
     new $.ComponentSpec("syntax", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec(
-        "assertionSyntax",
+        'assertionSyntax',
         true,
-        $.hasAnyTag,
+        $.or(
+            $.hasTag(_TagClass.universal, 20),
+            $.hasTag(_TagClass.universal, 19),
+            $.hasTag(_TagClass.universal, 30),
+            $.hasTag(_TagClass.universal, 28),
+            $.hasTag(_TagClass.universal, 12)
+        ),
         undefined,
         undefined
     ),

@@ -165,7 +165,13 @@ export const _root_component_type_list_1_spec_for_OsiBindResult_normal_mode_para
         undefined,
         undefined
     ),
-    new $.ComponentSpec("user-data", false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec(
+        'user-data',
+        true,
+        $.or($.hasTag(_TagClass.application, 1)),
+        undefined,
+        undefined
+    ),
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_OsiBindResult_normal_mode_parameters */
 
