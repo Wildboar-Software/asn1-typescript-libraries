@@ -35,7 +35,7 @@ import {
 import type {
     Name,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
-import { evaluateFilter, EvaluateFilterSettings } from "@wildboar/x500/src/lib/evaluateFilter";
+import { evaluateFilter, EvaluateFilterSettings } from "@wildboar/x500/src/lib/utils/evaluateFilter";
 import type EqualityMatcher from "@wildboar/x500/src/lib/types/EqualityMatcher";
 import type OrderingMatcher from "@wildboar/x500/src/lib/types/OrderingMatcher";
 import type SubstringsMatcher from "@wildboar/x500/src/lib/types/SubstringsMatcher";

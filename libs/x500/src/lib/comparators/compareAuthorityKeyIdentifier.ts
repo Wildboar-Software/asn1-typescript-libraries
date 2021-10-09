@@ -4,7 +4,6 @@ import type {
     AuthorityKeyIdentifier,
 } from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta";
 import compareGeneralNames from "./compareGeneralNames";
-import compareUint8Arrays from "./compareUint8Arrays";
 
 export
 function compareAttCertIssuer (
@@ -24,7 +23,7 @@ function compareAttCertIssuer (
     if (
         a.keyIdentifier
         && b.keyIdentifier
-        && !compareUint8Arrays(a.keyIdentifier, b.keyIdentifier)
+        && Buffer.compare(a.keyIdentifier, b.keyIdentifier)
     ) {
         return false;
     }
@@ -38,7 +37,7 @@ function compareAttCertIssuer (
     if (
         a.authorityCertSerialNumber
         && b.authorityCertSerialNumber
-        && !compareUint8Arrays(a.authorityCertSerialNumber, b.authorityCertSerialNumber)
+        && Buffer.compare(a.authorityCertSerialNumber, b.authorityCertSerialNumber)
     ) {
         return false;
     }

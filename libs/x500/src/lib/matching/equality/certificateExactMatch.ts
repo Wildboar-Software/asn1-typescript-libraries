@@ -1,6 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import compareName from "../../comparators/compareName";
 import {
     CertificateExactAssertion,
@@ -19,7 +18,7 @@ const certificateExactMatch: EqualityMatcher = (
 ): boolean => {
     const a: CertificateExactAssertion = _decode_CertificateExactAssertion(assertion);
     const v: Certificate = _decode_Certificate(value);
-    if (!compareUint8Arrays(v.toBeSigned.serialNumber, a.serialNumber)) {
+    if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
         return false;
     }
     return compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher ?? (() => undefined));

@@ -1,6 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher";
 import type { ASN1Element } from "asn1-ts";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 
 /**
  * In this matching rule, we only check the signature value, since it is
@@ -18,7 +17,7 @@ const attributeCertificateExactMatch: EqualityMatcher = (
 ): boolean => {
     const a: Uint8Array = assertion.sequence[2].octetString;
     const v: Uint8Array = value.sequence[2].octetString;
-    return compareUint8Arrays(a, v);
+    return !Buffer.compare(a, v);
 }
 
 export default attributeCertificateExactMatch;

@@ -5,12 +5,7 @@ import {
     _encode_AttributeDescriptorSyntax,
 } from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export {
-    AttributeDescriptorSyntax,
-    _decode_AttributeDescriptorSyntax,
-    _encode_AttributeDescriptorSyntax,
-} from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_attributeDescriptor } from "./id-ce-attributeDescriptor.va";
 
 /* START_OF_SYMBOL_DEFINITION attributeDescriptor */
 /**
@@ -22,7 +17,7 @@ export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
  * ```asn1
  * attributeDescriptor EXTENSION ::= {
  *   SYNTAX         AttributeDescriptorSyntax
- *   IDENTIFIED BY  {id-ce-attributeDescriptor} }
+ *   IDENTIFIED BY  id-ce-attributeDescriptor }
  * ```
  *
  * @constant
@@ -37,7 +32,7 @@ export const attributeDescriptor: EXTENSION<AttributeDescriptorSyntax> = {
     encoderFor: {
         "&ExtnType": _encode_AttributeDescriptorSyntax,
     },
-    "&id": undefined,
+    "&id": id_ce_attributeDescriptor,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION attributeDescriptor */

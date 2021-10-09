@@ -1,46 +1,45 @@
 import type {
     Filter,
-} from "./modules/DirectoryAbstractService/Filter.ta";
+} from "../modules/DirectoryAbstractService/Filter.ta";
 import type {
     FilterItem,
-} from "./modules/DirectoryAbstractService/FilterItem.ta";
+} from "../modules/DirectoryAbstractService/FilterItem.ta";
 import type {
     AttributeValueAssertion,
-} from "./modules/InformationFramework/AttributeValueAssertion.ta";
+} from "../modules/InformationFramework/AttributeValueAssertion.ta";
 import type {
     ContextAssertion,
-} from "./modules/InformationFramework/ContextAssertion.ta";
+} from "../modules/InformationFramework/ContextAssertion.ta";
 import type {
     AttributeType,
-} from "./modules/InformationFramework/AttributeType.ta";
+} from "../modules/InformationFramework/AttributeType.ta";
 import type {
     AttributeValue,
-} from "./modules/InformationFramework/AttributeValue.ta";
+} from "../modules/InformationFramework/AttributeValue.ta";
 import type {
     AttributeTypeAssertion,
-} from "./modules/InformationFramework/AttributeTypeAssertion.ta";
+} from "../modules/InformationFramework/AttributeTypeAssertion.ta";
 import type {
     MatchingRuleAssertion,
-} from "./modules/DirectoryAbstractService/MatchingRuleAssertion.ta";
+} from "../modules/DirectoryAbstractService/MatchingRuleAssertion.ta";
 import {
     Attribute,
-} from "./modules/InformationFramework/Attribute.ta";
+} from "../modules/InformationFramework/Attribute.ta";
 import type {
     EntryInformation,
-} from "./modules/DirectoryAbstractService/EntryInformation.ta";
+} from "../modules/DirectoryAbstractService/EntryInformation.ta";
 import type {
     FilterItem_substrings,
-} from "./modules/DirectoryAbstractService/FilterItem-substrings.ta";
-import compareElements from "./comparators/compareElements";
+} from "../modules/DirectoryAbstractService/FilterItem-substrings.ta";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import EqualityMatcher from "./types/EqualityMatcher";
-import OrderingMatcher from "./types/OrderingMatcher";
-import SubstringsMatcher from "./types/SubstringsMatcher";
-import ApproxMatcher from "./types/ApproxMatcher";
-import ContextMatcher from "./types/ContextMatcher";
-import SubstringSelection from "./types/SubstringSelection";
-import evaluateContextAssertion from "./utils/evaluateContextAssertion";
-import { id_mr_nullMatch } from "./modules/SelectedAttributeTypes/id-mr-nullMatch.va";
+import EqualityMatcher from "../types/EqualityMatcher";
+import OrderingMatcher from "../types/OrderingMatcher";
+import SubstringsMatcher from "../types/SubstringsMatcher";
+import ApproxMatcher from "../types/ApproxMatcher";
+import ContextMatcher from "../types/ContextMatcher";
+import SubstringSelection from "../types/SubstringSelection";
+import evaluateContextAssertion from "../utils/evaluateContextAssertion";
+import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
 
 export
 interface EvaluateFilterSettings {

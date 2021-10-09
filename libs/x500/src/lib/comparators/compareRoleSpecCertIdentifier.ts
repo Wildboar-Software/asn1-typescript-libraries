@@ -5,7 +5,6 @@ import {
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta";
 import compareGeneralName from "./compareGeneralName";
 import compareGeneralNames from "./compareGeneralNames";
-import compareUint8Arrays from "./compareUint8Arrays";
 
 export
 function compareRoleSpecCertIdentifier (
@@ -19,7 +18,7 @@ function compareRoleSpecCertIdentifier (
     if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, getEqualityMatcher)) {
         return false;
     }
-    if (!compareUint8Arrays(a.roleCertSerialNumber, b.roleCertSerialNumber)) {
+    if (Buffer.compare(a.roleCertSerialNumber, b.roleCertSerialNumber)) {
         return false;
     }
     return ((!a && !b) || ((a && b) && compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getEqualityMatcher)));

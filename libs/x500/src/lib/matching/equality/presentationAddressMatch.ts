@@ -4,14 +4,13 @@ import {
     PresentationAddress,
     _decode_PresentationAddress,
 } from "../../modules/SelectedAttributeTypes/PresentationAddress.ta";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 
 function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
     return (
         ((a === undefined) && (b === undefined))
         || (
             (a && b)
-            && compareUint8Arrays(a, b)
+            && !Buffer.compare(a, b)
         )
     );
 }

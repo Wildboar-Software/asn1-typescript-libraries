@@ -4,7 +4,6 @@ import {
     UUIDPair,
     _decode_UUIDPair,
 } from "../../modules/SelectedAttributeTypes/UUIDPair.ta";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 
 export
 const uUIDPairMatch: EqualityMatcher = (
@@ -14,8 +13,8 @@ const uUIDPairMatch: EqualityMatcher = (
     const a: UUIDPair = _decode_UUIDPair(assertion);
     const v: UUIDPair = _decode_UUIDPair(value);
     return (
-        compareUint8Arrays(a.issuerUUID, v.issuerUUID)
-        && compareUint8Arrays(a.subjectUUID, v.subjectUUID)
+        !Buffer.compare(a.issuerUUID, v.issuerUUID)
+        && !Buffer.compare(a.subjectUUID, v.subjectUUID)
     );
 }
 

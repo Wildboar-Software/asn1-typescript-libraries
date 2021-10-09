@@ -5,12 +5,7 @@ import {
     _encode_BasicAttConstraintsSyntax,
 } from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export {
-    BasicAttConstraintsSyntax,
-    _decode_BasicAttConstraintsSyntax,
-    _encode_BasicAttConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_basicAttConstraints } from "./id-ce-basicAttConstraints.va";
 
 /* START_OF_SYMBOL_DEFINITION basicAttConstraints */
 /**
@@ -22,7 +17,7 @@ export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
  * ```asn1
  * basicAttConstraints EXTENSION ::= {
  *   SYNTAX         BasicAttConstraintsSyntax
- *   IDENTIFIED BY  {id-ce-basicAttConstraints} }
+ *   IDENTIFIED BY  id-ce-basicAttConstraints }
  * ```
  *
  * @constant
@@ -37,7 +32,7 @@ export const basicAttConstraints: EXTENSION<BasicAttConstraintsSyntax> = {
     encoderFor: {
         "&ExtnType": _encode_BasicAttConstraintsSyntax,
     },
-    "&id": undefined,
+    "&id": id_ce_basicAttConstraints,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION basicAttConstraints */

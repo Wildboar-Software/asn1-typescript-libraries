@@ -1,22 +1,12 @@
 /* eslint-disable */
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va";
 import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va";
-export { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa";
-export {
-    SubstringAssertion,
-    _decode_SubstringAssertion,
-    _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
+import { id_lmr_caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5SubstringsMatch.va";
 
 /* START_OF_SYMBOL_DEFINITION caseIgnoreIA5SubstringsMatch */
 /**
@@ -47,7 +37,7 @@ export const caseIgnoreIA5SubstringsMatch: MATCHING_RULE<SubstringAssertion> = {
     },
     "&ldapSyntax": substringAssertion["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": undefined,
-    "&id": id_lmr_caseIgnoreIA5Match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&id": id_lmr_caseIgnoreIA5SubstringsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION caseIgnoreIA5SubstringsMatch */

@@ -24,7 +24,7 @@ const acceptableCertPoliciesMatch: EqualityMatcher = (
     const a: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_acceptableCertPolicies));
+        ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_acceptableCertPolicies));
     if (!ext) {
         return false;
     }

@@ -5,12 +5,7 @@ import {
     _encode_AuthorityAttributeIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export {
-    AuthorityAttributeIdentifierSyntax,
-    _decode_AuthorityAttributeIdentifierSyntax,
-    _encode_AuthorityAttributeIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_authorityAttributeIdentifier } from "./id-ce-authorityAttributeIdentifier.va";
 
 /* START_OF_SYMBOL_DEFINITION authorityAttributeIdentifier */
 /**
@@ -22,7 +17,7 @@ export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
  * ```asn1
  * authorityAttributeIdentifier EXTENSION ::= {
  *   SYNTAX         AuthorityAttributeIdentifierSyntax
- *   IDENTIFIED BY  {id-ce-authorityAttributeIdentifier} }
+ *   IDENTIFIED BY  id-ce-authorityAttributeIdentifier }
  * ```
  *
  * @constant
@@ -37,7 +32,7 @@ export const authorityAttributeIdentifier: EXTENSION<AuthorityAttributeIdentifie
     encoderFor: {
         "&ExtnType": _encode_AuthorityAttributeIdentifierSyntax,
     },
-    "&id": undefined,
+    "&id": id_ce_authorityAttributeIdentifier,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION authorityAttributeIdentifier */

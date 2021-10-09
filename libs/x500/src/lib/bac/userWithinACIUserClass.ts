@@ -44,8 +44,6 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  *
  * ### Parameters
  *
- * @param {DistinguishedName} administrativePoint The distinguished name of the
- *  administrative point in which the user resides.
  * @param {UserClasses} userClass The data structure that identifies which users
  *  an ACI item applies to.
  * @param {NameAndOptionalUID} user The distinguished name and optional unique
@@ -67,7 +65,6 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  */
 export
 async function userWithinACIUserClass (
-    administrativePoint: DistinguishedName,
     userClass: UserClasses,
     user: NameAndOptionalUID,
     entryDN: DistinguishedName,
@@ -112,7 +109,7 @@ async function userWithinACIUserClass (
             user.dn,
             [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
             subtree,
-            administrativePoint,
+            [], // Note that, with ACIItems, the subtree is always relative to the root.
             getEqualityMatcher,
         ))
     ) {

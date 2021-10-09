@@ -2,7 +2,6 @@ import type EqualityMatcher from "../types/EqualityMatcher";
 import type {
     GeneralName,
 } from "../modules/CertificateExtensions/GeneralName.ta";
-import compareUint8Arrays from "./compareUint8Arrays";
 import directoryStringToString from "../stringifiers/directoryStringToString";
 import compareName from "./compareName";
 import compareElements from "./compareElements";
@@ -41,7 +40,7 @@ function compareGeneralName (
             if (!(encb instanceof Uint8Array)) {
                 return false;
             }
-            return compareUint8Arrays(enca, encb);
+            return !Buffer.compare(enca, encb);
         } else if (enca instanceof Uint8ClampedArray) {
             if (!(encb instanceof Uint8ClampedArray)) {
                 return false;
@@ -115,7 +114,7 @@ function compareGeneralName (
         if (!("iPAddress" in b)) {
             return false;
         }
-        return compareUint8Arrays(a.iPAddress, b.iPAddress);
+        return !Buffer.compare(a.iPAddress, b.iPAddress);
     }
     else if ("registeredID" in a) {
         if (!("registeredID" in b)) {

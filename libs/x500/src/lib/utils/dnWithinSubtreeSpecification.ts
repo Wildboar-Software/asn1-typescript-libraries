@@ -12,7 +12,6 @@ import type {
 import compareDistinguishedName from "../comparators/compareDistinguishedName";
 import objectClassesWithinRefinement from "./objectClassesWithinRefinement";
 
-
 /**
  * @summary Determine whether a distinguished name falls within a subtree.
  * @description
@@ -53,7 +52,7 @@ import objectClassesWithinRefinement from "./objectClassesWithinRefinement";
  *
  * @param dn The full distinguished name of the entry.
  * @param sts The subtree specification used to subcategorize the administrative area.
- * @param administrativePoint The vertex that forms the root to which the subtree specification is applied.
+ * @param scope The vertex that forms the root to which the subtree specification is applied.
  * @param getEqualityMatcher A function that takes an object identifier that identifies a type and returns an equality matcher.
  * @returns {boolean} A boolean, which will be `true` if the entry falls within the subtree specification.
  */
@@ -62,11 +61,11 @@ function dnWithinSubtreeSpecification (
     entryDN: DistinguishedName,
     entryObjectClasses: OBJECT_CLASS["&id"][],
     sts: SubtreeSpecification,
-    administrativePoint: DistinguishedName,
+    scope: DistinguishedName,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     const base: DistinguishedName = [
-        ...administrativePoint,
+        ...scope,
         ...(sts.base ?? SubtreeSpecification._default_value_for_base),
     ];
     // Short circuits to avoid the more costly ATAV comparisons later on.
@@ -87,7 +86,7 @@ function dnWithinSubtreeSpecification (
         const specificallyExcluded: boolean = sts.specificExclusions.some((se) => {
             if ("chopBefore" in se) {
                 const chop: DistinguishedName = [
-                    ...administrativePoint,
+                    ...scope,
                     ...se.chopBefore,
                 ];
                 const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
@@ -96,7 +95,7 @@ function dnWithinSubtreeSpecification (
                 }
             } else if ("chopAfter" in se) {
                 const chop: DistinguishedName = [
-                    ...administrativePoint,
+                    ...scope,
                     ...se.chopAfter,
                 ];
                 const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));

@@ -1,6 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import compareName from "../../comparators/compareName";
 import {
     EnhancedCertificateAssertion,
@@ -93,7 +92,7 @@ function evaluateEnhancedCertificateAssertion (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     const tbs = value.toBeSigned;
-    if (assertion.serialNumber && !compareUint8Arrays(assertion.serialNumber, tbs.serialNumber)) {
+    if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
     if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer, getEqualityMatcher)) {
@@ -107,7 +106,7 @@ function evaluateEnhancedCertificateAssertion (
         }
         const el: DERElement = new DERElement();
         el.fromBytes(ski.extnValue);
-        if (!compareUint8Arrays(el.octetString, assertion.subjectKeyIdentifier)) {
+        if (Buffer.compare(el.octetString, assertion.subjectKeyIdentifier)) {
             return false;
         }
     }
@@ -416,7 +415,7 @@ function evaluateEnhancedCertificateAssertion (
 }
 
 export
-const certificateMatch : EqualityMatcher = (
+const enhancedCertificateMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
@@ -425,4 +424,4 @@ const certificateMatch : EqualityMatcher = (
     return evaluateEnhancedCertificateAssertion(a, v);
 }
 
-export default certificateMatch;
+export default enhancedCertificateMatch;

@@ -4,8 +4,8 @@ import {
     ProtocolInformation,
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 
+// TODO: This could use a little more intelligence when it comes to comparing addresses.
 export
 const protocolInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,
@@ -13,7 +13,7 @@ const protocolInformationMatch: EqualityMatcher = (
 ): boolean => {
     const a: ProtocolInformation = _decode_ProtocolInformation(assertion);
     const v: ProtocolInformation = _decode_ProtocolInformation(value);
-    return compareUint8Arrays(a.nAddress, v.nAddress);
+    return !Buffer.compare(a.nAddress, v.nAddress);
 }
 
 export default protocolInformationMatch;

@@ -2,7 +2,6 @@ import type { EqualityMatcher } from "../../types/EqualityMatcher";
 import type { ASN1Element } from "asn1-ts";
 import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta";
 import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier";
 
 // userPwdMatch MATCHING-RULE ::= {
@@ -33,7 +32,7 @@ function createUserPwdMatch (
             return (a.clear === v.clear);
         } else if (("encrypted" in a) && ("encrypted" in v)) {
             return (
-                compareUint8Arrays(a.encrypted.encryptedString, v.encrypted.encryptedString)
+                !Buffer.compare(a.encrypted.encryptedString, v.encrypted.encryptedString)
                 && compareAlgorithmIdentifier(a.encrypted.algorithmIdentifier, v.encrypted.algorithmIdentifier)
             );
         } else if (("encrypted" in a) && ("clear" in v)) {
@@ -42,14 +41,14 @@ function createUserPwdMatch (
             if (!result) {
                 return false; // Algorithm not understood.
             }
-            return compareUint8Arrays(result, a.encrypted.encryptedString);
+            return !Buffer.compare(result, a.encrypted.encryptedString);
         } else if (("clear" in a) && ("encrypted" in v)) {
             const alg = v.encrypted.algorithmIdentifier;
             const result = encrypter(alg, a.clear);
             if (!result) {
                 return false; // Algorithm not understood.
             }
-            return compareUint8Arrays(result, v.encrypted.encryptedString);
+            return !Buffer.compare(result, v.encrypted.encryptedString);
         } else {
             return false;
         }

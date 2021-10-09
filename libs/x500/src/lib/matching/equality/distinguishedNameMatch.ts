@@ -13,7 +13,7 @@ const distinguishedNameMatch: EqualityMatcher = (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: DistinguishedName = _decode_DistinguishedName(assertion);
-    const v: DistinguishedName = _decode_DistinguishedName(value)
+    const v: DistinguishedName = _decode_DistinguishedName(value);
     return compareDistinguishedName(a, v, getEqualityMatcher);
 }
 

@@ -61,3 +61,4 @@ This is due to copyright concerns.
 ## Notes
 
 - CINF and RINF may be useful for the OID registry.
+- Error in `attributeDescriptor` in `AttributeCertificateDefinitions`: `&id` enclosed in unnecessary `{}`.

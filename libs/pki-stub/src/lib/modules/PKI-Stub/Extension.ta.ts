@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    DERElement,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import { EXTENSION } from '../PKI-Stub/EXTENSION.oca';
@@ -151,6 +152,12 @@ export class Extension {
      */
     public static get _default_value_for_critical() {
         return false;
+    }
+
+    public valueElement (): DERElement {
+        const el = new DERElement();
+        el.fromBytes(this.extnValue);
+        return el;
     }
 }
 /* END_OF_SYMBOL_DEFINITION Extension */

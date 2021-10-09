@@ -4,7 +4,6 @@ import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta";
-import compareUint8Arrays from "../../comparators/compareUint8Arrays";
 import directoryStringToString from "../../stringifiers/directoryStringToString";
 
 export
@@ -19,7 +18,7 @@ const attDescriptor: EqualityMatcher = (
         return false;
     }
 
-    if (!compareUint8Arrays(a.attributeSyntax, v.attributeSyntax)) {
+    if (Buffer.compare(a.attributeSyntax, v.attributeSyntax)) {
         return false;
     }
 
