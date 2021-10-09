@@ -8,18 +8,7 @@ const numericStringOrderingMatch: OrderingMatcher = (
 ): number => {
     const a: string = assertion.numericString.replace(/\s+/, "");
     const v: string = value.numericString.replace(/\s+/, "");
-    if (a === v) {
-        return 0;
-    }
-    const min: number = Math.min(a.length, v.length);
-    for (let i = 0; i < min; i++) {
-        const charA = a.charCodeAt(i);
-        const charV = v.charCodeAt(i);
-        if (charA !== charV) {
-            return (charV - charA);
-        }
-    }
-    return (v.length - a.length);
+    return a.localeCompare(v);
 }
 
 export default numericStringOrderingMatch;

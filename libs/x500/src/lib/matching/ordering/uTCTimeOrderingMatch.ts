@@ -8,9 +8,6 @@ const uTCTimeOrderingMatch: OrderingMatcher = (
 ): number => {
     const a: UTCTime = assertion.utcTime;
     const v: UTCTime = value.utcTime;
-    if (a.valueOf() === v.valueOf()) {
-        return 0;
-    }
     /**
      * From ITU Recommendation X.520, Section 8.3.2:
      *

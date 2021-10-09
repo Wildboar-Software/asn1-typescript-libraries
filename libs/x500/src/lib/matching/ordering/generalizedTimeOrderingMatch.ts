@@ -8,9 +8,6 @@ const generalizedTimeOrderingMatch: OrderingMatcher = (
 ): number => {
     const a: GeneralizedTime = assertion.generalizedTime;
     const v: GeneralizedTime = value.generalizedTime;
-    if (a.valueOf() === v.valueOf()) {
-        return 0;
-    }
     /**
      * From ITU Recommendation X.520, Section 8.3.4:
      *

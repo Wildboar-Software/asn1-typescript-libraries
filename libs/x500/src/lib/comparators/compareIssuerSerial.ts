@@ -14,7 +14,7 @@ function compareIssuerSerial (
     if (Boolean(a.issuerUID) !== Boolean(b.issuerUID)) {
         return false;
     }
-    if (a.serial.toString() !== b.serial.toString()) {
+    if (Buffer.compare(a.serial, b.serial)) {
         return false;
     }
     return compareGeneralNames(a.issuer, b.issuer, getEqualityMatcher);

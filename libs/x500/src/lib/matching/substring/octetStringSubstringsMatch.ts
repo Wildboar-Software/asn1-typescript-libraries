@@ -16,29 +16,11 @@ const octetStringSubstringsMatch: SubstringsMatcher = (
     const osa: OctetSubstringAssertion = _decode_OctetSubstringAssertion(assertion);
     return osa.every((o) => { // REVIEW: Not really clear whether this should be .every() or .some().
         if ("initial" in o) {
-            if (v.length < o.initial.length) {
-                return false;
-            }
-            for (let i = 0; i < o.initial.length; i++) {
-                if (o.initial[i] !== v[i]) {
-                    return false;
-                }
-            }
-            return true;
+            return !Buffer.compare(v.slice(0, o.initial.length), o.initial);
         } else if ("any_" in o) {
-            const any_ = Buffer.from(o.any_).toString("base64");
-            const base64 = Buffer.from(v).toString("base64");
-            return (base64.indexOf(any_) > -1);
+            return (Buffer.from(v).indexOf(o.any_) > -1);
         } else if ("final" in o) {
-            if (v.length < o.final.length) {
-                return false;
-            }
-            for (let i = (v.length - o.final.length); i < o.final.length; i++) {
-                if (o.final[i] !== v[i]) {
-                    return false;
-                }
-            }
-            return true;
+            return Buffer.from(v).compare(o.final, 0, 0, (v.length - o.final.length), v.length);
         } else {
             throw new Error();
         }

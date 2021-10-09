@@ -12,18 +12,7 @@ const caseExactOrderingMatch: OrderingMatcher = (
 ): number => {
     const a: string = directoryStringToString(_decode_UDS(assertion));
     const v: string = directoryStringToString(_decode_UDS(value));
-    if (a === v) {
-        return 0;
-    }
-    const min: number = Math.min(a.length, v.length);
-    for (let i = 0; i < min; i++) {
-        const charA = a.charCodeAt(i);
-        const charV = v.charCodeAt(i);
-        if (charA !== charV) {
-            return (charV - charA);
-        }
-    }
-    return (v.length - a.length);
+    return a.localeCompare(v);
 }
 
 export default caseExactOrderingMatch;
