@@ -2,7 +2,7 @@ import EqualityMatcher from "../../types/EqualityMatcher";
 import type { ASN1Element } from "asn1-ts";
 
 export
-const numeringStringMatch: EqualityMatcher = (
+const numericStringMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
@@ -11,4 +11,4 @@ const numeringStringMatch: EqualityMatcher = (
     return (a === v);
 }
 
-export default numeringStringMatch;
+export default numericStringMatch;
