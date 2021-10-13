@@ -160,6 +160,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -198,6 +199,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -258,6 +260,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -318,6 +321,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -370,6 +374,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => UTF8_SUBSTRING_RULE,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -412,6 +417,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => INTEGER_ORDERING_RULE,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -454,6 +460,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => INTEGER_ORDERING_RULE,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -490,6 +497,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -535,6 +543,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => undefined,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,
@@ -596,6 +605,7 @@ describe("evaluateFilter", () => {
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
             getContextMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,
             isAttributeSubtype: NO_SUBTYPING,

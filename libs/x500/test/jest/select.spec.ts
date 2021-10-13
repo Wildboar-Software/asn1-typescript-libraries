@@ -189,6 +189,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(entryBefore.information.length);
     });
@@ -213,6 +214,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(entryBefore.information.length);
         expect(entryAfter.information.every((info) => ("attributeType" in info))).toBeTruthy();
@@ -243,6 +245,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         expect(entryAfter.information.every((info) => (
@@ -273,6 +276,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(0);
     });
@@ -299,6 +303,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
     });
@@ -328,6 +333,7 @@ describe("selectFromEntry()", () => {
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         expect(
@@ -370,6 +376,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
     });
@@ -408,6 +415,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(0);
     });
@@ -488,6 +496,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         if (!("attribute" in entryAfter.information[0])) {
@@ -576,6 +585,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         if (!("attribute" in entryAfter.information[0])) {
@@ -619,6 +629,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NAME_SUPERTYPE,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
     });
@@ -699,6 +710,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NAME_SUPERTYPE,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         if (!("attribute" in entryAfter.information[0])) {
@@ -787,6 +799,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             STRING_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(1);
         if (!("attribute" in entryAfter.information[0])) {
@@ -840,6 +853,7 @@ describe("selectFromEntry()", () => {
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
             ALWAYS_MATCHES,
+            () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information.length).toBe(entryBefore.information.length);
         if (!("attribute" in entryAfter.information[0])) {

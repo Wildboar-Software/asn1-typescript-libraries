@@ -10,6 +10,7 @@ function evaluateContextAssertion (
     ca: ContextAssertion,
     contexts: Context[],
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): boolean {
     const matcher = getContextMatcher(ca.contextType);
     if (!matcher) {
@@ -17,12 +18,20 @@ function evaluateContextAssertion (
         // For security's sake, we reject.
         return false;
     }
+    const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
     const relevantContexts = contexts
         .filter((c) => c.contextType.isEqualTo(ca.contextType));
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
     if (relevantContexts.length === 0) {
-        return true;
+        /**
+         * This is not documented in the section describing `ContextAssertion`s,
+         * but rather, in the definition of a context type, in Section 13.9.2 of
+         * ITU Recommendation X.501 (2016).
+         */
+        return isAbsentMatch
+            ? true
+            : false;
     }
     // a) the attribute value has a context of the same contextType of the ContextAssertion and any of the
     // stored contextValues of that context matches with any of the asserted contextValues according to

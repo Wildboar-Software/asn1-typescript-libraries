@@ -160,6 +160,7 @@ function selectFromEntry (
     isOperationalAttribute: (attributeType: OBJECT_IDENTIFIER) => boolean | undefined,
     getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
+    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): EntryInformation {
     const attributes: Set<string> | undefined = (eis.attributes && ("select" in eis.attributes))
         ? new Set(eis.attributes.select.map((attr) => attr.toString()))
@@ -249,13 +250,23 @@ function selectFromEntry (
                 }
                 return typeAndContextAssertions.every((taca): boolean => {
                     if ("all" in taca.contextAssertions) {
-                        return taca.contextAssertions.all.every((ca): boolean => evaluateContextAssertion(ca, contexts, getContextMatcher));
+                        return taca.contextAssertions.all.every((ca): boolean => evaluateContextAssertion(
+                            ca,
+                            contexts,
+                            getContextMatcher,
+                            determineAbsentMatch,
+                        ));
                     } else if ("preference" in taca.contextAssertions) { // This first pass only establishes the preference, but does not filter by it.
                         const existingPreference = preferences.get(taca.contextAssertions.preference) ?? -1;
                         const preferred: number = taca.contextAssertions.preference
                             // Slice so we don't repeatedly retry already superseded assertions.
                             .slice(0, ((existingPreference > -1) ? existingPreference : Infinity))
-                            .findIndex((ca: ContextAssertion): boolean => evaluateContextAssertion(ca, contexts, getContextMatcher));
+                            .findIndex((ca: ContextAssertion): boolean => evaluateContextAssertion(
+                                ca,
+                                contexts,
+                                getContextMatcher,
+                                determineAbsentMatch,
+                            ));
                         if ( // To become the new preferred context assertion,
                             (preferred > -1) // ...obviously, there must be a match
                             && ( // ...but also,
@@ -301,7 +312,12 @@ function selectFromEntry (
                     assert(prefIndex > -1);
                     const pref = taca.contextAssertions.preference[prefIndex];
                     assert(pref);
-                    return evaluateContextAssertion(pref, contexts, getContextMatcher);
+                    return evaluateContextAssertion(
+                        pref,
+                        contexts,
+                        getContextMatcher,
+                        determineAbsentMatch,
+                    );
                 });
             })
         : selectedAttributes;

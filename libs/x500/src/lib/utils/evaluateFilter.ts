@@ -40,6 +40,7 @@ import ContextMatcher from "../types/ContextMatcher";
 import SubstringSelection from "../types/SubstringSelection";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
+import { CannotPerformExactly } from "../errors";
 
 export
 interface EvaluateFilterSettings {
@@ -90,6 +91,16 @@ interface EvaluateFilterSettings {
      * @property
      */
     readonly getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined;
+
+    /**
+     * A function that takes a context type object identifier and returns a
+     * `boolean` that corresponds to the `&absentMatch` field of the context
+     * type definition.
+     *
+     * @readonly
+     * @property
+     */
+    readonly determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean;
 
     /**
      * A function that takes a matching rule object identifier and an attribute
@@ -203,7 +214,11 @@ function evaluateEquality (
                     ))
                     .some((vwc): boolean => selectedContexts
                         .every((sc) => evaluateContextAssertion(
-                            sc, vwc.contextList, options.getContextMatcher)) ?? false)
+                            sc,
+                            vwc.contextList,
+                            options.getContextMatcher,
+                            options.determineAbsentMatch,
+                        )) ?? false)
             );
             if (match) {
                 return true;
@@ -256,7 +271,11 @@ function evaluateApprox (
                     ))
                     .some((vwc): boolean => selectedContexts
                         .every((sc) => evaluateContextAssertion(
-                            sc, vwc.contextList, options.getContextMatcher)) ?? false)
+                            sc,
+                            vwc.contextList,
+                            options.getContextMatcher,
+                            options.determineAbsentMatch,
+                        )) ?? false)
             );
             if (match) {
                 return true;
@@ -312,7 +331,12 @@ function evaluateOrdering (
                         && ordered(ava.assertion, vwc.value)
                     )
                     .some((vwc): boolean => selectedContexts
-                        .every((sc) => evaluateContextAssertion(sc, vwc.contextList, options.getContextMatcher))) ?? false)
+                        .every((sc) => evaluateContextAssertion(
+                            sc,
+                            vwc.contextList,
+                            options.getContextMatcher,
+                            options.determineAbsentMatch,
+                        ))) ?? false)
             );
             if (match) {
                 return true;
@@ -437,10 +461,7 @@ function evaluateMatchingRuleAssertion (
     if (relevantAttributes.length === 0) {
         if (options.performExactly && !mra.type_ && (attributes.length > 0)) {
             // None of the attributes were compatible with the matching rule.
-            throw new Error( // TODO: Convert this to a specific error type.
-                "BAEB4660-3432-48FE-85EE-6625A6DCC41B: CANNOT_PERFORM_EXACTLY_NO_ATTRIBUTES_COMPATIBLE: "
-                + mra.matchingRule[0].toString()
-            );
+            throw new CannotPerformExactly(mra.matchingRule[0].toString());
         }
         return false; // There are no applicable attributes to match.
     }
@@ -484,7 +505,12 @@ function evaluateAttributeTypeAssertion (
         .some((attr: Attribute): boolean | undefined => attr.valuesWithContext // Check that there are some attributes...
             ?.some((vwc): boolean | undefined => ata.assertedContexts // That have some values...
                 // ... for which every context assertion evaluates to TRUE.
-                ?.every((ac: ContextAssertion): boolean => evaluateContextAssertion(ac, vwc.contextList, options.getContextMatcher))));
+                ?.every((ac: ContextAssertion): boolean => evaluateContextAssertion(
+                    ac,
+                    vwc.contextList,
+                    options.getContextMatcher,
+                    options.determineAbsentMatch,
+                ))));
 }
 
 export
