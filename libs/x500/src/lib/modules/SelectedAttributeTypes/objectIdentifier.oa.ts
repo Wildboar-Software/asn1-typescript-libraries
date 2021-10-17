@@ -59,7 +59,7 @@ export const objectIdentifier: ATTRIBUTE<OBJECT_IDENTIFIER> = {
         "&Type": $._encodeObjectIdentifier,
     },
     "&equality-match": objectIdentifierMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["Object Identifier"],
     "&id": id_at_objectIdentifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

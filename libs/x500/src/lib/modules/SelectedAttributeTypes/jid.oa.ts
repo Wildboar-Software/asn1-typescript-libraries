@@ -67,7 +67,7 @@ export const jid: ATTRIBUTE<Jid> = {
         "&Type": _encode_Jid,
     },
     "&equality-match": jidMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": jidString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["Jabber identifier"],
     "&id": id_at_jid /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

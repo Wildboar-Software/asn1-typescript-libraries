@@ -408,7 +408,7 @@ export class SearchArgumentData extends CommonArguments {
      * @method
      */
     public static get _default_value_for_searchAliases() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `selection`.

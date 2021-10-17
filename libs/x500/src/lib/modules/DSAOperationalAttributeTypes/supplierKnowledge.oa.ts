@@ -64,7 +64,7 @@ export const supplierKnowledge: ATTRIBUTE<SupplierInformation> = {
         "&Type": _encode_SupplierInformation,
     },
     "&equality-match": supplierOrConsumerInformationMatch /* OBJECT_FIELD_SETTING */,
-    "&no-user-modification": false /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
     "&usage": dSAOperation /* OBJECT_FIELD_SETTING */,
     "&id": id_doa_supplierKnowledge /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

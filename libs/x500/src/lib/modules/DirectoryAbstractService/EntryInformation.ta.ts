@@ -129,7 +129,7 @@ export class EntryInformation {
      * @method
      */
     public static get _default_value_for_fromEntry() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `incompleteEntry`.

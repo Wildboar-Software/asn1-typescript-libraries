@@ -56,7 +56,7 @@ export const collectiveInternationalISDNNumber: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": internationalISDNNumber /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": numericString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-InternationalISDNNumber"],
     "&id": id_at_collectiveInternationalISDNNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

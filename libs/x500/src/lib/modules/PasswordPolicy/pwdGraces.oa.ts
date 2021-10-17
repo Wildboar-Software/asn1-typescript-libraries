@@ -64,7 +64,7 @@ export const pwdGraces: ATTRIBUTE<INTEGER> = {
     },
     "&equality-match": integerMatch /* OBJECT_FIELD_SETTING */,
     "&ordering-match": integerOrderingMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": integer["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdGraces"],

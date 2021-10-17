@@ -71,7 +71,7 @@ export const organizationIdentifier: ATTRIBUTE<UnboundedDirectoryString> = {
     },
     "&equality-match": caseIgnoreMatch /* OBJECT_FIELD_SETTING */,
     "&substrings-match": caseIgnoreSubstringsMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["organizationIdentifier"],
     "&id": id_at_organizationIdentifier /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

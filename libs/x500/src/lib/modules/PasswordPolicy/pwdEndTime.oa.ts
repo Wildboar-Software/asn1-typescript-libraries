@@ -64,7 +64,7 @@ export const pwdEndTime: ATTRIBUTE<GeneralizedTime> = {
     },
     "&equality-match": generalizedTimeMatch /* OBJECT_FIELD_SETTING */,
     "&ordering-match": generalizedTimeOrderingMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": generalizedTime["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdEndTime"],

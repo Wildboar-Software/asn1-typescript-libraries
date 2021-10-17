@@ -64,7 +64,7 @@ export const hierarchyParent: ATTRIBUTE<DistinguishedName> = {
         "&Type": _encode_DistinguishedName,
     },
     "&equality-match": distinguishedNameMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&id": id_oa_hierarchyParent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

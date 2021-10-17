@@ -160,7 +160,7 @@ export class SupplierInformation {
      * @method
      */
     public static get _default_value_for_supplier_is_master() {
-        return false;
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION SupplierInformation */

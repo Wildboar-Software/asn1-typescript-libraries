@@ -56,7 +56,7 @@ export const epcInUrn: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": urn /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["epcInUrn"],
     "&id": id_at_epcInUrn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

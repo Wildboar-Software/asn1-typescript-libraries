@@ -74,7 +74,7 @@ export const pwdVocabulary: ATTRIBUTE<PwdVocabulary> = {
         "&Type": _encode_PwdVocabulary,
     },
     "&equality-match": bitStringMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": pwdVocabularyDescription["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdVocabulary"],

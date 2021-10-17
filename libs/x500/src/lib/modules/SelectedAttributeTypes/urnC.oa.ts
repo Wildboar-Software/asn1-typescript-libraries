@@ -59,7 +59,7 @@ export const urnC: ATTRIBUTE<PrintableString> = {
         "&Type": $._encodePrintableString,
     },
     "&equality-match": caseExactMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": printableString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["urnC"],
     "&id": id_at_urnC /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

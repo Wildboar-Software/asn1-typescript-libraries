@@ -67,7 +67,7 @@ export const intEmail: ATTRIBUTE<IntEmail> = {
         "&Type": _encode_IntEmail,
     },
     "&equality-match": intEmailMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": intEmailString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["Internationalized Email"],
     "&id": id_at_intEmail /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

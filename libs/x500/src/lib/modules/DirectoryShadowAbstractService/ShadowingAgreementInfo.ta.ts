@@ -112,7 +112,7 @@ export class ShadowingAgreementInfo {
      * @method
      */
     public static get _default_value_for_updateMode() {
-        return { supplierInitiated: { onChange: false } };
+        return { supplierInitiated: { onChange: true } };
     }
     /**
      * @summary Getter that returns the default value for `secondaryShadows`.

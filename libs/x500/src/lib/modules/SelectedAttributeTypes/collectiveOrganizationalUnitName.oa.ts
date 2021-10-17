@@ -56,7 +56,7 @@ export const collectiveOrganizationalUnitName: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": organizationalUnitName /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-ou"],
     "&id": id_at_collectiveOrganizationalUnitName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

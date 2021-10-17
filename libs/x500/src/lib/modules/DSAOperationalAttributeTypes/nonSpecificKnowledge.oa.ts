@@ -64,7 +64,7 @@ export const nonSpecificKnowledge: ATTRIBUTE<MasterAndShadowAccessPoints> = {
         "&Type": _encode_MasterAndShadowAccessPoints,
     },
     "&equality-match": masterAndShadowAccessPointsMatch /* OBJECT_FIELD_SETTING */,
-    "&no-user-modification": false /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
     "&usage": distributedOperation /* OBJECT_FIELD_SETTING */,
     "&id": id_doa_nonSpecificKnowledge /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

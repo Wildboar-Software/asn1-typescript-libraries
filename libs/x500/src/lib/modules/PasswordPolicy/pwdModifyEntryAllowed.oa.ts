@@ -60,7 +60,7 @@ export const pwdModifyEntryAllowed: ATTRIBUTE<BOOLEAN> = {
         "&Type": $._encodeBoolean,
     },
     "&equality-match": booleanMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": boolean_["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdModifyEntryAllowed"],

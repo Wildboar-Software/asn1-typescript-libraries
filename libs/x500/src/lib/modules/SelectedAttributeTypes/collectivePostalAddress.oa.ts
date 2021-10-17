@@ -56,7 +56,7 @@ export const collectivePostalAddress: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": postalAddress /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": postalAddr["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-PostalAddress"],
     "&id": id_at_collectivePostalAddress /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

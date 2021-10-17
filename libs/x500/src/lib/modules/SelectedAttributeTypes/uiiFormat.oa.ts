@@ -63,7 +63,7 @@ export const uiiFormat: ATTRIBUTE<UiiFormat> = {
     encoderFor: {
         "&Type": _encode_UiiFormat,
     },
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": uiiForm["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["uiiFormat"],
     "&id": id_at_uiiFormat /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

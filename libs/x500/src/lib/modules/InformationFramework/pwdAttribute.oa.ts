@@ -59,7 +59,7 @@ export const pwdAttribute: ATTRIBUTE<OBJECT_IDENTIFIER> = {
         "&Type": $._encodeObjectIdentifier,
     },
     "&equality-match": objectIdentifierMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdAttribute"],
     "&id": id_at_pwdAttribute /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

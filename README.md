@@ -13,6 +13,8 @@ programming languages, or if you have any other questions, please contact us at
 
 ## To Do
 
+- [ ] Fix `TRUE` bug where `BOOLEAN` values should have been `TRUE`.
+  - [ ] (Search for occurences of `TRUE` in ASN.1 files and find the corresponding incorrect `FALSE` and change it.)
 - [ ] Documentation
 - [ ] Single-module exports
 - [ ] Deduplicate `COMPONENTS OF` spec arrays

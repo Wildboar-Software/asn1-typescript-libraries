@@ -67,7 +67,7 @@ export const countryCode3c: ATTRIBUTE<CountryCode3c> = {
         "&Type": _encode_CountryCode3c,
     },
     "&derivation": name /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": countryString3c["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c3"],
     "&id": id_at_countryCode3c /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

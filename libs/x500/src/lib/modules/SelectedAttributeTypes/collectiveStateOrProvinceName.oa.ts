@@ -56,7 +56,7 @@ export const collectiveStateOrProvinceName: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": stateOrProvinceName /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-st"],
     "&id": id_at_collectiveStateOrProvinceName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

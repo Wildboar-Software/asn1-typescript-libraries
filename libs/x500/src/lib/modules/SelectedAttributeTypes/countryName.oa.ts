@@ -67,7 +67,7 @@ export const countryName: ATTRIBUTE<CountryName> = {
         "&Type": _encode_CountryName,
     },
     "&derivation": name /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": countryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c"],
     "&id": id_at_countryName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

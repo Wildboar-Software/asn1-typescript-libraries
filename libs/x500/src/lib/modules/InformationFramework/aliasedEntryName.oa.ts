@@ -67,7 +67,7 @@ export const aliasedEntryName: ATTRIBUTE<DistinguishedName> = {
         "&Type": _encode_DistinguishedName,
     },
     "&equality-match": distinguishedNameMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": dn["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["aliasedObjectName"],
     "&id": id_at_aliasedEntryName /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

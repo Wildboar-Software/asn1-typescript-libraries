@@ -64,7 +64,7 @@ export const ditBridgeKnowledge: ATTRIBUTE<DitBridgeKnowledge> = {
         "&Type": _encode_DitBridgeKnowledge,
     },
     "&equality-match": directoryStringFirstComponentMatch /* OBJECT_FIELD_SETTING */,
-    "&no-user-modification": false /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
     "&usage": dSAOperation /* OBJECT_FIELD_SETTING */,
     "&id": id_doa_ditBridgeKnowledge /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

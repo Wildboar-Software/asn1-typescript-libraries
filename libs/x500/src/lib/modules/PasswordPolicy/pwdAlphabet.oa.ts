@@ -64,7 +64,7 @@ export const pwdAlphabet: ATTRIBUTE<PwdAlphabet> = {
     encoderFor: {
         "&Type": _encode_PwdAlphabet,
     },
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": pwdAlphabetDescription["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdAlphabet"],

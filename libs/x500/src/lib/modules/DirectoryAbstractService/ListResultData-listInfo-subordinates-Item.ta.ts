@@ -101,7 +101,7 @@ export class ListResultData_listInfo_subordinates_Item {
      * @method
      */
     public static get _default_value_for_fromEntry() {
-        return false;
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION ListResultData_listInfo_subordinates_Item */

@@ -159,7 +159,7 @@ export class AAIssuingDistPointSyntax {
      * @method
      */
     public static get _default_value_for_containsUserAttributeCerts() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `containsAACerts`.
@@ -168,7 +168,7 @@ export class AAIssuingDistPointSyntax {
      * @method
      */
     public static get _default_value_for_containsAACerts() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `containsSOAPublicKeyCerts`.
@@ -177,7 +177,7 @@ export class AAIssuingDistPointSyntax {
      * @method
      */
     public static get _default_value_for_containsSOAPublicKeyCerts() {
-        return false;
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION AAIssuingDistPointSyntax */

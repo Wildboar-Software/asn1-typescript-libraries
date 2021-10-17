@@ -63,7 +63,7 @@ export const preferredDeliveryMethod: ATTRIBUTE<PreferredDeliveryMethod> = {
     encoderFor: {
         "&Type": _encode_PreferredDeliveryMethod,
     },
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": deliveryMethod["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["preferredDeliveryMethod"],
     "&id": id_at_preferredDeliveryMethod /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

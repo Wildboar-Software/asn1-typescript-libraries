@@ -63,7 +63,7 @@ export const epcFormat: ATTRIBUTE<EpcFormat> = {
     encoderFor: {
         "&Type": _encode_EpcFormat,
     },
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": epcForm["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["epcFormat"],
     "&id": id_at_epcFormat /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

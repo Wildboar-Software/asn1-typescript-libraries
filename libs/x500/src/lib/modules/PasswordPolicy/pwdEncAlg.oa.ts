@@ -68,7 +68,7 @@ export const pwdEncAlg: ATTRIBUTE<PwdEncAlg> = {
         "&Type": _encode_PwdEncAlg,
     },
     "&equality-match": pwdEncAlgMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": pwdEncAlgDescription["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdEncAlg"],

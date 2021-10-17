@@ -60,7 +60,7 @@ export const pwdMinLength: ATTRIBUTE<INTEGER> = {
         "&Type": $._encodeInteger,
     },
     "&equality-match": integerMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": integer["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["pwdMinLength"],

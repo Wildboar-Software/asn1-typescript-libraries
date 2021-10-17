@@ -56,7 +56,7 @@ export const collectiveTelexNumber: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": telexNumber /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": telexNr["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-TelexNumber"],
     "&id": id_at_collectiveTelexNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

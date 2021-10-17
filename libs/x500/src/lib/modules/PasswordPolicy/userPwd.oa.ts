@@ -67,7 +67,7 @@ export const userPwd: ATTRIBUTE<UserPwd> = {
         "&Type": _encode_UserPwd,
     },
     "&equality-match": userPwdMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": userPwdDescription["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": undefined,
     "&id": id_at_userPwd /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

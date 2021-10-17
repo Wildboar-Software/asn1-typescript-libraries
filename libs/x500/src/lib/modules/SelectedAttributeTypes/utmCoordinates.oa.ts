@@ -63,7 +63,7 @@ export const utmCoordinates: ATTRIBUTE<UtmCoordinates> = {
     encoderFor: {
         "&Type": _encode_UtmCoordinates,
     },
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": utmCoords["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["utmCoordinates"],
     "&id": id_at_utmCoordinates /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

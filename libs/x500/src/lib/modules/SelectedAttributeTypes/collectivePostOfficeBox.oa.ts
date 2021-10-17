@@ -56,7 +56,7 @@ export const collectivePostOfficeBox: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": postOfficeBox /* OBJECT_FIELD_SETTING */,
-    "&collective": false /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["c-PostOfficeBox"],
     "&id": id_at_collectivePostOfficeBox /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

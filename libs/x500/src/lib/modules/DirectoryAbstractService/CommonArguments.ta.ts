@@ -289,7 +289,7 @@ export class CommonArguments {
      * @method
      */
     public static get _default_value_for_entryOnly() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `nameResolveOnMaster`.

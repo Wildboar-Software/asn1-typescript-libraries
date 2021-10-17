@@ -56,7 +56,7 @@ export const accessControlScheme: ATTRIBUTE<OBJECT_IDENTIFIER> = {
         "&Type": $._encodeObjectIdentifier,
     },
     "&equality-match": objectIdentifierMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
     "&id": id_aca_accessControlScheme /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

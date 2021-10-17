@@ -56,7 +56,7 @@ export const tagLocation: ATTRIBUTE = {
         "&Type": undefined,
     },
     "&derivation": utmCoordinates /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": utmCoords["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["tagLocation"],
     "&id": id_at_tagLocation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

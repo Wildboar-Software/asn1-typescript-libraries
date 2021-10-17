@@ -59,7 +59,7 @@ export const uiiInUrn: ATTRIBUTE<UTF8String> = {
         "&Type": $._encodeUTF8String,
     },
     "&equality-match": caseExactMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["uiiInUrn"],
     "&id": id_at_uiiInUrn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

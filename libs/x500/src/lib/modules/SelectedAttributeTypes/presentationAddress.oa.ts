@@ -67,7 +67,7 @@ export const presentationAddress: ATTRIBUTE<PresentationAddress> = {
         "&Type": _encode_PresentationAddress,
     },
     "&equality-match": presentationAddressMatch /* OBJECT_FIELD_SETTING */,
-    "&single-valued": false /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
     "&ldapSyntax": presentationAddr["&id"] /* OBJECT_FIELD_SETTING */,
     "&ldapName": ["presentationAddress"],
     "&id": id_at_presentationAddress /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
