@@ -84,4 +84,23 @@ describe("destringifyRDNSequence()", () => {
         expect(decoded[2][0][0].toString()).toBe("2.5.4.3");
         expect(decoded[2][0][1].utf8String).toBe("#US");
     });
+
+    /**
+     * This test covers a former bug where backslash followed by a space could
+     * sometimes be interpreted as a number if the character after the space
+     * could count as a hex digit. The DN below uses backslash-space-C and
+     * backslash-space-A.
+     *
+     * To find the code that was changed to fix this bug, search for this UUID:
+     * 912FE54F-650F-48A3-8B3D-8D2AF036AFD7
+     */
+    it("unescapes values that could pass for single-digit hex numbers", () => {
+        const str = "2.5.4.3=AD\\ Collective\\ Attributes";
+        const decoderGetter: StringDecoderGetter = () => [ new ObjectIdentifier([ 2, 5, 4, 3 ]), utf8Element ];
+        const decoded = Array.from(destringifyRDNSequence(str, decoderGetter));
+        expect(decoded.length).toBe(1);
+        expect(decoded[0].length).toBe(1);
+        expect(decoded[0][0][0].toString()).toBe("2.5.4.3");
+        expect(decoded[0][0][1].utf8String).toBe("AD Collective Attributes");
+    });
 });

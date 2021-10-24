@@ -1,6 +1,7 @@
 import { BERElement, ObjectIdentifier } from "asn1-ts";
 import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue";
 import type { StringDecoderGetter } from "../types/StringDecoderGetter";
+import isDigit from "../utils/isDigit";
 
 const oidRegex = /^(0|1|2)\.\d+(?:\.\d+)+$/;
 
@@ -19,12 +20,14 @@ function unescape (str: string): string {
     let i: number = 0;
     while (i < trimmed.length) {
         if (trimmed.charAt(i) === "\\") {
-            const parsed = Number.parseInt(trimmed.slice(i + 1, i + 3), 16);
-            if (Number.isNaN(parsed)) {
+            // NOTE: Number.parseInt(" C", 16) === 12, not NaN. That's an important detail.
+            // Search for this UUID in this repo: 912FE54F-650F-48A3-8B3D-8D2AF036AFD7
+            if (!isDigit(trimmed.charCodeAt(i + 1))) {
                 ret += trimmed.charAt(i + 1);
                 i += 2;
                 continue;
             } else { // It was a hex escape.
+                const parsed = Number.parseInt(trimmed.slice(i + 1, i + 3), 16);
                 ret += String.fromCharCode(parsed);
                 i += 3;
                 continue;

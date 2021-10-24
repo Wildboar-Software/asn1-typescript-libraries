@@ -253,3 +253,25 @@ const utcTime: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
     el.utcTime = new Date(Buffer.from(value).toString("utf-8"));
     return el;
 };
+
+/**
+ * Specified in IETF RFC 4530: https://datatracker.ietf.org/doc/html/rfc4530
+ *
+ * @param value
+ * @returns
+ */
+export
+const uuid: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
+    return new BERElement(
+        ASN1TagClass.universal,
+        ASN1Construction.primitive,
+        ASN1UniversalType.octetString,
+        Buffer.from(
+            Buffer
+                .from(value)
+                .toString("utf-8")
+                .replace(/-/g, ""),
+            "hex",
+        ),
+    );
+};
