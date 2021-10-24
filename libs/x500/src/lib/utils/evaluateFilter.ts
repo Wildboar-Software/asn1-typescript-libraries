@@ -41,6 +41,17 @@ import SubstringSelection from "../types/SubstringSelection";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
 import { CannotPerformExactly } from "../errors";
+import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta";
+
+interface MatchedValue {
+    type: AttributeType;
+    value: ASN1Element;
+    contexts?: Context[];
+}
+
+interface MatchedEntryInfo extends MatchedValue {
+    entryIndex: number;
+};
 
 export
 interface EvaluateFilterSettings {
@@ -146,6 +157,24 @@ interface EvaluateFilterSettings {
      * @property
      */
     readonly performExactly?: boolean;
+
+    /**
+     * Referenced in ITU Recommendation X.511, Section 11.2.2, this option
+     * determines whether the filter should only return values that contributed
+     * to a match for attribute types that contributed to the match.
+     * (Unrelated attribute types or attribute types that did not match are not
+     * affected by this option.)
+     *
+     * Within this implementation, this option matters for performance: it
+     * determines whether this function bails out as soon as it finds a match
+     * for a given filter item. If this option is set, every attribute type of
+     * interest is evaluated so that the complete list of matched values can be
+     * returned.
+     *
+     * @readonly
+     * @property
+     */
+    readonly matchedValuesOnly?: boolean;
 }
 
 type AnyFunction = (...args: any[]) => any;
@@ -191,56 +220,63 @@ function evaluateEquality (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): MatchedValue[] | undefined {
+    const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(ava.type_));
+    if (!matcher) {
+        return undefined;
+    }
     const attributes = getAttributesFromEntry(entry);
     const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+    const matchedValues: MatchedValue[] = [];
+    const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
+        ? ava.assertedContexts.selectedContexts
+        : undefined;
     for (const attr of relevantAttributes) {
-        const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(attr.type_));
-        if (!matcher || !options.permittedToMatch(attr.type_)) {
+        if (!options.permittedToMatch(attr.type_)) {
             continue;
         }
-        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-            const selectedContexts = ava.assertedContexts.selectedContexts;
-            const match: boolean = Boolean(
-                attr.values.some((value) => (
-                    options.permittedToMatch(attr.type_, value)
-                    && matcher!(ava.assertion, value)
-                ))
-                || attr.valuesWithContext
-                    ?.filter((vwc): boolean => (
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && matcher!(ava.assertion, vwc.value)
-                    ))
-                    .some((vwc): boolean => selectedContexts
-                        .every((sc) => evaluateContextAssertion(
-                            sc,
-                            vwc.contextList,
-                            options.getContextMatcher,
-                            options.determineAbsentMatch,
-                        )) ?? false)
-            );
-            if (match) {
-                return true;
+        for (const value of attr.values) {
+            if (!options.permittedToMatch(attr.type_, value)) {
+                continue;
             }
-        } else {
-            const match = (
-                attr.values.some((a) =>
-                    options.permittedToMatch(attr.type_, a)
-                    && matcher(ava.assertion, a)
-                )
-                || (attr.valuesWithContext
-                    ?.some((vwc) =>
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && matcher(ava.assertion, vwc.value)
-                    ) ?? false)
-            );
-            if (match) {
-                return true;
+            if (!matcher!(ava.assertion, value)) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
+            }
+        }
+        for (const vwc of attr.valuesWithContext ?? []) {
+            if (!options.permittedToMatch(attr.type_, vwc.value)) {
+                continue;
+            }
+            if (!matcher!(ava.assertion, vwc.value)) {
+                continue;
+            }
+            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
+                sc,
+                vwc.contextList,
+                options.getContextMatcher,
+                options.determineAbsentMatch,
+            ))) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value: vwc.value,
+                contexts: vwc.contextList,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
             }
         }
     }
-    return false;
+    return matchedValues;
 }
 
 export
@@ -248,56 +284,63 @@ function evaluateApprox (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): MatchedValue[] | undefined {
+    const matcher: EqualityMatcher | undefined = handleErrors(options.getApproximateMatcher(ava.type_));
+    if (!matcher) {
+        return undefined;
+    }
     const attributes = getAttributesFromEntry(entry);
     const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+    const matchedValues: MatchedValue[] = [];
+    const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
+        ? ava.assertedContexts.selectedContexts
+        : undefined;
     for (const attr of relevantAttributes) {
-        const matcher: ApproxMatcher | undefined = handleErrors(options.getApproximateMatcher(attr.type_));
-        if (!matcher || !options.permittedToMatch(attr.type_)) {
+        if (!options.permittedToMatch(attr.type_)) {
             continue;
         }
-        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-            const selectedContexts = ava.assertedContexts.selectedContexts;
-            const match: boolean = Boolean(
-                attr.values.some((value) => (
-                    options.permittedToMatch(attr.type_, value)
-                    && matcher!(ava.assertion, value)
-                ))
-                || attr.valuesWithContext
-                    ?.filter((vwc): boolean => (
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && matcher!(ava.assertion, vwc.value)
-                    ))
-                    .some((vwc): boolean => selectedContexts
-                        .every((sc) => evaluateContextAssertion(
-                            sc,
-                            vwc.contextList,
-                            options.getContextMatcher,
-                            options.determineAbsentMatch,
-                        )) ?? false)
-            );
-            if (match) {
-                return true;
+        for (const value of attr.values) {
+            if (!options.permittedToMatch(attr.type_, value)) {
+                continue;
             }
-        } else {
-            const match = (
-                attr.values.some((a) =>
-                    options.permittedToMatch(attr.type_, a)
-                    && matcher(ava.assertion, a)
-                )
-                || (attr.valuesWithContext
-                    ?.some((vwc) =>
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && matcher(ava.assertion, vwc.value)
-                    ) ?? false)
-            );
-            if (match) {
-                return true;
+            if (!matcher!(ava.assertion, value)) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
+            }
+        }
+        for (const vwc of attr.valuesWithContext ?? []) {
+            if (!options.permittedToMatch(attr.type_, vwc.value)) {
+                continue;
+            }
+            if (!matcher!(ava.assertion, vwc.value)) {
+                continue;
+            }
+            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
+                sc,
+                vwc.contextList,
+                options.getContextMatcher,
+                options.determineAbsentMatch,
+            ))) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value: vwc.value,
+                contexts: vwc.contextList,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
             }
         }
     }
-    return false;
+    return matchedValues;
 }
 
 export
@@ -306,59 +349,66 @@ function evaluateOrdering (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): MatchedValue[] | undefined {
+    const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(ava.type_));
+    if (!orderer) {
+        return undefined;
+    }
     const attributes = getAttributesFromEntry(entry);
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_))
+        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+    const matchedValues: MatchedValue[] = [];
+    const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
+        ? ava.assertedContexts.selectedContexts
+        : undefined;
+    const ordered = gte
+        ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
+        : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
     for (const attr of relevantAttributes) {
-        const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(attr.type_));
-        if (!orderer || !options.permittedToMatch(attr.type_)) {
+        if (!options.permittedToMatch(attr.type_)) {
             continue;
         }
-        const ordered = gte
-            ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
-            : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
-        if (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts)) {
-            const selectedContexts = ava.assertedContexts.selectedContexts;
-            const match: boolean = Boolean(
-                attr.values.some((value) =>
-                    options.permittedToMatch(attr.type_, value)
-                    && ordered(ava.assertion, value)
-                )
-                || (attr.valuesWithContext
-                    ?.filter((vwc) =>
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && ordered(ava.assertion, vwc.value)
-                    )
-                    .some((vwc): boolean => selectedContexts
-                        .every((sc) => evaluateContextAssertion(
-                            sc,
-                            vwc.contextList,
-                            options.getContextMatcher,
-                            options.determineAbsentMatch,
-                        ))) ?? false)
-            );
-            if (match) {
-                return true;
+        for (const value of attr.values) {
+            if (!options.permittedToMatch(attr.type_, value)) {
+                continue;
             }
-        } else {
-            const match = Boolean(
-                attr.values.some((a) =>
-                    options.permittedToMatch(attr.type_, a)
-                    && ordered(ava.assertion, a)
-                )
-                || (attr.valuesWithContext
-                    ?.some((vwc) =>
-                        options.permittedToMatch(attr.type_, vwc.value)
-                        && ordered(ava.assertion, vwc.value)
-                    ) ?? false)
-            );
-            if (match) {
-                return true;
+            if (!ordered!(ava.assertion, value)) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
+            }
+        }
+        for (const vwc of attr.valuesWithContext ?? []) {
+            if (!options.permittedToMatch(attr.type_, vwc.value)) {
+                continue;
+            }
+            if (!ordered!(ava.assertion, vwc.value)) {
+                continue;
+            }
+            if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
+                sc,
+                vwc.contextList,
+                options.getContextMatcher,
+                options.determineAbsentMatch,
+            ))) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value: vwc.value,
+                contexts: vwc.contextList,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
             }
         }
     }
-    return false;
+    return matchedValues;
 }
 
 export
@@ -366,12 +416,15 @@ function evaluateSubstring (
     sub: FilterItem_substrings,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): MatchedValue[] | undefined {
+    const matcher = handleErrors(options.getSubstringsMatcher(sub.type_));
+    if (!matcher) {
+        return undefined;
+    }
     if (!options.permittedToMatch(sub.type_)) {
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry);
-    const matcher = handleErrors(options.getSubstringsMatcher(sub.type_));
     const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings
         .map((str) => {
             if ("initial" in str) {
@@ -386,22 +439,49 @@ function evaluateSubstring (
             }
         })
         .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
-    if (!matcher) {
-        return undefined;
+    const matchedValues: MatchedValue[] = [];
+    const relevantAttributes = attributes
+        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, sub.type_));
+    for (const attr of relevantAttributes) {
+        for (const value of attr.values) {
+            if (assertions.every(([ assertion, selection ]) => (
+                options.permittedToMatch(attr.type_, value)
+                && matcher!(assertion, value, selection)
+            ))) {
+                matchedValues.push({
+                    type: attr.type_,
+                    value,
+                });
+                if (!options.matchedValuesOnly) {
+                    return matchedValues;
+                }
+            }
+        }
+        for (const vwc of attr.valuesWithContext ?? []) {
+            if (assertions.every(([ assertion, selection ]) => (
+                options.permittedToMatch(attr.type_, vwc.value)
+                && matcher!(assertion, vwc.value, selection)
+            ))) {
+                matchedValues.push({
+                    type: attr.type_,
+                    value: vwc.value,
+                    contexts: vwc.contextList,
+                });
+                if (!options.matchedValuesOnly) {
+                    return matchedValues;
+                }
+            }
+        }
     }
-    return attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, sub.type_))
-        .some((attr): boolean => (attr.values
-            .some((value): boolean => (assertions
-                .every(([ assertion, selection ]): boolean => (
-                    options.permittedToMatch(attr.type_, value)
-                    && matcher!(assertion, value, selection)
-                )
-    )))));
+    return matchedValues;
 }
 
 export
-function evaluateAttributePresence (attributeType: AttributeType, entry: EntryInformation, options: EvaluateFilterSettings): boolean {
+function evaluateAttributePresence (
+    attributeType: AttributeType,
+    entry: EntryInformation,
+    options: EvaluateFilterSettings,
+): boolean {
     const attributes = getAttributesFromEntry(entry);
     return attributes.some((attr: Attribute): boolean => (
         options.permittedToMatch(attr.type_)
@@ -414,7 +494,7 @@ function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): MatchedValue[] | undefined {
     if (mra.type_ && !options.permittedToMatch(mra.type_)) {
         return undefined;
     }
@@ -463,21 +543,46 @@ function evaluateMatchingRuleAssertion (
             // None of the attributes were compatible with the matching rule.
             throw new CannotPerformExactly(mra.matchingRule[0].toString());
         }
-        return false; // There are no applicable attributes to match.
+        return []; // There are no applicable attributes to match.
     }
-    return relevantAttributes.some((attr: Attribute): boolean => (
-        attr.values.some((value) =>
-            options.permittedToMatch(attr.type_, value)
-            && matcher!(mra.matchValue, value)
-        )
-        || (attr
-            .valuesWithContext
-            ?.map((vwc) => vwc.value)
-            .some((value) =>
-                options.permittedToMatch(attr.type_, value)
-                && matcher!(mra.matchValue, value)
-            ) ?? false)
-    ));
+    const matchedValues: MatchedValue[] = [];
+    for (const attr of relevantAttributes) {
+        if (!options.permittedToMatch(attr.type_)) {
+            continue;
+        }
+        for (const value of attr.values) {
+            if (!options.permittedToMatch(attr.type_, value)) {
+                continue;
+            }
+            if (!matcher!(mra.matchValue, value)) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
+            }
+        }
+        for (const vwc of attr.valuesWithContext ?? []) {
+            if (!options.permittedToMatch(attr.type_, vwc.value)) {
+                continue;
+            }
+            if (!matcher!(mra.matchValue, vwc.value)) {
+                continue;
+            }
+            matchedValues.push({
+                type: attr.type_,
+                value: vwc.value,
+                contexts: vwc.contextList,
+            });
+            if (!options.matchedValuesOnly) {
+                return matchedValues;
+            }
+        }
+    }
+    return matchedValues;
 }
 
 export
@@ -514,7 +619,11 @@ function evaluateAttributeTypeAssertion (
 }
 
 export
-function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, options: EvaluateFilterSettings): boolean | undefined {
+function evaluateFilterItem (
+    filterItem: FilterItem,
+    entry: EntryInformation,
+    options: EvaluateFilterSettings,
+): MatchedValue[] | boolean | undefined {
     if ("equality" in filterItem) {
         return evaluateEquality(filterItem.equality, entry, options);
     } else if ("substrings" in filterItem) {
@@ -543,15 +652,31 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
  * @summary Implementation of X.500 filtering
  * @description
  *
- * This function filters a single directory entry using a `Filter`, and returns
- * `true` if it matches, `false` if it does not, or `undefined` if whether it
- * matches could not be determined.
+ * This function filters a group of directory entries that are supposed to
+ * represent a subset of the members of a compound entry, or the non-compound
+ * entry alone. If multiple entries are supplied, all of their attributes are
+ * treated as though they were all merged into a single "pseudo-entry" before
+ * matching. In other words, this function will treat all of the entries as a
+ * single entry (but still keeps them separate for the sake of tracking which
+ * of them supplied matching values and hence "contributed" to the match, per
+ * ITU Recommendation X.511 (2016), Section 7.13).
+ *
+ * This function returns `true` if the sum of all attributes of the supplied
+ * entries match the filter, `false` if they do not, or `undefined` if it could
+ * not be determined. It may also return an array of `MatchedValue`, each of
+ * which is an attribute type, value, contexts (if present), and the index of
+ * the entry from the array of supplied entries that supplied that matching
+ * value. If this array is empty, it means that there was no match; an empty
+ * array should be treated like a `false` result.
  *
  * Features:
  *
  * - Attribute subtyping
  * - `nullMatch`
  * - `performExactly`
+ * - `matchedValuesOnly`
+ * - `dnAttributes`
+ * - Family contribution tracking
  *
  * Though this implementation does not explicitly include support for the
  * `dontMatchFriends` and `noSubtypesMatch` service control options, these can
@@ -569,28 +694,76 @@ function evaluateFilterItem (filterItem: FilterItem, entry: EntryInformation, op
  * @param {Object} options An options object containing. Despite the name, this
  *  parameter, and most of its properties, are required.
  * @returns `true` if the entry matches the filter, `false` if it does not, or
- *  `undefined` if it cannot be determined whether the entry matches or not
+ *  `undefined` if it cannot be determined whether the entry matches or not.
+ *  An array of matched values may be returned, containing the values that
+ *  matched and the indices of the entries from which the matches came, if this
+ *  array is empty, it means there was no match.
  * @function
  */
 export
-function evaluateFilter (filter: Filter, entry: EntryInformation, options: EvaluateFilterSettings): boolean | undefined {
+function evaluateFilter (
+    filter: Filter,
+    family: EntryInformation[],
+    options: EvaluateFilterSettings,
+): MatchedEntryInfo[] | boolean | undefined {
     if ("item" in filter) {
-        return evaluateFilterItem(filter.item, entry, options);
+        const familyResults: MatchedEntryInfo[] = [];
+        let undefinedResultFound: boolean = false;
+        let matched: boolean = false;
+        for (let i = 0; i < family.length; i++) {
+            const member = family[i];
+            const result = evaluateFilterItem(filter.item, member, options);
+            if (!result) {
+                undefinedResultFound = true;
+                continue;
+            }
+            if (typeof result === "boolean") {
+                matched = true;
+                continue;
+            }
+            familyResults.push(...result.map((r) => ({
+                ...r,
+                entryIndex: i,
+            })));
+        }
+        if (familyResults.length === 0) {
+            if (matched) {
+                return true;
+            }
+            // If nothing matched, but there was one `undefined`, we consider this item `undefined`.
+            else if (undefinedResultFound) {
+                return undefined;
+            }
+            return false;
+        }
+        return familyResults;
     } else if ("and" in filter) {
         // Array.every() returns `true` when `Array.length` is 0.
-        const results = filter.and.map((subfilter) => evaluateFilter(subfilter, entry, options));
-        if (results.every((result) => (result === true))) {
+        const results = filter.and.map((subfilter) => evaluateFilter(subfilter, family, options));
+        if (results.every((result) => (
+            (result === true)
+            || (Array.isArray(result) && result.length)
+        ))) {
             return true;
-        } else if (results.some((result) => (result === false))) {
+        } else if (results.some((result) => (
+            (result === false)
+            || (Array.isArray(result) && !result.length)
+        ))) {
             return false;
         } else {
             return undefined;
         }
     } else if ("or" in filter) {
-        const results = filter.or.map((subfilter) => evaluateFilter(subfilter, entry, options));
-        if ((results.length === 0) || results.every((result) => (result === false))) {
+        const results = filter.or.map((subfilter) => evaluateFilter(subfilter, family, options));
+        if ((results.length === 0) || results.every((result) => (
+            (result === false)
+            || (Array.isArray(result) && !result.length)
+        ))) {
             return false;
-        } else if (results.some((result) => (result === true))) {
+        } else if (results.some((result) => (
+            (result === true)
+            || (Array.isArray(result) && result.length)
+        ))) {
             return true;
         } else {
             return undefined;
@@ -603,11 +776,14 @@ function evaluateFilter (filter: Filter, entry: EntryInformation, options: Evalu
         ) {
             return true;
         }
-        const result = evaluateFilter(filter.not, entry, options);
+        const result = evaluateFilter(filter.not, family, options);
         if (result === undefined) {
             return undefined;
         }
-        return (result === false); // undefined should be omitted.
+        return (
+            (result === false)
+            || (Array.isArray(result) && !result.length)
+        ); // undefined should be omitted.
     } else {
         return undefined;
     }
