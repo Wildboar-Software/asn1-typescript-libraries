@@ -187,3 +187,60 @@ const uuid: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
         "utf-8",
     );
 };
+
+// From IETF RFC 4523: https://www.rfc-editor.org/rfc/rfc4523.html
+
+export
+const certificate: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+    return value.toBytes();
+};
+
+export
+const certificateList: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+    return value.toBytes();
+};
+
+export
+const certificatePair: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+    return value.toBytes();
+};
+
+export
+const supportedAlgorithm: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+    return value.toBytes();
+};
+
+// export
+// const certificateExactAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const certificateAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const certificatePairExactAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const certificatePairAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const certificateListExactAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const certificateListAssertion: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
+
+// export
+// const algorithmIdentifier: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
+
+// };
