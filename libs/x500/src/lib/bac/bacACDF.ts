@@ -185,7 +185,7 @@ function bacACDF (
     }
 
     // SORT BY PRECEDENCE
-    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => b[4] - a[4]);
+    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => Number(b[4]) - Number(a[4]));
     const highestPrecedence = sortedByDescendingPrecedence[0][4];
     const betaIndex = sortedByDescendingPrecedence.findIndex((t) => (t[4] < highestPrecedence));
     const tuplesThatSurvivedStage1 = (betaIndex < 0)

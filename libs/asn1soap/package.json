@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/asn1soap",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "ASN.1 SOAP PDUs in TypeScript",
     "keywords": [
         "asn1",

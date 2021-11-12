@@ -106,7 +106,7 @@ export
 function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Date ] | null {
 
     const whitelistedYears: Set<number> | null = period.years
-        ? new Set(period.years)
+        ? new Set(period.years.map(Number))
         : null;
 
     const whitelistedMonths: Set<number> | null = ((): Set<number> | null => {
@@ -114,7 +114,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             return null;
         }
         if ("intMonth" in period.months) {
-            return new Set(period.months.intMonth);
+            return new Set(period.months.intMonth.map(Number));
         } else if ("bitMonth" in period.months) {
             return new Set(
                 period.months.bitMonth
@@ -133,7 +133,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             return null;
         }
         if ("intWeek" in period.weeks) {
-            return new Set(period.weeks.intWeek);
+            return new Set(period.weeks.intWeek.map(Number));
         } else if ("bitWeek" in period.weeks) {
             return new Set(
                 period.weeks.bitWeek
@@ -156,7 +156,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             return null;
         }
         if ("intDay" in period.days) {
-            return new Set(period.days.intDay);
+            return new Set(period.days.intDay.map(Number));
         } else if ("bitDay" in period.days) {
             return new Set(
                 period.days.bitDay
@@ -242,18 +242,18 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     prev.getFullYear(),
                     prev.getMonth(),
                     prev.getDate(),
-                    endOfDayBand.startDayTime?.hour ?? 0,
-                    endOfDayBand.startDayTime?.minute ?? 0,
-                    endOfDayBand.startDayTime?.second ?? 0,
+                    Number(endOfDayBand.startDayTime?.hour ?? 0),
+                    Number(endOfDayBand.startDayTime?.minute ?? 0),
+                    Number(endOfDayBand.startDayTime?.second ?? 0),
                 );
             } else {
                 min = new Date(
                     point.getFullYear(),
                     point.getMonth(),
                     point.getDate(),
-                    applicableTimeband.startDayTime?.hour ?? 0,
-                    applicableTimeband.startDayTime?.minute ?? 0,
-                    applicableTimeband.startDayTime?.second ?? 0,
+                    Number(applicableTimeband.startDayTime?.hour ?? 0),
+                    Number(applicableTimeband.startDayTime?.minute ?? 0),
+                    Number(applicableTimeband.startDayTime?.second ?? 0),
                 );
             }
         } else {
@@ -261,9 +261,9 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 point.getFullYear(),
                 point.getMonth(),
                 point.getDate(),
-                applicableTimeband.startDayTime?.hour ?? 0,
-                applicableTimeband.startDayTime?.minute ?? 0,
-                applicableTimeband.startDayTime?.second ?? 0,
+                Number(applicableTimeband.startDayTime?.hour ?? 0),
+                Number(applicableTimeband.startDayTime?.minute ?? 0),
+                Number(applicableTimeband.startDayTime?.second ?? 0),
             );
         }
 
@@ -286,18 +286,18 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     next.getFullYear(),
                     next.getMonth(),
                     next.getDate(),
-                    startOfDayBand.endDayTime?.hour ?? 23,
-                    startOfDayBand.endDayTime?.minute ?? 59,
-                    startOfDayBand.endDayTime?.second ?? 59,
+                    Number(startOfDayBand.endDayTime?.hour ?? 23),
+                    Number(startOfDayBand.endDayTime?.minute ?? 59),
+                    Number(startOfDayBand.endDayTime?.second ?? 59),
                 );
             } else {
                 max = new Date(
                     point.getFullYear(),
                     point.getMonth(),
                     point.getDate(),
-                    applicableTimeband.endDayTime?.hour ?? 23,
-                    applicableTimeband.endDayTime?.minute ?? 59,
-                    applicableTimeband.endDayTime?.second ?? 59,
+                    Number(applicableTimeband.endDayTime?.hour ?? 23),
+                    Number(applicableTimeband.endDayTime?.minute ?? 59),
+                    Number(applicableTimeband.endDayTime?.second ?? 59),
                 );
             }
         } else {
@@ -305,9 +305,9 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 point.getFullYear(),
                 point.getMonth(),
                 point.getDate(),
-                applicableTimeband.endDayTime?.hour ?? 23,
-                applicableTimeband.endDayTime?.minute ?? 59,
-                applicableTimeband.endDayTime?.second ?? 59,
+                Number(applicableTimeband.endDayTime?.hour ?? 23),
+                Number(applicableTimeband.endDayTime?.minute ?? 59),
+                Number(applicableTimeband.endDayTime?.second ?? 59),
             );
         }
 

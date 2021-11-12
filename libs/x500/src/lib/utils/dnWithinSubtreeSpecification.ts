@@ -69,10 +69,10 @@ function dnWithinSubtreeSpecification (
         ...(sts.base ?? SubtreeSpecification._default_value_for_base),
     ];
     // Short circuits to avoid the more costly ATAV comparisons later on.
-    if (entryDN.length < (base.length + (sts.minimum ?? 0))) {
+    if (entryDN.length < (base.length + (sts.minimum ? Number(sts.minimum) : 0))) {
         return false;
     }
-    if (entryDN.length > (base.length + (sts.maximum ?? Infinity))) {
+    if (entryDN.length > (base.length + (sts.maximum ? Number(sts.maximum) : Infinity))) {
         return false;
     }
     if (sts.specificationFilter && !objectClassesWithinRefinement(entryObjectClasses, sts.specificationFilter)) {

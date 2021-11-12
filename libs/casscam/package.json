@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/casscam",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Conditional Access Module (CAM) Authentication Sub-System (CASS) in TypeScript",
     "keywords": [
         "cam",

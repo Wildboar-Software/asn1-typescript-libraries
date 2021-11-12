@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/kerberos5",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Kerberos V5 PDUs in TypeScript",
     "keywords": [
         "kerberos",

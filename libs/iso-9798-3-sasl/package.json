@@ -1,6 +1,6 @@
 {
   "name": "@wildboar/iso-9798-3-sasl",
-  "version": "1.0.0",
+  "version": "1.0.1",
     "description": "ISO 9798-3 SASL PDUs in TypeScript",
     "keywords": [
         "iso",

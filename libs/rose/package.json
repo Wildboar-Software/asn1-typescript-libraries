@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/rose",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Remote Operation Service Element PDUs in TypeScript",
     "keywords": [
         "rose",

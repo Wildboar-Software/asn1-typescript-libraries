@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/usm",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "User-based Security Model for SNMPv3 in TypeScript",
     "keywords": [
         "usm",

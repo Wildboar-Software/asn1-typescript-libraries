@@ -43,6 +43,8 @@ function dnWithinGeneralSubtree (
     subtree: GeneralSubtree,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
+    const minimum: number = (subtree.minimum ? Number(subtree.minimum) : 0);
+    const maximum: number = (subtree.maximum ? Number(subtree.maximum) : Infinity);
     if (("dNSName" in gn) && ("dNSName" in subtree.base)) {
         const baseDCs = subtree.base.dNSName.toLowerCase()
             .split(".")
@@ -50,20 +52,20 @@ function dnWithinGeneralSubtree (
         const nameDCs = gn.dNSName.toLowerCase()
             .split(".")
             .filter((str) => (str.length > 0));
-        if (nameDCs.length < (baseDCs.length + (subtree.minimum ?? 0))) {
+        if (nameDCs.length < (baseDCs.length + minimum)) {
             return false;
         }
-        if (nameDCs.length > (baseDCs.length + (subtree.maximum ?? Infinity))) {
+        if (nameDCs.length > (baseDCs.length + maximum)) {
             return false;
         }
         return (nameDCs.join(".").endsWith(baseDCs.join(".")));
     } else if (("directoryName" in gn) && ("directoryName" in subtree.base)) {
         const base = subtree.base.directoryName.rdnSequence;
         const entry = gn.directoryName.rdnSequence;
-        if (entry.length < (base.length + (subtree.minimum ?? 0))) {
+        if (entry.length < (base.length + minimum)) {
             return false;
         }
-        if (entry.length > (base.length + (subtree.maximum ?? Infinity))) {
+        if (entry.length > (base.length + maximum)) {
             return false;
         }
         return compareDistinguishedName(

@@ -6,7 +6,7 @@ const integerOrderingMatch: OrderingMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): number => {
-    return (value.integer - assertion.integer);
+    return Number(BigInt(value.integer) - BigInt(assertion.integer));
 }
 
 export default integerOrderingMatch;

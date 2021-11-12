@@ -89,8 +89,8 @@ function comparePeriod (a: Period, b: Period): boolean {
             if (a.days.intDay.length !== b.days.intDay.length) {
                 return false;
             }
-            const sortedDaysA = a.days.intDay.sort((a, b) => (a - b));
-            const sortedDaysB = b.days.intDay.sort((a, b) => (a - b));
+            const sortedDaysA = a.days.intDay.sort((a, b) => (Number(a) - Number(b)));
+            const sortedDaysB = b.days.intDay.sort((a, b) => (Number(a) - Number(b)));
             for (let i = 0; i < sortedDaysA.length; i++) {
                 if (sortedDaysA[i] !== sortedDaysB[i]) {
                     return false;
@@ -148,8 +148,8 @@ function comparePeriod (a: Period, b: Period): boolean {
             if (a.weeks.intWeek.length !== b.weeks.intWeek.length) {
                 return false;
             }
-            const weeksA = a.weeks.intWeek.sort((a, b) => (a - b));
-            const weeksB = b.weeks.intWeek.sort((a, b) => (a - b));
+            const weeksA = a.weeks.intWeek.sort((a, b) => (Number(a) - Number(b)));
+            const weeksB = b.weeks.intWeek.sort((a, b) => (Number(a) - Number(b)));
             for (let i = 0; i < weeksA.length; i++) {
                 if (weeksA[i] !== weeksB[i]) {
                     return false;
@@ -173,8 +173,8 @@ function comparePeriod (a: Period, b: Period): boolean {
             if (a.months.intMonth.length !== b.months.intMonth.length) {
                 return false;
             }
-            const monthsA = a.months.intMonth.sort((a, b) => (a - b));
-            const monthsB = b.months.intMonth.sort((a, b) => (a - b));
+            const monthsA = a.months.intMonth.sort((a, b) => (Number(a) - Number(b)));
+            const monthsB = b.months.intMonth.sort((a, b) => (Number(a) - Number(b)));
             for (let i = 0; i < monthsA.length; i++) {
                 if (monthsA[i] !== monthsB[i]) {
                     return false;
@@ -194,8 +194,8 @@ function comparePeriod (a: Period, b: Period): boolean {
         }
     }
     if (a.years && b.years) {
-        const yearsA = a.years.sort((a, b) => (a - b));
-        const yearsB = b.years.sort((a, b) => (a - b));
+        const yearsA = a.years.sort((a, b) => (Number(a) - Number(b)));
+        const yearsB = b.years.sort((a, b) => (Number(a) - Number(b)));
         for (let i = 0; i < yearsA.length; i++) {
             if (yearsA[i] !== yearsB[i]) {
                 return false;

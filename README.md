@@ -11,6 +11,19 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
+## Publish All Modules
+
+`cd` into `dist/libs`, then run
+
+```bash
+for dir in $(ls -1);
+do
+    cd $dir
+    npm publish
+    cd ..
+done
+```
+
 ## To Do
 
 - [ ] Fix `TRUE` bug where `BOOLEAN` values should have been `TRUE`.

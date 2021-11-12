@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/ftam",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "File Transfer, Access, and Management (FTAM) PDUs in TypeScript",
     "keywords": [
         "ftam",

@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/sio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Security Information Objects in TypeScript",
     "keywords": [
         "sio",

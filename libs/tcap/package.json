@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/tcap",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Transaction Capabilities Application Part PDUs in TypeScript",
     "keywords": [
         "tcap",

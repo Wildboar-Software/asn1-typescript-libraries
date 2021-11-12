@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cmp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Certificate Management Protocol PDUs in TypeScript",
     "keywords": [
         "certificate",

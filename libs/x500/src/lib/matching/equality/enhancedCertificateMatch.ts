@@ -305,8 +305,8 @@ function evaluateEnhancedCertificateAssertion (
                     return dnWithinSubtree(
                         sub.base.directoryName.rdnSequence,
                         path.directoryName.rdnSequence,
-                        sub.minimum,
-                        sub.maximum,
+                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
                 })) {
                     return false;
@@ -318,8 +318,8 @@ function evaluateEnhancedCertificateAssertion (
                     return dnWithinSubtree(
                         sub.base.directoryName.rdnSequence,
                         path.directoryName.rdnSequence,
-                        sub.minimum,
-                        sub.maximum,
+                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
                 })) {
                     return false;
@@ -346,8 +346,8 @@ function evaluateEnhancedCertificateAssertion (
             return dnWithinSubtree(
                 sub.base.directoryName.rdnSequence,
                 tbs.subject.rdnSequence,
-                sub.minimum,
-                sub.maximum,
+                (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
             );
         })) {
             return false;
@@ -359,8 +359,8 @@ function evaluateEnhancedCertificateAssertion (
             return dnWithinSubtree(
                 sub.base.directoryName.rdnSequence,
                 tbs.subject.rdnSequence,
-                sub.minimum,
-                sub.maximum,
+                (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
             );
         })) {
             return false;
@@ -383,8 +383,8 @@ function evaluateEnhancedCertificateAssertion (
                     return dnWithinSubtree(
                         sub.base.directoryName.rdnSequence,
                         san.directoryName.rdnSequence,
-                        sub.minimum,
-                        sub.maximum,
+                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
                 })) {
                     return false;
@@ -399,8 +399,8 @@ function evaluateEnhancedCertificateAssertion (
                     return dnWithinSubtree(
                         sub.base.directoryName.rdnSequence,
                         san.directoryName.rdnSequence,
-                        sub.minimum,
-                        sub.maximum,
+                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
+                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
                     );
                 })) {
                     return false;

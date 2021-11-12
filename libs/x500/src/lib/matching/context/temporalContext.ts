@@ -35,15 +35,18 @@ function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0
 
 function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification): boolean {
     const result = ((): boolean => {
+        const timezone: number | undefined = (spec.timeZone !== undefined)
+            ? Number(spec.timeZone)
+            : undefined;
         if ("absolute" in spec.time) {
-            const start = addHours(spec.time.absolute.startTime, -(spec.timeZone ?? 0));
-            const end = addHours(spec.time.absolute.endTime, -(spec.timeZone ?? 0));
+            const start = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
+            const end = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
             return (
                 (time.valueOf() >= start.valueOf())
                 && (time.valueOf() <= end.valueOf())
             );
         } else if ("periodic" in spec.time) {
-            return spec.time.periodic.some((period) => timeFallsWithinPeriod(time, period, spec.timeZone));
+            return spec.time.periodic.some((period) => timeFallsWithinPeriod(time, period, timezone));
         } else {
             throw new Error(); // There is no other option.
         }
@@ -53,9 +56,12 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
 
 function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
     const result = ((): boolean => {
+        const timezone: number | undefined = (spec.timeZone !== undefined)
+            ? Number(spec.timeZone)
+            : undefined;
         if ("absolute" in spec.time) {
-            const startSpec = addHours(spec.time.absolute.startTime, -(spec.timeZone ?? 0));
-            const endSpec = addHours(spec.time.absolute.endTime, -(spec.timeZone ?? 0));
+            const startSpec = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
+            const endSpec = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
             if (entirely) {
                 return (
                     (start.valueOf() >= startSpec.valueOf())
@@ -69,8 +75,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             }
         } else if ("periodic" in spec.time) {
             return spec.time.periodic.some((period) => {
-                const adjustedStart = addHours(start, spec.timeZone); // TODO: I am not sure this is correct.
-                const adjustedEnd = addHours(end, spec.timeZone); // TODO: I am not sure this is correct.
+                const adjustedStart = addHours(start, timezone ?? 0); // TODO: I am not sure this is correct.
+                const adjustedEnd = addHours(end, timezone ?? 0); // TODO: I am not sure this is correct.
                 const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
                 if (!boundaries) {
                     return false;

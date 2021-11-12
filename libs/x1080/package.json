@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x1080",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "ITU X.1080 Telebiometric PDUs in TypeScript",
     "keywords": [
         "x1080",

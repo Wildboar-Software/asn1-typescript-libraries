@@ -1,3 +1,4 @@
+export { userPwd } from "../../modules/PasswordPolicy/userPwd.oa";
 export { pwdStartTime } from "../../modules/PasswordPolicy/pwdStartTime.oa";
 export { pwdExpiryTime } from "../../modules/PasswordPolicy/pwdExpiryTime.oa";
 export { pwdEndTime } from "../../modules/PasswordPolicy/pwdEndTime.oa";

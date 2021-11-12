@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/fast-infoset",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Fast Infoset in TypeScript",
     "keywords": [
         "fast",

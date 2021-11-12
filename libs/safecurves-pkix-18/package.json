@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/safecurves-pkix-18",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "IETF RFC 8410 safe curve / Ed25519 ASN.1 data structures in TypeScript",
     "keywords": [
         "rfc8410",
