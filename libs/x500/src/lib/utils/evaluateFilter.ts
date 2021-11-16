@@ -175,6 +175,16 @@ interface EvaluateFilterSettings {
      * @property
      */
     readonly matchedValuesOnly?: boolean;
+
+    /**
+     * Referenced in ITU Recommendation X.511, Section 11.2.2, this option
+     * determines whether the filter should include values from the
+     * distinguished name.
+     *
+     * @readonly
+     * @property
+     */
+    readonly dnAttribute?: boolean;
 }
 
 type AnyFunction = (...args: any[]) => any;
@@ -225,7 +235,7 @@ function evaluateEquality (
     if (!matcher) {
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
     const matchedValues: MatchedValue[] = [];
@@ -289,7 +299,7 @@ function evaluateApprox (
     if (!matcher) {
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
     const matchedValues: MatchedValue[] = [];
@@ -354,7 +364,7 @@ function evaluateOrdering (
     if (!orderer) {
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const relevantAttributes = attributes
         .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
     const matchedValues: MatchedValue[] = [];
@@ -424,7 +434,7 @@ function evaluateSubstring (
     if (!options.permittedToMatch(sub.type_)) {
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings
         .map((str) => {
             if ("initial" in str) {
@@ -482,7 +492,7 @@ function evaluateAttributePresence (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): boolean {
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     return attributes.some((attr: Attribute): boolean => (
         options.permittedToMatch(attr.type_)
         && attr.type_.isEqualTo(attributeType)
@@ -522,7 +532,13 @@ function evaluateMatchingRuleAssertion (
         }
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry, mra.dnAttributes);
+    /**
+     * From ITU Recommendation X.511, Section 11.2.2:
+     *
+     * > If [dnAttribute is] set, it overrides any possible dnAttribute
+     * > specification in extensibleMatch filter items.
+     */
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute || mra.dnAttributes);
     /**
      * From ITU Recommendation X.511, Section 7.8.2.g:
      *
@@ -594,7 +610,7 @@ function evaluateAttributeTypeAssertion (
     if (!options.permittedToMatch(ata.type_)) {
         return undefined;
     }
-    const attributes = getAttributesFromEntry(entry);
+    const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const relevantAttributes = attributes
         .filter((attr): boolean =>
             options.permittedToMatch(attr.type_)
