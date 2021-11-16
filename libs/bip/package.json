@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/bip",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "BioAPI Interworking Protocol (BIP) PDUs in TypeScript",
     "keywords": [
         "bip",

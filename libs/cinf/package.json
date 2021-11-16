@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cinf",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "object Identifier Resolution (ORS) Child Information (CINF) data structures in TypeScript",
     "keywords": [
         "cinf",

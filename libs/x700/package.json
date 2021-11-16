@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x700",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "X.700 management protocol data structures and business logic in TypeScript",
     "keywords": [
         "x700",

@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/isis",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Intermediate System to Intermediate System (ISIS) PDUs in TypeScript",
     "keywords": [
         "isis",

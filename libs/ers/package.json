@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/ers",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "IETF RFC 4998 Evidence Record Syntax ASN.1 data structures in TypeScript",
     "keywords": [
         "rfc4998",

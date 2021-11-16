@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/scvp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Server-based Certificate Validation Protocol PDUs in TypeScript",
     "keywords": [
         "scvp",

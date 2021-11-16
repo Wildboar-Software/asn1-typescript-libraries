@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cmip",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Common Management Information Protocol PDUs in TypeScript",
     "keywords": [
         "common",

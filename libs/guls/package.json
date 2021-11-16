@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/guls",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Generic Upper Layer Security (GULS) PDUs in TypeScript",
     "keywords": [
         "guls",

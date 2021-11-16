@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cades",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "CAdES ASN.1 data structures in TypeScript",
     "keywords": [
         "cades",

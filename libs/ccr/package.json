@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/ccr",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Commitment, Concurrency and Recovery Protocol PDUs in TypeScript",
     "keywords": [
         "commitment",

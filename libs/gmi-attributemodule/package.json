@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/gmi-attributemodule",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "ITU X.723 GMI Attribute ASN.1 data structures in TypeScript",
     "keywords": [
         "gmi",
