@@ -5,11 +5,7 @@ import { lookup } from "dns/promises";
 import { ipv4FromNSAP } from "./ipv4";
 import { uriFromNSAP } from "./uri";
 import { URL } from "url";
-
-const commonPrefix: number[] = [
-    0x54, // The AFI
-    0x00, 0x72, 0x87, 0x22, // The IDI
-];
+import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
 
 export
 async function compareSocketToNSAP (
@@ -48,8 +44,8 @@ async function compareSocketToNSAP (
         }
     }
     // Otherwise, the only other recognized format is the IP address.
-    for (let i = 0; i < commonPrefix.length; i++) {
-        if (nsap[i] !== commonPrefix[i]) {
+    for (let i = 0; i < IPV4_AFI_IDI.length; i++) {
+        if (nsap[i] !== IPV4_AFI_IDI[i]) {
             return false;
         }
     }

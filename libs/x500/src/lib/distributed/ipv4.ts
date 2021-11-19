@@ -1,3 +1,5 @@
+import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
+
 type IPv4 = Uint8Array;
 type NSAP = Uint8Array;
 
@@ -64,8 +66,7 @@ function ipv4ToNSAP (
     }
 
     return new Uint8Array([
-        0x54, // The AFI
-        0x00, 0x72, 0x87, 0x22, // The IDI
+        ...IPV4_AFI_IDI,
         type,
         ...Array.from(ipv4ToDSP(ipv4)),
         ...((port === undefined) ? [] : Array.from(portToDSP(port))),

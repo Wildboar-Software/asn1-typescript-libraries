@@ -11,6 +11,7 @@ specifications, as well as subset of the business logic, such as:
 - Context Matching
 - Stringifying
 - Comparison
+- Filter evaluation
 
 The protocols whose PDUs and data structures are implemented in this library
 are (inclusively):
@@ -22,6 +23,7 @@ are (inclusively):
 - Certificate Authority Subscription Protocol (CASP)
 - Authorization Validation Management Protocol (AVMP)
 - Trust Broker Protocol (TBP)
+## Footnote
 
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
