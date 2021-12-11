@@ -39,7 +39,7 @@ export class NameFormInformation {
          * @public
          * @readonly
          */
-        readonly namingMandatories?: OBJECT_IDENTIFIER[],
+        readonly namingMandatories: OBJECT_IDENTIFIER[],
         /**
          * @summary `namingOptionals`.
          * @public

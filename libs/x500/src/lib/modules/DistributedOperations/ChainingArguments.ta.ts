@@ -196,25 +196,25 @@ export class ChainingArguments {
          * @public
          * @readonly
          */
-        readonly originator?: OPTIONAL<DistinguishedName>,
+        readonly originator: OPTIONAL<DistinguishedName>,
         /**
          * @summary `targetObject`.
          * @public
          * @readonly
          */
-        readonly targetObject?: OPTIONAL<DistinguishedName>,
+        readonly targetObject: OPTIONAL<DistinguishedName>,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        readonly operationProgress?: OPTIONAL<OperationProgress>,
+        readonly operationProgress: OPTIONAL<OperationProgress>,
         /**
          * @summary `traceInformation`.
          * @public
          * @readonly
          */
-        readonly traceInformation?: TraceInformation,
+        readonly traceInformation: TraceInformation,
         /**
          * @summary `aliasDereferenced`.
          * @public
