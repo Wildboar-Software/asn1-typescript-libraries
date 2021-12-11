@@ -71,55 +71,55 @@ export class AttributeTypeInformation {
          * @public
          * @readonly
          */
-        readonly derivation: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly derivation?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `equalityMatch`.
          * @public
          * @readonly
          */
-        readonly equalityMatch: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly equalityMatch?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `orderingMatch`.
          * @public
          * @readonly
          */
-        readonly orderingMatch: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly orderingMatch?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `substringsMatch`.
          * @public
          * @readonly
          */
-        readonly substringsMatch: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly substringsMatch?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `attributeSyntax`.
          * @public
          * @readonly
          */
-        readonly attributeSyntax: OPTIONAL<UnboundedDirectoryString>,
+        readonly attributeSyntax?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary `multi_valued`.
          * @public
          * @readonly
          */
-        readonly multi_valued: OPTIONAL<BOOLEAN>,
+        readonly multi_valued?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `collective`.
          * @public
          * @readonly
          */
-        readonly collective: OPTIONAL<BOOLEAN>,
+        readonly collective?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `userModifiable`.
          * @public
          * @readonly
          */
-        readonly userModifiable: OPTIONAL<BOOLEAN>,
+        readonly userModifiable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `application`.
          * @public
          * @readonly
          */
-        readonly application: OPTIONAL<AttributeUsage>,
+        readonly application?: OPTIONAL<AttributeUsage>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -62,13 +62,13 @@ export class ResultAttribute {
          * @public
          * @readonly
          */
-        readonly outputValues: OPTIONAL<ResultAttribute_outputValues>,
+        readonly outputValues?: OPTIONAL<ResultAttribute_outputValues>,
         /**
          * @summary `contexts`.
          * @public
          * @readonly
          */
-        readonly contexts: OPTIONAL<ContextProfile[]>,
+        readonly contexts?: OPTIONAL<ContextProfile[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

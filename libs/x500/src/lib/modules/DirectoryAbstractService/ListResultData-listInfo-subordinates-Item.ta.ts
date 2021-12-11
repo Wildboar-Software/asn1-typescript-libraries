@@ -43,13 +43,13 @@ export class ListResultData_listInfo_subordinates_Item {
          * @public
          * @readonly
          */
-        readonly aliasEntry: OPTIONAL<BOOLEAN>,
+        readonly aliasEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fromEntry`.
          * @public
          * @readonly
          */
-        readonly fromEntry: OPTIONAL<BOOLEAN>,
+        readonly fromEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

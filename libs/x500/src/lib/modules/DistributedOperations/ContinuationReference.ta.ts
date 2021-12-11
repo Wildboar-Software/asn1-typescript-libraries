@@ -145,25 +145,25 @@ export class ContinuationReference {
          * @public
          * @readonly
          */
-        readonly entryOnly: OPTIONAL<BOOLEAN>,
+        readonly entryOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        readonly exclusions: OPTIONAL<Exclusions>,
+        readonly exclusions?: OPTIONAL<Exclusions>,
         /**
          * @summary `returnToDUA`.
          * @public
          * @readonly
          */
-        readonly returnToDUA: OPTIONAL<BOOLEAN>,
+        readonly returnToDUA?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        readonly nameResolveOnMaster: OPTIONAL<BOOLEAN>,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

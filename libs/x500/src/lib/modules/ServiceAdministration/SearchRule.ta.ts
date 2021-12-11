@@ -185,91 +185,91 @@ export class SearchRule {
          * @public
          * @readonly
          */
-        readonly serviceType: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `userClass`.
          * @public
          * @readonly
          */
-        readonly userClass: OPTIONAL<INTEGER>,
+        readonly userClass?: OPTIONAL<INTEGER>,
         /**
          * @summary `inputAttributeTypes`.
          * @public
          * @readonly
          */
-        readonly inputAttributeTypes: OPTIONAL<RequestAttribute[]>,
+        readonly inputAttributeTypes?: OPTIONAL<RequestAttribute[]>,
         /**
          * @summary `attributeCombination`.
          * @public
          * @readonly
          */
-        readonly attributeCombination: OPTIONAL<AttributeCombination>,
+        readonly attributeCombination?: OPTIONAL<AttributeCombination>,
         /**
          * @summary `outputAttributeTypes`.
          * @public
          * @readonly
          */
-        readonly outputAttributeTypes: OPTIONAL<ResultAttribute[]>,
+        readonly outputAttributeTypes?: OPTIONAL<ResultAttribute[]>,
         /**
          * @summary `defaultControls`.
          * @public
          * @readonly
          */
-        readonly defaultControls: OPTIONAL<ControlOptions>,
+        readonly defaultControls?: OPTIONAL<ControlOptions>,
         /**
          * @summary `mandatoryControls`.
          * @public
          * @readonly
          */
-        readonly mandatoryControls: OPTIONAL<ControlOptions>,
+        readonly mandatoryControls?: OPTIONAL<ControlOptions>,
         /**
          * @summary `searchRuleControls`.
          * @public
          * @readonly
          */
-        readonly searchRuleControls: OPTIONAL<ControlOptions>,
+        readonly searchRuleControls?: OPTIONAL<ControlOptions>,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        readonly familyGrouping: OPTIONAL<FamilyGrouping>,
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping>,
         /**
          * @summary `familyReturn`.
          * @public
          * @readonly
          */
-        readonly familyReturn: OPTIONAL<FamilyReturn>,
+        readonly familyReturn?: OPTIONAL<FamilyReturn>,
         /**
          * @summary `relaxation`.
          * @public
          * @readonly
          */
-        readonly relaxation: OPTIONAL<RelaxationPolicy>,
+        readonly relaxation?: OPTIONAL<RelaxationPolicy>,
         /**
          * @summary `additionalControl`.
          * @public
          * @readonly
          */
-        readonly additionalControl: OPTIONAL<AttributeType[]>,
+        readonly additionalControl?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `allowedSubset`.
          * @public
          * @readonly
          */
-        readonly allowedSubset: OPTIONAL<AllowedSubset>,
+        readonly allowedSubset?: OPTIONAL<AllowedSubset>,
         /**
          * @summary `imposedSubset`.
          * @public
          * @readonly
          */
-        readonly imposedSubset: OPTIONAL<ImposedSubset>,
+        readonly imposedSubset?: OPTIONAL<ImposedSubset>,
         /**
          * @summary `entryLimit`.
          * @public
          * @readonly
          */
-        readonly entryLimit: OPTIONAL<EntryLimit>,
+        readonly entryLimit?: OPTIONAL<EntryLimit>,
         /**
          * @summary Extensions that are not recognized.
          * @public

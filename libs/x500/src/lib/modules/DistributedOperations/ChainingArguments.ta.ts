@@ -196,139 +196,139 @@ export class ChainingArguments {
          * @public
          * @readonly
          */
-        readonly originator: OPTIONAL<DistinguishedName>,
+        readonly originator?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `targetObject`.
          * @public
          * @readonly
          */
-        readonly targetObject: OPTIONAL<DistinguishedName>,
+        readonly targetObject?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        readonly operationProgress: OPTIONAL<OperationProgress>,
+        readonly operationProgress?: OPTIONAL<OperationProgress>,
         /**
          * @summary `traceInformation`.
          * @public
          * @readonly
          */
-        readonly traceInformation: TraceInformation,
+        readonly traceInformation?: TraceInformation,
         /**
          * @summary `aliasDereferenced`.
          * @public
          * @readonly
          */
-        readonly aliasDereferenced: OPTIONAL<BOOLEAN>,
+        readonly aliasDereferenced?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `aliasedRDNs`.
          * @public
          * @readonly
          */
-        readonly aliasedRDNs: OPTIONAL<INTEGER>,
+        readonly aliasedRDNs?: OPTIONAL<INTEGER>,
         /**
          * @summary `returnCrossRefs`.
          * @public
          * @readonly
          */
-        readonly returnCrossRefs: OPTIONAL<BOOLEAN>,
+        readonly returnCrossRefs?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `referenceType`.
          * @public
          * @readonly
          */
-        readonly referenceType: OPTIONAL<ReferenceType>,
+        readonly referenceType?: OPTIONAL<ReferenceType>,
         /**
          * @summary `info`.
          * @public
          * @readonly
          */
-        readonly info: OPTIONAL<DomainInfo>,
+        readonly info?: OPTIONAL<DomainInfo>,
         /**
          * @summary `timeLimit`.
          * @public
          * @readonly
          */
-        readonly timeLimit: OPTIONAL<Time>,
+        readonly timeLimit?: OPTIONAL<Time>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `entryOnly`.
          * @public
          * @readonly
          */
-        readonly entryOnly: OPTIONAL<BOOLEAN>,
+        readonly entryOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `uniqueIdentifier`.
          * @public
          * @readonly
          */
-        readonly uniqueIdentifier: OPTIONAL<UniqueIdentifier>,
+        readonly uniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `authenticationLevel`.
          * @public
          * @readonly
          */
-        readonly authenticationLevel: OPTIONAL<AuthenticationLevel>,
+        readonly authenticationLevel?: OPTIONAL<AuthenticationLevel>,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        readonly exclusions: OPTIONAL<Exclusions>,
+        readonly exclusions?: OPTIONAL<Exclusions>,
         /**
          * @summary `excludeShadows`.
          * @public
          * @readonly
          */
-        readonly excludeShadows: OPTIONAL<BOOLEAN>,
+        readonly excludeShadows?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        readonly nameResolveOnMaster: OPTIONAL<BOOLEAN>,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `operationIdentifier`.
          * @public
          * @readonly
          */
-        readonly operationIdentifier: OPTIONAL<INTEGER>,
+        readonly operationIdentifier?: OPTIONAL<INTEGER>,
         /**
          * @summary `searchRuleId`.
          * @public
          * @readonly
          */
-        readonly searchRuleId: OPTIONAL<SearchRuleId>,
+        readonly searchRuleId?: OPTIONAL<SearchRuleId>,
         /**
          * @summary `chainedRelaxation`.
          * @public
          * @readonly
          */
-        readonly chainedRelaxation: OPTIONAL<MRMapping>,
+        readonly chainedRelaxation?: OPTIONAL<MRMapping>,
         /**
          * @summary `relatedEntry`.
          * @public
          * @readonly
          */
-        readonly relatedEntry: OPTIONAL<INTEGER>,
+        readonly relatedEntry?: OPTIONAL<INTEGER>,
         /**
          * @summary `dspPaging`.
          * @public
          * @readonly
          */
-        readonly dspPaging: OPTIONAL<BOOLEAN>,
+        readonly dspPaging?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `excludeWriteableCopies`.
          * @public
          * @readonly
          */
-        readonly excludeWriteableCopies: OPTIONAL<BOOLEAN>,
+        readonly excludeWriteableCopies?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

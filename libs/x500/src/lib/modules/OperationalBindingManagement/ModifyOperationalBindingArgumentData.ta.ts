@@ -126,19 +126,19 @@ export class ModifyOperationalBindingArgumentData {
          * @public
          * @readonly
          */
-        readonly newAgreement: OPTIONAL<_Element>,
+        readonly newAgreement?: OPTIONAL<_Element>,
         /**
          * @summary `valid`.
          * @public
          * @readonly
          */
-        readonly valid: OPTIONAL<ModifiedValidity>,
+        readonly valid?: OPTIONAL<ModifiedValidity>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -71,25 +71,25 @@ export class ChainingResults {
          * @public
          * @readonly
          */
-        readonly info: OPTIONAL<DomainInfo>,
+        readonly info?: OPTIONAL<DomainInfo>,
         /**
          * @summary `crossReferences`.
          * @public
          * @readonly
          */
-        readonly crossReferences: OPTIONAL<CrossReference[]>,
+        readonly crossReferences?: OPTIONAL<CrossReference[]>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `alreadySearched`.
          * @public
          * @readonly
          */
-        readonly alreadySearched: OPTIONAL<Exclusions>,
+        readonly alreadySearched?: OPTIONAL<Exclusions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

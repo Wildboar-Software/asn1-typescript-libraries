@@ -83,13 +83,13 @@ export class StrongCredentials {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<DistinguishedName>,
+        readonly name?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `attributeCertificationPath`.
          * @public
          * @readonly
          */
-        readonly attributeCertificationPath: OPTIONAL<AttributeCertificationPath>,
+        readonly attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>,
         /**
          * @summary Extensions that are not recognized.
          * @public

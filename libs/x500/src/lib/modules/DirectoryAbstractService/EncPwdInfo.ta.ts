@@ -50,13 +50,13 @@ export class EncPwdInfo {
          * @public
          * @readonly
          */
-        readonly algorithms: OPTIONAL<AlgorithmIdentifier[]>,
+        readonly algorithms?: OPTIONAL<AlgorithmIdentifier[]>,
         /**
          * @summary `pwdQualityRule`.
          * @public
          * @readonly
          */
-        readonly pwdQualityRule: OPTIONAL<AttributeTypeAndValue[]>,
+        readonly pwdQualityRule?: OPTIONAL<AttributeTypeAndValue[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

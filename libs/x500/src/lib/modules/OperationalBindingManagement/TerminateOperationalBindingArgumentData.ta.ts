@@ -94,19 +94,19 @@ export class TerminateOperationalBindingArgumentData {
          * @public
          * @readonly
          */
-        readonly initiator: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>,
+        readonly initiator?: OPTIONAL<TerminateOperationalBindingArgumentData_initiator>,
         /**
          * @summary `terminateAt`.
          * @public
          * @readonly
          */
-        readonly terminateAt: OPTIONAL<Time>,
+        readonly terminateAt?: OPTIONAL<Time>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

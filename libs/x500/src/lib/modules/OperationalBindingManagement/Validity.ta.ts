@@ -55,13 +55,13 @@ export class Validity {
          * @public
          * @readonly
          */
-        readonly validFrom: OPTIONAL<Validity_validFrom>,
+        readonly validFrom?: OPTIONAL<Validity_validFrom>,
         /**
          * @summary `validUntil`.
          * @public
          * @readonly
          */
-        readonly validUntil: OPTIONAL<Validity_validUntil>,
+        readonly validUntil?: OPTIONAL<Validity_validUntil>,
         /**
          * @summary Extensions that are not recognized.
          * @public

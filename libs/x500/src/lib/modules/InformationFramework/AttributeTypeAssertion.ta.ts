@@ -48,7 +48,7 @@ export class AttributeTypeAssertion {
          * @public
          * @readonly
          */
-        readonly assertedContexts: OPTIONAL<ContextAssertion[]>,
+        readonly assertedContexts?: OPTIONAL<ContextAssertion[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

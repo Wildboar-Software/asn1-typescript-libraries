@@ -82,7 +82,7 @@ export class AttributeErrorData_problems_Item {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<AttributeValue>,
+        readonly value?: OPTIONAL<AttributeValue>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -55,31 +55,31 @@ export class UserClasses {
          * @public
          * @readonly
          */
-        readonly allUsers: OPTIONAL<NULL>,
+        readonly allUsers?: OPTIONAL<NULL>,
         /**
          * @summary `thisEntry`.
          * @public
          * @readonly
          */
-        readonly thisEntry: OPTIONAL<NULL>,
+        readonly thisEntry?: OPTIONAL<NULL>,
         /**
          * @summary `name`.
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<NameAndOptionalUID[]>,
+        readonly name?: OPTIONAL<NameAndOptionalUID[]>,
         /**
          * @summary `userGroup`.
          * @public
          * @readonly
          */
-        readonly userGroup: OPTIONAL<NameAndOptionalUID[]>,
+        readonly userGroup?: OPTIONAL<NameAndOptionalUID[]>,
         /**
          * @summary `subtree`.
          * @public
          * @readonly
          */
-        readonly subtree: OPTIONAL<SubtreeSpecification[]>,
+        readonly subtree?: OPTIONAL<SubtreeSpecification[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

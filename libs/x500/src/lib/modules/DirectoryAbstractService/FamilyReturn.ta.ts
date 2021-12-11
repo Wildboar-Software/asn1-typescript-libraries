@@ -59,7 +59,7 @@ export class FamilyReturn {
          * @public
          * @readonly
          */
-        readonly familySelect: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly familySelect?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

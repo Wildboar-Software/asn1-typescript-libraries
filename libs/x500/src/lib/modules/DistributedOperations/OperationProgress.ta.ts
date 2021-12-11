@@ -58,7 +58,7 @@ export class OperationProgress {
          * @public
          * @readonly
          */
-        readonly nextRDNToBeResolved: OPTIONAL<INTEGER>,
+        readonly nextRDNToBeResolved?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

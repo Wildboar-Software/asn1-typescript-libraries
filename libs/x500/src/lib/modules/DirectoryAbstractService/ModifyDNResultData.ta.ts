@@ -64,25 +64,25 @@ export class ModifyDNResultData {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
          * @public
          * @readonly
          */
-        readonly performer: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
          * @public
          * @readonly
          */
-        readonly aliasDereferenced: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
          * @public
          * @readonly
          */
-        readonly notification: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
+        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

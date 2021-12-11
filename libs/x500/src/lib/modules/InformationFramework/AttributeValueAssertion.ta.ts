@@ -58,7 +58,7 @@ export class AttributeValueAssertion {
          * @public
          * @readonly
          */
-        readonly assertedContexts: OPTIONAL<AttributeValueAssertion_assertedContexts>,
+        readonly assertedContexts?: OPTIONAL<AttributeValueAssertion_assertedContexts>,
         /**
          * @summary Extensions that are not recognized.
          * @public

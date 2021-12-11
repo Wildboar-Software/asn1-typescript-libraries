@@ -63,25 +63,25 @@ export class CommonResultsSeq {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `performer`.
          * @public
          * @readonly
          */
-        readonly performer: OPTIONAL<DistinguishedName>,
+        readonly performer?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `aliasDereferenced`.
          * @public
          * @readonly
          */
-        readonly aliasDereferenced: OPTIONAL<BOOLEAN>,
+        readonly aliasDereferenced?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `notification`.
          * @public
          * @readonly
          */
-        readonly notification: OPTIONAL<Attribute[]>,
+        readonly notification?: OPTIONAL<Attribute[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

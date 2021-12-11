@@ -41,7 +41,7 @@ export class ContextInformation {
          * @public
          * @readonly
          */
-        readonly assertionSyntax: OPTIONAL<UnboundedDirectoryString>,
+        readonly assertionSyntax?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

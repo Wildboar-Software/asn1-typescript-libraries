@@ -126,7 +126,7 @@ export class UpdateErrorData {
          * @public
          * @readonly
          */
-        readonly attributeInfo: OPTIONAL<UpdateErrorData_attributeInfo_Item[]>,
+        readonly attributeInfo?: OPTIONAL<UpdateErrorData_attributeInfo_Item[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -138,25 +138,25 @@ export class UpdateErrorData {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
          * @public
          * @readonly
          */
-        readonly performer: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
          * @public
          * @readonly
          */
-        readonly aliasDereferenced: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
          * @public
          * @readonly
          */
-        readonly notification: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
+        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

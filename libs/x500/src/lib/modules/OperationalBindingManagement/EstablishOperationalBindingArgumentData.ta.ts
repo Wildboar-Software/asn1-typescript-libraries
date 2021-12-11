@@ -125,13 +125,13 @@ export class EstablishOperationalBindingArgumentData {
          * @public
          * @readonly
          */
-        readonly valid: OPTIONAL<Validity>,
+        readonly valid?: OPTIONAL<Validity>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

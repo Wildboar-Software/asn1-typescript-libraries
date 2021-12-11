@@ -39,7 +39,7 @@ export class ContextProfile {
          * @public
          * @readonly
          */
-        readonly contextValue: OPTIONAL<_Element[]>,
+        readonly contextValue?: OPTIONAL<_Element[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

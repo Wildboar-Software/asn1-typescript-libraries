@@ -71,7 +71,7 @@ export class DITStructureRuleDescription {
          * @public
          * @readonly
          */
-        readonly superiorStructureRules: OPTIONAL<
+        readonly superiorStructureRules?: OPTIONAL<
             RuleIdentifier[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -79,19 +79,19 @@ export class DITStructureRuleDescription {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<UnboundedDirectoryString[]>,
+        readonly name?: OPTIONAL<UnboundedDirectoryString[]>,
         /**
          * @summary `description`.
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<UnboundedDirectoryString>,
+        readonly description?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary `obsolete`.
          * @public
          * @readonly
          */
-        readonly obsolete: OPTIONAL<BOOLEAN>,
+        readonly obsolete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

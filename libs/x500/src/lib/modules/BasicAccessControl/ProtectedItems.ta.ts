@@ -119,79 +119,79 @@ export class ProtectedItems {
          * @public
          * @readonly
          */
-        readonly entry: OPTIONAL<NULL>,
+        readonly entry?: OPTIONAL<NULL>,
         /**
          * @summary `allUserAttributeTypes`.
          * @public
          * @readonly
          */
-        readonly allUserAttributeTypes: OPTIONAL<NULL>,
+        readonly allUserAttributeTypes?: OPTIONAL<NULL>,
         /**
          * @summary `attributeType`.
          * @public
          * @readonly
          */
-        readonly attributeType: OPTIONAL<AttributeType[]>,
+        readonly attributeType?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `allAttributeValues`.
          * @public
          * @readonly
          */
-        readonly allAttributeValues: OPTIONAL<AttributeType[]>,
+        readonly allAttributeValues?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `allUserAttributeTypesAndValues`.
          * @public
          * @readonly
          */
-        readonly allUserAttributeTypesAndValues: OPTIONAL<NULL>,
+        readonly allUserAttributeTypesAndValues?: OPTIONAL<NULL>,
         /**
          * @summary `attributeValue`.
          * @public
          * @readonly
          */
-        readonly attributeValue: OPTIONAL<AttributeTypeAndValue[]>,
+        readonly attributeValue?: OPTIONAL<AttributeTypeAndValue[]>,
         /**
          * @summary `selfValue`.
          * @public
          * @readonly
          */
-        readonly selfValue: OPTIONAL<AttributeType[]>,
+        readonly selfValue?: OPTIONAL<AttributeType[]>,
         /**
          * @summary `rangeOfValues`.
          * @public
          * @readonly
          */
-        readonly rangeOfValues: OPTIONAL<Filter>,
+        readonly rangeOfValues?: OPTIONAL<Filter>,
         /**
          * @summary `maxValueCount`.
          * @public
          * @readonly
          */
-        readonly maxValueCount: OPTIONAL<MaxValueCount[]>,
+        readonly maxValueCount?: OPTIONAL<MaxValueCount[]>,
         /**
          * @summary `maxImmSub`.
          * @public
          * @readonly
          */
-        readonly maxImmSub: OPTIONAL<INTEGER>,
+        readonly maxImmSub?: OPTIONAL<INTEGER>,
         /**
          * @summary `restrictedBy`.
          * @public
          * @readonly
          */
-        readonly restrictedBy: OPTIONAL<RestrictedValue[]>,
+        readonly restrictedBy?: OPTIONAL<RestrictedValue[]>,
         /**
          * @summary `contexts`.
          * @public
          * @readonly
          */
-        readonly contexts: OPTIONAL<ContextAssertion[]>,
+        readonly contexts?: OPTIONAL<ContextAssertion[]>,
         /**
          * @summary `classes`.
          * @public
          * @readonly
          */
-        readonly classes: OPTIONAL<Refinement>,
+        readonly classes?: OPTIONAL<Refinement>,
         /**
          * @summary Extensions that are not recognized.
          * @public

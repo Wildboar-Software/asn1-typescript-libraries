@@ -41,25 +41,25 @@ export class DITContentRule {
          * @public
          * @readonly
          */
-        readonly auxiliaries: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly auxiliaries?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `mandatory`.
          * @public
          * @readonly
          */
-        readonly mandatory: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly mandatory?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `optional`.
          * @public
          * @readonly
          */
-        readonly optional: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly optional?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `precluded`.
          * @public
          * @readonly
          */
-        readonly precluded: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly precluded?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

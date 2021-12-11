@@ -53,31 +53,31 @@ export class CertificationPath {
          * @public
          * @readonly
          */
-        readonly userKeyId: OPTIONAL<OCTET_STRING>,
+        readonly userKeyId?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `userCertif`.
          * @public
          * @readonly
          */
-        readonly userCertif: OPTIONAL<Certificate>,
+        readonly userCertif?: OPTIONAL<Certificate>,
         /**
          * @summary `verifKeyId`.
          * @public
          * @readonly
          */
-        readonly verifKeyId: OPTIONAL<OCTET_STRING>,
+        readonly verifKeyId?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `userVerifCertif`.
          * @public
          * @readonly
          */
-        readonly userVerifCertif: OPTIONAL<Certificate>,
+        readonly userVerifCertif?: OPTIONAL<Certificate>,
         /**
          * @summary `theCACertificates`.
          * @public
          * @readonly
          */
-        readonly theCACertificates: OPTIONAL<CertificatePair[]>
+        readonly theCACertificates?: OPTIONAL<CertificatePair[]>
     ) {}
 
     /**

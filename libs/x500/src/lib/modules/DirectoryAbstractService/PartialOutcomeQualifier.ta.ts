@@ -98,49 +98,49 @@ export class PartialOutcomeQualifier {
          * @public
          * @readonly
          */
-        readonly limitProblem: OPTIONAL<LimitProblem>,
+        readonly limitProblem?: OPTIONAL<LimitProblem>,
         /**
          * @summary `unexplored`.
          * @public
          * @readonly
          */
-        readonly unexplored: OPTIONAL<ContinuationReference[]>,
+        readonly unexplored?: OPTIONAL<ContinuationReference[]>,
         /**
          * @summary `unavailableCriticalExtensions`.
          * @public
          * @readonly
          */
-        readonly unavailableCriticalExtensions: OPTIONAL<BOOLEAN>,
+        readonly unavailableCriticalExtensions?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `unknownErrors`.
          * @public
          * @readonly
          */
-        readonly unknownErrors: OPTIONAL<_Element[]>,
+        readonly unknownErrors?: OPTIONAL<_Element[]>,
         /**
          * @summary `queryReference`.
          * @public
          * @readonly
          */
-        readonly queryReference: OPTIONAL<OCTET_STRING>,
+        readonly queryReference?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `overspecFilter`.
          * @public
          * @readonly
          */
-        readonly overspecFilter: OPTIONAL<Filter>,
+        readonly overspecFilter?: OPTIONAL<Filter>,
         /**
          * @summary `notification`.
          * @public
          * @readonly
          */
-        readonly notification: OPTIONAL<Attribute[]>,
+        readonly notification?: OPTIONAL<Attribute[]>,
         /**
          * @summary `entryCount`.
          * @public
          * @readonly
          */
-        readonly entryCount: OPTIONAL<PartialOutcomeQualifier_entryCount>
+        readonly entryCount?: OPTIONAL<PartialOutcomeQualifier_entryCount>
     ) {}
 
     /**

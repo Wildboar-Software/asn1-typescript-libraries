@@ -49,13 +49,13 @@ export class CertificationData {
          * @public
          * @readonly
          */
-        readonly certificationPath: OPTIONAL<CertificationPath>,
+        readonly certificationPath?: OPTIONAL<CertificationPath>,
         /**
          * @summary `certificateRevocationList`.
          * @public
          * @readonly
          */
-        readonly certificateRevocationList: OPTIONAL<CertificateList>
+        readonly certificateRevocationList?: OPTIONAL<CertificateList>
     ) {}
 
     /**

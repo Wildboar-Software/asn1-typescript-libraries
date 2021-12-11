@@ -47,7 +47,7 @@ export class SortKey {
          * @public
          * @readonly
          */
-        readonly orderingRule: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly orderingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

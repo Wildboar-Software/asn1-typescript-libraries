@@ -57,10 +57,15 @@ let _cached_decoder_for_AdministerPasswordResult: $.ASN1Decoder<AdministerPasswo
  */
 export function _decode_AdministerPasswordResult(el: _Element) {
     if (!_cached_decoder_for_AdministerPasswordResult) {
-        _cached_decoder_for_AdministerPasswordResult = $._decode_extensible_choice<AdministerPasswordResult>(
+        /**
+         * NOTE: This was manually modified to use `_decode_inextensible_choice`
+         * because `AdministerPasswordResult` actually cannot be extended, because
+         * `OPTIONALLY-PROTECTED-SEQ` occupies every single tag type.
+         */
+        _cached_decoder_for_AdministerPasswordResult = $._decode_inextensible_choice<AdministerPasswordResult>(
             {
                 "UNIVERSAL 5": ["null_", $._decodeNull],
-                "CONTEXT 0": [
+                "*": [
                     "information",
                     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<AdministerPasswordResultData>(
                         _decode_AdministerPasswordResultData

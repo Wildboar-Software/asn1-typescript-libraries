@@ -154,73 +154,73 @@ export class CommonArgumentsSeq {
          * @public
          * @readonly
          */
-        readonly serviceControls: OPTIONAL<ServiceControls>,
+        readonly serviceControls?: OPTIONAL<ServiceControls>,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>,
+        readonly securityParameters?: OPTIONAL<SecurityParameters>,
         /**
          * @summary `requestor`.
          * @public
          * @readonly
          */
-        readonly requestor: OPTIONAL<DistinguishedName>,
+        readonly requestor?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        readonly operationProgress: OPTIONAL<OperationProgress>,
+        readonly operationProgress?: OPTIONAL<OperationProgress>,
         /**
          * @summary `aliasedRDNs`.
          * @public
          * @readonly
          */
-        readonly aliasedRDNs: OPTIONAL<INTEGER>,
+        readonly aliasedRDNs?: OPTIONAL<INTEGER>,
         /**
          * @summary `criticalExtensions`.
          * @public
          * @readonly
          */
-        readonly criticalExtensions: OPTIONAL<BIT_STRING>,
+        readonly criticalExtensions?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `referenceType`.
          * @public
          * @readonly
          */
-        readonly referenceType: OPTIONAL<ReferenceType>,
+        readonly referenceType?: OPTIONAL<ReferenceType>,
         /**
          * @summary `entryOnly`.
          * @public
          * @readonly
          */
-        readonly entryOnly: OPTIONAL<BOOLEAN>,
+        readonly entryOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        readonly exclusions: OPTIONAL<Exclusions>,
+        readonly exclusions?: OPTIONAL<Exclusions>,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        readonly nameResolveOnMaster: OPTIONAL<BOOLEAN>,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `operationContexts`.
          * @public
          * @readonly
          */
-        readonly operationContexts: OPTIONAL<ContextSelection>,
+        readonly operationContexts?: OPTIONAL<ContextSelection>,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        readonly familyGrouping: OPTIONAL<FamilyGrouping>,
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping>,
         /**
          * @summary Extensions that are not recognized.
          * @public

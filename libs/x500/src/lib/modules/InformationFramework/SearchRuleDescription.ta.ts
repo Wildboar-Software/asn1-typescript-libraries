@@ -145,10 +145,8 @@ export {
     _decode_ResultAttribute,
     _encode_ResultAttribute,
 } from "../ServiceAdministration/ResultAttribute.ta";
-export {
+import {
     SearchRule,
-    _decode_SearchRule,
-    _encode_SearchRule,
 } from "../ServiceAdministration/SearchRule.ta";
 
 /* START_OF_SYMBOL_DEFINITION SearchRuleDescription */
@@ -168,7 +166,7 @@ export {
  *
  * @class
  */
-export class SearchRuleDescription {
+export class SearchRuleDescription extends SearchRule {
     constructor(
         /**
          * @summary `id`.
@@ -187,19 +185,19 @@ export class SearchRuleDescription {
          * @public
          * @readonly
          */
-        readonly serviceType: OPTIONAL<OBJECT_IDENTIFIER> /* REPLICATED_COMPONENT */,
+        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER> /* REPLICATED_COMPONENT */,
         /**
          * @summary `userClass`.
          * @public
          * @readonly
          */
-        readonly userClass: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
+        readonly userClass?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
         /**
          * @summary `inputAttributeTypes`.
          * @public
          * @readonly
          */
-        readonly inputAttributeTypes: OPTIONAL<
+        readonly inputAttributeTypes?: OPTIONAL<
             RequestAttribute[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -207,13 +205,13 @@ export class SearchRuleDescription {
          * @public
          * @readonly
          */
-        readonly attributeCombination: OPTIONAL<AttributeCombination> /* REPLICATED_COMPONENT */,
+        readonly attributeCombination?: OPTIONAL<AttributeCombination> /* REPLICATED_COMPONENT */,
         /**
          * @summary `outputAttributeTypes`.
          * @public
          * @readonly
          */
-        readonly outputAttributeTypes: OPTIONAL<
+        readonly outputAttributeTypes?: OPTIONAL<
             ResultAttribute[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -221,43 +219,43 @@ export class SearchRuleDescription {
          * @public
          * @readonly
          */
-        readonly defaultControls: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
+        readonly defaultControls?: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `mandatoryControls`.
          * @public
          * @readonly
          */
-        readonly mandatoryControls: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
+        readonly mandatoryControls?: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `searchRuleControls`.
          * @public
          * @readonly
          */
-        readonly searchRuleControls: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
+        readonly searchRuleControls?: OPTIONAL<ControlOptions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */,
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyReturn`.
          * @public
          * @readonly
          */
-        readonly familyReturn: OPTIONAL<FamilyReturn> /* REPLICATED_COMPONENT */,
+        readonly familyReturn?: OPTIONAL<FamilyReturn> /* REPLICATED_COMPONENT */,
         /**
          * @summary `relaxation`.
          * @public
          * @readonly
          */
-        readonly relaxation: OPTIONAL<RelaxationPolicy> /* REPLICATED_COMPONENT */,
+        readonly relaxation?: OPTIONAL<RelaxationPolicy> /* REPLICATED_COMPONENT */,
         /**
          * @summary `additionalControl`.
          * @public
          * @readonly
          */
-        readonly additionalControl: OPTIONAL<
+        readonly additionalControl?: OPTIONAL<
             AttributeType[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -265,38 +263,58 @@ export class SearchRuleDescription {
          * @public
          * @readonly
          */
-        readonly allowedSubset: OPTIONAL<AllowedSubset> /* REPLICATED_COMPONENT */,
+        readonly allowedSubset?: OPTIONAL<AllowedSubset> /* REPLICATED_COMPONENT */,
         /**
          * @summary `imposedSubset`.
          * @public
          * @readonly
          */
-        readonly imposedSubset: OPTIONAL<ImposedSubset> /* REPLICATED_COMPONENT */,
+        readonly imposedSubset?: OPTIONAL<ImposedSubset> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entryLimit`.
          * @public
          * @readonly
          */
-        readonly entryLimit: OPTIONAL<EntryLimit> /* REPLICATED_COMPONENT */,
+        readonly entryLimit?: OPTIONAL<EntryLimit> /* REPLICATED_COMPONENT */,
         /**
          * @summary `name`.
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<UnboundedDirectoryString[]>,
+        readonly name?: OPTIONAL<UnboundedDirectoryString[]>,
         /**
          * @summary `description`.
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<UnboundedDirectoryString>,
+        readonly description?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary Extensions that are not recognized.
          * @public
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(
+            id,
+            dmdId,
+            serviceType,
+            userClass,
+            inputAttributeTypes,
+            attributeCombination,
+            outputAttributeTypes,
+            defaultControls,
+            mandatoryControls,
+            searchRuleControls,
+            familyGrouping,
+            familyReturn,
+            relaxation,
+            additionalControl,
+            allowedSubset,
+            imposedSubset,
+            entryLimit,
+        );
+    }
 
     /**
      * @summary Restructures an object into a SearchRuleDescription

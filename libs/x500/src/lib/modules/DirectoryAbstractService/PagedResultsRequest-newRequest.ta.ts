@@ -44,25 +44,25 @@ export class PagedResultsRequest_newRequest {
          * @public
          * @readonly
          */
-        readonly sortKeys: OPTIONAL<SortKey[]>,
+        readonly sortKeys?: OPTIONAL<SortKey[]>,
         /**
          * @summary `reverse`.
          * @public
          * @readonly
          */
-        readonly reverse: OPTIONAL<BOOLEAN>,
+        readonly reverse?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `unmerged`.
          * @public
          * @readonly
          */
-        readonly unmerged: OPTIONAL<BOOLEAN>,
+        readonly unmerged?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pageNumber`.
          * @public
          * @readonly
          */
-        readonly pageNumber: OPTIONAL<INTEGER>,
+        readonly pageNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -102,49 +102,49 @@ export class SecurityParameters {
          * @public
          * @readonly
          */
-        readonly certification_path: OPTIONAL<CertificationPath>,
+        readonly certification_path?: OPTIONAL<CertificationPath>,
         /**
          * @summary `name`.
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<DistinguishedName>,
+        readonly name?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `time`.
          * @public
          * @readonly
          */
-        readonly time: OPTIONAL<Time>,
+        readonly time?: OPTIONAL<Time>,
         /**
          * @summary `random`.
          * @public
          * @readonly
          */
-        readonly random: OPTIONAL<BIT_STRING>,
+        readonly random?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `target`.
          * @public
          * @readonly
          */
-        readonly target: OPTIONAL<ProtectionRequest>,
+        readonly target?: OPTIONAL<ProtectionRequest>,
         /**
          * @summary `operationCode`.
          * @public
          * @readonly
          */
-        readonly operationCode: OPTIONAL<Code>,
+        readonly operationCode?: OPTIONAL<Code>,
         /**
          * @summary `errorProtection`.
          * @public
          * @readonly
          */
-        readonly errorProtection: OPTIONAL<ErrorProtectionRequest>,
+        readonly errorProtection?: OPTIONAL<ErrorProtectionRequest>,
         /**
          * @summary `errorCode`.
          * @public
          * @readonly
          */
-        readonly errorCode: OPTIONAL<Code>,
+        readonly errorCode?: OPTIONAL<Code>,
         /**
          * @summary Extensions that are not recognized.
          * @public

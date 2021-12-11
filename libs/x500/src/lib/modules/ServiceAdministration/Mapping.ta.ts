@@ -38,7 +38,7 @@ export class Mapping {
          * @public
          * @readonly
          */
-        readonly level: OPTIONAL<INTEGER>,
+        readonly level?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

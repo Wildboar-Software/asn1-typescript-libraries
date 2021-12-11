@@ -63,31 +63,31 @@ export class EntryInformation {
          * @public
          * @readonly
          */
-        readonly fromEntry: OPTIONAL<BOOLEAN>,
+        readonly fromEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `information`.
          * @public
          * @readonly
          */
-        readonly information: OPTIONAL<EntryInformation_information_Item[]>,
+        readonly information?: OPTIONAL<EntryInformation_information_Item[]>,
         /**
          * @summary `incompleteEntry`.
          * @public
          * @readonly
          */
-        readonly incompleteEntry: OPTIONAL<BOOLEAN>,
+        readonly incompleteEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `partialName`.
          * @public
          * @readonly
          */
-        readonly partialName: OPTIONAL<BOOLEAN>,
+        readonly partialName?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `derivedEntry`.
          * @public
          * @readonly
          */
-        readonly derivedEntry: OPTIONAL<BOOLEAN>,
+        readonly derivedEntry?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

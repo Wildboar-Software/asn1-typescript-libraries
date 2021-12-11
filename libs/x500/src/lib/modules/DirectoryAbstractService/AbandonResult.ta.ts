@@ -57,10 +57,15 @@ let _cached_decoder_for_AbandonResult: $.ASN1Decoder<AbandonResult> | null = nul
  */
 export function _decode_AbandonResult(el: _Element) {
     if (!_cached_decoder_for_AbandonResult) {
-        _cached_decoder_for_AbandonResult = $._decode_extensible_choice<AbandonResult>(
+        /**
+         * NOTE: This was manually modified to use `_decode_inextensible_choice`
+         * because `AbandonResult` actually cannot be extended, because
+         * `OPTIONALLY-PROTECTED-SEQ` occupies every single tag type.
+         */
+        _cached_decoder_for_AbandonResult = $._decode_inextensible_choice<AbandonResult>(
             {
                 "UNIVERSAL 5": ["null_", $._decodeNull],
-                "CONTEXT 0": [
+                "*": [
                     "information",
                     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<AbandonResultData>(
                         _decode_AbandonResultData

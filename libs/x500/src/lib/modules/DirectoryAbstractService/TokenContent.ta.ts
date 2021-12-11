@@ -87,7 +87,7 @@ export class TokenContent {
          * @public
          * @readonly
          */
-        readonly response: OPTIONAL<BIT_STRING>,
+        readonly response?: OPTIONAL<BIT_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -57,10 +57,15 @@ let _cached_decoder_for_ChangePasswordResult: $.ASN1Decoder<ChangePasswordResult
  */
 export function _decode_ChangePasswordResult(el: _Element) {
     if (!_cached_decoder_for_ChangePasswordResult) {
-        _cached_decoder_for_ChangePasswordResult = $._decode_extensible_choice<ChangePasswordResult>(
+        /**
+         * NOTE: This was manually modified to use `_decode_inextensible_choice`
+         * because `ChangePasswordResult` actually cannot be extended, because
+         * `OPTIONALLY-PROTECTED-SEQ` occupies every single tag type.
+         */
+        _cached_decoder_for_ChangePasswordResult = $._decode_inextensible_choice<ChangePasswordResult>(
             {
                 "UNIVERSAL 5": ["null_", $._decodeNull],
-                "CONTEXT 0": [
+                "*": [
                     "information",
                     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<ChangePasswordResultData>(
                         _decode_ChangePasswordResultData

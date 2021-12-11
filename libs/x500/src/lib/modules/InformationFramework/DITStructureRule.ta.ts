@@ -55,7 +55,7 @@ export class DITStructureRule {
          * @public
          * @readonly
          */
-        readonly superiorStructureRules: OPTIONAL<RuleIdentifier[]>,
+        readonly superiorStructureRules?: OPTIONAL<RuleIdentifier[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

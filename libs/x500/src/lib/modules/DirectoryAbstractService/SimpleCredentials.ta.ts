@@ -77,13 +77,13 @@ export class SimpleCredentials {
          * @public
          * @readonly
          */
-        readonly validity: OPTIONAL<SimpleCredentials_validity>,
+        readonly validity?: OPTIONAL<SimpleCredentials_validity>,
         /**
          * @summary `password`.
          * @public
          * @readonly
          */
-        readonly password: OPTIONAL<SimpleCredentials_password>
+        readonly password?: OPTIONAL<SimpleCredentials_password>
     ) {}
 
     /**

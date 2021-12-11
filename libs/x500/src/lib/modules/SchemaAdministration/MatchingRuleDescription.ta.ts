@@ -52,25 +52,25 @@ export class MatchingRuleDescription {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<UnboundedDirectoryString[]>,
+        readonly name?: OPTIONAL<UnboundedDirectoryString[]>,
         /**
          * @summary `description`.
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<UnboundedDirectoryString>,
+        readonly description?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary `obsolete`.
          * @public
          * @readonly
          */
-        readonly obsolete: OPTIONAL<BOOLEAN>,
+        readonly obsolete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `information`.
          * @public
          * @readonly
          */
-        readonly information: OPTIONAL<UnboundedDirectoryString>,
+        readonly information?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

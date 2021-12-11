@@ -47,25 +47,25 @@ export class SimpleCredentials_validity {
          * @public
          * @readonly
          */
-        readonly time1: OPTIONAL<SimpleCredentials_validity_time1>,
+        readonly time1?: OPTIONAL<SimpleCredentials_validity_time1>,
         /**
          * @summary `time2`.
          * @public
          * @readonly
          */
-        readonly time2: OPTIONAL<SimpleCredentials_validity_time2>,
+        readonly time2?: OPTIONAL<SimpleCredentials_validity_time2>,
         /**
          * @summary `random1`.
          * @public
          * @readonly
          */
-        readonly random1: OPTIONAL<BIT_STRING>,
+        readonly random1?: OPTIONAL<BIT_STRING>,
         /**
          * @summary `random2`.
          * @public
          * @readonly
          */
-        readonly random2: OPTIONAL<BIT_STRING>
+        readonly random2?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

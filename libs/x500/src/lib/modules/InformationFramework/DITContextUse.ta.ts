@@ -39,13 +39,13 @@ export class DITContextUse {
          * @public
          * @readonly
          */
-        readonly mandatoryContexts: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly mandatoryContexts?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `optionalContexts`.
          * @public
          * @readonly
          */
-        readonly optionalContexts: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly optionalContexts?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

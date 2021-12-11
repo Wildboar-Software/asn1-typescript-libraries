@@ -70,13 +70,13 @@ export class SecurityErrorData {
          * @public
          * @readonly
          */
-        readonly spkmInfo: OPTIONAL<SPKM_ERROR>,
+        readonly spkmInfo?: OPTIONAL<SPKM_ERROR>,
         /**
          * @summary `encPwdInfo`.
          * @public
          * @readonly
          */
-        readonly encPwdInfo: OPTIONAL<EncPwdInfo>,
+        readonly encPwdInfo?: OPTIONAL<EncPwdInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -88,25 +88,25 @@ export class SecurityErrorData {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `performer`.
          * @public
          * @readonly
          */
-        readonly performer: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasDereferenced`.
          * @public
          * @readonly
          */
-        readonly aliasDereferenced: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `notification`.
          * @public
          * @readonly
          */
-        readonly notification: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
+        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
     ) {}
 
     /**

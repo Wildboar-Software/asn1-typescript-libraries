@@ -53,25 +53,25 @@ export class ObjectClassInformation {
          * @public
          * @readonly
          */
-        readonly subclassOf: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly subclassOf?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `kind`.
          * @public
          * @readonly
          */
-        readonly kind: OPTIONAL<ObjectClassKind>,
+        readonly kind?: OPTIONAL<ObjectClassKind>,
         /**
          * @summary `mandatories`.
          * @public
          * @readonly
          */
-        readonly mandatories: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly mandatories?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `optionals`.
          * @public
          * @readonly
          */
-        readonly optionals: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly optionals?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

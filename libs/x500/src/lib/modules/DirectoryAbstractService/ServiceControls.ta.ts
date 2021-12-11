@@ -122,55 +122,55 @@ export class ServiceControls {
          * @public
          * @readonly
          */
-        readonly options: OPTIONAL<ServiceControlOptions>,
+        readonly options?: OPTIONAL<ServiceControlOptions>,
         /**
          * @summary `priority`.
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<ServiceControls_priority>,
+        readonly priority?: OPTIONAL<ServiceControls_priority>,
         /**
          * @summary `timeLimit`.
          * @public
          * @readonly
          */
-        readonly timeLimit: OPTIONAL<INTEGER>,
+        readonly timeLimit?: OPTIONAL<INTEGER>,
         /**
          * @summary `sizeLimit`.
          * @public
          * @readonly
          */
-        readonly sizeLimit: OPTIONAL<INTEGER>,
+        readonly sizeLimit?: OPTIONAL<INTEGER>,
         /**
          * @summary `scopeOfReferral`.
          * @public
          * @readonly
          */
-        readonly scopeOfReferral: OPTIONAL<ServiceControls_scopeOfReferral>,
+        readonly scopeOfReferral?: OPTIONAL<ServiceControls_scopeOfReferral>,
         /**
          * @summary `attributeSizeLimit`.
          * @public
          * @readonly
          */
-        readonly attributeSizeLimit: OPTIONAL<INTEGER>,
+        readonly attributeSizeLimit?: OPTIONAL<INTEGER>,
         /**
          * @summary `manageDSAITPlaneRef`.
          * @public
          * @readonly
          */
-        readonly manageDSAITPlaneRef: OPTIONAL<ServiceControls_manageDSAITPlaneRef>,
+        readonly manageDSAITPlaneRef?: OPTIONAL<ServiceControls_manageDSAITPlaneRef>,
         /**
          * @summary `serviceType`.
          * @public
          * @readonly
          */
-        readonly serviceType: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `userClass`.
          * @public
          * @readonly
          */
-        readonly userClass: OPTIONAL<INTEGER>,
+        readonly userClass?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -111,7 +111,7 @@ export class LinkedArgumentData extends CommonArgumentsSeq {
          * @public
          * @readonly
          */
-        readonly returnToClient: OPTIONAL<BOOLEAN>,
+        readonly returnToClient?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -123,73 +123,73 @@ export class LinkedArgumentData extends CommonArgumentsSeq {
          * @public
          * @readonly
          */
-        readonly serviceControls: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
+        readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `requestor`.
          * @public
          * @readonly
          */
-        readonly requestor: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        readonly operationProgress: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
+        readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasedRDNs`.
          * @public
          * @readonly
          */
-        readonly aliasedRDNs: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
+        readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
         /**
          * @summary `criticalExtensions`.
          * @public
          * @readonly
          */
-        readonly criticalExtensions: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
+        readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
         /**
          * @summary `referenceType`.
          * @public
          * @readonly
          */
-        readonly referenceType: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
+        readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entryOnly`.
          * @public
          * @readonly
          */
-        readonly entryOnly: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        readonly exclusions: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
+        readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        readonly nameResolveOnMaster: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationContexts`.
          * @public
          * @readonly
          */
-        readonly operationContexts: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
+        readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
     ) {
         super(
             serviceControls,

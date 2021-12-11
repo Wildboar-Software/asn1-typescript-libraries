@@ -70,6 +70,7 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta";
+import { MasterOrShadowAccessPoint } from "./MasterOrShadowAccessPoint.ta";
 
 /* START_OF_SYMBOL_DEFINITION AccessPointInformation */
 /**
@@ -87,7 +88,7 @@ export {
  *
  * @class
  */
-export class AccessPointInformation {
+export class AccessPointInformation extends MasterOrShadowAccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
@@ -106,7 +107,7 @@ export class AccessPointInformation {
          * @public
          * @readonly
          */
-        readonly protocolInformation: OPTIONAL<
+        readonly protocolInformation?: OPTIONAL<
             ProtocolInformation[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -114,26 +115,34 @@ export class AccessPointInformation {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<MasterOrShadowAccessPoint_category> /* REPLICATED_COMPONENT */,
+        readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category> /* REPLICATED_COMPONENT */,
         /**
          * @summary `chainingRequired`.
          * @public
          * @readonly
          */
-        readonly chainingRequired: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly chainingRequired?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `additionalPoints`.
          * @public
          * @readonly
          */
-        readonly additionalPoints: OPTIONAL<MasterAndShadowAccessPoints>,
+        readonly additionalPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
         /**
          * @summary Extensions that are not recognized.
          * @public
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(
+            ae_title,
+            address,
+            protocolInformation,
+            category,
+            chainingRequired,
+        );
+    }
 
     /**
      * @summary Restructures an object into a AccessPointInformation

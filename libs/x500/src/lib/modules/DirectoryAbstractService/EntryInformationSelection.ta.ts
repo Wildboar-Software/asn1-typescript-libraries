@@ -96,37 +96,37 @@ export class EntryInformationSelection {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<EntryInformationSelection_attributes>,
+        readonly attributes?: OPTIONAL<EntryInformationSelection_attributes>,
         /**
          * @summary `infoTypes`.
          * @public
          * @readonly
          */
-        readonly infoTypes: OPTIONAL<EntryInformationSelection_infoTypes>,
+        readonly infoTypes?: OPTIONAL<EntryInformationSelection_infoTypes>,
         /**
          * @summary `extraAttributes`.
          * @public
          * @readonly
          */
-        readonly extraAttributes: OPTIONAL<EntryInformationSelection_extraAttributes>,
+        readonly extraAttributes?: OPTIONAL<EntryInformationSelection_extraAttributes>,
         /**
          * @summary `contextSelection`.
          * @public
          * @readonly
          */
-        readonly contextSelection: OPTIONAL<ContextSelection>,
+        readonly contextSelection?: OPTIONAL<ContextSelection>,
         /**
          * @summary `returnContexts`.
          * @public
          * @readonly
          */
-        readonly returnContexts: OPTIONAL<BOOLEAN>,
+        readonly returnContexts?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `familyReturn`.
          * @public
          * @readonly
          */
-        readonly familyReturn: OPTIONAL<FamilyReturn>
+        readonly familyReturn?: OPTIONAL<FamilyReturn>
     ) {}
 
     /**

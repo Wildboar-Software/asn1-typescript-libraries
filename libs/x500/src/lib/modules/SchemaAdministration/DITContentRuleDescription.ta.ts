@@ -24,6 +24,7 @@ export {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+import { DITContentRule } from "../InformationFramework/DITContentRule.ta";
 
 /* START_OF_SYMBOL_DEFINITION DITContentRuleDescription */
 /**
@@ -43,7 +44,7 @@ export {
  *
  * @class
  */
-export class DITContentRuleDescription {
+export class DITContentRuleDescription extends DITContentRule {
     constructor(
         /**
          * @summary `structuralObjectClass`.
@@ -56,7 +57,7 @@ export class DITContentRuleDescription {
          * @public
          * @readonly
          */
-        readonly auxiliaries: OPTIONAL<
+        readonly auxiliaries?: OPTIONAL<
             OBJECT_IDENTIFIER[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -64,7 +65,7 @@ export class DITContentRuleDescription {
          * @public
          * @readonly
          */
-        readonly mandatory: OPTIONAL<
+        readonly mandatory?: OPTIONAL<
             OBJECT_IDENTIFIER[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -72,7 +73,7 @@ export class DITContentRuleDescription {
          * @public
          * @readonly
          */
-        readonly optional: OPTIONAL<
+        readonly optional?: OPTIONAL<
             OBJECT_IDENTIFIER[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -80,7 +81,7 @@ export class DITContentRuleDescription {
          * @public
          * @readonly
          */
-        readonly precluded: OPTIONAL<
+        readonly precluded?: OPTIONAL<
             OBJECT_IDENTIFIER[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -88,26 +89,34 @@ export class DITContentRuleDescription {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<UnboundedDirectoryString[]>,
+        readonly name?: OPTIONAL<UnboundedDirectoryString[]>,
         /**
          * @summary `description`.
          * @public
          * @readonly
          */
-        readonly description: OPTIONAL<UnboundedDirectoryString>,
+        readonly description?: OPTIONAL<UnboundedDirectoryString>,
         /**
          * @summary `obsolete`.
          * @public
          * @readonly
          */
-        readonly obsolete: OPTIONAL<BOOLEAN>,
+        readonly obsolete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(
+            structuralObjectClass,
+            auxiliaries,
+            mandatory,
+            optional,
+            precluded,
+        );
+    }
 
     /**
      * @summary Restructures an object into a DITContentRuleDescription

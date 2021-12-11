@@ -56,13 +56,13 @@ export class ModifiedValidity {
          * @public
          * @readonly
          */
-        readonly validFrom: OPTIONAL<ModifiedValidity_validFrom>,
+        readonly validFrom?: OPTIONAL<ModifiedValidity_validFrom>,
         /**
          * @summary `validUntil`.
          * @public
          * @readonly
          */
-        readonly validUntil: OPTIONAL<ModifiedValidity_validUntil>,
+        readonly validUntil?: OPTIONAL<ModifiedValidity_validUntil>,
         /**
          * @summary Extensions that are not recognized.
          * @public

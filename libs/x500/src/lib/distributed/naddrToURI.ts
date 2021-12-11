@@ -51,3 +51,5 @@ function naddrToURI (naddr: OCTET_STRING): string | undefined {
     }
     }
 }
+
+export default naddrToURI;

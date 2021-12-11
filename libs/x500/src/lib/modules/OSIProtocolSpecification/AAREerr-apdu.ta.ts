@@ -173,37 +173,37 @@ export class AAREerr_apdu {
          * @public
          * @readonly
          */
-        readonly responding_AP_title: OPTIONAL<Name>,
+        readonly responding_AP_title?: OPTIONAL<Name>,
         /**
          * @summary `responding_AE_qualifier`.
          * @public
          * @readonly
          */
-        readonly responding_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
+        readonly responding_AE_qualifier?: OPTIONAL<RelativeDistinguishedName>,
         /**
          * @summary `responding_AP_invocation_identifier`.
          * @public
          * @readonly
          */
-        readonly responding_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
+        readonly responding_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>,
         /**
          * @summary `responding_AE_invocation_identifier`.
          * @public
          * @readonly
          */
-        readonly responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
+        readonly responding_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>,
         /**
          * @summary `implementation_information`.
          * @public
          * @readonly
          */
-        readonly implementation_information: OPTIONAL<Implementation_data>,
+        readonly implementation_information?: OPTIONAL<Implementation_data>,
         /**
          * @summary `user_information`.
          * @public
          * @readonly
          */
-        readonly user_information: OPTIONAL<Association_informationBindErr>
+        readonly user_information?: OPTIONAL<Association_informationBindErr>
     ) {}
 
     /**

@@ -80,7 +80,7 @@ export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters>
+        readonly securityParameters?: OPTIONAL<SecurityParameters>
     ) {}
 
     /**

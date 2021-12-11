@@ -55,13 +55,13 @@ export class DSABindArgument {
          * @public
          * @readonly
          */
-        readonly credentials: OPTIONAL<DSACredentials>,
+        readonly credentials?: OPTIONAL<DSACredentials>,
         /**
          * @summary `versions`.
          * @public
          * @readonly
          */
-        readonly versions: OPTIONAL<Versions>,
+        readonly versions?: OPTIONAL<Versions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

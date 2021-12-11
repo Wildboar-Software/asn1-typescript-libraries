@@ -73,7 +73,7 @@ export class AccessPoint {
          * @public
          * @readonly
          */
-        readonly protocolInformation: OPTIONAL<ProtocolInformation[]>,
+        readonly protocolInformation?: OPTIONAL<ProtocolInformation[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

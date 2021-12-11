@@ -75,13 +75,13 @@ export class SubtreeSpecification {
          * @public
          * @readonly
          */
-        readonly base: OPTIONAL<LocalName>,
+        readonly base?: OPTIONAL<LocalName>,
         /**
          * @summary `specificExclusions`.
          * @public
          * @readonly
          */
-        readonly specificExclusions: OPTIONAL<
+        readonly specificExclusions?: OPTIONAL<
             ChopSpecification_specificExclusions_Item[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -89,19 +89,19 @@ export class SubtreeSpecification {
          * @public
          * @readonly
          */
-        readonly minimum: OPTIONAL<BaseDistance> /* REPLICATED_COMPONENT */,
+        readonly minimum?: OPTIONAL<BaseDistance> /* REPLICATED_COMPONENT */,
         /**
          * @summary `maximum`.
          * @public
          * @readonly
          */
-        readonly maximum: OPTIONAL<BaseDistance> /* REPLICATED_COMPONENT */,
+        readonly maximum?: OPTIONAL<BaseDistance> /* REPLICATED_COMPONENT */,
         /**
          * @summary `specificationFilter`.
          * @public
          * @readonly
          */
-        readonly specificationFilter: OPTIONAL<Refinement>,
+        readonly specificationFilter?: OPTIONAL<Refinement>,
         /**
          * @summary Extensions that are not recognized.
          * @public

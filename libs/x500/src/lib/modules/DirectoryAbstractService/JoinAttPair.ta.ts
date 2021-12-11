@@ -62,7 +62,7 @@ export class JoinAttPair {
          * @public
          * @readonly
          */
-        readonly joinContext: OPTIONAL<JoinContextType[]>,
+        readonly joinContext?: OPTIONAL<JoinContextType[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

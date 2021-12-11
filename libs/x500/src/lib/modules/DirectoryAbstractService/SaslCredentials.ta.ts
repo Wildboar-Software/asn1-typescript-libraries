@@ -49,13 +49,13 @@ export class SaslCredentials {
          * @public
          * @readonly
          */
-        readonly credentials: OPTIONAL<OCTET_STRING>,
+        readonly credentials?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `saslAbort`.
          * @public
          * @readonly
          */
-        readonly saslAbort: OPTIONAL<BOOLEAN>,
+        readonly saslAbort?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

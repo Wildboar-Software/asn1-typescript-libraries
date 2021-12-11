@@ -60,6 +60,9 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta";
+import {
+    AccessPoint,
+} from "./AccessPoint.ta";
 
 /* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint */
 /**
@@ -82,7 +85,7 @@ export {
  *
  * @class
  */
-export class MasterOrShadowAccessPoint {
+export class MasterOrShadowAccessPoint extends AccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
@@ -101,7 +104,7 @@ export class MasterOrShadowAccessPoint {
          * @public
          * @readonly
          */
-        readonly protocolInformation: OPTIONAL<
+        readonly protocolInformation?: OPTIONAL<
             ProtocolInformation[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -109,20 +112,26 @@ export class MasterOrShadowAccessPoint {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<MasterOrShadowAccessPoint_category>,
+        readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category>,
         /**
          * @summary `chainingRequired`.
          * @public
          * @readonly
          */
-        readonly chainingRequired: OPTIONAL<BOOLEAN>,
+        readonly chainingRequired?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(
+            ae_title,
+            address,
+            protocolInformation,
+        );
+    }
 
     /**
      * @summary Restructures an object into a MasterOrShadowAccessPoint

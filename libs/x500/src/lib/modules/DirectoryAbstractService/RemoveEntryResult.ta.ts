@@ -57,10 +57,15 @@ let _cached_decoder_for_RemoveEntryResult: $.ASN1Decoder<RemoveEntryResult> | nu
  */
 export function _decode_RemoveEntryResult(el: _Element) {
     if (!_cached_decoder_for_RemoveEntryResult) {
-        _cached_decoder_for_RemoveEntryResult = $._decode_extensible_choice<RemoveEntryResult>(
+        /**
+         * NOTE: This was manually modified to use `_decode_inextensible_choice`
+         * because `RemoveEntryResult` actually cannot be extended, because
+         * `OPTIONALLY-PROTECTED-SEQ` occupies every single tag type.
+         */
+        _cached_decoder_for_RemoveEntryResult = $._decode_inextensible_choice<RemoveEntryResult>(
             {
                 "UNIVERSAL 5": ["null_", $._decodeNull],
-                "CONTEXT 0": [
+                "*": [
                     "information",
                     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ<RemoveEntryResultData>(
                         _decode_RemoveEntryResultData
