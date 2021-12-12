@@ -162,85 +162,85 @@ export class SearchArgumentData extends CommonArguments {
          * @public
          * @readonly
          */
-        readonly subset: OPTIONAL<SearchArgumentData_subset>,
+        readonly subset?: OPTIONAL<SearchArgumentData_subset>,
         /**
          * @summary `filter`.
          * @public
          * @readonly
          */
-        readonly filter: OPTIONAL<Filter>,
+        readonly filter?: OPTIONAL<Filter>,
         /**
          * @summary `searchAliases`.
          * @public
          * @readonly
          */
-        readonly searchAliases: OPTIONAL<BOOLEAN>,
+        readonly searchAliases?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `selection`.
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<EntryInformationSelection>,
+        readonly selection?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `pagedResults`.
          * @public
          * @readonly
          */
-        readonly pagedResults: OPTIONAL<PagedResultsRequest>,
+        readonly pagedResults?: OPTIONAL<PagedResultsRequest>,
         /**
          * @summary `matchedValuesOnly`.
          * @public
          * @readonly
          */
-        readonly matchedValuesOnly: OPTIONAL<BOOLEAN>,
+        readonly matchedValuesOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extendedFilter`.
          * @public
          * @readonly
          */
-        readonly extendedFilter: OPTIONAL<Filter>,
+        readonly extendedFilter?: OPTIONAL<Filter>,
         /**
          * @summary `checkOverspecified`.
          * @public
          * @readonly
          */
-        readonly checkOverspecified: OPTIONAL<BOOLEAN>,
+        readonly checkOverspecified?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `relaxation`.
          * @public
          * @readonly
          */
-        readonly relaxation: OPTIONAL<RelaxationPolicy>,
+        readonly relaxation?: OPTIONAL<RelaxationPolicy>,
         /**
          * @summary `extendedArea`.
          * @public
          * @readonly
          */
-        readonly extendedArea: OPTIONAL<INTEGER>,
+        readonly extendedArea?: OPTIONAL<INTEGER>,
         /**
          * @summary `hierarchySelections`.
          * @public
          * @readonly
          */
-        readonly hierarchySelections: OPTIONAL<HierarchySelections>,
+        readonly hierarchySelections?: OPTIONAL<HierarchySelections>,
         /**
          * @summary `searchControlOptions`.
          * @public
          * @readonly
          */
-        readonly searchControlOptions: OPTIONAL<SearchControlOptions>,
+        readonly searchControlOptions?: OPTIONAL<SearchControlOptions>,
         /**
          * @summary `joinArguments`.
          * @public
          * @readonly
          */
-        readonly joinArguments: OPTIONAL<JoinArgument[]>,
+        readonly joinArguments?: OPTIONAL<JoinArgument[]>,
         /**
          * @summary `joinType`.
          * @public
          * @readonly
          */
-        readonly joinType: OPTIONAL<SearchArgumentData_joinType>,
+        readonly joinType?: OPTIONAL<SearchArgumentData_joinType>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -252,73 +252,73 @@ export class SearchArgumentData extends CommonArguments {
          * @public
          * @readonly
          */
-        readonly serviceControls: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
+        readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        readonly securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `requestor`.
          * @public
          * @readonly
          */
-        readonly requestor: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        readonly operationProgress: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
+        readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasedRDNs`.
          * @public
          * @readonly
          */
-        readonly aliasedRDNs: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
+        readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
         /**
          * @summary `criticalExtensions`.
          * @public
          * @readonly
          */
-        readonly criticalExtensions: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
+        readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
         /**
          * @summary `referenceType`.
          * @public
          * @readonly
          */
-        readonly referenceType: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
+        readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entryOnly`.
          * @public
          * @readonly
          */
-        readonly entryOnly: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        readonly exclusions: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
+        readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        readonly nameResolveOnMaster: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationContexts`.
          * @public
          * @readonly
          */
-        readonly operationContexts: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
+        readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        readonly familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
     ) {
         super(
             serviceControls,
