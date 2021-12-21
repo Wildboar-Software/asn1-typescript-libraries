@@ -128,6 +128,8 @@ interface EvaluateFilterSettings {
      * and one for a potential parent attribute type. This function returns a
      * `boolean` indicating whether the attribute type is a subtype of `parent`.
      *
+     * WARNING: This MUST also return `true` if the types are equal.
+     *
      * @readonly
      * @property
      */
@@ -247,7 +249,10 @@ function evaluateEquality (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        ava.type_,
+        ...(options.getFriends?.(ava.type_) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
@@ -312,7 +317,10 @@ function evaluateApprox (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        ava.type_,
+        ...(options.getFriends?.(ava.type_) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
@@ -378,7 +386,10 @@ function evaluateOrdering (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        ava.type_,
+        ...(options.getFriends?.(ava.type_) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
@@ -464,7 +475,10 @@ function evaluateSubstring (
         })
         .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
     const matchedValues: MatchedValue[] = [];
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(sub.type_) ?? [ sub.type_ ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        sub.type_,
+        ...(options.getFriends?.(sub.type_) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     for (const attr of relevantAttributes) {
@@ -508,7 +522,10 @@ function evaluateAttributePresence (
     options: EvaluateFilterSettings,
 ): boolean {
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(attributeType) ?? [ attributeType ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        attributeType,
+        ...(options.getFriends?.(attributeType) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     return relevantAttributes.some((attr: Attribute) => options.permittedToMatch(attr.type_));
@@ -555,8 +572,11 @@ function evaluateMatchingRuleAssertion (
      */
     const attributes = getAttributesFromEntry(entry, options.dnAttribute || mra.dnAttributes);
     const friendTypes: OBJECT_IDENTIFIER[] = mra.type_
-        ? options.getFriends?.(mra.type_) ?? [ mra.type_ ]
-        : [ mra.type_ ];
+        ? [
+            mra.type_,
+            ...(options.getFriends?.(mra.type_) ?? []),
+        ]
+        : [];
     /**
      * From ITU Recommendation X.511, Section 7.8.2.g:
      *
@@ -629,7 +649,10 @@ function evaluateAttributeTypeAssertion (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ata.type_) ?? [ ata.type_ ];
+    const friendTypes: OBJECT_IDENTIFIER[] = [
+        ata.type_,
+        ...(options.getFriends?.(ata.type_) ?? []),
+    ];
     const relevantAttributes = attributes
         .filter((attr): boolean =>
             options.permittedToMatch(attr.type_)
