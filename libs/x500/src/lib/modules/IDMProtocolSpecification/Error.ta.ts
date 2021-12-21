@@ -6,7 +6,11 @@ import {
     INTEGER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import {
+    Code,
+    _encode_Code,
+    _decode_Code,
+} from "../CommonProtocolSpecification/Code.ta";
 
 /* START_OF_SYMBOL_DEFINITION Error */
 /**
@@ -38,7 +42,7 @@ export class Error {
          * @public
          * @readonly
          */
-        readonly errcode: _Element,
+        readonly errcode: Code,
         /**
          * @summary `error`.
          * @public
@@ -148,10 +152,10 @@ export function _decode_Error(el: _Element) {
             sequence[1].name = "errcode";
             sequence[2].name = "error";
             let invokeID!: INTEGER;
-            let errcode!: _Element;
+            let errcode!: Code;
             let error!: _Element;
             invokeID = $._decodeInteger(sequence[0]);
-            errcode = $._decodeAny(sequence[1]);
+            errcode = _decode_Code(sequence[1]);
             error = $._decodeAny(sequence[2]);
             return new Error(invokeID, errcode, error, sequence.slice(3));
         };
@@ -186,7 +190,7 @@ export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>) {
                                 value.invokeID,
                                 $.BER
                             ),
-                            /* REQUIRED   */ $._encodeAny(value.errcode, $.BER),
+                            /* REQUIRED   */ _encode_Code(value.errcode, $.BER),
                             /* REQUIRED   */ $._encodeAny(value.error, $.BER),
                         ],
                         value._unrecognizedExtensionsList

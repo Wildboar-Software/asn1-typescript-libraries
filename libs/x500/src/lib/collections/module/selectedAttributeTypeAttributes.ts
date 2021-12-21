@@ -43,6 +43,9 @@ export { localityName } from "../../modules/SelectedAttributeTypes/localityName.
 export { member } from "../../modules/SelectedAttributeTypes/member.oa";
 export { name } from "../../modules/SelectedAttributeTypes/name.oa";
 export { objectIdentifier } from "../../modules/SelectedAttributeTypes/objectIdentifier.oa";
+export { oidC } from "../../modules/SelectedAttributeTypes/oidC.oa";
+export { oidC1 } from "../../modules/SelectedAttributeTypes/oidC1.oa";
+export { oidC2 } from "../../modules/SelectedAttributeTypes/oidC2.oa";
 export { organizationalUnitName } from "../../modules/SelectedAttributeTypes/organizationalUnitName.oa";
 export { organizationIdentifier } from "../../modules/SelectedAttributeTypes/organizationIdentifier.oa";
 export { organizationName } from "../../modules/SelectedAttributeTypes/organizationName.oa";

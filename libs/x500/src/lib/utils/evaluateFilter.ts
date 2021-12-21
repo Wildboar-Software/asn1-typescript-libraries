@@ -134,6 +134,17 @@ interface EvaluateFilterSettings {
     readonly isAttributeSubtype: (attributeType: OBJECT_IDENTIFIER, parentType: OBJECT_IDENTIFIER) => boolean;
 
     /**
+     * A function that accepts an attribute type and returns an array of object
+     * identifiers of all attribute types that are friends. If the
+     * `dontMatchFriends` option is used, this should always return an empty
+     * array.
+     *
+     * @readonly
+     * @property
+     */
+    readonly getFriends?: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[];
+
+    /**
      * A function that accepts an attribute description and optionally an
      * attribute value. If only an attribute type is supplied, this function
      * returns a `boolean` indicating whether the user is permitted to filter
@@ -236,8 +247,9 @@ function evaluateEquality (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
@@ -300,8 +312,9 @@ function evaluateApprox (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
@@ -365,8 +378,9 @@ function evaluateOrdering (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ava.type_) ?? [ ava.type_ ];
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, ava.type_));
+        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
@@ -450,8 +464,9 @@ function evaluateSubstring (
         })
         .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
     const matchedValues: MatchedValue[] = [];
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(sub.type_) ?? [ sub.type_ ];
     const relevantAttributes = attributes
-        .filter((attr): boolean => options.isAttributeSubtype(attr.type_, sub.type_));
+        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     for (const attr of relevantAttributes) {
         for (const value of attr.values) {
             if (assertions.every(([ assertion, selection ]) => (
@@ -493,10 +508,10 @@ function evaluateAttributePresence (
     options: EvaluateFilterSettings,
 ): boolean {
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    return attributes.some((attr: Attribute): boolean => (
-        options.permittedToMatch(attr.type_)
-        && attr.type_.isEqualTo(attributeType)
-    ));
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(attributeType) ?? [ attributeType ];
+    const relevantAttributes = attributes
+        .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
+    return relevantAttributes.some((attr: Attribute) => options.permittedToMatch(attr.type_));
 }
 
 export
@@ -510,7 +525,7 @@ function evaluateMatchingRuleAssertion (
     }
     if (mra.matchingRule.length !== 1) {
         if (options.performExactly) {
-            throw new Error(
+            throw new CannotPerformExactly(
                 "FFC8B875-4CE5-4FC8-B84A-2D10D9AC4AA1: CANNOT_PERFORM_EXACTLY_TOO_MANY_MATCHING_RULES: "
                 + mra.matchingRule.map((mr) => mr.toString()).join(", ")
             );
@@ -525,7 +540,7 @@ function evaluateMatchingRuleAssertion (
     );
     if (!matcher) {
         if (options.performExactly) {
-            throw new Error(
+            throw new CannotPerformExactly(
                 "7F3567B5-59F4-407C-81C5-4AF37D58559A: CANNOT_PERFORM_EXACTLY_UNRECOGNIZED_MATCHING_RULE: "
                 + mra.matchingRule[0].toString()
             );
@@ -539,6 +554,9 @@ function evaluateMatchingRuleAssertion (
      * > specification in extensibleMatch filter items.
      */
     const attributes = getAttributesFromEntry(entry, options.dnAttribute || mra.dnAttributes);
+    const friendTypes: OBJECT_IDENTIFIER[] = mra.type_
+        ? options.getFriends?.(mra.type_) ?? [ mra.type_ ]
+        : [ mra.type_ ];
     /**
      * From ITU Recommendation X.511, Section 7.8.2.g:
      *
@@ -547,7 +565,7 @@ function evaluateMatchingRuleAssertion (
      */
     const relevantAttributes = ((mra.type_)
         ? attributes
-            .filter((attr): boolean => options.isAttributeSubtype(attr.type_, mra.type_!))
+            .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)))
         : attributes
             .filter((attr: Attribute): boolean => options.isMatchingRuleCompatibleWithAttributeType(
                 mra.matchingRule[0],
@@ -611,10 +629,11 @@ function evaluateAttributeTypeAssertion (
         return undefined;
     }
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
+    const friendTypes: OBJECT_IDENTIFIER[] = options.getFriends?.(ata.type_) ?? [ ata.type_ ];
     const relevantAttributes = attributes
         .filter((attr): boolean =>
             options.permittedToMatch(attr.type_)
-            && options.isAttributeSubtype(attr.type_, ata.type_)
+            && friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f))
         );
     if (relevantAttributes.length === 0) {
         return false;
@@ -729,11 +748,14 @@ function evaluateFilter (
         for (let i = 0; i < family.length; i++) {
             const member = family[i];
             const result = evaluateFilterItem(filter.item, member, options);
-            if (!result) {
+            if (result === false) {
+                continue;
+            }
+            if (result === undefined) {
                 undefinedResultFound = true;
                 continue;
             }
-            if (typeof result === "boolean") {
+            if (result === true) {
                 matched = true;
                 continue;
             }
