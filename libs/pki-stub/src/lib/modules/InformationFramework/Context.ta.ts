@@ -45,7 +45,7 @@ export class Context {
          * @public
          * @readonly
          */
-        readonly fallback: OPTIONAL<BOOLEAN>,
+        readonly fallback?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -133,7 +133,7 @@ export class IssuerSerial {
          * @public
          * @readonly
          */
-        readonly issuerUID: OPTIONAL<UniqueIdentifier>,
+        readonly issuerUID?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary Extensions that are not recognized.
          * @public

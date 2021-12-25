@@ -209,7 +209,7 @@ export class TBSCertAVL {
          * @public
          * @readonly
          */
-        readonly avlExtensions: OPTIONAL<Extensions>
+        readonly avlExtensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

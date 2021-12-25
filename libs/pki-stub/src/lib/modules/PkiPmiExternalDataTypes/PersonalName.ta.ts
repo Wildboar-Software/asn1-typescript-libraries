@@ -40,19 +40,19 @@ export class PersonalName {
          * @public
          * @readonly
          */
-        readonly given_name: OPTIONAL<PrintableString>,
+        readonly given_name?: OPTIONAL<PrintableString>,
         /**
          * @summary `initials`.
          * @public
          * @readonly
          */
-        readonly initials: OPTIONAL<PrintableString>,
+        readonly initials?: OPTIONAL<PrintableString>,
         /**
          * @summary `generation_qualifier`.
          * @public
          * @readonly
          */
-        readonly generation_qualifier: OPTIONAL<PrintableString>
+        readonly generation_qualifier?: OPTIONAL<PrintableString>
     ) {}
 
     /**

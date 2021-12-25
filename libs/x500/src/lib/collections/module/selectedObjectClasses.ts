@@ -16,7 +16,7 @@ export { certificationAuthority } from "../../modules/SelectedObjectClasses/cert
 export { certificationAuthority_V2 } from "../../modules/SelectedObjectClasses/certificationAuthority-V2.oa";
 export { groupOfUniqueNames } from "../../modules/SelectedObjectClasses/groupOfUniqueNames.oa";
 export { userSecurityInformation } from "../../modules/SelectedObjectClasses/userSecurityInformation.oa";
-export { dMD } from "../../modules/SelectedObjectClasses/dmd.oa";
+export { dMD } from "../../modules/SelectedObjectClasses/dMD.oa";
 export { oidC1obj } from "../../modules/SelectedObjectClasses/oidC1obj.oa";
 export { oidC2obj } from "../../modules/SelectedObjectClasses/oidC2obj.oa";
 export { oidCobj } from "../../modules/SelectedObjectClasses/oidCobj.oa";

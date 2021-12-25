@@ -227,7 +227,7 @@ export class TBSAttributeCertificate {
          * @public
          * @readonly
          */
-        readonly issuerUniqueID: OPTIONAL<UniqueIdentifier>,
+        readonly issuerUniqueID?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary Extensions that are not recognized.
          * @public
@@ -239,7 +239,7 @@ export class TBSAttributeCertificate {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

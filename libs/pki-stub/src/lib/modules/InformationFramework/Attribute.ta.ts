@@ -56,7 +56,7 @@ export class Attribute {
          * @public
          * @readonly
          */
-        readonly valuesWithContext: OPTIONAL<
+        readonly valuesWithContext?: OPTIONAL<
             Attribute_valuesWithContext_Item[]
         >,
         /**

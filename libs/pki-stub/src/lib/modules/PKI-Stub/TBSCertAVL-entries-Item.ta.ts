@@ -118,13 +118,13 @@ export class TBSCertAVL_entries_Item {
          * @public
          * @readonly
          */
-        readonly scope: OPTIONAL<ScopeRestrictions>,
+        readonly scope?: OPTIONAL<ScopeRestrictions>,
         /**
          * @summary `entryExtensions`.
          * @public
          * @readonly
          */
-        readonly entryExtensions: OPTIONAL<Extensions>,
+        readonly entryExtensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

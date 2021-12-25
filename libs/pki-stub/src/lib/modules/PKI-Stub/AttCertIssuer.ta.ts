@@ -124,19 +124,19 @@ export class AttCertIssuer {
          * @public
          * @readonly
          */
-        readonly issuerName: OPTIONAL<GeneralNames>,
+        readonly issuerName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `baseCertificateID`.
          * @public
          * @readonly
          */
-        readonly baseCertificateID: OPTIONAL<IssuerSerial>,
+        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
         /**
          * @summary `objectDigestInfo`.
          * @public
          * @readonly
          */
-        readonly objectDigestInfo: OPTIONAL<ObjectDigestInfo>,
+        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

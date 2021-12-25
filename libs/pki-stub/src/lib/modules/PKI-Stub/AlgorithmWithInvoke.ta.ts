@@ -99,13 +99,13 @@ export class AlgorithmWithInvoke {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>,
+        readonly parameters?: OPTIONAL<_Element>,
         /**
          * @summary `dynamParms`.
          * @public
          * @readonly
          */
-        readonly dynamParms: OPTIONAL<_Element>,
+        readonly dynamParms?: OPTIONAL<_Element>,
         /**
          * @summary Extensions that are not recognized.
          * @public

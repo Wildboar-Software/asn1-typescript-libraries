@@ -66,13 +66,13 @@ export class ORAddress {
          * @public
          * @readonly
          */
-        readonly built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>,
+        readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
         /**
          * @summary `extension_attributes`.
          * @public
          * @readonly
          */
-        readonly extension_attributes: OPTIONAL<ExtensionAttributes>
+        readonly extension_attributes?: OPTIONAL<ExtensionAttributes>
     ) {}
 
     /**

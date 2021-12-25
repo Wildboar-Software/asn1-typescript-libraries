@@ -129,55 +129,55 @@ export class BuiltInStandardAttributes {
          * @public
          * @readonly
          */
-        readonly country_name: OPTIONAL<CountryName>,
+        readonly country_name?: OPTIONAL<CountryName>,
         /**
          * @summary `administration_domain_name`.
          * @public
          * @readonly
          */
-        readonly administration_domain_name: OPTIONAL<AdministrationDomainName>,
+        readonly administration_domain_name?: OPTIONAL<AdministrationDomainName>,
         /**
          * @summary `network_address`.
          * @public
          * @readonly
          */
-        readonly network_address: OPTIONAL<NetworkAddress>,
+        readonly network_address?: OPTIONAL<NetworkAddress>,
         /**
          * @summary `terminal_identifier`.
          * @public
          * @readonly
          */
-        readonly terminal_identifier: OPTIONAL<TerminalIdentifier>,
+        readonly terminal_identifier?: OPTIONAL<TerminalIdentifier>,
         /**
          * @summary `private_domain_name`.
          * @public
          * @readonly
          */
-        readonly private_domain_name: OPTIONAL<PrivateDomainName>,
+        readonly private_domain_name?: OPTIONAL<PrivateDomainName>,
         /**
          * @summary `organization_name`.
          * @public
          * @readonly
          */
-        readonly organization_name: OPTIONAL<OrganizationName>,
+        readonly organization_name?: OPTIONAL<OrganizationName>,
         /**
          * @summary `numeric_user_identifier`.
          * @public
          * @readonly
          */
-        readonly numeric_user_identifier: OPTIONAL<NumericUserIdentifier>,
+        readonly numeric_user_identifier?: OPTIONAL<NumericUserIdentifier>,
         /**
          * @summary `personal_name`.
          * @public
          * @readonly
          */
-        readonly personal_name: OPTIONAL<PersonalName>,
+        readonly personal_name?: OPTIONAL<PersonalName>,
         /**
          * @summary `organizational_unit_names`.
          * @public
          * @readonly
          */
-        readonly organizational_unit_names: OPTIONAL<OrganizationalUnitNames>
+        readonly organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>
     ) {}
 
     /**

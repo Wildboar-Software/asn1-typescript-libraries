@@ -123,19 +123,19 @@ export class Holder {
          * @public
          * @readonly
          */
-        readonly baseCertificateID: OPTIONAL<IssuerSerial>,
+        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
         /**
          * @summary `entityName`.
          * @public
          * @readonly
          */
-        readonly entityName: OPTIONAL<GeneralNames>,
+        readonly entityName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `objectDigestInfo`.
          * @public
          * @readonly
          */
-        readonly objectDigestInfo: OPTIONAL<ObjectDigestInfo>
+        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
     ) {}
 
     /**

@@ -228,19 +228,19 @@ export class TBSCertificate {
          * @public
          * @readonly
          */
-        readonly issuerUniqueIdentifier: OPTIONAL<UniqueIdentifier>,
+        readonly issuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `subjectUniqueIdentifier`.
          * @public
          * @readonly
          */
-        readonly subjectUniqueIdentifier: OPTIONAL<UniqueIdentifier>,
+        readonly subjectUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public
