@@ -46,7 +46,7 @@ export const distinguishedNameMatch: MATCHING_RULE<DistinguishedName> = {
         "&AssertionType": _encode_DistinguishedName,
     },
     "&ldapSyntax": dn["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["distinguishedNameMatch"],
     "&id": id_mr_distinguishedNameMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

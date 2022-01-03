@@ -38,7 +38,7 @@ export const integerOrderingMatch: MATCHING_RULE<INTEGER> = {
         "&AssertionType": $._encodeInteger,
     },
     "&ldapSyntax": integer["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["integerOrderingMatch"],
     "&id": id_mr_integerOrderingMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

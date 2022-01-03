@@ -46,7 +46,7 @@ export const caseIgnoreListSubstringsMatch: MATCHING_RULE<SubstringAssertion> = 
         "&AssertionType": _encode_SubstringAssertion,
     },
     "&ldapSyntax": substringAssertion["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["caseIgnoreListSubstringsMatch"],
     "&id": id_mr_caseIgnoreListSubstringsMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

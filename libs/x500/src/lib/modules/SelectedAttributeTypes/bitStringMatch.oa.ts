@@ -38,7 +38,7 @@ export const bitStringMatch: MATCHING_RULE<BIT_STRING> = {
         "&AssertionType": $._encodeBitString,
     },
     "&ldapSyntax": bitString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["bitStringMatch"],
     "&id": id_mr_bitStringMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

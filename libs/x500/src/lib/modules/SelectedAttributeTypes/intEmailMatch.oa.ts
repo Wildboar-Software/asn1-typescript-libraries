@@ -46,7 +46,7 @@ export const intEmailMatch: MATCHING_RULE<IntEmail> = {
         "&AssertionType": _encode_IntEmail,
     },
     "&ldapSyntax": dnsString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["intEmailMatch"],
     "&id": id_mr_intEmailMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

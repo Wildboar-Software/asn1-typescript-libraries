@@ -38,7 +38,7 @@ export const objectIdentifierFirstComponentMatch: MATCHING_RULE<OBJECT_IDENTIFIE
         "&AssertionType": $._encodeObjectIdentifier,
     },
     "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["objectIdentifierFirstComponentMatch"],
     "&id": id_mr_objectIdentifierFirstComponentMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

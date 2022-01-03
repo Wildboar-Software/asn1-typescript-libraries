@@ -57,7 +57,7 @@ export const subentry: OBJECT_CLASS = {
         commonName,
         subtreeSpecification,
     ] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["subentry"],
     "&id": id_sc_subentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION subentry */

@@ -39,7 +39,7 @@ export const generalizedTimeMatch: MATCHING_RULE<GeneralizedTime> = {
         "&AssertionType": $._encodeGeneralizedTime,
     },
     "&ldapSyntax": generalizedTime["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["generalizedTimeMatch"],
     "&id": id_mr_generalizedTimeMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

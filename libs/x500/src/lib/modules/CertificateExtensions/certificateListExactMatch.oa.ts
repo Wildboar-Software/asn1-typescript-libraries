@@ -47,7 +47,7 @@ export const certificateListExactMatch: MATCHING_RULE<CertificateListExactAssert
         "&AssertionType": _encode_CertificateListExactAssertion,
     },
     "&ldapSyntax": certListExactAssertion["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["certificateListExactMatch"],
     "&ldapDesc":
         "X.509 Certificate List Exact Match" /* OBJECT_FIELD_SETTING */,
     "&id": id_mr_certificateListExactMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

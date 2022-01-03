@@ -49,7 +49,7 @@ export const oidArc: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [alias] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [oidC] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["oidArc"],
     "&id": id_oidArc /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

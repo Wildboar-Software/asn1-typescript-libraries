@@ -38,7 +38,7 @@ export const objectIdentifierMatch: MATCHING_RULE<OBJECT_IDENTIFIER> = {
         "&AssertionType": $._encodeObjectIdentifier,
     },
     "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["objectIdentifierMatch"],
     "&id": id_mr_objectIdentifierMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

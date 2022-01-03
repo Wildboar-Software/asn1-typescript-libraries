@@ -53,7 +53,7 @@ export const oidRoot: OBJECT_CLASS = {
     encoderFor: {},
     "&Superclasses": [alias] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [oidC1, oidC2, oidC] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["oidRoot"],
     "&id": id_oidRoot /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

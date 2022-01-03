@@ -46,7 +46,7 @@ export const dnsNameMatch: MATCHING_RULE<DomainName> = {
         "&AssertionType": _encode_DomainName,
     },
     "&ldapSyntax": dnsString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["dnsNameMatch"],
     "&id": id_mr_dnsNameMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

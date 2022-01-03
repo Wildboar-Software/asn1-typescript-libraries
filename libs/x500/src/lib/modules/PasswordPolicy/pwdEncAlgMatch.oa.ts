@@ -46,7 +46,7 @@ export const pwdEncAlgMatch: MATCHING_RULE<PwdEncAlg> = {
         "&AssertionType": _encode_PwdEncAlg,
     },
     "&ldapSyntax": pwdEncAlgDescription["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pwdEncAlgMatch"],
     "&id": id_mr_pwdEncAlgMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

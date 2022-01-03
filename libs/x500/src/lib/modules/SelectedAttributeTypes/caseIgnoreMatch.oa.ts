@@ -46,7 +46,7 @@ export const caseIgnoreMatch: MATCHING_RULE<UnboundedDirectoryString> = {
         "&AssertionType": _encode_UnboundedDirectoryString,
     },
     "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["caseIgnoreMatch"],
     "&id": id_mr_caseIgnoreMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

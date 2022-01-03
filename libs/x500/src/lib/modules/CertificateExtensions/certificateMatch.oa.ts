@@ -47,7 +47,7 @@ export const certificateMatch: MATCHING_RULE<CertificateAssertion> = {
         "&AssertionType": _encode_CertificateAssertion,
     },
     "&ldapSyntax": certAssertion["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["certificateMatch"],
     "&ldapDesc": "X.509 Certificate Match" /* OBJECT_FIELD_SETTING */,
     "&id": id_mr_certificateMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

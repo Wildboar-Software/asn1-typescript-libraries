@@ -38,7 +38,7 @@ export const numericStringMatch: MATCHING_RULE<NumericString> = {
         "&AssertionType": $._encodeNumericString,
     },
     "&ldapSyntax": numericString["&id"] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["numericStringMatch"],
     "&id": id_mr_numericStringMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

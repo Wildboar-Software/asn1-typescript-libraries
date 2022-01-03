@@ -47,7 +47,7 @@ export const pwdAdminSubentry: OBJECT_CLASS = {
     encoderFor: {},
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [pwdAttribute] /* OBJECT_FIELD_SETTING */,
-    "&ldapName": undefined,
+    "&ldapName": ["pwdAdminSubentry"],
     "&id": id_sc_pwdAdminSubentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION pwdAdminSubentry */
