@@ -1,17 +1,14 @@
-
 import type ACDFTupleExtended from "../types/ACDFTupleExtended";
 import type ProtectedItem from "../types/ProtectedItem";
-import type {
-    AuthenticationLevel,
-} from "../modules/BasicAccessControl/AuthenticationLevel.ta";
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
 import itemIsProtected from "./itemIsProtected";
-import deniesAccess from "./deniesAccess";
 import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
 import { TRUE_BIT } from "asn1-ts";
+import type { EvaluateFilterSettings } from "../utils/evaluateFilter";
+import type {
+    NameAndOptionalUID,
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
 
 /**
  * Note that this function is different than `operationIsPermitted()`.
@@ -67,33 +64,44 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
 export
 function discardNonRelevantACDFTuples (
     tuples: ACDFTupleExtended[],
-    authLevel: AuthenticationLevel,
+    requester: NameAndOptionalUID,
     request: ProtectedItem,
     operations: number[],
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    settings: EvaluateFilterSettings,
 ): ACDFTupleExtended[] {
     return tuples
-        .filter((tuple) => {
-            const aci = tuple[1];
-            if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
-                return false; // We do not know how to compare EXTERNALs.
-            }
-            const aciBL = aci.basicLevels;
-            const userBL = authLevel.basicLevels;
-            const denies = deniesAccess(tuple);
-            const userLQ = userBL.localQualifier ?? 0;
-            const aciLQ = aciBL.localQualifier ?? 0;
-            const sufficientAuthentication = (
-                (userBL.level >= aci.basicLevels.level) // User's auth level meets the threshold.
-                && (userLQ >= aciLQ) // User's local qualifier meets the minimum.
-                && (!aciBL.signed || (Boolean(aciBL.signed) === Boolean(userBL.signed))) // Signing requirements met.
-            );
-            return (
-                (!denies && sufficientAuthentication)
-                || (denies && !sufficientAuthentication)
-            );
-        })
-        .filter((tuple) => itemIsProtected(request, tuple[2], getEqualityMatcher))
+        // This section was commented out entirely, because this should just be
+        // done once prior to calling the ACDF functions.
+        // .filter((tuple) => {
+        //     /**
+        //      * ITU Recommendation X.501 (2016), Section 18.8.3, states that
+        //      *
+        //      * > Also retain all tuples that deny access and which specify an
+        //      * > authentication level higher than that associated with the
+        //      * > requestor in accordance with 18.4.2.3. All other tuples that
+        //      * > deny access are discarded.
+        //      *
+        //      * The rationale for doing this is in the footnote right below it:
+        //      *
+        //      * > The second requirement [...]  reflects the fact that the
+        //      * > requestor has not adequately proved non-membership in the user
+        //      * > class for which the denial is specified.
+        //      *
+        //      * If the tuple denies access, we automatically consider it
+        //      * relevant, because it is the expectation of this function that all
+        //      * tuples supplied to the bacACDF function are relevant to the user.
+        //      */
+        //     if (deniesAccess(tuple[3])) {
+        //         return true;
+        //     }
+        //     const aci = tuple[1];
+        //     if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
+        //         return false; // We do not know how to compare EXTERNALs.
+        //     }
+        //     const authenticationLevelIsHigherThanRequester = authLevelHigher(aci.basicLevels, authLevel.basicLevels);
+        //     return !authenticationLevelIsHigherThanRequester;
+        // })
+        .filter((tuple) => itemIsProtected(request, tuple[2], requester, settings))
         // WARNING: Step 3 is skipped. I don't understand it.
         .filter((tuple) => operationRelevant(operations, tuple[3]));
 }

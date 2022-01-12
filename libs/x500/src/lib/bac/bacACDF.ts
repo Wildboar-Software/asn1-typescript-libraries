@@ -1,16 +1,15 @@
-import { OBJECT_IDENTIFIER, TRUE_BIT } from "asn1-ts";
 import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples";
 import type ACDFTupleExtended from "../types/ACDFTupleExtended";
 import type ProtectedItem from "../types/ProtectedItem";
 import type {
     ProtectedItems,
 } from "../modules/BasicAccessControl/ProtectedItems.ta";
-import type {
-    AuthenticationLevel,
-} from "../modules/BasicAccessControl/AuthenticationLevel.ta";
-import type EqualityMatcher from "../types/EqualityMatcher";
 import splitGrantsAndDenials from "./splitGrantsAndDenials";
 import operationPermitted from "./operationPermitted";
+import type { EvaluateFilterSettings } from "../utils/evaluateFilter";
+import type {
+    NameAndOptionalUID,
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
 
 function specificityOfProtectedItem (
     request: ProtectedItem,
@@ -48,6 +47,11 @@ export const PERMISSION_CATEGORY_RETURN_DN: number = 9;
 export const PERMISSION_CATEGORY_COMPARE: number = 10;
 export const PERMISSION_CATEGORY_FILTER_MATCH: number = 11;
 export const PERMISSION_CATEGORY_INVOKE: number = 12;
+
+export
+interface ACDFSettings extends EvaluateFilterSettings {
+
+}
 
 /**
  * The return type of an Access Control Decision Function (ACDF).
@@ -124,11 +128,7 @@ interface BACACDFReturn extends ACDFReturn {
  * This function deviates from the specification in these ways:
  *
  * - The function `discardNonRelevantACDFTuples()`, which is called by this
- *   function, does not observe the `maxValueCount`, `maxImmSub`, `restrictedBy`
- *   or `contexts` constraints.
- * - If the authorization level is anything other than `basicLevels`, access is
- *   denied (because there's no way to know the semantics of any other option in
- *   advance).
+ *   function, does not observe the `restrictedBy` or `contexts` constraints.
  *
  * ### Parameters
  *
@@ -136,16 +136,16 @@ interface BACACDFReturn extends ACDFReturn {
  *  ITU Recommendation X.501, Section 18.8.2. An array of five items:
  *  `( userClasses, authenticationLevel, protectedItems, grantsAndDenials, precedence )`
  *  with the addition of a user class specificity `number` tacked on the end.
- * @param {AuthenticationLevel} authLevel The authentication level of the user.
+ *  The tuples that are irrelevant according to ITU Recommendation X.501 (2016),
+ *  Section 18.8.3, bullet point #1 are expected to be discarded from this
+ *  array **BEFORE** calling this function.
  * @param {ProtectedItem} request The thing that is being requested, which can
  *  be an entry, attribute type, or attribute value.
  * @param {number[]} operations The bit indices of the permissions that are
  *  being requested, divided by two. The permissions come from the definition of
  *  `GrantsAndDenials`. For clarification, an operation of 3 indicates a request
  *  for the remove permission.
- * @param {function} getEqualityMatcher A function that takes an object
- *  identifier and returns another function (if one can be found) that can be
- *  used to compare two values of the same attribute type.
+ * @param {Object} settings The same settings that evaluateFilter() takes.
  * @returns An object whose `authorized` property is a `boolean` that indicates
  *  whether the request was authorized by this ACDF. All other properties of
  *  this object are for diagnostic purposes.
@@ -155,21 +155,23 @@ interface BACACDFReturn extends ACDFReturn {
 export
 function bacACDF (
     tuples: ACDFTupleExtended[],
-    authLevel: AuthenticationLevel,
+    requester: NameAndOptionalUID,
     request: ProtectedItem,
     operations: number[], // Index of bits in GrantsAndDenials / 2.
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    settings: EvaluateFilterSettings,
+    tuplesAlreadySplit: boolean = false, // This will eventually be removed.
 ): BACACDFReturn {
-
-    const tuplesSplitByGrantOrDenial = tuples
-        .flatMap((tuple) => splitGrantsAndDenials(tuple[3])
-            .map((gad): ACDFTupleExtended => [ tuple[0], tuple[1], tuple[2], gad, tuple[4], tuple[5] ]));
+    const tuplesSplitByGrantOrDenial = tuplesAlreadySplit
+        ? tuples
+        : tuples
+            .flatMap((tuple) => splitGrantsAndDenials(tuple[3])
+                .map((gad): ACDFTupleExtended => [ tuple[0], tuple[1], tuple[2], gad, tuple[4], tuple[5] ]));
     const relevantTuples: ACDFTupleExtended[] = discardNonRelevantACDFTuples(
         tuplesSplitByGrantOrDenial,
-        authLevel,
+        requester,
         request,
         operations,
-        getEqualityMatcher,
+        settings,
     );
 
     /**
@@ -196,7 +198,7 @@ function bacACDF (
         return {
             authorized: (
                 (tuplesThatSurvivedStage1.length === 1)
-                && operationPermitted(operations, tuplesThatSurvivedStage1[0])
+                && operationPermitted(operations, tuplesThatSurvivedStage1[0], request)
             ),
             relevantTuples,
             precedentTuples: tuplesThatSurvivedStage1,
@@ -216,7 +218,7 @@ function bacACDF (
     if (tuplesThatSurvivedStage2.length === 1) {
         return {
             authorized: tuplesThatSurvivedStage2
-                .every((tuple) => operationPermitted(operations, tuple)),
+                .every((tuple) => operationPermitted(operations, tuple, request)),
             relevantTuples,
             precedentTuples: tuplesThatSurvivedStage1,
             mostUserSpecificTuples: tuplesThatSurvivedStage2,
@@ -240,7 +242,7 @@ function bacACDF (
 
     return {
         authorized: tuplesThatSurvivedStage3
-            .every((tuple) => operationPermitted(operations, tuple)),
+            .every((tuple) => operationPermitted(operations, tuple, request)),
         relevantTuples,
         precedentTuples: tuplesThatSurvivedStage1,
         mostUserSpecificTuples: tuplesThatSurvivedStage2,

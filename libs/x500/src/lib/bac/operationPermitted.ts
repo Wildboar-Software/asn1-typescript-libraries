@@ -2,11 +2,45 @@ import type ACDFTupleExtended from "../types/ACDFTupleExtended";
 import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta";
-import { TRUE_BIT } from "asn1-ts";
+import type ProtectedItem from "../types/ProtectedItem";
+import { TRUE_BIT, INTEGER } from "asn1-ts";
+import {
+    PERMISSION_CATEGORY_ADD,
+    PERMISSION_CATEGORY_IMPORT,
+} from "./bacACDF";
 
 export
-function operationPermitted (operations: number[], tuple: ACDFTupleExtended): boolean {
+function operationPermitted (
+    operations: number[],
+    tuple: ACDFTupleExtended,
+    request: ProtectedItem,
+): boolean {
+    const items = tuple[2];
     const gad: GrantsAndDenials = tuple[3];
+    const adds = operations.includes(PERMISSION_CATEGORY_ADD);
+    const imports = operations.includes(PERMISSION_CATEGORY_IMPORT);
+    if (
+        (adds || imports)
+        && (items.maxImmSub !== undefined)
+        && ("entry" in request)
+        && Number.isSafeInteger(request.siblingsCount)
+        && (request.siblingsCount > items.maxImmSub)
+    ) {
+        return false;
+    }
+    const maxValueCount: INTEGER | undefined = (("attributeType" in request) && (items.maxValueCount?.length))
+        ? items.maxValueCount.find((mvc) => mvc.type_.isEqualTo(request.attributeType))?.maxCount
+        : undefined;
+    if (
+        adds
+        && (maxValueCount !== undefined)
+        && ("attributeType" in request)
+        && Number.isSafeInteger(request.valuesCount)
+        && (request.valuesCount > Number(maxValueCount))
+    ) {
+        return false;
+    }
+
     /** 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
      * Section 18.4.2.5.a of ITU Recommendation X.501 (2016) states that, if
      * group membership cannot be determined, a user should be assumed to be a

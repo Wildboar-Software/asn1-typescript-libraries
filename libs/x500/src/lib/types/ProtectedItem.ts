@@ -13,8 +13,14 @@ import type {
  * > values and names.
  */
 export
-type ProtectedItem = { entry: OBJECT_CLASS["&id"][] }
-    | { attributeType: AttributeType }
+type ProtectedItem = {
+        entry: OBJECT_CLASS["&id"][];
+        siblingsCount?: number; // for maxImmSub support.
+    }
+    | {
+        attributeType: AttributeType;
+        valuesCount?: number; // for maxValueCount support.
+    }
     | { value: AttributeTypeAndValue };
 
 export default ProtectedItem;

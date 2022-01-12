@@ -54,6 +54,13 @@ interface MatchedEntryInfo extends MatchedValue {
 };
 
 export
+interface EvaluateFilterReturn {
+    matched: boolean | undefined;
+    matchedValues?: MatchedEntryInfo[];
+    contributingEntries: Set<number>;
+}
+
+export
 interface EvaluateFilterSettings {
 
     /**
@@ -751,6 +758,8 @@ function evaluateFilterItem (
  * @param {EntryInformation} entry The entry that is to be evaluated by the filter.
  * @param {Object} options An options object containing. Despite the name, this
  *  parameter, and most of its properties, are required.
+ * @param {Set} contributingEntries The contributing entries. Do not supply this
+ *  argument. Just leave this `undefined`.
  * @returns `true` if the entry matches the filter, `false` if it does not, or
  *  `undefined` if it cannot be determined whether the entry matches or not.
  *  An array of matched values may be returned, containing the values that
@@ -763,7 +772,8 @@ function evaluateFilter (
     filter: Filter,
     family: EntryInformation[],
     options: EvaluateFilterSettings,
-): MatchedEntryInfo[] | boolean | undefined {
+    contributingEntries: Set<number> = new Set(),
+): EvaluateFilterReturn {
     if ("item" in filter) {
         const familyResults: MatchedEntryInfo[] = [];
         let undefinedResultFound: boolean = false;
@@ -778,75 +788,94 @@ function evaluateFilter (
                 undefinedResultFound = true;
                 continue;
             }
-            if (result === true) {
+            if ((result === true) || (result.length > 0)) {
+                contributingEntries.add(i);
                 matched = true;
-                continue;
             }
-            familyResults.push(...result.map((r) => ({
-                ...r,
-                entryIndex: i,
-            })));
+            if (Array.isArray(result)) {
+                familyResults.push(...result.map((r) => ({
+                    ...r,
+                    entryIndex: i,
+                })));
+            }
         }
-        if (familyResults.length === 0) {
-            if (matched) {
-                return true;
-            }
-            // If nothing matched, but there was one `undefined`, we consider this item `undefined`.
-            else if (undefinedResultFound) {
-                return undefined;
-            }
-            return false;
-        }
-        return familyResults;
+        return {
+            matched: matched || (undefinedResultFound ? undefined : false),
+            contributingEntries,
+            matchedValues: familyResults,
+        };
     } else if ("and" in filter) {
         // Array.every() returns `true` when `Array.length` is 0.
         const results = filter.and.map((subfilter) => evaluateFilter(subfilter, family, options));
-        if (results.every((result) => (
-            (result === true)
-            || (Array.isArray(result) && result.length)
-        ))) {
-            return true;
-        } else if (results.some((result) => (
-            (result === false)
-            || (Array.isArray(result) && !result.length)
-        ))) {
-            return false;
+        if (results.every((result) => result.matched)) {
+            return {
+                matched: true,
+                contributingEntries: new Set([
+                    ...contributingEntries.values(),
+                    ...results.flatMap((r) => Array.from(r.contributingEntries.values())),
+                ]),
+                matchedValues: results.flatMap((r) => r.matchedValues),
+            };
+        } else if (results.some((result) => result.matched === false)) {
+            return {
+                matched: false,
+                contributingEntries,
+                matchedValues: [],
+            };
         } else {
-            return undefined;
+            return {
+                matched: undefined,
+                contributingEntries,
+                matchedValues: [],
+            };
         }
     } else if ("or" in filter) {
         const results = filter.or.map((subfilter) => evaluateFilter(subfilter, family, options));
-        if ((results.length === 0) || results.every((result) => (
-            (result === false)
-            || (Array.isArray(result) && !result.length)
-        ))) {
-            return false;
-        } else if (results.some((result) => (
-            (result === true)
-            || (Array.isArray(result) && result.length)
-        ))) {
-            return true;
-        } else {
-            return undefined;
+        const undefinedResult: boolean = results.some((r) => (r.matched === undefined));
+        const matchedResults = results.filter((r) => r.matched);
+        if (matchedResults.length === 0) {
+            return {
+                matched: undefinedResult ? undefined : false,
+                contributingEntries,
+            };
         }
+        for (const mr of matchedResults) {
+            for (const contrib of mr.contributingEntries.values()) {
+                contributingEntries.add(contrib);
+            }
+        }
+        return {
+            matched: true,
+            contributingEntries,
+            matchedValues: matchedResults.flatMap((mr) => mr.matchedValues ?? []),
+        };
     } else if ("not" in filter) {
         if (
             ("item" in filter.not)
             && ("extensibleMatch" in filter.not.item)
             && (filter.not.item.extensibleMatch.matchingRule[0]?.isEqualTo(id_mr_nullMatch))
         ) {
-            return true;
+            return {
+                matched: true,
+                contributingEntries,
+            };
         }
-        const result = evaluateFilter(filter.not, family, options);
+        const result = evaluateFilter(filter.not, family, options, contributingEntries);
         if (result === undefined) {
-            return undefined;
+            return {
+                matched: undefined,
+                contributingEntries,
+            };
         }
-        return (
-            (result === false)
-            || (Array.isArray(result) && !result.length)
-        ); // undefined should be omitted.
+        return {
+            matched: (result.matched === false),
+            contributingEntries,
+        };
     } else {
-        return undefined;
+        return {
+            matched: undefined,
+            contributingEntries,
+        };
     }
 }
 

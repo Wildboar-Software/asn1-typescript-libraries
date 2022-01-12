@@ -167,7 +167,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     it("evaluates a basic NOT equality filter", () => {
@@ -206,7 +206,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeFalsy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeFalsy();
     });
 
     it("evaluates a basic AND filter", () => {
@@ -267,7 +267,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     it("evaluates a basic OR filter", () => {
@@ -328,7 +328,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     it("evaluates a basic substrings filter item", () => {
@@ -381,7 +381,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     it("evaluates a greaterOrEqual filter item", () => {
@@ -424,7 +424,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     it("evaluates a lessOrEqual filter item", () => {
@@ -467,7 +467,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeFalsy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeFalsy();
     });
 
     test("evaluates a present filter item", () => {
@@ -504,7 +504,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     // approximateMatch is currently the same as equality.
@@ -550,7 +550,7 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
     test("evaluates a contextPresent filter item", () => {
@@ -612,6 +612,6 @@ describe("evaluateFilter", () => {
             permittedToMatch: ALWAYS_PERMITTED,
         };
 
-        expect(evaluateFilter(filter, [entry], options)).toBeTruthy();
+        expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 });

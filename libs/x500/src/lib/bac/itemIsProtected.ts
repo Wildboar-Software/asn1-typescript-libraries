@@ -1,10 +1,28 @@
-import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import {
+    ASN1TagClass,
+    ASN1UniversalType,
+} from "asn1-ts";
 import type {
     ProtectedItems,
 } from "../modules/BasicAccessControl/ProtectedItems.ta";
 import objectClassesWithinRefinement from "../utils/objectClassesWithinRefinement";
 import type ProtectedItem from "../types/ProtectedItem";
+import {
+    NameAndOptionalUID,
+    _decode_NameAndOptionalUID,
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+import {
+    DistinguishedName,
+    _decode_DistinguishedName,
+} from "../modules/InformationFramework/DistinguishedName.ta";
+import compareDistinguishedName from "../comparators/compareDistinguishedName";
+import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter";
+import {
+    EntryInformation,
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta";
+import {
+    Attribute,
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta";
 
 /**
  * @summary Whether the requested item is protected by the `ProtectedItems`.
@@ -30,7 +48,9 @@ export
 function itemIsProtected (
     request: ProtectedItem,
     protectedItems: ProtectedItems,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    requester: NameAndOptionalUID,
+    settings: EvaluateFilterSettings,
+    // TODO: isUserAttributeType
 ): boolean {
     if ("entry" in request) {
         if (protectedItems.classes) {
@@ -43,18 +63,7 @@ function itemIsProtected (
             (protectedItems.allUserAttributeTypes === null)
             || protectedItems.attributeType
                 ?.some((at) => request.attributeType.isEqualTo(at))
-            || protectedItems.allAttributeValues
-                ?.some((av) => request.attributeType.isEqualTo(av))
             || (protectedItems.allUserAttributeTypesAndValues === null)
-            || protectedItems.attributeValue
-                ?.some((av) => av.type_.toString() === request.attributeType.toString())
-            // || protectedItems.selfValue // TODO:
-            //     ?.some((sv) => sv.toString() === request.attributeType.toString())
-            // || protectedItems.rangeOfValues // TODO: Check if its within the range.
-            // || protectedItems.maxValueCount // TODO: I don't know how to implement this.
-            //     ?.some((mvc) => mvc.type_.toString() === request.attributeType.toString())
-            // || protectedItems.restrictedBy // TODO:
-            //     ?.some((rb) => rb.type_.toString() === request.attributeType.toString())
         );
     } else if ("value" in request) {
         return (
@@ -66,18 +75,61 @@ function itemIsProtected (
                     if (!request.value.type_.isEqualTo(av.type_)) {
                         return false;
                     }
-                    const matcher = getEqualityMatcher(av.type_);
+                    const matcher = settings.getEqualityMatcher(av.type_);
                     if (!matcher) {
                         return false;
                     }
                     return matcher(av.value, request.value.value);
                 })
-            // || protectedItems.selfValue
-            //     ?.some((sv) => sv.toString() === request.value.type_.toString())
-            // || protectedItems.rangeOfValues // TODO: Check if its within the range.
-            // || protectedItems.maxValueCount // TODO: I don't know how to implement this.
-            //     ?.some((mvc) => mvc.type_.toString() === request.value.type_.toString())
-            // || protectedItems.restrictedBy
+            || (
+                requester
+                && protectedItems.selfValue?.some((type_) => type_.isEqualTo(request.value.type_))
+                && ((): boolean => {
+                    try {
+                        const elements = request.value.value.sequence;
+                        const valueIsNameAndOptionalUID: boolean = (
+                            (elements.length >= 1)
+                            && (elements[0].tagClass === ASN1TagClass.universal)
+                            && (elements[0].tagNumber === ASN1UniversalType.sequence)
+                        );
+                        const dn: DistinguishedName = valueIsNameAndOptionalUID
+                            ? _decode_NameAndOptionalUID(request.value.value).dn
+                            : _decode_DistinguishedName(request.value.value);
+                        return compareDistinguishedName(
+                            dn,
+                            requester.dn,
+                            settings.getEqualityMatcher,
+                        );
+                    } catch {
+                        return false;
+                    }
+                })()
+            )
+            || (
+                protectedItems.rangeOfValues
+                && evaluateFilter(
+                    protectedItems.rangeOfValues,
+                    [
+                        new EntryInformation(
+                            {
+                                rdnSequence: [],
+                            },
+                            undefined,
+                            [
+                                {
+                                    attribute: new Attribute(
+                                        request.value.type_,
+                                        [ request.value.value ],
+                                        undefined,
+                                    ),
+                                },
+                            ],
+                        ),
+                    ],
+                    settings,
+                )?.matched
+            )
+            // || protectedItems.restrictedBy // Probably will never support this.
             //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
             // || Boolean(protectedItems.contexts)
         );

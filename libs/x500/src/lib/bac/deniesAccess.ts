@@ -1,9 +1,7 @@
-import type ACDFTuple from "../types/ACDFTuple";
-import type ACDFTupleExtended from "../types/ACDFTupleExtended";
+import type { BIT_STRING } from "asn1-ts";
 
 export
-function deniesAccess (tuple: ACDFTuple | ACDFTupleExtended): boolean {
-    const permissions = tuple[3];
+function deniesAccess (permissions: BIT_STRING): boolean {
     // All the odd bits are denials.
     return Array.from(permissions).some((perm, index) => (index % 2) ? Boolean(perm) : false);
 }

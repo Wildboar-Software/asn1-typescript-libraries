@@ -9,9 +9,15 @@ import type {
 import type {
     UserClasses,
 } from "../modules/BasicAccessControl/UserClasses.ta";
+import type {
+    AuthenticationLevel,
+} from "../modules/BasicAccessControl/AuthenticationLevel.ta";
+import type ACDFTuple from "../types/ACDFTuple";
 import compareDistinguishedName from "../comparators/compareDistinguishedName";
 import compareBitStrings from "../comparators/compareBitStrings";
 import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification";
+import compareAuthenticationLevel from "../comparators/compareAuthenticationLevel";
+import deniesAccess from "./deniesAccess";
 
 /**
  * @summary Determines if a user falls within an ACI item's `UserClasses`.
@@ -65,12 +71,36 @@ import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification"
  */
 export
 async function userWithinACIUserClass (
-    userClass: UserClasses,
+    tuple: ACDFTuple,
     user: NameAndOptionalUID,
+    userAuthLevel: AuthenticationLevel,
     entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
+    const userClass: UserClasses = tuple[0];
+    const requiredAuthLevel: AuthenticationLevel = tuple[1];
+    const denies = deniesAccess(tuple[3]);
+    if (
+        denies
+        && ("basicLevels" in userAuthLevel)
+        && ("basicLevels" in requiredAuthLevel)
+        && compareAuthenticationLevel(requiredAuthLevel.basicLevels, userAuthLevel.basicLevels)
+    ) {
+        /**
+         * Per ITU Recommendation X.501, Section 18.8.3, bullet point 1.2, if
+         * the specified authentication level is higher than that of the user
+         * and the tuple denies access, we need to include this tuple. To
+         * include this tuple, we must return a non-negative integer.
+         *
+         * However, it is unclear in the specification how this should "count"
+         * when comparing the specificity of user classes. Since we presumably
+         * want this to _always_ count, we should return the highest value
+         * possible, which means that this tuple will override all others, at
+         * least in terms of user-class specificity.
+         */
+        return 5;
+    }
     let couldNotDetermineGroupMembership: boolean = false;
     if (
         (userClass.thisEntry === null)

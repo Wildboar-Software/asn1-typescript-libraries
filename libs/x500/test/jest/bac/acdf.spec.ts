@@ -13,7 +13,6 @@ import {
     ASN1Element,
     External,
 } from "asn1-ts";
-// import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples";
 import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended";
 import type ProtectedItem from "../../../src/lib/types/ProtectedItem";
 import {
@@ -60,6 +59,10 @@ import {
 import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials";
 import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem";
 import itemIsProtected from "../../../src/lib/bac/itemIsProtected";
+import type { EvaluateFilterSettings } from "../../../src/lib/utils/evaluateFilter";
+import {
+    NameAndOptionalUID,
+} from "../../../src/lib/modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
 
 const ALL_GRANTS: GrantsAndDenials = new Uint8ClampedArray([
     // Add
@@ -280,6 +283,27 @@ const ALL_DENY_ALL_USERS = new ItemPermission(
     ALL_DENIALS,
 );
 
+function getSettings (
+    matcherGetter: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): EvaluateFilterSettings {
+    return {
+        getEqualityMatcher: matcherGetter,
+        getOrderingMatcher: () => () => 1,
+        getSubstringsMatcher: () => () => true,
+        getApproximateMatcher: () => () => true,
+        getContextMatcher: () => () => true,
+        determineAbsentMatch: () => true,
+        isMatchingRuleCompatibleWithAttributeType: () => true,
+        isAttributeSubtype: () => true,
+        permittedToMatch: () => true,
+    };
+}
+
+const requester = new NameAndOptionalUID(
+    [],
+    undefined,
+);
+
 describe("splitGrantsAndDenials()", () => {
     it("works", () => {
         const gad: GrantsAndDenials = new Uint8ClampedArray([
@@ -333,13 +357,13 @@ describe("itemIsProtected()", () => {
         );
         const protected_ = itemIsProtected({
             entry: [ new ObjectIdentifier([ 2, 5, 4, 3 ]) ],
-        }, pi, () => () => true);
+        }, pi, requester, getSettings(ALWAYS_EQUAL));
         expect(protected_).toBe(true);
     });
 
     it("does not return true for an unrecognized request type", () => {
         const pi = PROTECTED_ITEMS_ENTRY;
-        const protected_ = itemIsProtected({} as ProtectedItem, pi, () => () => true);
+        const protected_ = itemIsProtected({} as ProtectedItem, pi, requester, getSettings(ALWAYS_EQUAL));
         expect(protected_).toBe(false);
     });
 });
@@ -361,11 +385,12 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
-    it("prohibits access when the user's authorization level uses the 'other' option", () => {
+    // This test is no longer valid.
+    it.skip("prohibits access when the user's authorization level uses the 'other' option", () => {
         const acis: ACIItem[] = [
             new ACIItem(
                 WHATEVER_LABEL,
@@ -401,7 +426,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
@@ -440,7 +465,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
     });
 
@@ -484,13 +509,14 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
     });
 
     //#region AuthenticationLevel tests
 
-    test.each([
+    // These tests are no longer valid.
+    test.skip.each([
         [ AuthenticationLevel_basicLevels_level_simple ],
         [ AuthenticationLevel_basicLevels_level_strong ],
     ])("denies access when there are only ACIItems above the user's authentication level's basic level", (req_auth) => {
@@ -528,11 +554,12 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
-    it("denies access when the applicable ACIItems match the authentication level of the user, but not the local qualifier", () => {
+    // This test is no longer valid.
+    it.skip("denies access when the applicable ACIItems match the authentication level of the user, but not the local qualifier", () => {
         const acis: ACIItem[] = [
             new ACIItem(
                 WHATEVER_LABEL,
@@ -567,11 +594,12 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
-    it("denies access when the applicable ACIItems require user signing, but the request is not signed", () => {
+    // This test is no longer valid.
+    it.skip("denies access when the applicable ACIItems require user signing, but the request is not signed", () => {
         const acis: ACIItem[] = [
             new ACIItem(
                 WHATEVER_LABEL,
@@ -606,7 +634,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
@@ -659,7 +687,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -670,7 +698,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -720,7 +748,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -731,7 +759,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -781,8 +809,8 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
-            expect(authorized).toBeTruthy();
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
+            expect(authorized).toBeFalsy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
@@ -792,7 +820,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -842,7 +870,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -853,7 +881,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -903,8 +931,8 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
-            expect(authorized).toBeTruthy();
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
+            expect(authorized).toBeFalsy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
@@ -914,7 +942,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -963,7 +991,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = UTF8_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBe(false);
     });
 
@@ -1011,7 +1039,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_UNRECOGNIZED;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBe(false);
     });
 
@@ -1060,7 +1088,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -1071,7 +1099,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -1121,7 +1149,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -1132,7 +1160,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel,request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -1182,7 +1210,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+            } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeTruthy();
         }
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
@@ -1193,7 +1221,7 @@ describe("bacACDF()", () => {
         {
             const {
                 authorized,
-            } = bacACDF(tuples2, authLevel, request, operations, getEqualityMatcher);
+            } = bacACDF(tuples2, requester, request, operations, getSettings(getEqualityMatcher));
             expect(authorized).toBeFalsy();
         }
     });
@@ -1242,7 +1270,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_UNEQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeFalsy();
     });
 
@@ -1291,7 +1319,7 @@ describe("bacACDF()", () => {
         const getEqualityMatcher: EqualityMatcherGetter = ALWAYS_EQUAL;
         const {
             authorized,
-        } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
     });
 
@@ -1349,7 +1377,7 @@ describe("bacACDF()", () => {
         const {
             authorized,
             mostUserSpecificTuples,
-        } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
         expect(mostUserSpecificTuples).toBeDefined();
     });
@@ -1424,7 +1452,7 @@ describe("bacACDF()", () => {
         const {
             authorized,
             mostItemSpecificTuples,
-        } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
         expect(mostItemSpecificTuples).toBeDefined();
     });
@@ -1499,7 +1527,7 @@ describe("bacACDF()", () => {
         const {
             authorized,
             mostItemSpecificTuples,
-        } = bacACDF(tuples, authLevel, request, operations, getEqualityMatcher);
+        } = bacACDF(tuples, requester, request, operations, getSettings(getEqualityMatcher));
         expect(authorized).toBeTruthy();
         expect(mostItemSpecificTuples).toBeDefined();
     });
