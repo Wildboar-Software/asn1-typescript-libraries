@@ -64,7 +64,7 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
 export
 function discardNonRelevantACDFTuples (
     tuples: ACDFTupleExtended[],
-    requester: NameAndOptionalUID,
+    requester: NameAndOptionalUID | undefined | null,
     request: ProtectedItem,
     operations: number[],
     settings: EvaluateFilterSettings,

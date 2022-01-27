@@ -56,7 +56,12 @@ function dnWithinSubtree (
     if (dn.length > (dit.length + maximum)) {
         return false;
     }
-    return compareDistinguishedName(dit.reverse(), dn.reverse().slice(0, dit.length), getEqualityMatcher ?? (() => () => false));
+    // We spread the arrays, because Array.reverse() reverses in-place!
+    return compareDistinguishedName(
+        [ ...dit ].reverse(),
+        [ ...dn ].reverse().slice(0, dit.length),
+        getEqualityMatcher ?? (() => () => false),
+    );
 }
 
 export default dnWithinSubtree;

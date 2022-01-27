@@ -6,6 +6,9 @@ const integerMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
+    if (assertion.value.length !== value.value.length) {
+        return false;
+    }
     return (assertion.integer === value.integer);
 }
 

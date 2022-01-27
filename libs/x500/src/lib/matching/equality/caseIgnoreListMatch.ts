@@ -10,11 +10,13 @@ const caseIgnoreListMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const a: string[] = assertion.sequence.map((a) => directoryStringToString(_decode_UDS(a)).toLowerCase());
-    const v: string[] = value.sequence.map((v) => directoryStringToString(_decode_UDS(v)).toLowerCase());
-    if (a.length !== v.length) {
+    const aElements = assertion.sequence;
+    const vElements = value.sequence;
+    if (aElements.length !== vElements.length) {
         return false;
     }
+    const a: string[] = aElements.map((a) => directoryStringToString(_decode_UDS(a)).trim().toLowerCase());
+    const v: string[] = vElements.map((v) => directoryStringToString(_decode_UDS(v)).trim().toLowerCase());
     return a.every((x, i) => (x === v[i]));
 }
 

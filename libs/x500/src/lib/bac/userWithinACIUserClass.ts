@@ -72,13 +72,16 @@ import deniesAccess from "./deniesAccess";
 export
 async function userWithinACIUserClass (
     tuple: ACDFTuple,
-    user: NameAndOptionalUID,
+    user: NameAndOptionalUID | undefined | null,
     userAuthLevel: AuthenticationLevel,
     entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
     const userClass: UserClasses = tuple[0];
+    if (!user) {
+        return (userClass.allUsers === null) ? 1 : 0;
+    }
     const requiredAuthLevel: AuthenticationLevel = tuple[1];
     const denies = deniesAccess(tuple[3]);
     if (
@@ -113,8 +116,8 @@ async function userWithinACIUserClass (
         && (userClass.name.some((n) => (
             compareDistinguishedName(user.dn, n.dn, getEqualityMatcher)
             && (
-                (!user.uid && !n.uid)
-                || compareBitStrings(user.uid, n.uid)
+                !n.uid // If there is no uid, all entries with this name are relevant.
+                || (user.uid && compareBitStrings(user.uid, n.uid))
             )
         )))
     ) {

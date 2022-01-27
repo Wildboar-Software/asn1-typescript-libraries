@@ -6,7 +6,7 @@ const caseIgnoreIA5Match: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    return (assertion.ia5String.toLowerCase() === value.ia5String.toLowerCase());
+    return (assertion.ia5String.trim().toLowerCase() === value.ia5String.trim().toLowerCase());
 }
 
 export default caseIgnoreIA5Match;

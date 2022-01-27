@@ -7,7 +7,7 @@ const intEmailMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    return (assertion.utf8String.toLowerCase() === value.utf8String.toLowerCase());
+    return (assertion.utf8String.trim().toLowerCase() === value.utf8String.trim().toLowerCase());
 }
 
 export default intEmailMatch;

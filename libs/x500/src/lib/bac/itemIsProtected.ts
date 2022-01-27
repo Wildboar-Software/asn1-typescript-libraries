@@ -49,7 +49,7 @@ export
 function itemIsProtected (
     request: ProtectedItem,
     protectedItems: ProtectedItems,
-    requester: NameAndOptionalUID,
+    requester: NameAndOptionalUID | undefined | null,
     settings: EvaluateFilterSettings,
     // TODO: isUserAttributeType
 ): boolean {
