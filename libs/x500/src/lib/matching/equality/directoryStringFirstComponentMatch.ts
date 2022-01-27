@@ -10,8 +10,8 @@ const directoryStringFirstComponentMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const a: string = directoryStringToString(_decode_UDS(assertion));
-    const v: string = directoryStringToString(_decode_UDS(value.sequence[0]));
+    const a: string = directoryStringToString(_decode_UDS(assertion)).trim().toLowerCase();
+    const v: string = directoryStringToString(_decode_UDS(value.sequence[0])).trim().toLowerCase();
     return (a === v);
 }
 

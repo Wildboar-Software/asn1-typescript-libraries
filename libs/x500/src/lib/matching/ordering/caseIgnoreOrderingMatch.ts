@@ -10,8 +10,8 @@ const caseIgnoreOrderingMatch: OrderingMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): number => {
-    const a: string = directoryStringToString(_decode_UDS(assertion)).toLowerCase();
-    const v: string = directoryStringToString(_decode_UDS(value)).toLowerCase();
+    const a: string = directoryStringToString(_decode_UDS(assertion)).trim().toLowerCase();
+    const v: string = directoryStringToString(_decode_UDS(value)).trim().toLowerCase();
     return a.localeCompare(v);
 }
 

@@ -375,7 +375,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -416,7 +415,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -455,7 +453,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -499,7 +496,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -544,7 +540,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -584,7 +579,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -624,7 +618,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -676,7 +669,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: new ObjectIdentifier([ 2, 5, 4, 3 ]),
         };
@@ -737,7 +729,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -798,7 +789,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -859,7 +849,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -920,7 +909,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -981,7 +969,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: ORG_NAME,
         };
@@ -1029,7 +1016,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1077,7 +1063,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1138,7 +1123,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1199,7 +1183,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1260,7 +1243,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1309,7 +1291,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -1366,7 +1347,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             entry: [],
         };
@@ -1441,7 +1421,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -1516,7 +1495,6 @@ describe("bacACDF()", () => {
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
             .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
             .filter((tuple): boolean => (tuple[5] > 0));
-        const authLevel: AuthenticationLevel = AUTH_LEVEL_NONE;
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };

@@ -7,8 +7,8 @@ const uriMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const a: URL = new URL(assertion.utf8String.toLowerCase());
-    const v: URL = new URL(value.utf8String.toLowerCase());
+    const a: URL = new URL(assertion.utf8String.trim().toLowerCase());
+    const v: URL = new URL(value.utf8String.trim().toLowerCase());
     return (
         (a.protocol === v.protocol)
         && (a.username === v.username)

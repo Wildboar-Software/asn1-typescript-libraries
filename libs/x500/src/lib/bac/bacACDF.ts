@@ -155,7 +155,7 @@ interface BACACDFReturn extends ACDFReturn {
 export
 function bacACDF (
     tuples: ACDFTupleExtended[],
-    requester: NameAndOptionalUID,
+    requester: NameAndOptionalUID | undefined | null,
     request: ProtectedItem,
     operations: number[], // Index of bits in GrantsAndDenials / 2.
     settings: EvaluateFilterSettings,
