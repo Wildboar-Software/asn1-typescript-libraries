@@ -23,6 +23,7 @@ import {
 import {
     Attribute,
 } from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta";
+import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 
 /**
  * @summary Whether the requested item is protected by the `ProtectedItems`.
@@ -131,7 +132,14 @@ function itemIsProtected (
             )
             // || protectedItems.restrictedBy // Probably will never support this.
             //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
-            // || Boolean(protectedItems.contexts)
+            || (
+                request.contexts?.length
+                && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
+                    ca,
+                    request.contexts,
+                    settings.getContextMatcher,
+                    settings.determineAbsentMatch,
+                )))
         );
     } else {
         return false; // For lack of knowing what to do.

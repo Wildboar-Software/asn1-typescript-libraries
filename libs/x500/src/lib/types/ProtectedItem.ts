@@ -5,6 +5,9 @@ import type {
 import type {
     AttributeTypeAndValue,
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
+import type {
+    Context,
+} from "../modules/InformationFramework/Context.ta";
 
 /**
  * From ITU Recommendation X.501 (2016), Section 18.2.1:
@@ -21,6 +24,9 @@ type ProtectedItem = {
         attributeType: AttributeType;
         valuesCount?: number; // for maxValueCount support.
     }
-    | { value: AttributeTypeAndValue };
+    | {
+        value: AttributeTypeAndValue;
+        contexts?: Context[];
+    };
 
 export default ProtectedItem;

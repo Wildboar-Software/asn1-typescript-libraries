@@ -42,6 +42,7 @@ import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
 import { CannotPerformExactly } from "../errors";
 import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta";
+import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem";
 
 interface MatchedValue {
     type: AttributeType;
@@ -866,6 +867,33 @@ function evaluateFilter (
                 matched: undefined,
                 contributingEntries,
             };
+        }
+        /**
+         * According to ITU Recommendation X.511 (2016), Section 7.13:
+         *
+         * > [A family member] also contributes if it holds an attribute of a
+         * > given type if a negated filter item for the same type does not
+         * > match.
+         *
+         * That is what the following if-block does.
+         */
+        if (
+            (result.matched === false)
+            && ("item" in filter.not)
+        ) {
+            const negatedAttributeType = getAttributeTypesFromFilterItem(filter.not.item)[0];
+            if (negatedAttributeType) {
+                for (let i = 0; i < family.length; i++) {
+                    const member = family[i];
+                    const attributes = getAttributesFromEntry(member, options.dnAttribute);
+                    for (const attr of attributes) {
+                        if (attr.type_.isEqualTo(negatedAttributeType)) {
+                            contributingEntries.add(i);
+                            break;
+                        }
+                    }
+                }
+            }
         }
         return {
             matched: (result.matched === false),
