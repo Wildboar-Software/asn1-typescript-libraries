@@ -51,7 +51,6 @@ function itemIsProtected (
     protectedItems: ProtectedItems,
     requester: NameAndOptionalUID | undefined | null,
     settings: EvaluateFilterSettings,
-    // TODO: isUserAttributeType
 ): boolean {
     if ("entry" in request) {
         if (protectedItems.classes) {
@@ -61,16 +60,25 @@ function itemIsProtected (
         }
     } else if ("attributeType" in request) {
         return (
-            (protectedItems.allUserAttributeTypes === null)
+            (
+                (protectedItems.allUserAttributeTypes === null)
+                && !request.operational
+            )
             || protectedItems.attributeType
                 ?.some((at) => request.attributeType.isEqualTo(at))
-            || (protectedItems.allUserAttributeTypesAndValues === null)
+            || (
+                (protectedItems.allUserAttributeTypesAndValues === null)
+                && !request.operational
+            )
         );
     } else if ("value" in request) {
         return (
             protectedItems.allAttributeValues
                 ?.some((av) => request.value.type_.isEqualTo(av))
-            || (protectedItems.allUserAttributeTypesAndValues === null)
+            || (
+                (protectedItems.allUserAttributeTypesAndValues === null)
+                && !request.operational
+            )
             || protectedItems.attributeValue
                 ?.some((av) => {
                     if (!request.value.type_.isEqualTo(av.type_)) {

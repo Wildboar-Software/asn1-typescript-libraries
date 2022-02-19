@@ -23,10 +23,12 @@ type ProtectedItem = {
     | {
         attributeType: AttributeType;
         valuesCount?: number; // for maxValueCount support.
+        operational?: boolean;
     }
     | {
         value: AttributeTypeAndValue;
         contexts?: Context[];
+        operational?: boolean;
     };
 
 export default ProtectedItem;
