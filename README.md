@@ -11,6 +11,15 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
+## Remove all unused imports
+
+This is slow and will crash from running out of memory if you try this for the
+whole project at once. Just do this for a single project at a time:
+
+```bash
+npx tslint --config tslint-imports.json --fix --project ./libs/<project>/tsconfig.lib.json
+```
+
 ## Publish All Modules
 
 `cd` into `dist/libs`, then run

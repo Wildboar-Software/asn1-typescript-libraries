@@ -45,7 +45,7 @@ function evaluateContextAssertion (
         // c) none of the other attribute values for the attribute satisfies the ContextAssertion according to 1) or 2)
         // in 8.9.2.2 above, but the attribute value does contain a context of the asserted contextType with the
         // fallback set to TRUE.
-        || relevantContexts.some((context) => context.fallback)
+        || relevantContexts.some((context) => (context.fallback && isAbsentMatch))
     );
 }
 
