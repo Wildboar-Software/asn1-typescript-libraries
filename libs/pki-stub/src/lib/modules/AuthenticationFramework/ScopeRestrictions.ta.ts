@@ -6,11 +6,6 @@ import {
     _decode_ScopeRestriction,
     _encode_ScopeRestriction,
 } from "../AuthenticationFramework/ScopeRestriction.ta";
-export {
-    ScopeRestriction,
-    _decode_ScopeRestriction,
-    _encode_ScopeRestriction,
-} from "../AuthenticationFramework/ScopeRestriction.ta";
 
 /* START_OF_SYMBOL_DEFINITION ScopeRestrictions */
 /**
@@ -27,7 +22,8 @@ export type ScopeRestrictions = ScopeRestriction[]; // SequenceOfType
 /* END_OF_SYMBOL_DEFINITION ScopeRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestrictions */
-let _cached_decoder_for_ScopeRestrictions: $.ASN1Decoder<ScopeRestrictions> | null = null;
+let _cached_decoder_for_ScopeRestrictions: $.ASN1Decoder<ScopeRestrictions> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ScopeRestrictions */
@@ -39,16 +35,18 @@ let _cached_decoder_for_ScopeRestrictions: $.ASN1Decoder<ScopeRestrictions> | nu
  */
 export function _decode_ScopeRestrictions(el: _Element) {
     if (!_cached_decoder_for_ScopeRestrictions) {
-        _cached_decoder_for_ScopeRestrictions = $._decodeSequenceOf<ScopeRestriction>(
-            () => _decode_ScopeRestriction
-        );
+        _cached_decoder_for_ScopeRestrictions =
+            $._decodeSequenceOf<ScopeRestriction>(
+                () => _decode_ScopeRestriction
+            );
     }
     return _cached_decoder_for_ScopeRestrictions(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ScopeRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestrictions */
-let _cached_encoder_for_ScopeRestrictions: $.ASN1Encoder<ScopeRestrictions> | null = null;
+let _cached_encoder_for_ScopeRestrictions: $.ASN1Encoder<ScopeRestrictions> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestrictions */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ScopeRestrictions */
@@ -64,10 +62,11 @@ export function _encode_ScopeRestrictions(
     elGetter: $.ASN1Encoder<ScopeRestrictions>
 ) {
     if (!_cached_encoder_for_ScopeRestrictions) {
-        _cached_encoder_for_ScopeRestrictions = $._encodeSequenceOf<ScopeRestriction>(
-            () => _encode_ScopeRestriction,
-            $.BER
-        );
+        _cached_encoder_for_ScopeRestrictions =
+            $._encodeSequenceOf<ScopeRestriction>(
+                () => _encode_ScopeRestriction,
+                $.BER
+            );
     }
     return _cached_encoder_for_ScopeRestrictions(value, elGetter);
 }

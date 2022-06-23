@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
     ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION _enum_for_CRLReason */
 export enum _enum_for_CRLReason {
@@ -124,7 +69,8 @@ export const CRLReason_unspecified: CRLReason = 0; /* LONG_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const unspecified: CRLReason = CRLReason_unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unspecified: CRLReason =
+    CRLReason_unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION unspecified */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_keyCompromise */
@@ -142,7 +88,8 @@ export const CRLReason_keyCompromise: CRLReason = 1; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const keyCompromise: CRLReason = CRLReason_keyCompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const keyCompromise: CRLReason =
+    CRLReason_keyCompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION keyCompromise */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_cACompromise */
@@ -160,7 +107,8 @@ export const CRLReason_cACompromise: CRLReason = 2; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const cACompromise: CRLReason = CRLReason_cACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cACompromise: CRLReason =
+    CRLReason_cACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION cACompromise */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_affiliationChanged */
@@ -178,7 +126,8 @@ export const CRLReason_affiliationChanged: CRLReason = 3; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const affiliationChanged: CRLReason = CRLReason_affiliationChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const affiliationChanged: CRLReason =
+    CRLReason_affiliationChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION affiliationChanged */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_superseded */
@@ -196,7 +145,8 @@ export const CRLReason_superseded: CRLReason = 4; /* LONG_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const superseded: CRLReason = CRLReason_superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const superseded: CRLReason =
+    CRLReason_superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION superseded */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_cessationOfOperation */
@@ -214,7 +164,8 @@ export const CRLReason_cessationOfOperation: CRLReason = 5; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const cessationOfOperation: CRLReason = CRLReason_cessationOfOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cessationOfOperation: CRLReason =
+    CRLReason_cessationOfOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION cessationOfOperation */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_certificateHold */
@@ -232,7 +183,8 @@ export const CRLReason_certificateHold: CRLReason = 6; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const certificateHold: CRLReason = CRLReason_certificateHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certificateHold: CRLReason =
+    CRLReason_certificateHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION certificateHold */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_removeFromCRL */
@@ -250,7 +202,8 @@ export const CRLReason_removeFromCRL: CRLReason = 8; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const removeFromCRL: CRLReason = CRLReason_removeFromCRL; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const removeFromCRL: CRLReason =
+    CRLReason_removeFromCRL; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION removeFromCRL */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_privilegeWithdrawn */
@@ -268,7 +221,8 @@ export const CRLReason_privilegeWithdrawn: CRLReason = 9; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const privilegeWithdrawn: CRLReason = CRLReason_privilegeWithdrawn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const privilegeWithdrawn: CRLReason =
+    CRLReason_privilegeWithdrawn; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION privilegeWithdrawn */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_aACompromise */
@@ -286,7 +240,8 @@ export const CRLReason_aACompromise: CRLReason = 10; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const aACompromise: CRLReason = CRLReason_aACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aACompromise: CRLReason =
+    CRLReason_aACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION aACompromise */
 
 /* START_OF_SYMBOL_DEFINITION CRLReason_weakAlgorithmOrKey */
@@ -304,7 +259,8 @@ export const CRLReason_weakAlgorithmOrKey: CRLReason = 11; /* LONG_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const weakAlgorithmOrKey: CRLReason = CRLReason_weakAlgorithmOrKey; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const weakAlgorithmOrKey: CRLReason =
+    CRLReason_weakAlgorithmOrKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION weakAlgorithmOrKey */
 
 /* START_OF_SYMBOL_DEFINITION _decode_CRLReason */

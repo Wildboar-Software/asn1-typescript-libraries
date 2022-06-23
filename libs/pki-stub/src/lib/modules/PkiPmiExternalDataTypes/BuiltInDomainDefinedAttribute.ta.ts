@@ -71,22 +71,23 @@ export class BuiltInDomainDefinedAttribute {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "type",
-        false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "value",
-        false,
-        $.hasTag(_TagClass.universal, 19),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "type",
+            false,
+            $.hasTag(_TagClass.universal, 19),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "value",
+            false,
+            $.hasTag(_TagClass.universal, 19),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute */
@@ -98,7 +99,8 @@ export const _root_component_type_list_1_spec_for_BuiltInDomainDefinedAttribute:
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute */
@@ -110,11 +112,13 @@ export const _root_component_type_list_2_spec_for_BuiltInDomainDefinedAttribute:
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttribute */
-let _cached_decoder_for_BuiltInDomainDefinedAttribute: $.ASN1Decoder<BuiltInDomainDefinedAttribute> | null = null;
+let _cached_decoder_for_BuiltInDomainDefinedAttribute: $.ASN1Decoder<BuiltInDomainDefinedAttribute> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
@@ -151,7 +155,8 @@ export function _decode_BuiltInDomainDefinedAttribute(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttribute */
-let _cached_encoder_for_BuiltInDomainDefinedAttribute: $.ASN1Encoder<BuiltInDomainDefinedAttribute> | null = null;
+let _cached_encoder_for_BuiltInDomainDefinedAttribute: $.ASN1Encoder<BuiltInDomainDefinedAttribute> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttribute */

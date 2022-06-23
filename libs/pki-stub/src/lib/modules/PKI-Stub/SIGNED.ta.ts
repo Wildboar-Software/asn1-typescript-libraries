@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
     BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,18 +10,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
+} from "../PKI-Stub/AlgorithmIdentifier.ta";
 
 /* START_OF_SYMBOL_DEFINITION SIGNED */
 /**
@@ -99,7 +40,6 @@ export {
  * @class
  */
 export class SIGNED<ToBeSigned> {
-
     /**
      * @summary The orignal DER encoding of the signed thing.
      * @description
@@ -151,7 +91,7 @@ export class SIGNED<ToBeSigned> {
         /**
          * @summary
          */
-        originalDER?: _Element,
+        originalDER?: _Element
     ) {
         this.originalDER = originalDER.toBytes();
     }
@@ -193,16 +133,16 @@ export class SIGNED<ToBeSigned> {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SIGNED: $.ComponentSpec[] = [
-    new $.ComponentSpec('toBeSigned', false, $.hasAnyTag, undefined, undefined),
+    new $.ComponentSpec("toBeSigned", false, $.hasAnyTag, undefined, undefined),
     new $.ComponentSpec(
-        'algorithmIdentifier',
+        "algorithmIdentifier",
         false,
         $.hasTag(_TagClass.universal, 16),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        'signature',
+        "signature",
         false,
         $.hasTag(_TagClass.universal, 3),
         undefined,
@@ -220,7 +160,8 @@ export const _root_component_type_list_1_spec_for_SIGNED: $.ComponentSpec[] = [
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_SIGNED: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_SIGNED: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SIGNED */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SIGNED */
@@ -234,14 +175,14 @@ export const _root_component_type_list_2_spec_for_SIGNED: $.ComponentSpec[] = []
  */
 export const _extension_additions_list_spec_for_SIGNED: $.ComponentSpec[] = [
     new $.ComponentSpec(
-        'altAlgorithmIdentifier',
+        "altAlgorithmIdentifier",
         true,
         $.hasTag(_TagClass.universal, 16),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        'altSignature',
+        "altSignature",
         true,
         $.hasTag(_TagClass.universal, 3),
         undefined,
@@ -298,14 +239,14 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
                 _unrecognizedExtensionsList.push(ext);
             }
         );
-        return new SIGNED /* SEQUENCE_CONSTRUCTOR_CALL */(
-            toBeSigned,
+        return new SIGNED(
+            /* SEQUENCE_CONSTRUCTOR_CALL */ toBeSigned,
             algorithmIdentifier,
             signature,
             altAlgorithmIdentifier,
             altSignature,
             _unrecognizedExtensionsList,
-            el,
+            el
         );
     };
 }

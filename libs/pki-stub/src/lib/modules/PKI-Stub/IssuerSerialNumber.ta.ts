@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,20 +8,15 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { Name, _decode_Name, _encode_Name } from '../PKI-Stub/Name.ta';
-export { Name, _decode_Name, _encode_Name } from '../PKI-Stub/Name.ta';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
+import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
+export { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
+} from "../PKI-Stub/CertificateSerialNumber.ta";
 
 /* START_OF_SYMBOL_DEFINITION IssuerSerialNumber */
 /**
@@ -150,16 +89,17 @@ export class IssuerSerialNumber {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_IssuerSerialNumber: $.ComponentSpec[] = [
-    new $.ComponentSpec('issuer', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec(
-        'serialNumber',
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_IssuerSerialNumber: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+        new $.ComponentSpec(
+            "serialNumber",
+            false,
+            $.hasTag(_TagClass.universal, 2),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerialNumber */
@@ -171,7 +111,8 @@ export const _root_component_type_list_1_spec_for_IssuerSerialNumber: $.Componen
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_IssuerSerialNumber: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_IssuerSerialNumber: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerialNumber */
@@ -183,11 +124,13 @@ export const _root_component_type_list_2_spec_for_IssuerSerialNumber: $.Componen
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_IssuerSerialNumber: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_IssuerSerialNumber: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuerSerialNumber */
-let _cached_decoder_for_IssuerSerialNumber: $.ASN1Decoder<IssuerSerialNumber> | null = null;
+let _cached_decoder_for_IssuerSerialNumber: $.ASN1Decoder<IssuerSerialNumber> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _decode_IssuerSerialNumber */
@@ -205,13 +148,13 @@ export function _decode_IssuerSerialNumber(el: _Element) {
             const sequence: _Element[] = el.sequence;
             if (sequence.length < 2) {
                 throw new _ConstructionError(
-                    'IssuerSerialNumber contained only ' +
+                    "IssuerSerialNumber contained only " +
                         sequence.length.toString() +
-                        ' elements.'
+                        " elements."
                 );
             }
-            sequence[0].name = 'issuer';
-            sequence[1].name = 'serialNumber';
+            sequence[0].name = "issuer";
+            sequence[1].name = "serialNumber";
             let issuer!: Name;
             let serialNumber!: CertificateSerialNumber;
             issuer = _decode_Name(sequence[0]);
@@ -228,7 +171,8 @@ export function _decode_IssuerSerialNumber(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuerSerialNumber */
-let _cached_encoder_for_IssuerSerialNumber: $.ASN1Encoder<IssuerSerialNumber> | null = null;
+let _cached_encoder_for_IssuerSerialNumber: $.ASN1Encoder<IssuerSerialNumber> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuerSerialNumber */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IssuerSerialNumber */

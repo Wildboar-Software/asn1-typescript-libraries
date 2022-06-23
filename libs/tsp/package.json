@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/tsp",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Timestamp Protocol PDUs in TypeScript",
     "keywords": [
         "tsp",
@@ -29,6 +29,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/pki-stub": "^1.1.1"
     }
 }
 

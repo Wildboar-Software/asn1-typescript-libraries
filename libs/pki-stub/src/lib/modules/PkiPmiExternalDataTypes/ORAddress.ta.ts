@@ -20,21 +20,6 @@ import {
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta";
-export {
-    BuiltInDomainDefinedAttributes,
-    _decode_BuiltInDomainDefinedAttributes,
-    _encode_BuiltInDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInDomainDefinedAttributes.ta";
-export {
-    BuiltInStandardAttributes,
-    _decode_BuiltInStandardAttributes,
-    _encode_BuiltInStandardAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInStandardAttributes.ta";
-export {
-    ExtensionAttributes,
-    _decode_ExtensionAttributes,
-    _encode_ExtensionAttributes,
-} from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta";
 
 /* START_OF_SYMBOL_DEFINITION ORAddress */
 /**
@@ -108,29 +93,30 @@ export class ORAddress {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "built-in-standard-attributes",
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "built-in-domain-defined-attributes",
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "extension-attributes",
-        true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "built-in-standard-attributes",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "built-in-domain-defined-attributes",
+            true,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "extension-attributes",
+            true,
+            $.hasTag(_TagClass.universal, 17),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ORAddress */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
@@ -142,7 +128,8 @@ export const _root_component_type_list_1_spec_for_ORAddress: $.ComponentSpec[] =
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ORAddress */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
@@ -154,7 +141,8 @@ export const _root_component_type_list_2_spec_for_ORAddress: $.ComponentSpec[] =
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddress */
@@ -179,14 +167,12 @@ export function _decode_ORAddress(el: _Element) {
             /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 "built-in-standard-attributes": (_el: _Element): void => {
-                    built_in_standard_attributes = _decode_BuiltInStandardAttributes(
-                        _el
-                    );
+                    built_in_standard_attributes =
+                        _decode_BuiltInStandardAttributes(_el);
                 },
                 "built-in-domain-defined-attributes": (_el: _Element): void => {
-                    built_in_domain_defined_attributes = _decode_BuiltInDomainDefinedAttributes(
-                        _el
-                    );
+                    built_in_domain_defined_attributes =
+                        _decode_BuiltInDomainDefinedAttributes(_el);
                 },
                 "extension-attributes": (_el: _Element): void => {
                     extension_attributes = _decode_ExtensionAttributes(_el);

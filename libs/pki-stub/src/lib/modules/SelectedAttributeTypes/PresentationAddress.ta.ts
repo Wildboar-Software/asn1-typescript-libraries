@@ -94,36 +94,37 @@ export class PresentationAddress {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_PresentationAddress: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "pSelector",
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sSelector",
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "tSelector",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "nAddresses",
-        false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_PresentationAddress: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "pSelector",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "sSelector",
+            true,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "tSelector",
+            true,
+            $.hasTag(_TagClass.context, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "nAddresses",
+            false,
+            $.hasTag(_TagClass.context, 3),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PresentationAddress */
@@ -135,7 +136,8 @@ export const _root_component_type_list_1_spec_for_PresentationAddress: $.Compone
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_PresentationAddress: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_PresentationAddress: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PresentationAddress */
@@ -147,11 +149,13 @@ export const _root_component_type_list_2_spec_for_PresentationAddress: $.Compone
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_PresentationAddress: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_PresentationAddress: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
-let _cached_decoder_for_PresentationAddress: $.ASN1Decoder<PresentationAddress> | null = null;
+let _cached_decoder_for_PresentationAddress: $.ASN1Decoder<PresentationAddress> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
@@ -221,7 +225,8 @@ export function _decode_PresentationAddress(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAddress */
-let _cached_encoder_for_PresentationAddress: $.ASN1Encoder<PresentationAddress> | null = null;
+let _cached_encoder_for_PresentationAddress: $.ASN1Encoder<PresentationAddress> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PresentationAddress */

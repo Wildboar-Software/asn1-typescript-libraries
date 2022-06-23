@@ -1,18 +1,11 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import { ASN1Element as _Element } from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from '../PKI-Stub/AttributeTypeAndValue.ta';
-export {
-    AttributeTypeAndValue,
-    _decode_AttributeTypeAndValue,
-    _encode_AttributeTypeAndValue,
-} from '../PKI-Stub/AttributeTypeAndValue.ta';
+} from "../PKI-Stub/AttributeTypeAndValue.ta";
 
 /* START_OF_SYMBOL_DEFINITION RelativeDistinguishedName */
 /**
@@ -29,7 +22,8 @@ export type RelativeDistinguishedName = AttributeTypeAndValue[]; // SetOfType
 /* END_OF_SYMBOL_DEFINITION RelativeDistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeDistinguishedName */
-let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDistinguishedName> | null = null;
+let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDistinguishedName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeDistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_RelativeDistinguishedName */
@@ -41,16 +35,18 @@ let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDisting
  */
 export function _decode_RelativeDistinguishedName(el: _Element) {
     if (!_cached_decoder_for_RelativeDistinguishedName) {
-        _cached_decoder_for_RelativeDistinguishedName = $._decodeSetOf<AttributeTypeAndValue>(
-            () => _decode_AttributeTypeAndValue
-        );
+        _cached_decoder_for_RelativeDistinguishedName =
+            $._decodeSetOf<AttributeTypeAndValue>(
+                () => _decode_AttributeTypeAndValue
+            );
     }
     return _cached_decoder_for_RelativeDistinguishedName(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_RelativeDistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeDistinguishedName */
-let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> | null = null;
+let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeDistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RelativeDistinguishedName */
@@ -66,10 +62,11 @@ export function _encode_RelativeDistinguishedName(
     elGetter: $.ASN1Encoder<RelativeDistinguishedName>
 ) {
     if (!_cached_encoder_for_RelativeDistinguishedName) {
-        _cached_encoder_for_RelativeDistinguishedName = $._encodeSetOf<AttributeTypeAndValue>(
-            () => _encode_AttributeTypeAndValue,
-            $.BER
-        );
+        _cached_encoder_for_RelativeDistinguishedName =
+            $._encodeSetOf<AttributeTypeAndValue>(
+                () => _encode_AttributeTypeAndValue,
+                $.BER
+            );
     }
     return _cached_encoder_for_RelativeDistinguishedName(value, elGetter);
 }

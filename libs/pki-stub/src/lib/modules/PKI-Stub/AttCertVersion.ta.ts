@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION AttCertVersion */
 /**
@@ -41,7 +41,8 @@ export const AttCertVersion_v2: AttCertVersion = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const v2: AttCertVersion = AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2: AttCertVersion =
+    AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION v2 */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttCertVersion */
@@ -68,7 +69,7 @@ export function _encode_AttCertVersion(
     value: AttCertVersion,
     elGetter: $.ASN1Encoder<AttCertVersion>
 ) {
-    return  $._encodeInteger(value, elGetter);
+    return $._encodeInteger(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttCertVersion */

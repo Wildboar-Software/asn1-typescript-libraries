@@ -1,18 +1,11 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import { ASN1Element as _Element } from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     RDNSequence,
     _decode_RDNSequence,
     _encode_RDNSequence,
-} from '../PKI-Stub/RDNSequence.ta';
-export {
-    RDNSequence,
-    _decode_RDNSequence,
-    _encode_RDNSequence,
-} from '../PKI-Stub/RDNSequence.ta';
+} from "../PKI-Stub/RDNSequence.ta";
 
 /* START_OF_SYMBOL_DEFINITION DistinguishedName */
 /**
@@ -32,7 +25,8 @@ export type DistinguishedName = RDNSequence; // DefinedType
 /* END_OF_SYMBOL_DEFINITION DistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistinguishedName */
-let _cached_decoder_for_DistinguishedName: $.ASN1Decoder<DistinguishedName> | null = null;
+let _cached_decoder_for_DistinguishedName: $.ASN1Decoder<DistinguishedName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
@@ -51,7 +45,8 @@ export function _decode_DistinguishedName(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistinguishedName */
-let _cached_encoder_for_DistinguishedName: $.ASN1Encoder<DistinguishedName> | null = null;
+let _cached_encoder_for_DistinguishedName: $.ASN1Encoder<DistinguishedName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DistinguishedName */

@@ -9,38 +9,23 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
+} from "../PKI-Stub/GeneralNames.ta";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from '../PKI-Stub/IssuerSerial.ta';
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from '../PKI-Stub/IssuerSerial.ta';
+} from "../PKI-Stub/IssuerSerial.ta";
 import {
     ObjectDigestInfo,
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
-} from '../PKI-Stub/ObjectDigestInfo.ta';
-export {
-    ObjectDigestInfo,
-    _decode_ObjectDigestInfo,
-    _encode_ObjectDigestInfo,
-} from '../PKI-Stub/ObjectDigestInfo.ta';
+} from "../PKI-Stub/ObjectDigestInfo.ta";
 
 /* START_OF_SYMBOL_DEFINITION AttCertIssuer */
 /**
@@ -124,29 +109,30 @@ export class AttCertIssuer {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AttCertIssuer: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'issuerName',
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'baseCertificateID',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'objectDigestInfo',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_AttCertIssuer: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "issuerName",
+            true,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "baseCertificateID",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "objectDigestInfo",
+            true,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertIssuer */
@@ -158,7 +144,8 @@ export const _root_component_type_list_1_spec_for_AttCertIssuer: $.ComponentSpec
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AttCertIssuer: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AttCertIssuer: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertIssuer */
@@ -170,11 +157,13 @@ export const _root_component_type_list_2_spec_for_AttCertIssuer: $.ComponentSpec
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AttCertIssuer: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AttCertIssuer: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertIssuer */
-let _cached_decoder_for_AttCertIssuer: $.ASN1Decoder<AttCertIssuer> | null = null;
+let _cached_decoder_for_AttCertIssuer: $.ASN1Decoder<AttCertIssuer> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttCertIssuer */
@@ -201,14 +190,16 @@ export function _decode_AttCertIssuer(el: _Element) {
                             issuerName = _decode_GeneralNames(_el);
                         },
                         baseCertificateID: (_el: _Element): void => {
-                            baseCertificateID = $._decode_explicit<IssuerSerial>(
-                                () => _decode_IssuerSerial
-                            )(_el);
+                            baseCertificateID =
+                                $._decode_explicit<IssuerSerial>(
+                                    () => _decode_IssuerSerial
+                                )(_el);
                         },
                         objectDigestInfo: (_el: _Element): void => {
-                            objectDigestInfo = $._decode_explicit<ObjectDigestInfo>(
-                                () => _decode_ObjectDigestInfo
-                            )(_el);
+                            objectDigestInfo =
+                                $._decode_explicit<ObjectDigestInfo>(
+                                    () => _decode_ObjectDigestInfo
+                                )(_el);
                         },
                     };
                     /* END_OF_CALLBACKS_MAP */
@@ -222,8 +213,8 @@ export function _decode_AttCertIssuer(el: _Element) {
                             _unrecognizedExtensionsList.push(ext);
                         }
                     );
-                    return new AttCertIssuer /* SEQUENCE_CONSTRUCTOR_CALL */(
-                        issuerName,
+                    return new AttCertIssuer(
+                        /* SEQUENCE_CONSTRUCTOR_CALL */ issuerName,
                         baseCertificateID,
                         objectDigestInfo,
                         _unrecognizedExtensionsList
@@ -236,7 +227,8 @@ export function _decode_AttCertIssuer(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertIssuer */
-let _cached_encoder_for_AttCertIssuer: $.ASN1Encoder<AttCertIssuer> | null = null;
+let _cached_encoder_for_AttCertIssuer: $.ASN1Encoder<AttCertIssuer> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertIssuer */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttCertIssuer */

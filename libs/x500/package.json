@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x500",
-    "version": "1.0.44",
+    "version": "1.0.45",
     "description": "X.500 directory protocol data structures and business logic in TypeScript",
     "keywords": [
         "x500",
@@ -32,5 +32,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/pki-stub": "^1.1.1"
     }
 }

@@ -10,10 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ALGORITHM } from '../PKI-Stub/ALGORITHM.oca';
-export { ALGORITHM } from '../PKI-Stub/ALGORITHM.oca';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmWithInvoke */
 /**
@@ -94,29 +92,30 @@ export class AlgorithmWithInvoke {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'algorithm',
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'parameters',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'dynamParms',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "algorithm",
+            false,
+            $.hasTag(_TagClass.universal, 6),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "parameters",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "dynamParms",
+            true,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmWithInvoke */
@@ -128,7 +127,8 @@ export const _root_component_type_list_1_spec_for_AlgorithmWithInvoke: $.Compone
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmWithInvoke */
@@ -140,11 +140,13 @@ export const _root_component_type_list_2_spec_for_AlgorithmWithInvoke: $.Compone
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AlgorithmWithInvoke: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmWithInvoke */
-let _cached_decoder_for_AlgorithmWithInvoke: $.ASN1Decoder<AlgorithmWithInvoke> | null = null;
+let _cached_decoder_for_AlgorithmWithInvoke: $.ASN1Decoder<AlgorithmWithInvoke> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
@@ -192,8 +194,8 @@ export function _decode_AlgorithmWithInvoke(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new AlgorithmWithInvoke /* SEQUENCE_CONSTRUCTOR_CALL */(
-                algorithm,
+            return new AlgorithmWithInvoke(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
                 parameters,
                 dynamParms,
                 _unrecognizedExtensionsList
@@ -205,7 +207,8 @@ export function _decode_AlgorithmWithInvoke(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmWithInvoke */
-let _cached_encoder_for_AlgorithmWithInvoke: $.ASN1Encoder<AlgorithmWithInvoke> | null = null;
+let _cached_encoder_for_AlgorithmWithInvoke: $.ASN1Encoder<AlgorithmWithInvoke> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlgorithmWithInvoke */

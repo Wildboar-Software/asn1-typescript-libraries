@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION AttCertValidityPeriod */
 /**
@@ -83,22 +83,23 @@ export class AttCertValidityPeriod {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'notBeforeTime',
-        false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'notAfterTime',
-        false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "notBeforeTime",
+            false,
+            $.hasTag(_TagClass.universal, 24),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "notAfterTime",
+            false,
+            $.hasTag(_TagClass.universal, 24),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertValidityPeriod */
@@ -110,7 +111,8 @@ export const _root_component_type_list_1_spec_for_AttCertValidityPeriod: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AttCertValidityPeriod: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AttCertValidityPeriod: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertValidityPeriod */
@@ -122,11 +124,13 @@ export const _root_component_type_list_2_spec_for_AttCertValidityPeriod: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AttCertValidityPeriod: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AttCertValidityPeriod: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertValidityPeriod */
-let _cached_decoder_for_AttCertValidityPeriod: $.ASN1Decoder<AttCertValidityPeriod> | null = null;
+let _cached_decoder_for_AttCertValidityPeriod: $.ASN1Decoder<AttCertValidityPeriod> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttCertValidityPeriod */
@@ -144,13 +148,13 @@ export function _decode_AttCertValidityPeriod(el: _Element) {
             const sequence: _Element[] = el.sequence;
             if (sequence.length < 2) {
                 throw new _ConstructionError(
-                    'AttCertValidityPeriod contained only ' +
+                    "AttCertValidityPeriod contained only " +
                         sequence.length.toString() +
-                        ' elements.'
+                        " elements."
                 );
             }
-            sequence[0].name = 'notBeforeTime';
-            sequence[1].name = 'notAfterTime';
+            sequence[0].name = "notBeforeTime";
+            sequence[1].name = "notAfterTime";
             let notBeforeTime!: GeneralizedTime;
             let notAfterTime!: GeneralizedTime;
             notBeforeTime = $._decodeGeneralizedTime(sequence[0]);
@@ -167,7 +171,8 @@ export function _decode_AttCertValidityPeriod(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertValidityPeriod */
-let _cached_encoder_for_AttCertValidityPeriod: $.ASN1Encoder<AttCertValidityPeriod> | null = null;
+let _cached_encoder_for_AttCertValidityPeriod: $.ASN1Encoder<AttCertValidityPeriod> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttCertValidityPeriod */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttCertValidityPeriod */

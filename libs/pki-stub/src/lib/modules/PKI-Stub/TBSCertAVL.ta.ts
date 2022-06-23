@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,72 +10,35 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from '../PKI-Stub/Version.ta';
-export {
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Version,
-    _encode_Version,
-} from '../PKI-Stub/Version.ta';
+} from "../PKI-Stub/Version.ta";
 import {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from '../PKI-Stub/AvlSerialNumber.ta';
-export {
-    AvlSerialNumber,
-    _decode_AvlSerialNumber,
-    _encode_AvlSerialNumber,
-} from '../PKI-Stub/AvlSerialNumber.ta';
+} from "../PKI-Stub/AvlSerialNumber.ta";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-import { Name, _decode_Name, _encode_Name } from '../PKI-Stub/Name.ta';
-export { Name, _decode_Name, _encode_Name } from '../PKI-Stub/Name.ta';
+} from "../PKI-Stub/AlgorithmIdentifier.ta";
+import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
 import {
     TBSCertAVL_entries_Item,
     _decode_TBSCertAVL_entries_Item,
     _encode_TBSCertAVL_entries_Item,
-} from '../PKI-Stub/TBSCertAVL-entries-Item.ta';
-export {
-    TBSCertAVL_entries_Item,
-    _decode_TBSCertAVL_entries_Item,
-    _encode_TBSCertAVL_entries_Item,
-} from '../PKI-Stub/TBSCertAVL-entries-Item.ta';
+} from "../PKI-Stub/TBSCertAVL-entries-Item.ta";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
+} from "../PKI-Stub/Extensions.ta";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertAVL */
 /**
@@ -260,44 +169,45 @@ export class TBSCertAVL {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_TBSCertAVL: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'version',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'serialNumber',
-        true,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'signature',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec('issuer', false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec(
-        'constrained',
-        false,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'entries',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_TBSCertAVL: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "version",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "serialNumber",
+            true,
+            $.hasTag(_TagClass.universal, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "signature",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec("issuer", false, $.hasAnyTag, undefined, undefined),
+        new $.ComponentSpec(
+            "constrained",
+            false,
+            $.hasTag(_TagClass.universal, 1),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "entries",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertAVL */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL */
@@ -309,15 +219,16 @@ export const _root_component_type_list_1_spec_for_TBSCertAVL: $.ComponentSpec[] 
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'avlExtensions',
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "avlExtensions",
+            true,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL */
@@ -329,7 +240,8 @@ export const _root_component_type_list_2_spec_for_TBSCertAVL: $.ComponentSpec[] 
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL */
@@ -396,8 +308,8 @@ export function _decode_TBSCertAVL(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TBSCertAVL /* SEQUENCE_CONSTRUCTOR_CALL */(
-                version,
+            return new TBSCertAVL(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
                 serialNumber,
                 signature,
                 issuer,

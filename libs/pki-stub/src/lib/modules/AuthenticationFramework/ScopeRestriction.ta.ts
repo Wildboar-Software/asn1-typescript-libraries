@@ -6,7 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
-export { SCOPE_RESTRICTION } from "../AuthenticationFramework/SCOPE-RESTRICTION.oca";
 
 /* START_OF_SYMBOL_DEFINITION ScopeRestriction */
 /**
@@ -79,22 +78,23 @@ export class ScopeRestriction {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_ScopeRestriction: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "id",
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "restriction",
-        false,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_ScopeRestriction: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "id",
+            false,
+            $.hasTag(_TagClass.universal, 6),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "restriction",
+            false,
+            $.hasAnyTag,
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScopeRestriction */
@@ -106,7 +106,8 @@ export const _root_component_type_list_1_spec_for_ScopeRestriction: $.ComponentS
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ScopeRestriction: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ScopeRestriction: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScopeRestriction */
@@ -118,11 +119,13 @@ export const _root_component_type_list_2_spec_for_ScopeRestriction: $.ComponentS
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ScopeRestriction: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ScopeRestriction: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestriction */
-let _cached_decoder_for_ScopeRestriction: $.ASN1Decoder<ScopeRestriction> | null = null;
+let _cached_decoder_for_ScopeRestriction: $.ASN1Decoder<ScopeRestriction> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
@@ -159,7 +162,8 @@ export function _decode_ScopeRestriction(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestriction */
-let _cached_encoder_for_ScopeRestriction: $.ASN1Encoder<ScopeRestriction> | null = null;
+let _cached_encoder_for_ScopeRestriction: $.ASN1Encoder<ScopeRestriction> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ScopeRestriction */

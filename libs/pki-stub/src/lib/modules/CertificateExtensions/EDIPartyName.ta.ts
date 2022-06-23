@@ -10,11 +10,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
 
 /* START_OF_SYMBOL_DEFINITION EDIPartyName */
 /**
@@ -87,22 +82,23 @@ export class EDIPartyName {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_EDIPartyName: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "nameAssigner",
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "partyName",
-        false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_EDIPartyName: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "nameAssigner",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "partyName",
+            false,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_EDIPartyName */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIPartyName */
@@ -114,7 +110,8 @@ export const _root_component_type_list_1_spec_for_EDIPartyName: $.ComponentSpec[
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_EDIPartyName: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_EDIPartyName: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EDIPartyName */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIPartyName */
@@ -126,7 +123,8 @@ export const _root_component_type_list_2_spec_for_EDIPartyName: $.ComponentSpec[
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIPartyName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIPartyName */

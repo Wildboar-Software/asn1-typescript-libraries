@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -65,14 +13,8 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
     DERElement,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../PKI-Stub/EXTENSION.oca';
-export { EXTENSION } from '../PKI-Stub/EXTENSION.oca';
-import { ExtensionSet } from '../PKI-Stub/ExtensionSet.osa';
-export { ExtensionSet } from '../PKI-Stub/ExtensionSet.osa';
-import { der } from '../PKI-Stub/der.va';
-export { der } from '../PKI-Stub/der.va';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION Extension */
 /**
@@ -154,7 +96,7 @@ export class Extension {
         return false;
     }
 
-    public valueElement (): DERElement {
+    public valueElement(): DERElement {
         const el = new DERElement();
         el.fromBytes(this.extnValue);
         return el;
@@ -171,29 +113,30 @@ export class Extension {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'extnId',
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'critical',
-        true,
-        $.hasTag(_TagClass.universal, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extnValue',
-        false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "extnId",
+            false,
+            $.hasTag(_TagClass.universal, 6),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "critical",
+            true,
+            $.hasTag(_TagClass.universal, 1),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "extnValue",
+            false,
+            $.hasTag(_TagClass.universal, 4),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Extension */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Extension */
@@ -205,7 +148,8 @@ export const _root_component_type_list_1_spec_for_Extension: $.ComponentSpec[] =
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_Extension: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_Extension: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Extension */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Extension */
@@ -217,7 +161,8 @@ export const _root_component_type_list_2_spec_for_Extension: $.ComponentSpec[] =
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Extension */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension */
@@ -264,8 +209,8 @@ export function _decode_Extension(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new Extension /* SEQUENCE_CONSTRUCTOR_CALL */(
-                extnId,
+            return new Extension(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ extnId,
                 critical,
                 extnValue,
                 _unrecognizedExtensionsList

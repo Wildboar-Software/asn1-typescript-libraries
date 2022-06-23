@@ -78,16 +78,17 @@ export class AttributeTypeAndValue {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AttributeTypeAndValue: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "type",
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
-];
+export const _root_component_type_list_1_spec_for_AttributeTypeAndValue: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "type",
+            false,
+            $.hasTag(_TagClass.universal, 6),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeAndValue */
@@ -99,7 +100,8 @@ export const _root_component_type_list_1_spec_for_AttributeTypeAndValue: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AttributeTypeAndValue: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AttributeTypeAndValue: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeAndValue */
@@ -111,11 +113,13 @@ export const _root_component_type_list_2_spec_for_AttributeTypeAndValue: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AttributeTypeAndValue: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AttributeTypeAndValue: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeAndValue */
-let _cached_decoder_for_AttributeTypeAndValue: $.ASN1Decoder<AttributeTypeAndValue> | null = null;
+let _cached_decoder_for_AttributeTypeAndValue: $.ASN1Decoder<AttributeTypeAndValue> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
@@ -152,7 +156,8 @@ export function _decode_AttributeTypeAndValue(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeAndValue */
-let _cached_encoder_for_AttributeTypeAndValue: $.ASN1Encoder<AttributeTypeAndValue> | null = null;
+let _cached_encoder_for_AttributeTypeAndValue: $.ASN1Encoder<AttributeTypeAndValue> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeTypeAndValue */

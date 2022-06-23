@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,38 +9,23 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from '../PKI-Stub/IssuerSerial.ta';
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from '../PKI-Stub/IssuerSerial.ta';
+} from "../PKI-Stub/IssuerSerial.ta";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
+} from "../PKI-Stub/GeneralNames.ta";
 import {
     ObjectDigestInfo,
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
-} from '../PKI-Stub/ObjectDigestInfo.ta';
-export {
-    ObjectDigestInfo,
-    _decode_ObjectDigestInfo,
-    _encode_ObjectDigestInfo,
-} from '../PKI-Stub/ObjectDigestInfo.ta';
+} from "../PKI-Stub/ObjectDigestInfo.ta";
 
 /* START_OF_SYMBOL_DEFINITION Holder */
 /**
@@ -173,21 +103,21 @@ export class Holder {
  */
 export const _root_component_type_list_1_spec_for_Holder: $.ComponentSpec[] = [
     new $.ComponentSpec(
-        'baseCertificateID',
+        "baseCertificateID",
         true,
         $.hasTag(_TagClass.context, 0),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        'entityName',
+        "entityName",
         true,
         $.hasTag(_TagClass.context, 1),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        'objectDigestInfo',
+        "objectDigestInfo",
         true,
         $.hasTag(_TagClass.context, 2),
         undefined,
@@ -205,7 +135,8 @@ export const _root_component_type_list_1_spec_for_Holder: $.ComponentSpec[] = [
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_Holder: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_Holder: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Holder */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Holder */
@@ -266,8 +197,8 @@ export function _decode_Holder(el: _Element) {
                 _root_component_type_list_2_spec_for_Holder,
                 undefined
             );
-            return new Holder /* SEQUENCE_CONSTRUCTOR_CALL */(
-                baseCertificateID,
+            return new Holder(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ baseCertificateID,
                 entityName,
                 objectDigestInfo
             );

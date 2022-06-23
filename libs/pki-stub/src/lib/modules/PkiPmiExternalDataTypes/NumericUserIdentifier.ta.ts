@@ -17,7 +17,8 @@ export type NumericUserIdentifier = NumericString; // NumericString
 /* END_OF_SYMBOL_DEFINITION NumericUserIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericUserIdentifier */
-let _cached_decoder_for_NumericUserIdentifier: $.ASN1Decoder<NumericUserIdentifier> | null = null;
+let _cached_decoder_for_NumericUserIdentifier: $.ASN1Decoder<NumericUserIdentifier> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NumericUserIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NumericUserIdentifier */
@@ -36,7 +37,8 @@ export function _decode_NumericUserIdentifier(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_NumericUserIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericUserIdentifier */
-let _cached_encoder_for_NumericUserIdentifier: $.ASN1Encoder<NumericUserIdentifier> | null = null;
+let _cached_encoder_for_NumericUserIdentifier: $.ASN1Encoder<NumericUserIdentifier> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NumericUserIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NumericUserIdentifier */

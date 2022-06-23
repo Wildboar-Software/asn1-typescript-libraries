@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
     BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,18 +9,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
+} from "../PKI-Stub/AlgorithmIdentifier.ta";
 
 /* START_OF_SYMBOL_DEFINITION HASH */
 /**
@@ -150,14 +90,14 @@ export class HASH<ToBeHashed> {
  */
 export const _root_component_type_list_1_spec_for_HASH: $.ComponentSpec[] = [
     new $.ComponentSpec(
-        'algorithmIdentifier',
+        "algorithmIdentifier",
         false,
         $.hasTag(_TagClass.universal, 16),
         undefined,
         undefined
     ),
     new $.ComponentSpec(
-        'hashValue',
+        "hashValue",
         false,
         $.hasTag(_TagClass.universal, 3),
         undefined,
@@ -204,13 +144,13 @@ export function _get_decoder_for_HASH<ToBeHashed>(
         const sequence: _Element[] = el.sequence;
         if (sequence.length < 2) {
             throw new _ConstructionError(
-                'HASH contained only ' +
+                "HASH contained only " +
                     sequence.length.toString() +
-                    ' elements.'
+                    " elements."
             );
         }
-        sequence[0].name = 'algorithmIdentifier';
-        sequence[1].name = 'hashValue';
+        sequence[0].name = "algorithmIdentifier";
+        sequence[1].name = "hashValue";
         let algorithmIdentifier!: AlgorithmIdentifier;
         let hashValue!: BIT_STRING;
         algorithmIdentifier = _decode_AlgorithmIdentifier(sequence[0]);

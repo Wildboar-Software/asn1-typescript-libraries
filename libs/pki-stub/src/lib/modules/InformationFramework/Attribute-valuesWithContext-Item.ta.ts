@@ -10,11 +10,6 @@ import {
     _decode_Context,
     _encode_Context,
 } from "../InformationFramework/Context.ta";
-export {
-    Context,
-    _decode_Context,
-    _encode_Context,
-} from "../InformationFramework/Context.ta";
 
 /* START_OF_SYMBOL_DEFINITION Attribute_valuesWithContext_Item */
 /**
@@ -88,16 +83,17 @@ export class Attribute_valuesWithContext_Item {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
-    new $.ComponentSpec(
-        "contextList",
-        false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec("value", false, $.hasAnyTag, undefined, undefined),
+        new $.ComponentSpec(
+            "contextList",
+            false,
+            $.hasTag(_TagClass.universal, 17),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item */
@@ -109,7 +105,8 @@ export const _root_component_type_list_1_spec_for_Attribute_valuesWithContext_It
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_valuesWithContext_Item */
@@ -121,11 +118,13 @@ export const _root_component_type_list_2_spec_for_Attribute_valuesWithContext_It
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_Attribute_valuesWithContext_Item: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_valuesWithContext_Item */
-let _cached_decoder_for_Attribute_valuesWithContext_Item: $.ASN1Decoder<Attribute_valuesWithContext_Item> | null = null;
+let _cached_decoder_for_Attribute_valuesWithContext_Item: $.ASN1Decoder<Attribute_valuesWithContext_Item> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
@@ -168,7 +167,8 @@ export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_valuesWithContext_Item */
-let _cached_encoder_for_Attribute_valuesWithContext_Item: $.ASN1Encoder<Attribute_valuesWithContext_Item> | null = null;
+let _cached_encoder_for_Attribute_valuesWithContext_Item: $.ASN1Encoder<Attribute_valuesWithContext_Item> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Attribute_valuesWithContext_Item */

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,38 +9,23 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from '../PKI-Stub/GeneralNames.ta';
+} from "../PKI-Stub/GeneralNames.ta";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
+} from "../PKI-Stub/CertificateSerialNumber.ta";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from '../PKI-Stub/UniqueIdentifier.ta';
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from '../PKI-Stub/UniqueIdentifier.ta';
+} from "../PKI-Stub/UniqueIdentifier.ta";
 
 /* START_OF_SYMBOL_DEFINITION IssuerSerial */
 /**
@@ -176,29 +106,30 @@ export class IssuerSerial {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_IssuerSerial: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'issuer',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'serial',
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'issuerUID',
-        true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_IssuerSerial: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "issuer",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "serial",
+            false,
+            $.hasTag(_TagClass.universal, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "issuerUID",
+            true,
+            $.hasTag(_TagClass.universal, 3),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_IssuerSerial */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerial */
@@ -210,7 +141,8 @@ export const _root_component_type_list_1_spec_for_IssuerSerial: $.ComponentSpec[
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_IssuerSerial: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_IssuerSerial: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IssuerSerial */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerial */
@@ -222,7 +154,8 @@ export const _root_component_type_list_2_spec_for_IssuerSerial: $.ComponentSpec[
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerial */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuerSerial */
@@ -270,8 +203,8 @@ export function _decode_IssuerSerial(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new IssuerSerial /* SEQUENCE_CONSTRUCTOR_CALL */(
-                issuer,
+            return new IssuerSerial(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
                 serial,
                 issuerUID,
                 _unrecognizedExtensionsList

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,33 +9,23 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,
     _encode_TBSCertAVL_entries_Item_idType,
-} from '../PKI-Stub/TBSCertAVL-entries-Item-idType.ta';
-export {
-    TBSCertAVL_entries_Item_idType,
-    _decode_TBSCertAVL_entries_Item_idType,
-    _encode_TBSCertAVL_entries_Item_idType,
-} from '../PKI-Stub/TBSCertAVL-entries-Item-idType.ta';
+} from "../PKI-Stub/TBSCertAVL-entries-Item-idType.ta";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
+} from "../PKI-Stub/Extensions.ta";
 import {
     ScopeRestrictions,
     _decode_ScopeRestrictions,
     _encode_ScopeRestrictions,
-} from '../AuthenticationFramework/ScopeRestrictions.ta';
+} from "../AuthenticationFramework/ScopeRestrictions.ta";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertAVL_entries_Item */
 /**
@@ -169,17 +104,18 @@ export class TBSCertAVL_entries_Item {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] = [
-    new $.ComponentSpec('idType', false, $.hasAnyTag, undefined, undefined),
-    ,
-    /* FIXME: scope COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
-        'entryExtensions',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec("idType", false, $.hasAnyTag, undefined, undefined),
+        ,
+        /* FIXME: scope COULD_NOT_RESOLVE_TYPE_DEF */ new $.ComponentSpec(
+            "entryExtensions",
+            true,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item */
@@ -191,7 +127,8 @@ export const _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item: $.Com
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL_entries_Item */
@@ -203,11 +140,13 @@ export const _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item: $.Com
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_TBSCertAVL_entries_Item: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item */
-let _cached_decoder_for_TBSCertAVL_entries_Item: $.ASN1Decoder<TBSCertAVL_entries_Item> | null = null;
+let _cached_decoder_for_TBSCertAVL_entries_Item: $.ASN1Decoder<TBSCertAVL_entries_Item> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item */
@@ -255,8 +194,8 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TBSCertAVL_entries_Item /* SEQUENCE_CONSTRUCTOR_CALL */(
-                idType,
+            return new TBSCertAVL_entries_Item(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ idType,
                 scope,
                 entryExtensions,
                 _unrecognizedExtensionsList
@@ -268,7 +207,8 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item */
-let _cached_encoder_for_TBSCertAVL_entries_Item: $.ASN1Encoder<TBSCertAVL_entries_Item> | null = null;
+let _cached_encoder_for_TBSCertAVL_entries_Item: $.ASN1Encoder<TBSCertAVL_entries_Item> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TBSCertAVL_entries_Item */

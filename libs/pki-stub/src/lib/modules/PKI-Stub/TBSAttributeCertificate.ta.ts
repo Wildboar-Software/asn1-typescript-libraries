@@ -9,94 +9,49 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     AttCertVersion,
-    AttCertVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttCertVersion,
     _encode_AttCertVersion,
-} from '../PKI-Stub/AttCertVersion.ta';
-export {
-    AttCertVersion,
-    AttCertVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_AttCertVersion,
-    _encode_AttCertVersion,
-} from '../PKI-Stub/AttCertVersion.ta';
-import { Holder, _decode_Holder, _encode_Holder } from '../PKI-Stub/Holder.ta';
-export { Holder, _decode_Holder, _encode_Holder } from '../PKI-Stub/Holder.ta';
+} from "../PKI-Stub/AttCertVersion.ta";
+import { Holder, _decode_Holder, _encode_Holder } from "../PKI-Stub/Holder.ta";
 import {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from '../PKI-Stub/AttCertIssuer.ta';
-export {
-    AttCertIssuer,
-    _decode_AttCertIssuer,
-    _encode_AttCertIssuer,
-} from '../PKI-Stub/AttCertIssuer.ta';
+} from "../PKI-Stub/AttCertIssuer.ta";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
+} from "../PKI-Stub/AlgorithmIdentifier.ta";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from '../PKI-Stub/CertificateSerialNumber.ta';
+} from "../PKI-Stub/CertificateSerialNumber.ta";
 import {
     AttCertValidityPeriod,
     _decode_AttCertValidityPeriod,
     _encode_AttCertValidityPeriod,
-} from '../PKI-Stub/AttCertValidityPeriod.ta';
-export {
-    AttCertValidityPeriod,
-    _decode_AttCertValidityPeriod,
-    _encode_AttCertValidityPeriod,
-} from '../PKI-Stub/AttCertValidityPeriod.ta';
+} from "../PKI-Stub/AttCertValidityPeriod.ta";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '../PKI-Stub/Attribute.ta';
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from '../PKI-Stub/Attribute.ta';
+} from "../PKI-Stub/Attribute.ta";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from '../PKI-Stub/UniqueIdentifier.ta';
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from '../PKI-Stub/UniqueIdentifier.ta';
+} from "../PKI-Stub/UniqueIdentifier.ta";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from '../PKI-Stub/Extensions.ta';
+} from "../PKI-Stub/Extensions.ta";
 
 /* START_OF_SYMBOL_DEFINITION TBSAttributeCertificate */
 /**
@@ -229,64 +184,65 @@ export class TBSAttributeCertificate {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_TBSAttributeCertificate: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'version',
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'holder',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'issuer',
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'signature',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'serialNumber',
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'attrCertValidityPeriod',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'attributes',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'issuerUniqueID',
-        true,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_TBSAttributeCertificate: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "version",
+            false,
+            $.hasTag(_TagClass.universal, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "holder",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "issuer",
+            false,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "signature",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "serialNumber",
+            false,
+            $.hasTag(_TagClass.universal, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "attrCertValidityPeriod",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "attributes",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "issuerUniqueID",
+            true,
+            $.hasTag(_TagClass.universal, 3),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAttributeCertificate */
@@ -298,15 +254,16 @@ export const _root_component_type_list_1_spec_for_TBSAttributeCertificate: $.Com
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_TBSAttributeCertificate: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_2_spec_for_TBSAttributeCertificate: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "extensions",
+            true,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAttributeCertificate */
@@ -318,11 +275,13 @@ export const _root_component_type_list_2_spec_for_TBSAttributeCertificate: $.Com
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_TBSAttributeCertificate: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_TBSAttributeCertificate: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAttributeCertificate */
-let _cached_decoder_for_TBSAttributeCertificate: $.ASN1Decoder<TBSAttributeCertificate> | null = null;
+let _cached_decoder_for_TBSAttributeCertificate: $.ASN1Decoder<TBSAttributeCertificate> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
@@ -392,8 +351,8 @@ export function _decode_TBSAttributeCertificate(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new TBSAttributeCertificate /* SEQUENCE_CONSTRUCTOR_CALL */(
-                version,
+            return new TBSAttributeCertificate(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
                 holder,
                 issuer,
                 signature,
@@ -411,7 +370,8 @@ export function _decode_TBSAttributeCertificate(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAttributeCertificate */
-let _cached_encoder_for_TBSAttributeCertificate: $.ASN1Encoder<TBSAttributeCertificate> | null = null;
+let _cached_encoder_for_TBSAttributeCertificate: $.ASN1Encoder<TBSAttributeCertificate> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TBSAttributeCertificate */

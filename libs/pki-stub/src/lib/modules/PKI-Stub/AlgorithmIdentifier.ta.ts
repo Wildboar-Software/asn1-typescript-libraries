@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,10 +10,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ALGORITHM } from '../PKI-Stub/ALGORITHM.oca';
-export { ALGORITHM } from '../PKI-Stub/ALGORITHM.oca';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 /**
@@ -140,16 +84,23 @@ export class AlgorithmIdentifier {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AlgorithmIdentifier: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'algorithm',
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec('parameters', true, $.hasAnyTag, undefined, undefined),
-];
+export const _root_component_type_list_1_spec_for_AlgorithmIdentifier: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "algorithm",
+            false,
+            $.hasTag(_TagClass.universal, 6),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "parameters",
+            true,
+            $.hasAnyTag,
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmIdentifier */
@@ -161,7 +112,8 @@ export const _root_component_type_list_1_spec_for_AlgorithmIdentifier: $.Compone
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AlgorithmIdentifier: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AlgorithmIdentifier: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmIdentifier */
@@ -173,11 +125,13 @@ export const _root_component_type_list_2_spec_for_AlgorithmIdentifier: $.Compone
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AlgorithmIdentifier: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AlgorithmIdentifier: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmIdentifier */
-let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> | null = null;
+let _cached_decoder_for_AlgorithmIdentifier: $.ASN1Decoder<AlgorithmIdentifier> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AlgorithmIdentifier */
@@ -217,8 +171,8 @@ export function _decode_AlgorithmIdentifier(el: _Element) {
                     _unrecognizedExtensionsList.push(ext);
                 }
             );
-            return new AlgorithmIdentifier /* SEQUENCE_CONSTRUCTOR_CALL */(
-                algorithm,
+            return new AlgorithmIdentifier(
+                /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
                 parameters,
                 _unrecognizedExtensionsList
             );
@@ -229,7 +183,8 @@ export function _decode_AlgorithmIdentifier(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmIdentifier */
-let _cached_encoder_for_AlgorithmIdentifier: $.ASN1Encoder<AlgorithmIdentifier> | null = null;
+let _cached_encoder_for_AlgorithmIdentifier: $.ASN1Encoder<AlgorithmIdentifier> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmIdentifier */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlgorithmIdentifier */

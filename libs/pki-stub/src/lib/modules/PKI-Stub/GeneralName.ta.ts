@@ -13,11 +13,7 @@ import {
     _decode_EDIPartyName,
     _encode_EDIPartyName,
 } from "../CertificateExtensions/EDIPartyName.ta";
-import {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "./Name.ta";
+import { Name, _decode_Name, _encode_Name } from "./Name.ta";
 import {
     ORAddress,
     _decode_ORAddress,
@@ -71,8 +67,8 @@ let _cached_decoder_for_GeneralName: $.ASN1Decoder<GeneralName> | null = null;
  */
 export function _decode_GeneralName(el: _Element) {
     if (!_cached_decoder_for_GeneralName) {
-        _cached_decoder_for_GeneralName = $._decode_extensible_choice<GeneralName>(
-            {
+        _cached_decoder_for_GeneralName =
+            $._decode_extensible_choice<GeneralName>({
                 "CONTEXT 0": [
                     "otherName",
                     $._decode_implicit<INSTANCE_OF>(() => $._decodeInstanceOf),
@@ -115,8 +111,7 @@ export function _decode_GeneralName(el: _Element) {
                         () => $._decodeObjectIdentifier
                     ),
                 ],
-            }
-        );
+            });
     }
     return _cached_decoder_for_GeneralName(el);
 }

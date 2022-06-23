@@ -132,7 +132,8 @@ export const _root_component_type_list_1_spec_for_Context: $.ComponentSpec[] = [
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_Context: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_Context: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_Context */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context */

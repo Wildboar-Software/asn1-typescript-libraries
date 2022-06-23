@@ -6,11 +6,6 @@ import {
     _decode_ExtensionAttribute,
     _encode_ExtensionAttribute,
 } from "../PkiPmiExternalDataTypes/ExtensionAttribute.ta";
-export {
-    ExtensionAttribute,
-    _decode_ExtensionAttribute,
-    _encode_ExtensionAttribute,
-} from "../PkiPmiExternalDataTypes/ExtensionAttribute.ta";
 
 /* START_OF_SYMBOL_DEFINITION ExtensionAttributes */
 /**
@@ -28,7 +23,8 @@ export type ExtensionAttributes = ExtensionAttribute[]; // SetOfType
 /* END_OF_SYMBOL_DEFINITION ExtensionAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttributes */
-let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> | null = null;
+let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ExtensionAttributes */
@@ -40,16 +36,18 @@ let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> 
  */
 export function _decode_ExtensionAttributes(el: _Element) {
     if (!_cached_decoder_for_ExtensionAttributes) {
-        _cached_decoder_for_ExtensionAttributes = $._decodeSetOf<ExtensionAttribute>(
-            () => _decode_ExtensionAttribute
-        );
+        _cached_decoder_for_ExtensionAttributes =
+            $._decodeSetOf<ExtensionAttribute>(
+                () => _decode_ExtensionAttribute
+            );
     }
     return _cached_decoder_for_ExtensionAttributes(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ExtensionAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttributes */
-let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> | null = null;
+let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExtensionAttributes */
@@ -65,10 +63,11 @@ export function _encode_ExtensionAttributes(
     elGetter: $.ASN1Encoder<ExtensionAttributes>
 ) {
     if (!_cached_encoder_for_ExtensionAttributes) {
-        _cached_encoder_for_ExtensionAttributes = $._encodeSetOf<ExtensionAttribute>(
-            () => _encode_ExtensionAttribute,
-            $.BER
-        );
+        _cached_encoder_for_ExtensionAttributes =
+            $._encodeSetOf<ExtensionAttribute>(
+                () => _encode_ExtensionAttribute,
+                $.BER
+            );
     }
     return _cached_encoder_for_ExtensionAttributes(value, elGetter);
 }

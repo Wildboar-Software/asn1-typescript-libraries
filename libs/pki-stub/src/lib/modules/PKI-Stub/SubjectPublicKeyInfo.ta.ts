@@ -8,28 +8,18 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from '../PKI-Stub/AlgorithmIdentifier.ta';
+} from "../PKI-Stub/AlgorithmIdentifier.ta";
 import {
     PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
-} from '../PKI-Stub/PublicKey.ta';
-export {
-    PublicKey,
-    _decode_PublicKey,
-    _encode_PublicKey,
-} from '../PKI-Stub/PublicKey.ta';
+} from "../PKI-Stub/PublicKey.ta";
 
 /* START_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
 /**
@@ -102,22 +92,23 @@ export class SubjectPublicKeyInfo {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'algorithm',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'subjectPublicKey',
-        false,
-        $.hasTag(_TagClass.universal, 3),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "algorithm",
+            false,
+            $.hasTag(_TagClass.universal, 16),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "subjectPublicKey",
+            false,
+            $.hasTag(_TagClass.universal, 3),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
@@ -129,7 +120,8 @@ export const _root_component_type_list_1_spec_for_SubjectPublicKeyInfo: $.Compon
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
@@ -141,11 +133,13 @@ export const _root_component_type_list_2_spec_for_SubjectPublicKeyInfo: $.Compon
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_SubjectPublicKeyInfo: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectPublicKeyInfo */
-let _cached_decoder_for_SubjectPublicKeyInfo: $.ASN1Decoder<SubjectPublicKeyInfo> | null = null;
+let _cached_decoder_for_SubjectPublicKeyInfo: $.ASN1Decoder<SubjectPublicKeyInfo> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
@@ -163,13 +157,13 @@ export function _decode_SubjectPublicKeyInfo(el: _Element) {
             const sequence: _Element[] = el.sequence;
             if (sequence.length < 2) {
                 throw new _ConstructionError(
-                    'SubjectPublicKeyInfo contained only ' +
+                    "SubjectPublicKeyInfo contained only " +
                         sequence.length.toString() +
-                        ' elements.'
+                        " elements."
                 );
             }
-            sequence[0].name = 'algorithm';
-            sequence[1].name = 'subjectPublicKey';
+            sequence[0].name = "algorithm";
+            sequence[1].name = "subjectPublicKey";
             let algorithm!: AlgorithmIdentifier;
             let subjectPublicKey!: PublicKey;
             algorithm = _decode_AlgorithmIdentifier(sequence[0]);
@@ -186,7 +180,8 @@ export function _decode_SubjectPublicKeyInfo(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectPublicKeyInfo */
-let _cached_encoder_for_SubjectPublicKeyInfo: $.ASN1Encoder<SubjectPublicKeyInfo> | null = null;
+let _cached_encoder_for_SubjectPublicKeyInfo: $.ASN1Encoder<SubjectPublicKeyInfo> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubjectPublicKeyInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubjectPublicKeyInfo */

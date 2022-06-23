@@ -1,18 +1,11 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import { ASN1Element as _Element } from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '../PKI-Stub/RelativeDistinguishedName.ta';
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from '../PKI-Stub/RelativeDistinguishedName.ta';
+} from "../PKI-Stub/RelativeDistinguishedName.ta";
 
 /* START_OF_SYMBOL_DEFINITION RDNSequence */
 /**
@@ -44,9 +37,10 @@ let _cached_decoder_for_RDNSequence: $.ASN1Decoder<RDNSequence> | null = null;
  */
 export function _decode_RDNSequence(el: _Element) {
     if (!_cached_decoder_for_RDNSequence) {
-        _cached_decoder_for_RDNSequence = $._decodeSequenceOf<RelativeDistinguishedName>(
-            () => _decode_RelativeDistinguishedName
-        );
+        _cached_decoder_for_RDNSequence =
+            $._decodeSequenceOf<RelativeDistinguishedName>(
+                () => _decode_RelativeDistinguishedName
+            );
     }
     return _cached_decoder_for_RDNSequence(el);
 }
@@ -69,10 +63,11 @@ export function _encode_RDNSequence(
     elGetter: $.ASN1Encoder<RDNSequence>
 ) {
     if (!_cached_encoder_for_RDNSequence) {
-        _cached_encoder_for_RDNSequence = $._encodeSequenceOf<RelativeDistinguishedName>(
-            () => _encode_RelativeDistinguishedName,
-            $.BER
-        );
+        _cached_encoder_for_RDNSequence =
+            $._encodeSequenceOf<RelativeDistinguishedName>(
+                () => _encode_RelativeDistinguishedName,
+                $.BER
+            );
     }
     return _cached_encoder_for_RDNSequence(value, elGetter);
 }

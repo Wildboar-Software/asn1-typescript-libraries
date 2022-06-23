@@ -9,8 +9,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION ALGORITHM */
 /**
@@ -39,7 +39,7 @@ export interface ALGORITHM<
     /**
      * @summary A fixed string that can be used for external programs to determine the object class of this object.
      */
-    readonly class: 'ALGORITHM';
+    readonly class: "ALGORITHM";
     /**
      * @summary A map of type fields to their corresponding decoders.
      */
@@ -65,15 +65,15 @@ export interface ALGORITHM<
     /**
      * @summary &Type
      */
-    readonly '&Type': Type;
+    readonly "&Type": Type;
     /**
      * @summary &DynParms
      */
-    readonly '&DynParms'?: DynParms;
+    readonly "&DynParms"?: DynParms;
     /**
      * @summary &id
      */
-    readonly '&id'?: OBJECT_IDENTIFIER;
+    readonly "&id"?: OBJECT_IDENTIFIER;
 }
 /* END_OF_SYMBOL_DEFINITION ALGORITHM */
 

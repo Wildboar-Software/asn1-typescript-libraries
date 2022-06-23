@@ -26,7 +26,8 @@ export type AdministrationDomainName =
 /* END_OF_SYMBOL_DEFINITION AdministrationDomainName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationDomainName */
-let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDomainName> | null = null;
+let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDomainName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdministrationDomainName */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdministrationDomainName */
@@ -38,20 +39,21 @@ let _cached_decoder_for_AdministrationDomainName: $.ASN1Decoder<AdministrationDo
  */
 export function _decode_AdministrationDomainName(el: _Element) {
     if (!_cached_decoder_for_AdministrationDomainName) {
-        _cached_decoder_for_AdministrationDomainName = $._decode_explicit<AdministrationDomainName>(
-            () =>
+        _cached_decoder_for_AdministrationDomainName =
+            $._decode_explicit<AdministrationDomainName>(() =>
                 $._decode_inextensible_choice<AdministrationDomainName>({
                     "UNIVERSAL 18": ["numeric", $._decodeNumericString],
                     "UNIVERSAL 19": ["printable", $._decodePrintableString],
                 })
-        );
+            );
     }
     return _cached_decoder_for_AdministrationDomainName(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AdministrationDomainName */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationDomainName */
-let _cached_encoder_for_AdministrationDomainName: $.ASN1Encoder<AdministrationDomainName> | null = null;
+let _cached_encoder_for_AdministrationDomainName: $.ASN1Encoder<AdministrationDomainName> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdministrationDomainName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdministrationDomainName */

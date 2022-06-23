@@ -50,51 +50,6 @@ import {
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta";
-export {
-    AdministrationDomainName,
-    _decode_AdministrationDomainName,
-    _encode_AdministrationDomainName,
-} from "../PkiPmiExternalDataTypes/AdministrationDomainName.ta";
-export {
-    CountryName,
-    _decode_CountryName,
-    _encode_CountryName,
-} from "../PkiPmiExternalDataTypes/CountryName.ta";
-export {
-    NetworkAddress,
-    _decode_NetworkAddress,
-    _encode_NetworkAddress,
-} from "../PkiPmiExternalDataTypes/NetworkAddress.ta";
-export {
-    NumericUserIdentifier,
-    _decode_NumericUserIdentifier,
-    _encode_NumericUserIdentifier,
-} from "../PkiPmiExternalDataTypes/NumericUserIdentifier.ta";
-export {
-    OrganizationalUnitNames,
-    _decode_OrganizationalUnitNames,
-    _encode_OrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/OrganizationalUnitNames.ta";
-export {
-    OrganizationName,
-    _decode_OrganizationName,
-    _encode_OrganizationName,
-} from "../PkiPmiExternalDataTypes/OrganizationName.ta";
-export {
-    PersonalName,
-    _decode_PersonalName,
-    _encode_PersonalName,
-} from "../PkiPmiExternalDataTypes/PersonalName.ta";
-export {
-    PrivateDomainName,
-    _decode_PrivateDomainName,
-    _encode_PrivateDomainName,
-} from "../PkiPmiExternalDataTypes/PrivateDomainName.ta";
-export {
-    TerminalIdentifier,
-    _decode_TerminalIdentifier,
-    _encode_TerminalIdentifier,
-} from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta";
 
 /* START_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 /**
@@ -223,71 +178,72 @@ export class BuiltInStandardAttributes {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "country-name",
-        true,
-        $.hasTag(_TagClass.application, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "administration-domain-name",
-        true,
-        $.hasTag(_TagClass.application, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "network-address",
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "terminal-identifier",
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "private-domain-name",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "organization-name",
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "numeric-user-identifier",
-        true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "personal-name",
-        true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "organizational-unit-names",
-        true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            "country-name",
+            true,
+            $.hasTag(_TagClass.application, 1),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "administration-domain-name",
+            true,
+            $.hasTag(_TagClass.application, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "network-address",
+            true,
+            $.hasTag(_TagClass.context, 0),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "terminal-identifier",
+            true,
+            $.hasTag(_TagClass.context, 1),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "private-domain-name",
+            true,
+            $.hasTag(_TagClass.context, 2),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "organization-name",
+            true,
+            $.hasTag(_TagClass.context, 3),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "numeric-user-identifier",
+            true,
+            $.hasTag(_TagClass.context, 4),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "personal-name",
+            true,
+            $.hasTag(_TagClass.context, 5),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            "organizational-unit-names",
+            true,
+            $.hasTag(_TagClass.context, 6),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
@@ -299,7 +255,8 @@ export const _root_component_type_list_1_spec_for_BuiltInStandardAttributes: $.C
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
@@ -311,11 +268,13 @@ export const _root_component_type_list_2_spec_for_BuiltInStandardAttributes: $.C
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
-let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandardAttributes> | null = null;
+let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandardAttributes> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
@@ -347,9 +306,8 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                     country_name = _decode_CountryName(_el);
                 },
                 "administration-domain-name": (_el: _Element): void => {
-                    administration_domain_name = _decode_AdministrationDomainName(
-                        _el
-                    );
+                    administration_domain_name =
+                        _decode_AdministrationDomainName(_el);
                 },
                 "network-address": (_el: _Element): void => {
                     network_address = $._decode_explicit<NetworkAddress>(
@@ -357,9 +315,10 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                     )(_el);
                 },
                 "terminal-identifier": (_el: _Element): void => {
-                    terminal_identifier = $._decode_explicit<TerminalIdentifier>(
-                        () => _decode_TerminalIdentifier
-                    )(_el);
+                    terminal_identifier =
+                        $._decode_explicit<TerminalIdentifier>(
+                            () => _decode_TerminalIdentifier
+                        )(_el);
                 },
                 "private-domain-name": (_el: _Element): void => {
                     private_domain_name = $._decode_explicit<PrivateDomainName>(
@@ -372,9 +331,10 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                     )(_el);
                 },
                 "numeric-user-identifier": (_el: _Element): void => {
-                    numeric_user_identifier = $._decode_explicit<NumericUserIdentifier>(
-                        () => _decode_NumericUserIdentifier
-                    )(_el);
+                    numeric_user_identifier =
+                        $._decode_explicit<NumericUserIdentifier>(
+                            () => _decode_NumericUserIdentifier
+                        )(_el);
                 },
                 "personal-name": (_el: _Element): void => {
                     personal_name = $._decode_explicit<PersonalName>(
@@ -382,9 +342,10 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
                     )(_el);
                 },
                 "organizational-unit-names": (_el: _Element): void => {
-                    organizational_unit_names = $._decode_explicit<OrganizationalUnitNames>(
-                        () => _decode_OrganizationalUnitNames
-                    )(_el);
+                    organizational_unit_names =
+                        $._decode_explicit<OrganizationalUnitNames>(
+                            () => _decode_OrganizationalUnitNames
+                        )(_el);
                 },
             };
             /* END_OF_CALLBACKS_MAP */
@@ -414,7 +375,8 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
-let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandardAttributes> | null = null;
+let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandardAttributes> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */

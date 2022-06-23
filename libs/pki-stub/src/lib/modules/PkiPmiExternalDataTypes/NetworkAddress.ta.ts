@@ -6,11 +6,6 @@ import {
     _decode_X121Address,
     _encode_X121Address,
 } from "../PkiPmiExternalDataTypes/X121Address.ta";
-export {
-    X121Address,
-    _decode_X121Address,
-    _encode_X121Address,
-} from "../PkiPmiExternalDataTypes/X121Address.ta";
 
 /* START_OF_SYMBOL_DEFINITION NetworkAddress */
 /**
@@ -27,7 +22,8 @@ export type NetworkAddress = X121Address; // DefinedType
 /* END_OF_SYMBOL_DEFINITION NetworkAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NetworkAddress */
-let _cached_decoder_for_NetworkAddress: $.ASN1Decoder<NetworkAddress> | null = null;
+let _cached_decoder_for_NetworkAddress: $.ASN1Decoder<NetworkAddress> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_NetworkAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_NetworkAddress */
@@ -46,7 +42,8 @@ export function _decode_NetworkAddress(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_NetworkAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_NetworkAddress */
-let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null = null;
+let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_NetworkAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_NetworkAddress */

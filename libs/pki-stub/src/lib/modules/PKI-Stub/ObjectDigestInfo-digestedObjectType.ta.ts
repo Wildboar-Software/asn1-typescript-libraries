@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +8,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-} from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+} from "asn1-ts";
+import * as $ from "asn1-ts/dist/node/functional";
 
 /* START_OF_SYMBOL_DEFINITION _enum_for_ObjectDigestInfo_digestedObjectType */
 /**
@@ -96,7 +40,8 @@ export enum _enum_for_ObjectDigestInfo_digestedObjectType {
  * ObjectDigestInfo-digestedObjectType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```@enum {number}
  */
-export type ObjectDigestInfo_digestedObjectType = _enum_for_ObjectDigestInfo_digestedObjectType;
+export type ObjectDigestInfo_digestedObjectType =
+    _enum_for_ObjectDigestInfo_digestedObjectType;
 /* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 
 /* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
@@ -110,7 +55,8 @@ export type ObjectDigestInfo_digestedObjectType = _enum_for_ObjectDigestInfo_dig
  * ObjectDigestInfo-digestedObjectType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
  * ```@enum {number}
  */
-export const ObjectDigestInfo_digestedObjectType = _enum_for_ObjectDigestInfo_digestedObjectType;
+export const ObjectDigestInfo_digestedObjectType =
+    _enum_for_ObjectDigestInfo_digestedObjectType;
 /* END_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType */
 
 /* START_OF_SYMBOL_DEFINITION ObjectDigestInfo_digestedObjectType_publicKey */
@@ -174,7 +120,8 @@ export const otherObjectTypes: ObjectDigestInfo_digestedObjectType =
 /* END_OF_SYMBOL_DEFINITION otherObjectTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo_digestedObjectType */
-let _cached_decoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> | null = null;
+let _cached_decoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo_digestedObjectType */
 
 /* START_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo_digestedObjectType */
@@ -194,7 +141,8 @@ export function _decode_ObjectDigestInfo_digestedObjectType(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo_digestedObjectType */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo_digestedObjectType */
-let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> | null = null;
+let _cached_encoder_for_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo_digestedObjectType */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo_digestedObjectType */
