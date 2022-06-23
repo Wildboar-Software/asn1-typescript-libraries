@@ -31,7 +31,8 @@ const acceptableCertPoliciesMatch: EqualityMatcher = (
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
     const storedValue: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(el);
-    return a.every((oid, index) => storedValue[index]?.isEqualTo(oid));
+    const storedPolicies: Set<string> = new Set(storedValue.map((oid) => oid.toString()));
+    return a.every((oid) => storedPolicies.has(oid.toString()));
 }
 
 export default acceptableCertPoliciesMatch;

@@ -16,10 +16,10 @@ function checkNameForm (
     if (unsatisfiedMandatories.size > 0) {
         return false;
     }
-    const permittedTypes: Set<string> = new Set(
+    const permittedTypes: Set<string> = new Set([
         ...mandatories?.map((m) => m.toString()) ?? [],
         ...optionals?.map((o) => o.toString()) ?? [],
-    );
+    ]);
     for (const atav of rdn) {
         if (!permittedTypes.has(atav.type_.toString())) {
             return false;
