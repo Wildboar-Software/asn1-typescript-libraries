@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
     BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -81,10 +26,6 @@ import * as $ from 'asn1-ts/dist/node/functional';
 export type PublicKey = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION PublicKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKey */
-let _cached_decoder_for_PublicKey: $.ASN1Decoder<PublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PublicKey */
-
 /* START_OF_SYMBOL_DEFINITION _decode_PublicKey */
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKey
@@ -93,16 +34,9 @@ let _cached_decoder_for_PublicKey: $.ASN1Decoder<PublicKey> | null = null;
  * @returns {PublicKey} The decoded data structure.
  */
 export function _decode_PublicKey(el: _Element) {
-    if (!_cached_decoder_for_PublicKey) {
-        _cached_decoder_for_PublicKey = $._decodeBitString;
-    }
-    return _cached_decoder_for_PublicKey(el);
+    return $._decodeBitString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_PublicKey */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKey */
-let _cached_encoder_for_PublicKey: $.ASN1Encoder<PublicKey> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PublicKey */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PublicKey */
 /**
@@ -116,10 +50,7 @@ export function _encode_PublicKey(
     value: PublicKey,
     elGetter: $.ASN1Encoder<PublicKey>
 ) {
-    if (!_cached_encoder_for_PublicKey) {
-        _cached_encoder_for_PublicKey = $._encodeBitString;
-    }
-    return _cached_encoder_for_PublicKey(value, elGetter);
+    return $._encodeBitString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_PublicKey */

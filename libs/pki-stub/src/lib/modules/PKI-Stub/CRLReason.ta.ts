@@ -307,10 +307,6 @@ export const CRLReason_weakAlgorithmOrKey: CRLReason = 11; /* LONG_NAMED_ENUMERA
 export const weakAlgorithmOrKey: CRLReason = CRLReason_weakAlgorithmOrKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION weakAlgorithmOrKey */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLReason */
-let _cached_decoder_for_CRLReason: $.ASN1Decoder<CRLReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_CRLReason */
-
 /* START_OF_SYMBOL_DEFINITION _decode_CRLReason */
 /**
  * @summary Decodes an ASN.1 element into a(n) CRLReason
@@ -319,16 +315,9 @@ let _cached_decoder_for_CRLReason: $.ASN1Decoder<CRLReason> | null = null;
  * @returns {CRLReason} The decoded data structure.
  */
 export function _decode_CRLReason(el: _Element) {
-    if (!_cached_decoder_for_CRLReason) {
-        _cached_decoder_for_CRLReason = $._decodeEnumerated;
-    }
-    return _cached_decoder_for_CRLReason(el);
+    return $._decodeEnumerated(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_CRLReason */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLReason */
-let _cached_encoder_for_CRLReason: $.ASN1Encoder<CRLReason> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_CRLReason */
 
 /* START_OF_SYMBOL_DEFINITION _encode_CRLReason */
 /**
@@ -342,10 +331,7 @@ export function _encode_CRLReason(
     value: CRLReason,
     elGetter: $.ASN1Encoder<CRLReason>
 ) {
-    if (!_cached_encoder_for_CRLReason) {
-        _cached_encoder_for_CRLReason = $._encodeEnumerated;
-    }
-    return _cached_encoder_for_CRLReason(value, elGetter);
+    return $._encodeEnumerated(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_CRLReason */

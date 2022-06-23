@@ -135,10 +135,6 @@ export const Version_v3: Version = 2; /* LONG_NAMED_INTEGER_VALUE */
 export const v3: Version = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION v3 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Version */
-let _cached_decoder_for_Version: $.ASN1Decoder<Version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Version */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Version */
 /**
  * @summary Decodes an ASN.1 element into a(n) Version
@@ -147,16 +143,9 @@ let _cached_decoder_for_Version: $.ASN1Decoder<Version> | null = null;
  * @returns {Version} The decoded data structure.
  */
 export function _decode_Version(el: _Element) {
-    if (!_cached_decoder_for_Version) {
-        _cached_decoder_for_Version = $._decodeInteger;
-    }
-    return _cached_decoder_for_Version(el);
+    return $._decodeInteger(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Version */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Version */
-let _cached_encoder_for_Version: $.ASN1Encoder<Version> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Version */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Version */
 /**
@@ -170,10 +159,7 @@ export function _encode_Version(
     value: Version,
     elGetter: $.ASN1Encoder<Version>
 ) {
-    if (!_cached_encoder_for_Version) {
-        _cached_encoder_for_Version = $._encodeInteger;
-    }
-    return _cached_encoder_for_Version(value, elGetter);
+    return $._encodeInteger(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Version */
