@@ -99,6 +99,18 @@ export {
  * @class
  */
 export class SIGNED<ToBeSigned> {
+
+    /**
+     * @summary The orignal DER encoding of the signed thing.
+     * @description
+     *
+     * This exists so that the original encoding element can be preserved for
+     * the sake of validating the signature correctly.
+     *
+     * @public
+     */
+    public originalDER?: Uint8Array;
+
     constructor(
         /**
          * @summary `toBeSigned`.
@@ -135,8 +147,14 @@ export class SIGNED<ToBeSigned> {
          * @public
          * @readonly
          */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        readonly _unrecognizedExtensionsList: _Element[] = [],
+        /**
+         * @summary
+         */
+        originalDER?: _Element,
+    ) {
+        this.originalDER = originalDER.toBytes();
+    }
 
     /**
      * @summary Restructures an object into a SIGNED
@@ -286,7 +304,8 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
             signature,
             altAlgorithmIdentifier,
             altSignature,
-            _unrecognizedExtensionsList
+            _unrecognizedExtensionsList,
+            el,
         );
     };
 }

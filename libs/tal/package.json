@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/tal",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Trust Anchor Lists in TypeScript",
     "keywords": [
         "tal",
@@ -31,6 +31,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/x500": "^1.0.44"
     }
 }
 
