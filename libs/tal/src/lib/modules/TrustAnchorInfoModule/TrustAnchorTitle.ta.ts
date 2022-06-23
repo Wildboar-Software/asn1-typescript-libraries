@@ -67,15 +67,13 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
 
-
-
 /* START_OF_SYMBOL_DEFINITION TrustAnchorTitle */
 /**
  * @summary TrustAnchorTitle
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TrustAnchorTitle  ::=  UTF8String (SIZE (1..64))
  * ```
@@ -83,10 +81,6 @@ import * as $ from "asn1-ts/dist/node/functional";
 export
 type TrustAnchorTitle = UTF8String; // UTF8String
 /* END_OF_SYMBOL_DEFINITION TrustAnchorTitle */
-
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorTitle */
-let _cached_decoder_for_TrustAnchorTitle: $.ASN1Decoder<TrustAnchorTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorTitle */
 
 /* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorTitle */
 /**
@@ -97,14 +91,9 @@ let _cached_decoder_for_TrustAnchorTitle: $.ASN1Decoder<TrustAnchorTitle> | null
  */
 export
 function _decode_TrustAnchorTitle (el: _Element) {
-    if (!_cached_decoder_for_TrustAnchorTitle) { _cached_decoder_for_TrustAnchorTitle = $._decodeUTF8String; }
-    return _cached_decoder_for_TrustAnchorTitle(el);
+    return $._decodeUTF8String(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorTitle */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorTitle */
-let _cached_encoder_for_TrustAnchorTitle: $.ASN1Encoder<TrustAnchorTitle> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorTitle */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorTitle */
 /**
@@ -116,8 +105,7 @@ let _cached_encoder_for_TrustAnchorTitle: $.ASN1Encoder<TrustAnchorTitle> | null
  */
 export
 function _encode_TrustAnchorTitle (value: TrustAnchorTitle, elGetter: $.ASN1Encoder<TrustAnchorTitle>) {
-    if (!_cached_encoder_for_TrustAnchorTitle) { _cached_encoder_for_TrustAnchorTitle = $._encodeUTF8String; }
-    return _cached_encoder_for_TrustAnchorTitle(value, elGetter);
+    return $._encodeUTF8String(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorTitle */

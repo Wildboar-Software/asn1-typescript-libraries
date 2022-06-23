@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -73,9 +18,9 @@ import * as $ from "asn1-ts/dist/node/functional";
 /**
  * @summary TrustAnchorInfoVersion
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * TrustAnchorInfoVersion  ::=  INTEGER { v1(1) }
  * ```
@@ -104,10 +49,6 @@ export
 const v1: TrustAnchorInfoVersion = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 /* END_OF_SYMBOL_DEFINITION v1 */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorInfoVersion */
-let _cached_decoder_for_TrustAnchorInfoVersion: $.ASN1Decoder<TrustAnchorInfoVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TrustAnchorInfoVersion */
-
 /* START_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfoVersion */
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorInfoVersion
@@ -117,14 +58,9 @@ let _cached_decoder_for_TrustAnchorInfoVersion: $.ASN1Decoder<TrustAnchorInfoVer
  */
 export
 function _decode_TrustAnchorInfoVersion (el: _Element) {
-    if (!_cached_decoder_for_TrustAnchorInfoVersion) { _cached_decoder_for_TrustAnchorInfoVersion = $._decodeInteger; }
-    return _cached_decoder_for_TrustAnchorInfoVersion(el);
+    return $._decodeInteger(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TrustAnchorInfoVersion */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorInfoVersion */
-let _cached_encoder_for_TrustAnchorInfoVersion: $.ASN1Encoder<TrustAnchorInfoVersion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TrustAnchorInfoVersion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfoVersion */
 /**
@@ -136,8 +72,7 @@ let _cached_encoder_for_TrustAnchorInfoVersion: $.ASN1Encoder<TrustAnchorInfoVer
  */
 export
 function _encode_TrustAnchorInfoVersion (value: TrustAnchorInfoVersion, elGetter: $.ASN1Encoder<TrustAnchorInfoVersion>) {
-    if (!_cached_encoder_for_TrustAnchorInfoVersion) { _cached_encoder_for_TrustAnchorInfoVersion = $._encodeInteger; }
-    return _cached_encoder_for_TrustAnchorInfoVersion(value, elGetter);
+    return $._encodeInteger(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TrustAnchorInfoVersion */
