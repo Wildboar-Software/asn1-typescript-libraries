@@ -63,15 +63,15 @@ export function _decode_CertStatus(el: _Element) {
             {
                 "CONTEXT 0": [
                     "good",
-                    $._decode_explicit<NULL>(() => $._decodeNull),
+                    $._decode_implicit<NULL>(() => $._decodeNull),
                 ],
                 "CONTEXT 1": [
                     "revoked",
-                    $._decode_explicit<RevokedInfo>(() => _decode_RevokedInfo),
+                    $._decode_implicit<RevokedInfo>(() => _decode_RevokedInfo),
                 ],
                 "CONTEXT 2": [
                     "unknown",
-                    $._decode_explicit<UnknownInfo>(() => _decode_UnknownInfo),
+                    $._decode_implicit<UnknownInfo>(() => _decode_UnknownInfo),
                 ],
             }
         );
@@ -99,19 +99,19 @@ export function _encode_CertStatus(
     if (!_cached_encoder_for_CertStatus) {
         _cached_encoder_for_CertStatus = $._encode_choice<CertStatus>(
             {
-                good: $._encode_explicit(
+                good: $._encode_implicit(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
                     $.BER
                 ),
-                revoked: $._encode_explicit(
+                revoked: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_RevokedInfo,
                     $.BER
                 ),
-                unknown: $._encode_explicit(
+                unknown: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_UnknownInfo,
