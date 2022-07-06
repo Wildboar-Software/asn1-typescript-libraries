@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
 import { id_pkix_ocsp_nonce } from "../OCSP-2013-08/id-pkix-ocsp-nonce.va";
 
 /* START_OF_SYMBOL_DEFINITION re_ocsp_nonce */

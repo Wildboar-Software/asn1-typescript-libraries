@@ -93,7 +93,7 @@ export class SIGNED<ToBeSigned> {
          */
         originalDER?: _Element
     ) {
-        this.originalDER = originalDER.toBytes();
+        this.originalDER = originalDER?.toBytes();
     }
 
     /**

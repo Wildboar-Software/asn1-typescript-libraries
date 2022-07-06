@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
 import {
     AcceptableResponses,
     _decode_AcceptableResponses,

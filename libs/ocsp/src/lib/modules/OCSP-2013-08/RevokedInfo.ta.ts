@@ -10,7 +10,7 @@ import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/CRLReason.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta";
 
 /* START_OF_SYMBOL_DEFINITION RevokedInfo */
 /**

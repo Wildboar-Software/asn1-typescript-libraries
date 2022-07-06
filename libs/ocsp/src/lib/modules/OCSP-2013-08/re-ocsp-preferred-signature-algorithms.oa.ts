@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
 import { id_pkix_ocsp_pref_sig_algs } from "../OCSP-2013-08/id-pkix-ocsp-pref-sig-algs.va";
 import {
     PreferredSignatureAlgorithms,

@@ -9,7 +9,7 @@ import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta";
 import {
     AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,

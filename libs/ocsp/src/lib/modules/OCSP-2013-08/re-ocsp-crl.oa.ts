@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
 import { CrlID, _decode_CrlID, _encode_CrlID } from "../OCSP-2013-08/CrlID.ta";
 import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va";
 
