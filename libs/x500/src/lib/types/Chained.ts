@@ -1,5 +1,5 @@
-import { OPTIONALLY_PROTECTED } from "../modules/EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
-import {
+import type { OPTIONALLY_PROTECTED } from "../modules/EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+import type {
     Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1,
 } from "../modules/DistributedOperations/Chained-ArgumentType-OPTIONALLY-PROTECTED-Parameter1.ta";
 

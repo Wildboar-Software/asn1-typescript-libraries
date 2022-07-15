@@ -3,7 +3,7 @@ import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta";
-import {
+import type {
     SubtreeSpecification,
 } from "../modules/InformationFramework/SubtreeSpecification.ta";
 import type {
@@ -66,7 +66,7 @@ function dnWithinSubtreeSpecification (
 ): boolean {
     const base: DistinguishedName = [
         ...scope,
-        ...(sts.base ?? SubtreeSpecification._default_value_for_base),
+        ...(sts.base ?? []),
     ];
     // Short circuits to avoid the more costly ATAV comparisons later on.
     if (entryDN.length < (base.length + (sts.minimum ? Number(sts.minimum) : 0))) {

@@ -1,5 +1,15 @@
 import EqualityMatcher from "../../types/EqualityMatcher";
 import { ASN1Construction, ASN1Element, unpackBits } from "asn1-ts";
+import { compareBitStrings } from "../../comparators/compareBitStrings";
+
+function lastBits (
+    numberOfTrailingBits: number,
+    lastByte: number,
+): Uint8ClampedArray {
+    return unpackBits(new Uint8Array([ lastByte ]))
+        .slice(0, -numberOfTrailingBits);
+}
+
 
 export
 const bitStringMatch: EqualityMatcher = (
@@ -26,44 +36,35 @@ const bitStringMatch: EqualityMatcher = (
          * trust that the final byte will be the same to encode the same value
          * if trailing bits are present.
          */
-        for (let i = 0; i < (assertion.value.length - 1); i++) {
-            if (assertion.value[i] !== value.value[i]) {
-                return false;
-            }
+        const wholeBytesComparison = Buffer.compare(
+            assertion.value.subarray(0, -1),
+            value.value.subarray(0, -1),
+        );
+        if (wholeBytesComparison) {
+            return false;
         }
 
         /**
          * If there are no trailing bits, we can just compare the last byte
          * directly.
          */
-        if (assertion.value[0] === 0) {
+        const numberOfTrailingBits = assertion.value[0];
+        if (numberOfTrailingBits === 0) {
             return (assertion.value[assertion.value.length - 1] === value.value[value.value.length - 1]);
         } else {
-            const lastBits = function (lastByte: number): Uint8ClampedArray {
-                return unpackBits(new Uint8Array([ lastByte ])).slice(0, assertion.value[0]);
-            };
-            const abits = lastBits(assertion.value[assertion.value.length - 1]);
-            const vbits = lastBits(value.value[value.value.length - 1]);
-            for (let i = 0; i < abits.length; i++) {
-                if (abits[i] !== vbits[i]) {
-                    return false;
-                }
-            }
-            return true;
+            const abits = lastBits(numberOfTrailingBits, assertion.value[assertion.value.length - 1]);
+            const vbits = lastBits(numberOfTrailingBits, value.value[value.value.length - 1]);
+            const trailingBitsCompare = Buffer.compare(
+                Buffer.from(abits.buffer),
+                Buffer.from(vbits.buffer),
+            );
+            return (trailingBitsCompare === 0);
         }
     }
 
     const a = assertion.bitString;
     const b = value.bitString;
-    if (a.length !== b.length) {
-        return false;
-    }
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            return false;
-        }
-    }
-    return true;
+    return compareBitStrings(a, b);
 }
 
 export default bitStringMatch;

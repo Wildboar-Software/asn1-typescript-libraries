@@ -45,15 +45,7 @@ function compareGeneralName (
             if (!(encb instanceof Uint8ClampedArray)) {
                 return false;
             }
-            if (enca.length !== encb.length) {
-                return false;
-            }
-            for (let i = 0; i < enca.length; i++) {
-                if (enca[i] !== encb[i]) {
-                    return false;
-                }
-            }
-            return true;
+            return !Buffer.compare(Buffer.from(enca), Buffer.from(encb));
         } else { // Some ASN.1 Element
             if ((encb instanceof Uint8Array) || (encb instanceof Uint8ClampedArray)) {
                 return false;

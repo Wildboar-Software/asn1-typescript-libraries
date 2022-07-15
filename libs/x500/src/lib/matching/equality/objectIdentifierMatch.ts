@@ -6,10 +6,9 @@ const objectIdentifierMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    if (assertion.value.length !== value.value.length) {
-        return false;
-    }
-    return assertion.objectIdentifier.isEqualTo(value.objectIdentifier);
+    // We can directly compare buffers because OBJECT IDENTIFIER is encoded the
+    // same way every time in {BER,CER,DER}.
+    return !Buffer.compare(assertion.value, value.value);
 }
 
 export default objectIdentifierMatch;

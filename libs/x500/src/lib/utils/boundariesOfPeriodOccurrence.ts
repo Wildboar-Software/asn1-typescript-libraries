@@ -2,10 +2,7 @@ import { TRUE_BIT } from "asn1-ts";
 import type {
     Period,
 } from "../modules/SelectedAttributeTypes/Period.ta";
-import {
-    DayTime,
-    DayTimeBand,
-} from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
+import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
 import {
     startOfDay,
     endOfMonth,

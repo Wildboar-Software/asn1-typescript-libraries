@@ -6,10 +6,9 @@ const integerMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    if (assertion.value.length !== value.value.length) {
-        return false;
-    }
-    return (assertion.integer === value.integer);
+    // We can directly compare buffers because INTEGER is encoded the same way
+    // every time in {BER,CER,DER}.
+    return !Buffer.compare(assertion.value, value.value);
 }
 
 export default integerMatch;

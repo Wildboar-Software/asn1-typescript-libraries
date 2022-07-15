@@ -1,7 +1,6 @@
 import { ASN1Element, OBJECT_IDENTIFIER, DERElement } from "asn1-ts";
 import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta";
-import type { Context } from "../modules/InformationFramework/Context.ta";
 import type {
     TypeAndContextAssertion,
 } from "../modules/DirectoryAbstractService/TypeAndContextAssertion.ta";

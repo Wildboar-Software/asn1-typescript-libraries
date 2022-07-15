@@ -46,7 +46,6 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
  * @param {ACDFTupleExtended[]} tuples The tuples of inputs to the ACDF as described in
  *  ITU Recommendation X.501, Section 18.8.2. An array of five items:
  *  `( userClasses, authenticationLevel, protectedItems, grantsAndDenials, precedence )`
- * @param {AuthenticationLevel} authLevel The authentication level of the user.
  * @param {ProtectedItem} request The thing that is being requested, which can
  *  be an entry, attribute type, or attribute value.
  * @param {number[]} operations The bit indices of the permissions that are

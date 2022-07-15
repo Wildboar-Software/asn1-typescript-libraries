@@ -26,7 +26,7 @@ const caseIgnoreSubstringsMatch: SubstringsMatcher = (
             return v.endsWith(a);
         }
         default: {
-            throw new Error();
+            return false;
         }
     }
 

@@ -54,7 +54,8 @@ import deniesAccess from "./deniesAccess";
  *  an ACI item applies to.
  * @param {NameAndOptionalUID} user The distinguished name and optional unique
  *  identifier of the user whose authorization is determined by the ACDF.
- * @param {DistinguishedName} entry The entry that is the predicate of the
+ * @param {AuthenticationLevel} authLevel The authentication level of the user.
+ * @param {DistinguishedName} entryDN The entry that is the predicate of the
  *  ACDF, or whose attributes are. The entry to whose entirety or whose
  *  attributes the subject is seeking authorization.
  * @param {function} getEqualityMatcher A function that takes an object
@@ -73,7 +74,7 @@ export
 async function userWithinACIUserClass (
     tuple: ACDFTuple,
     user: NameAndOptionalUID | undefined | null,
-    userAuthLevel: AuthenticationLevel,
+    authLevel: AuthenticationLevel, // FIXME: Not in JSDoc.
     entryDN: DistinguishedName,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
@@ -86,9 +87,9 @@ async function userWithinACIUserClass (
     const denies = deniesAccess(tuple[3]);
     if (
         denies
-        && ("basicLevels" in userAuthLevel)
+        && ("basicLevels" in authLevel)
         && ("basicLevels" in requiredAuthLevel)
-        && compareAuthenticationLevel(requiredAuthLevel.basicLevels, userAuthLevel.basicLevels)
+        && compareAuthenticationLevel(requiredAuthLevel.basicLevels, authLevel.basicLevels)
     ) {
         /**
          * Per ITU Recommendation X.501, Section 18.8.3, bullet point 1.2, if

@@ -1,4 +1,4 @@
-import {
+import type {
     AlgorithmIdentifier,
 } from "../modules/AuthenticationFramework/AlgorithmIdentifier.ta";
 import compareElements from "./compareElements";

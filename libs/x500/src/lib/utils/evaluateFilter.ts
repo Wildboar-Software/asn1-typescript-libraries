@@ -32,11 +32,11 @@ import type {
     FilterItem_substrings,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings.ta";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import EqualityMatcher from "../types/EqualityMatcher";
-import OrderingMatcher from "../types/OrderingMatcher";
-import SubstringsMatcher from "../types/SubstringsMatcher";
-import ApproxMatcher from "../types/ApproxMatcher";
-import ContextMatcher from "../types/ContextMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher";
+import type OrderingMatcher from "../types/OrderingMatcher";
+import type SubstringsMatcher from "../types/SubstringsMatcher";
+import type ApproxMatcher from "../types/ApproxMatcher";
+import type ContextMatcher from "../types/ContextMatcher";
 import SubstringSelection from "../types/SubstringSelection";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";

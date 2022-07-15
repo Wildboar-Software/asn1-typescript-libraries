@@ -20,26 +20,23 @@ const uniqueMemberMatch: EqualityMatcher = (
         return false;
     }
 
-    if ((a.uid === undefined) && (v.uid === undefined)) {
+    if (!a.uid && !v.uid) {
         return distinguishedNamesAreTheSame;
     }
-    else if (!a.uid || !v.uid) {
+    else if (!a.uid || !v.uid) { // One has a UID, but the other does not.
         return false;
     }
 
     const aBits: BIT_STRING = a.uid;
     const vBits: BIT_STRING = v.uid;
 
-    if (aBits.length !== vBits.length) {
-        return false;
-    }
-    for (let i = 0; i < aBits.length; i++) {
-        if (aBits[i] !== vBits[i]) {
-            return false;
-        }
-    }
-
-    return distinguishedNamesAreTheSame;
+    return (
+        distinguishedNamesAreTheSame
+        && !Buffer.compare(
+            Buffer.from(aBits.buffer),
+            Buffer.from(vBits.buffer),
+        )
+    );
 }
 
 export default uniqueMemberMatch;
