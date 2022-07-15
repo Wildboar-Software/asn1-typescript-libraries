@@ -38,7 +38,9 @@ const countryString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.printableString,
-        Buffer.from(value).toString("utf-8"),
+        (value instanceof Buffer)
+            ? value.toString("latin1")
+            : Buffer.from(value.buffer).toString("latin1"),
     );
 };
 
@@ -60,7 +62,9 @@ function pdmToInt (pdm: string): number {
 
 export
 const deliveryMethod: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
-    const v = Buffer.from(value).toString("utf-8");
+    const v = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
     return BERElement.fromSequence(
         v
             .split("$")
@@ -83,7 +87,9 @@ const directoryString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.utf8String,
-        Buffer.from(value).toString("utf-8"),
+        (value instanceof Buffer)
+            ? value.toString("utf-8")
+            : Buffer.from(value.buffer).toString("utf-8"),
     );
 };
 
@@ -96,12 +102,13 @@ const directoryString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const generalizedTime: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
-    return new BERElement(
+    const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.generalizedTime,
-        new Date(Buffer.from(value).toString("utf-8")),
     );
+    el.value = Buffer.from(value);
+    return el;
 };
 
 // 3.3.14. Guide .............................................14
@@ -113,13 +120,18 @@ const ia5String: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1Construction.primitive,
         ASN1UniversalType.ia5String,
     );
-    el.ia5String = Buffer.from(value).toString("utf-8");
+    el.ia5String = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
     return el;
 };
 
 export
 const integer: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
-    const v = Number.parseInt(Buffer.from(value).toString("utf-8"));
+    const str = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
+    const v = Number.parseInt(str, 10);
     if (Number.isNaN(v) || !Number.isSafeInteger(v)) {
         throw new Error();
     }
@@ -150,12 +162,15 @@ const jpeg: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const numericString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
+    const str = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.numericString,
     );
-    el.numericString = Buffer.from(value).toString("utf-8");
+    el.numericString = str;
     return el;
 };
 
@@ -187,8 +202,10 @@ const oid: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const otherMailbox: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
-    const v = Buffer.from(value).toString("utf-8");
-    const [ mailboxType, mailbox ] = v.split("$");
+    const str = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
+    const [ mailboxType, mailbox ] = str.split("$");
     return BERElement.fromSequence([
         new BERElement(
             ASN1TagClass.universal,
@@ -207,8 +224,10 @@ const otherMailbox: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const postalAddress: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
-    const v = Buffer.from(value).toString("utf-8");
-    return BERElement.fromSequence(v.split("$").map((line) => new BERElement(
+    const str = (value instanceof Buffer)
+        ? value.toString("utf-8")
+        : Buffer.from(value.buffer).toString("utf-8");
+    return BERElement.fromSequence(str.split("$").map((line) => new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.utf8String,
@@ -218,12 +237,15 @@ const postalAddress: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const printableString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
+    const str = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.printableString,
     );
-    el.printableString = Buffer.from(value).toString("utf-8");
+    el.printableString = str;
     return el;
 };
 
@@ -231,12 +253,15 @@ const printableString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
 
 export
 const telephoneNumber: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
+    const str = (value instanceof Buffer)
+        ? value.toString("latin1")
+        : Buffer.from(value.buffer).toString("latin1");
     const el = new BERElement(
         ASN1TagClass.universal,
         ASN1Construction.primitive,
         ASN1UniversalType.printableString,
     );
-    el.printableString = Buffer.from(value).toString("utf-8");
+    el.printableString = str;
     return el;
 };
 
@@ -250,7 +275,7 @@ const utcTime: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         ASN1Construction.primitive,
         ASN1UniversalType.utcTime,
     );
-    el.utcTime = new Date(Buffer.from(value).toString("utf-8"));
+    el.value = Buffer.from(value);
     return el;
 };
 
@@ -269,7 +294,7 @@ const uuid: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {
         Buffer.from(
             Buffer
                 .from(value)
-                .toString("utf-8")
+                .toString("latin1")
                 .replace(/-/g, ""),
             "hex",
         ),

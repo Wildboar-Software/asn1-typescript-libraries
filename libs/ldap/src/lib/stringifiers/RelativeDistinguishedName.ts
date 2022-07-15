@@ -1,7 +1,7 @@
 import { stringifyAttributeTypeAndValue } from "./AttributeTypeAndValue";
 import type StringEncoderGetter from "../types/StringEncoderGetter";
 import type AttributeTypeAndValue from "../types/AttributeTypeAndValue";
-import { OBJECT_IDENTIFIER } from "asn1-ts";
+import type { OBJECT_IDENTIFIER } from "asn1-ts";
 
 export
 function stringifyRelativeDistinguishedName (

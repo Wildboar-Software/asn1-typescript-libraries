@@ -87,7 +87,7 @@ const directoryString: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
 
 export
 const generalizedTime: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
-    return Buffer.from(value.generalizedTime.toISOString());
+    return Buffer.from(value.value);
 };
 
 // 3.3.14. Guide .............................................14
@@ -162,7 +162,7 @@ const telephoneNumber: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
 
 export
 const utcTime: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
-    return Buffer.from(value.utcTime.toISOString().slice(2));
+    return Buffer.from(value.value);
 };
 
 /**
