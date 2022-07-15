@@ -8,7 +8,7 @@ import {
     supplierOrConsumerInformationMatch_AssertionType as AssertionType,
     _decode_supplierOrConsumerInformationMatch_AssertionType as _decode_AssertionType,
 } from "../../modules/DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta";
-import { compareName } from "../../comparators";
+import compareName from "../../comparators/compareName";
 
 export
 const supplierOrConsumerInformationMatch: EqualityMatcher = (

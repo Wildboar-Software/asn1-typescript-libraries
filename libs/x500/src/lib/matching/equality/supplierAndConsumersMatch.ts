@@ -8,7 +8,7 @@ import {
     Name,
     _decode_Name,
 } from "../../modules/InformationFramework/Name.ta";
-import { compareName } from "../../comparators";
+import compareName from "../../comparators/compareName";
 
 export
 const supplierAndConsumersMatch: EqualityMatcher = (
