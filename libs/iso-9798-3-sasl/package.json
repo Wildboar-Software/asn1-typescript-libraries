@@ -1,6 +1,6 @@
 {
   "name": "@wildboar/iso-9798-3-sasl",
-  "version": "1.0.2",
+  "version": "1.0.3",
     "description": "ISO 9798-3 SASL PDUs in TypeScript",
     "keywords": [
         "iso",
@@ -30,5 +30,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/x500": "^1.0.48"
     }
 }

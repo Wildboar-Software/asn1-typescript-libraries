@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/spkac",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Signed Public Key and Challenge (SPKAC) in TypeScript",
     "keywords": [
         "spkac",
@@ -31,6 +31,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.1"
+        "@wildboar/pki-stub": "^1.1.3"
     }
 }

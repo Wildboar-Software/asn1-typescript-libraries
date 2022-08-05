@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/pc",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Trusted Computing Group Platform Certificate ASN.1 data structures in TypeScript",
     "keywords": [
         "tcg",
@@ -31,5 +31,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/x500": "^1.0.48"
     }
 }
