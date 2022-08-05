@@ -7,7 +7,38 @@ import encodeLDAPOID from "./encodeLDAPOID";
 const TRUE_VALUE = Buffer.from("TRUE");
 const FALSE_VALUE = Buffer.from("FALSE");
 
-function directoryStringToString (ds: ASN1Element): Uint8Array {
+/**
+ * @summary Convert a DirectoryString to a normal JavaScript `string`.
+ * @function
+ */
+ export
+ function directoryStringToString (ds: ASN1Element): string {
+    if (ds.tagClass !== ASN1TagClass.universal) {
+        throw new Error();
+    }
+    switch (ds.tagNumber) {
+        case (ASN1UniversalType.teletexString): {
+            return Buffer.from(ds.teletexString).toString("latin1");
+        }
+        case (ASN1UniversalType.printableString): {
+            return ds.printableString;
+        }
+        case (ASN1UniversalType.bmpString): {
+            return ds.bmpString;
+        }
+        case (ASN1UniversalType.universalString): {
+            return ds.universalString;
+        }
+        case (ASN1UniversalType.utf8String): {
+            return ds.utf8String;
+        }
+        default: {
+            throw new Error();
+        }
+    }
+ }
+
+function directoryStringToBytes (ds: ASN1Element): Uint8Array {
     if (ds.tagClass !== ASN1TagClass.universal) {
         throw new Error();
     }
@@ -75,7 +106,7 @@ const deliveryMethod: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
 
 export
 const directoryString: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
-    return Buffer.from(directoryStringToString(value));
+    return Buffer.from(directoryStringToBytes(value));
 };
 
 // 3.3.7. DIT Content Rule Description ........................9
@@ -138,11 +169,10 @@ const otherMailbox: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
 
 export
 const postalAddress: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
-    return Buffer.concat(
-        value.sequence
-            .flatMap((line) => [ directoryStringToString(line), Buffer.from("$") ])
-            .slice(0, -1)
-    );
+    const str = value.sequenceOf
+        .map((line) => directoryStringToString(line).replace(/\\/g, "\\\\").replace(/\$/g, "\\$"))
+        .join("$");
+    return Buffer.from(str, "utf-8");
 };
 
 export
