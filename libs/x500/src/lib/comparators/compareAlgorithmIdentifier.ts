@@ -9,7 +9,11 @@ function compareAlgorithmIdentifier (a: AlgorithmIdentifier, b: AlgorithmIdentif
         (a.algorithm.isEqualTo(b.algorithm))
         && (
             (a.parameters === b.parameters)
-            || compareElements(a.parameters, b.parameters)
+            || (
+                a.parameters
+                && b.parameters
+                && compareElements(a.parameters, b.parameters)
+            )
         )
     );
 }
