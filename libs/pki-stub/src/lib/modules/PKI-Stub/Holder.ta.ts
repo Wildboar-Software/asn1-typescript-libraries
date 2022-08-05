@@ -173,17 +173,17 @@ export function _decode_Holder(el: _Element) {
             /* START_OF_CALLBACKS_MAP */
             const callbacks: $.DecodingMap = {
                 baseCertificateID: (_el: _Element): void => {
-                    baseCertificateID = $._decode_explicit<IssuerSerial>(
+                    baseCertificateID = $._decode_implicit<IssuerSerial>(
                         () => _decode_IssuerSerial
                     )(_el);
                 },
                 entityName: (_el: _Element): void => {
-                    entityName = $._decode_explicit<GeneralNames>(
+                    entityName = $._decode_implicit<GeneralNames>(
                         () => _decode_GeneralNames
                     )(_el);
                 },
                 objectDigestInfo: (_el: _Element): void => {
-                    objectDigestInfo = $._decode_explicit<ObjectDigestInfo>(
+                    objectDigestInfo = $._decode_implicit<ObjectDigestInfo>(
                         () => _decode_ObjectDigestInfo
                     )(_el);
                 },
@@ -231,7 +231,7 @@ export function _encode_Holder(value: Holder, elGetter: $.ASN1Encoder<Holder>) {
                     .concat([
                         /* IF_ABSENT  */ value.baseCertificateID === undefined
                             ? undefined
-                            : $._encode_explicit(
+                            : $._encode_implicit(
                                   _TagClass.context,
                                   0,
                                   () => _encode_IssuerSerial,
@@ -239,7 +239,7 @@ export function _encode_Holder(value: Holder, elGetter: $.ASN1Encoder<Holder>) {
                               )(value.baseCertificateID, $.BER),
                         /* IF_ABSENT  */ value.entityName === undefined
                             ? undefined
-                            : $._encode_explicit(
+                            : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_GeneralNames,
@@ -247,7 +247,7 @@ export function _encode_Holder(value: Holder, elGetter: $.ASN1Encoder<Holder>) {
                               )(value.entityName, $.BER),
                         /* IF_ABSENT  */ value.objectDigestInfo === undefined
                             ? undefined
-                            : $._encode_explicit(
+                            : $._encode_implicit(
                                   _TagClass.context,
                                   2,
                                   () => _encode_ObjectDigestInfo,

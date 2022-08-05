@@ -191,13 +191,13 @@ export function _decode_AttCertIssuer(el: _Element) {
                         },
                         baseCertificateID: (_el: _Element): void => {
                             baseCertificateID =
-                                $._decode_explicit<IssuerSerial>(
+                                $._decode_implicit<IssuerSerial>(
                                     () => _decode_IssuerSerial
                                 )(_el);
                         },
                         objectDigestInfo: (_el: _Element): void => {
                             objectDigestInfo =
-                                $._decode_explicit<ObjectDigestInfo>(
+                                $._decode_implicit<ObjectDigestInfo>(
                                     () => _decode_ObjectDigestInfo
                                 )(_el);
                         },
@@ -266,7 +266,7 @@ export function _encode_AttCertIssuer(
                                     /* IF_ABSENT  */ value.baseCertificateID ===
                                     undefined
                                         ? undefined
-                                        : $._encode_explicit(
+                                        : $._encode_implicit(
                                               _TagClass.context,
                                               0,
                                               () => _encode_IssuerSerial,
@@ -275,7 +275,7 @@ export function _encode_AttCertIssuer(
                                     /* IF_ABSENT  */ value.objectDigestInfo ===
                                     undefined
                                         ? undefined
-                                        : $._encode_explicit(
+                                        : $._encode_implicit(
                                               _TagClass.context,
                                               1,
                                               () => _encode_ObjectDigestInfo,
