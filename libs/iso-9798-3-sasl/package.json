@@ -32,6 +32,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.48"
+        "@wildboar/x500": "^1.0.49"
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/pkcs",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "Public Key Cryptography Standard PDUs in TypeScript",
     "keywords": [
         "pkcs",
@@ -35,6 +35,8 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.48"
+        "@wildboar/x500": "^1.0.49",
+        "@wildboar/ansi-x9-62": "^1.0.4",
+        "@wildboar/cms": "^1.0.4"
     }
 }

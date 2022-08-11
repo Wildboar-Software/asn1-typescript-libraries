@@ -34,7 +34,8 @@
     },
     "dependencies": {
         "@wildboar/pki-stub": "^1.1.3",
-        "@wildboar/x500": "^1.0.48"
+        "@wildboar/x500": "^1.0.49",
+        "@wildboar/ldap": "^1.2.11"
     }
 }
 

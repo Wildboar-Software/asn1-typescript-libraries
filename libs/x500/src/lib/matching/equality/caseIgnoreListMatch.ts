@@ -4,20 +4,35 @@ import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
 import directoryStringToString from "../../stringifiers/directoryStringToString";
+import { prepString } from "../../utils/prepString";
 
 export
 const caseIgnoreListMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const aElements = assertion.sequence;
-    const vElements = value.sequence;
+    const aElements = assertion.sequenceOf;
+    const vElements = value.sequenceOf;
     if (aElements.length !== vElements.length) {
         return false;
     }
-    const a: string[] = aElements.map((a) => directoryStringToString(_decode_UDS(a)).trim().toLowerCase());
-    const v: string[] = vElements.map((v) => directoryStringToString(_decode_UDS(v)).trim().toLowerCase());
-    return a.every((x, i) => (x === v[i]));
+    for (let i = 0; i < aElements.length; i++) {
+        const a: string | undefined = prepString(directoryStringToString(_decode_UDS(aElements[i])).toLowerCase());
+        const v: string | undefined = prepString(directoryStringToString(_decode_UDS(vElements[i])).toLowerCase());
+        if (a === undefined) {
+            return false;
+            // throw new Error(
+                // `0a2f86ed-6db0-46bb-b9ab-b023920b66da: Invalid characters in caseIgnoreListMatch assertion, line ${(i + 1)}.`
+            // );
+        }
+        if (v === undefined) {
+            return false;
+        }
+        if (a !== v) {
+            return false;
+        }
+    }
+    return true;
 }
 
 export default caseIgnoreListMatch;
