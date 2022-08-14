@@ -4,7 +4,7 @@
 // - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 // - https://unicode.org/reports/tr18/#General_Category_Property
 const mappedToNothing: RegExp = /[\u00AD\u1806\u034F\u180B-\u180D\uFE0F-\uFF00\uFFFC\u200B\p{Cc}]+/ug;
-const prohibitedCharacters: RegExp = /[\uD800-\uDFFFF\uFFFD]/;
+const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
 
 // TODO: Eventually, I would like an implementation that does not use regexes for performance reasons.
 /**
