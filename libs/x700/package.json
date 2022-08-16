@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x700",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "X.700 management protocol data structures and business logic in TypeScript",
     "keywords": [
         "x700",
@@ -32,5 +32,11 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/cmip": "^1.0.4",
+        "@wildboar/attribute-asn1module": "^1.0.2",
+        "@wildboar/rose": "^1.0.3",
+        "@wildboar/acse": "^1.0.5"
     }
 }

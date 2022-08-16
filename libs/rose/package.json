@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/rose",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Remote Operation Service Element PDUs in TypeScript",
     "keywords": [
         "rose",
@@ -30,5 +30,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/acse": "^1.0.5",
+        "@wildboar/rtse": "^1.0.2"
     }
 }
