@@ -5,6 +5,7 @@ import {
     INTEGER,
     NULL,
     OPTIONAL,
+    OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
 import {
@@ -107,6 +108,7 @@ export {
  *   contexts                       [11] SET SIZE (1..MAX) OF ContextAssertion
  *                                         OPTIONAL,
  *   classes                        [12] Refinement OPTIONAL,
+ *   entryMethods                   [30] SET OF OBJECT IDENTIFIER OPTIONAL,
  *   ... }
  * ```
  *
@@ -193,6 +195,12 @@ export class ProtectedItems {
          */
         readonly classes?: OPTIONAL<Refinement>,
         /**
+         * @summary `entryMethods`.
+         * @public
+         * @readonly
+         */
+        readonly entryMethods?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        /**
          * @summary Extensions that are not recognized.
          * @public
          * @readonly
@@ -229,6 +237,7 @@ export class ProtectedItems {
             _o.restrictedBy,
             _o.contexts,
             _o.classes,
+            _o.entryMethods,
             _o._unrecognizedExtensionsList
         );
     }
@@ -336,6 +345,13 @@ export const _root_component_type_list_1_spec_for_ProtectedItems: $.ComponentSpe
         undefined,
         undefined
     ),
+    new $.ComponentSpec(
+        'entryMethods',
+        true,
+        $.hasTag(_TagClass.context, 30),
+        undefined,
+        undefined
+    ),
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ProtectedItems */
 
@@ -393,6 +409,7 @@ export function _decode_ProtectedItems(el: _Element) {
             let restrictedBy: OPTIONAL<RestrictedValue[]>;
             let contexts: OPTIONAL<ContextAssertion[]>;
             let classes: OPTIONAL<Refinement>;
+            let entryMethods: OPTIONAL<OBJECT_IDENTIFIER[]>;
             let _unrecognizedExtensionsList: _Element[] = [];
             /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             /* START_OF_CALLBACKS_MAP */
@@ -477,6 +494,13 @@ export function _decode_ProtectedItems(el: _Element) {
                         () => _decode_Refinement
                     )(_el);
                 },
+                entryMethods: (_el: _Element): void => {
+                    entryMethods = $._decode_explicit<OBJECT_IDENTIFIER[]>(() =>
+                        $._decodeSetOf<OBJECT_IDENTIFIER>(
+                            () => $._decodeObjectIdentifier
+                        )
+                    )(_el);
+                },
             };
             /* END_OF_CALLBACKS_MAP */
             $._parse_sequence(
@@ -503,6 +527,7 @@ export function _decode_ProtectedItems(el: _Element) {
                 restrictedBy,
                 contexts,
                 classes,
+                entryMethods,
                 _unrecognizedExtensionsList
             );
         };
@@ -675,6 +700,18 @@ export function _encode_ProtectedItems(
                                       () => _encode_Refinement,
                                       $.BER
                                   )(value.classes, $.BER),
+                            /* IF_ABSENT  */ value.entryMethods === undefined
+                                ? undefined
+                                : $._encode_explicit(
+                                    _TagClass.context,
+                                    30,
+                                    () =>
+                                        $._encodeSetOf<OBJECT_IDENTIFIER>(
+                                            () => $._encodeObjectIdentifier,
+                                            $.BER
+                                        ),
+                                    $.BER
+                                )(value.entryMethods, $.BER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
