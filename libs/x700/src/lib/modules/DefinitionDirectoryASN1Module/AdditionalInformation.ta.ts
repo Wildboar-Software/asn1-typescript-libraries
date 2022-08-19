@@ -111,9 +111,9 @@ export class AdditionalInformation {
      * @param {Object} _o An object having all of the keys and values of a `AdditionalInformation`.
      * @returns {AdditionalInformation}
      */
-    public static _from_object(
-        _o: { [_K in keyof AdditionalInformation]: AdditionalInformation[_K] }
-    ): AdditionalInformation {
+    public static _from_object(_o: {
+        [_K in keyof AdditionalInformation]: AdditionalInformation[_K];
+    }): AdditionalInformation {
         return new AdditionalInformation(_o.creationDate, _o.comment);
     }
 }
@@ -128,22 +128,23 @@ export class AdditionalInformation {
  *
  * @constant
  */
-export const _root_component_type_list_1_spec_for_AdditionalInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'creationDate',
-        true,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'comment',
-        true,
-        $.hasTag(_TagClass.universal, 25),
-        undefined,
-        undefined
-    ),
-];
+export const _root_component_type_list_1_spec_for_AdditionalInformation: $.ComponentSpec[] =
+    [
+        new $.ComponentSpec(
+            'creationDate',
+            true,
+            $.hasTag(_TagClass.universal, 24),
+            undefined,
+            undefined
+        ),
+        new $.ComponentSpec(
+            'comment',
+            true,
+            $.hasTag(_TagClass.universal, 25),
+            undefined,
+            undefined
+        ),
+    ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalInformation */
@@ -155,7 +156,8 @@ export const _root_component_type_list_1_spec_for_AdditionalInformation: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AdditionalInformation: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AdditionalInformation: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalInformation */
@@ -167,11 +169,13 @@ export const _root_component_type_list_2_spec_for_AdditionalInformation: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AdditionalInformation: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AdditionalInformation: $.ComponentSpec[] =
+    [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
-let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformation> | null = null;
+let _cached_decoder_for_AdditionalInformation: $.ASN1Decoder<AdditionalInformation> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
@@ -219,7 +223,8 @@ export function _decode_AdditionalInformation(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
-let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformation> | null = null;
+let _cached_encoder_for_AdditionalInformation: $.ASN1Encoder<AdditionalInformation> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AdditionalInformation */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AdditionalInformation */

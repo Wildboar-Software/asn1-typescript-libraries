@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x700",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "X.700 management protocol data structures and business logic in TypeScript",
     "keywords": [
         "x700",
@@ -37,6 +37,7 @@
         "@wildboar/cmip": "^1.0.4",
         "@wildboar/attribute-asn1module": "^1.0.2",
         "@wildboar/rose": "^1.0.3",
-        "@wildboar/acse": "^1.0.5"
+        "@wildboar/acse": "^1.0.5",
+        "@wildboar/x500": "^1.0.52"
     }
 }

@@ -174,7 +174,8 @@ export const preliminary: InformationStatus =
 /* END_OF_SYMBOL_DEFINITION preliminary */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
-let _cached_decoder_for_InformationStatus: $.ASN1Decoder<InformationStatus> | null = null;
+let _cached_decoder_for_InformationStatus: $.ASN1Decoder<InformationStatus> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InformationStatus */
@@ -193,7 +194,8 @@ export function _decode_InformationStatus(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
-let _cached_encoder_for_InformationStatus: $.ASN1Encoder<InformationStatus> | null = null;
+let _cached_encoder_for_InformationStatus: $.ASN1Encoder<InformationStatus> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InformationStatus */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InformationStatus */

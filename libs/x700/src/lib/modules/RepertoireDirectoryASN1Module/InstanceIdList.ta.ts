@@ -92,7 +92,8 @@ export type InstanceIdList = ObjectInstance[]; // SetOfType
 /* END_OF_SYMBOL_DEFINITION InstanceIdList */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_InstanceIdList */
-let _cached_decoder_for_InstanceIdList: $.ASN1Decoder<InstanceIdList> | null = null;
+let _cached_decoder_for_InstanceIdList: $.ASN1Decoder<InstanceIdList> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_InstanceIdList */
 
 /* START_OF_SYMBOL_DEFINITION _decode_InstanceIdList */
@@ -113,7 +114,8 @@ export function _decode_InstanceIdList(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_InstanceIdList */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_InstanceIdList */
-let _cached_encoder_for_InstanceIdList: $.ASN1Encoder<InstanceIdList> | null = null;
+let _cached_encoder_for_InstanceIdList: $.ASN1Encoder<InstanceIdList> | null =
+    null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_InstanceIdList */
 
 /* START_OF_SYMBOL_DEFINITION _encode_InstanceIdList */
