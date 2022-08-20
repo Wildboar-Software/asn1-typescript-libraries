@@ -40,6 +40,7 @@ import type ContextMatcher from "../types/ContextMatcher";
 import SubstringSelection from "../types/SubstringSelection";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
+import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va";
 import { CannotPerformExactly } from "../errors";
 import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem";
@@ -691,6 +692,9 @@ function evaluateFilterItem (
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
     if ("equality" in filterItem) {
+        if (filterItem.equality.type_.isEqualTo(id_mr_approximateStringMatch)) {
+            return evaluateApprox(filterItem.equality, entry, options);
+        }
         return evaluateEquality(filterItem.equality, entry, options);
     } else if ("substrings" in filterItem) {
         return evaluateSubstring(filterItem.substrings, entry, options);
