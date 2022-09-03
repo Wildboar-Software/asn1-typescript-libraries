@@ -85,3 +85,5 @@ export { urnC } from "../../modules/SelectedAttributeTypes/urnC.oa";
 export { utmCoordinates } from "../../modules/SelectedAttributeTypes/utmCoordinates.oa";
 export { uUIDPair } from "../../modules/SelectedAttributeTypes/uUIDPair.oa";
 export { x121Address } from "../../modules/SelectedAttributeTypes/x121Address.oa";
+export { uid } from "../../modules/SelectedAttributeTypes/uid.oa";
+export { dc } from "../../modules/SelectedAttributeTypes/dc.oa";
