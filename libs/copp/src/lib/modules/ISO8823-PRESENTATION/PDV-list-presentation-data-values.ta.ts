@@ -101,7 +101,7 @@ export function _decode_PDV_list_presentation_data_values(el: _Element) {
             {
                 'CONTEXT 0': [
                     'single_ASN1_type',
-                    $._decode_implicit<_Element>(() => $._decodeAny),
+                    $._decode_explicit<_Element>(() => $._decodeAny),
                 ],
                 'CONTEXT 1': [
                     'octet_aligned',
@@ -139,7 +139,7 @@ export function _encode_PDV_list_presentation_data_values(
     if (!_cached_encoder_for_PDV_list_presentation_data_values) {
         _cached_encoder_for_PDV_list_presentation_data_values = $._encode_choice<PDV_list_presentation_data_values>(
             {
-                single_ASN1_type: $._encode_implicit(
+                single_ASN1_type: $._encode_explicit(
                     _TagClass.context,
                     0,
                     () => $._encodeAny,
