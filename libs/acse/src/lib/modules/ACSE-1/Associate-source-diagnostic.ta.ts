@@ -109,6 +109,9 @@ import {
   _encode_Associate_source_diagnostic_acse_service_provider,
 } from '../ACSE-1/Associate-source-diagnostic-acse-service-provider.ta';
 
+// Manually modified!
+// For some reason, the integers were implicitly encoded.
+
 /* START_OF_SYMBOL_DEFINITION Associate_source_diagnostic */
 /**
  * @summary Associate_source_diagnostic
@@ -165,13 +168,13 @@ export function _decode_Associate_source_diagnostic(el: _Element) {
       {
         'CONTEXT 1': [
           'acse_service_user',
-          $._decode_implicit<Associate_source_diagnostic_acse_service_user>(
+          $._decode_explicit<Associate_source_diagnostic_acse_service_user>(
             () => _decode_Associate_source_diagnostic_acse_service_user
           ),
         ],
         'CONTEXT 2': [
           'acse_service_provider',
-          $._decode_implicit<Associate_source_diagnostic_acse_service_provider>(
+          $._decode_explicit<Associate_source_diagnostic_acse_service_provider>(
             () => _decode_Associate_source_diagnostic_acse_service_provider
           ),
         ],
@@ -201,13 +204,13 @@ export function _encode_Associate_source_diagnostic(
   if (!_cached_encoder_for_Associate_source_diagnostic) {
     _cached_encoder_for_Associate_source_diagnostic = $._encode_choice<Associate_source_diagnostic>(
       {
-        acse_service_user: $._encode_implicit(
+        acse_service_user: $._encode_explicit(
           _TagClass.context,
           1,
           () => _encode_Associate_source_diagnostic_acse_service_user,
           $.BER
         ),
-        acse_service_provider: $._encode_implicit(
+        acse_service_provider: $._encode_explicit(
           _TagClass.context,
           2,
           () => _encode_Associate_source_diagnostic_acse_service_provider,
