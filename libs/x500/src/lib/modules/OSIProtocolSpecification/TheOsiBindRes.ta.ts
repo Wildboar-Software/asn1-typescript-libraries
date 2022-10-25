@@ -3,6 +3,8 @@ import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
 export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
 
+// Manually modified!
+
 /* START_OF_SYMBOL_DEFINITION TheOsiBindRes */
 /**
  * @summary TheOsiBindRes
@@ -18,10 +20,6 @@ export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEX
 export type TheOsiBindRes = _Element; // ObjectClassFieldType
 /* END_OF_SYMBOL_DEFINITION TheOsiBindRes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TheOsiBindRes */
-let _cached_decoder_for_TheOsiBindRes: $.ASN1Decoder<TheOsiBindRes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TheOsiBindRes */
-
 /* START_OF_SYMBOL_DEFINITION _decode_TheOsiBindRes */
 /**
  * @summary Decodes an ASN.1 element into a(n) TheOsiBindRes
@@ -30,18 +28,9 @@ let _cached_decoder_for_TheOsiBindRes: $.ASN1Decoder<TheOsiBindRes> | null = nul
  * @returns {TheOsiBindRes} The decoded data structure.
  */
 export function _decode_TheOsiBindRes(el: _Element) {
-    if (!_cached_decoder_for_TheOsiBindRes) {
-        _cached_decoder_for_TheOsiBindRes = $._decode_implicit<TheOsiBindRes>(
-            () => $._decodeAny
-        );
-    }
-    return _cached_decoder_for_TheOsiBindRes(el);
+    return $._decode_explicit<TheOsiBindRes>(() => $._decodeAny)(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TheOsiBindRes */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TheOsiBindRes */
-let _cached_encoder_for_TheOsiBindRes: $.ASN1Encoder<TheOsiBindRes> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TheOsiBindRes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TheOsiBindRes */
 /**
@@ -55,15 +44,12 @@ export function _encode_TheOsiBindRes(
     value: TheOsiBindRes,
     elGetter: $.ASN1Encoder<TheOsiBindRes>
 ) {
-    if (!_cached_encoder_for_TheOsiBindRes) {
-        _cached_encoder_for_TheOsiBindRes = $._encode_implicit(
-            _TagClass.context,
-            17,
-            () => $._encodeAny,
-            $.BER
-        );
-    }
-    return _cached_encoder_for_TheOsiBindRes(value, elGetter);
+    return $._encode_explicit(
+        _TagClass.context,
+        17,
+        () => $._encodeAny,
+        $.BER
+    )(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TheOsiBindRes */
