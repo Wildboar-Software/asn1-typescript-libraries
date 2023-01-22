@@ -87,3 +87,4 @@ export { objectClassesWithinRefinement } from "./lib/utils/objectClassesWithinRe
 // export { selectFromEntry } from "./lib/utils/selectFromEntry";
 export { splitIntoMastersAndShadows } from "./lib/utils/splitIntoMastersAndShadows";
 export { validateObjectClasses } from "./lib/utils/validateObjectClasses";
+export { prepString } from "./lib/utils/prepString";
