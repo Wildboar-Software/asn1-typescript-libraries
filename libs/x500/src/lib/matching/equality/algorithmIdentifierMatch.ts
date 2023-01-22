@@ -12,7 +12,7 @@ const algorithmIdentifierMatch: EqualityMatcher = (
     value: ASN1Element,
 ): boolean => {
     const a: AlgorithmIdentifier = _decode_AlgorithmIdentifier(assertion);
-    const probablyAnAlgorithmIdentifier: ASN1Element = value.sequence[1];
+    const probablyAnAlgorithmIdentifier: ASN1Element = value.sequence[0];
     const algId: AlgorithmIdentifier = _decode_AlgorithmIdentifier(probablyAnAlgorithmIdentifier);
     return compareAlgorithmIdentifier(algId, a);
 }
