@@ -7,6 +7,9 @@ import { uriFromNSAP } from "./uri";
 import { URL } from "url";
 import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
 
+/**
+ * @deprecated
+ */
 export
 async function compareSocketToNSAP (
     socket: Socket | TLSSocket,
