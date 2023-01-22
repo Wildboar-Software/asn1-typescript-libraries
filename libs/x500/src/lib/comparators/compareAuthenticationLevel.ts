@@ -1,8 +1,6 @@
 import type {
     AuthenticationLevel_basicLevels,
 } from "../modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta";
-import { strict as assert } from "assert";
-
 
 /**
  * @summary Compare two `AuthenticationLevel`s having alternative `basicLevels`
@@ -39,7 +37,7 @@ function compareAuthenticationLevel (
      */
     if (
         (a.localQualifier !== undefined)
-        && (a.localQualifier > b.localQualifier)
+        && (a.localQualifier > (b.localQualifier ?? 0))
     ) {
         return true;
     }
