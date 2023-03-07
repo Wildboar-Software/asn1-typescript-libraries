@@ -44,6 +44,7 @@ import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/
 import { CannotPerformExactly } from "../errors";
 import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem";
+import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta";
 
 interface MatchedValue {
     type: AttributeType;
@@ -207,6 +208,18 @@ interface EvaluateFilterSettings {
      * @property
      */
     readonly dnAttribute?: boolean;
+
+    /**
+     * Referenced in ITU Recommendation X.501 (2019), Section 16.10.2, this is
+     * an index of request attribute profiles by the string-form object
+     * identifier of the attribute type. This is primarily used for its
+     * `defaultValues` property, which fills in values for attribute types if
+     * not present in the entry.
+     *
+     * @readonly
+     * @property
+     */
+    readonly requestAttributes?: Map<string, RequestAttribute>;
 }
 
 type AnyFunction = (...args: any[]) => any;
@@ -311,6 +324,45 @@ function evaluateEquality (
                 return matchedValues;
             }
         }
+        if (matchedValues.length === 0) {
+            const profile = options?.requestAttributes?.get(attr.type_.toString());
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // If length == 0, every value matches.
+                    for (const value of attr.values) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value,
+                        });
+                    }
+                    for (const vwc of attr.valuesWithContext ?? []) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: vwc.value,
+                            contexts: vwc.contextList,
+                        });
+                    }
+                } else {
+                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                    for (const default_value of default_values) {
+                        if (!options.permittedToMatch(attr.type_, default_value)) {
+                            continue;
+                        }
+                        if (!matcher!(ava.assertion, default_value)) {
+                            continue;
+                        }
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: default_value,
+                        });
+                        if (!options.matchedValuesOnly) {
+                            return matchedValues;
+                        }
+                    }
+                }
+            }
+        }
     }
     return matchedValues;
 }
@@ -377,6 +429,45 @@ function evaluateApprox (
             });
             if (!options.matchedValuesOnly) {
                 return matchedValues;
+            }
+        }
+        if (matchedValues.length === 0) {
+            const profile = options?.requestAttributes?.get(attr.type_.toString());
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // If length == 0, every value matches.
+                    for (const value of attr.values) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value,
+                        });
+                    }
+                    for (const vwc of attr.valuesWithContext ?? []) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: vwc.value,
+                            contexts: vwc.contextList,
+                        });
+                    }
+                } else {
+                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                    for (const default_value of default_values) {
+                        if (!options.permittedToMatch(attr.type_, default_value)) {
+                            continue;
+                        }
+                        if (!matcher!(ava.assertion, default_value)) {
+                            continue;
+                        }
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: default_value,
+                        });
+                        if (!options.matchedValuesOnly) {
+                            return matchedValues;
+                        }
+                    }
+                }
             }
         }
     }
@@ -451,6 +542,45 @@ function evaluateOrdering (
                 return matchedValues;
             }
         }
+        if (matchedValues.length === 0) {
+            const profile = options?.requestAttributes?.get(attr.type_.toString());
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // If length == 0, every value matches.
+                    for (const value of attr.values) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value,
+                        });
+                    }
+                    for (const vwc of attr.valuesWithContext ?? []) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: vwc.value,
+                            contexts: vwc.contextList,
+                        });
+                    }
+                } else {
+                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                    for (const default_value of default_values) {
+                        if (!options.permittedToMatch(attr.type_, default_value)) {
+                            continue;
+                        }
+                        if (!ordered!(ava.assertion, default_value)) {
+                            continue;
+                        }
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: default_value,
+                        });
+                        if (!options.matchedValuesOnly) {
+                            return matchedValues;
+                        }
+                    }
+                }
+            }
+        }
     }
     return matchedValues;
 }
@@ -517,6 +647,48 @@ function evaluateSubstring (
                 });
                 if (!options.matchedValuesOnly) {
                     return matchedValues;
+                }
+            }
+        }
+        if (matchedValues.length === 0) {
+            const profile = options?.requestAttributes?.get(attr.type_.toString());
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // If length == 0, every value matches.
+                    for (const value of attr.values) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value,
+                        });
+                    }
+                    for (const vwc of attr.valuesWithContext ?? []) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: vwc.value,
+                            contexts: vwc.contextList,
+                        });
+                    }
+                } else {
+                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                    for (const default_value of default_values) {
+                        if (!options.permittedToMatch(attr.type_, default_value)) {
+                            continue;
+                        }
+                        if (!assertions.every(([ assertion, selection ]) => (
+                            options.permittedToMatch(attr.type_, default_value)
+                            && matcher!(assertion, default_value, selection)
+                        ))) {
+                            continue;
+                        }
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: default_value,
+                        });
+                        if (!options.matchedValuesOnly) {
+                            return matchedValues;
+                        }
+                    }
                 }
             }
         }
@@ -642,6 +814,45 @@ function evaluateMatchingRuleAssertion (
             });
             if (!options.matchedValuesOnly) {
                 return matchedValues;
+            }
+        }
+        if (matchedValues.length === 0) {
+            const profile = options?.requestAttributes?.get(attr.type_.toString());
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // If length == 0, every value matches.
+                    for (const value of attr.values) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value,
+                        });
+                    }
+                    for (const vwc of attr.valuesWithContext ?? []) {
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: vwc.value,
+                            contexts: vwc.contextList,
+                        });
+                    }
+                } else {
+                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                    for (const default_value of default_values) {
+                        if (!options.permittedToMatch(attr.type_, default_value)) {
+                            continue;
+                        }
+                        if (!matcher!(mra.matchValue, default_value)) {
+                            continue;
+                        }
+                        matchedValues.push({
+                            type: attr.type_,
+                            value: default_value,
+                        });
+                        if (!options.matchedValuesOnly) {
+                            return matchedValues;
+                        }
+                    }
+                }
             }
         }
     }
@@ -819,7 +1030,7 @@ function evaluateFilter (
                     ...contributingEntries.values(),
                     ...results.flatMap((r) => Array.from(r.contributingEntries.values())),
                 ]),
-                matchedValues: results.flatMap((r) => r.matchedValues),
+                matchedValues: results.flatMap((r) => r.matchedValues ?? []),
             };
         } else if (results.some((result) => result.matched === false)) {
             return {
