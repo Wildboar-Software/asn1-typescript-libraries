@@ -198,7 +198,7 @@ MeasurementRootType ::= ENUMERATED {
 CommonCriteriaMeasures ::= SEQUENCE {
     version             IA5String (SIZE (1..strmax)), -- “2.2” or “3.1”; future syntax defined by CC
     assurancelevel      EvaluationAssuranceLevel,
-    evaluationStatus    EvalutionStatus,
+    evaluationStatus    EvaluationStatus,
     plus                BOOLEAN DEFAULT FALSE,
     strengthOfFunction  [0] IMPLICIT StrengthOfFunction OPTIONAL,
     profileOid          [1] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
