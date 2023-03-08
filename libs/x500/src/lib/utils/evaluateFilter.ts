@@ -265,7 +265,7 @@ function evaluateEquality (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | undefined {
+): MatchedValue[] | boolean | undefined {
     const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(ava.type_));
     if (!matcher) {
         return undefined;
@@ -278,6 +278,42 @@ function evaluateEquality (
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
     const matchedValues: MatchedValue[] = [];
+    if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
+        const req_attrs = options.requestAttributes;
+        // NOTE: This does NOT check parent types of the asserted value.
+        const profiled_type: AttributeType | undefined = friendTypes
+            .find((rattr) => req_attrs.has(rattr.toString()));
+        // "" will never match anything. It's just to make this a one-liner.
+        const profile = req_attrs.get(profiled_type?.toString() ?? "");
+        if (profile?.defaultValues) {
+            if (profile.defaultValues.length === 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+            for (const default_value of default_values) {
+                if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                    continue;
+                }
+                if (!matcher!(ava.assertion, default_value)) {
+                    continue;
+                }
+                matchedValues.push({
+                    type: profile.attributeType,
+                    value: default_value,
+                });
+                if (!options.matchedValuesOnly) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+            if (matchedValues.length > 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+        }
+    }
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
@@ -372,7 +408,7 @@ function evaluateApprox (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | undefined {
+): MatchedValue[] | boolean | undefined {
     const matcher: EqualityMatcher | undefined = handleErrors(options.getApproximateMatcher(ava.type_));
     if (!matcher) {
         return undefined;
@@ -388,6 +424,42 @@ function evaluateApprox (
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
+    if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
+        const req_attrs = options.requestAttributes;
+        // NOTE: This does NOT check parent types of the asserted value.
+        const profiled_type: AttributeType | undefined = friendTypes
+            .find((rattr) => req_attrs.has(rattr.toString()));
+        // "" will never match anything. It's just to make this a one-liner.
+        const profile = req_attrs.get(profiled_type?.toString() ?? "");
+        if (profile?.defaultValues) {
+            if (profile.defaultValues.length === 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+            for (const default_value of default_values) {
+                if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                    continue;
+                }
+                if (!matcher!(ava.assertion, default_value)) {
+                    continue;
+                }
+                matchedValues.push({
+                    type: profile.attributeType,
+                    value: default_value,
+                });
+                if (!options.matchedValuesOnly) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+            if (matchedValues.length > 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+        }
+    }
     for (const attr of relevantAttributes) {
         if (!options.permittedToMatch(attr.type_)) {
             continue;
@@ -431,45 +503,6 @@ function evaluateApprox (
                 return matchedValues;
             }
         }
-        if (matchedValues.length === 0) {
-            const profile = options?.requestAttributes?.get(attr.type_.toString());
-            if (profile?.defaultValues) {
-                if (profile.defaultValues.length === 0) {
-                    // If length == 0, every value matches.
-                    for (const value of attr.values) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value,
-                        });
-                    }
-                    for (const vwc of attr.valuesWithContext ?? []) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: vwc.value,
-                            contexts: vwc.contextList,
-                        });
-                    }
-                } else {
-                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                    for (const default_value of default_values) {
-                        if (!options.permittedToMatch(attr.type_, default_value)) {
-                            continue;
-                        }
-                        if (!matcher!(ava.assertion, default_value)) {
-                            continue;
-                        }
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: default_value,
-                        });
-                        if (!options.matchedValuesOnly) {
-                            return matchedValues;
-                        }
-                    }
-                }
-            }
-        }
     }
     return matchedValues;
 }
@@ -480,7 +513,7 @@ function evaluateOrdering (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | undefined {
+): MatchedValue[] | boolean | undefined {
     const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(ava.type_));
     if (!orderer) {
         return undefined;
@@ -496,9 +529,45 @@ function evaluateOrdering (
     const selectedContexts = (ava.assertedContexts && ("selectedContexts" in ava.assertedContexts))
         ? ava.assertedContexts.selectedContexts
         : undefined;
-    const ordered = gte
+    const matcher = gte
         ? (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) <= 0)
         : (assertion: ASN1Element, value: ASN1Element) => (orderer(assertion, value) >= 0);
+    if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
+        const req_attrs = options.requestAttributes;
+        // NOTE: This does NOT check parent types of the asserted value.
+        const profiled_type: AttributeType | undefined = friendTypes
+            .find((rattr) => req_attrs.has(rattr.toString()));
+        // "" will never match anything. It's just to make this a one-liner.
+        const profile = req_attrs.get(profiled_type?.toString() ?? "");
+        if (profile?.defaultValues) {
+            if (profile.defaultValues.length === 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+            for (const default_value of default_values) {
+                if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                    continue;
+                }
+                if (!matcher!(ava.assertion, default_value)) {
+                    continue;
+                }
+                matchedValues.push({
+                    type: profile.attributeType,
+                    value: default_value,
+                });
+                if (!options.matchedValuesOnly) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+            if (matchedValues.length > 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+        }
+    }
     for (const attr of relevantAttributes) {
         if (!options.permittedToMatch(attr.type_)) {
             continue;
@@ -507,7 +576,7 @@ function evaluateOrdering (
             if (!options.permittedToMatch(attr.type_, value)) {
                 continue;
             }
-            if (!ordered!(ava.assertion, value)) {
+            if (!matcher!(ava.assertion, value)) {
                 continue;
             }
             matchedValues.push({
@@ -522,7 +591,7 @@ function evaluateOrdering (
             if (!options.permittedToMatch(attr.type_, vwc.value)) {
                 continue;
             }
-            if (!ordered!(ava.assertion, vwc.value)) {
+            if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
             if (selectedContexts && !selectedContexts.every((sc) => evaluateContextAssertion(
@@ -542,45 +611,6 @@ function evaluateOrdering (
                 return matchedValues;
             }
         }
-        if (matchedValues.length === 0) {
-            const profile = options?.requestAttributes?.get(attr.type_.toString());
-            if (profile?.defaultValues) {
-                if (profile.defaultValues.length === 0) {
-                    // If length == 0, every value matches.
-                    for (const value of attr.values) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value,
-                        });
-                    }
-                    for (const vwc of attr.valuesWithContext ?? []) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: vwc.value,
-                            contexts: vwc.contextList,
-                        });
-                    }
-                } else {
-                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                    for (const default_value of default_values) {
-                        if (!options.permittedToMatch(attr.type_, default_value)) {
-                            continue;
-                        }
-                        if (!ordered!(ava.assertion, default_value)) {
-                            continue;
-                        }
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: default_value,
-                        });
-                        if (!options.matchedValuesOnly) {
-                            return matchedValues;
-                        }
-                    }
-                }
-            }
-        }
     }
     return matchedValues;
 }
@@ -590,7 +620,7 @@ function evaluateSubstring (
     sub: FilterItem_substrings,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | undefined {
+): MatchedValue[] | boolean | undefined {
     const matcher = handleErrors(options.getSubstringsMatcher(sub.type_));
     if (!matcher) {
         return undefined;
@@ -620,6 +650,45 @@ function evaluateSubstring (
     ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
+    if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
+        const req_attrs = options.requestAttributes;
+        // NOTE: This does NOT check parent types of the asserted value.
+        const profiled_type: AttributeType | undefined = friendTypes
+            .find((rattr) => req_attrs.has(rattr.toString()));
+        // "" will never match anything. It's just to make this a one-liner.
+        const profile = req_attrs.get(profiled_type?.toString() ?? "");
+        if (profile?.defaultValues) {
+            if (profile.defaultValues.length === 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+            for (const default_value of default_values) {
+                if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                    continue;
+                }
+                if (!assertions.every(([ assertion, selection ]) => (
+                    options.permittedToMatch(profile.attributeType, default_value)
+                    && matcher!(assertion, default_value, selection)
+                ))) {
+                    continue;
+                }
+                matchedValues.push({
+                    type: profile.attributeType,
+                    value: default_value,
+                });
+                if (!options.matchedValuesOnly) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+            if (matchedValues.length > 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+        }
+    }
     for (const attr of relevantAttributes) {
         for (const value of attr.values) {
             if (assertions.every(([ assertion, selection ]) => (
@@ -650,48 +719,6 @@ function evaluateSubstring (
                 }
             }
         }
-        if (matchedValues.length === 0) {
-            const profile = options?.requestAttributes?.get(attr.type_.toString());
-            if (profile?.defaultValues) {
-                if (profile.defaultValues.length === 0) {
-                    // If length == 0, every value matches.
-                    for (const value of attr.values) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value,
-                        });
-                    }
-                    for (const vwc of attr.valuesWithContext ?? []) {
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: vwc.value,
-                            contexts: vwc.contextList,
-                        });
-                    }
-                } else {
-                    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-                    const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                    for (const default_value of default_values) {
-                        if (!options.permittedToMatch(attr.type_, default_value)) {
-                            continue;
-                        }
-                        if (!assertions.every(([ assertion, selection ]) => (
-                            options.permittedToMatch(attr.type_, default_value)
-                            && matcher!(assertion, default_value, selection)
-                        ))) {
-                            continue;
-                        }
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: default_value,
-                        });
-                        if (!options.matchedValuesOnly) {
-                            return matchedValues;
-                        }
-                    }
-                }
-            }
-        }
     }
     return matchedValues;
 }
@@ -717,7 +744,7 @@ function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | undefined {
+): MatchedValue[] | boolean | undefined {
     if (mra.type_ && !options.permittedToMatch(mra.type_)) {
         return undefined;
     }
@@ -773,14 +800,50 @@ function evaluateMatchingRuleAssertion (
                 attr.type_,
             )))
             .filter((attr) => options.permittedToMatch(attr.type_));
+    const matchedValues: MatchedValue[] = [];
     if (relevantAttributes.length === 0) {
         if (options.performExactly && !mra.type_ && (attributes.length > 0)) {
             // None of the attributes were compatible with the matching rule.
             throw new CannotPerformExactly(mra.matchingRule[0].toString());
         }
-        return []; // There are no applicable attributes to match.
+        if (options?.requestAttributes?.size) {
+            const req_attrs = options.requestAttributes;
+            // NOTE: This does NOT check parent types of the asserted value.
+            const profiled_type: AttributeType | undefined = friendTypes
+                .find((rattr) => req_attrs.has(rattr.toString()));
+            // "" will never match anything. It's just to make this a one-liner.
+            const profile = req_attrs.get(profiled_type?.toString() ?? "");
+            if (profile?.defaultValues) {
+                if (profile.defaultValues.length === 0) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+                // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+                const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+                for (const default_value of default_values) {
+                    if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                        continue;
+                    }
+                    if (!matcher!(mra.matchValue, default_value)) {
+                        continue;
+                    }
+                    matchedValues.push({
+                        type: profile.attributeType,
+                        value: default_value,
+                    });
+                    if (!options.matchedValuesOnly) {
+                        // No matched values are returned intentionally, since these are defaults.
+                        return true;
+                    }
+                }
+                if (matchedValues.length > 0) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+        }
+        return [];
     }
-    const matchedValues: MatchedValue[] = [];
     for (const attr of relevantAttributes) {
         if (!options.permittedToMatch(attr.type_)) {
             continue;
@@ -971,7 +1034,7 @@ function evaluateFilterItem (
  * NOTE: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
  *
  * @param {Filter} filter The filter against which the entry is to be evaluated.
- * @param {EntryInformation} entry The entry that is to be evaluated by the filter.
+ * @param {EntryInformation[]} family The entries of the family that is to be evaluated by the filter.
  * @param {Object} options An options object containing. Despite the name, this
  *  parameter, and most of its properties, are required.
  * @param {Set} contributingEntries The contributing entries. Do not supply this
