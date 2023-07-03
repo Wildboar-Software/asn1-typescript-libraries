@@ -82,32 +82,22 @@ function dnWithinSubtreeSpecification (
     if (!baseMatches) {
         return false;
     }
-    if (sts.specificExclusions) {
-        const specificallyExcluded: boolean = sts.specificExclusions.some((se) => {
-            if ("chopBefore" in se) {
-                const chop: DistinguishedName = [
-                    ...scope,
-                    ...se.chopBefore,
-                ];
-                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
-                if (chopMatches) {
-                    return false;
-                }
-            } else if ("chopAfter" in se) {
-                const chop: DistinguishedName = [
-                    ...scope,
-                    ...se.chopAfter,
-                ];
-                const chopMatches = compareDistinguishedName(chop, entryDN.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
-                if (chopMatches && (entryDN.length >= (chop.length + 1))) {
-                    return false;
-                }
-            } else {
-                return false; // Extension not understood.
+    const localName = entryDN.slice(base.length);
+    for (const spex of sts.specificExclusions ?? []) {
+        if ("chopBefore" in spex) {
+            const chop: DistinguishedName = spex.chopBefore;
+            const chopMatches = compareDistinguishedName(chop, localName.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
+            if (chopMatches) {
+                return false;
             }
-        });
-        if (specificallyExcluded) {
-            return false;
+        } else if ("chopAfter" in spex) {
+            const chop: DistinguishedName = spex.chopAfter;
+            const chopMatches = compareDistinguishedName(chop, localName.slice(0, chop.length), getEqualityMatcher ?? (() => () => false));
+            if (chopMatches && (localName.length > chop.length)) {
+                return false;
+            }
+        } else {
+            return false; // Extension not understood.
         }
     }
     return true;
