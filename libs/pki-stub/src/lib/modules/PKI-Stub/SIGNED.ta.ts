@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    DERElement,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/node/functional";
 import {
@@ -213,6 +214,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
         /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             toBeSigned: (_el: _Element): void => {
+                ret.originalDER = _el.toBytes();
                 toBeSigned = _decode_ToBeSigned(_el);
             },
             algorithmIdentifier: (_el: _Element): void => {
@@ -239,7 +241,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
                 _unrecognizedExtensionsList.push(ext);
             }
         );
-        return new SIGNED(
+        const ret = new SIGNED(
             /* SEQUENCE_CONSTRUCTOR_CALL */ toBeSigned,
             algorithmIdentifier,
             signature,
@@ -248,6 +250,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
             _unrecognizedExtensionsList,
             el
         );
+        return ret;
     };
 }
 /* END_OF_SYMBOL_DEFINITION _get_decoder_for_SIGNED */
@@ -269,10 +272,16 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
             ([] as (_Element | undefined)[])
                 .concat(
                     [
-                        /* REQUIRED   */ _encode_ToBeSigned(
-                            value.toBeSigned,
-                            $.BER
-                        ),
+                        value.originalDER
+                            ? (() => {
+                                const e = new DERElement();
+                                e.fromBytes(value.originalDER);
+                                return e;
+                            })()
+                            : /* REQUIRED   */ _encode_ToBeSigned(
+                                value.toBeSigned,
+                                $.BER
+                            ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algorithmIdentifier,
                             $.BER
