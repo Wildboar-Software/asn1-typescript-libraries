@@ -42,8 +42,13 @@ import {
  */
 export class SIGNED<ToBeSigned> {
     /**
-     * @summary The orignal DER encoding of the signed thing.
+     * @summary The orignal DER encoding of the signed thing (not just the toBeSigned)
      * @description
+     *
+     * This is the original byte encoding of the signed thing, not just the
+     * `toBeSigned` part alone. (Instead of preserving just the bytes of
+     * `toBeSigned`, we preserve all bytes so that the entire certificate can
+     * be hashed reliably, which is important for some applications.)
      *
      * This exists so that the original encoding element can be preserved for
      * the sake of validating the signature correctly.
@@ -210,11 +215,11 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
         let altAlgorithmIdentifier: OPTIONAL<AlgorithmIdentifier>;
         let altSignature: OPTIONAL<BIT_STRING>;
         let _unrecognizedExtensionsList: _Element[] = [];
+        const originalDER: Uint8Array = el.toBytes();
         /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
         /* START_OF_CALLBACKS_MAP */
         const callbacks: $.DecodingMap = {
             toBeSigned: (_el: _Element): void => {
-                ret.originalDER = _el.toBytes();
                 toBeSigned = _decode_ToBeSigned(_el);
             },
             algorithmIdentifier: (_el: _Element): void => {
@@ -250,6 +255,7 @@ export function _get_decoder_for_SIGNED<ToBeSigned>(
             _unrecognizedExtensionsList,
             el
         );
+        ret.originalDER = originalDER;
         return ret;
     };
 }
@@ -272,23 +278,17 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
             ([] as (_Element | undefined)[])
                 .concat(
                     [
-                        value.originalDER
-                            ? (() => {
-                                const e = new DERElement();
-                                e.fromBytes(value.originalDER);
-                                return e;
-                            })()
-                            : /* REQUIRED   */ _encode_ToBeSigned(
-                                value.toBeSigned,
-                                $.BER
-                            ),
+                        /* REQUIRED   */ _encode_ToBeSigned(
+                            value.toBeSigned,
+                            $.DER
+                        ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algorithmIdentifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                     ],
                     [
@@ -297,7 +297,7 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
                             ? undefined
                             : _encode_AlgorithmIdentifier(
                                   value.altAlgorithmIdentifier,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.altSignature === undefined
                             ? undefined
@@ -308,7 +308,7 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }
