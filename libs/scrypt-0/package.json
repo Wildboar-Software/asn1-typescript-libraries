@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/scrypt-0",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Scrypt ASN.1 Algorithm Identifier in TypeScript",
     "keywords": [
         "scrypt",
@@ -34,7 +34,7 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.3"
+        "@wildboar/pki-stub": "^1.1.7"
     }
 }
 

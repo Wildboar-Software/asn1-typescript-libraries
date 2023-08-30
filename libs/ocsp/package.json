@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/ocsp",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Online Certificate Status Protocol PDUs in TypeScript",
     "keywords": [
         "ocsp",
@@ -33,9 +33,9 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.3",
-        "@wildboar/x500": "^1.0.49",
-        "@wildboar/ldap": "^1.2.11"
+        "@wildboar/pki-stub": "^1.1.7",
+        "@wildboar/x500": "^1.1.5",
+        "@wildboar/ldap": "^1.2.12"
     }
 }
 

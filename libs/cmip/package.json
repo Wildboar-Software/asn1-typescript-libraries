@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cmip",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Common Management Information Protocol PDUs in TypeScript",
     "keywords": [
         "common",
@@ -30,7 +30,9 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.49",
-        "@wildboar/rose": "^1.0.2"
+        "@wildboar/x500": "^1.1.5",
+        "@wildboar/rose": "^1.0.4",
+        "@wildboar/rtse": "^1.0.3",
+        "@wildboar/ldap": "^1.2.12"
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/acse",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Association Control Service Element PDUs in TypeScript",
     "keywords": [
         "acse",
@@ -31,6 +31,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.3"
+        "@wildboar/pki-stub": "^1.1.7"
     }
 }

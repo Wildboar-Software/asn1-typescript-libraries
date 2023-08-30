@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x400",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "X.400 message handling system ASN.1 data structures and business logic in TypeScript",
     "keywords": [
         "x400",
@@ -32,19 +32,17 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "asn1-ts": "^7.0.9",
-        "@wildboar/rose": "^1.0.2",
-        "@wildboar/acse": "^1.0.5",
-        "@wildboar/pki-stub": "^1.1.3",
-        "@wildboar/rtse": "^1.0.2",
-        "@wildboar/x500": "^1.0.51",
-        "date-fns": "^2.22.1",
-        "@wildboar/ldap": "^1.2.11",
-        "@wildboar/ftam": "^1.0.2",
-        "@wildboar/cmip": "^1.0.3",
-        "@wildboar/attribute-asn1module": "^1.0.2",
-        "@wildboar/cms": "^1.0.4",
-        "@wildboar/ansi-x9-42": "^1.0.2",
-        "@wildboar/ansi-x9-62": "^1.0.4"
+        "@wildboar/rose": "^1.0.4",
+        "@wildboar/acse": "^1.0.7",
+        "@wildboar/pki-stub": "^1.1.7",
+        "@wildboar/rtse": "^1.0.3",
+        "@wildboar/x500": "^1.1.5",
+        "@wildboar/ldap": "^1.2.12",
+        "@wildboar/ftam": "^1.0.3",
+        "@wildboar/cmip": "^1.0.5",
+        "@wildboar/attribute-asn1module": "^1.0.4",
+        "@wildboar/cms": "^1.0.5",
+        "@wildboar/ansi-x9-42": "^1.0.3",
+        "@wildboar/ansi-x9-62": "^1.0.45"
     }
 }
