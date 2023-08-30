@@ -95,16 +95,16 @@ export function _encode_TbpDataTransferServer_conf(
                     _TagClass.context,
                     4,
                     () => _encode_WrappedProt,
-                    $.BER
+                    $.DER
                 ),
                 protected_: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _get_encoder_for_ENCIPHERED<_Element>($._encodeAny),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TbpDataTransferServer_conf(value, elGetter);

@@ -67,7 +67,7 @@ export function _encode_TeletexOrganizationalUnitNames(
     if (!_cached_encoder_for_TeletexOrganizationalUnitNames) {
         _cached_encoder_for_TeletexOrganizationalUnitNames = $._encodeSequenceOf<TeletexOrganizationalUnitName>(
             () => _encode_TeletexOrganizationalUnitName,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TeletexOrganizationalUnitNames(value, elGetter);

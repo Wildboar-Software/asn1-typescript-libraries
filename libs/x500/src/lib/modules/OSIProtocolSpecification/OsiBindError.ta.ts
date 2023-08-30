@@ -90,7 +90,7 @@ export function _encode_OsiBindError(
             {
                 normal_mode_parameters: _encode_OsiBindError_normal_mode_parameters,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiBindError(value, elGetter);

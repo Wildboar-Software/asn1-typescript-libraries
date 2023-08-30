@@ -76,7 +76,7 @@ export function _encode_ThisEntry(
                 onlyOne: $._encodeNull,
                 specific: _encode_IssuerAndSerialNumber,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ThisEntry(value, elGetter);

@@ -105,11 +105,11 @@ export function _encode_Period_days(
     if (!_cached_encoder_for_Period_days) {
         _cached_encoder_for_Period_days = $._encode_choice<Period_days>(
             {
-                intDay: $._encodeSetOf<INTEGER>(() => $._encodeInteger, $.BER),
+                intDay: $._encodeSetOf<INTEGER>(() => $._encodeInteger, $.DER),
                 bitDay: _encode_Period_days_bitDay,
                 dayOf: _encode_XDayOf,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Period_days(value, elGetter);

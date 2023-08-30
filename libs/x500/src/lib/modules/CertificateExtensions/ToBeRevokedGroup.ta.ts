@@ -278,23 +278,23 @@ export function _encode_ToBeRevokedGroup(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.certificateIssuer, $.BER),
+                                      $.DER
+                                  )(value.certificateIssuer, $.DER),
                             /* IF_ABSENT  */ value.reasonInfo === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_ReasonInfo,
-                                      $.BER
-                                  )(value.reasonInfo, $.BER),
+                                      $.DER
+                                  )(value.reasonInfo, $.DER),
                             /* REQUIRED   */ $._encodeGeneralizedTime(
                                 value.revocationTime,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertificateGroup(
                                 value.certificateGroup,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -302,7 +302,7 @@ export function _encode_ToBeRevokedGroup(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

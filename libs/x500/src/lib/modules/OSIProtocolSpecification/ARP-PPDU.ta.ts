@@ -238,19 +238,19 @@ export function _encode_ARP_PPDU(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Abort_reason,
-                                  $.BER
-                              )(value.provider_reason, $.BER),
+                                  $.DER
+                              )(value.provider_reason, $.DER),
                         /* IF_ABSENT  */ value.event_identifier === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Event_identifier,
-                                  $.BER
-                              )(value.event_identifier, $.BER),
+                                  $.DER
+                              )(value.event_identifier, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

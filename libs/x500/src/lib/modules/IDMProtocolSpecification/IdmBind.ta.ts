@@ -255,7 +255,7 @@ export function _encode_IdmBind(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.protocolID,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.callingAETitle === undefined
                                 ? undefined
@@ -263,29 +263,29 @@ export function _encode_IdmBind(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.callingAETitle, $.BER),
+                                      $.DER
+                                  )(value.callingAETitle, $.DER),
                             /* IF_ABSENT  */ value.calledAETitle === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.calledAETitle, $.BER),
+                                      $.DER
+                                  )(value.calledAETitle, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => $._encodeAny,
-                                $.BER
-                            )(value.argument, $.BER),
+                                $.DER
+                            )(value.argument, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

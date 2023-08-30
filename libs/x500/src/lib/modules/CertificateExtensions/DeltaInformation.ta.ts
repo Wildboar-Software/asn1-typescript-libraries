@@ -209,13 +209,13 @@ export function _encode_DeltaInformation(
                         [
                             /* REQUIRED   */ _encode_GeneralName(
                                 value.deltaLocation,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.nextDelta === undefined
                                 ? undefined
                                 : $._encodeGeneralizedTime(
                                       value.nextDelta,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -223,7 +223,7 @@ export function _encode_DeltaInformation(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

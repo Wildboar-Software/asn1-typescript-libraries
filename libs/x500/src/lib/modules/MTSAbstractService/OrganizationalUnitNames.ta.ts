@@ -67,7 +67,7 @@ export function _encode_OrganizationalUnitNames(
     if (!_cached_encoder_for_OrganizationalUnitNames) {
         _cached_encoder_for_OrganizationalUnitNames = $._encodeSequenceOf<OrganizationalUnitName>(
             () => _encode_OrganizationalUnitName,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OrganizationalUnitNames(value, elGetter);

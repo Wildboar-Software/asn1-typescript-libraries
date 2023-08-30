@@ -196,18 +196,18 @@ export function _encode_PolicyQualifierInfo(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.policyQualifierId,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.qualifier === undefined
                                 ? undefined
-                                : $._encodeAny(value.qualifier, $.BER),
+                                : $._encodeAny(value.qualifier, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

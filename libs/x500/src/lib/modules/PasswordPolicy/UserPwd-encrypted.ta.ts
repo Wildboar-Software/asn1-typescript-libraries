@@ -195,11 +195,11 @@ export function _encode_UserPwd_encrypted(
                         [
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.algorithmIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeOctetString(
                                 value.encryptedString,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -207,7 +207,7 @@ export function _encode_UserPwd_encrypted(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -207,13 +207,13 @@ export function _encode_UserNotice(
                     .concat([
                         /* IF_ABSENT  */ value.noticeRef === undefined
                             ? undefined
-                            : _encode_NoticeReference(value.noticeRef, $.BER),
+                            : _encode_NoticeReference(value.noticeRef, $.DER),
                         /* IF_ABSENT  */ value.explicitText === undefined
                             ? undefined
-                            : _encode_DisplayText(value.explicitText, $.BER),
+                            : _encode_DisplayText(value.explicitText, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

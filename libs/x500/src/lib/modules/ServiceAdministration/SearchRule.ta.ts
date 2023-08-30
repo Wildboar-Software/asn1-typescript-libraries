@@ -701,29 +701,29 @@ export function _encode_SearchRule(
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ $._encodeInteger(value.id, $.BER),
+                            /* REQUIRED   */ $._encodeInteger(value.id, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.dmdId, $.BER),
+                                $.DER
+                            )(value.dmdId, $.DER),
                             /* IF_ABSENT  */ value.serviceType === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.serviceType, $.BER),
+                                      $.DER
+                                  )(value.serviceType, $.DER),
                             /* IF_ABSENT  */ value.userClass === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.userClass, $.BER),
+                                      $.DER
+                                  )(value.userClass, $.DER),
                             /* IF_ABSENT  */ value.inputAttributeTypes ===
                             undefined
                                 ? undefined
@@ -733,10 +733,10 @@ export function _encode_SearchRule(
                                       () =>
                                           $._encodeSequenceOf<RequestAttribute>(
                                               () => _encode_RequestAttribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.inputAttributeTypes, $.BER),
+                                      $.DER
+                                  )(value.inputAttributeTypes, $.DER),
                             /* IF_DEFAULT */ value.attributeCombination ===
                                 undefined ||
                             $.deepEq(
@@ -748,8 +748,8 @@ export function _encode_SearchRule(
                                       _TagClass.context,
                                       4,
                                       () => _encode_AttributeCombination,
-                                      $.BER
-                                  )(value.attributeCombination, $.BER),
+                                      $.DER
+                                  )(value.attributeCombination, $.DER),
                             /* IF_ABSENT  */ value.outputAttributeTypes ===
                             undefined
                                 ? undefined
@@ -759,18 +759,18 @@ export function _encode_SearchRule(
                                       () =>
                                           $._encodeSequenceOf<ResultAttribute>(
                                               () => _encode_ResultAttribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.outputAttributeTypes, $.BER),
+                                      $.DER
+                                  )(value.outputAttributeTypes, $.DER),
                             /* IF_ABSENT  */ value.defaultControls === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       6,
                                       () => _encode_ControlOptions,
-                                      $.BER
-                                  )(value.defaultControls, $.BER),
+                                      $.DER
+                                  )(value.defaultControls, $.DER),
                             /* IF_ABSENT  */ value.mandatoryControls ===
                             undefined
                                 ? undefined
@@ -778,8 +778,8 @@ export function _encode_SearchRule(
                                       _TagClass.context,
                                       7,
                                       () => _encode_ControlOptions,
-                                      $.BER
-                                  )(value.mandatoryControls, $.BER),
+                                      $.DER
+                                  )(value.mandatoryControls, $.DER),
                             /* IF_ABSENT  */ value.searchRuleControls ===
                             undefined
                                 ? undefined
@@ -787,32 +787,32 @@ export function _encode_SearchRule(
                                       _TagClass.context,
                                       8,
                                       () => _encode_ControlOptions,
-                                      $.BER
-                                  )(value.searchRuleControls, $.BER),
+                                      $.DER
+                                  )(value.searchRuleControls, $.DER),
                             /* IF_ABSENT  */ value.familyGrouping === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       9,
                                       () => _encode_FamilyGrouping,
-                                      $.BER
-                                  )(value.familyGrouping, $.BER),
+                                      $.DER
+                                  )(value.familyGrouping, $.DER),
                             /* IF_ABSENT  */ value.familyReturn === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       10,
                                       () => _encode_FamilyReturn,
-                                      $.BER
-                                  )(value.familyReturn, $.BER),
+                                      $.DER
+                                  )(value.familyReturn, $.DER),
                             /* IF_ABSENT  */ value.relaxation === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       11,
                                       () => _encode_RelaxationPolicy,
-                                      $.BER
-                                  )(value.relaxation, $.BER),
+                                      $.DER
+                                  )(value.relaxation, $.DER),
                             /* IF_ABSENT  */ value.additionalControl ===
                             undefined
                                 ? undefined
@@ -822,10 +822,10 @@ export function _encode_SearchRule(
                                       () =>
                                           $._encodeSequenceOf<AttributeType>(
                                               () => _encode_AttributeType,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.additionalControl, $.BER),
+                                      $.DER
+                                  )(value.additionalControl, $.DER),
                             /* IF_DEFAULT */ value.allowedSubset ===
                                 undefined ||
                             $.deepEq(
@@ -837,31 +837,31 @@ export function _encode_SearchRule(
                                       _TagClass.context,
                                       13,
                                       () => _encode_AllowedSubset,
-                                      $.BER
-                                  )(value.allowedSubset, $.BER),
+                                      $.DER
+                                  )(value.allowedSubset, $.DER),
                             /* IF_ABSENT  */ value.imposedSubset === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       14,
                                       () => _encode_ImposedSubset,
-                                      $.BER
-                                  )(value.imposedSubset, $.BER),
+                                      $.DER
+                                  )(value.imposedSubset, $.DER),
                             /* IF_ABSENT  */ value.entryLimit === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       15,
                                       () => _encode_EntryLimit,
-                                      $.BER
-                                  )(value.entryLimit, $.BER),
+                                      $.DER
+                                  )(value.entryLimit, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

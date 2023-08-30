@@ -437,10 +437,10 @@ export function _encode_Rep_ti_contents(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.context_id,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.pvno === undefined
                             ? undefined
@@ -448,14 +448,14 @@ export function _encode_Rep_ti_contents(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeBitString,
-                                  $.BER
-                              )(value.pvno, $.BER),
+                                  $.DER
+                              )(value.pvno, $.DER),
                         /* IF_ABSENT  */ value.timestamp === undefined
                             ? undefined
-                            : $._encodeUTCTime(value.timestamp, $.BER),
+                            : $._encodeUTCTime(value.timestamp, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.randTarg,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.src_name === undefined
                             ? undefined
@@ -463,16 +463,16 @@ export function _encode_Rep_ti_contents(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Name,
-                                  $.BER
-                              )(value.src_name, $.BER),
-                        /* REQUIRED   */ _encode_Name(value.targ_name, $.BER),
+                                  $.DER
+                              )(value.src_name, $.DER),
+                        /* REQUIRED   */ _encode_Name(value.targ_name, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.randSrc,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Context_Data(
                             value.rep_data,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.validity === undefined
                             ? undefined
@@ -480,20 +480,20 @@ export function _encode_Rep_ti_contents(
                                   _TagClass.context,
                                   2,
                                   () => _encode_Validity,
-                                  $.BER
-                              )(value.validity, $.BER),
+                                  $.DER
+                              )(value.validity, $.DER),
                         /* IF_ABSENT  */ value.key_estb_id === undefined
                             ? undefined
                             : _encode_AlgorithmIdentifier(
                                   value.key_estb_id,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.key_estb_str === undefined
                             ? undefined
-                            : $._encodeBitString(value.key_estb_str, $.BER),
+                            : $._encodeBitString(value.key_estb_str, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

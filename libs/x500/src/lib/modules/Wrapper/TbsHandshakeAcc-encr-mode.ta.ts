@@ -96,16 +96,16 @@ export function _encode_TbsHandshakeAcc_encr_mode(
                     _TagClass.context,
                     2,
                     () => _encode_AlgorithmIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 non_aead: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_TbsHandshakeAcc_encr_mode_non_aead,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TbsHandshakeAcc_encr_mode(value, elGetter);

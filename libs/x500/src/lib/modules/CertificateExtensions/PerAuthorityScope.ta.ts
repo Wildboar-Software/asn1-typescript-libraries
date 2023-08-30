@@ -434,8 +434,8 @@ export function _encode_PerAuthorityScope(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.authorityName, $.BER),
+                                      $.DER
+                                  )(value.authorityName, $.DER),
                             /* IF_ABSENT  */ value.distributionPoint ===
                             undefined
                                 ? undefined
@@ -443,24 +443,24 @@ export function _encode_PerAuthorityScope(
                                       _TagClass.context,
                                       1,
                                       () => _encode_DistributionPointName,
-                                      $.BER
-                                  )(value.distributionPoint, $.BER),
+                                      $.DER
+                                  )(value.distributionPoint, $.DER),
                             /* IF_ABSENT  */ value.onlyContains === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       2,
                                       () => _encode_OnlyCertificateTypes,
-                                      $.BER
-                                  )(value.onlyContains, $.BER),
+                                      $.DER
+                                  )(value.onlyContains, $.DER),
                             /* IF_ABSENT  */ value.onlySomeReasons === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       4,
                                       () => _encode_ReasonFlags,
-                                      $.BER
-                                  )(value.onlySomeReasons, $.BER),
+                                      $.DER
+                                  )(value.onlySomeReasons, $.DER),
                             /* IF_ABSENT  */ value.serialNumberRange ===
                             undefined
                                 ? undefined
@@ -468,8 +468,8 @@ export function _encode_PerAuthorityScope(
                                       _TagClass.context,
                                       5,
                                       () => _encode_NumberRange,
-                                      $.BER
-                                  )(value.serialNumberRange, $.BER),
+                                      $.DER
+                                  )(value.serialNumberRange, $.DER),
                             /* IF_ABSENT  */ value.subjectKeyIdRange ===
                             undefined
                                 ? undefined
@@ -477,16 +477,16 @@ export function _encode_PerAuthorityScope(
                                       _TagClass.context,
                                       6,
                                       () => _encode_NumberRange,
-                                      $.BER
-                                  )(value.subjectKeyIdRange, $.BER),
+                                      $.DER
+                                  )(value.subjectKeyIdRange, $.DER),
                             /* IF_ABSENT  */ value.nameSubtrees === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       7,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.nameSubtrees, $.BER),
+                                      $.DER
+                                  )(value.nameSubtrees, $.DER),
                             /* IF_ABSENT  */ value.baseRevocationInfo ===
                             undefined
                                 ? undefined
@@ -494,15 +494,15 @@ export function _encode_PerAuthorityScope(
                                       _TagClass.context,
                                       9,
                                       () => _encode_BaseRevocationInfo,
-                                      $.BER
-                                  )(value.baseRevocationInfo, $.BER),
+                                      $.DER
+                                  )(value.baseRevocationInfo, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

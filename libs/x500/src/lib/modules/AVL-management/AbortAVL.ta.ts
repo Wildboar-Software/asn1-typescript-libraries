@@ -235,11 +235,11 @@ export function _encode_AbortAVL(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AVMP_error(
                                 value.reason,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -247,7 +247,7 @@ export function _encode_AbortAVL(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

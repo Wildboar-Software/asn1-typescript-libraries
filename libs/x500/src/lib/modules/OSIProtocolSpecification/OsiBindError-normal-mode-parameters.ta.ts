@@ -345,8 +345,8 @@ export function _encode_OsiBindError_normal_mode_parameters(
                                   0,
                                   () =>
                                       _encode_OsiBindError_normal_mode_parameters_protocol_version,
-                                  $.BER
-                              )(value.protocol_version, $.BER),
+                                  $.DER
+                              )(value.protocol_version, $.DER),
                         /* IF_ABSENT  */ value.responding_presentation_selector ===
                         undefined
                             ? undefined
@@ -354,8 +354,8 @@ export function _encode_OsiBindError_normal_mode_parameters(
                                   _TagClass.context,
                                   3,
                                   () => _encode_Presentation_selector,
-                                  $.BER
-                              )(value.responding_presentation_selector, $.BER),
+                                  $.DER
+                              )(value.responding_presentation_selector, $.DER),
                         /* IF_ABSENT  */ value.presentation_context_definition_result_list ===
                         undefined
                             ? undefined
@@ -363,10 +363,10 @@ export function _encode_OsiBindError_normal_mode_parameters(
                                   _TagClass.context,
                                   5,
                                   () => _encode_Result_list,
-                                  $.BER
+                                  $.DER
                               )(
                                   value.presentation_context_definition_result_list,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.provider_reason === undefined
                             ? undefined
@@ -374,17 +374,17 @@ export function _encode_OsiBindError_normal_mode_parameters(
                                   _TagClass.context,
                                   10,
                                   () => _encode_Provider_reason,
-                                  $.BER
-                              )(value.provider_reason, $.BER),
+                                  $.DER
+                              )(value.provider_reason, $.DER),
                         /* IF_ABSENT  */ value.user_data === undefined
                             ? undefined
                             : _encode_OsiBindError_normal_mode_parameters_user_data(
                                   value.user_data,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

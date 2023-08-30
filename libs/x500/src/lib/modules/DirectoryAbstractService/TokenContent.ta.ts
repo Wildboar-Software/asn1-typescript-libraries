@@ -299,41 +299,41 @@ export function _encode_TokenContent(
                                 _TagClass.context,
                                 0,
                                 () => _encode_AlgorithmIdentifier,
-                                $.DER
-                            )(value.algorithm, $.DER),
+                                $.BER
+                            )(value.algorithm, $.BER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_DistinguishedName,
-                                $.DER
-                            )(value.name, $.DER),
+                                $.BER
+                            )(value.name, $.BER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => _encode_Time,
-                                $.DER
-                            )(value.time, $.DER),
+                                $.BER
+                            )(value.time, $.BER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 3,
                                 () => $._encodeBitString,
-                                $.DER
-                            )(value.random, $.DER),
+                                $.BER
+                            )(value.random, $.BER),
                             /* IF_ABSENT  */ value.response === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeBitString,
-                                      $.DER
-                                  )(value.response, $.DER),
+                                      $.BER
+                                  )(value.response, $.BER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.DER
+                $.BER
             );
         };
     }

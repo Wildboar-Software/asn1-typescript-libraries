@@ -107,7 +107,7 @@ export function _encode_AltNameType(
                 builtinNameForm: _encode_AltNameType_builtinNameForm,
                 otherNameForm: $._encodeObjectIdentifier,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AltNameType(value, elGetter);

@@ -319,29 +319,29 @@ export function _encode_UpdateShadowArgumentData(
                                 [
                                     /* REQUIRED   */ _encode_AgreementID(
                                         value.agreementID,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* REQUIRED   */ _encode_Time(
                                         value.updateTime,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.updateWindow ===
                                     undefined
                                         ? undefined
                                         : _encode_UpdateWindow(
                                               value.updateWindow,
-                                              $.BER
+                                              $.DER
                                           ),
                                     /* REQUIRED   */ _encode_RefreshInformation(
                                         value.updatedInfo,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.securityParameters ===
                                     undefined
                                         ? undefined
                                         : _encode_SecurityParameters(
                                               value.securityParameters,
-                                              $.BER
+                                              $.DER
                                           ),
                                 ],
                                 value._unrecognizedExtensionsList
@@ -351,10 +351,10 @@ export function _encode_UpdateShadowArgumentData(
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UpdateShadowArgumentData(value, elGetter);

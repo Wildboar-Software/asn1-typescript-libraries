@@ -220,20 +220,20 @@ export function _encode_TotalRefresh(
                         [
                             /* IF_ABSENT  */ value.sDSE === undefined
                                 ? undefined
-                                : _encode_SDSEContent(value.sDSE, $.BER),
+                                : _encode_SDSEContent(value.sDSE, $.DER),
                             /* IF_ABSENT  */ value.subtree === undefined
                                 ? undefined
                                 : $._encodeSetOf<Subtree>(
                                       () => _encode_Subtree,
-                                      $.BER
-                                  )(value.subtree, $.BER),
+                                      $.DER
+                                  )(value.subtree, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

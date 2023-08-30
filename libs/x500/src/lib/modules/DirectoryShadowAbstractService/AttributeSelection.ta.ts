@@ -66,7 +66,7 @@ export function _encode_AttributeSelection(
     if (!_cached_encoder_for_AttributeSelection) {
         _cached_encoder_for_AttributeSelection = $._encodeSetOf<ClassAttributeSelection>(
             () => _encode_ClassAttributeSelection,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributeSelection(value, elGetter);

@@ -211,21 +211,21 @@ export function _encode_Guide(value: Guide, elGetter: $.ASN1Encoder<Guide>) {
                                       _TagClass.context,
                                       0,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.objectClass, $.BER),
+                                      $.DER
+                                  )(value.objectClass, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_Criteria,
-                                $.BER
-                            )(value.criteria, $.BER),
+                                $.DER
+                            )(value.criteria, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

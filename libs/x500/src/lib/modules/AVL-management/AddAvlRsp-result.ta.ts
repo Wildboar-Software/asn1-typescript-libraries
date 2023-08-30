@@ -92,16 +92,16 @@ export function _encode_AddAvlRsp_result(
                     _TagClass.context,
                     0,
                     () => _encode_AddAvlOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_AddAvlErr,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AddAvlRsp_result(value, elGetter);

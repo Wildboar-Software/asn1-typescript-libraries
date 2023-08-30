@@ -277,82 +277,82 @@ export function _encode_AvlProt(
                     _TagClass.context,
                     0,
                     () => _encode_InitializationRec,
-                    $.BER
+                    $.DER
                 ),
                 initAcc: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_InitializationAcc,
-                    $.BER
+                    $.DER
                 ),
                 initRej: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_InitializationRej,
-                    $.BER
+                    $.DER
                 ),
                 initAbt: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_InitializationAbort,
-                    $.BER
+                    $.DER
                 ),
                 certReq: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_CertReq,
-                    $.BER
+                    $.DER
                 ),
                 certRsp: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _encode_CertRsp,
-                    $.BER
+                    $.DER
                 ),
                 addAvlReq: $._encode_implicit(
                     _TagClass.context,
                     6,
                     () => _encode_AddAvlReq,
-                    $.BER
+                    $.DER
                 ),
                 addAvlRsp: $._encode_implicit(
                     _TagClass.context,
                     7,
                     () => _encode_AddAvlRsp,
-                    $.BER
+                    $.DER
                 ),
                 replaceAvlReq: $._encode_implicit(
                     _TagClass.context,
                     8,
                     () => _encode_ReplaceAvlReq,
-                    $.BER
+                    $.DER
                 ),
                 replaceAvlRsp: $._encode_implicit(
                     _TagClass.context,
                     9,
                     () => _encode_ReplaceAvlRsp,
-                    $.BER
+                    $.DER
                 ),
                 deleteAvlReq: $._encode_implicit(
                     _TagClass.context,
                     10,
                     () => _encode_DeleteAvlReq,
-                    $.BER
+                    $.DER
                 ),
                 deleteAvlRsp: $._encode_implicit(
                     _TagClass.context,
                     11,
                     () => _encode_DeleteAvlRsp,
-                    $.BER
+                    $.DER
                 ),
                 abortAVL: $._encode_implicit(
                     _TagClass.context,
                     12,
                     () => _encode_AbortAVL,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AvlProt(value, elGetter);

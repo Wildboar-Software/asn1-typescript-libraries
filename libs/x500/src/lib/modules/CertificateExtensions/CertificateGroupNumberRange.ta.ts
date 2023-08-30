@@ -198,21 +198,21 @@ export function _encode_CertificateGroupNumberRange(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeInteger,
-                                $.BER
-                            )(value.startingNumber, $.BER),
+                                $.DER
+                            )(value.startingNumber, $.DER),
                             /* REQUIRED   */ $._encode_implicit(
                                 _TagClass.context,
                                 1,
                                 () => $._encodeInteger,
-                                $.BER
-                            )(value.endingNumber, $.BER),
+                                $.DER
+                            )(value.endingNumber, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

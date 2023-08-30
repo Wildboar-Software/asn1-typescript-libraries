@@ -198,22 +198,22 @@ export function _get_encoder_for_Signed<ToBeSigned>(
                     [
                         /* REQUIRED   */ _encode_ToBeSigned(
                             value.toBeSigned,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.altSignature === undefined
                             ? undefined
-                            : $._encodeBitString(value.altSignature, $.BER),
+                            : $._encodeBitString(value.altSignature, $.DER),
                     ],
                     value._unrecognizedExtensionsList
                         ? value._unrecognizedExtensionsList
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

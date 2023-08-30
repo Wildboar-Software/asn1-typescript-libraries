@@ -85,16 +85,16 @@ export function _encode_Scope(value: Scope, elGetter: $.ASN1Encoder<Scope>) {
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 selectedTypes: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_SelectedTypes,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Scope(value, elGetter);

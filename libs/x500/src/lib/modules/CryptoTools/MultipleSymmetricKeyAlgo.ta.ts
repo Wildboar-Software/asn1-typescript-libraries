@@ -67,7 +67,7 @@ export function _encode_MultipleSymmetricKeyAlgo(
     if (!_cached_encoder_for_MultipleSymmetricKeyAlgo) {
         _cached_encoder_for_MultipleSymmetricKeyAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultipleSymmetricKeyAlgo(value, elGetter);

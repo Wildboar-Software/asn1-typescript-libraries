@@ -223,7 +223,7 @@ export function _encode_SchedulingParameters(
                                 ? undefined
                                 : _encode_PeriodicStrategy(
                                       value.periodic,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_DEFAULT */ value.othertimes === undefined ||
                             $.deepEq(
@@ -231,14 +231,14 @@ export function _encode_SchedulingParameters(
                                 SchedulingParameters._default_value_for_othertimes
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.othertimes, $.BER),
+                                : $._encodeBoolean(value.othertimes, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

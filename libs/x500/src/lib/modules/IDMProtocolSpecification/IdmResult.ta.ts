@@ -194,17 +194,17 @@ export function _encode_IdmResult(
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
-                            /* REQUIRED   */ $._encodeAny(value.result, $.BER),
+                            /* REQUIRED   */ _encode_Code(value.opcode, $.DER),
+                            /* REQUIRED   */ $._encodeAny(value.result, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

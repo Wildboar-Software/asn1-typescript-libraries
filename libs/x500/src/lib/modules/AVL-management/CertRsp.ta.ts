@@ -198,11 +198,11 @@ export function _encode_CertRsp(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertRsp_result(
                                 value.result,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -210,7 +210,7 @@ export function _encode_CertRsp(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

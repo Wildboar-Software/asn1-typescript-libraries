@@ -209,23 +209,23 @@ export function _encode_PrivateKeyUsagePeriod(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.notBefore, $.BER),
+                                      $.DER
+                                  )(value.notBefore, $.DER),
                             /* IF_ABSENT  */ value.notAfter === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.notAfter, $.BER),
+                                      $.DER
+                                  )(value.notAfter, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

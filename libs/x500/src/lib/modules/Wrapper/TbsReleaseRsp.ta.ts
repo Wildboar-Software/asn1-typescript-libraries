@@ -323,22 +323,22 @@ export function _encode_TbsReleaseRsp(
                                 TbsReleaseRsp._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_Version(value.version, $.BER),
+                                : _encode_Version(value.version, $.DER),
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.sigAlg,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -346,7 +346,7 @@ export function _encode_TbsReleaseRsp(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

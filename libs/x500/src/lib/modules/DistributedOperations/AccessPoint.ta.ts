@@ -259,14 +259,14 @@ export function _encode_AccessPoint(
                                 _TagClass.context,
                                 0,
                                 () => _encode_Name,
-                                $.BER
-                            )(value.ae_title, $.BER),
+                                $.DER
+                            )(value.ae_title, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_PresentationAddress,
-                                $.BER
-                            )(value.address, $.BER),
+                                $.DER
+                            )(value.address, $.DER),
                             /* IF_ABSENT  */ value.protocolInformation ===
                             undefined
                                 ? undefined
@@ -276,17 +276,17 @@ export function _encode_AccessPoint(
                                       () =>
                                           $._encodeSetOf<ProtocolInformation>(
                                               () => _encode_ProtocolInformation,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.protocolInformation, $.BER),
+                                      $.DER
+                                  )(value.protocolInformation, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

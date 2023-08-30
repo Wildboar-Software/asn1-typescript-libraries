@@ -66,7 +66,7 @@ export function _encode_TraceInformation(
     if (!_cached_encoder_for_TraceInformation) {
         _cached_encoder_for_TraceInformation = $._encodeSequenceOf<TraceItem>(
             () => _encode_TraceItem,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TraceInformation(value, elGetter);

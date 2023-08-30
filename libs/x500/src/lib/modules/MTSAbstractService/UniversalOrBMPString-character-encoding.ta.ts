@@ -64,7 +64,7 @@ export function _encode_UniversalOrBMPString_character_encoding(
                 two_octets: $._encodeBMPString,
                 four_octets: $._encodeUniversalString,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UniversalOrBMPString_character_encoding(

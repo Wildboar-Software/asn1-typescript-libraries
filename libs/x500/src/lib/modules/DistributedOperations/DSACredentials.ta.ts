@@ -127,28 +127,28 @@ export function _encode_DSACredentials(
                     _TagClass.context,
                     0,
                     () => _encode_SimpleCredentials,
-                    $.BER
+                    $.DER
                 ),
                 strong: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_StrongCredentials,
-                    $.BER
+                    $.DER
                 ),
                 externalProcedure: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => $._encodeExternal,
-                    $.BER
+                    $.DER
                 ),
                 spkm: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_SpkmCredentials,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DSACredentials(value, elGetter);

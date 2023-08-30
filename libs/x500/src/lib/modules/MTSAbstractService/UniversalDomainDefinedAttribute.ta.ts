@@ -188,15 +188,15 @@ export function _encode_UniversalDomainDefinedAttribute(
                     .concat([
                         /* REQUIRED   */ _encode_UniversalOrBMPString(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_UniversalOrBMPString(
                             value.value,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

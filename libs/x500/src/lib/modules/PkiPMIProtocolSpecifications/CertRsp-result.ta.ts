@@ -92,16 +92,16 @@ export function _encode_CertRsp_result(
                     _TagClass.context,
                     0,
                     () => _encode_CertOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_CertErr,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertRsp_result(value, elGetter);

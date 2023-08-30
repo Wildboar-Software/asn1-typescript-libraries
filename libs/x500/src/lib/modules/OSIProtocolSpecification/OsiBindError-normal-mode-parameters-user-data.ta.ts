@@ -91,12 +91,12 @@ export function _encode_OsiBindError_normal_mode_parameters_user_data(
                         $._encodeSequenceOf<OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item>(
                             () =>
                                 _encode_OsiBindError_normal_mode_parameters_user_data_fully_encoded_data_Item,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiBindError_normal_mode_parameters_user_data(

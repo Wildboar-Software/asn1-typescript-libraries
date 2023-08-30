@@ -446,31 +446,31 @@ export function _encode_Req_contents(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.context_id,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeBitString(value.pvno, $.BER),
+                        /* REQUIRED   */ $._encodeBitString(value.pvno, $.DER),
                         /* IF_ABSENT  */ value.timestamp === undefined
                             ? undefined
-                            : $._encodeUTCTime(value.timestamp, $.BER),
+                            : $._encodeUTCTime(value.timestamp, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.randSrc,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ _encode_Name(value.targ_name, $.BER),
+                        /* REQUIRED   */ _encode_Name(value.targ_name, $.DER),
                         /* IF_ABSENT  */ value.src_name === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   0,
                                   () => _encode_Name,
-                                  $.BER
-                              )(value.src_name, $.BER),
+                                  $.DER
+                              )(value.src_name, $.DER),
                         /* REQUIRED   */ _encode_Context_Data(
                             value.req_data,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.validity === undefined
                             ? undefined
@@ -478,21 +478,21 @@ export function _encode_Req_contents(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Validity,
-                                  $.BER
-                              )(value.validity, $.BER),
+                                  $.DER
+                              )(value.validity, $.DER),
                         /* REQUIRED   */ _encode_Key_Estb_Algs(
                             value.key_estb_set,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.key_estb_req === undefined
                             ? undefined
-                            : $._encodeBitString(value.key_estb_req, $.BER),
+                            : $._encodeBitString(value.key_estb_req, $.DER),
                         /* IF_ABSENT  */ value.key_src_bind === undefined
                             ? undefined
-                            : $._encodeOctetString(value.key_src_bind, $.BER),
+                            : $._encodeOctetString(value.key_src_bind, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

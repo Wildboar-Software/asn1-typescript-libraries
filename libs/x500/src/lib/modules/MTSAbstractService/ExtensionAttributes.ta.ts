@@ -67,7 +67,7 @@ export function _encode_ExtensionAttributes(
     if (!_cached_encoder_for_ExtensionAttributes) {
         _cached_encoder_for_ExtensionAttributes = $._encodeSetOf<ExtensionAttribute>(
             () => _encode_ExtensionAttribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ExtensionAttributes(value, elGetter);

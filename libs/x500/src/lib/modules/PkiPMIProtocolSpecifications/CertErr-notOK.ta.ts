@@ -176,16 +176,16 @@ export function _encode_CertErr_notOK(
                     _TagClass.context,
                     0,
                     () => _encode_PkiWaError,
-                    $.BER
+                    $.DER
                 ),
                 avmpErr: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_AVMP_error,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertErr_notOK(value, elGetter);

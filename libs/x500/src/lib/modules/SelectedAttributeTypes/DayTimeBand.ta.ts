@@ -239,8 +239,8 @@ export function _encode_DayTimeBand(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DayTime,
-                                      $.BER
-                                  )(value.startDayTime, $.BER),
+                                      $.DER
+                                  )(value.startDayTime, $.DER),
                             /* IF_DEFAULT */ value.endDayTime === undefined ||
                             $.deepEq(
                                 value.endDayTime,
@@ -251,15 +251,15 @@ export function _encode_DayTimeBand(
                                       _TagClass.context,
                                       1,
                                       () => _encode_DayTime,
-                                      $.BER
-                                  )(value.endDayTime, $.BER),
+                                      $.DER
+                                  )(value.endDayTime, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

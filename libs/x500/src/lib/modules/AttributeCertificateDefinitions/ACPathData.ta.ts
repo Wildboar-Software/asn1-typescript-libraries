@@ -224,8 +224,8 @@ export function _encode_ACPathData(
                                       _TagClass.context,
                                       0,
                                       () => _encode_Certificate,
-                                      $.BER
-                                  )(value.certificate, $.BER),
+                                      $.DER
+                                  )(value.certificate, $.DER),
                             /* IF_ABSENT  */ value.attributeCertificate ===
                             undefined
                                 ? undefined
@@ -233,15 +233,15 @@ export function _encode_ACPathData(
                                       _TagClass.context,
                                       1,
                                       () => _encode_AttributeCertificate,
-                                      $.BER
-                                  )(value.attributeCertificate, $.BER),
+                                      $.DER
+                                  )(value.attributeCertificate, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

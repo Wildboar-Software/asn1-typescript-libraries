@@ -173,16 +173,16 @@ export function _encode_SearchRuleId(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.id, $.DER),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             0,
                             () => $._encodeObjectIdentifier,
-                            $.BER
-                        )(value.dmdId, $.BER),
+                            $.DER
+                        )(value.dmdId, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -66,7 +66,7 @@ export function _encode_DITcontext(
     if (!_cached_encoder_for_DITcontext) {
         _cached_encoder_for_DITcontext = $._encodeSequenceOf<Vertex>(
             () => _encode_Vertex,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DITcontext(value, elGetter);

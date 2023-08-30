@@ -186,7 +186,7 @@ export function _encode_InitializationRej(
                         [
                             /* REQUIRED   */ _encode_InitializationRej_diag(
                                 value.diag,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -194,7 +194,7 @@ export function _encode_InitializationRej(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

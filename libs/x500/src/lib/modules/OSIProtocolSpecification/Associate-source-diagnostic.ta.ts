@@ -141,17 +141,17 @@ export function _encode_Associate_source_diagnostic(
                     _TagClass.context,
                     1,
                     () => _encode_Associate_source_diagnostic_acse_service_user,
-                    $.BER
+                    $.DER
                 ),
                 acse_service_provider: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () =>
                         _encode_Associate_source_diagnostic_acse_service_provider,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Associate_source_diagnostic(value, elGetter);

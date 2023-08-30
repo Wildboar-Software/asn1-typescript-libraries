@@ -211,11 +211,11 @@ export function _encode_PrivilegePolicyIdentifier(
                         [
                             /* REQUIRED   */ _encode_PrivilegePolicy(
                                 value.privilegePolicy,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_InfoSyntax(
                                 value.privPolSyntax,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -223,7 +223,7 @@ export function _encode_PrivilegePolicyIdentifier(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

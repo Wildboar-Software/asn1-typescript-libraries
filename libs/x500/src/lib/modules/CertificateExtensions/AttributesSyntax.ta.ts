@@ -66,7 +66,7 @@ export function _encode_AttributesSyntax(
     if (!_cached_encoder_for_AttributesSyntax) {
         _cached_encoder_for_AttributesSyntax = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributesSyntax(value, elGetter);

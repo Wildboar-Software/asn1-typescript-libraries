@@ -114,7 +114,7 @@ export function _encode_OsiDirectoryOperation(
                 error: _encode_OsiErr,
                 reject: _encode_OsiRej,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiDirectoryOperation(value, elGetter);

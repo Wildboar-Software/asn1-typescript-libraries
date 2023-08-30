@@ -193,16 +193,16 @@ export function _encode_DSS_Parms(
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ $._encodeInteger(value.p, $.BER),
-                            /* REQUIRED   */ $._encodeInteger(value.q, $.BER),
-                            /* REQUIRED   */ $._encodeInteger(value.g, $.BER),
+                            /* REQUIRED   */ $._encodeInteger(value.p, $.DER),
+                            /* REQUIRED   */ $._encodeInteger(value.q, $.DER),
+                            /* REQUIRED   */ $._encodeInteger(value.g, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

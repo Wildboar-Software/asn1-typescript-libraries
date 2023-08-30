@@ -71,10 +71,10 @@ export function _encode_UnitOfReplication_supplyContexts(
                 allContexts: $._encodeNull,
                 selectedContexts: $._encodeSetOf<OBJECT_IDENTIFIER>(
                     () => $._encodeObjectIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UnitOfReplication_supplyContexts(

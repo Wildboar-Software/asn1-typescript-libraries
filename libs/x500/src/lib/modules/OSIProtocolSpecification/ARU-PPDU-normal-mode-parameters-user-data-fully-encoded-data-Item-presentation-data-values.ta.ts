@@ -75,10 +75,10 @@ export function _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_
                     _TagClass.context,
                     0,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(

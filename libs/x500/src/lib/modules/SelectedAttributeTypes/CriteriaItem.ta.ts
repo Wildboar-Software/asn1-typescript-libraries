@@ -113,34 +113,34 @@ export function _encode_CriteriaItem(
                     _TagClass.context,
                     0,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 substrings: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 greaterOrEqual: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 lessOrEqual: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 approximateMatch: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CriteriaItem(value, elGetter);

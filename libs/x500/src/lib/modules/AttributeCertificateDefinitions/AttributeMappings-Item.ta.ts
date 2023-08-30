@@ -99,16 +99,16 @@ export function _encode_AttributeMappings_Item(
                     _TagClass.context,
                     0,
                     () => _encode_AttributeMappings_Item_typeMappings,
-                    $.BER
+                    $.DER
                 ),
                 typeValueMappings: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_AttributeMappings_Item_typeValueMappings,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributeMappings_Item(value, elGetter);

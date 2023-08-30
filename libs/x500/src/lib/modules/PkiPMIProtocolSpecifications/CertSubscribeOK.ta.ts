@@ -75,7 +75,7 @@ export function _encode_CertSubscribeOK(
     if (!_cached_encoder_for_CertSubscribeOK) {
         _cached_encoder_for_CertSubscribeOK = $._encodeSequenceOf<CertSubscribeOK_Item>(
             () => _encode_CertSubscribeOK_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertSubscribeOK(value, elGetter);

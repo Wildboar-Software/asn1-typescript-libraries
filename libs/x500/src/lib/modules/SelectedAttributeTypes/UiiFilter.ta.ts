@@ -99,7 +99,7 @@ export function _encode_UiiFilter(
                     _TagClass.context,
                     0,
                     () => _encode_UiiItem,
-                    $.BER
+                    $.DER
                 ),
                 and: $._encode_explicit(
                     _TagClass.context,
@@ -107,9 +107,9 @@ export function _encode_UiiFilter(
                     () =>
                         $._encodeSetOf<UiiFilter>(
                             () => _encode_UiiFilter,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 or: $._encode_explicit(
                     _TagClass.context,
@@ -117,18 +117,18 @@ export function _encode_UiiFilter(
                     () =>
                         $._encodeSetOf<UiiFilter>(
                             () => _encode_UiiFilter,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 not: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_UiiFilter,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UiiFilter(value, elGetter);

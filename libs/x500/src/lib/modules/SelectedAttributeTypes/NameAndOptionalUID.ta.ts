@@ -218,18 +218,18 @@ export function _encode_NameAndOptionalUID(
                         [
                             /* REQUIRED   */ _encode_DistinguishedName(
                                 value.dn,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.uid === undefined
                                 ? undefined
-                                : _encode_UniqueIdentifier(value.uid, $.BER),
+                                : _encode_UniqueIdentifier(value.uid, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

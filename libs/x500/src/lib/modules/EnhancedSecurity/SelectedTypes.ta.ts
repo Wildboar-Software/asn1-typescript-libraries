@@ -66,7 +66,7 @@ export function _encode_SelectedTypes(
     if (!_cached_encoder_for_SelectedTypes) {
         _cached_encoder_for_SelectedTypes = $._encodeSequenceOf<AttributeType>(
             () => _encode_AttributeType,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SelectedTypes(value, elGetter);

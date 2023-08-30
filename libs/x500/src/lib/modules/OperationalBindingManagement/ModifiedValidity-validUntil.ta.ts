@@ -91,22 +91,22 @@ export function _encode_ModifiedValidity_validUntil(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 time: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_Time,
-                    $.BER
+                    $.DER
                 ),
                 unchanged: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ModifiedValidity_validUntil(value, elGetter);

@@ -207,11 +207,11 @@ export function _encode_SubordinateChanges(
                         [
                             /* REQUIRED   */ _encode_RelativeDistinguishedName(
                                 value.subordinate,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_IncrementalStepRefresh(
                                 value.changes,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -219,7 +219,7 @@ export function _encode_SubordinateChanges(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

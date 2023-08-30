@@ -48,7 +48,7 @@ export function _encode_TheOsiBindRes(
         _TagClass.context,
         17,
         () => $._encodeAny,
-        $.BER
+        $.DER
     )(value, elGetter);
 }
 

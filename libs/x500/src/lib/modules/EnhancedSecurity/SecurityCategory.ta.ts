@@ -192,21 +192,21 @@ export function _encode_SecurityCategory(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.type_, $.BER),
+                                $.DER
+                            )(value.type_, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => $._encodeAny,
-                                $.BER
-                            )(value.value, $.BER),
+                                $.DER
+                            )(value.value, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

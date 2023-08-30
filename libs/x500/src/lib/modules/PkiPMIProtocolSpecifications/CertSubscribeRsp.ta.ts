@@ -280,14 +280,14 @@ export function _encode_CertSubscribeRsp(
                                 CertSubscribeRsp._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_CASPversion(value.version, $.BER),
+                                : _encode_CASPversion(value.version, $.DER),
                             /* REQUIRED   */ _encode_CASPsequence(
                                 value.sequence,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertSubscribeRsp_result(
                                 value.result,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -295,7 +295,7 @@ export function _encode_CertSubscribeRsp(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

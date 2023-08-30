@@ -74,7 +74,7 @@ export function _encode_CertReplaceOK(
     if (!_cached_encoder_for_CertReplaceOK) {
         _cached_encoder_for_CertReplaceOK = $._encodeSequenceOf<CertReplaceOK_Item>(
             () => _encode_CertReplaceOK_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertReplaceOK(value, elGetter);

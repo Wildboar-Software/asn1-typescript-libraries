@@ -105,7 +105,7 @@ export function _encode_ContextCombination(
                     _TagClass.context,
                     0,
                     () => $._encodeObjectIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 and: $._encode_explicit(
                     _TagClass.context,
@@ -113,9 +113,9 @@ export function _encode_ContextCombination(
                     () =>
                         $._encodeSequenceOf<ContextCombination>(
                             () => _encode_ContextCombination,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 or: $._encode_explicit(
                     _TagClass.context,
@@ -123,18 +123,18 @@ export function _encode_ContextCombination(
                     () =>
                         $._encodeSequenceOf<ContextCombination>(
                             () => _encode_ContextCombination,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 not: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_ContextCombination,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ContextCombination(value, elGetter);

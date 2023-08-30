@@ -291,82 +291,82 @@ export function _encode_CasubProt(
                     _TagClass.context,
                     0,
                     () => _encode_InitializationRec,
-                    $.BER
+                    $.DER
                 ),
                 initAcc: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_InitializationAcc,
-                    $.BER
+                    $.DER
                 ),
                 initRej: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_InitializationRej,
-                    $.BER
+                    $.DER
                 ),
                 initAbt: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_InitializationAbort,
-                    $.BER
+                    $.DER
                 ),
                 certSubscribeReq: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_CertSubscribeReq,
-                    $.BER
+                    $.DER
                 ),
                 certSubscribeRsp: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _encode_CertSubscribeRsp,
-                    $.BER
+                    $.DER
                 ),
                 certUnsubscribeReq: $._encode_implicit(
                     _TagClass.context,
                     6,
                     () => _encode_CertUnsubscribeReq,
-                    $.BER
+                    $.DER
                 ),
                 certUnsubscribeRsp: $._encode_implicit(
                     _TagClass.context,
                     7,
                     () => _encode_CertUnsubscribeRsp,
-                    $.BER
+                    $.DER
                 ),
                 certReplaceReq: $._encode_implicit(
                     _TagClass.context,
                     8,
                     () => _encode_CertReplaceReq,
-                    $.BER
+                    $.DER
                 ),
                 certReplaceRsp: $._encode_implicit(
                     _TagClass.context,
                     9,
                     () => _encode_CertReplaceRsp,
-                    $.BER
+                    $.DER
                 ),
                 certUpdateReq: $._encode_implicit(
                     _TagClass.context,
                     10,
                     () => _encode_CertUpdateReq,
-                    $.BER
+                    $.DER
                 ),
                 certUpdateRsp: $._encode_implicit(
                     _TagClass.context,
                     11,
                     () => _encode_CertUpdateRsp,
-                    $.BER
+                    $.DER
                 ),
                 cAsubscribeAbort: $._encode_implicit(
                     _TagClass.context,
                     12,
                     () => _encode_CAsubscribeAbort,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CasubProt(value, elGetter);

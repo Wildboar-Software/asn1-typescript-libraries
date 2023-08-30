@@ -66,7 +66,7 @@ export function _encode_AuthorityInfoAccessSyntax(
     if (!_cached_encoder_for_AuthorityInfoAccessSyntax) {
         _cached_encoder_for_AuthorityInfoAccessSyntax = $._encodeSequenceOf<AccessDescription>(
             () => _encode_AccessDescription,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AuthorityInfoAccessSyntax(value, elGetter);

@@ -88,10 +88,10 @@ export function _encode_Period_weeks(
         _cached_encoder_for_Period_weeks = $._encode_choice<Period_weeks>(
             {
                 allWeeks: $._encodeNull,
-                intWeek: $._encodeSetOf<INTEGER>(() => $._encodeInteger, $.BER),
+                intWeek: $._encodeSetOf<INTEGER>(() => $._encodeInteger, $.DER),
                 bitWeek: _encode_Period_weeks_bitWeek,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Period_weeks(value, elGetter);

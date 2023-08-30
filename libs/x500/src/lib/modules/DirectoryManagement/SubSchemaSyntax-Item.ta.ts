@@ -193,17 +193,17 @@ export function _encode_SubSchemaSyntax_Item(
                             _TagClass.context,
                             1,
                             () => _encode_Name,
-                            $.BER
-                        )(value.name, $.BER),
+                            $.DER
+                        )(value.name, $.DER),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             2,
                             () => _encode_SubSchemaSyntax_Item_subSchema,
-                            $.BER
-                        )(value.subSchema, $.BER),
+                            $.DER
+                        )(value.subSchema, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

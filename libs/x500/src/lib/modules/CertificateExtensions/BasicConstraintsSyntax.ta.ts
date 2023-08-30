@@ -215,13 +215,13 @@ export function _encode_BasicConstraintsSyntax(
                                 BasicConstraintsSyntax._default_value_for_cA
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.cA, $.BER),
+                                : $._encodeBoolean(value.cA, $.DER),
                             /* IF_ABSENT  */ value.pathLenConstraint ===
                             undefined
                                 ? undefined
                                 : $._encodeInteger(
                                       value.pathLenConstraint,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -229,7 +229,7 @@ export function _encode_BasicConstraintsSyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

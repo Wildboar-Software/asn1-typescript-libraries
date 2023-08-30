@@ -219,8 +219,8 @@ export function _encode_NameConstraintsSyntax(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralSubtrees,
-                                      $.BER
-                                  )(value.permittedSubtrees, $.BER),
+                                      $.DER
+                                  )(value.permittedSubtrees, $.DER),
                             /* IF_ABSENT  */ value.excludedSubtrees ===
                             undefined
                                 ? undefined
@@ -228,15 +228,15 @@ export function _encode_NameConstraintsSyntax(
                                       _TagClass.context,
                                       1,
                                       () => _encode_GeneralSubtrees,
-                                      $.BER
-                                  )(value.excludedSubtrees, $.BER),
+                                      $.DER
+                                  )(value.excludedSubtrees, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

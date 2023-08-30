@@ -111,17 +111,17 @@ export function _encode_RefreshInformation(
                     _TagClass.context,
                     0,
                     () => _encode_TotalRefresh,
-                    $.BER
+                    $.DER
                 ),
                 incremental: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_IncrementalRefresh,
-                    $.BER
+                    $.DER
                 ),
                 otherStrategy: $._encodeExternal,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RefreshInformation(value, elGetter);

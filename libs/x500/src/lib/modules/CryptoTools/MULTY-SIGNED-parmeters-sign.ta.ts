@@ -186,11 +186,11 @@ export function _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
                     [
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algo,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.signature,
-                            $.BER
+                            $.DER
                         ),
                     ],
                     value._unrecognizedExtensionsList
@@ -198,7 +198,7 @@ export function _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

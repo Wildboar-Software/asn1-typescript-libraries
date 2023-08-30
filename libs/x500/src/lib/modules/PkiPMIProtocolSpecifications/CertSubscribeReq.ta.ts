@@ -288,22 +288,22 @@ export function _encode_CertSubscribeReq(
                                 CertSubscribeReq._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_CASPversion(value.version, $.BER),
+                                : _encode_CASPversion(value.version, $.DER),
                             /* REQUIRED   */ _encode_CASPsequence(
                                 value.sequence,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeSequenceOf<CertSubscribeReq_certs_Item>(
                                 () => _encode_CertSubscribeReq_certs_Item,
-                                $.BER
-                            )(value.certs, $.BER),
+                                $.DER
+                            )(value.certs, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

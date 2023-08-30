@@ -66,7 +66,7 @@ export function _encode_RevokedGroupsSyntax(
     if (!_cached_encoder_for_RevokedGroupsSyntax) {
         _cached_encoder_for_RevokedGroupsSyntax = $._encodeSequenceOf<RevokedGroup>(
             () => _encode_RevokedGroup,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RevokedGroupsSyntax(value, elGetter);

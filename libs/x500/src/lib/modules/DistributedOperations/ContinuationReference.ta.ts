@@ -493,46 +493,46 @@ export function _encode_ContinuationReference(
                                 _TagClass.context,
                                 0,
                                 () => _encode_Name,
-                                $.BER
-                            )(value.targetObject, $.BER),
+                                $.DER
+                            )(value.targetObject, $.DER),
                             /* IF_ABSENT  */ value.aliasedRDNs === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.aliasedRDNs, $.BER),
+                                      $.DER
+                                  )(value.aliasedRDNs, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => _encode_OperationProgress,
-                                $.BER
-                            )(value.operationProgress, $.BER),
+                                $.DER
+                            )(value.operationProgress, $.DER),
                             /* IF_ABSENT  */ value.rdnsResolved === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.rdnsResolved, $.BER),
+                                      $.DER
+                                  )(value.rdnsResolved, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 4,
                                 () => _encode_ReferenceType,
-                                $.BER
-                            )(value.referenceType, $.BER),
+                                $.DER
+                            )(value.referenceType, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 5,
                                 () =>
                                     $._encodeSetOf<AccessPointInformation>(
                                         () => _encode_AccessPointInformation,
-                                        $.BER
+                                        $.DER
                                     ),
-                                $.BER
-                            )(value.accessPoints, $.BER),
+                                $.DER
+                            )(value.accessPoints, $.DER),
                             /* IF_DEFAULT */ value.entryOnly === undefined ||
                             $.deepEq(
                                 value.entryOnly,
@@ -543,16 +543,16 @@ export function _encode_ContinuationReference(
                                       _TagClass.context,
                                       6,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.entryOnly, $.BER),
+                                      $.DER
+                                  )(value.entryOnly, $.DER),
                             /* IF_ABSENT  */ value.exclusions === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       7,
                                       () => _encode_Exclusions,
-                                      $.BER
-                                  )(value.exclusions, $.BER),
+                                      $.DER
+                                  )(value.exclusions, $.DER),
                             /* IF_DEFAULT */ value.returnToDUA === undefined ||
                             $.deepEq(
                                 value.returnToDUA,
@@ -563,8 +563,8 @@ export function _encode_ContinuationReference(
                                       _TagClass.context,
                                       8,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.returnToDUA, $.BER),
+                                      $.DER
+                                  )(value.returnToDUA, $.DER),
                             /* IF_DEFAULT */ value.nameResolveOnMaster ===
                                 undefined ||
                             $.deepEq(
@@ -576,15 +576,15 @@ export function _encode_ContinuationReference(
                                       _TagClass.context,
                                       9,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.nameResolveOnMaster, $.BER),
+                                      $.DER
+                                  )(value.nameResolveOnMaster, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

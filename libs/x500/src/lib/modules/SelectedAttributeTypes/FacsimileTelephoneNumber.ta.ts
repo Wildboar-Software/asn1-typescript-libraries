@@ -270,13 +270,13 @@ export function _encode_FacsimileTelephoneNumber(
                         [
                             /* REQUIRED   */ _encode_TelephoneNumber(
                                 value.telephoneNumber,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.parameters === undefined
                                 ? undefined
                                 : _encode_G3FacsimileNonBasicParameters(
                                       value.parameters,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -284,7 +284,7 @@ export function _encode_FacsimileTelephoneNumber(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

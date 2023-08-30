@@ -189,7 +189,7 @@ export function _encode_InitializationAbort(
                         [
                             /* REQUIRED   */ _encode_InitializationAbort_diag(
                                 value.diag,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -197,7 +197,7 @@ export function _encode_InitializationAbort(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -246,18 +246,18 @@ export function _encode_CertErr(
                         [
                             /* REQUIRED   */ _encode_AVMP_error(
                                 value.notOK,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.note === undefined
                                 ? undefined
-                                : _encode_Notifications(value.note, $.BER),
+                                : _encode_Notifications(value.note, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

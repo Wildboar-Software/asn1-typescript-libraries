@@ -298,27 +298,27 @@ export function _encode_SecurityLabel(
                                 ? undefined
                                 : _encode_SecurityPolicyIdentifier(
                                       value.security_policy_identifier,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.security_classification ===
                             undefined
                                 ? undefined
                                 : _encode_SecurityClassification(
                                       value.security_classification,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.privacy_mark === undefined
                                 ? undefined
                                 : _encode_PrivacyMark(
                                       value.privacy_mark,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.security_categories ===
                             undefined
                                 ? undefined
                                 : _encode_SecurityCategories(
                                       value.security_categories,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -326,7 +326,7 @@ export function _encode_SecurityLabel(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

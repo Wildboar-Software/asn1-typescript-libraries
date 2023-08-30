@@ -72,7 +72,7 @@ export function _encode_AllowedAttributeAssignments(
     if (!_cached_encoder_for_AllowedAttributeAssignments) {
         _cached_encoder_for_AllowedAttributeAssignments = $._encodeSetOf<AllowedAttributeAssignments_Item>(
             () => _encode_AllowedAttributeAssignments_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AllowedAttributeAssignments(value, elGetter);

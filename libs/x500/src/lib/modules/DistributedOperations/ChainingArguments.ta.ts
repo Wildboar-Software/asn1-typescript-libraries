@@ -925,16 +925,16 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DistinguishedName,
-                                      $.BER
-                                  )(value.originator, $.BER),
+                                      $.DER
+                                  )(value.originator, $.DER),
                             /* IF_ABSENT  */ value.targetObject === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_DistinguishedName,
-                                      $.BER
-                                  )(value.targetObject, $.BER),
+                                      $.DER
+                                  )(value.targetObject, $.DER),
                             /* IF_DEFAULT */ value.operationProgress ===
                                 undefined ||
                             $.deepEq(
@@ -946,14 +946,14 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       2,
                                       () => _encode_OperationProgress,
-                                      $.BER
-                                  )(value.operationProgress, $.BER),
+                                      $.DER
+                                  )(value.operationProgress, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 3,
                                 () => _encode_TraceInformation,
-                                $.BER
-                            )(value.traceInformation, $.BER),
+                                $.DER
+                            )(value.traceInformation, $.DER),
                             /* IF_DEFAULT */ value.aliasDereferenced ===
                                 undefined ||
                             $.deepEq(
@@ -965,16 +965,16 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.aliasDereferenced, $.BER),
+                                      $.DER
+                                  )(value.aliasDereferenced, $.DER),
                             /* IF_ABSENT  */ value.aliasedRDNs === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       5,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.aliasedRDNs, $.BER),
+                                      $.DER
+                                  )(value.aliasedRDNs, $.DER),
                             /* IF_DEFAULT */ value.returnCrossRefs ===
                                 undefined ||
                             $.deepEq(
@@ -986,8 +986,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       6,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.returnCrossRefs, $.BER),
+                                      $.DER
+                                  )(value.returnCrossRefs, $.DER),
                             /* IF_DEFAULT */ value.referenceType ===
                                 undefined ||
                             $.deepEq(
@@ -999,24 +999,24 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       7,
                                       () => _encode_ReferenceType,
-                                      $.BER
-                                  )(value.referenceType, $.BER),
+                                      $.DER
+                                  )(value.referenceType, $.DER),
                             /* IF_ABSENT  */ value.info === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       8,
                                       () => _encode_DomainInfo,
-                                      $.BER
-                                  )(value.info, $.BER),
+                                      $.DER
+                                  )(value.info, $.DER),
                             /* IF_ABSENT  */ value.timeLimit === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       9,
                                       () => _encode_Time,
-                                      $.BER
-                                  )(value.timeLimit, $.BER),
+                                      $.DER
+                                  )(value.timeLimit, $.DER),
                             /* IF_DEFAULT */ value.securityParameters ===
                                 undefined ||
                             $.deepEq(
@@ -1028,8 +1028,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       10,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                             /* IF_DEFAULT */ value.entryOnly === undefined ||
                             $.deepEq(
                                 value.entryOnly,
@@ -1040,8 +1040,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       11,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.entryOnly, $.BER),
+                                      $.DER
+                                  )(value.entryOnly, $.DER),
                             /* IF_ABSENT  */ value.uniqueIdentifier ===
                             undefined
                                 ? undefined
@@ -1049,8 +1049,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       12,
                                       () => _encode_UniqueIdentifier,
-                                      $.BER
-                                  )(value.uniqueIdentifier, $.BER),
+                                      $.DER
+                                  )(value.uniqueIdentifier, $.DER),
                             /* IF_ABSENT  */ value.authenticationLevel ===
                             undefined
                                 ? undefined
@@ -1058,16 +1058,16 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       13,
                                       () => _encode_AuthenticationLevel,
-                                      $.BER
-                                  )(value.authenticationLevel, $.BER),
+                                      $.DER
+                                  )(value.authenticationLevel, $.DER),
                             /* IF_ABSENT  */ value.exclusions === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       14,
                                       () => _encode_Exclusions,
-                                      $.BER
-                                  )(value.exclusions, $.BER),
+                                      $.DER
+                                  )(value.exclusions, $.DER),
                             /* IF_DEFAULT */ value.excludeShadows ===
                                 undefined ||
                             $.deepEq(
@@ -1079,8 +1079,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       15,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.excludeShadows, $.BER),
+                                      $.DER
+                                  )(value.excludeShadows, $.DER),
                             /* IF_DEFAULT */ value.nameResolveOnMaster ===
                                 undefined ||
                             $.deepEq(
@@ -1092,8 +1092,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       16,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.nameResolveOnMaster, $.BER),
+                                      $.DER
+                                  )(value.nameResolveOnMaster, $.DER),
                             /* IF_ABSENT  */ value.operationIdentifier ===
                             undefined
                                 ? undefined
@@ -1101,16 +1101,16 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       17,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.operationIdentifier, $.BER),
+                                      $.DER
+                                  )(value.operationIdentifier, $.DER),
                             /* IF_ABSENT  */ value.searchRuleId === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       18,
                                       () => _encode_SearchRuleId,
-                                      $.BER
-                                  )(value.searchRuleId, $.BER),
+                                      $.DER
+                                  )(value.searchRuleId, $.DER),
                             /* IF_ABSENT  */ value.chainedRelaxation ===
                             undefined
                                 ? undefined
@@ -1118,16 +1118,16 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       19,
                                       () => _encode_MRMapping,
-                                      $.BER
-                                  )(value.chainedRelaxation, $.BER),
+                                      $.DER
+                                  )(value.chainedRelaxation, $.DER),
                             /* IF_ABSENT  */ value.relatedEntry === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       20,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.relatedEntry, $.BER),
+                                      $.DER
+                                  )(value.relatedEntry, $.DER),
                             /* IF_DEFAULT */ value.dspPaging === undefined ||
                             $.deepEq(
                                 value.dspPaging,
@@ -1138,8 +1138,8 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       21,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.dspPaging, $.BER),
+                                      $.DER
+                                  )(value.dspPaging, $.DER),
                             /* IF_DEFAULT */ value.excludeWriteableCopies ===
                                 undefined ||
                             $.deepEq(
@@ -1151,15 +1151,15 @@ export function _encode_ChainingArguments(
                                       _TagClass.context,
                                       24,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.excludeWriteableCopies, $.BER),
+                                      $.DER
+                                  )(value.excludeWriteableCopies, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

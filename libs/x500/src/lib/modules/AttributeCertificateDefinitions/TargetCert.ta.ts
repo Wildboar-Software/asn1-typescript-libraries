@@ -227,20 +227,20 @@ export function _encode_TargetCert(
                     .concat([
                         /* REQUIRED   */ _encode_IssuerSerial(
                             value.targetCertificate,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.targetName === undefined
                             ? undefined
-                            : _encode_GeneralName(value.targetName, $.BER),
+                            : _encode_GeneralName(value.targetName, $.DER),
                         /* IF_ABSENT  */ value.certDigestInfo === undefined
                             ? undefined
                             : _encode_ObjectDigestInfo(
                                   value.certDigestInfo,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

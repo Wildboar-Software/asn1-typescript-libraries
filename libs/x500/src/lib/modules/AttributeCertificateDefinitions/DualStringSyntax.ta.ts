@@ -199,21 +199,21 @@ export function _encode_DualStringSyntax(
                                 _TagClass.context,
                                 0,
                                 () => _encode_UnboundedDirectoryString,
-                                $.BER
-                            )(value.operation, $.BER),
+                                $.DER
+                            )(value.operation, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_UnboundedDirectoryString,
-                                $.BER
-                            )(value.object, $.BER),
+                                $.DER
+                            )(value.object, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

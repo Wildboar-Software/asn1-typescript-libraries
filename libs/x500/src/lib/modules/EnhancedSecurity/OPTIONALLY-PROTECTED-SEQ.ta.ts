@@ -68,10 +68,10 @@ export function _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<Type>(
                 _TagClass.context,
                 0,
                 () => _get_encoder_for_SIGNED<Type>(_encode_Type),
-                $.BER
+                $.DER
             ),
         },
-        $.BER
+        $.DER
     );
 }
 /* END_OF_SYMBOL_DEFINITION _get_encoder_for_OPTIONALLY_PROTECTED_SEQ */

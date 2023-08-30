@@ -161,58 +161,58 @@ export function _encode_GeneralName(
                     _TagClass.context,
                     0,
                     () => $._encodeInstanceOf,
-                    $.BER
+                    $.DER
                 ),
                 rfc822Name: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => $._encodeIA5String,
-                    $.BER
+                    $.DER
                 ),
                 dNSName: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => $._encodeIA5String,
-                    $.BER
+                    $.DER
                 ),
                 x400Address: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_ORAddress,
-                    $.BER
+                    $.DER
                 ),
                 directoryName: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => _encode_Name,
-                    $.BER
+                    $.DER
                 ),
                 ediPartyName: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _encode_EDIPartyName,
-                    $.BER
+                    $.DER
                 ),
                 uniformResourceIdentifier: $._encode_implicit(
                     _TagClass.context,
                     6,
                     () => $._encodeIA5String,
-                    $.BER
+                    $.DER
                 ),
                 iPAddress: $._encode_implicit(
                     _TagClass.context,
                     7,
                     () => $._encodeOctetString,
-                    $.BER
+                    $.DER
                 ),
                 registeredID: $._encode_implicit(
                     _TagClass.context,
                     8,
                     () => $._encodeObjectIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_GeneralName(value, elGetter);

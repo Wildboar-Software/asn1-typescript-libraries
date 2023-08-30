@@ -96,16 +96,16 @@ export function _encode_CertUpdateRsp_result(
                     _TagClass.context,
                     0,
                     () => _encode_CertUpdateOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_CertUpdateErr,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertUpdateRsp_result(value, elGetter);

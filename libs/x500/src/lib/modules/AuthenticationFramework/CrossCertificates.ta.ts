@@ -66,7 +66,7 @@ export function _encode_CrossCertificates(
     if (!_cached_encoder_for_CrossCertificates) {
         _cached_encoder_for_CrossCertificates = $._encodeSetOf<Certificate>(
             () => _encode_Certificate,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CrossCertificates(value, elGetter);

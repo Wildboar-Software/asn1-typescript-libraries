@@ -205,16 +205,16 @@ export function _encode_CertificateExactAssertion(
                         [
                             /* REQUIRED   */ _encode_CertificateSerialNumber(
                                 value.serialNumber,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
+                            /* REQUIRED   */ _encode_Name(value.issuer, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

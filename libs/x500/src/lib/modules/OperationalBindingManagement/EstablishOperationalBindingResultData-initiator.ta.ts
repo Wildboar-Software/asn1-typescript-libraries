@@ -82,22 +82,22 @@ export function _encode_EstablishOperationalBindingResultData_initiator(
                     _TagClass.context,
                     3,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
                 roleA_replies: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
                 roleB_replies: $._encode_explicit(
                     _TagClass.context,
                     5,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EstablishOperationalBindingResultData_initiator(

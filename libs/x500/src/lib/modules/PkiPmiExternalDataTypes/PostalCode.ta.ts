@@ -71,7 +71,7 @@ export function _encode_PostalCode(
                 numeric_code: $._encodeNumericString,
                 printable_code: $._encodePrintableString,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PostalCode(value, elGetter);

@@ -216,11 +216,11 @@ export function _encode_KeyAgreement(
                                 _TagClass.context,
                                 0,
                                 () => _encode_SenderDhInfo,
-                                $.BER
-                            )(value.senderDhInfo, $.BER),
+                                $.DER
+                            )(value.senderDhInfo, $.DER),
                             /* REQUIRED   */ _encode_KeyAgreement_keyEncryptionAlgorithm(
                                 value.keyEncryptionAlgorithm,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -228,7 +228,7 @@ export function _encode_KeyAgreement(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

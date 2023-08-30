@@ -271,76 +271,76 @@ export function _encode_WrapperPDU(
                     _TagClass.context,
                     0,
                     () => _encode_HandshakeReq,
-                    $.BER
+                    $.DER
                 ),
                 handshakeAcc: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_HandshakeAcc,
-                    $.BER
+                    $.DER
                 ),
                 handshakeWrpRej: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_HandshakeWrpRej,
-                    $.BER
+                    $.DER
                 ),
                 handshakeProRej: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_HandshakeProRej,
-                    $.BER
+                    $.DER
                 ),
                 handshakeSecAbort: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_HandshakeSecAbort,
-                    $.BER
+                    $.DER
                 ),
                 handshakeProAbort: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _encode_HandshakeProAbort,
-                    $.BER
+                    $.DER
                 ),
                 dtSecAbort: $._encode_implicit(
                     _TagClass.context,
                     6,
                     () => _encode_DtSecAbort,
-                    $.BER
+                    $.DER
                 ),
                 applAbort: $._encode_implicit(
                     _TagClass.context,
                     7,
                     () => _encode_ApplAbort,
-                    $.BER
+                    $.DER
                 ),
                 releaseReq: $._encode_implicit(
                     _TagClass.context,
                     8,
                     () => _encode_ReleaseReq,
-                    $.BER
+                    $.DER
                 ),
                 releaseRsp: $._encode_implicit(
                     _TagClass.context,
                     9,
                     () => _encode_ReleaseRsp,
-                    $.BER
+                    $.DER
                 ),
                 dataTransferClient: $._encode_explicit(
                     _TagClass.context,
                     10,
                     () => _encode_DataTransferClient,
-                    $.BER
+                    $.DER
                 ),
                 dataTransferServer: $._encode_explicit(
                     _TagClass.context,
                     11,
                     () => _encode_DataTransferServer,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_WrapperPDU(value, elGetter);

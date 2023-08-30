@@ -236,8 +236,8 @@ export function _encode_OperationProgress(
                                 0,
                                 () =>
                                     _encode_OperationProgress_nameResolutionPhase,
-                                $.BER
-                            )(value.nameResolutionPhase, $.BER),
+                                $.DER
+                            )(value.nameResolutionPhase, $.DER),
                             /* IF_ABSENT  */ value.nextRDNToBeResolved ===
                             undefined
                                 ? undefined
@@ -245,15 +245,15 @@ export function _encode_OperationProgress(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.nextRDNToBeResolved, $.BER),
+                                      $.DER
+                                  )(value.nextRDNToBeResolved, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

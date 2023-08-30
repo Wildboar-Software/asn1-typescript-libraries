@@ -434,33 +434,33 @@ export function _encode_TbsHandshakeSecAbort(
                                 TbsHandshakeSecAbort._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_Version(value.version, $.BER),
+                                : _encode_Version(value.version, $.DER),
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.sigAlg,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.diag === undefined
                                 ? undefined
-                                : _encode_WrpError(value.diag, $.BER),
+                                : _encode_WrpError(value.diag, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

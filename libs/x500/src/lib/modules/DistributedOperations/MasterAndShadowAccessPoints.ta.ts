@@ -66,7 +66,7 @@ export function _encode_MasterAndShadowAccessPoints(
     if (!_cached_encoder_for_MasterAndShadowAccessPoints) {
         _cached_encoder_for_MasterAndShadowAccessPoints = $._encodeSetOf<MasterOrShadowAccessPoint>(
             () => _encode_MasterOrShadowAccessPoint,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MasterAndShadowAccessPoints(value, elGetter);

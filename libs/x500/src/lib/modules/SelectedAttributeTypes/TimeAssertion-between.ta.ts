@@ -233,30 +233,30 @@ export function _encode_TimeAssertion_between(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeGeneralizedTime,
-                                $.BER
-                            )(value.startTime, $.BER),
+                                $.DER
+                            )(value.startTime, $.DER),
                             /* IF_ABSENT  */ value.endTime === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.endTime, $.BER),
+                                      $.DER
+                                  )(value.endTime, $.DER),
                             /* IF_DEFAULT */ value.entirely === undefined ||
                             $.deepEq(
                                 value.entirely,
                                 TimeAssertion_between._default_value_for_entirely
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.entirely, $.BER),
+                                : $._encodeBoolean(value.entirely, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

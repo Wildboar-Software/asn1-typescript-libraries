@@ -208,23 +208,23 @@ export function _encode_TbsHandshakeReq_encr_mode_non_aead(
                                   () =>
                                       $._encodeSequenceOf<AlgorithmIdentifier>(
                                           () => _encode_AlgorithmIdentifier,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.encr, $.BER),
+                                  $.DER
+                              )(value.encr, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             1,
                             () =>
                                 $._encodeSequenceOf<AlgorithmIdentifier>(
                                     () => _encode_AlgorithmIdentifier,
-                                    $.BER
+                                    $.DER
                                 ),
-                            $.BER
-                        )(value.icvAlgID, $.BER),
+                            $.DER
+                        )(value.icvAlgID, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

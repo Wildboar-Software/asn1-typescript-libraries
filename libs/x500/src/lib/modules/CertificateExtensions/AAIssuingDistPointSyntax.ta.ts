@@ -381,16 +381,16 @@ export function _encode_AAIssuingDistPointSyntax(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DistributionPointName,
-                                      $.BER
-                                  )(value.distributionPoint, $.BER),
+                                      $.DER
+                                  )(value.distributionPoint, $.DER),
                             /* IF_ABSENT  */ value.onlySomeReasons === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_ReasonFlags,
-                                      $.BER
-                                  )(value.onlySomeReasons, $.BER),
+                                      $.DER
+                                  )(value.onlySomeReasons, $.DER),
                             /* IF_DEFAULT */ value.indirectCRL === undefined ||
                             $.deepEq(
                                 value.indirectCRL,
@@ -401,8 +401,8 @@ export function _encode_AAIssuingDistPointSyntax(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.indirectCRL, $.BER),
+                                      $.DER
+                                  )(value.indirectCRL, $.DER),
                             /* IF_DEFAULT */ value.containsUserAttributeCerts ===
                                 undefined ||
                             $.deepEq(
@@ -414,8 +414,8 @@ export function _encode_AAIssuingDistPointSyntax(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.containsUserAttributeCerts, $.BER),
+                                      $.DER
+                                  )(value.containsUserAttributeCerts, $.DER),
                             /* IF_DEFAULT */ value.containsAACerts ===
                                 undefined ||
                             $.deepEq(
@@ -427,8 +427,8 @@ export function _encode_AAIssuingDistPointSyntax(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.containsAACerts, $.BER),
+                                      $.DER
+                                  )(value.containsAACerts, $.DER),
                             /* IF_DEFAULT */ value.containsSOAPublicKeyCerts ===
                                 undefined ||
                             $.deepEq(
@@ -440,15 +440,15 @@ export function _encode_AAIssuingDistPointSyntax(
                                       _TagClass.context,
                                       5,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.containsSOAPublicKeyCerts, $.BER),
+                                      $.DER
+                                  )(value.containsSOAPublicKeyCerts, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

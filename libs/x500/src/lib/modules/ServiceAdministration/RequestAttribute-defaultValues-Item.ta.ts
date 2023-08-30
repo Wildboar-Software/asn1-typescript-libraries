@@ -207,19 +207,19 @@ export function _encode_RequestAttribute_defaultValues_Item(
                                 ? undefined
                                 : $._encodeObjectIdentifier(
                                       value.entryType,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ $._encodeSequenceOf<_Element>(
                                 () => $._encodeAny,
-                                $.BER
-                            )(value.values, $.BER),
+                                $.DER
+                            )(value.values, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

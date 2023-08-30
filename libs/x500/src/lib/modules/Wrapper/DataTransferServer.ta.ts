@@ -99,16 +99,16 @@ export function _encode_DataTransferServer(
                     _TagClass.context,
                     0,
                     () => _encode_DataTransferServerAE,
-                    $.BER
+                    $.DER
                 ),
                 non_aead: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_DataTransferServerNEA,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DataTransferServer(value, elGetter);

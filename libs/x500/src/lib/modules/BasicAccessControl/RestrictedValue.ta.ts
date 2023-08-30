@@ -193,11 +193,11 @@ export function _encode_RestrictedValue(
                         [
                             /* REQUIRED   */ _encode_AttributeType(
                                 value.type_,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AttributeType(
                                 value.valuesIn,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -205,7 +205,7 @@ export function _encode_RestrictedValue(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

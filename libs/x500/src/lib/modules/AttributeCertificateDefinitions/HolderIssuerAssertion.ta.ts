@@ -226,23 +226,23 @@ export function _encode_HolderIssuerAssertion(
                                       _TagClass.context,
                                       0,
                                       () => _encode_Holder,
-                                      $.BER
-                                  )(value.holder, $.BER),
+                                      $.DER
+                                  )(value.holder, $.DER),
                             /* IF_ABSENT  */ value.issuer === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_AttCertIssuer,
-                                      $.BER
-                                  )(value.issuer, $.BER),
+                                      $.DER
+                                  )(value.issuer, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

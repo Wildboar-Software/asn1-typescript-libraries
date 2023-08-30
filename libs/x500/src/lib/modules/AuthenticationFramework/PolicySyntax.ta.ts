@@ -207,11 +207,11 @@ export function _encode_PolicySyntax(
                         [
                             /* REQUIRED   */ _encode_PolicyID(
                                 value.policyIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_InfoSyntax(
                                 value.policySyntax,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -219,7 +219,7 @@ export function _encode_PolicySyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

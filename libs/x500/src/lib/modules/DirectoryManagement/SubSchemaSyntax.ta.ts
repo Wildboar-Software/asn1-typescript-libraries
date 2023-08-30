@@ -89,7 +89,7 @@ export function _encode_SubSchemaSyntax(
     if (!_cached_encoder_for_SubSchemaSyntax) {
         _cached_encoder_for_SubSchemaSyntax = $._encodeSequenceOf<SubSchemaSyntax_Item>(
             () => _encode_SubSchemaSyntax_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SubSchemaSyntax(value, elGetter);

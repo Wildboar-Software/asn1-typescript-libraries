@@ -56,7 +56,7 @@ export function _encode_PwdAlphabet(
     if (!_cached_encoder_for_PwdAlphabet) {
         _cached_encoder_for_PwdAlphabet = $._encodeSequenceOf<UTF8String>(
             () => $._encodeUTF8String,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PwdAlphabet(value, elGetter);

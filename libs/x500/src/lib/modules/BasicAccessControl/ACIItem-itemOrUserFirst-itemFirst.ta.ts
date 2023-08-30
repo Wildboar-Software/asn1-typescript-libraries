@@ -210,19 +210,19 @@ export function _encode_ACIItem_itemOrUserFirst_itemFirst(
                         [
                             /* REQUIRED   */ _encode_ProtectedItems(
                                 value.protectedItems,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeSetOf<ItemPermission>(
                                 () => _encode_ItemPermission,
-                                $.BER
-                            )(value.itemPermissions, $.BER),
+                                $.DER
+                            )(value.itemPermissions, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

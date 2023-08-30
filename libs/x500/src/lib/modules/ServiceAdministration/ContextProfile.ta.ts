@@ -204,21 +204,21 @@ export function _encode_ContextProfile(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.contextType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.contextValue === undefined
                                 ? undefined
                                 : $._encodeSequenceOf<_Element>(
                                       () => $._encodeAny,
-                                      $.BER
-                                  )(value.contextValue, $.BER),
+                                      $.DER
+                                  )(value.contextValue, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

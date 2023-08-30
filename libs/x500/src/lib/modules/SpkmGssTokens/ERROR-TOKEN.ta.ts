@@ -179,14 +179,14 @@ export function _encode_ERROR_TOKEN(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.context_id,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

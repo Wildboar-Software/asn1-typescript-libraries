@@ -68,7 +68,7 @@ export function _encode_AuthorizationData(
     if (!_cached_encoder_for_AuthorizationData) {
         _cached_encoder_for_AuthorizationData = $._encodeSequenceOf<AuthorizationData_Item>(
             () => _encode_AuthorizationData_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AuthorizationData(value, elGetter);

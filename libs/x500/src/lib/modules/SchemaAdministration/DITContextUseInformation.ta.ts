@@ -221,10 +221,10 @@ export function _encode_DITContextUseInformation(
                                       () =>
                                           $._encodeSetOf<OBJECT_IDENTIFIER>(
                                               () => $._encodeObjectIdentifier,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.mandatoryContexts, $.BER),
+                                      $.DER
+                                  )(value.mandatoryContexts, $.DER),
                             /* IF_ABSENT  */ value.optionalContexts ===
                             undefined
                                 ? undefined
@@ -234,17 +234,17 @@ export function _encode_DITContextUseInformation(
                                       () =>
                                           $._encodeSetOf<OBJECT_IDENTIFIER>(
                                               () => $._encodeObjectIdentifier,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.optionalContexts, $.BER),
+                                      $.DER
+                                  )(value.optionalContexts, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

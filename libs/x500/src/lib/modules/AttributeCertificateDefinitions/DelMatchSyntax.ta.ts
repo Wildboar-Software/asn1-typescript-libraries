@@ -207,11 +207,11 @@ export function _encode_DelMatchSyntax(
                         [
                             /* REQUIRED   */ _encode_AttCertIssuer(
                                 value.firstIssuer,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_Holder(
                                 value.lastHolder,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -219,7 +219,7 @@ export function _encode_DelMatchSyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

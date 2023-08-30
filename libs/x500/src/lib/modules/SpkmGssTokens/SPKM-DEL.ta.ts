@@ -180,15 +180,15 @@ export function _encode_SPKM_DEL(
                     .concat([
                         /* REQUIRED   */ _encode_Del_Header(
                             value.del_header,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeBitString(
                             value.int_cksum,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -333,26 +333,26 @@ export function _encode_ReplaceAvlReq(
                                 ReplaceAvlReq._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_AVMPversion(value.version, $.BER),
+                                : _encode_AVMPversion(value.version, $.DER),
                             /* REQUIRED   */ $._encodeGeneralizedTime(
                                 value.timeStamp,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AVMPsequence(
                                 value.sequence,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.old === undefined
                                 ? undefined
-                                : _encode_AvlSerialNumber(value.old, $.BER),
-                            /* REQUIRED   */ _encode_CertAVL(value.new_, $.BER),
+                                : _encode_AvlSerialNumber(value.old, $.DER),
+                            /* REQUIRED   */ _encode_CertAVL(value.new_, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

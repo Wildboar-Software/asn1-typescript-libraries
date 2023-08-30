@@ -69,7 +69,7 @@ export function _encode_PolicyMappingsSyntax(
     if (!_cached_encoder_for_PolicyMappingsSyntax) {
         _cached_encoder_for_PolicyMappingsSyntax = $._encodeSequenceOf<PolicyMappingsSyntax_Item>(
             () => _encode_PolicyMappingsSyntax_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PolicyMappingsSyntax(value, elGetter);

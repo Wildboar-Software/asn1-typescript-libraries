@@ -234,7 +234,7 @@ export function _encode_MRSubstitution(
                         [
                             /* REQUIRED   */ _encode_AttributeType(
                                 value.attribute,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.oldMatchingRule === undefined
                                 ? undefined
@@ -242,23 +242,23 @@ export function _encode_MRSubstitution(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.oldMatchingRule, $.BER),
+                                      $.DER
+                                  )(value.oldMatchingRule, $.DER),
                             /* IF_ABSENT  */ value.newMatchingRule === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.newMatchingRule, $.BER),
+                                      $.DER
+                                  )(value.newMatchingRule, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

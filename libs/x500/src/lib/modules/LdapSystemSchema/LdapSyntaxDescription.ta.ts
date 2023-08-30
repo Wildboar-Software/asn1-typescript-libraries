@@ -216,13 +216,13 @@ export function _encode_LdapSyntaxDescription(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.identifier,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.description === undefined
                                 ? undefined
                                 : _encode_UnboundedDirectoryString(
                                       value.description,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -230,7 +230,7 @@ export function _encode_LdapSyntaxDescription(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

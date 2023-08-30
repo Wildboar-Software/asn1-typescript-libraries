@@ -196,11 +196,11 @@ export function _encode_PkiPathMatchSyntax(
                         [
                             /* REQUIRED   */ _encode_Name(
                                 value.firstIssuer,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_Name(
                                 value.lastSubject,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -208,7 +208,7 @@ export function _encode_PkiPathMatchSyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

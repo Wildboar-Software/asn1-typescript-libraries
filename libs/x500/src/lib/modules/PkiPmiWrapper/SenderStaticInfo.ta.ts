@@ -228,14 +228,14 @@ export function _encode_SenderStaticInfo(
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
+                            /* REQUIRED   */ _encode_Name(value.issuer, $.DER),
                             /* REQUIRED   */ _encode_CertificateSerialNumber(
                                 value.serialNumber,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_UserKeyingMaterial(
                                 value.partyAinfo,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -243,7 +243,7 @@ export function _encode_SenderStaticInfo(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

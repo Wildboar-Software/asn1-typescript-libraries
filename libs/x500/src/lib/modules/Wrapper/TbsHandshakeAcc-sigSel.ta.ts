@@ -81,10 +81,10 @@ export function _encode_TbsHandshakeAcc_sigSel(
                     _TagClass.context,
                     0,
                     () => _encode_AlgorithmIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TbsHandshakeAcc_sigSel(value, elGetter);

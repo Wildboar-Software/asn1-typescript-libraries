@@ -177,7 +177,7 @@ export function _encode_InitializationAcc(
                         [
                             /* REQUIRED   */ _encode_Version(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -185,7 +185,7 @@ export function _encode_InitializationAcc(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

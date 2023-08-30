@@ -198,11 +198,11 @@ export function _encode_SenderDhPublicKey(
                         [
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.algorithm,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeBitString(
                                 value.publicKey,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -210,7 +210,7 @@ export function _encode_SenderDhPublicKey(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

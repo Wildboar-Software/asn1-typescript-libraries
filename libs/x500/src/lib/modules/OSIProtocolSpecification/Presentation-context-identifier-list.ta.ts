@@ -68,7 +68,7 @@ export function _encode_Presentation_context_identifier_list(
     if (!_cached_encoder_for_Presentation_context_identifier_list) {
         _cached_encoder_for_Presentation_context_identifier_list = $._encodeSequenceOf<Presentation_context_identifier_list_Item>(
             () => _encode_Presentation_context_identifier_list_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Presentation_context_identifier_list(

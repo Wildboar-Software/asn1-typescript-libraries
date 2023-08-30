@@ -196,14 +196,14 @@ export function _encode_AltName(
                     .concat([
                         /* REQUIRED   */ _encode_AltNameType(
                             value.altnameType,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.altNameValue === undefined
                             ? undefined
-                            : _encode_GeneralName(value.altNameValue, $.BER),
+                            : _encode_GeneralName(value.altNameValue, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

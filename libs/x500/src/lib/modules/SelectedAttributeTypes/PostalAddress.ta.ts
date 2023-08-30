@@ -66,7 +66,7 @@ export function _encode_PostalAddress(
     if (!_cached_encoder_for_PostalAddress) {
         _cached_encoder_for_PostalAddress = $._encodeSequenceOf<UnboundedDirectoryString>(
             () => _encode_UnboundedDirectoryString,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PostalAddress(value, elGetter);

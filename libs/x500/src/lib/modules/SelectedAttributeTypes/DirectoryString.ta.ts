@@ -85,7 +85,7 @@ export function _encode_DirectoryString(
                 universalString: $._encodeUniversalString,
                 uTF8String: $._encodeUTF8String,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DirectoryString(value, elGetter);

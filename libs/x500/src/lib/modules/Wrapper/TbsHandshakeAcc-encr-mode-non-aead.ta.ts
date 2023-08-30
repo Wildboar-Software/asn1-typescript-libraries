@@ -202,17 +202,17 @@ export function _encode_TbsHandshakeAcc_encr_mode_non_aead(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.encr, $.BER),
+                                  $.DER
+                              )(value.encr, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             1,
                             () => _encode_AlgorithmIdentifier,
-                            $.BER
-                        )(value.icvAlgID, $.BER),
+                            $.DER
+                        )(value.icvAlgID, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

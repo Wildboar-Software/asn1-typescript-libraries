@@ -66,7 +66,7 @@ export function _encode_AuthorityAttributeIdentifierSyntax(
     if (!_cached_encoder_for_AuthorityAttributeIdentifierSyntax) {
         _cached_encoder_for_AuthorityAttributeIdentifierSyntax = $._encodeSequenceOf<AuthAttId>(
             () => _encode_AuthAttId,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AuthorityAttributeIdentifierSyntax(

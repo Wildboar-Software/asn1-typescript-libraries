@@ -69,7 +69,7 @@ export function _encode_Context_list(
     if (!_cached_encoder_for_Context_list) {
         _cached_encoder_for_Context_list = $._encodeSequenceOf<Context_list_Item>(
             () => _encode_Context_list_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Context_list(value, elGetter);

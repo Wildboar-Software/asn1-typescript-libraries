@@ -203,12 +203,12 @@ export function _encode_AvlId(value: AvlId, elGetter: $.ASN1Encoder<AvlId>) {
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
+                            /* REQUIRED   */ _encode_Name(value.issuer, $.DER),
                             /* IF_ABSENT  */ value.serialNumber === undefined
                                 ? undefined
                                 : _encode_AvlSerialNumber(
                                       value.serialNumber,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -216,7 +216,7 @@ export function _encode_AvlId(value: AvlId, elGetter: $.ASN1Encoder<AvlId>) {
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

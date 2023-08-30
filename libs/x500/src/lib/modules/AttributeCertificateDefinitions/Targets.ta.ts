@@ -66,7 +66,7 @@ export function _encode_Targets(
     if (!_cached_encoder_for_Targets) {
         _cached_encoder_for_Targets = $._encodeSequenceOf<Target>(
             () => _encode_Target,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Targets(value, elGetter);

@@ -200,11 +200,11 @@ export function _encode_CertUnsubscribeRsp(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertUnsubscribeRsp_result(
                                 value.result,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -212,7 +212,7 @@ export function _encode_CertUnsubscribeRsp(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

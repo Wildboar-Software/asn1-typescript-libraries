@@ -108,10 +108,10 @@ export function _encode_TerminateOperationalBindingResult(
                         _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<TerminateOperationalBindingResultData>(
                             _encode_TerminateOperationalBindingResultData
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TerminateOperationalBindingResult(

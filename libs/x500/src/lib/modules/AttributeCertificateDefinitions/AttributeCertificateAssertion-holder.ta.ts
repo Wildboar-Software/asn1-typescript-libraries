@@ -96,16 +96,16 @@ export function _encode_AttributeCertificateAssertion_holder(
                     _TagClass.context,
                     0,
                     () => _encode_IssuerSerial,
-                    $.BER
+                    $.DER
                 ),
                 holderName: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_GeneralNames,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributeCertificateAssertion_holder(

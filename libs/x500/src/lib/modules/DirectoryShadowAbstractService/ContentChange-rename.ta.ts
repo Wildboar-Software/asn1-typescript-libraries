@@ -84,7 +84,7 @@ export function _encode_ContentChange_rename(
                 newRDN: _encode_RelativeDistinguishedName,
                 newDN: _encode_DistinguishedName,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ContentChange_rename(value, elGetter);

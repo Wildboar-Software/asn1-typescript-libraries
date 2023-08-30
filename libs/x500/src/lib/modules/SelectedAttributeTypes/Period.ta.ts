@@ -433,34 +433,34 @@ export function _encode_Period(value: Period, elGetter: $.ASN1Encoder<Period>) {
                                       () =>
                                           $._encodeSetOf<DayTimeBand>(
                                               () => _encode_DayTimeBand,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.timesOfDay, $.BER),
+                                      $.DER
+                                  )(value.timesOfDay, $.DER),
                             /* IF_ABSENT  */ value.days === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_Period_days,
-                                      $.BER
-                                  )(value.days, $.BER),
+                                      $.DER
+                                  )(value.days, $.DER),
                             /* IF_ABSENT  */ value.weeks === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       2,
                                       () => _encode_Period_weeks,
-                                      $.BER
-                                  )(value.weeks, $.BER),
+                                      $.DER
+                                  )(value.weeks, $.DER),
                             /* IF_ABSENT  */ value.months === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_Period_months,
-                                      $.BER
-                                  )(value.months, $.BER),
+                                      $.DER
+                                  )(value.months, $.DER),
                             /* IF_ABSENT  */ value.years === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -469,17 +469,17 @@ export function _encode_Period(value: Period, elGetter: $.ASN1Encoder<Period>) {
                                       () =>
                                           $._encodeSetOf<INTEGER>(
                                               () => $._encodeInteger,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.years, $.BER),
+                                      $.DER
+                                  )(value.years, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

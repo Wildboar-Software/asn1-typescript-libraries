@@ -182,15 +182,15 @@ export function _encode_AccessDescription(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.accessMethod,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_GeneralName(
                             value.accessLocation,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

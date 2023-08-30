@@ -251,13 +251,13 @@ export function _encode_ResultAttribute(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.attributeType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.outputValues === undefined
                                 ? undefined
                                 : _encode_ResultAttribute_outputValues(
                                       value.outputValues,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.contexts === undefined
                                 ? undefined
@@ -267,17 +267,17 @@ export function _encode_ResultAttribute(
                                       () =>
                                           $._encodeSequenceOf<ContextProfile>(
                                               () => _encode_ContextProfile,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.contexts, $.BER),
+                                      $.DER
+                                  )(value.contexts, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

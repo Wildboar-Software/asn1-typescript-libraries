@@ -66,7 +66,7 @@ export function _encode_CRLScopeSyntax(
     if (!_cached_encoder_for_CRLScopeSyntax) {
         _cached_encoder_for_CRLScopeSyntax = $._encodeSequenceOf<PerAuthorityScope>(
             () => _encode_PerAuthorityScope,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CRLScopeSyntax(value, elGetter);

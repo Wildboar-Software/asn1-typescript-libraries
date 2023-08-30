@@ -567,8 +567,8 @@ export function _encode_ProtectedItems(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeNull,
-                                      $.BER
-                                  )(value.entry, $.BER),
+                                      $.DER
+                                  )(value.entry, $.DER),
                             /* IF_ABSENT  */ value.allUserAttributeTypes ===
                             undefined
                                 ? undefined
@@ -576,8 +576,8 @@ export function _encode_ProtectedItems(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeNull,
-                                      $.BER
-                                  )(value.allUserAttributeTypes, $.BER),
+                                      $.DER
+                                  )(value.allUserAttributeTypes, $.DER),
                             /* IF_ABSENT  */ value.attributeType === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -586,10 +586,10 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<AttributeType>(
                                               () => _encode_AttributeType,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.attributeType, $.BER),
+                                      $.DER
+                                  )(value.attributeType, $.DER),
                             /* IF_ABSENT  */ value.allAttributeValues ===
                             undefined
                                 ? undefined
@@ -599,10 +599,10 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<AttributeType>(
                                               () => _encode_AttributeType,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.allAttributeValues, $.BER),
+                                      $.DER
+                                  )(value.allAttributeValues, $.DER),
                             /* IF_ABSENT  */ value.allUserAttributeTypesAndValues ===
                             undefined
                                 ? undefined
@@ -610,10 +610,10 @@ export function _encode_ProtectedItems(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeNull,
-                                      $.BER
+                                      $.DER
                                   )(
                                       value.allUserAttributeTypesAndValues,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.attributeValue === undefined
                                 ? undefined
@@ -624,10 +624,10 @@ export function _encode_ProtectedItems(
                                           $._encodeSetOf<AttributeTypeAndValue>(
                                               () =>
                                                   _encode_AttributeTypeAndValue,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.attributeValue, $.BER),
+                                      $.DER
+                                  )(value.attributeValue, $.DER),
                             /* IF_ABSENT  */ value.selfValue === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -636,18 +636,18 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<AttributeType>(
                                               () => _encode_AttributeType,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.selfValue, $.BER),
+                                      $.DER
+                                  )(value.selfValue, $.DER),
                             /* IF_ABSENT  */ value.rangeOfValues === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       7,
                                       () => _encode_Filter,
-                                      $.BER
-                                  )(value.rangeOfValues, $.BER),
+                                      $.DER
+                                  )(value.rangeOfValues, $.DER),
                             /* IF_ABSENT  */ value.maxValueCount === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -656,18 +656,18 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<MaxValueCount>(
                                               () => _encode_MaxValueCount,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.maxValueCount, $.BER),
+                                      $.DER
+                                  )(value.maxValueCount, $.DER),
                             /* IF_ABSENT  */ value.maxImmSub === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       9,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.maxImmSub, $.BER),
+                                      $.DER
+                                  )(value.maxImmSub, $.DER),
                             /* IF_ABSENT  */ value.restrictedBy === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -676,10 +676,10 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<RestrictedValue>(
                                               () => _encode_RestrictedValue,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.restrictedBy, $.BER),
+                                      $.DER
+                                  )(value.restrictedBy, $.DER),
                             /* IF_ABSENT  */ value.contexts === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -688,18 +688,18 @@ export function _encode_ProtectedItems(
                                       () =>
                                           $._encodeSetOf<ContextAssertion>(
                                               () => _encode_ContextAssertion,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.contexts, $.BER),
+                                      $.DER
+                                  )(value.contexts, $.DER),
                             /* IF_ABSENT  */ value.classes === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       12,
                                       () => _encode_Refinement,
-                                      $.BER
-                                  )(value.classes, $.BER),
+                                      $.DER
+                                  )(value.classes, $.DER),
                             /* IF_ABSENT  */ value.entryMethods === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -708,17 +708,17 @@ export function _encode_ProtectedItems(
                                     () =>
                                         $._encodeSetOf<OBJECT_IDENTIFIER>(
                                             () => $._encodeObjectIdentifier,
-                                            $.BER
+                                            $.DER
                                         ),
-                                    $.BER
-                                )(value.entryMethods, $.BER),
+                                    $.DER
+                                )(value.entryMethods, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

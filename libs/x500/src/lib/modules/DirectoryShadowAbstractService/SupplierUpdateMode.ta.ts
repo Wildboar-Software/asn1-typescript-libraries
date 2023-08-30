@@ -78,7 +78,7 @@ export function _encode_SupplierUpdateMode(
                 onChange: $._encodeBoolean,
                 scheduled: _encode_SchedulingParameters,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SupplierUpdateMode(value, elGetter);

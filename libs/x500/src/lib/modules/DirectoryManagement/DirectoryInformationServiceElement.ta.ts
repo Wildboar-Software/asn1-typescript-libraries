@@ -267,22 +267,22 @@ export function _encode_DirectoryInformationServiceElement(
                             ? undefined
                             : _encode_DirectoryInformationServiceElement_operationType(
                                   value.operationType,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.attributeType === undefined
                             ? undefined
-                            : _encode_AttributeType(value.attributeType, $.BER),
+                            : _encode_AttributeType(value.attributeType, $.DER),
                         /* IF_ABSENT  */ value.attributeValue === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AttributeValue,
-                                  $.BER
-                              )(value.attributeValue, $.BER),
+                                  $.DER
+                              )(value.attributeValue, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

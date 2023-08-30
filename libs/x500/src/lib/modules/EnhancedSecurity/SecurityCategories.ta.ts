@@ -66,7 +66,7 @@ export function _encode_SecurityCategories(
     if (!_cached_encoder_for_SecurityCategories) {
         _cached_encoder_for_SecurityCategories = $._encodeSetOf<SecurityCategory>(
             () => _encode_SecurityCategory,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SecurityCategories(value, elGetter);

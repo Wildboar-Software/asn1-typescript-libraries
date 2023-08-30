@@ -207,11 +207,11 @@ export function _encode_EncryptedInfo(
                         [
                             /* REQUIRED   */ _encode_KeyAgreement(
                                 value.keyAgreement,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_EncryptedPduInfo(
                                 value.encryptedPduInfo,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -219,7 +219,7 @@ export function _encode_EncryptedInfo(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

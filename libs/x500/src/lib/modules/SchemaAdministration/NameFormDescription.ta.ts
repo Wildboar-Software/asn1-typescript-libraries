@@ -302,19 +302,19 @@ export function _encode_NameFormDescription(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.identifier,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.name === undefined
                                 ? undefined
                                 : $._encodeSetOf<UnboundedDirectoryString>(
                                       () => _encode_UnboundedDirectoryString,
-                                      $.BER
-                                  )(value.name, $.BER),
+                                      $.DER
+                                  )(value.name, $.DER),
                             /* IF_ABSENT  */ value.description === undefined
                                 ? undefined
                                 : _encode_UnboundedDirectoryString(
                                       value.description,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_DEFAULT */ value.obsolete === undefined ||
                             $.deepEq(
@@ -322,20 +322,20 @@ export function _encode_NameFormDescription(
                                 NameFormDescription._default_value_for_obsolete
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.obsolete, $.BER),
+                                : $._encodeBoolean(value.obsolete, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 0,
                                 () => _encode_NameFormInformation,
-                                $.BER
-                            )(value.information, $.BER),
+                                $.DER
+                            )(value.information, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -162,40 +162,40 @@ export function _encode_TBprot(value: TBprot, elGetter: $.ASN1Encoder<TBprot>) {
                     _TagClass.context,
                     0,
                     () => _encode_InitializationReq,
-                    $.BER
+                    $.DER
                 ),
                 initAcc: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_InitializationAcc,
-                    $.BER
+                    $.DER
                 ),
                 initRej: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_InitializationRej,
-                    $.BER
+                    $.DER
                 ),
                 initAbt: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_InitializationAbort,
-                    $.BER
+                    $.DER
                 ),
                 tBrequest: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => _encode_TBrequest,
-                    $.BER
+                    $.DER
                 ),
                 tBresponse: $._encode_explicit(
                     _TagClass.context,
                     5,
                     () => _encode_TBresponse,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TBprot(value, elGetter);

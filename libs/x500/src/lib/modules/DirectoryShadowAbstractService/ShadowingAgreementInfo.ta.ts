@@ -273,7 +273,7 @@ export function _encode_ShadowingAgreementInfo(
                     .concat([
                         /* REQUIRED   */ _encode_UnitOfReplication(
                             value.shadowSubject,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_DEFAULT */ value.updateMode === undefined ||
                         $.deepEq(
@@ -281,10 +281,10 @@ export function _encode_ShadowingAgreementInfo(
                             ShadowingAgreementInfo._default_value_for_updateMode
                         )
                             ? undefined
-                            : _encode_UpdateMode(value.updateMode, $.BER),
+                            : _encode_UpdateMode(value.updateMode, $.DER),
                         /* IF_ABSENT  */ value.master === undefined
                             ? undefined
-                            : _encode_AccessPoint(value.master, $.BER),
+                            : _encode_AccessPoint(value.master, $.DER),
                         /* IF_DEFAULT */ value.secondaryShadows === undefined ||
                         $.deepEq(
                             value.secondaryShadows,
@@ -295,11 +295,11 @@ export function _encode_ShadowingAgreementInfo(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeBoolean,
-                                  $.BER
-                              )(value.secondaryShadows, $.BER),
+                                  $.DER
+                              )(value.secondaryShadows, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -231,11 +231,11 @@ export function _encode_CAsubscribeAbort(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CASP_error(
                                 value.reason,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -243,7 +243,7 @@ export function _encode_CAsubscribeAbort(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

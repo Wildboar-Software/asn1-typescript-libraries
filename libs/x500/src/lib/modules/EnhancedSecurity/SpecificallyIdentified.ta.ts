@@ -209,19 +209,19 @@ export function _encode_SpecificallyIdentified(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_GeneralName(value.name, $.BER),
+                        /* REQUIRED   */ _encode_GeneralName(value.name, $.DER),
                         /* IF_ABSENT  */ value.issuer === undefined
                             ? undefined
-                            : _encode_GeneralName(value.issuer, $.BER),
+                            : _encode_GeneralName(value.issuer, $.DER),
                         /* IF_ABSENT  */ value.serial === undefined
                             ? undefined
                             : _encode_CertificateSerialNumber(
                                   value.serial,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

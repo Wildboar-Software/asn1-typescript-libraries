@@ -366,8 +366,8 @@ export function _encode_ControlOptions(
                                       _TagClass.context,
                                       0,
                                       () => _encode_ServiceControlOptions,
-                                      $.BER
-                                  )(value.serviceControls, $.BER),
+                                      $.DER
+                                  )(value.serviceControls, $.DER),
                             /* IF_DEFAULT */ value.searchOptions ===
                                 undefined ||
                             $.deepEq(
@@ -379,8 +379,8 @@ export function _encode_ControlOptions(
                                       _TagClass.context,
                                       1,
                                       () => _encode_SearchControlOptions,
-                                      $.BER
-                                  )(value.searchOptions, $.BER),
+                                      $.DER
+                                  )(value.searchOptions, $.DER),
                             /* IF_ABSENT  */ value.hierarchyOptions ===
                             undefined
                                 ? undefined
@@ -388,15 +388,15 @@ export function _encode_ControlOptions(
                                       _TagClass.context,
                                       2,
                                       () => _encode_HierarchySelections,
-                                      $.BER
-                                  )(value.hierarchyOptions, $.BER),
+                                      $.DER
+                                  )(value.hierarchyOptions, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -76,7 +76,7 @@ export function _encode_DisplayText(
                 bmpString: $._encodeBMPString,
                 utf8String: $._encodeUTF8String,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DisplayText(value, elGetter);

@@ -209,19 +209,19 @@ export function _encode_CertUpdateReq(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeSequenceOf<CertUpdateReq_certs_Item>(
                                 () => _encode_CertUpdateReq_certs_Item,
-                                $.BER
-                            )(value.certs, $.BER),
+                                $.DER
+                            )(value.certs, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

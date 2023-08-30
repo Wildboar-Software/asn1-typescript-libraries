@@ -98,7 +98,7 @@ export function _encode_RequestShadowUpdateResult(
                     _encode_RequestShadowUpdateResultData
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RequestShadowUpdateResult(value, elGetter);

@@ -92,16 +92,16 @@ export function _encode_Signer(value: Signer, elGetter: $.ASN1Encoder<Signer>) {
                     _TagClass.context,
                     0,
                     () => _encode_ThisEntry,
-                    $.BER
+                    $.DER
                 ),
                 thirdParty: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_SpecificallyIdentified,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Signer(value, elGetter);

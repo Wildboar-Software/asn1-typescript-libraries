@@ -278,34 +278,34 @@ export function _encode_EncryptedPduInfo(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.pduType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.encryptedKey === undefined
                                 ? undefined
                                 : _encode_EncryptedKey(
                                       value.encryptedKey,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.pduEncryptionAlgorithm ===
                             undefined
                                 ? undefined
                                 : _encode_EncryptedPduInfo_pduEncryptionAlgorithm(
                                       value.pduEncryptionAlgorithm,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 0,
                                 () => _encode_EncryptedPdu,
-                                $.BER
-                            )(value.encryptedPdu, $.BER),
+                                $.DER
+                            )(value.encryptedPdu, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

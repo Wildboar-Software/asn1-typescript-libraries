@@ -174,46 +174,46 @@ export function _encode_SPKMInnerContextToken(
                     _TagClass.context,
                     0,
                     () => _encode_SPKM_REQ,
-                    $.BER
+                    $.DER
                 ),
                 rep_ti: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_SPKM_REP_TI,
-                    $.BER
+                    $.DER
                 ),
                 rep_it: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_SPKM_REP_IT,
-                    $.BER
+                    $.DER
                 ),
                 error: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_SPKM_ERROR,
-                    $.BER
+                    $.DER
                 ),
                 mic: $._encode_implicit(
                     _TagClass.context,
                     4,
                     () => _encode_SPKM_MIC,
-                    $.BER
+                    $.DER
                 ),
                 wrap: $._encode_implicit(
                     _TagClass.context,
                     5,
                     () => _encode_SPKM_WRAP,
-                    $.BER
+                    $.DER
                 ),
                 del: $._encode_implicit(
                     _TagClass.context,
                     6,
                     () => _encode_SPKM_DEL,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SPKMInnerContextToken(value, elGetter);

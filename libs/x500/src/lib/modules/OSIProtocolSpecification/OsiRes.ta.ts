@@ -189,20 +189,20 @@ export function _encode_OsiRes(value: OsiRes, elGetter: $.ASN1Encoder<OsiRes>) {
                             .concat([
                                 /* REQUIRED   */ _encode_InvokeId(
                                     value.invokeId,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ _encode_OsiRes_result(
                                     value.result,
-                                    $.BER
+                                    $.DER
                                 ),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiRes(value, elGetter);

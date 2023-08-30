@@ -66,7 +66,7 @@ export function _encode_OWF_Algs(
     if (!_cached_encoder_for_OWF_Algs) {
         _cached_encoder_for_OWF_Algs = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OWF_Algs(value, elGetter);

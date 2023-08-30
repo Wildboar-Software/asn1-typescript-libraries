@@ -297,22 +297,22 @@ export function _encode_RequestShadowUpdateArgumentData(
                                 [
                                     /* REQUIRED   */ _encode_AgreementID(
                                         value.agreementID,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.lastUpdate ===
                                     undefined
                                         ? undefined
-                                        : _encode_Time(value.lastUpdate, $.BER),
+                                        : _encode_Time(value.lastUpdate, $.DER),
                                     /* REQUIRED   */ _encode_RequestShadowUpdateArgumentData_requestedStrategy(
                                         value.requestedStrategy,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.securityParameters ===
                                     undefined
                                         ? undefined
                                         : _encode_SecurityParameters(
                                               value.securityParameters,
-                                              $.BER
+                                              $.DER
                                           ),
                                 ],
                                 value._unrecognizedExtensionsList
@@ -322,10 +322,10 @@ export function _encode_RequestShadowUpdateArgumentData(
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RequestShadowUpdateArgumentData(value, elGetter);

@@ -250,27 +250,27 @@ export function _encode_BaseRevocationInfo(
                                       _TagClass.context,
                                       0,
                                       () => _encode_CRLStreamIdentifier,
-                                      $.BER
-                                  )(value.cRLStreamIdentifier, $.BER),
+                                      $.DER
+                                  )(value.cRLStreamIdentifier, $.DER),
                             /* REQUIRED   */ $._encode_implicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_CRLNumber,
-                                $.BER
-                            )(value.cRLNumber, $.BER),
+                                $.DER
+                            )(value.cRLNumber, $.DER),
                             /* REQUIRED   */ $._encode_implicit(
                                 _TagClass.context,
                                 2,
                                 () => $._encodeGeneralizedTime,
-                                $.BER
-                            )(value.baseThisUpdate, $.BER),
+                                $.DER
+                            )(value.baseThisUpdate, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

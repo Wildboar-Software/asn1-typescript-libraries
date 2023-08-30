@@ -66,7 +66,7 @@ export function _encode_SecondaryShadows(
     if (!_cached_encoder_for_SecondaryShadows) {
         _cached_encoder_for_SecondaryShadows = $._encodeSetOf<SupplierAndConsumers>(
             () => _encode_SupplierAndConsumers,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SecondaryShadows(value, elGetter);

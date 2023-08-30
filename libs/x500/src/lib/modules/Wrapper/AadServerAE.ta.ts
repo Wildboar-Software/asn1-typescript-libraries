@@ -372,19 +372,19 @@ export function _encode_AadServerAE(
                                       _TagClass.context,
                                       0,
                                       () => _encode_InvokeID,
-                                      $.BER
-                                  )(value.invokeID, $.BER),
+                                      $.DER
+                                  )(value.invokeID, $.DER),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_SequenceNumber(
                                 value.seq,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.reqRekey === undefined ||
                             $.deepEq(
@@ -396,8 +396,8 @@ export function _encode_AadServerAE(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.reqRekey, $.BER),
+                                      $.DER
+                                  )(value.reqRekey, $.DER),
                             /* IF_DEFAULT */ value.changedKey === undefined ||
                             $.deepEq(
                                 value.changedKey,
@@ -408,23 +408,23 @@ export function _encode_AadServerAE(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.changedKey, $.BER),
+                                      $.DER
+                                  )(value.changedKey, $.DER),
                             /* IF_ABSENT  */ value.encInvoke === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_AlgoInvoke,
-                                      $.BER
-                                  )(value.encInvoke, $.BER),
+                                      $.DER
+                                  )(value.encInvoke, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

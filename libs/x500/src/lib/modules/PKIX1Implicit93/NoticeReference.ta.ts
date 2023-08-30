@@ -185,15 +185,15 @@ export function _encode_NoticeReference(
                     .concat([
                         /* REQUIRED   */ _encode_DisplayText(
                             value.organization,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSequenceOf<INTEGER>(
                             () => $._encodeInteger,
-                            $.BER
-                        )(value.noticeNumbers, $.BER),
+                            $.DER
+                        )(value.noticeNumbers, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

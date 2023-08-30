@@ -95,7 +95,7 @@ export function _encode_CoordinateShadowUpdateArgumentData_updateStrategy(
                 standard: _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
                 other: $._encodeExternal,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CoordinateShadowUpdateArgumentData_updateStrategy(

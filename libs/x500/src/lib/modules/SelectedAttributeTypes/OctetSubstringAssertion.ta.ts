@@ -70,7 +70,7 @@ export function _encode_OctetSubstringAssertion(
     if (!_cached_encoder_for_OctetSubstringAssertion) {
         _cached_encoder_for_OctetSubstringAssertion = $._encodeSequenceOf<OctetSubstringAssertion_Item>(
             () => _encode_OctetSubstringAssertion_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OctetSubstringAssertion(value, elGetter);

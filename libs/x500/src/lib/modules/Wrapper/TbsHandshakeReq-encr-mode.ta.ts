@@ -100,18 +100,18 @@ export function _encode_TbsHandshakeReq_encr_mode(
                     () =>
                         $._encodeSequenceOf<AlgorithmIdentifier>(
                             () => _encode_AlgorithmIdentifier,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 non_aead: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_TbsHandshakeReq_encr_mode_non_aead,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TbsHandshakeReq_encr_mode(value, elGetter);

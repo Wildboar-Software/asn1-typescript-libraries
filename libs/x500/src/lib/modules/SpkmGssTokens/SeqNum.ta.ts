@@ -166,11 +166,11 @@ export function _encode_SeqNum(value: SeqNum, elGetter: $.ASN1Encoder<SeqNum>) {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.num, $.BER),
-                        /* REQUIRED   */ $._encodeBoolean(value.dir_ind, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.num, $.DER),
+                        /* REQUIRED   */ $._encodeBoolean(value.dir_ind, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

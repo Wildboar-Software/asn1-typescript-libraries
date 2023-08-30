@@ -169,7 +169,7 @@ export function _encode_CertReplaceErr(
                         [
                             /* REQUIRED   */ _encode_CertReplaceErr_code(
                                 value.code,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -177,7 +177,7 @@ export function _encode_CertReplaceErr(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

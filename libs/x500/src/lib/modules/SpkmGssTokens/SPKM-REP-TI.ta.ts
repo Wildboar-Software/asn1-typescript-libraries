@@ -202,17 +202,17 @@ export function _encode_SPKM_REP_TI(
                     .concat([
                         /* REQUIRED   */ _encode_REP_TI_TOKEN(
                             value.responseToken,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certif_data === undefined
                             ? undefined
                             : _encode_CertificationData(
                                   value.certif_data,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

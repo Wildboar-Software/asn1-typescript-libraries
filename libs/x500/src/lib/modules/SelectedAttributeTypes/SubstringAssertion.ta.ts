@@ -73,7 +73,7 @@ export function _encode_SubstringAssertion(
     if (!_cached_encoder_for_SubstringAssertion) {
         _cached_encoder_for_SubstringAssertion = $._encodeSequenceOf<SubstringAssertion_Item>(
             () => _encode_SubstringAssertion_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SubstringAssertion(value, elGetter);

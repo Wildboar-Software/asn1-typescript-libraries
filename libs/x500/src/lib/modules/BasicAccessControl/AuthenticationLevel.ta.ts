@@ -85,7 +85,7 @@ export function _encode_AuthenticationLevel(
                 basicLevels: _encode_AuthenticationLevel_basicLevels,
                 other: $._encodeExternal,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AuthenticationLevel(value, elGetter);

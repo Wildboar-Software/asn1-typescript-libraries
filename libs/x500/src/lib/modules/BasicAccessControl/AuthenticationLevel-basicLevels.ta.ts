@@ -256,25 +256,25 @@ export function _encode_AuthenticationLevel_basicLevels(
                         [
                             /* REQUIRED   */ _encode_AuthenticationLevel_basicLevels_level(
                                 value.level,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.localQualifier === undefined
                                 ? undefined
-                                : $._encodeInteger(value.localQualifier, $.BER),
+                                : $._encodeInteger(value.localQualifier, $.DER),
                             /* IF_DEFAULT */ value.signed === undefined ||
                             $.deepEq(
                                 value.signed,
                                 AuthenticationLevel_basicLevels._default_value_for_signed
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.signed, $.BER),
+                                : $._encodeBoolean(value.signed, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

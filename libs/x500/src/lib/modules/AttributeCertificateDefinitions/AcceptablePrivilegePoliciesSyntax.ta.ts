@@ -66,7 +66,7 @@ export function _encode_AcceptablePrivilegePoliciesSyntax(
     if (!_cached_encoder_for_AcceptablePrivilegePoliciesSyntax) {
         _cached_encoder_for_AcceptablePrivilegePoliciesSyntax = $._encodeSequenceOf<PrivilegePolicy>(
             () => _encode_PrivilegePolicy,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AcceptablePrivilegePoliciesSyntax(

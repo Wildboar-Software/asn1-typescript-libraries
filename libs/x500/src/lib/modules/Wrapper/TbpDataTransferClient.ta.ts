@@ -358,19 +358,19 @@ export function _encode_TbpDataTransferClient(
                                       _TagClass.context,
                                       0,
                                       () => _encode_InvokeID,
-                                      $.BER
-                                  )(value.invokeID, $.BER),
+                                      $.DER
+                                  )(value.invokeID, $.DER),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_SequenceNumber(
                                 value.seq,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.keyEst === undefined
                                 ? undefined
@@ -378,19 +378,19 @@ export function _encode_TbpDataTransferClient(
                                       _TagClass.context,
                                       2,
                                       () => _encode_AlgoInvoke,
-                                      $.BER
-                                  )(value.keyEst, $.BER),
+                                      $.DER
+                                  )(value.keyEst, $.DER),
                             /* IF_ABSENT  */ value.encEnvoke === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_AlgoInvoke,
-                                      $.BER
-                                  )(value.encEnvoke, $.BER),
+                                      $.DER
+                                  )(value.encEnvoke, $.DER),
                             /* REQUIRED   */ _encode_TbpDataTransferClient_conf(
                                 value.conf,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -398,7 +398,7 @@ export function _encode_TbpDataTransferClient(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -66,7 +66,7 @@ export function _encode_CRLDistPointsSyntax(
     if (!_cached_encoder_for_CRLDistPointsSyntax) {
         _cached_encoder_for_CRLDistPointsSyntax = $._encodeSequenceOf<DistributionPoint>(
             () => _encode_DistributionPoint,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CRLDistPointsSyntax(value, elGetter);

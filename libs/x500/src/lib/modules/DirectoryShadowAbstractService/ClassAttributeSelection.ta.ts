@@ -208,7 +208,7 @@ export function _encode_ClassAttributeSelection(
                     .concat([
                         /* IF_ABSENT  */ value.class_ === undefined
                             ? undefined
-                            : $._encodeObjectIdentifier(value.class_, $.BER),
+                            : $._encodeObjectIdentifier(value.class_, $.DER),
                         /* IF_DEFAULT */ value.classAttributes === undefined ||
                         $.deepEq(
                             value.classAttributes,
@@ -217,11 +217,11 @@ export function _encode_ClassAttributeSelection(
                             ? undefined
                             : _encode_ClassAttributes(
                                   value.classAttributes,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

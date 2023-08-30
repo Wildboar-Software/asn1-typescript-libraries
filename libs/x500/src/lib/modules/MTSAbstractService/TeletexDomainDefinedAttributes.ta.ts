@@ -68,7 +68,7 @@ export function _encode_TeletexDomainDefinedAttributes(
     if (!_cached_encoder_for_TeletexDomainDefinedAttributes) {
         _cached_encoder_for_TeletexDomainDefinedAttributes = $._encodeSequenceOf<TeletexDomainDefinedAttribute>(
             () => _encode_TeletexDomainDefinedAttribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TeletexDomainDefinedAttributes(value, elGetter);

@@ -74,7 +74,7 @@ export function _encode_AttributeMappings(
     if (!_cached_encoder_for_AttributeMappings) {
         _cached_encoder_for_AttributeMappings = $._encodeSetOf<AttributeMappings_Item>(
             () => _encode_AttributeMappings_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributeMappings(value, elGetter);

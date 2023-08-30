@@ -66,7 +66,7 @@ export function _encode_AttCertPath(
     if (!_cached_encoder_for_AttCertPath) {
         _cached_encoder_for_AttCertPath = $._encodeSequenceOf<AttributeCertificate>(
             () => _encode_AttributeCertificate,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttCertPath(value, elGetter);

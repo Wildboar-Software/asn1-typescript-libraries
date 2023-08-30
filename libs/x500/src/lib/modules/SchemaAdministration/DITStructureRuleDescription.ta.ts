@@ -333,19 +333,19 @@ export function _encode_DITStructureRuleDescription(
                         [
                             /* REQUIRED   */ _encode_RuleIdentifier(
                                 value.ruleIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.nameForm,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.superiorStructureRules ===
                             undefined
                                 ? undefined
                                 : $._encodeSetOf<RuleIdentifier>(
                                       () => _encode_RuleIdentifier,
-                                      $.BER
-                                  )(value.superiorStructureRules, $.BER),
+                                      $.DER
+                                  )(value.superiorStructureRules, $.DER),
                             /* IF_ABSENT  */ value.name === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -355,15 +355,15 @@ export function _encode_DITStructureRuleDescription(
                                           $._encodeSetOf<UnboundedDirectoryString>(
                                               () =>
                                                   _encode_UnboundedDirectoryString,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.name, $.BER),
+                                      $.DER
+                                  )(value.name, $.DER),
                             /* IF_ABSENT  */ value.description === undefined
                                 ? undefined
                                 : _encode_UnboundedDirectoryString(
                                       value.description,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_DEFAULT */ value.obsolete === undefined ||
                             $.deepEq(
@@ -371,14 +371,14 @@ export function _encode_DITStructureRuleDescription(
                                 DITStructureRuleDescription._default_value_for_obsolete
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.obsolete, $.BER),
+                                : $._encodeBoolean(value.obsolete, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

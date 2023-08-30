@@ -99,9 +99,9 @@ export function _encode_ContentChange_attributeChanges(
                     () =>
                         $._encodeSetOf<Attribute>(
                             () => _encode_Attribute,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 changes: $._encode_implicit(
                     _TagClass.context,
@@ -109,12 +109,12 @@ export function _encode_ContentChange_attributeChanges(
                     () =>
                         $._encodeSequenceOf<EntryModification>(
                             () => _encode_EntryModification,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ContentChange_attributeChanges(value, elGetter);

@@ -399,10 +399,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                       $._encodeSequenceOf<DITStructureRuleDescription>(
                                           () =>
                                               _encode_DITStructureRuleDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.structureRules, $.BER),
+                                  $.DER
+                              )(value.structureRules, $.DER),
                         /* IF_ABSENT  */ value.contentRules === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -412,10 +412,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                       $._encodeSequenceOf<DITContentRuleDescription>(
                                           () =>
                                               _encode_DITContentRuleDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.contentRules, $.BER),
+                                  $.DER
+                              )(value.contentRules, $.DER),
                         /* IF_ABSENT  */ value.matchingRules === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -424,10 +424,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                   () =>
                                       $._encodeSequenceOf<MatchingRuleDescription>(
                                           () => _encode_MatchingRuleDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.matchingRules, $.BER),
+                                  $.DER
+                              )(value.matchingRules, $.DER),
                         /* IF_ABSENT  */ value.attributeTypes === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -437,10 +437,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                       $._encodeSequenceOf<AttributeTypeDescription>(
                                           () =>
                                               _encode_AttributeTypeDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.attributeTypes, $.BER),
+                                  $.DER
+                              )(value.attributeTypes, $.DER),
                         /* IF_ABSENT  */ value.objectClasses === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -449,10 +449,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                   () =>
                                       $._encodeSequenceOf<ObjectClassDescription>(
                                           () => _encode_ObjectClassDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.objectClasses, $.BER),
+                                  $.DER
+                              )(value.objectClasses, $.DER),
                         /* IF_ABSENT  */ value.nameForms === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -461,10 +461,10 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                   () =>
                                       $._encodeSequenceOf<NameFormDescription>(
                                           () => _encode_NameFormDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.nameForms, $.BER),
+                                  $.DER
+                              )(value.nameForms, $.DER),
                         /* IF_ABSENT  */ value.matchRuleUses === undefined
                             ? undefined
                             : $._encode_explicit(
@@ -474,13 +474,13 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
                                       $._encodeSequenceOf<MatchingRuleUseDescription>(
                                           () =>
                                               _encode_MatchingRuleUseDescription,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.matchRuleUses, $.BER),
+                                  $.DER
+                              )(value.matchRuleUses, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

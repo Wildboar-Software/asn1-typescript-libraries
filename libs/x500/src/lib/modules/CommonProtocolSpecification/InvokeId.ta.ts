@@ -66,7 +66,7 @@ export function _encode_InvokeId(
                 present: $._encodeInteger,
                 absent: $._encodeNull,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_InvokeId(value, elGetter);

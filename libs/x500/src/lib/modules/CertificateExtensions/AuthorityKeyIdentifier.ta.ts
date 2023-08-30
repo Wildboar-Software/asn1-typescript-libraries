@@ -262,8 +262,8 @@ export function _encode_AuthorityKeyIdentifier(
                                       _TagClass.context,
                                       0,
                                       () => _encode_KeyIdentifier,
-                                      $.BER
-                                  )(value.keyIdentifier, $.BER),
+                                      $.DER
+                                  )(value.keyIdentifier, $.DER),
                             /* IF_ABSENT  */ value.authorityCertIssuer ===
                             undefined
                                 ? undefined
@@ -271,8 +271,8 @@ export function _encode_AuthorityKeyIdentifier(
                                       _TagClass.context,
                                       1,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.authorityCertIssuer, $.BER),
+                                      $.DER
+                                  )(value.authorityCertIssuer, $.DER),
                             /* IF_ABSENT  */ value.authorityCertSerialNumber ===
                             undefined
                                 ? undefined
@@ -280,15 +280,15 @@ export function _encode_AuthorityKeyIdentifier(
                                       _TagClass.context,
                                       2,
                                       () => _encode_CertificateSerialNumber,
-                                      $.BER
-                                  )(value.authorityCertSerialNumber, $.BER),
+                                      $.DER
+                                  )(value.authorityCertSerialNumber, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

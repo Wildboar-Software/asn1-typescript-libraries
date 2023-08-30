@@ -66,7 +66,7 @@ export function _encode_CertPolicySet(
     if (!_cached_encoder_for_CertPolicySet) {
         _cached_encoder_for_CertPolicySet = $._encodeSequenceOf<CertPolicyId>(
             () => _encode_CertPolicyId,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertPolicySet(value, elGetter);

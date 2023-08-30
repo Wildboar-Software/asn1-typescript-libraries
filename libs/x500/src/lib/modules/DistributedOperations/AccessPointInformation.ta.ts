@@ -396,14 +396,14 @@ export function _encode_AccessPointInformation(
                                 _TagClass.context,
                                 0,
                                 () => _encode_Name,
-                                $.BER
-                            )(value.ae_title, $.BER),
+                                $.DER
+                            )(value.ae_title, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_PresentationAddress,
-                                $.BER
-                            )(value.address, $.BER),
+                                $.DER
+                            )(value.address, $.DER),
                             /* IF_ABSENT  */ value.protocolInformation ===
                             undefined
                                 ? undefined
@@ -413,10 +413,10 @@ export function _encode_AccessPointInformation(
                                       () =>
                                           $._encodeSetOf<ProtocolInformation>(
                                               () => _encode_ProtocolInformation,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.protocolInformation, $.BER),
+                                      $.DER
+                                  )(value.protocolInformation, $.DER),
                             /* IF_DEFAULT */ value.category === undefined ||
                             $.deepEq(
                                 value.category,
@@ -428,8 +428,8 @@ export function _encode_AccessPointInformation(
                                       3,
                                       () =>
                                           _encode_MasterOrShadowAccessPoint_category,
-                                      $.BER
-                                  )(value.category, $.BER),
+                                      $.DER
+                                  )(value.category, $.DER),
                             /* IF_DEFAULT */ value.chainingRequired ===
                                 undefined ||
                             $.deepEq(
@@ -441,8 +441,8 @@ export function _encode_AccessPointInformation(
                                       _TagClass.context,
                                       5,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.chainingRequired, $.BER),
+                                      $.DER
+                                  )(value.chainingRequired, $.DER),
                             /* IF_ABSENT  */ value.additionalPoints ===
                             undefined
                                 ? undefined
@@ -450,15 +450,15 @@ export function _encode_AccessPointInformation(
                                       _TagClass.context,
                                       4,
                                       () => _encode_MasterAndShadowAccessPoints,
-                                      $.BER
-                                  )(value.additionalPoints, $.BER),
+                                      $.DER
+                                  )(value.additionalPoints, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

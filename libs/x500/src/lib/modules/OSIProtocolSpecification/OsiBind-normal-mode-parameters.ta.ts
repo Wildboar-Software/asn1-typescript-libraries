@@ -319,8 +319,8 @@ export function _encode_OsiBind_normal_mode_parameters(
                                   0,
                                   () =>
                                       _encode_OsiBind_normal_mode_parameters_protocol_version,
-                                  $.BER
-                              )(value.protocol_version, $.BER),
+                                  $.DER
+                              )(value.protocol_version, $.DER),
                         /* IF_ABSENT  */ value.calling_presentation_selector ===
                         undefined
                             ? undefined
@@ -328,8 +328,8 @@ export function _encode_OsiBind_normal_mode_parameters(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Presentation_selector,
-                                  $.BER
-                              )(value.calling_presentation_selector, $.BER),
+                                  $.DER
+                              )(value.calling_presentation_selector, $.DER),
                         /* IF_ABSENT  */ value.called_presentation_selector ===
                         undefined
                             ? undefined
@@ -337,21 +337,21 @@ export function _encode_OsiBind_normal_mode_parameters(
                                   _TagClass.context,
                                   2,
                                   () => _encode_Presentation_selector,
-                                  $.BER
-                              )(value.called_presentation_selector, $.BER),
+                                  $.DER
+                              )(value.called_presentation_selector, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             4,
                             () => _encode_Context_list,
-                            $.BER
-                        )(value.presentation_context_definition_list, $.BER),
+                            $.DER
+                        )(value.presentation_context_definition_list, $.DER),
                         /* REQUIRED   */ _encode_OsiBind_normal_mode_parameters_user_data(
                             value.user_data,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

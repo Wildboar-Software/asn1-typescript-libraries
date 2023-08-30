@@ -87,22 +87,22 @@ export function _encode_OctetSubstringAssertion_Item(
                     _TagClass.context,
                     0,
                     () => $._encodeOctetString,
-                    $.BER
+                    $.DER
                 ),
                 any_: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => $._encodeOctetString,
-                    $.BER
+                    $.DER
                 ),
                 final: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => $._encodeOctetString,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OctetSubstringAssertion_Item(value, elGetter);

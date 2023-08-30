@@ -270,7 +270,7 @@ export function _encode_SupportedAlgorithm(
                         [
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.algorithmIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.intendedUsage === undefined
                                 ? undefined
@@ -278,8 +278,8 @@ export function _encode_SupportedAlgorithm(
                                       _TagClass.context,
                                       0,
                                       () => _encode_KeyUsage,
-                                      $.BER
-                                  )(value.intendedUsage, $.BER),
+                                      $.DER
+                                  )(value.intendedUsage, $.DER),
                             /* IF_ABSENT  */ value.intendedCertificatePolicies ===
                             undefined
                                 ? undefined
@@ -287,15 +287,15 @@ export function _encode_SupportedAlgorithm(
                                       _TagClass.context,
                                       1,
                                       () => _encode_CertificatePoliciesSyntax,
-                                      $.BER
-                                  )(value.intendedCertificatePolicies, $.BER),
+                                      $.DER
+                                  )(value.intendedCertificatePolicies, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

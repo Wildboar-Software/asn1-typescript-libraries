@@ -220,22 +220,22 @@ export function _encode_CertificationPath(
                         [
                             /* REQUIRED   */ _encode_Certificate(
                                 value.userCertificate,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.theCACertificates ===
                             undefined
                                 ? undefined
                                 : $._encodeSequenceOf<CertificatePair>(
                                       () => _encode_CertificatePair,
-                                      $.BER
-                                  )(value.theCACertificates, $.BER),
+                                      $.DER
+                                  )(value.theCACertificates, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

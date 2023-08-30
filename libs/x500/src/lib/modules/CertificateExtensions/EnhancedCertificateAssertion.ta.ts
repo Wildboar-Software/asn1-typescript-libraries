@@ -569,16 +569,16 @@ export function _encode_EnhancedCertificateAssertion(
                                       _TagClass.context,
                                       0,
                                       () => _encode_CertificateSerialNumber,
-                                      $.BER
-                                  )(value.serialNumber, $.BER),
+                                      $.DER
+                                  )(value.serialNumber, $.DER),
                             /* IF_ABSENT  */ value.issuer === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_Name,
-                                      $.BER
-                                  )(value.issuer, $.BER),
+                                      $.DER
+                                  )(value.issuer, $.DER),
                             /* IF_ABSENT  */ value.subjectKeyIdentifier ===
                             undefined
                                 ? undefined
@@ -586,8 +586,8 @@ export function _encode_EnhancedCertificateAssertion(
                                       _TagClass.context,
                                       2,
                                       () => _encode_SubjectKeyIdentifier,
-                                      $.BER
-                                  )(value.subjectKeyIdentifier, $.BER),
+                                      $.DER
+                                  )(value.subjectKeyIdentifier, $.DER),
                             /* IF_ABSENT  */ value.authorityKeyIdentifier ===
                             undefined
                                 ? undefined
@@ -595,8 +595,8 @@ export function _encode_EnhancedCertificateAssertion(
                                       _TagClass.context,
                                       3,
                                       () => _encode_AuthorityKeyIdentifier,
-                                      $.BER
-                                  )(value.authorityKeyIdentifier, $.BER),
+                                      $.DER
+                                  )(value.authorityKeyIdentifier, $.DER),
                             /* IF_ABSENT  */ value.certificateValid ===
                             undefined
                                 ? undefined
@@ -604,16 +604,16 @@ export function _encode_EnhancedCertificateAssertion(
                                       _TagClass.context,
                                       4,
                                       () => _encode_Time,
-                                      $.BER
-                                  )(value.certificateValid, $.BER),
+                                      $.DER
+                                  )(value.certificateValid, $.DER),
                             /* IF_ABSENT  */ value.privateKeyValid === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       5,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.privateKeyValid, $.BER),
+                                      $.DER
+                                  )(value.privateKeyValid, $.DER),
                             /* IF_ABSENT  */ value.subjectPublicKeyAlgID ===
                             undefined
                                 ? undefined
@@ -621,63 +621,63 @@ export function _encode_EnhancedCertificateAssertion(
                                       _TagClass.context,
                                       6,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.subjectPublicKeyAlgID, $.BER),
+                                      $.DER
+                                  )(value.subjectPublicKeyAlgID, $.DER),
                             /* IF_ABSENT  */ value.keyUsage === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       7,
                                       () => _encode_KeyUsage,
-                                      $.BER
-                                  )(value.keyUsage, $.BER),
+                                      $.DER
+                                  )(value.keyUsage, $.DER),
                             /* IF_ABSENT  */ value.subjectAltName === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       8,
                                       () => _encode_AltName,
-                                      $.BER
-                                  )(value.subjectAltName, $.BER),
+                                      $.DER
+                                  )(value.subjectAltName, $.DER),
                             /* IF_ABSENT  */ value.policy === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       9,
                                       () => _encode_CertPolicySet,
-                                      $.BER
-                                  )(value.policy, $.BER),
+                                      $.DER
+                                  )(value.policy, $.DER),
                             /* IF_ABSENT  */ value.pathToName === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       10,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.pathToName, $.BER),
+                                      $.DER
+                                  )(value.pathToName, $.DER),
                             /* IF_ABSENT  */ value.subject === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       11,
                                       () => _encode_Name,
-                                      $.BER
-                                  )(value.subject, $.BER),
+                                      $.DER
+                                  )(value.subject, $.DER),
                             /* IF_ABSENT  */ value.nameConstraints === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       12,
                                       () => _encode_NameConstraintsSyntax,
-                                      $.BER
-                                  )(value.nameConstraints, $.BER),
+                                      $.DER
+                                  )(value.nameConstraints, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

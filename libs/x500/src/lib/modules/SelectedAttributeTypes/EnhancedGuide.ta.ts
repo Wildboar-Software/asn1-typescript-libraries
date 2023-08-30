@@ -269,14 +269,14 @@ export function _encode_EnhancedGuide(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.objectClass, $.BER),
+                                $.DER
+                            )(value.objectClass, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_Criteria,
-                                $.BER
-                            )(value.criteria, $.BER),
+                                $.DER
+                            )(value.criteria, $.DER),
                             /* IF_DEFAULT */ value.subset === undefined ||
                             $.deepEq(
                                 value.subset,
@@ -287,15 +287,15 @@ export function _encode_EnhancedGuide(
                                       _TagClass.context,
                                       2,
                                       () => _encode_EnhancedGuide_subset,
-                                      $.BER
-                                  )(value.subset, $.BER),
+                                      $.DER
+                                  )(value.subset, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

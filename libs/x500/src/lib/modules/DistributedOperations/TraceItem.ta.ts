@@ -242,29 +242,29 @@ export function _encode_TraceItem(
                                 _TagClass.context,
                                 0,
                                 () => _encode_Name,
-                                $.BER
-                            )(value.dsa, $.BER),
+                                $.DER
+                            )(value.dsa, $.DER),
                             /* IF_ABSENT  */ value.targetObject === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_Name,
-                                      $.BER
-                                  )(value.targetObject, $.BER),
+                                      $.DER
+                                  )(value.targetObject, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => _encode_OperationProgress,
-                                $.BER
-                            )(value.operationProgress, $.BER),
+                                $.DER
+                            )(value.operationProgress, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

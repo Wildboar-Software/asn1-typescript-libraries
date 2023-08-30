@@ -228,10 +228,10 @@ export function _encode_MRMapping(
                                       () =>
                                           $._encodeSequenceOf<Mapping>(
                                               () => _encode_Mapping,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.mapping, $.BER),
+                                      $.DER
+                                  )(value.mapping, $.DER),
                             /* IF_ABSENT  */ value.substitution === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -240,17 +240,17 @@ export function _encode_MRMapping(
                                       () =>
                                           $._encodeSequenceOf<MRSubstitution>(
                                               () => _encode_MRSubstitution,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.substitution, $.BER),
+                                      $.DER
+                                  )(value.substitution, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

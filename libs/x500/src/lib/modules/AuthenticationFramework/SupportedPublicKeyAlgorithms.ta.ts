@@ -245,11 +245,11 @@ export function _encode_SupportedPublicKeyAlgorithms(
                         [
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.algorithmIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.minKeySize,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.extensions === undefined
                                 ? undefined
@@ -259,17 +259,17 @@ export function _encode_SupportedPublicKeyAlgorithms(
                                       () =>
                                           $._encodeSequenceOf<OidOrAttr>(
                                               () => _encode_OidOrAttr,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.extensions, $.BER),
+                                      $.DER
+                                  )(value.extensions, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

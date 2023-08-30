@@ -272,19 +272,19 @@ export function _encode_ACIItem(
                         [
                             /* REQUIRED   */ _encode_UnboundedDirectoryString(
                                 value.identificationTag,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_Precedence(
                                 value.precedence,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AuthenticationLevel(
                                 value.authenticationLevel,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_ACIItem_itemOrUserFirst(
                                 value.itemOrUserFirst,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -292,7 +292,7 @@ export function _encode_ACIItem(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

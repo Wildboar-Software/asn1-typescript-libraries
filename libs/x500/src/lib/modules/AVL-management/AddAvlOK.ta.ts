@@ -158,13 +158,13 @@ export function _encode_AddAvlOK(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(
-                        [/* REQUIRED   */ $._encodeNull(value.ok, $.BER)],
+                        [/* REQUIRED   */ $._encodeNull(value.ok, $.DER)],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

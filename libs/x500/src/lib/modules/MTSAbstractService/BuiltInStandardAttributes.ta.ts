@@ -440,13 +440,13 @@ export function _encode_BuiltInStandardAttributes(
                     .concat([
                         /* IF_ABSENT  */ value.country_name === undefined
                             ? undefined
-                            : _encode_CountryName(value.country_name, $.BER),
+                            : _encode_CountryName(value.country_name, $.DER),
                         /* IF_ABSENT  */ value.administration_domain_name ===
                         undefined
                             ? undefined
                             : _encode_AdministrationDomainName(
                                   value.administration_domain_name,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.network_address === undefined
                             ? undefined
@@ -454,32 +454,32 @@ export function _encode_BuiltInStandardAttributes(
                                   _TagClass.context,
                                   0,
                                   () => _encode_NetworkAddress,
-                                  $.BER
-                              )(value.network_address, $.BER),
+                                  $.DER
+                              )(value.network_address, $.DER),
                         /* IF_ABSENT  */ value.terminal_identifier === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_TerminalIdentifier,
-                                  $.BER
-                              )(value.terminal_identifier, $.BER),
+                                  $.DER
+                              )(value.terminal_identifier, $.DER),
                         /* IF_ABSENT  */ value.private_domain_name === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   2,
                                   () => _encode_PrivateDomainName,
-                                  $.BER
-                              )(value.private_domain_name, $.BER),
+                                  $.DER
+                              )(value.private_domain_name, $.DER),
                         /* IF_ABSENT  */ value.organization_name === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   3,
                                   () => _encode_OrganizationName,
-                                  $.BER
-                              )(value.organization_name, $.BER),
+                                  $.DER
+                              )(value.organization_name, $.DER),
                         /* IF_ABSENT  */ value.numeric_user_identifier ===
                         undefined
                             ? undefined
@@ -487,16 +487,16 @@ export function _encode_BuiltInStandardAttributes(
                                   _TagClass.context,
                                   4,
                                   () => _encode_NumericUserIdentifier,
-                                  $.BER
-                              )(value.numeric_user_identifier, $.BER),
+                                  $.DER
+                              )(value.numeric_user_identifier, $.DER),
                         /* IF_ABSENT  */ value.personal_name === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   5,
                                   () => _encode_PersonalName,
-                                  $.BER
-                              )(value.personal_name, $.BER),
+                                  $.DER
+                              )(value.personal_name, $.DER),
                         /* IF_ABSENT  */ value.organizational_unit_names ===
                         undefined
                             ? undefined
@@ -504,11 +504,11 @@ export function _encode_BuiltInStandardAttributes(
                                   _TagClass.context,
                                   6,
                                   () => _encode_OrganizationalUnitNames,
-                                  $.BER
-                              )(value.organizational_unit_names, $.BER),
+                                  $.DER
+                              )(value.organizational_unit_names, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

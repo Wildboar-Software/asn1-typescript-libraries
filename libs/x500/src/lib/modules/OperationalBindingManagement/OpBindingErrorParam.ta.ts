@@ -453,16 +453,16 @@ export function _encode_OpBindingErrorParam(
                                 _TagClass.context,
                                 0,
                                 () => _encode_OpBindingErrorParam_problem,
-                                $.BER
-                            )(value.problem, $.BER),
+                                $.DER
+                            )(value.problem, $.DER),
                             /* IF_ABSENT  */ value.bindingType === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.bindingType, $.BER),
+                                      $.DER
+                                  )(value.bindingType, $.DER),
                             /* IF_ABSENT  */ value.agreementProposal ===
                             undefined
                                 ? undefined
@@ -470,16 +470,16 @@ export function _encode_OpBindingErrorParam(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeAny,
-                                      $.BER
-                                  )(value.agreementProposal, $.BER),
+                                      $.DER
+                                  )(value.agreementProposal, $.DER),
                             /* IF_ABSENT  */ value.retryAt === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_Time,
-                                      $.BER
-                                  )(value.retryAt, $.BER),
+                                      $.DER
+                                  )(value.retryAt, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
@@ -492,16 +492,16 @@ export function _encode_OpBindingErrorParam(
                                       _TagClass.context,
                                       30,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                             /* IF_ABSENT  */ value.performer === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       29,
                                       () => _encode_DistinguishedName,
-                                      $.BER
-                                  )(value.performer, $.BER),
+                                      $.DER
+                                  )(value.performer, $.DER),
                             /* IF_DEFAULT */ value.aliasDereferenced ===
                                 undefined ||
                             $.deepEq(
@@ -513,8 +513,8 @@ export function _encode_OpBindingErrorParam(
                                       _TagClass.context,
                                       28,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.aliasDereferenced, $.BER),
+                                      $.DER
+                                  )(value.aliasDereferenced, $.DER),
                             /* IF_ABSENT  */ value.notification === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -523,14 +523,14 @@ export function _encode_OpBindingErrorParam(
                                       () =>
                                           $._encodeSequenceOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.notification, $.BER),
+                                      $.DER
+                                  )(value.notification, $.DER),
                         ]
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

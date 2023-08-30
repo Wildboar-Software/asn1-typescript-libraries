@@ -173,16 +173,16 @@ export function _encode_WrappedProt(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.id,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ $._encodeAny(value.prot, $.BER),
+                            /* REQUIRED   */ $._encodeAny(value.prot, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

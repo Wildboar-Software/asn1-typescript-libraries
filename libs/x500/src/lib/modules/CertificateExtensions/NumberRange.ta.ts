@@ -225,26 +225,26 @@ export function _encode_NumberRange(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeBigInt,
-                                      $.BER
-                                  )(value.startingNumber, $.BER),
+                                      $.DER
+                                  )(value.startingNumber, $.DER),
                             /* IF_ABSENT  */ value.endingNumber === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeBigInt,
-                                      $.BER
-                                  )(value.endingNumber, $.BER),
+                                      $.DER
+                                  )(value.endingNumber, $.DER),
                             /* IF_ABSENT  */ value.modulus === undefined
                                 ? undefined
-                                : $._encodeBigInt(value.modulus, $.BER),
+                                : $._encodeBigInt(value.modulus, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

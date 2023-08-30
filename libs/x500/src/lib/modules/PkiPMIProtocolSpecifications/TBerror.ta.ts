@@ -245,18 +245,18 @@ export function _encode_TBerror(
                         [
                             /* REQUIRED   */ _encode_TBerror_code(
                                 value.code,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.diagnostic === undefined
                                 ? undefined
-                                : $._encodeUTF8String(value.diagnostic, $.BER),
+                                : $._encodeUTF8String(value.diagnostic, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

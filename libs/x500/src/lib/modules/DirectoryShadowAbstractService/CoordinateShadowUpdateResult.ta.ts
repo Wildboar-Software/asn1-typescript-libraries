@@ -97,7 +97,7 @@ export function _encode_CoordinateShadowUpdateResult(
                     _encode_CoordinateShadowUpdateResultData
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CoordinateShadowUpdateResult(value, elGetter);

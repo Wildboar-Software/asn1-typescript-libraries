@@ -322,27 +322,27 @@ export function _encode_CRLReferral(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.issuer, $.BER),
+                                      $.DER
+                                  )(value.issuer, $.DER),
                             /* IF_ABSENT  */ value.location === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.location, $.BER),
+                                      $.DER
+                                  )(value.location, $.DER),
                             /* IF_ABSENT  */ value.deltaRefInfo === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       2,
                                       () => _encode_DeltaRefInfo,
-                                      $.BER
-                                  )(value.deltaRefInfo, $.BER),
+                                      $.DER
+                                  )(value.deltaRefInfo, $.DER),
                             /* REQUIRED   */ _encode_CRLScopeSyntax(
                                 value.cRLScope,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.lastUpdate === undefined
                                 ? undefined
@@ -350,23 +350,23 @@ export function _encode_CRLReferral(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.lastUpdate, $.BER),
+                                      $.DER
+                                  )(value.lastUpdate, $.DER),
                             /* IF_ABSENT  */ value.lastChangedCRL === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.lastChangedCRL, $.BER),
+                                      $.DER
+                                  )(value.lastChangedCRL, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

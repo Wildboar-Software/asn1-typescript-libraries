@@ -238,14 +238,14 @@ export function _encode_CertUpdateReq_certs_Item(
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ _encode_Name(value.subject, $.BER),
+                            /* REQUIRED   */ _encode_Name(value.subject, $.DER),
                             /* REQUIRED   */ _encode_CertificateSerialNumber(
                                 value.serialNumber,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertStatus(
                                 value.certStatus,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -253,7 +253,7 @@ export function _encode_CertUpdateReq_certs_Item(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -96,7 +96,7 @@ export function _encode_PreferredDeliveryMethod(
     if (!_cached_encoder_for_PreferredDeliveryMethod) {
         _cached_encoder_for_PreferredDeliveryMethod = $._encodeSequenceOf<PreferredDeliveryMethod_Item>(
             () => _encode_PreferredDeliveryMethod_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PreferredDeliveryMethod(value, elGetter);

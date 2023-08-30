@@ -180,15 +180,15 @@ export function _encode_ModificationParameter(
                         [
                             /* REQUIRED   */ $._encodeSetOf<SupplierAndConsumers>(
                                 () => _encode_SupplierAndConsumers,
-                                $.BER
-                            )(value.secondaryShadows, $.BER),
+                                $.DER
+                            )(value.secondaryShadows, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

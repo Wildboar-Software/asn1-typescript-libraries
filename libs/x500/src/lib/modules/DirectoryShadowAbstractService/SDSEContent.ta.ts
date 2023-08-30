@@ -316,7 +316,7 @@ export function _encode_SDSEContent(
                         [
                             /* REQUIRED   */ _encode_SDSEType(
                                 value.sDSEType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.subComplete === undefined ||
                             $.deepEq(
@@ -328,20 +328,20 @@ export function _encode_SDSEContent(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.subComplete, $.BER),
+                                      $.DER
+                                  )(value.subComplete, $.DER),
                             /* IF_ABSENT  */ value.attComplete === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.attComplete, $.BER),
+                                      $.DER
+                                  )(value.attComplete, $.DER),
                             /* REQUIRED   */ $._encodeSetOf<Attribute>(
                                 () => _encode_Attribute,
-                                $.BER
-                            )(value.attributes, $.BER),
+                                $.DER
+                            )(value.attributes, $.DER),
                             /* IF_DEFAULT */ value.attValIncomplete ===
                                 undefined ||
                             $.deepEq(
@@ -351,15 +351,15 @@ export function _encode_SDSEContent(
                                 ? undefined
                                 : $._encodeSetOf<AttributeType>(
                                       () => _encode_AttributeType,
-                                      $.BER
-                                  )(value.attValIncomplete, $.BER),
+                                      $.DER
+                                  )(value.attValIncomplete, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

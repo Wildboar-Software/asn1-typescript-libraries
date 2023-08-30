@@ -75,10 +75,10 @@ export function _encode_OsiBindResult_normal_mode_parameters_user_data_fully_enc
                     _TagClass.context,
                     0,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiBindResult_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(

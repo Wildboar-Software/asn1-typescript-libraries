@@ -209,25 +209,25 @@ export function _encode_SubentryInfo(
                                 _TagClass.context,
                                 0,
                                 () => _encode_RelativeDistinguishedName,
-                                $.BER
-                            )(value.rdn, $.BER),
+                                $.DER
+                            )(value.rdn, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () =>
                                     $._encodeSetOf<Attribute>(
                                         () => _encode_Attribute,
-                                        $.BER
+                                        $.DER
                                     ),
-                                $.BER
-                            )(value.info, $.BER),
+                                $.DER
+                            )(value.info, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

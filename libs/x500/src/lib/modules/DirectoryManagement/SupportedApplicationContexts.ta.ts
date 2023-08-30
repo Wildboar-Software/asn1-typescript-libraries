@@ -56,7 +56,7 @@ export function _encode_SupportedApplicationContexts(
     if (!_cached_encoder_for_SupportedApplicationContexts) {
         _cached_encoder_for_SupportedApplicationContexts = $._encodeSetOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SupportedApplicationContexts(value, elGetter);

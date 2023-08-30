@@ -248,14 +248,14 @@ export function _encode_ReasonInfo(
                         [
                             /* REQUIRED   */ _encode_CRLReason(
                                 value.reasonCode,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.holdInstructionCode ===
                             undefined
                                 ? undefined
                                 : _encode_HoldInstruction(
                                       value.holdInstructionCode,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -263,7 +263,7 @@ export function _encode_ReasonInfo(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

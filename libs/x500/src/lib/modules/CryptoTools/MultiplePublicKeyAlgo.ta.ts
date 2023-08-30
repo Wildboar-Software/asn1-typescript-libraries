@@ -67,7 +67,7 @@ export function _encode_MultiplePublicKeyAlgo(
     if (!_cached_encoder_for_MultiplePublicKeyAlgo) {
         _cached_encoder_for_MultiplePublicKeyAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultiplePublicKeyAlgo(value, elGetter);

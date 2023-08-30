@@ -66,7 +66,7 @@ export function _encode_Accessors(
     if (!_cached_encoder_for_Accessors) {
         _cached_encoder_for_Accessors = $._encodeSetOf<Name>(
             () => _encode_Name,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Accessors(value, elGetter);

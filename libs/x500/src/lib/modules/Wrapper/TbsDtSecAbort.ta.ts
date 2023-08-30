@@ -412,34 +412,34 @@ export function _encode_TbsDtSecAbort(
                         [
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.sigAlg,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_SequenceNumber(
                                 value.seq,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.diag === undefined
                                 ? undefined
-                                : _encode_WrpError(value.diag, $.BER),
+                                : _encode_WrpError(value.diag, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

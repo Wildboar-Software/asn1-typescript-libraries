@@ -88,9 +88,9 @@ export function _encode_TimeSpecification_time(
         _cached_encoder_for_TimeSpecification_time = $._encode_choice<TimeSpecification_time>(
             {
                 absolute: _encode_TimeSpecification_time_absolute,
-                periodic: $._encodeSetOf<Period>(() => _encode_Period, $.BER),
+                periodic: $._encodeSetOf<Period>(() => _encode_Period, $.DER),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TimeSpecification_time(value, elGetter);

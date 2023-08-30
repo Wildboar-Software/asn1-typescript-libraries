@@ -85,10 +85,10 @@ export function _encode_ARU_PPDU(
                     _TagClass.context,
                     0,
                     () => _encode_ARU_PPDU_normal_mode_parameters,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ARU_PPDU(value, elGetter);

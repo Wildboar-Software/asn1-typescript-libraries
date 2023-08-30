@@ -303,12 +303,12 @@ export function _encode_UpdateShadowResultData(
                                 [
                                     /* REQUIRED   */ _encode_AgreementID(
                                         value.agreementID,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.lastUpdate ===
                                     undefined
                                         ? undefined
-                                        : _encode_Time(value.lastUpdate, $.BER),
+                                        : _encode_Time(value.lastUpdate, $.DER),
                                 ],
                                 value._unrecognizedExtensionsList
                                     ? value._unrecognizedExtensionsList
@@ -321,8 +321,8 @@ export function _encode_UpdateShadowResultData(
                                               _TagClass.context,
                                               30,
                                               () => _encode_SecurityParameters,
-                                              $.BER
-                                          )(value.securityParameters, $.BER),
+                                              $.DER
+                                          )(value.securityParameters, $.DER),
                                     /* IF_ABSENT  */ value.performer ===
                                     undefined
                                         ? undefined
@@ -330,8 +330,8 @@ export function _encode_UpdateShadowResultData(
                                               _TagClass.context,
                                               29,
                                               () => _encode_DistinguishedName,
-                                              $.BER
-                                          )(value.performer, $.BER),
+                                              $.DER
+                                          )(value.performer, $.DER),
                                     /* IF_DEFAULT */ value.aliasDereferenced ===
                                         undefined ||
                                     $.deepEq(
@@ -343,8 +343,8 @@ export function _encode_UpdateShadowResultData(
                                               _TagClass.context,
                                               28,
                                               () => $._encodeBoolean,
-                                              $.BER
-                                          )(value.aliasDereferenced, $.BER),
+                                              $.DER
+                                          )(value.aliasDereferenced, $.DER),
                                     /* IF_ABSENT  */ value.notification ===
                                     undefined
                                         ? undefined
@@ -354,19 +354,19 @@ export function _encode_UpdateShadowResultData(
                                               () =>
                                                   $._encodeSequenceOf<Attribute>(
                                                       () => _encode_Attribute,
-                                                      $.BER
+                                                      $.DER
                                                   ),
-                                              $.BER
-                                          )(value.notification, $.BER),
+                                              $.DER
+                                          )(value.notification, $.DER),
                                 ]
                             )
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UpdateShadowResultData(value, elGetter);

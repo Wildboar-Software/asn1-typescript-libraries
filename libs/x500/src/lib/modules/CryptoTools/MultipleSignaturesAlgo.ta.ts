@@ -67,7 +67,7 @@ export function _encode_MultipleSignaturesAlgo(
     if (!_cached_encoder_for_MultipleSignaturesAlgo) {
         _cached_encoder_for_MultipleSignaturesAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultipleSignaturesAlgo(value, elGetter);

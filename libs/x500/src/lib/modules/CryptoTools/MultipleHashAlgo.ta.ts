@@ -67,7 +67,7 @@ export function _encode_MultipleHashAlgo(
     if (!_cached_encoder_for_MultipleHashAlgo) {
         _cached_encoder_for_MultipleHashAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultipleHashAlgo(value, elGetter);

@@ -99,30 +99,30 @@ export function _encode_Criteria(
                     _TagClass.context,
                     0,
                     () => _encode_CriteriaItem,
-                    $.BER
+                    $.DER
                 ),
                 and: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () =>
-                        $._encodeSetOf<Criteria>(() => _encode_Criteria, $.BER),
-                    $.BER
+                        $._encodeSetOf<Criteria>(() => _encode_Criteria, $.DER),
+                    $.DER
                 ),
                 or: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () =>
-                        $._encodeSetOf<Criteria>(() => _encode_Criteria, $.BER),
-                    $.BER
+                        $._encodeSetOf<Criteria>(() => _encode_Criteria, $.DER),
+                    $.DER
                 ),
                 not: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_Criteria,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Criteria(value, elGetter);

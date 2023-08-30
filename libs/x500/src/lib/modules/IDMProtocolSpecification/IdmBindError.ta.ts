@@ -283,7 +283,7 @@ export function _encode_IdmBindError(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.protocolID,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.respondingAETitle ===
                             undefined
@@ -292,27 +292,27 @@ export function _encode_IdmBindError(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.respondingAETitle, $.BER),
+                                      $.DER
+                                  )(value.respondingAETitle, $.DER),
                             /* IF_ABSENT  */ value.aETitleError === undefined
                                 ? undefined
                                 : _encode_IdmBindError_aETitleError(
                                       value.aETitleError,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => $._encodeAny,
-                                $.BER
-                            )(value.error, $.BER),
+                                $.DER
+                            )(value.error, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

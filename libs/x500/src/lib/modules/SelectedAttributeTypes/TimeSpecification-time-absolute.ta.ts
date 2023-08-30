@@ -208,23 +208,23 @@ export function _encode_TimeSpecification_time_absolute(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.startTime, $.BER),
+                                      $.DER
+                                  )(value.startTime, $.DER),
                             /* IF_ABSENT  */ value.endTime === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.endTime, $.BER),
+                                      $.DER
+                                  )(value.endTime, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

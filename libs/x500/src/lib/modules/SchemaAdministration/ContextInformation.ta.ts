@@ -204,13 +204,13 @@ export function _encode_ContextInformation(
                         [
                             /* REQUIRED   */ _encode_UnboundedDirectoryString(
                                 value.syntax,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.assertionSyntax === undefined
                                 ? undefined
                                 : _encode_UnboundedDirectoryString(
                                       value.assertionSyntax,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -218,7 +218,7 @@ export function _encode_ContextInformation(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

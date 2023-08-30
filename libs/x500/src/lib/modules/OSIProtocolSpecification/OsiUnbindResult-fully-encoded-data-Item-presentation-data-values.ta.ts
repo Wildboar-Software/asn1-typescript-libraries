@@ -75,10 +75,10 @@ export function _encode_OsiUnbindResult_fully_encoded_data_Item_presentation_dat
                     _TagClass.context,
                     0,
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item_presentation_data_values(

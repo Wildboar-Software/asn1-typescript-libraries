@@ -63,7 +63,7 @@ export function _encode_Code(value: Code, elGetter: $.ASN1Encoder<Code>) {
                 local: $._encodeInteger,
                 global: $._encodeObjectIdentifier,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Code(value, elGetter);

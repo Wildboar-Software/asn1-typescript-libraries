@@ -66,7 +66,7 @@ export function _encode_CaseIgnoreList(
     if (!_cached_encoder_for_CaseIgnoreList) {
         _cached_encoder_for_CaseIgnoreList = $._encodeSequenceOf<UnboundedDirectoryString>(
             () => _encode_UnboundedDirectoryString,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CaseIgnoreList(value, elGetter);

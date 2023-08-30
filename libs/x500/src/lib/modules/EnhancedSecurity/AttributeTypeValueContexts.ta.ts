@@ -231,22 +231,22 @@ export function _encode_AttributeTypeValueContexts(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.type_,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ $._encodeAny(value.value, $.BER),
+                            /* REQUIRED   */ $._encodeAny(value.value, $.DER),
                             /* IF_ABSENT  */ value.contextList === undefined
                                 ? undefined
                                 : $._encodeSetOf<Context>(
                                       () => _encode_Context,
-                                      $.BER
-                                  )(value.contextList, $.BER),
+                                      $.DER
+                                  )(value.contextList, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

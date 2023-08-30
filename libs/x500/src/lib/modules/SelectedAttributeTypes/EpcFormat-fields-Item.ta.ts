@@ -238,10 +238,10 @@ export function _encode_EpcFormat_fields_Item(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.bits, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.bits, $.DER),
                         /* REQUIRED   */ _encode_EpcFormat_fields_Item_charField(
                             value.charField,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_DEFAULT */ value.result === undefined ||
                         $.deepEq(
@@ -251,11 +251,11 @@ export function _encode_EpcFormat_fields_Item(
                             ? undefined
                             : _encode_EpcFormat_fields_Item_result(
                                   value.result,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -74,7 +74,7 @@ export function _encode_PhysicalDeliveryCountryName(
                 x121_dcc_code: $._encodeNumericString,
                 iso_3166_alpha2_code: $._encodePrintableString,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PhysicalDeliveryCountryName(value, elGetter);

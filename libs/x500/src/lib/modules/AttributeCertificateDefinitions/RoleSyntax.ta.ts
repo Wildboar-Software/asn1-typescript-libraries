@@ -224,21 +224,21 @@ export function _encode_RoleSyntax(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.roleAuthority, $.BER),
+                                      $.DER
+                                  )(value.roleAuthority, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_GeneralName,
-                                $.BER
-                            )(value.roleName, $.BER),
+                                $.DER
+                            )(value.roleName, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

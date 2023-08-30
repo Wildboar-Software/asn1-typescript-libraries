@@ -66,7 +66,7 @@ export function _encode_SubjectInfoAccessSyntax(
     if (!_cached_encoder_for_SubjectInfoAccessSyntax) {
         _cached_encoder_for_SubjectInfoAccessSyntax = $._encodeSequenceOf<AccessDescription>(
             () => _encode_AccessDescription,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SubjectInfoAccessSyntax(value, elGetter);

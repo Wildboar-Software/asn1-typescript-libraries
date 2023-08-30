@@ -515,14 +515,14 @@ export function _encode_TbsHandshakeReq(
                                 TbsHandshakeReq._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_Version(value.version, $.BER),
+                                : _encode_Version(value.version, $.DER),
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.prProt,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AlgorithmIdentifier(
                                 value.sigAlg,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.altSigAlg === undefined
                                 ? undefined
@@ -530,23 +530,23 @@ export function _encode_TbsHandshakeReq(
                                       _TagClass.context,
                                       0,
                                       () => _encode_AlgorithmIdentifier,
-                                      $.BER
-                                  )(value.altSigAlg, $.BER),
+                                      $.DER
+                                  )(value.altSigAlg, $.DER),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AlgorithmWithInvoke(
                                 value.keyEst,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.altKeyEst === undefined
                                 ? undefined
@@ -554,17 +554,17 @@ export function _encode_TbsHandshakeReq(
                                       _TagClass.context,
                                       1,
                                       () => _encode_AlgorithmWithInvoke,
-                                      $.BER
-                                  )(value.altKeyEst, $.BER),
+                                      $.DER
+                                  )(value.altKeyEst, $.DER),
                             /* REQUIRED   */ _encode_TbsHandshakeReq_encr_mode(
                                 value.encr_mode,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.attCert === undefined
                                 ? undefined
                                 : _encode_DER_AttributeCertificate(
                                       value.attCert,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.applData === undefined
                                 ? undefined
@@ -572,15 +572,15 @@ export function _encode_TbsHandshakeReq(
                                       _TagClass.context,
                                       4,
                                       () => _encode_WrappedProt,
-                                      $.BER
-                                  )(value.applData, $.BER),
+                                      $.DER
+                                  )(value.applData, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

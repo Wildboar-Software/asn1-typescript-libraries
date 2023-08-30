@@ -252,10 +252,10 @@ export function _encode_Del_Header(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.context_id,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.int_alg === undefined
                             ? undefined
@@ -263,19 +263,19 @@ export function _encode_Del_Header(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AlgorithmIdentifier,
-                                  $.BER
-                              )(value.int_alg, $.BER),
+                                  $.DER
+                              )(value.int_alg, $.DER),
                         /* IF_ABSENT  */ value.snd_seq === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_SeqNum,
-                                  $.BER
-                              )(value.snd_seq, $.BER),
+                                  $.DER
+                              )(value.snd_seq, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

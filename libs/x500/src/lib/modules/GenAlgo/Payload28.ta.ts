@@ -182,11 +182,11 @@ export function _encode_Payload28(
                         [
                             /* REQUIRED   */ $._encodeOctetString(
                                 value.dhPublicKey,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeOctetString(
                                 value.nonce,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -194,7 +194,7 @@ export function _encode_Payload28(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

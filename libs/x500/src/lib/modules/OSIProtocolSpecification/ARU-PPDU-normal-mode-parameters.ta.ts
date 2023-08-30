@@ -197,15 +197,15 @@ export function _encode_ARU_PPDU_normal_mode_parameters(
                             _TagClass.context,
                             0,
                             () => _encode_Presentation_context_identifier_list,
-                            $.BER
-                        )(value.presentation_context_identifier_list, $.BER),
+                            $.DER
+                        )(value.presentation_context_identifier_list, $.DER),
                         /* REQUIRED   */ _encode_ARU_PPDU_normal_mode_parameters_user_data(
                             value.user_data,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

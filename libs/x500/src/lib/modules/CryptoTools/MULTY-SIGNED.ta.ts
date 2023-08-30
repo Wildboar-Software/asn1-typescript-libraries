@@ -208,11 +208,11 @@ export function _get_encoder_for_MULTY_SIGNED<ToBeSigned>(
                     [
                         /* REQUIRED   */ _encode_ToBeSigned(
                             value.toBeSigned,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.algorithm,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSequenceOf<
                             MULTY_SIGNED_parmeters_sign<ToBeSigned>
@@ -221,15 +221,15 @@ export function _get_encoder_for_MULTY_SIGNED<ToBeSigned>(
                                 _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
                                     _encode_ToBeSigned
                                 ),
-                            $.BER
-                        )(value.parmeters, $.BER),
+                            $.DER
+                        )(value.parmeters, $.DER),
                     ],
                     value._unrecognizedExtensionsList
                         ? value._unrecognizedExtensionsList
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

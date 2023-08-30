@@ -180,16 +180,16 @@ export function _encode_WrappedPDUInfo(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.pduType,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ $._encodeAny(value.pduInfo, $.BER),
+                            /* REQUIRED   */ $._encodeAny(value.pduInfo, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

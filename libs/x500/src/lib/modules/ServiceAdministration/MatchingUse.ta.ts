@@ -189,11 +189,11 @@ export function _encode_MatchingUse(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.restrictionType,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeAny(
                                 value.restrictionValue,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -201,7 +201,7 @@ export function _encode_MatchingUse(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

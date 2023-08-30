@@ -94,7 +94,7 @@ export function _encode_RevokedCertificateGroup(
                 serialNumberRange: _encode_NumberRange,
                 nameSubtree: _encode_GeneralName,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RevokedCertificateGroup(value, elGetter);

@@ -260,13 +260,13 @@ export function _get_encoder_for_ICV_Total<ToBeProtected>(
                     [
                         /* REQUIRED   */ _encode_ToBeProtected(
                             value.toBeProtected,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmWithInvoke(
                             value.algorithmIdentifier,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeBitString(value.icv, $.BER),
+                        /* REQUIRED   */ $._encodeBitString(value.icv, $.DER),
                         /* IF_ABSENT  */ value.altAlgorithmIdentifier ===
                         undefined
                             ? undefined
@@ -274,23 +274,23 @@ export function _get_encoder_for_ICV_Total<ToBeProtected>(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AlgorithmWithInvoke,
-                                  $.BER
-                              )(value.altAlgorithmIdentifier, $.BER),
+                                  $.DER
+                              )(value.altAlgorithmIdentifier, $.DER),
                         /* IF_ABSENT  */ value.altIcv === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeBitString,
-                                  $.BER
-                              )(value.altIcv, $.BER),
+                                  $.DER
+                              )(value.altIcv, $.DER),
                     ],
                     value._unrecognizedExtensionsList
                         ? value._unrecognizedExtensionsList
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

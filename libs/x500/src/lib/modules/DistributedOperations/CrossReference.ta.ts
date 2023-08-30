@@ -220,21 +220,21 @@ export function _encode_CrossReference(
                                 _TagClass.context,
                                 0,
                                 () => _encode_DistinguishedName,
-                                $.BER
-                            )(value.contextPrefix, $.BER),
+                                $.DER
+                            )(value.contextPrefix, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_AccessPointInformation,
-                                $.BER
-                            )(value.accessPoint, $.BER),
+                                $.DER
+                            )(value.accessPoint, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

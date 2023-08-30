@@ -170,12 +170,12 @@ export function _encode_Wrap_Body(
                     .concat([
                         /* REQUIRED   */ $._encodeBitString(
                             value.int_cksum,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ $._encodeBitString(value.data, $.BER),
+                        /* REQUIRED   */ $._encodeBitString(value.data, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

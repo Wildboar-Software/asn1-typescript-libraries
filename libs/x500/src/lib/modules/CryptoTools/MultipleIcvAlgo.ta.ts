@@ -67,7 +67,7 @@ export function _encode_MultipleIcvAlgo(
     if (!_cached_encoder_for_MultipleIcvAlgo) {
         _cached_encoder_for_MultipleIcvAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultipleIcvAlgo(value, elGetter);

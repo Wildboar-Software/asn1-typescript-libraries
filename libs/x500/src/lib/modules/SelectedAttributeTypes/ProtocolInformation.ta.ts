@@ -175,15 +175,15 @@ export function _encode_ProtocolInformation(
                     .concat([
                         /* REQUIRED   */ $._encodeOctetString(
                             value.nAddress,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSetOf<OBJECT_IDENTIFIER>(
                             () => $._encodeObjectIdentifier,
-                            $.BER
-                        )(value.profiles, $.BER),
+                            $.DER
+                        )(value.profiles, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

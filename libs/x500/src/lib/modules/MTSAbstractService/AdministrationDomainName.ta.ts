@@ -77,9 +77,9 @@ export function _encode_AdministrationDomainName(
                         numeric: $._encodeNumericString,
                         printable: $._encodePrintableString,
                     },
-                    $.BER
+                    $.DER
                 ),
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AdministrationDomainName(value, elGetter);

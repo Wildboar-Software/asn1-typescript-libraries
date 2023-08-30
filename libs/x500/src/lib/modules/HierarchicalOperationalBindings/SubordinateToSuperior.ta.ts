@@ -292,8 +292,8 @@ export function _encode_SubordinateToSuperior(
                                       _TagClass.context,
                                       0,
                                       () => _encode_MasterAndShadowAccessPoints,
-                                      $.BER
-                                  )(value.accessPoints, $.BER),
+                                      $.DER
+                                  )(value.accessPoints, $.DER),
                             /* IF_DEFAULT */ value.alias === undefined ||
                             $.deepEq(
                                 value.alias,
@@ -304,8 +304,8 @@ export function _encode_SubordinateToSuperior(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.alias, $.BER),
+                                      $.DER
+                                  )(value.alias, $.DER),
                             /* IF_ABSENT  */ value.entryInfo === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -314,10 +314,10 @@ export function _encode_SubordinateToSuperior(
                                       () =>
                                           $._encodeSetOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.entryInfo, $.BER),
+                                      $.DER
+                                  )(value.entryInfo, $.DER),
                             /* IF_ABSENT  */ value.subentries === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -326,17 +326,17 @@ export function _encode_SubordinateToSuperior(
                                       () =>
                                           $._encodeSetOf<SubentryInfo>(
                                               () => _encode_SubentryInfo,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.subentries, $.BER),
+                                      $.DER
+                                  )(value.subentries, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

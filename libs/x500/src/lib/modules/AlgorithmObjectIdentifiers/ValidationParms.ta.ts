@@ -185,11 +185,11 @@ export function _encode_ValidationParms(
                         [
                             /* REQUIRED   */ $._encodeBitString(
                                 value.seed,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.pgenCounter,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -197,7 +197,7 @@ export function _encode_ValidationParms(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -221,17 +221,17 @@ export function _encode_CertificateListExactAssertion(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
-                        /* REQUIRED   */ _encode_Time(value.thisUpdate, $.BER),
+                        /* REQUIRED   */ _encode_Name(value.issuer, $.DER),
+                        /* REQUIRED   */ _encode_Time(value.thisUpdate, $.DER),
                         /* IF_ABSENT  */ value.distributionPoint === undefined
                             ? undefined
                             : _encode_DistributionPointName(
                                   value.distributionPoint,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

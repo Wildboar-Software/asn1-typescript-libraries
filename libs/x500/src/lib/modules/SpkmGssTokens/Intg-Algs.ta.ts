@@ -66,7 +66,7 @@ export function _encode_Intg_Algs(
     if (!_cached_encoder_for_Intg_Algs) {
         _cached_encoder_for_Intg_Algs = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Intg_Algs(value, elGetter);

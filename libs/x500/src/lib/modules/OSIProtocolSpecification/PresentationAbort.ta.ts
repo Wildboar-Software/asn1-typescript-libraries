@@ -86,7 +86,7 @@ export function _encode_PresentationAbort(
                 aru_ppdu: _encode_ARU_PPDU,
                 arp_ppdu: _encode_ARP_PPDU,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PresentationAbort(value, elGetter);

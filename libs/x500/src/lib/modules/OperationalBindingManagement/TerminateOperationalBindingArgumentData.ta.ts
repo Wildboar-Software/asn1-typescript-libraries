@@ -328,19 +328,19 @@ export function _encode_TerminateOperationalBindingArgumentData(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.bindingType, $.BER),
+                                $.DER
+                            )(value.bindingType, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_OperationalBindingID,
-                                $.BER
-                            )(value.bindingID, $.BER),
+                                $.DER
+                            )(value.bindingID, $.DER),
                             /* IF_ABSENT  */ value.initiator === undefined
                                 ? undefined
                                 : _encode_TerminateOperationalBindingArgumentData_initiator(
                                       value.initiator,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.terminateAt === undefined
                                 ? undefined
@@ -348,8 +348,8 @@ export function _encode_TerminateOperationalBindingArgumentData(
                                       _TagClass.context,
                                       5,
                                       () => _encode_Time,
-                                      $.BER
-                                  )(value.terminateAt, $.BER),
+                                      $.DER
+                                  )(value.terminateAt, $.DER),
                             /* IF_ABSENT  */ value.securityParameters ===
                             undefined
                                 ? undefined
@@ -357,15 +357,15 @@ export function _encode_TerminateOperationalBindingArgumentData(
                                       _TagClass.context,
                                       6,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

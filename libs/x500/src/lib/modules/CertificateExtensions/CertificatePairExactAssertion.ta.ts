@@ -223,8 +223,8 @@ export function _encode_CertificatePairExactAssertion(
                                       _TagClass.context,
                                       0,
                                       () => _encode_CertificateExactAssertion,
-                                      $.BER
-                                  )(value.issuedToThisCAAssertion, $.BER),
+                                      $.DER
+                                  )(value.issuedToThisCAAssertion, $.DER),
                             /* IF_ABSENT  */ value.issuedByThisCAAssertion ===
                             undefined
                                 ? undefined
@@ -232,15 +232,15 @@ export function _encode_CertificatePairExactAssertion(
                                       _TagClass.context,
                                       1,
                                       () => _encode_CertificateExactAssertion,
-                                      $.BER
-                                  )(value.issuedByThisCAAssertion, $.BER),
+                                      $.DER
+                                  )(value.issuedByThisCAAssertion, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -189,15 +189,15 @@ export function _encode_SPKM_WRAP(
                     .concat([
                         /* REQUIRED   */ _encode_Wrap_Header(
                             value.wrap_header,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Wrap_Body(
                             value.wrap_body,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

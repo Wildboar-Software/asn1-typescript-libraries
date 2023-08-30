@@ -79,9 +79,9 @@ export function _encode_CountryName(
                         x121_dcc_code: $._encodeNumericString,
                         iso_3166_alpha2_code: $._encodePrintableString,
                     },
-                    $.BER
+                    $.DER
                 ),
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CountryName(value, elGetter);

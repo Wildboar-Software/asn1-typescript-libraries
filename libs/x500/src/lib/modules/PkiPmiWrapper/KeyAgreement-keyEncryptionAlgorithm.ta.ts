@@ -185,11 +185,11 @@ export function _encode_KeyAgreement_keyEncryptionAlgorithm(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.algorithm,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeAny(
                                 value.parameters,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -197,7 +197,7 @@ export function _encode_KeyAgreement_keyEncryptionAlgorithm(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

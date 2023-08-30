@@ -219,19 +219,19 @@ export function _encode_MultipleMatchingLocalities(
                                 ? undefined
                                 : $._encodeObjectIdentifier(
                                       value.matchingRuleUsed,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ $._encodeSequenceOf<AttributeValueAssertion>(
                                 () => _encode_AttributeValueAssertion,
-                                $.BER
-                            )(value.attributeList, $.BER),
+                                $.DER
+                            )(value.attributeList, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

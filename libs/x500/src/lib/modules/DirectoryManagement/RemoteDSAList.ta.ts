@@ -66,7 +66,7 @@ export function _encode_RemoteDSAList(
     if (!_cached_encoder_for_RemoteDSAList) {
         _cached_encoder_for_RemoteDSAList = $._encodeSetOf<AccessPoint>(
             () => _encode_AccessPoint,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RemoteDSAList(value, elGetter);

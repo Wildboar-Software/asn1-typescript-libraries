@@ -247,8 +247,8 @@ export function _encode_DSABindArgument(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DSACredentials,
-                                      $.BER
-                                  )(value.credentials, $.BER),
+                                      $.DER
+                                  )(value.credentials, $.DER),
                             /* IF_DEFAULT */ value.versions === undefined ||
                             $.deepEq(
                                 value.versions,
@@ -259,15 +259,15 @@ export function _encode_DSABindArgument(
                                       _TagClass.context,
                                       1,
                                       () => _encode_Versions,
-                                      $.BER
-                                  )(value.versions, $.BER),
+                                      $.DER
+                                  )(value.versions, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

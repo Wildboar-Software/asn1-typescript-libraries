@@ -220,22 +220,22 @@ export function _encode_PolicyInformation(
                         [
                             /* REQUIRED   */ _encode_CertPolicyId(
                                 value.policyIdentifier,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.policyQualifiers ===
                             undefined
                                 ? undefined
                                 : $._encodeSequenceOf<PolicyQualifierInfo>(
                                       () => _encode_PolicyQualifierInfo,
-                                      $.BER
-                                  )(value.policyQualifiers, $.BER),
+                                      $.DER
+                                  )(value.policyQualifiers, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

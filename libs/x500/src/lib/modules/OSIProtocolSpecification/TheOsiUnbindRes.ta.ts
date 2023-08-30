@@ -186,16 +186,16 @@ export function _encode_TheOsiUnbindRes(
                                           _TagClass.context,
                                           0,
                                           () => _encode_Release_response_reason,
-                                          $.BER
-                                      )(value.reason, $.BER),
+                                          $.DER
+                                      )(value.reason, $.DER),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TheOsiUnbindRes(value, elGetter);

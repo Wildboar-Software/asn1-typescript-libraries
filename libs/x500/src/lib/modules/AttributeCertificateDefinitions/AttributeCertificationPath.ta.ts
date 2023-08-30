@@ -224,21 +224,21 @@ export function _encode_AttributeCertificationPath(
                         [
                             /* REQUIRED   */ _encode_AttributeCertificate(
                                 value.attributeCertificate,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.acPath === undefined
                                 ? undefined
                                 : $._encodeSequenceOf<ACPathData>(
                                       () => _encode_ACPathData,
-                                      $.BER
-                                  )(value.acPath, $.BER),
+                                      $.DER
+                                  )(value.acPath, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

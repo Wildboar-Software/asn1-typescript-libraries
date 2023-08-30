@@ -68,11 +68,11 @@ export function _encode_ResultAttribute_outputValues(
             {
                 selectedValues: $._encodeSequenceOf<_Element>(
                     () => $._encodeAny,
-                    $.BER
+                    $.DER
                 ),
                 matchedValuesOnly: $._encodeNull,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ResultAttribute_outputValues(value, elGetter);

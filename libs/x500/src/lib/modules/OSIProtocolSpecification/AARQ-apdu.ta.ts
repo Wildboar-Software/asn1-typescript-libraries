@@ -533,14 +533,14 @@ export function _encode_AARQ_apdu(
                                           0,
                                           () =>
                                               _encode_AARQ_apdu_protocol_version,
-                                          $.BER
-                                      )(value.protocol_version, $.BER),
+                                          $.DER
+                                      )(value.protocol_version, $.DER),
                                 /* REQUIRED   */ $._encode_explicit(
                                     _TagClass.context,
                                     1,
                                     () => _encode_Application_context_name,
-                                    $.BER
-                                )(value.application_context_name, $.BER),
+                                    $.DER
+                                )(value.application_context_name, $.DER),
                                 /* IF_ABSENT  */ value.called_AP_title ===
                                 undefined
                                     ? undefined
@@ -548,8 +548,8 @@ export function _encode_AARQ_apdu(
                                           _TagClass.context,
                                           2,
                                           () => _encode_Name,
-                                          $.BER
-                                      )(value.called_AP_title, $.BER),
+                                          $.DER
+                                      )(value.called_AP_title, $.DER),
                                 /* IF_ABSENT  */ value.called_AE_qualifier ===
                                 undefined
                                     ? undefined
@@ -558,8 +558,8 @@ export function _encode_AARQ_apdu(
                                           3,
                                           () =>
                                               _encode_RelativeDistinguishedName,
-                                          $.BER
-                                      )(value.called_AE_qualifier, $.BER),
+                                          $.DER
+                                      )(value.called_AE_qualifier, $.DER),
                                 /* IF_ABSENT  */ value.called_AP_invocation_identifier ===
                                 undefined
                                     ? undefined
@@ -568,10 +568,10 @@ export function _encode_AARQ_apdu(
                                           4,
                                           () =>
                                               _encode_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.called_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.called_AE_invocation_identifier ===
                                 undefined
@@ -581,10 +581,10 @@ export function _encode_AARQ_apdu(
                                           5,
                                           () =>
                                               _encode_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.called_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.calling_AP_title ===
                                 undefined
@@ -593,8 +593,8 @@ export function _encode_AARQ_apdu(
                                           _TagClass.context,
                                           6,
                                           () => _encode_Name,
-                                          $.BER
-                                      )(value.calling_AP_title, $.BER),
+                                          $.DER
+                                      )(value.calling_AP_title, $.DER),
                                 /* IF_ABSENT  */ value.calling_AE_qualifier ===
                                 undefined
                                     ? undefined
@@ -603,8 +603,8 @@ export function _encode_AARQ_apdu(
                                           7,
                                           () =>
                                               _encode_RelativeDistinguishedName,
-                                          $.BER
-                                      )(value.calling_AE_qualifier, $.BER),
+                                          $.DER
+                                      )(value.calling_AE_qualifier, $.DER),
                                 /* IF_ABSENT  */ value.calling_AP_invocation_identifier ===
                                 undefined
                                     ? undefined
@@ -613,10 +613,10 @@ export function _encode_AARQ_apdu(
                                           8,
                                           () =>
                                               _encode_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.calling_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.calling_AE_invocation_identifier ===
                                 undefined
@@ -626,10 +626,10 @@ export function _encode_AARQ_apdu(
                                           9,
                                           () =>
                                               _encode_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.calling_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.implementation_information ===
                                 undefined
@@ -638,25 +638,25 @@ export function _encode_AARQ_apdu(
                                           _TagClass.context,
                                           29,
                                           () => _encode_Implementation_data,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.implementation_information,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* REQUIRED   */ $._encode_implicit(
                                     _TagClass.context,
                                     30,
                                     () => _encode_Association_informationBind,
-                                    $.BER
-                                )(value.user_information, $.BER),
+                                    $.DER
+                                )(value.user_information, $.DER),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AARQ_apdu(value, elGetter);

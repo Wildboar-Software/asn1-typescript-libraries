@@ -75,16 +75,16 @@ export function _encode_EpcFormat_fields_Item_charField(
                     _TagClass.context,
                     0,
                     () => $._encodeInteger,
-                    $.BER
+                    $.DER
                 ),
                 maxValue: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => $._encodeInteger,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_EpcFormat_fields_Item_charField(value, elGetter);

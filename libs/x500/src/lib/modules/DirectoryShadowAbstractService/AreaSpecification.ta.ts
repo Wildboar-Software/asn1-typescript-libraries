@@ -207,11 +207,11 @@ export function _encode_AreaSpecification(
                         [
                             /* REQUIRED   */ _encode_DistinguishedName(
                                 value.contextPrefix,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_SubtreeSpecification(
                                 value.replicationArea,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -219,7 +219,7 @@ export function _encode_AreaSpecification(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

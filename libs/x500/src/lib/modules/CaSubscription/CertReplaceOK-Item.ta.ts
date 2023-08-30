@@ -96,16 +96,16 @@ export function _encode_CertReplaceOK_Item(
                     _TagClass.context,
                     0,
                     () => _encode_CertReplaceOK_Item_ok,
-                    $.BER
+                    $.DER
                 ),
                 not_ok: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_CertReplaceOK_Item_not_ok,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertReplaceOK_Item(value, elGetter);

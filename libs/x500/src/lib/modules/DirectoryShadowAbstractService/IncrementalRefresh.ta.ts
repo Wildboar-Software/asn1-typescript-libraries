@@ -66,7 +66,7 @@ export function _encode_IncrementalRefresh(
     if (!_cached_encoder_for_IncrementalRefresh) {
         _cached_encoder_for_IncrementalRefresh = $._encodeSequenceOf<IncrementalStepRefresh>(
             () => _encode_IncrementalStepRefresh,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_IncrementalRefresh(value, elGetter);

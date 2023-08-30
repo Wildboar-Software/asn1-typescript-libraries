@@ -388,7 +388,7 @@ export function _encode_RequestAttribute(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.attributeType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.includeSubtypes ===
                                 undefined ||
@@ -401,8 +401,8 @@ export function _encode_RequestAttribute(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.includeSubtypes, $.BER),
+                                      $.DER
+                                  )(value.includeSubtypes, $.DER),
                             /* IF_ABSENT  */ value.selectedValues === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -411,10 +411,10 @@ export function _encode_RequestAttribute(
                                       () =>
                                           $._encodeSequenceOf<_Element>(
                                               () => $._encodeAny,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.selectedValues, $.BER),
+                                      $.DER
+                                  )(value.selectedValues, $.DER),
                             /* IF_ABSENT  */ value.defaultValues === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -424,10 +424,10 @@ export function _encode_RequestAttribute(
                                           $._encodeSequenceOf<RequestAttribute_defaultValues_Item>(
                                               () =>
                                                   _encode_RequestAttribute_defaultValues_Item,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.defaultValues, $.BER),
+                                      $.DER
+                                  )(value.defaultValues, $.DER),
                             /* IF_ABSENT  */ value.contexts === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -436,10 +436,10 @@ export function _encode_RequestAttribute(
                                       () =>
                                           $._encodeSequenceOf<ContextProfile>(
                                               () => _encode_ContextProfile,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.contexts, $.BER),
+                                      $.DER
+                                  )(value.contexts, $.DER),
                             /* IF_DEFAULT */ value.contextCombination ===
                                 undefined ||
                             $.deepEq(
@@ -451,8 +451,8 @@ export function _encode_RequestAttribute(
                                       _TagClass.context,
                                       4,
                                       () => _encode_ContextCombination,
-                                      $.BER
-                                  )(value.contextCombination, $.BER),
+                                      $.DER
+                                  )(value.contextCombination, $.DER),
                             /* IF_ABSENT  */ value.matchingUse === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -461,17 +461,17 @@ export function _encode_RequestAttribute(
                                       () =>
                                           $._encodeSequenceOf<MatchingUse>(
                                               () => _encode_MatchingUse,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.matchingUse, $.BER),
+                                      $.DER
+                                  )(value.matchingUse, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

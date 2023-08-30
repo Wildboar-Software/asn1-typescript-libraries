@@ -96,16 +96,16 @@ export function _encode_ACIItem_itemOrUserFirst(
                     _TagClass.context,
                     0,
                     () => _encode_ACIItem_itemOrUserFirst_itemFirst,
-                    $.BER
+                    $.DER
                 ),
                 userFirst: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_ACIItem_itemOrUserFirst_userFirst,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ACIItem_itemOrUserFirst(value, elGetter);

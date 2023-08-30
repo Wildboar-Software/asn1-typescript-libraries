@@ -99,16 +99,16 @@ export function _encode_UpdateMode(
                     _TagClass.context,
                     0,
                     () => _encode_SupplierUpdateMode,
-                    $.BER
+                    $.DER
                 ),
                 consumerInitiated: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_ConsumerUpdateMode,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UpdateMode(value, elGetter);

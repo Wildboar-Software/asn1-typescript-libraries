@@ -229,14 +229,14 @@ export function _encode_PeriodicStrategy(
                         [
                             /* IF_ABSENT  */ value.beginTime === undefined
                                 ? undefined
-                                : _encode_Time(value.beginTime, $.BER),
+                                : _encode_Time(value.beginTime, $.DER),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.windowSize,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.updateInterval,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -244,7 +244,7 @@ export function _encode_PeriodicStrategy(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

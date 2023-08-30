@@ -73,7 +73,7 @@ export function _encode_Result_list(
     if (!_cached_encoder_for_Result_list) {
         _cached_encoder_for_Result_list = $._encodeSequenceOf<Result_list_Item>(
             () => _encode_Result_list_Item,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Result_list(value, elGetter);

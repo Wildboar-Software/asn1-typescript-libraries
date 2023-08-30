@@ -249,30 +249,30 @@ export function _encode_EpcFormat(
                     .concat([
                         /* REQUIRED   */ $._encodeSequenceOf<EpcFormat_fields_Item>(
                             () => _encode_EpcFormat_fields_Item,
-                            $.BER
-                        )(value.fields, $.BER),
+                            $.DER
+                        )(value.fields, $.DER),
                         /* IF_ABSENT  */ value.digitShift === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.digitShift, $.BER),
+                                  $.DER
+                              )(value.digitShift, $.DER),
                         /* IF_ABSENT  */ value.checkCalc === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.checkCalc, $.BER),
+                                  $.DER
+                              )(value.checkCalc, $.DER),
                         /* IF_ABSENT  */ value.urnPrefix === undefined
                             ? undefined
-                            : $._encodeUTF8String(value.urnPrefix, $.BER),
+                            : $._encodeUTF8String(value.urnPrefix, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

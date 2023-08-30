@@ -96,16 +96,16 @@ export function _encode_CertSubscribeRsp_result(
                     _TagClass.context,
                     0,
                     () => _encode_CertSubscribeOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_CertSubscribeErr,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertSubscribeRsp_result(value, elGetter);

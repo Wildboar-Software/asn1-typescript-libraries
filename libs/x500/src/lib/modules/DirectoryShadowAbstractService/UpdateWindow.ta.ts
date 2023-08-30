@@ -191,15 +191,15 @@ export function _encode_UpdateWindow(
                 ([] as (_Element | undefined)[])
                     .concat(
                         [
-                            /* REQUIRED   */ _encode_Time(value.start, $.BER),
-                            /* REQUIRED   */ _encode_Time(value.stop, $.BER),
+                            /* REQUIRED   */ _encode_Time(value.start, $.DER),
+                            /* REQUIRED   */ _encode_Time(value.stop, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

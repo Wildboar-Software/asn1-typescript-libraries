@@ -66,7 +66,7 @@ export function _encode_GeneralSubtrees(
     if (!_cached_encoder_for_GeneralSubtrees) {
         _cached_encoder_for_GeneralSubtrees = $._encodeSequenceOf<GeneralSubtree>(
             () => _encode_GeneralSubtree,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_GeneralSubtrees(value, elGetter);

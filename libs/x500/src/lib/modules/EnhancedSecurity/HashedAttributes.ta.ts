@@ -66,7 +66,7 @@ export function _encode_HashedAttributes(
     if (!_cached_encoder_for_HashedAttributes) {
         _cached_encoder_for_HashedAttributes = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_HashedAttributes(value, elGetter);

@@ -82,7 +82,7 @@ export function _encode_LocaleContextSyntax(
                 localeID1: $._encodeObjectIdentifier,
                 localeID2: _encode_UnboundedDirectoryString,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_LocaleContextSyntax(value, elGetter);

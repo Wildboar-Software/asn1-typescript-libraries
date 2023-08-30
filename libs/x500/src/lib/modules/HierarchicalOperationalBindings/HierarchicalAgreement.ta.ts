@@ -213,21 +213,21 @@ export function _encode_HierarchicalAgreement(
                                 _TagClass.context,
                                 0,
                                 () => _encode_RelativeDistinguishedName,
-                                $.BER
-                            )(value.rdn, $.BER),
+                                $.DER
+                            )(value.rdn, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_DistinguishedName,
-                                $.BER
-                            )(value.immediateSuperior, $.BER),
+                                $.DER
+                            )(value.immediateSuperior, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

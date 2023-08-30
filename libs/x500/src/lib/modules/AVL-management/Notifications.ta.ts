@@ -66,7 +66,7 @@ export function _encode_Notifications(
     if (!_cached_encoder_for_Notifications) {
         _cached_encoder_for_Notifications = $._encodeSequenceOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Notifications(value, elGetter);

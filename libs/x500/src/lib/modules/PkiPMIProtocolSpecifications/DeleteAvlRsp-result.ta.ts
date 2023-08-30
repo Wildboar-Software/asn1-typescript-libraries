@@ -92,16 +92,16 @@ export function _encode_DeleteAvlRsp_result(
                     _TagClass.context,
                     0,
                     () => _encode_DelAvlOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_DelAvlErr,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DeleteAvlRsp_result(value, elGetter);

@@ -104,11 +104,11 @@ export function _encode_Period_months(
                 allMonths: $._encodeNull,
                 intMonth: $._encodeSetOf<INTEGER>(
                     () => $._encodeInteger,
-                    $.BER
+                    $.DER
                 ),
                 bitMonth: _encode_Period_months_bitMonth,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Period_months(value, elGetter);

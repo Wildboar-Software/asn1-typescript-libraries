@@ -186,21 +186,21 @@ export function _get_encoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
                                   _TagClass.context,
                                   0,
                                   () => _encode_ToBeAuth,
-                                  $.BER
-                              )(value.aad, $.BER),
+                                  $.DER
+                              )(value.aad, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             1,
                             () => _encode_ToBeEnciphered,
-                            $.BER
-                        )(value.encr, $.BER),
+                            $.DER
+                        )(value.encr, $.DER),
                     ],
                     value._unrecognizedExtensionsList
                         ? value._unrecognizedExtensionsList
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

@@ -214,8 +214,8 @@ export function _encode_CertificationData(
                                   _TagClass.context,
                                   0,
                                   () => _encode_CertificationPath,
-                                  $.BER
-                              )(value.certificationPath, $.BER),
+                                  $.DER
+                              )(value.certificationPath, $.DER),
                         /* IF_ABSENT  */ value.certificateRevocationList ===
                         undefined
                             ? undefined
@@ -223,11 +223,11 @@ export function _encode_CertificationData(
                                   _TagClass.context,
                                   1,
                                   () => _encode_CertificateList,
-                                  $.BER
-                              )(value.certificateRevocationList, $.BER),
+                                  $.DER
+                              )(value.certificateRevocationList, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

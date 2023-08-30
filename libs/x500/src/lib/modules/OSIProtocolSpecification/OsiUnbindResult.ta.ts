@@ -91,12 +91,12 @@ export function _encode_OsiUnbindResult(
                         $._encodeSequenceOf<OsiUnbindResult_fully_encoded_data_Item>(
                             () =>
                                 _encode_OsiUnbindResult_fully_encoded_data_Item,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiUnbindResult(value, elGetter);

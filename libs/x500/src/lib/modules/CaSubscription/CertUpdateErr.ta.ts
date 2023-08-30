@@ -200,7 +200,7 @@ export function _encode_CertUpdateErr(
                         [
                             /* REQUIRED   */ _encode_CASP_error(
                                 value.code,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -208,7 +208,7 @@ export function _encode_CertUpdateErr(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -79,7 +79,7 @@ export function _encode_UserPwd(
                 clear: $._encodeUTF8String,
                 encrypted: _encode_UserPwd_encrypted,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UserPwd(value, elGetter);

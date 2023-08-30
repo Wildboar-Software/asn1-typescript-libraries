@@ -269,22 +269,22 @@ export function _encode_CertSubscribeOK_Item_ok(
                         [
                             /* REQUIRED   */ _encode_Certificate(
                                 value.cert,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertStatus(
                                 value.status,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.revokeReason === undefined
                                 ? undefined
-                                : _encode_CRLReason(value.revokeReason, $.BER),
+                                : _encode_CRLReason(value.revokeReason, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

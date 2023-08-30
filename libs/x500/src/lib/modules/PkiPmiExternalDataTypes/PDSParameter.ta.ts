@@ -186,17 +186,17 @@ export function _encode_PDSParameter(
                             ? undefined
                             : $._encodePrintableString(
                                   value.printable_string,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.teletex_string === undefined
                             ? undefined
                             : $._encodeTeletexString(
                                   value.teletex_string,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

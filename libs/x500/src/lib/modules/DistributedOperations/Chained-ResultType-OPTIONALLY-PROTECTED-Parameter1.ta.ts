@@ -205,17 +205,17 @@ export function _encode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
                     .concat([
                         /* REQUIRED   */ _encode_ChainingResults(
                             value.chainedResult,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             0,
                             () => $._encodeAny,
-                            $.BER
-                        )(value.result, $.BER),
+                            $.DER
+                        )(value.result, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

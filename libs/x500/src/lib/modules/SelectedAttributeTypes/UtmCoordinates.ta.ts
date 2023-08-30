@@ -190,19 +190,19 @@ export function _encode_UtmCoordinates(
                     .concat([
                         /* REQUIRED   */ $._encodePrintableString(
                             value.zone,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeNumericString(
                             value.easting,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeNumericString(
                             value.northing,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

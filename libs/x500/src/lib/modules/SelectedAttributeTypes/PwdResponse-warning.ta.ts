@@ -76,16 +76,16 @@ export function _encode_PwdResponse_warning(
                     _TagClass.context,
                     0,
                     () => $._encodeInteger,
-                    $.BER
+                    $.DER
                 ),
                 graceRemaining: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => $._encodeInteger,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PwdResponse_warning(value, elGetter);

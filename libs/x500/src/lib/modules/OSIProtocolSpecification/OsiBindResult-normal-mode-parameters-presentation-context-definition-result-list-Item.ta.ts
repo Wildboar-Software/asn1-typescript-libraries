@@ -217,17 +217,17 @@ export function _encode_OsiBindResult_normal_mode_parameters_presentation_contex
                             _TagClass.context,
                             0,
                             () => _encode_Result,
-                            $.BER
-                        )(value.result, $.BER),
+                            $.DER
+                        )(value.result, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             1,
                             () => _encode_Transfer_syntax_name,
-                            $.BER
-                        )(value.transfer_syntax_name, $.BER),
+                            $.DER
+                        )(value.transfer_syntax_name, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

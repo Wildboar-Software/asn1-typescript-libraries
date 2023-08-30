@@ -201,19 +201,19 @@ export function _encode_ExtensionAttribute(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.type_,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeSetOf<ExtensionAttribute_value_Item>(
                                 () => _encode_ExtensionAttribute_value_Item,
-                                $.BER
-                            )(value.value, $.BER),
+                                $.DER
+                            )(value.value, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

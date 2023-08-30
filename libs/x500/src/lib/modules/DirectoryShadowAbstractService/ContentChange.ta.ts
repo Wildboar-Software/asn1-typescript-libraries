@@ -360,18 +360,18 @@ export function _encode_ContentChange(
                                 ? undefined
                                 : _encode_ContentChange_rename(
                                       value.rename,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.attributeChanges ===
                             undefined
                                 ? undefined
                                 : _encode_ContentChange_attributeChanges(
                                       value.attributeChanges,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ _encode_SDSEType(
                                 value.sDSEType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.subComplete === undefined ||
                             $.deepEq(
@@ -383,16 +383,16 @@ export function _encode_ContentChange(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.subComplete, $.BER),
+                                      $.DER
+                                  )(value.subComplete, $.DER),
                             /* IF_ABSENT  */ value.attComplete === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.attComplete, $.BER),
+                                      $.DER
+                                  )(value.attComplete, $.DER),
                             /* IF_DEFAULT */ value.attValIncomplete ===
                                 undefined ||
                             $.deepEq(
@@ -402,15 +402,15 @@ export function _encode_ContentChange(
                                 ? undefined
                                 : $._encodeSetOf<AttributeType>(
                                       () => _encode_AttributeType,
-                                      $.BER
-                                  )(value.attValIncomplete, $.BER),
+                                      $.DER
+                                  )(value.attValIncomplete, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

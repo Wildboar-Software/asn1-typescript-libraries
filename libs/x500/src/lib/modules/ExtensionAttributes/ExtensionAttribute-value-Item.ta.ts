@@ -253,8 +253,8 @@ export function _encode_ExtensionAttribute_value_Item(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.mandatory, $.BER),
+                                      $.DER
+                                  )(value.mandatory, $.DER),
                             /* IF_DEFAULT */ value.critical === undefined ||
                             $.deepEq(
                                 value.critical,
@@ -265,21 +265,21 @@ export function _encode_ExtensionAttribute_value_Item(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.critical, $.BER),
+                                      $.DER
+                                  )(value.critical, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => $._encodeAny,
-                                $.BER
-                            )(value.ext, $.BER),
+                                $.DER
+                            )(value.ext, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

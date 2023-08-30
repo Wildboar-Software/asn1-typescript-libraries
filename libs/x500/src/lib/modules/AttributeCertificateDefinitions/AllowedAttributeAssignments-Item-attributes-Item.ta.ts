@@ -98,16 +98,16 @@ export function _encode_AllowedAttributeAssignments_Item_attributes_Item(
                     _TagClass.context,
                     0,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 attributeTypeandValues: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_Attribute,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AllowedAttributeAssignments_Item_attributes_Item(

@@ -216,7 +216,7 @@ export function _get_encoder_for_ICV_Invoke<ToBeProtected>(
                     [
                         /* REQUIRED   */ _encode_ToBeProtected(
                             value.toBeProtected,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.dynParms === undefined
                             ? undefined
@@ -224,16 +224,16 @@ export function _get_encoder_for_ICV_Invoke<ToBeProtected>(
                                   _TagClass.context,
                                   0,
                                   () => _encode_AlgoInvoke,
-                                  $.BER
-                              )(value.dynParms, $.BER),
-                        /* REQUIRED   */ $._encodeBitString(value.icv, $.BER),
+                                  $.DER
+                              )(value.dynParms, $.DER),
+                        /* REQUIRED   */ $._encodeBitString(value.icv, $.DER),
                     ],
                     value._unrecognizedExtensionsList
                         ? value._unrecognizedExtensionsList
                         : []
                 )
                 .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
+            $.DER
         );
     };
 }

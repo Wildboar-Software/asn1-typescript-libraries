@@ -99,16 +99,16 @@ export function _encode_SenderDhInfo(
                     _TagClass.context,
                     0,
                     () => _encode_SenderStaticInfo,
-                    $.BER
+                    $.DER
                 ),
                 senderDhPublicKey: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_SenderDhPublicKey,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SenderDhInfo(value, elGetter);

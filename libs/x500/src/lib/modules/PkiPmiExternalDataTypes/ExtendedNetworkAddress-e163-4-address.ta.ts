@@ -194,19 +194,19 @@ export function _encode_ExtendedNetworkAddress_e163_4_address(
                             _TagClass.context,
                             0,
                             () => $._encodeNumericString,
-                            $.BER
-                        )(value.number_, $.BER),
+                            $.DER
+                        )(value.number_, $.DER),
                         /* IF_ABSENT  */ value.sub_address === undefined
                             ? undefined
                             : $._encode_explicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodeNumericString,
-                                  $.BER
-                              )(value.sub_address, $.BER),
+                                  $.DER
+                              )(value.sub_address, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -222,23 +222,23 @@ export function _encode_AllowedAttributeAssignments_Item(
                                     $._encodeSetOf<AllowedAttributeAssignments_Item_attributes_Item>(
                                         () =>
                                             _encode_AllowedAttributeAssignments_Item_attributes_Item,
-                                        $.BER
+                                        $.DER
                                     ),
-                                $.BER
-                            )(value.attributes, $.BER),
+                                $.DER
+                            )(value.attributes, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_GeneralName,
-                                $.BER
-                            )(value.holderDomain, $.BER),
+                                $.DER
+                            )(value.holderDomain, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

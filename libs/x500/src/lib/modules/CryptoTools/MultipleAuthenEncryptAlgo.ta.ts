@@ -67,7 +67,7 @@ export function _encode_MultipleAuthenEncryptAlgo(
     if (!_cached_encoder_for_MultipleAuthenEncryptAlgo) {
         _cached_encoder_for_MultipleAuthenEncryptAlgo = $._encodeSequenceOf<AlgorithmIdentifier>(
             () => _encode_AlgorithmIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MultipleAuthenEncryptAlgo(value, elGetter);

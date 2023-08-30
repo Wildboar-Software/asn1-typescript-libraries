@@ -183,24 +183,24 @@ export function _encode_OsiErr(value: OsiErr, elGetter: $.ASN1Encoder<OsiErr>) {
                             .concat([
                                 /* REQUIRED   */ _encode_InvokeId(
                                     value.invokeID,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ $._encodeAny(
                                     value.errcode,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ $._encodeAny(
                                     value.error,
-                                    $.BER
+                                    $.DER
                                 ),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiErr(value, elGetter);

@@ -160,11 +160,11 @@ export function _encode_OsiRes_result(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
-                        /* REQUIRED   */ $._encodeAny(value.result, $.BER),
+                        /* REQUIRED   */ _encode_Code(value.opcode, $.DER),
+                        /* REQUIRED   */ $._encodeAny(value.result, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

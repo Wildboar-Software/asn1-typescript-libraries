@@ -271,14 +271,14 @@ export function _encode_CertReq(
                                 CertReq._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_AVMPversion(value.version, $.BER),
+                                : _encode_AVMPversion(value.version, $.DER),
                             /* REQUIRED   */ $._encodeGeneralizedTime(
                                 value.timeStamp,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AVMPsequence(
                                 value.sequence,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -286,7 +286,7 @@ export function _encode_CertReq(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

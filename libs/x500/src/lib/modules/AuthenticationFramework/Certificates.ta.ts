@@ -218,14 +218,14 @@ export function _encode_Certificates(
                         [
                             /* REQUIRED   */ _encode_Certificate(
                                 value.userCertificate,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.certificationPath ===
                             undefined
                                 ? undefined
                                 : _encode_ForwardCertificationPath(
                                       value.certificationPath,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -233,7 +233,7 @@ export function _encode_Certificates(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

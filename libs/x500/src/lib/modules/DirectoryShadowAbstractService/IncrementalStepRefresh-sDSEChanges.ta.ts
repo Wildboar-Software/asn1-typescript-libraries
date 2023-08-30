@@ -100,17 +100,17 @@ export function _encode_IncrementalStepRefresh_sDSEChanges(
                     _TagClass.context,
                     0,
                     () => _encode_SDSEContent,
-                    $.BER
+                    $.DER
                 ),
                 remove: $._encodeNull,
                 modify: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_ContentChange,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_IncrementalStepRefresh_sDSEChanges(

@@ -203,18 +203,18 @@ export function _encode_UniversalOrBMPString(
                     .concat([
                         /* REQUIRED   */ _encode_UniversalOrBMPString_character_encoding(
                             value.character_encoding,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.iso_639_language_code ===
                         undefined
                             ? undefined
                             : $._encodePrintableString(
                                   value.iso_639_language_code,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -283,8 +283,8 @@ export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
                                 _TagClass.context,
                                 0,
                                 () => _encode_RelativeDistinguishedName,
-                                $.BER
-                            )(value.rdn, $.BER),
+                                $.DER
+                            )(value.rdn, $.DER),
                             /* IF_ABSENT  */ value.admPointInfo === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -293,10 +293,10 @@ export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
                                       () =>
                                           $._encodeSetOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.admPointInfo, $.BER),
+                                      $.DER
+                                  )(value.admPointInfo, $.DER),
                             /* IF_ABSENT  */ value.subentries === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -305,25 +305,25 @@ export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
                                       () =>
                                           $._encodeSetOf<SubentryInfo>(
                                               () => _encode_SubentryInfo,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.subentries, $.BER),
+                                      $.DER
+                                  )(value.subentries, $.DER),
                             /* IF_ABSENT  */ value.accessPoints === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_MasterAndShadowAccessPoints,
-                                      $.BER
-                                  )(value.accessPoints, $.BER),
+                                      $.DER
+                                  )(value.accessPoints, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

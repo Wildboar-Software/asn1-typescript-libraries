@@ -436,36 +436,36 @@ export function _encode_TbsHandshakeAcc(
                                 TbsHandshakeAcc._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_Version(value.version, $.BER),
+                                : _encode_Version(value.version, $.DER),
                             /* REQUIRED   */ _encode_TbsHandshakeAcc_sigSel(
                                 value.sigSel,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TbsHandshakeAcc_keyEstSel(
                                 value.keyEstSel,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TbsHandshakeAcc_encr_mode(
                                 value.encr_mode,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.attCert === undefined
                                 ? undefined
                                 : _encode_DER_AttributeCertificate(
                                       value.attCert,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* IF_ABSENT  */ value.applData === undefined
                                 ? undefined
@@ -473,15 +473,15 @@ export function _encode_TbsHandshakeAcc(
                                       _TagClass.context,
                                       4,
                                       () => _encode_WrappedProt,
-                                      $.BER
-                                  )(value.applData, $.BER),
+                                      $.DER
+                                  )(value.applData, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

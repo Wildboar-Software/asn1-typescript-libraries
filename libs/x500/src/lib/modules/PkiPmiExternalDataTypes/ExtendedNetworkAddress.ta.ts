@@ -101,10 +101,10 @@ export function _encode_ExtendedNetworkAddress(
                     _TagClass.context,
                     0,
                     () => _encode_PresentationAddress,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ExtendedNetworkAddress(value, elGetter);

@@ -89,12 +89,12 @@ export function _encode_ARU_PPDU_normal_mode_parameters_user_data(
                         $._encodeSequenceOf<ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item>(
                             () =>
                                 _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ARU_PPDU_normal_mode_parameters_user_data(

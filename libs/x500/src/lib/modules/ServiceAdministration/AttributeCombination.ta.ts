@@ -109,7 +109,7 @@ export function _encode_AttributeCombination(
                     _TagClass.context,
                     0,
                     () => _encode_AttributeType,
-                    $.BER
+                    $.DER
                 ),
                 and: $._encode_explicit(
                     _TagClass.context,
@@ -117,9 +117,9 @@ export function _encode_AttributeCombination(
                     () =>
                         $._encodeSequenceOf<AttributeCombination>(
                             () => _encode_AttributeCombination,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 or: $._encode_explicit(
                     _TagClass.context,
@@ -127,18 +127,18 @@ export function _encode_AttributeCombination(
                     () =>
                         $._encodeSequenceOf<AttributeCombination>(
                             () => _encode_AttributeCombination,
-                            $.BER
+                            $.DER
                         ),
-                    $.BER
+                    $.DER
                 ),
                 not: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_AttributeCombination,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AttributeCombination(value, elGetter);

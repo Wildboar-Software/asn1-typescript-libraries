@@ -167,7 +167,7 @@ export function _encode_CertOK(value: CertOK, elGetter: $.ASN1Encoder<CertOK>) {
                         [
                             /* REQUIRED   */ _encode_Certificate(
                                 value.dhCert,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -175,7 +175,7 @@ export function _encode_CertOK(value: CertOK, elGetter: $.ASN1Encoder<CertOK>) {
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

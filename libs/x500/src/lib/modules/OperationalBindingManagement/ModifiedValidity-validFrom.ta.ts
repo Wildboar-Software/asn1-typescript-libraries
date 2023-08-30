@@ -86,16 +86,16 @@ export function _encode_ModifiedValidity_validFrom(
                     _TagClass.context,
                     0,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
                 time: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_Time,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ModifiedValidity_validFrom(value, elGetter);

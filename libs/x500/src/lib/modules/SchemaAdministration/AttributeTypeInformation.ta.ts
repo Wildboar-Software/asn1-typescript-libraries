@@ -445,40 +445,40 @@ export function _encode_AttributeTypeInformation(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.derivation, $.BER),
+                                      $.DER
+                                  )(value.derivation, $.DER),
                             /* IF_ABSENT  */ value.equalityMatch === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.equalityMatch, $.BER),
+                                      $.DER
+                                  )(value.equalityMatch, $.DER),
                             /* IF_ABSENT  */ value.orderingMatch === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.orderingMatch, $.BER),
+                                      $.DER
+                                  )(value.orderingMatch, $.DER),
                             /* IF_ABSENT  */ value.substringsMatch === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.substringsMatch, $.BER),
+                                      $.DER
+                                  )(value.substringsMatch, $.DER),
                             /* IF_ABSENT  */ value.attributeSyntax === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       4,
                                       () => _encode_UnboundedDirectoryString,
-                                      $.BER
-                                  )(value.attributeSyntax, $.BER),
+                                      $.DER
+                                  )(value.attributeSyntax, $.DER),
                             /* IF_DEFAULT */ value.multi_valued === undefined ||
                             $.deepEq(
                                 value.multi_valued,
@@ -489,8 +489,8 @@ export function _encode_AttributeTypeInformation(
                                       _TagClass.context,
                                       5,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.multi_valued, $.BER),
+                                      $.DER
+                                  )(value.multi_valued, $.DER),
                             /* IF_DEFAULT */ value.collective === undefined ||
                             $.deepEq(
                                 value.collective,
@@ -501,8 +501,8 @@ export function _encode_AttributeTypeInformation(
                                       _TagClass.context,
                                       6,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.collective, $.BER),
+                                      $.DER
+                                  )(value.collective, $.DER),
                             /* IF_DEFAULT */ value.userModifiable ===
                                 undefined ||
                             $.deepEq(
@@ -514,8 +514,8 @@ export function _encode_AttributeTypeInformation(
                                       _TagClass.context,
                                       7,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.userModifiable, $.BER),
+                                      $.DER
+                                  )(value.userModifiable, $.DER),
                             /* IF_DEFAULT */ value.application === undefined ||
                             $.deepEq(
                                 value.application,
@@ -524,7 +524,7 @@ export function _encode_AttributeTypeInformation(
                                 ? undefined
                                 : _encode_AttributeUsage(
                                       value.application,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -532,7 +532,7 @@ export function _encode_AttributeTypeInformation(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

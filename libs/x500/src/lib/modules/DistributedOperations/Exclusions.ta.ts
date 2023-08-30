@@ -66,7 +66,7 @@ export function _encode_Exclusions(
     if (!_cached_encoder_for_Exclusions) {
         _cached_encoder_for_Exclusions = $._encodeSetOf<RDNSequence>(
             () => _encode_RDNSequence,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Exclusions(value, elGetter);

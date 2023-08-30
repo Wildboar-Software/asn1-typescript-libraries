@@ -209,15 +209,15 @@ export function _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_
                     .concat([
                         /* REQUIRED   */ _encode_Presentation_context_identifier(
                             value.presentation_context_identifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values(
                             value.presentation_data_values,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

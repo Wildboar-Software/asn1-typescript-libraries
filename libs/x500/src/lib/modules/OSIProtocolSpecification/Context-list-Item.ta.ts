@@ -227,19 +227,19 @@ export function _encode_Context_list_Item(
                     .concat([
                         /* REQUIRED   */ _encode_Presentation_context_identifier(
                             value.presentation_context_identifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Abstract_syntax_name(
                             value.abstract_syntax_name,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeSequenceOf<Transfer_syntax_name>(
                             () => _encode_Transfer_syntax_name,
-                            $.BER
-                        )(value.transfer_syntax_name_list, $.BER),
+                            $.DER
+                        )(value.transfer_syntax_name_list, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

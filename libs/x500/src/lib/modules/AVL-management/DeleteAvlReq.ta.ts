@@ -218,18 +218,18 @@ export function _encode_DeleteAvlReq(
                         [
                             /* REQUIRED   */ _encode_InvokeID(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.avl_Id === undefined
                                 ? undefined
-                                : _encode_AvlSerialNumber(value.avl_Id, $.BER),
+                                : _encode_AvlSerialNumber(value.avl_Id, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

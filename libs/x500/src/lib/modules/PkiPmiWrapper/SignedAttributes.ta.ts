@@ -66,7 +66,7 @@ export function _encode_SignedAttributes(
     if (!_cached_encoder_for_SignedAttributes) {
         _cached_encoder_for_SignedAttributes = $._encodeSetOf<Attribute>(
             () => _encode_Attribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SignedAttributes(value, elGetter);

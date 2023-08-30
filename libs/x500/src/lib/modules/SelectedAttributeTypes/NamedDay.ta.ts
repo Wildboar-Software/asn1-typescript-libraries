@@ -113,7 +113,7 @@ export function _encode_NamedDay(
                 intNamedDays: _encode_NamedDay_intNamedDays,
                 bitNamedDays: _encode_NamedDay_bitNamedDays,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_NamedDay(value, elGetter);

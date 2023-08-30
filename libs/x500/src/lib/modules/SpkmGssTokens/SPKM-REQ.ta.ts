@@ -234,7 +234,7 @@ export function _encode_SPKM_REQ(
                     .concat([
                         /* REQUIRED   */ _encode_REQ_TOKEN(
                             value.requestToken,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.certif_data === undefined
                             ? undefined
@@ -242,19 +242,19 @@ export function _encode_SPKM_REQ(
                                   _TagClass.context,
                                   0,
                                   () => _encode_CertificationData,
-                                  $.BER
-                              )(value.certif_data, $.BER),
+                                  $.DER
+                              )(value.certif_data, $.DER),
                         /* IF_ABSENT  */ value.auth_data === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_AuthorizationData,
-                                  $.BER
-                              )(value.auth_data, $.BER),
+                                  $.DER
+                              )(value.auth_data, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

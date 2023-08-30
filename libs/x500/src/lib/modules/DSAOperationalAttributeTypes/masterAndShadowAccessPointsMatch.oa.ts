@@ -40,7 +40,7 @@ export const masterAndShadowAccessPointsMatch: MATCHING_RULE<Name[]> = {
         "&AssertionType": $._decodeSetOf<Name>(() => _decode_Name),
     },
     encoderFor: {
-        "&AssertionType": $._encodeSetOf<Name>(() => _encode_Name, $.BER),
+        "&AssertionType": $._encodeSetOf<Name>(() => _encode_Name, $.DER),
     },
     "&id": id_kmr_masterShadowMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

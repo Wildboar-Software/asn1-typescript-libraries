@@ -298,22 +298,22 @@ export function _encode_CoordinateShadowUpdateArgumentData(
                                 [
                                     /* REQUIRED   */ _encode_AgreementID(
                                         value.agreementID,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.lastUpdate ===
                                     undefined
                                         ? undefined
-                                        : _encode_Time(value.lastUpdate, $.BER),
+                                        : _encode_Time(value.lastUpdate, $.DER),
                                     /* REQUIRED   */ _encode_CoordinateShadowUpdateArgumentData_updateStrategy(
                                         value.updateStrategy,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* IF_ABSENT  */ value.securityParameters ===
                                     undefined
                                         ? undefined
                                         : _encode_SecurityParameters(
                                               value.securityParameters,
-                                              $.BER
+                                              $.DER
                                           ),
                                 ],
                                 value._unrecognizedExtensionsList
@@ -323,10 +323,10 @@ export function _encode_CoordinateShadowUpdateArgumentData(
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CoordinateShadowUpdateArgumentData(

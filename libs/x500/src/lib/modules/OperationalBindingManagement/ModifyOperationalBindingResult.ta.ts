@@ -108,10 +108,10 @@ export function _encode_ModifyOperationalBindingResult(
                         _get_encoder_for_OPTIONALLY_PROTECTED_SEQ<ModifyOperationalBindingResultData>(
                             _encode_ModifyOperationalBindingResultData
                         ),
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ModifyOperationalBindingResult(value, elGetter);

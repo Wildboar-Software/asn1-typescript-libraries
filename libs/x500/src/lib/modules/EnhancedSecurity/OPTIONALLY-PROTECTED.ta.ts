@@ -61,7 +61,7 @@ export function _get_encoder_for_OPTIONALLY_PROTECTED<Type>(
             unsigned: _encode_Type,
             signed: _get_encoder_for_SIGNED<Type>(_encode_Type),
         },
-        $.BER
+        $.DER
     );
 }
 /* END_OF_SYMBOL_DEFINITION _get_encoder_for_OPTIONALLY_PROTECTED */

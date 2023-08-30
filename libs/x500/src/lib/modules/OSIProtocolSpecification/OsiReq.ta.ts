@@ -188,24 +188,24 @@ export function _encode_OsiReq(value: OsiReq, elGetter: $.ASN1Encoder<OsiReq>) {
                             .concat([
                                 /* REQUIRED   */ _encode_InvokeId(
                                     value.invokeId,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ _encode_Code(
                                     value.opcode,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ $._encodeAny(
                                     value.argument,
-                                    $.BER
+                                    $.DER
                                 ),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiReq(value, elGetter);

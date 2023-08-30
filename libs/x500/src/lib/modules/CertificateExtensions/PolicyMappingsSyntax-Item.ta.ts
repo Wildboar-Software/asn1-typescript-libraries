@@ -198,11 +198,11 @@ export function _encode_PolicyMappingsSyntax_Item(
                         [
                             /* REQUIRED   */ _encode_CertPolicyId(
                                 value.issuerDomainPolicy,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CertPolicyId(
                                 value.subjectDomainPolicy,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -210,7 +210,7 @@ export function _encode_PolicyMappingsSyntax_Item(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

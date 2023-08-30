@@ -335,27 +335,27 @@ export function _encode_UnitOfReplication(
                     .concat([
                         /* REQUIRED   */ _encode_AreaSpecification(
                             value.area,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AttributeSelection(
                             value.attributes,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.knowledge === undefined
                             ? undefined
-                            : _encode_Knowledge(value.knowledge, $.BER),
+                            : _encode_Knowledge(value.knowledge, $.DER),
                         /* IF_DEFAULT */ value.subordinates === undefined ||
                         $.deepEq(
                             value.subordinates,
                             UnitOfReplication._default_value_for_subordinates
                         )
                             ? undefined
-                            : $._encodeBoolean(value.subordinates, $.BER),
+                            : $._encodeBoolean(value.subordinates, $.DER),
                         /* IF_ABSENT  */ value.contextSelection === undefined
                             ? undefined
                             : _encode_ContextSelection(
                                   value.contextSelection,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.supplyContexts === undefined
                             ? undefined
@@ -364,11 +364,11 @@ export function _encode_UnitOfReplication(
                                   0,
                                   () =>
                                       _encode_UnitOfReplication_supplyContexts,
-                                  $.BER
-                              )(value.supplyContexts, $.BER),
+                                  $.DER
+                              )(value.supplyContexts, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

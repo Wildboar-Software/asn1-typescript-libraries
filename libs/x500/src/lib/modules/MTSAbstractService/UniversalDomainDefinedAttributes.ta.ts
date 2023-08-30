@@ -68,7 +68,7 @@ export function _encode_UniversalDomainDefinedAttributes(
     if (!_cached_encoder_for_UniversalDomainDefinedAttributes) {
         _cached_encoder_for_UniversalDomainDefinedAttributes = $._encodeSequenceOf<UniversalDomainDefinedAttribute>(
             () => _encode_UniversalDomainDefinedAttribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UniversalDomainDefinedAttributes(

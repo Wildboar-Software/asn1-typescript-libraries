@@ -362,14 +362,14 @@ export function _encode_SupplierInformation(
                                 _TagClass.context,
                                 0,
                                 () => _encode_Name,
-                                $.BER
-                            )(value.ae_title, $.BER),
+                                $.DER
+                            )(value.ae_title, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_PresentationAddress,
-                                $.BER
-                            )(value.address, $.BER),
+                                $.DER
+                            )(value.address, $.DER),
                             /* IF_ABSENT  */ value.protocolInformation ===
                             undefined
                                 ? undefined
@@ -379,16 +379,16 @@ export function _encode_SupplierInformation(
                                       () =>
                                           $._encodeSetOf<ProtocolInformation>(
                                               () => _encode_ProtocolInformation,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.protocolInformation, $.BER),
+                                      $.DER
+                                  )(value.protocolInformation, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 3,
                                 () => _encode_OperationalBindingID,
-                                $.BER
-                            )(value.agreementID, $.BER),
+                                $.DER
+                            )(value.agreementID, $.DER),
                             /* IF_DEFAULT */ value.supplier_is_master ===
                                 undefined ||
                             $.deepEq(
@@ -400,8 +400,8 @@ export function _encode_SupplierInformation(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.supplier_is_master, $.BER),
+                                      $.DER
+                                  )(value.supplier_is_master, $.DER),
                             /* IF_ABSENT  */ value.non_supplying_master ===
                             undefined
                                 ? undefined
@@ -409,15 +409,15 @@ export function _encode_SupplierInformation(
                                       _TagClass.context,
                                       5,
                                       () => _encode_AccessPoint,
-                                      $.BER
-                                  )(value.non_supplying_master, $.BER),
+                                      $.DER
+                                  )(value.non_supplying_master, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

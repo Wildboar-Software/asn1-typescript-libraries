@@ -248,8 +248,8 @@ export function _encode_SuperiorToSubordinate(
                                 _TagClass.context,
                                 0,
                                 () => _encode_DITcontext,
-                                $.BER
-                            )(value.contextPrefixInfo, $.BER),
+                                $.DER
+                            )(value.contextPrefixInfo, $.DER),
                             /* IF_ABSENT  */ value.entryInfo === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -258,10 +258,10 @@ export function _encode_SuperiorToSubordinate(
                                       () =>
                                           $._encodeSetOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.entryInfo, $.BER),
+                                      $.DER
+                                  )(value.entryInfo, $.DER),
                             /* IF_ABSENT  */ value.immediateSuperiorInfo ===
                             undefined
                                 ? undefined
@@ -271,17 +271,17 @@ export function _encode_SuperiorToSubordinate(
                                       () =>
                                           $._encodeSetOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.immediateSuperiorInfo, $.BER),
+                                      $.DER
+                                  )(value.immediateSuperiorInfo, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

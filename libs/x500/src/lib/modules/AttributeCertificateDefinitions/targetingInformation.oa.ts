@@ -38,7 +38,7 @@ export const targetingInformation: EXTENSION<Targets[]> = {
         "&ExtnType": $._decodeSequenceOf<Targets>(() => _decode_Targets),
     },
     encoderFor: {
-        "&ExtnType": $._encodeSequenceOf<Targets>(() => _encode_Targets, $.BER),
+        "&ExtnType": $._encodeSequenceOf<Targets>(() => _encode_Targets, $.DER),
     },
     "&id": id_ce_targetingInformation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ExtnType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

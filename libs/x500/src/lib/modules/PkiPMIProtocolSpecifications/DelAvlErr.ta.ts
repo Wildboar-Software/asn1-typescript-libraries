@@ -224,7 +224,7 @@ export function _encode_DelAvlErr(
                         [
                             /* REQUIRED   */ _encode_AVMP_error(
                                 value.notOK,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -232,7 +232,7 @@ export function _encode_DelAvlErr(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

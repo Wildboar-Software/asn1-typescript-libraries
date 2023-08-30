@@ -278,14 +278,14 @@ export function _encode_RoleSpecCertIdentifier(
                                 _TagClass.context,
                                 0,
                                 () => _encode_GeneralName,
-                                $.BER
-                            )(value.roleName, $.BER),
+                                $.DER
+                            )(value.roleName, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_GeneralName,
-                                $.BER
-                            )(value.roleCertIssuer, $.BER),
+                                $.DER
+                            )(value.roleCertIssuer, $.DER),
                             /* IF_ABSENT  */ value.roleCertSerialNumber ===
                             undefined
                                 ? undefined
@@ -293,23 +293,23 @@ export function _encode_RoleSpecCertIdentifier(
                                       _TagClass.context,
                                       2,
                                       () => _encode_CertificateSerialNumber,
-                                      $.BER
-                                  )(value.roleCertSerialNumber, $.BER),
+                                      $.DER
+                                  )(value.roleCertSerialNumber, $.DER),
                             /* IF_ABSENT  */ value.roleCertLocator === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.roleCertLocator, $.BER),
+                                      $.DER
+                                  )(value.roleCertLocator, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

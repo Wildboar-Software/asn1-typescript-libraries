@@ -115,22 +115,22 @@ export function _encode_CertificateGroup(
                     _TagClass.context,
                     0,
                     () => _encode_CertificateSerialNumbers,
-                    $.BER
+                    $.DER
                 ),
                 serialNumberRange: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_CertificateGroupNumberRange,
-                    $.BER
+                    $.DER
                 ),
                 nameSubtree: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_GeneralName,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertificateGroup(value, elGetter);

@@ -93,7 +93,7 @@ export function _encode_RequestShadowUpdateArgumentData_requestedStrategy(
                 standard: _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
                 other: $._encodeExternal,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RequestShadowUpdateArgumentData_requestedStrategy(

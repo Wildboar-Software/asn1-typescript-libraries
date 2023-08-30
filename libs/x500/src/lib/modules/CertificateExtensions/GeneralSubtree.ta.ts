@@ -247,7 +247,7 @@ export function _encode_GeneralSubtree(
                         [
                             /* REQUIRED   */ _encode_GeneralName(
                                 value.base,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.minimum === undefined ||
                             $.deepEq(
@@ -259,23 +259,23 @@ export function _encode_GeneralSubtree(
                                       _TagClass.context,
                                       0,
                                       () => _encode_BaseDistance,
-                                      $.BER
-                                  )(value.minimum, $.BER),
+                                      $.DER
+                                  )(value.minimum, $.DER),
                             /* IF_ABSENT  */ value.maximum === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_BaseDistance,
-                                      $.BER
-                                  )(value.maximum, $.BER),
+                                      $.DER
+                                  )(value.maximum, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

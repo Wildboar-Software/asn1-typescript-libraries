@@ -169,14 +169,14 @@ export function _encode_AuthorizationData_Item(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.ad_type, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.ad_type, $.DER),
                         /* REQUIRED   */ $._encodeOctetString(
                             value.ad_data,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

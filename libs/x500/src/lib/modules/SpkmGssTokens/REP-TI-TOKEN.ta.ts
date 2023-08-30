@@ -219,19 +219,19 @@ export function _encode_REP_TI_TOKEN(
                     .concat([
                         /* REQUIRED   */ _encode_Rep_ti_contents(
                             value.rep_ti_contents,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algId,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Integrity(
                             value.rep_ti_integ,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

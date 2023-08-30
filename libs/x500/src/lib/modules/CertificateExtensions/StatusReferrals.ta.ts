@@ -66,7 +66,7 @@ export function _encode_StatusReferrals(
     if (!_cached_encoder_for_StatusReferrals) {
         _cached_encoder_for_StatusReferrals = $._encodeSequenceOf<StatusReferral>(
             () => _encode_StatusReferral,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_StatusReferrals(value, elGetter);

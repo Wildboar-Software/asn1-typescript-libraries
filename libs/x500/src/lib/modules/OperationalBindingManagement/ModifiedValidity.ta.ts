@@ -258,8 +258,8 @@ export function _encode_ModifiedValidity(
                                       _TagClass.context,
                                       0,
                                       () => _encode_ModifiedValidity_validFrom,
-                                      $.BER
-                                  )(value.validFrom, $.BER),
+                                      $.DER
+                                  )(value.validFrom, $.DER),
                             /* IF_DEFAULT */ value.validUntil === undefined ||
                             $.deepEq(
                                 value.validUntil,
@@ -270,15 +270,15 @@ export function _encode_ModifiedValidity(
                                       _TagClass.context,
                                       1,
                                       () => _encode_ModifiedValidity_validUntil,
-                                      $.BER
-                                  )(value.validUntil, $.BER),
+                                      $.DER
+                                  )(value.validUntil, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

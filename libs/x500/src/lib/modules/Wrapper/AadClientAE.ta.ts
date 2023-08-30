@@ -329,19 +329,19 @@ export function _encode_AadClientAE(
                                       _TagClass.context,
                                       0,
                                       () => _encode_InvokeID,
-                                      $.BER
-                                  )(value.invokeID, $.BER),
+                                      $.DER
+                                  )(value.invokeID, $.DER),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_SequenceNumber(
                                 value.seq,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.keyEst === undefined
                                 ? undefined
@@ -349,23 +349,23 @@ export function _encode_AadClientAE(
                                       _TagClass.context,
                                       2,
                                       () => _encode_AlgoInvoke,
-                                      $.BER
-                                  )(value.keyEst, $.BER),
+                                      $.DER
+                                  )(value.keyEst, $.DER),
                             /* IF_ABSENT  */ value.encInvoke === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_AlgoInvoke,
-                                      $.BER
-                                  )(value.encInvoke, $.BER),
+                                      $.DER
+                                  )(value.encInvoke, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

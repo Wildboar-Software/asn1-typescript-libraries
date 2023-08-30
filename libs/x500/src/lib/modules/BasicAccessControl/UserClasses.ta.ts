@@ -299,16 +299,16 @@ export function _encode_UserClasses(
                                       _TagClass.context,
                                       0,
                                       () => $._encodeNull,
-                                      $.BER
-                                  )(value.allUsers, $.BER),
+                                      $.DER
+                                  )(value.allUsers, $.DER),
                             /* IF_ABSENT  */ value.thisEntry === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeNull,
-                                      $.BER
-                                  )(value.thisEntry, $.BER),
+                                      $.DER
+                                  )(value.thisEntry, $.DER),
                             /* IF_ABSENT  */ value.name === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -317,10 +317,10 @@ export function _encode_UserClasses(
                                       () =>
                                           $._encodeSetOf<NameAndOptionalUID>(
                                               () => _encode_NameAndOptionalUID,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.name, $.BER),
+                                      $.DER
+                                  )(value.name, $.DER),
                             /* IF_ABSENT  */ value.userGroup === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -329,10 +329,10 @@ export function _encode_UserClasses(
                                       () =>
                                           $._encodeSetOf<NameAndOptionalUID>(
                                               () => _encode_NameAndOptionalUID,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.userGroup, $.BER),
+                                      $.DER
+                                  )(value.userGroup, $.DER),
                             /* IF_ABSENT  */ value.subtree === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -342,17 +342,17 @@ export function _encode_UserClasses(
                                           $._encodeSetOf<SubtreeSpecification>(
                                               () =>
                                                   _encode_SubtreeSpecification,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.subtree, $.BER),
+                                      $.DER
+                                  )(value.subtree, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -249,7 +249,7 @@ export function _encode_TimeSpecification(
                         [
                             /* REQUIRED   */ _encode_TimeSpecification_time(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.notThisTime === undefined ||
                             $.deepEq(
@@ -257,17 +257,17 @@ export function _encode_TimeSpecification(
                                 TimeSpecification._default_value_for_notThisTime
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.notThisTime, $.BER),
+                                : $._encodeBoolean(value.notThisTime, $.DER),
                             /* IF_ABSENT  */ value.timeZone === undefined
                                 ? undefined
-                                : _encode_TimeZone(value.timeZone, $.BER),
+                                : _encode_TimeZone(value.timeZone, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

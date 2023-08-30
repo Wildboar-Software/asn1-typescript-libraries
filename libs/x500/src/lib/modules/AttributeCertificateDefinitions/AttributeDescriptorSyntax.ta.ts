@@ -307,11 +307,11 @@ export function _encode_AttributeDescriptorSyntax(
                         [
                             /* REQUIRED   */ _encode_AttributeIdentifier(
                                 value.identifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeOctetString(
                                 value.attributeSyntax,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.name === undefined
                                 ? undefined
@@ -319,19 +319,19 @@ export function _encode_AttributeDescriptorSyntax(
                                       _TagClass.context,
                                       0,
                                       () => _encode_AttributeName,
-                                      $.BER
-                                  )(value.name, $.BER),
+                                      $.DER
+                                  )(value.name, $.DER),
                             /* IF_ABSENT  */ value.description === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_AttributeDescription,
-                                      $.BER
-                                  )(value.description, $.BER),
+                                      $.DER
+                                  )(value.description, $.DER),
                             /* REQUIRED   */ _encode_PrivilegePolicyIdentifier(
                                 value.dominationRule,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -339,7 +339,7 @@ export function _encode_AttributeDescriptorSyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

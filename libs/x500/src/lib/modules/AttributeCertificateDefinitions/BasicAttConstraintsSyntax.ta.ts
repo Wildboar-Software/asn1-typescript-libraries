@@ -219,13 +219,13 @@ export function _encode_BasicAttConstraintsSyntax(
                                 BasicAttConstraintsSyntax._default_value_for_authority
                             )
                                 ? undefined
-                                : $._encodeBoolean(value.authority, $.BER),
+                                : $._encodeBoolean(value.authority, $.DER),
                             /* IF_ABSENT  */ value.pathLenConstraint ===
                             undefined
                                 ? undefined
                                 : $._encodeInteger(
                                       value.pathLenConstraint,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -233,7 +233,7 @@ export function _encode_BasicAttConstraintsSyntax(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

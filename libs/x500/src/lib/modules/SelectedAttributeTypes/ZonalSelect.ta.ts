@@ -66,7 +66,7 @@ export function _encode_ZonalSelect(
     if (!_cached_encoder_for_ZonalSelect) {
         _cached_encoder_for_ZonalSelect = $._encodeSequenceOf<AttributeType>(
             () => _encode_AttributeType,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ZonalSelect(value, elGetter);

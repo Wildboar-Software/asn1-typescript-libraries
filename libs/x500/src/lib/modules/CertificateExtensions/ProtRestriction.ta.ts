@@ -56,7 +56,7 @@ export function _encode_ProtRestriction(
     if (!_cached_encoder_for_ProtRestriction) {
         _cached_encoder_for_ProtRestriction = $._encodeSequenceOf<OBJECT_IDENTIFIER>(
             () => $._encodeObjectIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ProtRestriction(value, elGetter);

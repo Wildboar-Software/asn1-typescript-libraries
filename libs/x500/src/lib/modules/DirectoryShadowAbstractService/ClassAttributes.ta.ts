@@ -97,16 +97,16 @@ export function _encode_ClassAttributes(
                     _TagClass.context,
                     0,
                     () => _encode_AttributeTypes,
-                    $.BER
+                    $.DER
                 ),
                 exclude: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_AttributeTypes,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ClassAttributes(value, elGetter);

@@ -325,23 +325,23 @@ export function _encode_Context_Data(
                     .concat([
                         /* IF_ABSENT  */ value.channelId === undefined
                             ? undefined
-                            : _encode_ChannelId(value.channelId, $.BER),
+                            : _encode_ChannelId(value.channelId, $.DER),
                         /* IF_ABSENT  */ value.seq_number === undefined
                             ? undefined
-                            : $._encodeInteger(value.seq_number, $.BER),
-                        /* REQUIRED   */ _encode_Options(value.options, $.BER),
+                            : $._encodeInteger(value.seq_number, $.DER),
+                        /* REQUIRED   */ _encode_Options(value.options, $.DER),
                         /* REQUIRED   */ _encode_Conf_Algs(
                             value.conf_alg,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Intg_Algs(
                             value.intg_alg,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ _encode_OWF_Algs(value.owf_alg, $.BER),
+                        /* REQUIRED   */ _encode_OWF_Algs(value.owf_alg, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

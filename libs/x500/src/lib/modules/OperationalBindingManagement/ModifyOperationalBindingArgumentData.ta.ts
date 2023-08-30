@@ -405,50 +405,50 @@ export function _encode_ModifyOperationalBindingArgumentData(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.bindingType, $.BER),
+                                $.DER
+                            )(value.bindingType, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_OperationalBindingID,
-                                $.BER
-                            )(value.bindingID, $.BER),
+                                $.DER
+                            )(value.bindingID, $.DER),
                             /* IF_ABSENT  */ value.accessPoint === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       2,
                                       () => _encode_AccessPoint,
-                                      $.BER
-                                  )(value.accessPoint, $.BER),
+                                      $.DER
+                                  )(value.accessPoint, $.DER),
                             /* IF_ABSENT  */ value.initiator === undefined
                                 ? undefined
                                 : _encode_ModifyOperationalBindingArgumentData_initiator(
                                       value.initiator,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 6,
                                 () => _encode_OperationalBindingID,
-                                $.BER
-                            )(value.newBindingID, $.BER),
+                                $.DER
+                            )(value.newBindingID, $.DER),
                             /* IF_ABSENT  */ value.newAgreement === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       7,
                                       () => $._encodeAny,
-                                      $.BER
-                                  )(value.newAgreement, $.BER),
+                                      $.DER
+                                  )(value.newAgreement, $.DER),
                             /* IF_ABSENT  */ value.valid === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       8,
                                       () => _encode_ModifiedValidity,
-                                      $.BER
-                                  )(value.valid, $.BER),
+                                      $.DER
+                                  )(value.valid, $.DER),
                             /* IF_ABSENT  */ value.securityParameters ===
                             undefined
                                 ? undefined
@@ -456,15 +456,15 @@ export function _encode_ModifyOperationalBindingArgumentData(
                                       _TagClass.context,
                                       9,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

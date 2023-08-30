@@ -40,7 +40,7 @@ export const userNotice: EXTENSION<UserNotice[]> = {
     encoderFor: {
         "&ExtnType": $._encodeSequenceOf<UserNotice>(
             () => _encode_UserNotice,
-            $.BER
+            $.DER
         ),
     },
     "&id": id_ce_userNotice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

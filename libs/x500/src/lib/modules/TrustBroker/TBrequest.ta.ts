@@ -87,16 +87,16 @@ export function _encode_TBrequest(
                     _TagClass.context,
                     0,
                     () => _encode_PKCertIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 subjectCert: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_PKCertIdentifier,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TBrequest(value, elGetter);

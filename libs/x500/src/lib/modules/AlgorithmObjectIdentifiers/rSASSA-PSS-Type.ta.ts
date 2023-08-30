@@ -242,8 +242,8 @@ export function _encode_rSASSA_PSS_Type(
                             _TagClass.context,
                             0,
                             () => _encode_AlgorithmIdentifier,
-                            $.BER
-                        )(value.hashAlgorithm, $.BER),
+                            $.DER
+                        )(value.hashAlgorithm, $.DER),
                         /* IF_DEFAULT */ value.saltLength === undefined ||
                         $.deepEq(
                             value.saltLength,
@@ -254,8 +254,8 @@ export function _encode_rSASSA_PSS_Type(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.saltLength, $.BER),
+                                  $.DER
+                              )(value.saltLength, $.DER),
                         /* IF_DEFAULT */ value.trailerField === undefined ||
                         $.deepEq(
                             value.trailerField,
@@ -266,11 +266,11 @@ export function _encode_rSASSA_PSS_Type(
                                   _TagClass.context,
                                   3,
                                   () => $._encodeInteger,
-                                  $.BER
-                              )(value.trailerField, $.BER),
+                                  $.DER
+                              )(value.trailerField, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

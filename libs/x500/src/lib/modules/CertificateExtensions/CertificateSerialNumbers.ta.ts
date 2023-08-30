@@ -66,7 +66,7 @@ export function _encode_CertificateSerialNumbers(
     if (!_cached_encoder_for_CertificateSerialNumbers) {
         _cached_encoder_for_CertificateSerialNumbers = $._encodeSequenceOf<CertificateSerialNumber>(
             () => _encode_CertificateSerialNumber,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertificateSerialNumbers(value, elGetter);

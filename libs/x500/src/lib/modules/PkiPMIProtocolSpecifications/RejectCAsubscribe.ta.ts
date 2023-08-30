@@ -310,14 +310,14 @@ export function _encode_RejectCAsubscribe(
                                 RejectCAsubscribe._default_value_for_version
                             )
                                 ? undefined
-                                : _encode_CASPversion(value.version, $.BER),
+                                : _encode_CASPversion(value.version, $.DER),
                             /* REQUIRED   */ _encode_CASPsequence(
                                 value.sequence,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_CASP_error(
                                 value.reason,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -325,7 +325,7 @@ export function _encode_RejectCAsubscribe(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

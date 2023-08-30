@@ -188,11 +188,11 @@ export function _encode_OperationalBindingID(
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.identifier,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.version,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -200,7 +200,7 @@ export function _encode_OperationalBindingID(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -101,16 +101,16 @@ export function _encode_DistributionPointName(
                     _TagClass.context,
                     0,
                     () => _encode_GeneralNames,
-                    $.BER
+                    $.DER
                 ),
                 nameRelativeToCRLIssuer: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_RelativeDistinguishedName,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_DistributionPointName(value, elGetter);

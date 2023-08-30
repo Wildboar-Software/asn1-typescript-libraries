@@ -284,32 +284,32 @@ export function _encode_CertificationPath(
                                   _TagClass.context,
                                   0,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.userKeyId, $.BER),
+                                  $.DER
+                              )(value.userKeyId, $.DER),
                         /* IF_ABSENT  */ value.userCertif === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Certificate,
-                                  $.BER
-                              )(value.userCertif, $.BER),
+                                  $.DER
+                              )(value.userCertif, $.DER),
                         /* IF_ABSENT  */ value.verifKeyId === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   2,
                                   () => $._encodeOctetString,
-                                  $.BER
-                              )(value.verifKeyId, $.BER),
+                                  $.DER
+                              )(value.verifKeyId, $.DER),
                         /* IF_ABSENT  */ value.userVerifCertif === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   3,
                                   () => _encode_Certificate,
-                                  $.BER
-                              )(value.userVerifCertif, $.BER),
+                                  $.DER
+                              )(value.userVerifCertif, $.DER),
                         /* IF_ABSENT  */ value.theCACertificates === undefined
                             ? undefined
                             : $._encode_implicit(
@@ -318,13 +318,13 @@ export function _encode_CertificationPath(
                                   () =>
                                       $._encodeSequenceOf<CertificatePair>(
                                           () => _encode_CertificatePair,
-                                          $.BER
+                                          $.DER
                                       ),
-                                  $.BER
-                              )(value.theCACertificates, $.BER),
+                                  $.DER
+                              )(value.theCACertificates, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

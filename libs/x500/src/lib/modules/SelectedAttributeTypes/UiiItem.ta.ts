@@ -180,14 +180,14 @@ export function _encode_UiiItem(
                     .concat([
                         /* REQUIRED   */ $._encodeObjectIdentifier(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.length === undefined
                             ? undefined
-                            : $._encodeInteger(value.length, $.BER),
+                            : $._encodeInteger(value.length, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

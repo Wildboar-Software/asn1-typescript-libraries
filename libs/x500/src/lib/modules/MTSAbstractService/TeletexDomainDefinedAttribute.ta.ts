@@ -177,15 +177,15 @@ export function _encode_TeletexDomainDefinedAttribute(
                     .concat([
                         /* REQUIRED   */ $._encodeTeletexString(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodeTeletexString(
                             value.value,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

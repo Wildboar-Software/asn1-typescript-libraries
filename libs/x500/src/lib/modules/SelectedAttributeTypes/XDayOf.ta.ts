@@ -96,34 +96,34 @@ export function _encode_XDayOf(value: XDayOf, elGetter: $.ASN1Encoder<XDayOf>) {
                     _TagClass.context,
                     1,
                     () => _encode_NamedDay,
-                    $.BER
+                    $.DER
                 ),
                 second: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_NamedDay,
-                    $.BER
+                    $.DER
                 ),
                 third: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_NamedDay,
-                    $.BER
+                    $.DER
                 ),
                 fourth: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => _encode_NamedDay,
-                    $.BER
+                    $.DER
                 ),
                 fifth: $._encode_explicit(
                     _TagClass.context,
                     5,
                     () => _encode_NamedDay,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_XDayOf(value, elGetter);

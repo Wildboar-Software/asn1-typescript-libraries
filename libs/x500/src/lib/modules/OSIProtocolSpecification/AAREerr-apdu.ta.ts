@@ -512,26 +512,26 @@ export function _encode_AAREerr_apdu(
                                           0,
                                           () =>
                                               _encode_AAREerr_apdu_protocol_version,
-                                          $.BER
-                                      )(value.protocol_version, $.BER),
+                                          $.DER
+                                      )(value.protocol_version, $.DER),
                                 /* REQUIRED   */ $._encode_explicit(
                                     _TagClass.context,
                                     1,
                                     () => _encode_Application_context_name,
-                                    $.BER
-                                )(value.application_context_name, $.BER),
+                                    $.DER
+                                )(value.application_context_name, $.DER),
                                 /* REQUIRED   */ $._encode_explicit(
                                     _TagClass.context,
                                     2,
                                     () => _encode_Associate_result,
-                                    $.BER
-                                )(value.result, $.BER),
+                                    $.DER
+                                )(value.result, $.DER),
                                 /* REQUIRED   */ $._encode_explicit(
                                     _TagClass.context,
                                     3,
                                     () => _encode_Associate_source_diagnostic,
-                                    $.BER
-                                )(value.result_source_diagnostic, $.BER),
+                                    $.DER
+                                )(value.result_source_diagnostic, $.DER),
                                 /* IF_ABSENT  */ value.responding_AP_title ===
                                 undefined
                                     ? undefined
@@ -539,8 +539,8 @@ export function _encode_AAREerr_apdu(
                                           _TagClass.context,
                                           4,
                                           () => _encode_Name,
-                                          $.BER
-                                      )(value.responding_AP_title, $.BER),
+                                          $.DER
+                                      )(value.responding_AP_title, $.DER),
                                 /* IF_ABSENT  */ value.responding_AE_qualifier ===
                                 undefined
                                     ? undefined
@@ -549,8 +549,8 @@ export function _encode_AAREerr_apdu(
                                           5,
                                           () =>
                                               _encode_RelativeDistinguishedName,
-                                          $.BER
-                                      )(value.responding_AE_qualifier, $.BER),
+                                          $.DER
+                                      )(value.responding_AE_qualifier, $.DER),
                                 /* IF_ABSENT  */ value.responding_AP_invocation_identifier ===
                                 undefined
                                     ? undefined
@@ -559,10 +559,10 @@ export function _encode_AAREerr_apdu(
                                           6,
                                           () =>
                                               _encode_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.responding_AP_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.responding_AE_invocation_identifier ===
                                 undefined
@@ -572,10 +572,10 @@ export function _encode_AAREerr_apdu(
                                           7,
                                           () =>
                                               _encode_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.responding_AE_invocation_identifier,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.implementation_information ===
                                 undefined
@@ -584,10 +584,10 @@ export function _encode_AAREerr_apdu(
                                           _TagClass.context,
                                           29,
                                           () => _encode_Implementation_data,
-                                          $.BER
+                                          $.DER
                                       )(
                                           value.implementation_information,
-                                          $.BER
+                                          $.DER
                                       ),
                                 /* IF_ABSENT  */ value.user_information ===
                                 undefined
@@ -597,16 +597,16 @@ export function _encode_AAREerr_apdu(
                                           30,
                                           () =>
                                               _encode_Association_informationBindErr,
-                                          $.BER
-                                      )(value.user_information, $.BER),
+                                          $.DER
+                                      )(value.user_information, $.DER),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_AAREerr_apdu(value, elGetter);

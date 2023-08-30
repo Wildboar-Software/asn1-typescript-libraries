@@ -309,8 +309,8 @@ export function _encode_OsiBindResult_normal_mode_parameters(
                                   0,
                                   () =>
                                       _encode_OsiBindResult_normal_mode_parameters_protocol_version,
-                                  $.BER
-                              )(value.protocol_version, $.BER),
+                                  $.DER
+                              )(value.protocol_version, $.DER),
                         /* IF_ABSENT  */ value.responding_presentation_selector ===
                         undefined
                             ? undefined
@@ -318,8 +318,8 @@ export function _encode_OsiBindResult_normal_mode_parameters(
                                   _TagClass.context,
                                   3,
                                   () => _encode_Presentation_selector,
-                                  $.BER
-                              )(value.responding_presentation_selector, $.BER),
+                                  $.DER
+                              )(value.responding_presentation_selector, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             5,
@@ -327,20 +327,20 @@ export function _encode_OsiBindResult_normal_mode_parameters(
                                 $._encodeSequenceOf<OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item>(
                                     () =>
                                         _encode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-                                    $.BER
+                                    $.DER
                                 ),
-                            $.BER
+                            $.DER
                         )(
                             value.presentation_context_definition_result_list,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_OsiBindResult_normal_mode_parameters_user_data(
                             value.user_data,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

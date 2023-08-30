@@ -308,8 +308,8 @@ export function _encode_RelaxationPolicy(
                                       _TagClass.context,
                                       0,
                                       () => _encode_MRMapping,
-                                      $.BER
-                                  )(value.basic, $.BER),
+                                      $.DER
+                                  )(value.basic, $.DER),
                             /* IF_ABSENT  */ value.tightenings === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -318,10 +318,10 @@ export function _encode_RelaxationPolicy(
                                       () =>
                                           $._encodeSequenceOf<MRMapping>(
                                               () => _encode_MRMapping,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.tightenings, $.BER),
+                                      $.DER
+                                  )(value.tightenings, $.DER),
                             /* IF_ABSENT  */ value.relaxations === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -330,18 +330,18 @@ export function _encode_RelaxationPolicy(
                                       () =>
                                           $._encodeSequenceOf<MRMapping>(
                                               () => _encode_MRMapping,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.relaxations, $.BER),
+                                      $.DER
+                                  )(value.relaxations, $.DER),
                             /* IF_ABSENT  */ value.maximum === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.maximum, $.BER),
+                                      $.DER
+                                  )(value.maximum, $.DER),
                             /* IF_DEFAULT */ value.minimum === undefined ||
                             $.deepEq(
                                 value.minimum,
@@ -352,15 +352,15 @@ export function _encode_RelaxationPolicy(
                                       _TagClass.context,
                                       4,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.minimum, $.BER),
+                                      $.DER
+                                  )(value.minimum, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

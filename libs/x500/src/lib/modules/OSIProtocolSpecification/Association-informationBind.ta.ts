@@ -62,7 +62,7 @@ export function _encode_Association_informationBind(
     if (!_cached_encoder_for_Association_informationBind) {
         _cached_encoder_for_Association_informationBind = $._encodeSequenceOf<EXTERNAL>(
             () => $._encodeExternal,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Association_informationBind(value, elGetter);

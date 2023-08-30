@@ -268,7 +268,7 @@ export function _encode_Clearance(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.policyId,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.classList === undefined ||
                             $.deepEq(
@@ -276,21 +276,21 @@ export function _encode_Clearance(
                                 Clearance._default_value_for_classList
                             )
                                 ? undefined
-                                : _encode_ClassList(value.classList, $.BER),
+                                : _encode_ClassList(value.classList, $.DER),
                             /* IF_ABSENT  */ value.securityCategories ===
                             undefined
                                 ? undefined
                                 : $._encodeSetOf<SecurityCategory>(
                                       () => _encode_SecurityCategory,
-                                      $.BER
-                                  )(value.securityCategories, $.BER),
+                                      $.DER
+                                  )(value.securityCategories, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

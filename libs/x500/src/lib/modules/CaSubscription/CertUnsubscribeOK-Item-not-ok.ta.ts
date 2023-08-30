@@ -191,7 +191,7 @@ export function _encode_CertUnsubscribeOK_Item_not_ok(
                         [
                             /* REQUIRED   */ _encode_CASP_CertStatusCode(
                                 value.status,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -199,7 +199,7 @@ export function _encode_CertUnsubscribeOK_Item_not_ok(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

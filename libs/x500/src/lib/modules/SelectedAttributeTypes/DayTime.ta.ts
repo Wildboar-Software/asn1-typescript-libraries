@@ -267,8 +267,8 @@ export function _encode_DayTime(
                                 _TagClass.context,
                                 0,
                                 () => $._encodeInteger,
-                                $.BER
-                            )(value.hour, $.BER),
+                                $.DER
+                            )(value.hour, $.DER),
                             /* IF_DEFAULT */ value.minute === undefined ||
                             $.deepEq(
                                 value.minute,
@@ -279,8 +279,8 @@ export function _encode_DayTime(
                                       _TagClass.context,
                                       1,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.minute, $.BER),
+                                      $.DER
+                                  )(value.minute, $.DER),
                             /* IF_DEFAULT */ value.second === undefined ||
                             $.deepEq(
                                 value.second,
@@ -291,15 +291,15 @@ export function _encode_DayTime(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeInteger,
-                                      $.BER
-                                  )(value.second, $.BER),
+                                      $.DER
+                                  )(value.second, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

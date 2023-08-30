@@ -242,30 +242,30 @@ export function _encode_TBOK(value: TBOK, elGetter: $.ASN1Encoder<TBOK>) {
                                 _TagClass.context,
                                 0,
                                 () => $._encodeInteger,
-                                $.BER
-                            )(value.levelOfAssurance, $.BER),
+                                $.DER
+                            )(value.levelOfAssurance, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 1,
                                 () => $._encodeInteger,
-                                $.BER
-                            )(value.confidenceLevel, $.BER),
+                                $.DER
+                            )(value.confidenceLevel, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 2,
                                 () => $._encodeUTCTime,
-                                $.BER
-                            )(value.validationTime, $.BER),
+                                $.DER
+                            )(value.validationTime, $.DER),
                             /* IF_ABSENT  */ value.info === undefined
                                 ? undefined
-                                : $._encodeUTF8String(value.info, $.BER),
+                                : $._encodeUTF8String(value.info, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

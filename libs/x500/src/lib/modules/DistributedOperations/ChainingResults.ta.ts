@@ -303,8 +303,8 @@ export function _encode_ChainingResults(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DomainInfo,
-                                      $.BER
-                                  )(value.info, $.BER),
+                                      $.DER
+                                  )(value.info, $.DER),
                             /* IF_ABSENT  */ value.crossReferences === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -313,10 +313,10 @@ export function _encode_ChainingResults(
                                       () =>
                                           $._encodeSequenceOf<CrossReference>(
                                               () => _encode_CrossReference,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.crossReferences, $.BER),
+                                      $.DER
+                                  )(value.crossReferences, $.DER),
                             /* IF_DEFAULT */ value.securityParameters ===
                                 undefined ||
                             $.deepEq(
@@ -328,23 +328,23 @@ export function _encode_ChainingResults(
                                       _TagClass.context,
                                       2,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                             /* IF_ABSENT  */ value.alreadySearched === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       3,
                                       () => _encode_Exclusions,
-                                      $.BER
-                                  )(value.alreadySearched, $.BER),
+                                      $.DER
+                                  )(value.alreadySearched, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

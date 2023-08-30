@@ -261,70 +261,70 @@ export function _encode_IDM_PDU(
                     _TagClass.context,
                     0,
                     () => _encode_IdmBind,
-                    $.BER
+                    $.DER
                 ),
                 bindResult: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_IdmBindResult,
-                    $.BER
+                    $.DER
                 ),
                 bindError: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_IdmBindError,
-                    $.BER
+                    $.DER
                 ),
                 request: $._encode_explicit(
                     _TagClass.context,
                     3,
                     () => _encode_Request,
-                    $.BER
+                    $.DER
                 ),
                 result: $._encode_explicit(
                     _TagClass.context,
                     4,
                     () => _encode_IdmResult,
-                    $.BER
+                    $.DER
                 ),
                 error: $._encode_explicit(
                     _TagClass.context,
                     5,
                     () => _encode_Error,
-                    $.BER
+                    $.DER
                 ),
                 reject: $._encode_explicit(
                     _TagClass.context,
                     6,
                     () => _encode_IdmReject,
-                    $.BER
+                    $.DER
                 ),
                 unbind: $._encode_explicit(
                     _TagClass.context,
                     7,
                     () => _encode_Unbind,
-                    $.BER
+                    $.DER
                 ),
                 abort: $._encode_explicit(
                     _TagClass.context,
                     8,
                     () => _encode_Abort,
-                    $.BER
+                    $.DER
                 ),
                 startTLS: $._encode_explicit(
                     _TagClass.context,
                     9,
                     () => _encode_StartTLS,
-                    $.BER
+                    $.DER
                 ),
                 tLSResponse: $._encode_explicit(
                     _TagClass.context,
                     10,
                     () => _encode_TLSResponse,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_IDM_PDU(value, elGetter);

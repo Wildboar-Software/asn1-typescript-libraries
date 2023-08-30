@@ -393,29 +393,29 @@ export function _encode_CertificateListAssertion(
                         [
                             /* IF_ABSENT  */ value.issuer === undefined
                                 ? undefined
-                                : _encode_Name(value.issuer, $.BER),
+                                : _encode_Name(value.issuer, $.DER),
                             /* IF_ABSENT  */ value.minCRLNumber === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       0,
                                       () => _encode_CRLNumber,
-                                      $.BER
-                                  )(value.minCRLNumber, $.BER),
+                                      $.DER
+                                  )(value.minCRLNumber, $.DER),
                             /* IF_ABSENT  */ value.maxCRLNumber === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_CRLNumber,
-                                      $.BER
-                                  )(value.maxCRLNumber, $.BER),
+                                      $.DER
+                                  )(value.maxCRLNumber, $.DER),
                             /* IF_ABSENT  */ value.reasonFlags === undefined
                                 ? undefined
-                                : _encode_ReasonFlags(value.reasonFlags, $.BER),
+                                : _encode_ReasonFlags(value.reasonFlags, $.DER),
                             /* IF_ABSENT  */ value.dateAndTime === undefined
                                 ? undefined
-                                : _encode_Time(value.dateAndTime, $.BER),
+                                : _encode_Time(value.dateAndTime, $.DER),
                             /* IF_ABSENT  */ value.distributionPoint ===
                             undefined
                                 ? undefined
@@ -423,8 +423,8 @@ export function _encode_CertificateListAssertion(
                                       _TagClass.context,
                                       2,
                                       () => _encode_DistributionPointName,
-                                      $.BER
-                                  )(value.distributionPoint, $.BER),
+                                      $.DER
+                                  )(value.distributionPoint, $.DER),
                             /* IF_ABSENT  */ value.authorityKeyIdentifier ===
                             undefined
                                 ? undefined
@@ -432,15 +432,15 @@ export function _encode_CertificateListAssertion(
                                       _TagClass.context,
                                       3,
                                       () => _encode_AuthorityKeyIdentifier,
-                                      $.BER
-                                  )(value.authorityKeyIdentifier, $.BER),
+                                      $.DER
+                                  )(value.authorityKeyIdentifier, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

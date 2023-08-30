@@ -77,7 +77,7 @@ export function _encode_UiiFormat_next(
                 length: $._encodeInteger,
                 filter: _encode_UiiFilter,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_UiiFormat_next(value, elGetter);

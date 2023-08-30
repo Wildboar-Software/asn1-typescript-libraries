@@ -166,11 +166,11 @@ export function _encode_OsiBind_mode_selector(
                             _TagClass.context,
                             0,
                             () => $._encodeInteger,
-                            $.BER
-                        )(value.mode_value, $.BER),
+                            $.DER
+                        )(value.mode_value, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

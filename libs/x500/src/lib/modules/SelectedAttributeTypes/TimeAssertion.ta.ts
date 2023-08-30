@@ -86,7 +86,7 @@ export function _encode_TimeAssertion(
                 at: $._encodeGeneralizedTime,
                 between: _encode_TimeAssertion_between,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TimeAssertion(value, elGetter);

@@ -182,16 +182,16 @@ export function _encode_EntryLimit(
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.default_,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ $._encodeInteger(value.max, $.BER),
+                            /* REQUIRED   */ $._encodeInteger(value.max, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

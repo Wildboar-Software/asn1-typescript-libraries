@@ -255,21 +255,21 @@ export function _encode_UiiFormat(
                     .concat([
                         /* IF_ABSENT  */ value.baseObject === undefined
                             ? undefined
-                            : _encode_URI(value.baseObject, $.BER),
+                            : _encode_URI(value.baseObject, $.DER),
                         /* IF_DEFAULT */ value.subset === undefined ||
                         $.deepEq(
                             value.subset,
                             UiiFormat._default_value_for_subset
                         )
                             ? undefined
-                            : _encode_UiiFormat_subset(value.subset, $.BER),
+                            : _encode_UiiFormat_subset(value.subset, $.DER),
                         /* REQUIRED   */ _encode_UiiFormat_next(
                             value.next,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

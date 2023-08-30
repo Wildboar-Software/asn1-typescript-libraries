@@ -279,31 +279,31 @@ export function _encode_DistributionPoint(
                                       _TagClass.context,
                                       0,
                                       () => _encode_DistributionPointName,
-                                      $.BER
-                                  )(value.distributionPoint, $.BER),
+                                      $.DER
+                                  )(value.distributionPoint, $.DER),
                             /* IF_ABSENT  */ value.reasons === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_ReasonFlags,
-                                      $.BER
-                                  )(value.reasons, $.BER),
+                                      $.DER
+                                  )(value.reasons, $.DER),
                             /* IF_ABSENT  */ value.cRLIssuer === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       2,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.cRLIssuer, $.BER),
+                                      $.DER
+                                  )(value.cRLIssuer, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

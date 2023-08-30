@@ -205,15 +205,15 @@ export function _encode_TelexNumber(
                         [
                             /* REQUIRED   */ $._encodePrintableString(
                                 value.telexNumber,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodePrintableString(
                                 value.countryCode,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodePrintableString(
                                 value.answerback,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -221,7 +221,7 @@ export function _encode_TelexNumber(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

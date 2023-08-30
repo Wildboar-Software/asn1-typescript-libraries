@@ -226,11 +226,11 @@ export function _encode_DitBridgeKnowledge(
                                 ? undefined
                                 : _encode_UnboundedDirectoryString(
                                       value.domainLocalID,
-                                      $.BER
+                                      $.DER
                                   ),
                             /* REQUIRED   */ _encode_MasterAndShadowAccessPoints(
                                 value.accessPoints,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -238,7 +238,7 @@ export function _encode_DitBridgeKnowledge(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -245,11 +245,11 @@ export function _encode_IdmReject(
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_IdmReject_reason(
                                 value.reason,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -257,7 +257,7 @@ export function _encode_IdmReject(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

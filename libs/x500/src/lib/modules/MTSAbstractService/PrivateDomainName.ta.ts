@@ -71,7 +71,7 @@ export function _encode_PrivateDomainName(
                 numeric: $._encodeNumericString,
                 printable: $._encodePrintableString,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_PrivateDomainName(value, elGetter);

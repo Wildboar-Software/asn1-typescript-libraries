@@ -177,16 +177,16 @@ export function _encode_ABRT_apdu(
                                     _TagClass.context,
                                     0,
                                     () => _encode_ABRT_source,
-                                    $.BER
-                                )(value.abort_source, $.BER),
+                                    $.DER
+                                )(value.abort_source, $.DER),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ABRT_apdu(value, elGetter);

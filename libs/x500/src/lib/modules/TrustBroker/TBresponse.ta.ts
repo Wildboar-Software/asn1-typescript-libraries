@@ -87,16 +87,16 @@ export function _encode_TBresponse(
                     _TagClass.context,
                     0,
                     () => _encode_TBOK,
-                    $.BER
+                    $.DER
                 ),
                 failure: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_TBerror,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_TBresponse(value, elGetter);

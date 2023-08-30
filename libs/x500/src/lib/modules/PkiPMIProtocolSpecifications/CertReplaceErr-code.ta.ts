@@ -139,22 +139,22 @@ export function _encode_CertReplaceErr_code(
                     _TagClass.context,
                     0,
                     () => _encode_SignedData_error,
-                    $.BER
+                    $.DER
                 ),
                 envelopedData: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_EnvelopedData_error,
-                    $.BER
+                    $.DER
                 ),
                 casp: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_CASP_error,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_CertReplaceErr_code(value, elGetter);

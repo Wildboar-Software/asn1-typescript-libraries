@@ -217,19 +217,19 @@ export function _encode_SPKM_ERROR(
                     .concat([
                         /* REQUIRED   */ _encode_ERROR_TOKEN(
                             value.errorToken,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_AlgorithmIdentifier(
                             value.algId,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Integrity(
                             value.integrity,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

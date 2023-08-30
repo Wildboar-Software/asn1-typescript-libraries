@@ -207,17 +207,17 @@ export function _encode_supplierOrConsumerInformationMatch_AssertionType(
                             _TagClass.context,
                             0,
                             () => _encode_Name,
-                            $.BER
-                        )(value.ae_title, $.BER),
+                            $.DER
+                        )(value.ae_title, $.DER),
                         /* REQUIRED   */ $._encode_explicit(
                             _TagClass.context,
                             2,
                             () => $._encodeInteger,
-                            $.BER
-                        )(value.agreement_identifier, $.BER),
+                            $.DER
+                        )(value.agreement_identifier, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

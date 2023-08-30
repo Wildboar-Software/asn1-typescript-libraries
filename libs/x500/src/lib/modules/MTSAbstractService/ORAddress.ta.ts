@@ -239,25 +239,25 @@ export function _encode_ORAddress(
                     .concat([
                         /* REQUIRED   */ _encode_BuiltInStandardAttributes(
                             value.built_in_standard_attributes,
-                            $.BER
+                            $.DER
                         ),
                         /* IF_ABSENT  */ value.built_in_domain_defined_attributes ===
                         undefined
                             ? undefined
                             : _encode_BuiltInDomainDefinedAttributes(
                                   value.built_in_domain_defined_attributes,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.extension_attributes ===
                         undefined
                             ? undefined
                             : _encode_ExtensionAttributes(
                                   value.extension_attributes,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

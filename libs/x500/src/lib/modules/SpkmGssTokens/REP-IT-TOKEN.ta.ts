@@ -300,29 +300,29 @@ export function _encode_REP_IT_TOKEN(
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
-                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.BER),
+                        /* REQUIRED   */ $._encodeInteger(value.tok_id, $.DER),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.context_id,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.randSrc,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Random_Integer(
                             value.randTarg,
-                            $.BER
+                            $.DER
                         ),
-                        /* REQUIRED   */ _encode_Name(value.targ_name, $.BER),
+                        /* REQUIRED   */ _encode_Name(value.targ_name, $.DER),
                         /* IF_ABSENT  */ value.src_name === undefined
                             ? undefined
-                            : _encode_Name(value.src_name, $.BER),
+                            : _encode_Name(value.src_name, $.DER),
                         /* IF_ABSENT  */ value.key_estb_rep === undefined
                             ? undefined
-                            : $._encodeBitString(value.key_estb_rep, $.BER),
+                            : $._encodeBitString(value.key_estb_rep, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

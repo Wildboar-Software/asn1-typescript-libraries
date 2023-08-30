@@ -301,14 +301,14 @@ export function _encode_ItemPermission(
                         [
                             /* IF_ABSENT  */ value.precedence === undefined
                                 ? undefined
-                                : _encode_Precedence(value.precedence, $.BER),
+                                : _encode_Precedence(value.precedence, $.DER),
                             /* REQUIRED   */ _encode_UserClasses(
                                 value.userClasses,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_GrantsAndDenials(
                                 value.grantsAndDenials,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -316,7 +316,7 @@ export function _encode_ItemPermission(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

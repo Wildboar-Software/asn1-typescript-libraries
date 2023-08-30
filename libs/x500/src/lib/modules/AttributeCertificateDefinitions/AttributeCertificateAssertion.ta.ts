@@ -291,24 +291,24 @@ export function _encode_AttributeCertificateAssertion(
                                       0,
                                       () =>
                                           _encode_AttributeCertificateAssertion_holder,
-                                      $.BER
-                                  )(value.holder, $.BER),
+                                      $.DER
+                                  )(value.holder, $.DER),
                             /* IF_ABSENT  */ value.issuer === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_GeneralNames,
-                                      $.BER
-                                  )(value.issuer, $.BER),
+                                      $.DER
+                                  )(value.issuer, $.DER),
                             /* IF_ABSENT  */ value.attCertValidity === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.attCertValidity, $.BER),
+                                      $.DER
+                                  )(value.attCertValidity, $.DER),
                             /* IF_ABSENT  */ value.attType === undefined
                                 ? undefined
                                 : $._encode_implicit(
@@ -317,17 +317,17 @@ export function _encode_AttributeCertificateAssertion(
                                       () =>
                                           $._encodeSetOf<AttributeType>(
                                               () => _encode_AttributeType,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.attType, $.BER),
+                                      $.DER
+                                  )(value.attType, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

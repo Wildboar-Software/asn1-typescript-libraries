@@ -282,37 +282,37 @@ export function _encode_RevokedGroup(
                                       _TagClass.context,
                                       0,
                                       () => _encode_GeneralName,
-                                      $.BER
-                                  )(value.certificateIssuer, $.BER),
+                                      $.DER
+                                  )(value.certificateIssuer, $.DER),
                             /* IF_ABSENT  */ value.reasonInfo === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_ReasonInfo,
-                                      $.BER
-                                  )(value.reasonInfo, $.BER),
+                                      $.DER
+                                  )(value.reasonInfo, $.DER),
                             /* IF_ABSENT  */ value.invalidityDate === undefined
                                 ? undefined
                                 : $._encode_implicit(
                                       _TagClass.context,
                                       2,
                                       () => $._encodeGeneralizedTime,
-                                      $.BER
-                                  )(value.invalidityDate, $.BER),
+                                      $.DER
+                                  )(value.invalidityDate, $.DER),
                             /* REQUIRED   */ $._encode_explicit(
                                 _TagClass.context,
                                 3,
                                 () => _encode_RevokedCertificateGroup,
-                                $.BER
-                            )(value.revokedcertificateGroup, $.BER),
+                                $.DER
+                            )(value.revokedcertificateGroup, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -88,16 +88,16 @@ export function _encode_Conf_Alg(
                     _TagClass.context,
                     0,
                     () => _encode_AlgorithmIdentifier,
-                    $.BER
+                    $.DER
                 ),
                 null_: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => $._encodeNull,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_Conf_Alg(value, elGetter);

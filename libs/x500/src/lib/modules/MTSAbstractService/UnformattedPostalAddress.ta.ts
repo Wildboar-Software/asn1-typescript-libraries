@@ -199,17 +199,17 @@ export function _encode_UnformattedPostalAddress(
                             ? undefined
                             : $._encodeSequenceOf<PrintableString>(
                                   () => $._encodePrintableString,
-                                  $.BER
-                              )(value.printable_address, $.BER),
+                                  $.DER
+                              )(value.printable_address, $.DER),
                         /* IF_ABSENT  */ value.teletex_string === undefined
                             ? undefined
                             : $._encodeTeletexString(
                                   value.teletex_string,
-                                  $.BER
+                                  $.DER
                               ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

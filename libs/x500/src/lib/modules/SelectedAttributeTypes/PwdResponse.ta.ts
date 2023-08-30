@@ -214,13 +214,13 @@ export function _encode_PwdResponse(
                     .concat([
                         /* IF_ABSENT  */ value.warning === undefined
                             ? undefined
-                            : _encode_PwdResponse_warning(value.warning, $.BER),
+                            : _encode_PwdResponse_warning(value.warning, $.DER),
                         /* IF_ABSENT  */ value.error === undefined
                             ? undefined
-                            : _encode_PwdResponse_error(value.error, $.BER),
+                            : _encode_PwdResponse_error(value.error, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

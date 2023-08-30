@@ -223,8 +223,8 @@ export function _encode_PolicyConstraintsSyntax(
                                       _TagClass.context,
                                       0,
                                       () => _encode_SkipCerts,
-                                      $.BER
-                                  )(value.requireExplicitPolicy, $.BER),
+                                      $.DER
+                                  )(value.requireExplicitPolicy, $.DER),
                             /* IF_ABSENT  */ value.inhibitPolicyMapping ===
                             undefined
                                 ? undefined
@@ -232,15 +232,15 @@ export function _encode_PolicyConstraintsSyntax(
                                       _TagClass.context,
                                       1,
                                       () => _encode_SkipCerts,
-                                      $.BER
-                                  )(value.inhibitPolicyMapping, $.BER),
+                                      $.DER
+                                  )(value.inhibitPolicyMapping, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

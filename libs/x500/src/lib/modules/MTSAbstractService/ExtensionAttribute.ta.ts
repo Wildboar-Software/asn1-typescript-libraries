@@ -190,17 +190,17 @@ export function _encode_ExtensionAttribute(
                             _TagClass.context,
                             0,
                             () => $._encodeInteger,
-                            $.BER
-                        )(value.extension_attribute_type, $.BER),
+                            $.DER
+                        )(value.extension_attribute_type, $.DER),
                         /* REQUIRED   */ $._encode_implicit(
                             _TagClass.context,
                             1,
                             () => $._encodeAny,
-                            $.BER
-                        )(value.extension_attribute_value, $.BER),
+                            $.DER
+                        )(value.extension_attribute_value, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

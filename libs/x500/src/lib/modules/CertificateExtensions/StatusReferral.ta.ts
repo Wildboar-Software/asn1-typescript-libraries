@@ -90,16 +90,16 @@ export function _encode_StatusReferral(
                     _TagClass.context,
                     0,
                     () => _encode_CRLReferral,
-                    $.BER
+                    $.DER
                 ),
                 otherReferral: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => $._encodeInstanceOf,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_StatusReferral(value, elGetter);

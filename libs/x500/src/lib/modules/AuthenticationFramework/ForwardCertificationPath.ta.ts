@@ -66,7 +66,7 @@ export function _encode_ForwardCertificationPath(
     if (!_cached_encoder_for_ForwardCertificationPath) {
         _cached_encoder_for_ForwardCertificationPath = $._encodeSequenceOf<CrossCertificates>(
             () => _encode_CrossCertificates,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_ForwardCertificationPath(value, elGetter);

@@ -78,7 +78,7 @@ export function _encode_OidOrAttr(
                 oid: $._encodeObjectIdentifier,
                 attribute: _encode_Attribute,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OidOrAttr(value, elGetter);

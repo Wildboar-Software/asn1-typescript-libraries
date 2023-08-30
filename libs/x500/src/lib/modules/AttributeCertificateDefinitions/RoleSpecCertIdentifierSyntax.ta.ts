@@ -67,7 +67,7 @@ export function _encode_RoleSpecCertIdentifierSyntax(
     if (!_cached_encoder_for_RoleSpecCertIdentifierSyntax) {
         _cached_encoder_for_RoleSpecCertIdentifierSyntax = $._encodeSequenceOf<RoleSpecCertIdentifier>(
             () => _encode_RoleSpecCertIdentifier,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_RoleSpecCertIdentifierSyntax(value, elGetter);

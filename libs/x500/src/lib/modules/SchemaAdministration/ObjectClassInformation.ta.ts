@@ -290,15 +290,15 @@ export function _encode_ObjectClassInformation(
                                 ? undefined
                                 : $._encodeSetOf<OBJECT_IDENTIFIER>(
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.subclassOf, $.BER),
+                                      $.DER
+                                  )(value.subclassOf, $.DER),
                             /* IF_DEFAULT */ value.kind === undefined ||
                             $.deepEq(
                                 value.kind,
                                 ObjectClassInformation._default_value_for_kind
                             )
                                 ? undefined
-                                : _encode_ObjectClassKind(value.kind, $.BER),
+                                : _encode_ObjectClassKind(value.kind, $.DER),
                             /* IF_ABSENT  */ value.mandatories === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -307,10 +307,10 @@ export function _encode_ObjectClassInformation(
                                       () =>
                                           $._encodeSetOf<OBJECT_IDENTIFIER>(
                                               () => $._encodeObjectIdentifier,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.mandatories, $.BER),
+                                      $.DER
+                                  )(value.mandatories, $.DER),
                             /* IF_ABSENT  */ value.optionals === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -319,17 +319,17 @@ export function _encode_ObjectClassInformation(
                                       () =>
                                           $._encodeSetOf<OBJECT_IDENTIFIER>(
                                               () => $._encodeObjectIdentifier,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.optionals, $.BER),
+                                      $.DER
+                                  )(value.optionals, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -218,23 +218,23 @@ export function _encode_CertificatePair(
                                       _TagClass.context,
                                       0,
                                       () => _encode_Certificate,
-                                      $.BER
-                                  )(value.issuedToThisCA, $.BER),
+                                      $.DER
+                                  )(value.issuedToThisCA, $.DER),
                             /* IF_ABSENT  */ value.issuedByThisCA === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       1,
                                       () => _encode_Certificate,
-                                      $.BER
-                                  )(value.issuedByThisCA, $.BER),
+                                      $.DER
+                                  )(value.issuedByThisCA, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -204,21 +204,21 @@ export function _encode_AttributeMappings_Item_typeMappings(
                                 _TagClass.context,
                                 0,
                                 () => _encode_AttributeType,
-                                $.BER
-                            )(value.local, $.BER),
+                                $.DER
+                            )(value.local, $.DER),
                             /* REQUIRED   */ $._encode_implicit(
                                 _TagClass.context,
                                 1,
                                 () => _encode_AttributeType,
-                                $.BER
-                            )(value.remote, $.BER),
+                                $.DER
+                            )(value.remote, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

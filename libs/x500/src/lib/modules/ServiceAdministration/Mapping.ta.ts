@@ -209,7 +209,7 @@ export function _encode_Mapping(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.mappingFunction,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.level === undefined ||
                             $.deepEq(
@@ -217,14 +217,14 @@ export function _encode_Mapping(
                                 Mapping._default_value_for_level
                             )
                                 ? undefined
-                                : $._encodeInteger(value.level, $.BER),
+                                : $._encodeInteger(value.level, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

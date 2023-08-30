@@ -66,7 +66,7 @@ export function _encode_MRMappings(
     if (!_cached_encoder_for_MRMappings) {
         _cached_encoder_for_MRMappings = $._encodeSequenceOf<MRMapping>(
             () => _encode_MRMapping,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_MRMappings(value, elGetter);

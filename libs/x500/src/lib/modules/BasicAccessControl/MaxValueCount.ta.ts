@@ -194,11 +194,11 @@ export function _encode_MaxValueCount(
                         [
                             /* REQUIRED   */ _encode_AttributeType(
                                 value.type_,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeInteger(
                                 value.maxCount,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -206,7 +206,7 @@ export function _encode_MaxValueCount(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

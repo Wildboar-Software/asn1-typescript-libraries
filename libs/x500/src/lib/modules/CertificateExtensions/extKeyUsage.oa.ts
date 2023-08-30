@@ -42,7 +42,7 @@ export const extKeyUsage: EXTENSION<KeyPurposeId[]> = {
     encoderFor: {
         "&ExtnType": $._encodeSequenceOf<KeyPurposeId>(
             () => _encode_KeyPurposeId,
-            $.BER
+            $.DER
         ),
     },
     "&id": id_ce_extKeyUsage /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -225,25 +225,25 @@ export function _encode_NameFormInformation(
                         [
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.subordinate,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeSetOf<OBJECT_IDENTIFIER>(
                                 () => $._encodeObjectIdentifier,
-                                $.BER
-                            )(value.namingMandatories, $.BER),
+                                $.DER
+                            )(value.namingMandatories, $.DER),
                             /* IF_ABSENT  */ value.namingOptionals === undefined
                                 ? undefined
                                 : $._encodeSetOf<OBJECT_IDENTIFIER>(
                                       () => $._encodeObjectIdentifier,
-                                      $.BER
-                                  )(value.namingOptionals, $.BER),
+                                      $.DER
+                                  )(value.namingOptionals, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

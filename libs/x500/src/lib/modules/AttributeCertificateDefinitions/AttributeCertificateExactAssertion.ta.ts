@@ -211,11 +211,11 @@ export function _encode_AttributeCertificateExactAssertion(
                         [
                             /* REQUIRED   */ _encode_CertificateSerialNumber(
                                 value.serialNumber,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AttCertIssuer(
                                 value.issuer,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -223,7 +223,7 @@ export function _encode_AttributeCertificateExactAssertion(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

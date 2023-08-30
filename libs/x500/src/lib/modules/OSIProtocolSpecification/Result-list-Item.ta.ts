@@ -252,8 +252,8 @@ export function _encode_Result_list_Item(
                             _TagClass.context,
                             0,
                             () => _encode_Result,
-                            $.BER
-                        )(value.result, $.BER),
+                            $.DER
+                        )(value.result, $.DER),
                         /* IF_ABSENT  */ value.transfer_syntax_name ===
                         undefined
                             ? undefined
@@ -261,8 +261,8 @@ export function _encode_Result_list_Item(
                                   _TagClass.context,
                                   1,
                                   () => _encode_Transfer_syntax_name,
-                                  $.BER
-                              )(value.transfer_syntax_name, $.BER),
+                                  $.DER
+                              )(value.transfer_syntax_name, $.DER),
                         /* IF_ABSENT  */ value.provider_reason === undefined
                             ? undefined
                             : $._encode_implicit(
@@ -270,11 +270,11 @@ export function _encode_Result_list_Item(
                                   2,
                                   () =>
                                       _encode_Result_list_Item_provider_reason,
-                                  $.BER
-                              )(value.provider_reason, $.BER),
+                                  $.DER
+                              )(value.provider_reason, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

@@ -160,28 +160,28 @@ export function _encode_OsiRej_problem(
                     _TagClass.context,
                     0,
                     () => _encode_GeneralProblem,
-                    $.BER
+                    $.DER
                 ),
                 invoke: $._encode_implicit(
                     _TagClass.context,
                     1,
                     () => _encode_InvokeProblem,
-                    $.BER
+                    $.DER
                 ),
                 returnResult: $._encode_implicit(
                     _TagClass.context,
                     2,
                     () => _encode_ReturnResultProblem,
-                    $.BER
+                    $.DER
                 ),
                 returnError: $._encode_implicit(
                     _TagClass.context,
                     3,
                     () => _encode_ReturnErrorProblem,
-                    $.BER
+                    $.DER
                 ),
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiRej_problem(value, elGetter);

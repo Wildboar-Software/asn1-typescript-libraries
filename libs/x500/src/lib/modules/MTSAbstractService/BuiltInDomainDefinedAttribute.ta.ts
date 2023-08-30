@@ -177,15 +177,15 @@ export function _encode_BuiltInDomainDefinedAttribute(
                     .concat([
                         /* REQUIRED   */ $._encodePrintableString(
                             value.type_,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ $._encodePrintableString(
                             value.value,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

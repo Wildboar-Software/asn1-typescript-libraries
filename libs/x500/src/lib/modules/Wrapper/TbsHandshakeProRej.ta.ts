@@ -282,23 +282,23 @@ export function _encode_TbsHandshakeProRej(
                         [
                             /* REQUIRED   */ _encode_TbsHandshakeProRej_sigSel(
                                 value.sigSel,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_AssoID(
                                 value.assoID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_TimeStamp(
                                 value.time,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_DER_PkiPath(
                                 value.pkiPath,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_WrappedProt(
                                 value.applData,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -306,7 +306,7 @@ export function _encode_TbsHandshakeProRej(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

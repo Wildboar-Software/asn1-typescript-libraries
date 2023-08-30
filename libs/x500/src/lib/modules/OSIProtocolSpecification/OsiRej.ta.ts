@@ -198,11 +198,11 @@ export function _encode_OsiRej(value: OsiRej, elGetter: $.ASN1Encoder<OsiRej>) {
                                 [
                                     /* REQUIRED   */ _encode_InvokeId(
                                         value.invokeId,
-                                        $.BER
+                                        $.DER
                                     ),
                                     /* REQUIRED   */ _encode_OsiRej_problem(
                                         value.problem,
-                                        $.BER
+                                        $.DER
                                     ),
                                 ],
                                 value._unrecognizedExtensionsList
@@ -212,10 +212,10 @@ export function _encode_OsiRej(value: OsiRej, elGetter: $.ASN1Encoder<OsiRej>) {
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_OsiRej(value, elGetter);

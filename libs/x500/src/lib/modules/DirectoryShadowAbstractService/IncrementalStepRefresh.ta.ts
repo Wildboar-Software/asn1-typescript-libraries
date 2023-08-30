@@ -209,17 +209,17 @@ export function _encode_IncrementalStepRefresh(
                             ? undefined
                             : _encode_IncrementalStepRefresh_sDSEChanges(
                                   value.sDSEChanges,
-                                  $.BER
+                                  $.DER
                               ),
                         /* IF_ABSENT  */ value.subordinateUpdates === undefined
                             ? undefined
                             : $._encodeSequenceOf<SubordinateChanges>(
                                   () => _encode_SubordinateChanges,
-                                  $.BER
-                              )(value.subordinateUpdates, $.BER),
+                                  $.DER
+                              )(value.subordinateUpdates, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

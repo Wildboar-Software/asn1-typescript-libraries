@@ -199,20 +199,20 @@ export function _encode_InitialContextToken(
                             .concat([
                                 /* REQUIRED   */ _encode_MechType(
                                     value.thisMech,
-                                    $.BER
+                                    $.DER
                                 ),
                                 /* REQUIRED   */ _encode_SPKMInnerContextToken(
                                     value.innerContextToken,
-                                    $.BER
+                                    $.DER
                                 ),
                             ])
                             .filter(
                                 (c: _Element | undefined): c is _Element => !!c
                             ),
-                        $.BER
+                        $.DER
                     );
                 },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_InitialContextToken(value, elGetter);

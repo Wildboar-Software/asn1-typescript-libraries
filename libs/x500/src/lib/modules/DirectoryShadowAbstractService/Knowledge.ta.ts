@@ -236,7 +236,7 @@ export function _encode_Knowledge(
                         [
                             /* REQUIRED   */ _encode_Knowledge_knowledgeType(
                                 value.knowledgeType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_DEFAULT */ value.extendedKnowledge ===
                                 undefined ||
@@ -247,7 +247,7 @@ export function _encode_Knowledge(
                                 ? undefined
                                 : $._encodeBoolean(
                                       value.extendedKnowledge,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -255,7 +255,7 @@ export function _encode_Knowledge(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

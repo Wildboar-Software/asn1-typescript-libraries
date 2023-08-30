@@ -191,11 +191,11 @@ export function _encode_UUIDPair(
                         [
                             /* REQUIRED   */ _encode_UUID(
                                 value.issuerUUID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_UUID(
                                 value.subjectUUID,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -203,7 +203,7 @@ export function _encode_UUIDPair(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

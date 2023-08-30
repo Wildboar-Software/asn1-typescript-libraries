@@ -105,23 +105,23 @@ export function _encode_SubstringAssertion_Item(
                     _TagClass.context,
                     0,
                     () => _encode_UnboundedDirectoryString,
-                    $.BER
+                    $.DER
                 ),
                 any_: $._encode_explicit(
                     _TagClass.context,
                     1,
                     () => _encode_UnboundedDirectoryString,
-                    $.BER
+                    $.DER
                 ),
                 final: $._encode_explicit(
                     _TagClass.context,
                     2,
                     () => _encode_UnboundedDirectoryString,
-                    $.BER
+                    $.DER
                 ),
                 control: _encode_Attribute,
             },
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_SubstringAssertion_Item(value, elGetter);

@@ -194,12 +194,12 @@ export function _encode_Request(
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
+                            /* REQUIRED   */ _encode_Code(value.opcode, $.DER),
                             /* REQUIRED   */ $._encodeAny(
                                 value.argument,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -207,7 +207,7 @@ export function _encode_Request(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

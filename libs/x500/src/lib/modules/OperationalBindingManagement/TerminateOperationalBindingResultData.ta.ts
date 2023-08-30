@@ -370,17 +370,17 @@ export function _encode_TerminateOperationalBindingResultData(
                         [
                             /* REQUIRED   */ _encode_OperationalBindingID(
                                 value.bindingID,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ $._encodeObjectIdentifier(
                                 value.bindingType,
-                                $.BER
+                                $.DER
                             ),
                             /* IF_ABSENT  */ value.terminateAt === undefined
                                 ? undefined
                                 : $._encodeGeneralizedTime(
                                       value.terminateAt,
-                                      $.BER
+                                      $.DER
                                   ),
                         ],
                         value._unrecognizedExtensionsList
@@ -394,16 +394,16 @@ export function _encode_TerminateOperationalBindingResultData(
                                       _TagClass.context,
                                       30,
                                       () => _encode_SecurityParameters,
-                                      $.BER
-                                  )(value.securityParameters, $.BER),
+                                      $.DER
+                                  )(value.securityParameters, $.DER),
                             /* IF_ABSENT  */ value.performer === undefined
                                 ? undefined
                                 : $._encode_explicit(
                                       _TagClass.context,
                                       29,
                                       () => _encode_DistinguishedName,
-                                      $.BER
-                                  )(value.performer, $.BER),
+                                      $.DER
+                                  )(value.performer, $.DER),
                             /* IF_DEFAULT */ value.aliasDereferenced ===
                                 undefined ||
                             $.deepEq(
@@ -415,8 +415,8 @@ export function _encode_TerminateOperationalBindingResultData(
                                       _TagClass.context,
                                       28,
                                       () => $._encodeBoolean,
-                                      $.BER
-                                  )(value.aliasDereferenced, $.BER),
+                                      $.DER
+                                  )(value.aliasDereferenced, $.DER),
                             /* IF_ABSENT  */ value.notification === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -425,14 +425,14 @@ export function _encode_TerminateOperationalBindingResultData(
                                       () =>
                                           $._encodeSequenceOf<Attribute>(
                                               () => _encode_Attribute,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.notification, $.BER),
+                                      $.DER
+                                  )(value.notification, $.DER),
                         ]
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

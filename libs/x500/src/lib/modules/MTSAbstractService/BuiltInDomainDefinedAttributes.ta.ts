@@ -68,7 +68,7 @@ export function _encode_BuiltInDomainDefinedAttributes(
     if (!_cached_encoder_for_BuiltInDomainDefinedAttributes) {
         _cached_encoder_for_BuiltInDomainDefinedAttributes = $._encodeSequenceOf<BuiltInDomainDefinedAttribute>(
             () => _encode_BuiltInDomainDefinedAttribute,
-            $.BER
+            $.DER
         );
     }
     return _cached_encoder_for_BuiltInDomainDefinedAttributes(value, elGetter);

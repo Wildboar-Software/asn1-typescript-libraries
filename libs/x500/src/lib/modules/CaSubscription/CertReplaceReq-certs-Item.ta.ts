@@ -204,11 +204,11 @@ export function _encode_CertReplaceReq_certs_Item(
                         [
                             /* REQUIRED   */ _encode_CertificateSerialNumber(
                                 value.old,
-                                $.BER
+                                $.DER
                             ),
                             /* REQUIRED   */ _encode_Certificate(
                                 value.new_,
-                                $.BER
+                                $.DER
                             ),
                         ],
                         value._unrecognizedExtensionsList
@@ -216,7 +216,7 @@ export function _encode_CertReplaceReq_certs_Item(
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

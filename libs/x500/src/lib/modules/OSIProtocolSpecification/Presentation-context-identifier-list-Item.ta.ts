@@ -201,15 +201,15 @@ export function _encode_Presentation_context_identifier_list_Item(
                     .concat([
                         /* REQUIRED   */ _encode_Presentation_context_identifier(
                             value.presentation_context_identifier,
-                            $.BER
+                            $.DER
                         ),
                         /* REQUIRED   */ _encode_Transfer_syntax_name(
                             value.transfer_syntax_name,
-                            $.BER
+                            $.DER
                         ),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

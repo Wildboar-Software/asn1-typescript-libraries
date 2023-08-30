@@ -240,24 +240,24 @@ export function _encode_PersonalName(
                             _TagClass.context,
                             0,
                             () => $._encodePrintableString,
-                            $.BER
-                        )(value.surname, $.BER),
+                            $.DER
+                        )(value.surname, $.DER),
                         /* IF_ABSENT  */ value.given_name === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   1,
                                   () => $._encodePrintableString,
-                                  $.BER
-                              )(value.given_name, $.BER),
+                                  $.DER
+                              )(value.given_name, $.DER),
                         /* IF_ABSENT  */ value.initials === undefined
                             ? undefined
                             : $._encode_implicit(
                                   _TagClass.context,
                                   2,
                                   () => $._encodePrintableString,
-                                  $.BER
-                              )(value.initials, $.BER),
+                                  $.DER
+                              )(value.initials, $.DER),
                         /* IF_ABSENT  */ value.generation_qualifier ===
                         undefined
                             ? undefined
@@ -265,11 +265,11 @@ export function _encode_PersonalName(
                                   _TagClass.context,
                                   3,
                                   () => $._encodePrintableString,
-                                  $.BER
-                              )(value.generation_qualifier, $.BER),
+                                  $.DER
+                              )(value.generation_qualifier, $.DER),
                     ])
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

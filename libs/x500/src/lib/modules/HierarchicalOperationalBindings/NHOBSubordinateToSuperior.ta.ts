@@ -230,8 +230,8 @@ export function _encode_NHOBSubordinateToSuperior(
                                       _TagClass.context,
                                       0,
                                       () => _encode_MasterAndShadowAccessPoints,
-                                      $.BER
-                                  )(value.accessPoints, $.BER),
+                                      $.DER
+                                  )(value.accessPoints, $.DER),
                             /* IF_ABSENT  */ value.subentries === undefined
                                 ? undefined
                                 : $._encode_explicit(
@@ -240,17 +240,17 @@ export function _encode_NHOBSubordinateToSuperior(
                                       () =>
                                           $._encodeSetOf<SubentryInfo>(
                                               () => _encode_SubentryInfo,
-                                              $.BER
+                                              $.DER
                                           ),
-                                      $.BER
-                                  )(value.subentries, $.BER),
+                                      $.DER
+                                  )(value.subentries, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }

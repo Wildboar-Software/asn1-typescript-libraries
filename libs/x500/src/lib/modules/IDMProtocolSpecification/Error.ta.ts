@@ -188,17 +188,17 @@ export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>) {
                         [
                             /* REQUIRED   */ $._encodeInteger(
                                 value.invokeID,
-                                $.BER
+                                $.DER
                             ),
-                            /* REQUIRED   */ _encode_Code(value.errcode, $.BER),
-                            /* REQUIRED   */ $._encodeAny(value.error, $.BER),
+                            /* REQUIRED   */ _encode_Code(value.errcode, $.DER),
+                            /* REQUIRED   */ $._encodeAny(value.error, $.DER),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList
                             : []
                     )
                     .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                $.DER
             );
         };
     }
