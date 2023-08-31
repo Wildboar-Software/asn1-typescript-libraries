@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/x400",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "X.400 message handling system ASN.1 data structures and business logic in TypeScript",
     "keywords": [
         "x400",
@@ -43,6 +43,6 @@
         "@wildboar/attribute-asn1module": "^1.0.4",
         "@wildboar/cms": "^1.0.5",
         "@wildboar/ansi-x9-42": "^1.0.3",
-        "@wildboar/ansi-x9-62": "^1.0.45"
+        "@wildboar/ansi-x9-62": "^1.0.5"
     }
 }
