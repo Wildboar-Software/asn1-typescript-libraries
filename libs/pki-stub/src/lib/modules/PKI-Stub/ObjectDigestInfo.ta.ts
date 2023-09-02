@@ -201,11 +201,6 @@ export const _extension_additions_list_spec_for_ObjectDigestInfo: $.ComponentSpe
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ObjectDigestInfo */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo */
-let _cached_decoder_for_ObjectDigestInfo: $.ASN1Decoder<ObjectDigestInfo> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ObjectDigestInfo */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo */
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectDigestInfo
@@ -214,61 +209,49 @@ let _cached_decoder_for_ObjectDigestInfo: $.ASN1Decoder<ObjectDigestInfo> | null
  * @returns {ObjectDigestInfo} The decoded data structure.
  */
 export function _decode_ObjectDigestInfo(el: _Element) {
-    if (!_cached_decoder_for_ObjectDigestInfo) {
-        _cached_decoder_for_ObjectDigestInfo = function (
-            el: _Element
-        ): ObjectDigestInfo {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let digestedObjectType!: ObjectDigestInfo_digestedObjectType;
-            let otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>;
-            let digestAlgorithm!: AlgorithmIdentifier;
-            let objectDigest!: BIT_STRING;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                digestedObjectType: (_el: _Element): void => {
-                    digestedObjectType =
-                        _decode_ObjectDigestInfo_digestedObjectType(_el);
-                },
-                otherObjectTypeID: (_el: _Element): void => {
-                    otherObjectTypeID = $._decodeObjectIdentifier(_el);
-                },
-                digestAlgorithm: (_el: _Element): void => {
-                    digestAlgorithm = _decode_AlgorithmIdentifier(_el);
-                },
-                objectDigest: (_el: _Element): void => {
-                    objectDigest = $._decodeBitString(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_ObjectDigestInfo,
-                _extension_additions_list_spec_for_ObjectDigestInfo,
-                _root_component_type_list_2_spec_for_ObjectDigestInfo,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new ObjectDigestInfo(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ digestedObjectType,
-                otherObjectTypeID,
-                digestAlgorithm,
-                objectDigest,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_ObjectDigestInfo(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let digestedObjectType!: ObjectDigestInfo_digestedObjectType;
+    let otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>;
+    let digestAlgorithm!: AlgorithmIdentifier;
+    let objectDigest!: BIT_STRING;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        digestedObjectType: (_el: _Element): void => {
+            digestedObjectType =
+                _decode_ObjectDigestInfo_digestedObjectType(_el);
+        },
+        otherObjectTypeID: (_el: _Element): void => {
+            otherObjectTypeID = $._decodeObjectIdentifier(_el);
+        },
+        digestAlgorithm: (_el: _Element): void => {
+            digestAlgorithm = _decode_AlgorithmIdentifier(_el);
+        },
+        objectDigest: (_el: _Element): void => {
+            objectDigest = $._decodeBitString(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_ObjectDigestInfo,
+        _extension_additions_list_spec_for_ObjectDigestInfo,
+        _root_component_type_list_2_spec_for_ObjectDigestInfo,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new ObjectDigestInfo(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ digestedObjectType,
+        otherObjectTypeID,
+        digestAlgorithm,
+        objectDigest,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ObjectDigestInfo */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo */
-let _cached_encoder_for_ObjectDigestInfo: $.ASN1Encoder<ObjectDigestInfo> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ObjectDigestInfo */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo */
 /**
@@ -282,45 +265,24 @@ export function _encode_ObjectDigestInfo(
     value: ObjectDigestInfo,
     elGetter: $.ASN1Encoder<ObjectDigestInfo>
 ) {
-    if (!_cached_encoder_for_ObjectDigestInfo) {
-        _cached_encoder_for_ObjectDigestInfo = function (
-            value: ObjectDigestInfo,
-            elGetter: $.ASN1Encoder<ObjectDigestInfo>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ _encode_ObjectDigestInfo_digestedObjectType(
-                                value.digestedObjectType,
-                                $.BER
-                            ),
-                            /* IF_ABSENT  */ value.otherObjectTypeID ===
-                            undefined
-                                ? undefined
-                                : $._encodeObjectIdentifier(
-                                      value.otherObjectTypeID,
-                                      $.BER
-                                  ),
-                            /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                                value.digestAlgorithm,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeBitString(
-                                value.objectDigest,
-                                $.BER
-                            ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ _encode_ObjectDigestInfo_digestedObjectType(
+            value.digestedObjectType,
+            $.BER
+        ),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    if (value.otherObjectTypeID) {
+        const c = _encode_ObjectDigestInfo_digestedObjectType(
+            value.digestedObjectType,
+            $.BER
+        );
+        components.push(c);
     }
-    return _cached_encoder_for_ObjectDigestInfo(value, elGetter);
+    components.push(_encode_AlgorithmIdentifier(value.digestAlgorithm, $.BER));
+    components.push($._encodeBitString(value.objectDigest, $.BER));
+    components.push(...value._unrecognizedExtensionsList);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ObjectDigestInfo */

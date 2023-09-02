@@ -118,11 +118,6 @@ export const _extension_additions_list_spec_for_ExtensionAttribute: $.ComponentS
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ExtensionAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttribute */
-let _cached_decoder_for_ExtensionAttribute: $.ASN1Decoder<ExtensionAttribute> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ExtensionAttribute */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ExtensionAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionAttribute
@@ -131,42 +126,30 @@ let _cached_decoder_for_ExtensionAttribute: $.ASN1Decoder<ExtensionAttribute> | 
  * @returns {ExtensionAttribute} The decoded data structure.
  */
 export function _decode_ExtensionAttribute(el: _Element) {
-    if (!_cached_decoder_for_ExtensionAttribute) {
-        _cached_decoder_for_ExtensionAttribute = function (
-            el: _Element
-        ): ExtensionAttribute {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "ExtensionAttribute contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "extension-attribute-type";
-            sequence[1].name = "extension-attribute-value";
-            let extension_attribute_type!: INTEGER;
-            let extension_attribute_value!: _Element;
-            extension_attribute_type = $._decode_explicit<INTEGER>(
-                () => $._decodeInteger
-            )(sequence[0]);
-            extension_attribute_value = $._decode_explicit<_Element>(
-                () => $._decodeAny
-            )(sequence[1]);
-            return new ExtensionAttribute(
-                extension_attribute_type,
-                extension_attribute_value
-            );
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "ExtensionAttribute contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_ExtensionAttribute(el);
+    sequence[0].name = "extension-attribute-type";
+    sequence[1].name = "extension-attribute-value";
+    let extension_attribute_type!: INTEGER;
+    let extension_attribute_value!: _Element;
+    extension_attribute_type = $._decode_explicit<INTEGER>(
+        () => $._decodeInteger
+    )(sequence[0]);
+    extension_attribute_value = $._decode_explicit<_Element>(
+        () => $._decodeAny
+    )(sequence[1]);
+    return new ExtensionAttribute(
+        extension_attribute_type,
+        extension_attribute_value
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ExtensionAttribute */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttribute */
-let _cached_encoder_for_ExtensionAttribute: $.ASN1Encoder<ExtensionAttribute> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ExtensionAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ExtensionAttribute */
 /**
@@ -180,33 +163,21 @@ export function _encode_ExtensionAttribute(
     value: ExtensionAttribute,
     elGetter: $.ASN1Encoder<ExtensionAttribute>
 ) {
-    if (!_cached_encoder_for_ExtensionAttribute) {
-        _cached_encoder_for_ExtensionAttribute = function (
-            value: ExtensionAttribute,
-            elGetter: $.ASN1Encoder<ExtensionAttribute>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* REQUIRED   */ $._encode_explicit(
-                            _TagClass.context,
-                            0,
-                            () => $._encodeInteger,
-                            $.BER
-                        )(value.extension_attribute_type, $.BER),
-                        /* REQUIRED   */ $._encode_explicit(
-                            _TagClass.context,
-                            1,
-                            () => $._encodeAny,
-                            $.BER
-                        )(value.extension_attribute_value, $.BER),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_ExtensionAttribute(value, elGetter);
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encode_explicit(
+            _TagClass.context,
+            0,
+            () => $._encodeInteger,
+            $.BER
+        )(value.extension_attribute_type, $.BER),
+        /* REQUIRED   */ $._encode_explicit(
+            _TagClass.context,
+            1,
+            () => $._encodeAny,
+            $.BER
+        )(value.extension_attribute_value, $.BER),
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ExtensionAttribute */

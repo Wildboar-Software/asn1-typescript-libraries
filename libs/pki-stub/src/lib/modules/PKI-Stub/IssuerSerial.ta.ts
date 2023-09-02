@@ -158,10 +158,6 @@ export const _extension_additions_list_spec_for_IssuerSerial: $.ComponentSpec[] 
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IssuerSerial */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuerSerial */
-let _cached_decoder_for_IssuerSerial: $.ASN1Decoder<IssuerSerial> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_IssuerSerial */
-
 /* START_OF_SYMBOL_DEFINITION _decode_IssuerSerial */
 /**
  * @summary Decodes an ASN.1 element into a(n) IssuerSerial
@@ -170,54 +166,43 @@ let _cached_decoder_for_IssuerSerial: $.ASN1Decoder<IssuerSerial> | null = null;
  * @returns {IssuerSerial} The decoded data structure.
  */
 export function _decode_IssuerSerial(el: _Element) {
-    if (!_cached_decoder_for_IssuerSerial) {
-        _cached_decoder_for_IssuerSerial = function (
-            el: _Element
-        ): IssuerSerial {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let issuer!: GeneralNames;
-            let serial!: CertificateSerialNumber;
-            let issuerUID: OPTIONAL<UniqueIdentifier>;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                issuer: (_el: _Element): void => {
-                    issuer = _decode_GeneralNames(_el);
-                },
-                serial: (_el: _Element): void => {
-                    serial = _decode_CertificateSerialNumber(_el);
-                },
-                issuerUID: (_el: _Element): void => {
-                    issuerUID = _decode_UniqueIdentifier(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_IssuerSerial,
-                _extension_additions_list_spec_for_IssuerSerial,
-                _root_component_type_list_2_spec_for_IssuerSerial,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new IssuerSerial(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
-                serial,
-                issuerUID,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_IssuerSerial(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let issuer!: GeneralNames;
+    let serial!: CertificateSerialNumber;
+    let issuerUID: OPTIONAL<UniqueIdentifier>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        issuer: (_el: _Element): void => {
+            issuer = _decode_GeneralNames(_el);
+        },
+        serial: (_el: _Element): void => {
+            serial = _decode_CertificateSerialNumber(_el);
+        },
+        issuerUID: (_el: _Element): void => {
+            issuerUID = _decode_UniqueIdentifier(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_IssuerSerial,
+        _extension_additions_list_spec_for_IssuerSerial,
+        _root_component_type_list_2_spec_for_IssuerSerial,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new IssuerSerial(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ issuer,
+        serial,
+        issuerUID,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_IssuerSerial */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuerSerial */
-let _cached_encoder_for_IssuerSerial: $.ASN1Encoder<IssuerSerial> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_IssuerSerial */
 
 /* START_OF_SYMBOL_DEFINITION _encode_IssuerSerial */
 /**
@@ -231,40 +216,21 @@ export function _encode_IssuerSerial(
     value: IssuerSerial,
     elGetter: $.ASN1Encoder<IssuerSerial>
 ) {
-    if (!_cached_encoder_for_IssuerSerial) {
-        _cached_encoder_for_IssuerSerial = function (
-            value: IssuerSerial,
-            elGetter: $.ASN1Encoder<IssuerSerial>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ _encode_GeneralNames(
-                                value.issuer,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_CertificateSerialNumber(
-                                value.serial,
-                                $.BER
-                            ),
-                            /* IF_ABSENT  */ value.issuerUID === undefined
-                                ? undefined
-                                : _encode_UniqueIdentifier(
-                                      value.issuerUID,
-                                      $.BER
-                                  ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ _encode_GeneralNames(
+            value.issuer,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_CertificateSerialNumber(
+            value.serial,
+            $.BER
+        ),
+    ];
+    if (value.issuerUID) {
+        components.push(_encode_UniqueIdentifier(value.issuerUID, $.BER));
     }
-    return _cached_encoder_for_IssuerSerial(value, elGetter);
+    components.push(...value._unrecognizedExtensionsList);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_IssuerSerial */

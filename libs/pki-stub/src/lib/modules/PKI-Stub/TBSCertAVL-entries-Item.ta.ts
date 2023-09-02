@@ -144,11 +144,6 @@ export const _extension_additions_list_spec_for_TBSCertAVL_entries_Item: $.Compo
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL_entries_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item */
-let _cached_decoder_for_TBSCertAVL_entries_Item: $.ASN1Decoder<TBSCertAVL_entries_Item> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL_entries_Item */
-
 /* START_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCertAVL_entries_Item
@@ -157,59 +152,47 @@ let _cached_decoder_for_TBSCertAVL_entries_Item: $.ASN1Decoder<TBSCertAVL_entrie
  * @returns {TBSCertAVL_entries_Item} The decoded data structure.
  */
 export function _decode_TBSCertAVL_entries_Item(el: _Element) {
-    if (!_cached_decoder_for_TBSCertAVL_entries_Item) {
-        _cached_decoder_for_TBSCertAVL_entries_Item = function (
-            el: _Element
-        ): TBSCertAVL_entries_Item {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let idType!: TBSCertAVL_entries_Item_idType;
-            let scope: OPTIONAL<ScopeRestrictions>;
-            let entryExtensions: OPTIONAL<Extensions>;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                idType: (_el: _Element): void => {
-                    idType = _decode_TBSCertAVL_entries_Item_idType(_el);
-                },
-                scope: (_el: _Element): void => {
-                    scope = $._decode_implicit<ScopeRestrictions>(
-                        () => _decode_ScopeRestrictions
-                    )(_el);
-                },
-                entryExtensions: (_el: _Element): void => {
-                    entryExtensions = $._decode_implicit<Extensions>(
-                        () => _decode_Extensions
-                    )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item,
-                _extension_additions_list_spec_for_TBSCertAVL_entries_Item,
-                _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new TBSCertAVL_entries_Item(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ idType,
-                scope,
-                entryExtensions,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_TBSCertAVL_entries_Item(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let idType!: TBSCertAVL_entries_Item_idType;
+    let scope: OPTIONAL<ScopeRestrictions>;
+    let entryExtensions: OPTIONAL<Extensions>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        idType: (_el: _Element): void => {
+            idType = _decode_TBSCertAVL_entries_Item_idType(_el);
+        },
+        scope: (_el: _Element): void => {
+            scope = $._decode_implicit<ScopeRestrictions>(
+                () => _decode_ScopeRestrictions
+            )(_el);
+        },
+        entryExtensions: (_el: _Element): void => {
+            entryExtensions = $._decode_implicit<Extensions>(
+                () => _decode_Extensions
+            )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_TBSCertAVL_entries_Item,
+        _extension_additions_list_spec_for_TBSCertAVL_entries_Item,
+        _root_component_type_list_2_spec_for_TBSCertAVL_entries_Item,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new TBSCertAVL_entries_Item(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ idType,
+        scope,
+        entryExtensions,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TBSCertAVL_entries_Item */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item */
-let _cached_encoder_for_TBSCertAVL_entries_Item: $.ASN1Encoder<TBSCertAVL_entries_Item> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL_entries_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TBSCertAVL_entries_Item */
 /**
@@ -223,46 +206,29 @@ export function _encode_TBSCertAVL_entries_Item(
     value: TBSCertAVL_entries_Item,
     elGetter: $.ASN1Encoder<TBSCertAVL_entries_Item>
 ) {
-    if (!_cached_encoder_for_TBSCertAVL_entries_Item) {
-        _cached_encoder_for_TBSCertAVL_entries_Item = function (
-            value: TBSCertAVL_entries_Item,
-            elGetter: $.ASN1Encoder<TBSCertAVL_entries_Item>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ _encode_TBSCertAVL_entries_Item_idType(
-                                value.idType,
-                                $.BER
-                            ),
-                            /* IF_ABSENT  */ value.scope === undefined
-                                ? undefined
-                                : $._encode_implicit(
-                                      _TagClass.context,
-                                      0,
-                                      () => _encode_ScopeRestrictions,
-                                      $.BER
-                                  )(value.scope, $.BER),
-                            /* IF_ABSENT  */ value.entryExtensions === undefined
-                                ? undefined
-                                : $._encode_implicit(
-                                      _TagClass.context,
-                                      1,
-                                      () => _encode_Extensions,
-                                      $.BER
-                                  )(value.entryExtensions, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        _encode_TBSCertAVL_entries_Item_idType(value.idType, $.BER),
+    ];
+    if (value.scope) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            0,
+            () => _encode_ScopeRestrictions,
+            $.BER
+        )(value.scope, $.BER);
+        components.push(c);
     }
-    return _cached_encoder_for_TBSCertAVL_entries_Item(value, elGetter);
+    if (value.entryExtensions?.length) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            1,
+            () => _encode_Extensions,
+            $.BER
+        )(value.entryExtensions, $.BER);
+        components.push(c);
+    }
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TBSCertAVL_entries_Item */

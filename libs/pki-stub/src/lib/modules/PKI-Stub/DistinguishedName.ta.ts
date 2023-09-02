@@ -24,11 +24,6 @@ import {
 export type DistinguishedName = RDNSequence; // DefinedType
 /* END_OF_SYMBOL_DEFINITION DistinguishedName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DistinguishedName */
-let _cached_decoder_for_DistinguishedName: $.ASN1Decoder<DistinguishedName> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_DistinguishedName */
-
 /* START_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
 /**
  * @summary Decodes an ASN.1 element into a(n) DistinguishedName
@@ -37,17 +32,9 @@ let _cached_decoder_for_DistinguishedName: $.ASN1Decoder<DistinguishedName> | nu
  * @returns {DistinguishedName} The decoded data structure.
  */
 export function _decode_DistinguishedName(el: _Element) {
-    if (!_cached_decoder_for_DistinguishedName) {
-        _cached_decoder_for_DistinguishedName = _decode_RDNSequence;
-    }
-    return _cached_decoder_for_DistinguishedName(el);
+    return _decode_RDNSequence(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_DistinguishedName */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_DistinguishedName */
-let _cached_encoder_for_DistinguishedName: $.ASN1Encoder<DistinguishedName> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_DistinguishedName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_DistinguishedName */
 /**
@@ -61,10 +48,7 @@ export function _encode_DistinguishedName(
     value: DistinguishedName,
     elGetter: $.ASN1Encoder<DistinguishedName>
 ) {
-    if (!_cached_encoder_for_DistinguishedName) {
-        _cached_encoder_for_DistinguishedName = _encode_RDNSequence;
-    }
-    return _cached_encoder_for_DistinguishedName(value, elGetter);
+    return _encode_RDNSequence(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_DistinguishedName */

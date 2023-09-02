@@ -151,10 +151,6 @@ export const _root_component_type_list_2_spec_for_Holder: $.ComponentSpec[] =
 export const _extension_additions_list_spec_for_Holder: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Holder */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Holder */
-let _cached_decoder_for_Holder: $.ASN1Decoder<Holder> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Holder */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Holder */
 /**
  * @summary Decodes an ASN.1 element into a(n) Holder
@@ -163,54 +159,45 @@ let _cached_decoder_for_Holder: $.ASN1Decoder<Holder> | null = null;
  * @returns {Holder} The decoded data structure.
  */
 export function _decode_Holder(el: _Element) {
-    if (!_cached_decoder_for_Holder) {
-        _cached_decoder_for_Holder = function (el: _Element): Holder {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let baseCertificateID: OPTIONAL<IssuerSerial>;
-            let entityName: OPTIONAL<GeneralNames>;
-            let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                baseCertificateID: (_el: _Element): void => {
-                    baseCertificateID = $._decode_implicit<IssuerSerial>(
-                        () => _decode_IssuerSerial
-                    )(_el);
-                },
-                entityName: (_el: _Element): void => {
-                    entityName = $._decode_implicit<GeneralNames>(
-                        () => _decode_GeneralNames
-                    )(_el);
-                },
-                objectDigestInfo: (_el: _Element): void => {
-                    objectDigestInfo = $._decode_implicit<ObjectDigestInfo>(
-                        () => _decode_ObjectDigestInfo
-                    )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_Holder,
-                _extension_additions_list_spec_for_Holder,
-                _root_component_type_list_2_spec_for_Holder,
-                undefined
-            );
-            return new Holder(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ baseCertificateID,
-                entityName,
-                objectDigestInfo
-            );
-        };
-    }
-    return _cached_decoder_for_Holder(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let baseCertificateID: OPTIONAL<IssuerSerial>;
+    let entityName: OPTIONAL<GeneralNames>;
+    let objectDigestInfo: OPTIONAL<ObjectDigestInfo>;
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        baseCertificateID: (_el: _Element): void => {
+            baseCertificateID = $._decode_implicit<IssuerSerial>(
+                () => _decode_IssuerSerial
+            )(_el);
+        },
+        entityName: (_el: _Element): void => {
+            entityName = $._decode_implicit<GeneralNames>(
+                () => _decode_GeneralNames
+            )(_el);
+        },
+        objectDigestInfo: (_el: _Element): void => {
+            objectDigestInfo = $._decode_implicit<ObjectDigestInfo>(
+                () => _decode_ObjectDigestInfo
+            )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_Holder,
+        _extension_additions_list_spec_for_Holder,
+        _root_component_type_list_2_spec_for_Holder,
+        undefined
+    );
+    return new Holder(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ baseCertificateID,
+        entityName,
+        objectDigestInfo
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Holder */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Holder */
-let _cached_encoder_for_Holder: $.ASN1Encoder<Holder> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Holder */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Holder */
 /**
@@ -221,45 +208,35 @@ let _cached_encoder_for_Holder: $.ASN1Encoder<Holder> | null = null;
  * @returns {_Element} The Holder, encoded as an ASN.1 Element.
  */
 export function _encode_Holder(value: Holder, elGetter: $.ASN1Encoder<Holder>) {
-    if (!_cached_encoder_for_Holder) {
-        _cached_encoder_for_Holder = function (
-            value: Holder,
-            elGetter: $.ASN1Encoder<Holder>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* IF_ABSENT  */ value.baseCertificateID === undefined
-                            ? undefined
-                            : $._encode_implicit(
-                                  _TagClass.context,
-                                  0,
-                                  () => _encode_IssuerSerial,
-                                  $.BER
-                              )(value.baseCertificateID, $.BER),
-                        /* IF_ABSENT  */ value.entityName === undefined
-                            ? undefined
-                            : $._encode_implicit(
-                                  _TagClass.context,
-                                  1,
-                                  () => _encode_GeneralNames,
-                                  $.BER
-                              )(value.entityName, $.BER),
-                        /* IF_ABSENT  */ value.objectDigestInfo === undefined
-                            ? undefined
-                            : $._encode_implicit(
-                                  _TagClass.context,
-                                  2,
-                                  () => _encode_ObjectDigestInfo,
-                                  $.BER
-                              )(value.objectDigestInfo, $.BER),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [];
+    if (value.baseCertificateID) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            0,
+            () => _encode_IssuerSerial,
+            $.BER
+        )(value.baseCertificateID, $.BER);
+        components.push(c);
     }
-    return _cached_encoder_for_Holder(value, elGetter);
+    if (value.entityName) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            1,
+            () => _encode_GeneralNames,
+            $.BER
+        )(value.entityName, $.BER);
+        components.push(c);
+    }
+    if (value.objectDigestInfo) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            2,
+            () => _encode_ObjectDigestInfo,
+            $.BER
+        )(value.objectDigestInfo, $.BER);
+        components.push(c);
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Holder */

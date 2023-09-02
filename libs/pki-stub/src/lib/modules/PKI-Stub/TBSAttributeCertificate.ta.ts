@@ -279,11 +279,6 @@ export const _extension_additions_list_spec_for_TBSAttributeCertificate: $.Compo
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSAttributeCertificate */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAttributeCertificate */
-let _cached_decoder_for_TBSAttributeCertificate: $.ASN1Decoder<TBSAttributeCertificate> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSAttributeCertificate */
-
 /* START_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSAttributeCertificate
@@ -292,87 +287,75 @@ let _cached_decoder_for_TBSAttributeCertificate: $.ASN1Decoder<TBSAttributeCerti
  * @returns {TBSAttributeCertificate} The decoded data structure.
  */
 export function _decode_TBSAttributeCertificate(el: _Element) {
-    if (!_cached_decoder_for_TBSAttributeCertificate) {
-        _cached_decoder_for_TBSAttributeCertificate = function (
-            el: _Element
-        ): TBSAttributeCertificate {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let version!: AttCertVersion;
-            let holder!: Holder;
-            let issuer!: AttCertIssuer;
-            let signature!: AlgorithmIdentifier;
-            let serialNumber!: CertificateSerialNumber;
-            let attrCertValidityPeriod!: AttCertValidityPeriod;
-            let attributes!: Attribute[];
-            let issuerUniqueID: OPTIONAL<UniqueIdentifier>;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            let extensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                version: (_el: _Element): void => {
-                    version = _decode_AttCertVersion(_el);
-                },
-                holder: (_el: _Element): void => {
-                    holder = _decode_Holder(_el);
-                },
-                issuer: (_el: _Element): void => {
-                    issuer = _decode_AttCertIssuer(_el);
-                },
-                signature: (_el: _Element): void => {
-                    signature = _decode_AlgorithmIdentifier(_el);
-                },
-                serialNumber: (_el: _Element): void => {
-                    serialNumber = _decode_CertificateSerialNumber(_el);
-                },
-                attrCertValidityPeriod: (_el: _Element): void => {
-                    attrCertValidityPeriod = _decode_AttCertValidityPeriod(_el);
-                },
-                attributes: (_el: _Element): void => {
-                    attributes = $._decodeSequenceOf<Attribute>(
-                        () => _decode_Attribute
-                    )(_el);
-                },
-                issuerUniqueID: (_el: _Element): void => {
-                    issuerUniqueID = _decode_UniqueIdentifier(_el);
-                },
-                extensions: (_el: _Element): void => {
-                    extensions = _decode_Extensions(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_TBSAttributeCertificate,
-                _extension_additions_list_spec_for_TBSAttributeCertificate,
-                _root_component_type_list_2_spec_for_TBSAttributeCertificate,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new TBSAttributeCertificate(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
-                holder,
-                issuer,
-                signature,
-                serialNumber,
-                attrCertValidityPeriod,
-                attributes,
-                issuerUniqueID,
-                _unrecognizedExtensionsList,
-                extensions
-            );
-        };
-    }
-    return _cached_decoder_for_TBSAttributeCertificate(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let version!: AttCertVersion;
+    let holder!: Holder;
+    let issuer!: AttCertIssuer;
+    let signature!: AlgorithmIdentifier;
+    let serialNumber!: CertificateSerialNumber;
+    let attrCertValidityPeriod!: AttCertValidityPeriod;
+    let attributes!: Attribute[];
+    let issuerUniqueID: OPTIONAL<UniqueIdentifier>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    let extensions: OPTIONAL<Extensions>;
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        version: (_el: _Element): void => {
+            version = _decode_AttCertVersion(_el);
+        },
+        holder: (_el: _Element): void => {
+            holder = _decode_Holder(_el);
+        },
+        issuer: (_el: _Element): void => {
+            issuer = _decode_AttCertIssuer(_el);
+        },
+        signature: (_el: _Element): void => {
+            signature = _decode_AlgorithmIdentifier(_el);
+        },
+        serialNumber: (_el: _Element): void => {
+            serialNumber = _decode_CertificateSerialNumber(_el);
+        },
+        attrCertValidityPeriod: (_el: _Element): void => {
+            attrCertValidityPeriod = _decode_AttCertValidityPeriod(_el);
+        },
+        attributes: (_el: _Element): void => {
+            attributes = $._decodeSequenceOf<Attribute>(
+                () => _decode_Attribute
+            )(_el);
+        },
+        issuerUniqueID: (_el: _Element): void => {
+            issuerUniqueID = _decode_UniqueIdentifier(_el);
+        },
+        extensions: (_el: _Element): void => {
+            extensions = _decode_Extensions(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_TBSAttributeCertificate,
+        _extension_additions_list_spec_for_TBSAttributeCertificate,
+        _root_component_type_list_2_spec_for_TBSAttributeCertificate,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new TBSAttributeCertificate(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+        holder,
+        issuer,
+        signature,
+        serialNumber,
+        attrCertValidityPeriod,
+        attributes,
+        issuerUniqueID,
+        _unrecognizedExtensionsList,
+        extensions
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TBSAttributeCertificate */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAttributeCertificate */
-let _cached_encoder_for_TBSAttributeCertificate: $.ASN1Encoder<TBSAttributeCertificate> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSAttributeCertificate */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TBSAttributeCertificate */
 /**
@@ -386,65 +369,44 @@ export function _encode_TBSAttributeCertificate(
     value: TBSAttributeCertificate,
     elGetter: $.ASN1Encoder<TBSAttributeCertificate>
 ) {
-    if (!_cached_encoder_for_TBSAttributeCertificate) {
-        _cached_encoder_for_TBSAttributeCertificate = function (
-            value: TBSAttributeCertificate,
-            elGetter: $.ASN1Encoder<TBSAttributeCertificate>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ _encode_AttCertVersion(
-                                value.version,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_Holder(
-                                value.holder,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_AttCertIssuer(
-                                value.issuer,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                                value.signature,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_CertificateSerialNumber(
-                                value.serialNumber,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_AttCertValidityPeriod(
-                                value.attrCertValidityPeriod,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeSequenceOf<Attribute>(
-                                () => _encode_Attribute,
-                                $.BER
-                            )(value.attributes, $.BER),
-                            /* IF_ABSENT  */ value.issuerUniqueID === undefined
-                                ? undefined
-                                : _encode_UniqueIdentifier(
-                                      value.issuerUniqueID,
-                                      $.BER
-                                  ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : [],
-                        [
-                            /* IF_ABSENT  */ value.extensions === undefined
-                                ? undefined
-                                : _encode_Extensions(value.extensions, $.BER),
-                        ]
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ _encode_AttCertVersion(
+            value.version,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_Holder(
+            value.holder,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_AttCertIssuer(
+            value.issuer,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_AlgorithmIdentifier(
+            value.signature,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_CertificateSerialNumber(
+            value.serialNumber,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_AttCertValidityPeriod(
+            value.attrCertValidityPeriod,
+            $.BER
+        ),
+        /* REQUIRED   */ $._encodeSequenceOf<Attribute>(
+            () => _encode_Attribute,
+            $.BER
+        )(value.attributes, $.BER),
+    ];
+    if (value.issuerUniqueID) {
+        components.push(_encode_UniqueIdentifier(value.issuerUniqueID, $.BER));
     }
-    return _cached_encoder_for_TBSAttributeCertificate(value, elGetter);
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    if (value.extensions.length) {
+        components.push(_encode_Extensions(value.extensions, $.BER));
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TBSAttributeCertificate */

@@ -117,11 +117,6 @@ export const _extension_additions_list_spec_for_AttributeTypeAndValue: $.Compone
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeTypeAndValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeAndValue */
-let _cached_decoder_for_AttributeTypeAndValue: $.ASN1Decoder<AttributeTypeAndValue> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeTypeAndValue */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeTypeAndValue
@@ -130,35 +125,23 @@ let _cached_decoder_for_AttributeTypeAndValue: $.ASN1Decoder<AttributeTypeAndVal
  * @returns {AttributeTypeAndValue} The decoded data structure.
  */
 export function _decode_AttributeTypeAndValue(el: _Element) {
-    if (!_cached_decoder_for_AttributeTypeAndValue) {
-        _cached_decoder_for_AttributeTypeAndValue = function (
-            el: _Element
-        ): AttributeTypeAndValue {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "AttributeTypeAndValue contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "type";
-            sequence[1].name = "value";
-            let type_!: OBJECT_IDENTIFIER;
-            let value!: _Element;
-            type_ = $._decodeObjectIdentifier(sequence[0]);
-            value = $._decodeAny(sequence[1]);
-            return new AttributeTypeAndValue(type_, value, sequence.slice(2));
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "AttributeTypeAndValue contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_AttributeTypeAndValue(el);
+    sequence[0].name = "type";
+    sequence[1].name = "value";
+    let type_!: OBJECT_IDENTIFIER;
+    let value!: _Element;
+    type_ = $._decodeObjectIdentifier(sequence[0]);
+    value = $._decodeAny(sequence[1]);
+    return new AttributeTypeAndValue(type_, value, sequence.slice(2));
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeTypeAndValue */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeAndValue */
-let _cached_encoder_for_AttributeTypeAndValue: $.ASN1Encoder<AttributeTypeAndValue> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeTypeAndValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeTypeAndValue */
 /**
@@ -172,31 +155,15 @@ export function _encode_AttributeTypeAndValue(
     value: AttributeTypeAndValue,
     elGetter: $.ASN1Encoder<AttributeTypeAndValue>
 ) {
-    if (!_cached_encoder_for_AttributeTypeAndValue) {
-        _cached_encoder_for_AttributeTypeAndValue = function (
-            value: AttributeTypeAndValue,
-            elGetter: $.ASN1Encoder<AttributeTypeAndValue>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeObjectIdentifier(
-                                value.type_,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeAny(value.value, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_AttributeTypeAndValue(value, elGetter);
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeObjectIdentifier(
+            value.type_,
+            $.BER
+        ),
+        /* REQUIRED   */ $._encodeAny(value.value, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeTypeAndValue */

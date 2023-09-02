@@ -166,68 +166,56 @@ let _cached_decoder_for_PresentationAddress: $.ASN1Decoder<PresentationAddress> 
  * @returns {PresentationAddress} The decoded data structure.
  */
 export function _decode_PresentationAddress(el: _Element) {
-    if (!_cached_decoder_for_PresentationAddress) {
-        _cached_decoder_for_PresentationAddress = function (
-            el: _Element
-        ): PresentationAddress {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let pSelector: OPTIONAL<OCTET_STRING>;
-            let sSelector: OPTIONAL<OCTET_STRING>;
-            let tSelector: OPTIONAL<OCTET_STRING>;
-            let nAddresses!: OCTET_STRING[];
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                pSelector: (_el: _Element): void => {
-                    pSelector = $._decode_explicit<OCTET_STRING>(
-                        () => $._decodeOctetString
-                    )(_el);
-                },
-                sSelector: (_el: _Element): void => {
-                    sSelector = $._decode_explicit<OCTET_STRING>(
-                        () => $._decodeOctetString
-                    )(_el);
-                },
-                tSelector: (_el: _Element): void => {
-                    tSelector = $._decode_explicit<OCTET_STRING>(
-                        () => $._decodeOctetString
-                    )(_el);
-                },
-                nAddresses: (_el: _Element): void => {
-                    nAddresses = $._decode_explicit<OCTET_STRING[]>(() =>
-                        $._decodeSetOf<OCTET_STRING>(() => $._decodeOctetString)
-                    )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_PresentationAddress,
-                _extension_additions_list_spec_for_PresentationAddress,
-                _root_component_type_list_2_spec_for_PresentationAddress,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new PresentationAddress(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ pSelector,
-                sSelector,
-                tSelector,
-                nAddresses,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_PresentationAddress(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let pSelector: OPTIONAL<OCTET_STRING>;
+    let sSelector: OPTIONAL<OCTET_STRING>;
+    let tSelector: OPTIONAL<OCTET_STRING>;
+    let nAddresses!: OCTET_STRING[];
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        pSelector: (_el: _Element): void => {
+            pSelector = $._decode_explicit<OCTET_STRING>(
+                () => $._decodeOctetString
+            )(_el);
+        },
+        sSelector: (_el: _Element): void => {
+            sSelector = $._decode_explicit<OCTET_STRING>(
+                () => $._decodeOctetString
+            )(_el);
+        },
+        tSelector: (_el: _Element): void => {
+            tSelector = $._decode_explicit<OCTET_STRING>(
+                () => $._decodeOctetString
+            )(_el);
+        },
+        nAddresses: (_el: _Element): void => {
+            nAddresses = $._decode_explicit<OCTET_STRING[]>(() =>
+                $._decodeSetOf<OCTET_STRING>(() => $._decodeOctetString)
+            )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_PresentationAddress,
+        _extension_additions_list_spec_for_PresentationAddress,
+        _root_component_type_list_2_spec_for_PresentationAddress,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new PresentationAddress(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ pSelector,
+        sSelector,
+        tSelector,
+        nAddresses,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAddress */
-let _cached_encoder_for_PresentationAddress: $.ASN1Encoder<PresentationAddress> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PresentationAddress */
 /**
@@ -241,60 +229,46 @@ export function _encode_PresentationAddress(
     value: PresentationAddress,
     elGetter: $.ASN1Encoder<PresentationAddress>
 ) {
-    if (!_cached_encoder_for_PresentationAddress) {
-        _cached_encoder_for_PresentationAddress = function (
-            value: PresentationAddress,
-            elGetter: $.ASN1Encoder<PresentationAddress>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* IF_ABSENT  */ value.pSelector === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      0,
-                                      () => $._encodeOctetString,
-                                      $.BER
-                                  )(value.pSelector, $.BER),
-                            /* IF_ABSENT  */ value.sSelector === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      1,
-                                      () => $._encodeOctetString,
-                                      $.BER
-                                  )(value.sSelector, $.BER),
-                            /* IF_ABSENT  */ value.tSelector === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      2,
-                                      () => $._encodeOctetString,
-                                      $.BER
-                                  )(value.tSelector, $.BER),
-                            /* REQUIRED   */ $._encode_explicit(
-                                _TagClass.context,
-                                3,
-                                () =>
-                                    $._encodeSetOf<OCTET_STRING>(
-                                        () => $._encodeOctetString,
-                                        $.BER
-                                    ),
-                                $.BER
-                            )(value.nAddresses, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [];
+    if (value.pSelector) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            0,
+            () => $._encodeOctetString,
+            $.BER
+        )(value.pSelector, $.BER);
+        components.push(c);
     }
-    return _cached_encoder_for_PresentationAddress(value, elGetter);
+    if (value.sSelector) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            1,
+            () => $._encodeOctetString,
+            $.BER
+        )(value.sSelector, $.BER);
+        components.push(c);
+    }
+    if (value.tSelector) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            2,
+            () => $._encodeOctetString,
+            $.BER
+        )(value.tSelector, $.BER);
+        components.push(c);
+    }
+    components.push($._encode_explicit(
+        _TagClass.context,
+        3,
+        () =>
+            $._encodeSetOf<OCTET_STRING>(
+                () => $._encodeOctetString,
+                $.BER
+            ),
+        $.BER
+    )(value.nAddresses, $.BER));
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_PresentationAddress */

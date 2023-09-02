@@ -272,11 +272,6 @@ export const _extension_additions_list_spec_for_BuiltInStandardAttributes: $.Com
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInStandardAttributes */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
-let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandardAttributes> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInStandardAttributes */
-
 /* START_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInStandardAttributes
@@ -285,99 +280,87 @@ let _cached_decoder_for_BuiltInStandardAttributes: $.ASN1Decoder<BuiltInStandard
  * @returns {BuiltInStandardAttributes} The decoded data structure.
  */
 export function _decode_BuiltInStandardAttributes(el: _Element) {
-    if (!_cached_decoder_for_BuiltInStandardAttributes) {
-        _cached_decoder_for_BuiltInStandardAttributes = function (
-            el: _Element
-        ): BuiltInStandardAttributes {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let country_name: OPTIONAL<CountryName>;
-            let administration_domain_name: OPTIONAL<AdministrationDomainName>;
-            let network_address: OPTIONAL<NetworkAddress>;
-            let terminal_identifier: OPTIONAL<TerminalIdentifier>;
-            let private_domain_name: OPTIONAL<PrivateDomainName>;
-            let organization_name: OPTIONAL<OrganizationName>;
-            let numeric_user_identifier: OPTIONAL<NumericUserIdentifier>;
-            let personal_name: OPTIONAL<PersonalName>;
-            let organizational_unit_names: OPTIONAL<OrganizationalUnitNames>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                "country-name": (_el: _Element): void => {
-                    country_name = _decode_CountryName(_el);
-                },
-                "administration-domain-name": (_el: _Element): void => {
-                    administration_domain_name =
-                        _decode_AdministrationDomainName(_el);
-                },
-                "network-address": (_el: _Element): void => {
-                    network_address = $._decode_explicit<NetworkAddress>(
-                        () => _decode_NetworkAddress
-                    )(_el);
-                },
-                "terminal-identifier": (_el: _Element): void => {
-                    terminal_identifier =
-                        $._decode_explicit<TerminalIdentifier>(
-                            () => _decode_TerminalIdentifier
-                        )(_el);
-                },
-                "private-domain-name": (_el: _Element): void => {
-                    private_domain_name = $._decode_explicit<PrivateDomainName>(
-                        () => _decode_PrivateDomainName
-                    )(_el);
-                },
-                "organization-name": (_el: _Element): void => {
-                    organization_name = $._decode_explicit<OrganizationName>(
-                        () => _decode_OrganizationName
-                    )(_el);
-                },
-                "numeric-user-identifier": (_el: _Element): void => {
-                    numeric_user_identifier =
-                        $._decode_explicit<NumericUserIdentifier>(
-                            () => _decode_NumericUserIdentifier
-                        )(_el);
-                },
-                "personal-name": (_el: _Element): void => {
-                    personal_name = $._decode_explicit<PersonalName>(
-                        () => _decode_PersonalName
-                    )(_el);
-                },
-                "organizational-unit-names": (_el: _Element): void => {
-                    organizational_unit_names =
-                        $._decode_explicit<OrganizationalUnitNames>(
-                            () => _decode_OrganizationalUnitNames
-                        )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_BuiltInStandardAttributes,
-                _extension_additions_list_spec_for_BuiltInStandardAttributes,
-                _root_component_type_list_2_spec_for_BuiltInStandardAttributes,
-                undefined
-            );
-            return new BuiltInStandardAttributes(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ country_name,
-                administration_domain_name,
-                network_address,
-                terminal_identifier,
-                private_domain_name,
-                organization_name,
-                numeric_user_identifier,
-                personal_name,
-                organizational_unit_names
-            );
-        };
-    }
-    return _cached_decoder_for_BuiltInStandardAttributes(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let country_name: OPTIONAL<CountryName>;
+    let administration_domain_name: OPTIONAL<AdministrationDomainName>;
+    let network_address: OPTIONAL<NetworkAddress>;
+    let terminal_identifier: OPTIONAL<TerminalIdentifier>;
+    let private_domain_name: OPTIONAL<PrivateDomainName>;
+    let organization_name: OPTIONAL<OrganizationName>;
+    let numeric_user_identifier: OPTIONAL<NumericUserIdentifier>;
+    let personal_name: OPTIONAL<PersonalName>;
+    let organizational_unit_names: OPTIONAL<OrganizationalUnitNames>;
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        "country-name": (_el: _Element): void => {
+            country_name = _decode_CountryName(_el);
+        },
+        "administration-domain-name": (_el: _Element): void => {
+            administration_domain_name =
+                _decode_AdministrationDomainName(_el);
+        },
+        "network-address": (_el: _Element): void => {
+            network_address = $._decode_explicit<NetworkAddress>(
+                () => _decode_NetworkAddress
+            )(_el);
+        },
+        "terminal-identifier": (_el: _Element): void => {
+            terminal_identifier =
+                $._decode_explicit<TerminalIdentifier>(
+                    () => _decode_TerminalIdentifier
+                )(_el);
+        },
+        "private-domain-name": (_el: _Element): void => {
+            private_domain_name = $._decode_explicit<PrivateDomainName>(
+                () => _decode_PrivateDomainName
+            )(_el);
+        },
+        "organization-name": (_el: _Element): void => {
+            organization_name = $._decode_explicit<OrganizationName>(
+                () => _decode_OrganizationName
+            )(_el);
+        },
+        "numeric-user-identifier": (_el: _Element): void => {
+            numeric_user_identifier =
+                $._decode_explicit<NumericUserIdentifier>(
+                    () => _decode_NumericUserIdentifier
+                )(_el);
+        },
+        "personal-name": (_el: _Element): void => {
+            personal_name = $._decode_explicit<PersonalName>(
+                () => _decode_PersonalName
+            )(_el);
+        },
+        "organizational-unit-names": (_el: _Element): void => {
+            organizational_unit_names =
+                $._decode_explicit<OrganizationalUnitNames>(
+                    () => _decode_OrganizationalUnitNames
+                )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_BuiltInStandardAttributes,
+        _extension_additions_list_spec_for_BuiltInStandardAttributes,
+        _root_component_type_list_2_spec_for_BuiltInStandardAttributes,
+        undefined
+    );
+    return new BuiltInStandardAttributes(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ country_name,
+        administration_domain_name,
+        network_address,
+        terminal_identifier,
+        private_domain_name,
+        organization_name,
+        numeric_user_identifier,
+        personal_name,
+        organizational_unit_names
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_BuiltInStandardAttributes */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
-let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandardAttributes> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInStandardAttributes */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */
 /**
@@ -391,89 +374,81 @@ export function _encode_BuiltInStandardAttributes(
     value: BuiltInStandardAttributes,
     elGetter: $.ASN1Encoder<BuiltInStandardAttributes>
 ) {
-    if (!_cached_encoder_for_BuiltInStandardAttributes) {
-        _cached_encoder_for_BuiltInStandardAttributes = function (
-            value: BuiltInStandardAttributes,
-            elGetter: $.ASN1Encoder<BuiltInStandardAttributes>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* IF_ABSENT  */ value.country_name === undefined
-                            ? undefined
-                            : _encode_CountryName(value.country_name, $.BER),
-                        /* IF_ABSENT  */ value.administration_domain_name ===
-                        undefined
-                            ? undefined
-                            : _encode_AdministrationDomainName(
-                                  value.administration_domain_name,
-                                  $.BER
-                              ),
-                        /* IF_ABSENT  */ value.network_address === undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  0,
-                                  () => _encode_NetworkAddress,
-                                  $.BER
-                              )(value.network_address, $.BER),
-                        /* IF_ABSENT  */ value.terminal_identifier === undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  1,
-                                  () => _encode_TerminalIdentifier,
-                                  $.BER
-                              )(value.terminal_identifier, $.BER),
-                        /* IF_ABSENT  */ value.private_domain_name === undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  2,
-                                  () => _encode_PrivateDomainName,
-                                  $.BER
-                              )(value.private_domain_name, $.BER),
-                        /* IF_ABSENT  */ value.organization_name === undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  3,
-                                  () => _encode_OrganizationName,
-                                  $.BER
-                              )(value.organization_name, $.BER),
-                        /* IF_ABSENT  */ value.numeric_user_identifier ===
-                        undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  4,
-                                  () => _encode_NumericUserIdentifier,
-                                  $.BER
-                              )(value.numeric_user_identifier, $.BER),
-                        /* IF_ABSENT  */ value.personal_name === undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  5,
-                                  () => _encode_PersonalName,
-                                  $.BER
-                              )(value.personal_name, $.BER),
-                        /* IF_ABSENT  */ value.organizational_unit_names ===
-                        undefined
-                            ? undefined
-                            : $._encode_explicit(
-                                  _TagClass.context,
-                                  6,
-                                  () => _encode_OrganizationalUnitNames,
-                                  $.BER
-                              )(value.organizational_unit_names, $.BER),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [];
+    if (value.country_name) {
+        components.push(_encode_CountryName(value.country_name, $.BER));
     }
-    return _cached_encoder_for_BuiltInStandardAttributes(value, elGetter);
+    if (value.administration_domain_name) {
+        const c = _encode_AdministrationDomainName(
+            value.administration_domain_name,
+            $.BER
+        );
+        components.push(c);
+    }
+    if (value.network_address) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            0,
+            () => _encode_NetworkAddress,
+            $.BER
+        )(value.network_address, $.BER);
+        components.push(c);
+    }
+    if (value.terminal_identifier) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            1,
+            () => _encode_TerminalIdentifier,
+            $.BER
+        )(value.terminal_identifier, $.BER);
+        components.push(c);
+    }
+    if (value.private_domain_name) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            2,
+            () => _encode_PrivateDomainName,
+            $.BER
+        )(value.private_domain_name, $.BER);
+        components.push(c);
+    }
+    if (value.organization_name) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            3,
+            () => _encode_OrganizationName,
+            $.BER
+        )(value.organization_name, $.BER);
+        components.push(c);
+    }
+    if (value.numeric_user_identifier) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            4,
+            () => _encode_NumericUserIdentifier,
+            $.BER
+        )(value.numeric_user_identifier, $.BER);
+        components.push(c);
+    }
+    if (value.personal_name) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            5,
+            () => _encode_PersonalName,
+            $.BER
+        )(value.personal_name, $.BER);
+        components.push(c);
+    }
+    if (value.organizational_unit_names?.length) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            6,
+            () => _encode_OrganizationalUnitNames,
+            $.BER
+        )(value.organizational_unit_names, $.BER);
+        components.push(c);
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_BuiltInStandardAttributes */

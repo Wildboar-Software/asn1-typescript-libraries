@@ -141,32 +141,25 @@ let _cached_decoder_for_AttCertValidityPeriod: $.ASN1Decoder<AttCertValidityPeri
  * @returns {AttCertValidityPeriod} The decoded data structure.
  */
 export function _decode_AttCertValidityPeriod(el: _Element) {
-    if (!_cached_decoder_for_AttCertValidityPeriod) {
-        _cached_decoder_for_AttCertValidityPeriod = function (
-            el: _Element
-        ): AttCertValidityPeriod {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "AttCertValidityPeriod contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "notBeforeTime";
-            sequence[1].name = "notAfterTime";
-            let notBeforeTime!: GeneralizedTime;
-            let notAfterTime!: GeneralizedTime;
-            notBeforeTime = $._decodeGeneralizedTime(sequence[0]);
-            notAfterTime = $._decodeGeneralizedTime(sequence[1]);
-            return new AttCertValidityPeriod(
-                notBeforeTime,
-                notAfterTime,
-                sequence.slice(2)
-            );
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "AttCertValidityPeriod contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_AttCertValidityPeriod(el);
+    sequence[0].name = "notBeforeTime";
+    sequence[1].name = "notAfterTime";
+    let notBeforeTime!: GeneralizedTime;
+    let notAfterTime!: GeneralizedTime;
+    notBeforeTime = $._decodeGeneralizedTime(sequence[0]);
+    notAfterTime = $._decodeGeneralizedTime(sequence[1]);
+    return new AttCertValidityPeriod(
+        notBeforeTime,
+        notAfterTime,
+        sequence.slice(2)
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AttCertValidityPeriod */
 
@@ -187,34 +180,18 @@ export function _encode_AttCertValidityPeriod(
     value: AttCertValidityPeriod,
     elGetter: $.ASN1Encoder<AttCertValidityPeriod>
 ) {
-    if (!_cached_encoder_for_AttCertValidityPeriod) {
-        _cached_encoder_for_AttCertValidityPeriod = function (
-            value: AttCertValidityPeriod,
-            elGetter: $.ASN1Encoder<AttCertValidityPeriod>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeGeneralizedTime(
-                                value.notBeforeTime,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeGeneralizedTime(
-                                value.notAfterTime,
-                                $.BER
-                            ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_AttCertValidityPeriod(value, elGetter);
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeGeneralizedTime(
+            value.notBeforeTime,
+            $.BER
+        ),
+        /* REQUIRED   */ $._encodeGeneralizedTime(
+            value.notAfterTime,
+            $.BER
+        ),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttCertValidityPeriod */

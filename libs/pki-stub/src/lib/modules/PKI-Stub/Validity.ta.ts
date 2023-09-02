@@ -128,10 +128,6 @@ export const _extension_additions_list_spec_for_Validity: $.ComponentSpec[] =
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Validity */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Validity */
-let _cached_decoder_for_Validity: $.ASN1Decoder<Validity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Validity */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Validity */
 /**
  * @summary Decodes an ASN.1 element into a(n) Validity
@@ -140,32 +136,23 @@ let _cached_decoder_for_Validity: $.ASN1Decoder<Validity> | null = null;
  * @returns {Validity} The decoded data structure.
  */
 export function _decode_Validity(el: _Element) {
-    if (!_cached_decoder_for_Validity) {
-        _cached_decoder_for_Validity = function (el: _Element): Validity {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "Validity contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "notBefore";
-            sequence[1].name = "notAfter";
-            let notBefore!: Time;
-            let notAfter!: Time;
-            notBefore = _decode_Time(sequence[0]);
-            notAfter = _decode_Time(sequence[1]);
-            return new Validity(notBefore, notAfter, sequence.slice(2));
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "Validity contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_Validity(el);
+    sequence[0].name = "notBefore";
+    sequence[1].name = "notAfter";
+    let notBefore!: Time;
+    let notAfter!: Time;
+    notBefore = _decode_Time(sequence[0]);
+    notAfter = _decode_Time(sequence[1]);
+    return new Validity(notBefore, notAfter, sequence.slice(2));
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Validity */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Validity */
-let _cached_encoder_for_Validity: $.ASN1Encoder<Validity> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Validity */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Validity */
 /**
@@ -179,34 +166,18 @@ export function _encode_Validity(
     value: Validity,
     elGetter: $.ASN1Encoder<Validity>
 ) {
-    if (!_cached_encoder_for_Validity) {
-        _cached_encoder_for_Validity = function (
-            value: Validity,
-            elGetter: $.ASN1Encoder<Validity>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ _encode_Time(
-                                value.notBefore,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_Time(
-                                value.notAfter,
-                                $.BER
-                            ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_Validity(value, elGetter);
+    const components: _Element[] = [
+        /* REQUIRED   */ _encode_Time(
+            value.notBefore,
+            $.BER
+        ),
+        /* REQUIRED   */ _encode_Time(
+            value.notAfter,
+            $.BER
+        ),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Validity */

@@ -116,11 +116,6 @@ export const _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute: $
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_BuiltInDomainDefinedAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttribute */
-let _cached_decoder_for_BuiltInDomainDefinedAttribute: $.ASN1Decoder<BuiltInDomainDefinedAttribute> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_BuiltInDomainDefinedAttribute */
-
 /* START_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) BuiltInDomainDefinedAttribute
@@ -129,35 +124,23 @@ let _cached_decoder_for_BuiltInDomainDefinedAttribute: $.ASN1Decoder<BuiltInDoma
  * @returns {BuiltInDomainDefinedAttribute} The decoded data structure.
  */
 export function _decode_BuiltInDomainDefinedAttribute(el: _Element) {
-    if (!_cached_decoder_for_BuiltInDomainDefinedAttribute) {
-        _cached_decoder_for_BuiltInDomainDefinedAttribute = function (
-            el: _Element
-        ): BuiltInDomainDefinedAttribute {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "BuiltInDomainDefinedAttribute contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "type";
-            sequence[1].name = "value";
-            let type_!: PrintableString;
-            let value!: PrintableString;
-            type_ = $._decodePrintableString(sequence[0]);
-            value = $._decodePrintableString(sequence[1]);
-            return new BuiltInDomainDefinedAttribute(type_, value);
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "BuiltInDomainDefinedAttribute contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_BuiltInDomainDefinedAttribute(el);
+    sequence[0].name = "type";
+    sequence[1].name = "value";
+    let type_!: PrintableString;
+    let value!: PrintableString;
+    type_ = $._decodePrintableString(sequence[0]);
+    value = $._decodePrintableString(sequence[1]);
+    return new BuiltInDomainDefinedAttribute(type_, value);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_BuiltInDomainDefinedAttribute */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttribute */
-let _cached_encoder_for_BuiltInDomainDefinedAttribute: $.ASN1Encoder<BuiltInDomainDefinedAttribute> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_BuiltInDomainDefinedAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttribute */
 /**
@@ -171,29 +154,11 @@ export function _encode_BuiltInDomainDefinedAttribute(
     value: BuiltInDomainDefinedAttribute,
     elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttribute>
 ) {
-    if (!_cached_encoder_for_BuiltInDomainDefinedAttribute) {
-        _cached_encoder_for_BuiltInDomainDefinedAttribute = function (
-            value: BuiltInDomainDefinedAttribute,
-            elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttribute>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* REQUIRED   */ $._encodePrintableString(
-                            value.type_,
-                            $.BER
-                        ),
-                        /* REQUIRED   */ $._encodePrintableString(
-                            value.value,
-                            $.BER
-                        ),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_BuiltInDomainDefinedAttribute(value, elGetter);
+    const components: _Element[] = [
+        $._encodePrintableString(value.type_, $.BER),
+        $._encodePrintableString(value.value, $.BER),
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_BuiltInDomainDefinedAttribute */

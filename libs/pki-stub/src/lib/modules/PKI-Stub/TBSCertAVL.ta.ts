@@ -244,10 +244,6 @@ export const _extension_additions_list_spec_for_TBSCertAVL: $.ComponentSpec[] =
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_TBSCertAVL */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL */
-let _cached_decoder_for_TBSCertAVL: $.ASN1Decoder<TBSCertAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_TBSCertAVL */
-
 /* START_OF_SYMBOL_DEFINITION _decode_TBSCertAVL */
 /**
  * @summary Decodes an ASN.1 element into a(n) TBSCertAVL
@@ -256,77 +252,68 @@ let _cached_decoder_for_TBSCertAVL: $.ASN1Decoder<TBSCertAVL> | null = null;
  * @returns {TBSCertAVL} The decoded data structure.
  */
 export function _decode_TBSCertAVL(el: _Element) {
-    if (!_cached_decoder_for_TBSCertAVL) {
-        _cached_decoder_for_TBSCertAVL = function (el: _Element): TBSCertAVL {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let version: OPTIONAL<Version> =
-                TBSCertAVL._default_value_for_version;
-            let serialNumber: OPTIONAL<AvlSerialNumber>;
-            let signature!: AlgorithmIdentifier;
-            let issuer!: Name;
-            let constrained!: BOOLEAN;
-            let entries!: TBSCertAVL_entries_Item[];
-            let _unrecognizedExtensionsList: _Element[] = [];
-            let avlExtensions: OPTIONAL<Extensions>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                version: (_el: _Element): void => {
-                    version = $._decode_implicit<Version>(
-                        () => _decode_Version
-                    )(_el);
-                },
-                serialNumber: (_el: _Element): void => {
-                    serialNumber = _decode_AvlSerialNumber(_el);
-                },
-                signature: (_el: _Element): void => {
-                    signature = _decode_AlgorithmIdentifier(_el);
-                },
-                issuer: (_el: _Element): void => {
-                    issuer = _decode_Name(_el);
-                },
-                constrained: (_el: _Element): void => {
-                    constrained = $._decodeBoolean(_el);
-                },
-                entries: (_el: _Element): void => {
-                    entries = $._decodeSequenceOf<TBSCertAVL_entries_Item>(
-                        () => _decode_TBSCertAVL_entries_Item
-                    )(_el);
-                },
-                avlExtensions: (_el: _Element): void => {
-                    avlExtensions = _decode_Extensions(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_TBSCertAVL,
-                _extension_additions_list_spec_for_TBSCertAVL,
-                _root_component_type_list_2_spec_for_TBSCertAVL,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new TBSCertAVL(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ version,
-                serialNumber,
-                signature,
-                issuer,
-                constrained,
-                entries,
-                _unrecognizedExtensionsList,
-                avlExtensions
-            );
-        };
-    }
-    return _cached_decoder_for_TBSCertAVL(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let version: OPTIONAL<Version> =
+        TBSCertAVL._default_value_for_version;
+    let serialNumber: OPTIONAL<AvlSerialNumber>;
+    let signature!: AlgorithmIdentifier;
+    let issuer!: Name;
+    let constrained!: BOOLEAN;
+    let entries!: TBSCertAVL_entries_Item[];
+    let _unrecognizedExtensionsList: _Element[] = [];
+    let avlExtensions: OPTIONAL<Extensions>;
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        version: (_el: _Element): void => {
+            version = $._decode_implicit<Version>(
+                () => _decode_Version
+            )(_el);
+        },
+        serialNumber: (_el: _Element): void => {
+            serialNumber = _decode_AvlSerialNumber(_el);
+        },
+        signature: (_el: _Element): void => {
+            signature = _decode_AlgorithmIdentifier(_el);
+        },
+        issuer: (_el: _Element): void => {
+            issuer = _decode_Name(_el);
+        },
+        constrained: (_el: _Element): void => {
+            constrained = $._decodeBoolean(_el);
+        },
+        entries: (_el: _Element): void => {
+            entries = $._decodeSequenceOf<TBSCertAVL_entries_Item>(
+                () => _decode_TBSCertAVL_entries_Item
+            )(_el);
+        },
+        avlExtensions: (_el: _Element): void => {
+            avlExtensions = _decode_Extensions(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_TBSCertAVL,
+        _extension_additions_list_spec_for_TBSCertAVL,
+        _root_component_type_list_2_spec_for_TBSCertAVL,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new TBSCertAVL(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ version,
+        serialNumber,
+        signature,
+        issuer,
+        constrained,
+        entries,
+        _unrecognizedExtensionsList,
+        avlExtensions
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_TBSCertAVL */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL */
-let _cached_encoder_for_TBSCertAVL: $.ASN1Encoder<TBSCertAVL> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_TBSCertAVL */
 
 /* START_OF_SYMBOL_DEFINITION _encode_TBSCertAVL */
 /**
@@ -340,65 +327,32 @@ export function _encode_TBSCertAVL(
     value: TBSCertAVL,
     elGetter: $.ASN1Encoder<TBSCertAVL>
 ) {
-    if (!_cached_encoder_for_TBSCertAVL) {
-        _cached_encoder_for_TBSCertAVL = function (
-            value: TBSCertAVL,
-            elGetter: $.ASN1Encoder<TBSCertAVL>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* IF_DEFAULT */ value.version === undefined ||
-                            $.deepEq(
-                                value.version,
-                                TBSCertAVL._default_value_for_version
-                            )
-                                ? undefined
-                                : $._encode_implicit(
-                                      _TagClass.context,
-                                      0,
-                                      () => _encode_Version,
-                                      $.BER
-                                  )(value.version, $.BER),
-                            /* IF_ABSENT  */ value.serialNumber === undefined
-                                ? undefined
-                                : _encode_AvlSerialNumber(
-                                      value.serialNumber,
-                                      $.BER
-                                  ),
-                            /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                                value.signature,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ _encode_Name(value.issuer, $.BER),
-                            /* REQUIRED   */ $._encodeBoolean(
-                                value.constrained,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeSequenceOf<TBSCertAVL_entries_Item>(
-                                () => _encode_TBSCertAVL_entries_Item,
-                                $.BER
-                            )(value.entries, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : [],
-                        [
-                            /* IF_ABSENT  */ value.avlExtensions === undefined
-                                ? undefined
-                                : _encode_Extensions(
-                                      value.avlExtensions,
-                                      $.BER
-                                  ),
-                        ]
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [];
+    if (value.version != TBSCertAVL._default_value_for_version) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            0,
+            () => _encode_Version,
+            $.BER
+        )(value.version, $.BER);
+        components.push(c);
     }
-    return _cached_encoder_for_TBSCertAVL(value, elGetter);
+    if (value.serialNumber !== undefined) {
+        const c = _encode_AvlSerialNumber(value.serialNumber, $.BER);
+        components.push(c);
+    }
+    components.push(_encode_AlgorithmIdentifier(value.signature, $.BER));
+    components.push(_encode_Name(value.issuer, $.BER));
+    components.push($._encodeBoolean(value.constrained, $.BER));
+    components.push($._encodeSequenceOf<TBSCertAVL_entries_Item>(
+        () => _encode_TBSCertAVL_entries_Item,
+        $.BER
+    )(value.entries, $.BER));
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    if (value.avlExtensions?.length) {
+        components.push(_encode_Extensions(value.avlExtensions, $.BER));
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TBSCertAVL */

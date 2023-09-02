@@ -122,11 +122,6 @@ export const _extension_additions_list_spec_for_Attribute_valuesWithContext_Item
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Attribute_valuesWithContext_Item */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_valuesWithContext_Item */
-let _cached_decoder_for_Attribute_valuesWithContext_Item: $.ASN1Decoder<Attribute_valuesWithContext_Item> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute_valuesWithContext_Item */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute_valuesWithContext_Item
@@ -135,41 +130,27 @@ let _cached_decoder_for_Attribute_valuesWithContext_Item: $.ASN1Decoder<Attribut
  * @returns {Attribute_valuesWithContext_Item} The decoded data structure.
  */
 export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
-    if (!_cached_decoder_for_Attribute_valuesWithContext_Item) {
-        _cached_decoder_for_Attribute_valuesWithContext_Item = function (
-            el: _Element
-        ): Attribute_valuesWithContext_Item {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "Attribute-valuesWithContext-Item contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "value";
-            sequence[1].name = "contextList";
-            let value!: _Element;
-            let contextList!: Context[];
-            value = $._decodeAny(sequence[0]);
-            contextList = $._decodeSetOf<Context>(() => _decode_Context)(
-                sequence[1]
-            );
-            return new Attribute_valuesWithContext_Item(
-                value,
-                contextList,
-                sequence.slice(2)
-            );
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "Attribute-valuesWithContext-Item contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_Attribute_valuesWithContext_Item(el);
+    sequence[0].name = "value";
+    sequence[1].name = "contextList";
+    let value!: _Element;
+    let contextList!: Context[];
+    value = $._decodeAny(sequence[0]);
+    contextList = $._decodeSetOf<Context>(() => _decode_Context)(sequence[1]);
+    return new Attribute_valuesWithContext_Item(
+        value,
+        contextList,
+        sequence.slice(2)
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Attribute_valuesWithContext_Item */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_valuesWithContext_Item */
-let _cached_encoder_for_Attribute_valuesWithContext_Item: $.ASN1Encoder<Attribute_valuesWithContext_Item> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute_valuesWithContext_Item */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Attribute_valuesWithContext_Item */
 /**
@@ -183,34 +164,15 @@ export function _encode_Attribute_valuesWithContext_Item(
     value: Attribute_valuesWithContext_Item,
     elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>
 ) {
-    if (!_cached_encoder_for_Attribute_valuesWithContext_Item) {
-        _cached_encoder_for_Attribute_valuesWithContext_Item = function (
-            value: Attribute_valuesWithContext_Item,
-            elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeAny(value.value, $.BER),
-                            /* REQUIRED   */ $._encodeSetOf<Context>(
-                                () => _encode_Context,
-                                $.BER
-                            )(value.contextList, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_Attribute_valuesWithContext_Item(
-        value,
-        elGetter
-    );
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeAny(value.value, $.BER),
+        /* REQUIRED   */ $._encodeSetOf<Context>(
+            () => _encode_Context,
+            $.BER
+        )(value.contextList, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Attribute_valuesWithContext_Item */

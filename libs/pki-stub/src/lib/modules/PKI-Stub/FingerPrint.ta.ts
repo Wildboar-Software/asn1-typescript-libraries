@@ -182,26 +182,18 @@ export function _get_encoder_for_FingerPrint<ToBeFingerprinted>(
         value: FingerPrint<ToBeFingerprinted>,
         elGetter: $.ASN1Encoder<FingerPrint<ToBeFingerprinted>>
     ): _Element {
-        return $._encodeSequence(
-            ([] as (_Element | undefined)[])
-                .concat(
-                    [
-                        /* REQUIRED   */ _encode_AlgorithmIdentifier(
-                            value.algorithmIdentifier,
-                            $.BER
-                        ),
-                        /* REQUIRED   */ $._encodeBitString(
-                            value.fingerprint,
-                            $.BER
-                        ),
-                    ],
-                    value._unrecognizedExtensionsList
-                        ? value._unrecognizedExtensionsList
-                        : []
-                )
-                .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
-        );
+        const components: _Element[] = [
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(
+                value.algorithmIdentifier,
+                $.BER
+            ),
+            /* REQUIRED   */ $._encodeBitString(
+                value.fingerprint,
+                $.BER
+            ),
+            ...value._unrecognizedExtensionsList ?? [],
+        ];
+        return $._encodeSequence(components, $.BER);
     };
 }
 /* END_OF_SYMBOL_DEFINITION _get_encoder_for_FingerPrint */

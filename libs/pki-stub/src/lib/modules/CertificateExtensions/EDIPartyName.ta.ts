@@ -127,10 +127,6 @@ export const _extension_additions_list_spec_for_EDIPartyName: $.ComponentSpec[] 
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EDIPartyName */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIPartyName */
-let _cached_decoder_for_EDIPartyName: $.ASN1Decoder<EDIPartyName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_EDIPartyName */
-
 /* START_OF_SYMBOL_DEFINITION _decode_EDIPartyName */
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIPartyName
@@ -139,53 +135,42 @@ let _cached_decoder_for_EDIPartyName: $.ASN1Decoder<EDIPartyName> | null = null;
  * @returns {EDIPartyName} The decoded data structure.
  */
 export function _decode_EDIPartyName(el: _Element) {
-    if (!_cached_decoder_for_EDIPartyName) {
-        _cached_decoder_for_EDIPartyName = function (
-            el: _Element
-        ): EDIPartyName {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let nameAssigner: OPTIONAL<UnboundedDirectoryString>;
-            let partyName!: UnboundedDirectoryString;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                nameAssigner: (_el: _Element): void => {
-                    nameAssigner = $._decode_explicit<UnboundedDirectoryString>(
-                        () => _decode_UnboundedDirectoryString
-                    )(_el);
-                },
-                partyName: (_el: _Element): void => {
-                    partyName = $._decode_explicit<UnboundedDirectoryString>(
-                        () => _decode_UnboundedDirectoryString
-                    )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_EDIPartyName,
-                _extension_additions_list_spec_for_EDIPartyName,
-                _root_component_type_list_2_spec_for_EDIPartyName,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new EDIPartyName(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ nameAssigner,
-                partyName,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_EDIPartyName(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let nameAssigner: OPTIONAL<UnboundedDirectoryString>;
+    let partyName!: UnboundedDirectoryString;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        nameAssigner: (_el: _Element): void => {
+            nameAssigner = $._decode_explicit<UnboundedDirectoryString>(
+                () => _decode_UnboundedDirectoryString
+            )(_el);
+        },
+        partyName: (_el: _Element): void => {
+            partyName = $._decode_explicit<UnboundedDirectoryString>(
+                () => _decode_UnboundedDirectoryString
+            )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_EDIPartyName,
+        _extension_additions_list_spec_for_EDIPartyName,
+        _root_component_type_list_2_spec_for_EDIPartyName,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new EDIPartyName(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ nameAssigner,
+        partyName,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_EDIPartyName */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIPartyName */
-let _cached_encoder_for_EDIPartyName: $.ASN1Encoder<EDIPartyName> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_EDIPartyName */
 
 /* START_OF_SYMBOL_DEFINITION _encode_EDIPartyName */
 /**
@@ -199,40 +184,24 @@ export function _encode_EDIPartyName(
     value: EDIPartyName,
     elGetter: $.ASN1Encoder<EDIPartyName>
 ) {
-    if (!_cached_encoder_for_EDIPartyName) {
-        _cached_encoder_for_EDIPartyName = function (
-            value: EDIPartyName,
-            elGetter: $.ASN1Encoder<EDIPartyName>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* IF_ABSENT  */ value.nameAssigner === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      0,
-                                      () => _encode_UnboundedDirectoryString,
-                                      $.BER
-                                  )(value.nameAssigner, $.BER),
-                            /* REQUIRED   */ $._encode_explicit(
-                                _TagClass.context,
-                                1,
-                                () => _encode_UnboundedDirectoryString,
-                                $.BER
-                            )(value.partyName, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_EDIPartyName(value, elGetter);
+    const components: _Element[] = [
+        /* IF_ABSENT  */ value.nameAssigner === undefined
+            ? undefined
+            : $._encode_explicit(
+                    _TagClass.context,
+                    0,
+                    () => _encode_UnboundedDirectoryString,
+                    $.BER
+                )(value.nameAssigner, $.BER),
+        /* REQUIRED   */ $._encode_explicit(
+            _TagClass.context,
+            1,
+            () => _encode_UnboundedDirectoryString,
+            $.BER
+        )(value.partyName, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_EDIPartyName */

@@ -145,10 +145,6 @@ export const _extension_additions_list_spec_for_ORAddress: $.ComponentSpec[] =
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ORAddress */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddress */
-let _cached_decoder_for_ORAddress: $.ASN1Decoder<ORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ORAddress */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ORAddress */
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddress
@@ -157,50 +153,41 @@ let _cached_decoder_for_ORAddress: $.ASN1Decoder<ORAddress> | null = null;
  * @returns {ORAddress} The decoded data structure.
  */
 export function _decode_ORAddress(el: _Element) {
-    if (!_cached_decoder_for_ORAddress) {
-        _cached_decoder_for_ORAddress = function (el: _Element): ORAddress {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let built_in_standard_attributes!: BuiltInStandardAttributes;
-            let built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>;
-            let extension_attributes: OPTIONAL<ExtensionAttributes>;
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                "built-in-standard-attributes": (_el: _Element): void => {
-                    built_in_standard_attributes =
-                        _decode_BuiltInStandardAttributes(_el);
-                },
-                "built-in-domain-defined-attributes": (_el: _Element): void => {
-                    built_in_domain_defined_attributes =
-                        _decode_BuiltInDomainDefinedAttributes(_el);
-                },
-                "extension-attributes": (_el: _Element): void => {
-                    extension_attributes = _decode_ExtensionAttributes(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_ORAddress,
-                _extension_additions_list_spec_for_ORAddress,
-                _root_component_type_list_2_spec_for_ORAddress,
-                undefined
-            );
-            return new ORAddress(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ built_in_standard_attributes,
-                built_in_domain_defined_attributes,
-                extension_attributes
-            );
-        };
-    }
-    return _cached_decoder_for_ORAddress(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let built_in_standard_attributes!: BuiltInStandardAttributes;
+    let built_in_domain_defined_attributes: OPTIONAL<BuiltInDomainDefinedAttributes>;
+    let extension_attributes: OPTIONAL<ExtensionAttributes>;
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        "built-in-standard-attributes": (_el: _Element): void => {
+            built_in_standard_attributes =
+                _decode_BuiltInStandardAttributes(_el);
+        },
+        "built-in-domain-defined-attributes": (_el: _Element): void => {
+            built_in_domain_defined_attributes =
+                _decode_BuiltInDomainDefinedAttributes(_el);
+        },
+        "extension-attributes": (_el: _Element): void => {
+            extension_attributes = _decode_ExtensionAttributes(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_ORAddress,
+        _extension_additions_list_spec_for_ORAddress,
+        _root_component_type_list_2_spec_for_ORAddress,
+        undefined
+    );
+    return new ORAddress(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ built_in_standard_attributes,
+        built_in_domain_defined_attributes,
+        extension_attributes
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ORAddress */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddress */
-let _cached_encoder_for_ORAddress: $.ASN1Encoder<ORAddress> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ORAddress */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ORAddress */
 /**
@@ -214,39 +201,27 @@ export function _encode_ORAddress(
     value: ORAddress,
     elGetter: $.ASN1Encoder<ORAddress>
 ) {
-    if (!_cached_encoder_for_ORAddress) {
-        _cached_encoder_for_ORAddress = function (
-            value: ORAddress,
-            elGetter: $.ASN1Encoder<ORAddress>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* REQUIRED   */ _encode_BuiltInStandardAttributes(
-                            value.built_in_standard_attributes,
-                            $.BER
-                        ),
-                        /* IF_ABSENT  */ value.built_in_domain_defined_attributes ===
-                        undefined
-                            ? undefined
-                            : _encode_BuiltInDomainDefinedAttributes(
-                                  value.built_in_domain_defined_attributes,
-                                  $.BER
-                              ),
-                        /* IF_ABSENT  */ value.extension_attributes ===
-                        undefined
-                            ? undefined
-                            : _encode_ExtensionAttributes(
-                                  value.extension_attributes,
-                                  $.BER
-                              ),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ _encode_BuiltInStandardAttributes(
+            value.built_in_standard_attributes,
+            $.BER
+        ),
+    ];
+    if (value.built_in_domain_defined_attributes?.length) {
+        const c = _encode_BuiltInDomainDefinedAttributes(
+            value.built_in_domain_defined_attributes,
+            $.BER
+        );
+        components.push(c);
     }
-    return _cached_encoder_for_ORAddress(value, elGetter);
+    if (value.extension_attributes?.length) {
+        const c = _encode_ExtensionAttributes(
+            value.extension_attributes,
+            $.BER
+        );
+        components.push(c);
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ORAddress */

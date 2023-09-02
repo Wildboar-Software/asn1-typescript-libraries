@@ -123,11 +123,6 @@ export const _extension_additions_list_spec_for_ScopeRestriction: $.ComponentSpe
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ScopeRestriction */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestriction */
-let _cached_decoder_for_ScopeRestriction: $.ASN1Decoder<ScopeRestriction> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ScopeRestriction */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
 /**
  * @summary Decodes an ASN.1 element into a(n) ScopeRestriction
@@ -136,35 +131,23 @@ let _cached_decoder_for_ScopeRestriction: $.ASN1Decoder<ScopeRestriction> | null
  * @returns {ScopeRestriction} The decoded data structure.
  */
 export function _decode_ScopeRestriction(el: _Element) {
-    if (!_cached_decoder_for_ScopeRestriction) {
-        _cached_decoder_for_ScopeRestriction = function (
-            el: _Element
-        ): ScopeRestriction {
-            const sequence: _Element[] = el.sequence;
-            if (sequence.length < 2) {
-                throw new _ConstructionError(
-                    "ScopeRestriction contained only " +
-                        sequence.length.toString() +
-                        " elements."
-                );
-            }
-            sequence[0].name = "id";
-            sequence[1].name = "restriction";
-            let id!: OBJECT_IDENTIFIER;
-            let restriction!: _Element;
-            id = $._decodeObjectIdentifier(sequence[0]);
-            restriction = $._decodeAny(sequence[1]);
-            return new ScopeRestriction(id, restriction, sequence.slice(2));
-        };
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            "ScopeRestriction contained only " +
+                sequence.length.toString() +
+                " elements."
+        );
     }
-    return _cached_decoder_for_ScopeRestriction(el);
+    sequence[0].name = "id";
+    sequence[1].name = "restriction";
+    let id!: OBJECT_IDENTIFIER;
+    let restriction!: _Element;
+    id = $._decodeObjectIdentifier(sequence[0]);
+    restriction = $._decodeAny(sequence[1]);
+    return new ScopeRestriction(id, restriction, sequence.slice(2));
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ScopeRestriction */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestriction */
-let _cached_encoder_for_ScopeRestriction: $.ASN1Encoder<ScopeRestriction> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ScopeRestriction */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ScopeRestriction */
 /**
@@ -178,34 +161,12 @@ export function _encode_ScopeRestriction(
     value: ScopeRestriction,
     elGetter: $.ASN1Encoder<ScopeRestriction>
 ) {
-    if (!_cached_encoder_for_ScopeRestriction) {
-        _cached_encoder_for_ScopeRestriction = function (
-            value: ScopeRestriction,
-            elGetter: $.ASN1Encoder<ScopeRestriction>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeObjectIdentifier(
-                                value.id,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeAny(
-                                value.restriction,
-                                $.BER
-                            ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
-    }
-    return _cached_encoder_for_ScopeRestriction(value, elGetter);
+    const components: _Element[] = [
+        $._encodeObjectIdentifier(value.id, $.BER),
+        $._encodeAny(value.restriction, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ScopeRestriction */

@@ -144,11 +144,6 @@ export const _extension_additions_list_spec_for_AlgorithmWithInvoke: $.Component
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AlgorithmWithInvoke */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmWithInvoke */
-let _cached_decoder_for_AlgorithmWithInvoke: $.ASN1Decoder<AlgorithmWithInvoke> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AlgorithmWithInvoke */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
 /**
  * @summary Decodes an ASN.1 element into a(n) AlgorithmWithInvoke
@@ -157,59 +152,47 @@ let _cached_decoder_for_AlgorithmWithInvoke: $.ASN1Decoder<AlgorithmWithInvoke> 
  * @returns {AlgorithmWithInvoke} The decoded data structure.
  */
 export function _decode_AlgorithmWithInvoke(el: _Element) {
-    if (!_cached_decoder_for_AlgorithmWithInvoke) {
-        _cached_decoder_for_AlgorithmWithInvoke = function (
-            el: _Element
-        ): AlgorithmWithInvoke {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let algorithm!: OBJECT_IDENTIFIER;
-            let parameters: OPTIONAL<_Element>;
-            let dynamParms: OPTIONAL<_Element>;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                algorithm: (_el: _Element): void => {
-                    algorithm = $._decodeObjectIdentifier(_el);
-                },
-                parameters: (_el: _Element): void => {
-                    parameters = $._decode_explicit<_Element>(
-                        () => $._decodeAny
-                    )(_el);
-                },
-                dynamParms: (_el: _Element): void => {
-                    dynamParms = $._decode_explicit<_Element>(
-                        () => $._decodeAny
-                    )(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_AlgorithmWithInvoke,
-                _extension_additions_list_spec_for_AlgorithmWithInvoke,
-                _root_component_type_list_2_spec_for_AlgorithmWithInvoke,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new AlgorithmWithInvoke(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
-                parameters,
-                dynamParms,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_AlgorithmWithInvoke(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let algorithm!: OBJECT_IDENTIFIER;
+    let parameters: OPTIONAL<_Element>;
+    let dynamParms: OPTIONAL<_Element>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        algorithm: (_el: _Element): void => {
+            algorithm = $._decodeObjectIdentifier(_el);
+        },
+        parameters: (_el: _Element): void => {
+            parameters = $._decode_explicit<_Element>(
+                () => $._decodeAny
+            )(_el);
+        },
+        dynamParms: (_el: _Element): void => {
+            dynamParms = $._decode_explicit<_Element>(
+                () => $._decodeAny
+            )(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_AlgorithmWithInvoke,
+        _extension_additions_list_spec_for_AlgorithmWithInvoke,
+        _root_component_type_list_2_spec_for_AlgorithmWithInvoke,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new AlgorithmWithInvoke(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ algorithm,
+        parameters,
+        dynamParms,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AlgorithmWithInvoke */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmWithInvoke */
-let _cached_encoder_for_AlgorithmWithInvoke: $.ASN1Encoder<AlgorithmWithInvoke> | null =
-    null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AlgorithmWithInvoke */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AlgorithmWithInvoke */
 /**
@@ -223,46 +206,34 @@ export function _encode_AlgorithmWithInvoke(
     value: AlgorithmWithInvoke,
     elGetter: $.ASN1Encoder<AlgorithmWithInvoke>
 ) {
-    if (!_cached_encoder_for_AlgorithmWithInvoke) {
-        _cached_encoder_for_AlgorithmWithInvoke = function (
-            value: AlgorithmWithInvoke,
-            elGetter: $.ASN1Encoder<AlgorithmWithInvoke>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeObjectIdentifier(
-                                value.algorithm,
-                                $.BER
-                            ),
-                            /* IF_ABSENT  */ value.parameters === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      0,
-                                      () => $._encodeAny,
-                                      $.BER
-                                  )(value.parameters, $.BER),
-                            /* IF_ABSENT  */ value.dynamParms === undefined
-                                ? undefined
-                                : $._encode_explicit(
-                                      _TagClass.context,
-                                      1,
-                                      () => $._encodeAny,
-                                      $.BER
-                                  )(value.dynamParms, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeObjectIdentifier(
+            value.algorithm,
+            $.BER
+        ),
+    ];
+    if (value.parameters) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            0,
+            () => $._encodeAny,
+            $.BER
+        )(value.parameters, $.BER);
+        components.push(c);
     }
-    return _cached_encoder_for_AlgorithmWithInvoke(value, elGetter);
+    if (value.dynamParms) {
+        const c = $._encode_explicit(
+            _TagClass.context,
+            1,
+            () => $._encodeAny,
+            $.BER
+        )(value.dynamParms, $.BER);
+        components.push(c);
+    }
+    if (value._unrecognizedExtensionsList?.length) {
+        components.push(...value._unrecognizedExtensionsList);
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AlgorithmWithInvoke */

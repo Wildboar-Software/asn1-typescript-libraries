@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/pki-stub",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "description": "X.510 PKI-Stub ASN.1 data structures in TypeScript",
     "keywords": [
         "x500",

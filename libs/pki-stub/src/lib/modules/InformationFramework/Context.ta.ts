@@ -148,10 +148,6 @@ export const _root_component_type_list_2_spec_for_Context: $.ComponentSpec[] =
 export const _extension_additions_list_spec_for_Context: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Context */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Context */
-let _cached_decoder_for_Context: $.ASN1Decoder<Context> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Context */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Context */
 /**
  * @summary Decodes an ASN.1 element into a(n) Context
@@ -160,55 +156,45 @@ let _cached_decoder_for_Context: $.ASN1Decoder<Context> | null = null;
  * @returns {Context} The decoded data structure.
  */
 export function _decode_Context(el: _Element) {
-    if (!_cached_decoder_for_Context) {
-        _cached_decoder_for_Context = function (el: _Element): Context {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let contextType!: OBJECT_IDENTIFIER;
-            let contextValues!: _Element[];
-            let fallback: OPTIONAL<BOOLEAN> =
-                Context._default_value_for_fallback;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                contextType: (_el: _Element): void => {
-                    contextType = $._decodeObjectIdentifier(_el);
-                },
-                contextValues: (_el: _Element): void => {
-                    contextValues = $._decodeSetOf<_Element>(
-                        () => $._decodeAny
-                    )(_el);
-                },
-                fallback: (_el: _Element): void => {
-                    fallback = $._decodeBoolean(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_Context,
-                _extension_additions_list_spec_for_Context,
-                _root_component_type_list_2_spec_for_Context,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new Context(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ contextType,
-                contextValues,
-                fallback,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_Context(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let contextType!: OBJECT_IDENTIFIER;
+    let contextValues!: _Element[];
+    let fallback: OPTIONAL<BOOLEAN> = Context._default_value_for_fallback;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        contextType: (_el: _Element): void => {
+            contextType = $._decodeObjectIdentifier(_el);
+        },
+        contextValues: (_el: _Element): void => {
+            contextValues = $._decodeSetOf<_Element>(
+                () => $._decodeAny
+            )(_el);
+        },
+        fallback: (_el: _Element): void => {
+            fallback = $._decodeBoolean(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_Context,
+        _extension_additions_list_spec_for_Context,
+        _root_component_type_list_2_spec_for_Context,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new Context(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ contextType,
+        contextValues,
+        fallback,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Context */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Context */
-let _cached_encoder_for_Context: $.ASN1Encoder<Context> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Context */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Context */
 /**
@@ -222,41 +208,21 @@ export function _encode_Context(
     value: Context,
     elGetter: $.ASN1Encoder<Context>
 ) {
-    if (!_cached_encoder_for_Context) {
-        _cached_encoder_for_Context = function (
-            value: Context,
-            elGetter: $.ASN1Encoder<Context>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeObjectIdentifier(
-                                value.contextType,
-                                $.BER
-                            ),
-                            /* REQUIRED   */ $._encodeSetOf<_Element>(
-                                () => $._encodeAny,
-                                $.BER
-                            )(value.contextValues, $.BER),
-                            /* IF_DEFAULT */ value.fallback === undefined ||
-                            $.deepEq(
-                                value.fallback,
-                                Context._default_value_for_fallback
-                            )
-                                ? undefined
-                                : $._encodeBoolean(value.fallback, $.BER),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeObjectIdentifier(
+            value.contextType,
+            $.BER
+        ),
+        /* REQUIRED   */ $._encodeSetOf<_Element>(
+            () => $._encodeAny,
+            $.BER
+        )(value.contextValues, $.BER),
+    ];
+    if (value.fallback) {
+        components.push($._encodeBoolean(value.fallback, $.BER));
     }
-    return _cached_encoder_for_Context(value, elGetter);
+    components.push(...value._unrecognizedExtensionsList);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Context */

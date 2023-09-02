@@ -165,10 +165,6 @@ export const _extension_additions_list_spec_for_Extension: $.ComponentSpec[] =
     [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Extension */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension */
-let _cached_decoder_for_Extension: $.ASN1Decoder<Extension> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Extension */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Extension */
 /**
  * @summary Decodes an ASN.1 element into a(n) Extension
@@ -177,53 +173,44 @@ let _cached_decoder_for_Extension: $.ASN1Decoder<Extension> | null = null;
  * @returns {Extension} The decoded data structure.
  */
 export function _decode_Extension(el: _Element) {
-    if (!_cached_decoder_for_Extension) {
-        _cached_decoder_for_Extension = function (el: _Element): Extension {
-            /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            let extnId!: OBJECT_IDENTIFIER;
-            let critical: OPTIONAL<BOOLEAN> =
-                Extension._default_value_for_critical;
-            let extnValue!: OCTET_STRING;
-            let _unrecognizedExtensionsList: _Element[] = [];
-            /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-            /* START_OF_CALLBACKS_MAP */
-            const callbacks: $.DecodingMap = {
-                extnId: (_el: _Element): void => {
-                    extnId = $._decodeObjectIdentifier(_el);
-                },
-                critical: (_el: _Element): void => {
-                    critical = $._decodeBoolean(_el);
-                },
-                extnValue: (_el: _Element): void => {
-                    extnValue = $._decodeOctetString(_el);
-                },
-            };
-            /* END_OF_CALLBACKS_MAP */
-            $._parse_sequence(
-                el,
-                callbacks,
-                _root_component_type_list_1_spec_for_Extension,
-                _extension_additions_list_spec_for_Extension,
-                _root_component_type_list_2_spec_for_Extension,
-                (ext: _Element): void => {
-                    _unrecognizedExtensionsList.push(ext);
-                }
-            );
-            return new Extension(
-                /* SEQUENCE_CONSTRUCTOR_CALL */ extnId,
-                critical,
-                extnValue,
-                _unrecognizedExtensionsList
-            );
-        };
-    }
-    return _cached_decoder_for_Extension(el);
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let extnId!: OBJECT_IDENTIFIER;
+    let critical: OPTIONAL<BOOLEAN> =
+        Extension._default_value_for_critical;
+    let extnValue!: OCTET_STRING;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        extnId: (_el: _Element): void => {
+            extnId = $._decodeObjectIdentifier(_el);
+        },
+        critical: (_el: _Element): void => {
+            critical = $._decodeBoolean(_el);
+        },
+        extnValue: (_el: _Element): void => {
+            extnValue = $._decodeOctetString(_el);
+        },
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
+        el,
+        callbacks,
+        _root_component_type_list_1_spec_for_Extension,
+        _extension_additions_list_spec_for_Extension,
+        _root_component_type_list_2_spec_for_Extension,
+        (ext: _Element): void => {
+            _unrecognizedExtensionsList.push(ext);
+        }
+    );
+    return new Extension(
+        /* SEQUENCE_CONSTRUCTOR_CALL */ extnId,
+        critical,
+        extnValue,
+        _unrecognizedExtensionsList
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Extension */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension */
-let _cached_encoder_for_Extension: $.ASN1Encoder<Extension> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Extension */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Extension */
 /**
@@ -237,41 +224,18 @@ export function _encode_Extension(
     value: Extension,
     elGetter: $.ASN1Encoder<Extension>
 ) {
-    if (!_cached_encoder_for_Extension) {
-        _cached_encoder_for_Extension = function (
-            value: Extension,
-            elGetter: $.ASN1Encoder<Extension>
-        ): _Element {
-            return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat(
-                        [
-                            /* REQUIRED   */ $._encodeObjectIdentifier(
-                                value.extnId,
-                                $.BER
-                            ),
-                            /* IF_DEFAULT */ value.critical === undefined ||
-                            $.deepEq(
-                                value.critical,
-                                Extension._default_value_for_critical
-                            )
-                                ? undefined
-                                : $._encodeBoolean(value.critical, $.BER),
-                            /* REQUIRED   */ $._encodeOctetString(
-                                value.extnValue,
-                                $.BER
-                            ),
-                        ],
-                        value._unrecognizedExtensionsList
-                            ? value._unrecognizedExtensionsList
-                            : []
-                    )
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
-            );
-        };
+    const components: _Element[] = [
+        /* REQUIRED   */ $._encodeObjectIdentifier(
+            value.extnId,
+            $.BER
+        ),
+    ];
+    if (value.critical) {
+        components.push($._encodeBoolean(value.critical, $.BER));
     }
-    return _cached_encoder_for_Extension(value, elGetter);
+    components.push($._encodeOctetString(value.extnValue, $.BER));
+    components.push(...value._unrecognizedExtensionsList);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Extension */
