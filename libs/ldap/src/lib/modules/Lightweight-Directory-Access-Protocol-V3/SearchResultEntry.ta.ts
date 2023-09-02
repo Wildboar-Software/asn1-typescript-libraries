@@ -64,6 +64,8 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
+  ASN1TagClass,
+  ASN1UniversalType,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import {
@@ -200,10 +202,6 @@ export const _root_component_type_list_2_spec_for_SearchResultEntry: $.Component
 export const _extension_additions_list_spec_for_SearchResultEntry: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SearchResultEntry */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultEntry */
-let _cached_decoder_for_SearchResultEntry: $.ASN1Decoder<SearchResultEntry> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchResultEntry */
-
 /* START_OF_SYMBOL_DEFINITION _decode_SearchResultEntry */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchResultEntry
@@ -212,39 +210,27 @@ let _cached_decoder_for_SearchResultEntry: $.ASN1Decoder<SearchResultEntry> | nu
  * @returns {SearchResultEntry} The decoded data structure.
  */
 export function _decode_SearchResultEntry(el: _Element) {
-  if (!_cached_decoder_for_SearchResultEntry) {
-    _cached_decoder_for_SearchResultEntry = $._decode_implicit<SearchResultEntry>(
-      () =>
-        function (el: _Element): SearchResultEntry {
-          const sequence: _Element[] = el.sequence;
-          if (sequence.length < 2) {
-            throw new _ConstructionError(
-              'SearchResultEntry contained only ' +
-                sequence.length.toString() +
-                ' elements.'
-            );
-          }
-          sequence[0].name = 'objectName';
-          sequence[1].name = 'attributes';
-          let objectName!: LDAPDN;
-          let attributes!: PartialAttributeList;
-          objectName = _decode_LDAPDN(sequence[0]);
-          attributes = _decode_PartialAttributeList(sequence[1]);
-          return new SearchResultEntry(
-            objectName,
-            attributes,
-            sequence.slice(2)
-          );
-        }
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError(
+            'SearchResultEntry contained only ' +
+            sequence.length.toString() +
+            ' elements.'
+        );
+    }
+    sequence[0].name = 'objectName';
+    sequence[1].name = 'attributes';
+    let objectName!: LDAPDN;
+    let attributes!: PartialAttributeList;
+    objectName = _decode_LDAPDN(sequence[0]);
+    attributes = _decode_PartialAttributeList(sequence[1]);
+    return new SearchResultEntry(
+        objectName,
+        attributes,
+        sequence.slice(2)
     );
-  }
-  return _cached_decoder_for_SearchResultEntry(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_SearchResultEntry */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultEntry */
-let _cached_encoder_for_SearchResultEntry: $.ASN1Encoder<SearchResultEntry> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchResultEntry */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchResultEntry */
 /**
@@ -258,37 +244,18 @@ export function _encode_SearchResultEntry(
   value: SearchResultEntry,
   elGetter: $.ASN1Encoder<SearchResultEntry>
 ) {
-  if (!_cached_encoder_for_SearchResultEntry) {
-    _cached_encoder_for_SearchResultEntry = $._encode_implicit(
-      _TagClass.application,
-      4,
-      () =>
-        function (
-          value: SearchResultEntry,
-          elGetter: $.ASN1Encoder<SearchResultEntry>
-        ): _Element {
-          return $._encodeSequence(
-            ([] as (_Element | undefined)[])
-              .concat(
-                [
-                  /* REQUIRED   */ _encode_LDAPDN(value.objectName, $.BER),
-                  /* REQUIRED   */ _encode_PartialAttributeList(
-                    value.attributes,
-                    $.BER
-                  ),
-                ],
-                value._unrecognizedExtensionsList
-                  ? value._unrecognizedExtensionsList
-                  : []
-              )
-              .filter((c: _Element | undefined): c is _Element => !!c),
-            $.BER
-          );
-        },
-      $.BER
-    );
-  }
-  return _cached_encoder_for_SearchResultEntry(value, elGetter);
+    const attrsEl = _encode_PartialAttributeList(value.attributes, $.BER);
+    attrsEl.tagClass = ASN1TagClass.universal;
+    attrsEl.tagNumber = ASN1UniversalType.sequence;
+    const components: _Element[] = [
+        _encode_LDAPDN(value.objectName, $.BER),
+        _encode_PartialAttributeList(value.attributes, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    const el = $._encodeSequence(components, $.BER);
+    el.tagClass = _TagClass.application;
+    el.tagNumber = 4;
+    return el;
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchResultEntry */

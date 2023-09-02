@@ -200,10 +200,6 @@ export const _root_component_type_list_2_spec_for_AttributeValueAssertion: $.Com
 export const _extension_additions_list_spec_for_AttributeValueAssertion: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AttributeValueAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueAssertion */
-let _cached_decoder_for_AttributeValueAssertion: $.ASN1Decoder<AttributeValueAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValueAssertion */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValueAssertion
@@ -212,38 +208,27 @@ let _cached_decoder_for_AttributeValueAssertion: $.ASN1Decoder<AttributeValueAss
  * @returns {AttributeValueAssertion} The decoded data structure.
  */
 export function _decode_AttributeValueAssertion(el: _Element) {
-  if (!_cached_decoder_for_AttributeValueAssertion) {
-    _cached_decoder_for_AttributeValueAssertion = function (
-      el: _Element
-    ): AttributeValueAssertion {
-      const sequence: _Element[] = el.sequence;
-      if (sequence.length < 2) {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
         throw new _ConstructionError(
-          'AttributeValueAssertion contained only ' +
+            'AttributeValueAssertion contained only ' +
             sequence.length.toString() +
             ' elements.'
         );
-      }
-      sequence[0].name = 'attributeDesc';
-      sequence[1].name = 'assertionValue';
-      let attributeDesc!: AttributeDescription;
-      let assertionValue!: AssertionValue;
-      attributeDesc = _decode_AttributeDescription(sequence[0]);
-      assertionValue = _decode_AssertionValue(sequence[1]);
-      return new AttributeValueAssertion(
+    }
+    sequence[0].name = 'attributeDesc';
+    sequence[1].name = 'assertionValue';
+    let attributeDesc!: AttributeDescription;
+    let assertionValue!: AssertionValue;
+    attributeDesc = _decode_AttributeDescription(sequence[0]);
+    assertionValue = _decode_AssertionValue(sequence[1]);
+    return new AttributeValueAssertion(
         attributeDesc,
         assertionValue,
         sequence.slice(2)
-      );
-    };
-  }
-  return _cached_decoder_for_AttributeValueAssertion(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeValueAssertion */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueAssertion */
-let _cached_encoder_for_AttributeValueAssertion: $.ASN1Encoder<AttributeValueAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValueAssertion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion */
 /**
@@ -257,34 +242,12 @@ export function _encode_AttributeValueAssertion(
   value: AttributeValueAssertion,
   elGetter: $.ASN1Encoder<AttributeValueAssertion>
 ) {
-  if (!_cached_encoder_for_AttributeValueAssertion) {
-    _cached_encoder_for_AttributeValueAssertion = function (
-      value: AttributeValueAssertion,
-      elGetter: $.ASN1Encoder<AttributeValueAssertion>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_AttributeDescription(
-                value.attributeDesc,
-                $.BER
-              ),
-              /* REQUIRED   */ _encode_AssertionValue(
-                value.assertionValue,
-                $.BER
-              ),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_AttributeValueAssertion(value, elGetter);
+    const components: _Element[] = [
+        _encode_AttributeDescription(value.attributeDesc, $.BER),
+        _encode_AssertionValue(value.assertionValue, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeValueAssertion */

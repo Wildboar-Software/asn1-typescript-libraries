@@ -829,10 +829,6 @@ export const LDAPResult_resultCode_other: LDAPResult_resultCode = 80; /* LONG_NA
 export const other: LDAPResult_resultCode = LDAPResult_resultCode_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION other */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPResult_resultCode */
-let _cached_decoder_for_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPResult_resultCode */
-
 /* START_OF_SYMBOL_DEFINITION _decode_LDAPResult_resultCode */
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPResult_resultCode
@@ -841,16 +837,9 @@ let _cached_decoder_for_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCo
  * @returns {LDAPResult_resultCode} The decoded data structure.
  */
 export function _decode_LDAPResult_resultCode(el: _Element) {
-  if (!_cached_decoder_for_LDAPResult_resultCode) {
-    _cached_decoder_for_LDAPResult_resultCode = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_LDAPResult_resultCode(el);
+  return $._decodeEnumerated(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_LDAPResult_resultCode */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPResult_resultCode */
-let _cached_encoder_for_LDAPResult_resultCode: $.ASN1Encoder<LDAPResult_resultCode> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPResult_resultCode */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LDAPResult_resultCode */
 /**
@@ -864,10 +853,7 @@ export function _encode_LDAPResult_resultCode(
   value: LDAPResult_resultCode,
   elGetter: $.ASN1Encoder<LDAPResult_resultCode>
 ) {
-  if (!_cached_encoder_for_LDAPResult_resultCode) {
-    _cached_encoder_for_LDAPResult_resultCode = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_LDAPResult_resultCode(value, elGetter);
+  return $._encodeEnumerated(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_LDAPResult_resultCode */

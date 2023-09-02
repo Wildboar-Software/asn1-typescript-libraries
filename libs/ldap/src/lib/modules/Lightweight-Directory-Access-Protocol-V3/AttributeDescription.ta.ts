@@ -91,10 +91,6 @@ export {
 export type AttributeDescription = LDAPString; // DefinedType
 /* END_OF_SYMBOL_DEFINITION AttributeDescription */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeDescription */
-let _cached_decoder_for_AttributeDescription: $.ASN1Decoder<AttributeDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeDescription */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeDescription */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeDescription
@@ -103,16 +99,9 @@ let _cached_decoder_for_AttributeDescription: $.ASN1Decoder<AttributeDescription
  * @returns {AttributeDescription} The decoded data structure.
  */
 export function _decode_AttributeDescription(el: _Element) {
-  if (!_cached_decoder_for_AttributeDescription) {
-    _cached_decoder_for_AttributeDescription = _decode_LDAPString;
-  }
-  return _cached_decoder_for_AttributeDescription(el);
+  return _decode_LDAPString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeDescription */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeDescription */
-let _cached_encoder_for_AttributeDescription: $.ASN1Encoder<AttributeDescription> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeDescription */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeDescription */
 /**
@@ -126,10 +115,7 @@ export function _encode_AttributeDescription(
   value: AttributeDescription,
   elGetter: $.ASN1Encoder<AttributeDescription>
 ) {
-  if (!_cached_encoder_for_AttributeDescription) {
-    _cached_encoder_for_AttributeDescription = _encode_LDAPString;
-  }
-  return _cached_encoder_for_AttributeDescription(value, elGetter);
+  return _encode_LDAPString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeDescription */

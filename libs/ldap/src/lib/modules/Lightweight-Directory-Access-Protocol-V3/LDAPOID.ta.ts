@@ -81,10 +81,6 @@ import * as $ from 'asn1-ts/dist/node/functional';
 export type LDAPOID = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION LDAPOID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPOID */
-let _cached_decoder_for_LDAPOID: $.ASN1Decoder<LDAPOID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPOID */
-
 /* START_OF_SYMBOL_DEFINITION _decode_LDAPOID */
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPOID
@@ -93,16 +89,9 @@ let _cached_decoder_for_LDAPOID: $.ASN1Decoder<LDAPOID> | null = null;
  * @returns {LDAPOID} The decoded data structure.
  */
 export function _decode_LDAPOID(el: _Element) {
-  if (!_cached_decoder_for_LDAPOID) {
-    _cached_decoder_for_LDAPOID = $._decodeOctetString;
-  }
-  return _cached_decoder_for_LDAPOID(el);
+  return $._decodeOctetString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_LDAPOID */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPOID */
-let _cached_encoder_for_LDAPOID: $.ASN1Encoder<LDAPOID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPOID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LDAPOID */
 /**
@@ -116,10 +105,7 @@ export function _encode_LDAPOID(
   value: LDAPOID,
   elGetter: $.ASN1Encoder<LDAPOID>
 ) {
-  if (!_cached_encoder_for_LDAPOID) {
-    _cached_encoder_for_LDAPOID = $._encodeOctetString;
-  }
-  return _cached_encoder_for_LDAPOID(value, elGetter);
+  return $._encodeOctetString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_LDAPOID */

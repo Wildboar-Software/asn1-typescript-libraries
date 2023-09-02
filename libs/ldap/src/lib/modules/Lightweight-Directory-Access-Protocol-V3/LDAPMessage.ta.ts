@@ -241,10 +241,6 @@ export const _root_component_type_list_2_spec_for_LDAPMessage: $.ComponentSpec[]
 export const _extension_additions_list_spec_for_LDAPMessage: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPMessage */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPMessage */
-let _cached_decoder_for_LDAPMessage: $.ASN1Decoder<LDAPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPMessage */
-
 /* START_OF_SYMBOL_DEFINITION _decode_LDAPMessage */
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPMessage
@@ -253,52 +249,43 @@ let _cached_decoder_for_LDAPMessage: $.ASN1Decoder<LDAPMessage> | null = null;
  * @returns {LDAPMessage} The decoded data structure.
  */
 export function _decode_LDAPMessage(el: _Element) {
-  if (!_cached_decoder_for_LDAPMessage) {
-    _cached_decoder_for_LDAPMessage = function (el: _Element): LDAPMessage {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      let messageID!: MessageID;
-      let protocolOp!: LDAPMessage_protocolOp;
-      let controls: OPTIONAL<Controls>;
-      let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
-      const callbacks: $.DecodingMap = {
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let messageID!: MessageID;
+    let protocolOp!: LDAPMessage_protocolOp;
+    let controls: OPTIONAL<Controls>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
         messageID: (_el: _Element): void => {
-          messageID = _decode_MessageID(_el);
+            messageID = _decode_MessageID(_el);
         },
         protocolOp: (_el: _Element): void => {
-          protocolOp = _decode_LDAPMessage_protocolOp(_el);
+            protocolOp = _decode_LDAPMessage_protocolOp(_el);
         },
         controls: (_el: _Element): void => {
-          controls = $._decode_implicit<Controls>(() => _decode_Controls)(_el);
+            controls = $._decode_implicit<Controls>(() => _decode_Controls)(_el);
         },
-      };
-      /* END_OF_CALLBACKS_MAP */
-      $._parse_sequence(
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
         el,
         callbacks,
         _root_component_type_list_1_spec_for_LDAPMessage,
         _extension_additions_list_spec_for_LDAPMessage,
         _root_component_type_list_2_spec_for_LDAPMessage,
         (ext: _Element): void => {
-          _unrecognizedExtensionsList.push(ext);
+            _unrecognizedExtensionsList.push(ext);
         }
-      );
-      return new LDAPMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
+    );
+    return new LDAPMessage /* SEQUENCE_CONSTRUCTOR_CALL */(
         messageID,
         protocolOp,
         controls,
         _unrecognizedExtensionsList
-      );
-    };
-  }
-  return _cached_decoder_for_LDAPMessage(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_LDAPMessage */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPMessage */
-let _cached_encoder_for_LDAPMessage: $.ASN1Encoder<LDAPMessage> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPMessage */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LDAPMessage */
 /**
@@ -312,39 +299,21 @@ export function _encode_LDAPMessage(
   value: LDAPMessage,
   elGetter: $.ASN1Encoder<LDAPMessage>
 ) {
-  if (!_cached_encoder_for_LDAPMessage) {
-    _cached_encoder_for_LDAPMessage = function (
-      value: LDAPMessage,
-      elGetter: $.ASN1Encoder<LDAPMessage>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_MessageID(value.messageID, $.BER),
-              /* REQUIRED   */ _encode_LDAPMessage_protocolOp(
-                value.protocolOp,
-                $.BER
-              ),
-              /* IF_ABSENT  */ value.controls === undefined
-                ? undefined
-                : $._encode_implicit(
-                    _TagClass.context,
-                    0,
-                    () => _encode_Controls,
-                    $.BER
-                  )(value.controls, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_LDAPMessage(value, elGetter);
+    const components: _Element[] = [
+        _encode_MessageID(value.messageID, $.BER),
+        _encode_LDAPMessage_protocolOp(value.protocolOp, $.BER),
+    ];
+    if (value.controls?.length) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            0,
+            () => _encode_Controls,
+            $.BER
+        )(value.controls, $.BER);
+        components.push(c);
+    }
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_LDAPMessage */

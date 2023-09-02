@@ -447,10 +447,6 @@ export const _root_component_type_list_2_spec_for_LDAPResult: $.ComponentSpec[] 
 export const _extension_additions_list_spec_for_LDAPResult: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_LDAPResult */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPResult */
-let _cached_decoder_for_LDAPResult: $.ASN1Decoder<LDAPResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPResult */
-
 /* START_OF_SYMBOL_DEFINITION _decode_LDAPResult */
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPResult
@@ -459,57 +455,48 @@ let _cached_decoder_for_LDAPResult: $.ASN1Decoder<LDAPResult> | null = null;
  * @returns {LDAPResult} The decoded data structure.
  */
 export function _decode_LDAPResult(el: _Element) {
-  if (!_cached_decoder_for_LDAPResult) {
-    _cached_decoder_for_LDAPResult = function (el: _Element): LDAPResult {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      let resultCode!: LDAPResult_resultCode;
-      let matchedDN!: LDAPDN;
-      let diagnosticMessage!: LDAPString;
-      let referral: OPTIONAL<Referral>;
-      let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
-      const callbacks: $.DecodingMap = {
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let resultCode!: LDAPResult_resultCode;
+    let matchedDN!: LDAPDN;
+    let diagnosticMessage!: LDAPString;
+    let referral: OPTIONAL<Referral>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
         resultCode: (_el: _Element): void => {
-          resultCode = _decode_LDAPResult_resultCode(_el);
+            resultCode = _decode_LDAPResult_resultCode(_el);
         },
         matchedDN: (_el: _Element): void => {
-          matchedDN = _decode_LDAPDN(_el);
+            matchedDN = _decode_LDAPDN(_el);
         },
         diagnosticMessage: (_el: _Element): void => {
-          diagnosticMessage = _decode_LDAPString(_el);
+            diagnosticMessage = _decode_LDAPString(_el);
         },
         referral: (_el: _Element): void => {
-          referral = $._decode_implicit<Referral>(() => _decode_Referral)(_el);
+            referral = $._decode_implicit<Referral>(() => _decode_Referral)(_el);
         },
-      };
-      /* END_OF_CALLBACKS_MAP */
-      $._parse_sequence(
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
         el,
         callbacks,
         _root_component_type_list_1_spec_for_LDAPResult,
         _extension_additions_list_spec_for_LDAPResult,
         _root_component_type_list_2_spec_for_LDAPResult,
         (ext: _Element): void => {
-          _unrecognizedExtensionsList.push(ext);
+            _unrecognizedExtensionsList.push(ext);
         }
-      );
-      return new LDAPResult /* SEQUENCE_CONSTRUCTOR_CALL */(
+    );
+    return new LDAPResult /* SEQUENCE_CONSTRUCTOR_CALL */(
         resultCode,
         matchedDN,
         diagnosticMessage,
         referral,
         _unrecognizedExtensionsList
-      );
-    };
-  }
-  return _cached_decoder_for_LDAPResult(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_LDAPResult */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPResult */
-let _cached_encoder_for_LDAPResult: $.ASN1Encoder<LDAPResult> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPResult */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LDAPResult */
 /**
@@ -523,43 +510,22 @@ export function _encode_LDAPResult(
   value: LDAPResult,
   elGetter: $.ASN1Encoder<LDAPResult>
 ) {
-  if (!_cached_encoder_for_LDAPResult) {
-    _cached_encoder_for_LDAPResult = function (
-      value: LDAPResult,
-      elGetter: $.ASN1Encoder<LDAPResult>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_LDAPResult_resultCode(
-                value.resultCode,
-                $.BER
-              ),
-              /* REQUIRED   */ _encode_LDAPDN(value.matchedDN, $.BER),
-              /* REQUIRED   */ _encode_LDAPString(
-                value.diagnosticMessage,
-                $.BER
-              ),
-              /* IF_ABSENT  */ value.referral === undefined
-                ? undefined
-                : $._encode_implicit(
-                    _TagClass.context,
-                    3,
-                    () => _encode_Referral,
-                    $.BER
-                  )(value.referral, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_LDAPResult(value, elGetter);
+    const components: _Element[] = [
+        _encode_LDAPResult_resultCode(value.resultCode, $.BER),
+        _encode_LDAPDN(value.matchedDN, $.BER),
+        _encode_LDAPString(value.diagnosticMessage, $.BER),
+    ];
+    if (value.referral) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            3,
+            () => _encode_Referral,
+            $.BER
+        )(value.referral, $.BER);
+        components.push(c);
+    }
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_LDAPResult */

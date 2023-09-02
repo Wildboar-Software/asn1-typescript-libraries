@@ -94,10 +94,6 @@ export {
 export type LDAPDN = LDAPString; // DefinedType
 /* END_OF_SYMBOL_DEFINITION LDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPDN */
-let _cached_decoder_for_LDAPDN: $.ASN1Decoder<LDAPDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_LDAPDN */
-
 /* START_OF_SYMBOL_DEFINITION _decode_LDAPDN */
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPDN
@@ -106,16 +102,9 @@ let _cached_decoder_for_LDAPDN: $.ASN1Decoder<LDAPDN> | null = null;
  * @returns {LDAPDN} The decoded data structure.
  */
 export function _decode_LDAPDN(el: _Element) {
-  if (!_cached_decoder_for_LDAPDN) {
-    _cached_decoder_for_LDAPDN = _decode_LDAPString;
-  }
-  return _cached_decoder_for_LDAPDN(el);
+  return _decode_LDAPString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_LDAPDN */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPDN */
-let _cached_encoder_for_LDAPDN: $.ASN1Encoder<LDAPDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_LDAPDN */
 
 /* START_OF_SYMBOL_DEFINITION _encode_LDAPDN */
 /**
@@ -126,10 +115,7 @@ let _cached_encoder_for_LDAPDN: $.ASN1Encoder<LDAPDN> | null = null;
  * @returns {_Element} The LDAPDN, encoded as an ASN.1 Element.
  */
 export function _encode_LDAPDN(value: LDAPDN, elGetter: $.ASN1Encoder<LDAPDN>) {
-  if (!_cached_encoder_for_LDAPDN) {
-    _cached_encoder_for_LDAPDN = _encode_LDAPString;
-  }
-  return _cached_encoder_for_LDAPDN(value, elGetter);
+  return _encode_LDAPString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_LDAPDN */

@@ -143,10 +143,6 @@ export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_
 export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION wholeSubtree */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest_scope */
-let _cached_decoder_for_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest_scope */
-
 /* START_OF_SYMBOL_DEFINITION _decode_SearchRequest_scope */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest_scope
@@ -155,16 +151,9 @@ let _cached_decoder_for_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> 
  * @returns {SearchRequest_scope} The decoded data structure.
  */
 export function _decode_SearchRequest_scope(el: _Element) {
-  if (!_cached_decoder_for_SearchRequest_scope) {
-    _cached_decoder_for_SearchRequest_scope = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_SearchRequest_scope(el);
+  return $._decodeEnumerated(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_SearchRequest_scope */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest_scope */
-let _cached_encoder_for_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest_scope */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchRequest_scope */
 /**
@@ -178,10 +167,7 @@ export function _encode_SearchRequest_scope(
   value: SearchRequest_scope,
   elGetter: $.ASN1Encoder<SearchRequest_scope>
 ) {
-  if (!_cached_encoder_for_SearchRequest_scope) {
-    _cached_encoder_for_SearchRequest_scope = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_SearchRequest_scope(value, elGetter);
+  return $._encodeEnumerated(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchRequest_scope */

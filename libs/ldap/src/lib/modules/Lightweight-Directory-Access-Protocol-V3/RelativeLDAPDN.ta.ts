@@ -92,10 +92,6 @@ export {
 export type RelativeLDAPDN = LDAPString; // DefinedType
 /* END_OF_SYMBOL_DEFINITION RelativeLDAPDN */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeLDAPDN */
-let _cached_decoder_for_RelativeLDAPDN: $.ASN1Decoder<RelativeLDAPDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_RelativeLDAPDN */
-
 /* START_OF_SYMBOL_DEFINITION _decode_RelativeLDAPDN */
 /**
  * @summary Decodes an ASN.1 element into a(n) RelativeLDAPDN
@@ -104,16 +100,9 @@ let _cached_decoder_for_RelativeLDAPDN: $.ASN1Decoder<RelativeLDAPDN> | null = n
  * @returns {RelativeLDAPDN} The decoded data structure.
  */
 export function _decode_RelativeLDAPDN(el: _Element) {
-  if (!_cached_decoder_for_RelativeLDAPDN) {
-    _cached_decoder_for_RelativeLDAPDN = _decode_LDAPString;
-  }
-  return _cached_decoder_for_RelativeLDAPDN(el);
+  return _decode_LDAPString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_RelativeLDAPDN */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeLDAPDN */
-let _cached_encoder_for_RelativeLDAPDN: $.ASN1Encoder<RelativeLDAPDN> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_RelativeLDAPDN */
 
 /* START_OF_SYMBOL_DEFINITION _encode_RelativeLDAPDN */
 /**
@@ -127,10 +116,7 @@ export function _encode_RelativeLDAPDN(
   value: RelativeLDAPDN,
   elGetter: $.ASN1Encoder<RelativeLDAPDN>
 ) {
-  if (!_cached_encoder_for_RelativeLDAPDN) {
-    _cached_encoder_for_RelativeLDAPDN = _encode_LDAPString;
-  }
-  return _cached_encoder_for_RelativeLDAPDN(value, elGetter);
+  return _encode_LDAPString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_RelativeLDAPDN */

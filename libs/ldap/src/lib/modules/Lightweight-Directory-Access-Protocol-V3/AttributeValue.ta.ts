@@ -81,10 +81,6 @@ import * as $ from 'asn1-ts/dist/node/functional';
 export type AttributeValue = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION AttributeValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValue */
-let _cached_decoder_for_AttributeValue: $.ASN1Decoder<AttributeValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AttributeValue */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AttributeValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeValue
@@ -93,16 +89,9 @@ let _cached_decoder_for_AttributeValue: $.ASN1Decoder<AttributeValue> | null = n
  * @returns {AttributeValue} The decoded data structure.
  */
 export function _decode_AttributeValue(el: _Element) {
-  if (!_cached_decoder_for_AttributeValue) {
-    _cached_decoder_for_AttributeValue = $._decodeOctetString;
-  }
-  return _cached_decoder_for_AttributeValue(el);
+  return $._decodeOctetString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AttributeValue */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValue */
-let _cached_encoder_for_AttributeValue: $.ASN1Encoder<AttributeValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AttributeValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AttributeValue */
 /**
@@ -116,10 +105,7 @@ export function _encode_AttributeValue(
   value: AttributeValue,
   elGetter: $.ASN1Encoder<AttributeValue>
 ) {
-  if (!_cached_encoder_for_AttributeValue) {
-    _cached_encoder_for_AttributeValue = $._encodeOctetString;
-  }
-  return _cached_encoder_for_AttributeValue(value, elGetter);
+  return $._encodeOctetString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AttributeValue */

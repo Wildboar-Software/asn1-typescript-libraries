@@ -250,10 +250,6 @@ export const _root_component_type_list_2_spec_for_MatchingRuleAssertion: $.Compo
 export const _extension_additions_list_spec_for_MatchingRuleAssertion: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MatchingRuleAssertion */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleAssertion */
-let _cached_decoder_for_MatchingRuleAssertion: $.ASN1Decoder<MatchingRuleAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleAssertion */
-
 /* START_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleAssertion
@@ -262,68 +258,57 @@ let _cached_decoder_for_MatchingRuleAssertion: $.ASN1Decoder<MatchingRuleAsserti
  * @returns {MatchingRuleAssertion} The decoded data structure.
  */
 export function _decode_MatchingRuleAssertion(el: _Element) {
-  if (!_cached_decoder_for_MatchingRuleAssertion) {
-    _cached_decoder_for_MatchingRuleAssertion = function (
-      el: _Element
-    ): MatchingRuleAssertion {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      let matchingRule: OPTIONAL<MatchingRuleId>;
-      let type_: OPTIONAL<AttributeDescription>;
-      let matchValue!: AssertionValue;
-      let dnAttributes: OPTIONAL<BOOLEAN> =
-        MatchingRuleAssertion._default_value_for_dnAttributes;
-      let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
-      const callbacks: $.DecodingMap = {
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let matchingRule: OPTIONAL<MatchingRuleId>;
+    let type_: OPTIONAL<AttributeDescription>;
+    let matchValue!: AssertionValue;
+    let dnAttributes: OPTIONAL<BOOLEAN> =
+    MatchingRuleAssertion._default_value_for_dnAttributes;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
         matchingRule: (_el: _Element): void => {
-          matchingRule = $._decode_implicit<MatchingRuleId>(
+            matchingRule = $._decode_implicit<MatchingRuleId>(
             () => _decode_MatchingRuleId
-          )(_el);
+            )(_el);
         },
         type: (_el: _Element): void => {
-          type_ = $._decode_implicit<AttributeDescription>(
+            type_ = $._decode_implicit<AttributeDescription>(
             () => _decode_AttributeDescription
-          )(_el);
+            )(_el);
         },
         matchValue: (_el: _Element): void => {
-          matchValue = $._decode_implicit<AssertionValue>(
+            matchValue = $._decode_implicit<AssertionValue>(
             () => _decode_AssertionValue
-          )(_el);
+            )(_el);
         },
         dnAttributes: (_el: _Element): void => {
-          dnAttributes = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(
+            dnAttributes = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(
             _el
-          );
+            );
         },
-      };
-      /* END_OF_CALLBACKS_MAP */
-      $._parse_sequence(
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
         el,
         callbacks,
         _root_component_type_list_1_spec_for_MatchingRuleAssertion,
         _extension_additions_list_spec_for_MatchingRuleAssertion,
         _root_component_type_list_2_spec_for_MatchingRuleAssertion,
         (ext: _Element): void => {
-          _unrecognizedExtensionsList.push(ext);
+            _unrecognizedExtensionsList.push(ext);
         }
-      );
-      return new MatchingRuleAssertion /* SEQUENCE_CONSTRUCTOR_CALL */(
+    );
+    return new MatchingRuleAssertion /* SEQUENCE_CONSTRUCTOR_CALL */(
         matchingRule,
         type_,
         matchValue,
         dnAttributes,
         _unrecognizedExtensionsList
-      );
-    };
-  }
-  return _cached_decoder_for_MatchingRuleAssertion(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_MatchingRuleAssertion */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleAssertion */
-let _cached_encoder_for_MatchingRuleAssertion: $.ASN1Encoder<MatchingRuleAssertion> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleAssertion */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */
 /**
@@ -337,60 +322,42 @@ export function _encode_MatchingRuleAssertion(
   value: MatchingRuleAssertion,
   elGetter: $.ASN1Encoder<MatchingRuleAssertion>
 ) {
-  if (!_cached_encoder_for_MatchingRuleAssertion) {
-    _cached_encoder_for_MatchingRuleAssertion = function (
-      value: MatchingRuleAssertion,
-      elGetter: $.ASN1Encoder<MatchingRuleAssertion>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* IF_ABSENT  */ value.matchingRule === undefined
-                ? undefined
-                : $._encode_implicit(
-                    _TagClass.context,
-                    1,
-                    () => _encode_MatchingRuleId,
-                    $.BER
-                  )(value.matchingRule, $.BER),
-              /* IF_ABSENT  */ value.type_ === undefined
-                ? undefined
-                : $._encode_implicit(
-                    _TagClass.context,
-                    2,
-                    () => _encode_AttributeDescription,
-                    $.BER
-                  )(value.type_, $.BER),
-              /* REQUIRED   */ $._encode_implicit(
-                _TagClass.context,
-                3,
-                () => _encode_AssertionValue,
-                $.BER
-              )(value.matchValue, $.BER),
-              /* IF_DEFAULT */ value.dnAttributes === undefined ||
-              $.deepEq(
-                value.dnAttributes,
-                MatchingRuleAssertion._default_value_for_dnAttributes
-              )
-                ? undefined
-                : $._encode_implicit(
-                    _TagClass.context,
-                    4,
-                    () => $._encodeBoolean,
-                    $.BER
-                  )(value.dnAttributes, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
+    const components: _Element[] = [];
+    if (value.matchingRule) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            1,
+            () => _encode_MatchingRuleId,
+            $.BER
+        )(value.matchingRule, $.BER);
+        components.push(c);
+    }
+    if (value.type_) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            2,
+            () => _encode_AttributeDescription,
+            $.BER
+        )(value.type_, $.BER);
+        components.push(c);
+    }
+    components.push($._encode_implicit(
+        _TagClass.context,
+        3,
+        () => _encode_AssertionValue,
         $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_MatchingRuleAssertion(value, elGetter);
+    )(value.matchValue, $.BER));
+    if (value.dnAttributes) {
+        const c = $._encode_implicit(
+            _TagClass.context,
+            4,
+            () => $._encodeBoolean,
+            $.BER
+        )(value.dnAttributes, $.BER);
+        components.push(c);
+    }
+    components.push(...value._unrecognizedExtensionsList ?? []);
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_MatchingRuleAssertion */

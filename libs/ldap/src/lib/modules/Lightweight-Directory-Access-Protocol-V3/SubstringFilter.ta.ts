@@ -204,10 +204,6 @@ export const _root_component_type_list_2_spec_for_SubstringFilter: $.ComponentSp
 export const _extension_additions_list_spec_for_SubstringFilter: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SubstringFilter */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringFilter */
-let _cached_decoder_for_SubstringFilter: $.ASN1Decoder<SubstringFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SubstringFilter */
-
 /* START_OF_SYMBOL_DEFINITION _decode_SubstringFilter */
 /**
  * @summary Decodes an ASN.1 element into a(n) SubstringFilter
@@ -216,36 +212,25 @@ let _cached_decoder_for_SubstringFilter: $.ASN1Decoder<SubstringFilter> | null =
  * @returns {SubstringFilter} The decoded data structure.
  */
 export function _decode_SubstringFilter(el: _Element) {
-  if (!_cached_decoder_for_SubstringFilter) {
-    _cached_decoder_for_SubstringFilter = function (
-      el: _Element
-    ): SubstringFilter {
-      const sequence: _Element[] = el.sequence;
-      if (sequence.length < 2) {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
         throw new _ConstructionError(
-          'SubstringFilter contained only ' +
+            'SubstringFilter contained only ' +
             sequence.length.toString() +
             ' elements.'
         );
-      }
-      sequence[0].name = 'type';
-      sequence[1].name = 'substrings';
-      let type_!: AttributeDescription;
-      let substrings!: SubstringFilter_substrings_substring[];
-      type_ = _decode_AttributeDescription(sequence[0]);
-      substrings = $._decodeSequenceOf<SubstringFilter_substrings_substring>(
-        () => _decode_SubstringFilter_substrings_substring
-      )(sequence[1]);
-      return new SubstringFilter(type_, substrings, sequence.slice(2));
-    };
-  }
-  return _cached_decoder_for_SubstringFilter(el);
+    }
+    sequence[0].name = 'type';
+    sequence[1].name = 'substrings';
+    let type_!: AttributeDescription;
+    let substrings!: SubstringFilter_substrings_substring[];
+    type_ = _decode_AttributeDescription(sequence[0]);
+    substrings = $._decodeSequenceOf<SubstringFilter_substrings_substring>(
+      () => _decode_SubstringFilter_substrings_substring
+    )(sequence[1]);
+    return new SubstringFilter(type_, substrings, sequence.slice(2));
 }
 /* END_OF_SYMBOL_DEFINITION _decode_SubstringFilter */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringFilter */
-let _cached_encoder_for_SubstringFilter: $.ASN1Encoder<SubstringFilter> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SubstringFilter */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SubstringFilter */
 /**
@@ -259,31 +244,15 @@ export function _encode_SubstringFilter(
   value: SubstringFilter,
   elGetter: $.ASN1Encoder<SubstringFilter>
 ) {
-  if (!_cached_encoder_for_SubstringFilter) {
-    _cached_encoder_for_SubstringFilter = function (
-      value: SubstringFilter,
-      elGetter: $.ASN1Encoder<SubstringFilter>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_AttributeDescription(value.type_, $.BER),
-              /* REQUIRED   */ $._encodeSequenceOf<SubstringFilter_substrings_substring>(
-                () => _encode_SubstringFilter_substrings_substring,
-                $.BER
-              )(value.substrings, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_SubstringFilter(value, elGetter);
+    const components: _Element[] = [
+        _encode_AttributeDescription(value.type_, $.BER),
+        $._encodeSequenceOf<SubstringFilter_substrings_substring>(
+            () => _encode_SubstringFilter_substrings_substring,
+            $.BER
+        )(value.substrings, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_SubstringFilter */

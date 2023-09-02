@@ -81,10 +81,6 @@ import * as $ from 'asn1-ts/dist/node/functional';
 export type MessageID = INTEGER;
 /* END_OF_SYMBOL_DEFINITION MessageID */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageID */
-let _cached_decoder_for_MessageID: $.ASN1Decoder<MessageID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MessageID */
-
 /* START_OF_SYMBOL_DEFINITION _decode_MessageID */
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageID
@@ -93,16 +89,9 @@ let _cached_decoder_for_MessageID: $.ASN1Decoder<MessageID> | null = null;
  * @returns {MessageID} The decoded data structure.
  */
 export function _decode_MessageID(el: _Element) {
-  if (!_cached_decoder_for_MessageID) {
-    _cached_decoder_for_MessageID = $._decodeInteger;
-  }
-  return _cached_decoder_for_MessageID(el);
+  return $._decodeInteger(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_MessageID */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageID */
-let _cached_encoder_for_MessageID: $.ASN1Encoder<MessageID> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MessageID */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MessageID */
 /**
@@ -116,10 +105,7 @@ export function _encode_MessageID(
   value: MessageID,
   elGetter: $.ASN1Encoder<MessageID>
 ) {
-  if (!_cached_encoder_for_MessageID) {
-    _cached_encoder_for_MessageID = $._encodeInteger;
-  }
-  return _cached_encoder_for_MessageID(value, elGetter);
+  return $._encodeInteger(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_MessageID */

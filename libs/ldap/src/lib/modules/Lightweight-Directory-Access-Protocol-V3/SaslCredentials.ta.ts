@@ -190,10 +190,6 @@ export const _root_component_type_list_2_spec_for_SaslCredentials: $.ComponentSp
 export const _extension_additions_list_spec_for_SaslCredentials: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SaslCredentials */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SaslCredentials */
-let _cached_decoder_for_SaslCredentials: $.ASN1Decoder<SaslCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SaslCredentials */
-
 /* START_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
 /**
  * @summary Decodes an ASN.1 element into a(n) SaslCredentials
@@ -202,49 +198,38 @@ let _cached_decoder_for_SaslCredentials: $.ASN1Decoder<SaslCredentials> | null =
  * @returns {SaslCredentials} The decoded data structure.
  */
 export function _decode_SaslCredentials(el: _Element) {
-  if (!_cached_decoder_for_SaslCredentials) {
-    _cached_decoder_for_SaslCredentials = function (
-      el: _Element
-    ): SaslCredentials {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      let mechanism!: LDAPString;
-      let credentials: OPTIONAL<OCTET_STRING>;
-      let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
-      const callbacks: $.DecodingMap = {
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let mechanism!: LDAPString;
+    let credentials: OPTIONAL<OCTET_STRING>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
         mechanism: (_el: _Element): void => {
-          mechanism = _decode_LDAPString(_el);
+            mechanism = _decode_LDAPString(_el);
         },
         credentials: (_el: _Element): void => {
-          credentials = $._decodeOctetString(_el);
+            credentials = $._decodeOctetString(_el);
         },
-      };
-      /* END_OF_CALLBACKS_MAP */
-      $._parse_sequence(
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
         el,
         callbacks,
         _root_component_type_list_1_spec_for_SaslCredentials,
         _extension_additions_list_spec_for_SaslCredentials,
         _root_component_type_list_2_spec_for_SaslCredentials,
         (ext: _Element): void => {
-          _unrecognizedExtensionsList.push(ext);
+            _unrecognizedExtensionsList.push(ext);
         }
-      );
-      return new SaslCredentials /* SEQUENCE_CONSTRUCTOR_CALL */(
+    );
+    return new SaslCredentials /* SEQUENCE_CONSTRUCTOR_CALL */(
         mechanism,
         credentials,
         _unrecognizedExtensionsList
-      );
-    };
-  }
-  return _cached_decoder_for_SaslCredentials(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_SaslCredentials */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SaslCredentials */
-let _cached_encoder_for_SaslCredentials: $.ASN1Encoder<SaslCredentials> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SaslCredentials */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SaslCredentials */
 /**
@@ -258,30 +243,13 @@ export function _encode_SaslCredentials(
   value: SaslCredentials,
   elGetter: $.ASN1Encoder<SaslCredentials>
 ) {
-  if (!_cached_encoder_for_SaslCredentials) {
-    _cached_encoder_for_SaslCredentials = function (
-      value: SaslCredentials,
-      elGetter: $.ASN1Encoder<SaslCredentials>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_LDAPString(value.mechanism, $.BER),
-              /* IF_ABSENT  */ value.credentials === undefined
-                ? undefined
-                : $._encodeOctetString(value.credentials, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_SaslCredentials(value, elGetter);
+    const components: _Element[] = [
+        _encode_LDAPString(value.mechanism, $.BER),
+    ];
+    if (value.credentials) {
+        components.push($._encodeOctetString(value.credentials, $.BER));
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_SaslCredentials */

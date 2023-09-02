@@ -81,10 +81,6 @@ import * as $ from 'asn1-ts/dist/node/functional';
 export type AssertionValue = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION AssertionValue */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AssertionValue */
-let _cached_decoder_for_AssertionValue: $.ASN1Decoder<AssertionValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AssertionValue */
-
 /* START_OF_SYMBOL_DEFINITION _decode_AssertionValue */
 /**
  * @summary Decodes an ASN.1 element into a(n) AssertionValue
@@ -93,16 +89,9 @@ let _cached_decoder_for_AssertionValue: $.ASN1Decoder<AssertionValue> | null = n
  * @returns {AssertionValue} The decoded data structure.
  */
 export function _decode_AssertionValue(el: _Element) {
-  if (!_cached_decoder_for_AssertionValue) {
-    _cached_decoder_for_AssertionValue = $._decodeOctetString;
-  }
-  return _cached_decoder_for_AssertionValue(el);
+  return $._decodeOctetString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_AssertionValue */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AssertionValue */
-let _cached_encoder_for_AssertionValue: $.ASN1Encoder<AssertionValue> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AssertionValue */
 
 /* START_OF_SYMBOL_DEFINITION _encode_AssertionValue */
 /**
@@ -116,10 +105,7 @@ export function _encode_AssertionValue(
   value: AssertionValue,
   elGetter: $.ASN1Encoder<AssertionValue>
 ) {
-  if (!_cached_encoder_for_AssertionValue) {
-    _cached_encoder_for_AssertionValue = $._encodeOctetString;
-  }
-  return _cached_encoder_for_AssertionValue(value, elGetter);
+  return $._encodeOctetString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_AssertionValue */

@@ -215,10 +215,6 @@ export const _root_component_type_list_2_spec_for_Control: $.ComponentSpec[] = [
 export const _extension_additions_list_spec_for_Control: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_Control */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Control */
-let _cached_decoder_for_Control: $.ASN1Decoder<Control> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Control */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Control */
 /**
  * @summary Decodes an ASN.1 element into a(n) Control
@@ -227,47 +223,41 @@ let _cached_decoder_for_Control: $.ASN1Decoder<Control> | null = null;
  * @returns {Control} The decoded data structure.
  */
 export function _decode_Control(el: _Element) {
-  if (!_cached_decoder_for_Control) {
-    _cached_decoder_for_Control = function (el: _Element): Control {
-      /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      let controlType!: LDAPOID;
-      let criticality: OPTIONAL<BOOLEAN> =
-        Control._default_value_for_criticality;
-      let controlValue: OPTIONAL<OCTET_STRING>;
-      let _unrecognizedExtensionsList: _Element[] = [];
-      /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
-      /* START_OF_CALLBACKS_MAP */
-      const callbacks: $.DecodingMap = {
+    /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    let controlType!: LDAPOID;
+    let criticality: OPTIONAL<BOOLEAN> = Control._default_value_for_criticality;
+    let controlValue: OPTIONAL<OCTET_STRING>;
+    let _unrecognizedExtensionsList: _Element[] = [];
+    /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
         controlType: (_el: _Element): void => {
-          controlType = _decode_LDAPOID(_el);
+            controlType = _decode_LDAPOID(_el);
         },
         criticality: (_el: _Element): void => {
-          criticality = $._decodeBoolean(_el);
+            criticality = $._decodeBoolean(_el);
         },
         controlValue: (_el: _Element): void => {
-          controlValue = $._decodeOctetString(_el);
+            controlValue = $._decodeOctetString(_el);
         },
-      };
-      /* END_OF_CALLBACKS_MAP */
-      $._parse_sequence(
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_sequence(
         el,
         callbacks,
         _root_component_type_list_1_spec_for_Control,
         _extension_additions_list_spec_for_Control,
         _root_component_type_list_2_spec_for_Control,
         (ext: _Element): void => {
-          _unrecognizedExtensionsList.push(ext);
+            _unrecognizedExtensionsList.push(ext);
         }
-      );
-      return new Control /* SEQUENCE_CONSTRUCTOR_CALL */(
+    );
+    return new Control /* SEQUENCE_CONSTRUCTOR_CALL */(
         controlType,
         criticality,
         controlValue,
         _unrecognizedExtensionsList
-      );
-    };
-  }
-  return _cached_decoder_for_Control(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Control */
 
@@ -287,37 +277,16 @@ export function _encode_Control(
   value: Control,
   elGetter: $.ASN1Encoder<Control>
 ) {
-  if (!_cached_encoder_for_Control) {
-    _cached_encoder_for_Control = function (
-      value: Control,
-      elGetter: $.ASN1Encoder<Control>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_LDAPOID(value.controlType, $.BER),
-              /* IF_DEFAULT */ value.criticality === undefined ||
-              $.deepEq(
-                value.criticality,
-                Control._default_value_for_criticality
-              )
-                ? undefined
-                : $._encodeBoolean(value.criticality, $.BER),
-              /* IF_ABSENT  */ value.controlValue === undefined
-                ? undefined
-                : $._encodeOctetString(value.controlValue, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_Control(value, elGetter);
+    const components: _Element[] = [
+        _encode_LDAPOID(value.controlType, $.BER),
+    ];
+    if (value.criticality) {
+        components.push($._encodeBoolean(value.criticality, $.BER));
+    }
+    if (value.controlValue) {
+        components.push($._encodeOctetString(value.controlValue, $.BER));
+    }
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Control */

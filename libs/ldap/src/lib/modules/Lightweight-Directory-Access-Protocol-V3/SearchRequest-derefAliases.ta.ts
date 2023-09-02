@@ -194,10 +194,6 @@ export const derefAlways: SearchRequest_derefAliases =
   SearchRequest_derefAliases.derefAlways; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION derefAlways */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest_derefAliases */
-let _cached_decoder_for_SearchRequest_derefAliases: $.ASN1Decoder<SearchRequest_derefAliases> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_SearchRequest_derefAliases */
-
 /* START_OF_SYMBOL_DEFINITION _decode_SearchRequest_derefAliases */
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest_derefAliases
@@ -206,16 +202,9 @@ let _cached_decoder_for_SearchRequest_derefAliases: $.ASN1Decoder<SearchRequest_
  * @returns {SearchRequest_derefAliases} The decoded data structure.
  */
 export function _decode_SearchRequest_derefAliases(el: _Element) {
-  if (!_cached_decoder_for_SearchRequest_derefAliases) {
-    _cached_decoder_for_SearchRequest_derefAliases = $._decodeEnumerated;
-  }
-  return _cached_decoder_for_SearchRequest_derefAliases(el);
+  return $._decodeEnumerated(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_SearchRequest_derefAliases */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest_derefAliases */
-let _cached_encoder_for_SearchRequest_derefAliases: $.ASN1Encoder<SearchRequest_derefAliases> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_SearchRequest_derefAliases */
 
 /* START_OF_SYMBOL_DEFINITION _encode_SearchRequest_derefAliases */
 /**
@@ -229,10 +218,7 @@ export function _encode_SearchRequest_derefAliases(
   value: SearchRequest_derefAliases,
   elGetter: $.ASN1Encoder<SearchRequest_derefAliases>
 ) {
-  if (!_cached_encoder_for_SearchRequest_derefAliases) {
-    _cached_encoder_for_SearchRequest_derefAliases = $._encodeEnumerated;
-  }
-  return _cached_encoder_for_SearchRequest_derefAliases(value, elGetter);
+  return $._encodeEnumerated(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_SearchRequest_derefAliases */

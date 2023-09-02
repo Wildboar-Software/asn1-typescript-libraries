@@ -91,10 +91,6 @@ export {
 export type MatchingRuleId = LDAPString; // DefinedType
 /* END_OF_SYMBOL_DEFINITION MatchingRuleId */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleId */
-let _cached_decoder_for_MatchingRuleId: $.ASN1Decoder<MatchingRuleId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_MatchingRuleId */
-
 /* START_OF_SYMBOL_DEFINITION _decode_MatchingRuleId */
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchingRuleId
@@ -103,16 +99,9 @@ let _cached_decoder_for_MatchingRuleId: $.ASN1Decoder<MatchingRuleId> | null = n
  * @returns {MatchingRuleId} The decoded data structure.
  */
 export function _decode_MatchingRuleId(el: _Element) {
-  if (!_cached_decoder_for_MatchingRuleId) {
-    _cached_decoder_for_MatchingRuleId = _decode_LDAPString;
-  }
-  return _cached_decoder_for_MatchingRuleId(el);
+  return _decode_LDAPString(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_MatchingRuleId */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleId */
-let _cached_encoder_for_MatchingRuleId: $.ASN1Encoder<MatchingRuleId> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_MatchingRuleId */
 
 /* START_OF_SYMBOL_DEFINITION _encode_MatchingRuleId */
 /**
@@ -126,10 +115,7 @@ export function _encode_MatchingRuleId(
   value: MatchingRuleId,
   elGetter: $.ASN1Encoder<MatchingRuleId>
 ) {
-  if (!_cached_encoder_for_MatchingRuleId) {
-    _cached_encoder_for_MatchingRuleId = _encode_LDAPString;
-  }
-  return _cached_encoder_for_MatchingRuleId(value, elGetter);
+  return _encode_LDAPString(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_MatchingRuleId */

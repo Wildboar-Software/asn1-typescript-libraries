@@ -64,6 +64,10 @@ import {
   External as _External,
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
+  BERElement,
+  ASN1TagClass,
+  ASN1Construction,
+  ASN1UniversalType,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/node/functional';
 import {
@@ -200,10 +204,6 @@ export const _root_component_type_list_2_spec_for_PartialAttribute: $.ComponentS
 export const _extension_additions_list_spec_for_PartialAttribute: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PartialAttribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialAttribute */
-let _cached_decoder_for_PartialAttribute: $.ASN1Decoder<PartialAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PartialAttribute */
-
 /* START_OF_SYMBOL_DEFINITION _decode_PartialAttribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) PartialAttribute
@@ -212,36 +212,23 @@ let _cached_decoder_for_PartialAttribute: $.ASN1Decoder<PartialAttribute> | null
  * @returns {PartialAttribute} The decoded data structure.
  */
 export function _decode_PartialAttribute(el: _Element) {
-  if (!_cached_decoder_for_PartialAttribute) {
-    _cached_decoder_for_PartialAttribute = function (
-      el: _Element
-    ): PartialAttribute {
-      const sequence: _Element[] = el.sequence;
-      if (sequence.length < 2) {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
         throw new _ConstructionError(
-          'PartialAttribute contained only ' +
+            'PartialAttribute contained only ' +
             sequence.length.toString() +
             ' elements.'
         );
-      }
-      sequence[0].name = 'type';
-      sequence[1].name = 'vals';
-      let type_!: AttributeDescription;
-      let vals!: AttributeValue[];
-      type_ = _decode_AttributeDescription(sequence[0]);
-      vals = $._decodeSetOf<AttributeValue>(() => _decode_AttributeValue)(
-        sequence[1]
-      );
-      return new PartialAttribute(type_, vals, sequence.slice(2));
-    };
-  }
-  return _cached_decoder_for_PartialAttribute(el);
+    }
+    sequence[0].name = 'type';
+    sequence[1].name = 'vals';
+    let type_!: AttributeDescription;
+    let vals!: AttributeValue[];
+    type_ = _decode_AttributeDescription(sequence[0]);
+    vals = $._decodeSetOf<AttributeValue>(() => _decode_AttributeValue)(sequence[1]);
+    return new PartialAttribute(type_, vals, sequence.slice(2));
 }
 /* END_OF_SYMBOL_DEFINITION _decode_PartialAttribute */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialAttribute */
-let _cached_encoder_for_PartialAttribute: $.ASN1Encoder<PartialAttribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_PartialAttribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_PartialAttribute */
 /**
@@ -255,31 +242,19 @@ export function _encode_PartialAttribute(
   value: PartialAttribute,
   elGetter: $.ASN1Encoder<PartialAttribute>
 ) {
-  if (!_cached_encoder_for_PartialAttribute) {
-    _cached_encoder_for_PartialAttribute = function (
-      value: PartialAttribute,
-      elGetter: $.ASN1Encoder<PartialAttribute>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_AttributeDescription(value.type_, $.BER),
-              /* REQUIRED   */ $._encodeSetOf<AttributeValue>(
-                () => _encode_AttributeValue,
-                $.BER
-              )(value.vals, $.BER),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_PartialAttribute(value, elGetter);
+    const vals = value.vals.map((v) => _encode_AttributeValue(v, $.BER));
+    const valsEl = new BERElement(
+        ASN1TagClass.universal,
+        ASN1Construction.constructed,
+        ASN1UniversalType.set,
+    );
+    valsEl.setOf = vals;
+    const components: _Element[] = [
+        _encode_AttributeDescription(value.type_, $.BER),
+        valsEl,
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_PartialAttribute */

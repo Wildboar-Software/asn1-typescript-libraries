@@ -221,10 +221,6 @@ export const _root_component_type_list_2_spec_for_ModifyRequest_changes_change: 
 export const _extension_additions_list_spec_for_ModifyRequest_changes_change: $.ComponentSpec[] = [];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ModifyRequest_changes_change */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRequest_changes_change */
-let _cached_decoder_for_ModifyRequest_changes_change: $.ASN1Decoder<ModifyRequest_changes_change> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRequest_changes_change */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRequest_changes_change
@@ -233,38 +229,27 @@ let _cached_decoder_for_ModifyRequest_changes_change: $.ASN1Decoder<ModifyReques
  * @returns {ModifyRequest_changes_change} The decoded data structure.
  */
 export function _decode_ModifyRequest_changes_change(el: _Element) {
-  if (!_cached_decoder_for_ModifyRequest_changes_change) {
-    _cached_decoder_for_ModifyRequest_changes_change = function (
-      el: _Element
-    ): ModifyRequest_changes_change {
-      const sequence: _Element[] = el.sequence;
-      if (sequence.length < 2) {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
         throw new _ConstructionError(
-          'ModifyRequest-changes-change contained only ' +
+            'ModifyRequest-changes-change contained only ' +
             sequence.length.toString() +
             ' elements.'
         );
-      }
-      sequence[0].name = 'operation';
-      sequence[1].name = 'modification';
-      let operation!: ModifyRequest_changes_change_operation;
-      let modification!: PartialAttribute;
-      operation = _decode_ModifyRequest_changes_change_operation(sequence[0]);
-      modification = _decode_PartialAttribute(sequence[1]);
-      return new ModifyRequest_changes_change(
+    }
+    sequence[0].name = 'operation';
+    sequence[1].name = 'modification';
+    let operation!: ModifyRequest_changes_change_operation;
+    let modification!: PartialAttribute;
+    operation = _decode_ModifyRequest_changes_change_operation(sequence[0]);
+    modification = _decode_PartialAttribute(sequence[1]);
+    return new ModifyRequest_changes_change(
         operation,
         modification,
         sequence.slice(2)
-      );
-    };
-  }
-  return _cached_decoder_for_ModifyRequest_changes_change(el);
+    );
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRequest_changes_change */
-let _cached_encoder_for_ModifyRequest_changes_change: $.ASN1Encoder<ModifyRequest_changes_change> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRequest_changes_change */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change */
 /**
@@ -278,34 +263,12 @@ export function _encode_ModifyRequest_changes_change(
   value: ModifyRequest_changes_change,
   elGetter: $.ASN1Encoder<ModifyRequest_changes_change>
 ) {
-  if (!_cached_encoder_for_ModifyRequest_changes_change) {
-    _cached_encoder_for_ModifyRequest_changes_change = function (
-      value: ModifyRequest_changes_change,
-      elGetter: $.ASN1Encoder<ModifyRequest_changes_change>
-    ): _Element {
-      return $._encodeSequence(
-        ([] as (_Element | undefined)[])
-          .concat(
-            [
-              /* REQUIRED   */ _encode_ModifyRequest_changes_change_operation(
-                value.operation,
-                $.BER
-              ),
-              /* REQUIRED   */ _encode_PartialAttribute(
-                value.modification,
-                $.BER
-              ),
-            ],
-            value._unrecognizedExtensionsList
-              ? value._unrecognizedExtensionsList
-              : []
-          )
-          .filter((c: _Element | undefined): c is _Element => !!c),
-        $.BER
-      );
-    };
-  }
-  return _cached_encoder_for_ModifyRequest_changes_change(value, elGetter);
+    const components: _Element[] = [
+        _encode_ModifyRequest_changes_change_operation(value.operation, $.BER),
+        _encode_PartialAttribute(value.modification, $.BER),
+        ...value._unrecognizedExtensionsList ?? [],
+    ];
+    return $._encodeSequence(components, $.BER);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change */

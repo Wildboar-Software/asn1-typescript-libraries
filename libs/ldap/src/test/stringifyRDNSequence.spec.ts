@@ -1,14 +1,10 @@
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
 import stringifyRDNSequence from "../lib/stringifiers/RDNSequence";
 import AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
+import { BER, _encodeUTF8String } from "asn1-ts/dist/node/functional";
 
 function utf8Element (str: string): BERElement {
-    return new BERElement(
-        ASN1TagClass.universal,
-        ASN1Construction.primitive,
-        ASN1UniversalType.utf8String,
-        str,
-    );
+    return _encodeUTF8String(str, BER) as BERElement;
 }
 
 const COUNTRY_NAME = new ObjectIdentifier([ 2, 5, 4, 6 ]);

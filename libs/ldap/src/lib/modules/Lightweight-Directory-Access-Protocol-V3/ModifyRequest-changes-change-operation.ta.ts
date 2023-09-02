@@ -145,10 +145,6 @@ export const ModifyRequest_changes_change_operation_replace: ModifyRequest_chang
 export const replace: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_replace; /* SHORT_NAMED_ENUMERATED_VALUE */
 /* END_OF_SYMBOL_DEFINITION replace */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRequest_changes_change_operation */
-let _cached_decoder_for_ModifyRequest_changes_change_operation: $.ASN1Decoder<ModifyRequest_changes_change_operation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_ModifyRequest_changes_change_operation */
-
 /* START_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change_operation */
 /**
  * @summary Decodes an ASN.1 element into a(n) ModifyRequest_changes_change_operation
@@ -157,17 +153,9 @@ let _cached_decoder_for_ModifyRequest_changes_change_operation: $.ASN1Decoder<Mo
  * @returns {ModifyRequest_changes_change_operation} The decoded data structure.
  */
 export function _decode_ModifyRequest_changes_change_operation(el: _Element) {
-  if (!_cached_decoder_for_ModifyRequest_changes_change_operation) {
-    _cached_decoder_for_ModifyRequest_changes_change_operation =
-      $._decodeEnumerated;
-  }
-  return _cached_decoder_for_ModifyRequest_changes_change_operation(el);
+  return $._decodeEnumerated(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_ModifyRequest_changes_change_operation */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRequest_changes_change_operation */
-let _cached_encoder_for_ModifyRequest_changes_change_operation: $.ASN1Encoder<ModifyRequest_changes_change_operation> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_ModifyRequest_changes_change_operation */
 
 /* START_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change_operation */
 /**
@@ -181,14 +169,7 @@ export function _encode_ModifyRequest_changes_change_operation(
   value: ModifyRequest_changes_change_operation,
   elGetter: $.ASN1Encoder<ModifyRequest_changes_change_operation>
 ) {
-  if (!_cached_encoder_for_ModifyRequest_changes_change_operation) {
-    _cached_encoder_for_ModifyRequest_changes_change_operation =
-      $._encodeEnumerated;
-  }
-  return _cached_encoder_for_ModifyRequest_changes_change_operation(
-    value,
-    elGetter
-  );
+  return $._encodeEnumerated(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_ModifyRequest_changes_change_operation */

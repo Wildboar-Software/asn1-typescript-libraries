@@ -94,10 +94,6 @@ export {
 export type Attribute = PartialAttribute; // DefinedType
 /* END_OF_SYMBOL_DEFINITION Attribute */
 
-/* START_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute */
-let _cached_decoder_for_Attribute: $.ASN1Decoder<Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_decoder_for_Attribute */
-
 /* START_OF_SYMBOL_DEFINITION _decode_Attribute */
 /**
  * @summary Decodes an ASN.1 element into a(n) Attribute
@@ -106,16 +102,9 @@ let _cached_decoder_for_Attribute: $.ASN1Decoder<Attribute> | null = null;
  * @returns {Attribute} The decoded data structure.
  */
 export function _decode_Attribute(el: _Element) {
-  if (!_cached_decoder_for_Attribute) {
-    _cached_decoder_for_Attribute = _decode_PartialAttribute;
-  }
-  return _cached_decoder_for_Attribute(el);
+  return _decode_PartialAttribute(el);
 }
 /* END_OF_SYMBOL_DEFINITION _decode_Attribute */
-
-/* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute */
-let _cached_encoder_for_Attribute: $.ASN1Encoder<Attribute> | null = null;
-/* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Attribute */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Attribute */
 /**
@@ -129,10 +118,7 @@ export function _encode_Attribute(
   value: Attribute,
   elGetter: $.ASN1Encoder<Attribute>
 ) {
-  if (!_cached_encoder_for_Attribute) {
-    _cached_encoder_for_Attribute = _encode_PartialAttribute;
-  }
-  return _cached_encoder_for_Attribute(value, elGetter);
+  return _encode_PartialAttribute(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Attribute */
