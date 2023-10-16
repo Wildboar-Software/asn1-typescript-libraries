@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cms",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Cryptographic Message Syntax (CMS) in TypeScript",
     "keywords": [
         "cryptographic",
@@ -32,6 +32,8 @@
     "dependencies": {
         "@wildboar/x500": "^1.1.5",
         "@wildboar/ansi-x9-62": "^1.0.5",
-        "@wildboar/ansi-x9-42": "^1.0.3"
+        "@wildboar/ansi-x9-42": "^1.0.3",
+        "@wildboar/pki-stub": "^1.1.8",
+        "@wildboar/ldap": "^1.2.13"
     }
 }

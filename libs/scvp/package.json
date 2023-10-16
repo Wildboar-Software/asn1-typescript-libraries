@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/scvp",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Server-based Certificate Validation Protocol PDUs in TypeScript",
     "keywords": [
         "scvp",
@@ -34,6 +34,11 @@
     },
     "dependencies": {
         "@wildboar/x500": "^1.1.5",
-        "@wildboar/cms": "^1.0.5"
+        "@wildboar/cms": "^1.0.5",
+        "@wildboar/pki-stub": "^1.1.8",
+        "@wildboar/ldap": "^1.2.13",
+        "@wildboar/ansi-x9-42": "^1.0.3",
+        "@wildboar/ansi-x9-62": "^1.0.5",
+        "@wildboar/ocsp": "^1.0.6"
     }
 }

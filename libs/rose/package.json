@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/rose",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Remote Operation Service Element PDUs in TypeScript",
     "keywords": [
         "rose",
@@ -33,6 +33,7 @@
     },
     "dependencies": {
         "@wildboar/acse": "^1.0.7",
-        "@wildboar/rtse": "^1.0.3"
+        "@wildboar/rtse": "^1.0.3",
+        "@wildboar/pki-stub": "^1.1.8"
     }
 }

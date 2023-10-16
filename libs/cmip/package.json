@@ -1,6 +1,6 @@
 {
     "name": "@wildboar/cmip",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Common Management Information Protocol PDUs in TypeScript",
     "keywords": [
         "common",
@@ -33,6 +33,7 @@
         "@wildboar/x500": "^1.1.5",
         "@wildboar/rose": "^1.0.4",
         "@wildboar/rtse": "^1.0.3",
-        "@wildboar/ldap": "^1.2.12"
+        "@wildboar/ldap": "^1.2.13",
+        "@wildboar/pki-stub": "^1.1.8"
     }
 }
