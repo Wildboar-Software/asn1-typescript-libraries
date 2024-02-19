@@ -106,15 +106,15 @@ export function _decode_Bind(el: _Element) {
     _cached_decoder_for_Bind = $._decode_inextensible_choice<Bind>({
       'CONTEXT 16': [
         'bind_invoke',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
       'CONTEXT 17': [
         'bind_result',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
       'CONTEXT 18': [
         'bind_error',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
     });
   }
@@ -138,19 +138,19 @@ export function _encode_Bind(value: Bind, elGetter: $.ASN1Encoder<Bind>) {
   if (!_cached_encoder_for_Bind) {
     _cached_encoder_for_Bind = $._encode_choice<Bind>(
       {
-        bind_invoke: $._encode_implicit(
+        bind_invoke: $._encode_explicit(
           _TagClass.context,
           16,
           () => $._encodeAny,
           $.BER
         ),
-        bind_result: $._encode_implicit(
+        bind_result: $._encode_explicit(
           _TagClass.context,
           17,
           () => $._encodeAny,
           $.BER
         ),
-        bind_error: $._encode_implicit(
+        bind_error: $._encode_explicit(
           _TagClass.context,
           18,
           () => $._encodeAny,

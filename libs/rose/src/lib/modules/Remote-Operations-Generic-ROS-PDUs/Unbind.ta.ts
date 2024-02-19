@@ -106,15 +106,15 @@ export function _decode_Unbind(el: _Element) {
     _cached_decoder_for_Unbind = $._decode_inextensible_choice<Unbind>({
       'CONTEXT 19': [
         'unbind_invoke',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
       'CONTEXT 20': [
         'unbind_result',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
       'CONTEXT 21': [
         'unbind_error',
-        $._decode_implicit<_Element>(() => $._decodeAny),
+        $._decode_explicit<_Element>(() => $._decodeAny),
       ],
     });
   }
@@ -138,19 +138,19 @@ export function _encode_Unbind(value: Unbind, elGetter: $.ASN1Encoder<Unbind>) {
   if (!_cached_encoder_for_Unbind) {
     _cached_encoder_for_Unbind = $._encode_choice<Unbind>(
       {
-        unbind_invoke: $._encode_implicit(
+        unbind_invoke: $._encode_explicit(
           _TagClass.context,
           19,
           () => $._encodeAny,
           $.BER
         ),
-        unbind_result: $._encode_implicit(
+        unbind_result: $._encode_explicit(
           _TagClass.context,
           20,
           () => $._encodeAny,
           $.BER
         ),
-        unbind_error: $._encode_implicit(
+        unbind_error: $._encode_explicit(
           _TagClass.context,
           21,
           () => $._encodeAny,

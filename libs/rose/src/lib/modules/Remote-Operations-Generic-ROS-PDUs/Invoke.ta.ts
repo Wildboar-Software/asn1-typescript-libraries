@@ -281,7 +281,7 @@ export class Invoke {
  */
 export const _root_component_type_list_1_spec_for_Invoke: $.ComponentSpec[] = [
   new $.ComponentSpec('invokeId', false, $.hasAnyTag, undefined, undefined),
-  new $.ComponentSpec('linkedId', true, $.hasAnyTag, undefined, undefined),
+  new $.ComponentSpec('linkedId', true, $.hasAnyTag, undefined, undefined), // FIXME:
   new $.ComponentSpec('opcode', false, $.hasAnyTag, undefined, undefined),
   new $.ComponentSpec('argument', true, $.hasAnyTag, undefined, undefined),
 ];

@@ -116,7 +116,7 @@ export function _decode_ConnectionData(el: _Element) {
   if (!_cached_decoder_for_ConnectionData) {
     _cached_decoder_for_ConnectionData = $._decode_inextensible_choice<ConnectionData>(
       {
-        'CONTEXT 0': ['open', $._decode_implicit<_Element>(() => $._decodeAny)],
+        'CONTEXT 0': ['open', $._decode_explicit<_Element>(() => $._decodeAny)],
         'CONTEXT 1': [
           'recover',
           $._decode_implicit<SessionConnectionIdentifier>(
@@ -149,7 +149,7 @@ export function _encode_ConnectionData(
   if (!_cached_encoder_for_ConnectionData) {
     _cached_encoder_for_ConnectionData = $._encode_choice<ConnectionData>(
       {
-        open: $._encode_implicit(
+        open: $._encode_explicit(
           _TagClass.context,
           0,
           () => $._encodeAny,
