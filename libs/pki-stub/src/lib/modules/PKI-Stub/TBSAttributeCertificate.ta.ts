@@ -403,7 +403,7 @@ export function _encode_TBSAttributeCertificate(
         components.push(_encode_UniqueIdentifier(value.issuerUniqueID, $.BER));
     }
     components.push(...value._unrecognizedExtensionsList ?? []);
-    if (value.extensions.length) {
+    if (value.extensions?.length) {
         components.push(_encode_Extensions(value.extensions, $.BER));
     }
     return $._encodeSequence(components, $.BER);
