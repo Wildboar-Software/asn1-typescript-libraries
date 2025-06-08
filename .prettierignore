@@ -3,6 +3,3 @@
 /dist
 /coverage
 .docusaurus/
-
-/.nx/cache
-/.nx/workspace-data
