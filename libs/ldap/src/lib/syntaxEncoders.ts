@@ -38,13 +38,14 @@ const FALSE_VALUE = Buffer.from("FALSE");
     }
  }
 
-function directoryStringToBytes (ds: ASN1Element): Uint8Array {
+function directoryStringToBytes (ds: ASN1Element): Buffer {
     if (ds.tagClass !== ASN1TagClass.universal) {
         throw new Error();
     }
     switch (ds.tagNumber) {
         case (ASN1UniversalType.teletexString): {
-            return ds.teletexString;
+            const t = ds.teletexString;
+            return Buffer.from(t.buffer, t.byteOffset, t.byteLength);
         }
         case (ASN1UniversalType.printableString): {
             return Buffer.from(ds.printableString);
@@ -106,7 +107,7 @@ const deliveryMethod: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
 
 export
 const directoryString: LDAPSyntaxEncoder = (value: ASN1Element): Uint8Array => {
-    return Buffer.from(directoryStringToBytes(value));
+    return directoryStringToBytes(value);
 };
 
 // 3.3.7. DIT Content Rule Description ........................9
