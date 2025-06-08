@@ -1,8 +1,4 @@
 {
-    "npmScope": "asn1-typescript-libraries",
-    "affected": {
-        "defaultBase": "master"
-    },
     "implicitDependencies": {
         "workspace.json": "*",
         "package.json": {
@@ -13,14 +9,6 @@
         "tslint.json": "*",
         ".eslintrc.json": "*",
         "nx.json": "*"
-    },
-    "tasksRunnerOptions": {
-        "default": {
-            "runner": "@nrwl/workspace/tasks-runners/default",
-            "options": {
-                "cacheableOperations": ["build", "lint", "test", "e2e"]
-            }
-        }
     },
     "projects": {
         "acbio": {
@@ -197,5 +185,21 @@
         "x700": {
             "tags": []
         }
-    }
+    },
+    "targetDefaults": {
+        "build": {
+            "cache": true
+        },
+        "lint": {
+            "cache": true
+        },
+        "test": {
+            "cache": true
+        },
+        "e2e": {
+            "cache": true
+        }
+    },
+    "useInferencePlugins": false,
+    "defaultBase": "master"
 }
