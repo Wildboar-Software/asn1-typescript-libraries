@@ -1,0 +1,36 @@
+{
+    "name": "ec-private-key",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/ec-private-key/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/ec-private-key",
+                "tsConfig": "packages/ec-private-key/tsconfig.lib.json",
+                "packageJson": "packages/ec-private-key/package.json",
+                "main": "packages/ec-private-key/src/index.ts",
+                "assets": [
+                    "packages/ec-private-key/*.md",
+                    "packages/ec-private-key/LICENSE.txt"
+                ]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/ec-private-key/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/ec-private-key"],
+            "options": {
+                "jestConfig": "packages/ec-private-key/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

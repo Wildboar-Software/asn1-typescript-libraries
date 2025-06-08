@@ -1,0 +1,33 @@
+{
+    "name": "acbio",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/acbio/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/acbio",
+                "tsConfig": "packages/acbio/tsconfig.lib.json",
+                "packageJson": "packages/acbio/package.json",
+                "main": "packages/acbio/src/index.ts",
+                "assets": ["packages/acbio/*.md", "packages/acbio/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/acbio/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/acbio"],
+            "options": {
+                "jestConfig": "packages/acbio/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

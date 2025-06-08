@@ -1,0 +1,33 @@
+{
+    "name": "copp",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/copp/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/copp",
+                "tsConfig": "packages/copp/tsconfig.lib.json",
+                "packageJson": "packages/copp/package.json",
+                "main": "packages/copp/src/index.ts",
+                "assets": ["packages/copp/*.md", "packages/copp/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/copp/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/copp"],
+            "options": {
+                "jestConfig": "packages/copp/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

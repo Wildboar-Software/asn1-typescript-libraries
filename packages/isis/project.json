@@ -1,0 +1,33 @@
+{
+    "name": "isis",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/isis/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/isis/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/isis"],
+            "options": {
+                "jestConfig": "packages/isis/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/isis",
+                "tsConfig": "packages/isis/tsconfig.lib.json",
+                "packageJson": "packages/isis/package.json",
+                "main": "packages/isis/src/index.ts",
+                "assets": ["packages/isis/*.md", "packages/isis/LICENSE.txt"]
+            }
+        }
+    }
+}

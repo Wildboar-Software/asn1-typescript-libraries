@@ -1,0 +1,33 @@
+{
+    "name": "t38",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/t38/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/t38/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/t38"],
+            "options": {
+                "jestConfig": "packages/t38/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/t38",
+                "tsConfig": "packages/t38/tsconfig.lib.json",
+                "packageJson": "packages/t38/package.json",
+                "main": "packages/t38/src/index.ts",
+                "assets": ["packages/t38/*.md", "packages/t38/LICENSE.txt"]
+            }
+        }
+    }
+}

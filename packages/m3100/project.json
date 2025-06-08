@@ -1,0 +1,33 @@
+{
+    "name": "m3100",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/m3100/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/m3100",
+                "tsConfig": "packages/m3100/tsconfig.lib.json",
+                "packageJson": "packages/m3100/package.json",
+                "main": "packages/m3100/src/index.ts",
+                "assets": ["packages/m3100/*.md", "packages/m3100/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/m3100/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/m3100"],
+            "options": {
+                "jestConfig": "packages/m3100/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "ftam",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/ftam/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/ftam/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/ftam"],
+            "options": {
+                "jestConfig": "packages/ftam/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/ftam",
+                "tsConfig": "packages/ftam/tsconfig.lib.json",
+                "packageJson": "packages/ftam/package.json",
+                "main": "packages/ftam/src/index.ts",
+                "assets": ["packages/ftam/*.md", "packages/ftam/LICENSE.txt"]
+            }
+        }
+    }
+}

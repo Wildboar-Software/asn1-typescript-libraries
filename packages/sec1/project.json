@@ -1,0 +1,33 @@
+{
+    "name": "sec1",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/sec1/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/sec1",
+                "tsConfig": "packages/sec1/tsconfig.lib.json",
+                "packageJson": "packages/sec1/package.json",
+                "main": "packages/sec1/src/index.ts",
+                "assets": ["packages/sec1/*.md", "packages/sec1/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/sec1/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/sec1"],
+            "options": {
+                "jestConfig": "packages/sec1/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

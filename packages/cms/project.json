@@ -1,0 +1,33 @@
+{
+    "name": "cms",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/cms/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/cms/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/cms"],
+            "options": {
+                "jestConfig": "packages/cms/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/cms",
+                "tsConfig": "packages/cms/tsconfig.lib.json",
+                "packageJson": "packages/cms/package.json",
+                "main": "packages/cms/src/index.ts",
+                "assets": ["packages/cms/*.md", "packages/cms/LICENSE.txt"]
+            }
+        }
+    }
+}

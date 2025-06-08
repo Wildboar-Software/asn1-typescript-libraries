@@ -1,0 +1,33 @@
+{
+    "name": "rinf",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/rinf/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/rinf/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/rinf"],
+            "options": {
+                "jestConfig": "packages/rinf/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/rinf",
+                "tsConfig": "packages/rinf/tsconfig.lib.json",
+                "packageJson": "packages/rinf/package.json",
+                "main": "packages/rinf/src/index.ts",
+                "assets": ["packages/rinf/*.md", "packages/rinf/LICENSE.txt"]
+            }
+        }
+    }
+}

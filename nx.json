@@ -1,201 +1,29 @@
 {
-    "npmScope": "asn1-typescript-libraries",
-    "affected": {
-        "defaultBase": "master"
-    },
-    "implicitDependencies": {
-        "workspace.json": "*",
-        "package.json": {
-            "dependencies": "*",
-            "devDependencies": "*"
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": []
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
         },
-        "tsconfig.base.json": "*",
-        "tslint.json": "*",
-        ".eslintrc.json": "*",
-        "nx.json": "*"
-    },
-    "tasksRunnerOptions": {
-        "default": {
-            "runner": "@nrwl/workspace/tasks-runners/default",
-            "options": {
-                "cacheableOperations": ["build", "lint", "test", "e2e"]
-            }
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
         }
-    },
-    "projects": {
-        "acbio": {
-            "tags": []
-        },
-        "acse": {
-            "tags": []
-        },
-        "ansi-x9-42": {
-            "tags": []
-        },
-        "ansi-x9-62": {
-            "tags": []
-        },
-        "asn1soap": {
-            "tags": []
-        },
-        "attribute-asn1module": {
-            "tags": []
-        },
-        "bip": {
-            "tags": []
-        },
-        "cades": {
-            "tags": []
-        },
-        "casscam": {
-            "tags": []
-        },
-        "cbeff": {
-            "tags": []
-        },
-        "ccr": {
-            "tags": []
-        },
-        "cinf": {
-            "tags": []
-        },
-        "clacse": {
-            "tags": []
-        },
-        "clearance-sponsor-attribute": {
-            "tags": []
-        },
-        "cmail": {
-            "tags": []
-        },
-        "cmip": {
-            "tags": []
-        },
-        "cmp": {
-            "tags": []
-        },
-        "cms": {
-            "tags": []
-        },
-        "copp": {
-            "tags": []
-        },
-        "crmf": {
-            "tags": []
-        },
-        "device-owner-attribute": {
-            "tags": []
-        },
-        "docs": {
-            "tags": []
-        },
-        "ec-private-key": {
-            "tags": []
-        },
-        "ers": {
-            "tags": []
-        },
-        "ess": {
-            "tags": []
-        },
-        "fast-infoset": {
-            "tags": []
-        },
-        "ftam": {
-            "tags": []
-        },
-        "gmi-attributemodule": {
-            "tags": []
-        },
-        "guls": {
-            "tags": []
-        },
-        "isis": {
-            "tags": []
-        },
-        "iso-9798-3-sasl": {
-            "tags": []
-        },
-        "kerberos5": {
-            "tags": []
-        },
-        "ldap": {
-            "tags": []
-        },
-        "m3100": {
-            "tags": []
-        },
-        "nlm": {
-            "tags": []
-        },
-        "ocsp": {
-            "tags": []
-        },
-        "pc": {
-            "tags": []
-        },
-        "pkcs": {
-            "tags": []
-        },
-        "pki-stub": {
-            "tags": []
-        },
-        "qc": {
-            "tags": []
-        },
-        "rinf": {
-            "tags": []
-        },
-        "rose": {
-            "tags": []
-        },
-        "rtse": {
-            "tags": []
-        },
-        "safecurves-pkix-18": {
-            "tags": []
-        },
-        "scrypt-0": {
-            "tags": []
-        },
-        "scvp": {
-            "tags": []
-        },
-        "sec1": {
-            "tags": []
-        },
-        "sio": {
-            "tags": []
-        },
-        "spkac": {
-            "tags": []
-        },
-        "t38": {
-            "tags": []
-        },
-        "tal": {
-            "tags": []
-        },
-        "tcap": {
-            "tags": []
-        },
-        "tsp": {
-            "tags": []
-        },
-        "usm": {
-            "tags": []
-        },
-        "x1080": {
-            "tags": []
-        },
-        "x400": {
-            "tags": []
-        },
-        "x500": {
-            "tags": []
-        },
-        "x700": {
-            "tags": []
-        }
+      }
     }
+  ]
 }

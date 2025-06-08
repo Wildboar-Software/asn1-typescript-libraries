@@ -1,0 +1,33 @@
+{
+    "name": "pc",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/pc/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/pc",
+                "tsConfig": "packages/pc/tsconfig.lib.json",
+                "packageJson": "packages/pc/package.json",
+                "main": "packages/pc/src/index.ts",
+                "assets": ["packages/pc/*.md", "packages/pc/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/pc/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/pc"],
+            "options": {
+                "jestConfig": "packages/pc/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "scvp",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/scvp/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/scvp/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/scvp"],
+            "options": {
+                "jestConfig": "packages/scvp/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/scvp",
+                "tsConfig": "packages/scvp/tsconfig.lib.json",
+                "packageJson": "packages/scvp/package.json",
+                "main": "packages/scvp/src/index.ts",
+                "assets": ["packages/scvp/*.md", "packages/scvp/LICENSE.txt"]
+            }
+        }
+    }
+}

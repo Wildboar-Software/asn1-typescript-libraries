@@ -1,0 +1,33 @@
+{
+    "name": "x400",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/x400/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/x400",
+                "tsConfig": "packages/x400/tsconfig.lib.json",
+                "packageJson": "packages/x400/package.json",
+                "main": "packages/x400/src/index.ts",
+                "assets": ["packages/x400/*.md", "packages/x400/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/x400/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/x400"],
+            "options": {
+                "jestConfig": "packages/x400/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

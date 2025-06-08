@@ -1,0 +1,36 @@
+{
+    "name": "iso-9798-3-sasl",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/iso-9798-3-sasl/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/iso-9798-3-sasl/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/iso-9798-3-sasl"],
+            "options": {
+                "jestConfig": "packages/iso-9798-3-sasl/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/iso-9798-3-sasl",
+                "tsConfig": "packages/iso-9798-3-sasl/tsconfig.lib.json",
+                "packageJson": "packages/iso-9798-3-sasl/package.json",
+                "main": "packages/iso-9798-3-sasl/src/index.ts",
+                "assets": [
+                    "packages/iso-9798-3-sasl/*.md",
+                    "packages/iso-9798-3-sasl/LICENSE.txt"
+                ]
+            }
+        }
+    }
+}

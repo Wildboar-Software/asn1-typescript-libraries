@@ -1,0 +1,36 @@
+{
+    "name": "ansi-x9-62",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/ansi-x9-62/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/ansi-x9-62/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/ansi-x9-62"],
+            "options": {
+                "jestConfig": "packages/ansi-x9-62/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/ansi-x9-62",
+                "tsConfig": "packages/ansi-x9-62/tsconfig.lib.json",
+                "packageJson": "packages/ansi-x9-62/package.json",
+                "main": "packages/ansi-x9-62/src/index.ts",
+                "assets": [
+                    "packages/ansi-x9-62/*.md",
+                    "packages/ansi-x9-62/LICENSE.txt"
+                ]
+            }
+        }
+    }
+}

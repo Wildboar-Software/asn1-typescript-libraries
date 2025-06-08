@@ -1,0 +1,33 @@
+{
+    "name": "ccr",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/ccr/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/ccr/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/ccr"],
+            "options": {
+                "jestConfig": "packages/ccr/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/ccr",
+                "tsConfig": "packages/ccr/tsconfig.lib.json",
+                "packageJson": "packages/ccr/package.json",
+                "main": "packages/ccr/src/index.ts",
+                "assets": ["packages/ccr/*.md", "packages/ccr/LICENSE.txt"]
+            }
+        }
+    }
+}

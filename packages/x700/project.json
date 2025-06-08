@@ -1,0 +1,33 @@
+{
+    "name": "x700",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/x700/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/x700",
+                "tsConfig": "packages/x700/tsconfig.lib.json",
+                "packageJson": "packages/x700/package.json",
+                "main": "packages/x700/src/index.ts",
+                "assets": ["packages/x700/*.md", "packages/x700/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/x700/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/x700"],
+            "options": {
+                "jestConfig": "packages/x700/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

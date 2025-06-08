@@ -1,0 +1,36 @@
+{
+    "name": "device-owner-attribute",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/device-owner-attribute/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/device-owner-attribute/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/device-owner-attribute"],
+            "options": {
+                "jestConfig": "packages/device-owner-attribute/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/device-owner-attribute",
+                "tsConfig": "packages/device-owner-attribute/tsconfig.lib.json",
+                "packageJson": "packages/device-owner-attribute/package.json",
+                "main": "packages/device-owner-attribute/src/index.ts",
+                "assets": [
+                    "packages/device-owner-attribute/*.md",
+                    "packages/device-owner-attribute/LICENSE.txt"
+                ]
+            }
+        }
+    }
+}

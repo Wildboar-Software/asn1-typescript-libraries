@@ -1,0 +1,36 @@
+{
+    "name": "safecurves-pkix-18",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/safecurves-pkix-18/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/safecurves-pkix-18",
+                "tsConfig": "packages/safecurves-pkix-18/tsconfig.lib.json",
+                "packageJson": "packages/safecurves-pkix-18/package.json",
+                "main": "packages/safecurves-pkix-18/src/index.ts",
+                "assets": [
+                    "packages/safecurves-pkix-18/*.md",
+                    "packages/safecurves-pkix-18/LICENSE.txt"
+                ]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/safecurves-pkix-18/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/safecurves-pkix-18"],
+            "options": {
+                "jestConfig": "packages/safecurves-pkix-18/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

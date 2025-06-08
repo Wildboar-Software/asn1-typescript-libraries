@@ -1,0 +1,33 @@
+{
+    "name": "spkac",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/spkac/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/spkac/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/spkac"],
+            "options": {
+                "jestConfig": "packages/spkac/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/spkac",
+                "tsConfig": "packages/spkac/tsconfig.lib.json",
+                "packageJson": "packages/spkac/package.json",
+                "main": "packages/spkac/src/index.ts",
+                "assets": ["packages/spkac/*.md", "packages/spkac/LICENSE.txt"]
+            }
+        }
+    }
+}

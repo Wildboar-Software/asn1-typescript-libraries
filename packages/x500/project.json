@@ -1,0 +1,33 @@
+{
+    "name": "x500",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/x500/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/x500/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/x500"],
+            "options": {
+                "jestConfig": "packages/x500/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/x500",
+                "tsConfig": "packages/x500/tsconfig.lib.json",
+                "packageJson": "packages/x500/package.json",
+                "main": "packages/x500/src/index.ts",
+                "assets": ["packages/x500/*.md", "packages/x500/LICENSE.txt"]
+            }
+        }
+    }
+}

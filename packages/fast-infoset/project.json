@@ -1,0 +1,36 @@
+{
+    "name": "fast-infoset",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/fast-infoset/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/fast-infoset/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/fast-infoset"],
+            "options": {
+                "jestConfig": "packages/fast-infoset/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/fast-infoset",
+                "tsConfig": "packages/fast-infoset/tsconfig.lib.json",
+                "packageJson": "packages/fast-infoset/package.json",
+                "main": "packages/fast-infoset/src/index.ts",
+                "assets": [
+                    "packages/fast-infoset/*.md",
+                    "packages/fast-infoset/LICENSE.txt"
+                ]
+            }
+        }
+    }
+}

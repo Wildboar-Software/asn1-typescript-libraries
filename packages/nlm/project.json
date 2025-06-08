@@ -1,0 +1,33 @@
+{
+    "name": "nlm",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/nlm/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/nlm",
+                "tsConfig": "packages/nlm/tsconfig.lib.json",
+                "packageJson": "packages/nlm/package.json",
+                "main": "packages/nlm/src/index.ts",
+                "assets": ["packages/nlm/*.md", "packages/nlm/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/nlm/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/nlm"],
+            "options": {
+                "jestConfig": "packages/nlm/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

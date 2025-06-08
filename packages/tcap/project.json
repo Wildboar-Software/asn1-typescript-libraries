@@ -1,0 +1,33 @@
+{
+    "name": "tcap",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/tcap/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/tcap/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/tcap"],
+            "options": {
+                "jestConfig": "packages/tcap/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/tcap",
+                "tsConfig": "packages/tcap/tsconfig.lib.json",
+                "packageJson": "packages/tcap/package.json",
+                "main": "packages/tcap/src/index.ts",
+                "assets": ["packages/tcap/*.md", "packages/tcap/LICENSE.txt"]
+            }
+        }
+    }
+}

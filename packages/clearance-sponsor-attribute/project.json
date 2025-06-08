@@ -1,0 +1,36 @@
+{
+    "name": "clearance-sponsor-attribute",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/clearance-sponsor-attribute/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/clearance-sponsor-attribute/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/clearance-sponsor-attribute"],
+            "options": {
+                "jestConfig": "packages/clearance-sponsor-attribute/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/clearance-sponsor-attribute",
+                "tsConfig": "packages/clearance-sponsor-attribute/tsconfig.lib.json",
+                "packageJson": "packages/clearance-sponsor-attribute/package.json",
+                "main": "packages/clearance-sponsor-attribute/src/index.ts",
+                "assets": [
+                    "packages/clearance-sponsor-attribute/*.md",
+                    "packages/clearance-sponsor-attribute/LICENSE.txt"
+                ]
+            }
+        }
+    }
+}

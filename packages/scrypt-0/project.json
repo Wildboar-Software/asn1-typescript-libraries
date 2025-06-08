@@ -1,0 +1,33 @@
+{
+    "name": "scrypt-0",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/scrypt-0/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/scrypt-0",
+                "tsConfig": "packages/scrypt-0/tsconfig.lib.json",
+                "packageJson": "packages/scrypt-0/package.json",
+                "main": "packages/scrypt-0/src/index.ts",
+                "assets": ["packages/scrypt-0/*.md", "packages/scrypt-0/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/scrypt-0/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/scrypt-0"],
+            "options": {
+                "jestConfig": "packages/scrypt-0/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

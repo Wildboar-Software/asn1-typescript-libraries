@@ -1,0 +1,33 @@
+{
+    "name": "clacse",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/clacse/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/clacse",
+                "tsConfig": "packages/clacse/tsconfig.lib.json",
+                "packageJson": "packages/clacse/package.json",
+                "main": "packages/clacse/src/index.ts",
+                "assets": ["packages/clacse/*.md", "packages/clacse/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/clacse/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/clacse"],
+            "options": {
+                "jestConfig": "packages/clacse/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

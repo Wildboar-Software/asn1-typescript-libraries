@@ -1,0 +1,33 @@
+{
+    "name": "pki-stub",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/pki-stub/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/pki-stub",
+                "tsConfig": "packages/pki-stub/tsconfig.lib.json",
+                "packageJson": "packages/pki-stub/package.json",
+                "main": "packages/pki-stub/src/index.ts",
+                "assets": ["packages/pki-stub/*.md", "packages/pki-stub/LICENSE.txt"]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/pki-stub/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/pki-stub"],
+            "options": {
+                "jestConfig": "packages/pki-stub/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}

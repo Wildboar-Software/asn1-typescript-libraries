@@ -1,0 +1,36 @@
+{
+    "name": "gmi-attributemodule",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/gmi-attributemodule/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/gmi-attributemodule",
+                "tsConfig": "packages/gmi-attributemodule/tsconfig.lib.json",
+                "packageJson": "packages/gmi-attributemodule/package.json",
+                "main": "packages/gmi-attributemodule/src/index.ts",
+                "assets": [
+                    "packages/gmi-attributemodule/*.md",
+                    "packages/gmi-attributemodule/LICENSE.txt"
+                ]
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["packages/gmi-attributemodule/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/gmi-attributemodule"],
+            "options": {
+                "jestConfig": "packages/gmi-attributemodule/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    }
+}
