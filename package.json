@@ -5,7 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "asn1-ts": "^8.0.0",
+    "asn1-ts": "9.x.x",
     "date-fns": "^2.22.1"
   },
   "devDependencies": {

@@ -31,8 +31,6 @@
     },
     "dependencies": {
         "@wildboar/x500": "^1.1.5",
-        "asn1-ts": "^8.0.0",
-        "date-fns": "^2.22.1",
         "@wildboar/pki-stub": "^1.1.8",
         "@wildboar/ldap": "^1.2.14"
     }
