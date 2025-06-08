@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/usm"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/usm/jest.config.js",
                 "passWithNoTests": true

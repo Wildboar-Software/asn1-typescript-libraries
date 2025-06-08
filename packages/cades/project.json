@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/cades"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/cades/jest.config.js",
                 "passWithNoTests": true

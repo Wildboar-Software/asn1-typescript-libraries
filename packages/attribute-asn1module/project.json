@@ -25,8 +25,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/attribute-asn1module"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/attribute-asn1module/jest.config.js",
                 "passWithNoTests": true

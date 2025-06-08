@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/pc"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/pc/jest.config.js",
                 "passWithNoTests": true

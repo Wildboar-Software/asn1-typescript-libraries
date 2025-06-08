@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/pki-stub"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/pki-stub/jest.config.js",
                 "passWithNoTests": true

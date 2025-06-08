@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/rinf"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/rinf/jest.config.js",
                 "passWithNoTests": true

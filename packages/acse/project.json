@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/acse"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/acse/jest.config.js",
                 "passWithNoTests": true

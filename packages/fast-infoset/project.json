@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/fast-infoset"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/fast-infoset/jest.config.js",
                 "passWithNoTests": true

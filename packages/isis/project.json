@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/isis"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/isis/jest.config.js",
                 "passWithNoTests": true

@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/tal"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/tal/jest.config.js",
                 "passWithNoTests": true

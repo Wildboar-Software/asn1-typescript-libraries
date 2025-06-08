@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/x400"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/x400/jest.config.js",
                 "passWithNoTests": true

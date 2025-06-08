@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/crmf"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/crmf/jest.config.js",
                 "passWithNoTests": true

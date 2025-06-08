@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/sio"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/sio/jest.config.js",
                 "passWithNoTests": true

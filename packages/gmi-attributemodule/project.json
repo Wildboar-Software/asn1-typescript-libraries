@@ -25,8 +25,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/gmi-attributemodule"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/gmi-attributemodule/jest.config.js",
                 "passWithNoTests": true

@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/clearance-sponsor-attribute"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/clearance-sponsor-attribute/jest.config.js",
                 "passWithNoTests": true

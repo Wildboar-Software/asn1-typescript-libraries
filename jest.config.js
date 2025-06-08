@@ -1,5 +1,4 @@
 module.exports = {
-  coverageReporters: ['text'],
   projects: [
     ,
     '<rootDir>/libs/x500',

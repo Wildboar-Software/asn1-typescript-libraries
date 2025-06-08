@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/casscam"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/casscam/jest.config.js",
                 "passWithNoTests": true

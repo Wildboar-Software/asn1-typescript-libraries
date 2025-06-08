@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/ansi-x9-62"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/ansi-x9-62/jest.config.js",
                 "passWithNoTests": true

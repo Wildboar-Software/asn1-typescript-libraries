@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/ldap"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/ldap/jest.config.js",
                 "passWithNoTests": true

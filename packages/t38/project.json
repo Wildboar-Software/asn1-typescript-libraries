@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/t38"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/t38/jest.config.js",
                 "passWithNoTests": true

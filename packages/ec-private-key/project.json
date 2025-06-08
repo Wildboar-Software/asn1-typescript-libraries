@@ -25,8 +25,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/ec-private-key"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/ec-private-key/jest.config.js",
                 "passWithNoTests": true

@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/kerberos5"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/kerberos5/jest.config.js",
                 "passWithNoTests": true

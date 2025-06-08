@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/clacse"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/clacse/jest.config.js",
                 "passWithNoTests": true

@@ -11,8 +11,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/tcap"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/tcap/jest.config.js",
                 "passWithNoTests": true

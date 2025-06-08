@@ -22,8 +22,8 @@
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/x1080"],
+            "executor": "@nx/jest:jest",
+
             "options": {
                 "jestConfig": "packages/x1080/jest.config.js",
                 "passWithNoTests": true
