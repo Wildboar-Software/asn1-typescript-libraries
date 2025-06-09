@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta";
+} from "../DirectoryShadowAbstractService/AgreementID.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta";
+} from "../DirectoryShadowAbstractService/AgreementID.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ServiceControls_manageDSAITPlaneRef */
 /**

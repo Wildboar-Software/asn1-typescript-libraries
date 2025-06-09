@@ -4,49 +4,49 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
+import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 import {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 import {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
+export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 export {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 export {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeProAbort */
 /**

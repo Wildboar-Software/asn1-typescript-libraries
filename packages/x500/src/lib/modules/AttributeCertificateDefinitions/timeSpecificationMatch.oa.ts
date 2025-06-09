@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { id_mr_timeSpecMatch } from "../AttributeCertificateDefinitions/id-mr-timeSpecMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+import { id_mr_timeSpecMatch } from "../AttributeCertificateDefinitions/id-mr-timeSpecMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
-export { id_mr_timeSpecMatch } from "../AttributeCertificateDefinitions/id-mr-timeSpecMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
+export { id_mr_timeSpecMatch } from "../AttributeCertificateDefinitions/id-mr-timeSpecMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION timeSpecificationMatch */
 /**

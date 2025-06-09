@@ -1,36 +1,36 @@
 /* eslint-disable */
-import { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     AbandonArgument,
     _decode_AbandonArgument,
     _encode_AbandonArgument,
-} from "../DirectoryAbstractService/AbandonArgument.ta";
-import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa";
+} from "../DirectoryAbstractService/AbandonArgument.ta.js";
+import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.js";
 import {
     AbandonResult,
     _decode_AbandonResult,
     _encode_AbandonResult,
-} from "../DirectoryAbstractService/AbandonResult.ta";
+} from "../DirectoryAbstractService/AbandonResult.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     AbandonArgument,
     _decode_AbandonArgument,
     _encode_AbandonArgument,
-} from "../DirectoryAbstractService/AbandonArgument.ta";
-export { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa";
+} from "../DirectoryAbstractService/AbandonArgument.ta.js";
+export { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.js";
 export {
     AbandonResult,
     _decode_AbandonResult,
     _encode_AbandonResult,
-} from "../DirectoryAbstractService/AbandonResult.ta";
+} from "../DirectoryAbstractService/AbandonResult.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION abandon */
 /**

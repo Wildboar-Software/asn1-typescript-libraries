@@ -6,27 +6,27 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION REP_IT_TOKEN */
 /**

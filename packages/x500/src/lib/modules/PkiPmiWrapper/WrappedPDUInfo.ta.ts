@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION WrappedPDUInfo */
 /**

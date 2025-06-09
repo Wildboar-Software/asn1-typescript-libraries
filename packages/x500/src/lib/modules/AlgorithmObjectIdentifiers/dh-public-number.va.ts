@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-export { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va";
+import { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va.js";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION dh_public_number */
 /**

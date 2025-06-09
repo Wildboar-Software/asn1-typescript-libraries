@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertReplaceOK_Item_not_ok,
     _decode_CertReplaceOK_Item_not_ok,
     _encode_CertReplaceOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-not-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-not-ok.ta.js";
 import {
     CertReplaceOK_Item_ok,
     _decode_CertReplaceOK_Item_ok,
     _encode_CertReplaceOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta.js";
 export {
     CertReplaceOK_Item_not_ok,
     _decode_CertReplaceOK_Item_not_ok,
     _encode_CertReplaceOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-not-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-not-ok.ta.js";
 export {
     CertReplaceOK_Item_ok,
     _decode_CertReplaceOK_Item_ok,
     _encode_CertReplaceOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceOK_Item */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 export {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DitBridgeKnowledge */
 /**

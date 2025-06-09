@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va.js";
 import {
     ToBeRevokedSyntax,
     _decode_ToBeRevokedSyntax,
     _encode_ToBeRevokedSyntax,
-} from "../CertificateExtensions/ToBeRevokedSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va";
+} from "../CertificateExtensions/ToBeRevokedSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va.js";
 export {
     ToBeRevokedSyntax,
     _decode_ToBeRevokedSyntax,
     _encode_ToBeRevokedSyntax,
-} from "../CertificateExtensions/ToBeRevokedSyntax.ta";
+} from "../CertificateExtensions/ToBeRevokedSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION toBeRevoked */
 /**

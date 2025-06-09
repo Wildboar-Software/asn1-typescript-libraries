@@ -1,2 +1,2 @@
-export { contentType } from "../../modules/PkiPmiWrapper/contentType.oa";
-export { messageDigest } from "../../modules/PkiPmiWrapper/messageDigest.oa";
+export { contentType } from "../../modules/PkiPmiWrapper/contentType.oa.js";
+export { messageDigest } from "../../modules/PkiPmiWrapper/messageDigest.oa.js";

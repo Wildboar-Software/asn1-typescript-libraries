@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.js";
 import {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.js";
 export {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION postalAddr */
 /**

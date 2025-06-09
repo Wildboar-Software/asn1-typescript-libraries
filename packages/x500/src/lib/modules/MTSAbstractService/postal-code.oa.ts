@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PostalCode,
     _decode_PostalCode,
     _encode_PostalCode,
-} from "../MTSAbstractService/PostalCode.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/PostalCode.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PostalCode,
     _decode_PostalCode,
     _encode_PostalCode,
-} from "../MTSAbstractService/PostalCode.ta";
+} from "../MTSAbstractService/PostalCode.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION postal_code */
 /**

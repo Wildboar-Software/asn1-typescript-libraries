@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RevokedGroup,
     _decode_RevokedGroup,
     _encode_RevokedGroup,
-} from "../CertificateExtensions/RevokedGroup.ta";
+} from "../CertificateExtensions/RevokedGroup.ta.js";
 export {
     RevokedGroup,
     _decode_RevokedGroup,
     _encode_RevokedGroup,
-} from "../CertificateExtensions/RevokedGroup.ta";
+} from "../CertificateExtensions/RevokedGroup.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RevokedGroupsSyntax */
 /**

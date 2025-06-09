@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UiiFilter,
     _decode_UiiFilter,
     _encode_UiiFilter,
-} from "../SelectedAttributeTypes/UiiFilter.ta";
+} from "../SelectedAttributeTypes/UiiFilter.ta.js";
 export {
     UiiFilter,
     _decode_UiiFilter,
     _encode_UiiFilter,
-} from "../SelectedAttributeTypes/UiiFilter.ta";
+} from "../SelectedAttributeTypes/UiiFilter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UiiFormat_next */
 /**

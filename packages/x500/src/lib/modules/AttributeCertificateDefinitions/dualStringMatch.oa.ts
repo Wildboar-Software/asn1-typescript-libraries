@@ -3,18 +3,18 @@ import {
     DualStringSyntax,
     _decode_DualStringSyntax,
     _encode_DualStringSyntax,
-} from "../AttributeCertificateDefinitions/DualStringSyntax.ta";
-import { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/DualStringSyntax.ta.js";
+import { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     DualStringSyntax,
     _decode_DualStringSyntax,
     _encode_DualStringSyntax,
-} from "../AttributeCertificateDefinitions/DualStringSyntax.ta";
-export { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/DualStringSyntax.ta.js";
+export { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dualStringMatch */
 /**

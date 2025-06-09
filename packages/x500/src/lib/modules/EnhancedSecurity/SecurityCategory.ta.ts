@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca";
-export { SecurityCategoriesTable } from "../EnhancedSecurity/SecurityCategoriesTable.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.js";
+export { SecurityCategoriesTable } from "../EnhancedSecurity/SecurityCategoriesTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityCategory */
 /**

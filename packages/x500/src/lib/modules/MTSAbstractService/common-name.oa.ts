@@ -3,14 +3,14 @@ import {
     CommonName,
     _decode_CommonName,
     _encode_CommonName,
-} from "../MTSAbstractService/CommonName.ta";
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/CommonName.ta.js";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     CommonName,
     _decode_CommonName,
     _encode_CommonName,
-} from "../MTSAbstractService/CommonName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/CommonName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION common_name */
 /**

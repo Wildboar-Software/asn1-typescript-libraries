@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { id_mr_delegatedNameConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-delegatedNameConstraintsMatch.va";
+import { id_mr_delegatedNameConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-delegatedNameConstraintsMatch.va.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { id_mr_delegatedNameConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-delegatedNameConstraintsMatch.va";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { id_mr_delegatedNameConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-delegatedNameConstraintsMatch.va.js";
 export {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION delegatedNameConstraintsMatch */
 /**

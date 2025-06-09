@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalDomainDefinedAttributes,
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
-} from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalDomainDefinedAttributes,
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
-} from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta";
+} from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_domain_defined_attributes */
 /**

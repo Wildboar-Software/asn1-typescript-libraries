@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SimpleCredentials_password,
     _decode_SimpleCredentials_password,
     _encode_SimpleCredentials_password,
-} from "../DirectoryAbstractService/SimpleCredentials-password.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-password.ta.js";
 import {
     SimpleCredentials_validity,
     _decode_SimpleCredentials_validity,
     _encode_SimpleCredentials_validity,
-} from "../DirectoryAbstractService/SimpleCredentials-validity.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     SimpleCredentials_password,
     _decode_SimpleCredentials_password,
     _encode_SimpleCredentials_password,
-} from "../DirectoryAbstractService/SimpleCredentials-password.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-password.ta.js";
 export {
     SimpleCredentials_validity,
     _decode_SimpleCredentials_validity,
     _encode_SimpleCredentials_validity,
-} from "../DirectoryAbstractService/SimpleCredentials-validity.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials */
 /**

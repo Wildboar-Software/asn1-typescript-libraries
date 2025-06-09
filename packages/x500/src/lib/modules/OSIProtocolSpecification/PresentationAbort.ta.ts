@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ARP_PPDU,
     _decode_ARP_PPDU,
     _encode_ARP_PPDU,
-} from "../OSIProtocolSpecification/ARP-PPDU.ta";
+} from "../OSIProtocolSpecification/ARP-PPDU.ta.js";
 import {
     ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
-} from "../OSIProtocolSpecification/ARU-PPDU.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU.ta.js";
 export {
     ARP_PPDU,
     _decode_ARP_PPDU,
     _encode_ARP_PPDU,
-} from "../OSIProtocolSpecification/ARP-PPDU.ta";
+} from "../OSIProtocolSpecification/ARP-PPDU.ta.js";
 export {
     ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
-} from "../OSIProtocolSpecification/ARU-PPDU.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PresentationAbort */
 /**

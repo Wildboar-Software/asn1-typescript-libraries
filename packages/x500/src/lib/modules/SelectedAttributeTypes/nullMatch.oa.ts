@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_nullMatch } from "../SelectedAttributeTypes/id-mr-nullMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_nullMatch } from "../SelectedAttributeTypes/id-mr-nullMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_nullMatch } from "../SelectedAttributeTypes/id-mr-nullMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_nullMatch } from "../SelectedAttributeTypes/id-mr-nullMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION nullMatch */
 /**

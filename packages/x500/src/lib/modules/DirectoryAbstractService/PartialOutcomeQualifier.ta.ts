@@ -6,37 +6,37 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 import {
     LimitProblem,
     _decode_LimitProblem,
     _encode_LimitProblem,
-} from "../DirectoryAbstractService/LimitProblem.ta";
+} from "../DirectoryAbstractService/LimitProblem.ta.js";
 import {
     PartialOutcomeQualifier_entryCount,
     _decode_PartialOutcomeQualifier_entryCount,
     _encode_PartialOutcomeQualifier_entryCount,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier-entryCount.ta";
+} from "../DirectoryAbstractService/PartialOutcomeQualifier-entryCount.ta.js";
 import {
     ContinuationReference,
     _decode_ContinuationReference,
     _encode_ContinuationReference,
-} from "../DistributedOperations/ContinuationReference.ta";
+} from "../DistributedOperations/ContinuationReference.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 export {
     administrativeLimitExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     LimitProblem,
@@ -47,22 +47,22 @@ export {
     timeLimitExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_LimitProblem,
     _encode_LimitProblem,
-} from "../DirectoryAbstractService/LimitProblem.ta";
+} from "../DirectoryAbstractService/LimitProblem.ta.js";
 export {
     PartialOutcomeQualifier_entryCount,
     _decode_PartialOutcomeQualifier_entryCount,
     _encode_PartialOutcomeQualifier_entryCount,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier-entryCount.ta";
+} from "../DirectoryAbstractService/PartialOutcomeQualifier-entryCount.ta.js";
 export {
     ContinuationReference,
     _decode_ContinuationReference,
     _encode_ContinuationReference,
-} from "../DistributedOperations/ContinuationReference.ta";
+} from "../DistributedOperations/ContinuationReference.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PartialOutcomeQualifier */
 /**

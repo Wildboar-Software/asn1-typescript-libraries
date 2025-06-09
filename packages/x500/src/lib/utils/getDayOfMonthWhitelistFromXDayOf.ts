@@ -1,6 +1,6 @@
 import { getDay, subDays, getDaysInMonth, lastDayOfMonth } from "date-fns";
-import type { XDayOf } from "../modules/SelectedAttributeTypes/XDayOf.ta";
-import type { NamedDay } from "../modules/SelectedAttributeTypes/NamedDay.ta";
+import type { XDayOf } from "../modules/SelectedAttributeTypes/XDayOf.ta.js";
+import type { NamedDay } from "../modules/SelectedAttributeTypes/NamedDay.ta.js";
 import { TRUE_BIT } from "asn1-ts";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_not } from "../UsefulDefinitions/id-not.va";
-export { id_not } from "../UsefulDefinitions/id-not.va";
+import { id_not } from "../UsefulDefinitions/id-not.va.js";
+export { id_not } from "../UsefulDefinitions/id-not.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_not_hierarchySelectList */
 /**

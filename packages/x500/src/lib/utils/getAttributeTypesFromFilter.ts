@@ -1,6 +1,6 @@
-import type { Filter } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Filter.ta";
-import type { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta";
-import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem";
+import type { Filter } from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/Filter.ta.js";
+import type { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.js";
+import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.js";
 
 export
 function getAttributeTypesFromFilter (filter: Filter): AttributeType[] {

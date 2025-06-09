@@ -1,25 +1,25 @@
 /* eslint-disable */
-import { id_at_attributeAuthorityRevocationList } from "../AttributeCertificateDefinitions/id-at-attributeAuthorityRevocationList.va";
+import { id_at_attributeAuthorityRevocationList } from "../AttributeCertificateDefinitions/id-at-attributeAuthorityRevocationList.va.js";
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
-import { x509CertificateList } from "../AuthenticationFramework/x509CertificateList.oa";
-import { certificateListExactMatch } from "../CertificateExtensions/certificateListExactMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/CertificateList.ta.js";
+import { x509CertificateList } from "../AuthenticationFramework/x509CertificateList.oa.js";
+import { certificateListExactMatch } from "../CertificateExtensions/certificateListExactMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_at_attributeAuthorityRevocationList } from "../AttributeCertificateDefinitions/id-at-attributeAuthorityRevocationList.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_at_attributeAuthorityRevocationList } from "../AttributeCertificateDefinitions/id-at-attributeAuthorityRevocationList.va.js";
 export {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
-export { x509CertificateList } from "../AuthenticationFramework/x509CertificateList.oa";
-export { certificateListExactMatch } from "../CertificateExtensions/certificateListExactMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/CertificateList.ta.js";
+export { x509CertificateList } from "../AuthenticationFramework/x509CertificateList.oa.js";
+export { certificateListExactMatch } from "../CertificateExtensions/certificateListExactMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -33,9 +33,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeAuthorityRevocationList */
 /**

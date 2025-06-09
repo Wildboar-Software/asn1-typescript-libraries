@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { operationalBinding } from "../UsefulDefinitions/operationalBinding.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { operationalBinding } from "../UsefulDefinitions/operationalBinding.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { operationalBinding } from "../UsefulDefinitions/operationalBinding.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { operationalBinding } from "../UsefulDefinitions/operationalBinding.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ob */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ChainingArguments,
     _decode_ChainingArguments,
     _encode_ChainingArguments,
-} from "../DistributedOperations/ChainingArguments.ta";
+} from "../DistributedOperations/ChainingArguments.ta.js";
 export {
     ChainingArguments,
     _decode_ChainingArguments,
     _encode_ChainingArguments,
-} from "../DistributedOperations/ChainingArguments.ta";
+} from "../DistributedOperations/ChainingArguments.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 */
 /**

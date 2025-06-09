@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     FacsimileTelephoneNumber,
     _decode_FacsimileTelephoneNumber,
     _encode_FacsimileTelephoneNumber,
-} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta";
-import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.js";
+import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     FacsimileTelephoneNumber,
     _decode_FacsimileTelephoneNumber,
     _encode_FacsimileTelephoneNumber,
-} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta";
-export { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va";
+} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.js";
+export { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.js";
 
 /* START_OF_SYMBOL_DEFINITION facsimileTelephoneNr */
 /**

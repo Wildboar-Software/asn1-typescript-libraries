@@ -1,6 +1,6 @@
 import type {
     Period,
-} from "../modules/SelectedAttributeTypes/Period.ta";
+} from "../modules/SelectedAttributeTypes/Period.ta.js";
 import {
     getDay,
     getDayOfYear,

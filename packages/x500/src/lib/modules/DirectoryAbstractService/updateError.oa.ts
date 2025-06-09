@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_errcode_updateError } from "../CommonProtocolSpecification/id-errcode-updateError.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_errcode_updateError } from "../CommonProtocolSpecification/id-errcode-updateError.va.js";
 import {
     UpdateErrorData,
     _decode_UpdateErrorData,
     _encode_UpdateErrorData,
-} from "../DirectoryAbstractService/UpdateErrorData.ta";
+} from "../DirectoryAbstractService/UpdateErrorData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_errcode_updateError } from "../CommonProtocolSpecification/id-errcode-updateError.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_errcode_updateError } from "../CommonProtocolSpecification/id-errcode-updateError.va.js";
 export {
     UpdateErrorData,
     _decode_UpdateErrorData,
     _encode_UpdateErrorData,
-} from "../DirectoryAbstractService/UpdateErrorData.ta";
+} from "../DirectoryAbstractService/UpdateErrorData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION updateError */
 /**

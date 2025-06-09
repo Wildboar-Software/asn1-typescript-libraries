@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { dsaOperationalAttribute } from "../UsefulDefinitions/dsaOperationalAttribute.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { dsaOperationalAttribute } from "../UsefulDefinitions/dsaOperationalAttribute.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { dsaOperationalAttribute } from "../UsefulDefinitions/dsaOperationalAttribute.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { dsaOperationalAttribute } from "../UsefulDefinitions/dsaOperationalAttribute.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_doa */
 /**

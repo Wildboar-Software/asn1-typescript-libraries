@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, GeneralizedTime, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TimeAssertion_between,
     _decode_TimeAssertion_between,
     _encode_TimeAssertion_between,
-} from "../SelectedAttributeTypes/TimeAssertion-between.ta";
+} from "../SelectedAttributeTypes/TimeAssertion-between.ta.js";
 export {
     TimeAssertion_between,
     _decode_TimeAssertion_between,
     _encode_TimeAssertion_between,
-} from "../SelectedAttributeTypes/TimeAssertion-between.ta";
+} from "../SelectedAttributeTypes/TimeAssertion-between.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeAssertion */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityCategory,
     _decode_SecurityCategory,
     _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta";
+} from "../EnhancedSecurity/SecurityCategory.ta.js";
 export {
     SecurityCategory,
     _decode_SecurityCategory,
     _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta";
+} from "../EnhancedSecurity/SecurityCategory.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityCategories */
 /**

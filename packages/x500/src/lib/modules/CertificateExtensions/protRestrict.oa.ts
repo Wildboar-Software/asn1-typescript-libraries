@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va.js";
 import {
     ProtRestriction,
     _decode_ProtRestriction,
     _encode_ProtRestriction,
-} from "../CertificateExtensions/ProtRestriction.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va";
+} from "../CertificateExtensions/ProtRestriction.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va.js";
 export {
     ProtRestriction,
     _decode_ProtRestriction,
     _encode_ProtRestriction,
-} from "../CertificateExtensions/ProtRestriction.ta";
+} from "../CertificateExtensions/ProtRestriction.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION protRestrict */
 /**

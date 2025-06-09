@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
-export { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
+export { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION timeSpecification */
 /**

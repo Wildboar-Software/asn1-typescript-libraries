@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION groupAC */
 /**

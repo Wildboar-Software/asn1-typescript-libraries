@@ -6,18 +6,18 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "../SelectedAttributeTypes/DirectoryString.ta";
-export { ub_saslMechanism } from "../DirectoryAbstractService/ub-saslMechanism.va";
+} from "../SelectedAttributeTypes/DirectoryString.ta.js";
+export { ub_saslMechanism } from "../DirectoryAbstractService/ub-saslMechanism.va.js";
 export {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "../SelectedAttributeTypes/DirectoryString.ta";
+} from "../SelectedAttributeTypes/DirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SaslCredentials */
 /**

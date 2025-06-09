@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va.js";
 import {
     StatusReferrals,
     _decode_StatusReferrals,
     _encode_StatusReferrals,
-} from "../CertificateExtensions/StatusReferrals.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va";
+} from "../CertificateExtensions/StatusReferrals.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va.js";
 export {
     StatusReferrals,
     _decode_StatusReferrals,
     _encode_StatusReferrals,
-} from "../CertificateExtensions/StatusReferrals.ta";
+} from "../CertificateExtensions/StatusReferrals.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION statusReferrals */
 /**

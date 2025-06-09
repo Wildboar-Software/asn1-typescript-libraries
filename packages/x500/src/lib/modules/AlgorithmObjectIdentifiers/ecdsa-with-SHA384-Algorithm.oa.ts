@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ecdsa_with_SHA384 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA384.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { ecdsa_with_SHA384 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA384.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import { ecdsa_with_SHA384 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA384.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { ecdsa_with_SHA384 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA384.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA384_Algorithm */
 /**

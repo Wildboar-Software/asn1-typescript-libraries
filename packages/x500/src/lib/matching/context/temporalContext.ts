@@ -1,18 +1,18 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element } from "asn1-ts";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
-} from "../../modules/SelectedAttributeTypes/TimeSpecification.ta";
+} from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.js";
 import {
     TimeAssertion,
     _decode_TimeAssertion,
-} from "../../modules/SelectedAttributeTypes/TimeAssertion.ta";
+} from "../../modules/SelectedAttributeTypes/TimeAssertion.ta.js";
 import type {
     Period,
-} from "../../modules/SelectedAttributeTypes/Period.ta";
+} from "../../modules/SelectedAttributeTypes/Period.ta.js";
 import { addHours } from "date-fns";
-import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence";
+import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.js";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 

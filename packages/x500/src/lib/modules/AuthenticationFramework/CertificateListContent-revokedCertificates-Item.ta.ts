@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../AuthenticationFramework/Extensions.ta";
+} from "../AuthenticationFramework/Extensions.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 export {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../AuthenticationFramework/Extensions.ta";
+} from "../AuthenticationFramework/Extensions.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateListContent_revokedCertificates_Item */
 /**

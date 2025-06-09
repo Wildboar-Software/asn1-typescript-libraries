@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ItemPermission,
     _decode_ItemPermission,
     _encode_ItemPermission,
-} from "../BasicAccessControl/ItemPermission.ta";
+} from "../BasicAccessControl/ItemPermission.ta.js";
 import {
     ProtectedItems,
     _decode_ProtectedItems,
     _encode_ProtectedItems,
-} from "../BasicAccessControl/ProtectedItems.ta";
+} from "../BasicAccessControl/ProtectedItems.ta.js";
 export {
     ItemPermission,
     _decode_ItemPermission,
     _encode_ItemPermission,
-} from "../BasicAccessControl/ItemPermission.ta";
+} from "../BasicAccessControl/ItemPermission.ta.js";
 export {
     ProtectedItems,
     _decode_ProtectedItems,
     _encode_ProtectedItems,
-} from "../BasicAccessControl/ProtectedItems.ta";
+} from "../BasicAccessControl/ProtectedItems.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst_itemFirst */
 /**

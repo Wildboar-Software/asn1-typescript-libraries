@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     NamedDay,
     _decode_NamedDay,
     _encode_NamedDay,
-} from "../SelectedAttributeTypes/NamedDay.ta";
+} from "../SelectedAttributeTypes/NamedDay.ta.js";
 export {
     NamedDay,
     _decode_NamedDay,
     _encode_NamedDay,
-} from "../SelectedAttributeTypes/NamedDay.ta";
+} from "../SelectedAttributeTypes/NamedDay.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION XDayOf */
 /**

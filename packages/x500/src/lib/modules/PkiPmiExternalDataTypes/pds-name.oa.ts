@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PDSName,
     _decode_PDSName,
     _encode_PDSName,
-} from "../PkiPmiExternalDataTypes/PDSName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/PDSName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PDSName,
     _decode_PDSName,
     _encode_PDSName,
-} from "../PkiPmiExternalDataTypes/PDSName.ta";
+} from "../PkiPmiExternalDataTypes/PDSName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pds_name */
 /**

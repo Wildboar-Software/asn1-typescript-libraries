@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PolicyInformation,
     _decode_PolicyInformation,
     _encode_PolicyInformation,
-} from "../CertificateExtensions/PolicyInformation.ta";
+} from "../CertificateExtensions/PolicyInformation.ta.js";
 export {
     PolicyInformation,
     _decode_PolicyInformation,
     _encode_PolicyInformation,
-} from "../CertificateExtensions/PolicyInformation.ta";
+} from "../CertificateExtensions/PolicyInformation.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificatePoliciesSyntax */
 /**

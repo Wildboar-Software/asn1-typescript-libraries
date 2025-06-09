@@ -4,37 +4,37 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../PkiPmiWrapper/UserKeyingMaterial.ta";
+} from "../PkiPmiWrapper/UserKeyingMaterial.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../PkiPmiWrapper/UserKeyingMaterial.ta";
+} from "../PkiPmiWrapper/UserKeyingMaterial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SenderStaticInfo */
 /**

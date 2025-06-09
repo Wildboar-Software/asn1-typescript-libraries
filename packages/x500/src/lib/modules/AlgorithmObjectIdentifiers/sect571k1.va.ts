@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-export { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va";
+import { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va.js";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION sect571k1 */
 /**

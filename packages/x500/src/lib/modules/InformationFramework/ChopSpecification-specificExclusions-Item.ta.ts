@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     LocalName,
     _decode_LocalName,
     _encode_LocalName,
-} from "../InformationFramework/LocalName.ta";
+} from "../InformationFramework/LocalName.ta.js";
 export {
     LocalName,
     _decode_LocalName,
     _encode_LocalName,
-} from "../InformationFramework/LocalName.ta";
+} from "../InformationFramework/LocalName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ChopSpecification_specificExclusions_Item */
 /**

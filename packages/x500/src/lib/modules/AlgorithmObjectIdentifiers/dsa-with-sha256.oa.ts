@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_dsa_with_sha256 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha256.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dsa_with_sha256 */
 /**

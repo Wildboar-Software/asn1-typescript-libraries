@@ -1,23 +1,23 @@
 /* eslint-disable */
-import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa";
-import { cACertificate } from "../AuthenticationFramework/cACertificate.oa";
-import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa";
-import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa";
-import { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa";
-import { id_oc_pkiCA } from "../AuthenticationFramework/id-oc-pkiCA.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.js";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.js";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.js";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.js";
+import { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa.js";
+import { id_oc_pkiCA } from "../AuthenticationFramework/id-oc-pkiCA.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-export { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa";
-export { cACertificate } from "../AuthenticationFramework/cACertificate.oa";
-export { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa";
-export { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa";
-export { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa";
-export { id_oc_pkiCA } from "../AuthenticationFramework/id-oc-pkiCA.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+export { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.js";
+export { cACertificate } from "../AuthenticationFramework/cACertificate.oa.js";
+export { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.js";
+export { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.js";
+export { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa.js";
+export { id_oc_pkiCA } from "../AuthenticationFramework/id-oc-pkiCA.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -29,8 +29,8 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pkiCA */
 /**

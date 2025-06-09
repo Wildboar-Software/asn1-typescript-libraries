@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { addEntry } from "../DirectoryAbstractService/addEntry.oa";
-import { chained } from "../DistributedOperations/chained.oa";
-import type { ChainedOperation } from "./chained.oa";
+import { addEntry } from "../DirectoryAbstractService/addEntry.oa.js";
+import { chained } from "../DistributedOperations/chained.oa.js";
+import type { ChainedOperation } from "./chained.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION chainedAddEntry */
 /**

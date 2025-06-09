@@ -25,4 +25,4 @@ export {
     CRLReason_aACompromise,
     CRLReason_weakAlgorithmOrKey,
     _enum_for_CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.js";

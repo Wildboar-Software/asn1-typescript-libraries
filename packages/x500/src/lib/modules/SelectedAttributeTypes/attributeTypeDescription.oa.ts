@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
-import { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
+import { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
-export { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
+export { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeTypeDescription */
 /**

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta";
-export { ub_pds_parameter_length } from "../MTSAbstractService/ub-pds-parameter-length.va";
+} from "../MTSAbstractService/UniversalOrBMPString.ta.js";
+export { ub_pds_parameter_length } from "../MTSAbstractService/ub-pds-parameter-length.va.js";
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta";
+} from "../MTSAbstractService/UniversalOrBMPString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 /**

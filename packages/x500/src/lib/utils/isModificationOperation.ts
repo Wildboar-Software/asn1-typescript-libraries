@@ -1,11 +1,11 @@
-import type { Code } from "../modules/CommonProtocolSpecification/Code.ta";
-import { id_opcode_administerPassword } from "../modules/CommonProtocolSpecification/id-opcode-administerPassword.va";
-import { id_opcode_addEntry } from "../modules/CommonProtocolSpecification/id-opcode-addEntry.va";
-import { id_opcode_changePassword } from "../modules/CommonProtocolSpecification/id-opcode-changePassword.va";
-import { id_opcode_modifyDN } from "../modules/CommonProtocolSpecification/id-opcode-modifyDN.va";
-import { id_opcode_modifyEntry } from "../modules/CommonProtocolSpecification/id-opcode-modifyEntry.va";
-import { id_opcode_removeEntry } from "../modules/CommonProtocolSpecification/id-opcode-removeEntry.va";
-import compareCode from "../utils/compareCode";
+import type { Code } from "../modules/CommonProtocolSpecification/Code.ta.js";
+import { id_opcode_administerPassword } from "../modules/CommonProtocolSpecification/id-opcode-administerPassword.va.js";
+import { id_opcode_addEntry } from "../modules/CommonProtocolSpecification/id-opcode-addEntry.va.js";
+import { id_opcode_changePassword } from "../modules/CommonProtocolSpecification/id-opcode-changePassword.va.js";
+import { id_opcode_modifyDN } from "../modules/CommonProtocolSpecification/id-opcode-modifyDN.va.js";
+import { id_opcode_modifyEntry } from "../modules/CommonProtocolSpecification/id-opcode-modifyEntry.va.js";
+import { id_opcode_removeEntry } from "../modules/CommonProtocolSpecification/id-opcode-removeEntry.va.js";
+import compareCode from "../utils/compareCode.js";
 
 export
 function isModificationOperation (operationType: Code): boolean {

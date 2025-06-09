@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalPDSParameter,
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
-} from "../MTSAbstractService/UniversalPDSParameter.ta";
+} from "../MTSAbstractService/UniversalPDSParameter.ta.js";
 export {
     UniversalPDSParameter,
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
-} from "../MTSAbstractService/UniversalPDSParameter.ta";
+} from "../MTSAbstractService/UniversalPDSParameter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalPosteRestanteAddress */
 /**

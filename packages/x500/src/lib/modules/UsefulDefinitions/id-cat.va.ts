@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { controlAttributeType } from "../UsefulDefinitions/controlAttributeType.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { controlAttributeType } from "../UsefulDefinitions/controlAttributeType.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { controlAttributeType } from "../UsefulDefinitions/controlAttributeType.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { controlAttributeType } from "../UsefulDefinitions/controlAttributeType.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_cat */
 /**

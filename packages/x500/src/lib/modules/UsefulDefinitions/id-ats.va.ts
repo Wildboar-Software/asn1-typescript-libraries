@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ats */
 /**

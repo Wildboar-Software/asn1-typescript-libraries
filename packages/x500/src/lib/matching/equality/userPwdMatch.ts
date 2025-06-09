@@ -1,8 +1,8 @@
-import type { EqualityMatcher } from "../../types/EqualityMatcher";
+import type { EqualityMatcher } from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
-import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta";
-import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier";
+import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.js";
+import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.js";
 
 // userPwdMatch MATCHING-RULE ::= {
 //     SYNTAX       UserPwd

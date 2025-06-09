@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va.js";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va.js";
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION presentationAddr */
 /**

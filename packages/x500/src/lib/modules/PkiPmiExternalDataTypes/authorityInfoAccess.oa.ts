@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,
     _encode_AuthorityInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta";
-import { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.js";
+import { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,
     _encode_AuthorityInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta";
-export { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va";
+} from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.js";
+export { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va.js";
 
 /* START_OF_SYMBOL_DEFINITION authorityInfoAccess */
 /**

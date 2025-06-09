@@ -6,53 +6,53 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     OpBindingErrorParam_problem,
     _decode_OpBindingErrorParam_problem,
     _encode_OpBindingErrorParam_problem,
     _enum_for_OpBindingErrorParam_problem,
-} from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta";
+} from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../OperationalBindingManagement/Time.ta";
+} from "../OperationalBindingManagement/Time.ta.js";
 export {
     CommonResultsSeq,
     _decode_CommonResultsSeq,
     _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta";
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     currentlyNotDecidable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     duplicateID /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -84,14 +84,14 @@ export {
     _decode_OpBindingErrorParam_problem,
     _encode_OpBindingErrorParam_problem,
     _enum_for_OpBindingErrorParam_problem,
-} from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta.js";
+export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.js";
+export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../OperationalBindingManagement/Time.ta";
+} from "../OperationalBindingManagement/Time.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OpBindingErrorParam */
 /**

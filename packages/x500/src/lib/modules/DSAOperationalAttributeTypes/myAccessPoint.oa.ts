@@ -3,21 +3,21 @@ import {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
-import { accessPointMatch } from "../DSAOperationalAttributeTypes/accessPointMatch.oa";
-import { id_doa_myAccessPoint } from "../DSAOperationalAttributeTypes/id-doa-myAccessPoint.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/AccessPoint.ta.js";
+import { accessPointMatch } from "../DSAOperationalAttributeTypes/accessPointMatch.oa.js";
+import { id_doa_myAccessPoint } from "../DSAOperationalAttributeTypes/id-doa-myAccessPoint.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
-export { accessPointMatch } from "../DSAOperationalAttributeTypes/accessPointMatch.oa";
-export { id_doa_myAccessPoint } from "../DSAOperationalAttributeTypes/id-doa-myAccessPoint.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/AccessPoint.ta.js";
+export { accessPointMatch } from "../DSAOperationalAttributeTypes/accessPointMatch.oa.js";
+export { id_doa_myAccessPoint } from "../DSAOperationalAttributeTypes/id-doa-myAccessPoint.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION myAccessPoint */
 /**

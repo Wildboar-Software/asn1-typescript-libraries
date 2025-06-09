@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va";
-import { person } from "../SelectedObjectClasses/person.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va";
-export { person } from "../SelectedObjectClasses/person.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va.js";
+import { person } from "../SelectedObjectClasses/person.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va.js";
+export { person } from "../SelectedObjectClasses/person.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION personNameForm */
 /**

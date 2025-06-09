@@ -5,18 +5,18 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ExtensionAttribute_value_Item,
     _decode_ExtensionAttribute_value_Item,
     _encode_ExtensionAttribute_value_Item,
-} from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta";
+} from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta.js";
 export {
     ExtensionAttribute_value_Item,
     _decode_ExtensionAttribute_value_Item,
     _encode_ExtensionAttribute_value_Item,
-} from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtensionAttribute */
 /**

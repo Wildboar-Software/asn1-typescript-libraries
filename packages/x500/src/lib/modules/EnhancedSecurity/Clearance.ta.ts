@@ -6,18 +6,18 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ClassList,
     ClassList_unclassified /* IMPORTED_LONG_NAMED_BIT */,
     _decode_ClassList,
     _encode_ClassList,
-} from "../EnhancedSecurity/ClassList.ta";
+} from "../EnhancedSecurity/ClassList.ta.js";
 import {
     SecurityCategory,
     _decode_SecurityCategory,
     _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta";
+} from "../EnhancedSecurity/SecurityCategory.ta.js";
 export {
     ClassList,
     ClassList_confidential /* IMPORTED_LONG_NAMED_BIT */,
@@ -34,12 +34,12 @@ export {
     unmarked /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ClassList,
     _encode_ClassList,
-} from "../EnhancedSecurity/ClassList.ta";
+} from "../EnhancedSecurity/ClassList.ta.js";
 export {
     SecurityCategory,
     _decode_SecurityCategory,
     _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta";
+} from "../EnhancedSecurity/SecurityCategory.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Clearance */
 /**

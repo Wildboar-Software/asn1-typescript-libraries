@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { cosine } from "../UsefulDefinitions/cosine.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { cosine } from "../UsefulDefinitions/cosine.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { cosine } from "../UsefulDefinitions/cosine.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { cosine } from "../UsefulDefinitions/cosine.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION cosineAttr */
 /**

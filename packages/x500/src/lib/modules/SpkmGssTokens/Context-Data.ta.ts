@@ -5,47 +5,47 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ChannelId,
     _decode_ChannelId,
     _encode_ChannelId,
-} from "../SpkmGssTokens/ChannelId.ta";
+} from "../SpkmGssTokens/ChannelId.ta.js";
 import {
     Conf_Algs,
     _decode_Conf_Algs,
     _encode_Conf_Algs,
-} from "../SpkmGssTokens/Conf-Algs.ta";
+} from "../SpkmGssTokens/Conf-Algs.ta.js";
 import {
     Intg_Algs,
     _decode_Intg_Algs,
     _encode_Intg_Algs,
-} from "../SpkmGssTokens/Intg-Algs.ta";
+} from "../SpkmGssTokens/Intg-Algs.ta.js";
 import {
     Options,
     _decode_Options,
     _encode_Options,
-} from "../SpkmGssTokens/Options.ta";
+} from "../SpkmGssTokens/Options.ta.js";
 import {
     OWF_Algs,
     _decode_OWF_Algs,
     _encode_OWF_Algs,
-} from "../SpkmGssTokens/OWF-Algs.ta";
+} from "../SpkmGssTokens/OWF-Algs.ta.js";
 export {
     ChannelId,
     _decode_ChannelId,
     _encode_ChannelId,
-} from "../SpkmGssTokens/ChannelId.ta";
+} from "../SpkmGssTokens/ChannelId.ta.js";
 export {
     Conf_Algs,
     _decode_Conf_Algs,
     _encode_Conf_Algs,
-} from "../SpkmGssTokens/Conf-Algs.ta";
+} from "../SpkmGssTokens/Conf-Algs.ta.js";
 export {
     Intg_Algs,
     _decode_Intg_Algs,
     _encode_Intg_Algs,
-} from "../SpkmGssTokens/Intg-Algs.ta";
+} from "../SpkmGssTokens/Intg-Algs.ta.js";
 export {
     conf_avail /* IMPORTED_SHORT_NAMED_BIT */,
     delegation_state /* IMPORTED_SHORT_NAMED_BIT */,
@@ -64,12 +64,12 @@ export {
     target_certif_data_required /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Options,
     _encode_Options,
-} from "../SpkmGssTokens/Options.ta";
+} from "../SpkmGssTokens/Options.ta.js";
 export {
     OWF_Algs,
     _decode_OWF_Algs,
     _encode_OWF_Algs,
-} from "../SpkmGssTokens/OWF-Algs.ta";
+} from "../SpkmGssTokens/OWF-Algs.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Context_Data */
 /**

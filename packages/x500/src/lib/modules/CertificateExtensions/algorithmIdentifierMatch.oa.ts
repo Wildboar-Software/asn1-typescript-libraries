@@ -3,20 +3,20 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
-import { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa";
-import { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.js";
+import { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
-export { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa";
-export { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
+export { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.js";
+export { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION algorithmIdentifierMatch */
 /**

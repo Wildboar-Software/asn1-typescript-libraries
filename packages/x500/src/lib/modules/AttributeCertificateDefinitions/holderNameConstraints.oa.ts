@@ -3,16 +3,16 @@ import {
     HolderNameConstraintsSyntax,
     _decode_HolderNameConstraintsSyntax,
     _encode_HolderNameConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta";
-import { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.js";
+import { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     HolderNameConstraintsSyntax,
     _decode_HolderNameConstraintsSyntax,
     _encode_HolderNameConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta";
-export { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.js";
+export { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION holderNameConstraints */
 /**

@@ -1,10 +1,10 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
-} from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
+} from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
 
 export
 const attDescriptor: EqualityMatcher = (

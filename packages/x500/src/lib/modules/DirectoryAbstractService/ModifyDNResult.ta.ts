@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifyDNResultData,
     _decode_ModifyDNResultData,
     _encode_ModifyDNResultData,
-} from "../DirectoryAbstractService/ModifyDNResultData.ta";
+} from "../DirectoryAbstractService/ModifyDNResultData.ta.js";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     ModifyDNResultData,
     _decode_ModifyDNResultData,
     _encode_ModifyDNResultData,
-} from "../DirectoryAbstractService/ModifyDNResultData.ta";
+} from "../DirectoryAbstractService/ModifyDNResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyDNResult */
 /**

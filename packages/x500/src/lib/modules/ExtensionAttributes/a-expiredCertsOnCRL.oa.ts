@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { expiredCertsOnCRL } from "../CertificateExtensions/expiredCertsOnCRL.oa";
-import { id_asx_expiredCertsOnCRL } from "../ExtensionAttributes/id-asx-expiredCertsOnCRL.va";
-import { id_ce_a_expiredCertsOnCRL } from "../ExtensionAttributes/id-ce-a-expiredCertsOnCRL.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { expiredCertsOnCRL } from "../CertificateExtensions/expiredCertsOnCRL.oa.js";
+import { id_asx_expiredCertsOnCRL } from "../ExtensionAttributes/id-asx-expiredCertsOnCRL.va.js";
+import { id_ce_a_expiredCertsOnCRL } from "../ExtensionAttributes/id-ce-a-expiredCertsOnCRL.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { expiredCertsOnCRL } from "../CertificateExtensions/expiredCertsOnCRL.oa";
-export { id_asx_expiredCertsOnCRL } from "../ExtensionAttributes/id-asx-expiredCertsOnCRL.va";
-export { id_ce_a_expiredCertsOnCRL } from "../ExtensionAttributes/id-ce-a-expiredCertsOnCRL.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { expiredCertsOnCRL } from "../CertificateExtensions/expiredCertsOnCRL.oa.js";
+export { id_asx_expiredCertsOnCRL } from "../ExtensionAttributes/id-asx-expiredCertsOnCRL.va.js";
+export { id_ce_a_expiredCertsOnCRL } from "../ExtensionAttributes/id-ce-a-expiredCertsOnCRL.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_expiredCertsOnCRL */
 /**

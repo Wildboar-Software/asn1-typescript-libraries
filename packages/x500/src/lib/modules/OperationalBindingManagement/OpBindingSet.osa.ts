@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa";
-import { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa";
-import { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
-export { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa";
-export { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa";
-export { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+import { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa.js";
+import { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.js";
+import { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.js";
+import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
+export { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa.js";
+export { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.js";
+export { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.js";
+export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OpBindingSet */
 /**

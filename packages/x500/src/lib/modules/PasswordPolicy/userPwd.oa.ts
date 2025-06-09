@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_userPwd } from "../PasswordPolicy/id-at-userPwd.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_userPwd } from "../PasswordPolicy/id-at-userPwd.va.js";
 import {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
-import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa";
-import { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../PasswordPolicy/UserPwd.ta.js";
+import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.js";
+import { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_userPwd } from "../PasswordPolicy/id-at-userPwd.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_userPwd } from "../PasswordPolicy/id-at-userPwd.va.js";
 export {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
-export { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa";
-export { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa";
+} from "../PasswordPolicy/UserPwd.ta.js";
+export { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.js";
+export { userPwdMatch } from "../PasswordPolicy/userPwdMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION userPwd */
 /**

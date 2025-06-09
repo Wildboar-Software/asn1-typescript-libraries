@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca";
-export { SupportedMatchingRestrictions } from "../ServiceAdministration/SupportedMatchingRestrictions.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.js";
+export { SupportedMatchingRestrictions } from "../ServiceAdministration/SupportedMatchingRestrictions.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION MatchingUse */
 /**

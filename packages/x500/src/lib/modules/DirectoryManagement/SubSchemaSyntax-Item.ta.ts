@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubSchemaSyntax_Item_subSchema,
     _decode_SubSchemaSyntax_Item_subSchema,
     _encode_SubSchemaSyntax_Item_subSchema,
-} from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta";
+} from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     SubSchemaSyntax_Item_subSchema,
     _decode_SubSchemaSyntax_Item_subSchema,
     _encode_SubSchemaSyntax_Item_subSchema,
-} from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta";
+} from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item */
 /**

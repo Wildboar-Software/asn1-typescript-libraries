@@ -1,18 +1,18 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     AttributeCertificateAssertion,
     _decode_AttributeCertificateAssertion,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificateAssertion.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificateAssertion.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import type {
     Attribute,
-} from "../../modules/InformationFramework/Attribute.ta";
-import compareIssuerSerial from "../../comparators/compareIssuerSerial";
-import compareGeneralNames from "../../comparators/compareGeneralNames";
+} from "../../modules/InformationFramework/Attribute.ta.js";
+import compareIssuerSerial from "../../comparators/compareIssuerSerial.js";
+import compareGeneralNames from "../../comparators/compareGeneralNames.js";
 
 export
 const attributeCertificateMatch: EqualityMatcher = (

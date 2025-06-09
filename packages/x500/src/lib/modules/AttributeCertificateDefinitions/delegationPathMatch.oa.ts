@@ -3,18 +3,18 @@ import {
     DelMatchSyntax,
     _decode_DelMatchSyntax,
     _encode_DelMatchSyntax,
-} from "../AttributeCertificateDefinitions/DelMatchSyntax.ta";
-import { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.js";
+import { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     DelMatchSyntax,
     _decode_DelMatchSyntax,
     _encode_DelMatchSyntax,
-} from "../AttributeCertificateDefinitions/DelMatchSyntax.ta";
-export { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.js";
+export { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION delegationPathMatch */
 /**

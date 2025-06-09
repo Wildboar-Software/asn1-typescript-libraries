@@ -1,4 +1,4 @@
-import type ACDFTupleExtended from "../types/ACDFTupleExtended";
+import type ACDFTupleExtended from "../types/ACDFTupleExtended.js";
 
 export
 function grantsAccess (tuple: ACDFTupleExtended): boolean {

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.js";
 import {
     IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va";
+} from "../SelectedAttributeTypes/IntEmail.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.js";
 export {
     IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta";
+} from "../SelectedAttributeTypes/IntEmail.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION intEmailString */
 /**

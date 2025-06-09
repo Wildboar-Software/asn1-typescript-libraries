@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
-} from "../AttributeCertificateDefinitions/DisplayText.ta";
+} from "../AttributeCertificateDefinitions/DisplayText.ta.js";
 export {
     DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
-} from "../AttributeCertificateDefinitions/DisplayText.ta";
+} from "../AttributeCertificateDefinitions/DisplayText.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NoticeReference */
 /**

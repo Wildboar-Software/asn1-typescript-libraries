@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION rsaEncryptionAlgorithm */
 /**

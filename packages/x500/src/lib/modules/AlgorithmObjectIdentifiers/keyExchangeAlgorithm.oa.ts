@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_keyExchangeAlgorithm } from "../AlgorithmObjectIdentifiers/id-keyExchangeAlgorithm.va";
+import { id_keyExchangeAlgorithm } from "../AlgorithmObjectIdentifiers/id-keyExchangeAlgorithm.va.js";
 import {
     KEA_Parms_Id,
     _decode_KEA_Parms_Id,
     _encode_KEA_Parms_Id,
-} from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_keyExchangeAlgorithm } from "../AlgorithmObjectIdentifiers/id-keyExchangeAlgorithm.va";
+} from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_keyExchangeAlgorithm } from "../AlgorithmObjectIdentifiers/id-keyExchangeAlgorithm.va.js";
 export {
     KEA_Parms_Id,
     _decode_KEA_Parms_Id,
     _encode_KEA_Parms_Id,
-} from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION keyExchangeAlgorithm */
 /**

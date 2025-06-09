@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Result,
     _decode_Result,
     _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta";
+} from "../OSIProtocolSpecification/Result.ta.js";
 import {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 export {
     acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
     provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -25,12 +25,12 @@ export {
     user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Result,
     _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta";
+} from "../OSIProtocolSpecification/Result.ta.js";
 export {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item */
 /**

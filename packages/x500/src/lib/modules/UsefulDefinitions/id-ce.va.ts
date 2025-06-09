@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { certificateExtension } from "../UsefulDefinitions/certificateExtension.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { certificateExtension } from "../UsefulDefinitions/certificateExtension.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { certificateExtension } from "../UsefulDefinitions/certificateExtension.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { certificateExtension } from "../UsefulDefinitions/certificateExtension.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ce */
 /**

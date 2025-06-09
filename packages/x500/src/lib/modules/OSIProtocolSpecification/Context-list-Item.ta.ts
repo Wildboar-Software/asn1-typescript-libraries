@@ -4,37 +4,37 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Abstract_syntax_name,
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
-} from "../OSIProtocolSpecification/Abstract-syntax-name.ta";
+} from "../OSIProtocolSpecification/Abstract-syntax-name.ta.js";
 import {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.js";
 import {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 export {
     Abstract_syntax_name,
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
-} from "../OSIProtocolSpecification/Abstract-syntax-name.ta";
+} from "../OSIProtocolSpecification/Abstract-syntax-name.ta.js";
 export {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.js";
 export {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Context_list_Item */
 /**

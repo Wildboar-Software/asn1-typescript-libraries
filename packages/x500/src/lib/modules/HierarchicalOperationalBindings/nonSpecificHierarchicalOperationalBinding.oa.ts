@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { id_op_binding_non_specific_hierarchical } from "../DirectoryOperationalBindingTypes/id-op-binding-non-specific-hierarchical.va";
-import { directorySystemAC } from "../DirectoryOSIProtocols/directorySystemAC.oa";
+import { id_op_binding_non_specific_hierarchical } from "../DirectoryOperationalBindingTypes/id-op-binding-non-specific-hierarchical.va.js";
+import { directorySystemAC } from "../DirectoryOSIProtocols/directorySystemAC.oa.js";
 import {
     NonSpecificHierarchicalAgreement,
     _decode_NonSpecificHierarchicalAgreement,
     _encode_NonSpecificHierarchicalAgreement,
-} from "../HierarchicalOperationalBindings/NonSpecificHierarchicalAgreement.ta";
-import { nonSpecificHierarchicalOperationalBinding_roleA } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding-roleA.oa";
-import { nonSpecificHierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding-roleB.oa";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../HierarchicalOperationalBindings/NonSpecificHierarchicalAgreement.ta.js";
+import { nonSpecificHierarchicalOperationalBinding_roleA } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding-roleA.oa.js";
+import { nonSpecificHierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding-roleB.oa.js";
+import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding */
 /**

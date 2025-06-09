@@ -3,9 +3,9 @@ import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
     _encode_AttributeDescriptorSyntax,
-} from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_attributeDescriptor } from "./id-ce-attributeDescriptor.va";
+} from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_attributeDescriptor } from "./id-ce-attributeDescriptor.va.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeDescriptor */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalExtensionORAddressComponents,
     _decode_UniversalExtensionORAddressComponents,
     _encode_UniversalExtensionORAddressComponents,
-} from "../PkiPmiExternalDataTypes/UniversalExtensionORAddressComponents.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalExtensionORAddressComponents.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalExtensionORAddressComponents,
     _decode_UniversalExtensionORAddressComponents,
     _encode_UniversalExtensionORAddressComponents,
-} from "../PkiPmiExternalDataTypes/UniversalExtensionORAddressComponents.ta";
+} from "../PkiPmiExternalDataTypes/UniversalExtensionORAddressComponents.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_extension_OR_address_components */
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { knowledgeInformation } from "../SelectedAttributeTypes/knowledgeInformation.oa";
-import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa";
-import { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { knowledgeInformation } from "../SelectedAttributeTypes/knowledgeInformation.oa.js";
+import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.js";
+import { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -19,10 +19,10 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { knowledgeInformation } from "../SelectedAttributeTypes/knowledgeInformation.oa";
-export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa";
-export { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { knowledgeInformation } from "../SelectedAttributeTypes/knowledgeInformation.oa.js";
+export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.js";
+export { id_oc_dSA } from "../SelectedObjectClasses/id-oc-dSA.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dSA */
 /**

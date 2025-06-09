@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     CountryCode3n,
     _decode_CountryCode3n,
     _encode_CountryCode3n,
-} from "../SelectedAttributeTypes/CountryCode3n.ta";
-import { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa";
-import { id_at_countryCode3n } from "../SelectedAttributeTypes/id-at-countryCode3n.va";
-import { name } from "../SelectedAttributeTypes/name.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/CountryCode3n.ta.js";
+import { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa.js";
+import { id_at_countryCode3n } from "../SelectedAttributeTypes/id-at-countryCode3n.va.js";
+import { name } from "../SelectedAttributeTypes/name.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CountryCode3n,
     _decode_CountryCode3n,
     _encode_CountryCode3n,
-} from "../SelectedAttributeTypes/CountryCode3n.ta";
-export { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa";
-export { id_at_countryCode3n } from "../SelectedAttributeTypes/id-at-countryCode3n.va";
-export { name } from "../SelectedAttributeTypes/name.oa";
+} from "../SelectedAttributeTypes/CountryCode3n.ta.js";
+export { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa.js";
+export { id_at_countryCode3n } from "../SelectedAttributeTypes/id-at-countryCode3n.va.js";
+export { name } from "../SelectedAttributeTypes/name.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION countryCode3n */
 /**

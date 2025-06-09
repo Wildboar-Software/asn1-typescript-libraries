@@ -5,50 +5,50 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiBindError_normal_mode_parameters_protocol_version,
     OsiBindError_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_OsiBindError_normal_mode_parameters_protocol_version,
     _encode_OsiBindError_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta.js";
 import {
     OsiBindError_normal_mode_parameters_user_data,
     _decode_OsiBindError_normal_mode_parameters_user_data,
     _encode_OsiBindError_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta.js";
 import {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 import {
     Provider_reason,
     _decode_Provider_reason,
     _encode_Provider_reason,
-} from "../OSIProtocolSpecification/Provider-reason.ta";
+} from "../OSIProtocolSpecification/Provider-reason.ta.js";
 import {
     Result_list,
     _decode_Result_list,
     _encode_Result_list,
-} from "../OSIProtocolSpecification/Result-list.ta";
+} from "../OSIProtocolSpecification/Result-list.ta.js";
 export {
     OsiBindError_normal_mode_parameters_protocol_version,
     OsiBindError_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OsiBindError_normal_mode_parameters_protocol_version,
     _encode_OsiBindError_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta.js";
 export {
     OsiBindError_normal_mode_parameters_user_data,
     _decode_OsiBindError_normal_mode_parameters_user_data,
     _encode_OsiBindError_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta.js";
 export {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 export {
     called_presentation_address_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     default_context_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -69,12 +69,12 @@ export {
     user_data_not_readable /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Provider_reason,
     _encode_Provider_reason,
-} from "../OSIProtocolSpecification/Provider-reason.ta";
+} from "../OSIProtocolSpecification/Provider-reason.ta.js";
 export {
     Result_list,
     _decode_Result_list,
     _encode_Result_list,
-} from "../OSIProtocolSpecification/Result-list.ta";
+} from "../OSIProtocolSpecification/Result-list.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBindError_normal_mode_parameters */
 /**

@@ -1,14 +1,14 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareName from "../../comparators/compareName";
+import compareName from "../../comparators/compareName.js";
 import {
     CertificatePairExactAssertion,
     _decode_CertificatePairExactAssertion,
-} from "../../modules/CertificateExtensions/CertificatePairExactAssertion.ta";
+} from "../../modules/CertificateExtensions/CertificatePairExactAssertion.ta.js";
 import {
     CertificatePair,
     _decode_CertificatePair,
-} from "../../modules/AuthenticationFramework/CertificatePair.ta";
+} from "../../modules/AuthenticationFramework/CertificatePair.ta.js";
 
 export
 const certificatePairExactMatch: EqualityMatcher = (

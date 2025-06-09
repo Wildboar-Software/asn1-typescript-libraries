@@ -4,13 +4,13 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InitializationRej_diag,
     _decode_InitializationRej_diag,
     _encode_InitializationRej_diag,
     _enum_for_InitializationRej_diag,
-} from "../CaSubscription/InitializationRej-diag.ta";
+} from "../CaSubscription/InitializationRej-diag.ta.js";
 export {
     InitializationRej_diag,
     InitializationRej_diag_unsupportedVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -18,7 +18,7 @@ export {
     _decode_InitializationRej_diag,
     _encode_InitializationRej_diag,
     _enum_for_InitializationRej_diag,
-} from "../CaSubscription/InitializationRej-diag.ta";
+} from "../CaSubscription/InitializationRej-diag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION InitializationRej */
 /**

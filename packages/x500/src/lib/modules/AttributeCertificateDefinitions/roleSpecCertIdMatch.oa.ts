@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va";
+import { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va.js";
 import {
     RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va";
+} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va.js";
 export {
     RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION roleSpecCertIdMatch */
 /**

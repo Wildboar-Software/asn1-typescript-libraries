@@ -3,16 +3,16 @@ import {
     AcceptablePrivilegePoliciesSyntax,
     _decode_AcceptablePrivilegePoliciesSyntax,
     _encode_AcceptablePrivilegePoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta";
-import { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.js";
+import { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AcceptablePrivilegePoliciesSyntax,
     _decode_AcceptablePrivilegePoliciesSyntax,
     _encode_AcceptablePrivilegePoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta";
-export { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.js";
+export { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION acceptablePrivilegePolicies */
 /**

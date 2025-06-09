@@ -17,52 +17,52 @@ import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended";
 import type ProtectedItem from "../../../src/lib/types/ProtectedItem";
 import {
     ProtectedItems,
-} from "../../../src/lib/modules/BasicAccessControl/ProtectedItems.ta";
+} from "../../../src/lib/modules/BasicAccessControl/ProtectedItems.ta.js";
 import type {
     AuthenticationLevel,
-} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel.ta";
+} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel.ta.js";
 import {
     AuthenticationLevel_basicLevels,
-} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta";
+} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta.js";
 import {
     AuthenticationLevel_basicLevels_level_none,
     AuthenticationLevel_basicLevels_level_simple,
     AuthenticationLevel_basicLevels_level_strong,
-} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels-level.ta";
-import type EqualityMatcher from "../../../src/lib/types/EqualityMatcher";
+} from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.js";
+import type EqualityMatcher from "../../../src/lib/types/EqualityMatcher.js";
 import {
     ACIItem, ACIItem_itemOrUserFirst
-} from "../../../src/lib/modules/BasicAccessControl/ACIItem.ta";
+} from "../../../src/lib/modules/BasicAccessControl/ACIItem.ta.js";
 import {
     UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../../../src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../../../src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 import {
     ACIItem_itemOrUserFirst_itemFirst,
-} from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta";
+} from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta.js";
 import {
     ACIItem_itemOrUserFirst_userFirst,
-} from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta";
+} from "../../../src/lib/modules/BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.js";
 import {
     ItemPermission,
-} from "../../../src/lib/modules/BasicAccessControl/ItemPermission.ta";
+} from "../../../src/lib/modules/BasicAccessControl/ItemPermission.ta.js";
 import {
     UserPermission,
-} from "../../../src/lib/modules/BasicAccessControl/UserPermission.ta";
+} from "../../../src/lib/modules/BasicAccessControl/UserPermission.ta.js";
 import {
     UserClasses,
-} from "../../../src/lib/modules/BasicAccessControl/UserClasses.ta";
-import type { GrantsAndDenials } from "../../../src/lib/modules/BasicAccessControl/GrantsAndDenials.ta";
+} from "../../../src/lib/modules/BasicAccessControl/UserClasses.ta.js";
+import type { GrantsAndDenials } from "../../../src/lib/modules/BasicAccessControl/GrantsAndDenials.ta.js";
 import {
     AttributeTypeAndValue,
-} from "../../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta";
+} from "../../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.js";
 import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials";
 import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem";
 import itemIsProtected from "../../../src/lib/bac/itemIsProtected";
 import type { EvaluateFilterSettings } from "../../../src/lib/utils/evaluateFilter";
 import {
     NameAndOptionalUID,
-} from "../../../src/lib/modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../../../src/lib/modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 const ALL_GRANTS: GrantsAndDenials = new Uint8ClampedArray([
     // Add

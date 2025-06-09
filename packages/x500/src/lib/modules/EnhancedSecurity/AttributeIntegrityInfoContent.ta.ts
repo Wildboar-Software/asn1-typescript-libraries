@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttribsHash,
     _decode_AttribsHash,
     _encode_AttribsHash,
-} from "../EnhancedSecurity/AttribsHash.ta";
+} from "../EnhancedSecurity/AttribsHash.ta.js";
 import {
     Scope,
     _decode_Scope,
     _encode_Scope,
-} from "../EnhancedSecurity/Scope.ta";
+} from "../EnhancedSecurity/Scope.ta.js";
 import {
     Signer,
     _decode_Signer,
     _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta";
+} from "../EnhancedSecurity/Signer.ta.js";
 export {
     AttribsHash,
     _decode_AttribsHash,
     _encode_AttribsHash,
-} from "../EnhancedSecurity/AttribsHash.ta";
+} from "../EnhancedSecurity/AttribsHash.ta.js";
 export {
     Scope,
     _decode_Scope,
     _encode_Scope,
-} from "../EnhancedSecurity/Scope.ta";
+} from "../EnhancedSecurity/Scope.ta.js";
 export {
     Signer,
     _decode_Signer,
     _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta";
+} from "../EnhancedSecurity/Signer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeIntegrityInfoContent */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { IA5String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { ia5String } from "../SelectedAttributeTypes/ia5String.oa";
-import { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { ia5String } from "../SelectedAttributeTypes/ia5String.oa";
-export { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.js";
+import { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.js";
+export { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va.js";
 
 /* START_OF_SYMBOL_DEFINITION caseIgnoreIA5Match */
 /**

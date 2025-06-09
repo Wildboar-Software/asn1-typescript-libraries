@@ -1,25 +1,25 @@
 /* eslint-disable */
-import { id_at_supportedPublicKeyAlgorithms } from "../AuthenticationFramework/id-at-supportedPublicKeyAlgorithms.va";
+import { id_at_supportedPublicKeyAlgorithms } from "../AuthenticationFramework/id-at-supportedPublicKeyAlgorithms.va.js";
 import {
     SupportedPublicKeyAlgorithms,
     _decode_SupportedPublicKeyAlgorithms,
     _encode_SupportedPublicKeyAlgorithms,
-} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta";
-import { x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/x509SupportedPublicKeyAlgos.oa";
-import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.js";
+import { x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/x509SupportedPublicKeyAlgos.oa.js";
+import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_at_supportedPublicKeyAlgorithms } from "../AuthenticationFramework/id-at-supportedPublicKeyAlgorithms.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_at_supportedPublicKeyAlgorithms } from "../AuthenticationFramework/id-at-supportedPublicKeyAlgorithms.va.js";
 export {
     SupportedPublicKeyAlgorithms,
     _decode_SupportedPublicKeyAlgorithms,
     _encode_SupportedPublicKeyAlgorithms,
-} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta";
-export { x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/x509SupportedPublicKeyAlgos.oa";
-export { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.js";
+export { x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/x509SupportedPublicKeyAlgos.oa.js";
+export { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -33,9 +33,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION supportedPublicKeyAlgorithms */
 /**

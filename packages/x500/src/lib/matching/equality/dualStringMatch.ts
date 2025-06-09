@@ -1,11 +1,11 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
-} from "../../modules/AttributeCertificateDefinitions/DualStringSyntax.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
-import { prepString } from "../../utils/prepString";
+} from "../../modules/AttributeCertificateDefinitions/DualStringSyntax.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
+import { prepString } from "../../utils/prepString.js";
 
 export
 const dualStringMatch: EqualityMatcher = (

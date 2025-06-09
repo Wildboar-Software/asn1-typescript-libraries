@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralProblem,
     _decode_GeneralProblem,
     _encode_GeneralProblem,
-} from "../OSIProtocolSpecification/GeneralProblem.ta";
+} from "../OSIProtocolSpecification/GeneralProblem.ta.js";
 import {
     InvokeProblem,
     _decode_InvokeProblem,
     _encode_InvokeProblem,
-} from "../OSIProtocolSpecification/InvokeProblem.ta";
+} from "../OSIProtocolSpecification/InvokeProblem.ta.js";
 import {
     ReturnErrorProblem,
     _decode_ReturnErrorProblem,
     _encode_ReturnErrorProblem,
-} from "../OSIProtocolSpecification/ReturnErrorProblem.ta";
+} from "../OSIProtocolSpecification/ReturnErrorProblem.ta.js";
 import {
     ReturnResultProblem,
     _decode_ReturnResultProblem,
     _encode_ReturnResultProblem,
-} from "../OSIProtocolSpecification/ReturnResultProblem.ta";
+} from "../OSIProtocolSpecification/ReturnResultProblem.ta.js";
 export {
     badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
     GeneralProblem,
@@ -31,7 +31,7 @@ export {
     unrecognizedPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_GeneralProblem,
     _encode_GeneralProblem,
-} from "../OSIProtocolSpecification/GeneralProblem.ta";
+} from "../OSIProtocolSpecification/GeneralProblem.ta.js";
 export {
     duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */,
     InvokeProblem,
@@ -46,7 +46,7 @@ export {
     unrecognizedOperation /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_InvokeProblem,
     _encode_InvokeProblem,
-} from "../OSIProtocolSpecification/InvokeProblem.ta";
+} from "../OSIProtocolSpecification/InvokeProblem.ta.js";
 export {
     errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */,
     mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -60,7 +60,7 @@ export {
     unrecognizedError /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ReturnErrorProblem,
     _encode_ReturnErrorProblem,
-} from "../OSIProtocolSpecification/ReturnErrorProblem.ta";
+} from "../OSIProtocolSpecification/ReturnErrorProblem.ta.js";
 export {
     mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */,
     resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -70,7 +70,7 @@ export {
     ReturnResultProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_ReturnResultProblem,
     _encode_ReturnResultProblem,
-} from "../OSIProtocolSpecification/ReturnResultProblem.ta";
+} from "../OSIProtocolSpecification/ReturnResultProblem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiRej_problem */
 /**

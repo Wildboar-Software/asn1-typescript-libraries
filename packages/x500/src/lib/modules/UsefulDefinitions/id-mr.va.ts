@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { matchingRule } from "../UsefulDefinitions/matchingRule.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { matchingRule } from "../UsefulDefinitions/matchingRule.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { matchingRule } from "../UsefulDefinitions/matchingRule.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { matchingRule } from "../UsefulDefinitions/matchingRule.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mr */
 /**

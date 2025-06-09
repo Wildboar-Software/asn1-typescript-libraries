@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_lat } from "../UsefulDefinitions/id-lat.va";
-export { id_lat } from "../UsefulDefinitions/id-lat.va";
+import { id_lat } from "../UsefulDefinitions/id-lat.va.js";
+export { id_lat } from "../UsefulDefinitions/id-lat.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_lat_namingContexts */
 /**

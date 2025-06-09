@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { dmdName } from "../SelectedAttributeTypes/dmdName.oa";
-import { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va";
-import { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.js";
+import { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va.js";
+import { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,11 +20,11 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { dmdName } from "../SelectedAttributeTypes/dmdName.oa";
-export { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va";
-export { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.js";
+export { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va.js";
+export { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION dMD */
 /**

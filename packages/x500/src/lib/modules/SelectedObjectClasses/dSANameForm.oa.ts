@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { dSA } from "../SelectedObjectClasses/dSA.oa";
-import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { dSA } from "../SelectedObjectClasses/dSA.oa";
-export { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { dSA } from "../SelectedObjectClasses/dSA.oa.js";
+import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { dSA } from "../SelectedObjectClasses/dSA.oa.js";
+export { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dSANameForm */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PrivilegePolicy,
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
-} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta";
+} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.js";
 import {
     InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta";
+} from "../AuthenticationFramework/InfoSyntax.ta.js";
 export {
     PrivilegePolicy,
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
-} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta";
+} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.js";
 export {
     InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta";
+} from "../AuthenticationFramework/InfoSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PrivilegePolicyIdentifier */
 /**

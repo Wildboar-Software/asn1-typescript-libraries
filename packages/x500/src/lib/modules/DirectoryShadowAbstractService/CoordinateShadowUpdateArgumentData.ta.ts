@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta";
+} from "../DirectoryShadowAbstractService/AgreementID.ta.js";
 import {
     CoordinateShadowUpdateArgumentData_updateStrategy,
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta";
+} from "../DirectoryShadowAbstractService/Time.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta";
+} from "../DirectoryShadowAbstractService/AgreementID.ta.js";
 export {
     CoordinateShadowUpdateArgumentData_updateStrategy,
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta";
+} from "../DirectoryShadowAbstractService/Time.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData */
 /**

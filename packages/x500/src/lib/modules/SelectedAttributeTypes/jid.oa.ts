@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_jid } from "../SelectedAttributeTypes/id-at-jid.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_jid } from "../SelectedAttributeTypes/id-at-jid.va.js";
 import {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
-import { jidMatch } from "../SelectedAttributeTypes/jidMatch.oa";
-import { jidString } from "../SelectedAttributeTypes/jidString.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/Jid.ta.js";
+import { jidMatch } from "../SelectedAttributeTypes/jidMatch.oa.js";
+import { jidString } from "../SelectedAttributeTypes/jidString.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_jid } from "../SelectedAttributeTypes/id-at-jid.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_jid } from "../SelectedAttributeTypes/id-at-jid.va.js";
 export {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
-export { jidMatch } from "../SelectedAttributeTypes/jidMatch.oa";
-export { jidString } from "../SelectedAttributeTypes/jidString.oa";
+} from "../SelectedAttributeTypes/Jid.ta.js";
+export { jidMatch } from "../SelectedAttributeTypes/jidMatch.oa.js";
+export { jidString } from "../SelectedAttributeTypes/jidString.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION jid */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     NamedDay_bitNamedDays,
     _decode_NamedDay_bitNamedDays,
     _encode_NamedDay_bitNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta";
+} from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta.js";
 import {
     NamedDay_intNamedDays,
     _decode_NamedDay_intNamedDays,
     _encode_NamedDay_intNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta";
+} from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta.js";
 export {
     NamedDay_bitNamedDays,
     NamedDay_bitNamedDays_friday /* IMPORTED_LONG_NAMED_BIT */,
@@ -22,7 +22,7 @@ export {
     NamedDay_bitNamedDays_wednesday /* IMPORTED_LONG_NAMED_BIT */,
     _decode_NamedDay_bitNamedDays,
     _encode_NamedDay_bitNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta";
+} from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta.js";
 export {
     NamedDay_intNamedDays,
     NamedDay_intNamedDays_friday /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -35,7 +35,7 @@ export {
     _decode_NamedDay_intNamedDays,
     _encode_NamedDay_intNamedDays,
     _enum_for_NamedDay_intNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta";
+} from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NamedDay */
 /**

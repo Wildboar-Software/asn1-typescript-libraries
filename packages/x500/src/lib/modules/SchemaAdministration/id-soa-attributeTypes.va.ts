@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_soa } from "../UsefulDefinitions/id-soa.va";
-export { id_soa } from "../UsefulDefinitions/id-soa.va";
+import { id_soa } from "../UsefulDefinitions/id-soa.va.js";
+export { id_soa } from "../UsefulDefinitions/id-soa.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_soa_attributeTypes */
 /**

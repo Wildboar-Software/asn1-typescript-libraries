@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
-import { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
+import { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.js";
 import {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
-export { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va";
+} from "../SelectedAttributeTypes/Jid.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
+export { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.js";
 export {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
+} from "../SelectedAttributeTypes/Jid.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION jidMatch */
 /**

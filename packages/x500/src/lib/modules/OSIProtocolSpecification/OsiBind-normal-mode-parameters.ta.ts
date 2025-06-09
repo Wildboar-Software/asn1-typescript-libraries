@@ -5,50 +5,50 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Context_list,
     _decode_Context_list,
     _encode_Context_list,
-} from "../OSIProtocolSpecification/Context-list.ta";
+} from "../OSIProtocolSpecification/Context-list.ta.js";
 import {
     OsiBind_normal_mode_parameters_protocol_version,
     OsiBind_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_OsiBind_normal_mode_parameters_protocol_version,
     _encode_OsiBind_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-protocol-version.ta.js";
 import {
     OsiBind_normal_mode_parameters_user_data,
     _decode_OsiBind_normal_mode_parameters_user_data,
     _encode_OsiBind_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data.ta.js";
 import {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 export {
     Context_list,
     _decode_Context_list,
     _encode_Context_list,
-} from "../OSIProtocolSpecification/Context-list.ta";
+} from "../OSIProtocolSpecification/Context-list.ta.js";
 export {
     OsiBind_normal_mode_parameters_protocol_version,
     OsiBind_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OsiBind_normal_mode_parameters_protocol_version,
     _encode_OsiBind_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-protocol-version.ta.js";
 export {
     OsiBind_normal_mode_parameters_user_data,
     _decode_OsiBind_normal_mode_parameters_user_data,
     _encode_OsiBind_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data.ta.js";
 export {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters */
 /**

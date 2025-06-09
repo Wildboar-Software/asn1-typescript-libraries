@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { nameForm } from "../UsefulDefinitions/nameForm.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { nameForm } from "../UsefulDefinitions/nameForm.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { nameForm } from "../UsefulDefinitions/nameForm.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { nameForm } from "../UsefulDefinitions/nameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_nf */
 /**

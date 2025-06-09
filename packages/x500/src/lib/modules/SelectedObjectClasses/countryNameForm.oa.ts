@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { countryName } from "../SelectedAttributeTypes/countryName.oa";
-import { country } from "../SelectedObjectClasses/country.oa";
-import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { countryName } from "../SelectedAttributeTypes/countryName.oa";
-export { country } from "../SelectedObjectClasses/country.oa";
-export { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.js";
+import { country } from "../SelectedObjectClasses/country.oa.js";
+import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { countryName } from "../SelectedAttributeTypes/countryName.oa.js";
+export { country } from "../SelectedObjectClasses/country.oa.js";
+export { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION countryNameForm */
 /**

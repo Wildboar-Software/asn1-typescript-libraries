@@ -1,46 +1,46 @@
 /* eslint-disable */
-import { id_opcode_read } from "../CommonProtocolSpecification/id-opcode-read.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { abandoned } from "../DirectoryAbstractService/abandoned.oa";
-import { attributeError } from "../DirectoryAbstractService/attributeError.oa";
-import { nameError } from "../DirectoryAbstractService/nameError.oa";
+import { id_opcode_read } from "../CommonProtocolSpecification/id-opcode-read.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { abandoned } from "../DirectoryAbstractService/abandoned.oa.js";
+import { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
+import { nameError } from "../DirectoryAbstractService/nameError.oa.js";
 import {
     ReadArgument,
     _decode_ReadArgument,
     _encode_ReadArgument,
-} from "../DirectoryAbstractService/ReadArgument.ta";
+} from "../DirectoryAbstractService/ReadArgument.ta.js";
 import {
     ReadResult,
     _decode_ReadResult,
     _encode_ReadResult,
-} from "../DirectoryAbstractService/ReadResult.ta";
-import { referral } from "../DirectoryAbstractService/referral.oa";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { serviceError } from "../DirectoryAbstractService/serviceError.oa";
+} from "../DirectoryAbstractService/ReadResult.ta.js";
+import { referral } from "../DirectoryAbstractService/referral.oa.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_read } from "../CommonProtocolSpecification/id-opcode-read.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa";
-export { nameError } from "../DirectoryAbstractService/nameError.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_read } from "../CommonProtocolSpecification/id-opcode-read.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { abandoned } from "../DirectoryAbstractService/abandoned.oa.js";
+export { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
+export { nameError } from "../DirectoryAbstractService/nameError.oa.js";
 export {
     ReadArgument,
     _decode_ReadArgument,
     _encode_ReadArgument,
-} from "../DirectoryAbstractService/ReadArgument.ta";
+} from "../DirectoryAbstractService/ReadArgument.ta.js";
 export {
     ReadResult,
     _decode_ReadResult,
     _encode_ReadResult,
-} from "../DirectoryAbstractService/ReadResult.ta";
-export { referral } from "../DirectoryAbstractService/referral.oa";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa";
+} from "../DirectoryAbstractService/ReadResult.ta.js";
+export { referral } from "../DirectoryAbstractService/referral.oa.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION read */
 /**

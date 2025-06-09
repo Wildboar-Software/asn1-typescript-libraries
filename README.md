@@ -11,6 +11,11 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
+## Note
+
+Due to both Jest not supporting ESM (yet), the tests are broken and will stay
+broken for as long as it takes. I hate the entire Javashit ecosystem.
+
 ## Remove all unused imports
 
 This is slow and will crash from running out of memory if you try this for the

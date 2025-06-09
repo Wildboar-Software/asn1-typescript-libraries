@@ -4,18 +4,18 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
+} from "../CertificateExtensions/CRLReason.ta.js";
 import {
     HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
-} from "../CertificateExtensions/HoldInstruction.ta";
+} from "../CertificateExtensions/HoldInstruction.ta.js";
 export {
     aACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     affiliationChanged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -43,12 +43,12 @@ export {
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
+} from "../CertificateExtensions/CRLReason.ta.js";
 export {
     HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
-} from "../CertificateExtensions/HoldInstruction.ta";
+} from "../CertificateExtensions/HoldInstruction.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ReasonInfo */
 /**

@@ -4,49 +4,49 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 import {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 import {
     TbsHandshakeProRej_sigSel,
     _decode_TbsHandshakeProRej_sigSel,
     _encode_TbsHandshakeProRej_sigSel,
-} from "../Wrapper/TbsHandshakeProRej-sigSel.ta";
+} from "../Wrapper/TbsHandshakeProRej-sigSel.ta.js";
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 import {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "../Wrapper/WrappedProt.ta.js";
+export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 export {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 export {
     TbsHandshakeProRej_sigSel,
     _decode_TbsHandshakeProRej_sigSel,
     _encode_TbsHandshakeProRej_sigSel,
-} from "../Wrapper/TbsHandshakeProRej-sigSel.ta";
+} from "../Wrapper/TbsHandshakeProRej-sigSel.ta.js";
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 export {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeProRej */
 /**

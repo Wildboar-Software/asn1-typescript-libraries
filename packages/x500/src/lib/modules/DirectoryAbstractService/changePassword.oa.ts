@@ -1,38 +1,38 @@
 /* eslint-disable */
-import { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     ChangePasswordArgument,
     _decode_ChangePasswordArgument,
     _encode_ChangePasswordArgument,
-} from "../DirectoryAbstractService/ChangePasswordArgument.ta";
+} from "../DirectoryAbstractService/ChangePasswordArgument.ta.js";
 import {
     ChangePasswordResult,
     _decode_ChangePasswordResult,
     _encode_ChangePasswordResult,
-} from "../DirectoryAbstractService/ChangePasswordResult.ta";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/ChangePasswordResult.ta.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     ChangePasswordArgument,
     _decode_ChangePasswordArgument,
     _encode_ChangePasswordArgument,
-} from "../DirectoryAbstractService/ChangePasswordArgument.ta";
+} from "../DirectoryAbstractService/ChangePasswordArgument.ta.js";
 export {
     ChangePasswordResult,
     _decode_ChangePasswordResult,
     _encode_ChangePasswordResult,
-} from "../DirectoryAbstractService/ChangePasswordResult.ta";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/ChangePasswordResult.ta.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION changePassword */
 /**

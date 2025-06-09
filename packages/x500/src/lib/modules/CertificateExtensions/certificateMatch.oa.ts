@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { certAssertion } from "../CertificateExtensions/certAssertion.oa";
+import { certAssertion } from "../CertificateExtensions/certAssertion.oa.js";
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from "../CertificateExtensions/CertificateAssertion.ta";
-import { id_mr_certificateMatch } from "../CertificateExtensions/id-mr-certificateMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { certAssertion } from "../CertificateExtensions/certAssertion.oa";
+} from "../CertificateExtensions/CertificateAssertion.ta.js";
+import { id_mr_certificateMatch } from "../CertificateExtensions/id-mr-certificateMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { certAssertion } from "../CertificateExtensions/certAssertion.oa.js";
 export {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from "../CertificateExtensions/CertificateAssertion.ta";
-export { id_mr_certificateMatch } from "../CertificateExtensions/id-mr-certificateMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateAssertion.ta.js";
+export { id_mr_certificateMatch } from "../CertificateExtensions/id-mr-certificateMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certificateMatch */
 /**

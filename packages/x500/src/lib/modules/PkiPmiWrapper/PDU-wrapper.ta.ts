@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 import {
     TBSPDU_wrapper,
     _decode_TBSPDU_wrapper,
     _encode_TBSPDU_wrapper,
-} from "../PkiPmiWrapper/TBSPDU-wrapper.ta";
+} from "../PkiPmiWrapper/TBSPDU-wrapper.ta.js";
 export {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 export {
     TBSPDU_wrapper,
     _decode_TBSPDU_wrapper,
     _encode_TBSPDU_wrapper,
-} from "../PkiPmiWrapper/TBSPDU-wrapper.ta";
+} from "../PkiPmiWrapper/TBSPDU-wrapper.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PDU_wrapper */
 /**

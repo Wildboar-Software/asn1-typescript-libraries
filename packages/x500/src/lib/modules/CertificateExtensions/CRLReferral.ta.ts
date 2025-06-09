@@ -5,37 +5,37 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta";
+} from "../CertificateExtensions/CRLScopeSyntax.ta.js";
 import {
     DeltaRefInfo,
     _decode_DeltaRefInfo,
     _encode_DeltaRefInfo,
-} from "../CertificateExtensions/DeltaRefInfo.ta";
+} from "../CertificateExtensions/DeltaRefInfo.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta";
+} from "../CertificateExtensions/CRLScopeSyntax.ta.js";
 export {
     DeltaRefInfo,
     _decode_DeltaRefInfo,
     _encode_DeltaRefInfo,
-} from "../CertificateExtensions/DeltaRefInfo.ta";
+} from "../CertificateExtensions/DeltaRefInfo.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CRLReferral */
 /**

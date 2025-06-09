@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DataTransferServerAE,
     _decode_DataTransferServerAE,
     _encode_DataTransferServerAE,
-} from "../Wrapper/DataTransferServerAE.ta";
+} from "../Wrapper/DataTransferServerAE.ta.js";
 import {
     DataTransferServerNEA,
     _decode_DataTransferServerNEA,
     _encode_DataTransferServerNEA,
-} from "../Wrapper/DataTransferServerNEA.ta";
+} from "../Wrapper/DataTransferServerNEA.ta.js";
 export {
     DataTransferServerAE,
     _decode_DataTransferServerAE,
     _encode_DataTransferServerAE,
-} from "../Wrapper/DataTransferServerAE.ta";
+} from "../Wrapper/DataTransferServerAE.ta.js";
 export {
     DataTransferServerNEA,
     _decode_DataTransferServerNEA,
     _encode_DataTransferServerNEA,
-} from "../Wrapper/DataTransferServerNEA.ta";
+} from "../Wrapper/DataTransferServerNEA.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DataTransferServer */
 /**

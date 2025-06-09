@@ -5,27 +5,27 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     OidOrAttr,
     _decode_OidOrAttr,
     _encode_OidOrAttr,
-} from "../AuthenticationFramework/OidOrAttr.ta";
+} from "../AuthenticationFramework/OidOrAttr.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     OidOrAttr,
     _decode_OidOrAttr,
     _encode_OidOrAttr,
-} from "../AuthenticationFramework/OidOrAttr.ta";
+} from "../AuthenticationFramework/OidOrAttr.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedPublicKeyAlgorithms */
 /**

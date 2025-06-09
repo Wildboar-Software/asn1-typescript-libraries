@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oidC2 } from "../SelectedAttributeTypes/id-oidC2.va";
-import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oidC2 } from "../SelectedAttributeTypes/id-oidC2.va.js";
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -21,11 +21,11 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_oidC2 } from "../SelectedAttributeTypes/id-oidC2.va";
-export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_oidC2 } from "../SelectedAttributeTypes/id-oidC2.va.js";
+export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION oidC2 */
 /**

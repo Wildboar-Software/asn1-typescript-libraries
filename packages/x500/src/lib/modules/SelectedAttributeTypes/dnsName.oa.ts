@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { dnsNameMatch } from "../SelectedAttributeTypes/dnsNameMatch.oa";
-import { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { dnsNameMatch } from "../SelectedAttributeTypes/dnsNameMatch.oa.js";
+import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
 import {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-import { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+import { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { dnsNameMatch } from "../SelectedAttributeTypes/dnsNameMatch.oa";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { dnsNameMatch } from "../SelectedAttributeTypes/dnsNameMatch.oa.js";
+export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
 export {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-export { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+export { id_at_dnsName } from "../SelectedAttributeTypes/id-at-dnsName.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dnsName */
 /**

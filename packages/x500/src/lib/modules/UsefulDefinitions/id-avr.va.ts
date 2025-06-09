@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { avRestriction } from "../UsefulDefinitions/avRestriction.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { avRestriction } from "../UsefulDefinitions/avRestriction.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { avRestriction } from "../UsefulDefinitions/avRestriction.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { avRestriction } from "../UsefulDefinitions/avRestriction.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_avr */
 /**

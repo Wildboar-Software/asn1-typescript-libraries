@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { id_sha512_224 } from "../AlgorithmObjectIdentifiers/id-sha512-224.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_sha512_224 } from "../AlgorithmObjectIdentifiers/id-sha512-224.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import { id_sha512_224 } from "../AlgorithmObjectIdentifiers/id-sha512-224.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_sha512_224 } from "../AlgorithmObjectIdentifiers/id-sha512-224.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION sha512_224 */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa";
-import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va";
-import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa";
-export { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va";
-export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.js";
+import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.js";
+import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.js";
+export { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.js";
+export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION resPersonNameForm */
 /**

@@ -5,13 +5,13 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Knowledge_knowledgeType,
     _decode_Knowledge_knowledgeType,
     _encode_Knowledge_knowledgeType,
     _enum_for_Knowledge_knowledgeType,
-} from "../DirectoryShadowAbstractService/Knowledge-knowledgeType.ta";
+} from "../DirectoryShadowAbstractService/Knowledge-knowledgeType.ta.js";
 export {
     both /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     Knowledge_knowledgeType,
@@ -23,7 +23,7 @@ export {
     _decode_Knowledge_knowledgeType,
     _encode_Knowledge_knowledgeType,
     _enum_for_Knowledge_knowledgeType,
-} from "../DirectoryShadowAbstractService/Knowledge-knowledgeType.ta";
+} from "../DirectoryShadowAbstractService/Knowledge-knowledgeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Knowledge */
 /**

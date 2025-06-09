@@ -4,77 +4,77 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
 import {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
 import {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
 import {
     MatchingRuleDescription,
     _decode_MatchingRuleDescription,
     _encode_MatchingRuleDescription,
-} from "../SchemaAdministration/MatchingRuleDescription.ta";
+} from "../SchemaAdministration/MatchingRuleDescription.ta.js";
 import {
     MatchingRuleUseDescription,
     _decode_MatchingRuleUseDescription,
     _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta";
+} from "../SchemaAdministration/MatchingRuleUseDescription.ta.js";
 import {
     NameFormDescription,
     _decode_NameFormDescription,
     _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta";
+} from "../SchemaAdministration/NameFormDescription.ta.js";
 import {
     ObjectClassDescription,
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta";
+} from "../SchemaAdministration/ObjectClassDescription.ta.js";
 export {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
 export {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
 export {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
 export {
     MatchingRuleDescription,
     _decode_MatchingRuleDescription,
     _encode_MatchingRuleDescription,
-} from "../SchemaAdministration/MatchingRuleDescription.ta";
+} from "../SchemaAdministration/MatchingRuleDescription.ta.js";
 export {
     MatchingRuleUseDescription,
     _decode_MatchingRuleUseDescription,
     _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta";
+} from "../SchemaAdministration/MatchingRuleUseDescription.ta.js";
 export {
     NameFormDescription,
     _decode_NameFormDescription,
     _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta";
+} from "../SchemaAdministration/NameFormDescription.ta.js";
 export {
     ObjectClassDescription,
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta";
+} from "../SchemaAdministration/ObjectClassDescription.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item_subSchema */
 /**

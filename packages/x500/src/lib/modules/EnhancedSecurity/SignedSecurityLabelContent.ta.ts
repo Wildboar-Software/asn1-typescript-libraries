@@ -4,57 +4,57 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 import {
     KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta";
+} from "../CertificateExtensions/KeyIdentifier.ta.js";
 import {
     SecurityLabel,
     _decode_SecurityLabel,
     _encode_SecurityLabel,
-} from "../EnhancedSecurity/SecurityLabel.ta";
+} from "../EnhancedSecurity/SecurityLabel.ta.js";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 export {
     KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta";
+} from "../CertificateExtensions/KeyIdentifier.ta.js";
 export {
     SecurityLabel,
     _decode_SecurityLabel,
     _encode_SecurityLabel,
-} from "../EnhancedSecurity/SecurityLabel.ta";
+} from "../EnhancedSecurity/SecurityLabel.ta.js";
 export {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedSecurityLabelContent */
 /**

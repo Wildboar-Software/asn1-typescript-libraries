@@ -1,4 +1,4 @@
-import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
+import IPV4_AFI_IDI from "./IPV4_AFI_IDI.js";
 
 type IPv4 = Uint8Array;
 type NSAP = Uint8Array;

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { contextAssertionDefaults } from "../InformationFramework/contextAssertionDefaults.oa";
-import { id_sc_contextAssertionSubentry } from "../InformationFramework/id-sc-contextAssertionSubentry.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { contextAssertionDefaults } from "../InformationFramework/contextAssertionDefaults.oa.js";
+import { id_sc_contextAssertionSubentry } from "../InformationFramework/id-sc-contextAssertionSubentry.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { contextAssertionDefaults } from "../InformationFramework/contextAssertionDefaults.oa";
-export { id_sc_contextAssertionSubentry } from "../InformationFramework/id-sc-contextAssertionSubentry.va";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { contextAssertionDefaults } from "../InformationFramework/contextAssertionDefaults.oa.js";
+export { id_sc_contextAssertionSubentry } from "../InformationFramework/id-sc-contextAssertionSubentry.va.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
+} from "../InformationFramework/ObjectClassKind.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION contextAssertionSubentry */
 /**

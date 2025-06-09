@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { ldap_dir } from "../UsefulDefinitions/ldap-dir.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ldap_x509 */
 /**

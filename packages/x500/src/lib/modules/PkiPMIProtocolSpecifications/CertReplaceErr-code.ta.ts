@@ -1,21 +1,21 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
-} from "../PkiPMIProtocolSpecifications/CASP-error.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-error.ta.js";
 import {
     EnvelopedData_error,
     _decode_EnvelopedData_error,
     _encode_EnvelopedData_error,
-} from "../PkiPMIProtocolSpecifications/EnvelopedData-error.ta";
+} from "../PkiPMIProtocolSpecifications/EnvelopedData-error.ta.js";
 import {
     SignedData_error,
     _decode_SignedData_error,
     _encode_SignedData_error,
-} from "../PkiPMIProtocolSpecifications/SignedData-error.ta";
+} from "../PkiPMIProtocolSpecifications/SignedData-error.ta.js";
 export {
     CASP_error,
     CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -35,14 +35,14 @@ export {
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
-} from "../PkiPMIProtocolSpecifications/CASP-error.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-error.ta.js";
 export {
     EnvelopedData_error,
     EnvelopedData_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_EnvelopedData_error,
     _encode_EnvelopedData_error,
     _enum_for_EnvelopedData_error,
-} from "../PkiPMIProtocolSpecifications/EnvelopedData-error.ta";
+} from "../PkiPMIProtocolSpecifications/EnvelopedData-error.ta.js";
 export {
     signedDataContectTypeExpected /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     SignedData_error,
@@ -58,7 +58,7 @@ export {
     _decode_SignedData_error,
     _encode_SignedData_error,
     _enum_for_SignedData_error,
-} from "../PkiPMIProtocolSpecifications/SignedData-error.ta";
+} from "../PkiPMIProtocolSpecifications/SignedData-error.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceErr_code */
 /**

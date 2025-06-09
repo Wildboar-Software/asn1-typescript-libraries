@@ -1,21 +1,21 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { description } from "../SelectedAttributeTypes/description.oa";
-import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa";
-import { roleOccupant } from "../SelectedAttributeTypes/roleOccupant.oa";
-import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-import { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organizationalRole.va";
-import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa";
-import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa";
-import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { description } from "../SelectedAttributeTypes/description.oa.js";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.js";
+import { roleOccupant } from "../SelectedAttributeTypes/roleOccupant.oa.js";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+import { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organizationalRole.va.js";
+import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.js";
+import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.js";
+import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -27,18 +27,18 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { description } from "../SelectedAttributeTypes/description.oa";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa";
-export { roleOccupant } from "../SelectedAttributeTypes/roleOccupant.oa";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-export { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organizationalRole.va";
-export { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa";
-export { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa";
-export { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { description } from "../SelectedAttributeTypes/description.oa.js";
+export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.js";
+export { roleOccupant } from "../SelectedAttributeTypes/roleOccupant.oa.js";
+export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+export { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organizationalRole.va.js";
+export { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.js";
+export { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.js";
+export { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION organizationalRole */
 /**

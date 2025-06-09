@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
-import { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
+import { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
-export { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
+export { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dITContentRuleDescription */
 /**

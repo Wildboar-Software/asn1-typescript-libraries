@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ecStdCurvesAndGen } from "../AlgorithmObjectIdentifiers/ecStdCurvesAndGen.va";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-export { ecStdCurvesAndGen } from "../AlgorithmObjectIdentifiers/ecStdCurvesAndGen.va";
+import { ecStdCurvesAndGen } from "../AlgorithmObjectIdentifiers/ecStdCurvesAndGen.va.js";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { ecStdCurvesAndGen } from "../AlgorithmObjectIdentifiers/ecStdCurvesAndGen.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION versionOne */
 /**

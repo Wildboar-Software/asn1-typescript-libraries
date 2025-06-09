@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_octetStringOrderingMatch } from "../SelectedAttributeTypes/id-mr-octetStringOrderingMatch.va";
-import { octetString } from "../SelectedAttributeTypes/octetString.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_octetStringOrderingMatch } from "../SelectedAttributeTypes/id-mr-octetStringOrderingMatch.va";
-export { octetString } from "../SelectedAttributeTypes/octetString.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_octetStringOrderingMatch } from "../SelectedAttributeTypes/id-mr-octetStringOrderingMatch.va.js";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_octetStringOrderingMatch } from "../SelectedAttributeTypes/id-mr-octetStringOrderingMatch.va.js";
+export { octetString } from "../SelectedAttributeTypes/octetString.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION octetStringOrderingMatch */
 /**

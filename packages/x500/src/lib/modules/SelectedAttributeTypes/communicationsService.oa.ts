@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.js";
 import {
     CommunicationsService,
     _decode_CommunicationsService,
     _encode_CommunicationsService,
-} from "../SelectedAttributeTypes/CommunicationsService.ta";
-import { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va";
-import { oid } from "../SelectedAttributeTypes/oid.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/CommunicationsService.ta.js";
+import { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va.js";
+import { oid } from "../SelectedAttributeTypes/oid.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CommunicationsService,
     _decode_CommunicationsService,
     _encode_CommunicationsService,
-} from "../SelectedAttributeTypes/CommunicationsService.ta";
-export { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va";
-export { oid } from "../SelectedAttributeTypes/oid.oa";
+} from "../SelectedAttributeTypes/CommunicationsService.ta.js";
+export { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va.js";
+export { oid } from "../SelectedAttributeTypes/oid.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION communicationsService */
 /**

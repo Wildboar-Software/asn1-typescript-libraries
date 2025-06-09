@@ -3,9 +3,9 @@ import {
     AuthorityAttributeIdentifierSyntax,
     _decode_AuthorityAttributeIdentifierSyntax,
     _encode_AuthorityAttributeIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_authorityAttributeIdentifier } from "./id-ce-authorityAttributeIdentifier.va";
+} from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_authorityAttributeIdentifier } from "./id-ce-authorityAttributeIdentifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION authorityAttributeIdentifier */
 /**

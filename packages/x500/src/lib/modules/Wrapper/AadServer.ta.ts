@@ -5,39 +5,39 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../Wrapper/InvokeID.ta";
+} from "../Wrapper/InvokeID.ta.js";
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from "../Wrapper/SequenceNumber.ta";
+} from "../Wrapper/SequenceNumber.ta.js";
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "../Wrapper/TimeStamp.ta.js";
+export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../Wrapper/InvokeID.ta";
+} from "../Wrapper/InvokeID.ta.js";
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from "../Wrapper/SequenceNumber.ta";
+} from "../Wrapper/SequenceNumber.ta.js";
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AadServer */
 /**

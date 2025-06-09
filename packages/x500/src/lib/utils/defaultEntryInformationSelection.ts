@@ -1,4 +1,4 @@
-import { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta";
+import { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta.js";
 
 /**
  * @summary Convenience default value for EntryInformationSelection.

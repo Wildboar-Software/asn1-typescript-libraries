@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa";
-import { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va";
-export { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa.js";
+import { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va.js";
+export { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,9 +20,9 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa";
-export { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa.js";
+export { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va.js";
 
 /* START_OF_SYMBOL_DEFINITION certificationAuthority_V2 */
 /**

@@ -4,12 +4,12 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ABRT_source,
     _decode_ABRT_source,
     _encode_ABRT_source,
-} from "../OSIProtocolSpecification/ABRT-source.ta";
+} from "../OSIProtocolSpecification/ABRT-source.ta.js";
 export {
     ABRT_source,
     ABRT_source_acse_service_provider /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -18,7 +18,7 @@ export {
     acse_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ABRT_source,
     _encode_ABRT_source,
-} from "../OSIProtocolSpecification/ABRT-source.ta";
+} from "../OSIProtocolSpecification/ABRT-source.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ABRT_apdu */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { administrativeRoles } from "../UsefulDefinitions/administrativeRoles.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { administrativeRoles } from "../UsefulDefinitions/administrativeRoles.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { administrativeRoles } from "../UsefulDefinitions/administrativeRoles.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { administrativeRoles } from "../UsefulDefinitions/administrativeRoles.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ar */
 /**

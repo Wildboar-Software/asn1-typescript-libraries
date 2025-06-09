@@ -1,10 +1,10 @@
 import type {
     MasterOrShadowAccessPoint,
-} from "../modules/DistributedOperations/MasterOrShadowAccessPoint.ta";
+} from "../modules/DistributedOperations/MasterOrShadowAccessPoint.ta.js";
 import {
     MasterOrShadowAccessPoint_category_master,
     MasterOrShadowAccessPoint_category_shadow,
-} from "../modules/DistributedOperations/MasterOrShadowAccessPoint-category.ta";
+} from "../modules/DistributedOperations/MasterOrShadowAccessPoint-category.ta.js";
 
 export
 function splitIntoMastersAndShadows (

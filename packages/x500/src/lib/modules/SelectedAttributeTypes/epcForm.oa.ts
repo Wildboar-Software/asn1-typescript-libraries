@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     EpcFormat,
     _decode_EpcFormat,
     _encode_EpcFormat,
-} from "../SelectedAttributeTypes/EpcFormat.ta";
-import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/EpcFormat.ta.js";
+import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     EpcFormat,
     _decode_EpcFormat,
     _encode_EpcFormat,
-} from "../SelectedAttributeTypes/EpcFormat.ta";
-export { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va";
+} from "../SelectedAttributeTypes/EpcFormat.ta.js";
+export { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION epcForm */
 /**

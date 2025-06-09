@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va.js";
 import {
     PolicyMappingsSyntax,
     _decode_PolicyMappingsSyntax,
     _encode_PolicyMappingsSyntax,
-} from "../CertificateExtensions/PolicyMappingsSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va";
+} from "../CertificateExtensions/PolicyMappingsSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va.js";
 export {
     PolicyMappingsSyntax,
     _decode_PolicyMappingsSyntax,
     _encode_PolicyMappingsSyntax,
-} from "../CertificateExtensions/PolicyMappingsSyntax.ta";
+} from "../CertificateExtensions/PolicyMappingsSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION policyMappings */
 /**

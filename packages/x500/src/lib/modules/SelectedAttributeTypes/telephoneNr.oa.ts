@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.js";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.js";
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION telephoneNr */
 /**

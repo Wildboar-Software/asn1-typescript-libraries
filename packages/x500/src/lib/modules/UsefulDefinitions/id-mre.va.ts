@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { matchingRestriction } from "../UsefulDefinitions/matchingRestriction.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mre */
 /**

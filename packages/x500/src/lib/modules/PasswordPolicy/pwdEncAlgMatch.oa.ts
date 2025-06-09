@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va.js";
 import {
     PwdEncAlg,
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
-} from "../PasswordPolicy/PwdEncAlg.ta";
-import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va";
+} from "../PasswordPolicy/PwdEncAlg.ta.js";
+import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va.js";
 export {
     PwdEncAlg,
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
-} from "../PasswordPolicy/PwdEncAlg.ta";
-export { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa";
+} from "../PasswordPolicy/PwdEncAlg.ta.js";
+export { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdEncAlgMatch */
 /**

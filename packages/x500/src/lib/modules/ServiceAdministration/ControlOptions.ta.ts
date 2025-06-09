@@ -5,23 +5,23 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HierarchySelections,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
-} from "../DirectoryAbstractService/HierarchySelections.ta";
+} from "../DirectoryAbstractService/HierarchySelections.ta.js";
 import {
     SearchControlOptions,
     SearchControlOptions_searchAliases /* IMPORTED_LONG_NAMED_BIT */,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
-} from "../DirectoryAbstractService/SearchControlOptions.ta";
+} from "../DirectoryAbstractService/SearchControlOptions.ta.js";
 import {
     ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
-} from "../DirectoryAbstractService/ServiceControlOptions.ta";
+} from "../DirectoryAbstractService/ServiceControlOptions.ta.js";
 export {
     all /* IMPORTED_SHORT_NAMED_BIT */,
     children /* IMPORTED_SHORT_NAMED_BIT */,
@@ -46,7 +46,7 @@ export {
     top /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
-} from "../DirectoryAbstractService/HierarchySelections.ta";
+} from "../DirectoryAbstractService/HierarchySelections.ta.js";
 export {
     checkOverspecified /* IMPORTED_SHORT_NAMED_BIT */,
     dnAttribute /* IMPORTED_SHORT_NAMED_BIT */,
@@ -75,7 +75,7 @@ export {
     useSubset /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
-} from "../DirectoryAbstractService/SearchControlOptions.ta";
+} from "../DirectoryAbstractService/SearchControlOptions.ta.js";
 export {
     allowWriteableCopy /* IMPORTED_SHORT_NAMED_BIT */,
     chainingProhibited /* IMPORTED_SHORT_NAMED_BIT */,
@@ -110,7 +110,7 @@ export {
     subentries /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
-} from "../DirectoryAbstractService/ServiceControlOptions.ta";
+} from "../DirectoryAbstractService/ServiceControlOptions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ControlOptions */
 /**

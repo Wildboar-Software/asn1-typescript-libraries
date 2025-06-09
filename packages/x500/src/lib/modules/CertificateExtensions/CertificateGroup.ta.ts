@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateGroupNumberRange,
     _decode_CertificateGroupNumberRange,
     _encode_CertificateGroupNumberRange,
-} from "../CertificateExtensions/CertificateGroupNumberRange.ta";
+} from "../CertificateExtensions/CertificateGroupNumberRange.ta.js";
 import {
     CertificateSerialNumbers,
     _decode_CertificateSerialNumbers,
     _encode_CertificateSerialNumbers,
-} from "../CertificateExtensions/CertificateSerialNumbers.ta";
+} from "../CertificateExtensions/CertificateSerialNumbers.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     CertificateGroupNumberRange,
     _decode_CertificateGroupNumberRange,
     _encode_CertificateGroupNumberRange,
-} from "../CertificateExtensions/CertificateGroupNumberRange.ta";
+} from "../CertificateExtensions/CertificateGroupNumberRange.ta.js";
 export {
     CertificateSerialNumbers,
     _decode_CertificateSerialNumbers,
     _encode_CertificateSerialNumbers,
-} from "../CertificateExtensions/CertificateSerialNumbers.ta";
+} from "../CertificateExtensions/CertificateSerialNumbers.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateGroup */
 /**

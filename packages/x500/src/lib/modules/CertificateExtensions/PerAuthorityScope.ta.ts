@@ -4,67 +4,67 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     BaseRevocationInfo,
     _decode_BaseRevocationInfo,
     _encode_BaseRevocationInfo,
-} from "../CertificateExtensions/BaseRevocationInfo.ta";
+} from "../CertificateExtensions/BaseRevocationInfo.ta.js";
 import {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 import {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta";
+} from "../CertificateExtensions/NumberRange.ta.js";
 import {
     OnlyCertificateTypes,
     _decode_OnlyCertificateTypes,
     _encode_OnlyCertificateTypes,
-} from "../CertificateExtensions/OnlyCertificateTypes.ta";
+} from "../CertificateExtensions/OnlyCertificateTypes.ta.js";
 import {
     ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 export {
     BaseRevocationInfo,
     _decode_BaseRevocationInfo,
     _encode_BaseRevocationInfo,
-} from "../CertificateExtensions/BaseRevocationInfo.ta";
+} from "../CertificateExtensions/BaseRevocationInfo.ta.js";
 export {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta";
+} from "../CertificateExtensions/NumberRange.ta.js";
 export {
     attribute /* IMPORTED_SHORT_NAMED_BIT */,
     authority /* IMPORTED_SHORT_NAMED_BIT */,
@@ -75,7 +75,7 @@ export {
     user /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OnlyCertificateTypes,
     _encode_OnlyCertificateTypes,
-} from "../CertificateExtensions/OnlyCertificateTypes.ta";
+} from "../CertificateExtensions/OnlyCertificateTypes.ta.js";
 export {
     aACompromise /* IMPORTED_SHORT_NAMED_BIT */,
     affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */,
@@ -100,7 +100,7 @@ export {
     weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PerAuthorityScope */
 /**

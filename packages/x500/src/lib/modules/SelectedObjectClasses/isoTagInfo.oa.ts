@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa";
-import { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa";
-import { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa";
-import { tagOid } from "../SelectedAttributeTypes/tagOid.oa";
-import { uii } from "../SelectedAttributeTypes/uii.oa";
-import { uiiInUrn } from "../SelectedAttributeTypes/uiiInUrn.oa";
-import { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa.js";
+import { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa.js";
+import { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa.js";
+import { tagOid } from "../SelectedAttributeTypes/tagOid.oa.js";
+import { uii } from "../SelectedAttributeTypes/uii.oa.js";
+import { uiiInUrn } from "../SelectedAttributeTypes/uiiInUrn.oa.js";
+import { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,15 +24,15 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa";
-export { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa";
-export { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa";
-export { tagOid } from "../SelectedAttributeTypes/tagOid.oa";
-export { uii } from "../SelectedAttributeTypes/uii.oa";
-export { uiiInUrn } from "../SelectedAttributeTypes/uiiInUrn.oa";
-export { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa.js";
+export { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa.js";
+export { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa.js";
+export { tagOid } from "../SelectedAttributeTypes/tagOid.oa.js";
+export { uii } from "../SelectedAttributeTypes/uii.oa.js";
+export { uiiInUrn } from "../SelectedAttributeTypes/uiiInUrn.oa.js";
+export { id_oc_isoTagInfo } from "../SelectedObjectClasses/id-oc-isoTagInfo.va.js";
 
 /* START_OF_SYMBOL_DEFINITION isoTagInfo */
 /**

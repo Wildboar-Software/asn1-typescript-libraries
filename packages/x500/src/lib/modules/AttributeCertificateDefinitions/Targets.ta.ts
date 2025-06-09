@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Target,
     _decode_Target,
     _encode_Target,
-} from "../AttributeCertificateDefinitions/Target.ta";
+} from "../AttributeCertificateDefinitions/Target.ta.js";
 export {
     Target,
     _decode_Target,
     _encode_Target,
-} from "../AttributeCertificateDefinitions/Target.ta";
+} from "../AttributeCertificateDefinitions/Target.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Targets */
 /**

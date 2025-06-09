@@ -3,9 +3,9 @@ import {
     BasicAttConstraintsSyntax,
     _decode_BasicAttConstraintsSyntax,
     _encode_BasicAttConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_basicAttConstraints } from "./id-ce-basicAttConstraints.va";
+} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_basicAttConstraints } from "./id-ce-basicAttConstraints.va.js";
 
 /* START_OF_SYMBOL_DEFINITION basicAttConstraints */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va";
+import { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va.js";
 import {
     MultipleIcvAlgo,
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
-} from "../CryptoTools/MultipleIcvAlgo.ta";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
-export { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va";
+} from "../CryptoTools/MultipleIcvAlgo.ta.js";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
+export { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va.js";
 export {
     MultipleIcvAlgo,
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
-} from "../CryptoTools/MultipleIcvAlgo.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../CryptoTools/MultipleIcvAlgo.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION multipleIcvAlgo */
 /**

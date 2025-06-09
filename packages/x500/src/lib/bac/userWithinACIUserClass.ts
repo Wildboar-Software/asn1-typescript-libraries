@@ -1,23 +1,23 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta";
+} from "../modules/InformationFramework/DistinguishedName.ta.js";
 import type {
     NameAndOptionalUID,
-} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 import type {
     UserClasses,
-} from "../modules/BasicAccessControl/UserClasses.ta";
+} from "../modules/BasicAccessControl/UserClasses.ta.js";
 import type {
     AuthenticationLevel,
-} from "../modules/BasicAccessControl/AuthenticationLevel.ta";
-import type ACDFTuple from "../types/ACDFTuple";
-import compareDistinguishedName from "../comparators/compareDistinguishedName";
-import compareBitStrings from "../comparators/compareBitStrings";
-import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification";
-import compareAuthenticationLevel from "../comparators/compareAuthenticationLevel";
-import deniesAccess from "./deniesAccess";
+} from "../modules/BasicAccessControl/AuthenticationLevel.ta.js";
+import type ACDFTuple from "../types/ACDFTuple.js";
+import compareDistinguishedName from "../comparators/compareDistinguishedName.js";
+import compareBitStrings from "../comparators/compareBitStrings.js";
+import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification.js";
+import compareAuthenticationLevel from "../comparators/compareAuthenticationLevel.js";
+import deniesAccess from "./deniesAccess.js";
 
 /**
  * @summary Determines if a user falls within an ACI item's `UserClasses`.

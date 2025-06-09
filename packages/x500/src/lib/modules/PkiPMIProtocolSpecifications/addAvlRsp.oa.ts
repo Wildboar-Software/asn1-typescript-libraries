@@ -3,16 +3,16 @@ import {
     AddAvlRsp,
     _decode_AddAvlRsp,
     _encode_AddAvlRsp,
-} from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta";
-import { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta.js";
+import { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 export {
     AddAvlRsp,
     _decode_AddAvlRsp,
     _encode_AddAvlRsp,
-} from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta";
-export { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/AddAvlRsp.ta.js";
+export { id_addAvlRsp } from "../PkiPMIProtocolSpecifications/id-addAvlRsp.va.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION addAvlRsp */
 /**

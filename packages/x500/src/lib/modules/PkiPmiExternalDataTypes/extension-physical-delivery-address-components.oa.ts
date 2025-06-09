@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     ExtensionPhysicalDeliveryAddressComponents,
     _decode_ExtensionPhysicalDeliveryAddressComponents,
     _encode_ExtensionPhysicalDeliveryAddressComponents,
-} from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     ExtensionPhysicalDeliveryAddressComponents,
     _decode_ExtensionPhysicalDeliveryAddressComponents,
     _encode_ExtensionPhysicalDeliveryAddressComponents,
-} from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta";
+} from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION extension_physical_delivery_address_components */
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_gmac */
 /**

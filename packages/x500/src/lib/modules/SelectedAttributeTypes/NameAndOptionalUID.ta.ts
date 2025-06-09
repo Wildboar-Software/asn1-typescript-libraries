@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NameAndOptionalUID */
 /**

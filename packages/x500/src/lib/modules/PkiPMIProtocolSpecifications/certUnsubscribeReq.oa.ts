@@ -3,16 +3,16 @@ import {
     CertUnsubscribeReq,
     _decode_CertUnsubscribeReq,
     _encode_CertUnsubscribeReq,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq.ta";
-import { id_certUnsubscribeReq } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeReq.va";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq.ta.js";
+import { id_certUnsubscribeReq } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeReq.va.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 export {
     CertUnsubscribeReq,
     _decode_CertUnsubscribeReq,
     _encode_CertUnsubscribeReq,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq.ta";
-export { id_certUnsubscribeReq } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeReq.va";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq.ta.js";
+export { id_certUnsubscribeReq } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeReq.va.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certUnsubscribeReq */
 /**

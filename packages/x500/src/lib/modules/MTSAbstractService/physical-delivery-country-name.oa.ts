@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from "../MTSAbstractService/PhysicalDeliveryCountryName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/PhysicalDeliveryCountryName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from "../MTSAbstractService/PhysicalDeliveryCountryName.ta";
+} from "../MTSAbstractService/PhysicalDeliveryCountryName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_country_name */
 /**

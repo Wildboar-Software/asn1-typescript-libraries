@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "../AttributeCertificateDefinitions/IssuerSerial.ta.js";
 import {
     ObjectDigestInfo,
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
-} from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta";
+} from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "../AttributeCertificateDefinitions/IssuerSerial.ta.js";
 export {
     ObjectDigestInfo,
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
-} from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta";
+} from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TargetCert */
 /**

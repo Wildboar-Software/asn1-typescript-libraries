@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModificationParameter,
     _decode_ModificationParameter,
     _encode_ModificationParameter,
-} from "../DirectoryShadowAbstractService/ModificationParameter.ta";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../DirectoryShadowAbstractService/ModificationParameter.ta.js";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 export {
     ModificationParameter,
     _decode_ModificationParameter,
     _encode_ModificationParameter,
-} from "../DirectoryShadowAbstractService/ModificationParameter.ta";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../DirectoryShadowAbstractService/ModificationParameter.ta.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleB */
 /**

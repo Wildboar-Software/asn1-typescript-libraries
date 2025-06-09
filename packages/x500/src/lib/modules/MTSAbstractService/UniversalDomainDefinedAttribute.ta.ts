@@ -4,19 +4,19 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta";
-export { ub_domain_defined_attribute_type_length } from "../MTSAbstractService/ub-domain-defined-attribute-type-length.va";
-export { ub_domain_defined_attribute_value_length } from "../MTSAbstractService/ub-domain-defined-attribute-value-length.va";
+} from "../MTSAbstractService/UniversalOrBMPString.ta.js";
+export { ub_domain_defined_attribute_type_length } from "../MTSAbstractService/ub-domain-defined-attribute-type-length.va.js";
+export { ub_domain_defined_attribute_value_length } from "../MTSAbstractService/ub-domain-defined-attribute-value-length.va.js";
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta";
+} from "../MTSAbstractService/UniversalOrBMPString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttribute */
 /**

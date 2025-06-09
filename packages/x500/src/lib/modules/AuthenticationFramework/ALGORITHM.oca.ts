@@ -1,3 +1,3 @@
 export {
     ALGORITHM,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";

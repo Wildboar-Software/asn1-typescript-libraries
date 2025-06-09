@@ -1,7 +1,7 @@
-import type ATVAC from "../types/AttributeTypeValueAndContextsTuple";
+import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.js";
 import type {
     Attribute,
-} from "../modules/InformationFramework/Attribute.ta";
+} from "../modules/InformationFramework/Attribute.ta.js";
 
 export
 function getValueTuplesFromAttribute (attr: Attribute): ATVAC[] {

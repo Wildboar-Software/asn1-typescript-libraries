@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UnformattedPostalAddress,
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
-} from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UnformattedPostalAddress,
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
-} from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta";
+} from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION unformatted_postal_address */
 /**

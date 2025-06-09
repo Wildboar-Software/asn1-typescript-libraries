@@ -7,11 +7,11 @@ import {
 import {
     _encodeIA5String,
     _encodePrintableString,
-} from "asn1-ts/dist/node/functional";
-import * as selat from "../collections/module/selectedAttributeTypeAttributes";
-import { AttributeTypeAndValue as ATAV } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
-import { RelativeDistinguishedName as RDN } from "../modules/InformationFramework/RelativeDistinguishedName.ta";
-import { _encode_UnboundedDirectoryString as _encode_UBS } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "asn1-ts/dist/functional.mjs";
+import * as selat from "../collections/module/selectedAttributeTypeAttributes.js";
+import { AttributeTypeAndValue as ATAV } from "../modules/InformationFramework/AttributeTypeAndValue.ta.js";
+import { RelativeDistinguishedName as RDN } from "../modules/InformationFramework/RelativeDistinguishedName.ta.js";
+import { _encode_UnboundedDirectoryString as _encode_UBS } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 // OpenSSL on Windows 10:
 // Subject: CN = Jonathan Wilbur + dnQualifier = 68109699-a4f6-477e-a7b2-1246ef9717f3, ST = FL, C = US

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
-} from "../PKIX1Implicit93/DisplayText.ta";
+} from "../PKIX1Implicit93/DisplayText.ta.js";
 import {
     NoticeReference,
     _decode_NoticeReference,
     _encode_NoticeReference,
-} from "../PKIX1Implicit93/NoticeReference.ta";
+} from "../PKIX1Implicit93/NoticeReference.ta.js";
 export {
     DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
-} from "../PKIX1Implicit93/DisplayText.ta";
+} from "../PKIX1Implicit93/DisplayText.ta.js";
 export {
     NoticeReference,
     _decode_NoticeReference,
     _encode_NoticeReference,
-} from "../PKIX1Implicit93/NoticeReference.ta";
+} from "../PKIX1Implicit93/NoticeReference.ta.js";
 
 // FIXME: Deduplicate this whole module.
 

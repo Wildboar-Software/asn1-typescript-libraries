@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertUpdateOK_Item_not_ok,
     _decode_CertUpdateOK_Item_not_ok,
     _encode_CertUpdateOK_Item_not_ok,
-} from "../CaSubscription/CertUpdateOK-Item-not-ok.ta";
+} from "../CaSubscription/CertUpdateOK-Item-not-ok.ta.js";
 import {
     CertUpdateOK_Item_ok,
     _decode_CertUpdateOK_Item_ok,
     _encode_CertUpdateOK_Item_ok,
-} from "../CaSubscription/CertUpdateOK-Item-ok.ta";
+} from "../CaSubscription/CertUpdateOK-Item-ok.ta.js";
 export {
     CertUpdateOK_Item_not_ok,
     _decode_CertUpdateOK_Item_not_ok,
     _encode_CertUpdateOK_Item_not_ok,
-} from "../CaSubscription/CertUpdateOK-Item-not-ok.ta";
+} from "../CaSubscription/CertUpdateOK-Item-not-ok.ta.js";
 export {
     CertUpdateOK_Item_ok,
     _decode_CertUpdateOK_Item_ok,
     _encode_CertUpdateOK_Item_ok,
-} from "../CaSubscription/CertUpdateOK-Item-ok.ta";
+} from "../CaSubscription/CertUpdateOK-Item-ok.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertUpdateOK_Item */
 /**

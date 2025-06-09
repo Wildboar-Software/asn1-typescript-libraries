@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-import { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va";
-import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-export { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va";
-export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+import { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.js";
+import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+export { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.js";
+export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION orgUnitNameForm */
 /**

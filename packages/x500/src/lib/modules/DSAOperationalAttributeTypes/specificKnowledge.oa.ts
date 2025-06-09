@@ -3,21 +3,21 @@ import {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
-import { id_doa_specificKnowledge } from "../DSAOperationalAttributeTypes/id-doa-specificKnowledge.va";
-import { masterAndShadowAccessPointsMatch } from "../DSAOperationalAttributeTypes/masterAndShadowAccessPointsMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
+import { id_doa_specificKnowledge } from "../DSAOperationalAttributeTypes/id-doa-specificKnowledge.va.js";
+import { masterAndShadowAccessPointsMatch } from "../DSAOperationalAttributeTypes/masterAndShadowAccessPointsMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
-export { id_doa_specificKnowledge } from "../DSAOperationalAttributeTypes/id-doa-specificKnowledge.va";
-export { masterAndShadowAccessPointsMatch } from "../DSAOperationalAttributeTypes/masterAndShadowAccessPointsMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
+export { id_doa_specificKnowledge } from "../DSAOperationalAttributeTypes/id-doa-specificKnowledge.va.js";
+export { masterAndShadowAccessPointsMatch } from "../DSAOperationalAttributeTypes/masterAndShadowAccessPointsMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION specificKnowledge */
 /**

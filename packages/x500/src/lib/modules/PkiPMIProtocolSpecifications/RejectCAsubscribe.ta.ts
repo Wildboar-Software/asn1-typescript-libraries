@@ -4,25 +4,25 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
-} from "../PkiPMIProtocolSpecifications/CASP-error.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-error.ta.js";
 import {
     CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.js";
 import {
     CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CASPversion,
     _encode_CASPversion,
     _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta";
+} from "../PkiPMIProtocolSpecifications/CASPversion.ta.js";
 export {
     CASP_error,
     CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -46,17 +46,17 @@ export {
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
-} from "../PkiPMIProtocolSpecifications/CASP-error.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-error.ta.js";
 export {
     CASPcommonComponents,
     _decode_CASPcommonComponents,
     _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta";
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.js";
 export {
     CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.js";
 export {
     CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -68,7 +68,7 @@ export {
     _decode_CASPversion,
     _encode_CASPversion,
     _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta";
+} from "../PkiPMIProtocolSpecifications/CASPversion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RejectCAsubscribe */
 /**

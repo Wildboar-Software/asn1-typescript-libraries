@@ -1,15 +1,15 @@
-import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples";
-import type ACDFTupleExtended from "../types/ACDFTupleExtended";
-import type ProtectedItem from "../types/ProtectedItem";
+import discardNonRelevantACDFTuples from "./discardNonRelevantACDFTuples.js";
+import type ACDFTupleExtended from "../types/ACDFTupleExtended.js";
+import type ProtectedItem from "../types/ProtectedItem.js";
 import type {
     ProtectedItems,
-} from "../modules/BasicAccessControl/ProtectedItems.ta";
-import splitGrantsAndDenials from "./splitGrantsAndDenials";
-import operationPermitted from "./operationPermitted";
-import type { EvaluateFilterSettings } from "../utils/evaluateFilter";
+} from "../modules/BasicAccessControl/ProtectedItems.ta.js";
+import splitGrantsAndDenials from "./splitGrantsAndDenials.js";
+import operationPermitted from "./operationPermitted.js";
+import type { EvaluateFilterSettings } from "../utils/evaluateFilter.js";
 import type {
     NameAndOptionalUID,
-} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 function specificityOfProtectedItem (
     request: ProtectedItem,

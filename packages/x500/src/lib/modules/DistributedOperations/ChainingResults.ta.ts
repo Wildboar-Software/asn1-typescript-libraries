@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     CrossReference,
     _decode_CrossReference,
     _encode_CrossReference,
-} from "../DistributedOperations/CrossReference.ta";
+} from "../DistributedOperations/CrossReference.ta.js";
 import {
     DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta";
+} from "../DistributedOperations/DomainInfo.ta.js";
 import {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     CrossReference,
     _decode_CrossReference,
     _encode_CrossReference,
-} from "../DistributedOperations/CrossReference.ta";
+} from "../DistributedOperations/CrossReference.ta.js";
 export {
     DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta";
+} from "../DistributedOperations/DomainInfo.ta.js";
 export {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ChainingResults */
 /**

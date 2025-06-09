@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from "../PkiPmiExternalDataTypes/TeletexCommonName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/TeletexCommonName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from "../PkiPmiExternalDataTypes/TeletexCommonName.ta";
+} from "../PkiPmiExternalDataTypes/TeletexCommonName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION teletex_common_name */
 /**

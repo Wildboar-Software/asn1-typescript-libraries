@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { oidC } from "../SelectedAttributeTypes/oidC.oa";
-import { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va";
-import { oidArc } from "../SelectedObjectClasses/oidArc.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa";
-export { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va";
-export { oidArc } from "../SelectedObjectClasses/oidArc.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+import { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va.js";
+import { oidArc } from "../SelectedObjectClasses/oidArc.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+export { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va.js";
+export { oidArc } from "../SelectedObjectClasses/oidArc.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION oidArcNf */
 /**

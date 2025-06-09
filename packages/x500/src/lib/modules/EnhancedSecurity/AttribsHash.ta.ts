@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 import {
     HashedAttributes,
     _decode_HashedAttributes,
     _encode_HashedAttributes,
-} from "../EnhancedSecurity/HashedAttributes.ta";
+} from "../EnhancedSecurity/HashedAttributes.ta.js";
 export {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 export {
     HashedAttributes,
     _decode_HashedAttributes,
     _encode_HashedAttributes,
-} from "../EnhancedSecurity/HashedAttributes.ta";
+} from "../EnhancedSecurity/HashedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttribsHash */
 /**

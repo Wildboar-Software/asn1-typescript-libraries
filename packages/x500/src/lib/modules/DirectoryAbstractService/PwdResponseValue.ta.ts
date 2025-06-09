@@ -4,18 +4,18 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PwdResponseValue_error,
     _decode_PwdResponseValue_error,
     _encode_PwdResponseValue_error,
     _enum_for_PwdResponseValue_error,
-} from "../DirectoryAbstractService/PwdResponseValue-error.ta";
+} from "../DirectoryAbstractService/PwdResponseValue-error.ta.js";
 import {
     PwdResponseValue_warning,
     _decode_PwdResponseValue_warning,
     _encode_PwdResponseValue_warning,
-} from "../DirectoryAbstractService/PwdResponseValue-warning.ta";
+} from "../DirectoryAbstractService/PwdResponseValue-warning.ta.js";
 export {
     changeAfterReset /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     passwordExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -25,12 +25,12 @@ export {
     _decode_PwdResponseValue_error,
     _encode_PwdResponseValue_error,
     _enum_for_PwdResponseValue_error,
-} from "../DirectoryAbstractService/PwdResponseValue-error.ta";
+} from "../DirectoryAbstractService/PwdResponseValue-error.ta.js";
 export {
     PwdResponseValue_warning,
     _decode_PwdResponseValue_warning,
     _encode_PwdResponseValue_warning,
-} from "../DirectoryAbstractService/PwdResponseValue-warning.ta";
+} from "../DirectoryAbstractService/PwdResponseValue-warning.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PwdResponseValue */
 /**

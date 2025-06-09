@@ -3,18 +3,18 @@ import {
     PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta";
-import { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AuthenticationFramework/PolicyID.ta.js";
+import { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta";
-export { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/PolicyID.ta.js";
+export { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION policyMatch */
 /**

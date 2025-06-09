@@ -5,27 +5,27 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EntryInformation_information_Item,
     _decode_EntryInformation_information_Item,
     _encode_EntryInformation_information_Item,
-} from "../DirectoryAbstractService/EntryInformation-information-Item.ta";
+} from "../DirectoryAbstractService/EntryInformation-information-Item.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     EntryInformation_information_Item,
     _decode_EntryInformation_information_Item,
     _encode_EntryInformation_information_Item,
-} from "../DirectoryAbstractService/EntryInformation-information-Item.ta";
+} from "../DirectoryAbstractService/EntryInformation-information-Item.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EntryInformation */
 /**

@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta";
+} from "../CertificateExtensions/SkipCerts.ta.js";
 export {
     SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta";
+} from "../CertificateExtensions/SkipCerts.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PolicyConstraintsSyntax */
 /**

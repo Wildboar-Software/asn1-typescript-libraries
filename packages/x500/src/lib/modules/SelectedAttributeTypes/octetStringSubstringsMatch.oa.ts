@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va.js";
 import {
     OctetSubstringAssertion,
     _decode_OctetSubstringAssertion,
     _encode_OctetSubstringAssertion,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va";
+} from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va.js";
 export {
     OctetSubstringAssertion,
     _decode_OctetSubstringAssertion,
     _encode_OctetSubstringAssertion,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion.ta";
+} from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION octetStringSubstringsMatch */
 /**

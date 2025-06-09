@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { localityName } from "../SelectedAttributeTypes/localityName.oa";
-import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa";
-import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa";
-export { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa";
-export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.js";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+export { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.js";
+export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION LocaleAttributeSet */
 /**

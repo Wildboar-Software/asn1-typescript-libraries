@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 import {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
+} from "../PasswordPolicy/UserPwd.ta.js";
 export {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 export {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
+} from "../PasswordPolicy/UserPwd.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials_password */
 /**

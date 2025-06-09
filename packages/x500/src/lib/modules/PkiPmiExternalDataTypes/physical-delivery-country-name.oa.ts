@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryCountryName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryCountryName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryCountryName.ta";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryCountryName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_country_name */
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TerminalType,
     _decode_TerminalType,
     _encode_TerminalType,
-} from "../MTSAbstractService/TerminalType.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/TerminalType.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     g3_facsimile /* IMPORTED_SHORT_NAMED_INTEGER */,
     g4_facsimile /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -22,7 +22,7 @@ export {
     videotex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TerminalType,
     _encode_TerminalType,
-} from "../MTSAbstractService/TerminalType.ta";
+} from "../MTSAbstractService/TerminalType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION terminal_type */
 /**

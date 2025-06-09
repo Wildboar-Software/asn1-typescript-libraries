@@ -1,9 +1,9 @@
 import type {
     TraceInformation,
-} from "../modules/DistributedOperations/TraceInformation.ta";
+} from "../modules/DistributedOperations/TraceInformation.ta.js";
 import type {
     Name,
-} from "../modules/InformationFramework/Name.ta";
+} from "../modules/InformationFramework/Name.ta.js";
 
 function cheaplyNormalizeName (name: Name): string {
     return name.rdnSequence

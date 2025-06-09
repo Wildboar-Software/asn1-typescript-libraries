@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifyRights_Item,
     _decode_ModifyRights_Item,
     _encode_ModifyRights_Item,
-} from "../DirectoryAbstractService/ModifyRights-Item.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item.ta.js";
 export {
     ModifyRights_Item,
     _decode_ModifyRights_Item,
     _encode_ModifyRights_Item,
-} from "../DirectoryAbstractService/ModifyRights-Item.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyRights */
 /**

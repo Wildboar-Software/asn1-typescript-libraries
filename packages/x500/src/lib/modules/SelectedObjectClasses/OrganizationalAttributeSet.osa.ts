@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { userPassword } from "../AuthenticationFramework/userPassword.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa";
-import { description } from "../SelectedAttributeTypes/description.oa";
-import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa";
-import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa";
-import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa";
-import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa";
-export { userPassword } from "../AuthenticationFramework/userPassword.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa";
-export { description } from "../SelectedAttributeTypes/description.oa";
-export { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-export { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa";
-export { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa";
-export { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.js";
+import { description } from "../SelectedAttributeTypes/description.oa.js";
+import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.js";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.js";
+import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.js";
+import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.js";
+export { userPassword } from "../AuthenticationFramework/userPassword.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.js";
+export { description } from "../SelectedAttributeTypes/description.oa.js";
+export { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.js";
+export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+export { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.js";
+export { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.js";
+export { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OrganizationalAttributeSet */
 /**

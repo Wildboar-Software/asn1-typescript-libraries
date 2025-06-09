@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa";
-import { id_at_aliasedEntryName } from "../InformationFramework/id-at-aliasedEntryName.va";
-import { dn } from "../SelectedAttributeTypes/dn.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/DistinguishedName.ta.js";
+import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.js";
+import { id_at_aliasedEntryName } from "../InformationFramework/id-at-aliasedEntryName.va.js";
+import { dn } from "../SelectedAttributeTypes/dn.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa";
-export { id_at_aliasedEntryName } from "../InformationFramework/id-at-aliasedEntryName.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { dn } from "../SelectedAttributeTypes/dn.oa";
+} from "../InformationFramework/DistinguishedName.ta.js";
+export { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.js";
+export { id_at_aliasedEntryName } from "../InformationFramework/id-at-aliasedEntryName.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { dn } from "../SelectedAttributeTypes/dn.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION aliasedEntryName */
 /**

@@ -5,13 +5,13 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FamilyReturn_memberSelect,
     _decode_FamilyReturn_memberSelect,
     _encode_FamilyReturn_memberSelect,
     _enum_for_FamilyReturn_memberSelect,
-} from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta";
+} from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta.js";
 export {
     compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     contributingEntriesOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -23,8 +23,8 @@ export {
     _decode_FamilyReturn_memberSelect,
     _encode_FamilyReturn_memberSelect,
     _enum_for_FamilyReturn_memberSelect,
-} from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION FamilyReturn */
 /**

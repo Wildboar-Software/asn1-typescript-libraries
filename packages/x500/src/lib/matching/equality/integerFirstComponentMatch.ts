@@ -1,4 +1,4 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element, INTEGER, BERElement } from "asn1-ts";
 
 export

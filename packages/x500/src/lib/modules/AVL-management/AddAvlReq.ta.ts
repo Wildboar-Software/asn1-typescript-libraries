@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 import {
     CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 export {
     CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AddAvlReq */
 /**

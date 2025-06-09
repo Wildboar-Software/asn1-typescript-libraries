@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va";
+import { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va.js";
 import {
     ShakeOutputLen,
     _decode_ShakeOutputLen,
     _encode_ShakeOutputLen,
-} from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va";
+} from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va.js";
 export {
     ShakeOutputLen,
     _decode_ShakeOutputLen,
     _encode_ShakeOutputLen,
-} from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION shake128_len */
 /**

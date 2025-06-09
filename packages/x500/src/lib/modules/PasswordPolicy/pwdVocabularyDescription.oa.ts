@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_pwdVocabularyDescription } from "../PasswordPolicy/id-asx-pwdVocabularyDescription.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_pwdVocabularyDescription } from "../PasswordPolicy/id-asx-pwdVocabularyDescription.va.js";
 import {
     PwdVocabulary,
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_pwdVocabularyDescription } from "../PasswordPolicy/id-asx-pwdVocabularyDescription.va";
+} from "../PasswordPolicy/PwdVocabulary.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_pwdVocabularyDescription } from "../PasswordPolicy/id-asx-pwdVocabularyDescription.va.js";
 export {
     noDictionaryWords /* IMPORTED_SHORT_NAMED_BIT */,
     noGeographicalNames /* IMPORTED_SHORT_NAMED_BIT */,
@@ -18,7 +18,7 @@ export {
     PwdVocabulary_noPersonNames /* IMPORTED_LONG_NAMED_BIT */,
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta";
+} from "../PasswordPolicy/PwdVocabulary.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdVocabularyDescription */
 /**

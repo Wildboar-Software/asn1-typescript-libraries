@@ -1,14 +1,14 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     ConsumerInformation,
     _decode_ConsumerInformation,
-} from "../../modules/DSAOperationalAttributeTypes/ConsumerInformation.ta";
+} from "../../modules/DSAOperationalAttributeTypes/ConsumerInformation.ta.js";
 import {
     supplierOrConsumerInformationMatch_AssertionType as AssertionType,
     _decode_supplierOrConsumerInformationMatch_AssertionType as _decode_AssertionType,
-} from "../../modules/DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta";
-import compareName from "../../comparators/compareName";
+} from "../../modules/DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.js";
+import compareName from "../../comparators/compareName.js";
 
 export
 const supplierOrConsumerInformationMatch: EqualityMatcher = (

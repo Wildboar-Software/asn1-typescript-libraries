@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { GeneralizedTime } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va.js";
 
 /* START_OF_SYMBOL_DEFINITION baseUpdateTime */
 /**

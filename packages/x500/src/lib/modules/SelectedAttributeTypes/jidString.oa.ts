@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.js";
 import {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va";
+} from "../SelectedAttributeTypes/Jid.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.js";
 export {
     Jid,
     _decode_Jid,
     _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta";
+} from "../SelectedAttributeTypes/Jid.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION jidString */
 /**

@@ -5,10 +5,10 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION RequestAttribute_defaultValues_Item */
 /**

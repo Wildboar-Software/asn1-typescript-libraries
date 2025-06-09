@@ -1,6 +1,6 @@
-import type Request from "./Request";
-import type { ChainingArguments } from "../modules/DistributedOperations/ChainingArguments.ta";
-import type { Code } from "../modules/CommonProtocolSpecification/Code.ta";
+import type Request from "./Request.js";
+import type { ChainingArguments } from "../modules/DistributedOperations/ChainingArguments.ta.js";
+import type { Code } from "../modules/CommonProtocolSpecification/Code.ta.js";
 
 export
 interface ChainedRequest extends Request {

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.js";
 import {
     SupportedCurves,
     _decode_SupportedCurves,
     _encode_SupportedCurves,
-} from "../AuthenticationFramework/SupportedCurves.vsa";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va";
+} from "../AuthenticationFramework/SupportedCurves.vsa.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.js";
 export {
     SupportedCurves,
     _decode_SupportedCurves,
     _encode_SupportedCurves,
-} from "../AuthenticationFramework/SupportedCurves.vsa";
+} from "../AuthenticationFramework/SupportedCurves.vsa.js";
 
 /* START_OF_SYMBOL_DEFINITION ecPublicKey */
 /**

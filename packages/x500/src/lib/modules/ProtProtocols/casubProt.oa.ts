@@ -3,16 +3,16 @@ import {
     CasubProt,
     _decode_CasubProt,
     _encode_CasubProt,
-} from "../CaSubscription/CasubProt.ta";
-import { id_casubprot } from "../ProtProtocols/id-casubprot.va";
-import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../CaSubscription/CasubProt.ta.js";
+import { id_casubprot } from "../ProtProtocols/id-casubprot.va.js";
+import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 export {
     CasubProt,
     _decode_CasubProt,
     _encode_CasubProt,
-} from "../CaSubscription/CasubProt.ta";
-export { id_casubprot } from "../ProtProtocols/id-casubprot.va";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../CaSubscription/CasubProt.ta.js";
+export { id_casubprot } from "../ProtProtocols/id-casubprot.va.js";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION casubProt */
 /**

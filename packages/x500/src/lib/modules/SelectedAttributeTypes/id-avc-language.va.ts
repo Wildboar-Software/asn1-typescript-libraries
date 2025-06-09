@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_avc } from "../UsefulDefinitions/id-avc.va";
-export { id_avc } from "../UsefulDefinitions/id-avc.va";
+import { id_avc } from "../UsefulDefinitions/id-avc.va.js";
+export { id_avc } from "../UsefulDefinitions/id-avc.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_avc_language */
 /**

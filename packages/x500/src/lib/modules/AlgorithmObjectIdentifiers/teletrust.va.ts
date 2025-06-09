@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va.js";
 
 /* START_OF_SYMBOL_DEFINITION teletrust */
 /**

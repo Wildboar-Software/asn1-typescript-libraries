@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_presentationAddress } from "../SelectedAttributeTypes/id-at-presentationAddress.va";
-import { presentationAddr } from "../SelectedAttributeTypes/presentationAddr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_presentationAddress } from "../SelectedAttributeTypes/id-at-presentationAddress.va.js";
+import { presentationAddr } from "../SelectedAttributeTypes/presentationAddr.oa.js";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
-import { presentationAddressMatch } from "../SelectedAttributeTypes/presentationAddressMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
+import { presentationAddressMatch } from "../SelectedAttributeTypes/presentationAddressMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_presentationAddress } from "../SelectedAttributeTypes/id-at-presentationAddress.va";
-export { presentationAddr } from "../SelectedAttributeTypes/presentationAddr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_presentationAddress } from "../SelectedAttributeTypes/id-at-presentationAddress.va.js";
+export { presentationAddr } from "../SelectedAttributeTypes/presentationAddr.oa.js";
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
-export { presentationAddressMatch } from "../SelectedAttributeTypes/presentationAddressMatch.oa";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
+export { presentationAddressMatch } from "../SelectedAttributeTypes/presentationAddressMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION presentationAddress */
 /**

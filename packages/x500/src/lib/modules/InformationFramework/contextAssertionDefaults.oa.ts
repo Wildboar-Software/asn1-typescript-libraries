@@ -3,19 +3,19 @@ import {
     TypeAndContextAssertion,
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
-} from "../DirectoryAbstractService/TypeAndContextAssertion.ta";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/TypeAndContextAssertion.ta.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_contextAssertionDefault } from "../InformationFramework/id-oa-contextAssertionDefault.va";
-import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_contextAssertionDefault } from "../InformationFramework/id-oa-contextAssertionDefault.va.js";
+import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
 export {
     TypeAndContextAssertion,
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
-} from "../DirectoryAbstractService/TypeAndContextAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/TypeAndContextAssertion.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -29,11 +29,11 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_oa_contextAssertionDefault } from "../InformationFramework/id-oa-contextAssertionDefault.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_oa_contextAssertionDefault } from "../InformationFramework/id-oa-contextAssertionDefault.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION contextAssertionDefaults */
 /**

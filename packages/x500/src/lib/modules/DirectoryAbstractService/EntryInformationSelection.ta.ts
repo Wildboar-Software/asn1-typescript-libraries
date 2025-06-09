@@ -5,48 +5,48 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 import {
     EntryInformationSelection_attributes,
     _decode_EntryInformationSelection_attributes,
     _encode_EntryInformationSelection_attributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta.js";
 import {
     EntryInformationSelection_extraAttributes,
     _decode_EntryInformationSelection_extraAttributes,
     _encode_EntryInformationSelection_extraAttributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta.js";
 import {
     attributeTypesAndValues /* IMPORTED_SHORT_NAMED_INTEGER */,
     EntryInformationSelection_infoTypes,
     _decode_EntryInformationSelection_infoTypes,
     _encode_EntryInformationSelection_infoTypes,
-} from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.js";
 import {
     FamilyReturn,
     _decode_FamilyReturn,
     _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta";
+} from "../DirectoryAbstractService/FamilyReturn.ta.js";
 export {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 export {
     EntryInformationSelection_attributes,
     _decode_EntryInformationSelection_attributes,
     _encode_EntryInformationSelection_attributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta.js";
 export {
     EntryInformationSelection_extraAttributes,
     _decode_EntryInformationSelection_extraAttributes,
     _encode_EntryInformationSelection_extraAttributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta.js";
 export {
     attributeTypesAndValues /* IMPORTED_SHORT_NAMED_INTEGER */,
     attributeTypesOnly /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -55,12 +55,12 @@ export {
     EntryInformationSelection_infoTypes_attributeTypesOnly /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_EntryInformationSelection_infoTypes,
     _encode_EntryInformationSelection_infoTypes,
-} from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.js";
 export {
     FamilyReturn,
     _decode_FamilyReturn,
     _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta";
+} from "../DirectoryAbstractService/FamilyReturn.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EntryInformationSelection */
 /**

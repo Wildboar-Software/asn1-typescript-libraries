@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TeletexDomainDefinedAttributes,
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
-} from "../MTSAbstractService/TeletexDomainDefinedAttributes.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/TeletexDomainDefinedAttributes.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     TeletexDomainDefinedAttributes,
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
-} from "../MTSAbstractService/TeletexDomainDefinedAttributes.ta";
+} from "../MTSAbstractService/TeletexDomainDefinedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION teletex_domain_defined_attributes */
 /**

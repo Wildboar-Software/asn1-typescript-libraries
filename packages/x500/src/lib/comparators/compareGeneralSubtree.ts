@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import {
     GeneralSubtree,
-} from "../modules/CertificateExtensions/GeneralSubtree.ta";
-import compareGeneralName from "./compareGeneralName";
+} from "../modules/CertificateExtensions/GeneralSubtree.ta.js";
+import compareGeneralName from "./compareGeneralName.js";
 
 const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum;
 

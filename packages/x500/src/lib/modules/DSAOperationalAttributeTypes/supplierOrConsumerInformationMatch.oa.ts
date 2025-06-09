@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { id_kmr_supplierConsumerMatch } from "../DSAOperationalAttributeTypes/id-kmr-supplierConsumerMatch.va";
+import { id_kmr_supplierConsumerMatch } from "../DSAOperationalAttributeTypes/id-kmr-supplierConsumerMatch.va.js";
 import {
     supplierOrConsumerInformationMatch_AssertionType,
     _decode_supplierOrConsumerInformationMatch_AssertionType,
     _encode_supplierOrConsumerInformationMatch_AssertionType,
-} from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { id_kmr_supplierConsumerMatch } from "../DSAOperationalAttributeTypes/id-kmr-supplierConsumerMatch.va";
+} from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { id_kmr_supplierConsumerMatch } from "../DSAOperationalAttributeTypes/id-kmr-supplierConsumerMatch.va.js";
 export {
     supplierOrConsumerInformationMatch_AssertionType,
     _decode_supplierOrConsumerInformationMatch_AssertionType,
     _encode_supplierOrConsumerInformationMatch_AssertionType,
-} from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch */
 /**

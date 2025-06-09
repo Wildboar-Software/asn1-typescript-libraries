@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { applicationContext } from "../UsefulDefinitions/applicationContext.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { applicationContext } from "../UsefulDefinitions/applicationContext.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { applicationContext } from "../UsefulDefinitions/applicationContext.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { applicationContext } from "../UsefulDefinitions/applicationContext.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ac */
 /**

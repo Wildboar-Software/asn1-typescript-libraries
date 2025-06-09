@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EntryModification */
 /**

@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeTypes,
     _decode_AttributeTypes,
     _encode_AttributeTypes,
-} from "../DirectoryShadowAbstractService/AttributeTypes.ta";
+} from "../DirectoryShadowAbstractService/AttributeTypes.ta.js";
 export {
     AttributeTypes,
     _decode_AttributeTypes,
     _encode_AttributeTypes,
-} from "../DirectoryShadowAbstractService/AttributeTypes.ta";
+} from "../DirectoryShadowAbstractService/AttributeTypes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ClassAttributes */
 /**

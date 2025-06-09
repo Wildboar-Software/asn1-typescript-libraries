@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.js";
 import {
     UUIDPair,
     _decode_UUIDPair,
     _encode_UUIDPair,
-} from "../SelectedAttributeTypes/UUIDPair.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va";
+} from "../SelectedAttributeTypes/UUIDPair.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.js";
 export {
     UUIDPair,
     _decode_UUIDPair,
     _encode_UUIDPair,
-} from "../SelectedAttributeTypes/UUIDPair.ta";
+} from "../SelectedAttributeTypes/UUIDPair.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION uUIDPairMatch */
 /**

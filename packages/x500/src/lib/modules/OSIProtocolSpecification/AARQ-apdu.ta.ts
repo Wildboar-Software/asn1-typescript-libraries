@@ -5,90 +5,90 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 import {
     AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta";
+} from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta.js";
 import {
     AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.js";
 import {
     AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.js";
 import {
     Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta";
+} from "../OSIProtocolSpecification/Application-context-name.ta.js";
 import {
     Association_informationBind,
     _decode_Association_informationBind,
     _encode_Association_informationBind,
-} from "../OSIProtocolSpecification/Association-informationBind.ta";
+} from "../OSIProtocolSpecification/Association-informationBind.ta.js";
 import {
     Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta";
+} from "../OSIProtocolSpecification/Implementation-data.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 export {
     AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta";
+} from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta.js";
 export {
     AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.js";
 export {
     AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.js";
 export {
     Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta";
+} from "../OSIProtocolSpecification/Application-context-name.ta.js";
 export {
     Association_informationBind,
     _decode_Association_informationBind,
     _encode_Association_informationBind,
-} from "../OSIProtocolSpecification/Association-informationBind.ta";
+} from "../OSIProtocolSpecification/Association-informationBind.ta.js";
 export {
     Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta";
+} from "../OSIProtocolSpecification/Implementation-data.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AARQ_apdu */
 /**

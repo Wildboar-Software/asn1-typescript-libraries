@@ -3,16 +3,16 @@ import {
     AttributeMappings,
     _decode_AttributeMappings,
     _encode_AttributeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings.ta";
-import { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AttributeMappings.ta.js";
+import { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AttributeMappings,
     _decode_AttributeMappings,
     _encode_AttributeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings.ta";
-export { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AttributeMappings.ta.js";
+export { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeMappings */
 /**

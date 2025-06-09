@@ -1,61 +1,61 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Abort,
     _decode_Abort,
     _encode_Abort,
-} from "../IDMProtocolSpecification/Abort.ta";
+} from "../IDMProtocolSpecification/Abort.ta.js";
 import {
     Error,
     _decode_Error,
     _encode_Error,
-} from "../IDMProtocolSpecification/Error.ta";
+} from "../IDMProtocolSpecification/Error.ta.js";
 import {
     IdmBind,
     _decode_IdmBind,
     _encode_IdmBind,
-} from "../IDMProtocolSpecification/IdmBind.ta";
+} from "../IDMProtocolSpecification/IdmBind.ta.js";
 import {
     IdmBindError,
     _decode_IdmBindError,
     _encode_IdmBindError,
-} from "../IDMProtocolSpecification/IdmBindError.ta";
+} from "../IDMProtocolSpecification/IdmBindError.ta.js";
 import {
     IdmBindResult,
     _decode_IdmBindResult,
     _encode_IdmBindResult,
-} from "../IDMProtocolSpecification/IdmBindResult.ta";
+} from "../IDMProtocolSpecification/IdmBindResult.ta.js";
 import {
     IdmReject,
     _decode_IdmReject,
     _encode_IdmReject,
-} from "../IDMProtocolSpecification/IdmReject.ta";
+} from "../IDMProtocolSpecification/IdmReject.ta.js";
 import {
     IdmResult,
     _decode_IdmResult,
     _encode_IdmResult,
-} from "../IDMProtocolSpecification/IdmResult.ta";
+} from "../IDMProtocolSpecification/IdmResult.ta.js";
 import {
     Request,
     _decode_Request,
     _encode_Request,
-} from "../IDMProtocolSpecification/Request.ta";
+} from "../IDMProtocolSpecification/Request.ta.js";
 import {
     StartTLS,
     _decode_StartTLS,
     _encode_StartTLS,
-} from "../IDMProtocolSpecification/StartTLS.ta";
+} from "../IDMProtocolSpecification/StartTLS.ta.js";
 import {
     TLSResponse,
     _decode_TLSResponse,
     _encode_TLSResponse,
-} from "../IDMProtocolSpecification/TLSResponse.ta";
+} from "../IDMProtocolSpecification/TLSResponse.ta.js";
 import {
     Unbind,
     _decode_Unbind,
     _encode_Unbind,
-} from "../IDMProtocolSpecification/Unbind.ta";
+} from "../IDMProtocolSpecification/Unbind.ta.js";
 export {
     Abort,
     Abort_connectionFailed /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -75,47 +75,47 @@ export {
     _decode_Abort,
     _encode_Abort,
     _enum_for_Abort,
-} from "../IDMProtocolSpecification/Abort.ta";
+} from "../IDMProtocolSpecification/Abort.ta.js";
 export {
     Error,
     _decode_Error,
     _encode_Error,
-} from "../IDMProtocolSpecification/Error.ta";
+} from "../IDMProtocolSpecification/Error.ta.js";
 export {
     IdmBind,
     _decode_IdmBind,
     _encode_IdmBind,
-} from "../IDMProtocolSpecification/IdmBind.ta";
+} from "../IDMProtocolSpecification/IdmBind.ta.js";
 export {
     IdmBindError,
     _decode_IdmBindError,
     _encode_IdmBindError,
-} from "../IDMProtocolSpecification/IdmBindError.ta";
+} from "../IDMProtocolSpecification/IdmBindError.ta.js";
 export {
     IdmBindResult,
     _decode_IdmBindResult,
     _encode_IdmBindResult,
-} from "../IDMProtocolSpecification/IdmBindResult.ta";
+} from "../IDMProtocolSpecification/IdmBindResult.ta.js";
 export {
     IdmReject,
     _decode_IdmReject,
     _encode_IdmReject,
-} from "../IDMProtocolSpecification/IdmReject.ta";
+} from "../IDMProtocolSpecification/IdmReject.ta.js";
 export {
     IdmResult,
     _decode_IdmResult,
     _encode_IdmResult,
-} from "../IDMProtocolSpecification/IdmResult.ta";
+} from "../IDMProtocolSpecification/IdmResult.ta.js";
 export {
     Request,
     _decode_Request,
     _encode_Request,
-} from "../IDMProtocolSpecification/Request.ta";
+} from "../IDMProtocolSpecification/Request.ta.js";
 export {
     StartTLS,
     _decode_StartTLS,
     _encode_StartTLS,
-} from "../IDMProtocolSpecification/StartTLS.ta";
+} from "../IDMProtocolSpecification/StartTLS.ta.js";
 export {
     operationsError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     protocolError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -129,12 +129,12 @@ export {
     _decode_TLSResponse,
     _encode_TLSResponse,
     _enum_for_TLSResponse,
-} from "../IDMProtocolSpecification/TLSResponse.ta";
+} from "../IDMProtocolSpecification/TLSResponse.ta.js";
 export {
     Unbind,
     _decode_Unbind,
     _encode_Unbind,
-} from "../IDMProtocolSpecification/Unbind.ta";
+} from "../IDMProtocolSpecification/Unbind.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IDM_PDU */
 /**

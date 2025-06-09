@@ -1,18 +1,18 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     AttCertPath,
     _decode_AttCertPath,
-} from "../../modules/AttributeCertificateDefinitions/AttCertPath.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttCertPath.ta.js";
 import {
     DelMatchSyntax,
     _decode_DelMatchSyntax,
-} from "../../modules/AttributeCertificateDefinitions/DelMatchSyntax.ta";
+} from "../../modules/AttributeCertificateDefinitions/DelMatchSyntax.ta.js";
 import type {
     AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
-import compareAttCertIssuer from "../../comparators/compareAttCertIssuer";
-import compareHolder from "../../comparators/compareHolder";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
+import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.js";
+import compareHolder from "../../comparators/compareHolder.js";
 
 export
 const delegationPathMatch: EqualityMatcher = (

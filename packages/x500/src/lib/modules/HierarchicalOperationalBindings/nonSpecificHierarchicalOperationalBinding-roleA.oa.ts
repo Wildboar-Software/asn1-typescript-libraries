@@ -3,14 +3,14 @@ import {
     NHOBSuperiorToSubordinate,
     _decode_NHOBSuperiorToSubordinate,
     _encode_NHOBSuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.js";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 export {
     NHOBSuperiorToSubordinate,
     _decode_NHOBSuperiorToSubordinate,
     _encode_NHOBSuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding_roleA */
 /**

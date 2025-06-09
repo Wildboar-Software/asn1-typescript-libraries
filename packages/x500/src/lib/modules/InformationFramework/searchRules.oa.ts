@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_searchRules } from "../InformationFramework/id-oa-searchRules.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_searchRules } from "../InformationFramework/id-oa-searchRules.va.js";
 import {
     SearchRuleDescription,
     _decode_SearchRuleDescription,
     _encode_SearchRuleDescription,
-} from "../InformationFramework/SearchRuleDescription.ta";
-import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/SearchRuleDescription.ta.js";
+import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_oa_searchRules } from "../InformationFramework/id-oa-searchRules.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_oa_searchRules } from "../InformationFramework/id-oa-searchRules.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     SearchRuleDescription,
     _decode_SearchRuleDescription,
     _encode_SearchRuleDescription,
-} from "../InformationFramework/SearchRuleDescription.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa";
+} from "../InformationFramework/SearchRuleDescription.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION searchRules */
 /**

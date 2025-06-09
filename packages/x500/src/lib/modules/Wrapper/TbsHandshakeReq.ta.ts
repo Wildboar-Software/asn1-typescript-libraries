@@ -6,94 +6,94 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
 import {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.js";
+import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 import {
     DER_AttributeCertificate,
     _decode_DER_AttributeCertificate,
     _encode_DER_AttributeCertificate,
-} from "../Wrapper/DER-AttributeCertificate.ta";
+} from "../Wrapper/DER-AttributeCertificate.ta.js";
 import {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 import {
     TbsHandshakeReq_encr_mode,
     _decode_TbsHandshakeReq_encr_mode,
     _encode_TbsHandshakeReq_encr_mode,
-} from "../Wrapper/TbsHandshakeReq-encr-mode.ta";
+} from "../Wrapper/TbsHandshakeReq-encr-mode.ta.js";
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 import {
     Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,
-} from "../Wrapper/Version.ta";
+} from "../Wrapper/Version.ta.js";
 import {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
 export {
     AlgorithmWithInvoke,
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta";
-export { SupportedProtSet } from "../ProtProtocols/SupportedProtSet.osa";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.js";
+export { SupportedProtSet } from "../ProtProtocols/SupportedProtSet.osa.js";
+export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.js";
 export {
     DER_AttributeCertificate,
     _decode_DER_AttributeCertificate,
     _encode_DER_AttributeCertificate,
-} from "../Wrapper/DER-AttributeCertificate.ta";
+} from "../Wrapper/DER-AttributeCertificate.ta.js";
 export {
     DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta";
+} from "../Wrapper/DER-PkiPath.ta.js";
 export {
     TbsHandshakeReq_encr_mode,
     _decode_TbsHandshakeReq_encr_mode,
     _encode_TbsHandshakeReq_encr_mode,
-} from "../Wrapper/TbsHandshakeReq-encr-mode.ta";
+} from "../Wrapper/TbsHandshakeReq-encr-mode.ta.js";
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta";
+} from "../Wrapper/TimeStamp.ta.js";
 export {
     v1 /* IMPORTED_SHORT_NAMED_BIT */,
     Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,
-} from "../Wrapper/Version.ta";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../Wrapper/Version.ta.js";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 export {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeReq */
 /**

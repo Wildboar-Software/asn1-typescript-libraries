@@ -6,69 +6,69 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FamilyGrouping,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
+} from "../DirectoryAbstractService/FamilyGrouping.ta.js";
 import {
     FamilyReturn,
     _decode_FamilyReturn,
     _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta";
+} from "../DirectoryAbstractService/FamilyReturn.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 import {
     AllowedSubset,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
-} from "../ServiceAdministration/AllowedSubset.ta";
+} from "../ServiceAdministration/AllowedSubset.ta.js";
 import {
     AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta";
+} from "../ServiceAdministration/AttributeCombination.ta.js";
 import {
     ControlOptions,
     _decode_ControlOptions,
     _encode_ControlOptions,
-} from "../ServiceAdministration/ControlOptions.ta";
+} from "../ServiceAdministration/ControlOptions.ta.js";
 import {
     EntryLimit,
     _decode_EntryLimit,
     _encode_EntryLimit,
-} from "../ServiceAdministration/EntryLimit.ta";
+} from "../ServiceAdministration/EntryLimit.ta.js";
 import {
     ImposedSubset,
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,
-} from "../ServiceAdministration/ImposedSubset.ta";
+} from "../ServiceAdministration/ImposedSubset.ta.js";
 import {
     RelaxationPolicy,
     _decode_RelaxationPolicy,
     _encode_RelaxationPolicy,
-} from "../ServiceAdministration/RelaxationPolicy.ta";
+} from "../ServiceAdministration/RelaxationPolicy.ta.js";
 import {
     RequestAttribute,
     _decode_RequestAttribute,
     _encode_RequestAttribute,
-} from "../ServiceAdministration/RequestAttribute.ta";
+} from "../ServiceAdministration/RequestAttribute.ta.js";
 import {
     ResultAttribute,
     _decode_ResultAttribute,
     _encode_ResultAttribute,
-} from "../ServiceAdministration/ResultAttribute.ta";
+} from "../ServiceAdministration/ResultAttribute.ta.js";
 export {
     compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -82,22 +82,22 @@ export {
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
+} from "../DirectoryAbstractService/FamilyGrouping.ta.js";
 export {
     FamilyReturn,
     _decode_FamilyReturn,
     _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta";
+} from "../DirectoryAbstractService/FamilyReturn.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 export {
     AllowedSubset,
     AllowedSubset_baseObject /* IMPORTED_LONG_NAMED_BIT */,
@@ -105,22 +105,22 @@ export {
     AllowedSubset_wholeSubtree /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
-} from "../ServiceAdministration/AllowedSubset.ta";
+} from "../ServiceAdministration/AllowedSubset.ta.js";
 export {
     AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta";
+} from "../ServiceAdministration/AttributeCombination.ta.js";
 export {
     ControlOptions,
     _decode_ControlOptions,
     _encode_ControlOptions,
-} from "../ServiceAdministration/ControlOptions.ta";
+} from "../ServiceAdministration/ControlOptions.ta.js";
 export {
     EntryLimit,
     _decode_EntryLimit,
     _encode_EntryLimit,
-} from "../ServiceAdministration/EntryLimit.ta";
+} from "../ServiceAdministration/EntryLimit.ta.js";
 export {
     ImposedSubset,
     ImposedSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -129,25 +129,25 @@ export {
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,
-} from "../ServiceAdministration/ImposedSubset.ta";
+} from "../ServiceAdministration/ImposedSubset.ta.js";
 export {
     RelaxationPolicy,
     _decode_RelaxationPolicy,
     _encode_RelaxationPolicy,
-} from "../ServiceAdministration/RelaxationPolicy.ta";
+} from "../ServiceAdministration/RelaxationPolicy.ta.js";
 export {
     RequestAttribute,
     _decode_RequestAttribute,
     _encode_RequestAttribute,
-} from "../ServiceAdministration/RequestAttribute.ta";
+} from "../ServiceAdministration/RequestAttribute.ta.js";
 export {
     ResultAttribute,
     _decode_ResultAttribute,
     _encode_ResultAttribute,
-} from "../ServiceAdministration/ResultAttribute.ta";
+} from "../ServiceAdministration/ResultAttribute.ta.js";
 import {
     SearchRule,
-} from "../ServiceAdministration/SearchRule.ta";
+} from "../ServiceAdministration/SearchRule.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SearchRuleDescription */
 /**

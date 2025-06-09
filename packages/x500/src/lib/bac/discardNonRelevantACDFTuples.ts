@@ -1,14 +1,14 @@
-import type ACDFTupleExtended from "../types/ACDFTupleExtended";
-import type ProtectedItem from "../types/ProtectedItem";
-import itemIsProtected from "./itemIsProtected";
+import type ACDFTupleExtended from "../types/ACDFTupleExtended.js";
+import type ProtectedItem from "../types/ProtectedItem.js";
+import itemIsProtected from "./itemIsProtected.js";
 import type {
     GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta";
+} from "../modules/BasicAccessControl/GrantsAndDenials.ta.js";
 import { TRUE_BIT } from "asn1-ts";
-import type { EvaluateFilterSettings } from "../utils/evaluateFilter";
+import type { EvaluateFilterSettings } from "../utils/evaluateFilter.js";
 import type {
     NameAndOptionalUID,
-} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 /**
  * Note that this function is different than `operationIsPermitted()`.

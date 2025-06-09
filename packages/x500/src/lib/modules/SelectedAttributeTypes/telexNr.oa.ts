@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va.js";
 import {
     TelexNumber,
     _decode_TelexNumber,
     _encode_TelexNumber,
-} from "../SelectedAttributeTypes/TelexNumber.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va";
+} from "../SelectedAttributeTypes/TelexNumber.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va.js";
 export {
     TelexNumber,
     _decode_TelexNumber,
     _encode_TelexNumber,
-} from "../SelectedAttributeTypes/TelexNumber.ta";
+} from "../SelectedAttributeTypes/TelexNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION telexNr */
 /**

@@ -3,14 +3,14 @@ import {
     ExtendedNetworkAddress,
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
-} from "../MTSAbstractService/ExtendedNetworkAddress.ta";
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/ExtendedNetworkAddress.ta.js";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     ExtendedNetworkAddress,
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
-} from "../MTSAbstractService/ExtendedNetworkAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/ExtendedNetworkAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION extended_network_address */
 /**

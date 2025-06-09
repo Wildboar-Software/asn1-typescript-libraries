@@ -1,5 +1,5 @@
-import { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta";
-import attributeTypeAndValueToString from "./attributeTypeAndValueToString";
+import { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta.js";
+import attributeTypeAndValueToString from "./attributeTypeAndValueToString.js";
 
 /**
  * @deprecated

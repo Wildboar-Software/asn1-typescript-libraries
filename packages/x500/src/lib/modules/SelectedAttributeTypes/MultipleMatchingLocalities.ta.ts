@@ -5,18 +5,18 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta";
+} from "../InformationFramework/AttributeValueAssertion.ta.js";
 export {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../InformationFramework/AttributeValueAssertion.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION MultipleMatchingLocalities */
 /**

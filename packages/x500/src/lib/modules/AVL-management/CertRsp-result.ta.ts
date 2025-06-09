@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertErr,
     _decode_CertErr,
     _encode_CertErr,
-} from "../AVL-management/CertErr.ta";
+} from "../AVL-management/CertErr.ta.js";
 import {
     CertOK,
     _decode_CertOK,
     _encode_CertOK,
-} from "../AVL-management/CertOK.ta";
+} from "../AVL-management/CertOK.ta.js";
 export {
     CertErr,
     _decode_CertErr,
     _encode_CertErr,
-} from "../AVL-management/CertErr.ta";
+} from "../AVL-management/CertErr.ta.js";
 export {
     CertOK,
     _decode_CertOK,
     _encode_CertOK,
-} from "../AVL-management/CertOK.ta";
+} from "../AVL-management/CertOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertRsp_result */
 /**

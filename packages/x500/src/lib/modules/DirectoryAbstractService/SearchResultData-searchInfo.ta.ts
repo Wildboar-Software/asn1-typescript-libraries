@@ -5,72 +5,72 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EntryInformation,
     _decode_EntryInformation,
     _encode_EntryInformation,
-} from "../DirectoryAbstractService/EntryInformation.ta";
+} from "../DirectoryAbstractService/EntryInformation.ta.js";
 import {
     PartialOutcomeQualifier,
     _decode_PartialOutcomeQualifier,
     _encode_PartialOutcomeQualifier,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta";
+} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     CommonResults,
     _decode_CommonResults,
     _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta";
+} from "../DirectoryAbstractService/CommonResults.ta.js";
 export {
     EntryInformation,
     _decode_EntryInformation,
     _encode_EntryInformation,
-} from "../DirectoryAbstractService/EntryInformation.ta";
+} from "../DirectoryAbstractService/EntryInformation.ta.js";
 export {
     PartialOutcomeQualifier,
     _decode_PartialOutcomeQualifier,
     _encode_PartialOutcomeQualifier,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta";
+} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SearchResultData_searchInfo */
 /**

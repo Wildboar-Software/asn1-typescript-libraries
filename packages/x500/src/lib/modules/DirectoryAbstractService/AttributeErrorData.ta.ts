@@ -5,33 +5,33 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeErrorData_problems_Item,
     _decode_AttributeErrorData_problems_Item,
     _encode_AttributeErrorData_problems_Item,
-} from "../DirectoryAbstractService/AttributeErrorData-problems-Item.ta";
+} from "../DirectoryAbstractService/AttributeErrorData-problems-Item.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
-import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta";
+} from "../InformationFramework/Name.ta.js";
+import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeErrorData */
 /**

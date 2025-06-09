@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { description } from "../SelectedAttributeTypes/description.oa";
-import { localityName } from "../SelectedAttributeTypes/localityName.oa";
-import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-import { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
-import { owner } from "../SelectedAttributeTypes/owner.oa";
-import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa";
-import { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { description } from "../SelectedAttributeTypes/description.oa.js";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
+import { owner } from "../SelectedAttributeTypes/owner.oa.js";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.js";
+import { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -26,17 +26,17 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { description } from "../SelectedAttributeTypes/description.oa";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
-export { owner } from "../SelectedAttributeTypes/owner.oa";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa";
-export { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { description } from "../SelectedAttributeTypes/description.oa.js";
+export { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
+export { owner } from "../SelectedAttributeTypes/owner.oa.js";
+export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.js";
+export { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.js";
 
 /* START_OF_SYMBOL_DEFINITION device */
 /**

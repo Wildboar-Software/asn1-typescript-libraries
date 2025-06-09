@@ -5,48 +5,48 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DayTimeBand,
     _decode_DayTimeBand,
     _encode_DayTimeBand,
-} from "../SelectedAttributeTypes/DayTimeBand.ta";
+} from "../SelectedAttributeTypes/DayTimeBand.ta.js";
 import {
     Period_days,
     _decode_Period_days,
     _encode_Period_days,
-} from "../SelectedAttributeTypes/Period-days.ta";
+} from "../SelectedAttributeTypes/Period-days.ta.js";
 import {
     Period_months,
     _decode_Period_months,
     _encode_Period_months,
-} from "../SelectedAttributeTypes/Period-months.ta";
+} from "../SelectedAttributeTypes/Period-months.ta.js";
 import {
     Period_weeks,
     _decode_Period_weeks,
     _encode_Period_weeks,
-} from "../SelectedAttributeTypes/Period-weeks.ta";
+} from "../SelectedAttributeTypes/Period-weeks.ta.js";
 export {
     DayTimeBand,
     _decode_DayTimeBand,
     _encode_DayTimeBand,
-} from "../SelectedAttributeTypes/DayTimeBand.ta";
+} from "../SelectedAttributeTypes/DayTimeBand.ta.js";
 export {
     Period_days,
     _decode_Period_days,
     _encode_Period_days,
-} from "../SelectedAttributeTypes/Period-days.ta";
+} from "../SelectedAttributeTypes/Period-days.ta.js";
 export {
     Period_months,
     _decode_Period_months,
     _encode_Period_months,
-} from "../SelectedAttributeTypes/Period-months.ta";
+} from "../SelectedAttributeTypes/Period-months.ta.js";
 export {
     Period_weeks,
     _decode_Period_weeks,
     _encode_Period_weeks,
-} from "../SelectedAttributeTypes/Period-weeks.ta";
-import isPositionalInt from "../../utils/isPositionalInt";
+} from "../SelectedAttributeTypes/Period-weeks.ta.js";
+import isPositionalInt from "../../utils/isPositionalInt.js";
 
 /* START_OF_SYMBOL_DEFINITION Period */
 /**

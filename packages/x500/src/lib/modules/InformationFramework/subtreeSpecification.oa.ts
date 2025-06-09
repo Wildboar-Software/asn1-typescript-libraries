@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va.js";
 import {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
-import { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
+import { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION subtreeSpecification */
 /**

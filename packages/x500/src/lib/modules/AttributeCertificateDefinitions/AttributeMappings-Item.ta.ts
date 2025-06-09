@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeMappings_Item_typeMappings,
     _decode_AttributeMappings_Item_typeMappings,
     _encode_AttributeMappings_Item_typeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeMappings.ta";
+} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeMappings.ta.js";
 import {
     AttributeMappings_Item_typeValueMappings,
     _decode_AttributeMappings_Item_typeValueMappings,
     _encode_AttributeMappings_Item_typeValueMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta";
+} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta.js";
 export {
     AttributeMappings_Item_typeMappings,
     _decode_AttributeMappings_Item_typeMappings,
     _encode_AttributeMappings_Item_typeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeMappings.ta";
+} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeMappings.ta.js";
 export {
     AttributeMappings_Item_typeValueMappings,
     _decode_AttributeMappings_Item_typeValueMappings,
     _encode_AttributeMappings_Item_typeValueMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta";
+} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeMappings_Item */
 /**

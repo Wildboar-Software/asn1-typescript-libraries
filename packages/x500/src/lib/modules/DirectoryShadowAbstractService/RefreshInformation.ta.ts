@@ -5,27 +5,27 @@ import {
     EXTERNAL,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IncrementalRefresh,
     _decode_IncrementalRefresh,
     _encode_IncrementalRefresh,
-} from "../DirectoryShadowAbstractService/IncrementalRefresh.ta";
+} from "../DirectoryShadowAbstractService/IncrementalRefresh.ta.js";
 import {
     TotalRefresh,
     _decode_TotalRefresh,
     _encode_TotalRefresh,
-} from "../DirectoryShadowAbstractService/TotalRefresh.ta";
+} from "../DirectoryShadowAbstractService/TotalRefresh.ta.js";
 export {
     IncrementalRefresh,
     _decode_IncrementalRefresh,
     _encode_IncrementalRefresh,
-} from "../DirectoryShadowAbstractService/IncrementalRefresh.ta";
+} from "../DirectoryShadowAbstractService/IncrementalRefresh.ta.js";
 export {
     TotalRefresh,
     _decode_TotalRefresh,
     _encode_TotalRefresh,
-} from "../DirectoryShadowAbstractService/TotalRefresh.ta";
+} from "../DirectoryShadowAbstractService/TotalRefresh.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RefreshInformation */
 /**

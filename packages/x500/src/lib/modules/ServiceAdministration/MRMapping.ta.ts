@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Mapping,
     _decode_Mapping,
     _encode_Mapping,
-} from "../ServiceAdministration/Mapping.ta";
+} from "../ServiceAdministration/Mapping.ta.js";
 import {
     MRSubstitution,
     _decode_MRSubstitution,
     _encode_MRSubstitution,
-} from "../ServiceAdministration/MRSubstitution.ta";
+} from "../ServiceAdministration/MRSubstitution.ta.js";
 export {
     Mapping,
     _decode_Mapping,
     _encode_Mapping,
-} from "../ServiceAdministration/Mapping.ta";
+} from "../ServiceAdministration/Mapping.ta.js";
 export {
     MRSubstitution,
     _decode_MRSubstitution,
     _encode_MRSubstitution,
-} from "../ServiceAdministration/MRSubstitution.ta";
+} from "../ServiceAdministration/MRSubstitution.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MRMapping */
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_pwdHistorySlots } from "../PasswordPolicy/id-oa-pwdHistorySlots.va";
-import { integer } from "../SelectedAttributeTypes/integer.oa";
-import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa";
-import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_pwdHistorySlots } from "../PasswordPolicy/id-oa-pwdHistorySlots.va.js";
+import { integer } from "../SelectedAttributeTypes/integer.oa.js";
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.js";
+import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,13 +23,13 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_oa_pwdHistorySlots } from "../PasswordPolicy/id-oa-pwdHistorySlots.va";
-export { integer } from "../SelectedAttributeTypes/integer.oa";
-export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa";
-export { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_oa_pwdHistorySlots } from "../PasswordPolicy/id-oa-pwdHistorySlots.va.js";
+export { integer } from "../SelectedAttributeTypes/integer.oa.js";
+export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.js";
+export { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdHistorySlots */
 /**

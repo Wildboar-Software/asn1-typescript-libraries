@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     NameConstraintsSyntax,
-} from "../modules/CertificateExtensions/NameConstraintsSyntax.ta";
-import compareGeneralSubtrees from "../comparators/compareGeneralSubtrees";
+} from "../modules/CertificateExtensions/NameConstraintsSyntax.ta.js";
+import compareGeneralSubtrees from "../comparators/compareGeneralSubtrees.js";
 
 export
 function compareNameConstraintsSyntax (

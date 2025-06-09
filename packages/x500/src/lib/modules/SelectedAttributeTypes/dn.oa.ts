@@ -3,16 +3,16 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va";
+} from "../InformationFramework/DistinguishedName.ta.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va";
+} from "../InformationFramework/DistinguishedName.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dn */
 /**

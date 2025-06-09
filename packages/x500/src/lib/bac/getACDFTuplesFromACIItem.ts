@@ -1,7 +1,7 @@
-import type ACDFTuple from "../types/ACDFTuple";
+import type ACDFTuple from "../types/ACDFTuple.js";
 import type {
     ACIItem,
-} from "../modules/BasicAccessControl/ACIItem.ta";
+} from "../modules/BasicAccessControl/ACIItem.ta.js";
 
 /**
  * Produces the Access Control Decision Function (ACDF) tuple types from

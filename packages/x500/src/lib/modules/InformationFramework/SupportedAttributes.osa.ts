@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { objectClass } from "../InformationFramework/objectClass.oa";
-export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { objectClass } from "../InformationFramework/objectClass.oa";
+import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { objectClass } from "../InformationFramework/objectClass.oa.js";
+export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { objectClass } from "../InformationFramework/objectClass.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedAttributes */
 /**

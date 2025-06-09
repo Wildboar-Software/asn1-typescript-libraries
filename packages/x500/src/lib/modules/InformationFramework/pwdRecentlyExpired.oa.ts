@@ -1,6 +1,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.js";
 
 // pwdRecentlyExpired{ATTRIBUTE:passwordAttribute,OBJECT IDENTIFIER:id} ATTRIBUTE ::= {
 //     WITH SYNTAX             passwordAttribute.&Type

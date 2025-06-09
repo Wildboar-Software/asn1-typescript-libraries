@@ -4,19 +4,19 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Context,
     _decode_Context,
     _encode_Context,
-} from "../InformationFramework/Context.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/Context.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     Context,
     _decode_Context,
     _encode_Context,
-} from "../InformationFramework/Context.ta";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../InformationFramework/Context.ta.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION Attribute_valuesWithContext_Item */
 /**

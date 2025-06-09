@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RequestAuthenticationPolicy,
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
-} from "../DirectoryManagement/RequestAuthenticationPolicy.ta";
+} from "../DirectoryManagement/RequestAuthenticationPolicy.ta.js";
 export {
     none /* IMPORTED_SHORT_NAMED_BIT */,
     RequestAuthenticationPolicy,
@@ -16,7 +16,7 @@ export {
     strong /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
-} from "../DirectoryManagement/RequestAuthenticationPolicy.ta";
+} from "../DirectoryManagement/RequestAuthenticationPolicy.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ResultAuthenticationPolicy */
 /**

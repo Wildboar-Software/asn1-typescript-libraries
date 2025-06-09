@@ -4,18 +4,18 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
-} from "../AVL-management/AVMP-error.ta";
+} from "../AVL-management/AVMP-error.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 export {
     AVMP_error,
     AVMP_error_constrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -45,12 +45,12 @@ export {
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
-} from "../AVL-management/AVMP-error.ta";
+} from "../AVL-management/AVMP-error.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AbortAVL */
 /**

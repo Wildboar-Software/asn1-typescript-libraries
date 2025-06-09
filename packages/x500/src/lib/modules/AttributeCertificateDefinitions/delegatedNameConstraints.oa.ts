@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
-export { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
+export { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION delegatedNameConstraints */
 /**

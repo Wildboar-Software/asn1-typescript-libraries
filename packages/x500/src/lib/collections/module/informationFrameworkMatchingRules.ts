@@ -1,2 +1,2 @@
-export { objectIdentifierMatch } from "../../modules/InformationFramework/objectIdentifierMatch.oa";
-export { distinguishedNameMatch } from "../../modules/InformationFramework/distinguishedNameMatch.oa";
+export { objectIdentifierMatch } from "../../modules/InformationFramework/objectIdentifierMatch.oa.js";
+export { distinguishedNameMatch } from "../../modules/InformationFramework/distinguishedNameMatch.oa.js";

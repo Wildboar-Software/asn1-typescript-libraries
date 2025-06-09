@@ -1,36 +1,36 @@
 /* eslint-disable */
-import { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     RequestShadowUpdateArgument,
     _decode_RequestShadowUpdateArgument,
     _encode_RequestShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta.js";
 import {
     RequestShadowUpdateResult,
     _decode_RequestShadowUpdateResult,
     _encode_RequestShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta";
-import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.js";
+import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     RequestShadowUpdateArgument,
     _decode_RequestShadowUpdateArgument,
     _encode_RequestShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta.js";
 export {
     RequestShadowUpdateResult,
     _decode_RequestShadowUpdateResult,
     _encode_RequestShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta";
-export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.js";
+export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION requestShadowUpdate */
 /**

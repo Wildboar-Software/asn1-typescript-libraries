@@ -1,11 +1,11 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher";
-import SubstringSelection from "../../types/SubstringSelection";
+import SubstringsMatcher from "../../types/SubstringsMatcher.js";
+import SubstringSelection from "../../types/SubstringSelection.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
-import { prepString } from "../../utils/prepString";
+} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
+import { prepString } from "../../utils/prepString.js";
 
 // This is technically a substring matching rule, even though the selection is
 // ignored. See ITU Recommendation Q.1551's `providerId` attribute type as

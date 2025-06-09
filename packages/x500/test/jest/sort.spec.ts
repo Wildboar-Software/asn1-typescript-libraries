@@ -8,22 +8,22 @@ import {
     ASN1UniversalType,
 } from "asn1-ts";
 import sort from "../../src/lib/dap/sort";
-import type OrderingMatcher from "../../src/lib/types/OrderingMatcher";
+import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.js";
 import {
     SortKey,
-} from "../../src/lib/modules/DirectoryAbstractService/SortKey.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/SortKey.ta.js";
 import {
     EntryInformation,
-} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta.js";
 import type {
     EntryInformation_information_Item,
-} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation-information-Item.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation-information-Item.ta.js";
 import type {
     Name,
-} from "../../src/lib/modules/InformationFramework/Name.ta";
+} from "../../src/lib/modules/InformationFramework/Name.ta.js";
 import {
     Attribute,
-} from "../../src/lib/modules/InformationFramework/Attribute.ta";
+} from "../../src/lib/modules/InformationFramework/Attribute.ta.js";
 import type ATVAC from "../../src/lib/types/AttributeTypeValueAndContextsTuple";
 import getValueTuplesFromAttribute from "../../src/lib/utils/getValueTuplesFromAttribute";
 

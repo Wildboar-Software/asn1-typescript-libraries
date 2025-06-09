@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa";
-import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa";
-import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa";
-import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa";
-import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa";
-import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa";
-import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa";
-import { x121Address } from "../SelectedAttributeTypes/x121Address.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa";
-export { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa";
-export { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa";
-export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa";
-export { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa";
-export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa";
-export { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa";
-export { x121Address } from "../SelectedAttributeTypes/x121Address.oa";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.js";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.js";
+import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.js";
+import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.js";
+import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.js";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.js";
+import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.js";
+import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.js";
+export { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.js";
+export { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.js";
+export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.js";
+export { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.js";
+export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.js";
+export { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.js";
+export { x121Address } from "../SelectedAttributeTypes/x121Address.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION TelecommunicationAttributeSet */
 /**

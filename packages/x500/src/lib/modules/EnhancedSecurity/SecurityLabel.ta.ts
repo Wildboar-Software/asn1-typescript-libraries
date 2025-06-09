@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
-} from "../EnhancedSecurity/PrivacyMark.ta";
+} from "../EnhancedSecurity/PrivacyMark.ta.js";
 import {
     SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
-} from "../EnhancedSecurity/SecurityCategories.ta";
+} from "../EnhancedSecurity/SecurityCategories.ta.js";
 import {
     SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from "../EnhancedSecurity/SecurityClassification.ta";
+} from "../EnhancedSecurity/SecurityClassification.ta.js";
 import {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from "../EnhancedSecurity/SecurityPolicyIdentifier.ta";
+} from "../EnhancedSecurity/SecurityPolicyIdentifier.ta.js";
 export {
     PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
-} from "../EnhancedSecurity/PrivacyMark.ta";
+} from "../EnhancedSecurity/PrivacyMark.ta.js";
 export {
     SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
-} from "../EnhancedSecurity/SecurityCategories.ta";
+} from "../EnhancedSecurity/SecurityCategories.ta.js";
 export {
     confidential /* IMPORTED_SHORT_NAMED_INTEGER */,
     restricted /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -51,12 +51,12 @@ export {
     unmarked /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from "../EnhancedSecurity/SecurityClassification.ta";
+} from "../EnhancedSecurity/SecurityClassification.ta.js";
 export {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from "../EnhancedSecurity/SecurityPolicyIdentifier.ta";
+} from "../EnhancedSecurity/SecurityPolicyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityLabel */
 /**

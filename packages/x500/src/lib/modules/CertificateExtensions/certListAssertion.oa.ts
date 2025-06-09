@@ -3,16 +3,16 @@ import {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
     _encode_CertificateListAssertion,
-} from "../CertificateExtensions/CertificateListAssertion.ta";
-import { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListAssertion.ta.js";
+import { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
     _encode_CertificateListAssertion,
-} from "../CertificateExtensions/CertificateListAssertion.ta";
-export { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListAssertion.ta.js";
+export { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certListAssertion */
 /**

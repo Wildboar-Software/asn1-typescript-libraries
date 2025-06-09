@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, EXTERNAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthenticationLevel_basicLevels,
     _decode_AuthenticationLevel_basicLevels,
     _encode_AuthenticationLevel_basicLevels,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta";
+} from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.js";
 export {
     AuthenticationLevel_basicLevels,
     _decode_AuthenticationLevel_basicLevels,
     _encode_AuthenticationLevel_basicLevels,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta";
+} from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationLevel */
 /**

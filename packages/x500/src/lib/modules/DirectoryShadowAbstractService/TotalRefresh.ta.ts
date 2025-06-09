@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SDSEContent,
     _decode_SDSEContent,
     _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta";
+} from "../DirectoryShadowAbstractService/SDSEContent.ta.js";
 import {
     Subtree,
     _decode_Subtree,
     _encode_Subtree,
-} from "../DirectoryShadowAbstractService/Subtree.ta";
+} from "../DirectoryShadowAbstractService/Subtree.ta.js";
 export {
     SDSEContent,
     _decode_SDSEContent,
     _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta";
+} from "../DirectoryShadowAbstractService/SDSEContent.ta.js";
 export {
     Subtree,
     _decode_Subtree,
     _encode_Subtree,
-} from "../DirectoryShadowAbstractService/Subtree.ta";
+} from "../DirectoryShadowAbstractService/Subtree.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TotalRefresh */
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, INTEGER, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Period_weeks_bitWeek,
     _decode_Period_weeks_bitWeek,
     _encode_Period_weeks_bitWeek,
-} from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta";
+} from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta.js";
 export {
     Period_weeks_bitWeek,
     Period_weeks_bitWeek_week1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -20,7 +20,7 @@ export {
     week5 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Period_weeks_bitWeek,
     _encode_Period_weeks_bitWeek,
-} from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta";
+} from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Period_weeks */
 /**

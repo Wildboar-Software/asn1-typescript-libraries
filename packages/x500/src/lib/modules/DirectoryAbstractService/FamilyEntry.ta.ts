@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FamilyEntries,
     _decode_FamilyEntries,
     _encode_FamilyEntries,
-} from "../DirectoryAbstractService/FamilyEntries.ta";
+} from "../DirectoryAbstractService/FamilyEntries.ta.js";
 import {
     FamilyEntry_information_Item,
     _decode_FamilyEntry_information_Item,
     _encode_FamilyEntry_information_Item,
-} from "../DirectoryAbstractService/FamilyEntry-information-Item.ta";
+} from "../DirectoryAbstractService/FamilyEntry-information-Item.ta.js";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 export {
     FamilyEntries,
     _decode_FamilyEntries,
     _encode_FamilyEntries,
-} from "../DirectoryAbstractService/FamilyEntries.ta";
+} from "../DirectoryAbstractService/FamilyEntries.ta.js";
 export {
     FamilyEntry_information_Item,
     _decode_FamilyEntry_information_Item,
     _encode_FamilyEntry_information_Item,
-} from "../DirectoryAbstractService/FamilyEntry-information-Item.ta";
+} from "../DirectoryAbstractService/FamilyEntry-information-Item.ta.js";
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FamilyEntry */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_ce } from "../UsefulDefinitions/id-ce.va";
-export { id_ce } from "../UsefulDefinitions/id-ce.va";
+import { id_ce } from "../UsefulDefinitions/id-ce.va.js";
+export { id_ce } from "../UsefulDefinitions/id-ce.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ce_a_protRestrict */
 /**

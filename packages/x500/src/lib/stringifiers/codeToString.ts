@@ -1,4 +1,4 @@
-import type { Code } from "../modules/CommonProtocolSpecification/Code.ta";
+import type { Code } from "../modules/CommonProtocolSpecification/Code.ta.js";
 
 export
 function codeToString (code: Code): string {

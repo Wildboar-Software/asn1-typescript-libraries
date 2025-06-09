@@ -5,33 +5,33 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
-} from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta";
+} from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta";
+} from "../DirectoryAbstractService/Versions.ta.js";
 export {
     DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
-} from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta";
+} from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     v1 /* IMPORTED_SHORT_NAMED_BIT */,
     v2 /* IMPORTED_SHORT_NAMED_BIT */,
@@ -40,7 +40,7 @@ export {
     Versions_v2 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta";
+} from "../DirectoryAbstractService/Versions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 */
 /**

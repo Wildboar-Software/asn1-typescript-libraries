@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     BIT_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Mic_Header,
     _decode_Mic_Header,
     _encode_Mic_Header,
-} from "../SpkmGssTokens/Mic-Header.ta";
+} from "../SpkmGssTokens/Mic-Header.ta.js";
 export {
     Mic_Header,
     _decode_Mic_Header,
     _encode_Mic_Header,
-} from "../SpkmGssTokens/Mic-Header.ta";
+} from "../SpkmGssTokens/Mic-Header.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKM_MIC */
 /**

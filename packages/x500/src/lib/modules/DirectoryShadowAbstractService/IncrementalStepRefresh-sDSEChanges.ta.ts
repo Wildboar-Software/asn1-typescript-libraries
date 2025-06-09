@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentChange,
     _decode_ContentChange,
     _encode_ContentChange,
-} from "../DirectoryShadowAbstractService/ContentChange.ta";
+} from "../DirectoryShadowAbstractService/ContentChange.ta.js";
 import {
     SDSEContent,
     _decode_SDSEContent,
     _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta";
+} from "../DirectoryShadowAbstractService/SDSEContent.ta.js";
 export {
     ContentChange,
     _decode_ContentChange,
     _encode_ContentChange,
-} from "../DirectoryShadowAbstractService/ContentChange.ta";
+} from "../DirectoryShadowAbstractService/ContentChange.ta.js";
 export {
     SDSEContent,
     _decode_SDSEContent,
     _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta";
+} from "../DirectoryShadowAbstractService/SDSEContent.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IncrementalStepRefresh_sDSEChanges */
 /**

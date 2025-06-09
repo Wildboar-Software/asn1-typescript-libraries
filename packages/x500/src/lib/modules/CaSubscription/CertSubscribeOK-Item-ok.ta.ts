@@ -4,24 +4,24 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
-} from "../CaSubscription/CertStatus.ta";
+} from "../CaSubscription/CertStatus.ta.js";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.js";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CRLReason.ta.js";
 export {
     CertStatus,
     CertStatus_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -35,12 +35,12 @@ export {
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
-} from "../CaSubscription/CertStatus.ta";
+} from "../CaSubscription/CertStatus.ta.js";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_ok */
 /**

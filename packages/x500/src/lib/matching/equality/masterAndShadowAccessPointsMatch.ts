@@ -1,14 +1,14 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
-import { _decodeSetOf } from "asn1-ts/dist/node/functional";
+import { _decodeSetOf } from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
-} from "../../modules/InformationFramework/Name.ta";
+} from "../../modules/InformationFramework/Name.ta.js";
 import {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
-} from "../../modules/DistributedOperations/MasterAndShadowAccessPoints.ta";
+} from "../../modules/DistributedOperations/MasterAndShadowAccessPoints.ta.js";
 
 function scoreName (name: Name): number {
     return name.rdnSequence.reduce((p, c, i) => (p + (c.length * (10 ** i))), 0);

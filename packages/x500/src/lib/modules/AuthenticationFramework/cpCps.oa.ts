@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { certificatePolicy } from "../AuthenticationFramework/certificatePolicy.oa";
-import { certificationPracticeStmt } from "../AuthenticationFramework/certificationPracticeStmt.oa";
-import { id_oc_cpCps } from "../AuthenticationFramework/id-oc-cpCps.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { certificatePolicy } from "../AuthenticationFramework/certificatePolicy.oa.js";
+import { certificationPracticeStmt } from "../AuthenticationFramework/certificationPracticeStmt.oa.js";
+import { id_oc_cpCps } from "../AuthenticationFramework/id-oc-cpCps.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-export { certificatePolicy } from "../AuthenticationFramework/certificatePolicy.oa";
-export { certificationPracticeStmt } from "../AuthenticationFramework/certificationPracticeStmt.oa";
-export { id_oc_cpCps } from "../AuthenticationFramework/id-oc-cpCps.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+export { certificatePolicy } from "../AuthenticationFramework/certificatePolicy.oa.js";
+export { certificationPracticeStmt } from "../AuthenticationFramework/certificationPracticeStmt.oa.js";
+export { id_oc_cpCps } from "../AuthenticationFramework/id-oc-cpCps.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -23,8 +23,8 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION cpCps */
 /**

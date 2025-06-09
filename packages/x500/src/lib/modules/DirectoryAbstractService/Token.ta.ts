@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 import {
     TokenContent,
     _decode_TokenContent,
     _encode_TokenContent,
-} from "../DirectoryAbstractService/TokenContent.ta";
+} from "../DirectoryAbstractService/TokenContent.ta.js";
 export {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 export {
     TokenContent,
     _decode_TokenContent,
     _encode_TokenContent,
-} from "../DirectoryAbstractService/TokenContent.ta";
+} from "../DirectoryAbstractService/TokenContent.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Token */
 /**

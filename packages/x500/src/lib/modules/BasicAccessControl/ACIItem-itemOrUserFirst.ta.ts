@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ACIItem_itemOrUserFirst_itemFirst,
     _decode_ACIItem_itemOrUserFirst_itemFirst,
     _encode_ACIItem_itemOrUserFirst_itemFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta.js";
 import {
     ACIItem_itemOrUserFirst_userFirst,
     _decode_ACIItem_itemOrUserFirst_userFirst,
     _encode_ACIItem_itemOrUserFirst_userFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.js";
 export {
     ACIItem_itemOrUserFirst_itemFirst,
     _decode_ACIItem_itemOrUserFirst_itemFirst,
     _encode_ACIItem_itemOrUserFirst_itemFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta.js";
 export {
     ACIItem_itemOrUserFirst_userFirst,
     _decode_ACIItem_itemOrUserFirst_userFirst,
     _encode_ACIItem_itemOrUserFirst_userFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst */
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
-import { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAsynchronousAC.va";
-import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa";
-import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
-export { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAsynchronousAC.va";
-export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa";
-export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
+import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
+import { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAsynchronousAC.va.js";
+import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.js";
+import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
+export { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAsynchronousAC.va.js";
+export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.js";
+export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION shadowConsumerInitiatedAsynchronousAC */
 /**

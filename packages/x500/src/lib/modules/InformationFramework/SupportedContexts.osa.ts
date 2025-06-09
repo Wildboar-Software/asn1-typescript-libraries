@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedContexts */
 /**

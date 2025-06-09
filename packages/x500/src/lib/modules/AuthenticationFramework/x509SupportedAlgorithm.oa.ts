@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va";
+import { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va.js";
 import {
     SupportedAlgorithm,
     _decode_SupportedAlgorithm,
     _encode_SupportedAlgorithm,
-} from "../AuthenticationFramework/SupportedAlgorithm.ta";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va";
+} from "../AuthenticationFramework/SupportedAlgorithm.ta.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va.js";
 export {
     SupportedAlgorithm,
     _decode_SupportedAlgorithm,
     _encode_SupportedAlgorithm,
-} from "../AuthenticationFramework/SupportedAlgorithm.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/SupportedAlgorithm.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION x509SupportedAlgorithm */
 /**

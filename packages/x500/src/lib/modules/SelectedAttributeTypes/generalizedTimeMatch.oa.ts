@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { GeneralizedTime } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa";
-import { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa";
-export { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeMatch.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.js";
+import { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.js";
+export { id_mr_generalizedTimeMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION generalizedTimeMatch */
 /**

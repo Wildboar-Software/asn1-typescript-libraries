@@ -5,27 +5,27 @@ import {
     NULL,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 export {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
 export {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UserClasses */
 /**

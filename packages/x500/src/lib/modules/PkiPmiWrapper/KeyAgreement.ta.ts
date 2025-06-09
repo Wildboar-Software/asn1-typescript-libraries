@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyAgreement_keyEncryptionAlgorithm,
     _decode_KeyAgreement_keyEncryptionAlgorithm,
     _encode_KeyAgreement_keyEncryptionAlgorithm,
-} from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta";
+} from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta.js";
 import {
     SenderDhInfo,
     _decode_SenderDhInfo,
     _encode_SenderDhInfo,
-} from "../PkiPmiWrapper/SenderDhInfo.ta";
+} from "../PkiPmiWrapper/SenderDhInfo.ta.js";
 export {
     KeyAgreement_keyEncryptionAlgorithm,
     _decode_KeyAgreement_keyEncryptionAlgorithm,
     _encode_KeyAgreement_keyEncryptionAlgorithm,
-} from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta";
+} from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta.js";
 export {
     SenderDhInfo,
     _decode_SenderDhInfo,
     _encode_SenderDhInfo,
-} from "../PkiPmiWrapper/SenderDhInfo.ta";
+} from "../PkiPmiWrapper/SenderDhInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreement */
 /**

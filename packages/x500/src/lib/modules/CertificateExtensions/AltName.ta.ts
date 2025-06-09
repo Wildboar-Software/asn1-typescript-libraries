@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OPTIONAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AltNameType,
     _decode_AltNameType,
     _encode_AltNameType,
-} from "../CertificateExtensions/AltNameType.ta";
+} from "../CertificateExtensions/AltNameType.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     AltNameType,
     _decode_AltNameType,
     _encode_AltNameType,
-} from "../CertificateExtensions/AltNameType.ta";
+} from "../CertificateExtensions/AltNameType.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AltName */
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PreferredDeliveryMethod_Item,
     _decode_PreferredDeliveryMethod_Item,
     _encode_PreferredDeliveryMethod_Item,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta.js";
 export {
     any_delivery_method /* IMPORTED_SHORT_NAMED_INTEGER */,
     g3_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -30,7 +30,7 @@ export {
     videotex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PreferredDeliveryMethod_Item,
     _encode_PreferredDeliveryMethod_Item,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PreferredDeliveryMethod */
 /**

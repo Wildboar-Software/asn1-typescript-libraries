@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_collectivePostalAddress } from "../SelectedAttributeTypes/id-at-collectivePostalAddress.va";
-import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
-import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_collectivePostalAddress } from "../SelectedAttributeTypes/id-at-collectivePostalAddress.va.js";
+import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -20,12 +20,12 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_collectivePostalAddress } from "../SelectedAttributeTypes/id-at-collectivePostalAddress.va";
-export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
-export { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_collectivePostalAddress } from "../SelectedAttributeTypes/id-at-collectivePostalAddress.va.js";
+export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
+export { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION collectivePostalAddress */
 /**

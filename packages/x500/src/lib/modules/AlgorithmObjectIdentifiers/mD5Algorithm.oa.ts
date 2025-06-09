@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { NULL, ObjectIdentifier as _OID } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION mD5Algorithm */
 /**

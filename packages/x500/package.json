@@ -1,5 +1,6 @@
 {
     "name": "@wildboar/x500",
+    "type": "module",
     "version": "1.1.5",
     "description": "X.500 directory protocol data structures and business logic in TypeScript",
     "keywords": [

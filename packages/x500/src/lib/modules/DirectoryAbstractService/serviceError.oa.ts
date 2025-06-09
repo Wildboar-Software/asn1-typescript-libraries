@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_errcode_serviceError } from "../CommonProtocolSpecification/id-errcode-serviceError.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_errcode_serviceError } from "../CommonProtocolSpecification/id-errcode-serviceError.va.js";
 import {
     ServiceErrorData,
     _decode_ServiceErrorData,
     _encode_ServiceErrorData,
-} from "../DirectoryAbstractService/ServiceErrorData.ta";
+} from "../DirectoryAbstractService/ServiceErrorData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_errcode_serviceError } from "../CommonProtocolSpecification/id-errcode-serviceError.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_errcode_serviceError } from "../CommonProtocolSpecification/id-errcode-serviceError.va.js";
 export {
     ServiceErrorData,
     _decode_ServiceErrorData,
     _encode_ServiceErrorData,
-} from "../DirectoryAbstractService/ServiceErrorData.ta";
+} from "../DirectoryAbstractService/ServiceErrorData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION serviceError */
 /**

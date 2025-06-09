@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiUnbindResult_fully_encoded_data_Item,
     _decode_OsiUnbindResult_fully_encoded_data_Item,
     _encode_OsiUnbindResult_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item.ta";
+} from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item.ta.js";
 export {
     OsiUnbindResult_fully_encoded_data_Item,
     _decode_OsiUnbindResult_fully_encoded_data_Item,
     _encode_OsiUnbindResult_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item.ta";
+} from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiUnbindResult */
 /**

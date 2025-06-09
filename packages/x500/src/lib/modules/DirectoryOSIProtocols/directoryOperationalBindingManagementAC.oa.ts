@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
-import { id_ac_directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/id-ac-directoryOperationalBindingManagementAC.va";
-import { dSAOperationalBindingManagementBind } from "../OperationalBindingManagement/dSAOperationalBindingManagementBind.oa";
-import { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa";
-import { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa";
-import { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
-export { id_ac_directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/id-ac-directoryOperationalBindingManagementAC.va";
-export { dSAOperationalBindingManagementBind } from "../OperationalBindingManagement/dSAOperationalBindingManagementBind.oa";
-export { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa";
-export { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa";
-export { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa";
+import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
+import { id_ac_directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/id-ac-directoryOperationalBindingManagementAC.va.js";
+import { dSAOperationalBindingManagementBind } from "../OperationalBindingManagement/dSAOperationalBindingManagementBind.oa.js";
+import { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.js";
+import { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.js";
+import { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
+export { id_ac_directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/id-ac-directoryOperationalBindingManagementAC.va.js";
+export { dSAOperationalBindingManagementBind } from "../OperationalBindingManagement/dSAOperationalBindingManagementBind.oa.js";
+export { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.js";
+export { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.js";
+export { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION directoryOperationalBindingManagementAC */
 /**

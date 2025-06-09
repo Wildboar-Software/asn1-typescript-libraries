@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     LdapResultData,
     _decode_LdapResultData,
     _encode_LdapResultData,
-} from "../DirectoryAbstractService/LdapResultData.ta";
+} from "../DirectoryAbstractService/LdapResultData.ta.js";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     LdapResultData,
     _decode_LdapResultData,
     _encode_LdapResultData,
-} from "../DirectoryAbstractService/LdapResultData.ta";
+} from "../DirectoryAbstractService/LdapResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION LdapResult */
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { aes } from "../AlgorithmObjectIdentifiers/aes.va";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-export { aes } from "../AlgorithmObjectIdentifiers/aes.va";
+import { aes } from "../AlgorithmObjectIdentifiers/aes.va.js";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { aes } from "../AlgorithmObjectIdentifiers/aes.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_aes256_wrap */
 /**

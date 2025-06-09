@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { UTF8String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-export { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+export { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION uriMatch */
 /**

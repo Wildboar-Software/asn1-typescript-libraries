@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DeleteAvlRsp_result,
     _decode_DeleteAvlRsp_result,
     _encode_DeleteAvlRsp_result,
-} from "../AVL-management/DeleteAvlRsp-result.ta";
+} from "../AVL-management/DeleteAvlRsp-result.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 export {
     DeleteAvlRsp_result,
     _decode_DeleteAvlRsp_result,
     _encode_DeleteAvlRsp_result,
-} from "../AVL-management/DeleteAvlRsp-result.ta";
+} from "../AVL-management/DeleteAvlRsp-result.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DeleteAvlRsp */
 /**

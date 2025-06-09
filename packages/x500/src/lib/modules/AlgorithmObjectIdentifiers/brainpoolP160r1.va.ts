@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.js";
 
 /* START_OF_SYMBOL_DEFINITION brainpoolP160r1 */
 /**

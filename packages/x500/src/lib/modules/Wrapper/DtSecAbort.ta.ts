@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Signed,
     _get_decoder_for_Signed,
     _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta";
+} from "../CryptoTools/Signed.ta.js";
 import {
     TbsDtSecAbort,
     _decode_TbsDtSecAbort,
     _encode_TbsDtSecAbort,
-} from "../Wrapper/TbsDtSecAbort.ta";
+} from "../Wrapper/TbsDtSecAbort.ta.js";
 export {
     Signed,
     _get_decoder_for_Signed,
     _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta";
+} from "../CryptoTools/Signed.ta.js";
 export {
     TbsDtSecAbort,
     _decode_TbsDtSecAbort,
     _encode_TbsDtSecAbort,
-} from "../Wrapper/TbsDtSecAbort.ta";
+} from "../Wrapper/TbsDtSecAbort.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DtSecAbort */
 /**

@@ -1,66 +1,66 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../TrustBroker/InitializationAbort.ta";
+} from "../TrustBroker/InitializationAbort.ta.js";
 import {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../TrustBroker/InitializationAcc.ta";
+} from "../TrustBroker/InitializationAcc.ta.js";
 import {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../TrustBroker/InitializationRej.ta";
+} from "../TrustBroker/InitializationRej.ta.js";
 import {
     InitializationReq,
     _decode_InitializationReq,
     _encode_InitializationReq,
-} from "../TrustBroker/InitializationReq.ta";
+} from "../TrustBroker/InitializationReq.ta.js";
 import {
     TBrequest,
     _decode_TBrequest,
     _encode_TBrequest,
-} from "../TrustBroker/TBrequest.ta";
+} from "../TrustBroker/TBrequest.ta.js";
 import {
     TBresponse,
     _decode_TBresponse,
     _encode_TBresponse,
-} from "../TrustBroker/TBresponse.ta";
+} from "../TrustBroker/TBresponse.ta.js";
 export {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../TrustBroker/InitializationAbort.ta";
+} from "../TrustBroker/InitializationAbort.ta.js";
 export {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../TrustBroker/InitializationAcc.ta";
+} from "../TrustBroker/InitializationAcc.ta.js";
 export {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../TrustBroker/InitializationRej.ta";
+} from "../TrustBroker/InitializationRej.ta.js";
 export {
     InitializationReq,
     _decode_InitializationReq,
     _encode_InitializationReq,
-} from "../TrustBroker/InitializationReq.ta";
+} from "../TrustBroker/InitializationReq.ta.js";
 export {
     TBrequest,
     _decode_TBrequest,
     _encode_TBrequest,
-} from "../TrustBroker/TBrequest.ta";
+} from "../TrustBroker/TBrequest.ta.js";
 export {
     TBresponse,
     _decode_TBresponse,
     _encode_TBresponse,
-} from "../TrustBroker/TBresponse.ta";
+} from "../TrustBroker/TBresponse.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBprot */
 /**

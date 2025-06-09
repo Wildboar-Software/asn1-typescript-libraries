@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 import {
     AttributeTypeValueContexts,
     _decode_AttributeTypeValueContexts,
     _encode_AttributeTypeValueContexts,
-} from "../EnhancedSecurity/AttributeTypeValueContexts.ta";
+} from "../EnhancedSecurity/AttributeTypeValueContexts.ta.js";
 export {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 export {
     AttributeTypeValueContexts,
     _decode_AttributeTypeValueContexts,
     _encode_AttributeTypeValueContexts,
-} from "../EnhancedSecurity/AttributeTypeValueContexts.ta";
+} from "../EnhancedSecurity/AttributeTypeValueContexts.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AVIHash */
 /**

@@ -1,9 +1,9 @@
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta";
-import compareDistinguishedName from "../comparators/compareDistinguishedName";
+} from "../modules/InformationFramework/DistinguishedName.ta.js";
+import compareDistinguishedName from "../comparators/compareDistinguishedName.js";
 
 // TODO: This should be split into two: nameWithinGeneralSubtree and dnWithinSubtreeSpecification
 

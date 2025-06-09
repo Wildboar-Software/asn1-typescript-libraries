@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { BOOLEAN, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION MAPPING_BASED_MATCHING */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     HierarchyBelow,
     _decode_HierarchyBelow,
     _encode_HierarchyBelow,
-} from "../InformationFramework/HierarchyBelow.ta";
-import { id_oa_hierarchyBelow } from "../InformationFramework/id-oa-hierarchyBelow.va";
-import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/HierarchyBelow.ta.js";
+import { id_oa_hierarchyBelow } from "../InformationFramework/id-oa-hierarchyBelow.va.js";
+import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     HierarchyBelow,
     _decode_HierarchyBelow,
     _encode_HierarchyBelow,
-} from "../InformationFramework/HierarchyBelow.ta";
-export { id_oa_hierarchyBelow } from "../InformationFramework/id-oa-hierarchyBelow.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa";
+} from "../InformationFramework/HierarchyBelow.ta.js";
+export { id_oa_hierarchyBelow } from "../InformationFramework/id-oa-hierarchyBelow.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION hierarchyBelow */
 /**

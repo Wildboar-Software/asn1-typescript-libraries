@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AllowedAttributeAssignments_Item_attributes_Item,
     _decode_AllowedAttributeAssignments_Item_attributes_Item,
     _encode_AllowedAttributeAssignments_Item_attributes_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     AllowedAttributeAssignments_Item_attributes_Item,
     _decode_AllowedAttributeAssignments_Item_attributes_Item,
     _encode_AllowedAttributeAssignments_Item_attributes_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AllowedAttributeAssignments_Item */
 /**

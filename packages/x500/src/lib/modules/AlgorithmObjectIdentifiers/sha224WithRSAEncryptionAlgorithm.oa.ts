@@ -1,3 +1,3 @@
 export {
     sha224WithRSAEncryptionAlgorithm,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/sha224WithRSAEncryptionAlgorithm.oa";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/sha224WithRSAEncryptionAlgorithm.oa.js";

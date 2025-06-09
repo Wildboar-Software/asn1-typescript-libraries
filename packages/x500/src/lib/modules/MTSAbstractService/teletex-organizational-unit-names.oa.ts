@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TeletexOrganizationalUnitNames,
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
-} from "../MTSAbstractService/TeletexOrganizationalUnitNames.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/TeletexOrganizationalUnitNames.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     TeletexOrganizationalUnitNames,
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
-} from "../MTSAbstractService/TeletexOrganizationalUnitNames.ta";
+} from "../MTSAbstractService/TeletexOrganizationalUnitNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION teletex_organizational_unit_names */
 /**

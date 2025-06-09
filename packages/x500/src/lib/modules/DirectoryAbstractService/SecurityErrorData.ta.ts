@@ -5,38 +5,38 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncPwdInfo,
     _decode_EncPwdInfo,
     _encode_EncPwdInfo,
-} from "../DirectoryAbstractService/EncPwdInfo.ta";
+} from "../DirectoryAbstractService/EncPwdInfo.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from "../DirectoryAbstractService/SecurityProblem.ta";
+} from "../DirectoryAbstractService/SecurityProblem.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     SPKM_ERROR,
     _decode_SPKM_ERROR,
     _encode_SPKM_ERROR,
-} from "../SpkmGssTokens/SPKM-ERROR.ta";
-import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta";
+} from "../SpkmGssTokens/SPKM-ERROR.ta.js";
+import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityErrorData */
 /**

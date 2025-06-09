@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
-} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.js";
 
 export
 const facsimileNumberMatch: EqualityMatcher = (

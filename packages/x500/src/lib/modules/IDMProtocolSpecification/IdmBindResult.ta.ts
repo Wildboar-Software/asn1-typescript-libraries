@@ -5,18 +5,18 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca";
+} from "../CertificateExtensions/GeneralName.ta.js";
+export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION IdmBindResult */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IncrementalStepRefresh_sDSEChanges,
     _decode_IncrementalStepRefresh_sDSEChanges,
     _encode_IncrementalStepRefresh_sDSEChanges,
-} from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta";
+} from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta.js";
 import {
     SubordinateChanges,
     _decode_SubordinateChanges,
     _encode_SubordinateChanges,
-} from "../DirectoryShadowAbstractService/SubordinateChanges.ta";
+} from "../DirectoryShadowAbstractService/SubordinateChanges.ta.js";
 export {
     IncrementalStepRefresh_sDSEChanges,
     _decode_IncrementalStepRefresh_sDSEChanges,
     _encode_IncrementalStepRefresh_sDSEChanges,
-} from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta";
+} from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta.js";
 export {
     SubordinateChanges,
     _decode_SubordinateChanges,
     _encode_SubordinateChanges,
-} from "../DirectoryShadowAbstractService/SubordinateChanges.ta";
+} from "../DirectoryShadowAbstractService/SubordinateChanges.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IncrementalStepRefresh */
 /**

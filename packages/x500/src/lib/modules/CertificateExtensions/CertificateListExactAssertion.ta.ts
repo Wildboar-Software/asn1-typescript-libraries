@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OPTIONAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 import {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 export {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateListExactAssertion */
 /**

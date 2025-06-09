@@ -1,6 +1,6 @@
-import type Result from "./Result";
-import type { ChainingResults } from "../modules/DistributedOperations/ChainingResults.ta";
-import type { Code } from "../modules/CommonProtocolSpecification/Code.ta";
+import type Result from "./Result.js";
+import type { ChainingResults } from "../modules/DistributedOperations/ChainingResults.ta.js";
+import type { Code } from "../modules/CommonProtocolSpecification/Code.ta.js";
 
 export
 interface ChainedResult extends Result {

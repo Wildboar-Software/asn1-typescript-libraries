@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { ldap_syntax } from "../UsefulDefinitions/ldap-syntax.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { ldap_syntax } from "../UsefulDefinitions/ldap-syntax.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { ldap_syntax } from "../UsefulDefinitions/ldap-syntax.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { ldap_syntax } from "../UsefulDefinitions/ldap-syntax.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_lsx */
 /**

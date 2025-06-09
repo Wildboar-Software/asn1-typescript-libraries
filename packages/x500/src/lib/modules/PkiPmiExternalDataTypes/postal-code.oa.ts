@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PostalCode,
     _decode_PostalCode,
     _encode_PostalCode,
-} from "../PkiPmiExternalDataTypes/PostalCode.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/PostalCode.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PostalCode,
     _decode_PostalCode,
     _encode_PostalCode,
-} from "../PkiPmiExternalDataTypes/PostalCode.ta";
+} from "../PkiPmiExternalDataTypes/PostalCode.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION postal_code */
 /**

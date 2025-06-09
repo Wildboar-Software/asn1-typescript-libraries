@@ -5,57 +5,57 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 import {
     AreaSpecification,
     _decode_AreaSpecification,
     _encode_AreaSpecification,
-} from "../DirectoryShadowAbstractService/AreaSpecification.ta";
+} from "../DirectoryShadowAbstractService/AreaSpecification.ta.js";
 import {
     AttributeSelection,
     _decode_AttributeSelection,
     _encode_AttributeSelection,
-} from "../DirectoryShadowAbstractService/AttributeSelection.ta";
+} from "../DirectoryShadowAbstractService/AttributeSelection.ta.js";
 import {
     Knowledge,
     _decode_Knowledge,
     _encode_Knowledge,
-} from "../DirectoryShadowAbstractService/Knowledge.ta";
+} from "../DirectoryShadowAbstractService/Knowledge.ta.js";
 import {
     UnitOfReplication_supplyContexts,
     _decode_UnitOfReplication_supplyContexts,
     _encode_UnitOfReplication_supplyContexts,
-} from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta";
+} from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta.js";
 export {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 export {
     AreaSpecification,
     _decode_AreaSpecification,
     _encode_AreaSpecification,
-} from "../DirectoryShadowAbstractService/AreaSpecification.ta";
+} from "../DirectoryShadowAbstractService/AreaSpecification.ta.js";
 export {
     AttributeSelection,
     _decode_AttributeSelection,
     _encode_AttributeSelection,
-} from "../DirectoryShadowAbstractService/AttributeSelection.ta";
+} from "../DirectoryShadowAbstractService/AttributeSelection.ta.js";
 export {
     Knowledge,
     _decode_Knowledge,
     _encode_Knowledge,
-} from "../DirectoryShadowAbstractService/Knowledge.ta";
+} from "../DirectoryShadowAbstractService/Knowledge.ta.js";
 export {
     UnitOfReplication_supplyContexts,
     _decode_UnitOfReplication_supplyContexts,
     _encode_UnitOfReplication_supplyContexts,
-} from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta";
+} from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UnitOfReplication */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalPhysicalDeliveryOfficeNumber,
     _decode_UniversalPhysicalDeliveryOfficeNumber,
     _encode_UniversalPhysicalDeliveryOfficeNumber,
-} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalPhysicalDeliveryOfficeNumber,
     _decode_UniversalPhysicalDeliveryOfficeNumber,
     _encode_UniversalPhysicalDeliveryOfficeNumber,
-} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta";
+} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_physical_delivery_office_number */
 /**

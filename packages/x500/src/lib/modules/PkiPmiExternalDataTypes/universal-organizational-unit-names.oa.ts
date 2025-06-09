@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalOrganizationalUnitNames,
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalOrganizationalUnitNames,
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta";
+} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_organizational_unit_names */
 /**

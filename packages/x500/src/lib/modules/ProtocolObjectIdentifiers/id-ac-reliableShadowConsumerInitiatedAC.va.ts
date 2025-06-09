@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_ac } from "../UsefulDefinitions/id-ac.va";
-export { id_ac } from "../UsefulDefinitions/id-ac.va";
+import { id_ac } from "../UsefulDefinitions/id-ac.va.js";
+export { id_ac } from "../UsefulDefinitions/id-ac.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ac_reliableShadowConsumerInitiatedAC */
 /**

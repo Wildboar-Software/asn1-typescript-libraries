@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifier */
 /**

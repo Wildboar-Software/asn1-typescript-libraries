@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, UTF8String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UserPwd_encrypted,
     _decode_UserPwd_encrypted,
     _encode_UserPwd_encrypted,
-} from "../PasswordPolicy/UserPwd-encrypted.ta";
+} from "../PasswordPolicy/UserPwd-encrypted.ta.js";
 export {
     UserPwd_encrypted,
     _decode_UserPwd_encrypted,
     _encode_UserPwd_encrypted,
-} from "../PasswordPolicy/UserPwd-encrypted.ta";
+} from "../PasswordPolicy/UserPwd-encrypted.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UserPwd */
 /**

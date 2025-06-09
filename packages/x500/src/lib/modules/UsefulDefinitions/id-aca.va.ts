@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { accessControlAttribute } from "../UsefulDefinitions/accessControlAttribute.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { accessControlAttribute } from "../UsefulDefinitions/accessControlAttribute.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { accessControlAttribute } from "../UsefulDefinitions/accessControlAttribute.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { accessControlAttribute } from "../UsefulDefinitions/accessControlAttribute.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_aca */
 /**

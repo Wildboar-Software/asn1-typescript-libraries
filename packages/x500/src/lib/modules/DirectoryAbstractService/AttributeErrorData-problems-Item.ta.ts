@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeProblem,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from "../DirectoryAbstractService/AttributeProblem.ta";
+} from "../DirectoryAbstractService/AttributeProblem.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta";
+} from "../InformationFramework/AttributeValue.ta.js";
 export {
     attributeOrValueAlreadyExists /* IMPORTED_SHORT_NAMED_INTEGER */,
     AttributeProblem,
@@ -38,17 +38,17 @@ export {
     undefinedAttributeType /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from "../DirectoryAbstractService/AttributeProblem.ta";
+} from "../DirectoryAbstractService/AttributeProblem.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta";
+} from "../InformationFramework/AttributeValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeErrorData_problems_Item */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_rejectAVL } from "../PkiPMIProtocolSpecifications/id-rejectAVL.va";
+import { id_rejectAVL } from "../PkiPMIProtocolSpecifications/id-rejectAVL.va.js";
 import {
     RejectAVL,
     _decode_RejectAVL,
     _encode_RejectAVL,
-} from "../PkiPMIProtocolSpecifications/RejectAVL.ta";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
-export { id_rejectAVL } from "../PkiPMIProtocolSpecifications/id-rejectAVL.va";
+} from "../PkiPMIProtocolSpecifications/RejectAVL.ta.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
+export { id_rejectAVL } from "../PkiPMIProtocolSpecifications/id-rejectAVL.va.js";
 export {
     RejectAVL,
     _decode_RejectAVL,
     _encode_RejectAVL,
-} from "../PkiPMIProtocolSpecifications/RejectAVL.ta";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/RejectAVL.ta.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION rejectAVL */
 /**

@@ -1,7 +1,7 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type { RDNSequence } from "../modules/InformationFramework/RDNSequence.ta";
-import type EqualityMatcher from "../types/EqualityMatcher";
-import compareRelativeDistinguishedName from "./compareRelativeDistinguishedName";
+import type { RDNSequence } from "../modules/InformationFramework/RDNSequence.ta.js";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
+import compareRelativeDistinguishedName from "./compareRelativeDistinguishedName.js";
 
 export default function compare(
     a: RDNSequence,

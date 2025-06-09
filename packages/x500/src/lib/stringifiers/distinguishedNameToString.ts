@@ -1,5 +1,5 @@
-import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta";
-import rdnSequenceToString from "./rdnSequenceToString";
+import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta.js";
+import rdnSequenceToString from "./rdnSequenceToString.js";
 
 /**
  * @deprecated

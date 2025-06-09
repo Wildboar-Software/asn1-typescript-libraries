@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { openLDAP_attributes } from "../UsefulDefinitions/openLDAP-attributes.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { openLDAP_attributes } from "../UsefulDefinitions/openLDAP-attributes.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { openLDAP_attributes } from "../UsefulDefinitions/openLDAP-attributes.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { openLDAP_attributes } from "../UsefulDefinitions/openLDAP-attributes.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_oat */
 /**

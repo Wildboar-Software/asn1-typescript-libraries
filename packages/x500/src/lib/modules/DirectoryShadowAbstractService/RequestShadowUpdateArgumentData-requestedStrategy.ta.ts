@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, EXTERNAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta.js";
 export {
     incremental /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     RequestShadowUpdateArgumentData_requestedStrategy_standard,
@@ -15,7 +15,7 @@ export {
     _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _enum_for_RequestShadowUpdateArgumentData_requestedStrategy_standard,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData_requestedStrategy */
 /**

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CONTENT_RULE */
 /**

@@ -2,10 +2,10 @@ import type { Socket } from "net";
 import { TLSSocket, checkServerIdentity } from "tls";
 import type { OCTET_STRING } from "asn1-ts";
 import { lookup } from "dns/promises";
-import { ipv4FromNSAP } from "./ipv4";
-import { uriFromNSAP } from "./uri";
+import { ipv4FromNSAP } from "./ipv4.js";
+import { uriFromNSAP } from "./uri.js";
 import { URL } from "url";
-import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
+import IPV4_AFI_IDI from "./IPV4_AFI_IDI.js";
 
 /**
  * @deprecated

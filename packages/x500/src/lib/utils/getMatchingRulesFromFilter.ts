@@ -1,6 +1,6 @@
 import type {
     Filter,
-} from "../modules/DirectoryAbstractService/Filter.ta";
+} from "../modules/DirectoryAbstractService/Filter.ta.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 
 export

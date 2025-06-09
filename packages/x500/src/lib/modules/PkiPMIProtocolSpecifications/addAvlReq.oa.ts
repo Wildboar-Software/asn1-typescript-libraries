@@ -3,16 +3,16 @@ import {
     AddAvlReq,
     _decode_AddAvlReq,
     _encode_AddAvlReq,
-} from "../PkiPMIProtocolSpecifications/AddAvlReq.ta";
-import { id_addAvlReq } from "../PkiPMIProtocolSpecifications/id-addAvlReq.va";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/AddAvlReq.ta.js";
+import { id_addAvlReq } from "../PkiPMIProtocolSpecifications/id-addAvlReq.va.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 export {
     AddAvlReq,
     _decode_AddAvlReq,
     _encode_AddAvlReq,
-} from "../PkiPMIProtocolSpecifications/AddAvlReq.ta";
-export { id_addAvlReq } from "../PkiPMIProtocolSpecifications/id-addAvlReq.va";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/AddAvlReq.ta.js";
+export { id_addAvlReq } from "../PkiPMIProtocolSpecifications/id-addAvlReq.va.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION addAvlReq */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_RSASSA_PSS } from "../AlgorithmObjectIdentifiers/id-RSASSA-PSS.va";
+import { id_RSASSA_PSS } from "../AlgorithmObjectIdentifiers/id-RSASSA-PSS.va.js";
 import {
     rSASSA_PSS_Type,
     _decode_rSASSA_PSS_Type,
     _encode_rSASSA_PSS_Type,
-} from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_RSASSA_PSS } from "../AlgorithmObjectIdentifiers/id-RSASSA-PSS.va";
+} from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_RSASSA_PSS } from "../AlgorithmObjectIdentifiers/id-RSASSA-PSS.va.js";
 export {
     rSASSA_PSS_Type,
     _decode_rSASSA_PSS_Type,
     _encode_rSASSA_PSS_Type,
-} from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION rSASSA_PSS */
 /**

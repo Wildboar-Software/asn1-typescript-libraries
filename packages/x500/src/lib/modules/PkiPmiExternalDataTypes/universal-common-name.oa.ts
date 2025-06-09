@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalCommonName,
     _decode_UniversalCommonName,
     _encode_UniversalCommonName,
-} from "../PkiPmiExternalDataTypes/UniversalCommonName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalCommonName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalCommonName,
     _decode_UniversalCommonName,
     _encode_UniversalCommonName,
-} from "../PkiPmiExternalDataTypes/UniversalCommonName.ta";
+} from "../PkiPmiExternalDataTypes/UniversalCommonName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_common_name */
 /**

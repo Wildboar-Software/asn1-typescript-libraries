@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ListResult,
     _decode_ListResult,
     _encode_ListResult,
-} from "../DirectoryAbstractService/ListResult.ta";
+} from "../DirectoryAbstractService/ListResult.ta.js";
 import {
     ListResultData_listInfo,
     _decode_ListResultData_listInfo,
     _encode_ListResultData_listInfo,
-} from "../DirectoryAbstractService/ListResultData-listInfo.ta";
+} from "../DirectoryAbstractService/ListResultData-listInfo.ta.js";
 export {
     ListResult,
     _decode_ListResult,
     _encode_ListResult,
-} from "../DirectoryAbstractService/ListResult.ta";
+} from "../DirectoryAbstractService/ListResult.ta.js";
 export {
     ListResultData_listInfo,
     _decode_ListResultData_listInfo,
     _encode_ListResultData_listInfo,
-} from "../DirectoryAbstractService/ListResultData-listInfo.ta";
+} from "../DirectoryAbstractService/ListResultData-listInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ListResultData */
 /**

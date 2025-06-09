@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-export { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+export { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dnsString */
 /**

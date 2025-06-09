@@ -1,19 +1,19 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     id_ce_acceptableCertPolicies,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va";
+} from "../../modules/AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.js";
 import {
     AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
-} from "../../modules/AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta";
+} from "../../modules/AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import type {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import { DERElement } from "asn1-ts";
 
 export

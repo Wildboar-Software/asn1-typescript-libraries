@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, INTEGER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Period_days_bitDay,
     _decode_Period_days_bitDay,
     _encode_Period_days_bitDay,
-} from "../SelectedAttributeTypes/Period-days-bitDay.ta";
+} from "../SelectedAttributeTypes/Period-days-bitDay.ta.js";
 import {
     XDayOf,
     _decode_XDayOf,
     _encode_XDayOf,
-} from "../SelectedAttributeTypes/XDayOf.ta";
+} from "../SelectedAttributeTypes/XDayOf.ta.js";
 export {
     friday /* IMPORTED_SHORT_NAMED_BIT */,
     monday /* IMPORTED_SHORT_NAMED_BIT */,
@@ -29,12 +29,12 @@ export {
     wednesday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Period_days_bitDay,
     _encode_Period_days_bitDay,
-} from "../SelectedAttributeTypes/Period-days-bitDay.ta";
+} from "../SelectedAttributeTypes/Period-days-bitDay.ta.js";
 export {
     XDayOf,
     _decode_XDayOf,
     _encode_XDayOf,
-} from "../SelectedAttributeTypes/XDayOf.ta";
+} from "../SelectedAttributeTypes/XDayOf.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Period_days */
 /**

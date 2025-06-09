@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CrossCertificates,
     _decode_CrossCertificates,
     _encode_CrossCertificates,
-} from "../AuthenticationFramework/CrossCertificates.ta";
+} from "../AuthenticationFramework/CrossCertificates.ta.js";
 export {
     CrossCertificates,
     _decode_CrossCertificates,
     _encode_CrossCertificates,
-} from "../AuthenticationFramework/CrossCertificates.ta";
+} from "../AuthenticationFramework/CrossCertificates.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ForwardCertificationPath */
 /**

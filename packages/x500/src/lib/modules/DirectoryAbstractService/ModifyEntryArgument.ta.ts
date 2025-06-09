@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifyEntryArgumentData,
     _decode_ModifyEntryArgumentData,
     _encode_ModifyEntryArgumentData,
-} from "../DirectoryAbstractService/ModifyEntryArgumentData.ta";
+} from "../DirectoryAbstractService/ModifyEntryArgumentData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     ModifyEntryArgumentData,
     _decode_ModifyEntryArgumentData,
     _encode_ModifyEntryArgumentData,
-} from "../DirectoryAbstractService/ModifyEntryArgumentData.ta";
+} from "../DirectoryAbstractService/ModifyEntryArgumentData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyEntryArgument */
 /**

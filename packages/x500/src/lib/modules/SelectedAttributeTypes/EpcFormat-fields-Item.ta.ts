@@ -5,24 +5,24 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EpcFormat_fields_Item_charField,
     _decode_EpcFormat_fields_Item_charField,
     _encode_EpcFormat_fields_Item_charField,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.js";
 import {
     EpcFormat_fields_Item_result,
     EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_EpcFormat_fields_Item_result,
     _encode_EpcFormat_fields_Item_result,
     _enum_for_EpcFormat_fields_Item_result,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.js";
 export {
     EpcFormat_fields_Item_charField,
     _decode_EpcFormat_fields_Item_charField,
     _encode_EpcFormat_fields_Item_charField,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.js";
 export {
     alpha7bits /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     EpcFormat_fields_Item_result,
@@ -34,7 +34,7 @@ export {
     _decode_EpcFormat_fields_Item_result,
     _encode_EpcFormat_fields_Item_result,
     _enum_for_EpcFormat_fields_Item_result,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EpcFormat_fields_Item */
 /**

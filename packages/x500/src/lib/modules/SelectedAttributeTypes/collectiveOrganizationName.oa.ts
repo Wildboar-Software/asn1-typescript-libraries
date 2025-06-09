@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-import { id_at_collectiveOrganizationName } from "../SelectedAttributeTypes/id-at-collectiveOrganizationName.va";
-import { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+import { id_at_collectiveOrganizationName } from "../SelectedAttributeTypes/id-at-collectiveOrganizationName.va.js";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -20,12 +20,12 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-export { id_at_collectiveOrganizationName } from "../SelectedAttributeTypes/id-at-collectiveOrganizationName.va";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+export { id_at_collectiveOrganizationName } from "../SelectedAttributeTypes/id-at-collectiveOrganizationName.va.js";
+export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION collectiveOrganizationName */
 /**

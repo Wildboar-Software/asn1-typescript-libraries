@@ -4,29 +4,29 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UiiFormat_next,
     _decode_UiiFormat_next,
     _encode_UiiFormat_next,
-} from "../SelectedAttributeTypes/UiiFormat-next.ta";
+} from "../SelectedAttributeTypes/UiiFormat-next.ta.js";
 import {
     UiiFormat_subset,
     UiiFormat_subset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_UiiFormat_subset,
     _encode_UiiFormat_subset,
     _enum_for_UiiFormat_subset,
-} from "../SelectedAttributeTypes/UiiFormat-subset.ta";
+} from "../SelectedAttributeTypes/UiiFormat-subset.ta.js";
 import {
     URI,
     _decode_URI,
     _encode_URI,
-} from "../SelectedAttributeTypes/URI.ta";
+} from "../SelectedAttributeTypes/URI.ta.js";
 export {
     UiiFormat_next,
     _decode_UiiFormat_next,
     _encode_UiiFormat_next,
-} from "../SelectedAttributeTypes/UiiFormat-next.ta";
+} from "../SelectedAttributeTypes/UiiFormat-next.ta.js";
 export {
     baseObject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     oneLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -38,12 +38,12 @@ export {
     _decode_UiiFormat_subset,
     _encode_UiiFormat_subset,
     _enum_for_UiiFormat_subset,
-} from "../SelectedAttributeTypes/UiiFormat-subset.ta";
+} from "../SelectedAttributeTypes/UiiFormat-subset.ta.js";
 export {
     URI,
     _decode_URI,
     _encode_URI,
-} from "../SelectedAttributeTypes/URI.ta";
+} from "../SelectedAttributeTypes/URI.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UiiFormat */
 /**

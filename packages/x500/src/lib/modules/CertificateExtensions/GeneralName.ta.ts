@@ -7,38 +7,38 @@ import {
     OBJECT_IDENTIFIER,
     OCTET_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EDIPartyName,
     _decode_EDIPartyName,
     _encode_EDIPartyName,
-} from "../CertificateExtensions/EDIPartyName.ta";
+} from "../CertificateExtensions/EDIPartyName.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from "../PkiPmiExternalDataTypes/ORAddress.ta";
+} from "../PkiPmiExternalDataTypes/ORAddress.ta.js";
 export {
     EDIPartyName,
     _decode_EDIPartyName,
     _encode_EDIPartyName,
-} from "../CertificateExtensions/EDIPartyName.ta";
-export { OTHER_NAME } from "../CertificateExtensions/OTHER-NAME.oca";
+} from "../CertificateExtensions/EDIPartyName.ta.js";
+export { OTHER_NAME } from "../CertificateExtensions/OTHER-NAME.oca.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from "../PkiPmiExternalDataTypes/ORAddress.ta";
+} from "../PkiPmiExternalDataTypes/ORAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION GeneralName */
 /**

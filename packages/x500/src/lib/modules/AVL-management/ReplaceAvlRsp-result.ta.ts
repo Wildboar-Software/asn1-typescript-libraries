@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RepAvlErr,
     _decode_RepAvlErr,
     _encode_RepAvlErr,
-} from "../AVL-management/RepAvlErr.ta";
+} from "../AVL-management/RepAvlErr.ta.js";
 import {
     RepAvlOK,
     _decode_RepAvlOK,
     _encode_RepAvlOK,
-} from "../AVL-management/RepAvlOK.ta";
+} from "../AVL-management/RepAvlOK.ta.js";
 export {
     RepAvlErr,
     _decode_RepAvlErr,
     _encode_RepAvlErr,
-} from "../AVL-management/RepAvlErr.ta";
+} from "../AVL-management/RepAvlErr.ta.js";
 export {
     RepAvlOK,
     _decode_RepAvlOK,
     _encode_RepAvlOK,
-} from "../AVL-management/RepAvlOK.ta";
+} from "../AVL-management/RepAvlOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp_result */
 /**

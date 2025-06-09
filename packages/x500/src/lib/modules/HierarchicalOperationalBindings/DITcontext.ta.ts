@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Vertex,
     _decode_Vertex,
     _encode_Vertex,
-} from "../HierarchicalOperationalBindings/Vertex.ta";
+} from "../HierarchicalOperationalBindings/Vertex.ta.js";
 export {
     Vertex,
     _decode_Vertex,
     _encode_Vertex,
-} from "../HierarchicalOperationalBindings/Vertex.ta";
+} from "../HierarchicalOperationalBindings/Vertex.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DITcontext */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertRsp_result,
     _decode_CertRsp_result,
     _encode_CertRsp_result,
-} from "../AVL-management/CertRsp-result.ta";
+} from "../AVL-management/CertRsp-result.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 export {
     CertRsp_result,
     _decode_CertRsp_result,
     _encode_CertRsp_result,
-} from "../AVL-management/CertRsp-result.ta";
+} from "../AVL-management/CertRsp-result.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertRsp */
 /**

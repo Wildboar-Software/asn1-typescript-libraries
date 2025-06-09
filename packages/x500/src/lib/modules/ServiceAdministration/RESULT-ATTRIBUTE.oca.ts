@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RESULT_ATTRIBUTE */
 /**

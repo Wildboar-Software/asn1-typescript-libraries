@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
-import { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CRLReason.ta.js";
+import { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     aACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     affiliationChanged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -34,8 +34,8 @@ export {
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
-export { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va";
+} from "../CertificateExtensions/CRLReason.ta.js";
+export { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va.js";
 
 /* START_OF_SYMBOL_DEFINITION reasonCode */
 /**

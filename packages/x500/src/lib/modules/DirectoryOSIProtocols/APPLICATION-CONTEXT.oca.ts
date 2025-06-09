@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 /**

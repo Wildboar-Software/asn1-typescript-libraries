@@ -3,16 +3,16 @@ import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
-import { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/CertificateList.ta.js";
+import { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
-export { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/CertificateList.ta.js";
+export { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION x509CertificateList */
 /**

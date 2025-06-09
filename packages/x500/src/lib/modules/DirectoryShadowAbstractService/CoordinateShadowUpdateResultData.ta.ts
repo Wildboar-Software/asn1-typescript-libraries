@@ -5,33 +5,33 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta";
+} from "../DirectoryShadowAbstractService/AgreementID.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta";
+} from "../DirectoryShadowAbstractService/Time.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
+import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateResultData */
 /**

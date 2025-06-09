@@ -3,16 +3,16 @@ import {
     AllowedAttributeAssignments,
     _decode_AllowedAttributeAssignments,
     _encode_AllowedAttributeAssignments,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta";
-import { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.js";
+import { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AllowedAttributeAssignments,
     _decode_AllowedAttributeAssignments,
     _encode_AllowedAttributeAssignments,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta";
-export { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.js";
+export { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION allowedAttributeAssignments */
 /**

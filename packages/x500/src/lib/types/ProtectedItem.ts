@@ -1,13 +1,13 @@
-import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca";
+import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca.js";
 import type {
     AttributeType,
-} from "../modules/InformationFramework/AttributeType.ta";
+} from "../modules/InformationFramework/AttributeType.ta.js";
 import type {
     AttributeTypeAndValue,
-} from "../modules/InformationFramework/AttributeTypeAndValue.ta";
+} from "../modules/InformationFramework/AttributeTypeAndValue.ta.js";
 import type {
     Context,
-} from "../modules/InformationFramework/Context.ta";
+} from "../modules/InformationFramework/Context.ta.js";
 
 /**
  * From ITU Recommendation X.501 (2016), Section 18.2.1:

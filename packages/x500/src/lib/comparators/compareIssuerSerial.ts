@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     IssuerSerial,
-} from "../modules/AttributeCertificateDefinitions/IssuerSerial.ta";
-import compareGeneralNames from "./compareGeneralNames";
+} from "../modules/AttributeCertificateDefinitions/IssuerSerial.ta.js";
+import compareGeneralNames from "./compareGeneralNames.js";
 
 export
 function compareIssuerSerial (

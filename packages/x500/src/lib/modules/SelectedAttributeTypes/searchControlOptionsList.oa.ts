@@ -3,12 +3,12 @@ import {
     SearchControlOptions,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
-} from "../DirectoryAbstractService/SearchControlOptions.ta";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/SearchControlOptions.ta.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_not_searchControlOptionsList } from "../SelectedAttributeTypes/id-not-searchControlOptionsList.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_not_searchControlOptionsList } from "../SelectedAttributeTypes/id-not-searchControlOptionsList.va.js";
 export {
     checkOverspecified /* IMPORTED_SHORT_NAMED_BIT */,
     dnAttribute /* IMPORTED_SHORT_NAMED_BIT */,
@@ -37,8 +37,8 @@ export {
     useSubset /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
-} from "../DirectoryAbstractService/SearchControlOptions.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/SearchControlOptions.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -52,10 +52,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_not_searchControlOptionsList } from "../SelectedAttributeTypes/id-not-searchControlOptionsList.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_not_searchControlOptionsList } from "../SelectedAttributeTypes/id-not-searchControlOptionsList.va.js";
 
 /* START_OF_SYMBOL_DEFINITION searchControlOptionsList */
 /**

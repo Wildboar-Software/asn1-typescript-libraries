@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca";
-export { SupportedPolicyQualifiers } from "../CertificateExtensions/SupportedPolicyQualifiers.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.js";
+export { SupportedPolicyQualifiers } from "../CertificateExtensions/SupportedPolicyQualifiers.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION PolicyQualifierInfo */
 /**

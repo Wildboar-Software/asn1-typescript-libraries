@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertReplaceOK_Item,
     _decode_CertReplaceOK_Item,
     _encode_CertReplaceOK_Item,
-} from "../CaSubscription/CertReplaceOK-Item.ta";
+} from "../CaSubscription/CertReplaceOK-Item.ta.js";
 export {
     CertReplaceOK_Item,
     _decode_CertReplaceOK_Item,
     _encode_CertReplaceOK_Item,
-} from "../CaSubscription/CertReplaceOK-Item.ta";
+} from "../CaSubscription/CertReplaceOK-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceOK */
 /**

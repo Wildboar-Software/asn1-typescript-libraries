@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     AltSignatureAlgorithm,
     _decode_AltSignatureAlgorithm,
     _encode_AltSignatureAlgorithm,
-} from "../CertificateExtensions/AltSignatureAlgorithm.ta";
-import { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/AltSignatureAlgorithm.ta.js";
+import { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AltSignatureAlgorithm,
     _decode_AltSignatureAlgorithm,
     _encode_AltSignatureAlgorithm,
-} from "../CertificateExtensions/AltSignatureAlgorithm.ta";
-export { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va";
+} from "../CertificateExtensions/AltSignatureAlgorithm.ta.js";
+export { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION altSignatureAlgorithm */
 /**

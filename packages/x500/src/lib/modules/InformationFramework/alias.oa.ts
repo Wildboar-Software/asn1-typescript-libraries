@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa";
-import { id_oc_alias } from "../InformationFramework/id-oc-alias.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.js";
+import { id_oc_alias } from "../InformationFramework/id-oc-alias.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { id_oc_alias } from "../InformationFramework/id-oc-alias.va";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { id_oc_alias } from "../InformationFramework/id-oc-alias.va.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -21,8 +21,8 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION alias */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TypeAndContextAssertion,
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
-} from "../DirectoryAbstractService/TypeAndContextAssertion.ta";
+} from "../DirectoryAbstractService/TypeAndContextAssertion.ta.js";
 export {
     TypeAndContextAssertion,
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
-} from "../DirectoryAbstractService/TypeAndContextAssertion.ta";
+} from "../DirectoryAbstractService/TypeAndContextAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ContextSelection */
 /**

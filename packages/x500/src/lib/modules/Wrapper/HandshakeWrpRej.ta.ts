@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Signed,
     _get_decoder_for_Signed,
     _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta";
+} from "../CryptoTools/Signed.ta.js";
 import {
     TbsHandshakeWrpRej,
     _decode_TbsHandshakeWrpRej,
     _encode_TbsHandshakeWrpRej,
-} from "../Wrapper/TbsHandshakeWrpRej.ta";
+} from "../Wrapper/TbsHandshakeWrpRej.ta.js";
 export {
     Signed,
     _get_decoder_for_Signed,
     _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta";
+} from "../CryptoTools/Signed.ta.js";
 export {
     TbsHandshakeWrpRej,
     _decode_TbsHandshakeWrpRej,
     _encode_TbsHandshakeWrpRej,
-} from "../Wrapper/TbsHandshakeWrpRej.ta";
+} from "../Wrapper/TbsHandshakeWrpRej.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION HandshakeWrpRej */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TraceItem,
     _decode_TraceItem,
     _encode_TraceItem,
-} from "../DistributedOperations/TraceItem.ta";
+} from "../DistributedOperations/TraceItem.ta.js";
 export {
     TraceItem,
     _decode_TraceItem,
     _encode_TraceItem,
-} from "../DistributedOperations/TraceItem.ta";
+} from "../DistributedOperations/TraceItem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TraceInformation */
 /**

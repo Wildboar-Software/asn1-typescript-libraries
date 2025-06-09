@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { id_idm_disp } from "../DirectoryIDMProtocols/id-idm-disp.va";
-import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa";
-import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa";
-import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
-import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { id_idm_disp } from "../DirectoryIDMProtocols/id-idm-disp.va";
-export { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa";
-export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa";
-export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca";
+import { id_idm_disp } from "../DirectoryIDMProtocols/id-idm-disp.va.js";
+import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.js";
+import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.js";
+import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
+import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { id_idm_disp } from "../DirectoryIDMProtocols/id-idm-disp.va.js";
+export { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.js";
+export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.js";
+export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
+export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION disp_ip */
 /**

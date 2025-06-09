@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalOrganizationalUnitName,
     _decode_UniversalOrganizationalUnitName,
     _encode_UniversalOrganizationalUnitName,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitName.ta";
+} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitName.ta.js";
 export {
     UniversalOrganizationalUnitName,
     _decode_UniversalOrganizationalUnitName,
     _encode_UniversalOrganizationalUnitName,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitName.ta";
+} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalOrganizationalUnitNames */
 /**

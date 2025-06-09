@@ -6,87 +6,87 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 import {
     AltName,
     _decode_AltName,
     _encode_AltName,
-} from "../CertificateExtensions/AltName.ta";
+} from "../CertificateExtensions/AltName.ta.js";
 import {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
     _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 import {
     CertPolicySet,
     _decode_CertPolicySet,
     _encode_CertPolicySet,
-} from "../CertificateExtensions/CertPolicySet.ta";
+} from "../CertificateExtensions/CertPolicySet.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 import {
     KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
+} from "../CertificateExtensions/KeyUsage.ta.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CertificateExtensions/SubjectKeyIdentifier.ta";
+} from "../CertificateExtensions/SubjectKeyIdentifier.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 export {
     AltName,
     _decode_AltName,
     _encode_AltName,
-} from "../CertificateExtensions/AltName.ta";
+} from "../CertificateExtensions/AltName.ta.js";
 export {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
     _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 export {
     CertPolicySet,
     _decode_CertPolicySet,
     _encode_CertPolicySet,
-} from "../CertificateExtensions/CertPolicySet.ta";
+} from "../CertificateExtensions/CertPolicySet.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     contentCommitment /* IMPORTED_SHORT_NAMED_BIT */,
     cRLSign /* IMPORTED_SHORT_NAMED_BIT */,
@@ -109,22 +109,22 @@ export {
     KeyUsage_keyEncipherment /* IMPORTED_LONG_NAMED_BIT */,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
+} from "../CertificateExtensions/KeyUsage.ta.js";
 export {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
 export {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CertificateExtensions/SubjectKeyIdentifier.ta";
+} from "../CertificateExtensions/SubjectKeyIdentifier.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EnhancedCertificateAssertion */
 /**

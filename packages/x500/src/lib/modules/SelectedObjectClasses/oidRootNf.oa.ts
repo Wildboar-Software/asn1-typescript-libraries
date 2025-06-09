@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { oidC } from "../SelectedAttributeTypes/oidC.oa";
-import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa";
-import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa";
-import { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va";
-import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa";
-export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa";
-export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa";
-export { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va";
-export { oidRoot } from "../SelectedObjectClasses/oidRoot.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.js";
+import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.js";
+import { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.js";
+import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.js";
+export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.js";
+export { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.js";
+export { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION oidRootNf */
 /**

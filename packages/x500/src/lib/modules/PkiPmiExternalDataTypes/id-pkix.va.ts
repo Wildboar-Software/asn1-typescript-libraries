@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { intSecurity } from "../UsefulDefinitions/intSecurity.va";
-export { intSecurity } from "../UsefulDefinitions/intSecurity.va";
+import { intSecurity } from "../UsefulDefinitions/intSecurity.va.js";
+export { intSecurity } from "../UsefulDefinitions/intSecurity.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pkix */
 /**

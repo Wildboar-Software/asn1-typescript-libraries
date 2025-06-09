@@ -1,19 +1,19 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_ce_userNotice } from "../AttributeCertificateDefinitions/id-ce-userNotice.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_ce_userNotice } from "../AttributeCertificateDefinitions/id-ce-userNotice.va.js";
 import {
     UserNotice,
     _decode_UserNotice,
     _encode_UserNotice,
-} from "../AttributeCertificateDefinitions/UserNotice.ta";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_userNotice } from "../AttributeCertificateDefinitions/id-ce-userNotice.va";
+} from "../AttributeCertificateDefinitions/UserNotice.ta.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_userNotice } from "../AttributeCertificateDefinitions/id-ce-userNotice.va.js";
 export {
     UserNotice,
     _decode_UserNotice,
     _encode_UserNotice,
-} from "../AttributeCertificateDefinitions/UserNotice.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/UserNotice.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION userNotice */
 /**

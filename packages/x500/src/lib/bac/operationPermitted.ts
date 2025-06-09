@@ -1,13 +1,13 @@
-import type ACDFTupleExtended from "../types/ACDFTupleExtended";
+import type ACDFTupleExtended from "../types/ACDFTupleExtended.js";
 import type {
     GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta";
-import type ProtectedItem from "../types/ProtectedItem";
+} from "../modules/BasicAccessControl/GrantsAndDenials.ta.js";
+import type ProtectedItem from "../types/ProtectedItem.js";
 import { TRUE_BIT, INTEGER } from "asn1-ts";
 import {
     PERMISSION_CATEGORY_ADD,
     PERMISSION_CATEGORY_IMPORT,
-} from "./bacACDF";
+} from "./bacACDF.js";
 
 export
 function operationPermitted (

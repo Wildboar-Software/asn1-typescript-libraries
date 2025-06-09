@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
-} from "../CertificateExtensions/HoldInstruction.ta";
-import { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/HoldInstruction.ta.js";
+import { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
-} from "../CertificateExtensions/HoldInstruction.ta";
-export { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va";
+} from "../CertificateExtensions/HoldInstruction.ta.js";
+export { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va.js";
 
 /* START_OF_SYMBOL_DEFINITION holdInstructionCode */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DITcontext,
     _decode_DITcontext,
     _encode_DITcontext,
-} from "../HierarchicalOperationalBindings/DITcontext.ta";
+} from "../HierarchicalOperationalBindings/DITcontext.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     DITcontext,
     _decode_DITcontext,
     _encode_DITcontext,
-} from "../HierarchicalOperationalBindings/DITcontext.ta";
+} from "../HierarchicalOperationalBindings/DITcontext.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SuperiorToSubordinate */
 /**

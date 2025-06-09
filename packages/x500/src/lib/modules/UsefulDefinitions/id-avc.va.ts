@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { attributeValueContext } from "../UsefulDefinitions/attributeValueContext.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { attributeValueContext } from "../UsefulDefinitions/attributeValueContext.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { attributeValueContext } from "../UsefulDefinitions/attributeValueContext.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { attributeValueContext } from "../UsefulDefinitions/attributeValueContext.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_avc */
 /**

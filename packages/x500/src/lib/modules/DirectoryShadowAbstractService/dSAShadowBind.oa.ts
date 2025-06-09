@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { dSABind } from "../DistributedOperations/dSABind.oa";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { dSABind } from "../DistributedOperations/dSABind.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { dSABind } from "../DistributedOperations/dSABind.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { dSABind } from "../DistributedOperations/dSABind.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION dSAShadowBind */
 /**

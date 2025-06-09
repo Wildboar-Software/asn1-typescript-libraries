@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa";
-import { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa";
-export { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa.js";
+import { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa.js";
+export { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION applProcessNameForm */
 /**

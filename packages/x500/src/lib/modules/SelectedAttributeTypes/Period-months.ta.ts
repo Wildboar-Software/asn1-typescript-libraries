@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, INTEGER, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Period_months_bitMonth,
     _decode_Period_months_bitMonth,
     _encode_Period_months_bitMonth,
-} from "../SelectedAttributeTypes/Period-months-bitMonth.ta";
+} from "../SelectedAttributeTypes/Period-months-bitMonth.ta.js";
 export {
     april /* IMPORTED_SHORT_NAMED_BIT */,
     august /* IMPORTED_SHORT_NAMED_BIT */,
@@ -34,7 +34,7 @@ export {
     september /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Period_months_bitMonth,
     _encode_Period_months_bitMonth,
-} from "../SelectedAttributeTypes/Period-months-bitMonth.ta";
+} from "../SelectedAttributeTypes/Period-months-bitMonth.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Period_months */
 /**

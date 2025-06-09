@@ -1,7 +1,7 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
-import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta";
-import compareRDNSequence from "./compareRDNSequence";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
+import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta.js";
+import compareRDNSequence from "./compareRDNSequence.js";
 
 export default function compare(
     a: DistinguishedName,

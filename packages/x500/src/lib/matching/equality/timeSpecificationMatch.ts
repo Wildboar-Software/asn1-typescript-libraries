@@ -1,28 +1,28 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element, DERElement } from "asn1-ts";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
-} from "../../modules/SelectedAttributeTypes/TimeSpecification.ta";
+} from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.js";
 import type {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import {
     id_ce_timeSpecification,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-timeSpecification.va";
+} from "../../modules/AttributeCertificateDefinitions/id-ce-timeSpecification.va.js";
 import type {
     Period,
-} from "../../modules/SelectedAttributeTypes/Period.ta";
+} from "../../modules/SelectedAttributeTypes/Period.ta.js";
 import type {
     NamedDay,
-} from "../../modules/SelectedAttributeTypes/NamedDay.ta";
+} from "../../modules/SelectedAttributeTypes/NamedDay.ta.js";
 import {
     DayTimeBand,
-} from "../../modules/SelectedAttributeTypes/DayTimeBand.ta";
+} from "../../modules/SelectedAttributeTypes/DayTimeBand.ta.js";
 
 const SOUGHT_OID: string = id_ce_timeSpecification.toString();
 

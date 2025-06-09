@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_replaceAvlRsp } from "../PkiPMIProtocolSpecifications/id-replaceAvlRsp.va";
+import { id_replaceAvlRsp } from "../PkiPMIProtocolSpecifications/id-replaceAvlRsp.va.js";
 import {
     ReplaceAvlRsp,
     _decode_ReplaceAvlRsp,
     _encode_ReplaceAvlRsp,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
-export { id_replaceAvlRsp } from "../PkiPMIProtocolSpecifications/id-replaceAvlRsp.va";
+} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
+export { id_replaceAvlRsp } from "../PkiPMIProtocolSpecifications/id-replaceAvlRsp.va.js";
 export {
     ReplaceAvlRsp,
     _decode_ReplaceAvlRsp,
     _encode_ReplaceAvlRsp,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION replaceAvlRsp */
 /**

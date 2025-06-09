@@ -5,24 +5,24 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.js";
 import {
     AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.js";
 export {
     AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.js";
 export {
     AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -34,7 +34,7 @@ export {
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AVMPcommonComponents */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa";
-import { chained } from "../DistributedOperations/chained.oa";
-import type { ChainedOperation } from "./chained.oa";
+import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.js";
+import { chained } from "../DistributedOperations/chained.oa.js";
+import type { ChainedOperation } from "./chained.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION chainedRemoveEntry */
 /**

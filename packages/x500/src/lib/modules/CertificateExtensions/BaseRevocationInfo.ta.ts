@@ -5,27 +5,27 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 import {
     CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta";
+} from "../CertificateExtensions/CRLStreamIdentifier.ta.js";
 export {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 export {
     CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta";
+} from "../CertificateExtensions/CRLStreamIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BaseRevocationInfo */
 /**

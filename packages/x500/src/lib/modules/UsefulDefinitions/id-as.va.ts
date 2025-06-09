@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { abstractSyntax } from "../UsefulDefinitions/abstractSyntax.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { abstractSyntax } from "../UsefulDefinitions/abstractSyntax.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { abstractSyntax } from "../UsefulDefinitions/abstractSyntax.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { abstractSyntax } from "../UsefulDefinitions/abstractSyntax.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_as */
 /**

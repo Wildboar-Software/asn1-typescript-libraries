@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertUnsubscribeErr,
     _decode_CertUnsubscribeErr,
     _encode_CertUnsubscribeErr,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta.js";
 import {
     CertUnsubscribeOK,
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta.js";
 export {
     CertUnsubscribeErr,
     _decode_CertUnsubscribeErr,
     _encode_CertUnsubscribeErr,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta.js";
 export {
     CertUnsubscribeOK,
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeRsp_result */
 /**

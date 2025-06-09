@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { NumericString } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_numericStringMatch } from "../SelectedAttributeTypes/id-mr-numericStringMatch.va";
-import { numericString } from "../SelectedAttributeTypes/numericString.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_numericStringMatch } from "../SelectedAttributeTypes/id-mr-numericStringMatch.va";
-export { numericString } from "../SelectedAttributeTypes/numericString.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_numericStringMatch } from "../SelectedAttributeTypes/id-mr-numericStringMatch.va.js";
+import { numericString } from "../SelectedAttributeTypes/numericString.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_numericStringMatch } from "../SelectedAttributeTypes/id-mr-numericStringMatch.va.js";
+export { numericString } from "../SelectedAttributeTypes/numericString.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION numericStringMatch */
 /**

@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.js";
+export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION All_operations_consumer_initiated */
 /**

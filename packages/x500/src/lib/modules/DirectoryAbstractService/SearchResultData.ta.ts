@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SearchResult,
     _decode_SearchResult,
     _encode_SearchResult,
-} from "../DirectoryAbstractService/SearchResult.ta";
+} from "../DirectoryAbstractService/SearchResult.ta.js";
 import {
     SearchResultData_searchInfo,
     _decode_SearchResultData_searchInfo,
     _encode_SearchResultData_searchInfo,
-} from "../DirectoryAbstractService/SearchResultData-searchInfo.ta";
+} from "../DirectoryAbstractService/SearchResultData-searchInfo.ta.js";
 export {
     SearchResult,
     _decode_SearchResult,
     _encode_SearchResult,
-} from "../DirectoryAbstractService/SearchResult.ta";
+} from "../DirectoryAbstractService/SearchResult.ta.js";
 export {
     SearchResultData_searchInfo,
     _decode_SearchResultData_searchInfo,
     _encode_SearchResultData_searchInfo,
-} from "../DirectoryAbstractService/SearchResultData-searchInfo.ta";
+} from "../DirectoryAbstractService/SearchResultData-searchInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SearchResultData */
 /**

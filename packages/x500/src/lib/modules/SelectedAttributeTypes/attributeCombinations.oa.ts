@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_not_attributeCombinations } from "../SelectedAttributeTypes/id-not-attributeCombinations.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_not_attributeCombinations } from "../SelectedAttributeTypes/id-not-attributeCombinations.va.js";
 import {
     AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../ServiceAdministration/AttributeCombination.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,15 +23,15 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_not_attributeCombinations } from "../SelectedAttributeTypes/id-not-attributeCombinations.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_not_attributeCombinations } from "../SelectedAttributeTypes/id-not-attributeCombinations.va.js";
 export {
     AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta";
+} from "../ServiceAdministration/AttributeCombination.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeCombinations */
 /**

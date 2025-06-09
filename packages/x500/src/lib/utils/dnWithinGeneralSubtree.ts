@@ -1,12 +1,12 @@
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     GeneralName,
-} from "../modules/CertificateExtensions/GeneralName.ta";
+} from "../modules/CertificateExtensions/GeneralName.ta.js";
 import type {
     GeneralSubtree,
-} from "../modules/CertificateExtensions/GeneralSubtree.ta";
-import compareDistinguishedName from "../comparators/compareDistinguishedName";
+} from "../modules/CertificateExtensions/GeneralSubtree.ta.js";
+import compareDistinguishedName from "../comparators/compareDistinguishedName.js";
 
 
 /**

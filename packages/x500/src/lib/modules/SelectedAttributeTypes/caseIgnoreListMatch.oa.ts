@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 import {
     CaseIgnoreList,
     _decode_CaseIgnoreList,
     _encode_CaseIgnoreList,
-} from "../SelectedAttributeTypes/CaseIgnoreList.ta";
-import { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va";
-import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/CaseIgnoreList.ta.js";
+import { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.js";
+import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CaseIgnoreList,
     _decode_CaseIgnoreList,
     _encode_CaseIgnoreList,
-} from "../SelectedAttributeTypes/CaseIgnoreList.ta";
-export { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va";
-export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
+} from "../SelectedAttributeTypes/CaseIgnoreList.ta.js";
+export { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.js";
+export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION caseIgnoreListMatch */
 /**

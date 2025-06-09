@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TBerror,
     _decode_TBerror,
     _encode_TBerror,
-} from "../TrustBroker/TBerror.ta";
-import { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta";
+} from "../TrustBroker/TBerror.ta.js";
+import { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta.js";
 export {
     TBerror,
     _decode_TBerror,
     _encode_TBerror,
-} from "../TrustBroker/TBerror.ta";
-export { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta";
+} from "../TrustBroker/TBerror.ta.js";
+export { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBresponse */
 /**

@@ -1,126 +1,126 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ApplAbort,
     _decode_ApplAbort,
     _encode_ApplAbort,
-} from "../Wrapper/ApplAbort.ta";
+} from "../Wrapper/ApplAbort.ta.js";
 import {
     DataTransferClient,
     _decode_DataTransferClient,
     _encode_DataTransferClient,
-} from "../Wrapper/DataTransferClient.ta";
+} from "../Wrapper/DataTransferClient.ta.js";
 import {
     DataTransferServer,
     _decode_DataTransferServer,
     _encode_DataTransferServer,
-} from "../Wrapper/DataTransferServer.ta";
+} from "../Wrapper/DataTransferServer.ta.js";
 import {
     DtSecAbort,
     _decode_DtSecAbort,
     _encode_DtSecAbort,
-} from "../Wrapper/DtSecAbort.ta";
+} from "../Wrapper/DtSecAbort.ta.js";
 import {
     HandshakeAcc,
     _decode_HandshakeAcc,
     _encode_HandshakeAcc,
-} from "../Wrapper/HandshakeAcc.ta";
+} from "../Wrapper/HandshakeAcc.ta.js";
 import {
     HandshakeProAbort,
     _decode_HandshakeProAbort,
     _encode_HandshakeProAbort,
-} from "../Wrapper/HandshakeProAbort.ta";
+} from "../Wrapper/HandshakeProAbort.ta.js";
 import {
     HandshakeProRej,
     _decode_HandshakeProRej,
     _encode_HandshakeProRej,
-} from "../Wrapper/HandshakeProRej.ta";
+} from "../Wrapper/HandshakeProRej.ta.js";
 import {
     HandshakeReq,
     _decode_HandshakeReq,
     _encode_HandshakeReq,
-} from "../Wrapper/HandshakeReq.ta";
+} from "../Wrapper/HandshakeReq.ta.js";
 import {
     HandshakeSecAbort,
     _decode_HandshakeSecAbort,
     _encode_HandshakeSecAbort,
-} from "../Wrapper/HandshakeSecAbort.ta";
+} from "../Wrapper/HandshakeSecAbort.ta.js";
 import {
     HandshakeWrpRej,
     _decode_HandshakeWrpRej,
     _encode_HandshakeWrpRej,
-} from "../Wrapper/HandshakeWrpRej.ta";
+} from "../Wrapper/HandshakeWrpRej.ta.js";
 import {
     ReleaseReq,
     _decode_ReleaseReq,
     _encode_ReleaseReq,
-} from "../Wrapper/ReleaseReq.ta";
+} from "../Wrapper/ReleaseReq.ta.js";
 import {
     ReleaseRsp,
     _decode_ReleaseRsp,
     _encode_ReleaseRsp,
-} from "../Wrapper/ReleaseRsp.ta";
+} from "../Wrapper/ReleaseRsp.ta.js";
 export {
     ApplAbort,
     _decode_ApplAbort,
     _encode_ApplAbort,
-} from "../Wrapper/ApplAbort.ta";
+} from "../Wrapper/ApplAbort.ta.js";
 export {
     DataTransferClient,
     _decode_DataTransferClient,
     _encode_DataTransferClient,
-} from "../Wrapper/DataTransferClient.ta";
+} from "../Wrapper/DataTransferClient.ta.js";
 export {
     DataTransferServer,
     _decode_DataTransferServer,
     _encode_DataTransferServer,
-} from "../Wrapper/DataTransferServer.ta";
+} from "../Wrapper/DataTransferServer.ta.js";
 export {
     DtSecAbort,
     _decode_DtSecAbort,
     _encode_DtSecAbort,
-} from "../Wrapper/DtSecAbort.ta";
+} from "../Wrapper/DtSecAbort.ta.js";
 export {
     HandshakeAcc,
     _decode_HandshakeAcc,
     _encode_HandshakeAcc,
-} from "../Wrapper/HandshakeAcc.ta";
+} from "../Wrapper/HandshakeAcc.ta.js";
 export {
     HandshakeProAbort,
     _decode_HandshakeProAbort,
     _encode_HandshakeProAbort,
-} from "../Wrapper/HandshakeProAbort.ta";
+} from "../Wrapper/HandshakeProAbort.ta.js";
 export {
     HandshakeProRej,
     _decode_HandshakeProRej,
     _encode_HandshakeProRej,
-} from "../Wrapper/HandshakeProRej.ta";
+} from "../Wrapper/HandshakeProRej.ta.js";
 export {
     HandshakeReq,
     _decode_HandshakeReq,
     _encode_HandshakeReq,
-} from "../Wrapper/HandshakeReq.ta";
+} from "../Wrapper/HandshakeReq.ta.js";
 export {
     HandshakeSecAbort,
     _decode_HandshakeSecAbort,
     _encode_HandshakeSecAbort,
-} from "../Wrapper/HandshakeSecAbort.ta";
+} from "../Wrapper/HandshakeSecAbort.ta.js";
 export {
     HandshakeWrpRej,
     _decode_HandshakeWrpRej,
     _encode_HandshakeWrpRej,
-} from "../Wrapper/HandshakeWrpRej.ta";
+} from "../Wrapper/HandshakeWrpRej.ta.js";
 export {
     ReleaseReq,
     _decode_ReleaseReq,
     _encode_ReleaseReq,
-} from "../Wrapper/ReleaseReq.ta";
+} from "../Wrapper/ReleaseReq.ta.js";
 export {
     ReleaseRsp,
     _decode_ReleaseRsp,
     _encode_ReleaseRsp,
-} from "../Wrapper/ReleaseRsp.ta";
+} from "../Wrapper/ReleaseRsp.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION WrapperPDU */
 /**

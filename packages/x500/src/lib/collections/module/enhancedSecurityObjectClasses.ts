@@ -1,1 +1,1 @@
-export { integrityInfo } from "../../modules/EnhancedSecurity/integrityInfo.oa";
+export { integrityInfo } from "../../modules/EnhancedSecurity/integrityInfo.oa.js";

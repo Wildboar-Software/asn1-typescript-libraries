@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     BIT_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Del_Header,
     _decode_Del_Header,
     _encode_Del_Header,
-} from "../SpkmGssTokens/Del-Header.ta";
+} from "../SpkmGssTokens/Del-Header.ta.js";
 export {
     Del_Header,
     _decode_Del_Header,
     _encode_Del_Header,
-} from "../SpkmGssTokens/Del-Header.ta";
+} from "../SpkmGssTokens/Del-Header.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKM_DEL */
 /**

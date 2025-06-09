@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListSubstringsMatch.va";
-import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListSubstringsMatch.va.js";
+import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.js";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListSubstringsMatch.va";
-export { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListSubstringsMatch.va.js";
+export { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.js";
 export {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION caseIgnoreListSubstringsMatch */
 /**

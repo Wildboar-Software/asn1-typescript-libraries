@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_coat } from "../UsefulDefinitions/id-coat.va";
-export { id_coat } from "../UsefulDefinitions/id-coat.va";
+import { id_coat } from "../UsefulDefinitions/id-coat.va.js";
+export { id_coat } from "../UsefulDefinitions/id-coat.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_coat_uid */
 /**

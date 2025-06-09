@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from "../SelectedAttributeTypes/CountryName.ta";
-import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/CountryName.ta.js";
+import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from "../SelectedAttributeTypes/CountryName.ta";
-export { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va";
+} from "../SelectedAttributeTypes/CountryName.ta.js";
+export { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.js";
 
 /* START_OF_SYMBOL_DEFINITION countryString */
 /**

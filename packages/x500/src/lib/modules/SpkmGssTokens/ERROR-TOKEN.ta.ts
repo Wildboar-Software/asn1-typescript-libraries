@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 export {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ERROR_TOKEN */
 /**

@@ -1,25 +1,25 @@
 /* eslint-disable */
-import { id_at_supportedAlgorithms } from "../AuthenticationFramework/id-at-supportedAlgorithms.va";
+import { id_at_supportedAlgorithms } from "../AuthenticationFramework/id-at-supportedAlgorithms.va.js";
 import {
     SupportedAlgorithm,
     _decode_SupportedAlgorithm,
     _encode_SupportedAlgorithm,
-} from "../AuthenticationFramework/SupportedAlgorithm.ta";
-import { x509SupportedAlgorithm } from "../AuthenticationFramework/x509SupportedAlgorithm.oa";
-import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/SupportedAlgorithm.ta.js";
+import { x509SupportedAlgorithm } from "../AuthenticationFramework/x509SupportedAlgorithm.oa.js";
+import { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_at_supportedAlgorithms } from "../AuthenticationFramework/id-at-supportedAlgorithms.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_at_supportedAlgorithms } from "../AuthenticationFramework/id-at-supportedAlgorithms.va.js";
 export {
     SupportedAlgorithm,
     _decode_SupportedAlgorithm,
     _encode_SupportedAlgorithm,
-} from "../AuthenticationFramework/SupportedAlgorithm.ta";
-export { x509SupportedAlgorithm } from "../AuthenticationFramework/x509SupportedAlgorithm.oa";
-export { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/SupportedAlgorithm.ta.js";
+export { x509SupportedAlgorithm } from "../AuthenticationFramework/x509SupportedAlgorithm.oa.js";
+export { algorithmIdentifierMatch } from "../CertificateExtensions/algorithmIdentifierMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -33,9 +33,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION supportedAlgorithms */
 /**

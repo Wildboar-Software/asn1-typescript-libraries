@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { contract } from "../UsefulDefinitions/contract.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { contract } from "../UsefulDefinitions/contract.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { contract } from "../UsefulDefinitions/contract.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { contract } from "../UsefulDefinitions/contract.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_contract */
 /**

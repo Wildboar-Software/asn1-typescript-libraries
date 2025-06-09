@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PerAuthorityScope,
     _decode_PerAuthorityScope,
     _encode_PerAuthorityScope,
-} from "../CertificateExtensions/PerAuthorityScope.ta";
+} from "../CertificateExtensions/PerAuthorityScope.ta.js";
 export {
     PerAuthorityScope,
     _decode_PerAuthorityScope,
     _encode_PerAuthorityScope,
-} from "../CertificateExtensions/PerAuthorityScope.ta";
+} from "../CertificateExtensions/PerAuthorityScope.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CRLScopeSyntax */
 /**

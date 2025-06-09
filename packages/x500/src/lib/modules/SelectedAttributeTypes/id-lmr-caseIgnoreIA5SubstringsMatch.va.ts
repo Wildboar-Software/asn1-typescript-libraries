@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_lmr } from "../UsefulDefinitions/id-lmr.va";
-export { id_lmr } from "../UsefulDefinitions/id-lmr.va";
+import { id_lmr } from "../UsefulDefinitions/id-lmr.va.js";
+export { id_lmr } from "../UsefulDefinitions/id-lmr.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_lmr_caseIgnoreIA5SubstringsMatch */
 /**

@@ -1,76 +1,76 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SPKM_DEL,
     _decode_SPKM_DEL,
     _encode_SPKM_DEL,
-} from "../SpkmGssTokens/SPKM-DEL.ta";
+} from "../SpkmGssTokens/SPKM-DEL.ta.js";
 import {
     SPKM_ERROR,
     _decode_SPKM_ERROR,
     _encode_SPKM_ERROR,
-} from "../SpkmGssTokens/SPKM-ERROR.ta";
+} from "../SpkmGssTokens/SPKM-ERROR.ta.js";
 import {
     SPKM_MIC,
     _decode_SPKM_MIC,
     _encode_SPKM_MIC,
-} from "../SpkmGssTokens/SPKM-MIC.ta";
+} from "../SpkmGssTokens/SPKM-MIC.ta.js";
 import {
     SPKM_REP_IT,
     _decode_SPKM_REP_IT,
     _encode_SPKM_REP_IT,
-} from "../SpkmGssTokens/SPKM-REP-IT.ta";
+} from "../SpkmGssTokens/SPKM-REP-IT.ta.js";
 import {
     SPKM_REP_TI,
     _decode_SPKM_REP_TI,
     _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta";
+} from "../SpkmGssTokens/SPKM-REP-TI.ta.js";
 import {
     SPKM_REQ,
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta";
+} from "../SpkmGssTokens/SPKM-REQ.ta.js";
 import {
     SPKM_WRAP,
     _decode_SPKM_WRAP,
     _encode_SPKM_WRAP,
-} from "../SpkmGssTokens/SPKM-WRAP.ta";
+} from "../SpkmGssTokens/SPKM-WRAP.ta.js";
 export {
     SPKM_DEL,
     _decode_SPKM_DEL,
     _encode_SPKM_DEL,
-} from "../SpkmGssTokens/SPKM-DEL.ta";
+} from "../SpkmGssTokens/SPKM-DEL.ta.js";
 export {
     SPKM_ERROR,
     _decode_SPKM_ERROR,
     _encode_SPKM_ERROR,
-} from "../SpkmGssTokens/SPKM-ERROR.ta";
+} from "../SpkmGssTokens/SPKM-ERROR.ta.js";
 export {
     SPKM_MIC,
     _decode_SPKM_MIC,
     _encode_SPKM_MIC,
-} from "../SpkmGssTokens/SPKM-MIC.ta";
+} from "../SpkmGssTokens/SPKM-MIC.ta.js";
 export {
     SPKM_REP_IT,
     _decode_SPKM_REP_IT,
     _encode_SPKM_REP_IT,
-} from "../SpkmGssTokens/SPKM-REP-IT.ta";
+} from "../SpkmGssTokens/SPKM-REP-IT.ta.js";
 export {
     SPKM_REP_TI,
     _decode_SPKM_REP_TI,
     _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta";
+} from "../SpkmGssTokens/SPKM-REP-TI.ta.js";
 export {
     SPKM_REQ,
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta";
+} from "../SpkmGssTokens/SPKM-REQ.ta.js";
 export {
     SPKM_WRAP,
     _decode_SPKM_WRAP,
     _encode_SPKM_WRAP,
-} from "../SpkmGssTokens/SPKM-WRAP.ta";
+} from "../SpkmGssTokens/SPKM-WRAP.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKMInnerContextToken */
 /**

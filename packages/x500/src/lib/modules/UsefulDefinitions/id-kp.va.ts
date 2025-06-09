@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { keyPurposes } from "../UsefulDefinitions/keyPurposes.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { keyPurposes } from "../UsefulDefinitions/keyPurposes.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { keyPurposes } from "../UsefulDefinitions/keyPurposes.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { keyPurposes } from "../UsefulDefinitions/keyPurposes.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_kp */
 /**

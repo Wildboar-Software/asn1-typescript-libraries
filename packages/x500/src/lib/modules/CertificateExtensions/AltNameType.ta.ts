@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AltNameType_builtinNameForm,
     _decode_AltNameType_builtinNameForm,
     _encode_AltNameType_builtinNameForm,
-} from "../CertificateExtensions/AltNameType-builtinNameForm.ta";
+} from "../CertificateExtensions/AltNameType-builtinNameForm.ta.js";
 export {
     AltNameType_builtinNameForm,
     AltNameType_builtinNameForm_directoryName /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -27,7 +27,7 @@ export {
     _decode_AltNameType_builtinNameForm,
     _encode_AltNameType_builtinNameForm,
     _enum_for_AltNameType_builtinNameForm,
-} from "../CertificateExtensions/AltNameType-builtinNameForm.ta";
+} from "../CertificateExtensions/AltNameType-builtinNameForm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AltNameType */
 /**

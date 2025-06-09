@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { modifyDN } from "../DirectoryAbstractService/modifyDN.oa";
-import { chained } from "../DistributedOperations/chained.oa";
-import type { ChainedOperation } from "./chained.oa";
+import { modifyDN } from "../DirectoryAbstractService/modifyDN.oa.js";
+import { chained } from "../DistributedOperations/chained.oa.js";
+import type { ChainedOperation } from "./chained.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION chainedModifyDN */
 /**

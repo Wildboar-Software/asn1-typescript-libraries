@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Wrap_Body,
     _decode_Wrap_Body,
     _encode_Wrap_Body,
-} from "../SpkmGssTokens/Wrap-Body.ta";
+} from "../SpkmGssTokens/Wrap-Body.ta.js";
 import {
     Wrap_Header,
     _decode_Wrap_Header,
     _encode_Wrap_Header,
-} from "../SpkmGssTokens/Wrap-Header.ta";
+} from "../SpkmGssTokens/Wrap-Header.ta.js";
 export {
     Wrap_Body,
     _decode_Wrap_Body,
     _encode_Wrap_Body,
-} from "../SpkmGssTokens/Wrap-Body.ta";
+} from "../SpkmGssTokens/Wrap-Body.ta.js";
 export {
     Wrap_Header,
     _decode_Wrap_Header,
     _encode_Wrap_Header,
-} from "../SpkmGssTokens/Wrap-Header.ta";
+} from "../SpkmGssTokens/Wrap-Header.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKM_WRAP */
 /**

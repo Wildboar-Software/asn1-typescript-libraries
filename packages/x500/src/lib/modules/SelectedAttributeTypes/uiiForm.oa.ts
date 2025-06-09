@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.js";
 import {
     UiiFormat,
     _decode_UiiFormat,
     _encode_UiiFormat,
-} from "../SelectedAttributeTypes/UiiFormat.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va";
+} from "../SelectedAttributeTypes/UiiFormat.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.js";
 export {
     UiiFormat,
     _decode_UiiFormat,
     _encode_UiiFormat,
-} from "../SelectedAttributeTypes/UiiFormat.ta";
+} from "../SelectedAttributeTypes/UiiFormat.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION uiiForm */
 /**

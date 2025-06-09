@@ -6,28 +6,28 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextInformation,
     _decode_ContextInformation,
     _encode_ContextInformation,
-} from "../SchemaAdministration/ContextInformation.ta";
+} from "../SchemaAdministration/ContextInformation.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 export {
     ContextInformation,
     _decode_ContextInformation,
     _encode_ContextInformation,
-} from "../SchemaAdministration/ContextInformation.ta";
+} from "../SchemaAdministration/ContextInformation.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ContextDescription */
 /**

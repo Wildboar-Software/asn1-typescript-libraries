@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DirectoryInformationServiceElement_operationType,
     _decode_DirectoryInformationServiceElement_operationType,
     _encode_DirectoryInformationServiceElement_operationType,
-} from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta";
+} from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta";
+} from "../InformationFramework/AttributeValue.ta.js";
 export {
     abandon /* IMPORTED_SHORT_NAMED_BIT */,
     addEntry /* IMPORTED_SHORT_NAMED_BIT */,
@@ -42,17 +42,17 @@ export {
     search /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DirectoryInformationServiceElement_operationType,
     _encode_DirectoryInformationServiceElement_operationType,
-} from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta";
+} from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta";
+} from "../InformationFramework/AttributeValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DirectoryInformationServiceElement */
 /**

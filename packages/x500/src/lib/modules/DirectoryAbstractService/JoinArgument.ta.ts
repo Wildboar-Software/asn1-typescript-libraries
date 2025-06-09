@@ -4,54 +4,54 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DomainLocalID,
     _decode_DomainLocalID,
     _encode_DomainLocalID,
-} from "../DirectoryAbstractService/DomainLocalID.ta";
+} from "../DirectoryAbstractService/DomainLocalID.ta.js";
 import {
     EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
-} from "../DirectoryAbstractService/EntryInformationSelection.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection.ta.js";
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 import {
     JoinArgument_joinSubset,
     JoinArgument_joinSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_JoinArgument_joinSubset,
     _encode_JoinArgument_joinSubset,
     _enum_for_JoinArgument_joinSubset,
-} from "../DirectoryAbstractService/JoinArgument-joinSubset.ta";
+} from "../DirectoryAbstractService/JoinArgument-joinSubset.ta.js";
 import {
     JoinAttPair,
     _decode_JoinAttPair,
     _encode_JoinAttPair,
-} from "../DirectoryAbstractService/JoinAttPair.ta";
+} from "../DirectoryAbstractService/JoinAttPair.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     DomainLocalID,
     _decode_DomainLocalID,
     _encode_DomainLocalID,
-} from "../DirectoryAbstractService/DomainLocalID.ta";
+} from "../DirectoryAbstractService/DomainLocalID.ta.js";
 export {
     EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
-} from "../DirectoryAbstractService/EntryInformationSelection.ta";
+} from "../DirectoryAbstractService/EntryInformationSelection.ta.js";
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 export {
     baseObject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     JoinArgument_joinSubset,
@@ -63,17 +63,17 @@ export {
     _decode_JoinArgument_joinSubset,
     _encode_JoinArgument_joinSubset,
     _enum_for_JoinArgument_joinSubset,
-} from "../DirectoryAbstractService/JoinArgument-joinSubset.ta";
+} from "../DirectoryAbstractService/JoinArgument-joinSubset.ta.js";
 export {
     JoinAttPair,
     _decode_JoinAttPair,
     _encode_JoinAttPair,
-} from "../DirectoryAbstractService/JoinAttPair.ta";
+} from "../DirectoryAbstractService/JoinAttPair.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION JoinArgument */
 /**

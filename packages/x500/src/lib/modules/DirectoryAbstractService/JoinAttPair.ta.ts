@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     JoinContextType,
     _decode_JoinContextType,
     _encode_JoinContextType,
-} from "../DirectoryAbstractService/JoinContextType.ta";
+} from "../DirectoryAbstractService/JoinContextType.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     JoinContextType,
     _decode_JoinContextType,
     _encode_JoinContextType,
-} from "../DirectoryAbstractService/JoinContextType.ta";
+} from "../DirectoryAbstractService/JoinContextType.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION JoinAttPair */
 /**

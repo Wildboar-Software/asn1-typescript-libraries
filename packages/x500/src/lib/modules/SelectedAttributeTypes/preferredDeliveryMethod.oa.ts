@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { deliveryMethod } from "../SelectedAttributeTypes/deliveryMethod.oa";
-import { id_at_preferredDeliveryMethod } from "../SelectedAttributeTypes/id-at-preferredDeliveryMethod.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { deliveryMethod } from "../SelectedAttributeTypes/deliveryMethod.oa.js";
+import { id_at_preferredDeliveryMethod } from "../SelectedAttributeTypes/id-at-preferredDeliveryMethod.va.js";
 import {
     PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { deliveryMethod } from "../SelectedAttributeTypes/deliveryMethod.oa";
-export { id_at_preferredDeliveryMethod } from "../SelectedAttributeTypes/id-at-preferredDeliveryMethod.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { deliveryMethod } from "../SelectedAttributeTypes/deliveryMethod.oa.js";
+export { id_at_preferredDeliveryMethod } from "../SelectedAttributeTypes/id-at-preferredDeliveryMethod.va.js";
 export {
     PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION preferredDeliveryMethod */
 /**

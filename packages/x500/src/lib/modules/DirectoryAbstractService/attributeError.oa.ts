@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_errcode_attributeError } from "../CommonProtocolSpecification/id-errcode-attributeError.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_errcode_attributeError } from "../CommonProtocolSpecification/id-errcode-attributeError.va.js";
 import {
     AttributeErrorData,
     _decode_AttributeErrorData,
     _encode_AttributeErrorData,
-} from "../DirectoryAbstractService/AttributeErrorData.ta";
+} from "../DirectoryAbstractService/AttributeErrorData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_errcode_attributeError } from "../CommonProtocolSpecification/id-errcode-attributeError.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_errcode_attributeError } from "../CommonProtocolSpecification/id-errcode-attributeError.va.js";
 export {
     AttributeErrorData,
     _decode_AttributeErrorData,
     _encode_AttributeErrorData,
-} from "../DirectoryAbstractService/AttributeErrorData.ta";
+} from "../DirectoryAbstractService/AttributeErrorData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeError */
 /**

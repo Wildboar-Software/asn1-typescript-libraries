@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { caseIgnoreListMatch } from "../SelectedAttributeTypes/caseIgnoreListMatch.oa";
-import { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreListSubstringsMatch.oa";
-import { id_at_postalAddress } from "../SelectedAttributeTypes/id-at-postalAddress.va";
-import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { caseIgnoreListMatch } from "../SelectedAttributeTypes/caseIgnoreListMatch.oa.js";
+import { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreListSubstringsMatch.oa.js";
+import { id_at_postalAddress } from "../SelectedAttributeTypes/id-at-postalAddress.va.js";
+import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
 import {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -26,18 +26,18 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { caseIgnoreListMatch } from "../SelectedAttributeTypes/caseIgnoreListMatch.oa";
-export { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreListSubstringsMatch.oa";
-export { id_at_postalAddress } from "../SelectedAttributeTypes/id-at-postalAddress.va";
-export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { caseIgnoreListMatch } from "../SelectedAttributeTypes/caseIgnoreListMatch.oa.js";
+export { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreListSubstringsMatch.oa.js";
+export { id_at_postalAddress } from "../SelectedAttributeTypes/id-at-postalAddress.va.js";
+export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
 export {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION postalAddress */
 /**

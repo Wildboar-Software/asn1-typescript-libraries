@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertPolicyId,
     _decode_CertPolicyId,
     _encode_CertPolicyId,
-} from "../CertificateExtensions/CertPolicyId.ta";
+} from "../CertificateExtensions/CertPolicyId.ta.js";
 import {
     PolicyQualifierInfo,
     _decode_PolicyQualifierInfo,
     _encode_PolicyQualifierInfo,
-} from "../CertificateExtensions/PolicyQualifierInfo.ta";
+} from "../CertificateExtensions/PolicyQualifierInfo.ta.js";
 export {
     CertPolicyId,
     _decode_CertPolicyId,
     _encode_CertPolicyId,
-} from "../CertificateExtensions/CertPolicyId.ta";
+} from "../CertificateExtensions/CertPolicyId.ta.js";
 export {
     PolicyQualifierInfo,
     _decode_PolicyQualifierInfo,
     _encode_PolicyQualifierInfo,
-} from "../CertificateExtensions/PolicyQualifierInfo.ta";
+} from "../CertificateExtensions/PolicyQualifierInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PolicyInformation */
 /**

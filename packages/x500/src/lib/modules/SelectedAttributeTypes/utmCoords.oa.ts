@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.js";
 import {
     UtmCoordinates,
     _decode_UtmCoordinates,
     _encode_UtmCoordinates,
-} from "../SelectedAttributeTypes/UtmCoordinates.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va";
+} from "../SelectedAttributeTypes/UtmCoordinates.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.js";
 export {
     UtmCoordinates,
     _decode_UtmCoordinates,
     _encode_UtmCoordinates,
-} from "../SelectedAttributeTypes/UtmCoordinates.ta";
+} from "../SelectedAttributeTypes/UtmCoordinates.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION utmCoords */
 /**

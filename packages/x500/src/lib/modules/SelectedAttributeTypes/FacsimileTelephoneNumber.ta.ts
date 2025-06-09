@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta";
+} from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.js";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
 export {
     a3_width /* IMPORTED_SHORT_NAMED_BIT */,
     b4_length /* IMPORTED_SHORT_NAMED_BIT */,
@@ -67,12 +67,12 @@ export {
     width_middle_864_of_1728 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta";
+} from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.js";
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FacsimileTelephoneNumber */
 /**

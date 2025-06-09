@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Period,
     _decode_Period,
     _encode_Period,
-} from "../SelectedAttributeTypes/Period.ta";
+} from "../SelectedAttributeTypes/Period.ta.js";
 import {
     TimeSpecification_time_absolute,
     _decode_TimeSpecification_time_absolute,
     _encode_TimeSpecification_time_absolute,
-} from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta";
+} from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.js";
 export {
     Period,
     _decode_Period,
     _encode_Period,
-} from "../SelectedAttributeTypes/Period.ta";
+} from "../SelectedAttributeTypes/Period.ta.js";
 export {
     TimeSpecification_time_absolute,
     _decode_TimeSpecification_time_absolute,
     _encode_TimeSpecification_time_absolute,
-} from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta";
+} from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeSpecification_time */
 /**

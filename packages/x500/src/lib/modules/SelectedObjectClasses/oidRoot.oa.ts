@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { alias } from "../InformationFramework/alias.oa";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { alias } from "../InformationFramework/alias.oa.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { oidC } from "../SelectedAttributeTypes/oidC.oa";
-import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa";
-import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa";
-import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va";
-export { alias } from "../InformationFramework/alias.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.js";
+import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.js";
+import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.js";
+export { alias } from "../InformationFramework/alias.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -22,11 +22,11 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa";
-export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa";
-export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa";
-export { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.js";
+export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.js";
+export { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.js";
 
 /* START_OF_SYMBOL_DEFINITION oidRoot */
 /**

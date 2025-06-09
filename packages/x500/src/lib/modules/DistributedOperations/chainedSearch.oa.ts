@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { search } from "../DirectoryAbstractService/search.oa";
-import { chained } from "../DistributedOperations/chained.oa";
-import type { ChainedOperation } from "./chained.oa";
+import { search } from "../DirectoryAbstractService/search.oa.js";
+import { chained } from "../DistributedOperations/chained.oa.js";
+import type { ChainedOperation } from "./chained.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION chainedSearch */
 /**

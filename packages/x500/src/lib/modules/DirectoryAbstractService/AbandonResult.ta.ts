@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AbandonResultData,
     _decode_AbandonResultData,
     _encode_AbandonResultData,
-} from "../DirectoryAbstractService/AbandonResultData.ta";
+} from "../DirectoryAbstractService/AbandonResultData.ta.js";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     AbandonResultData,
     _decode_AbandonResultData,
     _encode_AbandonResultData,
-} from "../DirectoryAbstractService/AbandonResultData.ta";
+} from "../DirectoryAbstractService/AbandonResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AbandonResult */
 /**

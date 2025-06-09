@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
-export { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/GeneralName.ta.js";
+export { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION issuedOnBehalfOf */
 /**

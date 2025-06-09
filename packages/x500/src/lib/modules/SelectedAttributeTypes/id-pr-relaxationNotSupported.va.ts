@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_pr } from "../UsefulDefinitions/id-pr.va";
-export { id_pr } from "../UsefulDefinitions/id-pr.va";
+import { id_pr } from "../UsefulDefinitions/id-pr.va.js";
+export { id_pr } from "../UsefulDefinitions/id-pr.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pr_relaxationNotSupported */
 /**

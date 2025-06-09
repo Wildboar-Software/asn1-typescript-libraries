@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PhysicalDeliveryPersonalName,
     _decode_PhysicalDeliveryPersonalName,
     _encode_PhysicalDeliveryPersonalName,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryPersonalName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryPersonalName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PhysicalDeliveryPersonalName,
     _decode_PhysicalDeliveryPersonalName,
     _encode_PhysicalDeliveryPersonalName,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryPersonalName.ta";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryPersonalName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_personal_name */
 /**

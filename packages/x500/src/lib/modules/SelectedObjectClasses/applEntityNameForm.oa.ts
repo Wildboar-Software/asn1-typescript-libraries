@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa";
-import { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa";
-export { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.js";
+import { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.js";
+export { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION applEntityNameForm */
 /**

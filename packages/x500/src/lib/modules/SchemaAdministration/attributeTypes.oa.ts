@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
-import { id_soa_attributeTypes } from "../SchemaAdministration/id-soa-attributeTypes.va";
-import { attributeTypeDescription } from "../SelectedAttributeTypes/attributeTypeDescription.oa";
-import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
+import { id_soa_attributeTypes } from "../SchemaAdministration/id-soa-attributeTypes.va.js";
+import { attributeTypeDescription } from "../SelectedAttributeTypes/attributeTypeDescription.oa.js";
+import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     AttributeTypeDescription,
     _decode_AttributeTypeDescription,
     _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta";
-export { id_soa_attributeTypes } from "../SchemaAdministration/id-soa-attributeTypes.va";
-export { attributeTypeDescription } from "../SelectedAttributeTypes/attributeTypeDescription.oa";
-export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
+} from "../SchemaAdministration/AttributeTypeDescription.ta.js";
+export { id_soa_attributeTypes } from "../SchemaAdministration/id-soa-attributeTypes.va.js";
+export { attributeTypeDescription } from "../SelectedAttributeTypes/attributeTypeDescription.oa.js";
+export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeTypes */
 /**

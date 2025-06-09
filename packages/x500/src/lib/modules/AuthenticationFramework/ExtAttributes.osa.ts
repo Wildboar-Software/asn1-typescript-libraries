@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtAttributes */
 /**

@@ -5,25 +5,25 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
-} from "../PkiPMIProtocolSpecifications/AVMP-error.ta";
+} from "../PkiPMIProtocolSpecifications/AVMP-error.ta.js";
 import {
     AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.js";
 import {
     AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.js";
 export {
     AVMP_error,
     AVMP_error_constrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -73,17 +73,17 @@ export {
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
-} from "../PkiPMIProtocolSpecifications/AVMP-error.ta";
+} from "../PkiPMIProtocolSpecifications/AVMP-error.ta.js";
 export {
     AVMPcommonComponents,
     _decode_AVMPcommonComponents,
     _encode_AVMPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.js";
 export {
     AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.js";
 export {
     AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -95,7 +95,7 @@ export {
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta";
+} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RejectAVL */
 /**

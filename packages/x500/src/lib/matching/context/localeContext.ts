@@ -1,10 +1,10 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     LocaleContextSyntax,
     _decode_LocaleContextSyntax,
-} from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
+} from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
 
 export
 const evaluateLocaleContext: EqualityMatcher = (

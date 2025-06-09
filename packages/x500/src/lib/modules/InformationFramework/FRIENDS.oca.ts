@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION FRIENDS */
 /**

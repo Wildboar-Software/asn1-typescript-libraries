@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
-import { id_soa_dITStructureRule } from "../SchemaAdministration/id-soa-dITStructureRule.va";
-import { dITStructureRuleDescription } from "../SelectedAttributeTypes/dITStructureRuleDescription.oa";
-import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
+import { id_soa_dITStructureRule } from "../SchemaAdministration/id-soa-dITStructureRule.va.js";
+import { dITStructureRuleDescription } from "../SelectedAttributeTypes/dITStructureRuleDescription.oa.js";
+import { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
-export { id_soa_dITStructureRule } from "../SchemaAdministration/id-soa-dITStructureRule.va";
-export { dITStructureRuleDescription } from "../SelectedAttributeTypes/dITStructureRuleDescription.oa";
-export { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
+export { id_soa_dITStructureRule } from "../SchemaAdministration/id-soa-dITStructureRule.va.js";
+export { dITStructureRuleDescription } from "../SelectedAttributeTypes/dITStructureRuleDescription.oa.js";
+export { integerFirstComponentMatch } from "../SelectedAttributeTypes/integerFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION dITStructureRules */
 /**

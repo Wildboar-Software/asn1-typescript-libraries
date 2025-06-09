@@ -6,49 +6,49 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta";
+} from "../ServiceAdministration/ContextCombination.ta.js";
 import {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 import {
     MatchingUse,
     _decode_MatchingUse,
     _encode_MatchingUse,
-} from "../ServiceAdministration/MatchingUse.ta";
+} from "../ServiceAdministration/MatchingUse.ta.js";
 import {
     RequestAttribute_defaultValues_Item,
     _decode_RequestAttribute_defaultValues_Item,
     _encode_RequestAttribute_defaultValues_Item,
-} from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 export {
     ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta";
+} from "../ServiceAdministration/ContextCombination.ta.js";
 export {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 export {
     MatchingUse,
     _decode_MatchingUse,
     _encode_MatchingUse,
-} from "../ServiceAdministration/MatchingUse.ta";
+} from "../ServiceAdministration/MatchingUse.ta.js";
 export {
     RequestAttribute_defaultValues_Item,
     _decode_RequestAttribute_defaultValues_Item,
     _encode_RequestAttribute_defaultValues_Item,
-} from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta";
+} from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RequestAttribute */
 /**

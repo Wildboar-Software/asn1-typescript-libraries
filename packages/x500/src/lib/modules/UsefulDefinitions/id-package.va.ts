@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { package_ } from "../UsefulDefinitions/package.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { package_ } from "../UsefulDefinitions/package.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { package_ } from "../UsefulDefinitions/package.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { package_ } from "../UsefulDefinitions/package.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_package */
 /**

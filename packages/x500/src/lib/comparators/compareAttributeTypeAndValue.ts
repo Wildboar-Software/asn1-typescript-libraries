@@ -1,7 +1,7 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
-import type EqualityMatcher from "../types/EqualityMatcher";
-import compareElements from "./compareElements";
+import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.js";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
+import compareElements from "./compareElements.js";
 
 export default function compare(
     a: Readonly<AttributeTypeAndValue>,

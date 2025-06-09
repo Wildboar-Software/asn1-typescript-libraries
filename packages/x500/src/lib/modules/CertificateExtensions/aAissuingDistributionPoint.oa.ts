@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     AAIssuingDistPointSyntax,
     _decode_AAIssuingDistPointSyntax,
     _encode_AAIssuingDistPointSyntax,
-} from "../CertificateExtensions/AAIssuingDistPointSyntax.ta";
-import { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/AAIssuingDistPointSyntax.ta.js";
+import { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AAIssuingDistPointSyntax,
     _decode_AAIssuingDistPointSyntax,
     _encode_AAIssuingDistPointSyntax,
-} from "../CertificateExtensions/AAIssuingDistPointSyntax.ta";
-export { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va";
+} from "../CertificateExtensions/AAIssuingDistPointSyntax.ta.js";
+export { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va.js";
 
 /* START_OF_SYMBOL_DEFINITION aAissuingDistributionPoint */
 /**

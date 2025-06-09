@@ -5,37 +5,37 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta";
+} from "../DirectoryShadowAbstractService/SDSEType.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta";
+} from "../DirectoryShadowAbstractService/SDSEType.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SDSEContent */
 /**

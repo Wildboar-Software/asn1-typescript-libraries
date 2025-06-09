@@ -5,27 +5,27 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta";
-import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta";
-import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.js";
+import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.js";
+import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta";
+} from "../ServiceAdministration/ContextCombination.ta.js";
 export {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 export {
     MatchingUse,
     _decode_MatchingUse,
     _encode_MatchingUse,
-} from "../ServiceAdministration/MatchingUse.ta";
+} from "../ServiceAdministration/MatchingUse.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION REQUEST_ATTRIBUTE */
 /**

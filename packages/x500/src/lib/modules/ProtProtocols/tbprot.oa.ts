@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_tbprot } from "../ProtProtocols/id-tbprot.va";
+import { id_tbprot } from "../ProtProtocols/id-tbprot.va.js";
 import {
     TBprot,
     _decode_TBprot,
     _encode_TBprot,
-} from "../TrustBroker/TBprot.ta";
-import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
-export { id_tbprot } from "../ProtProtocols/id-tbprot.va";
+} from "../TrustBroker/TBprot.ta.js";
+import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
+export { id_tbprot } from "../ProtProtocols/id-tbprot.va.js";
 export {
     TBprot,
     _decode_TBprot,
     _encode_TBprot,
-} from "../TrustBroker/TBprot.ta";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../TrustBroker/TBprot.ta.js";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION tbprot */
 /**

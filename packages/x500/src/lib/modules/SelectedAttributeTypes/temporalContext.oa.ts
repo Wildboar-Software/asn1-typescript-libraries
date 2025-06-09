@@ -1,28 +1,28 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.js";
 import {
     TimeAssertion,
     _decode_TimeAssertion,
     _encode_TimeAssertion,
-} from "../SelectedAttributeTypes/TimeAssertion.ta";
+} from "../SelectedAttributeTypes/TimeAssertion.ta.js";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-export { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+export { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.js";
 export {
     TimeAssertion,
     _decode_TimeAssertion,
     _encode_TimeAssertion,
-} from "../SelectedAttributeTypes/TimeAssertion.ta";
+} from "../SelectedAttributeTypes/TimeAssertion.ta.js";
 export {
     TimeSpecification,
     _decode_TimeSpecification,
     _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta";
+} from "../SelectedAttributeTypes/TimeSpecification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION temporalContext */
 /**

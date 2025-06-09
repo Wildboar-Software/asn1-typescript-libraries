@@ -1,6 +1,6 @@
 import type {
     AuthenticationLevel_basicLevels,
-} from "../modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta";
+} from "../modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta.js";
 
 /**
  * @summary Compare two `AuthenticationLevel`s having alternative `basicLevels`

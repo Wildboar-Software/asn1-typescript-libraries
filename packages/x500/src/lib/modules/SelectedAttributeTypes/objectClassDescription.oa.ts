@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     ObjectClassDescription,
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta";
-import { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/ObjectClassDescription.ta.js";
+import { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     ObjectClassDescription,
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta";
-export { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va";
+} from "../SchemaAdministration/ObjectClassDescription.ta.js";
+export { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION objectClassDescription */
 /**

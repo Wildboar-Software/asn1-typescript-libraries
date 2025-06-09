@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa";
-import { cACertificate } from "../AuthenticationFramework/cACertificate.oa";
-import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa";
-import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.js";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.js";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.js";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va";
-export { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa";
-export { cACertificate } from "../AuthenticationFramework/cACertificate.oa";
-export { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa";
-export { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.js";
+export { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.js";
+export { cACertificate } from "../AuthenticationFramework/cACertificate.oa.js";
+export { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.js";
+export { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -26,9 +26,9 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.js";
 
 /* START_OF_SYMBOL_DEFINITION certificationAuthority */
 /**

@@ -1,136 +1,136 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CAsubscribeAbort,
     _decode_CAsubscribeAbort,
     _encode_CAsubscribeAbort,
-} from "../CaSubscription/CAsubscribeAbort.ta";
+} from "../CaSubscription/CAsubscribeAbort.ta.js";
 import {
     CertReplaceReq,
     _decode_CertReplaceReq,
     _encode_CertReplaceReq,
-} from "../CaSubscription/CertReplaceReq.ta";
+} from "../CaSubscription/CertReplaceReq.ta.js";
 import {
     CertReplaceRsp,
     _decode_CertReplaceRsp,
     _encode_CertReplaceRsp,
-} from "../CaSubscription/CertReplaceRsp.ta";
+} from "../CaSubscription/CertReplaceRsp.ta.js";
 import {
     CertSubscribeReq,
     _decode_CertSubscribeReq,
     _encode_CertSubscribeReq,
-} from "../CaSubscription/CertSubscribeReq.ta";
+} from "../CaSubscription/CertSubscribeReq.ta.js";
 import {
     CertSubscribeRsp,
     _decode_CertSubscribeRsp,
     _encode_CertSubscribeRsp,
-} from "../CaSubscription/CertSubscribeRsp.ta";
+} from "../CaSubscription/CertSubscribeRsp.ta.js";
 import {
     CertUnsubscribeReq,
     _decode_CertUnsubscribeReq,
     _encode_CertUnsubscribeReq,
-} from "../CaSubscription/CertUnsubscribeReq.ta";
+} from "../CaSubscription/CertUnsubscribeReq.ta.js";
 import {
     CertUnsubscribeRsp,
     _decode_CertUnsubscribeRsp,
     _encode_CertUnsubscribeRsp,
-} from "../CaSubscription/CertUnsubscribeRsp.ta";
+} from "../CaSubscription/CertUnsubscribeRsp.ta.js";
 import {
     CertUpdateReq,
     _decode_CertUpdateReq,
     _encode_CertUpdateReq,
-} from "../CaSubscription/CertUpdateReq.ta";
+} from "../CaSubscription/CertUpdateReq.ta.js";
 import {
     CertUpdateRsp,
     _decode_CertUpdateRsp,
     _encode_CertUpdateRsp,
-} from "../CaSubscription/CertUpdateRsp.ta";
+} from "../CaSubscription/CertUpdateRsp.ta.js";
 import {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../CaSubscription/InitializationAbort.ta";
+} from "../CaSubscription/InitializationAbort.ta.js";
 import {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../CaSubscription/InitializationAcc.ta";
+} from "../CaSubscription/InitializationAcc.ta.js";
 import {
     InitializationRec,
     _decode_InitializationRec,
     _encode_InitializationRec,
-} from "../CaSubscription/InitializationRec.ta";
+} from "../CaSubscription/InitializationRec.ta.js";
 import {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../CaSubscription/InitializationRej.ta";
+} from "../CaSubscription/InitializationRej.ta.js";
 export {
     CAsubscribeAbort,
     _decode_CAsubscribeAbort,
     _encode_CAsubscribeAbort,
-} from "../CaSubscription/CAsubscribeAbort.ta";
+} from "../CaSubscription/CAsubscribeAbort.ta.js";
 export {
     CertReplaceReq,
     _decode_CertReplaceReq,
     _encode_CertReplaceReq,
-} from "../CaSubscription/CertReplaceReq.ta";
+} from "../CaSubscription/CertReplaceReq.ta.js";
 export {
     CertReplaceRsp,
     _decode_CertReplaceRsp,
     _encode_CertReplaceRsp,
-} from "../CaSubscription/CertReplaceRsp.ta";
+} from "../CaSubscription/CertReplaceRsp.ta.js";
 export {
     CertSubscribeReq,
     _decode_CertSubscribeReq,
     _encode_CertSubscribeReq,
-} from "../CaSubscription/CertSubscribeReq.ta";
+} from "../CaSubscription/CertSubscribeReq.ta.js";
 export {
     CertSubscribeRsp,
     _decode_CertSubscribeRsp,
     _encode_CertSubscribeRsp,
-} from "../CaSubscription/CertSubscribeRsp.ta";
+} from "../CaSubscription/CertSubscribeRsp.ta.js";
 export {
     CertUnsubscribeReq,
     _decode_CertUnsubscribeReq,
     _encode_CertUnsubscribeReq,
-} from "../CaSubscription/CertUnsubscribeReq.ta";
+} from "../CaSubscription/CertUnsubscribeReq.ta.js";
 export {
     CertUnsubscribeRsp,
     _decode_CertUnsubscribeRsp,
     _encode_CertUnsubscribeRsp,
-} from "../CaSubscription/CertUnsubscribeRsp.ta";
+} from "../CaSubscription/CertUnsubscribeRsp.ta.js";
 export {
     CertUpdateReq,
     _decode_CertUpdateReq,
     _encode_CertUpdateReq,
-} from "../CaSubscription/CertUpdateReq.ta";
+} from "../CaSubscription/CertUpdateReq.ta.js";
 export {
     CertUpdateRsp,
     _decode_CertUpdateRsp,
     _encode_CertUpdateRsp,
-} from "../CaSubscription/CertUpdateRsp.ta";
+} from "../CaSubscription/CertUpdateRsp.ta.js";
 export {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../CaSubscription/InitializationAbort.ta";
+} from "../CaSubscription/InitializationAbort.ta.js";
 export {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../CaSubscription/InitializationAcc.ta";
+} from "../CaSubscription/InitializationAcc.ta.js";
 export {
     InitializationRec,
     _decode_InitializationRec,
     _encode_InitializationRec,
-} from "../CaSubscription/InitializationRec.ta";
+} from "../CaSubscription/InitializationRec.ta.js";
 export {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../CaSubscription/InitializationRej.ta";
+} from "../CaSubscription/InitializationRej.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CasubProt */
 /**

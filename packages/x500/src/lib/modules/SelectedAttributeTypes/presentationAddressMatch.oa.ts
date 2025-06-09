@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va.js";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va.js";
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION presentationAddressMatch */
 /**

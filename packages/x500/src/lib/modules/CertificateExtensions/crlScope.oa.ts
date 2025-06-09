@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta";
-import { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CRLScopeSyntax.ta.js";
+import { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta";
-export { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va";
+} from "../CertificateExtensions/CRLScopeSyntax.ta.js";
+export { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va.js";
 
 /* START_OF_SYMBOL_DEFINITION crlScope */
 /**

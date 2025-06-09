@@ -1,27 +1,27 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element, DERElement, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareName from "../../comparators/compareName";
+import compareName from "../../comparators/compareName.js";
 import {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
-} from "../../modules/CertificateExtensions/CertificateListExactAssertion.ta";
+} from "../../modules/CertificateExtensions/CertificateListExactAssertion.ta.js";
 import {
     CertificateList,
     _decode_CertificateList,
-} from "../../modules/AuthenticationFramework/CertificateList.ta";
+} from "../../modules/AuthenticationFramework/CertificateList.ta.js";
 import type {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import {
     id_ce_issuingDistributionPoint,
-} from "../../modules/CertificateExtensions/id-ce-issuingDistributionPoint.va";
+} from "../../modules/CertificateExtensions/id-ce-issuingDistributionPoint.va.js";
 import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
-} from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta";
-import compareGeneralNames from "../../comparators/compareGeneralNames";
-import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName";
-import compareElements from "../../comparators/compareElements";
+} from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.js";
+import compareGeneralNames from "../../comparators/compareGeneralNames.js";
+import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName.js";
+import compareElements from "../../comparators/compareElements.js";
 
 const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();
 

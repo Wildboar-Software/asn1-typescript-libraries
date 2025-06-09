@@ -1,19 +1,19 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_opcode_ldapTransport } from "../CommonProtocolSpecification/id-opcode-ldapTransport.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { abandoned } from "../DirectoryAbstractService/abandoned.oa";
-import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_opcode_ldapTransport } from "../CommonProtocolSpecification/id-opcode-ldapTransport.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { abandoned } from "../DirectoryAbstractService/abandoned.oa.js";
+import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.js";
 import {
     LdapArgument,
     _decode_LdapArgument,
     _encode_LdapArgument,
-} from "../DirectoryAbstractService/LdapArgument.ta";
+} from "../DirectoryAbstractService/LdapArgument.ta.js";
 import {
     LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
-} from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta";
+} from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ldapTransport */
 /**

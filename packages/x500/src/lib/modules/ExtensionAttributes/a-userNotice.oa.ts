@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { userNotice } from "../AttributeCertificateDefinitions/userNotice.oa";
-import { id_asx_userNotice } from "../ExtensionAttributes/id-asx-userNotice.va";
-import { id_ce_a_userNotice } from "../ExtensionAttributes/id-ce-a-userNotice.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { userNotice } from "../AttributeCertificateDefinitions/userNotice.oa.js";
+import { id_asx_userNotice } from "../ExtensionAttributes/id-asx-userNotice.va.js";
+import { id_ce_a_userNotice } from "../ExtensionAttributes/id-ce-a-userNotice.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { userNotice } from "../AttributeCertificateDefinitions/userNotice.oa";
-export { id_asx_userNotice } from "../ExtensionAttributes/id-asx-userNotice.va";
-export { id_ce_a_userNotice } from "../ExtensionAttributes/id-ce-a-userNotice.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { userNotice } from "../AttributeCertificateDefinitions/userNotice.oa.js";
+export { id_asx_userNotice } from "../ExtensionAttributes/id-asx-userNotice.va.js";
+export { id_ce_a_userNotice } from "../ExtensionAttributes/id-ce-a-userNotice.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_userNotice */
 /**

@@ -3,16 +3,16 @@ import {
     AES_InitializationVector,
     _decode_AES_InitializationVector,
     _encode_AES_InitializationVector,
-} from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta";
-import { id_aes256_CBC } from "../AlgorithmObjectIdentifiers/id-aes256-CBC.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.js";
+import { id_aes256_CBC } from "../AlgorithmObjectIdentifiers/id-aes256-CBC.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 export {
     AES_InitializationVector,
     _decode_AES_InitializationVector,
     _encode_AES_InitializationVector,
-} from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta";
-export { id_aes256_CBC } from "../AlgorithmObjectIdentifiers/id-aes256-CBC.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.js";
+export { id_aes256_CBC } from "../AlgorithmObjectIdentifiers/id-aes256-CBC.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION aes256_CBC */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TeletexOrganizationalUnitName,
     _decode_TeletexOrganizationalUnitName,
     _encode_TeletexOrganizationalUnitName,
-} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitName.ta";
+} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitName.ta.js";
 export {
     TeletexOrganizationalUnitName,
     _decode_TeletexOrganizationalUnitName,
     _encode_TeletexOrganizationalUnitName,
-} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitName.ta";
+} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TeletexOrganizationalUnitNames */
 /**

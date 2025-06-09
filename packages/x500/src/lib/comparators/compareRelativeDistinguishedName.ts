@@ -1,8 +1,8 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta";
-import type { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta";
-import type EqualityMatcher from "../types/EqualityMatcher";
-import compareAttributeTypeAndValue from "./compareAttributeTypeAndValue";
+import type { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.js";
+import type { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta.js";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
+import compareAttributeTypeAndValue from "./compareAttributeTypeAndValue.js";
 
 export default function compare(
     a: RelativeDistinguishedName,

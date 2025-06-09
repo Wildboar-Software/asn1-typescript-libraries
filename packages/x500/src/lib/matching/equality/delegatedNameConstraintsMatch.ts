@@ -1,21 +1,21 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     id_ce_delegatedNameConstraints,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va";
+} from "../../modules/AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
-} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import type {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import { DERElement } from "asn1-ts";
-import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax";
+import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax.js";
 
 export
 const delegatedNameConstraintsMatch: EqualityMatcher = (

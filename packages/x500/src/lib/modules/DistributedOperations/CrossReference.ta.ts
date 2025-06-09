@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessPointInformation,
     _decode_AccessPointInformation,
     _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta";
+} from "../DistributedOperations/AccessPointInformation.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     AccessPointInformation,
     _decode_AccessPointInformation,
     _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta";
+} from "../DistributedOperations/AccessPointInformation.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CrossReference */
 /**

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   displayName: 'x500',
   preset: '../../jest.preset.js',
   globals: {
@@ -11,6 +11,4 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-
-
 };

@@ -3,12 +3,12 @@ import {
     HierarchySelections,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
-} from "../DirectoryAbstractService/HierarchySelections.ta";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/HierarchySelections.ta.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hierarchySelectList.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hierarchySelectList.va.js";
 export {
     all /* IMPORTED_SHORT_NAMED_BIT */,
     children /* IMPORTED_SHORT_NAMED_BIT */,
@@ -33,8 +33,8 @@ export {
     top /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
-} from "../DirectoryAbstractService/HierarchySelections.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DirectoryAbstractService/HierarchySelections.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -48,10 +48,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hierarchySelectList.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_not_hierarchySelectList } from "../SelectedAttributeTypes/id-not-hierarchySelectList.va.js";
 
 /* START_OF_SYMBOL_DEFINITION hierarchySelectList */
 /**

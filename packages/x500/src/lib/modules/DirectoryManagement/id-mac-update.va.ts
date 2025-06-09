@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_mac } from "../DirectoryManagement/id-mac.va";
-export { id_mac } from "../DirectoryManagement/id-mac.va";
+import { id_mac } from "../DirectoryManagement/id-mac.va.js";
+export { id_mac } from "../DirectoryManagement/id-mac.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mac_update */
 /**

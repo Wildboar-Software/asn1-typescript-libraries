@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-import { id_at_organizationalUnitName } from "../SelectedAttributeTypes/id-at-organizationalUnitName.va";
-import { name } from "../SelectedAttributeTypes/name.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+import { id_at_organizationalUnitName } from "../SelectedAttributeTypes/id-at-organizationalUnitName.va.js";
+import { name } from "../SelectedAttributeTypes/name.oa.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-export { id_at_organizationalUnitName } from "../SelectedAttributeTypes/id-at-organizationalUnitName.va";
-export { name } from "../SelectedAttributeTypes/name.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+export { id_at_organizationalUnitName } from "../SelectedAttributeTypes/id-at-organizationalUnitName.va.js";
+export { name } from "../SelectedAttributeTypes/name.oa.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION organizationalUnitName */
 /**

@@ -1,30 +1,30 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     _decode_DSABindArgument,
     _encode_DSABindArgument,
-} from "../DistributedOperations/DSABindArgument.ta";
+} from "../DistributedOperations/DSABindArgument.ta.js";
 import {
     _decode_DSABindResult,
     _encode_DSABindResult,
-} from "../DistributedOperations/DSABindResult.ta";
+} from "../DistributedOperations/DSABindResult.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     DSABindArgument,
     _decode_DSABindArgument,
     _encode_DSABindArgument,
-} from "../DistributedOperations/DSABindArgument.ta";
+} from "../DistributedOperations/DSABindArgument.ta.js";
 export {
     DSABindResult,
     _decode_DSABindResult,
     _encode_DSABindResult,
-} from "../DistributedOperations/DSABindResult.ta";
+} from "../DistributedOperations/DSABindResult.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION dSABind */
 /**

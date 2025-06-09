@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Associate_source_diagnostic_acse_service_provider,
     _decode_Associate_source_diagnostic_acse_service_provider,
     _encode_Associate_source_diagnostic_acse_service_provider,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-provider.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-provider.ta.js";
 import {
     Associate_source_diagnostic_acse_service_user,
     _decode_Associate_source_diagnostic_acse_service_user,
     _encode_Associate_source_diagnostic_acse_service_user,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-user.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-user.ta.js";
 export {
     Associate_source_diagnostic_acse_service_provider,
     Associate_source_diagnostic_acse_service_provider_no_common_acse_version /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -19,7 +19,7 @@ export {
     no_common_acse_version /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_source_diagnostic_acse_service_provider,
     _encode_Associate_source_diagnostic_acse_service_provider,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-provider.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-provider.ta.js";
 export {
     application_context_name_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
     Associate_source_diagnostic_acse_service_user,
@@ -44,7 +44,7 @@ export {
     calling_AP_title_not_recognized /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_source_diagnostic_acse_service_user,
     _encode_Associate_source_diagnostic_acse_service_user,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-user.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-user.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Associate_source_diagnostic */
 /**

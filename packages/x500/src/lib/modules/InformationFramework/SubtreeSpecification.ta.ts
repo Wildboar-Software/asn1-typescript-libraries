@@ -4,52 +4,52 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta";
+} from "../InformationFramework/BaseDistance.ta.js";
 import {
     ChopSpecification_specificExclusions_Item,
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta";
+} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.js";
 import {
     LocalName,
     _decode_LocalName,
     _encode_LocalName,
-} from "../InformationFramework/LocalName.ta";
+} from "../InformationFramework/LocalName.ta.js";
 import {
     Refinement,
     _decode_Refinement,
     _encode_Refinement,
-} from "../InformationFramework/Refinement.ta";
+} from "../InformationFramework/Refinement.ta.js";
 export {
     BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta";
+} from "../InformationFramework/BaseDistance.ta.js";
 export {
     ChopSpecification_specificExclusions_Item,
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta";
+} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.js";
 export {
     ChopSpecification,
     _decode_ChopSpecification,
     _encode_ChopSpecification,
-} from "../InformationFramework/ChopSpecification.ta";
+} from "../InformationFramework/ChopSpecification.ta.js";
 export {
     LocalName,
     _decode_LocalName,
     _encode_LocalName,
-} from "../InformationFramework/LocalName.ta";
+} from "../InformationFramework/LocalName.ta.js";
 export {
     Refinement,
     _decode_Refinement,
     _encode_Refinement,
-} from "../InformationFramework/Refinement.ta";
+} from "../InformationFramework/Refinement.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SubtreeSpecification */
 /**

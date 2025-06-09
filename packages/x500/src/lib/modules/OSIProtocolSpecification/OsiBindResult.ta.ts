@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiBindResult_mode_selector,
     _decode_OsiBindResult_mode_selector,
     _encode_OsiBindResult_mode_selector,
-} from "../OSIProtocolSpecification/OsiBindResult-mode-selector.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-mode-selector.ta.js";
 import {
     OsiBindResult_normal_mode_parameters,
     _decode_OsiBindResult_normal_mode_parameters,
     _encode_OsiBindResult_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta.js";
 export {
     OsiBindResult_mode_selector,
     _decode_OsiBindResult_mode_selector,
     _encode_OsiBindResult_mode_selector,
-} from "../OSIProtocolSpecification/OsiBindResult-mode-selector.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-mode-selector.ta.js";
 export {
     OsiBindResult_normal_mode_parameters,
     _decode_OsiBindResult_normal_mode_parameters,
     _encode_OsiBindResult_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBindResult */
 /**

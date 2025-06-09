@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
 export {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 export {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SupplierAndConsumers */
 /**

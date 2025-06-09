@@ -5,18 +5,18 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Criteria,
     _decode_Criteria,
     _encode_Criteria,
-} from "../SelectedAttributeTypes/Criteria.ta";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../SelectedAttributeTypes/Criteria.ta.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     Criteria,
     _decode_Criteria,
     _encode_Criteria,
-} from "../SelectedAttributeTypes/Criteria.ta";
+} from "../SelectedAttributeTypes/Criteria.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Guide */
 /**

@@ -3,18 +3,18 @@ import {
     BasicAttConstraintsSyntax,
     _decode_BasicAttConstraintsSyntax,
     _encode_BasicAttConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta";
-import { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.js";
+import { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     BasicAttConstraintsSyntax,
     _decode_BasicAttConstraintsSyntax,
     _encode_BasicAttConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta";
-export { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.js";
+export { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION basicAttConstraintsMatch */
 /**

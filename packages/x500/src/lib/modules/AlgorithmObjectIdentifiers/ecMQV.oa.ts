@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_ecMQV } from "../AlgorithmObjectIdentifiers/id-ecMQV.va";
+import { id_ecMQV } from "../AlgorithmObjectIdentifiers/id-ecMQV.va.js";
 import {
     X509Curves,
     _decode_X509Curves,
     _encode_X509Curves,
-} from "../AlgorithmObjectIdentifiers/X509Curves.vsa";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_ecMQV } from "../AlgorithmObjectIdentifiers/id-ecMQV.va";
+} from "../AlgorithmObjectIdentifiers/X509Curves.vsa.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_ecMQV } from "../AlgorithmObjectIdentifiers/id-ecMQV.va.js";
 export {
     X509Curves,
     _decode_X509Curves,
     _encode_X509Curves,
-} from "../AlgorithmObjectIdentifiers/X509Curves.vsa";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/X509Curves.vsa.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ecMQV */
 /**

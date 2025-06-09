@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OSI_PDU,
     _decode_OSI_PDU,
     _encode_OSI_PDU,
-} from "../OSIProtocolSpecification/OSI-PDU.ta";
-export { directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/directoryOperationalBindingManagementAC.oa";
+} from "../OSIProtocolSpecification/OSI-PDU.ta.js";
+export { directoryOperationalBindingManagementAC } from "../DirectoryOSIProtocols/directoryOperationalBindingManagementAC.oa.js";
 export {
     OSI_PDU,
     _decode_OSI_PDU,
     _encode_OSI_PDU,
-} from "../OSIProtocolSpecification/OSI-PDU.ta";
+} from "../OSIProtocolSpecification/OSI-PDU.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DOP_OSI_PDUs */
 /**

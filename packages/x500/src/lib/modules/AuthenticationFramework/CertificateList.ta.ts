@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateListContent,
     _decode_CertificateListContent,
     _encode_CertificateListContent,
-} from "../AuthenticationFramework/CertificateListContent.ta";
+} from "../AuthenticationFramework/CertificateListContent.ta.js";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 export {
     CertificateListContent,
     _decode_CertificateListContent,
     _encode_CertificateListContent,
-} from "../AuthenticationFramework/CertificateListContent.ta";
+} from "../AuthenticationFramework/CertificateListContent.ta.js";
 export {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta";
+} from "../AuthenticationFramework/SIGNED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateList */
 /**

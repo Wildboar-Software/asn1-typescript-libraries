@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va";
-import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va";
-export { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.js";
+import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.js";
+export { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION zonalMatch */
 /**

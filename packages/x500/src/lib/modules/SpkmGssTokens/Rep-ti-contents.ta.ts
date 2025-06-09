@@ -7,57 +7,57 @@ import {
     OPTIONAL,
     UTCTime,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta";
+} from "../AuthenticationFramework/Validity.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     Context_Data,
     _decode_Context_Data,
     _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta";
+} from "../SpkmGssTokens/Context-Data.ta.js";
 import {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta";
+} from "../AuthenticationFramework/Validity.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     Context_Data,
     _decode_Context_Data,
     _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta";
+} from "../SpkmGssTokens/Context-Data.ta.js";
 export {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Rep_ti_contents */
 /**

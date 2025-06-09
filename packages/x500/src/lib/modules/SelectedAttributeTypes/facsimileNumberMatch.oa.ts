@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_facsimileNumberMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_facsimileNumberMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberMatch.va.js";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_facsimileNumberMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberMatch.va";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_facsimileNumberMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberMatch.va.js";
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION facsimileNumberMatch */
 /**

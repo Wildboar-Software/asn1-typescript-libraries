@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { contentType } from "../PkiPmiWrapper/contentType.oa";
-import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { contentType } from "../PkiPmiWrapper/contentType.oa";
-export { messageDigest } from "../PkiPmiWrapper/messageDigest.oa";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { contentType } from "../PkiPmiWrapper/contentType.oa.js";
+import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { contentType } from "../PkiPmiWrapper/contentType.oa.js";
+export { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedSignedAttributes */
 /**

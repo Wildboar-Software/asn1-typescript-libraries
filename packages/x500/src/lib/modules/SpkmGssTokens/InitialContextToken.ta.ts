@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MechType,
     _decode_MechType,
     _encode_MechType,
-} from "../SpkmGssTokens/MechType.ta";
+} from "../SpkmGssTokens/MechType.ta.js";
 import {
     SPKMInnerContextToken,
     _decode_SPKMInnerContextToken,
     _encode_SPKMInnerContextToken,
-} from "../SpkmGssTokens/SPKMInnerContextToken.ta";
+} from "../SpkmGssTokens/SPKMInnerContextToken.ta.js";
 export {
     MechType,
     _decode_MechType,
     _encode_MechType,
-} from "../SpkmGssTokens/MechType.ta";
+} from "../SpkmGssTokens/MechType.ta.js";
 export {
     SPKMInnerContextToken,
     _decode_SPKMInnerContextToken,
     _encode_SPKMInnerContextToken,
-} from "../SpkmGssTokens/SPKMInnerContextToken.ta";
+} from "../SpkmGssTokens/SPKMInnerContextToken.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION InitialContextToken */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta";
+} from "../CommonProtocolSpecification/InvokeId.ta.js";
 import {
     OsiRej_problem,
     _decode_OsiRej_problem,
     _encode_OsiRej_problem,
-} from "../OSIProtocolSpecification/OsiRej-problem.ta";
+} from "../OSIProtocolSpecification/OsiRej-problem.ta.js";
 export {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta";
+} from "../CommonProtocolSpecification/InvokeId.ta.js";
 export {
     OsiRej_problem,
     _decode_OsiRej_problem,
     _encode_OsiRej_problem,
-} from "../OSIProtocolSpecification/OsiRej-problem.ta";
+} from "../OSIProtocolSpecification/OsiRej-problem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiRej */
 /**

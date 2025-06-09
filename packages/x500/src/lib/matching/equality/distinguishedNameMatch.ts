@@ -1,10 +1,10 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareDistinguishedName from "../../comparators/compareDistinguishedName";
+import compareDistinguishedName from "../../comparators/compareDistinguishedName.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
-} from "../../modules/InformationFramework/DistinguishedName.ta";
+} from "../../modules/InformationFramework/DistinguishedName.ta.js";
 
 export
 const distinguishedNameMatch: EqualityMatcher = (

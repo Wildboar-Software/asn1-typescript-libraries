@@ -6,17 +6,17 @@ import {
     OPTIONAL,
     UTF8String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EpcFormat_fields_Item,
     _decode_EpcFormat_fields_Item,
     _encode_EpcFormat_fields_Item,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.js";
 export {
     EpcFormat_fields_Item,
     _decode_EpcFormat_fields_Item,
     _encode_EpcFormat_fields_Item,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta";
+} from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EpcFormat */
 /**

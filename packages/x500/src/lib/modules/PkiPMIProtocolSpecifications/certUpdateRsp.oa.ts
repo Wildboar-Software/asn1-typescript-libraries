@@ -3,16 +3,16 @@ import {
     CertUpdateRsp,
     _decode_CertUpdateRsp,
     _encode_CertUpdateRsp,
-} from "../PkiPMIProtocolSpecifications/CertUpdateRsp.ta";
-import { id_certUpdateRsp } from "../PkiPMIProtocolSpecifications/id-certUpdateRsp.va";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/CertUpdateRsp.ta.js";
+import { id_certUpdateRsp } from "../PkiPMIProtocolSpecifications/id-certUpdateRsp.va.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 export {
     CertUpdateRsp,
     _decode_CertUpdateRsp,
     _encode_CertUpdateRsp,
-} from "../PkiPMIProtocolSpecifications/CertUpdateRsp.ta";
-export { id_certUpdateRsp } from "../PkiPMIProtocolSpecifications/id-certUpdateRsp.va";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/CertUpdateRsp.ta.js";
+export { id_certUpdateRsp } from "../PkiPMIProtocolSpecifications/id-certUpdateRsp.va.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certUpdateRsp */
 /**

@@ -1,9 +1,9 @@
-import OrderingMatcher from "../../types/OrderingMatcher";
+import OrderingMatcher from "../../types/OrderingMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
+} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
 
 export
 const caseExactOrderingMatch: OrderingMatcher = (

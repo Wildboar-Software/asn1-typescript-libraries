@@ -1,7 +1,7 @@
 import { TRUE_BIT } from "asn1-ts";
 import type {
     GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta";
+} from "../modules/BasicAccessControl/GrantsAndDenials.ta.js";
 
 /**
  * @summary Splits `GrantsAndDenials` into up to two `GrantsAndDenials` into

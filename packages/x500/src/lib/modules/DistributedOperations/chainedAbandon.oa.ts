@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { abandon } from "../DirectoryAbstractService/abandon.oa";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { abandon } from "../DirectoryAbstractService/abandon.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { abandon } from "../DirectoryAbstractService/abandon.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { abandon } from "../DirectoryAbstractService/abandon.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION chainedAbandon */
 /**

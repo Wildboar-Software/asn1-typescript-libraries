@@ -3,14 +3,14 @@ import {
     ExtendedNetworkAddress,
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
-} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta";
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.js";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     ExtendedNetworkAddress,
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
-} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION extended_network_address */
 /**

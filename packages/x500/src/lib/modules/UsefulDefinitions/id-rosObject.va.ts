@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { rosObject } from "../UsefulDefinitions/rosObject.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { rosObject } from "../UsefulDefinitions/rosObject.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { rosObject } from "../UsefulDefinitions/rosObject.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { rosObject } from "../UsefulDefinitions/rosObject.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_rosObject */
 /**

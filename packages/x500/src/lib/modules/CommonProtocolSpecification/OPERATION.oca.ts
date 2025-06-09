@@ -1,13 +1,13 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { Code } from "../CommonProtocolSpecification/Code.ta";
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Code } from "../CommonProtocolSpecification/Code.ta.js";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OPERATION */
 /**

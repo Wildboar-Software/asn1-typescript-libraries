@@ -6,13 +6,13 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthenticationLevel_basicLevels_level,
     _decode_AuthenticationLevel_basicLevels_level,
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta";
+} from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.js";
 export {
     AuthenticationLevel_basicLevels_level,
     AuthenticationLevel_basicLevels_level_none /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,7 +24,7 @@ export {
     _decode_AuthenticationLevel_basicLevels_level,
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta";
+} from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels */
 /**

@@ -4,47 +4,47 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ACIItem_itemOrUserFirst,
     _decode_ACIItem_itemOrUserFirst,
     _encode_ACIItem_itemOrUserFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta.js";
 import {
     AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta";
+} from "../BasicAccessControl/AuthenticationLevel.ta.js";
 import {
     Precedence,
     _decode_Precedence,
     _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta";
+} from "../BasicAccessControl/Precedence.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 export {
     ACIItem_itemOrUserFirst,
     _decode_ACIItem_itemOrUserFirst,
     _encode_ACIItem_itemOrUserFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta";
+} from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta.js";
 export {
     AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta";
+} from "../BasicAccessControl/AuthenticationLevel.ta.js";
 export {
     Precedence,
     _decode_Precedence,
     _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta";
+} from "../BasicAccessControl/Precedence.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ACIItem */
 /**

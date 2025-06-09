@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedInfo,
     _decode_EncryptedInfo,
     _encode_EncryptedInfo,
-} from "../PkiPmiWrapper/EncryptedInfo.ta";
+} from "../PkiPmiWrapper/EncryptedInfo.ta.js";
 import {
     WrappedPDUInfo,
     _decode_WrappedPDUInfo,
     _encode_WrappedPDUInfo,
-} from "../PkiPmiWrapper/WrappedPDUInfo.ta";
+} from "../PkiPmiWrapper/WrappedPDUInfo.ta.js";
 export {
     EncryptedInfo,
     _decode_EncryptedInfo,
     _encode_EncryptedInfo,
-} from "../PkiPmiWrapper/EncryptedInfo.ta";
+} from "../PkiPmiWrapper/EncryptedInfo.ta.js";
 export {
     WrappedPDUInfo,
     _decode_WrappedPDUInfo,
     _encode_WrappedPDUInfo,
-} from "../PkiPmiWrapper/WrappedPDUInfo.ta";
+} from "../PkiPmiWrapper/WrappedPDUInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper_conf */
 /**

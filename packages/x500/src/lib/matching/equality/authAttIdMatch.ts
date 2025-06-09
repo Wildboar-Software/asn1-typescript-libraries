@@ -1,21 +1,21 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     id_ce_basicAttConstraints,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va";
+} from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.js";
 import {
     AuthorityAttributeIdentifierSyntax,
     _decode_AuthorityAttributeIdentifierSyntax,
-} from "../../modules/AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta";
+} from "../../modules/AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import type {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import { DERElement } from "asn1-ts";
-import compareIssuerSerial from "../../comparators/compareIssuerSerial";
+import compareIssuerSerial from "../../comparators/compareIssuerSerial.js";
 
 export
 const authAttIdMatch: EqualityMatcher = (

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { alias } from "../InformationFramework/alias.oa";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { alias } from "../InformationFramework/alias.oa.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { oidC } from "../SelectedAttributeTypes/oidC.oa";
-import { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va";
-export { alias } from "../InformationFramework/alias.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+import { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.js";
+export { alias } from "../InformationFramework/alias.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,9 +20,9 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa";
-export { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { oidC } from "../SelectedAttributeTypes/oidC.oa.js";
+export { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.js";
 
 /* START_OF_SYMBOL_DEFINITION oidArc */
 /**

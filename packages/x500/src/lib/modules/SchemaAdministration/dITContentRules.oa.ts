@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 import {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
-import { id_soa_dITContentRules } from "../SchemaAdministration/id-soa-dITContentRules.va";
-import { dITContentRuleDescription } from "../SelectedAttributeTypes/dITContentRuleDescription.oa";
-import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
+import { id_soa_dITContentRules } from "../SchemaAdministration/id-soa-dITContentRules.va.js";
+import { dITContentRuleDescription } from "../SelectedAttributeTypes/dITContentRuleDescription.oa.js";
+import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     DITContentRuleDescription,
     _decode_DITContentRuleDescription,
     _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta";
-export { id_soa_dITContentRules } from "../SchemaAdministration/id-soa-dITContentRules.va";
-export { dITContentRuleDescription } from "../SelectedAttributeTypes/dITContentRuleDescription.oa";
-export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
+} from "../SchemaAdministration/DITContentRuleDescription.ta.js";
+export { id_soa_dITContentRules } from "../SchemaAdministration/id-soa-dITContentRules.va.js";
+export { dITContentRuleDescription } from "../SelectedAttributeTypes/dITContentRuleDescription.oa.js";
+export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION dITContentRules */
 /**

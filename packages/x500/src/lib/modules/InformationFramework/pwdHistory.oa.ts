@@ -1,12 +1,12 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 import {
     PwdHistory,
     _decode_PwdHistory,
     _encode_PwdHistory,
-} from "../InformationFramework/PwdHistory.ta";
+} from "../InformationFramework/PwdHistory.ta.js";
 
 // pwdHistory{ATTRIBUTE:passwordAttribute,MATCHING-RULE:historyMatch,OBJECT IDENTIFIER:id}
 // ATTRIBUTE ::= {

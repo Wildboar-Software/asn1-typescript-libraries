@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 import {
     TerminateOperationalBindingResultData,
     _decode_TerminateOperationalBindingResultData,
     _encode_TerminateOperationalBindingResultData,
-} from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     TerminateOperationalBindingResultData,
     _decode_TerminateOperationalBindingResultData,
     _encode_TerminateOperationalBindingResultData,
-} from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingResult */
 /**

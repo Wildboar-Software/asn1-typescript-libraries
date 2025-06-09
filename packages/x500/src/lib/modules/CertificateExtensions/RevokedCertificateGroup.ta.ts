@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 import {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta";
+} from "../CertificateExtensions/NumberRange.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta";
+} from "../CertificateExtensions/NumberRange.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RevokedCertificateGroup */
 /**

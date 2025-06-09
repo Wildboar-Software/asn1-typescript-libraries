@@ -5,34 +5,34 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterOrShadowAccessPoint_category,
     MasterOrShadowAccessPoint_category_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_MasterOrShadowAccessPoint_category,
     _encode_MasterOrShadowAccessPoint_category,
     _enum_for_MasterOrShadowAccessPoint_category,
-} from "../DistributedOperations/MasterOrShadowAccessPoint-category.ta";
+} from "../DistributedOperations/MasterOrShadowAccessPoint-category.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
 export {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 export {
     master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     MasterOrShadowAccessPoint_category,
@@ -44,25 +44,25 @@ export {
     _decode_MasterOrShadowAccessPoint_category,
     _encode_MasterOrShadowAccessPoint_category,
     _enum_for_MasterOrShadowAccessPoint_category,
-} from "../DistributedOperations/MasterOrShadowAccessPoint-category.ta";
+} from "../DistributedOperations/MasterOrShadowAccessPoint-category.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta";
+} from "../SelectedAttributeTypes/PresentationAddress.ta.js";
 export {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
 import {
     AccessPoint,
-} from "./AccessPoint.ta";
+} from "./AccessPoint.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MasterOrShadowAccessPoint */
 /**

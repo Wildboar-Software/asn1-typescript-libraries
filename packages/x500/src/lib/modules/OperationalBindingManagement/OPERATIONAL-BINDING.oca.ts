@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
-import { OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING-COOP.oca";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
-export { OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING-COOP.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
+import { OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING-COOP.oca.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
+export { OP_BINDING_COOP } from "../OperationalBindingManagement/OP-BINDING-COOP.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OPERATIONAL_BINDING */
 /**

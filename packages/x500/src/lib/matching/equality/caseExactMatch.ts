@@ -1,10 +1,10 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
-import { prepString } from "../../utils/prepString";
+} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
+import { prepString } from "../../utils/prepString.js";
 
 export
 const caseExactMatch: EqualityMatcher = (

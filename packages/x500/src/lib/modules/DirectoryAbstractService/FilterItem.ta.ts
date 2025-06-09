@@ -1,56 +1,56 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FilterItem_substrings,
     _decode_FilterItem_substrings,
     _encode_FilterItem_substrings,
-} from "../DirectoryAbstractService/FilterItem-substrings.ta";
+} from "../DirectoryAbstractService/FilterItem-substrings.ta.js";
 import {
     MatchingRuleAssertion,
     _decode_MatchingRuleAssertion,
     _encode_MatchingRuleAssertion,
-} from "../DirectoryAbstractService/MatchingRuleAssertion.ta";
+} from "../DirectoryAbstractService/MatchingRuleAssertion.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     AttributeTypeAssertion,
     _decode_AttributeTypeAssertion,
     _encode_AttributeTypeAssertion,
-} from "../InformationFramework/AttributeTypeAssertion.ta";
+} from "../InformationFramework/AttributeTypeAssertion.ta.js";
 import {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta";
+} from "../InformationFramework/AttributeValueAssertion.ta.js";
 export {
     FilterItem_substrings,
     _decode_FilterItem_substrings,
     _encode_FilterItem_substrings,
-} from "../DirectoryAbstractService/FilterItem-substrings.ta";
+} from "../DirectoryAbstractService/FilterItem-substrings.ta.js";
 export {
     MatchingRuleAssertion,
     _decode_MatchingRuleAssertion,
     _encode_MatchingRuleAssertion,
-} from "../DirectoryAbstractService/MatchingRuleAssertion.ta";
+} from "../DirectoryAbstractService/MatchingRuleAssertion.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeTypeAssertion,
     _decode_AttributeTypeAssertion,
     _encode_AttributeTypeAssertion,
-} from "../InformationFramework/AttributeTypeAssertion.ta";
+} from "../InformationFramework/AttributeTypeAssertion.ta.js";
 export {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta";
+} from "../InformationFramework/AttributeValueAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FilterItem */
 /**

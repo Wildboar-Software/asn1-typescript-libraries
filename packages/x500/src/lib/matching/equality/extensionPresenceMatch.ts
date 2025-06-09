@@ -1,12 +1,12 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import {
     Extensions,
     _decode_Extensions,
-} from "../../modules/AuthenticationFramework/Extensions.ta";
+} from "../../modules/AuthenticationFramework/Extensions.ta.js";
 
 /**
  * It is never said explicitly in the specification, but it is implied that the

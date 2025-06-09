@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta";
-export { ub_common_name_length } from "../PkiPmiExternalDataTypes/ub-common-name-length.va";
+} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.js";
+export { ub_common_name_length } from "../PkiPmiExternalDataTypes/ub-common-name-length.va.js";
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta";
+} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalCommonName */
 /**

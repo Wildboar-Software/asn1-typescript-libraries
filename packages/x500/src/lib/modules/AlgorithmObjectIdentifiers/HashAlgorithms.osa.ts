@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { sha1Algorithm } from "../AlgorithmObjectIdentifiers/sha1Algorithm.oa";
-import { sha224 } from "../AlgorithmObjectIdentifiers/sha224.oa";
-import { sha256 } from "../AlgorithmObjectIdentifiers/sha256.oa";
-import { sha384 } from "../AlgorithmObjectIdentifiers/sha384.oa";
-import { sha512 } from "../AlgorithmObjectIdentifiers/sha512.oa";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { sha1Algorithm } from "../AlgorithmObjectIdentifiers/sha1Algorithm.oa";
-export { sha224 } from "../AlgorithmObjectIdentifiers/sha224.oa";
-export { sha256 } from "../AlgorithmObjectIdentifiers/sha256.oa";
-export { sha384 } from "../AlgorithmObjectIdentifiers/sha384.oa";
-export { sha512 } from "../AlgorithmObjectIdentifiers/sha512.oa";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import { sha1Algorithm } from "../AlgorithmObjectIdentifiers/sha1Algorithm.oa.js";
+import { sha224 } from "../AlgorithmObjectIdentifiers/sha224.oa.js";
+import { sha256 } from "../AlgorithmObjectIdentifiers/sha256.oa.js";
+import { sha384 } from "../AlgorithmObjectIdentifiers/sha384.oa.js";
+import { sha512 } from "../AlgorithmObjectIdentifiers/sha512.oa.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { sha1Algorithm } from "../AlgorithmObjectIdentifiers/sha1Algorithm.oa.js";
+export { sha224 } from "../AlgorithmObjectIdentifiers/sha224.oa.js";
+export { sha256 } from "../AlgorithmObjectIdentifiers/sha256.oa.js";
+export { sha384 } from "../AlgorithmObjectIdentifiers/sha384.oa.js";
+export { sha512 } from "../AlgorithmObjectIdentifiers/sha512.oa.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION HashAlgorithms */
 /**

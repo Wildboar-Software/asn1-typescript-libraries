@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ConsumerUpdateMode,
     _decode_ConsumerUpdateMode,
     _encode_ConsumerUpdateMode,
-} from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta";
+} from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta.js";
 import {
     SupplierUpdateMode,
     _decode_SupplierUpdateMode,
     _encode_SupplierUpdateMode,
-} from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta";
+} from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.js";
 export {
     ConsumerUpdateMode,
     _decode_ConsumerUpdateMode,
     _encode_ConsumerUpdateMode,
-} from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta";
+} from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta.js";
 export {
     SupplierUpdateMode,
     _decode_SupplierUpdateMode,
     _encode_SupplierUpdateMode,
-} from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta";
+} from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UpdateMode */
 /**

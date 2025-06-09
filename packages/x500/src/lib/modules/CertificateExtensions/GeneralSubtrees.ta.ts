@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralSubtree,
     _decode_GeneralSubtree,
     _encode_GeneralSubtree,
-} from "../CertificateExtensions/GeneralSubtree.ta";
+} from "../CertificateExtensions/GeneralSubtree.ta.js";
 export {
     GeneralSubtree,
     _decode_GeneralSubtree,
     _encode_GeneralSubtree,
-} from "../CertificateExtensions/GeneralSubtree.ta";
+} from "../CertificateExtensions/GeneralSubtree.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION GeneralSubtrees */
 /**

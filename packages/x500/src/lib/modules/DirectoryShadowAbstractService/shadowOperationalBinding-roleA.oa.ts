@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleA */
 /**

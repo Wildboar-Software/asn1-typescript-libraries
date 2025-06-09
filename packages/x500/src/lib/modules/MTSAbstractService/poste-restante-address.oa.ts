@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PosteRestanteAddress,
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
-} from "../MTSAbstractService/PosteRestanteAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/PosteRestanteAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PosteRestanteAddress,
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
-} from "../MTSAbstractService/PosteRestanteAddress.ta";
+} from "../MTSAbstractService/PosteRestanteAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION poste_restante_address */
 /**

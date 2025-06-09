@@ -5,17 +5,17 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PeriodicStrategy,
     _decode_PeriodicStrategy,
     _encode_PeriodicStrategy,
-} from "../DirectoryShadowAbstractService/PeriodicStrategy.ta";
+} from "../DirectoryShadowAbstractService/PeriodicStrategy.ta.js";
 export {
     PeriodicStrategy,
     _decode_PeriodicStrategy,
     _encode_PeriodicStrategy,
-} from "../DirectoryShadowAbstractService/PeriodicStrategy.ta";
+} from "../DirectoryShadowAbstractService/PeriodicStrategy.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SchedulingParameters */
 /**

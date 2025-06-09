@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-import { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+import { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va.js";
 import {
     LanguageContextSyntax,
     _decode_LanguageContextSyntax,
     _encode_LanguageContextSyntax,
-} from "../SelectedAttributeTypes/LanguageContextSyntax.ta";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-export { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va";
+} from "../SelectedAttributeTypes/LanguageContextSyntax.ta.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+export { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va.js";
 export {
     LanguageContextSyntax,
     _decode_LanguageContextSyntax,
     _encode_LanguageContextSyntax,
-} from "../SelectedAttributeTypes/LanguageContextSyntax.ta";
+} from "../SelectedAttributeTypes/LanguageContextSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION languageContext */
 /**

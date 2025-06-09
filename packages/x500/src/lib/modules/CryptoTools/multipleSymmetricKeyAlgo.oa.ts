@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_algo_multipleSymmetricKeyAlgo } from "../CryptoTools/id-algo-multipleSymmetricKeyAlgo.va";
+import { id_algo_multipleSymmetricKeyAlgo } from "../CryptoTools/id-algo-multipleSymmetricKeyAlgo.va.js";
 import {
     MultipleSymmetricKeyAlgo,
     _decode_MultipleSymmetricKeyAlgo,
     _encode_MultipleSymmetricKeyAlgo,
-} from "../CryptoTools/MultipleSymmetricKeyAlgo.ta";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
-export { id_algo_multipleSymmetricKeyAlgo } from "../CryptoTools/id-algo-multipleSymmetricKeyAlgo.va";
+} from "../CryptoTools/MultipleSymmetricKeyAlgo.ta.js";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
+export { id_algo_multipleSymmetricKeyAlgo } from "../CryptoTools/id-algo-multipleSymmetricKeyAlgo.va.js";
 export {
     MultipleSymmetricKeyAlgo,
     _decode_MultipleSymmetricKeyAlgo,
     _encode_MultipleSymmetricKeyAlgo,
-} from "../CryptoTools/MultipleSymmetricKeyAlgo.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../CryptoTools/MultipleSymmetricKeyAlgo.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION multipleSymmetricKeyAlgo */
 /**

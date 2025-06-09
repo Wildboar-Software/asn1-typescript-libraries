@@ -4,29 +4,29 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
+} from "../AuthenticationFramework/Certificate.ta.js";
 import {
     CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
+} from "../CertificateExtensions/CRLReason.ta.js";
 import {
     CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
-} from "../PkiPMIProtocolSpecifications/CertStatus.ta";
+} from "../PkiPMIProtocolSpecifications/CertStatus.ta.js";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
+} from "../AuthenticationFramework/Certificate.ta.js";
 export {
     aACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     affiliationChanged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -54,7 +54,7 @@ export {
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta";
+} from "../CertificateExtensions/CRLReason.ta.js";
 export {
     CertStatus,
     CertStatus_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -68,7 +68,7 @@ export {
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
-} from "../PkiPMIProtocolSpecifications/CertStatus.ta";
+} from "../PkiPMIProtocolSpecifications/CertStatus.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_ok */
 /**

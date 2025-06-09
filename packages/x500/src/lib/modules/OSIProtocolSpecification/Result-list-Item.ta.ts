@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Result_list_Item_provider_reason,
     _decode_Result_list_Item_provider_reason,
     _encode_Result_list_Item_provider_reason,
-} from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta";
+} from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta.js";
 import {
     Result,
     _decode_Result,
     _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta";
+} from "../OSIProtocolSpecification/Result.ta.js";
 import {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 export {
     abstract_syntax_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
     proposed_transfer_syntaxes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -30,7 +30,7 @@ export {
     Result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_Result_list_Item_provider_reason,
     _encode_Result_list_Item_provider_reason,
-} from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta";
+} from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta.js";
 export {
     acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
     provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -41,12 +41,12 @@ export {
     user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Result,
     _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta";
+} from "../OSIProtocolSpecification/Result.ta.js";
 export {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta";
+} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Result_list_Item */
 /**

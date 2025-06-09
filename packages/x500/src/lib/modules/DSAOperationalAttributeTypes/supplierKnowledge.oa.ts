@@ -1,23 +1,23 @@
 /* eslint-disable */
-import { id_doa_supplierKnowledge } from "../DSAOperationalAttributeTypes/id-doa-supplierKnowledge.va";
+import { id_doa_supplierKnowledge } from "../DSAOperationalAttributeTypes/id-doa-supplierKnowledge.va.js";
 import {
     SupplierInformation,
     _decode_SupplierInformation,
     _encode_SupplierInformation,
-} from "../DSAOperationalAttributeTypes/SupplierInformation.ta";
-import { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/SupplierInformation.ta.js";
+import { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_doa_supplierKnowledge } from "../DSAOperationalAttributeTypes/id-doa-supplierKnowledge.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_doa_supplierKnowledge } from "../DSAOperationalAttributeTypes/id-doa-supplierKnowledge.va.js";
 export {
     SupplierInformation,
     _decode_SupplierInformation,
     _encode_SupplierInformation,
-} from "../DSAOperationalAttributeTypes/SupplierInformation.ta";
-export { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/SupplierInformation.ta.js";
+export { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION supplierKnowledge */
 /**

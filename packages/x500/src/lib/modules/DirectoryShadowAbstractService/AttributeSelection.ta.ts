@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ClassAttributeSelection,
     _decode_ClassAttributeSelection,
     _encode_ClassAttributeSelection,
-} from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta";
+} from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta.js";
 export {
     ClassAttributeSelection,
     _decode_ClassAttributeSelection,
     _encode_ClassAttributeSelection,
-} from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta";
+} from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeSelection */
 /**

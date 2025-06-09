@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SelectedTypes,
     _decode_SelectedTypes,
     _encode_SelectedTypes,
-} from "../EnhancedSecurity/SelectedTypes.ta";
+} from "../EnhancedSecurity/SelectedTypes.ta.js";
 export {
     SelectedTypes,
     _decode_SelectedTypes,
     _encode_SelectedTypes,
-} from "../EnhancedSecurity/SelectedTypes.ta";
+} from "../EnhancedSecurity/SelectedTypes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Scope */
 /**

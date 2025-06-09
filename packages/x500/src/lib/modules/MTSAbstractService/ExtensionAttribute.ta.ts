@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
-export { ExtensionAttributeTable } from "../MTSAbstractService/ExtensionAttributeTable.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
+export { ExtensionAttributeTable } from "../MTSAbstractService/ExtensionAttributeTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtensionAttribute */
 /**

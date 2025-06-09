@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     EXTERNAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SimpleCredentials,
     _decode_SimpleCredentials,
     _encode_SimpleCredentials,
-} from "../DirectoryAbstractService/SimpleCredentials.ta";
+} from "../DirectoryAbstractService/SimpleCredentials.ta.js";
 import {
     SpkmCredentials,
     _decode_SpkmCredentials,
     _encode_SpkmCredentials,
-} from "../DirectoryAbstractService/SpkmCredentials.ta";
+} from "../DirectoryAbstractService/SpkmCredentials.ta.js";
 import {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from "../DirectoryAbstractService/StrongCredentials.ta";
+} from "../DirectoryAbstractService/StrongCredentials.ta.js";
 export {
     SimpleCredentials,
     _decode_SimpleCredentials,
     _encode_SimpleCredentials,
-} from "../DirectoryAbstractService/SimpleCredentials.ta";
+} from "../DirectoryAbstractService/SimpleCredentials.ta.js";
 export {
     SpkmCredentials,
     _decode_SpkmCredentials,
     _encode_SpkmCredentials,
-} from "../DirectoryAbstractService/SpkmCredentials.ta";
+} from "../DirectoryAbstractService/SpkmCredentials.ta.js";
 export {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from "../DirectoryAbstractService/StrongCredentials.ta";
+} from "../DirectoryAbstractService/StrongCredentials.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DSACredentials */
 /**

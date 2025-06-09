@@ -1,34 +1,34 @@
 /* eslint-disable */
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     DirectoryBindArgument,
     _decode_DirectoryBindArgument,
     _encode_DirectoryBindArgument,
-} from "../DirectoryAbstractService/DirectoryBindArgument.ta";
-import { directoryBindError } from "../DirectoryAbstractService/directoryBindError.oa";
+} from "../DirectoryAbstractService/DirectoryBindArgument.ta.js";
+import { directoryBindError } from "../DirectoryAbstractService/directoryBindError.oa.js";
 import {
     DirectoryBindResult,
     _decode_DirectoryBindResult,
     _encode_DirectoryBindResult,
-} from "../DirectoryAbstractService/DirectoryBindResult.ta";
+} from "../DirectoryAbstractService/DirectoryBindResult.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     DirectoryBindArgument,
     _decode_DirectoryBindArgument,
     _encode_DirectoryBindArgument,
-} from "../DirectoryAbstractService/DirectoryBindArgument.ta";
-export { directoryBindError } from "../DirectoryAbstractService/directoryBindError.oa";
+} from "../DirectoryAbstractService/DirectoryBindArgument.ta.js";
+export { directoryBindError } from "../DirectoryAbstractService/directoryBindError.oa.js";
 export {
     DirectoryBindResult,
     _decode_DirectoryBindResult,
     _encode_DirectoryBindResult,
-} from "../DirectoryAbstractService/DirectoryBindResult.ta";
+} from "../DirectoryAbstractService/DirectoryBindResult.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION directoryBind */
 /**

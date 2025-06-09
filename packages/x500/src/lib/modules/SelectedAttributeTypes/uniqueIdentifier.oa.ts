@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { bitString } from "../SelectedAttributeTypes/bitString.oa";
-import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
-import { id_at_uniqueIdentifier } from "../SelectedAttributeTypes/id-at-uniqueIdentifier.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { bitString } from "../SelectedAttributeTypes/bitString.oa.js";
+import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
+import { id_at_uniqueIdentifier } from "../SelectedAttributeTypes/id-at-uniqueIdentifier.va.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { bitString } from "../SelectedAttributeTypes/bitString.oa";
-export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
-export { id_at_uniqueIdentifier } from "../SelectedAttributeTypes/id-at-uniqueIdentifier.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { bitString } from "../SelectedAttributeTypes/bitString.oa.js";
+export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
+export { id_at_uniqueIdentifier } from "../SelectedAttributeTypes/id-at-uniqueIdentifier.va.js";
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION uniqueIdentifier */
 /**

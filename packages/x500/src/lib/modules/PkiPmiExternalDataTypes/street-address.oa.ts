@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     StreetAddress,
     _decode_StreetAddress,
     _encode_StreetAddress,
-} from "../PkiPmiExternalDataTypes/StreetAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/StreetAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     StreetAddress,
     _decode_StreetAddress,
     _encode_StreetAddress,
-} from "../PkiPmiExternalDataTypes/StreetAddress.ta";
+} from "../PkiPmiExternalDataTypes/StreetAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION street_address */
 /**

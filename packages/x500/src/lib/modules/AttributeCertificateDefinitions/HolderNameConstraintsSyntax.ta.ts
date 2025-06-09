@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
-} from "../AttributeCertificateDefinitions/GeneralSubtrees.ta";
+} from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.js";
 export {
     GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
-} from "../AttributeCertificateDefinitions/GeneralSubtrees.ta";
+} from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION HolderNameConstraintsSyntax */
 /**

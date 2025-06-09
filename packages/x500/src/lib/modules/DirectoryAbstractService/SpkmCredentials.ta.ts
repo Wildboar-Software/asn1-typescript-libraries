@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SPKM_REP_TI,
     _decode_SPKM_REP_TI,
     _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta";
+} from "../SpkmGssTokens/SPKM-REP-TI.ta.js";
 import {
     SPKM_REQ,
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta";
+} from "../SpkmGssTokens/SPKM-REQ.ta.js";
 export {
     SPKM_REP_TI,
     _decode_SPKM_REP_TI,
     _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta";
+} from "../SpkmGssTokens/SPKM-REP-TI.ta.js";
 export {
     SPKM_REQ,
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta";
+} from "../SpkmGssTokens/SPKM-REQ.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SpkmCredentials */
 /**

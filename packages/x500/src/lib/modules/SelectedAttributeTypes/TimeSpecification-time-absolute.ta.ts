@@ -5,7 +5,7 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 
 /* START_OF_SYMBOL_DEFINITION TimeSpecification_time_absolute */
 /**

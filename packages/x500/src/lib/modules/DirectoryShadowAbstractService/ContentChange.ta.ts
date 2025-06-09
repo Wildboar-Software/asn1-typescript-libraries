@@ -5,47 +5,47 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentChange_attributeChanges,
     _decode_ContentChange_attributeChanges,
     _encode_ContentChange_attributeChanges,
-} from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta";
+} from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta.js";
 import {
     ContentChange_rename,
     _decode_ContentChange_rename,
     _encode_ContentChange_rename,
-} from "../DirectoryShadowAbstractService/ContentChange-rename.ta";
+} from "../DirectoryShadowAbstractService/ContentChange-rename.ta.js";
 import {
     SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta";
+} from "../DirectoryShadowAbstractService/SDSEType.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     ContentChange_attributeChanges,
     _decode_ContentChange_attributeChanges,
     _encode_ContentChange_attributeChanges,
-} from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta";
+} from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta.js";
 export {
     ContentChange_rename,
     _decode_ContentChange_rename,
     _encode_ContentChange_rename,
-} from "../DirectoryShadowAbstractService/ContentChange-rename.ta";
+} from "../DirectoryShadowAbstractService/ContentChange-rename.ta.js";
 export {
     SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta";
+} from "../DirectoryShadowAbstractService/SDSEType.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentChange */
 /**

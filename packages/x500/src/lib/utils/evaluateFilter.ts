@@ -1,50 +1,50 @@
 import type {
     Filter,
-} from "../modules/DirectoryAbstractService/Filter.ta";
+} from "../modules/DirectoryAbstractService/Filter.ta.js";
 import type {
     FilterItem,
-} from "../modules/DirectoryAbstractService/FilterItem.ta";
+} from "../modules/DirectoryAbstractService/FilterItem.ta.js";
 import type {
     AttributeValueAssertion,
-} from "../modules/InformationFramework/AttributeValueAssertion.ta";
+} from "../modules/InformationFramework/AttributeValueAssertion.ta.js";
 import type {
     ContextAssertion,
-} from "../modules/InformationFramework/ContextAssertion.ta";
+} from "../modules/InformationFramework/ContextAssertion.ta.js";
 import type {
     AttributeType,
-} from "../modules/InformationFramework/AttributeType.ta";
+} from "../modules/InformationFramework/AttributeType.ta.js";
 import type {
     AttributeValue,
-} from "../modules/InformationFramework/AttributeValue.ta";
+} from "../modules/InformationFramework/AttributeValue.ta.js";
 import type {
     AttributeTypeAssertion,
-} from "../modules/InformationFramework/AttributeTypeAssertion.ta";
+} from "../modules/InformationFramework/AttributeTypeAssertion.ta.js";
 import type {
     MatchingRuleAssertion,
-} from "../modules/DirectoryAbstractService/MatchingRuleAssertion.ta";
+} from "../modules/DirectoryAbstractService/MatchingRuleAssertion.ta.js";
 import {
     Attribute,
-} from "../modules/InformationFramework/Attribute.ta";
+} from "../modules/InformationFramework/Attribute.ta.js";
 import type {
     EntryInformation,
-} from "../modules/DirectoryAbstractService/EntryInformation.ta";
+} from "../modules/DirectoryAbstractService/EntryInformation.ta.js";
 import type {
     FilterItem_substrings,
-} from "../modules/DirectoryAbstractService/FilterItem-substrings.ta";
+} from "../modules/DirectoryAbstractService/FilterItem-substrings.ta.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
-import type OrderingMatcher from "../types/OrderingMatcher";
-import type SubstringsMatcher from "../types/SubstringsMatcher";
-import type ApproxMatcher from "../types/ApproxMatcher";
-import type ContextMatcher from "../types/ContextMatcher";
-import SubstringSelection from "../types/SubstringSelection";
-import evaluateContextAssertion from "../utils/evaluateContextAssertion";
-import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va";
-import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va";
-import { CannotPerformExactly } from "../errors";
-import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta";
-import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem";
-import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
+import type OrderingMatcher from "../types/OrderingMatcher.js";
+import type SubstringsMatcher from "../types/SubstringsMatcher.js";
+import type ApproxMatcher from "../types/ApproxMatcher.js";
+import type ContextMatcher from "../types/ContextMatcher.js";
+import SubstringSelection from "../types/SubstringSelection.js";
+import evaluateContextAssertion from "../utils/evaluateContextAssertion.js";
+import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.js";
+import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.js";
+import { CannotPerformExactly } from "../errors.js";
+import type { Context } from "@wildboar/x500/src/lib/modules/InformationFramework/Context.ta.js";
+import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.js";
+import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.js";
 
 interface MatchedValue {
     type: AttributeType;

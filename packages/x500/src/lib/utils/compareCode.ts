@@ -1,6 +1,6 @@
 import type {
     Code,
-} from "../modules/CommonProtocolSpecification/Code.ta";
+} from "../modules/CommonProtocolSpecification/Code.ta.js";
 
 export
 function compareCode (a: Code, b: Code): boolean {

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
-import { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/GeneralNames.ta.js";
+import { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
-export { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va";
+} from "../CertificateExtensions/GeneralNames.ta.js";
+export { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va.js";
 
 /* START_OF_SYMBOL_DEFINITION subjectAltName */
 /**

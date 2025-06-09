@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_keyUsage } from "../CertificateExtensions/id-ce-keyUsage.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_keyUsage } from "../CertificateExtensions/id-ce-keyUsage.va.js";
 import {
     KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_keyUsage } from "../CertificateExtensions/id-ce-keyUsage.va";
+} from "../CertificateExtensions/KeyUsage.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_keyUsage } from "../CertificateExtensions/id-ce-keyUsage.va.js";
 export {
     contentCommitment /* IMPORTED_SHORT_NAMED_BIT */,
     cRLSign /* IMPORTED_SHORT_NAMED_BIT */,
@@ -30,7 +30,7 @@ export {
     KeyUsage_keyEncipherment /* IMPORTED_LONG_NAMED_BIT */,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
+} from "../CertificateExtensions/KeyUsage.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION keyUsage */
 /**

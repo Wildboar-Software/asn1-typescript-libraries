@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_privateKeyUsagePeriod } from "../CertificateExtensions/id-ce-privateKeyUsagePeriod.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_privateKeyUsagePeriod } from "../CertificateExtensions/id-ce-privateKeyUsagePeriod.va.js";
 import {
     PrivateKeyUsagePeriod,
     _decode_PrivateKeyUsagePeriod,
     _encode_PrivateKeyUsagePeriod,
-} from "../CertificateExtensions/PrivateKeyUsagePeriod.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_privateKeyUsagePeriod } from "../CertificateExtensions/id-ce-privateKeyUsagePeriod.va";
+} from "../CertificateExtensions/PrivateKeyUsagePeriod.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_privateKeyUsagePeriod } from "../CertificateExtensions/id-ce-privateKeyUsagePeriod.va.js";
 export {
     PrivateKeyUsagePeriod,
     _decode_PrivateKeyUsagePeriod,
     _encode_PrivateKeyUsagePeriod,
-} from "../CertificateExtensions/PrivateKeyUsagePeriod.ta";
+} from "../CertificateExtensions/PrivateKeyUsagePeriod.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION privateKeyUsagePeriod */
 /**

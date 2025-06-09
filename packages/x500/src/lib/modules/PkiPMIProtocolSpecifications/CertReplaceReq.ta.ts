@@ -4,34 +4,34 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.js";
 import {
     CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CASPversion,
     _encode_CASPversion,
     _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta";
+} from "../PkiPMIProtocolSpecifications/CASPversion.ta.js";
 import {
     CertReplaceReq_certs_Item,
     _decode_CertReplaceReq_certs_Item,
     _encode_CertReplaceReq_certs_Item,
-} from "../PkiPMIProtocolSpecifications/CertReplaceReq-certs-Item.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceReq-certs-Item.ta.js";
 export {
     CASPcommonComponents,
     _decode_CASPcommonComponents,
     _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta";
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.js";
 export {
     CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta";
+} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.js";
 export {
     CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -43,12 +43,12 @@ export {
     _decode_CASPversion,
     _encode_CASPversion,
     _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta";
+} from "../PkiPMIProtocolSpecifications/CASPversion.ta.js";
 export {
     CertReplaceReq_certs_Item,
     _decode_CertReplaceReq_certs_Item,
     _encode_CertReplaceReq_certs_Item,
-} from "../PkiPMIProtocolSpecifications/CertReplaceReq-certs-Item.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceReq-certs-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceReq */
 /**

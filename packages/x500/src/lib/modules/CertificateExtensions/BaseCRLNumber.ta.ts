@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 export {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BaseCRLNumber */
 /**

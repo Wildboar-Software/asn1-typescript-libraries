@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va.js";
 export {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../CertificateExtensions/NameConstraintsSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION nameConstraints */
 /**

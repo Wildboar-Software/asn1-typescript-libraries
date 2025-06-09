@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifyDNArgumentData,
     _decode_ModifyDNArgumentData,
     _encode_ModifyDNArgumentData,
-} from "../DirectoryAbstractService/ModifyDNArgumentData.ta";
+} from "../DirectoryAbstractService/ModifyDNArgumentData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     ModifyDNArgumentData,
     _decode_ModifyDNArgumentData,
     _encode_ModifyDNArgumentData,
-} from "../DirectoryAbstractService/ModifyDNArgumentData.ta";
+} from "../DirectoryAbstractService/ModifyDNArgumentData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyDNArgument */
 /**

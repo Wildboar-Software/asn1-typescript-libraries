@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_subjectAltPublicKeyInfo } from "../CertificateExtensions/id-ce-subjectAltPublicKeyInfo.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_subjectAltPublicKeyInfo } from "../CertificateExtensions/id-ce-subjectAltPublicKeyInfo.va.js";
 import {
     SubjectAltPublicKeyInfo,
     _decode_SubjectAltPublicKeyInfo,
     _encode_SubjectAltPublicKeyInfo,
-} from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_subjectAltPublicKeyInfo } from "../CertificateExtensions/id-ce-subjectAltPublicKeyInfo.va";
+} from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_subjectAltPublicKeyInfo } from "../CertificateExtensions/id-ce-subjectAltPublicKeyInfo.va.js";
 export {
     SubjectAltPublicKeyInfo,
     _decode_SubjectAltPublicKeyInfo,
     _encode_SubjectAltPublicKeyInfo,
-} from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta";
+} from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION subjectAltPublicKeyInfo */
 /**

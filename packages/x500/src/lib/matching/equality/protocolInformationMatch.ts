@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
-} from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta";
+} from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.js";
 
 // TODO: This could use a little more intelligence when it comes to comparing addresses.
 export

@@ -1,11 +1,11 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { Code } from "../CommonProtocolSpecification/Code.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Code } from "../CommonProtocolSpecification/Code.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
+} from "../CommonProtocolSpecification/Code.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ERROR */
 /**

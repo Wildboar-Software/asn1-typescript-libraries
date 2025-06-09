@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_orderedList } from "../CertificateExtensions/id-ce-orderedList.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_orderedList } from "../CertificateExtensions/id-ce-orderedList.va.js";
 import {
     OrderedListSyntax,
     _decode_OrderedListSyntax,
     _encode_OrderedListSyntax,
-} from "../CertificateExtensions/OrderedListSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_orderedList } from "../CertificateExtensions/id-ce-orderedList.va";
+} from "../CertificateExtensions/OrderedListSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_orderedList } from "../CertificateExtensions/id-ce-orderedList.va.js";
 export {
     ascRevDate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     ascSerialNum /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -17,7 +17,7 @@ export {
     _decode_OrderedListSyntax,
     _encode_OrderedListSyntax,
     _enum_for_OrderedListSyntax,
-} from "../CertificateExtensions/OrderedListSyntax.ta";
+} from "../CertificateExtensions/OrderedListSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION orderedList */
 /**

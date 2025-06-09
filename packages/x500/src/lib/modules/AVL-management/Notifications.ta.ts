@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Notifications */
 /**

@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AddAvlErr,
     _decode_AddAvlErr,
     _encode_AddAvlErr,
-} from "../PkiPMIProtocolSpecifications/AddAvlErr.ta";
+} from "../PkiPMIProtocolSpecifications/AddAvlErr.ta.js";
 import {
     AddAvlOK,
     _decode_AddAvlOK,
     _encode_AddAvlOK,
-} from "../PkiPMIProtocolSpecifications/AddAvlOK.ta";
+} from "../PkiPMIProtocolSpecifications/AddAvlOK.ta.js";
 export {
     AddAvlErr,
     _decode_AddAvlErr,
     _encode_AddAvlErr,
-} from "../PkiPMIProtocolSpecifications/AddAvlErr.ta";
+} from "../PkiPMIProtocolSpecifications/AddAvlErr.ta.js";
 export {
     AddAvlOK,
     _decode_AddAvlOK,
     _encode_AddAvlOK,
-} from "../PkiPMIProtocolSpecifications/AddAvlOK.ta";
+} from "../PkiPMIProtocolSpecifications/AddAvlOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AddAvlRsp_result */
 /**

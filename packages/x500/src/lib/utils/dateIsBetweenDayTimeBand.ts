@@ -1,6 +1,6 @@
 import {
     DayTimeBand,
-} from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
+} from "../modules/SelectedAttributeTypes/DayTimeBand.ta.js";
 
 function score (hour: number, minute: number, second: number): number {
     return (

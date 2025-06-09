@@ -1,14 +1,14 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element } from "asn1-ts";
-import { evaluateCertificateAssertion } from "./certificateMatch";
+import { evaluateCertificateAssertion } from "./certificateMatch.js";
 import {
     CertificatePairAssertion,
     _decode_CertificatePairAssertion,
-} from "../../modules/CertificateExtensions/CertificatePairAssertion.ta";
+} from "../../modules/CertificateExtensions/CertificatePairAssertion.ta.js";
 import {
     CertificatePair,
     _decode_CertificatePair,
-} from "../../modules/AuthenticationFramework/CertificatePair.ta";
+} from "../../modules/AuthenticationFramework/CertificatePair.ta.js";
 
 export
 const certificatePairMatch: EqualityMatcher = (

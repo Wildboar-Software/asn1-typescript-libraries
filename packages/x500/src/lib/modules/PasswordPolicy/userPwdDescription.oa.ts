@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_userPwdDescription } from "../PasswordPolicy/id-asx-userPwdDescription.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_userPwdDescription } from "../PasswordPolicy/id-asx-userPwdDescription.va.js";
 import {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_userPwdDescription } from "../PasswordPolicy/id-asx-userPwdDescription.va";
+} from "../PasswordPolicy/UserPwd.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_userPwdDescription } from "../PasswordPolicy/id-asx-userPwdDescription.va.js";
 export {
     UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta";
+} from "../PasswordPolicy/UserPwd.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION userPwdDescription */
 /**

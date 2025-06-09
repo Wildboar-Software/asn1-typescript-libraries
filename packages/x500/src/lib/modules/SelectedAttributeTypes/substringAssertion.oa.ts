@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.js";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.js";
 export {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION substringAssertion */
 /**

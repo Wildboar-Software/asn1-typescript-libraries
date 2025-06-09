@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.js";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.js";
 export {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION nameAndOptionalUID */
 /**

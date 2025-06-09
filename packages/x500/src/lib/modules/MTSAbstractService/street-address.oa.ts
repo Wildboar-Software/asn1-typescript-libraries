@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     StreetAddress,
     _decode_StreetAddress,
     _encode_StreetAddress,
-} from "../MTSAbstractService/StreetAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/StreetAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     StreetAddress,
     _decode_StreetAddress,
     _encode_StreetAddress,
-} from "../MTSAbstractService/StreetAddress.ta";
+} from "../MTSAbstractService/StreetAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION street_address */
 /**

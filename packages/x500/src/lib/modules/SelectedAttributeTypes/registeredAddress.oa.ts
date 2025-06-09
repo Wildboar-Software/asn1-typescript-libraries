@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_registeredAddress } from "../SelectedAttributeTypes/id-at-registeredAddress.va";
-import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
-import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_registeredAddress } from "../SelectedAttributeTypes/id-at-registeredAddress.va.js";
+import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.js";
 import {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_registeredAddress } from "../SelectedAttributeTypes/id-at-registeredAddress.va";
-export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa";
-export { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_registeredAddress } from "../SelectedAttributeTypes/id-at-registeredAddress.va.js";
+export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.js";
+export { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.js";
 export {
     PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta";
+} from "../SelectedAttributeTypes/PostalAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION registeredAddress */
 /**

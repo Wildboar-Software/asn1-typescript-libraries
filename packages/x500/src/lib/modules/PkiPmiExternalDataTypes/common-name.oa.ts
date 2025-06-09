@@ -3,14 +3,14 @@ import {
     CommonName,
     _decode_CommonName,
     _encode_CommonName,
-} from "../PkiPmiExternalDataTypes/CommonName.ta";
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/CommonName.ta.js";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     CommonName,
     _decode_CommonName,
     _encode_CommonName,
-} from "../PkiPmiExternalDataTypes/CommonName.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/CommonName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION common_name */
 /**

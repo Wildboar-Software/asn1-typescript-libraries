@@ -1,4 +1,4 @@
-import type EqualityMatcher from "./EqualityMatcher";
+import type EqualityMatcher from "./EqualityMatcher.js";
 
 export
 type ApproxMatcher = EqualityMatcher;

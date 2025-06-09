@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertErr_notOK,
     _decode_CertErr_notOK,
     _encode_CertErr_notOK,
-} from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta.js";
 import {
     Notifications,
     _decode_Notifications,
     _encode_Notifications,
-} from "../PkiPMIProtocolSpecifications/Notifications.ta";
+} from "../PkiPMIProtocolSpecifications/Notifications.ta.js";
 export {
     CertErr_notOK,
     _decode_CertErr_notOK,
     _encode_CertErr_notOK,
-} from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta.js";
 export {
     Notifications,
     _decode_Notifications,
     _encode_Notifications,
-} from "../PkiPMIProtocolSpecifications/Notifications.ta";
+} from "../PkiPMIProtocolSpecifications/Notifications.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertErr */
 /**

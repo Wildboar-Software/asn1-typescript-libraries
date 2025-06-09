@@ -1,5 +1,5 @@
-import type { GeneralName } from "../modules/CertificateExtensions/GeneralName.ta";
-import nameToString from "./nameToString";
+import type { GeneralName } from "../modules/CertificateExtensions/GeneralName.ta.js";
+import nameToString from "./nameToString.js";
 
 // GeneralName ::= CHOICE {
 //     otherName                  [0]  INSTANCE OF OTHER-NAME,

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MRMapping,
     _decode_MRMapping,
     _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta";
+} from "../ServiceAdministration/MRMapping.ta.js";
 export {
     MRMapping,
     _decode_MRMapping,
     _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta";
+} from "../ServiceAdministration/MRMapping.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MRMappings */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta";
+} from "../InformationFramework/BaseDistance.ta.js";
 import {
     ChopSpecification_specificExclusions_Item,
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta";
+} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.js";
 export {
     BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta";
+} from "../InformationFramework/BaseDistance.ta.js";
 export {
     ChopSpecification_specificExclusions_Item,
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta";
+} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ChopSpecification */
 /**

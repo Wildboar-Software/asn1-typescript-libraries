@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa";
-import { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeObj.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa.js";
+import { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeObj.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -19,10 +19,10 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa";
-export { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeObj.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa.js";
+export { id_oc_epcTagTypeObj } from "../SelectedObjectClasses/id-oc-epcTagTypeObj.va.js";
 
 /* START_OF_SYMBOL_DEFINITION epcTagTypeObj */
 /**

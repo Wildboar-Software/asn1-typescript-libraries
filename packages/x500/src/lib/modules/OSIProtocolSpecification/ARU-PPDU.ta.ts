@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ARU_PPDU_normal_mode_parameters,
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta.js";
 export {
     ARU_PPDU_normal_mode_parameters,
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU */
 /**

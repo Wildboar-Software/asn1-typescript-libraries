@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalPostOfficeBoxAddress,
     _decode_UniversalPostOfficeBoxAddress,
     _encode_UniversalPostOfficeBoxAddress,
-} from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalPostOfficeBoxAddress,
     _decode_UniversalPostOfficeBoxAddress,
     _encode_UniversalPostOfficeBoxAddress,
-} from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta";
+} from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_post_office_box_address */
 /**

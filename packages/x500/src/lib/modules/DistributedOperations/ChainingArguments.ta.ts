@@ -6,94 +6,94 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta";
+} from "../BasicAccessControl/AuthenticationLevel.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta";
+} from "../DistributedOperations/DomainInfo.ta.js";
 import {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 import {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 import {
     ReferenceType,
     ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DistributedOperations/Time.ta";
+} from "../DistributedOperations/Time.ta.js";
 import {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from "../DistributedOperations/TraceInformation.ta";
+} from "../DistributedOperations/TraceInformation.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
 import {
     MRMapping,
     _decode_MRMapping,
     _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta";
+} from "../ServiceAdministration/MRMapping.ta.js";
 import {
     SearchRuleId,
     _decode_SearchRuleId,
     _encode_SearchRuleId,
-} from "../ServiceAdministration/SearchRuleId.ta";
+} from "../ServiceAdministration/SearchRuleId.ta.js";
 export {
     AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta";
+} from "../BasicAccessControl/AuthenticationLevel.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta";
+} from "../DistributedOperations/DomainInfo.ta.js";
 export {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 export {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 export {
     cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -117,37 +117,37 @@ export {
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DistributedOperations/Time.ta";
+} from "../DistributedOperations/Time.ta.js";
 export {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from "../DistributedOperations/TraceInformation.ta";
+} from "../DistributedOperations/TraceInformation.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "../SelectedAttributeTypes/UniqueIdentifier.ta.js";
 export {
     MRMapping,
     _decode_MRMapping,
     _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta";
+} from "../ServiceAdministration/MRMapping.ta.js";
 export {
     SearchRuleId,
     _decode_SearchRuleId,
     _encode_SearchRuleId,
-} from "../ServiceAdministration/SearchRuleId.ta";
+} from "../ServiceAdministration/SearchRuleId.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ChainingArguments */
 /**

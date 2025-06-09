@@ -6,28 +6,28 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeTypeInformation,
     _decode_AttributeTypeInformation,
     _encode_AttributeTypeInformation,
-} from "../SchemaAdministration/AttributeTypeInformation.ta";
+} from "../SchemaAdministration/AttributeTypeInformation.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeTypeInformation,
     _decode_AttributeTypeInformation,
     _encode_AttributeTypeInformation,
-} from "../SchemaAdministration/AttributeTypeInformation.ta";
+} from "../SchemaAdministration/AttributeTypeInformation.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeTypeDescription */
 /**

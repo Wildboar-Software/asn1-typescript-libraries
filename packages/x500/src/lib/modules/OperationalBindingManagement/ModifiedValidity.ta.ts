@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifiedValidity_validFrom,
     _decode_ModifiedValidity_validFrom,
     _encode_ModifiedValidity_validFrom,
-} from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta";
+} from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta.js";
 import {
     ModifiedValidity_validUntil,
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
-} from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta";
+} from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.js";
 export {
     ModifiedValidity_validFrom,
     _decode_ModifiedValidity_validFrom,
     _encode_ModifiedValidity_validFrom,
-} from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta";
+} from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta.js";
 export {
     ModifiedValidity_validUntil,
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
-} from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta";
+} from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifiedValidity */
 /**

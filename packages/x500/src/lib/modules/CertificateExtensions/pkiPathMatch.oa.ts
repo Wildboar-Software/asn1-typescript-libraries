@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { id_mr_pkiPathMatch } from "../CertificateExtensions/id-mr-pkiPathMatch.va";
+import { id_mr_pkiPathMatch } from "../CertificateExtensions/id-mr-pkiPathMatch.va.js";
 import {
     PkiPathMatchSyntax,
     _decode_PkiPathMatchSyntax,
     _encode_PkiPathMatchSyntax,
-} from "../CertificateExtensions/PkiPathMatchSyntax.ta";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { id_mr_pkiPathMatch } from "../CertificateExtensions/id-mr-pkiPathMatch.va";
+} from "../CertificateExtensions/PkiPathMatchSyntax.ta.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { id_mr_pkiPathMatch } from "../CertificateExtensions/id-mr-pkiPathMatch.va.js";
 export {
     PkiPathMatchSyntax,
     _decode_PkiPathMatchSyntax,
     _encode_PkiPathMatchSyntax,
-} from "../CertificateExtensions/PkiPathMatchSyntax.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/PkiPathMatchSyntax.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION pkiPathMatch */
 /**

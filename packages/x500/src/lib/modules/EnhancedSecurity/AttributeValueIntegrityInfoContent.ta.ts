@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AVIHash,
     _decode_AVIHash,
     _encode_AVIHash,
-} from "../EnhancedSecurity/AVIHash.ta";
+} from "../EnhancedSecurity/AVIHash.ta.js";
 import {
     Signer,
     _decode_Signer,
     _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta";
+} from "../EnhancedSecurity/Signer.ta.js";
 export {
     AVIHash,
     _decode_AVIHash,
     _encode_AVIHash,
-} from "../EnhancedSecurity/AVIHash.ta";
+} from "../EnhancedSecurity/AVIHash.ta.js";
 export {
     Signer,
     _decode_Signer,
     _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta";
+} from "../EnhancedSecurity/Signer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeValueIntegrityInfoContent */
 /**

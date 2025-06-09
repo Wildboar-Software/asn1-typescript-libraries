@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_mnb } from "../DirectoryManagement/id-mnb.va";
-export { id_mnb } from "../DirectoryManagement/id-mnb.va";
+import { id_mnb } from "../DirectoryManagement/id-mnb.va.js";
+export { id_mnb } from "../DirectoryManagement/id-mnb.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mnb_ULconnEnd_knownDSA */
 /**

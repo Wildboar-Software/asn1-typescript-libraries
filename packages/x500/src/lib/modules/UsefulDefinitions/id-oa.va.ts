@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_oa */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { urnC } from "../SelectedAttributeTypes/urnC.oa";
-import { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va";
-import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { urnC } from "../SelectedAttributeTypes/urnC.oa";
-export { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va";
-export { urnCobj } from "../SelectedObjectClasses/urnCobj.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { urnC } from "../SelectedAttributeTypes/urnC.oa.js";
+import { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.js";
+import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { urnC } from "../SelectedAttributeTypes/urnC.oa.js";
+export { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.js";
+export { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION urnCNameForm */
 /**

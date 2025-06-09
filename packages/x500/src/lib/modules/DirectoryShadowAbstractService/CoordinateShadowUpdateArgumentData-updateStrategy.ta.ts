@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, EXTERNAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.js";
 export {
     CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -17,7 +17,7 @@ export {
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData_updateStrategy */
 /**

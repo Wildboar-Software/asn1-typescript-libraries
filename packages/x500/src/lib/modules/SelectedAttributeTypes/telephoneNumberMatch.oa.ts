@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va";
-import { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.js";
+import { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.js";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va";
-export { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.js";
+export { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.js";
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION telephoneNumberMatch */
 /**

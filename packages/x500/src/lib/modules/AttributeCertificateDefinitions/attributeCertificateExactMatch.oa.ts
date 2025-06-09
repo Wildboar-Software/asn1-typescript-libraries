@@ -3,18 +3,18 @@ import {
     AttributeCertificateExactAssertion,
     _decode_AttributeCertificateExactAssertion,
     _encode_AttributeCertificateExactAssertion,
-} from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta";
-import { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.js";
+import { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     AttributeCertificateExactAssertion,
     _decode_AttributeCertificateExactAssertion,
     _encode_AttributeCertificateExactAssertion,
-} from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta";
-export { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.js";
+export { id_mr_attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/id-mr-attributeCertificateExactMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeCertificateExactMatch */
 /**

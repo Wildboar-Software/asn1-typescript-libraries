@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_protocolInformation } from "../SelectedAttributeTypes/id-at-protocolInformation.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_protocolInformation } from "../SelectedAttributeTypes/id-at-protocolInformation.va.js";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
-import { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInformationMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
+import { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInformationMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_protocolInformation } from "../SelectedAttributeTypes/id-at-protocolInformation.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_protocolInformation } from "../SelectedAttributeTypes/id-at-protocolInformation.va.js";
 export {
     ProtocolInformation,
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta";
-export { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInformationMatch.oa";
+} from "../SelectedAttributeTypes/ProtocolInformation.ta.js";
+export { protocolInformationMatch } from "../SelectedAttributeTypes/protocolInformationMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION protocolInformation */
 /**

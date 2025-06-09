@@ -8,57 +8,57 @@ import {
     OPTIONAL,
     UTCTime,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta";
+} from "../AuthenticationFramework/Validity.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     Context_Data,
     _decode_Context_Data,
     _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta";
+} from "../SpkmGssTokens/Context-Data.ta.js";
 import {
     Key_Estb_Algs,
     _decode_Key_Estb_Algs,
     _encode_Key_Estb_Algs,
-} from "../SpkmGssTokens/Key-Estb-Algs.ta";
+} from "../SpkmGssTokens/Key-Estb-Algs.ta.js";
 import {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 export {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta";
+} from "../AuthenticationFramework/Validity.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     Context_Data,
     _decode_Context_Data,
     _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta";
+} from "../SpkmGssTokens/Context-Data.ta.js";
 export {
     Key_Estb_Algs,
     _decode_Key_Estb_Algs,
     _encode_Key_Estb_Algs,
-} from "../SpkmGssTokens/Key-Estb-Algs.ta";
+} from "../SpkmGssTokens/Key-Estb-Algs.ta.js";
 export {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Req_contents */
 /**

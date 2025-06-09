@@ -4,57 +4,57 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 import {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
     _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 import {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 import {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 import {
     ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../AuthenticationFramework/Time.ta";
+} from "../AuthenticationFramework/Time.ta.js";
 export {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
     _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 export {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
+} from "../CertificateExtensions/CRLNumber.ta.js";
 export {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 export {
     aACompromise /* IMPORTED_SHORT_NAMED_BIT */,
     affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */,
@@ -79,12 +79,12 @@ export {
     weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateListAssertion */
 /**

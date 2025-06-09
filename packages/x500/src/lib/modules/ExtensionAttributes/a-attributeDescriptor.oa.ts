@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { attributeDescriptor } from "../AttributeCertificateDefinitions/attributeDescriptor.oa";
-import { id_asx_attributeDescriptor } from "../ExtensionAttributes/id-asx-attributeDescriptor.va";
-import { id_ce_a_attributeDescriptor } from "../ExtensionAttributes/id-ce-a-attributeDescriptor.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { attributeDescriptor } from "../AttributeCertificateDefinitions/attributeDescriptor.oa.js";
+import { id_asx_attributeDescriptor } from "../ExtensionAttributes/id-asx-attributeDescriptor.va.js";
+import { id_ce_a_attributeDescriptor } from "../ExtensionAttributes/id-ce-a-attributeDescriptor.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { attributeDescriptor } from "../AttributeCertificateDefinitions/attributeDescriptor.oa";
-export { id_asx_attributeDescriptor } from "../ExtensionAttributes/id-asx-attributeDescriptor.va";
-export { id_ce_a_attributeDescriptor } from "../ExtensionAttributes/id-ce-a-attributeDescriptor.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { attributeDescriptor } from "../AttributeCertificateDefinitions/attributeDescriptor.oa.js";
+export { id_asx_attributeDescriptor } from "../ExtensionAttributes/id-asx-attributeDescriptor.va.js";
+export { id_ce_a_attributeDescriptor } from "../ExtensionAttributes/id-ce-a-attributeDescriptor.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_attributeDescriptor */
 /**

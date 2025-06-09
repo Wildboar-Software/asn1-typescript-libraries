@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     ExpiredCertsOnCRL,
     _decode_ExpiredCertsOnCRL,
     _encode_ExpiredCertsOnCRL,
-} from "../CertificateExtensions/ExpiredCertsOnCRL.ta";
-import { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/ExpiredCertsOnCRL.ta.js";
+import { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     ExpiredCertsOnCRL,
     _decode_ExpiredCertsOnCRL,
     _encode_ExpiredCertsOnCRL,
-} from "../CertificateExtensions/ExpiredCertsOnCRL.ta";
-export { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va";
+} from "../CertificateExtensions/ExpiredCertsOnCRL.ta.js";
+export { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va.js";
 
 /* START_OF_SYMBOL_DEFINITION expiredCertsOnCRL */
 /**

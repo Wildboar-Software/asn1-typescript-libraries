@@ -3,16 +3,16 @@ import {
     CertificatePairAssertion,
     _decode_CertificatePairAssertion,
     _encode_CertificatePairAssertion,
-} from "../CertificateExtensions/CertificatePairAssertion.ta";
-import { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificatePairAssertion.ta.js";
+import { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificatePairAssertion,
     _decode_CertificatePairAssertion,
     _encode_CertificatePairAssertion,
-} from "../CertificateExtensions/CertificatePairAssertion.ta";
-export { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificatePairAssertion.ta.js";
+export { id_ldx_certPairAssertion } from "../CertificateExtensions/id-ldx-certPairAssertion.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certPairAssertion */
 /**

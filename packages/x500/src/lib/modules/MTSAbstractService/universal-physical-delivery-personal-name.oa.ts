@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalPhysicalDeliveryPersonalName,
     _decode_UniversalPhysicalDeliveryPersonalName,
     _encode_UniversalPhysicalDeliveryPersonalName,
-} from "../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalPhysicalDeliveryPersonalName,
     _decode_UniversalPhysicalDeliveryPersonalName,
     _encode_UniversalPhysicalDeliveryPersonalName,
-} from "../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta";
+} from "../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_physical_delivery_personal_name */
 /**

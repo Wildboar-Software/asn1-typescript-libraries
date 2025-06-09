@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { oid } from "../SelectedAttributeTypes/oid.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { oid } from "../SelectedAttributeTypes/oid.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { oid } from "../SelectedAttributeTypes/oid.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { oid } from "../SelectedAttributeTypes/oid.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION objectIdentifierMatch */
 /**

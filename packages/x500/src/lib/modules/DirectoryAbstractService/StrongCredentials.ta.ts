@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificationPath,
     _decode_AttributeCertificationPath,
     _encode_AttributeCertificationPath,
-} from "../AttributeCertificateDefinitions/AttributeCertificationPath.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificationPath.ta.js";
 import {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta";
+} from "../AuthenticationFramework/CertificationPath.ta.js";
 import {
     Token,
     _decode_Token,
     _encode_Token,
-} from "../DirectoryAbstractService/Token.ta";
+} from "../DirectoryAbstractService/Token.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     AttributeCertificationPath,
     _decode_AttributeCertificationPath,
     _encode_AttributeCertificationPath,
-} from "../AttributeCertificateDefinitions/AttributeCertificationPath.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificationPath.ta.js";
 export {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta";
+} from "../AuthenticationFramework/CertificationPath.ta.js";
 export {
     Token,
     _decode_Token,
     _encode_Token,
-} from "../DirectoryAbstractService/Token.ta";
+} from "../DirectoryAbstractService/Token.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION StrongCredentials */
 /**

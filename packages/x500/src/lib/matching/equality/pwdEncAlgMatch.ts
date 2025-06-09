@@ -1,14 +1,14 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     PwdEncAlg,
     _decode_PwdEncAlg,
-} from "../../modules/PasswordPolicy/PwdEncAlg.ta";
+} from "../../modules/PasswordPolicy/PwdEncAlg.ta.js";
 import {
     UserPwd,
     _decode_UserPwd,
-} from "../../modules/PasswordPolicy/UserPwd.ta";
-import compareElements from "../../comparators/compareElements";
+} from "../../modules/PasswordPolicy/UserPwd.ta.js";
+import compareElements from "../../comparators/compareElements.js";
 
 export
 const pwdEncAlgMatch: EqualityMatcher = (

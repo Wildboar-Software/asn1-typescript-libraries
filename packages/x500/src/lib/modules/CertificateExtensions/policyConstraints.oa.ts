@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_policyConstraints } from "../CertificateExtensions/id-ce-policyConstraints.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_policyConstraints } from "../CertificateExtensions/id-ce-policyConstraints.va.js";
 import {
     PolicyConstraintsSyntax,
     _decode_PolicyConstraintsSyntax,
     _encode_PolicyConstraintsSyntax,
-} from "../CertificateExtensions/PolicyConstraintsSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_policyConstraints } from "../CertificateExtensions/id-ce-policyConstraints.va";
+} from "../CertificateExtensions/PolicyConstraintsSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_policyConstraints } from "../CertificateExtensions/id-ce-policyConstraints.va.js";
 export {
     PolicyConstraintsSyntax,
     _decode_PolicyConstraintsSyntax,
     _encode_PolicyConstraintsSyntax,
-} from "../CertificateExtensions/PolicyConstraintsSyntax.ta";
+} from "../CertificateExtensions/PolicyConstraintsSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION policyConstraints */
 /**

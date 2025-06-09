@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.js";
 
 /* START_OF_SYMBOL_DEFINITION iso9797 */
 /**

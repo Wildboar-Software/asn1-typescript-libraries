@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_tagAfi } from "../SelectedAttributeTypes/id-at-tagAfi.va";
-import { octetString } from "../SelectedAttributeTypes/octetString.oa";
-import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_tagAfi } from "../SelectedAttributeTypes/id-at-tagAfi.va.js";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.js";
+import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -22,12 +22,12 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_tagAfi } from "../SelectedAttributeTypes/id-at-tagAfi.va";
-export { octetString } from "../SelectedAttributeTypes/octetString.oa";
-export { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_tagAfi } from "../SelectedAttributeTypes/id-at-tagAfi.va.js";
+export { octetString } from "../SelectedAttributeTypes/octetString.oa.js";
+export { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION tagAfi */
 /**

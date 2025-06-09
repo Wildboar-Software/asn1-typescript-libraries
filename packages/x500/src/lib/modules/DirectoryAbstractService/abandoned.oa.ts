@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_errcode_abandoned } from "../CommonProtocolSpecification/id-errcode-abandoned.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_errcode_abandoned } from "../CommonProtocolSpecification/id-errcode-abandoned.va.js";
 import {
     AbandonedData,
     _decode_AbandonedData,
     _encode_AbandonedData,
-} from "../DirectoryAbstractService/AbandonedData.ta";
+} from "../DirectoryAbstractService/AbandonedData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_errcode_abandoned } from "../CommonProtocolSpecification/id-errcode-abandoned.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_errcode_abandoned } from "../CommonProtocolSpecification/id-errcode-abandoned.va.js";
 export {
     AbandonedData,
     _decode_AbandonedData,
     _encode_AbandonedData,
-} from "../DirectoryAbstractService/AbandonedData.ta";
+} from "../DirectoryAbstractService/AbandonedData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION abandoned */
 /**

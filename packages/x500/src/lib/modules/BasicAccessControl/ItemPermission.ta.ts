@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GrantsAndDenials,
     _decode_GrantsAndDenials,
     _encode_GrantsAndDenials,
-} from "../BasicAccessControl/GrantsAndDenials.ta";
+} from "../BasicAccessControl/GrantsAndDenials.ta.js";
 import {
     Precedence,
     _decode_Precedence,
     _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta";
+} from "../BasicAccessControl/Precedence.ta.js";
 import {
     UserClasses,
     _decode_UserClasses,
     _encode_UserClasses,
-} from "../BasicAccessControl/UserClasses.ta";
+} from "../BasicAccessControl/UserClasses.ta.js";
 export {
     denyAdd /* IMPORTED_SHORT_NAMED_BIT */,
     denyBrowse /* IMPORTED_SHORT_NAMED_BIT */,
@@ -76,17 +76,17 @@ export {
     GrantsAndDenials_grantReturnDN /* IMPORTED_LONG_NAMED_BIT */,
     _decode_GrantsAndDenials,
     _encode_GrantsAndDenials,
-} from "../BasicAccessControl/GrantsAndDenials.ta";
+} from "../BasicAccessControl/GrantsAndDenials.ta.js";
 export {
     Precedence,
     _decode_Precedence,
     _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta";
+} from "../BasicAccessControl/Precedence.ta.js";
 export {
     UserClasses,
     _decode_UserClasses,
     _encode_UserClasses,
-} from "../BasicAccessControl/UserClasses.ta";
+} from "../BasicAccessControl/UserClasses.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ItemPermission */
 /**

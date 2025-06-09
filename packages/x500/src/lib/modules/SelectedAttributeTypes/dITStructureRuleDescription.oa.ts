@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
-import { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
+import { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     DITStructureRuleDescription,
     _decode_DITStructureRuleDescription,
     _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta";
-export { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va";
+} from "../SchemaAdministration/DITStructureRuleDescription.ta.js";
+export { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dITStructureRuleDescription */
 /**

@@ -1,12 +1,12 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     Certificate,
     _decode_Certificate,
-} from "../../modules/AuthenticationFramework/Certificate.ta";
+} from "../../modules/AuthenticationFramework/Certificate.ta.js";
 import {
     id_ce_sOAIdentifier,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-sOAIdentifier.va";
+} from "../../modules/AttributeCertificateDefinitions/id-ce-sOAIdentifier.va.js";
 
 export
 const sOAIdentifierMatch: EqualityMatcher = (

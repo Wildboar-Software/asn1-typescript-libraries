@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PhysicalDeliveryOfficeNumber,
     _decode_PhysicalDeliveryOfficeNumber,
     _encode_PhysicalDeliveryOfficeNumber,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryOfficeNumber.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryOfficeNumber.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PhysicalDeliveryOfficeNumber,
     _decode_PhysicalDeliveryOfficeNumber,
     _encode_PhysicalDeliveryOfficeNumber,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryOfficeNumber.ta";
+} from "../PkiPmiExternalDataTypes/PhysicalDeliveryOfficeNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_office_number */
 /**

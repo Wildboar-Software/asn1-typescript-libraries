@@ -1,9 +1,9 @@
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     AuthorityKeyIdentifier,
-} from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta";
-import compareGeneralNames from "./compareGeneralNames";
+} from "../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.js";
+import compareGeneralNames from "./compareGeneralNames.js";
 
 export
 function compareAttCertIssuer (

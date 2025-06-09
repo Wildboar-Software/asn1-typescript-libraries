@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va";
+import { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va.js";
 import {
     MultipleSignaturesAlgo,
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
-} from "../CryptoTools/MultipleSignaturesAlgo.ta";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
-export { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va";
+} from "../CryptoTools/MultipleSignaturesAlgo.ta.js";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
+export { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va.js";
 export {
     MultipleSignaturesAlgo,
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
-} from "../CryptoTools/MultipleSignaturesAlgo.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../CryptoTools/MultipleSignaturesAlgo.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION multipleSignaturesAlgo */
 /**

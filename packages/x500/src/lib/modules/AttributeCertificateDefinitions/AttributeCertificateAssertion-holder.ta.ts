@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "../AttributeCertificateDefinitions/IssuerSerial.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "../AttributeCertificateDefinitions/IssuerSerial.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateAssertion_holder */
 /**

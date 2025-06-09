@@ -7,77 +7,77 @@ import {
     OPTIONAL,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MaxValueCount,
     _decode_MaxValueCount,
     _encode_MaxValueCount,
-} from "../BasicAccessControl/MaxValueCount.ta";
+} from "../BasicAccessControl/MaxValueCount.ta.js";
 import {
     RestrictedValue,
     _decode_RestrictedValue,
     _encode_RestrictedValue,
-} from "../BasicAccessControl/RestrictedValue.ta";
+} from "../BasicAccessControl/RestrictedValue.ta.js";
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 import {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
+} from "../InformationFramework/ContextAssertion.ta.js";
 import {
     Refinement,
     _decode_Refinement,
     _encode_Refinement,
-} from "../InformationFramework/Refinement.ta";
+} from "../InformationFramework/Refinement.ta.js";
 export {
     MaxValueCount,
     _decode_MaxValueCount,
     _encode_MaxValueCount,
-} from "../BasicAccessControl/MaxValueCount.ta";
+} from "../BasicAccessControl/MaxValueCount.ta.js";
 export {
     RestrictedValue,
     _decode_RestrictedValue,
     _encode_RestrictedValue,
-} from "../BasicAccessControl/RestrictedValue.ta";
+} from "../BasicAccessControl/RestrictedValue.ta.js";
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta";
+} from "../DirectoryAbstractService/Filter.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta";
+} from "../InformationFramework/AttributeTypeAndValue.ta.js";
 export {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
+} from "../InformationFramework/ContextAssertion.ta.js";
 export {
     Refinement,
     _decode_Refinement,
     _encode_Refinement,
-} from "../InformationFramework/Refinement.ta";
+} from "../InformationFramework/Refinement.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ProtectedItems */
 /**

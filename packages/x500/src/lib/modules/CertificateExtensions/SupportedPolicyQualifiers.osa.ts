@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca";
-export { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca";
+import { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.js";
+export { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedPolicyQualifiers */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_mr } from "../UsefulDefinitions/id-mr.va";
-export { id_mr } from "../UsefulDefinitions/id-mr.va";
+import { id_mr } from "../UsefulDefinitions/id-mr.va.js";
+export { id_mr } from "../UsefulDefinitions/id-mr.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mr_numericStringMatch */
 /**

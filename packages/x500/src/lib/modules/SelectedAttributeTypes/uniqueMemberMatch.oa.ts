@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va";
-import { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va.js";
+import { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.js";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va";
-export { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va.js";
+export { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.js";
 export {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION uniqueMemberMatch */
 /**

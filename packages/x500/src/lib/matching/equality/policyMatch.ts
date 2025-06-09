@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     PolicySyntax,
     _decode_PolicySyntax,
-} from "../../modules/AuthenticationFramework/PolicySyntax.ta";
+} from "../../modules/AuthenticationFramework/PolicySyntax.ta.js";
 
 export
 const policyMatch: EqualityMatcher = (

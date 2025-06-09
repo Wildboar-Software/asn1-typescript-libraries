@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
-import { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CRLNumber.ta.js";
+import { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta";
-export { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va";
+} from "../CertificateExtensions/CRLNumber.ta.js";
+export { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va.js";
 
 /* START_OF_SYMBOL_DEFINITION cRLNumber */
 /**

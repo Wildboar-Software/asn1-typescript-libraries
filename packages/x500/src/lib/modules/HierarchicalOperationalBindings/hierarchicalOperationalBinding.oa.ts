@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { id_op_binding_hierarchical } from "../DirectoryOperationalBindingTypes/id-op-binding-hierarchical.va";
-import { directorySystemAC } from "../DirectoryOSIProtocols/directorySystemAC.oa";
+import { id_op_binding_hierarchical } from "../DirectoryOperationalBindingTypes/id-op-binding-hierarchical.va.js";
+import { directorySystemAC } from "../DirectoryOSIProtocols/directorySystemAC.oa.js";
 import {
     HierarchicalAgreement,
     _decode_HierarchicalAgreement,
     _encode_HierarchicalAgreement,
-} from "../HierarchicalOperationalBindings/HierarchicalAgreement.ta";
-import { hierarchicalOperationalBinding_roleA } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleA.oa";
-import { hierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleB.oa";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../HierarchicalOperationalBindings/HierarchicalAgreement.ta.js";
+import { hierarchicalOperationalBinding_roleA } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleA.oa.js";
+import { hierarchicalOperationalBinding_roleB } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding-roleB.oa.js";
+import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding */
 /**

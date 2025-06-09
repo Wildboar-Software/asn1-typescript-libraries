@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { statusReferrals } from "../CertificateExtensions/statusReferrals.oa";
-import { id_asx_statusReferrals } from "../ExtensionAttributes/id-asx-statusReferrals.va";
-import { id_ce_a_statusReferrals } from "../ExtensionAttributes/id-ce-a-statusReferrals.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { statusReferrals } from "../CertificateExtensions/statusReferrals.oa.js";
+import { id_asx_statusReferrals } from "../ExtensionAttributes/id-asx-statusReferrals.va.js";
+import { id_ce_a_statusReferrals } from "../ExtensionAttributes/id-ce-a-statusReferrals.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { statusReferrals } from "../CertificateExtensions/statusReferrals.oa";
-export { id_asx_statusReferrals } from "../ExtensionAttributes/id-asx-statusReferrals.va";
-export { id_ce_a_statusReferrals } from "../ExtensionAttributes/id-ce-a-statusReferrals.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { statusReferrals } from "../CertificateExtensions/statusReferrals.oa.js";
+export { id_asx_statusReferrals } from "../ExtensionAttributes/id-asx-statusReferrals.va.js";
+export { id_ce_a_statusReferrals } from "../ExtensionAttributes/id-ce-a-statusReferrals.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_statusReferrals */
 /**

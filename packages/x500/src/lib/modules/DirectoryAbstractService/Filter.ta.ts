@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FilterItem,
     _decode_FilterItem,
     _encode_FilterItem,
-} from "../DirectoryAbstractService/FilterItem.ta";
+} from "../DirectoryAbstractService/FilterItem.ta.js";
 export {
     FilterItem,
     _decode_FilterItem,
     _encode_FilterItem,
-} from "../DirectoryAbstractService/FilterItem.ta";
+} from "../DirectoryAbstractService/FilterItem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Filter */
 /**

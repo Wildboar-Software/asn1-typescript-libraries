@@ -7,54 +7,54 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 export {
     CommonResultsSeq,
     _decode_CommonResultsSeq,
     _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta";
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../InformationFramework/DistinguishedName.ta.js";
+export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.js";
+export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 export {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingResultData */
 /**

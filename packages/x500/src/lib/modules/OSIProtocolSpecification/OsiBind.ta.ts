@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiBind_mode_selector,
     _decode_OsiBind_mode_selector,
     _encode_OsiBind_mode_selector,
-} from "../OSIProtocolSpecification/OsiBind-mode-selector.ta";
+} from "../OSIProtocolSpecification/OsiBind-mode-selector.ta.js";
 import {
     OsiBind_normal_mode_parameters,
     _decode_OsiBind_normal_mode_parameters,
     _encode_OsiBind_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta.js";
 export {
     OsiBind_mode_selector,
     _decode_OsiBind_mode_selector,
     _encode_OsiBind_mode_selector,
-} from "../OSIProtocolSpecification/OsiBind-mode-selector.ta";
+} from "../OSIProtocolSpecification/OsiBind-mode-selector.ta.js";
 export {
     OsiBind_normal_mode_parameters,
     _decode_OsiBind_normal_mode_parameters,
     _encode_OsiBind_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta";
+} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBind */
 /**

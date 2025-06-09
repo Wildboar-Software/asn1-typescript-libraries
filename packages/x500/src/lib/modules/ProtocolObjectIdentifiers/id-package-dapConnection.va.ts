@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_package } from "../UsefulDefinitions/id-package.va";
-export { id_package } from "../UsefulDefinitions/id-package.va";
+import { id_package } from "../UsefulDefinitions/id-package.va.js";
+export { id_package } from "../UsefulDefinitions/id-package.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_package_dapConnection */
 /**

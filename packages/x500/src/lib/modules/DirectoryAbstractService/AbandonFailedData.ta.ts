@@ -5,37 +5,37 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta";
+} from "../CommonProtocolSpecification/InvokeId.ta.js";
 import {
     AbandonProblem,
     _decode_AbandonProblem,
     _encode_AbandonProblem,
-} from "../DirectoryAbstractService/AbandonProblem.ta";
+} from "../DirectoryAbstractService/AbandonProblem.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta";
+} from "../CommonProtocolSpecification/InvokeId.ta.js";
 export {
     AbandonProblem,
     AbandonProblem_cannotAbandon /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -46,27 +46,27 @@ export {
     tooLate /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AbandonProblem,
     _encode_AbandonProblem,
-} from "../DirectoryAbstractService/AbandonProblem.ta";
+} from "../DirectoryAbstractService/AbandonProblem.ta.js";
 export {
     CommonResults,
     _decode_CommonResults,
     _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta";
+} from "../DirectoryAbstractService/CommonResults.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AbandonFailedData */
 /**

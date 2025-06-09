@@ -3,16 +3,16 @@ import {
     CertificatePairExactAssertion,
     _decode_CertificatePairExactAssertion,
     _encode_CertificatePairExactAssertion,
-} from "../CertificateExtensions/CertificatePairExactAssertion.ta";
-import { id_ldx_certPairExactAssertion } from "../CertificateExtensions/id-ldx-certPairExactAssertion.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificatePairExactAssertion.ta.js";
+import { id_ldx_certPairExactAssertion } from "../CertificateExtensions/id-ldx-certPairExactAssertion.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificatePairExactAssertion,
     _decode_CertificatePairExactAssertion,
     _encode_CertificatePairExactAssertion,
-} from "../CertificateExtensions/CertificatePairExactAssertion.ta";
-export { id_ldx_certPairExactAssertion } from "../CertificateExtensions/id-ldx-certPairExactAssertion.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificatePairExactAssertion.ta.js";
+export { id_ldx_certPairExactAssertion } from "../CertificateExtensions/id-ldx-certPairExactAssertion.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certPairExactAssertion */
 /**

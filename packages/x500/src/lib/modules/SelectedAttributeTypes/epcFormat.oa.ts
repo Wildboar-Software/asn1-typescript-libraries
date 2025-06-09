@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { epcForm } from "../SelectedAttributeTypes/epcForm.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { epcForm } from "../SelectedAttributeTypes/epcForm.oa.js";
 import {
     EpcFormat,
     _decode_EpcFormat,
     _encode_EpcFormat,
-} from "../SelectedAttributeTypes/EpcFormat.ta";
-import { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/EpcFormat.ta.js";
+import { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { epcForm } from "../SelectedAttributeTypes/epcForm.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { epcForm } from "../SelectedAttributeTypes/epcForm.oa.js";
 export {
     EpcFormat,
     _decode_EpcFormat,
     _encode_EpcFormat,
-} from "../SelectedAttributeTypes/EpcFormat.ta";
-export { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va";
+} from "../SelectedAttributeTypes/EpcFormat.ta.js";
+export { id_at_epcFormat } from "../SelectedAttributeTypes/id-at-epcFormat.va.js";
 
 /* START_OF_SYMBOL_DEFINITION epcFormat */
 /**

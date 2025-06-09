@@ -5,27 +5,27 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SimpleCredentials_validity_time1,
     _decode_SimpleCredentials_validity_time1,
     _encode_SimpleCredentials_validity_time1,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta.js";
 import {
     SimpleCredentials_validity_time2,
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.js";
 export {
     SimpleCredentials_validity_time1,
     _decode_SimpleCredentials_validity_time1,
     _encode_SimpleCredentials_validity_time1,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta.js";
 export {
     SimpleCredentials_validity_time2,
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta";
+} from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials_validity */
 /**

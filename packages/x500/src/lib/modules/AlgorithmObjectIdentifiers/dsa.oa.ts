@@ -3,16 +3,16 @@ import {
     DSS_Parms,
     _decode_DSS_Parms,
     _encode_DSS_Parms,
-} from "../AlgorithmObjectIdentifiers/DSS-Parms.ta";
-import { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.js";
+import { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 export {
     DSS_Parms,
     _decode_DSS_Parms,
     _encode_DSS_Parms,
-} from "../AlgorithmObjectIdentifiers/DSS-Parms.ta";
-export { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.js";
+export { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dsa */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalDomainDefinedAttributes,
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttributes.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttributes.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalDomainDefinedAttributes,
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttributes.ta";
+} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_domain_defined_attributes */
 /**

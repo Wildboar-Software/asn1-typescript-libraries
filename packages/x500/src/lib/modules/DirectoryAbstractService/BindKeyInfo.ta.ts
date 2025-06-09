@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, BIT_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../AuthenticationFramework/ENCRYPTED.ta";
+} from "../AuthenticationFramework/ENCRYPTED.ta.js";
 export {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../AuthenticationFramework/ENCRYPTED.ta";
+} from "../AuthenticationFramework/ENCRYPTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BindKeyInfo */
 /**

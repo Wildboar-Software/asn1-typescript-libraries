@@ -1,19 +1,19 @@
 /* eslint-disable */
-import { userPassword } from "../AuthenticationFramework/userPassword.oa";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { description } from "../SelectedAttributeTypes/description.oa";
-import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-import { surname } from "../SelectedAttributeTypes/surname.oa";
-import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa";
-import { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va";
-export { userPassword } from "../AuthenticationFramework/userPassword.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { description } from "../SelectedAttributeTypes/description.oa.js";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+import { surname } from "../SelectedAttributeTypes/surname.oa.js";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.js";
+import { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va.js";
+export { userPassword } from "../AuthenticationFramework/userPassword.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -25,14 +25,14 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { description } from "../SelectedAttributeTypes/description.oa";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa";
-export { surname } from "../SelectedAttributeTypes/surname.oa";
-export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa";
-export { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { description } from "../SelectedAttributeTypes/description.oa.js";
+export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.js";
+export { surname } from "../SelectedAttributeTypes/surname.oa.js";
+export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.js";
+export { id_oc_person } from "../SelectedObjectClasses/id-oc-person.va.js";
 
 /* START_OF_SYMBOL_DEFINITION person */
 /**

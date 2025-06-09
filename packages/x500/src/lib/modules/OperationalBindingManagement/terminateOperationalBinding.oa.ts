@@ -1,38 +1,38 @@
 /* eslint-disable */
-import { id_op_terminateOperationalBinding } from "../CommonProtocolSpecification/id-op-terminateOperationalBinding.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa";
+import { id_op_terminateOperationalBinding } from "../CommonProtocolSpecification/id-op-terminateOperationalBinding.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.js";
 import {
     TerminateOperationalBindingArgument,
     _decode_TerminateOperationalBindingArgument,
     _encode_TerminateOperationalBindingArgument,
-} from "../OperationalBindingManagement/TerminateOperationalBindingArgument.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingArgument.ta.js";
 import {
     TerminateOperationalBindingResult,
     _decode_TerminateOperationalBindingResult,
     _encode_TerminateOperationalBindingResult,
-} from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_op_terminateOperationalBinding } from "../CommonProtocolSpecification/id-op-terminateOperationalBinding.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_op_terminateOperationalBinding } from "../CommonProtocolSpecification/id-op-terminateOperationalBinding.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.js";
 export {
     TerminateOperationalBindingArgument,
     _decode_TerminateOperationalBindingArgument,
     _encode_TerminateOperationalBindingArgument,
-} from "../OperationalBindingManagement/TerminateOperationalBindingArgument.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingArgument.ta.js";
 export {
     TerminateOperationalBindingResult,
     _decode_TerminateOperationalBindingResult,
     _encode_TerminateOperationalBindingResult,
-} from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION terminateOperationalBinding */
 /**

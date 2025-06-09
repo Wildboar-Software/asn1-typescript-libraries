@@ -5,17 +5,17 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.js";
 export {
     AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ICV_Invoke */
 /**

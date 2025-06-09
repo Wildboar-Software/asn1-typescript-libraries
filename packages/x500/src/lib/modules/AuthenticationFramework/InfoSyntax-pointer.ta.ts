@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 import {
     HashedPolicyInfo,
     _decode_HashedPolicyInfo,
     _encode_HashedPolicyInfo,
-} from "../AuthenticationFramework/HashedPolicyInfo.ta";
+} from "../AuthenticationFramework/HashedPolicyInfo.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta";
+} from "../AuthenticationFramework/HASH.ta.js";
 export {
     HashedPolicyInfo,
     _decode_HashedPolicyInfo,
     _encode_HashedPolicyInfo,
-} from "../AuthenticationFramework/HashedPolicyInfo.ta";
+} from "../AuthenticationFramework/HashedPolicyInfo.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION InfoSyntax_pointer */
 /**

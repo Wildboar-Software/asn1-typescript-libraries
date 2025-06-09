@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { allowedAttributeAssignments } from "../AttributeCertificateDefinitions/allowedAttributeAssignments.oa";
-import { id_asx_allowedAttributeAssignments } from "../ExtensionAttributes/id-asx-allowedAttributeAssignments.va";
-import { id_ce_a_allowedAttributeAssignments } from "../ExtensionAttributes/id-ce-a-allowedAttributeAssignments.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { allowedAttributeAssignments } from "../AttributeCertificateDefinitions/allowedAttributeAssignments.oa.js";
+import { id_asx_allowedAttributeAssignments } from "../ExtensionAttributes/id-asx-allowedAttributeAssignments.va.js";
+import { id_ce_a_allowedAttributeAssignments } from "../ExtensionAttributes/id-ce-a-allowedAttributeAssignments.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { allowedAttributeAssignments } from "../AttributeCertificateDefinitions/allowedAttributeAssignments.oa";
-export { id_asx_allowedAttributeAssignments } from "../ExtensionAttributes/id-asx-allowedAttributeAssignments.va";
-export { id_ce_a_allowedAttributeAssignments } from "../ExtensionAttributes/id-ce-a-allowedAttributeAssignments.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { allowedAttributeAssignments } from "../AttributeCertificateDefinitions/allowedAttributeAssignments.oa.js";
+export { id_asx_allowedAttributeAssignments } from "../ExtensionAttributes/id-asx-allowedAttributeAssignments.va.js";
+export { id_ce_a_allowedAttributeAssignments } from "../ExtensionAttributes/id-ce-a-allowedAttributeAssignments.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_allowedAttributeAssignments */
 /**

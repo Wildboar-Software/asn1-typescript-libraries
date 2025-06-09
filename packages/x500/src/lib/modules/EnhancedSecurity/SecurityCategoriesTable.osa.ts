@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca";
-export { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca";
+import { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.js";
+export { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityCategoriesTable */
 /**

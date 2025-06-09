@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificationData,
     _decode_CertificationData,
     _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta";
+} from "../SpkmGssTokens/CertificationData.ta.js";
 import {
     REP_TI_TOKEN,
     _decode_REP_TI_TOKEN,
     _encode_REP_TI_TOKEN,
-} from "../SpkmGssTokens/REP-TI-TOKEN.ta";
+} from "../SpkmGssTokens/REP-TI-TOKEN.ta.js";
 export {
     CertificationData,
     _decode_CertificationData,
     _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta";
+} from "../SpkmGssTokens/CertificationData.ta.js";
 export {
     REP_TI_TOKEN,
     _decode_REP_TI_TOKEN,
     _encode_REP_TI_TOKEN,
-} from "../SpkmGssTokens/REP-TI-TOKEN.ta";
+} from "../SpkmGssTokens/REP-TI-TOKEN.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKM_REP_TI */
 /**

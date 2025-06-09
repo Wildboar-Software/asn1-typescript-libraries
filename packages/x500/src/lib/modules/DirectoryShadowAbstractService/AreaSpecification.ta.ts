@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 import {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AreaSpecification */
 /**

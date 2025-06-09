@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
-import { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va";
-import { organization } from "../SelectedObjectClasses/organization.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa";
-export { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va";
-export { organization } from "../SelectedObjectClasses/organization.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
+import { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va.js";
+import { organization } from "../SelectedObjectClasses/organization.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.js";
+export { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va.js";
+export { organization } from "../SelectedObjectClasses/organization.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION orgNameForm */
 /**

@@ -1,54 +1,54 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareName from "../../comparators/compareName";
+import compareName from "../../comparators/compareName.js";
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
-} from "../../modules/CertificateExtensions/CertificateAssertion.ta";
+} from "../../modules/CertificateExtensions/CertificateAssertion.ta.js";
 import {
     Certificate,
     _decode_Certificate,
-} from "../../modules/AuthenticationFramework/Certificate.ta";
+} from "../../modules/AuthenticationFramework/Certificate.ta.js";
 import {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import {
     id_ce_subjectKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-subjectKeyIdentifier.va";
+} from "../../modules/CertificateExtensions/id-ce-subjectKeyIdentifier.va.js";
 import {
     id_ce_authorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va";
+} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va.js";
 import {
     id_ce_privateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/id-ce-privateKeyUsagePeriod.va";
+} from "../../modules/CertificateExtensions/id-ce-privateKeyUsagePeriod.va.js";
 import {
     id_ce_subjectAltName,
-} from "../../modules/CertificateExtensions/id-ce-subjectAltName.va";
+} from "../../modules/CertificateExtensions/id-ce-subjectAltName.va.js";
 import {
     id_ce_certificatePolicies,
-} from "../../modules/CertificateExtensions/id-ce-certificatePolicies.va";
+} from "../../modules/CertificateExtensions/id-ce-certificatePolicies.va.js";
 import {
     id_ce_nameConstraints,
-} from "../../modules/CertificateExtensions/id-ce-nameConstraints.va";
+} from "../../modules/CertificateExtensions/id-ce-nameConstraints.va.js";
 import {
     id_ce_keyUsage,
-} from "../../modules/CertificateExtensions/id-ce-keyUsage.va";
+} from "../../modules/CertificateExtensions/id-ce-keyUsage.va.js";
 import {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 import {
     PrivateKeyUsagePeriod,
     _decode_PrivateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta";
+} from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.js";
 import {
     KeyUsage,
     _decode_KeyUsage,
-} from "../../modules/CertificateExtensions/KeyUsage.ta";
+} from "../../modules/CertificateExtensions/KeyUsage.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
-} from "../../modules/CertificateExtensions/GeneralNames.ta";
+} from "../../modules/CertificateExtensions/GeneralNames.ta.js";
 import {
     AltNameType_builtinNameForm_rfc822Name,
     AltNameType_builtinNameForm_dNSName,
@@ -58,21 +58,21 @@ import {
     AltNameType_builtinNameForm_uniformResourceIdentifier,
     AltNameType_builtinNameForm_iPAddress,
     AltNameType_builtinNameForm_registeredId,
-} from "../../modules/CertificateExtensions/AltNameType.ta";
-import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier";
-import getDateFromTime from "../../utils/getDateFromTime";
+} from "../../modules/CertificateExtensions/AltNameType.ta.js";
+import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.js";
+import getDateFromTime from "../../utils/getDateFromTime.js";
 import {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
-} from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta";
+} from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.js";
 import {
     NameConstraintsSyntax,
     _decode_NameConstraintsSyntax,
-} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta";
+} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.js";
 import {
     anyPolicy,
-} from "../../modules/CertificateExtensions/anyPolicy.va";
-import dnWithinSubtree from "../../utils/dnWithinSubtree";
+} from "../../modules/CertificateExtensions/anyPolicy.va.js";
+import dnWithinSubtree from "../../utils/dnWithinSubtree.js";
 
 const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();
 const SKI_OID: string = id_ce_subjectKeyIdentifier.toString();

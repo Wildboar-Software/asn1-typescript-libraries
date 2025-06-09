@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va";
-import { printableString } from "../SelectedAttributeTypes/printableString.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va.js";
+import { printableString } from "../SelectedAttributeTypes/printableString.oa.js";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
-import { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa";
-import { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
+import { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa.js";
+import { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -26,18 +26,18 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va";
-export { printableString } from "../SelectedAttributeTypes/printableString.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va.js";
+export { printableString } from "../SelectedAttributeTypes/printableString.oa.js";
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta";
-export { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa";
-export { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa";
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.js";
+export { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa.js";
+export { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION telephoneNumber */
 /**

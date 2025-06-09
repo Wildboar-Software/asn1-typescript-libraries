@@ -7,55 +7,55 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 import {
     FamilyGrouping,
     FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
+} from "../DirectoryAbstractService/FamilyGrouping.ta.js";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     ServiceControls,
     _decode_ServiceControls,
     _encode_ServiceControls,
-} from "../DirectoryAbstractService/ServiceControls.ta";
+} from "../DirectoryAbstractService/ServiceControls.ta.js";
 import {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 import {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 import {
     ReferenceType,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta";
+} from "../DirectoryAbstractService/ContextSelection.ta.js";
 export {
     compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -69,27 +69,27 @@ export {
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
+} from "../DirectoryAbstractService/FamilyGrouping.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     ServiceControls,
     _decode_ServiceControls,
     _encode_ServiceControls,
-} from "../DirectoryAbstractService/ServiceControls.ta";
+} from "../DirectoryAbstractService/ServiceControls.ta.js";
 export {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 export {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 export {
     cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -113,12 +113,12 @@ export {
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonArgumentsSeq */
 /**

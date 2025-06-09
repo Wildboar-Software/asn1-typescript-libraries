@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { ldapSyntaxes } from "../LdapSystemSchema/ldapSyntaxes.oa";
-import { attributeTypes } from "../SchemaAdministration/attributeTypes.oa";
-import { contextTypes } from "../SchemaAdministration/contextTypes.oa";
-import { dITContentRules } from "../SchemaAdministration/dITContentRules.oa";
-import { dITContextUse } from "../SchemaAdministration/dITContextUse.oa";
-import { dITStructureRules } from "../SchemaAdministration/dITStructureRules.oa";
-import { friends } from "../SchemaAdministration/friends.oa";
-import { id_soc_subschema } from "../SchemaAdministration/id-soc-subschema.va";
-import { matchingRules } from "../SchemaAdministration/matchingRules.oa";
-import { matchingRuleUse } from "../SchemaAdministration/matchingRuleUse.oa";
-import { nameForms } from "../SchemaAdministration/nameForms.oa";
-import { objectClasses } from "../SchemaAdministration/objectClasses.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { ldapSyntaxes } from "../LdapSystemSchema/ldapSyntaxes.oa.js";
+import { attributeTypes } from "../SchemaAdministration/attributeTypes.oa.js";
+import { contextTypes } from "../SchemaAdministration/contextTypes.oa.js";
+import { dITContentRules } from "../SchemaAdministration/dITContentRules.oa.js";
+import { dITContextUse } from "../SchemaAdministration/dITContextUse.oa.js";
+import { dITStructureRules } from "../SchemaAdministration/dITStructureRules.oa.js";
+import { friends } from "../SchemaAdministration/friends.oa.js";
+import { id_soc_subschema } from "../SchemaAdministration/id-soc-subschema.va.js";
+import { matchingRules } from "../SchemaAdministration/matchingRules.oa.js";
+import { matchingRuleUse } from "../SchemaAdministration/matchingRuleUse.oa.js";
+import { nameForms } from "../SchemaAdministration/nameForms.oa.js";
+import { objectClasses } from "../SchemaAdministration/objectClasses.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -28,19 +28,19 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { ldapSyntaxes } from "../LdapSystemSchema/ldapSyntaxes.oa";
-export { attributeTypes } from "../SchemaAdministration/attributeTypes.oa";
-export { contextTypes } from "../SchemaAdministration/contextTypes.oa";
-export { dITContentRules } from "../SchemaAdministration/dITContentRules.oa";
-export { dITContextUse } from "../SchemaAdministration/dITContextUse.oa";
-export { dITStructureRules } from "../SchemaAdministration/dITStructureRules.oa";
-export { friends } from "../SchemaAdministration/friends.oa";
-export { id_soc_subschema } from "../SchemaAdministration/id-soc-subschema.va";
-export { matchingRules } from "../SchemaAdministration/matchingRules.oa";
-export { matchingRuleUse } from "../SchemaAdministration/matchingRuleUse.oa";
-export { nameForms } from "../SchemaAdministration/nameForms.oa";
-export { objectClasses } from "../SchemaAdministration/objectClasses.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { ldapSyntaxes } from "../LdapSystemSchema/ldapSyntaxes.oa.js";
+export { attributeTypes } from "../SchemaAdministration/attributeTypes.oa.js";
+export { contextTypes } from "../SchemaAdministration/contextTypes.oa.js";
+export { dITContentRules } from "../SchemaAdministration/dITContentRules.oa.js";
+export { dITContextUse } from "../SchemaAdministration/dITContextUse.oa.js";
+export { dITStructureRules } from "../SchemaAdministration/dITStructureRules.oa.js";
+export { friends } from "../SchemaAdministration/friends.oa.js";
+export { id_soc_subschema } from "../SchemaAdministration/id-soc-subschema.va.js";
+export { matchingRules } from "../SchemaAdministration/matchingRules.oa.js";
+export { matchingRuleUse } from "../SchemaAdministration/matchingRuleUse.oa.js";
+export { nameForms } from "../SchemaAdministration/nameForms.oa.js";
+export { objectClasses } from "../SchemaAdministration/objectClasses.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION subschema */
 /**

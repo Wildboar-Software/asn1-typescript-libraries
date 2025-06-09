@@ -5,17 +5,17 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ListResultData_listInfo_subordinates_Item */
 /**

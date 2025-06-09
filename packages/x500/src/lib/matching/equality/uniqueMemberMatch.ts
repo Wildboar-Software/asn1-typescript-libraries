@@ -1,11 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type { ASN1Element, BIT_STRING } from "asn1-ts";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
-} from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
-import compareDistinguishedName from "../../comparators/compareDistinguishedName";
+} from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
+import compareDistinguishedName from "../../comparators/compareDistinguishedName.js";
 
 export
 const uniqueMemberMatch: EqualityMatcher = (

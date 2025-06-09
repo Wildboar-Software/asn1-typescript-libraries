@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ACPathData,
     _decode_ACPathData,
     _encode_ACPathData,
-} from "../AttributeCertificateDefinitions/ACPathData.ta";
+} from "../AttributeCertificateDefinitions/ACPathData.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 export {
     ACPathData,
     _decode_ACPathData,
     _encode_ACPathData,
-} from "../AttributeCertificateDefinitions/ACPathData.ta";
+} from "../AttributeCertificateDefinitions/ACPathData.ta.js";
 export {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeCertificationPath */
 /**

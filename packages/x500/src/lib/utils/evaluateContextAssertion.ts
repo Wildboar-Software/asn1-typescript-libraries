@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type { Context } from "../modules/InformationFramework/Context.ta";
+import type { Context } from "../modules/InformationFramework/Context.ta.js";
 import type {
     ContextAssertion,
-} from "../modules/InformationFramework/ContextAssertion.ta";
-import type ContextMatcher from "../types/ContextMatcher";
+} from "../modules/InformationFramework/ContextAssertion.ta.js";
+import type ContextMatcher from "../types/ContextMatcher.js";
 
 export
 function evaluateContextAssertion (

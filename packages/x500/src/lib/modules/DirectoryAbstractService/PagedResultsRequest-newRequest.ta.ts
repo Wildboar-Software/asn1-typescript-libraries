@@ -6,17 +6,17 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SortKey,
     _decode_SortKey,
     _encode_SortKey,
-} from "../DirectoryAbstractService/SortKey.ta";
+} from "../DirectoryAbstractService/SortKey.ta.js";
 export {
     SortKey,
     _decode_SortKey,
     _encode_SortKey,
-} from "../DirectoryAbstractService/SortKey.ta";
+} from "../DirectoryAbstractService/SortKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PagedResultsRequest_newRequest */
 /**

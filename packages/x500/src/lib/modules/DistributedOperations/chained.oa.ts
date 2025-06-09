@@ -1,19 +1,19 @@
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 import {
     Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1,
     _decode_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1,
     _encode_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1,
-} from "./Chained-ArgumentType-OPTIONALLY-PROTECTED-Parameter1.ta";
+} from "./Chained-ArgumentType-OPTIONALLY-PROTECTED-Parameter1.ta.js";
 import {
     Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
     _decode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
     _encode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
-} from "./Chained-ResultType-OPTIONALLY-PROTECTED-Parameter1.ta";
+} from "./Chained-ResultType-OPTIONALLY-PROTECTED-Parameter1.ta.js";
 
 export
 type ChainedOperation = OPERATION<

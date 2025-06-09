@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa";
-import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa";
-import { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-import { id_at_businessCategory } from "../SelectedAttributeTypes/id-at-businessCategory.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.js";
+import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.js";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+import { id_at_businessCategory } from "../SelectedAttributeTypes/id-at-businessCategory.va.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -26,18 +26,18 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa";
-export { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa";
-export { id_at_businessCategory } from "../SelectedAttributeTypes/id-at-businessCategory.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.js";
+export { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.js";
+export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.js";
+export { id_at_businessCategory } from "../SelectedAttributeTypes/id-at-businessCategory.va.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION businessCategory */
 /**

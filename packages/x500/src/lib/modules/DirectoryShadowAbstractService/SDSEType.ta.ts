@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DSEType,
     _decode_DSEType,
     _encode_DSEType,
-} from "../DSAOperationalAttributeTypes/DSEType.ta";
+} from "../DSAOperationalAttributeTypes/DSEType.ta.js";
 export {
     admPoint /* IMPORTED_SHORT_NAMED_BIT */,
     alias /* IMPORTED_SHORT_NAMED_BIT */,
@@ -46,7 +46,7 @@ export {
     xr /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DSEType,
     _encode_DSEType,
-} from "../DSAOperationalAttributeTypes/DSEType.ta";
+} from "../DSAOperationalAttributeTypes/DSEType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SDSEType */
 /**

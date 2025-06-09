@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va.js";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 import {
     OpBindingErrorParam,
     _decode_OpBindingErrorParam,
     _encode_OpBindingErrorParam,
-} from "../OperationalBindingManagement/OpBindingErrorParam.ta";
+} from "../OperationalBindingManagement/OpBindingErrorParam.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     OpBindingErrorParam,
     _decode_OpBindingErrorParam,
     _encode_OpBindingErrorParam,
-} from "../OperationalBindingManagement/OpBindingErrorParam.ta";
+} from "../OperationalBindingManagement/OpBindingErrorParam.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION operationalBindingError */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/id-rejectCAsubscribe.va";
+import { id_rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/id-rejectCAsubscribe.va.js";
 import {
     RejectCAsubscribe,
     _decode_RejectCAsubscribe,
     _encode_RejectCAsubscribe,
-} from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
-export { id_rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/id-rejectCAsubscribe.va";
+} from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
+export { id_rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/id-rejectCAsubscribe.va.js";
 export {
     RejectCAsubscribe,
     _decode_RejectCAsubscribe,
     _encode_RejectCAsubscribe,
-} from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION rejectCAsubscribe */
 /**

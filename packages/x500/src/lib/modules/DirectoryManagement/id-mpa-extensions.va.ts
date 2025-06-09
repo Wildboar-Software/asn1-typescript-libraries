@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_mpa } from "../DirectoryManagement/id-mpa.va";
-export { id_mpa } from "../DirectoryManagement/id-mpa.va";
+import { id_mpa } from "../DirectoryManagement/id-mpa.va.js";
+export { id_mpa } from "../DirectoryManagement/id-mpa.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mpa_extensions */
 /**

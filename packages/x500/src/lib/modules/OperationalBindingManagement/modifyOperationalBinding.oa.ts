@@ -1,38 +1,38 @@
 /* eslint-disable */
-import { id_op_modifyOperationalBinding } from "../CommonProtocolSpecification/id-op-modifyOperationalBinding.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
+import { id_op_modifyOperationalBinding } from "../CommonProtocolSpecification/id-op-modifyOperationalBinding.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
 import {
     ModifyOperationalBindingArgument,
     _decode_ModifyOperationalBindingArgument,
     _encode_ModifyOperationalBindingArgument,
-} from "../OperationalBindingManagement/ModifyOperationalBindingArgument.ta";
+} from "../OperationalBindingManagement/ModifyOperationalBindingArgument.ta.js";
 import {
     ModifyOperationalBindingResult,
     _decode_ModifyOperationalBindingResult,
     _encode_ModifyOperationalBindingResult,
-} from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta";
-import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa";
+} from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta.js";
+import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_op_modifyOperationalBinding } from "../CommonProtocolSpecification/id-op-modifyOperationalBinding.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_op_modifyOperationalBinding } from "../CommonProtocolSpecification/id-op-modifyOperationalBinding.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
 export {
     ModifyOperationalBindingArgument,
     _decode_ModifyOperationalBindingArgument,
     _encode_ModifyOperationalBindingArgument,
-} from "../OperationalBindingManagement/ModifyOperationalBindingArgument.ta";
+} from "../OperationalBindingManagement/ModifyOperationalBindingArgument.ta.js";
 export {
     ModifyOperationalBindingResult,
     _decode_ModifyOperationalBindingResult,
     _encode_ModifyOperationalBindingResult,
-} from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta";
-export { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa";
+} from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta.js";
+export { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION modifyOperationalBinding */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { id_oc_top } from "../InformationFramework/id-oc-top.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-import { objectClass } from "../InformationFramework/objectClass.oa";
+import { id_oc_top } from "../InformationFramework/id-oc-top.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+import { objectClass } from "../InformationFramework/objectClass.oa.js";
 import {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { id_oc_top } from "../InformationFramework/id-oc-top.va";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { objectClass } from "../InformationFramework/objectClass.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { id_oc_top } from "../InformationFramework/id-oc-top.va.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { objectClass } from "../InformationFramework/objectClass.oa.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
+} from "../InformationFramework/ObjectClassKind.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION top */
 /**

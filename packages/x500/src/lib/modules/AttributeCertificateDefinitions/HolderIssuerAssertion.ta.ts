@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta";
+} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.js";
 import {
     Holder,
     _decode_Holder,
     _encode_Holder,
-} from "../AttributeCertificateDefinitions/Holder.ta";
+} from "../AttributeCertificateDefinitions/Holder.ta.js";
 export {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta";
+} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.js";
 export {
     Holder,
     _decode_Holder,
     _encode_Holder,
-} from "../AttributeCertificateDefinitions/Holder.ta";
+} from "../AttributeCertificateDefinitions/Holder.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION HolderIssuerAssertion */
 /**

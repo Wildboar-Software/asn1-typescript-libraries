@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { ldap_match } from "../UsefulDefinitions/ldap-match.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { ldap_match } from "../UsefulDefinitions/ldap-match.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { ldap_match } from "../UsefulDefinitions/ldap-match.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { ldap_match } from "../UsefulDefinitions/ldap-match.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_lmr */
 /**

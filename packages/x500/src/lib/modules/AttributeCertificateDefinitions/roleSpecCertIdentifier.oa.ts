@@ -3,9 +3,9 @@ import {
     RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_roleSpecCertIdentifier } from "./id-ce-roleSpecCertIdentifier.va";
+} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_roleSpecCertIdentifier } from "./id-ce-roleSpecCertIdentifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION roleSpecCertIdentifier */
 /**

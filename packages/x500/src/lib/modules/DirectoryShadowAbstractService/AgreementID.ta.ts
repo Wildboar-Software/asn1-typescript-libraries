@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 export {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AgreementID */
 /**

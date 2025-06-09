@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalOrganizationName,
     _decode_UniversalOrganizationName,
     _encode_UniversalOrganizationName,
-} from "../MTSAbstractService/UniversalOrganizationName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalOrganizationName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalOrganizationName,
     _decode_UniversalOrganizationName,
     _encode_UniversalOrganizationName,
-} from "../MTSAbstractService/UniversalOrganizationName.ta";
+} from "../MTSAbstractService/UniversalOrganizationName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_organization_name */
 /**

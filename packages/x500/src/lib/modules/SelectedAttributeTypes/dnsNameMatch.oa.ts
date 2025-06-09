@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
 import {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-import { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+import { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.js";
 export {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta";
-export { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va";
+} from "../SelectedAttributeTypes/DomainName.ta.js";
+export { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dnsNameMatch */
 /**

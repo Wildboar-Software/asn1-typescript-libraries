@@ -3,14 +3,14 @@ import {
     SubordinateToSuperior,
     _decode_SubordinateToSuperior,
     _encode_SubordinateToSuperior,
-} from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.js";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 export {
     SubordinateToSuperior,
     _decode_SubordinateToSuperior,
     _encode_SubordinateToSuperior,
-} from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleB */
 /**

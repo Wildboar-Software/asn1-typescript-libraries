@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ICV_Invoke,
     _get_decoder_for_ICV_Invoke,
     _get_encoder_for_ICV_Invoke,
-} from "../CryptoTools/ICV-Invoke.ta";
+} from "../CryptoTools/ICV-Invoke.ta.js";
 import {
     TbpDataTransferServer,
     _decode_TbpDataTransferServer,
     _encode_TbpDataTransferServer,
-} from "../Wrapper/TbpDataTransferServer.ta";
+} from "../Wrapper/TbpDataTransferServer.ta.js";
 export {
     ICV_Invoke,
     _get_decoder_for_ICV_Invoke,
     _get_encoder_for_ICV_Invoke,
-} from "../CryptoTools/ICV-Invoke.ta";
+} from "../CryptoTools/ICV-Invoke.ta.js";
 export {
     TbpDataTransferServer,
     _decode_TbpDataTransferServer,
     _encode_TbpDataTransferServer,
-} from "../Wrapper/TbpDataTransferServer.ta";
+} from "../Wrapper/TbpDataTransferServer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DataTransferServerNEA */
 /**

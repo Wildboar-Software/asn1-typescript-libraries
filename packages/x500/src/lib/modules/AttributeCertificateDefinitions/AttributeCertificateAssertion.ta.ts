@@ -5,37 +5,37 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificateAssertion_holder,
     _decode_AttributeCertificateAssertion_holder,
     _encode_AttributeCertificateAssertion_holder,
-} from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AttributeCertificateAssertion_holder,
     _decode_AttributeCertificateAssertion_holder,
     _encode_AttributeCertificateAssertion_holder,
-} from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta";
+} from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateAssertion */
 /**

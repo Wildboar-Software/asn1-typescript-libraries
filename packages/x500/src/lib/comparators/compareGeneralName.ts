@@ -1,13 +1,13 @@
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     GeneralName,
-} from "../modules/CertificateExtensions/GeneralName.ta";
-import directoryStringToString from "../stringifiers/directoryStringToString";
-import compareName from "./compareName";
-import compareElements from "./compareElements";
+} from "../modules/CertificateExtensions/GeneralName.ta.js";
+import directoryStringToString from "../stringifiers/directoryStringToString.js";;
+import compareName from "./compareName.js";
+import compareElements from "./compareElements.js";
 import {
     _encode_ORAddress,
-} from "../modules/PkiPmiExternalDataTypes/ORAddress.ta";
+} from "../modules/PkiPmiExternalDataTypes/ORAddress.ta.js";
 import {
     ASN1Element,
     DERElement,

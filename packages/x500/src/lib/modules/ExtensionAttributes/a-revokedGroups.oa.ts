@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { revokedGroups } from "../CertificateExtensions/revokedGroups.oa";
-import { id_asx_revokedGroups } from "../ExtensionAttributes/id-asx-revokedGroups.va";
-import { id_ce_a_revokedGroups } from "../ExtensionAttributes/id-ce-a-revokedGroups.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { revokedGroups } from "../CertificateExtensions/revokedGroups.oa.js";
+import { id_asx_revokedGroups } from "../ExtensionAttributes/id-asx-revokedGroups.va.js";
+import { id_ce_a_revokedGroups } from "../ExtensionAttributes/id-ce-a-revokedGroups.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { revokedGroups } from "../CertificateExtensions/revokedGroups.oa";
-export { id_asx_revokedGroups } from "../ExtensionAttributes/id-asx-revokedGroups.va";
-export { id_ce_a_revokedGroups } from "../ExtensionAttributes/id-ce-a-revokedGroups.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { revokedGroups } from "../CertificateExtensions/revokedGroups.oa.js";
+export { id_asx_revokedGroups } from "../ExtensionAttributes/id-asx-revokedGroups.va.js";
+export { id_ce_a_revokedGroups } from "../ExtensionAttributes/id-ce-a-revokedGroups.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_revokedGroups */
 /**

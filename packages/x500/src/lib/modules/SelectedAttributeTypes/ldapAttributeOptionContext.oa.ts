@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 import {
     AttributeOptionList,
     _decode_AttributeOptionList,
     _encode_AttributeOptionList,
-} from "../SelectedAttributeTypes/AttributeOptionList.ta";
-import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+} from "../SelectedAttributeTypes/AttributeOptionList.ta.js";
+import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 export {
     AttributeOptionList,
     _decode_AttributeOptionList,
     _encode_AttributeOptionList,
-} from "../SelectedAttributeTypes/AttributeOptionList.ta";
-export { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va";
+} from "../SelectedAttributeTypes/AttributeOptionList.ta.js";
+export { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ldapAttributeOptionContext */
 /**

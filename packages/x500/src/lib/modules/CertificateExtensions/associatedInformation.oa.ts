@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     AttributesSyntax,
     _decode_AttributesSyntax,
     _encode_AttributesSyntax,
-} from "../CertificateExtensions/AttributesSyntax.ta";
-import { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/AttributesSyntax.ta.js";
+import { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AttributesSyntax,
     _decode_AttributesSyntax,
     _encode_AttributesSyntax,
-} from "../CertificateExtensions/AttributesSyntax.ta";
-export { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va";
+} from "../CertificateExtensions/AttributesSyntax.ta.js";
+export { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va.js";
 
 /* START_OF_SYMBOL_DEFINITION associatedInformation */
 /**

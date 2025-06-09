@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from "../CertificateExtensions/CertificateAssertion.ta";
+} from "../CertificateExtensions/CertificateAssertion.ta.js";
 export {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from "../CertificateExtensions/CertificateAssertion.ta";
+} from "../CertificateExtensions/CertificateAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificatePairAssertion */
 /**

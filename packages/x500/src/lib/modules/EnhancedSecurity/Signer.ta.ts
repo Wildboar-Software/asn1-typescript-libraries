@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SpecificallyIdentified,
     _decode_SpecificallyIdentified,
     _encode_SpecificallyIdentified,
-} from "../EnhancedSecurity/SpecificallyIdentified.ta";
+} from "../EnhancedSecurity/SpecificallyIdentified.ta.js";
 import {
     ThisEntry,
     _decode_ThisEntry,
     _encode_ThisEntry,
-} from "../EnhancedSecurity/ThisEntry.ta";
+} from "../EnhancedSecurity/ThisEntry.ta.js";
 export {
     SpecificallyIdentified,
     _decode_SpecificallyIdentified,
     _encode_SpecificallyIdentified,
-} from "../EnhancedSecurity/SpecificallyIdentified.ta";
+} from "../EnhancedSecurity/SpecificallyIdentified.ta.js";
 export {
     ThisEntry,
     _decode_ThisEntry,
     _encode_ThisEntry,
-} from "../EnhancedSecurity/ThisEntry.ta";
+} from "../EnhancedSecurity/ThisEntry.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Signer */
 /**

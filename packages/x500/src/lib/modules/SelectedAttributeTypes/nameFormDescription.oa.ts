@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     NameFormDescription,
     _decode_NameFormDescription,
     _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta";
-import { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/NameFormDescription.ta.js";
+import { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     NameFormDescription,
     _decode_NameFormDescription,
     _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta";
-export { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va";
+} from "../SchemaAdministration/NameFormDescription.ta.js";
+export { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION nameFormDescription */
 /**

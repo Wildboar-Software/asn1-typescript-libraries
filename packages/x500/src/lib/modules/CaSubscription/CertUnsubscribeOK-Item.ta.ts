@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertUnsubscribeOK_Item_not_ok,
     _decode_CertUnsubscribeOK_Item_not_ok,
     _encode_CertUnsubscribeOK_Item_not_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-not-ok.ta";
+} from "../CaSubscription/CertUnsubscribeOK-Item-not-ok.ta.js";
 import {
     CertUnsubscribeOK_Item_ok,
     _decode_CertUnsubscribeOK_Item_ok,
     _encode_CertUnsubscribeOK_Item_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta";
+} from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta.js";
 export {
     CertUnsubscribeOK_Item_not_ok,
     _decode_CertUnsubscribeOK_Item_not_ok,
     _encode_CertUnsubscribeOK_Item_not_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-not-ok.ta";
+} from "../CaSubscription/CertUnsubscribeOK-Item-not-ok.ta.js";
 export {
     CertUnsubscribeOK_Item_ok,
     _decode_CertUnsubscribeOK_Item_ok,
     _encode_CertUnsubscribeOK_Item_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta";
+} from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK_Item */
 /**

@@ -6,28 +6,28 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
-} from "../DirectoryAbstractService/ServiceControlOptions.ta";
+} from "../DirectoryAbstractService/ServiceControlOptions.ta.js";
 import {
     ServiceControls_manageDSAITPlaneRef,
     _decode_ServiceControls_manageDSAITPlaneRef,
     _encode_ServiceControls_manageDSAITPlaneRef,
-} from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta";
+} from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta.js";
 import {
     medium /* IMPORTED_SHORT_NAMED_INTEGER */,
     ServiceControls_priority,
     _decode_ServiceControls_priority,
     _encode_ServiceControls_priority,
-} from "../DirectoryAbstractService/ServiceControls-priority.ta";
+} from "../DirectoryAbstractService/ServiceControls-priority.ta.js";
 import {
     ServiceControls_scopeOfReferral,
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
-} from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta";
+} from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.js";
 export {
     allowWriteableCopy /* IMPORTED_SHORT_NAMED_BIT */,
     chainingProhibited /* IMPORTED_SHORT_NAMED_BIT */,
@@ -62,12 +62,12 @@ export {
     subentries /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
-} from "../DirectoryAbstractService/ServiceControlOptions.ta";
+} from "../DirectoryAbstractService/ServiceControlOptions.ta.js";
 export {
     ServiceControls_manageDSAITPlaneRef,
     _decode_ServiceControls_manageDSAITPlaneRef,
     _encode_ServiceControls_manageDSAITPlaneRef,
-} from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta";
+} from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta.js";
 export {
     high /* IMPORTED_SHORT_NAMED_INTEGER */,
     low /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ export {
     ServiceControls_priority_medium /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_ServiceControls_priority,
     _encode_ServiceControls_priority,
-} from "../DirectoryAbstractService/ServiceControls-priority.ta";
+} from "../DirectoryAbstractService/ServiceControls-priority.ta.js";
 export {
     country /* IMPORTED_SHORT_NAMED_INTEGER */,
     dmd /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     ServiceControls_scopeOfReferral_dmd /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
-} from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta";
+} from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ServiceControls */
 /**

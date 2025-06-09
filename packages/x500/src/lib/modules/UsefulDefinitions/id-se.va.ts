@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { securityExchange } from "../UsefulDefinitions/securityExchange.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { securityExchange } from "../UsefulDefinitions/securityExchange.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { securityExchange } from "../UsefulDefinitions/securityExchange.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { securityExchange } from "../UsefulDefinitions/securityExchange.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_se */
 /**

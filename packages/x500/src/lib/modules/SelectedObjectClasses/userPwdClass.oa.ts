@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { userPwd } from "../PasswordPolicy/userPwd.oa";
-import { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { userPwd } from "../PasswordPolicy/userPwd.oa.js";
+import { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -18,9 +18,9 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { userPwd } from "../PasswordPolicy/userPwd.oa";
-export { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { userPwd } from "../PasswordPolicy/userPwd.oa.js";
+export { id_oc_userPwdClass } from "../SelectedObjectClasses/id-oc-userPwdClass.va.js";
 
 /* START_OF_SYMBOL_DEFINITION userPwdClass */
 /**

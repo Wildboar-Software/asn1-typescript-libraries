@@ -5,49 +5,49 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 import {
     TerminateOperationalBindingArgumentData_initiator,
     _decode_TerminateOperationalBindingArgumentData_initiator,
     _encode_TerminateOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../OperationalBindingManagement/Time.ta";
+} from "../OperationalBindingManagement/Time.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
+export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.js";
+export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 export {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 export {
     TerminateOperationalBindingArgumentData_initiator,
     _decode_TerminateOperationalBindingArgumentData_initiator,
     _encode_TerminateOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta";
+} from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../OperationalBindingManagement/Time.ta";
+} from "../OperationalBindingManagement/Time.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgumentData */
 /**

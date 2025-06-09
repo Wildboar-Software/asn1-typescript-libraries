@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va.js";
 import {
     SequenceMatchType,
     _decode_SequenceMatchType,
     _encode_SequenceMatchType,
-} from "../SelectedAttributeTypes/SequenceMatchType.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/SequenceMatchType.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,10 +23,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va.js";
 export {
     sequenceDeletion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     sequenceExact /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -44,7 +44,7 @@ export {
     _decode_SequenceMatchType,
     _encode_SequenceMatchType,
     _enum_for_SequenceMatchType,
-} from "../SelectedAttributeTypes/SequenceMatchType.ta";
+} from "../SelectedAttributeTypes/SequenceMatchType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION sequenceMatchType */
 /**

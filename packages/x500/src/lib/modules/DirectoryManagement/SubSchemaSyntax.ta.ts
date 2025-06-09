@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubSchemaSyntax_Item,
     _decode_SubSchemaSyntax_Item,
     _encode_SubSchemaSyntax_Item,
-} from "../DirectoryManagement/SubSchemaSyntax-Item.ta";
+} from "../DirectoryManagement/SubSchemaSyntax-Item.ta.js";
 export {
     SubSchemaSyntax_Item,
     _decode_SubSchemaSyntax_Item,
     _encode_SubSchemaSyntax_Item,
-} from "../DirectoryManagement/SubSchemaSyntax-Item.ta";
+} from "../DirectoryManagement/SubSchemaSyntax-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax */
 /**

@@ -1,5 +1,5 @@
-import type { InvokeId } from "../modules/CommonProtocolSpecification/InvokeId.ta";
-import type { Code } from "../modules/CommonProtocolSpecification/Code.ta";
+import type { InvokeId } from "../modules/CommonProtocolSpecification/InvokeId.ta.js";
+import type { Code } from "../modules/CommonProtocolSpecification/Code.ta.js";
 import type { ASN1Element } from "asn1-ts";
 
 /**

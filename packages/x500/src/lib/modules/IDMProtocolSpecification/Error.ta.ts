@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Code,
     _encode_Code,
     _decode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
+} from "../CommonProtocolSpecification/Code.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Error */
 /**

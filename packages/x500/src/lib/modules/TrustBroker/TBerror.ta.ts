@@ -5,13 +5,13 @@ import {
     OPTIONAL,
     UTF8String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TBerror_code,
     _decode_TBerror_code,
     _encode_TBerror_code,
     _enum_for_TBerror_code,
-} from "../TrustBroker/TBerror-code.ta";
+} from "../TrustBroker/TBerror-code.ta.js";
 export {
     caCertInvalid /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     contractExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -35,7 +35,7 @@ export {
     _decode_TBerror_code,
     _encode_TBerror_code,
     _enum_for_TBerror_code,
-} from "../TrustBroker/TBerror-code.ta";
+} from "../TrustBroker/TBerror-code.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBerror */
 /**

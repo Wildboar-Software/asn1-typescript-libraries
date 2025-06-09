@@ -1,16 +1,16 @@
 import type { OBJECT_IDENTIFIER, ASN1Element } from "asn1-ts";
-import type OrderingMatcher from "../types/OrderingMatcher";
+import type OrderingMatcher from "../types/OrderingMatcher.js";
 import type {
     SortKey,
-} from "../modules/DirectoryAbstractService/SortKey.ta";
+} from "../modules/DirectoryAbstractService/SortKey.ta.js";
 import type {
     EntryInformation,
-} from "../modules/DirectoryAbstractService/EntryInformation.ta";
+} from "../modules/DirectoryAbstractService/EntryInformation.ta.js";
 import type {
     Attribute,
-} from "../modules/InformationFramework/Attribute.ta"
-import type ATVAC from "../types/AttributeTypeValueAndContextsTuple";
-import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute";
+} from "../modules/InformationFramework/Attribute.ta.js";
+import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.js";
+import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute.js";
 
 /**
  * @summary Sort entries via sort keys of a paged results request.

@@ -1,27 +1,27 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ENCIPHERED,
     _get_decoder_for_ENCIPHERED,
     _get_encoder_for_ENCIPHERED,
-} from "../CryptoTools/ENCIPHERED.ta";
+} from "../CryptoTools/ENCIPHERED.ta.js";
 import {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 export {
     ENCIPHERED,
     _get_decoder_for_ENCIPHERED,
     _get_encoder_for_ENCIPHERED,
-} from "../CryptoTools/ENCIPHERED.ta";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../CryptoTools/ENCIPHERED.ta.js";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 export {
     WrappedProt,
     _decode_WrappedProt,
     _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta";
+} from "../Wrapper/WrappedProt.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TbpDataTransferClient_conf */
 /**

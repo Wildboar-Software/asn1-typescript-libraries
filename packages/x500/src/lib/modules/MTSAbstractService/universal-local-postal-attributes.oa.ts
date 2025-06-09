@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalLocalPostalAttributes,
     _decode_UniversalLocalPostalAttributes,
     _encode_UniversalLocalPostalAttributes,
-} from "../MTSAbstractService/UniversalLocalPostalAttributes.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalLocalPostalAttributes.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalLocalPostalAttributes,
     _decode_UniversalLocalPostalAttributes,
     _encode_UniversalLocalPostalAttributes,
-} from "../MTSAbstractService/UniversalLocalPostalAttributes.ta";
+} from "../MTSAbstractService/UniversalLocalPostalAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_local_postal_attributes */
 /**

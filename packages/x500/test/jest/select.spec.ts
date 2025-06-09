@@ -8,45 +8,45 @@ import {
     ASN1Construction,
     ASN1UniversalType,
 } from "asn1-ts";
-import { EntryInformationSelection } from "../../src/lib/modules/DirectoryAbstractService/EntryInformationSelection.ta";
-import { EntryInformation } from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta";
-import { Context } from "../../src/lib/modules/InformationFramework/Context.ta";
+import { EntryInformationSelection } from "../../src/lib/modules/DirectoryAbstractService/EntryInformationSelection.ta.js";
+import { EntryInformation } from "../../src/lib/modules/DirectoryAbstractService/EntryInformation.ta.js";
+import { Context } from "../../src/lib/modules/InformationFramework/Context.ta.js";
 import {
     TypeAndContextAssertion,
-} from "../../src/lib/modules/DirectoryAbstractService/TypeAndContextAssertion.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/TypeAndContextAssertion.ta.js";
 import {
     ContextAssertion,
-} from "../../src/lib/modules/InformationFramework/ContextAssertion.ta";
+} from "../../src/lib/modules/InformationFramework/ContextAssertion.ta.js";
 import type {
     Name,
-} from "../../src/lib/modules/InformationFramework/Name.ta";
+} from "../../src/lib/modules/InformationFramework/Name.ta.js";
 import type {
     EntryInformation_information_Item,
-} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation-information-Item.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/EntryInformation-information-Item.ta.js";
 import {
     EntryInformationSelection_infoTypes_attributeTypesAndValues,
     EntryInformationSelection_infoTypes_attributeTypesOnly,
-} from "../../src/lib/modules/DirectoryAbstractService/EntryInformationSelection-infoTypes.ta";
+} from "../../src/lib/modules/DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.js";
 import {
     Attribute,
-} from "../../src/lib/modules/InformationFramework/Attribute.ta";
+} from "../../src/lib/modules/InformationFramework/Attribute.ta.js";
 import {
     Attribute_valuesWithContext_Item,
-} from "../../src/lib/modules/InformationFramework/Attribute-valuesWithContext-Item.ta";
+} from "../../src/lib/modules/InformationFramework/Attribute-valuesWithContext-Item.ta.js";
 import {
     id_oa_allAttributeTypes,
-} from "../../src/lib/modules/InformationFramework/id-oa-allAttributeTypes.va";
+} from "../../src/lib/modules/InformationFramework/id-oa-allAttributeTypes.va.js";
 import {
     FamilyEntries,
     _encode_FamilyEntries,
     _decode_FamilyEntries,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntries.ta";
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntries.ta.js";
 import {
     FamilyEntry,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntry.ta";
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/FamilyEntry.ta.js";
 import {
     id_at_family_information,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/id-at-family-information.va";
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/id-at-family-information.va.js";
 
 const EMPTY_NAME: Name = {
     rdnSequence: [],

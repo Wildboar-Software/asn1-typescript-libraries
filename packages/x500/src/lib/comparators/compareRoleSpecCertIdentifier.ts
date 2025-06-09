@@ -1,10 +1,10 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import {
     RoleSpecCertIdentifier,
-} from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta";
-import compareGeneralName from "./compareGeneralName";
-import compareGeneralNames from "./compareGeneralNames";
+} from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.js";
+import compareGeneralName from "./compareGeneralName.js";
+import compareGeneralNames from "./compareGeneralNames.js";
 
 export
 function compareRoleSpecCertIdentifier (

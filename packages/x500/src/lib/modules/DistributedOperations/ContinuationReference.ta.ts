@@ -6,48 +6,48 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessPointInformation,
     _decode_AccessPointInformation,
     _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta";
+} from "../DistributedOperations/AccessPointInformation.ta.js";
 import {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 import {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 import {
     ReferenceType,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     AccessPointInformation,
     _decode_AccessPointInformation,
     _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta";
+} from "../DistributedOperations/AccessPointInformation.ta.js";
 export {
     Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta";
+} from "../DistributedOperations/Exclusions.ta.js";
 export {
     OperationProgress,
     _decode_OperationProgress,
     _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta";
+} from "../DistributedOperations/OperationProgress.ta.js";
 export {
     cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -71,12 +71,12 @@ export {
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta";
+} from "../DistributedOperations/ReferenceType.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ContinuationReference */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { localityName } from "../SelectedAttributeTypes/localityName.oa";
-import { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va";
-import { locality } from "../SelectedObjectClasses/locality.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa";
-export { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va";
-export { locality } from "../SelectedObjectClasses/locality.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+import { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.js";
+import { locality } from "../SelectedObjectClasses/locality.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { localityName } from "../SelectedAttributeTypes/localityName.oa.js";
+export { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.js";
+export { locality } from "../SelectedObjectClasses/locality.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION locNameForm */
 /**

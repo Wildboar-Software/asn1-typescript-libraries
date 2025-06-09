@@ -3,16 +3,16 @@ import {
     DeleteAvlReq,
     _decode_DeleteAvlReq,
     _encode_DeleteAvlReq,
-} from "../PkiPMIProtocolSpecifications/DeleteAvlReq.ta";
-import { id_deleteAvlReq } from "../PkiPMIProtocolSpecifications/id-deleteAvlReq.va";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/DeleteAvlReq.ta.js";
+import { id_deleteAvlReq } from "../PkiPMIProtocolSpecifications/id-deleteAvlReq.va.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 export {
     DeleteAvlReq,
     _decode_DeleteAvlReq,
     _encode_DeleteAvlReq,
-} from "../PkiPMIProtocolSpecifications/DeleteAvlReq.ta";
-export { id_deleteAvlReq } from "../PkiPMIProtocolSpecifications/id-deleteAvlReq.va";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/DeleteAvlReq.ta.js";
+export { id_deleteAvlReq } from "../PkiPMIProtocolSpecifications/id-deleteAvlReq.va.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION deleteAvlReq */
 /**

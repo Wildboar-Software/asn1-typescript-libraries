@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { enhancedGuide } from "../SelectedAttributeTypes/enhancedGuide.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { enhancedGuide } from "../SelectedAttributeTypes/enhancedGuide.oa.js";
 import {
     EnhancedGuide,
     _decode_EnhancedGuide,
     _encode_EnhancedGuide,
-} from "../SelectedAttributeTypes/EnhancedGuide.ta";
-import { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhancedSearchGuide.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/EnhancedGuide.ta.js";
+import { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhancedSearchGuide.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { enhancedGuide } from "../SelectedAttributeTypes/enhancedGuide.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { enhancedGuide } from "../SelectedAttributeTypes/enhancedGuide.oa.js";
 export {
     EnhancedGuide,
     _decode_EnhancedGuide,
     _encode_EnhancedGuide,
-} from "../SelectedAttributeTypes/EnhancedGuide.ta";
-export { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhancedSearchGuide.va";
+} from "../SelectedAttributeTypes/EnhancedGuide.ta.js";
+export { id_at_enhancedSearchGuide } from "../SelectedAttributeTypes/id-at-enhancedSearchGuide.va.js";
 
 /* START_OF_SYMBOL_DEFINITION enhancedSearchGuide */
 /**

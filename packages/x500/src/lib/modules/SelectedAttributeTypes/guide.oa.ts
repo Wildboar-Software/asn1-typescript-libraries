@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     Guide,
     _decode_Guide,
     _encode_Guide,
-} from "../SelectedAttributeTypes/Guide.ta";
-import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/Guide.ta.js";
+import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     Guide,
     _decode_Guide,
     _encode_Guide,
-} from "../SelectedAttributeTypes/Guide.ta";
-export { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va";
+} from "../SelectedAttributeTypes/Guide.ta.js";
+export { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.js";
 
 /* START_OF_SYMBOL_DEFINITION guide */
 /**

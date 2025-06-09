@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va.js";
 import {
     PwdVocabulary,
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta";
-import { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa";
-import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../PasswordPolicy/PwdVocabulary.ta.js";
+import { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa.js";
+import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,10 +25,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va.js";
 export {
     noDictionaryWords /* IMPORTED_SHORT_NAMED_BIT */,
     noGeographicalNames /* IMPORTED_SHORT_NAMED_BIT */,
@@ -39,9 +39,9 @@ export {
     PwdVocabulary_noPersonNames /* IMPORTED_LONG_NAMED_BIT */,
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta";
-export { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa";
-export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
+} from "../PasswordPolicy/PwdVocabulary.ta.js";
+export { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa.js";
+export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdVocabulary */
 /**

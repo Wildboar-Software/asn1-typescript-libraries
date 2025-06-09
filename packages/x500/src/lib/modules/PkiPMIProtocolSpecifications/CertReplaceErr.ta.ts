@@ -3,17 +3,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertReplaceErr_code,
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
-} from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.js";
 export {
     CertReplaceErr_code,
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
-} from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta";
+} from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceErr */
 /**

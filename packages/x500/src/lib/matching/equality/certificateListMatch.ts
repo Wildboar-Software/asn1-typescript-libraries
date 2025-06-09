@@ -1,39 +1,39 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "asn1-ts";
-import compareName from "../../comparators/compareName";
+import compareName from "../../comparators/compareName.js";
 import {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
-} from "../../modules/CertificateExtensions/CertificateListAssertion.ta";
+} from "../../modules/CertificateExtensions/CertificateListAssertion.ta.js";
 import {
     CertificateList,
     _decode_CertificateList,
-} from "../../modules/AuthenticationFramework/CertificateList.ta";
+} from "../../modules/AuthenticationFramework/CertificateList.ta.js";
 import {
     Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta";
+} from "../../modules/AuthenticationFramework/Extension.ta.js";
 import {
     id_ce_authorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va";
+} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va.js";
 import {
     id_ce_issuingDistributionPoint,
-} from "../../modules/CertificateExtensions/id-ce-issuingDistributionPoint.va";
-import { id_ce_cRLNumber } from "../../modules/CertificateExtensions/id-ce-cRLNumber.va";
+} from "../../modules/CertificateExtensions/id-ce-issuingDistributionPoint.va.js";
+import { id_ce_cRLNumber } from "../../modules/CertificateExtensions/id-ce-cRLNumber.va.js";
 import {
     AuthorityKeyIdentifier,
     _decode_AuthorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta";
+} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.js";
 import {
     _decode_GeneralNames,
-} from "../../modules/CertificateExtensions/GeneralNames.ta";
-import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier";
-import getDateFromTime from "../../utils/getDateFromTime";
+} from "../../modules/CertificateExtensions/GeneralNames.ta.js";
+import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.js";
+import getDateFromTime from "../../utils/getDateFromTime.js";
 import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
-} from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta";
-import compareGeneralName from "../../comparators/compareGeneralName";
-import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName";
+} from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.js";
+import compareGeneralName from "../../comparators/compareGeneralName.js";
+import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName.js";
 
 export
 const certificateListMatch : EqualityMatcher = (

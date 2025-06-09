@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { sigAlgs } from "../AlgorithmObjectIdentifiers/sigAlgs.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_dsa_with_sha256 */
 /**

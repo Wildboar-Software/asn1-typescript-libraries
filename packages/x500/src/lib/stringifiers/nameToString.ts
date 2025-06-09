@@ -1,5 +1,5 @@
-import type { Name } from "../modules/InformationFramework/Name.ta";
-import rdnSequenceToString from "./rdnSequenceToString";
+import type { Name } from "../modules/InformationFramework/Name.ta.js";
+import rdnSequenceToString from "./rdnSequenceToString.js";
 
 /**
  * @deprecated

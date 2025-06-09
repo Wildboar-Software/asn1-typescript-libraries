@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta";
+} from "../CertificateExtensions/KeyIdentifier.ta.js";
 export {
     KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta";
+} from "../CertificateExtensions/KeyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SubjectKeyIdentifier */
 /**

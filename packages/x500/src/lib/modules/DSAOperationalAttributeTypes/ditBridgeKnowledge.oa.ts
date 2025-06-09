@@ -3,20 +3,20 @@ import {
     DitBridgeKnowledge,
     _decode_DitBridgeKnowledge,
     _encode_DitBridgeKnowledge,
-} from "../DistributedOperations/DitBridgeKnowledge.ta";
-import { id_doa_ditBridgeKnowledge } from "../DSAOperationalAttributeTypes/id-doa-ditBridgeKnowledge.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/DitBridgeKnowledge.ta.js";
+import { id_doa_ditBridgeKnowledge } from "../DSAOperationalAttributeTypes/id-doa-ditBridgeKnowledge.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.js";
 export {
     DitBridgeKnowledge,
     _decode_DitBridgeKnowledge,
     _encode_DitBridgeKnowledge,
-} from "../DistributedOperations/DitBridgeKnowledge.ta";
-export { id_doa_ditBridgeKnowledge } from "../DSAOperationalAttributeTypes/id-doa-ditBridgeKnowledge.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DistributedOperations/DitBridgeKnowledge.ta.js";
+export { id_doa_ditBridgeKnowledge } from "../DSAOperationalAttributeTypes/id-doa-ditBridgeKnowledge.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -30,10 +30,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { directoryStringFirstComponentMatch } from "../SelectedAttributeTypes/directoryStringFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION ditBridgeKnowledge */
 /**

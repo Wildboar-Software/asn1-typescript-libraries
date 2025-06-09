@@ -4,13 +4,13 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CASP_CertStatusCode,
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
-} from "../PkiPMIProtocolSpecifications/CASP-CertStatusCode.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-CertStatusCode.ta.js";
 export {
     CASP_CertStatusCode,
     CASP_CertStatusCode_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
-} from "../PkiPMIProtocolSpecifications/CASP-CertStatusCode.ta";
+} from "../PkiPMIProtocolSpecifications/CASP-CertStatusCode.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceOK_Item_not_ok */
 /**

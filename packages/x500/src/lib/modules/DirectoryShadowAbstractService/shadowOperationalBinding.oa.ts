@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { id_op_binding_shadow } from "../DirectoryOperationalBindingTypes/id-op-binding-shadow.va";
-import { shadowConsumerInitiatedAC } from "../DirectoryOSIProtocols/shadowConsumerInitiatedAC.oa";
-import { shadowSupplierInitiatedAC } from "../DirectoryOSIProtocols/shadowSupplierInitiatedAC.oa";
-import { All_operations_consumer_initiated } from "../DirectoryShadowAbstractService/All-operations-consumer-initiated.osa";
-import { All_operations_supplier_initiated } from "../DirectoryShadowAbstractService/All-operations-supplier-initiated.osa";
+import { id_op_binding_shadow } from "../DirectoryOperationalBindingTypes/id-op-binding-shadow.va.js";
+import { shadowConsumerInitiatedAC } from "../DirectoryOSIProtocols/shadowConsumerInitiatedAC.oa.js";
+import { shadowSupplierInitiatedAC } from "../DirectoryOSIProtocols/shadowSupplierInitiatedAC.oa.js";
+import { All_operations_consumer_initiated } from "../DirectoryShadowAbstractService/All-operations-consumer-initiated.osa.js";
+import { All_operations_supplier_initiated } from "../DirectoryShadowAbstractService/All-operations-supplier-initiated.osa.js";
 import {
     ShadowingAgreementInfo,
     _decode_ShadowingAgreementInfo,
     _encode_ShadowingAgreementInfo,
-} from "../DirectoryShadowAbstractService/ShadowingAgreementInfo.ta";
-import { shadowOperationalBinding_roleA } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleA.oa";
-import { shadowOperationalBinding_roleB } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleB.oa";
-import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../DirectoryShadowAbstractService/ShadowingAgreementInfo.ta.js";
+import { shadowOperationalBinding_roleA } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleA.oa.js";
+import { shadowOperationalBinding_roleB } from "../DirectoryShadowAbstractService/shadowOperationalBinding-roleB.oa.js";
+import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION shadowOperationalBinding */
 /**

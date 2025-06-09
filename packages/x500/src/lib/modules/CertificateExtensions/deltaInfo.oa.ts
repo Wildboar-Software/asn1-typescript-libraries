@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     DeltaInformation,
     _decode_DeltaInformation,
     _encode_DeltaInformation,
-} from "../CertificateExtensions/DeltaInformation.ta";
-import { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/DeltaInformation.ta.js";
+import { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     DeltaInformation,
     _decode_DeltaInformation,
     _encode_DeltaInformation,
-} from "../CertificateExtensions/DeltaInformation.ta";
-export { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va";
+} from "../CertificateExtensions/DeltaInformation.ta.js";
+export { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va.js";
 
 /* START_OF_SYMBOL_DEFINITION deltaInfo */
 /**

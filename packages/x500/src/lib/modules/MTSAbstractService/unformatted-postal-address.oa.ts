@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UnformattedPostalAddress,
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
-} from "../MTSAbstractService/UnformattedPostalAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UnformattedPostalAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UnformattedPostalAddress,
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
-} from "../MTSAbstractService/UnformattedPostalAddress.ta";
+} from "../MTSAbstractService/UnformattedPostalAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION unformatted_postal_address */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PolicyMappingsSyntax_Item,
     _decode_PolicyMappingsSyntax_Item,
     _encode_PolicyMappingsSyntax_Item,
-} from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta";
+} from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta.js";
 export {
     PolicyMappingsSyntax_Item,
     _decode_PolicyMappingsSyntax_Item,
     _encode_PolicyMappingsSyntax_Item,
-} from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta";
+} from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PolicyMappingsSyntax */
 /**

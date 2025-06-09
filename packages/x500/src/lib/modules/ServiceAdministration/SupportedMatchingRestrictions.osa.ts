@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca";
-export { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca";
+import { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.js";
+export { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedMatchingRestrictions */
 /**

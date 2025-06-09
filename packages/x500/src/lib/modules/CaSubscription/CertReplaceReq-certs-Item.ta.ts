@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.js";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceReq_certs_Item */
 /**

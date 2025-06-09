@@ -1,33 +1,33 @@
 /* eslint-disable */
-import { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-import { id_errcode_shadowError } from "../CommonProtocolSpecification/id-errcode-shadowError.va";
+import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+import { id_errcode_shadowError } from "../CommonProtocolSpecification/id-errcode-shadowError.va.js";
 import {
     ShadowErrorData,
     _decode_ShadowErrorData,
     _encode_ShadowErrorData,
-} from "../DirectoryShadowAbstractService/ShadowErrorData.ta";
+} from "../DirectoryShadowAbstractService/ShadowErrorData.ta.js";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_errcode_shadowError } from "../CommonProtocolSpecification/id-errcode-shadowError.va";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_errcode_shadowError } from "../CommonProtocolSpecification/id-errcode-shadowError.va.js";
 export {
     ShadowErrorData,
     _decode_ShadowErrorData,
     _encode_ShadowErrorData,
-} from "../DirectoryShadowAbstractService/ShadowErrorData.ta";
+} from "../DirectoryShadowAbstractService/ShadowErrorData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION shadowError */
 /**

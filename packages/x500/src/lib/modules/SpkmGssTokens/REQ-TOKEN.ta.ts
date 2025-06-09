@@ -4,37 +4,37 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     Integrity,
     _decode_Integrity,
     _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta";
+} from "../SpkmGssTokens/Integrity.ta.js";
 import {
     Req_contents,
     _decode_Req_contents,
     _encode_Req_contents,
-} from "../SpkmGssTokens/Req-contents.ta";
+} from "../SpkmGssTokens/Req-contents.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     Integrity,
     _decode_Integrity,
     _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta";
+} from "../SpkmGssTokens/Integrity.ta.js";
 export {
     Req_contents,
     _decode_Req_contents,
     _encode_Req_contents,
-} from "../SpkmGssTokens/Req-contents.ta";
+} from "../SpkmGssTokens/Req-contents.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION REQ_TOKEN */
 /**

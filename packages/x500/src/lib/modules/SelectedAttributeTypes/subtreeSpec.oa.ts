@@ -3,16 +3,16 @@ import {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va.js";
 export {
     SubtreeSpecification,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va";
+} from "../InformationFramework/SubtreeSpecification.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va.js";
 
 /* START_OF_SYMBOL_DEFINITION subtreeSpec */
 /**

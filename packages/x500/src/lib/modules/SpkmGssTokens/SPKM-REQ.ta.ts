@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthorizationData,
     _decode_AuthorizationData,
     _encode_AuthorizationData,
-} from "../SpkmGssTokens/AuthorizationData.ta";
+} from "../SpkmGssTokens/AuthorizationData.ta.js";
 import {
     CertificationData,
     _decode_CertificationData,
     _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta";
+} from "../SpkmGssTokens/CertificationData.ta.js";
 import {
     REQ_TOKEN,
     _decode_REQ_TOKEN,
     _encode_REQ_TOKEN,
-} from "../SpkmGssTokens/REQ-TOKEN.ta";
+} from "../SpkmGssTokens/REQ-TOKEN.ta.js";
 export {
     AuthorizationData,
     _decode_AuthorizationData,
     _encode_AuthorizationData,
-} from "../SpkmGssTokens/AuthorizationData.ta";
+} from "../SpkmGssTokens/AuthorizationData.ta.js";
 export {
     CertificationData,
     _decode_CertificationData,
     _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta";
+} from "../SpkmGssTokens/CertificationData.ta.js";
 export {
     REQ_TOKEN,
     _decode_REQ_TOKEN,
     _encode_REQ_TOKEN,
-} from "../SpkmGssTokens/REQ-TOKEN.ta";
+} from "../SpkmGssTokens/REQ-TOKEN.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPKM_REQ */
 /**

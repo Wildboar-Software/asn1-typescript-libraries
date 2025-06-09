@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { dh_public_number } from "../AlgorithmObjectIdentifiers/dh-public-number.va";
+import { dh_public_number } from "../AlgorithmObjectIdentifiers/dh-public-number.va.js";
 import {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../AlgorithmObjectIdentifiers/DomainParameters.ta";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { dh_public_number } from "../AlgorithmObjectIdentifiers/dh-public-number.va";
+} from "../AlgorithmObjectIdentifiers/DomainParameters.ta.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { dh_public_number } from "../AlgorithmObjectIdentifiers/dh-public-number.va.js";
 export {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../AlgorithmObjectIdentifiers/DomainParameters.ta";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+} from "../AlgorithmObjectIdentifiers/DomainParameters.ta.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dh_public_numberAlgorithm */
 /**

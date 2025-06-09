@@ -5,17 +5,17 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ValidationParms,
     _decode_ValidationParms,
     _encode_ValidationParms,
-} from "../AlgorithmObjectIdentifiers/ValidationParms.ta";
+} from "../AlgorithmObjectIdentifiers/ValidationParms.ta.js";
 export {
     ValidationParms,
     _decode_ValidationParms,
     _encode_ValidationParms,
-} from "../AlgorithmObjectIdentifiers/ValidationParms.ta";
+} from "../AlgorithmObjectIdentifiers/ValidationParms.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DomainParameters */
 /**

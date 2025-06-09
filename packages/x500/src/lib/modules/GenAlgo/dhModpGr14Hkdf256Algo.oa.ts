@@ -3,26 +3,26 @@ import {
     Group14,
     _decode_Group14,
     _encode_Group14,
-} from "../GenAlgo/Group14.ta";
-import { id_algo_dhModpGr14Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr14Hkdf256Algo.va";
+} from "../GenAlgo/Group14.ta.js";
+import { id_algo_dhModpGr14Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr14Hkdf256Algo.va.js";
 import {
     Payload14,
     _decode_Payload14,
     _encode_Payload14,
-} from "../GenAlgo/Payload14.ta";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../GenAlgo/Payload14.ta.js";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 export {
     Group14,
     _decode_Group14,
     _encode_Group14,
-} from "../GenAlgo/Group14.ta";
-export { id_algo_dhModpGr14Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr14Hkdf256Algo.va";
+} from "../GenAlgo/Group14.ta.js";
+export { id_algo_dhModpGr14Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr14Hkdf256Algo.va.js";
 export {
     Payload14,
     _decode_Payload14,
     _encode_Payload14,
-} from "../GenAlgo/Payload14.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../GenAlgo/Payload14.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dhModpGr14Hkdf256Algo */
 /**

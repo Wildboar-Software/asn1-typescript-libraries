@@ -1,46 +1,46 @@
 /* eslint-disable */
-import { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     AddEntryArgument,
     _decode_AddEntryArgument,
     _encode_AddEntryArgument,
-} from "../DirectoryAbstractService/AddEntryArgument.ta";
+} from "../DirectoryAbstractService/AddEntryArgument.ta.js";
 import {
     AddEntryResult,
     _decode_AddEntryResult,
     _encode_AddEntryResult,
-} from "../DirectoryAbstractService/AddEntryResult.ta";
-import { attributeError } from "../DirectoryAbstractService/attributeError.oa";
-import { nameError } from "../DirectoryAbstractService/nameError.oa";
-import { referral } from "../DirectoryAbstractService/referral.oa";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { serviceError } from "../DirectoryAbstractService/serviceError.oa";
-import { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/AddEntryResult.ta.js";
+import { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
+import { nameError } from "../DirectoryAbstractService/nameError.oa.js";
+import { referral } from "../DirectoryAbstractService/referral.oa.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
+import { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     AddEntryArgument,
     _decode_AddEntryArgument,
     _encode_AddEntryArgument,
-} from "../DirectoryAbstractService/AddEntryArgument.ta";
+} from "../DirectoryAbstractService/AddEntryArgument.ta.js";
 export {
     AddEntryResult,
     _decode_AddEntryResult,
     _encode_AddEntryResult,
-} from "../DirectoryAbstractService/AddEntryResult.ta";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa";
-export { nameError } from "../DirectoryAbstractService/nameError.oa";
-export { referral } from "../DirectoryAbstractService/referral.oa";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa";
-export { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/AddEntryResult.ta.js";
+export { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
+export { nameError } from "../DirectoryAbstractService/nameError.oa.js";
+export { referral } from "../DirectoryAbstractService/referral.oa.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
+export { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION addEntry */
 /**

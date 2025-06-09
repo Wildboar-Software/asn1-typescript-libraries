@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     LocalPostalAttributes,
     _decode_LocalPostalAttributes,
     _encode_LocalPostalAttributes,
-} from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     LocalPostalAttributes,
     _decode_LocalPostalAttributes,
     _encode_LocalPostalAttributes,
-} from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta";
+} from "../PkiPmiExternalDataTypes/LocalPostalAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION local_postal_attributes */
 /**

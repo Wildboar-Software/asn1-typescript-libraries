@@ -1,6 +1,6 @@
 import type { OCTET_STRING } from "asn1-ts";
-import { ipv4FromNSAP } from "../distributed/ipv4";
-import { uriFromNSAP } from "../distributed/uri";
+import { ipv4FromNSAP } from "../distributed/ipv4.js";
+import { uriFromNSAP } from "../distributed/uri.js";
 
 const commonPrefix: number[] = [
     0x54, // The AFI

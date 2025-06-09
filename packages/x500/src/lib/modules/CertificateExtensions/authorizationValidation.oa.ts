@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     AvlId,
     _decode_AvlId,
     _encode_AvlId,
-} from "../CertificateExtensions/AvlId.ta";
-import { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/AvlId.ta.js";
+import { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AvlId,
     _decode_AvlId,
     _encode_AvlId,
-} from "../CertificateExtensions/AvlId.ta";
-export { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va";
+} from "../CertificateExtensions/AvlId.ta.js";
+export { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va.js";
 
 /* START_OF_SYMBOL_DEFINITION authorizationValidation */
 /**

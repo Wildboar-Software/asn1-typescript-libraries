@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { INTEGER, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta";
-import { FamilyReturn } from "../DirectoryAbstractService/FamilyReturn.ta";
-import { AttributeType } from "../InformationFramework/AttributeType.ta";
-import { AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta";
-import { AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta";
-import { ControlOptions } from "../ServiceAdministration/ControlOptions.ta";
-import { EntryLimit } from "../ServiceAdministration/EntryLimit.ta";
-import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta";
-import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta";
-import { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca";
-import { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.js";
+import { FamilyReturn } from "../DirectoryAbstractService/FamilyReturn.ta.js";
+import { AttributeType } from "../InformationFramework/AttributeType.ta.js";
+import { AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta.js";
+import { AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta.js";
+import { ControlOptions } from "../ServiceAdministration/ControlOptions.ta.js";
+import { EntryLimit } from "../ServiceAdministration/EntryLimit.ta.js";
+import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.js";
+import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta.js";
+import { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.js";
+import { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.js";
 export {
     compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta";
+} from "../DirectoryAbstractService/FamilyGrouping.ta.js";
 export {
     FamilyReturn,
     _decode_FamilyReturn,
     _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta";
+} from "../DirectoryAbstractService/FamilyReturn.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     AllowedSubset,
     AllowedSubset_baseObject /* IMPORTED_LONG_NAMED_BIT */,
@@ -43,22 +43,22 @@ export {
     AllowedSubset_wholeSubtree /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
-} from "../ServiceAdministration/AllowedSubset.ta";
+} from "../ServiceAdministration/AllowedSubset.ta.js";
 export {
     AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta";
+} from "../ServiceAdministration/AttributeCombination.ta.js";
 export {
     ControlOptions,
     _decode_ControlOptions,
     _encode_ControlOptions,
-} from "../ServiceAdministration/ControlOptions.ta";
+} from "../ServiceAdministration/ControlOptions.ta.js";
 export {
     EntryLimit,
     _decode_EntryLimit,
     _encode_EntryLimit,
-} from "../ServiceAdministration/EntryLimit.ta";
+} from "../ServiceAdministration/EntryLimit.ta.js";
 export {
     ImposedSubset,
     ImposedSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -67,14 +67,14 @@ export {
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,
-} from "../ServiceAdministration/ImposedSubset.ta";
+} from "../ServiceAdministration/ImposedSubset.ta.js";
 export {
     RelaxationPolicy,
     _decode_RelaxationPolicy,
     _encode_RelaxationPolicy,
-} from "../ServiceAdministration/RelaxationPolicy.ta";
-export { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca";
-export { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca";
+} from "../ServiceAdministration/RelaxationPolicy.ta.js";
+export { REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.js";
+export { RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SEARCH_RULE */
 /**

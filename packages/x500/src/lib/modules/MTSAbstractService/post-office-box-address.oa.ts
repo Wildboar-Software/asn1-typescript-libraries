@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     PostOfficeBoxAddress,
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
-} from "../MTSAbstractService/PostOfficeBoxAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/PostOfficeBoxAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     PostOfficeBoxAddress,
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
-} from "../MTSAbstractService/PostOfficeBoxAddress.ta";
+} from "../MTSAbstractService/PostOfficeBoxAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION post_office_box_address */
 /**

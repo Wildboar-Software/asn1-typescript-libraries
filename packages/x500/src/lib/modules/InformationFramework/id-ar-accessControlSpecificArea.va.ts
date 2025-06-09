@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_ar } from "../UsefulDefinitions/id-ar.va";
-export { id_ar } from "../UsefulDefinitions/id-ar.va";
+import { id_ar } from "../UsefulDefinitions/id-ar.va.js";
+export { id_ar } from "../UsefulDefinitions/id-ar.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ar_accessControlSpecificArea */
 /**

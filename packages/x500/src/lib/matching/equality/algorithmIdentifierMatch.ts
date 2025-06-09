@@ -1,10 +1,10 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
-} from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier";
+} from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.js";
 
 export
 const algorithmIdentifierMatch: EqualityMatcher = (

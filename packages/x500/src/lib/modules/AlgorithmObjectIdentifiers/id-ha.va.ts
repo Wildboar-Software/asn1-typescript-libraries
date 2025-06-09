@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-export { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va";
+import { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va.js";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ha */
 /**

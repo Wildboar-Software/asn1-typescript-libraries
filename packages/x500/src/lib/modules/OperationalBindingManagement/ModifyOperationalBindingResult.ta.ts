@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 import {
     ModifyOperationalBindingResultData,
     _decode_ModifyOperationalBindingResultData,
     _encode_ModifyOperationalBindingResultData,
-} from "../OperationalBindingManagement/ModifyOperationalBindingResultData.ta";
+} from "../OperationalBindingManagement/ModifyOperationalBindingResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.js";
 export {
     ModifyOperationalBindingResultData,
     _decode_ModifyOperationalBindingResultData,
     _encode_ModifyOperationalBindingResultData,
-} from "../OperationalBindingManagement/ModifyOperationalBindingResultData.ta";
+} from "../OperationalBindingManagement/ModifyOperationalBindingResultData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyOperationalBindingResult */
 /**

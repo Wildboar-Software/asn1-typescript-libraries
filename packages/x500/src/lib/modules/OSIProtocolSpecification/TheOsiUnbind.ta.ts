@@ -4,19 +4,19 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Release_request_reason,
     _decode_Release_request_reason,
     _encode_Release_request_reason,
-} from "../OSIProtocolSpecification/Release-request-reason.ta";
+} from "../OSIProtocolSpecification/Release-request-reason.ta.js";
 export {
     normal /* IMPORTED_SHORT_NAMED_INTEGER */,
     Release_request_reason,
     Release_request_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_Release_request_reason,
     _encode_Release_request_reason,
-} from "../OSIProtocolSpecification/Release-request-reason.ta";
+} from "../OSIProtocolSpecification/Release-request-reason.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TheOsiUnbind */
 /**

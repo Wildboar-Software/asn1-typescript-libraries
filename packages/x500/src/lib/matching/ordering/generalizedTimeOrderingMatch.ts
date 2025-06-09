@@ -1,4 +1,4 @@
-import OrderingMatcher from "../../types/OrderingMatcher";
+import OrderingMatcher from "../../types/OrderingMatcher.js";
 import type { ASN1Element, GeneralizedTime } from "asn1-ts";
 
 export

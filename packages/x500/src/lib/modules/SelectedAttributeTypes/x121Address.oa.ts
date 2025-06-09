@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_x121Address } from "../SelectedAttributeTypes/id-at-x121Address.va";
-import { numericString } from "../SelectedAttributeTypes/numericString.oa";
-import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa";
-import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_x121Address } from "../SelectedAttributeTypes/id-at-x121Address.va.js";
+import { numericString } from "../SelectedAttributeTypes/numericString.oa.js";
+import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.js";
+import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.js";
 import {
     X121Address,
     _decode_X121Address,
     _encode_X121Address,
-} from "../SelectedAttributeTypes/X121Address.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/X121Address.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -26,18 +26,18 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_x121Address } from "../SelectedAttributeTypes/id-at-x121Address.va";
-export { numericString } from "../SelectedAttributeTypes/numericString.oa";
-export { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa";
-export { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_x121Address } from "../SelectedAttributeTypes/id-at-x121Address.va.js";
+export { numericString } from "../SelectedAttributeTypes/numericString.oa.js";
+export { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.js";
+export { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.js";
 export {
     X121Address,
     _decode_X121Address,
     _encode_X121Address,
-} from "../SelectedAttributeTypes/X121Address.ta";
+} from "../SelectedAttributeTypes/X121Address.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION x121Address */
 /**

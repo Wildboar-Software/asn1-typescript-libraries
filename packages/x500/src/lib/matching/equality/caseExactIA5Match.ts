@@ -1,6 +1,6 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
-import { prepString } from "../../utils/prepString";
+import { prepString } from "../../utils/prepString.js";
 
 export
 const caseExactIA5Match: EqualityMatcher = (

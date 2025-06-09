@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_pwdAlphabet } from "../PasswordPolicy/id-oa-pwdAlphabet.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_pwdAlphabet } from "../PasswordPolicy/id-oa-pwdAlphabet.va.js";
 import {
     PwdAlphabet,
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
-} from "../PasswordPolicy/PwdAlphabet.ta";
-import { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../PasswordPolicy/PwdAlphabet.ta.js";
+import { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_oa_pwdAlphabet } from "../PasswordPolicy/id-oa-pwdAlphabet.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_oa_pwdAlphabet } from "../PasswordPolicy/id-oa-pwdAlphabet.va.js";
 export {
     PwdAlphabet,
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
-} from "../PasswordPolicy/PwdAlphabet.ta";
-export { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription.oa";
+} from "../PasswordPolicy/PwdAlphabet.ta.js";
+export { pwdAlphabetDescription } from "../PasswordPolicy/pwdAlphabetDescription.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdAlphabet */
 /**

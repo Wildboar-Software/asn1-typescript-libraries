@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalStreetAddress,
     _decode_UniversalStreetAddress,
     _encode_UniversalStreetAddress,
-} from "../MTSAbstractService/UniversalStreetAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalStreetAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalStreetAddress,
     _decode_UniversalStreetAddress,
     _encode_UniversalStreetAddress,
-} from "../MTSAbstractService/UniversalStreetAddress.ta";
+} from "../MTSAbstractService/UniversalStreetAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_street_address */
 /**

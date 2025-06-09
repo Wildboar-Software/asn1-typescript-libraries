@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va";
-import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa";
-import { oid } from "../SelectedAttributeTypes/oid.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va.js";
+import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.js";
+import { oid } from "../SelectedAttributeTypes/oid.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -22,13 +22,13 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { oid } from "../SelectedAttributeTypes/oid.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { oid } from "../SelectedAttributeTypes/oid.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION administrativeRole */
 /**

@@ -5,37 +5,37 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UnitOfReplication,
     _decode_UnitOfReplication,
     _encode_UnitOfReplication,
-} from "../DirectoryShadowAbstractService/UnitOfReplication.ta";
+} from "../DirectoryShadowAbstractService/UnitOfReplication.ta.js";
 import {
     UpdateMode,
     _decode_UpdateMode,
     _encode_UpdateMode,
-} from "../DirectoryShadowAbstractService/UpdateMode.ta";
+} from "../DirectoryShadowAbstractService/UpdateMode.ta.js";
 import {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 export {
     UnitOfReplication,
     _decode_UnitOfReplication,
     _encode_UnitOfReplication,
-} from "../DirectoryShadowAbstractService/UnitOfReplication.ta";
+} from "../DirectoryShadowAbstractService/UnitOfReplication.ta.js";
 export {
     UpdateMode,
     _decode_UpdateMode,
     _encode_UpdateMode,
-} from "../DirectoryShadowAbstractService/UpdateMode.ta";
+} from "../DirectoryShadowAbstractService/UpdateMode.ta.js";
 export {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ShadowingAgreementInfo */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniversalDomainDefinedAttribute,
     _decode_UniversalDomainDefinedAttribute,
     _encode_UniversalDomainDefinedAttribute,
-} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttribute.ta";
+} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttribute.ta.js";
 export {
     UniversalDomainDefinedAttribute,
     _decode_UniversalDomainDefinedAttribute,
     _encode_UniversalDomainDefinedAttribute,
-} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttribute.ta";
+} from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttribute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttributes */
 /**

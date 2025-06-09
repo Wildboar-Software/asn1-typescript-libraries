@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertUnsubscribeOK_Item,
     _decode_CertUnsubscribeOK_Item,
     _encode_CertUnsubscribeOK_Item,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK-Item.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK-Item.ta.js";
 export {
     CertUnsubscribeOK_Item,
     _decode_CertUnsubscribeOK_Item,
     _encode_CertUnsubscribeOK_Item,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK-Item.ta";
+} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK */
 /**

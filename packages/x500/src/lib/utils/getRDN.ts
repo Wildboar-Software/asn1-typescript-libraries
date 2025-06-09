@@ -1,9 +1,9 @@
 import type {
     DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta";
+} from "../modules/InformationFramework/DistinguishedName.ta.js";
 import type {
     RelativeDistinguishedName,
-} from "../modules/InformationFramework/RelativeDistinguishedName.ta";
+} from "../modules/InformationFramework/RelativeDistinguishedName.ta.js";
 
 /**
  * @summary Get the relative distinguished name from a distinguished name.

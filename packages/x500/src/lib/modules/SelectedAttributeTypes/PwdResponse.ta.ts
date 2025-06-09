@@ -4,18 +4,18 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PwdResponse_error,
     _decode_PwdResponse_error,
     _encode_PwdResponse_error,
     _enum_for_PwdResponse_error,
-} from "../SelectedAttributeTypes/PwdResponse-error.ta";
+} from "../SelectedAttributeTypes/PwdResponse-error.ta.js";
 import {
     PwdResponse_warning,
     _decode_PwdResponse_warning,
     _encode_PwdResponse_warning,
-} from "../SelectedAttributeTypes/PwdResponse-warning.ta";
+} from "../SelectedAttributeTypes/PwdResponse-warning.ta.js";
 export {
     changeAfterReset /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     passwordExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -25,12 +25,12 @@ export {
     _decode_PwdResponse_error,
     _encode_PwdResponse_error,
     _enum_for_PwdResponse_error,
-} from "../SelectedAttributeTypes/PwdResponse-error.ta";
+} from "../SelectedAttributeTypes/PwdResponse-error.ta.js";
 export {
     PwdResponse_warning,
     _decode_PwdResponse_warning,
     _encode_PwdResponse_warning,
-} from "../SelectedAttributeTypes/PwdResponse-warning.ta";
+} from "../SelectedAttributeTypes/PwdResponse-warning.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PwdResponse */
 /**

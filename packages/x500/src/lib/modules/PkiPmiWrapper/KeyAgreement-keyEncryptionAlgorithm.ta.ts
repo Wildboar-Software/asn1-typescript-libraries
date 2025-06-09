@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { SupportedKeyEncryptionAlgorithm } from "../PkiPmiWrapper/SupportedKeyEncryptionAlgorithm.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { SupportedKeyEncryptionAlgorithm } from "../PkiPmiWrapper/SupportedKeyEncryptionAlgorithm.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreement_keyEncryptionAlgorithm */
 /**

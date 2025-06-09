@@ -6,33 +6,33 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RuleIdentifier,
     _decode_RuleIdentifier,
     _encode_RuleIdentifier,
-} from "../InformationFramework/RuleIdentifier.ta";
+} from "../InformationFramework/RuleIdentifier.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 export {
     DITStructureRule,
     _decode_DITStructureRule,
     _encode_DITStructureRule,
-} from "../InformationFramework/DITStructureRule.ta";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
+} from "../InformationFramework/DITStructureRule.ta.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
 export {
     RuleIdentifier,
     _decode_RuleIdentifier,
     _encode_RuleIdentifier,
-} from "../InformationFramework/RuleIdentifier.ta";
+} from "../InformationFramework/RuleIdentifier.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DITStructureRuleDescription */
 /**

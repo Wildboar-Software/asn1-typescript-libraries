@@ -1,9 +1,9 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa";
-import { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va";
-import { userPwd } from "../PasswordPolicy/userPwd.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa.js";
+import { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va.js";
+import { userPwd } from "../PasswordPolicy/userPwd.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -17,12 +17,12 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va";
-export { userPwd } from "../PasswordPolicy/userPwd.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { pwdRecentlyExpired } from "../InformationFramework/pwdRecentlyExpired.oa.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_oa_userPwdRecentlyExpired } from "../PasswordPolicy/id-oa-userPwdRecentlyExpired.va.js";
+export { userPwd } from "../PasswordPolicy/userPwd.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION userPwdRecentlyExpired */
 /**

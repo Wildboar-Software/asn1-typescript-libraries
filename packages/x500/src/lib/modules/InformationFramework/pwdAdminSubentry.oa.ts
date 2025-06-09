@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { id_sc_pwdAdminSubentry } from "../InformationFramework/id-sc-pwdAdminSubentry.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { id_sc_pwdAdminSubentry } from "../InformationFramework/id-sc-pwdAdminSubentry.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { pwdAttribute } from "../InformationFramework/pwdAttribute.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { id_sc_pwdAdminSubentry } from "../InformationFramework/id-sc-pwdAdminSubentry.va";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { pwdAttribute } from "../InformationFramework/pwdAttribute.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { id_sc_pwdAdminSubentry } from "../InformationFramework/id-sc-pwdAdminSubentry.va.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -19,8 +19,8 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { pwdAttribute } from "../InformationFramework/pwdAttribute.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { pwdAttribute } from "../InformationFramework/pwdAttribute.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdAdminSubentry */
 /**

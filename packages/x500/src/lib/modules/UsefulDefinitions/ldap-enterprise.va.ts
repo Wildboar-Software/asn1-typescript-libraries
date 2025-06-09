@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { internet } from "../UsefulDefinitions/internet.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { internet } from "../UsefulDefinitions/internet.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { internet } from "../UsefulDefinitions/internet.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { internet } from "../UsefulDefinitions/internet.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ldap_enterprise */
 /**

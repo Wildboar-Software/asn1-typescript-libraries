@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ARU_PPDU_normal_mode_parameters_user_data,
     _decode_ARU_PPDU_normal_mode_parameters_user_data,
     _encode_ARU_PPDU_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta.js";
 import {
     Presentation_context_identifier_list,
     _decode_Presentation_context_identifier_list,
     _encode_Presentation_context_identifier_list,
-} from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta.js";
 export {
     ARU_PPDU_normal_mode_parameters_user_data,
     _decode_ARU_PPDU_normal_mode_parameters_user_data,
     _encode_ARU_PPDU_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta.js";
 export {
     Presentation_context_identifier_list,
     _decode_Presentation_context_identifier_list,
     _encode_Presentation_context_identifier_list,
-} from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU_normal_mode_parameters */
 /**

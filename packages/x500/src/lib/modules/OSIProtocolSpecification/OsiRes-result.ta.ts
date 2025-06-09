@@ -3,13 +3,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiRes_result */
 /**

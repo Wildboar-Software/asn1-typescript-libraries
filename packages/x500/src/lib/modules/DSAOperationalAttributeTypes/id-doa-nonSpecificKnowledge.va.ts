@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_doa } from "../UsefulDefinitions/id-doa.va";
-export { id_doa } from "../UsefulDefinitions/id-doa.va";
+import { id_doa } from "../UsefulDefinitions/id-doa.va.js";
+export { id_doa } from "../UsefulDefinitions/id-doa.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_doa_nonSpecificKnowledge */
 /**

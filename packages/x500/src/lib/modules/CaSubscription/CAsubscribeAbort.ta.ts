@@ -4,18 +4,18 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
-} from "../CaSubscription/CASP-error.ta";
+} from "../CaSubscription/CASP-error.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta";
+} from "../CaSubscription/InvokeID.ta.js";
 export {
     CASP_error,
     CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -39,12 +39,12 @@ export {
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
-} from "../CaSubscription/CASP-error.ta";
+} from "../CaSubscription/CASP-error.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta";
+} from "../CaSubscription/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CAsubscribeAbort */
 /**

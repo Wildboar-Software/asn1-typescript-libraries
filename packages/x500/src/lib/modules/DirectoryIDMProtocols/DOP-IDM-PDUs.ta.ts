@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IDM_PDU,
     _decode_IDM_PDU,
     _encode_IDM_PDU,
-} from "../IDMProtocolSpecification/IDM-PDU.ta";
-export { dop_ip } from "../DirectoryIDMProtocols/dop-ip.oa";
+} from "../IDMProtocolSpecification/IDM-PDU.ta.js";
+export { dop_ip } from "../DirectoryIDMProtocols/dop-ip.oa.js";
 export {
     IDM_PDU,
     _decode_IDM_PDU,
     _encode_IDM_PDU,
-} from "../IDMProtocolSpecification/IDM-PDU.ta";
+} from "../IDMProtocolSpecification/IDM-PDU.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DOP_IDM_PDUs */
 /**

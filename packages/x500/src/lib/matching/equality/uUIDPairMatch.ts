@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     UUIDPair,
     _decode_UUIDPair,
-} from "../../modules/SelectedAttributeTypes/UUIDPair.ta";
+} from "../../modules/SelectedAttributeTypes/UUIDPair.ta.js";
 
 export
 const uUIDPairMatch: EqualityMatcher = (

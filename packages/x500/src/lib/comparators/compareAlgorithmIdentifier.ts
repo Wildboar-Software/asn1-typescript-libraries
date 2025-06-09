@@ -1,7 +1,7 @@
 import type {
     AlgorithmIdentifier,
-} from "../modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import compareElements from "./compareElements";
+} from "../modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import compareElements from "./compareElements.js";
 
 export
 function compareAlgorithmIdentifier (a: AlgorithmIdentifier, b: AlgorithmIdentifier): boolean {

@@ -1,13 +1,13 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
 export {
     RuleIdentifier,
     _decode_RuleIdentifier,
     _encode_RuleIdentifier,
-} from "../InformationFramework/RuleIdentifier.ta";
+} from "../InformationFramework/RuleIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION STRUCTURE_RULE */
 /**

@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IdmReject_reason,
     _decode_IdmReject_reason,
     _encode_IdmReject_reason,
     _enum_for_IdmReject_reason,
-} from "../IDMProtocolSpecification/IdmReject-reason.ta";
+} from "../IDMProtocolSpecification/IdmReject-reason.ta.js";
 export {
     duplicateInvokeIDRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     IdmReject_reason,
@@ -45,7 +45,7 @@ export {
     _decode_IdmReject_reason,
     _encode_IdmReject_reason,
     _enum_for_IdmReject_reason,
-} from "../IDMProtocolSpecification/IdmReject-reason.ta";
+} from "../IDMProtocolSpecification/IdmReject-reason.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IdmReject */
 /**

@@ -5,59 +5,59 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 import {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 import {
     EstablishOperationalBindingArgumentData_initiator,
     _decode_EstablishOperationalBindingArgumentData_initiator,
     _encode_EstablishOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta";
+} from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta.js";
 import {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 import {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../OperationalBindingManagement/Validity.ta";
+} from "../OperationalBindingManagement/Validity.ta.js";
 export {
     SecurityParameters,
     _decode_SecurityParameters,
     _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta";
+} from "../DirectoryAbstractService/SecurityParameters.ta.js";
 export {
     AccessPoint,
     _decode_AccessPoint,
     _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta";
+} from "../DistributedOperations/AccessPoint.ta.js";
 export {
     EstablishOperationalBindingArgumentData_initiator,
     _decode_EstablishOperationalBindingArgumentData_initiator,
     _encode_EstablishOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca";
+} from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta.js";
+export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.js";
+export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.js";
 export {
     OperationalBindingID,
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta";
+} from "../OperationalBindingManagement/OperationalBindingID.ta.js";
 export {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../OperationalBindingManagement/Validity.ta";
+} from "../OperationalBindingManagement/Validity.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgumentData */
 /**

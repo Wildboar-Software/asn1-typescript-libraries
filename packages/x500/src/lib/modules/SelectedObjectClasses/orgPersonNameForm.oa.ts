@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-import { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va";
-import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa";
-export { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va";
-export { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+import { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va.js";
+import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.js";
+export { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va.js";
+export { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION orgPersonNameForm */
 /**

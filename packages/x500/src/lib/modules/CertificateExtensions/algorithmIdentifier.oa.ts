@@ -3,16 +3,16 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
-import { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
-export { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
+export { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION algorithmIdentifier */
 /**

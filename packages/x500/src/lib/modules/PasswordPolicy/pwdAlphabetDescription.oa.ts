@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_asx_pwdAlphabetDescription } from "../PasswordPolicy/id-asx-pwdAlphabetDescription.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_asx_pwdAlphabetDescription } from "../PasswordPolicy/id-asx-pwdAlphabetDescription.va.js";
 import {
     PwdAlphabet,
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
-} from "../PasswordPolicy/PwdAlphabet.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_pwdAlphabetDescription } from "../PasswordPolicy/id-asx-pwdAlphabetDescription.va";
+} from "../PasswordPolicy/PwdAlphabet.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_pwdAlphabetDescription } from "../PasswordPolicy/id-asx-pwdAlphabetDescription.va.js";
 export {
     PwdAlphabet,
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
-} from "../PasswordPolicy/PwdAlphabet.ta";
+} from "../PasswordPolicy/PwdAlphabet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pwdAlphabetDescription */
 /**

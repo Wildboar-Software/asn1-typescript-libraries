@@ -5,19 +5,19 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/ContextAssertion.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../InformationFramework/ContextAssertion.ta.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeTypeAssertion */
 /**

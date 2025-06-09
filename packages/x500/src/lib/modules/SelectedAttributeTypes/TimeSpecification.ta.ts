@@ -5,27 +5,27 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TimeSpecification_time,
     _decode_TimeSpecification_time,
     _encode_TimeSpecification_time,
-} from "../SelectedAttributeTypes/TimeSpecification-time.ta";
+} from "../SelectedAttributeTypes/TimeSpecification-time.ta.js";
 import {
     TimeZone,
     _decode_TimeZone,
     _encode_TimeZone,
-} from "../SelectedAttributeTypes/TimeZone.ta";
+} from "../SelectedAttributeTypes/TimeZone.ta.js";
 export {
     TimeSpecification_time,
     _decode_TimeSpecification_time,
     _encode_TimeSpecification_time,
-} from "../SelectedAttributeTypes/TimeSpecification-time.ta";
+} from "../SelectedAttributeTypes/TimeSpecification-time.ta.js";
 export {
     TimeZone,
     _decode_TimeZone,
     _encode_TimeZone,
-} from "../SelectedAttributeTypes/TimeZone.ta";
+} from "../SelectedAttributeTypes/TimeZone.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeSpecification */
 /**

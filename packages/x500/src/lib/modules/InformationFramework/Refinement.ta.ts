@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION Refinement */
 /**

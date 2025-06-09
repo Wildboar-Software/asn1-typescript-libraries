@@ -1,12 +1,12 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     Holder,
-} from "../modules/AttributeCertificateDefinitions/Holder.ta";
-import compareGeneralNames from "./compareGeneralNames";
-import compareIssuerSerial from "./compareIssuerSerial";
-import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier";
-import compareBitStrings from "./compareBitStrings";
+} from "../modules/AttributeCertificateDefinitions/Holder.ta.js";
+import compareGeneralNames from "./compareGeneralNames.js";
+import compareIssuerSerial from "./compareIssuerSerial.js";
+import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier.js";
+import compareBitStrings from "./compareBitStrings.js";
 
 export
 function compareHolder (

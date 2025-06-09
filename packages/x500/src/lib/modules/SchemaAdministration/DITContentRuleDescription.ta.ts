@@ -6,25 +6,25 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     DITContentRule,
     _decode_DITContentRule,
     _encode_DITContentRule,
-} from "../InformationFramework/DITContentRule.ta";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/DITContentRule.ta.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-import { DITContentRule } from "../InformationFramework/DITContentRule.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+import { DITContentRule } from "../InformationFramework/DITContentRule.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DITContentRuleDescription */
 /**

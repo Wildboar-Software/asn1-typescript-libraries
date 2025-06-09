@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SenderDhPublicKey,
     _decode_SenderDhPublicKey,
     _encode_SenderDhPublicKey,
-} from "../PkiPmiWrapper/SenderDhPublicKey.ta";
+} from "../PkiPmiWrapper/SenderDhPublicKey.ta.js";
 import {
     SenderStaticInfo,
     _decode_SenderStaticInfo,
     _encode_SenderStaticInfo,
-} from "../PkiPmiWrapper/SenderStaticInfo.ta";
+} from "../PkiPmiWrapper/SenderStaticInfo.ta.js";
 export {
     SenderDhPublicKey,
     _decode_SenderDhPublicKey,
     _encode_SenderDhPublicKey,
-} from "../PkiPmiWrapper/SenderDhPublicKey.ta";
+} from "../PkiPmiWrapper/SenderDhPublicKey.ta.js";
 export {
     SenderStaticInfo,
     _decode_SenderStaticInfo,
     _encode_SenderStaticInfo,
-} from "../PkiPmiWrapper/SenderStaticInfo.ta";
+} from "../PkiPmiWrapper/SenderStaticInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SenderDhInfo */
 /**

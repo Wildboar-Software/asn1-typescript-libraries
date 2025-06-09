@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va.js";
 import {
     SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va";
+} from "../CertificateExtensions/SkipCerts.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va.js";
 export {
     SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta";
+} from "../CertificateExtensions/SkipCerts.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION inhibitAnyPolicy */
 /**

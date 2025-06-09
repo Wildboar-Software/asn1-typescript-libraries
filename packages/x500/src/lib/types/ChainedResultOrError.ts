@@ -1,5 +1,5 @@
-import type ChainedResult from "./ChainedResult";
-import type Error_ from "./Error_";
+import type ChainedResult from "./ChainedResult.js";
+import type Error_ from "./Error_.js";
 
 export
 type ChainedResultOrError = ChainedResult | Error_;

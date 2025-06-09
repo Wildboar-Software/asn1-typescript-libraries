@@ -1,34 +1,34 @@
 /* eslint-disable */
-import { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     LinkedArgument,
     _decode_LinkedArgument,
     _encode_LinkedArgument,
-} from "../DirectoryAbstractService/LinkedArgument.ta";
+} from "../DirectoryAbstractService/LinkedArgument.ta.js";
 import {
     LinkedResult,
     _decode_LinkedResult,
     _encode_LinkedResult,
-} from "../DirectoryAbstractService/LinkedResult.ta";
+} from "../DirectoryAbstractService/LinkedResult.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     LinkedArgument,
     _decode_LinkedArgument,
     _encode_LinkedArgument,
-} from "../DirectoryAbstractService/LinkedArgument.ta";
+} from "../DirectoryAbstractService/LinkedArgument.ta.js";
 export {
     LinkedResult,
     _decode_LinkedResult,
     _encode_LinkedResult,
-} from "../DirectoryAbstractService/LinkedResult.ta";
+} from "../DirectoryAbstractService/LinkedResult.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION linkedLDAP */
 /**

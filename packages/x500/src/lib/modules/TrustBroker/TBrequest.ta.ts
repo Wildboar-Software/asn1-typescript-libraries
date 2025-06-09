@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKCertIdentifier,
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/PKCertIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/PKCertIdentifier.ta.js";
 export {
     PKCertIdentifier,
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/PKCertIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/PKCertIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBrequest */
 /**

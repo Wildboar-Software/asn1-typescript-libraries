@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va";
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va.js";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa";
-import { top } from "../InformationFramework/top.oa";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -21,10 +21,10 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa";
-export { top } from "../InformationFramework/top.oa";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION subentry */
 /**

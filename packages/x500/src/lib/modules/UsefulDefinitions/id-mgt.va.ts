@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { managementObject } from "../UsefulDefinitions/managementObject.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { managementObject } from "../UsefulDefinitions/managementObject.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { managementObject } from "../UsefulDefinitions/managementObject.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { managementObject } from "../UsefulDefinitions/managementObject.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mgt */
 /**

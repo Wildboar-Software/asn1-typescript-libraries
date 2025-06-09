@@ -1,38 +1,38 @@
 /* eslint-disable */
-import { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     AdministerPasswordArgument,
     _decode_AdministerPasswordArgument,
     _encode_AdministerPasswordArgument,
-} from "../DirectoryAbstractService/AdministerPasswordArgument.ta";
+} from "../DirectoryAbstractService/AdministerPasswordArgument.ta.js";
 import {
     AdministerPasswordResult,
     _decode_AdministerPasswordResult,
     _encode_AdministerPasswordResult,
-} from "../DirectoryAbstractService/AdministerPasswordResult.ta";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/AdministerPasswordResult.ta.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     AdministerPasswordArgument,
     _decode_AdministerPasswordArgument,
     _encode_AdministerPasswordArgument,
-} from "../DirectoryAbstractService/AdministerPasswordArgument.ta";
+} from "../DirectoryAbstractService/AdministerPasswordArgument.ta.js";
 export {
     AdministerPasswordResult,
     _decode_AdministerPasswordResult,
     _encode_AdministerPasswordResult,
-} from "../DirectoryAbstractService/AdministerPasswordResult.ta";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { updateError } from "../DirectoryAbstractService/updateError.oa";
+} from "../DirectoryAbstractService/AdministerPasswordResult.ta.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { updateError } from "../DirectoryAbstractService/updateError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION administerPassword */
 /**

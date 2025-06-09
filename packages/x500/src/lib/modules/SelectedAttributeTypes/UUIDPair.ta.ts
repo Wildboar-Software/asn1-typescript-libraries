@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UUID,
     _decode_UUID,
     _encode_UUID,
-} from "../SelectedAttributeTypes/UUID.ta";
+} from "../SelectedAttributeTypes/UUID.ta.js";
 export {
     UUID,
     _decode_UUID,
     _encode_UUID,
-} from "../SelectedAttributeTypes/UUID.ta";
+} from "../SelectedAttributeTypes/UUID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UUIDPair */
 /**

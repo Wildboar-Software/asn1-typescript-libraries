@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     CountryCode3c,
     _decode_CountryCode3c,
     _encode_CountryCode3c,
-} from "../SelectedAttributeTypes/CountryCode3c.ta";
-import { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/CountryCode3c.ta.js";
+import { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CountryCode3c,
     _decode_CountryCode3c,
     _encode_CountryCode3c,
-} from "../SelectedAttributeTypes/CountryCode3c.ta";
-export { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va";
+} from "../SelectedAttributeTypes/CountryCode3c.ta.js";
+export { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.js";
 
 /* START_OF_SYMBOL_DEFINITION countryString3c */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_mat } from "../DirectoryManagement/id-mat.va";
-export { id_mat } from "../DirectoryManagement/id-mat.va";
+import { id_mat } from "../DirectoryManagement/id-mat.va.js";
+export { id_mat } from "../DirectoryManagement/id-mat.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_mat_noSuchObject */
 /**

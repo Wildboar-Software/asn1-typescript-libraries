@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_issuingDistributionPoint } from "../CertificateExtensions/id-ce-issuingDistributionPoint.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_issuingDistributionPoint } from "../CertificateExtensions/id-ce-issuingDistributionPoint.va.js";
 import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
     _encode_IssuingDistPointSyntax,
-} from "../CertificateExtensions/IssuingDistPointSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_issuingDistributionPoint } from "../CertificateExtensions/id-ce-issuingDistributionPoint.va";
+} from "../CertificateExtensions/IssuingDistPointSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_issuingDistributionPoint } from "../CertificateExtensions/id-ce-issuingDistributionPoint.va.js";
 export {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
     _encode_IssuingDistPointSyntax,
-} from "../CertificateExtensions/IssuingDistPointSyntax.ta";
+} from "../CertificateExtensions/IssuingDistPointSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION issuingDistributionPoint */
 /**

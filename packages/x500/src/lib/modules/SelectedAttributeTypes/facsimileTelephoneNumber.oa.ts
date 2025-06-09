@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa";
-import { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa";
-import { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa.js";
+import { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa.js";
+import { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa.js";
 import {
     FacsimileTelephoneNumber,
     _decode_FacsimileTelephoneNumber,
     _encode_FacsimileTelephoneNumber,
-} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta";
-import { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.js";
+import { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -26,18 +26,18 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa";
-export { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa";
-export { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa.js";
+export { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa.js";
+export { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa.js";
 export {
     FacsimileTelephoneNumber,
     _decode_FacsimileTelephoneNumber,
     _encode_FacsimileTelephoneNumber,
-} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta";
-export { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va";
+} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.js";
+export { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va.js";
 
 /* START_OF_SYMBOL_DEFINITION facsimileTelephoneNumber */
 /**

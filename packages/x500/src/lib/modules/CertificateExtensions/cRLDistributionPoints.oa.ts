@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CRLDistPointsSyntax,
     _decode_CRLDistPointsSyntax,
     _encode_CRLDistPointsSyntax,
-} from "../CertificateExtensions/CRLDistPointsSyntax.ta";
-import { id_ce_cRLDistributionPoints } from "../CertificateExtensions/id-ce-cRLDistributionPoints.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CRLDistPointsSyntax.ta.js";
+import { id_ce_cRLDistributionPoints } from "../CertificateExtensions/id-ce-cRLDistributionPoints.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     CRLDistPointsSyntax,
     _decode_CRLDistPointsSyntax,
     _encode_CRLDistPointsSyntax,
-} from "../CertificateExtensions/CRLDistPointsSyntax.ta";
-export { id_ce_cRLDistributionPoints } from "../CertificateExtensions/id-ce-cRLDistributionPoints.va";
+} from "../CertificateExtensions/CRLDistPointsSyntax.ta.js";
+export { id_ce_cRLDistributionPoints } from "../CertificateExtensions/id-ce-cRLDistributionPoints.va.js";
 
 /* START_OF_SYMBOL_DEFINITION cRLDistributionPoints */
 /**

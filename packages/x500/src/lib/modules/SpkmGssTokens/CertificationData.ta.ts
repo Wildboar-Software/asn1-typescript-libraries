@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
+} from "../AuthenticationFramework/CertificateList.ta.js";
 import {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../SpkmGssTokens/CertificationPath.ta";
+} from "../SpkmGssTokens/CertificationPath.ta.js";
 export {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta";
+} from "../AuthenticationFramework/CertificateList.ta.js";
 export {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../SpkmGssTokens/CertificationPath.ta";
+} from "../SpkmGssTokens/CertificationPath.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificationData */
 /**

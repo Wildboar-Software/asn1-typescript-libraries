@@ -5,19 +5,19 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MULTY_SIGNED_parmeters_sign,
     _get_decoder_for_MULTY_SIGNED_parmeters_sign,
     _get_encoder_for_MULTY_SIGNED_parmeters_sign,
-} from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta";
-export { multipleSignaturesAlgo } from "../CryptoTools/multipleSignaturesAlgo.oa";
+} from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta.js";
+export { multipleSignaturesAlgo } from "../CryptoTools/multipleSignaturesAlgo.oa.js";
 export {
     MULTY_SIGNED_parmeters_sign,
     _get_decoder_for_MULTY_SIGNED_parmeters_sign,
     _get_encoder_for_MULTY_SIGNED_parmeters_sign,
-} from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION MULTY_SIGNED */
 /**

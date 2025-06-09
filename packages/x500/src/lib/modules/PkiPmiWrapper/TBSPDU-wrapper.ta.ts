@@ -4,43 +4,43 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     PkiPath,
     _decode_PkiPath,
     _encode_PkiPath,
-} from "../AuthenticationFramework/PkiPath.ta";
+} from "../AuthenticationFramework/PkiPath.ta.js";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     Version,
     _decode_Version,
     _encode_Version,
-} from "../AuthenticationFramework/Version.ta";
+} from "../AuthenticationFramework/Version.ta.js";
 import {
     SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
-} from "../PkiPmiWrapper/SignedAttributes.ta";
+} from "../PkiPmiWrapper/SignedAttributes.ta.js";
 import {
     TBSPDU_wrapper_conf,
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
-} from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta";
+} from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     PkiPath,
     _decode_PkiPath,
     _encode_PkiPath,
-} from "../AuthenticationFramework/PkiPath.ta";
+} from "../AuthenticationFramework/PkiPath.ta.js";
 export {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -51,17 +51,17 @@ export {
     Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from "../AuthenticationFramework/Version.ta";
+} from "../AuthenticationFramework/Version.ta.js";
 export {
     SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
-} from "../PkiPmiWrapper/SignedAttributes.ta";
+} from "../PkiPmiWrapper/SignedAttributes.ta.js";
 export {
     TBSPDU_wrapper_conf,
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
-} from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta";
+} from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper */
 /**

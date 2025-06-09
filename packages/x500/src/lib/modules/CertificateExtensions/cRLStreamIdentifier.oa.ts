@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta";
-import { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CRLStreamIdentifier.ta.js";
+import { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta";
-export { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va";
+} from "../CertificateExtensions/CRLStreamIdentifier.ta.js";
+export { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION cRLStreamIdentifier */
 /**

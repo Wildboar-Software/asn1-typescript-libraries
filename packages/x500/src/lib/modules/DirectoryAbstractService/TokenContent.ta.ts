@@ -5,37 +5,37 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryAbstractService/Time.ta";
+} from "../DirectoryAbstractService/Time.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryAbstractService/Time.ta";
+} from "../DirectoryAbstractService/Time.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TokenContent */
 /**

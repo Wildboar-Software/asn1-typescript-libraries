@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_hmacWithSHA512 } from "../AlgorithmObjectIdentifiers/id-hmacWithSHA512.va";
-import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
-export { id_hmacWithSHA512 } from "../AlgorithmObjectIdentifiers/id-hmacWithSHA512.va";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_hmacWithSHA512 } from "../AlgorithmObjectIdentifiers/id-hmacWithSHA512.va.js";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
+export { id_hmacWithSHA512 } from "../AlgorithmObjectIdentifiers/id-hmacWithSHA512.va.js";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION hmacWithSHA512 */
 /**

@@ -3,18 +3,18 @@ import {
     HolderIssuerAssertion,
     _decode_HolderIssuerAssertion,
     _encode_HolderIssuerAssertion,
-} from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta";
-import { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta.js";
+import { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     HolderIssuerAssertion,
     _decode_HolderIssuerAssertion,
     _encode_HolderIssuerAssertion,
-} from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta";
-export { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta.js";
+export { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION holderIssuerMatch */
 /**

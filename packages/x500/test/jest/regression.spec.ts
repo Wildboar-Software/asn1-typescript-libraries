@@ -1,7 +1,7 @@
 import * as asn1 from "asn1-ts";
 import {
   _decode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
 
 
 describe("This library", () => {

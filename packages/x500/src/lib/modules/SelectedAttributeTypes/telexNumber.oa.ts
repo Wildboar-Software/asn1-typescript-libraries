@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_telexNumber } from "../SelectedAttributeTypes/id-at-telexNumber.va";
-import { telexNr } from "../SelectedAttributeTypes/telexNr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_telexNumber } from "../SelectedAttributeTypes/id-at-telexNumber.va.js";
+import { telexNr } from "../SelectedAttributeTypes/telexNr.oa.js";
 import {
     TelexNumber,
     _decode_TelexNumber,
     _encode_TelexNumber,
-} from "../SelectedAttributeTypes/TelexNumber.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/TelexNumber.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_telexNumber } from "../SelectedAttributeTypes/id-at-telexNumber.va";
-export { telexNr } from "../SelectedAttributeTypes/telexNr.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_telexNumber } from "../SelectedAttributeTypes/id-at-telexNumber.va.js";
+export { telexNr } from "../SelectedAttributeTypes/telexNr.oa.js";
 export {
     TelexNumber,
     _decode_TelexNumber,
     _encode_TelexNumber,
-} from "../SelectedAttributeTypes/TelexNumber.ta";
+} from "../SelectedAttributeTypes/TelexNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION telexNumber */
 /**

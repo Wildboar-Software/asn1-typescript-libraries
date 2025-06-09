@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedPduSet */
 /**

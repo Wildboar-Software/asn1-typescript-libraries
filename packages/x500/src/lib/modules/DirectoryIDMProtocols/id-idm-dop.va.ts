@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_idm } from "../UsefulDefinitions/id-idm.va";
-export { id_idm } from "../UsefulDefinitions/id-idm.va";
+import { id_idm } from "../UsefulDefinitions/id-idm.va.js";
+export { id_idm } from "../UsefulDefinitions/id-idm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_idm_dop */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { cmsContentType } from "../UsefulDefinitions/cmsContentType.va";
-import { ID } from "../UsefulDefinitions/ID.ta";
-export { cmsContentType } from "../UsefulDefinitions/cmsContentType.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
+import { cmsContentType } from "../UsefulDefinitions/cmsContentType.va.js";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+export { cmsContentType } from "../UsefulDefinitions/cmsContentType.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_cmsct */
 /**

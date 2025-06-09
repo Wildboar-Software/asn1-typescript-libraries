@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertSubscribeReq_certs_Item,
     _decode_CertSubscribeReq_certs_Item,
     _encode_CertSubscribeReq_certs_Item,
-} from "../CaSubscription/CertSubscribeReq-certs-Item.ta";
+} from "../CaSubscription/CertSubscribeReq-certs-Item.ta.js";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta";
+} from "../CaSubscription/InvokeID.ta.js";
 export {
     CertSubscribeReq_certs_Item,
     _decode_CertSubscribeReq_certs_Item,
     _encode_CertSubscribeReq_certs_Item,
-} from "../CaSubscription/CertSubscribeReq-certs-Item.ta";
+} from "../CaSubscription/CertSubscribeReq-certs-Item.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta";
+} from "../CaSubscription/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeReq */
 /**

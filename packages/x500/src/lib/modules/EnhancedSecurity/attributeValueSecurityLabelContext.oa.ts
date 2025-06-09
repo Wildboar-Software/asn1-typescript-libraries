@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va";
+import { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va.js";
 import {
     SignedSecurityLabel,
     _decode_SignedSecurityLabel,
     _encode_SignedSecurityLabel,
-} from "../EnhancedSecurity/SignedSecurityLabel.ta";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-export { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va";
+} from "../EnhancedSecurity/SignedSecurityLabel.ta.js";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+export { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va.js";
 export {
     SignedSecurityLabel,
     _decode_SignedSecurityLabel,
     _encode_SignedSecurityLabel,
-} from "../EnhancedSecurity/SignedSecurityLabel.ta";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+} from "../EnhancedSecurity/SignedSecurityLabel.ta.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeValueSecurityLabelContext */
 /**

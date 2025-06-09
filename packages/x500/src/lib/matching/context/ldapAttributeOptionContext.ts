@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     AttributeOptionList,
     _decode_AttributeOptionList,
-} from "../../modules/SelectedAttributeTypes/AttributeOptionList.ta";
+} from "../../modules/SelectedAttributeTypes/AttributeOptionList.ta.js";
 
 export
 const evaluateLDAPAttributeOptionContext: EqualityMatcher = (

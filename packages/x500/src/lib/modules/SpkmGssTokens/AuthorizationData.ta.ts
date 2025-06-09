@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthorizationData_Item,
     _decode_AuthorizationData_Item,
     _encode_AuthorizationData_Item,
-} from "../SpkmGssTokens/AuthorizationData-Item.ta";
+} from "../SpkmGssTokens/AuthorizationData-Item.ta.js";
 export {
     AuthorizationData_Item,
     _decode_AuthorizationData_Item,
     _encode_AuthorizationData_Item,
-} from "../SpkmGssTokens/AuthorizationData-Item.ta";
+} from "../SpkmGssTokens/AuthorizationData-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthorizationData */
 /**

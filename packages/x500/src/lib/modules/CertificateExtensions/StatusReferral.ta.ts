@@ -4,18 +4,18 @@ import {
     ASN1TagClass as _TagClass,
     INSTANCE_OF,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CRLReferral,
     _decode_CRLReferral,
     _encode_CRLReferral,
-} from "../CertificateExtensions/CRLReferral.ta";
+} from "../CertificateExtensions/CRLReferral.ta.js";
 export {
     CRLReferral,
     _decode_CRLReferral,
     _encode_CRLReferral,
-} from "../CertificateExtensions/CRLReferral.ta";
-export { OTHER_REFERRAL } from "../CertificateExtensions/OTHER-REFERRAL.oca";
+} from "../CertificateExtensions/CRLReferral.ta.js";
+export { OTHER_REFERRAL } from "../CertificateExtensions/OTHER-REFERRAL.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION StatusReferral */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { AttributeIDs } from "../AttributeCertificateDefinitions/AttributeIDs.osa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { AttributeIDs } from "../AttributeCertificateDefinitions/AttributeIDs.osa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeIdentifier */
 /**

@@ -5,18 +5,18 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FamilyEntry,
     _decode_FamilyEntry,
     _encode_FamilyEntry,
-} from "../DirectoryAbstractService/FamilyEntry.ta";
+} from "../DirectoryAbstractService/FamilyEntry.ta.js";
 export {
     FamilyEntry,
     _decode_FamilyEntry,
     _encode_FamilyEntry,
-} from "../DirectoryAbstractService/FamilyEntry.ta";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../DirectoryAbstractService/FamilyEntry.ta.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION FamilyEntries */
 /**

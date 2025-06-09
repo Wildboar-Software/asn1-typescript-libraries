@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { guide } from "../SelectedAttributeTypes/guide.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { guide } from "../SelectedAttributeTypes/guide.oa.js";
 import {
     Guide,
     _decode_Guide,
     _encode_Guide,
-} from "../SelectedAttributeTypes/Guide.ta";
-import { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/Guide.ta.js";
+import { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { guide } from "../SelectedAttributeTypes/guide.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { guide } from "../SelectedAttributeTypes/guide.oa.js";
 export {
     Guide,
     _decode_Guide,
     _encode_Guide,
-} from "../SelectedAttributeTypes/Guide.ta";
-export { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.va";
+} from "../SelectedAttributeTypes/Guide.ta.js";
+export { id_at_searchGuide } from "../SelectedAttributeTypes/id-at-searchGuide.va.js";
 
 /* START_OF_SYMBOL_DEFINITION searchGuide */
 /**

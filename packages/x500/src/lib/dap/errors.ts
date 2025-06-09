@@ -1,54 +1,54 @@
 import type {
     AbandonedData,
-} from "../modules/DirectoryAbstractService/AbandonedData.ta";
+} from "../modules/DirectoryAbstractService/AbandonedData.ta.js";
 import type {
     AbandonFailedData,
-} from "../modules/DirectoryAbstractService/AbandonFailedData.ta";
+} from "../modules/DirectoryAbstractService/AbandonFailedData.ta.js";
 import type {
     AttributeErrorData,
-} from "../modules/DirectoryAbstractService/AttributeErrorData.ta";
+} from "../modules/DirectoryAbstractService/AttributeErrorData.ta.js";
 import {
     NameErrorData,
-} from "../modules/DirectoryAbstractService/NameErrorData.ta";
+} from "../modules/DirectoryAbstractService/NameErrorData.ta.js";
 import type {
     ReferralData,
-} from "../modules/DirectoryAbstractService/ReferralData.ta";
+} from "../modules/DirectoryAbstractService/ReferralData.ta.js";
 import type {
     SecurityErrorData,
-} from "../modules/DirectoryAbstractService/SecurityErrorData.ta";
+} from "../modules/DirectoryAbstractService/SecurityErrorData.ta.js";
 import {
     ServiceErrorData,
-} from "../modules/DirectoryAbstractService/ServiceErrorData.ta";
+} from "../modules/DirectoryAbstractService/ServiceErrorData.ta.js";
 import {
     UpdateErrorData,
-} from "../modules/DirectoryAbstractService/UpdateErrorData.ta";
+} from "../modules/DirectoryAbstractService/UpdateErrorData.ta.js";
 import type {
     Code,
-} from "../modules/CommonProtocolSpecification/Code.ta";
+} from "../modules/CommonProtocolSpecification/Code.ta.js";
 import {
     id_errcode_abandoned,
-} from "../modules/CommonProtocolSpecification/id-errcode-abandoned.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-abandoned.va.js";
 import {
     id_errcode_abandonFailed,
-} from "../modules/CommonProtocolSpecification/id-errcode-abandonFailed.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-abandonFailed.va.js";
 import {
     id_errcode_attributeError,
-} from "../modules/CommonProtocolSpecification/id-errcode-attributeError.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-attributeError.va.js";
 import {
     id_errcode_nameError,
-} from "../modules/CommonProtocolSpecification/id-errcode-nameError.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-nameError.va.js";
 import {
     id_errcode_referral,
-} from "../modules/CommonProtocolSpecification/id-errcode-referral.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-referral.va.js";
 import {
     id_errcode_securityError,
-} from "../modules/CommonProtocolSpecification/id-errcode-securityError.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-securityError.va.js";
 import {
     id_errcode_serviceError,
-} from "../modules/CommonProtocolSpecification/id-errcode-serviceError.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-serviceError.va.js";
 import {
     id_errcode_updateError,
-} from "../modules/CommonProtocolSpecification/id-errcode-updateError.va";
+} from "../modules/CommonProtocolSpecification/id-errcode-updateError.va.js";
 
 export
 class AbandonError extends Error {

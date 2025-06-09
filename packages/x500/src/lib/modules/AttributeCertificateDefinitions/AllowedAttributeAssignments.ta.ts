@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AllowedAttributeAssignments_Item,
     _decode_AllowedAttributeAssignments_Item,
     _encode_AllowedAttributeAssignments_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta.js";
 export {
     AllowedAttributeAssignments_Item,
     _decode_AllowedAttributeAssignments_Item,
     _encode_AllowedAttributeAssignments_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta";
+} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AllowedAttributeAssignments */
 /**

@@ -3,16 +3,16 @@ import {
     AttributeValueIntegrityInfo,
     _decode_AttributeValueIntegrityInfo,
     _encode_AttributeValueIntegrityInfo,
-} from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta";
-import { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va";
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+} from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.js";
+import { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.js";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 export {
     AttributeValueIntegrityInfo,
     _decode_AttributeValueIntegrityInfo,
     _encode_AttributeValueIntegrityInfo,
-} from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta";
-export { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
+} from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.js";
+export { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION attributeValueIntegrityInfoContext */
 /**

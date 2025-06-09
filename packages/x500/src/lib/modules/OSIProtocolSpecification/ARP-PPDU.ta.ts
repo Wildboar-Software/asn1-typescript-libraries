@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Abort_reason,
     _decode_Abort_reason,
     _encode_Abort_reason,
-} from "../OSIProtocolSpecification/Abort-reason.ta";
+} from "../OSIProtocolSpecification/Abort-reason.ta.js";
 import {
     Event_identifier,
     _decode_Event_identifier,
     _encode_Event_identifier,
-} from "../OSIProtocolSpecification/Event-identifier.ta";
+} from "../OSIProtocolSpecification/Event-identifier.ta.js";
 export {
     Abort_reason,
     Abort_reason_invalid_ppdu_parameter_value /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -33,7 +33,7 @@ export {
     unrecognized_ppdu_parameter /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Abort_reason,
     _encode_Abort_reason,
-} from "../OSIProtocolSpecification/Abort-reason.ta";
+} from "../OSIProtocolSpecification/Abort-reason.ta.js";
 export {
     arp_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
     aru_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -54,7 +54,7 @@ export {
     td_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Event_identifier,
     _encode_Event_identifier,
-} from "../OSIProtocolSpecification/Event-identifier.ta";
+} from "../OSIProtocolSpecification/Event-identifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ARP_PPDU */
 /**

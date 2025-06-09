@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TeletexOrganizationalUnitNames,
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     TeletexOrganizationalUnitNames,
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta";
+} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION teletex_organizational_unit_names */
 /**

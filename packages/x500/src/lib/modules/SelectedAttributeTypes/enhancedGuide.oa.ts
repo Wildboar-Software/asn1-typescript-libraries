@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     EnhancedGuide,
     _decode_EnhancedGuide,
     _encode_EnhancedGuide,
-} from "../SelectedAttributeTypes/EnhancedGuide.ta";
-import { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SelectedAttributeTypes/EnhancedGuide.ta.js";
+import { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     EnhancedGuide,
     _decode_EnhancedGuide,
     _encode_EnhancedGuide,
-} from "../SelectedAttributeTypes/EnhancedGuide.ta";
-export { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va";
+} from "../SelectedAttributeTypes/EnhancedGuide.ta.js";
+export { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.js";
 
 /* START_OF_SYMBOL_DEFINITION enhancedGuide */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { idmProtocol } from "../UsefulDefinitions/idmProtocol.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { idmProtocol } from "../UsefulDefinitions/idmProtocol.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { idmProtocol } from "../UsefulDefinitions/idmProtocol.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { idmProtocol } from "../UsefulDefinitions/idmProtocol.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_idm */
 /**

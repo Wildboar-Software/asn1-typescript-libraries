@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta";
-import { passwordQuality } from "../UsefulDefinitions/passwordQuality.va";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta";
-export { passwordQuality } from "../UsefulDefinitions/passwordQuality.va";
+import { ID } from "../UsefulDefinitions/ID.ta.js";
+import { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.js";
+export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.js";
+export { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pq */
 /**

@@ -1,36 +1,36 @@
 /* eslint-disable */
-import { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+import { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 import {
     CoordinateShadowUpdateArgument,
     _decode_CoordinateShadowUpdateArgument,
     _encode_CoordinateShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.js";
 import {
     CoordinateShadowUpdateResult,
     _decode_CoordinateShadowUpdateResult,
     _encode_CoordinateShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta";
-import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.js";
+import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
 export {
     CoordinateShadowUpdateArgument,
     _decode_CoordinateShadowUpdateArgument,
     _encode_CoordinateShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.js";
 export {
     CoordinateShadowUpdateResult,
     _decode_CoordinateShadowUpdateResult,
     _encode_CoordinateShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta";
-export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa";
+} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.js";
+export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION coordinateShadowUpdate */
 /**

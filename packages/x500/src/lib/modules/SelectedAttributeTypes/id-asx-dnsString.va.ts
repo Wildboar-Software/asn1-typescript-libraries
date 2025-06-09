@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_asx } from "../UsefulDefinitions/id-asx.va";
-export { id_asx } from "../UsefulDefinitions/id-asx.va";
+import { id_asx } from "../UsefulDefinitions/id-asx.va.js";
+export { id_asx } from "../UsefulDefinitions/id-asx.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_asx_dnsString */
 /**

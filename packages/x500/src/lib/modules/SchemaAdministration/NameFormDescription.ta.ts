@@ -6,28 +6,28 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     NameFormInformation,
     _decode_NameFormInformation,
     _encode_NameFormInformation,
-} from "../SchemaAdministration/NameFormInformation.ta";
+} from "../SchemaAdministration/NameFormInformation.ta.js";
 import {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
 export {
     NameFormInformation,
     _decode_NameFormInformation,
     _encode_NameFormInformation,
-} from "../SchemaAdministration/NameFormInformation.ta";
+} from "../SchemaAdministration/NameFormInformation.ta.js";
 export {
     UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NameFormDescription */
 /**

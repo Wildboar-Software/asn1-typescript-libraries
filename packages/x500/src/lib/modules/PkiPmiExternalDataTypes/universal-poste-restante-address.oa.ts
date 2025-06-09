@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalPosteRestanteAddress,
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
-} from "../PkiPmiExternalDataTypes/UniversalPosteRestanteAddress.ta";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca";
+} from "../PkiPmiExternalDataTypes/UniversalPosteRestanteAddress.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalPosteRestanteAddress,
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
-} from "../PkiPmiExternalDataTypes/UniversalPosteRestanteAddress.ta";
+} from "../PkiPmiExternalDataTypes/UniversalPosteRestanteAddress.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_poste_restante_address */
 /**

@@ -5,90 +5,90 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 import {
     AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AARE-apdu-protocol-version.ta";
+} from "../OSIProtocolSpecification/AARE-apdu-protocol-version.ta.js";
 import {
     AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.js";
 import {
     AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.js";
 import {
     Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta";
+} from "../OSIProtocolSpecification/Application-context-name.ta.js";
 import {
     Associate_result,
     _decode_Associate_result,
     _encode_Associate_result,
-} from "../OSIProtocolSpecification/Associate-result.ta";
+} from "../OSIProtocolSpecification/Associate-result.ta.js";
 import {
     Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic.ta.js";
 import {
     Association_informationBindRes,
     _decode_Association_informationBindRes,
     _encode_Association_informationBindRes,
-} from "../OSIProtocolSpecification/Association-informationBindRes.ta";
+} from "../OSIProtocolSpecification/Association-informationBindRes.ta.js";
 import {
     Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta";
+} from "../OSIProtocolSpecification/Implementation-data.ta.js";
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from "../InformationFramework/Name.ta";
+} from "../InformationFramework/Name.ta.js";
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 export {
     AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AARE-apdu-protocol-version.ta";
+} from "../OSIProtocolSpecification/AARE-apdu-protocol-version.ta.js";
 export {
     AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.js";
 export {
     AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta";
+} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.js";
 export {
     Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta";
+} from "../OSIProtocolSpecification/Application-context-name.ta.js";
 export {
     accepted /* IMPORTED_SHORT_NAMED_INTEGER */,
     Associate_result,
@@ -99,22 +99,22 @@ export {
     rejected_transient /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_result,
     _encode_Associate_result,
-} from "../OSIProtocolSpecification/Associate-result.ta";
+} from "../OSIProtocolSpecification/Associate-result.ta.js";
 export {
     Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic.ta";
+} from "../OSIProtocolSpecification/Associate-source-diagnostic.ta.js";
 export {
     Association_informationBindRes,
     _decode_Association_informationBindRes,
     _encode_Association_informationBindRes,
-} from "../OSIProtocolSpecification/Association-informationBindRes.ta";
+} from "../OSIProtocolSpecification/Association-informationBindRes.ta.js";
 export {
     Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta";
+} from "../OSIProtocolSpecification/Implementation-data.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AARE_apdu */
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { basicAttConstraints } from "../AttributeCertificateDefinitions/basicAttConstraints.oa";
-import { id_asx_basicAttConstraints } from "../ExtensionAttributes/id-asx-basicAttConstraints.va";
-import { id_ce_a_basicAttConstraints } from "../ExtensionAttributes/id-ce-a-basicAttConstraints.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { basicAttConstraints } from "../AttributeCertificateDefinitions/basicAttConstraints.oa.js";
+import { id_asx_basicAttConstraints } from "../ExtensionAttributes/id-asx-basicAttConstraints.va.js";
+import { id_ce_a_basicAttConstraints } from "../ExtensionAttributes/id-ce-a-basicAttConstraints.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { basicAttConstraints } from "../AttributeCertificateDefinitions/basicAttConstraints.oa";
-export { id_asx_basicAttConstraints } from "../ExtensionAttributes/id-asx-basicAttConstraints.va";
-export { id_ce_a_basicAttConstraints } from "../ExtensionAttributes/id-ce-a-basicAttConstraints.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { basicAttConstraints } from "../AttributeCertificateDefinitions/basicAttConstraints.oa.js";
+export { id_asx_basicAttConstraints } from "../ExtensionAttributes/id-asx-basicAttConstraints.va.js";
+export { id_ce_a_basicAttConstraints } from "../ExtensionAttributes/id-ce-a-basicAttConstraints.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,9 +23,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION a_basicAttConstraints */
 /**

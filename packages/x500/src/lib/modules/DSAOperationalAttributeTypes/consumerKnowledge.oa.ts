@@ -3,21 +3,21 @@ import {
     ConsumerInformation,
     _decode_ConsumerInformation,
     _encode_ConsumerInformation,
-} from "../DSAOperationalAttributeTypes/ConsumerInformation.ta";
-import { id_doa_consumerKnowledge } from "../DSAOperationalAttributeTypes/id-doa-consumerKnowledge.va";
-import { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/ConsumerInformation.ta.js";
+import { id_doa_consumerKnowledge } from "../DSAOperationalAttributeTypes/id-doa-consumerKnowledge.va.js";
+import { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     ConsumerInformation,
     _decode_ConsumerInformation,
     _encode_ConsumerInformation,
-} from "../DSAOperationalAttributeTypes/ConsumerInformation.ta";
-export { id_doa_consumerKnowledge } from "../DSAOperationalAttributeTypes/id-doa-consumerKnowledge.va";
-export { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/ConsumerInformation.ta.js";
+export { id_doa_consumerKnowledge } from "../DSAOperationalAttributeTypes/id-doa-consumerKnowledge.va.js";
+export { supplierOrConsumerInformationMatch } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION consumerKnowledge */
 /**

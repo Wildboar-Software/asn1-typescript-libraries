@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { commonName } from "../SelectedAttributeTypes/commonName.oa";
-import { device } from "../SelectedObjectClasses/device.oa";
-import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa";
-export { device } from "../SelectedObjectClasses/device.oa";
-export { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+import { device } from "../SelectedObjectClasses/device.oa.js";
+import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { commonName } from "../SelectedAttributeTypes/commonName.oa.js";
+export { device } from "../SelectedObjectClasses/device.oa.js";
+export { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION deviceNameForm */
 /**

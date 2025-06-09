@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
+} from "../AuthenticationFramework/Certificate.ta.js";
 import {
     ForwardCertificationPath,
     _decode_ForwardCertificationPath,
     _encode_ForwardCertificationPath,
-} from "../AuthenticationFramework/ForwardCertificationPath.ta";
+} from "../AuthenticationFramework/ForwardCertificationPath.ta.js";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
+} from "../AuthenticationFramework/Certificate.ta.js";
 export {
     ForwardCertificationPath,
     _decode_ForwardCertificationPath,
     _encode_ForwardCertificationPath,
-} from "../AuthenticationFramework/ForwardCertificationPath.ta";
+} from "../AuthenticationFramework/ForwardCertificationPath.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Certificates */
 /**

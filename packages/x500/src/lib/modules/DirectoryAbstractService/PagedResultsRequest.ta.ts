@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PagedResultsRequest_newRequest,
     _decode_PagedResultsRequest_newRequest,
     _encode_PagedResultsRequest_newRequest,
-} from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta";
+} from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta.js";
 export {
     PagedResultsRequest_newRequest,
     _decode_PagedResultsRequest_newRequest,
     _encode_PagedResultsRequest_newRequest,
-} from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta";
+} from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PagedResultsRequest */
 /**

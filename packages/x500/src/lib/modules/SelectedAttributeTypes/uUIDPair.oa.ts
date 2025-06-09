@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_uuidpair } from "../SelectedAttributeTypes/id-at-uuidpair.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_uuidpair } from "../SelectedAttributeTypes/id-at-uuidpair.va.js";
 import {
     UUIDPair,
     _decode_UUIDPair,
     _encode_UUIDPair,
-} from "../SelectedAttributeTypes/UUIDPair.ta";
-import { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/UUIDPair.ta.js";
+import { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -24,16 +24,16 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_uuidpair } from "../SelectedAttributeTypes/id-at-uuidpair.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_uuidpair } from "../SelectedAttributeTypes/id-at-uuidpair.va.js";
 export {
     UUIDPair,
     _decode_UUIDPair,
     _encode_UUIDPair,
-} from "../SelectedAttributeTypes/UUIDPair.ta";
-export { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa";
+} from "../SelectedAttributeTypes/UUIDPair.ta.js";
+export { uUIDPairMatch } from "../SelectedAttributeTypes/uUIDPairMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION uUIDPair */
 /**

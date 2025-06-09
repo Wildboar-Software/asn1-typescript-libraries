@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_not_contextCombinations } from "../SelectedAttributeTypes/id-not-contextCombinations.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_not_contextCombinations } from "../SelectedAttributeTypes/id-not-contextCombinations.va.js";
 import {
     ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../ServiceAdministration/ContextCombination.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -23,15 +23,15 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_not_contextCombinations } from "../SelectedAttributeTypes/id-not-contextCombinations.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_not_contextCombinations } from "../SelectedAttributeTypes/id-not-contextCombinations.va.js";
 export {
     ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta";
+} from "../ServiceAdministration/ContextCombination.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION contextCombinations */
 /**

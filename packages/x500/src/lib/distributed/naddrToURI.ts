@@ -1,6 +1,6 @@
 import type { OCTET_STRING } from "asn1-ts";
-import { ipv4FromNSAP } from "./ipv4";
-import IPV4_AFI_IDI from "./IPV4_AFI_IDI";
+import { ipv4FromNSAP } from "./ipv4.js";
+import IPV4_AFI_IDI from "./IPV4_AFI_IDI.js";
 
 export
 function naddrToURI (naddr: OCTET_STRING): string | undefined {

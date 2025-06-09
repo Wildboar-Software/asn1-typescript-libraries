@@ -5,37 +5,37 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 import {
     ReasonInfo,
     _decode_ReasonInfo,
     _encode_ReasonInfo,
-} from "../CertificateExtensions/ReasonInfo.ta";
+} from "../CertificateExtensions/ReasonInfo.ta.js";
 import {
     RevokedCertificateGroup,
     _decode_RevokedCertificateGroup,
     _encode_RevokedCertificateGroup,
-} from "../CertificateExtensions/RevokedCertificateGroup.ta";
+} from "../CertificateExtensions/RevokedCertificateGroup.ta.js";
 export {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta";
+} from "../CertificateExtensions/GeneralName.ta.js";
 export {
     ReasonInfo,
     _decode_ReasonInfo,
     _encode_ReasonInfo,
-} from "../CertificateExtensions/ReasonInfo.ta";
+} from "../CertificateExtensions/ReasonInfo.ta.js";
 export {
     RevokedCertificateGroup,
     _decode_RevokedCertificateGroup,
     _encode_RevokedCertificateGroup,
-} from "../CertificateExtensions/RevokedCertificateGroup.ta";
+} from "../CertificateExtensions/RevokedCertificateGroup.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RevokedGroup */
 /**

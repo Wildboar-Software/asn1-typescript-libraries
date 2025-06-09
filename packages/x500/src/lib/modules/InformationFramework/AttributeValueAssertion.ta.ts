@@ -5,19 +5,19 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeValueAssertion_assertedContexts,
     _decode_AttributeValueAssertion_assertedContexts,
     _encode_AttributeValueAssertion_assertedContexts,
-} from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeValueAssertion_assertedContexts,
     _decode_AttributeValueAssertion_assertedContexts,
     _encode_AttributeValueAssertion_assertedContexts,
-} from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeValueAssertion */
 /**

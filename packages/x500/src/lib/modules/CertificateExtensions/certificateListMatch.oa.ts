@@ -3,20 +3,20 @@ import {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
     _encode_CertificateListAssertion,
-} from "../CertificateExtensions/CertificateListAssertion.ta";
-import { certListAssertion } from "../CertificateExtensions/certListAssertion.oa";
-import { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../CertificateExtensions/CertificateListAssertion.ta.js";
+import { certListAssertion } from "../CertificateExtensions/certListAssertion.oa.js";
+import { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
     _encode_CertificateListAssertion,
-} from "../CertificateExtensions/CertificateListAssertion.ta";
-export { certListAssertion } from "../CertificateExtensions/certListAssertion.oa";
-export { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListAssertion.ta.js";
+export { certListAssertion } from "../CertificateExtensions/certListAssertion.oa.js";
+export { id_mr_certificateListMatch } from "../CertificateExtensions/id-mr-certificateListMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certificateListMatch */
 /**

@@ -1,7 +1,7 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     RelativeDistinguishedName as RDN,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/RelativeDistinguishedName.ta.js";
 
 export
 function checkNameForm (

@@ -1,16 +1,16 @@
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 import type {
     DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta";
+} from "../modules/InformationFramework/DistinguishedName.ta.js";
 import type {
     SubtreeSpecification,
-} from "../modules/InformationFramework/SubtreeSpecification.ta";
+} from "../modules/InformationFramework/SubtreeSpecification.ta.js";
 import type {
     OBJECT_CLASS,
-} from "../modules/InformationFramework/OBJECT-CLASS.oca";
-import compareDistinguishedName from "../comparators/compareDistinguishedName";
-import objectClassesWithinRefinement from "./objectClassesWithinRefinement";
+} from "../modules/InformationFramework/OBJECT-CLASS.oca.js";
+import compareDistinguishedName from "../comparators/compareDistinguishedName.js";
+import objectClassesWithinRefinement from "./objectClassesWithinRefinement.js";
 
 /**
  * @summary Determine whether a distinguished name falls within a subtree.

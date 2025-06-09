@@ -1,6 +1,6 @@
 import type {
     Attribute,
-} from "../modules/InformationFramework/Attribute.ta";
+} from "../modules/InformationFramework/Attribute.ta.js";
 
 const BYTES_FOR_TAG: number = 2;
 

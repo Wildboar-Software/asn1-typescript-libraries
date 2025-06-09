@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va.js";
 import {
     IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta";
-import { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa";
-import { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SelectedAttributeTypes/IntEmail.ta.js";
+import { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa.js";
+import { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va.js";
 export {
     IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta";
-export { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa";
-export { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa";
+} from "../SelectedAttributeTypes/IntEmail.ta.js";
+export { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa.js";
+export { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION intEmail */
 /**

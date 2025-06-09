@@ -5,13 +5,13 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OperationProgress_nameResolutionPhase,
     _decode_OperationProgress_nameResolutionPhase,
     _encode_OperationProgress_nameResolutionPhase,
     _enum_for_OperationProgress_nameResolutionPhase,
-} from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta";
+} from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta.js";
 export {
     completed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     notStarted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -23,7 +23,7 @@ export {
     _decode_OperationProgress_nameResolutionPhase,
     _encode_OperationProgress_nameResolutionPhase,
     _enum_for_OperationProgress_nameResolutionPhase,
-} from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta";
+} from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OperationProgress */
 /**

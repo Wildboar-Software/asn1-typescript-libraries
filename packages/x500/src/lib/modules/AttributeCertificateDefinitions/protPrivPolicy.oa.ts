@@ -3,21 +3,21 @@ import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta";
-import { attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/attributeCertificateExactMatch.oa";
-import { id_at_protPrivPolicy } from "../AttributeCertificateDefinitions/id-at-protPrivPolicy.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.js";
+import { attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/attributeCertificateExactMatch.oa.js";
+import { id_at_protPrivPolicy } from "../AttributeCertificateDefinitions/id-at-protPrivPolicy.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta";
-export { attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/attributeCertificateExactMatch.oa";
-export { id_at_protPrivPolicy } from "../AttributeCertificateDefinitions/id-at-protPrivPolicy.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.js";
+export { attributeCertificateExactMatch } from "../AttributeCertificateDefinitions/attributeCertificateExactMatch.oa.js";
+export { id_at_protPrivPolicy } from "../AttributeCertificateDefinitions/id-at-protPrivPolicy.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION protPrivPolicy */
 /**

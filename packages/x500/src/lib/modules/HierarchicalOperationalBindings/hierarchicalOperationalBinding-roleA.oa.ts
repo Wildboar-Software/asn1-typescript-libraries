@@ -3,24 +3,24 @@ import {
     SuperiorToSubordinate,
     _decode_SuperiorToSubordinate,
     _encode_SuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta";
+} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.js";
 import {
     SuperiorToSubordinateModification,
     _decode_SuperiorToSubordinateModification,
     _encode_SuperiorToSubordinateModification,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta";
-import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.js";
+import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 export {
     SuperiorToSubordinate,
     _decode_SuperiorToSubordinate,
     _encode_SuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta";
+} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.js";
 export {
     SuperiorToSubordinateModification,
     _decode_SuperiorToSubordinateModification,
     _encode_SuperiorToSubordinateModification,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca";
+} from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.js";
+export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleA */
 /**

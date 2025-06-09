@@ -4,13 +4,13 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InitializationAbort_diag,
     _decode_InitializationAbort_diag,
     _encode_InitializationAbort_diag,
     _enum_for_InitializationAbort_diag,
-} from "../CaSubscription/InitializationAbort-diag.ta";
+} from "../CaSubscription/InitializationAbort-diag.ta.js";
 export {
     InitializationAbort_diag,
     InitializationAbort_diag_onlySingleVersionAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_InitializationAbort_diag,
     _encode_InitializationAbort_diag,
     _enum_for_InitializationAbort_diag,
-} from "../CaSubscription/InitializationAbort-diag.ta";
+} from "../CaSubscription/InitializationAbort-diag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION InitializationAbort */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Result_list_Item,
     _decode_Result_list_Item,
     _encode_Result_list_Item,
-} from "../OSIProtocolSpecification/Result-list-Item.ta";
+} from "../OSIProtocolSpecification/Result-list-Item.ta.js";
 export {
     Result_list_Item,
     _decode_Result_list_Item,
     _encode_Result_list_Item,
-} from "../OSIProtocolSpecification/Result-list-Item.ta";
+} from "../OSIProtocolSpecification/Result-list-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Result_list */
 /**

@@ -5,19 +5,19 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FilterItem_substrings_strings_Item,
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
-} from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta";
+} from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.js";
 export {
     FilterItem_substrings_strings_Item,
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
-} from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION FilterItem_substrings */
 /**

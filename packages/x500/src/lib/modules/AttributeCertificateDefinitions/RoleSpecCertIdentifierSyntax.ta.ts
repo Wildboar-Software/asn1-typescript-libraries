@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RoleSpecCertIdentifier,
     _decode_RoleSpecCertIdentifier,
     _encode_RoleSpecCertIdentifier,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta";
+} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.js";
 export {
     RoleSpecCertIdentifier,
     _decode_RoleSpecCertIdentifier,
     _encode_RoleSpecCertIdentifier,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta";
+} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifierSyntax */
 /**

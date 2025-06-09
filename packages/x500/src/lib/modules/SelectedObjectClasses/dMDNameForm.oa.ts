@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-import { dmdName } from "../SelectedAttributeTypes/dmdName.oa";
-import { dMD } from "../SelectedObjectClasses/dMD.oa";
-import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
-export { dmdName } from "../SelectedAttributeTypes/dmdName.oa";
-export { dMD } from "../SelectedObjectClasses/dMD.oa";
-export { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va";
+import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.js";
+import { dMD } from "../SelectedObjectClasses/dMD.oa.js";
+import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
+export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.js";
+export { dMD } from "../SelectedObjectClasses/dMD.oa.js";
+export { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dMDNameForm */
 /**

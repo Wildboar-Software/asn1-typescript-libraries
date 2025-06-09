@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertSubscribeOK_Item_not_ok,
     _decode_CertSubscribeOK_Item_not_ok,
     _encode_CertSubscribeOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-not-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-not-ok.ta.js";
 import {
     CertSubscribeOK_Item_ok,
     _decode_CertSubscribeOK_Item_ok,
     _encode_CertSubscribeOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta.js";
 export {
     CertSubscribeOK_Item_not_ok,
     _decode_CertSubscribeOK_Item_not_ok,
     _encode_CertSubscribeOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-not-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-not-ok.ta.js";
 export {
     CertSubscribeOK_Item_ok,
     _decode_CertSubscribeOK_Item_ok,
     _encode_CertSubscribeOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta";
+} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item */
 /**

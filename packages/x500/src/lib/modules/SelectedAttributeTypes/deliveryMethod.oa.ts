@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.js";
 import {
     PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.js";
 export {
     PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta";
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION deliveryMethod */
 /**

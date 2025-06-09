@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from "../MTSAbstractService/TeletexCommonName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/TeletexCommonName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from "../MTSAbstractService/TeletexCommonName.ta";
+} from "../MTSAbstractService/TeletexCommonName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION teletex_common_name */
 /**

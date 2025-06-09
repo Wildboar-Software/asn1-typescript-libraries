@@ -1,5 +1,5 @@
-import { RDNSequence } from "../modules/InformationFramework/RDNSequence.ta";
-import relativeDistinguishedNameToString from "./relativeDistinguishedNameToString";
+import { RDNSequence } from "../modules/InformationFramework/RDNSequence.ta.js";
+import relativeDistinguishedNameToString from "./relativeDistinguishedNameToString.js";
 
 /**
  * @deprecated

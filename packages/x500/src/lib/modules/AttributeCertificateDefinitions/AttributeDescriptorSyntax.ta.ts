@@ -5,47 +5,47 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeDescription,
     _decode_AttributeDescription,
     _encode_AttributeDescription,
-} from "../AttributeCertificateDefinitions/AttributeDescription.ta";
+} from "../AttributeCertificateDefinitions/AttributeDescription.ta.js";
 import {
     AttributeIdentifier,
     _decode_AttributeIdentifier,
     _encode_AttributeIdentifier,
-} from "../AttributeCertificateDefinitions/AttributeIdentifier.ta";
+} from "../AttributeCertificateDefinitions/AttributeIdentifier.ta.js";
 import {
     AttributeName,
     _decode_AttributeName,
     _encode_AttributeName,
-} from "../AttributeCertificateDefinitions/AttributeName.ta";
+} from "../AttributeCertificateDefinitions/AttributeName.ta.js";
 import {
     PrivilegePolicyIdentifier,
     _decode_PrivilegePolicyIdentifier,
     _encode_PrivilegePolicyIdentifier,
-} from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta";
+} from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta.js";
 export {
     AttributeDescription,
     _decode_AttributeDescription,
     _encode_AttributeDescription,
-} from "../AttributeCertificateDefinitions/AttributeDescription.ta";
+} from "../AttributeCertificateDefinitions/AttributeDescription.ta.js";
 export {
     AttributeIdentifier,
     _decode_AttributeIdentifier,
     _encode_AttributeIdentifier,
-} from "../AttributeCertificateDefinitions/AttributeIdentifier.ta";
+} from "../AttributeCertificateDefinitions/AttributeIdentifier.ta.js";
 export {
     AttributeName,
     _decode_AttributeName,
     _encode_AttributeName,
-} from "../AttributeCertificateDefinitions/AttributeName.ta";
+} from "../AttributeCertificateDefinitions/AttributeName.ta.js";
 export {
     PrivilegePolicyIdentifier,
     _decode_PrivilegePolicyIdentifier,
     _encode_PrivilegePolicyIdentifier,
-} from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta";
+} from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeDescriptorSyntax */
 /**

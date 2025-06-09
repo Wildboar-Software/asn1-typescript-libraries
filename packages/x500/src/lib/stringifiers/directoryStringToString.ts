@@ -1,7 +1,7 @@
 import type {
     UnboundedDirectoryString
-} from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
-import teletexToString from "./teletexToString";
+} from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
+import teletexToString from "./teletexToString.js";
 
 /**
  * @summary Convert a DirectoryString to a normal JavaScript `string`.

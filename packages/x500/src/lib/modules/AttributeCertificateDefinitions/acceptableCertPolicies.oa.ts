@@ -3,16 +3,16 @@ import {
     AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
     _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta";
-import { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va";
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.js";
+import { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.js";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
     _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta";
-export { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.js";
+export { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION acceptableCertPolicies */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_kmr } from "../UsefulDefinitions/id-kmr.va";
-export { id_kmr } from "../UsefulDefinitions/id-kmr.va";
+import { id_kmr } from "../UsefulDefinitions/id-kmr.va.js";
+export { id_kmr } from "../UsefulDefinitions/id-kmr.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_kmr_supplierConsumerMatch */
 /**

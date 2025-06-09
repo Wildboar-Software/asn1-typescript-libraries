@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _decode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _encode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta";
+} from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta.js";
 import {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.js";
 export {
     OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _decode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _encode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta";
+} from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta.js";
 export {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta";
+} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiUnbind_fully_encoded_data_Item */
 /**

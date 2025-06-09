@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta";
-import { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va";
+import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.js";
+import { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va.js";
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta";
-export { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va";
+} from "../AlgorithmObjectIdentifiers/ID.ta.js";
+export { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_sa */
 /**

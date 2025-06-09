@@ -3,16 +3,16 @@ import {
     CertificatePair,
     _decode_CertificatePair,
     _encode_CertificatePair,
-} from "../AuthenticationFramework/CertificatePair.ta";
-import { id_lsx_x509CertificatePair } from "../AuthenticationFramework/id-lsx-x509CertificatePair.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/CertificatePair.ta.js";
+import { id_lsx_x509CertificatePair } from "../AuthenticationFramework/id-lsx-x509CertificatePair.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificatePair,
     _decode_CertificatePair,
     _encode_CertificatePair,
-} from "../AuthenticationFramework/CertificatePair.ta";
-export { id_lsx_x509CertificatePair } from "../AuthenticationFramework/id-lsx-x509CertificatePair.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/CertificatePair.ta.js";
+export { id_lsx_x509CertificatePair } from "../AuthenticationFramework/id-lsx-x509CertificatePair.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION x509CertificatePair */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { pwdHistoryMatch } from "../InformationFramework/pwdHistoryMatch.oa";
-import { id_mr_userPwdHistoryMatch } from "../PasswordPolicy/id-mr-userPwdHistoryMatch.va";
-import { userPwd } from "../PasswordPolicy/userPwd.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { pwdHistoryMatch } from "../InformationFramework/pwdHistoryMatch.oa";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_userPwdHistoryMatch } from "../PasswordPolicy/id-mr-userPwdHistoryMatch.va";
-export { userPwd } from "../PasswordPolicy/userPwd.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { pwdHistoryMatch } from "../InformationFramework/pwdHistoryMatch.oa.js";
+import { id_mr_userPwdHistoryMatch } from "../PasswordPolicy/id-mr-userPwdHistoryMatch.va.js";
+import { userPwd } from "../PasswordPolicy/userPwd.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { pwdHistoryMatch } from "../InformationFramework/pwdHistoryMatch.oa.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_userPwdHistoryMatch } from "../PasswordPolicy/id-mr-userPwdHistoryMatch.va.js";
+export { userPwd } from "../PasswordPolicy/userPwd.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION userPwdHistoryMatch */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/ObjectClassKind.ta";
-import { top } from "../InformationFramework/top.oa";
-import { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa";
-import { epc } from "../SelectedAttributeTypes/epc.oa";
-import { epcInUrn } from "../SelectedAttributeTypes/epcInUrn.oa";
-import { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa";
-import { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoObj.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+import { top } from "../InformationFramework/top.oa.js";
+import { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa.js";
+import { epc } from "../SelectedAttributeTypes/epc.oa.js";
+import { epcInUrn } from "../SelectedAttributeTypes/epcInUrn.oa.js";
+import { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa.js";
+import { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoObj.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -22,13 +22,13 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
-export { top } from "../InformationFramework/top.oa";
-export { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa";
-export { epc } from "../SelectedAttributeTypes/epc.oa";
-export { epcInUrn } from "../SelectedAttributeTypes/epcInUrn.oa";
-export { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa";
-export { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoObj.va";
+} from "../InformationFramework/ObjectClassKind.ta.js";
+export { top } from "../InformationFramework/top.oa.js";
+export { contentUrl } from "../SelectedAttributeTypes/contentUrl.oa.js";
+export { epc } from "../SelectedAttributeTypes/epc.oa.js";
+export { epcInUrn } from "../SelectedAttributeTypes/epcInUrn.oa.js";
+export { tagLocation } from "../SelectedAttributeTypes/tagLocation.oa.js";
+export { id_oc_epcTagInfoObj } from "../SelectedObjectClasses/id-oc-epcTagInfoObj.va.js";
 
 /* START_OF_SYMBOL_DEFINITION epcTagInfoObj */
 /**

@@ -1,136 +1,136 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AbortAVL,
     _decode_AbortAVL,
     _encode_AbortAVL,
-} from "../AVL-management/AbortAVL.ta";
+} from "../AVL-management/AbortAVL.ta.js";
 import {
     AddAvlReq,
     _decode_AddAvlReq,
     _encode_AddAvlReq,
-} from "../AVL-management/AddAvlReq.ta";
+} from "../AVL-management/AddAvlReq.ta.js";
 import {
     AddAvlRsp,
     _decode_AddAvlRsp,
     _encode_AddAvlRsp,
-} from "../AVL-management/AddAvlRsp.ta";
+} from "../AVL-management/AddAvlRsp.ta.js";
 import {
     CertReq,
     _decode_CertReq,
     _encode_CertReq,
-} from "../AVL-management/CertReq.ta";
+} from "../AVL-management/CertReq.ta.js";
 import {
     CertRsp,
     _decode_CertRsp,
     _encode_CertRsp,
-} from "../AVL-management/CertRsp.ta";
+} from "../AVL-management/CertRsp.ta.js";
 import {
     DeleteAvlReq,
     _decode_DeleteAvlReq,
     _encode_DeleteAvlReq,
-} from "../AVL-management/DeleteAvlReq.ta";
+} from "../AVL-management/DeleteAvlReq.ta.js";
 import {
     DeleteAvlRsp,
     _decode_DeleteAvlRsp,
     _encode_DeleteAvlRsp,
-} from "../AVL-management/DeleteAvlRsp.ta";
+} from "../AVL-management/DeleteAvlRsp.ta.js";
 import {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../AVL-management/InitializationAbort.ta";
+} from "../AVL-management/InitializationAbort.ta.js";
 import {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../AVL-management/InitializationAcc.ta";
+} from "../AVL-management/InitializationAcc.ta.js";
 import {
     InitializationRec,
     _decode_InitializationRec,
     _encode_InitializationRec,
-} from "../AVL-management/InitializationRec.ta";
+} from "../AVL-management/InitializationRec.ta.js";
 import {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../AVL-management/InitializationRej.ta";
+} from "../AVL-management/InitializationRej.ta.js";
 import {
     ReplaceAvlReq,
     _decode_ReplaceAvlReq,
     _encode_ReplaceAvlReq,
-} from "../AVL-management/ReplaceAvlReq.ta";
+} from "../AVL-management/ReplaceAvlReq.ta.js";
 import {
     ReplaceAvlRsp,
     _decode_ReplaceAvlRsp,
     _encode_ReplaceAvlRsp,
-} from "../AVL-management/ReplaceAvlRsp.ta";
+} from "../AVL-management/ReplaceAvlRsp.ta.js";
 export {
     AbortAVL,
     _decode_AbortAVL,
     _encode_AbortAVL,
-} from "../AVL-management/AbortAVL.ta";
+} from "../AVL-management/AbortAVL.ta.js";
 export {
     AddAvlReq,
     _decode_AddAvlReq,
     _encode_AddAvlReq,
-} from "../AVL-management/AddAvlReq.ta";
+} from "../AVL-management/AddAvlReq.ta.js";
 export {
     AddAvlRsp,
     _decode_AddAvlRsp,
     _encode_AddAvlRsp,
-} from "../AVL-management/AddAvlRsp.ta";
+} from "../AVL-management/AddAvlRsp.ta.js";
 export {
     CertReq,
     _decode_CertReq,
     _encode_CertReq,
-} from "../AVL-management/CertReq.ta";
+} from "../AVL-management/CertReq.ta.js";
 export {
     CertRsp,
     _decode_CertRsp,
     _encode_CertRsp,
-} from "../AVL-management/CertRsp.ta";
+} from "../AVL-management/CertRsp.ta.js";
 export {
     DeleteAvlReq,
     _decode_DeleteAvlReq,
     _encode_DeleteAvlReq,
-} from "../AVL-management/DeleteAvlReq.ta";
+} from "../AVL-management/DeleteAvlReq.ta.js";
 export {
     DeleteAvlRsp,
     _decode_DeleteAvlRsp,
     _encode_DeleteAvlRsp,
-} from "../AVL-management/DeleteAvlRsp.ta";
+} from "../AVL-management/DeleteAvlRsp.ta.js";
 export {
     InitializationAbort,
     _decode_InitializationAbort,
     _encode_InitializationAbort,
-} from "../AVL-management/InitializationAbort.ta";
+} from "../AVL-management/InitializationAbort.ta.js";
 export {
     InitializationAcc,
     _decode_InitializationAcc,
     _encode_InitializationAcc,
-} from "../AVL-management/InitializationAcc.ta";
+} from "../AVL-management/InitializationAcc.ta.js";
 export {
     InitializationRec,
     _decode_InitializationRec,
     _encode_InitializationRec,
-} from "../AVL-management/InitializationRec.ta";
+} from "../AVL-management/InitializationRec.ta.js";
 export {
     InitializationRej,
     _decode_InitializationRej,
     _encode_InitializationRej,
-} from "../AVL-management/InitializationRej.ta";
+} from "../AVL-management/InitializationRej.ta.js";
 export {
     ReplaceAvlReq,
     _decode_ReplaceAvlReq,
     _encode_ReplaceAvlReq,
-} from "../AVL-management/ReplaceAvlReq.ta";
+} from "../AVL-management/ReplaceAvlReq.ta.js";
 export {
     ReplaceAvlRsp,
     _decode_ReplaceAvlRsp,
     _encode_ReplaceAvlRsp,
-} from "../AVL-management/ReplaceAvlRsp.ta";
+} from "../AVL-management/ReplaceAvlRsp.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AvlProt */
 /**

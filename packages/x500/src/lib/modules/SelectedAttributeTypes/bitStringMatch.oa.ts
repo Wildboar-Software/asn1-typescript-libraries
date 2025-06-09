@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { BIT_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { bitString } from "../SelectedAttributeTypes/bitString.oa";
-import { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { bitString } from "../SelectedAttributeTypes/bitString.oa";
-export { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { bitString } from "../SelectedAttributeTypes/bitString.oa.js";
+import { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { bitString } from "../SelectedAttributeTypes/bitString.oa.js";
+export { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION bitStringMatch */
 /**

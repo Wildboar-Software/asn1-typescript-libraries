@@ -5,71 +5,71 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta";
+} from "../AuthenticationFramework/CertificationPath.ta.js";
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
+} from "../CommonProtocolSpecification/Code.ta.js";
 import {
     ErrorProtectionRequest,
     _decode_ErrorProtectionRequest,
     _encode_ErrorProtectionRequest,
-} from "../DirectoryAbstractService/ErrorProtectionRequest.ta";
+} from "../DirectoryAbstractService/ErrorProtectionRequest.ta.js";
 import {
     ProtectionRequest,
     _decode_ProtectionRequest,
     _encode_ProtectionRequest,
-} from "../DirectoryAbstractService/ProtectionRequest.ta";
+} from "../DirectoryAbstractService/ProtectionRequest.ta.js";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryAbstractService/Time.ta";
+} from "../DirectoryAbstractService/Time.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 export {
     CertificationPath,
     _decode_CertificationPath,
     _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta";
+} from "../AuthenticationFramework/CertificationPath.ta.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
+} from "../CommonProtocolSpecification/Code.ta.js";
 export {
     ErrorProtectionRequest,
     ErrorProtectionRequest_none /* IMPORTED_LONG_NAMED_INTEGER */,
     ErrorProtectionRequest_signed /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_ErrorProtectionRequest,
     _encode_ErrorProtectionRequest,
-} from "../DirectoryAbstractService/ErrorProtectionRequest.ta";
+} from "../DirectoryAbstractService/ErrorProtectionRequest.ta.js";
 export {
     ProtectionRequest,
     ProtectionRequest_none /* IMPORTED_LONG_NAMED_INTEGER */,
     ProtectionRequest_signed /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_ProtectionRequest,
     _encode_ProtectionRequest,
-} from "../DirectoryAbstractService/ProtectionRequest.ta";
+} from "../DirectoryAbstractService/ProtectionRequest.ta.js";
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from "../DirectoryAbstractService/Time.ta";
+} from "../DirectoryAbstractService/Time.ta.js";
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta";
+} from "../InformationFramework/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityParameters */
 /**

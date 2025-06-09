@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DistributionPoint,
     _decode_DistributionPoint,
     _encode_DistributionPoint,
-} from "../CertificateExtensions/DistributionPoint.ta";
+} from "../CertificateExtensions/DistributionPoint.ta.js";
 export {
     DistributionPoint,
     _decode_DistributionPoint,
     _encode_DistributionPoint,
-} from "../CertificateExtensions/DistributionPoint.ta";
+} from "../CertificateExtensions/DistributionPoint.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CRLDistPointsSyntax */
 /**

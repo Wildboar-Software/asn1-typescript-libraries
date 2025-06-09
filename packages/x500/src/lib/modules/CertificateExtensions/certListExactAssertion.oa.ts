@@ -3,16 +3,16 @@ import {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
     _encode_CertificateListExactAssertion,
-} from "../CertificateExtensions/CertificateListExactAssertion.ta";
-import { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListExactAssertion.ta.js";
+import { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
     _encode_CertificateListExactAssertion,
-} from "../CertificateExtensions/CertificateListExactAssertion.ta";
-export { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListExactAssertion.ta.js";
+export { id_ldx_certListExactAssertion } from "../CertificateExtensions/id-ldx-certListExactAssertion.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certListExactAssertion */
 /**

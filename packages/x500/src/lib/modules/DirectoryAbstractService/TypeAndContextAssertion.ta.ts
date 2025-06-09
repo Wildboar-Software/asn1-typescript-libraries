@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TypeAndContextAssertion_contextAssertions,
     _decode_TypeAndContextAssertion_contextAssertions,
     _encode_TypeAndContextAssertion_contextAssertions,
-} from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta";
+} from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 export {
     TypeAndContextAssertion_contextAssertions,
     _decode_TypeAndContextAssertion_contextAssertions,
     _encode_TypeAndContextAssertion_contextAssertions,
-} from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta";
+} from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta.js";
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta";
+} from "../InformationFramework/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TypeAndContextAssertion */
 /**

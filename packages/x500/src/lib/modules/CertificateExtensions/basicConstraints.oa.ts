@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     BasicConstraintsSyntax,
     _decode_BasicConstraintsSyntax,
     _encode_BasicConstraintsSyntax,
-} from "../CertificateExtensions/BasicConstraintsSyntax.ta";
-import { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/BasicConstraintsSyntax.ta.js";
+import { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     BasicConstraintsSyntax,
     _decode_BasicConstraintsSyntax,
     _encode_BasicConstraintsSyntax,
-} from "../CertificateExtensions/BasicConstraintsSyntax.ta";
-export { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va";
+} from "../CertificateExtensions/BasicConstraintsSyntax.ta.js";
+export { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va.js";
 
 /* START_OF_SYMBOL_DEFINITION basicConstraints */
 /**

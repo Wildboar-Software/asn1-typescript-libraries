@@ -3,13 +3,13 @@ import {
     DSEType,
     _decode_DSEType,
     _encode_DSEType,
-} from "../DSAOperationalAttributeTypes/DSEType.ta";
-import { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/DSEType.ta.js";
+import { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
 export {
     admPoint /* IMPORTED_SHORT_NAMED_BIT */,
     alias /* IMPORTED_SHORT_NAMED_BIT */,
@@ -50,9 +50,9 @@ export {
     xr /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DSEType,
     _encode_DSEType,
-} from "../DSAOperationalAttributeTypes/DSEType.ta";
-export { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../DSAOperationalAttributeTypes/DSEType.ta.js";
+export { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -66,10 +66,10 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION dseType */
 /**

@@ -5,23 +5,23 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Credentials,
     _decode_Credentials,
     _encode_Credentials,
-} from "../DirectoryAbstractService/Credentials.ta";
+} from "../DirectoryAbstractService/Credentials.ta.js";
 import {
     Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta";
+} from "../DirectoryAbstractService/Versions.ta.js";
 export {
     Credentials,
     _decode_Credentials,
     _encode_Credentials,
-} from "../DirectoryAbstractService/Credentials.ta";
+} from "../DirectoryAbstractService/Credentials.ta.js";
 export {
     v1 /* IMPORTED_SHORT_NAMED_BIT */,
     v2 /* IMPORTED_SHORT_NAMED_BIT */,
@@ -30,7 +30,7 @@ export {
     Versions_v2 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta";
+} from "../DirectoryAbstractService/Versions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DirectoryBindArgument */
 /**

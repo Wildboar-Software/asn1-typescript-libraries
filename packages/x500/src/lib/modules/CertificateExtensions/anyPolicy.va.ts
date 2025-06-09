@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va";
-export { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va";
+import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.js";
+export { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.js";
 
 /* START_OF_SYMBOL_DEFINITION anyPolicy */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va.js";
 import {
     RevokedGroupsSyntax,
     _decode_RevokedGroupsSyntax,
     _encode_RevokedGroupsSyntax,
-} from "../CertificateExtensions/RevokedGroupsSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va";
+} from "../CertificateExtensions/RevokedGroupsSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va.js";
 export {
     RevokedGroupsSyntax,
     _decode_RevokedGroupsSyntax,
     _encode_RevokedGroupsSyntax,
-} from "../CertificateExtensions/RevokedGroupsSyntax.ta";
+} from "../CertificateExtensions/RevokedGroupsSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION revokedGroups */
 /**

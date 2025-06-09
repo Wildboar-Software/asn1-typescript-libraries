@@ -1,15 +1,15 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     HolderIssuerAssertion,
     _decode_HolderIssuerAssertion,
-} from "../../modules/AttributeCertificateDefinitions/HolderIssuerAssertion.ta";
+} from "../../modules/AttributeCertificateDefinitions/HolderIssuerAssertion.ta.js";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
-} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
-import compareAttCertIssuer from "../../comparators/compareAttCertIssuer";
-import compareHolder from "../../comparators/compareHolder";
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
+import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.js";
+import compareHolder from "../../comparators/compareHolder.js";
 
 export
 const holderIssuerMatch: EqualityMatcher = (

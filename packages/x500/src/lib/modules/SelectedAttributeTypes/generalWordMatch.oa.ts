@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { id_mr_generalWordMatch } from "../SelectedAttributeTypes/id-mr-generalWordMatch.va";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { id_mr_generalWordMatch } from "../SelectedAttributeTypes/id-mr-generalWordMatch.va.js";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_mr_generalWordMatch } from "../SelectedAttributeTypes/id-mr-generalWordMatch.va";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_mr_generalWordMatch } from "../SelectedAttributeTypes/id-mr-generalWordMatch.va.js";
 export {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION generalWordMatch */
 /**

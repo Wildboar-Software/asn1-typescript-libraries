@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-import { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va";
+import { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+import { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.js";
 import {
     LocaleContextSyntax,
     _decode_LocaleContextSyntax,
     _encode_LocaleContextSyntax,
-} from "../SelectedAttributeTypes/LocaleContextSyntax.ta";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca";
-export { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va";
+} from "../SelectedAttributeTypes/LocaleContextSyntax.ta.js";
+export { CONTEXT } from "../InformationFramework/CONTEXT.oca.js";
+export { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.js";
 export {
     LocaleContextSyntax,
     _decode_LocaleContextSyntax,
     _encode_LocaleContextSyntax,
-} from "../SelectedAttributeTypes/LocaleContextSyntax.ta";
+} from "../SelectedAttributeTypes/LocaleContextSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION localeContext */
 /**

@@ -3,10 +3,10 @@ import {
     DayTimeBand,
     Period,
     _encode_Period_months,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/Period.ta";
-import { DayTime } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DayTime.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/Period.ta.js";
+import { DayTime } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DayTime.ta.js";
 import { DERElement, FALSE_BIT, TRUE_BIT } from "asn1-ts";
-import { NamedDay_intNamedDays_friday } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta";
+import { NamedDay_intNamedDays_friday } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.js";
 import { addDays } from "date-fns";
 
 const GENERIC_DAY_TIME_BAND = new DayTimeBand(

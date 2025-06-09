@@ -5,29 +5,29 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 import {
     ResultAttribute_outputValues,
     _decode_ResultAttribute_outputValues,
     _encode_ResultAttribute_outputValues,
-} from "../ServiceAdministration/ResultAttribute-outputValues.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa";
+} from "../ServiceAdministration/ResultAttribute-outputValues.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.js";
 export {
     ContextProfile,
     _decode_ContextProfile,
     _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta";
+} from "../ServiceAdministration/ContextProfile.ta.js";
 export {
     ResultAttribute_outputValues,
     _decode_ResultAttribute_outputValues,
     _encode_ResultAttribute_outputValues,
-} from "../ServiceAdministration/ResultAttribute-outputValues.ta";
+} from "../ServiceAdministration/ResultAttribute-outputValues.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ResultAttribute */
 /**

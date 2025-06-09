@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION WrappedProt */
 /**

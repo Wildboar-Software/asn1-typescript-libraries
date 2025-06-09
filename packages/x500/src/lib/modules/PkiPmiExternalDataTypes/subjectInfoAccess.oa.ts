@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-import { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+import { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va.js";
 import {
     SubjectInfoAccessSyntax,
     _decode_SubjectInfoAccessSyntax,
     _encode_SubjectInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
-export { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va";
+} from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
+export { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va.js";
 export {
     SubjectInfoAccessSyntax,
     _decode_SubjectInfoAccessSyntax,
     _encode_SubjectInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta";
+} from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION subjectInfoAccess */
 /**

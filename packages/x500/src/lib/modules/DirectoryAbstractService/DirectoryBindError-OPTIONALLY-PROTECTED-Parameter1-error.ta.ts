@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from "../DirectoryAbstractService/SecurityProblem.ta";
+} from "../DirectoryAbstractService/SecurityProblem.ta.js";
 import {
     ServiceProblem,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
-} from "../DirectoryAbstractService/ServiceProblem.ta";
+} from "../DirectoryAbstractService/ServiceProblem.ta.js";
 export {
     blockedCredentials /* IMPORTED_SHORT_NAMED_INTEGER */,
     inappropriateAlgorithms /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -37,7 +37,7 @@ export {
     unsupportedAuthenticationMethod /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from "../DirectoryAbstractService/SecurityProblem.ta";
+} from "../DirectoryAbstractService/SecurityProblem.ta.js";
 export {
     administrativeLimitExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     ambiguousKeyAttributes /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ export {
     unwillingToPerform /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
-} from "../DirectoryAbstractService/ServiceProblem.ta";
+} from "../DirectoryAbstractService/ServiceProblem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error */
 /**

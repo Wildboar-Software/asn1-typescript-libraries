@@ -4,32 +4,32 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
-} from "../CertificateExtensions/CertificatePoliciesSyntax.ta";
+} from "../CertificateExtensions/CertificatePoliciesSyntax.ta.js";
 import {
     KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
+} from "../CertificateExtensions/KeyUsage.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
-} from "../CertificateExtensions/CertificatePoliciesSyntax.ta";
+} from "../CertificateExtensions/CertificatePoliciesSyntax.ta.js";
 export {
     contentCommitment /* IMPORTED_SHORT_NAMED_BIT */,
     cRLSign /* IMPORTED_SHORT_NAMED_BIT */,
@@ -52,7 +52,7 @@ export {
     KeyUsage_keyEncipherment /* IMPORTED_LONG_NAMED_BIT */,
     _decode_KeyUsage,
     _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta";
+} from "../CertificateExtensions/KeyUsage.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedAlgorithm */
 /**

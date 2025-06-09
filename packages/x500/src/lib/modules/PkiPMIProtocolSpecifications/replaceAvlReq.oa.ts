@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_replaceAvlReq } from "../PkiPMIProtocolSpecifications/id-replaceAvlReq.va";
+import { id_replaceAvlReq } from "../PkiPMIProtocolSpecifications/id-replaceAvlReq.va.js";
 import {
     ReplaceAvlReq,
     _decode_ReplaceAvlReq,
     _encode_ReplaceAvlReq,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlReq.ta";
-import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
-export { id_replaceAvlReq } from "../PkiPMIProtocolSpecifications/id-replaceAvlReq.va";
+} from "../PkiPMIProtocolSpecifications/ReplaceAvlReq.ta.js";
+import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
+export { id_replaceAvlReq } from "../PkiPMIProtocolSpecifications/id-replaceAvlReq.va.js";
 export {
     ReplaceAvlReq,
     _decode_ReplaceAvlReq,
     _encode_ReplaceAvlReq,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlReq.ta";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPMIProtocolSpecifications/ReplaceAvlReq.ta.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION replaceAvlReq */
 /**

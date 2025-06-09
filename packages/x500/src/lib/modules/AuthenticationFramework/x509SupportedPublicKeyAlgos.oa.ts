@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va";
+import { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.js";
 import {
     SupportedPublicKeyAlgorithms,
     _decode_SupportedPublicKeyAlgorithms,
     _encode_SupportedPublicKeyAlgorithms,
-} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va";
+} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.js";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.js";
 export {
     SupportedPublicKeyAlgorithms,
     _decode_SupportedPublicKeyAlgorithms,
     _encode_SupportedPublicKeyAlgorithms,
-} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION x509SupportedPublicKeyAlgos */
 /**

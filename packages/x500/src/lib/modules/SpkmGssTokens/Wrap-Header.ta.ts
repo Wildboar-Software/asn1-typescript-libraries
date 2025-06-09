@@ -5,47 +5,47 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     Conf_Alg,
     _decode_Conf_Alg,
     _encode_Conf_Alg,
-} from "../SpkmGssTokens/Conf-Alg.ta";
+} from "../SpkmGssTokens/Conf-Alg.ta.js";
 import {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 import {
     SeqNum,
     _decode_SeqNum,
     _encode_SeqNum,
-} from "../SpkmGssTokens/SeqNum.ta";
+} from "../SpkmGssTokens/SeqNum.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "../AuthenticationFramework/AlgorithmIdentifier.ta.js";
 export {
     Conf_Alg,
     _decode_Conf_Alg,
     _encode_Conf_Alg,
-} from "../SpkmGssTokens/Conf-Alg.ta";
+} from "../SpkmGssTokens/Conf-Alg.ta.js";
 export {
     Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta";
+} from "../SpkmGssTokens/Random-Integer.ta.js";
 export {
     SeqNum,
     _decode_SeqNum,
     _encode_SeqNum,
-} from "../SpkmGssTokens/SeqNum.ta";
+} from "../SpkmGssTokens/SeqNum.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Wrap_Header */
 /**

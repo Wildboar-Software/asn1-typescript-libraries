@@ -3,18 +3,18 @@ import {
     AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
     _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta";
-import { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.js";
+import { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
     _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta";
-export { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.js";
+export { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION acceptableCertPoliciesMatch */
 /**

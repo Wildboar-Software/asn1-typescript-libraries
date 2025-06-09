@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 import {
     MatchingRuleDescription,
     _decode_MatchingRuleDescription,
     _encode_MatchingRuleDescription,
-} from "../SchemaAdministration/MatchingRuleDescription.ta";
-import { id_lsx_matchingRuleDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleDescription.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../SchemaAdministration/MatchingRuleDescription.ta.js";
+import { id_lsx_matchingRuleDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleDescription.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 export {
     MatchingRuleDescription,
     _decode_MatchingRuleDescription,
     _encode_MatchingRuleDescription,
-} from "../SchemaAdministration/MatchingRuleDescription.ta";
-export { id_lsx_matchingRuleDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleDescription.va";
+} from "../SchemaAdministration/MatchingRuleDescription.ta.js";
+export { id_lsx_matchingRuleDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleDescription.va.js";
 
 /* START_OF_SYMBOL_DEFINITION matchingRuleDescription */
 /**

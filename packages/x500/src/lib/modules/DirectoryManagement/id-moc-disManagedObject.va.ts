@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_moc } from "../DirectoryManagement/id-moc.va";
-export { id_moc } from "../DirectoryManagement/id-moc.va";
+import { id_moc } from "../DirectoryManagement/id-moc.va.js";
+export { id_moc } from "../DirectoryManagement/id-moc.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_moc_disManagedObject */
 /**

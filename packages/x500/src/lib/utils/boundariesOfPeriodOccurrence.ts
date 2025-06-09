@@ -1,8 +1,8 @@
 import { TRUE_BIT } from "asn1-ts";
 import type {
     Period,
-} from "../modules/SelectedAttributeTypes/Period.ta";
-import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta";
+} from "../modules/SelectedAttributeTypes/Period.ta.js";
+import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta.js";
 import {
     startOfDay,
     endOfMonth,
@@ -22,9 +22,9 @@ import {
     endOfYear,
     getWeeksInMonth,
 } from "date-fns";
-import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf";
-import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand";
-import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties";
+import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf.js";
+import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand.js";
+import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties.js";
 
 const MAX_DAY_OF_WEEK = 7;
 const MAX_WEEK_OF_YEAR = 53;

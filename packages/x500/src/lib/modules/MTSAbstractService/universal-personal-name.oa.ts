@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     UniversalPersonalName,
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
-} from "../MTSAbstractService/UniversalPersonalName.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/UniversalPersonalName.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     UniversalPersonalName,
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
-} from "../MTSAbstractService/UniversalPersonalName.ta";
+} from "../MTSAbstractService/UniversalPersonalName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION universal_personal_name */
 /**

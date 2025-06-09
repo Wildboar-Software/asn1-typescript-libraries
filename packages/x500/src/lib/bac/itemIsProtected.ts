@@ -4,26 +4,26 @@ import {
 } from "asn1-ts";
 import type {
     ProtectedItems,
-} from "../modules/BasicAccessControl/ProtectedItems.ta";
-import objectClassesWithinRefinement from "../utils/objectClassesWithinRefinement";
-import type ProtectedItem from "../types/ProtectedItem";
+} from "../modules/BasicAccessControl/ProtectedItems.ta.js";
+import objectClassesWithinRefinement from "../utils/objectClassesWithinRefinement.js";
+import type ProtectedItem from "../types/ProtectedItem.js";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
-} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta";
+} from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta";
-import compareDistinguishedName from "../comparators/compareDistinguishedName";
-import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter";
+} from "../modules/InformationFramework/DistinguishedName.ta.js";
+import compareDistinguishedName from "../comparators/compareDistinguishedName.js";
+import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter.js";
 import {
     EntryInformation,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta";
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/EntryInformation.ta.js";
 import {
     Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta";
-import evaluateContextAssertion from "../utils/evaluateContextAssertion";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.js";
+import evaluateContextAssertion from "../utils/evaluateContextAssertion.js";
 
 /**
  * @summary Whether the requested item is protected by the `ProtectedItems`.

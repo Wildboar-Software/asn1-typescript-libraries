@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta";
+} from "../AuthenticationFramework/InfoSyntax.ta.js";
 import {
     PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta";
+} from "../AuthenticationFramework/PolicyID.ta.js";
 export {
     InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta";
+} from "../AuthenticationFramework/InfoSyntax.ta.js";
 export {
     PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta";
+} from "../AuthenticationFramework/PolicyID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PolicySyntax */
 /**

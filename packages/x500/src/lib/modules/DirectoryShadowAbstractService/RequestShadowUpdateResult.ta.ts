@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RequestShadowUpdateResultData,
     _decode_RequestShadowUpdateResultData,
     _encode_RequestShadowUpdateResultData,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResultData.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateResultData.ta.js";
 import {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 export {
     RequestShadowUpdateResultData,
     _decode_RequestShadowUpdateResultData,
     _encode_RequestShadowUpdateResultData,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResultData.ta";
+} from "../DirectoryShadowAbstractService/RequestShadowUpdateResultData.ta.js";
 export {
     OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta";
+} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RequestShadowUpdateResult */
 /**

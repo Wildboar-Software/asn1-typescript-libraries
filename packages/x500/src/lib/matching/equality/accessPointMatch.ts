@@ -1,14 +1,14 @@
-import type EqualityMatcher from "../../types/EqualityMatcher";
+import type EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import {
     Name,
     _decode_Name,
-} from "../../modules/InformationFramework/Name.ta";
+} from "../../modules/InformationFramework/Name.ta.js";
 import {
     AccessPoint,
     _decode_AccessPoint,
-} from "../../modules/DistributedOperations/AccessPoint.ta";
-import compareName from "../../comparators/compareName";
+} from "../../modules/DistributedOperations/AccessPoint.ta.js";
+import compareName from "../../comparators/compareName.js";
 
 export
 const accessPointMatch: EqualityMatcher = (

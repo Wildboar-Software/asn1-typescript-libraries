@@ -1,9 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import type { ASN1Element, OCTET_STRING } from "asn1-ts";
 import {
     PresentationAddress,
     _decode_PresentationAddress,
-} from "../../modules/SelectedAttributeTypes/PresentationAddress.ta";
+} from "../../modules/SelectedAttributeTypes/PresentationAddress.ta.js";
 
 function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
     return (

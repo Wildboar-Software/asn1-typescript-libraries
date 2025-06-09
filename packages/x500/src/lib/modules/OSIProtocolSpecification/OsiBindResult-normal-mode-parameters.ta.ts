@@ -5,50 +5,50 @@ import {
     OPTIONAL,
     TRUE_BIT,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
     _decode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
     _encode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta.js";
 import {
     OsiBindResult_normal_mode_parameters_protocol_version,
     OsiBindResult_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_OsiBindResult_normal_mode_parameters_protocol_version,
     _encode_OsiBindResult_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-protocol-version.ta.js";
 import {
     OsiBindResult_normal_mode_parameters_user_data,
     _decode_OsiBindResult_normal_mode_parameters_user_data,
     _encode_OsiBindResult_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data.ta.js";
 import {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 export {
     OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
     _decode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
     _encode_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-presentation-context-definition-result-list-Item.ta.js";
 export {
     OsiBindResult_normal_mode_parameters_protocol_version,
     OsiBindResult_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OsiBindResult_normal_mode_parameters_protocol_version,
     _encode_OsiBindResult_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-protocol-version.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-protocol-version.ta.js";
 export {
     OsiBindResult_normal_mode_parameters_user_data,
     _decode_OsiBindResult_normal_mode_parameters_user_data,
     _encode_OsiBindResult_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data.ta";
+} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters-user-data.ta.js";
 export {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta";
+} from "../OSIProtocolSpecification/Presentation-selector.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiBindResult_normal_mode_parameters */
 /**

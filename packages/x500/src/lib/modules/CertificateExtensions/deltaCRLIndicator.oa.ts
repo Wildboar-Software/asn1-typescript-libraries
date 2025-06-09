@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     BaseCRLNumber,
     _decode_BaseCRLNumber,
     _encode_BaseCRLNumber,
-} from "../CertificateExtensions/BaseCRLNumber.ta";
-import { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/BaseCRLNumber.ta.js";
+import { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     BaseCRLNumber,
     _decode_BaseCRLNumber,
     _encode_BaseCRLNumber,
-} from "../CertificateExtensions/BaseCRLNumber.ta";
-export { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va";
+} from "../CertificateExtensions/BaseCRLNumber.ta.js";
+export { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va.js";
 
 /* START_OF_SYMBOL_DEFINITION deltaCRLIndicator */
 /**

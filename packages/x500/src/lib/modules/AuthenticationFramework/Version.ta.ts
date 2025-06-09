@@ -8,4 +8,4 @@ export {
     v1,
     v2,
     v3,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Version.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Version.ta.js";

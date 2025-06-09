@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_as } from "../UsefulDefinitions/id-as.va";
-export { id_as } from "../UsefulDefinitions/id-as.va";
+import { id_as } from "../UsefulDefinitions/id-as.va.js";
+export { id_as } from "../UsefulDefinitions/id-as.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_as_directoryReliableShadowAS */
 /**

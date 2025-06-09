@@ -4,22 +4,22 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ModifyRights_Item_item,
     _decode_ModifyRights_Item_item,
     _encode_ModifyRights_Item_item,
-} from "../DirectoryAbstractService/ModifyRights-Item-item.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item-item.ta.js";
 import {
     ModifyRights_Item_permission,
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
-} from "../DirectoryAbstractService/ModifyRights-Item-permission.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.js";
 export {
     ModifyRights_Item_item,
     _decode_ModifyRights_Item_item,
     _encode_ModifyRights_Item_item,
-} from "../DirectoryAbstractService/ModifyRights-Item-item.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item-item.ta.js";
 export {
     add /* IMPORTED_SHORT_NAMED_BIT */,
     ModifyRights_Item_permission,
@@ -32,7 +32,7 @@ export {
     rename /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
-} from "../DirectoryAbstractService/ModifyRights-Item-permission.ta";
+} from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ModifyRights_Item */
 /**

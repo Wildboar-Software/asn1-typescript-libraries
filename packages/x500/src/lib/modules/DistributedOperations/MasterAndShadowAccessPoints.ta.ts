@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterOrShadowAccessPoint,
     _decode_MasterOrShadowAccessPoint,
     _encode_MasterOrShadowAccessPoint,
-} from "../DistributedOperations/MasterOrShadowAccessPoint.ta";
+} from "../DistributedOperations/MasterOrShadowAccessPoint.ta.js";
 export {
     MasterOrShadowAccessPoint,
     _decode_MasterOrShadowAccessPoint,
     _encode_MasterOrShadowAccessPoint,
-} from "../DistributedOperations/MasterOrShadowAccessPoint.ta";
+} from "../DistributedOperations/MasterOrShadowAccessPoint.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MasterAndShadowAccessPoints */
 /**

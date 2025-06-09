@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 import {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
-} from "../CertificateExtensions/CertificatePoliciesSyntax.ta";
-import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca";
+} from "../CertificateExtensions/CertificatePoliciesSyntax.ta.js";
+import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.js";
+export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.js";
 export {
     CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
-} from "../CertificateExtensions/CertificatePoliciesSyntax.ta";
-export { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va";
+} from "../CertificateExtensions/CertificatePoliciesSyntax.ta.js";
+export { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.js";
 
 /* START_OF_SYMBOL_DEFINITION certificatePolicies */
 /**

@@ -1,5 +1,5 @@
-import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca";
-import type { Refinement } from "../modules/InformationFramework/Refinement.ta";
+import type { OBJECT_CLASS } from "../modules/InformationFramework/OBJECT-CLASS.oca.js";
+import type { Refinement } from "../modules/InformationFramework/Refinement.ta.js";
 
 // TODO: Review. I worked on this late at night and don't feel confident in this code.
 export

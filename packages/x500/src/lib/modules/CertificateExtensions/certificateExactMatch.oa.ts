@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { certExactAssertion } from "../CertificateExtensions/certExactAssertion.oa";
+import { certExactAssertion } from "../CertificateExtensions/certExactAssertion.oa.js";
 import {
     CertificateExactAssertion,
     _decode_CertificateExactAssertion,
     _encode_CertificateExactAssertion,
-} from "../CertificateExtensions/CertificateExactAssertion.ta";
-import { id_mr_certificateExactMatch } from "../CertificateExtensions/id-mr-certificateExactMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { certExactAssertion } from "../CertificateExtensions/certExactAssertion.oa";
+} from "../CertificateExtensions/CertificateExactAssertion.ta.js";
+import { id_mr_certificateExactMatch } from "../CertificateExtensions/id-mr-certificateExactMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { certExactAssertion } from "../CertificateExtensions/certExactAssertion.oa.js";
 export {
     CertificateExactAssertion,
     _decode_CertificateExactAssertion,
     _encode_CertificateExactAssertion,
-} from "../CertificateExtensions/CertificateExactAssertion.ta";
-export { id_mr_certificateExactMatch } from "../CertificateExtensions/id-mr-certificateExactMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateExactAssertion.ta.js";
+export { id_mr_certificateExactMatch } from "../CertificateExtensions/id-mr-certificateExactMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certificateExactMatch */
 /**

@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
-import type EqualityMatcher from "../types/EqualityMatcher";
+import type EqualityMatcher from "../types/EqualityMatcher.js";
 import type {
     GeneralNames,
-} from "../modules/CertificateExtensions/GeneralNames.ta";
-import compareGeneralName from "./compareGeneralName";
+} from "../modules/CertificateExtensions/GeneralNames.ta.js";
+import compareGeneralName from "./compareGeneralName.js";
 
 export
 function compareGeneralNames (

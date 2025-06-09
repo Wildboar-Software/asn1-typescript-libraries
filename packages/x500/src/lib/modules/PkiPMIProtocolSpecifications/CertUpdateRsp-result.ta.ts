@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertUpdateErr,
     _decode_CertUpdateErr,
     _encode_CertUpdateErr,
-} from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta";
+} from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta.js";
 import {
     CertUpdateOK,
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
-} from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta.js";
 export {
     CertUpdateErr,
     _decode_CertUpdateErr,
     _encode_CertUpdateErr,
-} from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta";
+} from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta.js";
 export {
     CertUpdateOK,
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
-} from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta";
+} from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertUpdateRsp_result */
 /**

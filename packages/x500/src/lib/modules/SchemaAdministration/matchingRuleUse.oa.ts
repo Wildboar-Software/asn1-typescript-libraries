@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_soa_matchingRuleUse } from "../SchemaAdministration/id-soa-matchingRuleUse.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_soa_matchingRuleUse } from "../SchemaAdministration/id-soa-matchingRuleUse.va.js";
 import {
     MatchingRuleUseDescription,
     _decode_MatchingRuleUseDescription,
     _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta";
-import { matchingRuleUseDescription } from "../SelectedAttributeTypes/matchingRuleUseDescription.oa";
-import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../SchemaAdministration/MatchingRuleUseDescription.ta.js";
+import { matchingRuleUseDescription } from "../SelectedAttributeTypes/matchingRuleUseDescription.oa.js";
+import { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -25,17 +25,17 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_soa_matchingRuleUse } from "../SchemaAdministration/id-soa-matchingRuleUse.va";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_soa_matchingRuleUse } from "../SchemaAdministration/id-soa-matchingRuleUse.va.js";
 export {
     MatchingRuleUseDescription,
     _decode_MatchingRuleUseDescription,
     _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta";
-export { matchingRuleUseDescription } from "../SelectedAttributeTypes/matchingRuleUseDescription.oa";
-export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa";
+} from "../SchemaAdministration/MatchingRuleUseDescription.ta.js";
+export { matchingRuleUseDescription } from "../SelectedAttributeTypes/matchingRuleUseDescription.oa.js";
+export { objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/objectIdentifierFirstComponentMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION matchingRuleUse */
 /**

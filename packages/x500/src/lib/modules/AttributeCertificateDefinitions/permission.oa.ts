@@ -1,23 +1,23 @@
 /* eslint-disable */
-import { dualStringMatch } from "../AttributeCertificateDefinitions/dualStringMatch.oa";
+import { dualStringMatch } from "../AttributeCertificateDefinitions/dualStringMatch.oa.js";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
     _encode_DualStringSyntax,
-} from "../AttributeCertificateDefinitions/DualStringSyntax.ta";
-import { id_at_permission } from "../AttributeCertificateDefinitions/id-at-permission.va";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AttributeCertificateDefinitions/DualStringSyntax.ta.js";
+import { id_at_permission } from "../AttributeCertificateDefinitions/id-at-permission.va.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-export { dualStringMatch } from "../AttributeCertificateDefinitions/dualStringMatch.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { dualStringMatch } from "../AttributeCertificateDefinitions/dualStringMatch.oa.js";
 export {
     DualStringSyntax,
     _decode_DualStringSyntax,
     _encode_DualStringSyntax,
-} from "../AttributeCertificateDefinitions/DualStringSyntax.ta";
-export { id_at_permission } from "../AttributeCertificateDefinitions/id-at-permission.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AttributeCertificateDefinitions/DualStringSyntax.ta.js";
+export { id_at_permission } from "../AttributeCertificateDefinitions/id-at-permission.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -31,9 +31,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION permission */
 /**

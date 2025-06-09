@@ -3,23 +3,23 @@ import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
-import { id_at_cAcertificate } from "../AuthenticationFramework/id-at-cAcertificate.va";
-import { x509Certificate } from "../AuthenticationFramework/x509Certificate.oa";
-import { certificateExactMatch } from "../CertificateExtensions/certificateExactMatch.oa";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/Certificate.ta.js";
+import { id_at_cAcertificate } from "../AuthenticationFramework/id-at-cAcertificate.va.js";
+import { x509Certificate } from "../AuthenticationFramework/x509Certificate.oa.js";
+import { certificateExactMatch } from "../CertificateExtensions/certificateExactMatch.oa.js";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
+} from "../InformationFramework/AttributeUsage.ta.js";
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta";
-export { id_at_cAcertificate } from "../AuthenticationFramework/id-at-cAcertificate.va";
-export { x509Certificate } from "../AuthenticationFramework/x509Certificate.oa";
-export { certificateExactMatch } from "../CertificateExtensions/certificateExactMatch.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../AuthenticationFramework/Certificate.ta.js";
+export { id_at_cAcertificate } from "../AuthenticationFramework/id-at-cAcertificate.va.js";
+export { x509Certificate } from "../AuthenticationFramework/x509Certificate.oa.js";
+export { certificateExactMatch } from "../CertificateExtensions/certificateExactMatch.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -33,9 +33,9 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION cACertificate */
 /**

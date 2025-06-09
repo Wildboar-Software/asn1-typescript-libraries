@@ -3,20 +3,20 @@ import {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
     _encode_CertificateListExactAssertion,
-} from "../CertificateExtensions/CertificateListExactAssertion.ta";
-import { certListExactAssertion } from "../CertificateExtensions/certListExactAssertion.oa";
-import { id_mr_certificateListExactMatch } from "../CertificateExtensions/id-mr-certificateListExactMatch.va";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+} from "../CertificateExtensions/CertificateListExactAssertion.ta.js";
+import { certListExactAssertion } from "../CertificateExtensions/certListExactAssertion.oa.js";
+import { id_mr_certificateListExactMatch } from "../CertificateExtensions/id-mr-certificateListExactMatch.va.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 export {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
     _encode_CertificateListExactAssertion,
-} from "../CertificateExtensions/CertificateListExactAssertion.ta";
-export { certListExactAssertion } from "../CertificateExtensions/certListExactAssertion.oa";
-export { id_mr_certificateListExactMatch } from "../CertificateExtensions/id-mr-certificateListExactMatch.va";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
+} from "../CertificateExtensions/CertificateListExactAssertion.ta.js";
+export { certListExactAssertion } from "../CertificateExtensions/certListExactAssertion.oa.js";
+export { id_mr_certificateListExactMatch } from "../CertificateExtensions/id-mr-certificateListExactMatch.va.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION certificateListExactMatch */
 /**

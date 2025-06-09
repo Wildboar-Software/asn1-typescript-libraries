@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DayTime,
     _decode_DayTime,
     _encode_DayTime,
-} from "../SelectedAttributeTypes/DayTime.ta";
+} from "../SelectedAttributeTypes/DayTime.ta.js";
 export {
     DayTime,
     _decode_DayTime,
     _encode_DayTime,
-} from "../SelectedAttributeTypes/DayTime.ta";
+} from "../SelectedAttributeTypes/DayTime.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DayTimeBand */
 /**

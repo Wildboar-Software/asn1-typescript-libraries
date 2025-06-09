@@ -4,97 +4,97 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from "../MTSAbstractService/AdministrationDomainName.ta";
+} from "../MTSAbstractService/AdministrationDomainName.ta.js";
 import {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from "../MTSAbstractService/CountryName.ta";
+} from "../MTSAbstractService/CountryName.ta.js";
 import {
     NetworkAddress,
     _decode_NetworkAddress,
     _encode_NetworkAddress,
-} from "../MTSAbstractService/NetworkAddress.ta";
+} from "../MTSAbstractService/NetworkAddress.ta.js";
 import {
     NumericUserIdentifier,
     _decode_NumericUserIdentifier,
     _encode_NumericUserIdentifier,
-} from "../MTSAbstractService/NumericUserIdentifier.ta";
+} from "../MTSAbstractService/NumericUserIdentifier.ta.js";
 import {
     OrganizationalUnitNames,
     _decode_OrganizationalUnitNames,
     _encode_OrganizationalUnitNames,
-} from "../MTSAbstractService/OrganizationalUnitNames.ta";
+} from "../MTSAbstractService/OrganizationalUnitNames.ta.js";
 import {
     OrganizationName,
     _decode_OrganizationName,
     _encode_OrganizationName,
-} from "../MTSAbstractService/OrganizationName.ta";
+} from "../MTSAbstractService/OrganizationName.ta.js";
 import {
     PersonalName,
     _decode_PersonalName,
     _encode_PersonalName,
-} from "../MTSAbstractService/PersonalName.ta";
+} from "../MTSAbstractService/PersonalName.ta.js";
 import {
     PrivateDomainName,
     _decode_PrivateDomainName,
     _encode_PrivateDomainName,
-} from "../MTSAbstractService/PrivateDomainName.ta";
+} from "../MTSAbstractService/PrivateDomainName.ta.js";
 import {
     TerminalIdentifier,
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
-} from "../MTSAbstractService/TerminalIdentifier.ta";
+} from "../MTSAbstractService/TerminalIdentifier.ta.js";
 export {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from "../MTSAbstractService/AdministrationDomainName.ta";
+} from "../MTSAbstractService/AdministrationDomainName.ta.js";
 export {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from "../MTSAbstractService/CountryName.ta";
+} from "../MTSAbstractService/CountryName.ta.js";
 export {
     NetworkAddress,
     _decode_NetworkAddress,
     _encode_NetworkAddress,
-} from "../MTSAbstractService/NetworkAddress.ta";
+} from "../MTSAbstractService/NetworkAddress.ta.js";
 export {
     NumericUserIdentifier,
     _decode_NumericUserIdentifier,
     _encode_NumericUserIdentifier,
-} from "../MTSAbstractService/NumericUserIdentifier.ta";
+} from "../MTSAbstractService/NumericUserIdentifier.ta.js";
 export {
     OrganizationalUnitNames,
     _decode_OrganizationalUnitNames,
     _encode_OrganizationalUnitNames,
-} from "../MTSAbstractService/OrganizationalUnitNames.ta";
+} from "../MTSAbstractService/OrganizationalUnitNames.ta.js";
 export {
     OrganizationName,
     _decode_OrganizationName,
     _encode_OrganizationName,
-} from "../MTSAbstractService/OrganizationName.ta";
+} from "../MTSAbstractService/OrganizationName.ta.js";
 export {
     PersonalName,
     _decode_PersonalName,
     _encode_PersonalName,
-} from "../MTSAbstractService/PersonalName.ta";
+} from "../MTSAbstractService/PersonalName.ta.js";
 export {
     PrivateDomainName,
     _decode_PrivateDomainName,
     _encode_PrivateDomainName,
-} from "../MTSAbstractService/PrivateDomainName.ta";
+} from "../MTSAbstractService/PrivateDomainName.ta.js";
 export {
     TerminalIdentifier,
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
-} from "../MTSAbstractService/TerminalIdentifier.ta";
+} from "../MTSAbstractService/TerminalIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 /**

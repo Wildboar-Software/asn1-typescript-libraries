@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-import { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+import { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va.js";
 
 /* START_OF_SYMBOL_DEFINITION octetString */
 /**

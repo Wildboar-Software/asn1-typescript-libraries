@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
+} from "../InformationFramework/ContextAssertion.ta.js";
 export {
     ContextAssertion,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta";
+} from "../InformationFramework/ContextAssertion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeValueAssertion_assertedContexts */
 /**

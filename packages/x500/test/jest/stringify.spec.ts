@@ -1,23 +1,23 @@
 import * as asn1 from "asn1-ts";
 import {
     AttributeTypeAndValue,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.js";
 import {
     id_at_givenName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-givenName.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-givenName.va.js";
 import {
     id_at_surname,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-surname.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-surname.va.js";
 import {
     id_at_organizationName,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.js";
 import rdnSequenceToString from "@wildboar/x500/src/lib/stringifiers/rdnSequenceToString";
 import generalNameToString from "@wildboar/x500/src/lib/stringifiers/generalNameToString";
 import rdnSequenceFromString from "@wildboar/x500/src/lib/stringifiers/rdnSequenceFromString";
-import directoryStringToString from "@wildboar/x500/src/lib/stringifiers/directoryStringToString";
+import directoryStringToString from "@wildboar/x500/src/lib/stringifiers/directoryStringToString.js";;
 import {
     _decode_UnboundedDirectoryString as decodeUBS,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.js";
 
 describe("Stringifiers", () => {
     const issuerCN = "Mr. Is/uer, Jr.";

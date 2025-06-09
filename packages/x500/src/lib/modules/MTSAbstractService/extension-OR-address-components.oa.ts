@@ -1,16 +1,16 @@
 /* eslint-disable */
-import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 import {
     ExtensionORAddressComponents,
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
-} from "../MTSAbstractService/ExtensionORAddressComponents.ta";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca";
+} from "../MTSAbstractService/ExtensionORAddressComponents.ta.js";
+export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js";
 export {
     ExtensionORAddressComponents,
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
-} from "../MTSAbstractService/ExtensionORAddressComponents.ta";
+} from "../MTSAbstractService/ExtensionORAddressComponents.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION extension_OR_address_components */
 /**

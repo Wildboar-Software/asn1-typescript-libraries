@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../InformationFramework/AttributeUsage.ta";
-import { id_lat_supportedExtension } from "../LdapSystemSchema/id-lat-supportedExtension.va";
-import { oid } from "../SelectedAttributeTypes/oid.oa";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+} from "../InformationFramework/AttributeUsage.ta.js";
+import { id_lat_supportedExtension } from "../LdapSystemSchema/id-lat-supportedExtension.va.js";
+import { oid } from "../SelectedAttributeTypes/oid.oa.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     AttributeUsage,
     AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -21,11 +21,11 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca";
-export { id_lat_supportedExtension } from "../LdapSystemSchema/id-lat-supportedExtension.va";
-export { oid } from "../SelectedAttributeTypes/oid.oa";
+} from "../InformationFramework/AttributeUsage.ta.js";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.js";
+export { id_lat_supportedExtension } from "../LdapSystemSchema/id-lat-supportedExtension.va.js";
+export { oid } from "../SelectedAttributeTypes/oid.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION supportedExtension */
 /**

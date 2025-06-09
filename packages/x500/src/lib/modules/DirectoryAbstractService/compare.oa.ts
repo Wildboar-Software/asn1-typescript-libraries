@@ -1,46 +1,46 @@
 /* eslint-disable */
-import { id_opcode_compare } from "../CommonProtocolSpecification/id-opcode-compare.va";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { abandoned } from "../DirectoryAbstractService/abandoned.oa";
-import { attributeError } from "../DirectoryAbstractService/attributeError.oa";
+import { id_opcode_compare } from "../CommonProtocolSpecification/id-opcode-compare.va.js";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { abandoned } from "../DirectoryAbstractService/abandoned.oa.js";
+import { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
 import {
     CompareArgument,
     _decode_CompareArgument,
     _encode_CompareArgument,
-} from "../DirectoryAbstractService/CompareArgument.ta";
+} from "../DirectoryAbstractService/CompareArgument.ta.js";
 import {
     CompareResult,
     _decode_CompareResult,
     _encode_CompareResult,
-} from "../DirectoryAbstractService/CompareResult.ta";
-import { nameError } from "../DirectoryAbstractService/nameError.oa";
-import { referral } from "../DirectoryAbstractService/referral.oa";
-import { securityError } from "../DirectoryAbstractService/securityError.oa";
-import { serviceError } from "../DirectoryAbstractService/serviceError.oa";
+} from "../DirectoryAbstractService/CompareResult.ta.js";
+import { nameError } from "../DirectoryAbstractService/nameError.oa.js";
+import { referral } from "../DirectoryAbstractService/referral.oa.js";
+import { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+import { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca";
-export { id_opcode_compare } from "../CommonProtocolSpecification/id-opcode-compare.va";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa";
+} from "../CommonProtocolSpecification/Code.ta.js";
+export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.js";
+export { id_opcode_compare } from "../CommonProtocolSpecification/id-opcode-compare.va.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { abandoned } from "../DirectoryAbstractService/abandoned.oa.js";
+export { attributeError } from "../DirectoryAbstractService/attributeError.oa.js";
 export {
     CompareArgument,
     _decode_CompareArgument,
     _encode_CompareArgument,
-} from "../DirectoryAbstractService/CompareArgument.ta";
+} from "../DirectoryAbstractService/CompareArgument.ta.js";
 export {
     CompareResult,
     _decode_CompareResult,
     _encode_CompareResult,
-} from "../DirectoryAbstractService/CompareResult.ta";
-export { nameError } from "../DirectoryAbstractService/nameError.oa";
-export { referral } from "../DirectoryAbstractService/referral.oa";
-export { securityError } from "../DirectoryAbstractService/securityError.oa";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa";
+} from "../DirectoryAbstractService/CompareResult.ta.js";
+export { nameError } from "../DirectoryAbstractService/nameError.oa.js";
+export { referral } from "../DirectoryAbstractService/referral.oa.js";
+export { securityError } from "../DirectoryAbstractService/securityError.oa.js";
+export { serviceError } from "../DirectoryAbstractService/serviceError.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION compare */
 /**

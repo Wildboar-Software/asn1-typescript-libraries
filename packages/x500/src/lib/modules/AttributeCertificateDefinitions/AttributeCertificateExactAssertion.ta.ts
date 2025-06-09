@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta";
+} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 export {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta";
+} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.js";
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta";
+} from "../AuthenticationFramework/CertificateSerialNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateExactAssertion */
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
-import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
+import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.js";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta";
-import { id_lmr_caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5SubstringsMatch.va";
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.js";
+import { id_lmr_caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5SubstringsMatch.va.js";
 
 /* START_OF_SYMBOL_DEFINITION caseIgnoreIA5SubstringsMatch */
 /**

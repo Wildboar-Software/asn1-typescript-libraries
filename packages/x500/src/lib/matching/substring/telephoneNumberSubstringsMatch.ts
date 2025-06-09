@@ -1,15 +1,15 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher";
-import SubstringSelection from "../../types/SubstringSelection";
+import SubstringsMatcher from "../../types/SubstringsMatcher.js";
+import SubstringSelection from "../../types/SubstringSelection.js";
 import type { ASN1Element } from "asn1-ts";
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
-} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta";
+} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.js";
 import {
     SubstringAssertion,
     _decode_SubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta";
-import directoryStringToString from "../../stringifiers/directoryStringToString";
+} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.js";
+import directoryStringToString from "../../stringifiers/directoryStringToString.js";;
 
 export
 const telephoneNumberSubstringsMatch: SubstringsMatcher = (

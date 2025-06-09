@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 export {
     InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta";
+} from "../AVL-management/InvokeID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReq */
 /**

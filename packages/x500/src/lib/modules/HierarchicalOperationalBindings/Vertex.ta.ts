@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
 import {
     SubentryInfo,
     _decode_SubentryInfo,
     _encode_SubentryInfo,
-} from "../HierarchicalOperationalBindings/SubentryInfo.ta";
+} from "../HierarchicalOperationalBindings/SubentryInfo.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 export {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta";
+} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.js";
 export {
     SubentryInfo,
     _decode_SubentryInfo,
     _encode_SubentryInfo,
-} from "../HierarchicalOperationalBindings/SubentryInfo.ta";
+} from "../HierarchicalOperationalBindings/SubentryInfo.ta.js";
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../InformationFramework/Attribute.ta";
+} from "../InformationFramework/Attribute.ta.js";
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta";
+} from "../InformationFramework/RelativeDistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Vertex */
 /**

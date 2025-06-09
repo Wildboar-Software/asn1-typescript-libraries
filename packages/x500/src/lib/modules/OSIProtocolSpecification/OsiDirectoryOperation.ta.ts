@@ -1,46 +1,46 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OsiErr,
     _decode_OsiErr,
     _encode_OsiErr,
-} from "../OSIProtocolSpecification/OsiErr.ta";
+} from "../OSIProtocolSpecification/OsiErr.ta.js";
 import {
     OsiRej,
     _decode_OsiRej,
     _encode_OsiRej,
-} from "../OSIProtocolSpecification/OsiRej.ta";
+} from "../OSIProtocolSpecification/OsiRej.ta.js";
 import {
     OsiReq,
     _decode_OsiReq,
     _encode_OsiReq,
-} from "../OSIProtocolSpecification/OsiReq.ta";
+} from "../OSIProtocolSpecification/OsiReq.ta.js";
 import {
     OsiRes,
     _decode_OsiRes,
     _encode_OsiRes,
-} from "../OSIProtocolSpecification/OsiRes.ta";
+} from "../OSIProtocolSpecification/OsiRes.ta.js";
 export {
     OsiErr,
     _decode_OsiErr,
     _encode_OsiErr,
-} from "../OSIProtocolSpecification/OsiErr.ta";
+} from "../OSIProtocolSpecification/OsiErr.ta.js";
 export {
     OsiRej,
     _decode_OsiRej,
     _encode_OsiRej,
-} from "../OSIProtocolSpecification/OsiRej.ta";
+} from "../OSIProtocolSpecification/OsiRej.ta.js";
 export {
     OsiReq,
     _decode_OsiReq,
     _encode_OsiReq,
-} from "../OSIProtocolSpecification/OsiReq.ta";
+} from "../OSIProtocolSpecification/OsiReq.ta.js";
 export {
     OsiRes,
     _decode_OsiRes,
     _encode_OsiRes,
-} from "../OSIProtocolSpecification/OsiRes.ta";
+} from "../OSIProtocolSpecification/OsiRes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OsiDirectoryOperation */
 /**

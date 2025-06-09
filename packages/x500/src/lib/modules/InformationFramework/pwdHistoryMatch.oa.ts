@@ -1,6 +1,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.js";
 
 // pwdHistoryMatch{ATTRIBUTE:passwordAttribute,OBJECT IDENTIFIER:id}
 // MATCHING-RULE ::= {

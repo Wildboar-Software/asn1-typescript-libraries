@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertSubscribeErr,
     _decode_CertSubscribeErr,
     _encode_CertSubscribeErr,
-} from "../CaSubscription/CertSubscribeErr.ta";
+} from "../CaSubscription/CertSubscribeErr.ta.js";
 import {
     CertSubscribeOK,
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
-} from "../CaSubscription/CertSubscribeOK.ta";
+} from "../CaSubscription/CertSubscribeOK.ta.js";
 export {
     CertSubscribeErr,
     _decode_CertSubscribeErr,
     _encode_CertSubscribeErr,
-} from "../CaSubscription/CertSubscribeErr.ta";
+} from "../CaSubscription/CertSubscribeErr.ta.js";
 export {
     CertSubscribeOK,
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
-} from "../CaSubscription/CertSubscribeOK.ta";
+} from "../CaSubscription/CertSubscribeOK.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertSubscribeRsp_result */
 /**

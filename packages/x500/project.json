@@ -14,7 +14,7 @@
             "executor": "@nx/jest:jest",
 
             "options": {
-                "jestConfig": "packages/x500/jest.config.js",
+                "jestConfig": "packages/x500/jest.config.mjs",
                 "passWithNoTests": true
             }
         },

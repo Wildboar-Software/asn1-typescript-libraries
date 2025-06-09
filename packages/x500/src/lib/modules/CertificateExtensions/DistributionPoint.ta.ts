@@ -4,32 +4,32 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 import {
     ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 export {
     DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta";
+} from "../CertificateExtensions/DistributionPointName.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta";
+} from "../CertificateExtensions/GeneralNames.ta.js";
 export {
     aACompromise /* IMPORTED_SHORT_NAMED_BIT */,
     affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */,
@@ -54,7 +54,7 @@ export {
     weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta";
+} from "../CertificateExtensions/ReasonFlags.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DistributionPoint */
 /**

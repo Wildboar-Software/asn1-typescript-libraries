@@ -1,6 +1,6 @@
-import EqualityMatcher from "../../types/EqualityMatcher";
+import EqualityMatcher from "../../types/EqualityMatcher.js";
 import { ASN1Construction, ASN1Element, unpackBits } from "asn1-ts";
-import { compareBitStrings } from "../../comparators/compareBitStrings";
+import { compareBitStrings } from "../../comparators/compareBitStrings.js";
 
 function lastBits (
     numberOfTrailingBits: number,

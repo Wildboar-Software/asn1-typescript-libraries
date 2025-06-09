@@ -3,26 +3,26 @@ import {
     Group28,
     _decode_Group28,
     _encode_Group28,
-} from "../GenAlgo/Group28.ta";
-import { id_algo_dhModpGr28Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr28Hkdf256Algo.va";
+} from "../GenAlgo/Group28.ta.js";
+import { id_algo_dhModpGr28Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr28Hkdf256Algo.va.js";
 import {
     Payload28,
     _decode_Payload28,
     _encode_Payload28,
-} from "../GenAlgo/Payload28.ta";
-import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../GenAlgo/Payload28.ta.js";
+import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 export {
     Group28,
     _decode_Group28,
     _encode_Group28,
-} from "../GenAlgo/Group28.ta";
-export { id_algo_dhModpGr28Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr28Hkdf256Algo.va";
+} from "../GenAlgo/Group28.ta.js";
+export { id_algo_dhModpGr28Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr28Hkdf256Algo.va.js";
 export {
     Payload28,
     _decode_Payload28,
     _encode_Payload28,
-} from "../GenAlgo/Payload28.ta";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+} from "../GenAlgo/Payload28.ta.js";
+export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION dhModpGr28Hkdf256Algo */
 /**

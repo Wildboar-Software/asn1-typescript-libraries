@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_lsx } from "../UsefulDefinitions/id-lsx.va";
-export { id_lsx } from "../UsefulDefinitions/id-lsx.va";
+import { id_lsx } from "../UsefulDefinitions/id-lsx.va.js";
+export { id_lsx } from "../UsefulDefinitions/id-lsx.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_lsx_jpeg */
 /**

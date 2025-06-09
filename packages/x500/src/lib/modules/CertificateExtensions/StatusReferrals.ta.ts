@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     StatusReferral,
     _decode_StatusReferral,
     _encode_StatusReferral,
-} from "../CertificateExtensions/StatusReferral.ta";
+} from "../CertificateExtensions/StatusReferral.ta.js";
 export {
     StatusReferral,
     _decode_StatusReferral,
     _encode_StatusReferral,
-} from "../CertificateExtensions/StatusReferral.ta";
+} from "../CertificateExtensions/StatusReferral.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION StatusReferrals */
 /**

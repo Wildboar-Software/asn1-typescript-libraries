@@ -1,44 +1,44 @@
 import { ASN1Element, OBJECT_IDENTIFIER, DERElement } from "asn1-ts";
-import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta";
-import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta";
+import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta.js";
+import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta.js";
 import type {
     TypeAndContextAssertion,
-} from "../modules/DirectoryAbstractService/TypeAndContextAssertion.ta";
+} from "../modules/DirectoryAbstractService/TypeAndContextAssertion.ta.js";
 import type {
     ContextAssertion,
-} from "../modules/InformationFramework/ContextAssertion.ta";
+} from "../modules/InformationFramework/ContextAssertion.ta.js";
 import type {
     EntryInformation_information_Item,
-} from "../modules/DirectoryAbstractService/EntryInformation-information-Item.ta";
+} from "../modules/DirectoryAbstractService/EntryInformation-information-Item.ta.js";
 import {
     EntryInformationSelection_infoTypes_attributeTypesAndValues,
     EntryInformationSelection_infoTypes_attributeTypesOnly,
-} from "../modules/DirectoryAbstractService/EntryInformationSelection-infoTypes.ta";
+} from "../modules/DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.js";
 import {
     Attribute,
-} from "../modules/InformationFramework/Attribute.ta";
+} from "../modules/InformationFramework/Attribute.ta.js";
 import {
     Attribute_valuesWithContext_Item,
-} from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta";
-import type ContextMatcher from "../types/ContextMatcher";
+} from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.js";
+import type ContextMatcher from "../types/ContextMatcher.js";
 import {
     id_oa_allAttributeTypes,
-} from "../modules/InformationFramework/id-oa-allAttributeTypes.va";
-import groupByOID from "./groupByOID";
+} from "../modules/InformationFramework/id-oa-allAttributeTypes.va.js";
+import groupByOID from "./groupByOID.js";
 import { strict as assert } from "assert";
-import evaluateContextAssertion from "./evaluateContextAssertion";
+import evaluateContextAssertion from "./evaluateContextAssertion.js";
 import {
     family_information,
-} from "../modules/DirectoryAbstractService/family-information.oa";
+} from "../modules/DirectoryAbstractService/family-information.oa.js";
 import {
     FamilyEntries,
     _decode_FamilyEntries,
     _encode_FamilyEntries,
-} from "../modules/DirectoryAbstractService/FamilyEntries.ta";
+} from "../modules/DirectoryAbstractService/FamilyEntries.ta.js";
 import {
     FamilyEntry,
-} from "../modules/DirectoryAbstractService/FamilyEntry.ta";
-import type ATVAC from "../types/AttributeTypeValueAndContextsTuple";
+} from "../modules/DirectoryAbstractService/FamilyEntry.ta.js";
+import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.js";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 

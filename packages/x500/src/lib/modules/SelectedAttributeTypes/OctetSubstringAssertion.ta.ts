@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OctetSubstringAssertion_Item,
     _decode_OctetSubstringAssertion_Item,
     _encode_OctetSubstringAssertion_Item,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta";
+} from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.js";
 export {
     OctetSubstringAssertion_Item,
     _decode_OctetSubstringAssertion_Item,
     _encode_OctetSubstringAssertion_Item,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta";
+} from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OctetSubstringAssertion */
 /**

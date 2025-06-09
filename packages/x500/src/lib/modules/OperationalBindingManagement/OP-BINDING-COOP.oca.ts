@@ -1,9 +1,9 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+import { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
+export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.js";
+export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OP_BINDING_COOP */
 /**

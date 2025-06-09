@@ -1,27 +1,27 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AUTHEN_ENCRYPT,
     _get_decoder_for_AUTHEN_ENCRYPT,
     _get_encoder_for_AUTHEN_ENCRYPT,
-} from "../CryptoTools/AUTHEN-ENCRYPT.ta";
+} from "../CryptoTools/AUTHEN-ENCRYPT.ta.js";
 import {
     AadServerAE,
     _decode_AadServerAE,
     _encode_AadServerAE,
-} from "../Wrapper/AadServerAE.ta";
+} from "../Wrapper/AadServerAE.ta.js";
 export {
     AUTHEN_ENCRYPT,
     _get_decoder_for_AUTHEN_ENCRYPT,
     _get_encoder_for_AUTHEN_ENCRYPT,
-} from "../CryptoTools/AUTHEN-ENCRYPT.ta";
+} from "../CryptoTools/AUTHEN-ENCRYPT.ta.js";
 export {
     AadServerAE,
     _decode_AadServerAE,
     _encode_AadServerAE,
-} from "../Wrapper/AadServerAE.ta";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca";
+} from "../Wrapper/AadServerAE.ta.js";
+export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION DataTransferServerAE */
 /**

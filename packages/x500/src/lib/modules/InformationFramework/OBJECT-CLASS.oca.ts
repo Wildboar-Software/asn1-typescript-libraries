@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER, UTF8String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
-import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
+import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.js";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.js";
 export {
     abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -15,7 +15,7 @@ export {
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta";
+} from "../InformationFramework/ObjectClassKind.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OBJECT_CLASS */
 /**

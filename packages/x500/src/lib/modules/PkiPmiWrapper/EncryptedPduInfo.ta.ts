@@ -5,39 +5,39 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PkiPmiWrapper/EncryptedKey.ta";
+} from "../PkiPmiWrapper/EncryptedKey.ta.js";
 import {
     EncryptedPdu,
     _decode_EncryptedPdu,
     _encode_EncryptedPdu,
-} from "../PkiPmiWrapper/EncryptedPdu.ta";
+} from "../PkiPmiWrapper/EncryptedPdu.ta.js";
 import {
     EncryptedPduInfo_pduEncryptionAlgorithm,
     _decode_EncryptedPduInfo_pduEncryptionAlgorithm,
     _encode_EncryptedPduInfo_pduEncryptionAlgorithm,
-} from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta";
+} from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PkiPmiWrapper/EncryptedKey.ta";
+} from "../PkiPmiWrapper/EncryptedKey.ta.js";
 export {
     EncryptedPdu,
     _decode_EncryptedPdu,
     _encode_EncryptedPdu,
-} from "../PkiPmiWrapper/EncryptedPdu.ta";
+} from "../PkiPmiWrapper/EncryptedPdu.ta.js";
 export {
     EncryptedPduInfo_pduEncryptionAlgorithm,
     _decode_EncryptedPduInfo_pduEncryptionAlgorithm,
     _encode_EncryptedPduInfo_pduEncryptionAlgorithm,
-} from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta";
-export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca";
+} from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta.js";
+export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa.js";
+export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedPduInfo */
 /**

@@ -1,10 +1,10 @@
 import { ObjectIdentifier, OBJECT_IDENTIFIER } from "asn1-ts";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa";
+import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js";
 import {
     ObjectClassKind,
     ObjectClassKind_structural,
     ObjectClassKind_abstract,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js";
 
 /**
  * NOTE: There may only be one structural object class chain in an entry.
