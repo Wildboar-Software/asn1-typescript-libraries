@@ -1,0 +1,39 @@
+/* eslint-disable */
+import { NULL } from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va.mjs";
+import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+export { rsaEncryption } from "../AlgorithmObjectIdentifiers/rsaEncryption.va.mjs";
+export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
+
+/* START_OF_SYMBOL_DEFINITION rsaEncryptionAlgorithm */
+/**
+ * @summary rsaEncryptionAlgorithm
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * rsaEncryptionAlgorithm ALGORITHM ::= { -- IETF RFC 4055
+ *   PARMS         NULL
+ *   IDENTIFIED BY rsaEncryption }
+ * ```
+ *
+ * @constant
+ * @type {ALGORITHM<NULL>}
+ * @implements {ALGORITHM<NULL>}
+ */
+export const rsaEncryptionAlgorithm: ALGORITHM<NULL> = {
+    class: "ALGORITHM",
+    decoderFor: {
+        "&Type": $._decodeNull,
+    },
+    encoderFor: {
+        "&Type": $._encodeNull,
+    },
+    "&id": rsaEncryption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
+/* END_OF_SYMBOL_DEFINITION rsaEncryptionAlgorithm */
+
+/* eslint-enable */

@@ -1,0 +1,71 @@
+/* eslint-disable */
+import { OBJECT_IDENTIFIER } from "asn1-ts";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import {
+    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+} from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_lat_supportedControl } from "../LdapSystemSchema/id-lat-supportedControl.va.mjs";
+import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
+export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+export {
+    AttributeUsage,
+    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
+    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
+    _decode_AttributeUsage,
+    _encode_AttributeUsage,
+    _enum_for_AttributeUsage,
+} from "../InformationFramework/AttributeUsage.ta.mjs";
+export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
+export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
+export { id_lat_supportedControl } from "../LdapSystemSchema/id-lat-supportedControl.va.mjs";
+export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
+
+/* START_OF_SYMBOL_DEFINITION supportedControl */
+/**
+ * @summary supportedControl
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * supportedControl ATTRIBUTE ::= {
+ *   WITH SYNTAX              OBJECT IDENTIFIER
+ *   USAGE                    dSAOperation
+ *   LDAP-SYNTAX              oid.&id
+ *   LDAP-NAME                {"supportedControl"}
+ *   ID                       id-lat-supportedControl }
+ * ```
+ *
+ * @constant
+ * @type {ATTRIBUTE<OBJECT_IDENTIFIER>}
+ * @implements {ATTRIBUTE<OBJECT_IDENTIFIER>}
+ */
+export const supportedControl: ATTRIBUTE<OBJECT_IDENTIFIER> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeObjectIdentifier,
+    },
+    encoderFor: {
+        "&Type": $._encodeObjectIdentifier,
+    },
+    "&usage": dSAOperation /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": oid["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["supportedControl"],
+    "&id": id_lat_supportedControl /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+/* END_OF_SYMBOL_DEFINITION supportedControl */
+
+/* eslint-enable */

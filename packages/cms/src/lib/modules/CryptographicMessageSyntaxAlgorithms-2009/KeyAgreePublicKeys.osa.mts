@@ -1,0 +1,25 @@
+/* eslint-disable */
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
+import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
+export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
+
+/* START_OF_SYMBOL_DEFINITION KeyAgreePublicKeys */
+/**
+ * @summary KeyAgreePublicKeys
+ * @description
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * KeyAgreePublicKeys PUBLIC-KEY ::= { pk-dh, ...}
+ * ```
+ *
+ * @constant
+ * @type {PUBLIC_KEY[]}
+ *
+ */
+export const KeyAgreePublicKeys: PUBLIC_KEY[] = [pk_dh];
+/* END_OF_SYMBOL_DEFINITION KeyAgreePublicKeys */
+
+/* eslint-enable */

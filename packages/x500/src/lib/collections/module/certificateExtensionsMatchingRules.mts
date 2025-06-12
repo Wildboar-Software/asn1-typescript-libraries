@@ -1,0 +1,10 @@
+export { certificateExactMatch } from "../../modules/CertificateExtensions/certificateExactMatch.oa.mjs";
+export { certificateMatch } from "../../modules/CertificateExtensions/certificateMatch.oa.mjs";
+export { certificatePairExactMatch } from "../../modules/CertificateExtensions/certificatePairExactMatch.oa.mjs";
+export { certificatePairMatch } from "../../modules/CertificateExtensions/certificatePairMatch.oa.mjs";
+export { certificateListExactMatch } from "../../modules/CertificateExtensions/certificateListExactMatch.oa.mjs";
+export { certificateListMatch } from "../../modules/CertificateExtensions/certificateListMatch.oa.mjs";
+export { algorithmIdentifierMatch } from "../../modules/CertificateExtensions/algorithmIdentifierMatch.oa.mjs";
+export { policyMatch } from "../../modules/CertificateExtensions/policyMatch.oa.mjs";
+export { pkiPathMatch } from "../../modules/CertificateExtensions/pkiPathMatch.oa.mjs";
+export { enhancedCertificateMatch } from "../../modules/CertificateExtensions/enhancedCertificateMatch.oa.mjs";

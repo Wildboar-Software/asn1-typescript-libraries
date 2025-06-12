@@ -1,0 +1,12 @@
+export { role } from "../../modules/AttributeCertificateDefinitions/role.oa.mjs";
+export { permission } from "../../modules/AttributeCertificateDefinitions/permission.oa.mjs";
+export { attributeCertificateAttribute } from "../../modules/AttributeCertificateDefinitions/attributeCertificateAttribute.oa.mjs";
+export { aACertificate } from "../../modules/AttributeCertificateDefinitions/aACertificate.oa.mjs";
+export { attributeDescriptorCertificate } from "../../modules/AttributeCertificateDefinitions/attributeDescriptorCertificate.oa.mjs";
+export { attributeCertificateRevocationList } from "../../modules/AttributeCertificateDefinitions/attributeCertificateRevocationList.oa.mjs";
+export { eeAttrCertificateRevocationList } from "../../modules/AttributeCertificateDefinitions/eeAttrCertificateRevocationList.oa.mjs";
+export { attributeAuthorityRevocationList } from "../../modules/AttributeCertificateDefinitions/attributeAuthorityRevocationList.oa.mjs";
+export { delegationPath } from "../../modules/AttributeCertificateDefinitions/delegationPath.oa.mjs";
+export { privPolicy } from "../../modules/AttributeCertificateDefinitions/privPolicy.oa.mjs";
+export { protPrivPolicy } from "../../modules/AttributeCertificateDefinitions/protPrivPolicy.oa.mjs";
+export { xmlPrivPolicy } from "../../modules/AttributeCertificateDefinitions/xmlPrivPolicy.oa.mjs";

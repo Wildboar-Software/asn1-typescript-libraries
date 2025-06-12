@@ -1,3 +1,5 @@
+// This might be broken now, because it relies specifically on CommonJS, which
+// asn1-ts no longer supports.
 const fs = require("fs");
 const path = require("path");
 const asn1 = require("asn1-ts");

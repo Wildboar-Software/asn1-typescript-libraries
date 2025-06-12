@@ -1,9 +1,0 @@
-export { dseType } from "../../modules/DSAOperationalAttributeTypes/dseType.oa.js";
-export { myAccessPoint } from "../../modules/DSAOperationalAttributeTypes/myAccessPoint.oa.js";
-export { superiorKnowledge } from "../../modules/DSAOperationalAttributeTypes/superiorKnowledge.oa.js";
-export { specificKnowledge } from "../../modules/DSAOperationalAttributeTypes/specificKnowledge.oa.js";
-export { nonSpecificKnowledge } from "../../modules/DSAOperationalAttributeTypes/nonSpecificKnowledge.oa.js";
-export { supplierKnowledge } from "../../modules/DSAOperationalAttributeTypes/supplierKnowledge.oa.js";
-export { consumerKnowledge } from "../../modules/DSAOperationalAttributeTypes/consumerKnowledge.oa.js";
-export { secondaryShadows } from "../../modules/DSAOperationalAttributeTypes/secondaryShadows.oa.js";
-export { ditBridgeKnowledge } from "../../modules/DSAOperationalAttributeTypes/ditBridgeKnowledge.oa.js";
