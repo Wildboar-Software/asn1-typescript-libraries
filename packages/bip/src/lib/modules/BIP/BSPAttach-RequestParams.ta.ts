@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 export {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 import {
   BioAPI_UNIT_LIST_ELEMENT,
   _decode_BioAPI_UNIT_LIST_ELEMENT,
   _encode_BioAPI_UNIT_LIST_ELEMENT,
-} from '../BIP/BioAPI-UNIT-LIST-ELEMENT.ta';
+} from '../BIP/BioAPI-UNIT-LIST-ELEMENT.ta.js';
 export {
   BioAPI_UNIT_LIST_ELEMENT,
   _decode_BioAPI_UNIT_LIST_ELEMENT,
   _encode_BioAPI_UNIT_LIST_ELEMENT,
-} from '../BIP/BioAPI-UNIT-LIST-ELEMENT.ta';
+} from '../BIP/BioAPI-UNIT-LIST-ELEMENT.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BSPAttach_RequestParams */
 /**

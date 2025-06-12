@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EntryModification_modification,
     _decode_EntryModification_modification,
     _encode_EntryModification_modification,
-} from '../MSAbstractService/EntryModification-modification.ta';
+} from '../MSAbstractService/EntryModification-modification.ta.js';
 export {
     EntryModification_modification,
     _decode_EntryModification_modification,
     _encode_EntryModification_modification,
-} from '../MSAbstractService/EntryModification-modification.ta';
+} from '../MSAbstractService/EntryModification-modification.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntryModification */
 /**

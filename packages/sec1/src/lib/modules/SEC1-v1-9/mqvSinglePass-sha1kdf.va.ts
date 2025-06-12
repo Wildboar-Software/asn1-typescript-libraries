@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va";
-export { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.js";
+export { x9_63_scheme } from "../SEC1-v1-9/x9-63-scheme.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION mqvSinglePass_sha1kdf */

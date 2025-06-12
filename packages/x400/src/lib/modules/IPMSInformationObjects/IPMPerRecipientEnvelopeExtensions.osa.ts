@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa';
-export { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa';
-import { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa';
-export { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa';
-import { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa';
-export { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa.js';
+export { blind_copy_recipients } from '../IPMSInformationObjects/blind-copy-recipients.oa.js';
+import { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa.js';
+export { body_part_encryption_token } from '../IPMSSecurityExtensions/body-part-encryption-token.oa.js';
+import { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa.js';
+export { forwarded_content_token } from '../IPMSSecurityExtensions/forwarded-content-token.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMPerRecipientEnvelopeExtensions */
 /**

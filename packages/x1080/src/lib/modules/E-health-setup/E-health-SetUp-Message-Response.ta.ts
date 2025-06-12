@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     E_health_SetUp_Message_Response_interactive,
     _decode_E_health_SetUp_Message_Response_interactive,
     _encode_E_health_SetUp_Message_Response_interactive,
-} from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta';
+} from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta.js';
 export {
     E_health_SetUp_Message_Response_interactive,
     _decode_E_health_SetUp_Message_Response_interactive,
     _encode_E_health_SetUp_Message_Response_interactive,
-} from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta';
+} from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response */
 /**

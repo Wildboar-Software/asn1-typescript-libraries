@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta';
-export { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta';
-import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va';
-export { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.js';
+export { ID, _decode_ID, _encode_ID } from '../EDIMSObjectIdentifiers/ID.ta.js';
+import { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.js';
+export { id_hat } from '../EDIMSObjectIdentifiers/id-hat.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_hat_cross_referencing_information */
 /**

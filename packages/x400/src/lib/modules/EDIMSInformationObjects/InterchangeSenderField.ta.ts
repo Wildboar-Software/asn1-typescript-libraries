@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IdentificationCode,
     _decode_IdentificationCode,
     _encode_IdentificationCode,
-} from '../EDIMSInformationObjects/IdentificationCode.ta';
+} from '../EDIMSInformationObjects/IdentificationCode.ta.js';
 export {
     IdentificationCode,
     _decode_IdentificationCode,
     _encode_IdentificationCode,
-} from '../EDIMSInformationObjects/IdentificationCode.ta';
+} from '../EDIMSInformationObjects/IdentificationCode.ta.js';
 import {
     IdentificationCodeQualifier,
     _decode_IdentificationCodeQualifier,
     _encode_IdentificationCodeQualifier,
-} from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta';
+} from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta.js';
 export {
     IdentificationCodeQualifier,
     _decode_IdentificationCodeQualifier,
     _encode_IdentificationCodeQualifier,
-} from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta';
+} from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta.js';
 import {
     RoutingAddress,
     _decode_RoutingAddress,
     _encode_RoutingAddress,
-} from '../EDIMSInformationObjects/RoutingAddress.ta';
+} from '../EDIMSInformationObjects/RoutingAddress.ta.js';
 export {
     RoutingAddress,
     _decode_RoutingAddress,
     _encode_RoutingAddress,
-} from '../EDIMSInformationObjects/RoutingAddress.ta';
+} from '../EDIMSInformationObjects/RoutingAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InterchangeSenderField */
 /**

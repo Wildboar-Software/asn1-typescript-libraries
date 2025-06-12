@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CirculationMember,
     _decode_CirculationMember,
     _encode_CirculationMember,
-} from '../IPMSHeadingExtensions/CirculationMember.ta';
+} from '../IPMSHeadingExtensions/CirculationMember.ta.js';
 export {
     CirculationMember,
     _decode_CirculationMember,
     _encode_CirculationMember,
-} from '../IPMSHeadingExtensions/CirculationMember.ta';
+} from '../IPMSHeadingExtensions/CirculationMember.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CirculationList */
 /**

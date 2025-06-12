@@ -4,22 +4,22 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.js";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -36,12 +36,12 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificateInfo */
 /**

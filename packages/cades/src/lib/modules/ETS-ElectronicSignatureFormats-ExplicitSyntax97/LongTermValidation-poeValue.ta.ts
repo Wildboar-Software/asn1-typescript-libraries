@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta";
-export { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta";
-import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "@wildboar/ers/src/lib/modules/ERS/EvidenceRecord.ta";
-export { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "@wildboar/ers/src/lib/modules/ERS/EvidenceRecord.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta.js";
+export { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "@wildboar/tsp/src/lib/modules/PKIXTSP/TimeStampToken.ta.js";
+import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "@wildboar/ers/src/lib/modules/ERS/EvidenceRecord.ta.js";
+export { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "@wildboar/ers/src/lib/modules/ERS/EvidenceRecord.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION LongTermValidation_poeValue */

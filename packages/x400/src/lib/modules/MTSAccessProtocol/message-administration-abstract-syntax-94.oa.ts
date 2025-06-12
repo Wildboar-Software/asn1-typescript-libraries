@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageAdministrationPDUs,
     _decode_MessageAdministrationPDUs,
     _encode_MessageAdministrationPDUs,
-} from '../MTSAccessProtocol/MessageAdministrationPDUs.ta';
+} from '../MTSAccessProtocol/MessageAdministrationPDUs.ta.js';
 export {
     MessageAdministrationPDUs,
     _decode_MessageAdministrationPDUs,
     _encode_MessageAdministrationPDUs,
-} from '../MTSAccessProtocol/MessageAdministrationPDUs.ta';
-import { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va';
-export { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va';
+} from '../MTSAccessProtocol/MessageAdministrationPDUs.ta.js';
+import { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va.js';
+export { id_as_mase_94 } from '../MHSProtocolObjectIdentifiers/id-as-mase-94.va.js';
 
 /* START_OF_SYMBOL_DEFINITION message_administration_abstract_syntax_94 */
 /**

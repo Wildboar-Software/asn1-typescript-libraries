@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateChoice,
     _decode_CertificateChoice,
     _encode_CertificateChoice,
-} from "../PKCS7/CertificateChoice.ta";
+} from "../PKCS7/CertificateChoice.ta.js";
 export {
     CertificateChoice,
     _decode_CertificateChoice,
     _encode_CertificateChoice,
-} from "../PKCS7/CertificateChoice.ta";
+} from "../PKCS7/CertificateChoice.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateSet */
 /**

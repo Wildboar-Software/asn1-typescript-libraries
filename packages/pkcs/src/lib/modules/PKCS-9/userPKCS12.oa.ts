@@ -1,10 +1,10 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { PFX, _decode_PFX, _encode_PFX } from "../PKCS-12/PFX.ta";
-import { pkcs_9_at_userPKCS12 } from "../PKCS-9/pkcs-9-at-userPKCS12.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { PFX, _decode_PFX, _encode_PFX } from "../PKCS-12/PFX.ta.js";
+import { pkcs_9_at_userPKCS12 } from "../PKCS-9/pkcs-9-at-userPKCS12.va.js";
 
 /* START_OF_SYMBOL_DEFINITION userPKCS12 */
 /**

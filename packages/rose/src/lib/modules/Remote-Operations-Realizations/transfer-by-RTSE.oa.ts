@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RealizationParameter,
   _decode_RealizationParameter,
   _encode_RealizationParameter,
-} from '../Remote-Operations-Realizations/RealizationParameter.ta';
+} from '../Remote-Operations-Realizations/RealizationParameter.ta.js';
 export {
   RealizationParameter,
   _decode_RealizationParameter,
   _encode_RealizationParameter,
-} from '../Remote-Operations-Realizations/RealizationParameter.ta';
-import { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca';
-export { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca';
+} from '../Remote-Operations-Realizations/RealizationParameter.ta.js';
+import { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.js';
+export { REALIZATION } from '../Remote-Operations-Information-Objects-extensions/REALIZATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION transfer_by_RTSE */
 /**

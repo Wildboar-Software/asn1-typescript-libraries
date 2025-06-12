@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     Authenticator,
     _decode_Authenticator,
     _encode_Authenticator,
-} from "../PKIXCRMF-2009/Authenticator.ta";
-import { id_regCtrl_authenticator } from "../PKIXCRMF-2009/id-regCtrl-authenticator.va";
+} from "../PKIXCRMF-2009/Authenticator.ta.js";
+import { id_regCtrl_authenticator } from "../PKIXCRMF-2009/id-regCtrl-authenticator.va.js";
 
 /* START_OF_SYMBOL_DEFINITION regCtrl_authenticator */
 /**

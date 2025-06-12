@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActivityDuration_Item,
     _decode_ActivityDuration_Item,
     _encode_ActivityDuration_Item,
-} from '../X790ASN1Module/ActivityDuration-Item.ta';
+} from '../X790ASN1Module/ActivityDuration-Item.ta.js';
 export {
     ActivityDuration_Item,
     _decode_ActivityDuration_Item,
     _encode_ActivityDuration_Item,
-} from '../X790ASN1Module/ActivityDuration-Item.ta';
+} from '../X790ASN1Module/ActivityDuration-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ActivityDuration */
 /**

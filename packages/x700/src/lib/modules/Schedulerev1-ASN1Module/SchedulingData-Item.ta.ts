@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IndexOrOperSpec,
     _decode_IndexOrOperSpec,
     _encode_IndexOrOperSpec,
-} from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta';
+} from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta.js';
 export {
     IndexOrOperSpec,
     _decode_IndexOrOperSpec,
     _encode_IndexOrOperSpec,
-} from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta';
+} from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta.js';
 import {
     Schedule,
     _decode_Schedule,
     _encode_Schedule,
-} from '../Schedulerev1-ASN1Module/Schedule.ta';
+} from '../Schedulerev1-ASN1Module/Schedule.ta.js';
 export {
     Schedule,
     _decode_Schedule,
     _encode_Schedule,
-} from '../Schedulerev1-ASN1Module/Schedule.ta';
+} from '../Schedulerev1-ASN1Module/Schedule.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SchedulingData_Item */
 /**

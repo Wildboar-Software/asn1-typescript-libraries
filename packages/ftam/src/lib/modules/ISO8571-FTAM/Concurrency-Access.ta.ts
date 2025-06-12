@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Concurrency_Key,
   Concurrency_Key_not_required /* IMPORTED_LONG_NAMED_BIT */,
@@ -78,7 +78,7 @@ import {
   no_access /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Concurrency_Key,
   _encode_Concurrency_Key,
-} from '../ISO8571-FTAM/Concurrency-Key.ta';
+} from '../ISO8571-FTAM/Concurrency-Key.ta.js';
 export {
   Concurrency_Key,
   Concurrency_Key_not_required /* IMPORTED_LONG_NAMED_BIT */,
@@ -91,7 +91,7 @@ export {
   no_access /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Concurrency_Key,
   _encode_Concurrency_Key,
-} from '../ISO8571-FTAM/Concurrency-Key.ta';
+} from '../ISO8571-FTAM/Concurrency-Key.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Concurrency_Access */
 /**

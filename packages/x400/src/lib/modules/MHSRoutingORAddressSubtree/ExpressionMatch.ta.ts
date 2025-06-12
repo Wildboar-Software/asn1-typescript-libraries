@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddressFilter,
     _decode_ORAddressFilter,
     _encode_ORAddressFilter,
-} from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta';
+} from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta.js';
 export {
     ORAddressFilter,
     _decode_ORAddressFilter,
     _encode_ORAddressFilter,
-} from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta';
+} from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta.js';
 import {
     RoutingAdvice,
     _decode_RoutingAdvice,
     _encode_RoutingAdvice,
-} from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta';
+} from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.js';
 export {
     RoutingAdvice,
     _decode_RoutingAdvice,
     _encode_RoutingAdvice,
-} from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta';
+} from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExpressionMatch */
 /**

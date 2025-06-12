@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-export { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-import { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-export { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-import { originator_and_DL_expansion_history } from '../MTSAbstractService/originator-and-DL-expansion-history.oa';
-export { originator_and_DL_expansion_history } from '../MTSAbstractService/originator-and-DL-expansion-history.oa';
-import { reporting_DL_name } from '../MTSAbstractService/reporting-DL-name.oa';
-export { reporting_DL_name } from '../MTSAbstractService/reporting-DL-name.oa';
-import { reporting_MTA_certificate } from '../MTSAbstractService/reporting-MTA-certificate.oa';
-export { reporting_MTA_certificate } from '../MTSAbstractService/reporting-MTA-certificate.oa';
-import { report_origin_authentication_check } from '../MTSAbstractService/report-origin-authentication-check.oa';
-export { report_origin_authentication_check } from '../MTSAbstractService/report-origin-authentication-check.oa';
-import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa';
-export { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa';
-import { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa';
-export { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+export { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+import { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+export { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+import { originator_and_DL_expansion_history } from '../MTSAbstractService/originator-and-DL-expansion-history.oa.js';
+export { originator_and_DL_expansion_history } from '../MTSAbstractService/originator-and-DL-expansion-history.oa.js';
+import { reporting_DL_name } from '../MTSAbstractService/reporting-DL-name.oa.js';
+export { reporting_DL_name } from '../MTSAbstractService/reporting-DL-name.oa.js';
+import { reporting_MTA_certificate } from '../MTSAbstractService/reporting-MTA-certificate.oa.js';
+export { reporting_MTA_certificate } from '../MTSAbstractService/reporting-MTA-certificate.oa.js';
+import { report_origin_authentication_check } from '../MTSAbstractService/report-origin-authentication-check.oa.js';
+export { report_origin_authentication_check } from '../MTSAbstractService/report-origin-authentication-check.oa.js';
+import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.js';
+export { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.js';
+import { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa.js';
+export { reporting_MTA_name } from '../MTSAbstractService/reporting-MTA-name.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportTransferEnvelopeExtensions */
 /**

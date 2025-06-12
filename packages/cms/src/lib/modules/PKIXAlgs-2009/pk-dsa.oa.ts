@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 import {
     DSA_Params,
     _decode_DSA_Params,
     _encode_DSA_Params,
-} from "../PKIXAlgs-2009/DSA-Params.ta";
+} from "../PKIXAlgs-2009/DSA-Params.ta.js";
 import {
     DSAPublicKey,
     _decode_DSAPublicKey,
     _encode_DSAPublicKey,
-} from "../PKIXAlgs-2009/DSAPublicKey.ta";
-import { id_dsa } from "../PKIXAlgs-2009/id-dsa.va";
+} from "../PKIXAlgs-2009/DSAPublicKey.ta.js";
+import { id_dsa } from "../PKIXAlgs-2009/id-dsa.va.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -31,19 +31,19 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 export {
     DSA_Params,
     _decode_DSA_Params,
     _encode_DSA_Params,
-} from "../PKIXAlgs-2009/DSA-Params.ta";
+} from "../PKIXAlgs-2009/DSA-Params.ta.js";
 export {
     DSAPublicKey,
     _decode_DSAPublicKey,
     _encode_DSAPublicKey,
-} from "../PKIXAlgs-2009/DSAPublicKey.ta";
-export { id_dsa } from "../PKIXAlgs-2009/id-dsa.va";
+} from "../PKIXAlgs-2009/DSAPublicKey.ta.js";
+export { id_dsa } from "../PKIXAlgs-2009/id-dsa.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_dsa */
 /**

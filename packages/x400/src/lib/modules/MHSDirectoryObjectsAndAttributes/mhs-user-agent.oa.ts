@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,31 +91,31 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa';
-export { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa';
-import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa';
-export { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa';
-import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa';
-export { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa';
-import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa';
-export { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa';
-import { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa';
-export { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa';
-import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa';
-export { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa';
-import { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-classes.oa';
-export { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-classes.oa';
-import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa';
-export { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa';
-import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa';
-export { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa';
-import { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va';
-export { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.js';
+export { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.js';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.js';
+export { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.js';
+import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.js';
+export { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.js';
+import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.js';
+export { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.js';
+import { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa.js';
+export { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa.js';
+import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa.js';
+export { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa.js';
+import { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-classes.oa.js';
+export { mhs_deliverable_classes } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-classes.oa.js';
+import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.js';
+export { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.js';
+import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.js';
+export { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.js';
+import { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va.js';
+export { id_oc_mhs_user_agent } from '../MHSObjectIdentifiers/id-oc-mhs-user-agent.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mhs_user_agent */
 /**

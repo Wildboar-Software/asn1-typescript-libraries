@@ -5,17 +5,17 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ValidationParams,
     _decode_ValidationParams,
     _encode_ValidationParams,
-} from "../PKIXAlgs-2009/ValidationParams.ta";
+} from "../PKIXAlgs-2009/ValidationParams.ta.js";
 export {
     ValidationParams,
     _decode_ValidationParams,
     _encode_ValidationParams,
-} from "../PKIXAlgs-2009/ValidationParams.ta";
+} from "../PKIXAlgs-2009/ValidationParams.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DomainParameters */
 /**

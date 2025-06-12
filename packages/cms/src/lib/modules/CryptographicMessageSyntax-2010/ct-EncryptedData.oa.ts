@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 import {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../CryptographicMessageSyntax-2010/EncryptedData.ta";
-import { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "../CryptographicMessageSyntax-2010/EncryptedData.ta.js";
+import { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 export {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../CryptographicMessageSyntax-2010/EncryptedData.ta";
-export { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va";
+} from "../CryptographicMessageSyntax-2010/EncryptedData.ta.js";
+export { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_EncryptedData */
 /**

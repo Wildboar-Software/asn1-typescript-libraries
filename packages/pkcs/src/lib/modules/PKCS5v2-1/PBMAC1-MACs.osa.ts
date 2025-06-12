@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION PBMAC1_MACs */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,8 +20,8 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CONTENT_ENCRYPTION */
 /**

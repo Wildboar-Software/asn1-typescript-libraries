@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CommonObjectAttributes,
     _decode_CommonObjectAttributes,
     _encode_CommonObjectAttributes,
-} from "../PKCS-15/CommonObjectAttributes.ta";
+} from "../PKCS-15/CommonObjectAttributes.ta.js";
 export {
     CommonObjectAttributes,
     _decode_CommonObjectAttributes,
     _encode_CommonObjectAttributes,
-} from "../PKCS-15/CommonObjectAttributes.ta";
+} from "../PKCS-15/CommonObjectAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS15Object */
 /**

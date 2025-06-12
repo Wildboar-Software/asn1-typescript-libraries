@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { NATIONAL_BODY_PARTS } from '../IPMSInformationObjects/NATIONAL-BODY-PARTS.oca';
-export { NATIONAL_BODY_PARTS } from '../IPMSInformationObjects/NATIONAL-BODY-PARTS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { NATIONAL_BODY_PARTS } from '../IPMSInformationObjects/NATIONAL-BODY-PARTS.oca.js';
+export { NATIONAL_BODY_PARTS } from '../IPMSInformationObjects/NATIONAL-BODY-PARTS.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION NationallyDefinedBodyPart */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BIPMessage_nature,
   _decode_BIPMessage_nature,
   _encode_BIPMessage_nature,
-} from '../BIP/BIPMessage-nature.ta';
+} from '../BIP/BIPMessage-nature.ta.js';
 export {
   BIPMessage_nature,
   _decode_BIPMessage_nature,
   _encode_BIPMessage_nature,
-} from '../BIP/BIPMessage-nature.ta';
+} from '../BIP/BIPMessage-nature.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPMessage */
 /**

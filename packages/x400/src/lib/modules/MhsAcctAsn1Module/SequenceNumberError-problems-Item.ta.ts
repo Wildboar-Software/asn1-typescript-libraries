@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceNumberProblem,
     SequenceNumberProblem_no_such_entry /* IMPORTED_LONG_NAMED_INTEGER */,
     no_such_entry /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SequenceNumberProblem,
     _encode_SequenceNumberProblem,
-} from '../MSAbstractService/SequenceNumberProblem.ta';
+} from '../MSAbstractService/SequenceNumberProblem.ta.js';
 export {
     SequenceNumberProblem,
     SequenceNumberProblem_no_such_entry /* IMPORTED_LONG_NAMED_INTEGER */,
     no_such_entry /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SequenceNumberProblem,
     _encode_SequenceNumberProblem,
-} from '../MSAbstractService/SequenceNumberProblem.ta';
+} from '../MSAbstractService/SequenceNumberProblem.ta.js';
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SequenceNumberError_problems_Item */
 /**

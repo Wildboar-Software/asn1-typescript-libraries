@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 export {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 import {
   KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
-} from '../KerberosV5Spec2/KerberosString.ta';
+} from '../KerberosV5Spec2/KerberosString.ta.js';
 export {
   KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
-} from '../KerberosV5Spec2/KerberosString.ta';
+} from '../KerberosV5Spec2/KerberosString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PrincipalName */
 /**

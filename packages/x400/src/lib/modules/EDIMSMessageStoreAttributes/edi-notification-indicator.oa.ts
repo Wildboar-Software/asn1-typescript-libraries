@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     EDINotificationIndicator,
     _enum_for_EDINotificationIndicator,
@@ -91,7 +91,7 @@ import {
     fn_sent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EDINotificationIndicator,
     _encode_EDINotificationIndicator,
-} from '../EDIMSMessageStoreAttributes/EDINotificationIndicator.ta';
+} from '../EDIMSMessageStoreAttributes/EDINotificationIndicator.ta.js';
 export {
     EDINotificationIndicator,
     _enum_for_EDINotificationIndicator,
@@ -105,14 +105,14 @@ export {
     fn_sent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EDINotificationIndicator,
     _encode_EDINotificationIndicator,
-} from '../EDIMSMessageStoreAttributes/EDINotificationIndicator.ta';
-import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa';
-export { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa';
-import { id_sat_edi_notification_indicator } from '../EDIMSObjectIdentifiers/id-sat-edi-notification-indicator.va';
-export { id_sat_edi_notification_indicator } from '../EDIMSObjectIdentifiers/id-sat-edi-notification-indicator.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../EDIMSMessageStoreAttributes/EDINotificationIndicator.ta.js';
+import { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.js';
+export { integerMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/integerMatch.oa.js';
+import { id_sat_edi_notification_indicator } from '../EDIMSObjectIdentifiers/id-sat-edi-notification-indicator.va.js';
+export { id_sat_edi_notification_indicator } from '../EDIMSObjectIdentifiers/id-sat-edi-notification-indicator.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION edi_notification_indicator */
 /**

@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { RSAENCRYPTED, _get_decoder_for_RSAENCRYPTED, _get_encoder_for_RSAENCRYPTED } from "../CASS-CAM-MESSAGE-FORMAT/RSAENCRYPTED.ta";
-export { RSAENCRYPTED, _get_decoder_for_RSAENCRYPTED, _get_encoder_for_RSAENCRYPTED } from "../CASS-CAM-MESSAGE-FORMAT/RSAENCRYPTED.ta";
-import { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-FORMAT/Content.ta";
-export { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-FORMAT/Content.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { RSAENCRYPTED, _get_decoder_for_RSAENCRYPTED, _get_encoder_for_RSAENCRYPTED } from "../CASS-CAM-MESSAGE-FORMAT/RSAENCRYPTED.ta.js";
+export { RSAENCRYPTED, _get_decoder_for_RSAENCRYPTED, _get_encoder_for_RSAENCRYPTED } from "../CASS-CAM-MESSAGE-FORMAT/RSAENCRYPTED.ta.js";
+import { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-FORMAT/Content.ta.js";
+export { Content, _decode_Content, _encode_Content } from "../CASS-CAM-MESSAGE-FORMAT/Content.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION RSAEncryptedContent */

@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-import { AutoActionErrorTable } from '../MSGeneralAutoActionTypes/AutoActionErrorTable.osa';
-export { AutoActionErrorTable } from '../MSGeneralAutoActionTypes/AutoActionErrorTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+import { AutoActionErrorTable } from '../MSGeneralAutoActionTypes/AutoActionErrorTable.osa.js';
+export { AutoActionErrorTable } from '../MSGeneralAutoActionTypes/AutoActionErrorTable.osa.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from "@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta";
+} from "@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AutoActionError */
 /**

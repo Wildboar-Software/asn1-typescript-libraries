@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ECCAlgorithms,
     _decode_ECCAlgorithms,
     _encode_ECCAlgorithms,
-} from "../ANSI-X9-62/ECCAlgorithms.ta";
+} from "../ANSI-X9-62/ECCAlgorithms.ta.js";
 import {
     ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
-} from "../ANSI-X9-62/ECDomainParameters.ta";
+} from "../ANSI-X9-62/ECDomainParameters.ta.js";
 export {
     ECCAlgorithms,
     _decode_ECCAlgorithms,
     _encode_ECCAlgorithms,
-} from "../ANSI-X9-62/ECCAlgorithms.ta";
+} from "../ANSI-X9-62/ECCAlgorithms.ta.js";
 export {
     ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
-} from "../ANSI-X9-62/ECDomainParameters.ta";
+} from "../ANSI-X9-62/ECDomainParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ECPKRestrictions */
 /**

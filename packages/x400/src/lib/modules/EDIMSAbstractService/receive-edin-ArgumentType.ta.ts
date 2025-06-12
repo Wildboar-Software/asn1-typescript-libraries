@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
 export {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
 import {
     EDIN,
     _decode_EDIN,
     _encode_EDIN,
-} from '../EDIMSInformationObjects/EDIN.ta';
+} from '../EDIMSInformationObjects/EDIN.ta.js';
 export {
     EDIN,
     _decode_EDIN,
     _encode_EDIN,
-} from '../EDIMSInformationObjects/EDIN.ta';
+} from '../EDIMSInformationObjects/EDIN.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION receive_edin_ArgumentType */
 /**

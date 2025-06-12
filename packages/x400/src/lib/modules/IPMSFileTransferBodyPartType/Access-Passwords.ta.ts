@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../IPMSFileTransferBodyPartType/Password.ta';
+} from '../IPMSFileTransferBodyPartType/Password.ta.js';
 export {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../IPMSFileTransferBodyPartType/Password.ta';
+} from '../IPMSFileTransferBodyPartType/Password.ta.js';
 import {
     Pass_Passwords,
     _decode_Pass_Passwords,
     _encode_Pass_Passwords,
-} from '../IPMSFileTransferBodyPartType/Pass-Passwords.ta';
+} from '../IPMSFileTransferBodyPartType/Pass-Passwords.ta.js';
 export {
     Pass_Passwords,
     _decode_Pass_Passwords,
     _encode_Pass_Passwords,
-} from '../IPMSFileTransferBodyPartType/Pass-Passwords.ta';
+} from '../IPMSFileTransferBodyPartType/Pass-Passwords.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Passwords */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
-} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta';
+} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.js';
 import {
     Bundle,
     _decode_Bundle,
     _encode_Bundle,
-} from '../ASN1DefinedTypesModule/Bundle.ta';
+} from '../ASN1DefinedTypesModule/Bundle.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignalId */
 /**

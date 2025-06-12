@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_SUBTYPE_anySubtype,
   BioAPI_BIR_SUBTYPE_anySubtype_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -82,7 +82,7 @@ import {
   littleFinger /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_anySubtype,
   _encode_BioAPI_BIR_SUBTYPE_anySubtype,
-} from '../BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta.js';
 export {
   BioAPI_BIR_SUBTYPE_anySubtype,
   BioAPI_BIR_SUBTYPE_anySubtype_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -99,7 +99,7 @@ export {
   littleFinger /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_anySubtype,
   _encode_BioAPI_BIR_SUBTYPE_anySubtype,
-} from '../BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta.js';
 import {
   BioAPI_BIR_SUBTYPE_vein_only_subtype,
   BioAPI_BIR_SUBTYPE_vein_only_subtype_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -112,7 +112,7 @@ import {
   veinWrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
   _encode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
-} from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta.js';
 export {
   BioAPI_BIR_SUBTYPE_vein_only_subtype,
   BioAPI_BIR_SUBTYPE_vein_only_subtype_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -125,7 +125,7 @@ export {
   veinWrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
   _encode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
-} from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_BIR_SUBTYPE */
 /**

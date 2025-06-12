@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta";
-export { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta";
-import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta";
-export { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta.js";
+export { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta.js";
+import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta.js";
+export { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECCSupplements */

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GroupNamePart,
     _decode_GroupNamePart,
     _encode_GroupNamePart,
-} from '../MSAbstractService/GroupNamePart.ta';
+} from '../MSAbstractService/GroupNamePart.ta.js';
 export {
     GroupNamePart,
     _decode_GroupNamePart,
     _encode_GroupNamePart,
-} from '../MSAbstractService/GroupNamePart.ta';
+} from '../MSAbstractService/GroupNamePart.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageGroupName */
 /**

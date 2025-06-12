@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ModifyRequest_changes_change_operation,
   _enum_for_ModifyRequest_changes_change_operation,
@@ -77,7 +77,7 @@ import {
   replace /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ModifyRequest_changes_change_operation,
   _encode_ModifyRequest_changes_change_operation,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta.js';
 export {
   ModifyRequest_changes_change_operation,
   _enum_for_ModifyRequest_changes_change_operation,
@@ -89,17 +89,17 @@ export {
   replace /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ModifyRequest_changes_change_operation,
   _encode_ModifyRequest_changes_change_operation,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta.js';
 import {
   PartialAttribute,
   _decode_PartialAttribute,
   _encode_PartialAttribute,
-} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.js';
 export {
   PartialAttribute,
   _decode_PartialAttribute,
   _encode_PartialAttribute,
-} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModifyRequest_changes_change */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 export {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -107,7 +107,7 @@ export {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 import {
     EntryClassErrorParameter_problem,
     EntryClassErrorParameter_problem_unsupported_entry_class /* IMPORTED_LONG_NAMED_BIT */,
@@ -118,7 +118,7 @@ import {
     inappropriate_entry_class /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_EntryClassErrorParameter_problem,
     _encode_EntryClassErrorParameter_problem,
-} from '../MSAbstractService/EntryClassErrorParameter-problem.ta';
+} from '../MSAbstractService/EntryClassErrorParameter-problem.ta.js';
 export {
     EntryClassErrorParameter_problem,
     EntryClassErrorParameter_problem_unsupported_entry_class /* IMPORTED_LONG_NAMED_BIT */,
@@ -129,7 +129,7 @@ export {
     inappropriate_entry_class /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_EntryClassErrorParameter_problem,
     _encode_EntryClassErrorParameter_problem,
-} from '../MSAbstractService/EntryClassErrorParameter-problem.ta';
+} from '../MSAbstractService/EntryClassErrorParameter-problem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntryClassErrorParameter */
 /**

@@ -5,31 +5,31 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
 import {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va";
-import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.js";
+import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
 export {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-export { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va";
-export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+export { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.js";
+export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
 /**

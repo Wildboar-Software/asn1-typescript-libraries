@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Channel,
     _decode_Channel,
     _encode_Channel,
-} from '../M3100ASN1TypeModule2/Channel.ta';
+} from '../M3100ASN1TypeModule2/Channel.ta.js';
 export {
     Channel,
     _decode_Channel,
     _encode_Channel,
-} from '../M3100ASN1TypeModule2/Channel.ta';
+} from '../M3100ASN1TypeModule2/Channel.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Channels */
 /**

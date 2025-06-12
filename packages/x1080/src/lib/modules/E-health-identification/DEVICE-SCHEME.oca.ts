@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from '../E-health-identification/SchemeName.ta';
+} from '../E-health-identification/SchemeName.ta.js';
 export {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from '../E-health-identification/SchemeName.ta';
+} from '../E-health-identification/SchemeName.ta.js';
 import {
     Supported_formats,
     _decode_Supported_formats,
     _encode_Supported_formats,
-} from '../E-health-identification/Supported-formats.ta';
+} from '../E-health-identification/Supported-formats.ta.js';
 export {
     Supported_formats,
     _decode_Supported_formats,
     _encode_Supported_formats,
-} from '../E-health-identification/Supported-formats.ta';
+} from '../E-health-identification/Supported-formats.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DEVICE_SCHEME */
 /**

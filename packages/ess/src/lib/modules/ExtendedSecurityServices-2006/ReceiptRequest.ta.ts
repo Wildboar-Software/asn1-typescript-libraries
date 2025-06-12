@@ -4,37 +4,37 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.js";
 import {
     ReceiptsFrom,
     _decode_ReceiptsFrom,
     _encode_ReceiptsFrom,
-} from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta";
+} from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.js";
 export {
     ReceiptsFrom,
     _decode_ReceiptsFrom,
     _encode_ReceiptsFrom,
-} from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta";
+} from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ReceiptRequest */
 /**

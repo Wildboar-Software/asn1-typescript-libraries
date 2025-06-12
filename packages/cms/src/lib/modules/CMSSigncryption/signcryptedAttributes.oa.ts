@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { signcrypted_attributes } from "../CMSObjectIdentifiers/signcrypted-attributes.va";
-import { MODE } from "../CMSSigncryption/MODE.oca";
-export { signcrypted_attributes } from "../CMSObjectIdentifiers/signcrypted-attributes.va";
-export { MODE } from "../CMSSigncryption/MODE.oca";
+import { signcrypted_attributes } from "../CMSObjectIdentifiers/signcrypted-attributes.va.js";
+import { MODE } from "../CMSSigncryption/MODE.oca.js";
+export { signcrypted_attributes } from "../CMSObjectIdentifiers/signcrypted-attributes.va.js";
+export { MODE } from "../CMSSigncryption/MODE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION signcryptedAttributes */
 /**

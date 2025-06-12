@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IpnSecurityResponse_content_or_arguments,
     _decode_IpnSecurityResponse_content_or_arguments,
     _encode_IpnSecurityResponse_content_or_arguments,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta.js';
 export {
     IpnSecurityResponse_content_or_arguments,
     _decode_IpnSecurityResponse_content_or_arguments,
     _encode_IpnSecurityResponse_content_or_arguments,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta.js';
 import {
     SecurityDiagnosticCode,
     SecurityDiagnosticCode_integrity_failure_on_subject_message /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -146,7 +146,7 @@ import {
     security_policy_violation /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityDiagnosticCode,
     _encode_SecurityDiagnosticCode,
-} from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta';
+} from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta.js';
 export {
     SecurityDiagnosticCode,
     SecurityDiagnosticCode_integrity_failure_on_subject_message /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -217,7 +217,7 @@ export {
     security_policy_violation /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityDiagnosticCode,
     _encode_SecurityDiagnosticCode,
-} from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta';
+} from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IpnSecurityResponse */
 /**

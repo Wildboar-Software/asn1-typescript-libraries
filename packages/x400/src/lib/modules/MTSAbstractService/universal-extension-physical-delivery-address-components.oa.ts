@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalExtensionPhysicalDeliveryAddressComponents,
     _decode_UniversalExtensionPhysicalDeliveryAddressComponents,
     _encode_UniversalExtensionPhysicalDeliveryAddressComponents,
-} from '../MTSAbstractService/UniversalExtensionPhysicalDeliveryAddressComponents.ta';
+} from '../MTSAbstractService/UniversalExtensionPhysicalDeliveryAddressComponents.ta.js';
 export {
     UniversalExtensionPhysicalDeliveryAddressComponents,
     _decode_UniversalExtensionPhysicalDeliveryAddressComponents,
     _encode_UniversalExtensionPhysicalDeliveryAddressComponents,
-} from '../MTSAbstractService/UniversalExtensionPhysicalDeliveryAddressComponents.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalExtensionPhysicalDeliveryAddressComponents.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_extension_physical_delivery_address_components */
 /**

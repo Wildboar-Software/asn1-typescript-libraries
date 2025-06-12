@@ -65,87 +65,87 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubjectIdentifier,
     _decode_SubjectIdentifier,
     _encode_SubjectIdentifier,
-} from '../MTAAbstractService/SubjectIdentifier.ta';
+} from '../MTAAbstractService/SubjectIdentifier.ta.js';
 export {
     SubjectIdentifier,
     _decode_SubjectIdentifier,
     _encode_SubjectIdentifier,
-} from '../MTAAbstractService/SubjectIdentifier.ta';
+} from '../MTAAbstractService/SubjectIdentifier.ta.js';
 import {
     SubjectIntermediateTraceInformation,
     _decode_SubjectIntermediateTraceInformation,
     _encode_SubjectIntermediateTraceInformation,
-} from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta';
+} from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta.js';
 export {
     SubjectIntermediateTraceInformation,
     _decode_SubjectIntermediateTraceInformation,
     _encode_SubjectIntermediateTraceInformation,
-} from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta';
+} from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta.js';
 import {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '../MTAAbstractService/AdditionalInformation.ta';
+} from '../MTAAbstractService/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '../MTAAbstractService/AdditionalInformation.ta';
+} from '../MTAAbstractService/AdditionalInformation.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerReportTransferFields */
 /**

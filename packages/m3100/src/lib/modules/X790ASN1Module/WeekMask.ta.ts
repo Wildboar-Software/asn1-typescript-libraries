@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekMask_daysOfWeek,
     WeekMask_daysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -84,7 +84,7 @@ import {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_WeekMask_daysOfWeek,
     _encode_WeekMask_daysOfWeek,
-} from '../X790ASN1Module/WeekMask-daysOfWeek.ta';
+} from '../X790ASN1Module/WeekMask-daysOfWeek.ta.js';
 export {
     WeekMask_daysOfWeek,
     WeekMask_daysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -103,17 +103,17 @@ export {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_WeekMask_daysOfWeek,
     _encode_WeekMask_daysOfWeek,
-} from '../X790ASN1Module/WeekMask-daysOfWeek.ta';
+} from '../X790ASN1Module/WeekMask-daysOfWeek.ta.js';
 import {
     WeekMask_intervalsOfDay_Item,
     _decode_WeekMask_intervalsOfDay_Item,
     _encode_WeekMask_intervalsOfDay_Item,
-} from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta';
+} from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta.js';
 export {
     WeekMask_intervalsOfDay_Item,
     _decode_WeekMask_intervalsOfDay_Item,
     _encode_WeekMask_intervalsOfDay_Item,
-} from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta';
+} from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION WeekMask */
 /**

@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   FTAM_Regime_PDU,
   _decode_FTAM_Regime_PDU,
   _encode_FTAM_Regime_PDU,
-} from '../ISO8571-FTAM/FTAM-Regime-PDU.ta';
+} from '../ISO8571-FTAM/FTAM-Regime-PDU.ta.js';
 export {
   FTAM_Regime_PDU,
   _decode_FTAM_Regime_PDU,
   _encode_FTAM_Regime_PDU,
-} from '../ISO8571-FTAM/FTAM-Regime-PDU.ta';
+} from '../ISO8571-FTAM/FTAM-Regime-PDU.ta.js';
 import {
   File_PDU,
   _decode_File_PDU,
   _encode_File_PDU,
-} from '../ISO8571-FTAM/File-PDU.ta';
+} from '../ISO8571-FTAM/File-PDU.ta.js';
 export {
   File_PDU,
   _decode_File_PDU,
   _encode_File_PDU,
-} from '../ISO8571-FTAM/File-PDU.ta';
+} from '../ISO8571-FTAM/File-PDU.ta.js';
 import {
   Bulk_Data_PDU,
   _decode_Bulk_Data_PDU,
   _encode_Bulk_Data_PDU,
-} from '../ISO8571-FTAM/Bulk-Data-PDU.ta';
+} from '../ISO8571-FTAM/Bulk-Data-PDU.ta.js';
 export {
   Bulk_Data_PDU,
   _decode_Bulk_Data_PDU,
   _encode_Bulk_Data_PDU,
-} from '../ISO8571-FTAM/Bulk-Data-PDU.ta';
+} from '../ISO8571-FTAM/Bulk-Data-PDU.ta.js';
 import {
   FSM_PDU,
   _decode_FSM_PDU,
   _encode_FSM_PDU,
-} from '../ISO8571-FTAM/FSM-PDU.ta';
+} from '../ISO8571-FTAM/FSM-PDU.ta.js';
 export {
   FSM_PDU,
   _decode_FSM_PDU,
   _encode_FSM_PDU,
-} from '../ISO8571-FTAM/FSM-PDU.ta';
+} from '../ISO8571-FTAM/FSM-PDU.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PDU */
 /**

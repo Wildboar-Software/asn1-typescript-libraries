@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Condition,
     _decode_Condition,
     _encode_Condition,
-} from '../ChangeOverASN1Productions/Condition.ta';
+} from '../ChangeOverASN1Productions/Condition.ta.js';
 export {
     Condition,
     _decode_Condition,
     _encode_Condition,
-} from '../ChangeOverASN1Productions/Condition.ta';
+} from '../ChangeOverASN1Productions/Condition.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Conditions */
 /**

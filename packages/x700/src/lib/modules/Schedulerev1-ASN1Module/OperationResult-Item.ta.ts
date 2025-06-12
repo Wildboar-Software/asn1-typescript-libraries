@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GetResult,
     _decode_GetResult,
     _encode_GetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta.js';
 export {
     GetResult,
     _decode_GetResult,
     _encode_GetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta.js';
 import {
     GetListError,
     _decode_GetListError,
     _encode_GetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta.js';
 export {
     GetListError,
     _decode_GetListError,
     _encode_GetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta.js';
 import {
     SetResult,
     _decode_SetResult,
     _encode_SetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta.js';
 export {
     SetResult,
     _decode_SetResult,
     _encode_SetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta.js';
 import {
     SetListError,
     _decode_SetListError,
     _encode_SetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta.js';
 export {
     SetListError,
     _decode_SetListError,
     _encode_SetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta.js';
 import {
     ActionResult,
     _decode_ActionResult,
     _encode_ActionResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta.js';
 export {
     ActionResult,
     _decode_ActionResult,
     _encode_ActionResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta.js';
 import {
     CommonError,
     _decode_CommonError,
     _encode_CommonError,
-} from '../Schedulerev1-ASN1Module/CommonError.ta';
+} from '../Schedulerev1-ASN1Module/CommonError.ta.js';
 export {
     CommonError,
     _decode_CommonError,
     _encode_CommonError,
-} from '../Schedulerev1-ASN1Module/CommonError.ta';
+} from '../Schedulerev1-ASN1Module/CommonError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OperationResult_Item */
 /**

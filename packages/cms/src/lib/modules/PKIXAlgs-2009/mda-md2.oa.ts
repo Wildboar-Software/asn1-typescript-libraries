@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_md2 } from "../PKIXAlgs-2009/id-md2.va";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_md2 } from "../PKIXAlgs-2009/id-md2.va.js";
+export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,8 +24,8 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { id_md2 } from "../PKIXAlgs-2009/id-md2.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { id_md2 } from "../PKIXAlgs-2009/id-md2.va.js";
 
 /* START_OF_SYMBOL_DEFINITION mda_md2 */
 /**

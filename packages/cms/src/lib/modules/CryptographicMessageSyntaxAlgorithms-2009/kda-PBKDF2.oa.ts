@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca";
+import { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/id-PBKDF2.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/id-PBKDF2.va.js";
 import {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta";
-export { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta.js";
+export { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -27,14 +27,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/id-PBKDF2.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/id-PBKDF2.va.js";
 export {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION kda_PBKDF2 */
 /**

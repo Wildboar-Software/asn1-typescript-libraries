@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-import { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa';
-export { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+import { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa.js';
+export { EncryptedContentSet } from '../CmsTelebiometric/EncryptedContentSet.osa.js';
 import {
     EncryptedContentInfo_contentEncryptionAlgorithm,
     _decode_EncryptedContentInfo_contentEncryptionAlgorithm,
     _encode_EncryptedContentInfo_contentEncryptionAlgorithm,
-} from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta';
+} from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta.js';
 export {
     EncryptedContentInfo_contentEncryptionAlgorithm,
     _decode_EncryptedContentInfo_contentEncryptionAlgorithm,
     _encode_EncryptedContentInfo_contentEncryptionAlgorithm,
-} from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta';
+} from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta.js';
 import {
     EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
-} from '../CmsTelebiometric/EncryptedContent.ta';
+} from '../CmsTelebiometric/EncryptedContent.ta.js';
 export {
     EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
-} from '../CmsTelebiometric/EncryptedContent.ta';
+} from '../CmsTelebiometric/EncryptedContent.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**

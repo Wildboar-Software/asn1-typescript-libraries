@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va";
-export { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va.js";
+export { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,9 +24,9 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/hMAC-SHA1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION maca_hMAC_SHA1 */
 /**

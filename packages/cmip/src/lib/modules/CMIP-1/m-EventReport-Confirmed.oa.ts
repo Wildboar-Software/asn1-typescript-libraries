@@ -65,63 +65,63 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
   EventReportArgument,
   _decode_EventReportArgument,
   _encode_EventReportArgument,
-} from '../CMIP-1/EventReportArgument.ta';
+} from '../CMIP-1/EventReportArgument.ta.js';
 export {
   EventReportArgument,
   _decode_EventReportArgument,
   _encode_EventReportArgument,
-} from '../CMIP-1/EventReportArgument.ta';
+} from '../CMIP-1/EventReportArgument.ta.js';
 import {
   EventReportResult,
   _decode_EventReportResult,
   _encode_EventReportResult,
-} from '../CMIP-1/EventReportResult.ta';
+} from '../CMIP-1/EventReportResult.ta.js';
 export {
   EventReportResult,
   _decode_EventReportResult,
   _encode_EventReportResult,
-} from '../CMIP-1/EventReportResult.ta';
-import { noSuchEventType } from '../CMIP-1/noSuchEventType.oa';
-export { noSuchEventType } from '../CMIP-1/noSuchEventType.oa';
-import { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa';
-export { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa';
-import { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa';
-export { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa';
-import { processingFailure } from '../CMIP-1/processingFailure.oa';
-export { processingFailure } from '../CMIP-1/processingFailure.oa';
-import { accessDenied } from '../CMIP-1/accessDenied.oa';
-import { invalidArgumentValue } from '../CMIP-1/invalidArgumentValue.oa';
-import { noSuchAction } from '../CMIP-1/noSuchAction.oa';
-import { noSuchArgument } from '../CMIP-1/noSuchArgument.oa';
+} from '../CMIP-1/EventReportResult.ta.js';
+import { noSuchEventType } from '../CMIP-1/noSuchEventType.oa.js';
+export { noSuchEventType } from '../CMIP-1/noSuchEventType.oa.js';
+import { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa.js';
+export { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa.js';
+import { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa.js';
+export { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa.js';
+import { processingFailure } from '../CMIP-1/processingFailure.oa.js';
+export { processingFailure } from '../CMIP-1/processingFailure.oa.js';
+import { accessDenied } from '../CMIP-1/accessDenied.oa.js';
+import { invalidArgumentValue } from '../CMIP-1/invalidArgumentValue.oa.js';
+import { noSuchAction } from '../CMIP-1/noSuchAction.oa.js';
+import { noSuchArgument } from '../CMIP-1/noSuchArgument.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION m_EventReport_Confirmed */
 /**

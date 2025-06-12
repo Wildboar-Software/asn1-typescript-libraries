@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca";
-import { prime_field } from "../ANSI-X9-62/prime-field.va";
+import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.js";
+import { prime_field } from "../ANSI-X9-62/prime-field.va.js";
 import {
     Prime_p,
     _decode_Prime_p,
     _encode_Prime_p,
-} from "../ANSI-X9-62/Prime-p.ta";
-export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca";
-export { prime_field } from "../ANSI-X9-62/prime-field.va";
+} from "../ANSI-X9-62/Prime-p.ta.js";
+export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.js";
+export { prime_field } from "../ANSI-X9-62/prime-field.va.js";
 export {
     Prime_p,
     _decode_Prime_p,
     _encode_Prime_p,
-} from "../ANSI-X9-62/Prime-p.ta";
+} from "../ANSI-X9-62/Prime-p.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */
 /**

@@ -65,87 +65,87 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AARQ_apdu,
   _decode_AARQ_apdu,
   _encode_AARQ_apdu,
-} from '../ACSE-1/AARQ-apdu.ta';
+} from '../ACSE-1/AARQ-apdu.ta.js';
 export {
   AARQ_apdu,
   _decode_AARQ_apdu,
   _encode_AARQ_apdu,
-} from '../ACSE-1/AARQ-apdu.ta';
+} from '../ACSE-1/AARQ-apdu.ta.js';
 import {
   AARE_apdu,
   _decode_AARE_apdu,
   _encode_AARE_apdu,
-} from '../ACSE-1/AARE-apdu.ta';
+} from '../ACSE-1/AARE-apdu.ta.js';
 export {
   AARE_apdu,
   _decode_AARE_apdu,
   _encode_AARE_apdu,
-} from '../ACSE-1/AARE-apdu.ta';
+} from '../ACSE-1/AARE-apdu.ta.js';
 import {
   RLRQ_apdu,
   _decode_RLRQ_apdu,
   _encode_RLRQ_apdu,
-} from '../ACSE-1/RLRQ-apdu.ta';
+} from '../ACSE-1/RLRQ-apdu.ta.js';
 export {
   RLRQ_apdu,
   _decode_RLRQ_apdu,
   _encode_RLRQ_apdu,
-} from '../ACSE-1/RLRQ-apdu.ta';
+} from '../ACSE-1/RLRQ-apdu.ta.js';
 import {
   RLRE_apdu,
   _decode_RLRE_apdu,
   _encode_RLRE_apdu,
-} from '../ACSE-1/RLRE-apdu.ta';
+} from '../ACSE-1/RLRE-apdu.ta.js';
 export {
   RLRE_apdu,
   _decode_RLRE_apdu,
   _encode_RLRE_apdu,
-} from '../ACSE-1/RLRE-apdu.ta';
+} from '../ACSE-1/RLRE-apdu.ta.js';
 import {
   ABRT_apdu,
   _decode_ABRT_apdu,
   _encode_ABRT_apdu,
-} from '../ACSE-1/ABRT-apdu.ta';
+} from '../ACSE-1/ABRT-apdu.ta.js';
 export {
   ABRT_apdu,
   _decode_ABRT_apdu,
   _encode_ABRT_apdu,
-} from '../ACSE-1/ABRT-apdu.ta';
+} from '../ACSE-1/ABRT-apdu.ta.js';
 import {
   A_DT_apdu,
   _decode_A_DT_apdu,
   _encode_A_DT_apdu,
-} from '../ACSE-1/A-DT-apdu.ta';
+} from '../ACSE-1/A-DT-apdu.ta.js';
 export {
   A_DT_apdu,
   _decode_A_DT_apdu,
   _encode_A_DT_apdu,
-} from '../ACSE-1/A-DT-apdu.ta';
+} from '../ACSE-1/A-DT-apdu.ta.js';
 import {
   ACRQ_apdu,
   _decode_ACRQ_apdu,
   _encode_ACRQ_apdu,
-} from '../ACSE-1/ACRQ-apdu.ta';
+} from '../ACSE-1/ACRQ-apdu.ta.js';
 export {
   ACRQ_apdu,
   _decode_ACRQ_apdu,
   _encode_ACRQ_apdu,
-} from '../ACSE-1/ACRQ-apdu.ta';
+} from '../ACSE-1/ACRQ-apdu.ta.js';
 import {
   ACRP_apdu,
   _decode_ACRP_apdu,
   _encode_ACRP_apdu,
-} from '../ACSE-1/ACRP-apdu.ta';
+} from '../ACSE-1/ACRP-apdu.ta.js';
 export {
   ACRP_apdu,
   _decode_ACRP_apdu,
   _encode_ACRP_apdu,
-} from '../ACSE-1/ACRP-apdu.ta';
+} from '../ACSE-1/ACRP-apdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ACSE_apdu */
 /**

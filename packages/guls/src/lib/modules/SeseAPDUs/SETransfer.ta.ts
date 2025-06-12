@@ -65,26 +65,26 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
-export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
+export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
 import {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 export {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
-import { noInvocationId } from '../SeseAPDUs/noInvocationId.va';
-export { noInvocationId } from '../SeseAPDUs/noInvocationId.va';
+} from '../SeseAPDUs/InvocationId.ta.js';
+import { noInvocationId } from '../SeseAPDUs/noInvocationId.va.js';
+export { noInvocationId } from '../SeseAPDUs/noInvocationId.va.js';
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SETransfer */
 /**

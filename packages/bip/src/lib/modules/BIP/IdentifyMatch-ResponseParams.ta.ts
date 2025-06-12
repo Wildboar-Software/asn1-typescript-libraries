@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_CANDIDATE,
   _decode_BioAPI_CANDIDATE,
   _encode_BioAPI_CANDIDATE,
-} from '../BIP/BioAPI-CANDIDATE.ta';
+} from '../BIP/BioAPI-CANDIDATE.ta.js';
 export {
   BioAPI_CANDIDATE,
   _decode_BioAPI_CANDIDATE,
   _encode_BioAPI_CANDIDATE,
-} from '../BIP/BioAPI-CANDIDATE.ta';
+} from '../BIP/BioAPI-CANDIDATE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IdentifyMatch_ResponseParams */
 /**

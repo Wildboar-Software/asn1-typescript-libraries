@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 export {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 import {
     LocalReference,
     _decode_LocalReference,
     _encode_LocalReference,
-} from '../EDIMSInformationObjects/LocalReference.ta';
+} from '../EDIMSInformationObjects/LocalReference.ta.js';
 export {
     LocalReference,
     _decode_LocalReference,
     _encode_LocalReference,
-} from '../EDIMSInformationObjects/LocalReference.ta';
+} from '../EDIMSInformationObjects/LocalReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIMIdentifier */
 /**

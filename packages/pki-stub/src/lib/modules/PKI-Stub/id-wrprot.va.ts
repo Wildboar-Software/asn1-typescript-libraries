@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { wrapperProtocolType } from "../PKI-Stub/wrapperProtocolType.va";
+import { wrapperProtocolType } from "../PKI-Stub/wrapperProtocolType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_wrprot */
 /**

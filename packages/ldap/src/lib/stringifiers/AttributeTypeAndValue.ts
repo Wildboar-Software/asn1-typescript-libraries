@@ -1,6 +1,6 @@
-import type StringEncoderGetter from "../types/StringEncoderGetter";
+import type StringEncoderGetter from "../types/StringEncoderGetter.js";
 import { ASN1Element, BERElement, OBJECT_IDENTIFIER } from "asn1-ts";
-import type AttributeTypeAndValue from "../types/AttributeTypeAndValue";
+import type AttributeTypeAndValue from "../types/AttributeTypeAndValue.js";
 
 export
 const backslashable = new Set([

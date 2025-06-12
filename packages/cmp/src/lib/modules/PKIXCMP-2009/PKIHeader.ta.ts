@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIHeader_pvno,
   PKIHeader_pvno_cmp1999 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,32 +74,32 @@ import {
   cmp2000 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_PKIHeader_pvno,
   _encode_PKIHeader_pvno,
-} from '../PKIXCMP-2009/PKIHeader-pvno.ta';
+} from '../PKIXCMP-2009/PKIHeader-pvno.ta.js';
 import {
   GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.js';
 import {
   AlgorithmIdentifier,
   _decode_AlgorithmIdentifier,
   _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
   KeyIdentifier,
   _decode_KeyIdentifier,
   _encode_KeyIdentifier,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta.js';
 import {
   PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
-} from '../PKIXCMP-2009/PKIFreeText.ta';
+} from '../PKIXCMP-2009/PKIFreeText.ta.js';
 import {
   InfoTypeAndValue,
   _decode_InfoTypeAndValue,
   _encode_InfoTypeAndValue,
-} from '../PKIXCMP-2009/InfoTypeAndValue.ta';
+} from '../PKIXCMP-2009/InfoTypeAndValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PKIHeader */
 /**

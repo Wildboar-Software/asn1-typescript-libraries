@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIHeader,
   _decode_PKIHeader,
   _encode_PKIHeader,
-} from '../PKIXCMP-2009/PKIHeader.ta';
+} from '../PKIXCMP-2009/PKIHeader.ta.js';
 export {
   PKIHeader,
   _decode_PKIHeader,
   _encode_PKIHeader,
-} from '../PKIXCMP-2009/PKIHeader.ta';
+} from '../PKIXCMP-2009/PKIHeader.ta.js';
 import {
   PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
-} from '../PKIXCMP-2009/PKIBody.ta';
+} from '../PKIXCMP-2009/PKIBody.ta.js';
 export {
   PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
-} from '../PKIXCMP-2009/PKIBody.ta';
+} from '../PKIXCMP-2009/PKIBody.ta.js';
 import {
   PKIProtection,
   _decode_PKIProtection,
   _encode_PKIProtection,
-} from '../PKIXCMP-2009/PKIProtection.ta';
+} from '../PKIXCMP-2009/PKIProtection.ta.js';
 export {
   PKIProtection,
   _decode_PKIProtection,
   _encode_PKIProtection,
-} from '../PKIXCMP-2009/PKIProtection.ta';
+} from '../PKIXCMP-2009/PKIProtection.ta.js';
 import {
   CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
-} from '../PKIXCMP-2009/CMPCertificate.ta';
+} from '../PKIXCMP-2009/CMPCertificate.ta.js';
 export {
   CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
-} from '../PKIXCMP-2009/CMPCertificate.ta';
+} from '../PKIXCMP-2009/CMPCertificate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PKIMessage */
 /**

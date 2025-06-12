@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_DATA_TYPE_processedLevel,
   _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel,
@@ -77,7 +77,7 @@ import {
   processed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_DATA_TYPE_processedLevel,
   _encode_BioAPI_BIR_DATA_TYPE_processedLevel,
-} from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta';
+} from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta.js';
 export {
   BioAPI_BIR_DATA_TYPE_processedLevel,
   _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel,
@@ -89,7 +89,7 @@ export {
   processed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_DATA_TYPE_processedLevel,
   _encode_BioAPI_BIR_DATA_TYPE_processedLevel,
-} from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta';
+} from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta.js';
 import {
   BioAPI_BIR_DATA_TYPE_flags,
   BioAPI_BIR_DATA_TYPE_flags_encrypted /* IMPORTED_LONG_NAMED_BIT */,
@@ -100,7 +100,7 @@ import {
   index_present /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_DATA_TYPE_flags,
   _encode_BioAPI_BIR_DATA_TYPE_flags,
-} from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta';
+} from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta.js';
 export {
   BioAPI_BIR_DATA_TYPE_flags,
   BioAPI_BIR_DATA_TYPE_flags_encrypted /* IMPORTED_LONG_NAMED_BIT */,
@@ -111,7 +111,7 @@ export {
   index_present /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_DATA_TYPE_flags,
   _encode_BioAPI_BIR_DATA_TYPE_flags,
-} from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta';
+} from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_BIR_DATA_TYPE */
 /**

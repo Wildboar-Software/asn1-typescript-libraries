@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ManagerSearchKeyList_Item,
     _decode_ManagerSearchKeyList_Item,
     _encode_ManagerSearchKeyList_Item,
-} from '../X790ASN1Module/ManagerSearchKeyList-Item.ta';
+} from '../X790ASN1Module/ManagerSearchKeyList-Item.ta.js';
 export {
     ManagerSearchKeyList_Item,
     _decode_ManagerSearchKeyList_Item,
     _encode_ManagerSearchKeyList_Item,
-} from '../X790ASN1Module/ManagerSearchKeyList-Item.ta';
+} from '../X790ASN1Module/ManagerSearchKeyList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ManagerSearchKeyList */
 /**

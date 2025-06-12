@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ArcAlarmDetail,
     _decode_ArcAlarmDetail,
     _encode_ArcAlarmDetail,
-} from '../M3100ASN1TypeModule4/ArcAlarmDetail.ta';
+} from '../M3100ASN1TypeModule4/ArcAlarmDetail.ta.js';
 export {
     ArcAlarmDetail,
     _decode_ArcAlarmDetail,
     _encode_ArcAlarmDetail,
-} from '../M3100ASN1TypeModule4/ArcAlarmDetail.ta';
+} from '../M3100ASN1TypeModule4/ArcAlarmDetail.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ArcAlarmDetailSet */
 /**

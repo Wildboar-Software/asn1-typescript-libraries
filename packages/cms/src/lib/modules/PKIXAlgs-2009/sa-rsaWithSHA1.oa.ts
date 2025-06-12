@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
-import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-import { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
+import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+import { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va.js";
+export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -26,13 +26,13 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-export { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
+export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+export { sha1WithRSAEncryption } from "../PKIXAlgs-2009/sha1WithRSAEncryption.va.js";
 
 /* START_OF_SYMBOL_DEFINITION sa_rsaWithSHA1 */
 /**

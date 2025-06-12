@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIStatus,
   PKIStatus_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
   keyUpdateWarning /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_PKIStatus,
   _encode_PKIStatus,
-} from '../PKIXCMP-2009/PKIStatus.ta';
+} from '../PKIXCMP-2009/PKIStatus.ta.js';
 export {
   PKIStatus,
   PKIStatus_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,17 +103,17 @@ export {
   keyUpdateWarning /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_PKIStatus,
   _encode_PKIStatus,
-} from '../PKIXCMP-2009/PKIStatus.ta';
+} from '../PKIXCMP-2009/PKIStatus.ta.js';
 import {
   PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
-} from '../PKIXCMP-2009/PKIFreeText.ta';
+} from '../PKIXCMP-2009/PKIFreeText.ta.js';
 export {
   PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
-} from '../PKIXCMP-2009/PKIFreeText.ta';
+} from '../PKIXCMP-2009/PKIFreeText.ta.js';
 import {
   PKIFailureInfo,
   PKIFailureInfo_badAlg /* IMPORTED_LONG_NAMED_BIT */,
@@ -172,7 +172,7 @@ import {
   duplicateCertReq /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_PKIFailureInfo,
   _encode_PKIFailureInfo,
-} from '../PKIXCMP-2009/PKIFailureInfo.ta';
+} from '../PKIXCMP-2009/PKIFailureInfo.ta.js';
 export {
   PKIFailureInfo,
   PKIFailureInfo_badAlg /* IMPORTED_LONG_NAMED_BIT */,
@@ -231,7 +231,7 @@ export {
   duplicateCertReq /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_PKIFailureInfo,
   _encode_PKIFailureInfo,
-} from '../PKIXCMP-2009/PKIFailureInfo.ta';
+} from '../PKIXCMP-2009/PKIFailureInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PKIStatusInfo */
 /**

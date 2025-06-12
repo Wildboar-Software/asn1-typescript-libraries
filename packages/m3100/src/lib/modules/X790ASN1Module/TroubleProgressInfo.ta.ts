@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TroubleReportStatus,
     _decode_TroubleReportStatus,
     _encode_TroubleReportStatus,
-} from '../X790ASN1Module/TroubleReportStatus.ta';
+} from '../X790ASN1Module/TroubleReportStatus.ta.js';
 export {
     TroubleReportStatus,
     _decode_TroubleReportStatus,
     _encode_TroubleReportStatus,
-} from '../X790ASN1Module/TroubleReportStatus.ta';
+} from '../X790ASN1Module/TroubleReportStatus.ta.js';
 import {
     AdditionalTroubleStatusInfo,
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
-} from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta';
+} from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta.js';
 export {
     AdditionalTroubleStatusInfo,
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
-} from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta';
+} from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TroubleProgressInfo */
 /**

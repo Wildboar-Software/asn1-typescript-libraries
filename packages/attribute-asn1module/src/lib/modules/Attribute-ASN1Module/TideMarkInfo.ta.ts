@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta";
-export { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.js";
+export { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TideMarkInfo */

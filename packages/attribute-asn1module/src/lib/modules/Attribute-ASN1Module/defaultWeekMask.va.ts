@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta";
-export { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta";
-import { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va";
-export { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va";
-import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta";
-export { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.js";
+export { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.js";
+import { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.js";
+export { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.js";
+import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.js";
+export { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION defaultWeekMask */

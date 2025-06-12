@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefinition_Item, _encode_AttributeValueChangeDefinition_Item } from "../Attribute-ASN1Module/AttributeValueChangeDefinition-Item.ta";
-export { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefinition_Item, _encode_AttributeValueChangeDefinition_Item } from "../Attribute-ASN1Module/AttributeValueChangeDefinition-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefinition_Item, _encode_AttributeValueChangeDefinition_Item } from "../Attribute-ASN1Module/AttributeValueChangeDefinition-Item.ta.js";
+export { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefinition_Item, _encode_AttributeValueChangeDefinition_Item } from "../Attribute-ASN1Module/AttributeValueChangeDefinition-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION AttributeValueChangeDefinition */

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Release_response_reason,
     Release_response_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
-} from '../DialoguePDUs/Release-response-reason.ta';
+} from '../DialoguePDUs/Release-response-reason.ta.js';
 export {
     Release_response_reason,
     Release_response_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
-} from '../DialoguePDUs/Release-response-reason.ta';
+} from '../DialoguePDUs/Release-response-reason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RLRE_apdu */
 /**

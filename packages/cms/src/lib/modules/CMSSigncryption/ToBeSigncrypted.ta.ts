@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from "../CMSSigncryption/Content.ta";
+} from "../CMSSigncryption/Content.ta.js";
 import {
     SigncryptedAttributes,
     _decode_SigncryptedAttributes,
     _encode_SigncryptedAttributes,
-} from "../CMSSigncryption/SigncryptedAttributes.ta";
+} from "../CMSSigncryption/SigncryptedAttributes.ta.js";
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from "../CMSSigncryption/Content.ta";
+} from "../CMSSigncryption/Content.ta.js";
 export {
     SigncryptedAttributes,
     _decode_SigncryptedAttributes,
     _encode_SigncryptedAttributes,
-} from "../CMSSigncryption/SigncryptedAttributes.ta";
+} from "../CMSSigncryption/SigncryptedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ToBeSigncrypted */
 /**

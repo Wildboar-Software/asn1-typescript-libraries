@@ -4,39 +4,39 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyManagementInfo,
     _decode_KeyManagementInfo,
     _encode_KeyManagementInfo,
-} from "../PKCS-15/KeyManagementInfo.ta";
+} from "../PKCS-15/KeyManagementInfo.ta.js";
 import {
     PKCS15Objects,
     _decode_PKCS15Objects,
     _encode_PKCS15Objects,
-} from "../PKCS-15/PKCS15Objects.ta";
+} from "../PKCS-15/PKCS15Objects.ta.js";
 import {
     PKCS15Token_version,
     _decode_PKCS15Token_version,
     _encode_PKCS15Token_version,
-} from "../PKCS-15/PKCS15Token-version.ta";
+} from "../PKCS-15/PKCS15Token-version.ta.js";
 export {
     KeyManagementInfo,
     _decode_KeyManagementInfo,
     _encode_KeyManagementInfo,
-} from "../PKCS-15/KeyManagementInfo.ta";
+} from "../PKCS-15/KeyManagementInfo.ta.js";
 export {
     PKCS15Objects,
     _decode_PKCS15Objects,
     _encode_PKCS15Objects,
-} from "../PKCS-15/PKCS15Objects.ta";
+} from "../PKCS-15/PKCS15Objects.ta.js";
 export {
     PKCS15Token_version,
     PKCS15Token_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PKCS15Token_version,
     _encode_PKCS15Token_version,
-} from "../PKCS-15/PKCS15Token-version.ta";
+} from "../PKCS-15/PKCS15Token-version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS15Token */
 /**

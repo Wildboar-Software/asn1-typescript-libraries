@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ActionErrorInfo_errorStatus,
   _enum_for_ActionErrorInfo_errorStatus,
@@ -79,7 +79,7 @@ import {
   invalidArgumentValue /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ActionErrorInfo_errorStatus,
   _encode_ActionErrorInfo_errorStatus,
-} from '../CMIP-1/ActionErrorInfo-errorStatus.ta';
+} from '../CMIP-1/ActionErrorInfo-errorStatus.ta.js';
 export {
   ActionErrorInfo_errorStatus,
   _enum_for_ActionErrorInfo_errorStatus,
@@ -93,17 +93,17 @@ export {
   invalidArgumentValue /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ActionErrorInfo_errorStatus,
   _encode_ActionErrorInfo_errorStatus,
-} from '../CMIP-1/ActionErrorInfo-errorStatus.ta';
+} from '../CMIP-1/ActionErrorInfo-errorStatus.ta.js';
 import {
   ActionErrorInfo_errorInfo,
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
-} from '../CMIP-1/ActionErrorInfo-errorInfo.ta';
+} from '../CMIP-1/ActionErrorInfo-errorInfo.ta.js';
 export {
   ActionErrorInfo_errorInfo,
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
-} from '../CMIP-1/ActionErrorInfo-errorInfo.ta';
+} from '../CMIP-1/ActionErrorInfo-errorInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ActionErrorInfo */
 /**

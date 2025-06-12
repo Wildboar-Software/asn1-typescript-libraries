@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NormalValue_value_range,
     _decode_NormalValue_value_range,
     _encode_NormalValue_value_range,
-} from '../E-health-Data-Message/NormalValue-value-range.ta';
+} from '../E-health-Data-Message/NormalValue-value-range.ta.js';
 export {
     NormalValue_value_range,
     _decode_NormalValue_value_range,
     _encode_NormalValue_value_range,
-} from '../E-health-Data-Message/NormalValue-value-range.ta';
+} from '../E-health-Data-Message/NormalValue-value-range.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NormalValue_value */
 /**

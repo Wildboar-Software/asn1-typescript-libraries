@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelatedMessageReference,
     _decode_RelatedMessageReference,
     _encode_RelatedMessageReference,
-} from '../EDIMSInformationObjects/RelatedMessageReference.ta';
+} from '../EDIMSInformationObjects/RelatedMessageReference.ta.js';
 export {
     RelatedMessageReference,
     _decode_RelatedMessageReference,
     _encode_RelatedMessageReference,
-} from '../EDIMSInformationObjects/RelatedMessageReference.ta';
+} from '../EDIMSInformationObjects/RelatedMessageReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RelatedMessagesField */
 /**

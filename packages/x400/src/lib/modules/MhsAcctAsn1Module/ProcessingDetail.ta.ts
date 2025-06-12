@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NameResolutionProcessingInfo,
     _decode_NameResolutionProcessingInfo,
     _encode_NameResolutionProcessingInfo,
-} from '../MhsAcctAsn1Module/NameResolutionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/NameResolutionProcessingInfo.ta.js';
 export {
     NameResolutionProcessingInfo,
     _decode_NameResolutionProcessingInfo,
     _encode_NameResolutionProcessingInfo,
-} from '../MhsAcctAsn1Module/NameResolutionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/NameResolutionProcessingInfo.ta.js';
 import {
     DLExpansionProcessingInfo,
     _decode_DLExpansionProcessingInfo,
     _encode_DLExpansionProcessingInfo,
-} from '../MhsAcctAsn1Module/DLExpansionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/DLExpansionProcessingInfo.ta.js';
 export {
     DLExpansionProcessingInfo,
     _decode_DLExpansionProcessingInfo,
     _encode_DLExpansionProcessingInfo,
-} from '../MhsAcctAsn1Module/DLExpansionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/DLExpansionProcessingInfo.ta.js';
 import {
     RedirectionProcessingInfo,
     _decode_RedirectionProcessingInfo,
     _encode_RedirectionProcessingInfo,
-} from '../MhsAcctAsn1Module/RedirectionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/RedirectionProcessingInfo.ta.js';
 export {
     RedirectionProcessingInfo,
     _decode_RedirectionProcessingInfo,
     _encode_RedirectionProcessingInfo,
-} from '../MhsAcctAsn1Module/RedirectionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/RedirectionProcessingInfo.ta.js';
 import {
     DeferralOfDeliveryProcessingInfo,
     _decode_DeferralOfDeliveryProcessingInfo,
     _encode_DeferralOfDeliveryProcessingInfo,
-} from '../MhsAcctAsn1Module/DeferralOfDeliveryProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/DeferralOfDeliveryProcessingInfo.ta.js';
 export {
     DeferralOfDeliveryProcessingInfo,
     _decode_DeferralOfDeliveryProcessingInfo,
     _encode_DeferralOfDeliveryProcessingInfo,
-} from '../MhsAcctAsn1Module/DeferralOfDeliveryProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/DeferralOfDeliveryProcessingInfo.ta.js';
 import {
     ConversionProcessingInfo,
     _decode_ConversionProcessingInfo,
     _encode_ConversionProcessingInfo,
-} from '../MhsAcctAsn1Module/ConversionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/ConversionProcessingInfo.ta.js';
 export {
     ConversionProcessingInfo,
     _decode_ConversionProcessingInfo,
     _encode_ConversionProcessingInfo,
-} from '../MhsAcctAsn1Module/ConversionProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/ConversionProcessingInfo.ta.js';
 import {
     SecurityProcessingInfo,
     _decode_SecurityProcessingInfo,
     _encode_SecurityProcessingInfo,
-} from '../MhsAcctAsn1Module/SecurityProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/SecurityProcessingInfo.ta.js';
 export {
     SecurityProcessingInfo,
     _decode_SecurityProcessingInfo,
     _encode_SecurityProcessingInfo,
-} from '../MhsAcctAsn1Module/SecurityProcessingInfo.ta';
+} from '../MhsAcctAsn1Module/SecurityProcessingInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProcessingDetail */
 /**

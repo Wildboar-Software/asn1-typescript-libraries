@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va";
-export { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va";
+import { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.js";
+export { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs_9_ub_emailAddress */
 /**

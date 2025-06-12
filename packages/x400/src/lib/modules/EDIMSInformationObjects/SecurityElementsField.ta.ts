@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 import {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 export {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 import {
     EDIApplicationSecurityElementsField,
     _decode_EDIApplicationSecurityElementsField,
     _encode_EDIApplicationSecurityElementsField,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.js';
 export {
     EDIApplicationSecurityElementsField,
     _decode_EDIApplicationSecurityElementsField,
     _encode_EDIApplicationSecurityElementsField,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.js';
 import {
     SecurityExtensionsField,
     _decode_SecurityExtensionsField,
     _encode_SecurityExtensionsField,
-} from '../EDIMSInformationObjects/SecurityExtensionsField.ta';
+} from '../EDIMSInformationObjects/SecurityExtensionsField.ta.js';
 export {
     SecurityExtensionsField,
     _decode_SecurityExtensionsField,
     _encode_SecurityExtensionsField,
-} from '../EDIMSInformationObjects/SecurityExtensionsField.ta';
+} from '../EDIMSInformationObjects/SecurityExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityElementsField */
 /**

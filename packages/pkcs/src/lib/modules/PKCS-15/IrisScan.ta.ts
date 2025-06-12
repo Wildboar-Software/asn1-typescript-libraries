@@ -4,13 +4,13 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IrisScan_eye,
     _decode_IrisScan_eye,
     _encode_IrisScan_eye,
     _enum_for_IrisScan_eye,
-} from "../PKCS-15/IrisScan-eye.ta";
+} from "../PKCS-15/IrisScan-eye.ta.js";
 export {
     IrisScan_eye,
     IrisScan_eye_left /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_IrisScan_eye,
     _encode_IrisScan_eye,
     _enum_for_IrisScan_eye,
-} from "../PKCS-15/IrisScan-eye.ta";
+} from "../PKCS-15/IrisScan-eye.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IrisScan */
 /**

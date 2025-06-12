@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MESSAGE-FORMAT/ImageInfo.ta";
-export { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MESSAGE-FORMAT/ImageInfo.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MESSAGE-FORMAT/ImageInfo.ta.js";
+export { ImageInfo, _decode_ImageInfo, _encode_ImageInfo } from "../CASS-CAM-MESSAGE-FORMAT/ImageInfo.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION RenewInfoMsgContent */

@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActionResponse,
     _decode_ActionResponse,
     _encode_ActionResponse,
-} from '../UsageMeteringFunction/ActionResponse.ta';
+} from '../UsageMeteringFunction/ActionResponse.ta.js';
 export {
     ActionResponse,
     _decode_ActionResponse,
     _encode_ActionResponse,
-} from '../UsageMeteringFunction/ActionResponse.ta';
+} from '../UsageMeteringFunction/ActionResponse.ta.js';
 import {
     ReportingTriggers,
     _decode_ReportingTriggers,
     _encode_ReportingTriggers,
-} from '../UsageMeteringFunction/ReportingTriggers.ta';
+} from '../UsageMeteringFunction/ReportingTriggers.ta.js';
 export {
     ReportingTriggers,
     _decode_ReportingTriggers,
     _encode_ReportingTriggers,
-} from '../UsageMeteringFunction/ReportingTriggers.ta';
+} from '../UsageMeteringFunction/ReportingTriggers.ta.js';
 import {
     AccountableObjectsReferenceList,
     _decode_AccountableObjectsReferenceList,
     _encode_AccountableObjectsReferenceList,
-} from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta';
+} from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.js';
 export {
     AccountableObjectsReferenceList,
     _decode_AccountableObjectsReferenceList,
     _encode_AccountableObjectsReferenceList,
-} from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta';
+} from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.js';
 import {
     DataObjectsReferenceList,
     _decode_DataObjectsReferenceList,
     _encode_DataObjectsReferenceList,
-} from '../UsageMeteringFunction/DataObjectsReferenceList.ta';
+} from '../UsageMeteringFunction/DataObjectsReferenceList.ta.js';
 export {
     DataObjectsReferenceList,
     _decode_DataObjectsReferenceList,
     _encode_DataObjectsReferenceList,
-} from '../UsageMeteringFunction/DataObjectsReferenceList.ta';
+} from '../UsageMeteringFunction/DataObjectsReferenceList.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ControlInfo */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AbortReason,
     AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
     transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AbortReason,
     _encode_AbortReason,
-} from '../MTSAccessProtocol/AbortReason.ta';
+} from '../MTSAccessProtocol/AbortReason.ta.js';
 export {
     AbortReason,
     AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -107,7 +107,7 @@ export {
     transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AbortReason,
     _encode_AbortReason,
-} from '../MTSAccessProtocol/AbortReason.ta';
+} from '../MTSAccessProtocol/AbortReason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RTABapdu */
 /**

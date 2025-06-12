@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta";
-export { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta";
-import { tpBasis } from "../SEC1-v1-9/tpBasis.va";
-export { tpBasis } from "../SEC1-v1-9/tpBasis.va";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.js";
+export { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.js";
+import { tpBasis } from "../SEC1-v1-9/tpBasis.va.js";
+export { tpBasis } from "../SEC1-v1-9/tpBasis.va.js";
+import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union1_Intersection0_Element */

@@ -66,11 +66,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca";
-export { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca";
-import { CR_Sequences } from "../E-health-command-response/CR-Sequences.osa";
-export { CR_Sequences } from "../E-health-command-response/CR-Sequences.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.js";
+export { CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.js";
+import { CR_Sequences } from "../E-health-command-response/CR-Sequences.osa.js";
+export { CR_Sequences } from "../E-health-command-response/CR-Sequences.osa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Response_interactive_conditional_accept */

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalPersonalName,
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
-} from '../MTSAbstractService/UniversalPersonalName.ta';
+} from '../MTSAbstractService/UniversalPersonalName.ta.js';
 export {
     UniversalPersonalName,
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
-} from '../MTSAbstractService/UniversalPersonalName.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalPersonalName.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_personal_name */
 /**

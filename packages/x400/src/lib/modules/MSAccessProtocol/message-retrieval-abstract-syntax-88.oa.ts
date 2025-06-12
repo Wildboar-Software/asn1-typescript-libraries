@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageRetrievalPDUs88,
     _decode_MessageRetrievalPDUs88,
     _encode_MessageRetrievalPDUs88,
-} from '../MSAccessProtocol/MessageRetrievalPDUs88.ta';
+} from '../MSAccessProtocol/MessageRetrievalPDUs88.ta.js';
 export {
     MessageRetrievalPDUs88,
     _decode_MessageRetrievalPDUs88,
     _encode_MessageRetrievalPDUs88,
-} from '../MSAccessProtocol/MessageRetrievalPDUs88.ta';
-import { id_as_mrse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-88.va';
-export { id_as_mrse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-88.va';
+} from '../MSAccessProtocol/MessageRetrievalPDUs88.ta.js';
+import { id_as_mrse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-88.va.js';
+export { id_as_mrse_88 } from '../MHSProtocolObjectIdentifiers/id-as-mrse-88.va.js';
 
 /* START_OF_SYMBOL_DEFINITION message_retrieval_abstract_syntax_88 */
 /**

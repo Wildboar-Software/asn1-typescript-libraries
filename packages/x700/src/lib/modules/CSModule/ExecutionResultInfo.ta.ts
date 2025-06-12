@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
-} from '../CSModule/TriggerId.ta';
+} from '../CSModule/TriggerId.ta.js';
 export {
     TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
-} from '../CSModule/TriggerId.ta';
+} from '../CSModule/TriggerId.ta.js';
 import {
     ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
-} from '../CSModule/ScriptId.ta';
+} from '../CSModule/ScriptId.ta.js';
 export {
     ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
-} from '../CSModule/ScriptId.ta';
+} from '../CSModule/ScriptId.ta.js';
 import {
     ThreadId,
     _decode_ThreadId,
     _encode_ThreadId,
-} from '../CSModule/ThreadId.ta';
+} from '../CSModule/ThreadId.ta.js';
 export {
     ThreadId,
     _decode_ThreadId,
     _encode_ThreadId,
-} from '../CSModule/ThreadId.ta';
+} from '../CSModule/ThreadId.ta.js';
 import {
     ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
-} from '../CSModule/ErrorCode.ta';
+} from '../CSModule/ErrorCode.ta.js';
 export {
     ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
-} from '../CSModule/ErrorCode.ta';
+} from '../CSModule/ErrorCode.ta.js';
 import {
     ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
-} from '../CSModule/ExecutionResultType.ta';
+} from '../CSModule/ExecutionResultType.ta.js';
 export {
     ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
-} from '../CSModule/ExecutionResultType.ta';
+} from '../CSModule/ExecutionResultType.ta.js';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.js';
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExecutionResultInfo */
 /**

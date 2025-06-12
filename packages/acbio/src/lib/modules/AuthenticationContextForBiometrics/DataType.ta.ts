@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProcessedLevel,
     _enum_for_ProcessedLevel,
@@ -81,7 +81,7 @@ import {
     comparison_decision /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProcessedLevel,
     _encode_ProcessedLevel,
-} from '../AuthenticationContextForBiometrics/ProcessedLevel.ta';
+} from '../AuthenticationContextForBiometrics/ProcessedLevel.ta.js';
 export {
     ProcessedLevel,
     _enum_for_ProcessedLevel,
@@ -97,7 +97,7 @@ export {
     comparison_decision /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProcessedLevel,
     _encode_ProcessedLevel,
-} from '../AuthenticationContextForBiometrics/ProcessedLevel.ta';
+} from '../AuthenticationContextForBiometrics/ProcessedLevel.ta.js';
 import {
     Purpose,
     _enum_for_Purpose,
@@ -107,7 +107,7 @@ import {
     sample /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Purpose,
     _encode_Purpose,
-} from '../AuthenticationContextForBiometrics/Purpose.ta';
+} from '../AuthenticationContextForBiometrics/Purpose.ta.js';
 export {
     Purpose,
     _enum_for_Purpose,
@@ -117,7 +117,7 @@ export {
     sample /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Purpose,
     _encode_Purpose,
-} from '../AuthenticationContextForBiometrics/Purpose.ta';
+} from '../AuthenticationContextForBiometrics/Purpose.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DataType */
 /**

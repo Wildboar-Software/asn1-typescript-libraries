@@ -65,30 +65,30 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FileIdentifier,
     _decode_FileIdentifier,
     _encode_FileIdentifier,
-} from '../IPMSFileTransferBodyPartType/FileIdentifier.ta';
+} from '../IPMSFileTransferBodyPartType/FileIdentifier.ta.js';
 export {
     FileIdentifier,
     _decode_FileIdentifier,
     _encode_FileIdentifier,
-} from '../IPMSFileTransferBodyPartType/FileIdentifier.ta';
+} from '../IPMSFileTransferBodyPartType/FileIdentifier.ta.js';
 import {
     Relationship,
     _decode_Relationship,
     _encode_Relationship,
-} from '../IPMSFileTransferBodyPartType/Relationship.ta';
+} from '../IPMSFileTransferBodyPartType/Relationship.ta.js';
 export {
     Relationship,
     _decode_Relationship,
     _encode_Relationship,
-} from '../IPMSFileTransferBodyPartType/Relationship.ta';
+} from '../IPMSFileTransferBodyPartType/Relationship.ta.js';
 import {
     ExplicitRelationship_unspecified,
-} from './ExplicitRelationship.ta';
+} from './ExplicitRelationship.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RelatedStoredFile_Item */
 /**

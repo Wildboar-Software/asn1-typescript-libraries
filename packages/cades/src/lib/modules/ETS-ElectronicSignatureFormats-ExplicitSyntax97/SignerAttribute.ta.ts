@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttribute_Item } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignerAttribute-Item.ta";
-export { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttribute_Item } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignerAttribute-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttribute_Item } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignerAttribute-Item.ta.js";
+export { SignerAttribute_Item, _decode_SignerAttribute_Item, _encode_SignerAttribute_Item } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignerAttribute-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SignerAttribute */

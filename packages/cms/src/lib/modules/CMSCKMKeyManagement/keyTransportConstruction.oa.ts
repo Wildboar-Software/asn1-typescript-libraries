@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta";
-import { id_ckm_key_transport } from "../CMSObjectIdentifiers/id-ckm-key-transport.va";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.js";
+import { id_ckm_key_transport } from "../CMSObjectIdentifiers/id-ckm-key-transport.va.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,14 +24,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta";
-export { id_ckm_key_transport } from "../CMSObjectIdentifiers/id-ckm-key-transport.va";
+} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.js";
+export { id_ckm_key_transport } from "../CMSObjectIdentifiers/id-ckm-key-transport.va.js";
 
 /* START_OF_SYMBOL_DEFINITION keyTransportConstruction */
 /**

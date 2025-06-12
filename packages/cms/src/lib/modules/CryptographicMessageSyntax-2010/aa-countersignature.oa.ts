@@ -3,15 +3,15 @@ import {
     Countersignature,
     _decode_Countersignature,
     _encode_Countersignature,
-} from "../CryptographicMessageSyntax-2010/Countersignature.ta";
-import { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+} from "../CryptographicMessageSyntax-2010/Countersignature.ta.js";
+import { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 export {
     Countersignature,
     _decode_Countersignature,
     _encode_Countersignature,
-} from "../CryptographicMessageSyntax-2010/Countersignature.ta";
-export { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va";
+} from "../CryptographicMessageSyntax-2010/Countersignature.ta.js";
+export { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_countersignature */
 /**

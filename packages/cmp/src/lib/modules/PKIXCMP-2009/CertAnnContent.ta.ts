@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
-} from '../PKIXCMP-2009/CMPCertificate.ta';
+} from '../PKIXCMP-2009/CMPCertificate.ta.js';
 export {
   CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
-} from '../PKIXCMP-2009/CMPCertificate.ta';
+} from '../PKIXCMP-2009/CMPCertificate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertAnnContent */
 /**

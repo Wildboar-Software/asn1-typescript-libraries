@@ -5,23 +5,23 @@ import {
     BOOLEAN,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CredentialIdentifier,
     _decode_CredentialIdentifier,
     _encode_CredentialIdentifier,
-} from "../PKCS-15/CredentialIdentifier.ta";
+} from "../PKCS-15/CredentialIdentifier.ta.js";
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
-import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta";
+} from "../PKCS-15/Identifier.ta.js";
+import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta.js";
 import {
     OOBCertHash,
     _decode_OOBCertHash,
     _encode_OOBCertHash,
-} from "../PKIXCMP-2009/OOBCertHash.ta";
+} from "../PKIXCMP-2009/OOBCertHash.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonCertificateAttributes */
 /**

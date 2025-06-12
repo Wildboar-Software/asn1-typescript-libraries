@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BPUSubprocessInformation,
     _decode_BPUSubprocessInformation,
     _encode_BPUSubprocessInformation,
-} from '../AuthenticationContextForBiometrics/BPUSubprocessInformation.ta';
+} from '../AuthenticationContextForBiometrics/BPUSubprocessInformation.ta.js';
 export {
     BPUSubprocessInformation,
     _decode_BPUSubprocessInformation,
     _encode_BPUSubprocessInformation,
-} from '../AuthenticationContextForBiometrics/BPUSubprocessInformation.ta';
+} from '../AuthenticationContextForBiometrics/BPUSubprocessInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUSubprocessInformationList */
 /**

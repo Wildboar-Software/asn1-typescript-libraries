@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectSel_objSelect_objectNames_Item_object,
     _decode_ObjectSel_objSelect_objectNames_Item_object,
     _encode_ObjectSel_objSelect_objectNames_Item_object,
-} from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta';
+} from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta.js';
 export {
     ObjectSel_objSelect_objectNames_Item_object,
     _decode_ObjectSel_objSelect_objectNames_Item_object,
     _encode_ObjectSel_objSelect_objectNames_Item_object,
-} from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta';
+} from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta.js';
 import {
     TargetSelect,
     _decode_TargetSelect,
     _encode_TargetSelect,
-} from '../Pbact-access/TargetSelect.ta';
+} from '../Pbact-access/TargetSelect.ta.js';
 export {
     TargetSelect,
     _decode_TargetSelect,
     _encode_TargetSelect,
-} from '../Pbact-access/TargetSelect.ta';
+} from '../Pbact-access/TargetSelect.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObjectSel_objSelect_objectNames_Item */
 /**

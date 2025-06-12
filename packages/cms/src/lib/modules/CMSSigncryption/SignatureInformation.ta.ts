@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ToBeSigned,
     _decode_ToBeSigned,
     _encode_ToBeSigned,
-} from "../CMSSigncryption/ToBeSigned.ta";
+} from "../CMSSigncryption/ToBeSigned.ta.js";
 import {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.js";
 import {
     SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
-} from "../CryptographicMessageSyntax-2010/SignatureValue.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureValue.ta.js";
 import {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.js";
 export {
     ToBeSigned,
     _decode_ToBeSigned,
     _encode_ToBeSigned,
-} from "../CMSSigncryption/ToBeSigned.ta";
+} from "../CMSSigncryption/ToBeSigned.ta.js";
 export {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.js";
 export {
     SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
-} from "../CryptographicMessageSyntax-2010/SignatureValue.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureValue.ta.js";
 export {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignatureInformation */
 /**

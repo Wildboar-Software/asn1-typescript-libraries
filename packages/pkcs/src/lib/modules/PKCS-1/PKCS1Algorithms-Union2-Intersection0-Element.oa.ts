@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { md5WithRSAEncryption } from "../PKCS-1/md5WithRSAEncryption.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-export { md5WithRSAEncryption } from "../PKCS-1/md5WithRSAEncryption.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { md5WithRSAEncryption } from "../PKCS-1/md5WithRSAEncryption.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+export { md5WithRSAEncryption } from "../PKCS-1/md5WithRSAEncryption.va.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union2_Intersection0_Element */
 /**

@@ -65,25 +65,25 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
-import { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va';
-export { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va';
-import { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va';
-export { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va';
-import { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va';
-export { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va';
-import { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va';
-export { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
+import { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va.js';
+export { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va.js';
+import { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va.js';
+export { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va.js';
+import { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va.js';
+export { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va.js';
+import { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va.js';
+export { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va.js';
 
 /* START_OF_SYMBOL_DEFINITION UniversalPersonalName */
 /**

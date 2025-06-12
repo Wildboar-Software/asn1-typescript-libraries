@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   FirstPdvExplicit,
   _decode_FirstPdvExplicit,
   _encode_FirstPdvExplicit,
-} from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta';
+} from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta.js';
 export {
   FirstPdvExplicit,
   _decode_FirstPdvExplicit,
   _encode_FirstPdvExplicit,
-} from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta';
+} from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta.js';
 import {
   FirstPdvExternal,
   _decode_FirstPdvExternal,
   _encode_FirstPdvExternal,
-} from '../GenericProtectingTransferSyntax/FirstPdvExternal.ta';
+} from '../GenericProtectingTransferSyntax/FirstPdvExternal.ta.js';
 export {
   FirstPdvExternal,
   _decode_FirstPdvExternal,
   _encode_FirstPdvExternal,
-} from '../GenericProtectingTransferSyntax/FirstPdvExternal.ta';
+} from '../GenericProtectingTransferSyntax/FirstPdvExternal.ta.js';
 import {
   SubsequentPdv,
   _decode_SubsequentPdv,
   _encode_SubsequentPdv,
-} from '../GenericProtectingTransferSyntax/SubsequentPdv.ta';
+} from '../GenericProtectingTransferSyntax/SubsequentPdv.ta.js';
 export {
   SubsequentPdv,
   _decode_SubsequentPdv,
   _encode_SubsequentPdv,
-} from '../GenericProtectingTransferSyntax/SubsequentPdv.ta';
+} from '../GenericProtectingTransferSyntax/SubsequentPdv.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SyntaxStructure */
 /**

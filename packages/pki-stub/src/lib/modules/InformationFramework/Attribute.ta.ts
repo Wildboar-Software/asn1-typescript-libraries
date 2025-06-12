@@ -5,12 +5,12 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attribute_valuesWithContext_Item as VWC,
     _decode_Attribute_valuesWithContext_Item as _decode_VWC,
     _encode_Attribute_valuesWithContext_Item as _encode_VWC,
-} from "../InformationFramework/Attribute-valuesWithContext-Item.ta";
+} from "../InformationFramework/Attribute-valuesWithContext-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Attribute */
 /**

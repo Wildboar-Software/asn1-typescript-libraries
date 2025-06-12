@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SupportedChoice,
     _decode_SupportedChoice,
     _encode_SupportedChoice,
-} from '../GrmAttributeDefinitionModule/SupportedChoice.ta';
+} from '../GrmAttributeDefinitionModule/SupportedChoice.ta.js';
 export {
     SupportedChoice,
     _decode_SupportedChoice,
     _encode_SupportedChoice,
-} from '../GrmAttributeDefinitionModule/SupportedChoice.ta';
+} from '../GrmAttributeDefinitionModule/SupportedChoice.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Supports */
 /**

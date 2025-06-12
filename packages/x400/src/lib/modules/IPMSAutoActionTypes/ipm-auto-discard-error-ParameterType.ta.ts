@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoDiscardProblem,
     AutoDiscardProblem_not_obsoleted_by_originator /* IMPORTED_LONG_NAMED_INTEGER */,
     not_obsoleted_by_originator /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AutoDiscardProblem,
     _encode_AutoDiscardProblem,
-} from '../IPMSAutoActionTypes/AutoDiscardProblem.ta';
+} from '../IPMSAutoActionTypes/AutoDiscardProblem.ta.js';
 export {
     AutoDiscardProblem,
     AutoDiscardProblem_not_obsoleted_by_originator /* IMPORTED_LONG_NAMED_INTEGER */,
     not_obsoleted_by_originator /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AutoDiscardProblem,
     _encode_AutoDiscardProblem,
-} from '../IPMSAutoActionTypes/AutoDiscardProblem.ta';
+} from '../IPMSAutoActionTypes/AutoDiscardProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ipm_auto_discard_error_ParameterType */
 /**

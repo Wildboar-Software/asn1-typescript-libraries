@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va";
-export { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va";
+import { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.js";
+export { ansi_X9_62 } from "../ANSI-X9-62/ansi-X9-62.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_publicKeyType */
 /**

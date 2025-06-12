@@ -1,21 +1,21 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass, OPTIONAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.js";
 import {
     Attributes,
     _encode_Attributes,
     _decode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**

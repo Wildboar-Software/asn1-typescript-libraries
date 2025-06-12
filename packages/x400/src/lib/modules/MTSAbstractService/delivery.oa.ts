@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { delivery_control } from '../MTSAbstractService/delivery-control.oa';
-export { delivery_control } from '../MTSAbstractService/delivery-control.oa';
-import { message_delivery } from '../MTSAbstractService/message-delivery.oa';
-export { message_delivery } from '../MTSAbstractService/message-delivery.oa';
-import { report_delivery } from '../MTSAbstractService/report-delivery.oa';
-export { report_delivery } from '../MTSAbstractService/report-delivery.oa';
-import { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va';
-export { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { delivery_control } from '../MTSAbstractService/delivery-control.oa.js';
+export { delivery_control } from '../MTSAbstractService/delivery-control.oa.js';
+import { message_delivery } from '../MTSAbstractService/message-delivery.oa.js';
+export { message_delivery } from '../MTSAbstractService/message-delivery.oa.js';
+import { report_delivery } from '../MTSAbstractService/report-delivery.oa.js';
+export { report_delivery } from '../MTSAbstractService/report-delivery.oa.js';
+import { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va.js';
+export { id_pt_delivery } from '../MTSObjectIdentifiers/id-pt-delivery.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION delivery */
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { rsadsi } from "../PKCS5v2-1/rsadsi.va";
-export { rsadsi } from "../PKCS5v2-1/rsadsi.va";
+import { rsadsi } from "../PKCS5v2-1/rsadsi.va.js";
+export { rsadsi } from "../PKCS5v2-1/rsadsi.va.js";
 
 /* START_OF_SYMBOL_DEFINITION digestAlgorithm */
 /**

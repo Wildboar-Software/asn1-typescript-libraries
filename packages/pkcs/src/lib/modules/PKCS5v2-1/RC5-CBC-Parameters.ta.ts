@@ -6,19 +6,19 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RC5_CBC_Parameters_version,
     _decode_RC5_CBC_Parameters_version,
     _encode_RC5_CBC_Parameters_version,
-} from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta";
+} from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta.js";
 export {
     RC5_CBC_Parameters_version,
     RC5_CBC_Parameters_version_v1_0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v1_0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RC5_CBC_Parameters_version,
     _encode_RC5_CBC_Parameters_version,
-} from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta";
+} from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RC5_CBC_Parameters */
 /**

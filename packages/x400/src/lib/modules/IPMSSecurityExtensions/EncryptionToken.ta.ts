@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.js';
 export {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.js';
 import {
     EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
-} from '../MTSAbstractService/EncryptionKey.ta';
+} from '../MTSAbstractService/EncryptionKey.ta.js';
 export {
     EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
-} from '../MTSAbstractService/EncryptionKey.ta';
+} from '../MTSAbstractService/EncryptionKey.ta.js';
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 export {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.js';
 export {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.js';
 import {
     ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
-} from '../MTSAbstractService/ExtendedCertificates.ta';
+} from '../MTSAbstractService/ExtendedCertificates.ta.js';
 export {
     ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
-} from '../MTSAbstractService/ExtendedCertificates.ta';
+} from '../MTSAbstractService/ExtendedCertificates.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncryptionToken */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKIFreeText,
     _decode_PKIFreeText,
     _encode_PKIFreeText,
-} from "../PKIXCMP/PKIFreeText.ta";
+} from "../PKIXCMP/PKIFreeText.ta.js";
 import {
     PKIFailureInfo,
     _decode_PKIFailureInfo,
     _encode_PKIFailureInfo,
-} from "../PKIXTSP/PKIFailureInfo.ta";
+} from "../PKIXTSP/PKIFailureInfo.ta.js";
 import {
     PKIStatus,
     _decode_PKIStatus,
     _encode_PKIStatus,
-} from "../PKIXTSP/PKIStatus.ta";
+} from "../PKIXTSP/PKIStatus.ta.js";
 export {
     PKIFreeText,
     _decode_PKIFreeText,
     _encode_PKIFreeText,
-} from "../PKIXCMP/PKIFreeText.ta";
+} from "../PKIXCMP/PKIFreeText.ta.js";
 export {
     addInfoNotAvailable /* IMPORTED_SHORT_NAMED_BIT */,
     badAlg /* IMPORTED_SHORT_NAMED_BIT */,
@@ -45,7 +45,7 @@ export {
     unacceptedPolicy /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PKIFailureInfo,
     _encode_PKIFailureInfo,
-} from "../PKIXTSP/PKIFailureInfo.ta";
+} from "../PKIXTSP/PKIFailureInfo.ta.js";
 export {
     granted /* IMPORTED_SHORT_NAMED_INTEGER */,
     grantedWithMods /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -62,7 +62,7 @@ export {
     waiting /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PKIStatus,
     _encode_PKIStatus,
-} from "../PKIXTSP/PKIStatus.ta";
+} from "../PKIXTSP/PKIStatus.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKIStatusInfo */
 /**

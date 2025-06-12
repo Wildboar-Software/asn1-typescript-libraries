@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActivityDuration,
     _decode_ActivityDuration,
     _encode_ActivityDuration,
-} from '../X790ASN1Module/ActivityDuration.ta';
+} from '../X790ASN1Module/ActivityDuration.ta.js';
 export {
     ActivityDuration,
     _decode_ActivityDuration,
     _encode_ActivityDuration,
-} from '../X790ASN1Module/ActivityDuration.ta';
+} from '../X790ASN1Module/ActivityDuration.ta.js';
 import {
     TimeInterval,
     _decode_TimeInterval,
     _encode_TimeInterval,
-} from '../X790ASN1Module/TimeInterval.ta';
+} from '../X790ASN1Module/TimeInterval.ta.js';
 export {
     TimeInterval,
     _decode_TimeInterval,
     _encode_TimeInterval,
-} from '../X790ASN1Module/TimeInterval.ta';
+} from '../X790ASN1Module/TimeInterval.ta.js';
 import {
     ActivityType,
     ActivityType_after_hours_repair /* IMPORTED_LONG_NAMED_BIT */,
@@ -108,7 +108,7 @@ import {
     release /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ActivityType,
     _encode_ActivityType,
-} from '../X790ASN1Module/ActivityType.ta';
+} from '../X790ASN1Module/ActivityType.ta.js';
 export {
     ActivityType,
     ActivityType_after_hours_repair /* IMPORTED_LONG_NAMED_BIT */,
@@ -131,7 +131,7 @@ export {
     release /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ActivityType,
     _encode_ActivityType,
-} from '../X790ASN1Module/ActivityType.ta';
+} from '../X790ASN1Module/ActivityType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION activityDurationactivityDurationInitial */
 /**

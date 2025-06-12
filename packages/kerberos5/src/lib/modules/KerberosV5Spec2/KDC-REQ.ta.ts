@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PA_DATA,
   _decode_PA_DATA,
   _encode_PA_DATA,
-} from '../KerberosV5Spec2/PA-DATA.ta';
+} from '../KerberosV5Spec2/PA-DATA.ta.js';
 export {
   PA_DATA,
   _decode_PA_DATA,
   _encode_PA_DATA,
-} from '../KerberosV5Spec2/PA-DATA.ta';
+} from '../KerberosV5Spec2/PA-DATA.ta.js';
 import {
   KDC_REQ_BODY,
   _decode_KDC_REQ_BODY,
   _encode_KDC_REQ_BODY,
-} from '../KerberosV5Spec2/KDC-REQ-BODY.ta';
+} from '../KerberosV5Spec2/KDC-REQ-BODY.ta.js';
 export {
   KDC_REQ_BODY,
   _decode_KDC_REQ_BODY,
   _encode_KDC_REQ_BODY,
-} from '../KerberosV5Spec2/KDC-REQ-BODY.ta';
+} from '../KerberosV5Spec2/KDC-REQ-BODY.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KDC_REQ */
 /**

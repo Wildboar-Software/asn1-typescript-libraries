@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OriginatorToken,
     _decode_OriginatorToken,
     _encode_OriginatorToken,
-} from '../MSAbstractService/OriginatorToken.ta';
+} from '../MSAbstractService/OriginatorToken.ta.js';
 export {
     OriginatorToken,
     _decode_OriginatorToken,
     _encode_OriginatorToken,
-} from '../MSAbstractService/OriginatorToken.ta';
-import { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va';
-export { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../MSAbstractService/OriginatorToken.ta.js';
+import { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va.js';
+export { id_ext_originator_token } from '../MSObjectIdentifiers/id-ext-originator-token.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION originator_token */
 /**

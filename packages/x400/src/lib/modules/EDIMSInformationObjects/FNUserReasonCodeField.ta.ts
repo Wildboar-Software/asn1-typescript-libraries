@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNUserBasicCodeField,
     FNUserBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -92,7 +92,7 @@ import {
     user_defined_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUserBasicCodeField,
     _encode_FNUserBasicCodeField,
-} from '../EDIMSInformationObjects/FNUserBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNUserBasicCodeField.ta.js';
 export {
     FNUserBasicCodeField,
     FNUserBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -119,17 +119,17 @@ export {
     user_defined_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUserBasicCodeField,
     _encode_FNUserBasicCodeField,
-} from '../EDIMSInformationObjects/FNUserBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNUserBasicCodeField.ta.js';
 import {
     FNUserDiagnosticField,
     _decode_FNUserDiagnosticField,
     _encode_FNUserDiagnosticField,
-} from '../EDIMSInformationObjects/FNUserDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNUserDiagnosticField.ta.js';
 export {
     FNUserDiagnosticField,
     _decode_FNUserDiagnosticField,
     _encode_FNUserDiagnosticField,
-} from '../EDIMSInformationObjects/FNUserDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNUserDiagnosticField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FNUserReasonCodeField */
 /**

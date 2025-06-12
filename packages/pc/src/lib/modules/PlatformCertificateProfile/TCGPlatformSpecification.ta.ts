@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta";
-export { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta.js";
+export { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TCGPlatformSpecification */

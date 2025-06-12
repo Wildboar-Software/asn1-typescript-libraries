@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
-export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
-import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa';
-export { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa';
-import { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa';
-export { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa';
-import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca';
-export { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
+export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
+import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.js';
+export { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.js';
+import { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa.js';
+export { dl_nested_dl } from '../MHSDirectoryObjectsAndAttributes/dl-nested-dl.oa.js';
+import { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca.js';
+export { DIT_CONTEXT_USE_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/DIT-CONTEXT-USE-RULE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dl_nested_dl_use_rule */
 /**

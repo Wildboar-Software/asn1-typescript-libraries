@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeValueAssertion,
   _decode_AttributeValueAssertion,
   _encode_AttributeValueAssertion,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.js';
 export {
   AttributeValueAssertion,
   _decode_AttributeValueAssertion,
   _encode_AttributeValueAssertion,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.js';
 import {
   SubstringFilter,
   _decode_SubstringFilter,
   _encode_SubstringFilter,
-} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.js';
 export {
   SubstringFilter,
   _decode_SubstringFilter,
   _encode_SubstringFilter,
-} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.js';
 import {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 export {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 import {
   MatchingRuleAssertion,
   _decode_MatchingRuleAssertion,
   _encode_MatchingRuleAssertion,
-} from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.js';
 export {
   MatchingRuleAssertion,
   _decode_MatchingRuleAssertion,
   _encode_MatchingRuleAssertion,
-} from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Filter */
 // TODO: CHECK_RECURSIVE_DEFINITION

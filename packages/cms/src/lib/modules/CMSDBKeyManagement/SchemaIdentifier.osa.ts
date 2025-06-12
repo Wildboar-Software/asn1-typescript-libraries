@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca";
-import { simpleString } from "../CMSDBKeyManagement/simpleString.oa";
-export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca";
-export { simpleString } from "../CMSDBKeyManagement/simpleString.oa";
+import { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.js";
+import { simpleString } from "../CMSDBKeyManagement/simpleString.oa.js";
+export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.js";
+export { simpleString } from "../CMSDBKeyManagement/simpleString.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SchemaIdentifier */
 /**

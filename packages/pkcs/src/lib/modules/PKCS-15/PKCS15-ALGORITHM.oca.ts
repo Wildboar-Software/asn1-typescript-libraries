@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Operations } from "../PKCS-15/Operations.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Operations } from "../PKCS-15/Operations.ta.js";
 export {
     compute_checksum /* IMPORTED_SHORT_NAMED_BIT */,
     compute_signature /* IMPORTED_SHORT_NAMED_BIT */,
@@ -22,7 +22,7 @@ export {
     verify_signature /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from "../PKCS-15/Operations.ta";
+} from "../PKCS-15/Operations.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS15_ALGORITHM */
 /**

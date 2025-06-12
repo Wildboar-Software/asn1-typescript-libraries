@@ -65,20 +65,20 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta";
-export { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta";
-import { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta";
-export { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta";
-import { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta";
-export { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta";
-import { TBSDataBA, _decode_TBSDataBA, _encode_TBSDataBA } from "../SASL-9798-3-1997/TBSDataBA.ta";
-export { TBSDataBA, _decode_TBSDataBA, _encode_TBSDataBA } from "../SASL-9798-3-1997/TBSDataBA.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.js";
+export { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.js";
+import { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta.js";
+export { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta.js";
+import { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta.js";
+export { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta.js";
+import { TBSDataBA, _decode_TBSDataBA, _encode_TBSDataBA } from "../SASL-9798-3-1997/TBSDataBA.ta.js";
+export { TBSDataBA, _decode_TBSDataBA, _encode_TBSDataBA } from "../SASL-9798-3-1997/TBSDataBA.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TokenBA2 */

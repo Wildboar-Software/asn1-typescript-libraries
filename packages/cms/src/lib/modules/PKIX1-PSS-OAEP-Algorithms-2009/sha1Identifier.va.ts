@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { HashAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
-import { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va";
+import { HashAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
+import { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
-export { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
+export { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va.js";
 import {
     AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     ASN1TagClass,
     ASN1Construction,

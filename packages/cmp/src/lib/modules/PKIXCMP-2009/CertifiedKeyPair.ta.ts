@@ -65,22 +65,22 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertOrEncCert,
   _decode_CertOrEncCert,
   _encode_CertOrEncCert,
-} from '../PKIXCMP-2009/CertOrEncCert.ta';
+} from '../PKIXCMP-2009/CertOrEncCert.ta.js';
 import {
   EncryptedValue,
   _decode_EncryptedValue,
   _encode_EncryptedValue,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/EncryptedValue.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/EncryptedValue.ta.js';
 import {
   PKIPublicationInfo,
   _decode_PKIPublicationInfo,
   _encode_PKIPublicationInfo,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/PKIPublicationInfo.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/PKIPublicationInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertifiedKeyPair */
 /**

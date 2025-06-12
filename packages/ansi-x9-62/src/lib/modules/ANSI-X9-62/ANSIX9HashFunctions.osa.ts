@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { ANSIX9HashFunctions_Union0_Intersection0_Element } from "./ANSIX9HashFunctions-Union0-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union1_Intersection0_Element } from "./ANSIX9HashFunctions-Union1-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union2_Intersection0_Element } from "./ANSIX9HashFunctions-Union2-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union3_Intersection0_Element } from "./ANSIX9HashFunctions-Union3-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union4_Intersection0_Element } from "./ANSIX9HashFunctions-Union4-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union5_Intersection0_Element } from "./ANSIX9HashFunctions-Union5-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union6_Intersection0_Element } from "./ANSIX9HashFunctions-Union6-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union7_Intersection0_Element } from "./ANSIX9HashFunctions-Union7-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union8_Intersection0_Element } from "./ANSIX9HashFunctions-Union8-Intersection0-Element.oa";
-import { ANSIX9HashFunctions_Union9_Intersection0_Element } from "./ANSIX9HashFunctions-Union9-Intersection0-Element.oa";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { ANSIX9HashFunctions_Union0_Intersection0_Element } from "./ANSIX9HashFunctions-Union0-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union1_Intersection0_Element } from "./ANSIX9HashFunctions-Union1-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union2_Intersection0_Element } from "./ANSIX9HashFunctions-Union2-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union3_Intersection0_Element } from "./ANSIX9HashFunctions-Union3-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union4_Intersection0_Element } from "./ANSIX9HashFunctions-Union4-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union5_Intersection0_Element } from "./ANSIX9HashFunctions-Union5-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union6_Intersection0_Element } from "./ANSIX9HashFunctions-Union6-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union7_Intersection0_Element } from "./ANSIX9HashFunctions-Union7-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union8_Intersection0_Element } from "./ANSIX9HashFunctions-Union8-Intersection0-Element.oa.js";
+import { ANSIX9HashFunctions_Union9_Intersection0_Element } from "./ANSIX9HashFunctions-Union9-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions */
 /**

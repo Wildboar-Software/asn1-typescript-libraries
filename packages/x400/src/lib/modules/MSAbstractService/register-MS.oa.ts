@@ -65,77 +65,77 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     Register_MSArgument,
     _decode_Register_MSArgument,
     _encode_Register_MSArgument,
-} from '../MSAbstractService/Register-MSArgument.ta';
+} from '../MSAbstractService/Register-MSArgument.ta.js';
 export {
     Register_MSArgument,
     _decode_Register_MSArgument,
     _encode_Register_MSArgument,
-} from '../MSAbstractService/Register-MSArgument.ta';
+} from '../MSAbstractService/Register-MSArgument.ta.js';
 import {
     Register_MSResult,
     _decode_Register_MSResult,
     _encode_Register_MSResult,
-} from '../MSAbstractService/Register-MSResult.ta';
+} from '../MSAbstractService/Register-MSResult.ta.js';
 export {
     Register_MSResult,
     _decode_Register_MSResult,
     _encode_Register_MSResult,
-} from '../MSAbstractService/Register-MSResult.ta';
-import { attribute_error } from '../MSAbstractService/attribute-error.oa';
-export { attribute_error } from '../MSAbstractService/attribute-error.oa';
-import { auto_action_request_error } from '../MSAbstractService/auto-action-request-error.oa';
-export { auto_action_request_error } from '../MSAbstractService/auto-action-request-error.oa';
-import { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa';
-export { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { old_credentials_incorrectly_specified } from '../MTSAbstractService/old-credentials-incorrectly-specified.oa';
-export { old_credentials_incorrectly_specified } from '../MTSAbstractService/old-credentials-incorrectly-specified.oa';
-import { new_credentials_unacceptable } from '../MTSAbstractService/new-credentials-unacceptable.oa';
-export { new_credentials_unacceptable } from '../MTSAbstractService/new-credentials-unacceptable.oa';
-import { message_group_error } from '../MSAbstractService/message-group-error.oa';
-export { message_group_error } from '../MSAbstractService/message-group-error.oa';
-import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-import { register_ms_error } from '../MSAbstractService/register-ms-error.oa';
-export { register_ms_error } from '../MSAbstractService/register-ms-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_register_ms } from '../MSAccessProtocol/op-register-ms.va';
-export { op_register_ms } from '../MSAccessProtocol/op-register-ms.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MSAbstractService/Register-MSResult.ta.js';
+import { attribute_error } from '../MSAbstractService/attribute-error.oa.js';
+export { attribute_error } from '../MSAbstractService/attribute-error.oa.js';
+import { auto_action_request_error } from '../MSAbstractService/auto-action-request-error.oa.js';
+export { auto_action_request_error } from '../MSAbstractService/auto-action-request-error.oa.js';
+import { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa.js';
+export { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { old_credentials_incorrectly_specified } from '../MTSAbstractService/old-credentials-incorrectly-specified.oa.js';
+export { old_credentials_incorrectly_specified } from '../MTSAbstractService/old-credentials-incorrectly-specified.oa.js';
+import { new_credentials_unacceptable } from '../MTSAbstractService/new-credentials-unacceptable.oa.js';
+export { new_credentials_unacceptable } from '../MTSAbstractService/new-credentials-unacceptable.oa.js';
+import { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+export { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+import { register_ms_error } from '../MSAbstractService/register-ms-error.oa.js';
+export { register_ms_error } from '../MSAbstractService/register-ms-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_register_ms } from '../MSAccessProtocol/op-register-ms.va.js';
+export { op_register_ms } from '../MSAccessProtocol/op-register-ms.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION register_MS */
 /**

@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { String, _decode_String, _encode_String } from '../XSD/String.ta';
-export { String, _decode_String, _encode_String } from '../XSD/String.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { String, _decode_String, _encode_String } from '../XSD/String.ta.js';
+export { String, _decode_String, _encode_String } from '../XSD/String.ta.js';
 import {
   AnyType_nillable_content,
   _decode_AnyType_nillable_content,
   _encode_AnyType_nillable_content,
-} from '../XSD/AnyType-nillable-content.ta';
+} from '../XSD/AnyType-nillable-content.ta.js';
 export {
   AnyType_nillable_content,
   _decode_AnyType_nillable_content,
   _encode_AnyType_nillable_content,
-} from '../XSD/AnyType-nillable-content.ta';
+} from '../XSD/AnyType-nillable-content.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AnyType_nillable */
 /**

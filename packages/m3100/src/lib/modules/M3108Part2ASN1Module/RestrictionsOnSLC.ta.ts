@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RestrictionsOnSLC_restrictionId,
     _enum_for_RestrictionsOnSLC_restrictionId,
@@ -83,7 +83,7 @@ import {
     dedicatedProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RestrictionsOnSLC_restrictionId,
     _encode_RestrictionsOnSLC_restrictionId,
-} from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta';
+} from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta.js';
 export {
     RestrictionsOnSLC_restrictionId,
     _enum_for_RestrictionsOnSLC_restrictionId,
@@ -101,7 +101,7 @@ export {
     dedicatedProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RestrictionsOnSLC_restrictionId,
     _encode_RestrictionsOnSLC_restrictionId,
-} from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta';
+} from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RestrictionsOnSLC */
 /**

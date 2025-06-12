@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ValidationPolicy,
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
-} from '../SCVP-2009/ValidationPolicy.ta';
+} from '../SCVP-2009/ValidationPolicy.ta.js';
 export {
   ValidationPolicy,
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
-} from '../SCVP-2009/ValidationPolicy.ta';
+} from '../SCVP-2009/ValidationPolicy.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RespValidationPolicy */
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa";
-import { pkcs_9_at_localKeyId } from "../PKCS-9/pkcs-9-at-localKeyId.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.js";
+import { pkcs_9_at_localKeyId } from "../PKCS-9/pkcs-9-at-localKeyId.va.js";
 
 /* START_OF_SYMBOL_DEFINITION localKeyId */
 /**

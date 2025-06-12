@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeTypeAndValue,
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
-} from "../PKI-Stub/AttributeTypeAndValue.ta";
+} from "../PKI-Stub/AttributeTypeAndValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RelativeDistinguishedName */
 /**

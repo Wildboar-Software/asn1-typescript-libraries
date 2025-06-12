@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DLPolicy_report_propagation,
     DLPolicy_report_propagation_previous_dl_or_originator /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     both_previous_and_owner /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_propagation,
     _encode_DLPolicy_report_propagation,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta.js';
 export {
     DLPolicy_report_propagation,
     DLPolicy_report_propagation_previous_dl_or_originator /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     both_previous_and_owner /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_propagation,
     _encode_DLPolicy_report_propagation,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta.js';
 import {
     DLPolicy_report_from_dl,
     DLPolicy_report_from_dl_whenever_requested /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -96,7 +96,7 @@ import {
     when_no_propagation /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_from_dl,
     _encode_DLPolicy_report_from_dl,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta.js';
 export {
     DLPolicy_report_from_dl,
     DLPolicy_report_from_dl_whenever_requested /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,7 +105,7 @@ export {
     when_no_propagation /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_from_dl,
     _encode_DLPolicy_report_from_dl,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta.js';
 import {
     DLPolicy_originating_MTA_report,
     DLPolicy_originating_MTA_report_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,7 +115,7 @@ import {
     audited_report /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_originating_MTA_report,
     _encode_DLPolicy_originating_MTA_report,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta.js';
 export {
     DLPolicy_originating_MTA_report,
     DLPolicy_originating_MTA_report_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -125,7 +125,7 @@ export {
     audited_report /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_originating_MTA_report,
     _encode_DLPolicy_originating_MTA_report,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta.js';
 import {
     DLPolicy_originator_report,
     DLPolicy_originator_report_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -135,7 +135,7 @@ import {
     DLPolicy_originator_report_non_delivery_report /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_DLPolicy_originator_report,
     _encode_DLPolicy_originator_report,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta.js';
 export {
     DLPolicy_originator_report,
     DLPolicy_originator_report_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -145,7 +145,7 @@ export {
     DLPolicy_originator_report_non_delivery_report /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_DLPolicy_originator_report,
     _encode_DLPolicy_originator_report,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta.js';
 import {
     DLPolicy_return_of_content,
     _enum_for_DLPolicy_return_of_content,
@@ -156,7 +156,7 @@ import {
     content_return_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_return_of_content,
     _encode_DLPolicy_return_of_content,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta.js';
 export {
     DLPolicy_return_of_content,
     _enum_for_DLPolicy_return_of_content,
@@ -167,7 +167,7 @@ export {
     content_return_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_return_of_content,
     _encode_DLPolicy_return_of_content,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta.js';
 import {
     DLPolicy_priority,
     DLPolicy_priority_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -179,7 +179,7 @@ import {
     urgent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_priority,
     _encode_DLPolicy_priority,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta.js';
 export {
     DLPolicy_priority,
     DLPolicy_priority_unchanged /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -191,7 +191,7 @@ export {
     urgent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_priority,
     _encode_DLPolicy_priority,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta.js';
 import {
     DLPolicy_disclosure_of_other_recipients,
     _enum_for_DLPolicy_disclosure_of_other_recipients,
@@ -202,7 +202,7 @@ import {
     disclosure_of_other_recipients_allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_disclosure_of_other_recipients,
     _encode_DLPolicy_disclosure_of_other_recipients,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-disclosure-of-other-recipients.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-disclosure-of-other-recipients.ta.js';
 export {
     DLPolicy_disclosure_of_other_recipients,
     _enum_for_DLPolicy_disclosure_of_other_recipients,
@@ -213,7 +213,7 @@ export {
     disclosure_of_other_recipients_allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_disclosure_of_other_recipients,
     _encode_DLPolicy_disclosure_of_other_recipients,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-disclosure-of-other-recipients.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-disclosure-of-other-recipients.ta.js';
 import {
     DLPolicy_implicit_conversion_prohibited,
     _enum_for_DLPolicy_implicit_conversion_prohibited,
@@ -224,7 +224,7 @@ import {
     implicit_conversion_prohibited /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_implicit_conversion_prohibited,
     _encode_DLPolicy_implicit_conversion_prohibited,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-implicit-conversion-prohibited.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-implicit-conversion-prohibited.ta.js';
 export {
     DLPolicy_implicit_conversion_prohibited,
     _enum_for_DLPolicy_implicit_conversion_prohibited,
@@ -235,7 +235,7 @@ export {
     implicit_conversion_prohibited /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_implicit_conversion_prohibited,
     _encode_DLPolicy_implicit_conversion_prohibited,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-implicit-conversion-prohibited.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-implicit-conversion-prohibited.ta.js';
 import {
     DLPolicy_conversion_with_loss_prohibited,
     _enum_for_DLPolicy_conversion_with_loss_prohibited,
@@ -246,7 +246,7 @@ import {
     conversion_with_loss_prohibited /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_conversion_with_loss_prohibited,
     _encode_DLPolicy_conversion_with_loss_prohibited,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta.js';
 export {
     DLPolicy_conversion_with_loss_prohibited,
     _enum_for_DLPolicy_conversion_with_loss_prohibited,
@@ -257,7 +257,7 @@ export {
     conversion_with_loss_prohibited /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DLPolicy_conversion_with_loss_prohibited,
     _encode_DLPolicy_conversion_with_loss_prohibited,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta.js';
 import {
     DLPolicy_proof_of_delivery,
     DLPolicy_proof_of_delivery_dl_expansion_point /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -270,7 +270,7 @@ import {
     neither /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_proof_of_delivery,
     _encode_DLPolicy_proof_of_delivery,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta.js';
 export {
     DLPolicy_proof_of_delivery,
     DLPolicy_proof_of_delivery_dl_expansion_point /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -283,27 +283,27 @@ export {
     neither /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_proof_of_delivery,
     _encode_DLPolicy_proof_of_delivery,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta.js';
 import {
     DLPolicy_requested_delivery_method,
     _decode_DLPolicy_requested_delivery_method,
     _encode_DLPolicy_requested_delivery_method,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta.js';
 export {
     DLPolicy_requested_delivery_method,
     _decode_DLPolicy_requested_delivery_method,
     _encode_DLPolicy_requested_delivery_method,
-} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta';
+} from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta.js';
 import {
     AlgorithmInformation,
     _decode_AlgorithmInformation,
     _encode_AlgorithmInformation,
-} from '../MHSDirectoryObjectsAndAttributes/AlgorithmInformation.ta';
+} from '../MHSDirectoryObjectsAndAttributes/AlgorithmInformation.ta.js';
 export {
     AlgorithmInformation,
     _decode_AlgorithmInformation,
     _encode_AlgorithmInformation,
-} from '../MHSDirectoryObjectsAndAttributes/AlgorithmInformation.ta';
+} from '../MHSDirectoryObjectsAndAttributes/AlgorithmInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DLPolicy */
 /**

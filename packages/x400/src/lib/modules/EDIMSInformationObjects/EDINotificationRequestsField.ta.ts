@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EDINotificationRequests,
     EDINotificationRequests_pn /* IMPORTED_LONG_NAMED_BIT */,
@@ -76,7 +76,7 @@ import {
     fn /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_EDINotificationRequests,
     _encode_EDINotificationRequests,
-} from '../EDIMSInformationObjects/EDINotificationRequests.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequests.ta.js';
 export {
     EDINotificationRequests,
     EDINotificationRequests_pn /* IMPORTED_LONG_NAMED_BIT */,
@@ -87,35 +87,35 @@ export {
     fn /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_EDINotificationRequests,
     _encode_EDINotificationRequests,
-} from '../EDIMSInformationObjects/EDINotificationRequests.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequests.ta.js';
 import {
     EDINotificationSecurity,
     EDINotificationSecurity_proof /* IMPORTED_LONG_NAMED_BIT */,
     EDINotificationSecurity_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
     _decode_EDINotificationSecurity,
     _encode_EDINotificationSecurity,
-} from '../EDIMSInformationObjects/EDINotificationSecurity.ta';
+} from '../EDIMSInformationObjects/EDINotificationSecurity.ta.js';
 export {
     EDINotificationSecurity,
     EDINotificationSecurity_proof /* IMPORTED_LONG_NAMED_BIT */,
     EDINotificationSecurity_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
     _decode_EDINotificationSecurity,
     _encode_EDINotificationSecurity,
-} from '../EDIMSInformationObjects/EDINotificationSecurity.ta';
+} from '../EDIMSInformationObjects/EDINotificationSecurity.ta.js';
 import {
     EDIReceptionSecurity,
     EDIReceptionSecurity_proof /* IMPORTED_LONG_NAMED_BIT */,
     EDIReceptionSecurity_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
     _decode_EDIReceptionSecurity,
     _encode_EDIReceptionSecurity,
-} from '../EDIMSInformationObjects/EDIReceptionSecurity.ta';
+} from '../EDIMSInformationObjects/EDIReceptionSecurity.ta.js';
 export {
     EDIReceptionSecurity,
     EDIReceptionSecurity_proof /* IMPORTED_LONG_NAMED_BIT */,
     EDIReceptionSecurity_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
     _decode_EDIReceptionSecurity,
     _encode_EDIReceptionSecurity,
-} from '../EDIMSInformationObjects/EDIReceptionSecurity.ta';
+} from '../EDIMSInformationObjects/EDIReceptionSecurity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDINotificationRequestsField */
 /**

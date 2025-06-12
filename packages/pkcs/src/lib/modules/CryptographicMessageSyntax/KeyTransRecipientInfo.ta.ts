@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax/EncryptedKey.ta.js";
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta.js";
 import {
     RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
-} from "../CryptographicMessageSyntax/RecipientIdentifier.ta";
+} from "../CryptographicMessageSyntax/RecipientIdentifier.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -39,22 +39,22 @@ export {
     v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax/EncryptedKey.ta.js";
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta.js";
 export {
     RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
-} from "../CryptographicMessageSyntax/RecipientIdentifier.ta";
+} from "../CryptographicMessageSyntax/RecipientIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyTransRecipientInfo */
 /**

@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta';
-export { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.js';
+export { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NOTATION */
 /**

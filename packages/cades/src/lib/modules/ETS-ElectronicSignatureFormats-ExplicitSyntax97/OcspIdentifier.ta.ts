@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/ResponderID.ta";
-export { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/ResponderID.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/ResponderID.ta.js";
+export { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/ResponderID.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OcspIdentifier */

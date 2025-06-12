@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Create_Attributes,
   _decode_Create_Attributes,
   _encode_Create_Attributes,
-} from '../ISO8571-FTAM/Create-Attributes.ta';
+} from '../ISO8571-FTAM/Create-Attributes.ta.js';
 export {
   Create_Attributes,
   _decode_Create_Attributes,
   _encode_Create_Attributes,
-} from '../ISO8571-FTAM/Create-Attributes.ta';
+} from '../ISO8571-FTAM/Create-Attributes.ta.js';
 import {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 export {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 import {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 export {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_CREATE_DIRECTORY_request */
 /**

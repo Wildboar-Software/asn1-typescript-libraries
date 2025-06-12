@@ -4,79 +4,79 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
 import {
     MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-} from "../PKCS7/MessageAuthenticationCode.ta";
+} from "../PKCS7/MessageAuthenticationCode.ta.js";
 import {
     MessageAuthenticationCodeAlgorithmIdentifier,
     _decode_MessageAuthenticationCodeAlgorithmIdentifier,
     _encode_MessageAuthenticationCodeAlgorithmIdentifier,
-} from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta";
+} from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta.js";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta";
+} from "../PKCS7/OriginatorInfo.ta.js";
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientInfos.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 export {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
 export {
     MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-} from "../PKCS7/MessageAuthenticationCode.ta";
+} from "../PKCS7/MessageAuthenticationCode.ta.js";
 export {
     MessageAuthenticationCodeAlgorithmIdentifier,
     _decode_MessageAuthenticationCodeAlgorithmIdentifier,
     _encode_MessageAuthenticationCodeAlgorithmIdentifier,
-} from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta";
+} from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta.js";
 export {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta";
+} from "../PKCS7/OriginatorInfo.ta.js";
 export {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientInfos.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticatedData */
 /**

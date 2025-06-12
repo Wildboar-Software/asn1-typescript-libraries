@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 export {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 import {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 export {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectivityTestInfo_timeoutPeriod */
 /**

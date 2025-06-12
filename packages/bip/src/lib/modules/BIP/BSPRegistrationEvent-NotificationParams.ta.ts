@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BSP_SCHEMA,
   _decode_BioAPI_BSP_SCHEMA,
   _encode_BioAPI_BSP_SCHEMA,
-} from '../BIP/BioAPI-BSP-SCHEMA.ta';
+} from '../BIP/BioAPI-BSP-SCHEMA.ta.js';
 export {
   BioAPI_BSP_SCHEMA,
   _decode_BioAPI_BSP_SCHEMA,
   _encode_BioAPI_BSP_SCHEMA,
-} from '../BIP/BioAPI-BSP-SCHEMA.ta';
+} from '../BIP/BioAPI-BSP-SCHEMA.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BSPRegistrationEvent_NotificationParams */
 /**

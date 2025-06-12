@@ -4,29 +4,29 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**

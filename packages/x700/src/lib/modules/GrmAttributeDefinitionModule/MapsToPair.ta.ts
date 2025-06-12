@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SystemsMgtOperation,
     _decode_SystemsMgtOperation,
     _encode_SystemsMgtOperation,
-} from '../GrmAttributeDefinitionModule/SystemsMgtOperation.ta';
+} from '../GrmAttributeDefinitionModule/SystemsMgtOperation.ta.js';
 export {
     SystemsMgtOperation,
     _decode_SystemsMgtOperation,
     _encode_SystemsMgtOperation,
-} from '../GrmAttributeDefinitionModule/SystemsMgtOperation.ta';
+} from '../GrmAttributeDefinitionModule/SystemsMgtOperation.ta.js';
 import {
     RoleOrRelationshipObject,
     _decode_RoleOrRelationshipObject,
     _encode_RoleOrRelationshipObject,
-} from '../GrmAttributeDefinitionModule/RoleOrRelationshipObject.ta';
+} from '../GrmAttributeDefinitionModule/RoleOrRelationshipObject.ta.js';
 export {
     RoleOrRelationshipObject,
     _decode_RoleOrRelationshipObject,
     _encode_RoleOrRelationshipObject,
-} from '../GrmAttributeDefinitionModule/RoleOrRelationshipObject.ta';
+} from '../GrmAttributeDefinitionModule/RoleOrRelationshipObject.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MapsToPair */
 /**

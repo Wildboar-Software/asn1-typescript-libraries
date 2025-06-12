@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     EntryClassErrorParameter,
     _decode_EntryClassErrorParameter,
     _encode_EntryClassErrorParameter,
-} from '../MSAbstractService/EntryClassErrorParameter.ta';
+} from '../MSAbstractService/EntryClassErrorParameter.ta.js';
 export {
     EntryClassErrorParameter,
     _decode_EntryClassErrorParameter,
     _encode_EntryClassErrorParameter,
-} from '../MSAbstractService/EntryClassErrorParameter.ta';
-import { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va';
-export { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/EntryClassErrorParameter.ta.js';
+import { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va.js';
+export { err_entry_class_error } from '../MSAccessProtocol/err-entry-class-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION entry_class_error */
 /**

@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CBEFFVersion,
     _decode_CBEFFVersion,
     _encode_CBEFFVersion,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta.js';
 export {
     CBEFFVersion,
     _decode_CBEFFVersion,
     _encode_CBEFFVersion,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta.js';
 import {
     BIRIndex,
     _decode_BIRIndex,
     _encode_BIRIndex,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta.js';
 export {
     BIRIndex,
     _decode_BIRIndex,
     _encode_BIRIndex,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta.js';
 import {
     BDBValidityPeriod,
     _decode_BDBValidityPeriod,
     _encode_BDBValidityPeriod,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.js';
 export {
     BDBValidityPeriod,
     _decode_BDBValidityPeriod,
     _encode_BDBValidityPeriod,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.js';
 import {
     Quality,
     Quality_no_value_available /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -106,7 +106,7 @@ import {
     quality_not_recorded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Quality,
     _encode_Quality,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta.js';
 export {
     Quality,
     Quality_no_value_available /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -117,37 +117,37 @@ export {
     quality_not_recorded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Quality,
     _encode_Quality,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta.js';
 import {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.js';
 export {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.js';
 import {
     IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.js';
 export {
     IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.js';
 import {
     BDBFormat,
     _decode_BDBFormat,
     _encode_BDBFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta.js';
 export {
     BDBFormat,
     _decode_BDBFormat,
     _encode_BDBFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SBHForBRTC */
 /**

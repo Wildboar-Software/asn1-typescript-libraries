@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta';
-export { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta';
-import { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va';
-export { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.js';
+export { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.js';
+import { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va.js';
+export { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va.js';
 import {
   Content,
   _decode_Content,
   _encode_Content,
-} from '../ASN1SOAP/Content.ta';
+} from '../ASN1SOAP/Content.ta.js';
 export {
   Content,
   _decode_Content,
   _encode_Content,
-} from '../ASN1SOAP/Content.ta';
+} from '../ASN1SOAP/Content.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION HeaderBlock */
 /**

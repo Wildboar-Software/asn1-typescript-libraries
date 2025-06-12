@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ContentEnvelopeInformationType,
   _decode_ContentEnvelopeInformationType,
   _encode_ContentEnvelopeInformationType,
-} from '../CMAIL/ContentEnvelopeInformationType.ta';
+} from '../CMAIL/ContentEnvelopeInformationType.ta.js';
 export {
   ContentEnvelopeInformationType,
   _decode_ContentEnvelopeInformationType,
   _encode_ContentEnvelopeInformationType,
-} from '../CMAIL/ContentEnvelopeInformationType.ta';
+} from '../CMAIL/ContentEnvelopeInformationType.ta.js';
 import {
   EntityType,
   _decode_EntityType,
   _encode_EntityType,
-} from '../CMAIL/EntityType.ta';
+} from '../CMAIL/EntityType.ta.js';
 export {
   EntityType,
   _decode_EntityType,
   _encode_EntityType,
-} from '../CMAIL/EntityType.ta';
+} from '../CMAIL/EntityType.ta.js';
 import {
   EntityChallengeType,
   _decode_EntityChallengeType,
   _encode_EntityChallengeType,
-} from '../CMAIL/EntityChallengeType.ta';
+} from '../CMAIL/EntityChallengeType.ta.js';
 export {
   EntityChallengeType,
   _decode_EntityChallengeType,
   _encode_EntityChallengeType,
-} from '../CMAIL/EntityChallengeType.ta';
+} from '../CMAIL/EntityChallengeType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntityEnvelopeInformationType */
 /**

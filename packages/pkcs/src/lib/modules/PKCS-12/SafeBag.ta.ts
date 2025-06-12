@@ -5,19 +5,19 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKCS12Attribute,
     _decode_PKCS12Attribute,
     _encode_PKCS12Attribute,
-} from "../PKCS-12/PKCS12Attribute.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
+} from "../PKCS-12/PKCS12Attribute.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
 export {
     PKCS12Attribute,
     _decode_PKCS12Attribute,
     _encode_PKCS12Attribute,
-} from "../PKCS-12/PKCS12Attribute.ta";
-export { PKCS12BagSet } from "../PKCS-12/PKCS12BagSet.osa";
+} from "../PKCS-12/PKCS12Attribute.ta.js";
+export { PKCS12BagSet } from "../PKCS-12/PKCS12BagSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SafeBag */
 /**

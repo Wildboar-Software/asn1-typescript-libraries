@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Access_Control_Change_Attribute_actual_values,
   _decode_Access_Control_Change_Attribute_actual_values,
   _encode_Access_Control_Change_Attribute_actual_values,
-} from '../ISO8571-FTAM/Access-Control-Change-Attribute-actual-values.ta';
+} from '../ISO8571-FTAM/Access-Control-Change-Attribute-actual-values.ta.js';
 export {
   Access_Control_Change_Attribute_actual_values,
   _decode_Access_Control_Change_Attribute_actual_values,
   _encode_Access_Control_Change_Attribute_actual_values,
-} from '../ISO8571-FTAM/Access-Control-Change-Attribute-actual-values.ta';
+} from '../ISO8571-FTAM/Access-Control-Change-Attribute-actual-values.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Control_Change_Attribute */
 /**

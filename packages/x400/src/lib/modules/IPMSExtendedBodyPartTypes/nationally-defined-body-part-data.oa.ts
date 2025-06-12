@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
-} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.js';
 export {
     NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
-} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta';
-import { id_et_nationally_defined } from '../IPMSObjectIdentifiers/id-et-nationally-defined.va';
-export { id_et_nationally_defined } from '../IPMSObjectIdentifiers/id-et-nationally-defined.va';
+} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.js';
+import { id_et_nationally_defined } from '../IPMSObjectIdentifiers/id-et-nationally-defined.va.js';
+export { id_et_nationally_defined } from '../IPMSObjectIdentifiers/id-et-nationally-defined.va.js';
 
 /* START_OF_SYMBOL_DEFINITION nationally_defined_body_part_data */
 /**

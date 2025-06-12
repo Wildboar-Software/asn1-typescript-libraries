@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va";
-export { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va";
+import { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.js";
+export { id_regCtrl } from "../PKIXCRMF-2009/id-regCtrl.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_regCtrl_protocolEncrKey */
 /**

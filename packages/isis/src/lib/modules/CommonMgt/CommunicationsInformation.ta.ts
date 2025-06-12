@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InformationType,
   _decode_InformationType,
   _encode_InformationType,
-} from '../CommonMgt/InformationType.ta';
+} from '../CommonMgt/InformationType.ta.js';
 export {
   InformationType,
   _decode_InformationType,
   _encode_InformationType,
-} from '../CommonMgt/InformationType.ta';
+} from '../CommonMgt/InformationType.ta.js';
 import {
   InformationData,
   _decode_InformationData,
   _encode_InformationData,
-} from '../CommonMgt/InformationData.ta';
+} from '../CommonMgt/InformationData.ta.js';
 export {
   InformationData,
   _decode_InformationData,
   _encode_InformationData,
-} from '../CommonMgt/InformationData.ta';
+} from '../CommonMgt/InformationData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CommunicationsInformation */
 /**

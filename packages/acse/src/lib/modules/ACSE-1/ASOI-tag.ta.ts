@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ASOI_tag_Item,
   _decode_ASOI_tag_Item,
   _encode_ASOI_tag_Item,
-} from '../ACSE-1/ASOI-tag-Item.ta';
+} from '../ACSE-1/ASOI-tag-Item.ta.js';
 export {
   ASOI_tag_Item,
   _decode_ASOI_tag_Item,
   _encode_ASOI_tag_Item,
-} from '../ACSE-1/ASOI-tag-Item.ta';
+} from '../ACSE-1/ASOI-tag-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ASOI_tag */
 /**

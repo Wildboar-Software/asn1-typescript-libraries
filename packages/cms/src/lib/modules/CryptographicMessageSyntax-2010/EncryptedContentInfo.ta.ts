@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.js";
 import {
     EncryptedContentInfoType,
     _get_decoder_for_EncryptedContentInfoType,
     _get_encoder_for_EncryptedContentInfoType,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta.js";
 export {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.js";
 export {
     EncryptedContentInfoType,
     _get_decoder_for_EncryptedContentInfoType,
     _get_encoder_for_EncryptedContentInfoType,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RevokedInfo,
     _decode_RevokedInfo,
     _encode_RevokedInfo,
-} from "../OCSP-2013-08/RevokedInfo.ta";
+} from "../OCSP-2013-08/RevokedInfo.ta.js";
 import {
     UnknownInfo,
     _decode_UnknownInfo,
     _encode_UnknownInfo,
-} from "../OCSP-2013-08/UnknownInfo.ta";
+} from "../OCSP-2013-08/UnknownInfo.ta.js";
 export {
     RevokedInfo,
     _decode_RevokedInfo,
     _encode_RevokedInfo,
-} from "../OCSP-2013-08/RevokedInfo.ta";
+} from "../OCSP-2013-08/RevokedInfo.ta.js";
 export {
     UnknownInfo,
     _decode_UnknownInfo,
     _encode_UnknownInfo,
-} from "../OCSP-2013-08/UnknownInfo.ta";
+} from "../OCSP-2013-08/UnknownInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertStatus */
 /**

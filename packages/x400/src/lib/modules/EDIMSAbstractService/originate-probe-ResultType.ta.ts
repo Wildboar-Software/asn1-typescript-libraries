@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta';
+} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.js';
 export {
     ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta';
+} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.js';
 import {
     ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
-} from '../MTSAbstractService/ProbeSubmissionTime.ta';
+} from '../MTSAbstractService/ProbeSubmissionTime.ta.js';
 export {
     ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
-} from '../MTSAbstractService/ProbeSubmissionTime.ta';
+} from '../MTSAbstractService/ProbeSubmissionTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION originate_probe_ResultType */
 /**

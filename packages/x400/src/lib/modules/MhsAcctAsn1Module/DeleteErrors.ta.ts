@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RetrievalError,
     RetrievalError_attribute_error /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     service_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RetrievalError,
     _encode_RetrievalError,
-} from '../MhsAcctAsn1Module/RetrievalError.ta';
+} from '../MhsAcctAsn1Module/RetrievalError.ta.js';
 export {
     RetrievalError,
     RetrievalError_attribute_error /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,7 +111,7 @@ export {
     service_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RetrievalError,
     _encode_RetrievalError,
-} from '../MhsAcctAsn1Module/RetrievalError.ta';
+} from '../MhsAcctAsn1Module/RetrievalError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeleteErrors */
 /**

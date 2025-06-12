@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Value,
   _enum_for_Value,
@@ -81,7 +81,7 @@ import {
   receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Value,
   _encode_Value,
-} from '../ASN1SOAP/Value.ta';
+} from '../ASN1SOAP/Value.ta.js';
 export {
   Value,
   _enum_for_Value,
@@ -97,9 +97,9 @@ export {
   receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Value,
   _encode_Value,
-} from '../ASN1SOAP/Value.ta';
-import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta';
-export { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta';
+} from '../ASN1SOAP/Value.ta.js';
+import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.js';
+export { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Code */
 /**

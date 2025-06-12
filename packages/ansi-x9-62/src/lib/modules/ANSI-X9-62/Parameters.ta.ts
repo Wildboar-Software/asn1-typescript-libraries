@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ECParameters,
     _decode_ECParameters,
     _encode_ECParameters,
-} from "../ANSI-X9-62/ECParameters.ta";
-export { CurveNames } from "../ANSI-X9-62/CurveNames.osa";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca";
+} from "../ANSI-X9-62/ECParameters.ta.js";
+export { CurveNames } from "../ANSI-X9-62/CurveNames.osa.js";
+export { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
 export {
     ECParameters,
     _decode_ECParameters,
     _encode_ECParameters,
-} from "../ANSI-X9-62/ECParameters.ta";
+} from "../ANSI-X9-62/ECParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Parameters */
 /**

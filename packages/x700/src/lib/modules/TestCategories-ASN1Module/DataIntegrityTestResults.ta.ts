@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DataIntegrityTestResults_testResult,
     _decode_DataIntegrityTestResults_testResult,
     _encode_DataIntegrityTestResults_testResult,
-} from '../TestCategories-ASN1Module/DataIntegrityTestResults-testResult.ta';
+} from '../TestCategories-ASN1Module/DataIntegrityTestResults-testResult.ta.js';
 export {
     DataIntegrityTestResults_testResult,
     _decode_DataIntegrityTestResults_testResult,
     _encode_DataIntegrityTestResults_testResult,
-} from '../TestCategories-ASN1Module/DataIntegrityTestResults-testResult.ta';
+} from '../TestCategories-ASN1Module/DataIntegrityTestResults-testResult.ta.js';
 import {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 export {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 import {
     TestThreshold,
     _decode_TestThreshold,
     _encode_TestThreshold,
-} from '../TestCategories-ASN1Module/TestThreshold.ta';
+} from '../TestCategories-ASN1Module/TestThreshold.ta.js';
 export {
     TestThreshold,
     _decode_TestThreshold,
     _encode_TestThreshold,
-} from '../TestCategories-ASN1Module/TestThreshold.ta';
+} from '../TestCategories-ASN1Module/TestThreshold.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DataIntegrityTestResults */
 /**

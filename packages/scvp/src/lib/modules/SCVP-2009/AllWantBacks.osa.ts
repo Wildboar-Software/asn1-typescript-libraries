@@ -65,15 +65,15 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-import { WantBackSet } from '../SCVP-2009/WantBackSet.osa';
-export { WantBackSet } from '../SCVP-2009/WantBackSet.osa';
-import { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa';
-export { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa';
-import { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa';
-export { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+import { WantBackSet } from '../SCVP-2009/WantBackSet.osa.js';
+export { WantBackSet } from '../SCVP-2009/WantBackSet.osa.js';
+import { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa.js';
+export { ACertWantBackSet } from '../SCVP-2009/ACertWantBackSet.osa.js';
+import { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa.js';
+export { AnyWantBackSet } from '../SCVP-2009/AnyWantBackSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION AllWantBacks */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../CryptographicMessageSyntax/ContentInfo.ta";
-import { pkcs_9_at_pkcs7PDU } from "../PKCS-9/pkcs-9-at-pkcs7PDU.va";
+} from "../CryptographicMessageSyntax/ContentInfo.ta.js";
+import { pkcs_9_at_pkcs7PDU } from "../PKCS-9/pkcs-9-at-pkcs7PDU.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pKCS7PDU */
 /**

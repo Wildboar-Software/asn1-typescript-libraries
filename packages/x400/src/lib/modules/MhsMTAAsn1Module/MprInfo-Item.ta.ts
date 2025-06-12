@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EMailMpduIdentifier,
     _decode_EMailMpduIdentifier,
     _encode_EMailMpduIdentifier,
-} from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta';
+} from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.js';
 export {
     EMailMpduIdentifier,
     _decode_EMailMpduIdentifier,
     _encode_EMailMpduIdentifier,
-} from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta';
+} from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.js';
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 import {
     ProcessingState,
     ProcessingState_idle /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -110,7 +110,7 @@ import {
     unknownFunction /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ProcessingState,
     _encode_ProcessingState,
-} from '../MhsMTAAsn1Module/ProcessingState.ta';
+} from '../MhsMTAAsn1Module/ProcessingState.ta.js';
 export {
     ProcessingState,
     ProcessingState_idle /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -135,7 +135,7 @@ export {
     unknownFunction /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ProcessingState,
     _encode_ProcessingState,
-} from '../MhsMTAAsn1Module/ProcessingState.ta';
+} from '../MhsMTAAsn1Module/ProcessingState.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MprInfo_Item */
 /**

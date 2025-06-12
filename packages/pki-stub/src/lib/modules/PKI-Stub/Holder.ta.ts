@@ -10,22 +10,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../PKI-Stub/IssuerSerial.ta";
+} from "../PKI-Stub/IssuerSerial.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "../PKI-Stub/GeneralNames.ta";
+} from "../PKI-Stub/GeneralNames.ta.js";
 import {
     ObjectDigestInfo,
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
-} from "../PKI-Stub/ObjectDigestInfo.ta";
+} from "../PKI-Stub/ObjectDigestInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Holder */
 /**

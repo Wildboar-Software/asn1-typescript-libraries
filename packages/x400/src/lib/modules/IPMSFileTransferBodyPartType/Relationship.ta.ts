@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExplicitRelationship,
     ExplicitRelationship_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     extension /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitRelationship,
     _encode_ExplicitRelationship,
-} from '../IPMSFileTransferBodyPartType/ExplicitRelationship.ta';
+} from '../IPMSFileTransferBodyPartType/ExplicitRelationship.ta.js';
 export {
     ExplicitRelationship,
     ExplicitRelationship_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,7 +91,7 @@ export {
     extension /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitRelationship,
     _encode_ExplicitRelationship,
-} from '../IPMSFileTransferBodyPartType/ExplicitRelationship.ta';
+} from '../IPMSFileTransferBodyPartType/ExplicitRelationship.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Relationship */
 /**

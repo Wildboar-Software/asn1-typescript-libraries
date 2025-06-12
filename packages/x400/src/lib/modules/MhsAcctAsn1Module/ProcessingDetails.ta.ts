@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProcessingDetail,
     _decode_ProcessingDetail,
     _encode_ProcessingDetail,
-} from '../MhsAcctAsn1Module/ProcessingDetail.ta';
+} from '../MhsAcctAsn1Module/ProcessingDetail.ta.js';
 export {
     ProcessingDetail,
     _decode_ProcessingDetail,
     _encode_ProcessingDetail,
-} from '../MhsAcctAsn1Module/ProcessingDetail.ta';
+} from '../MhsAcctAsn1Module/ProcessingDetail.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProcessingDetails */
 /**

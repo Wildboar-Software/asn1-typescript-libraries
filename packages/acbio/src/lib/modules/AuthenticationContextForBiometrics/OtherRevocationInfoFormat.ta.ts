@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca';
-export { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca';
-import { OtherRevocation } from '../AuthenticationContextForBiometrics/OtherRevocation.osa';
-export { OtherRevocation } from '../AuthenticationContextForBiometrics/OtherRevocation.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca.js';
+export { OTHERREVOCATION } from '../AuthenticationContextForBiometrics/OTHERREVOCATION.oca.js';
+import { OtherRevocation } from '../AuthenticationContextForBiometrics/OtherRevocation.osa.js';
+export { OtherRevocation } from '../AuthenticationContextForBiometrics/OtherRevocation.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION OtherRevocationInfoFormat */
 /**

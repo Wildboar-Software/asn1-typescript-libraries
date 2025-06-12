@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 export {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PermissibleEncodedInformationTypes */
 /**

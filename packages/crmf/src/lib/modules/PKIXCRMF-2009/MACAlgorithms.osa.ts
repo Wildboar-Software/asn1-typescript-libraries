@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca";
-import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/maca-hMAC-SHA1.oa";
+import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
+import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/maca-hMAC-SHA1.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION MACAlgorithms */
 /**

@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-import { BasisTypes } from "../SEC1-v1-9/BasisTypes.osa";
-export { BasisTypes } from "../SEC1-v1-9/BasisTypes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+import { BasisTypes } from "../SEC1-v1-9/BasisTypes.osa.js";
+export { BasisTypes } from "../SEC1-v1-9/BasisTypes.osa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION Characteristic_two */

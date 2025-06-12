@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta";
-export { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta";
-import { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta";
-export { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.js";
+export { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.js";
+import { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.js";
+export { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CommunicationsInformation */

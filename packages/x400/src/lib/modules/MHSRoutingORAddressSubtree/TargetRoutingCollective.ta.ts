@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RoutingCollectiveName,
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
-} from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta';
+} from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.js';
 export {
     RoutingCollectiveName,
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
-} from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta';
+} from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.js';
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
-import { ub_local_user_identifier } from '../MHSRoutingORAddressSubtree/ub-local-user-identifier.va';
-export { ub_local_user_identifier } from '../MHSRoutingORAddressSubtree/ub-local-user-identifier.va';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
+import { ub_local_user_identifier } from '../MHSRoutingORAddressSubtree/ub-local-user-identifier.va.js';
+export { ub_local_user_identifier } from '../MHSRoutingORAddressSubtree/ub-local-user-identifier.va.js';
 
 /* START_OF_SYMBOL_DEFINITION TargetRoutingCollective */
 /**

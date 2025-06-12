@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va.js";
 import {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKCS-1/RSASSA-PSS-params.ta";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-export { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va";
+} from "../PKCS-1/RSASSA-PSS-params.ta.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va.js";
 export {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKCS-1/RSASSA-PSS-params.ta";
+} from "../PKCS-1/RSASSA-PSS-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union12_Intersection0_Element */
 /**

@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   OrigTransactionID,
   _decode_OrigTransactionID,
   _encode_OrigTransactionID,
-} from '../TCAPMessages/OrigTransactionID.ta';
+} from '../TCAPMessages/OrigTransactionID.ta.js';
 export {
   OrigTransactionID,
   _decode_OrigTransactionID,
   _encode_OrigTransactionID,
-} from '../TCAPMessages/OrigTransactionID.ta';
+} from '../TCAPMessages/OrigTransactionID.ta.js';
 import {
   DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
-} from '../TCAPMessages/DialoguePortion.ta';
+} from '../TCAPMessages/DialoguePortion.ta.js';
 export {
   DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
-} from '../TCAPMessages/DialoguePortion.ta';
+} from '../TCAPMessages/DialoguePortion.ta.js';
 import {
   ComponentPortion,
   _decode_ComponentPortion,
   _encode_ComponentPortion,
-} from '../TCAPMessages/ComponentPortion.ta';
+} from '../TCAPMessages/ComponentPortion.ta.js';
 export {
   ComponentPortion,
   _decode_ComponentPortion,
   _encode_ComponentPortion,
-} from '../TCAPMessages/ComponentPortion.ta';
+} from '../TCAPMessages/ComponentPortion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Begin */
 /**

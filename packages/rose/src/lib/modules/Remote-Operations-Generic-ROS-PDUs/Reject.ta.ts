@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 export {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 import {
   Reject_problem,
   _decode_Reject_problem,
   _encode_Reject_problem,
-} from '../Remote-Operations-Generic-ROS-PDUs/Reject-problem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Reject-problem.ta.js';
 export {
   Reject_problem,
   _decode_Reject_problem,
   _encode_Reject_problem,
-} from '../Remote-Operations-Generic-ROS-PDUs/Reject-problem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Reject-problem.ta.js';
 import {
   RejectProblem,
   RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -128,7 +128,7 @@ import {
   returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RejectProblem,
   _encode_RejectProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.js';
 export {
   RejectProblem,
   RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -171,7 +171,7 @@ export {
   returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RejectProblem,
   _encode_RejectProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Reject */
 /**

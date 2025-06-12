@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
-} from '../ISO8823-PRESENTATION/ARU-PPDU.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU.ta.js';
 export {
     ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
-} from '../ISO8823-PRESENTATION/ARU-PPDU.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU.ta.js';
 import {
     ARP_PPDU,
     _decode_ARP_PPDU,
     _encode_ARP_PPDU,
-} from '../ISO8823-PRESENTATION/ARP-PPDU.ta';
+} from '../ISO8823-PRESENTATION/ARP-PPDU.ta.js';
 export {
     ARP_PPDU,
     _decode_ARP_PPDU,
     _encode_ARP_PPDU,
-} from '../ISO8823-PRESENTATION/ARP-PPDU.ta';
+} from '../ISO8823-PRESENTATION/ARP-PPDU.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Abort_type */
 /**

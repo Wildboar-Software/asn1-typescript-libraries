@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegistrationTypes_registrations,
     RegistrationTypes_registrations_auto_action_registrations /* IMPORTED_LONG_NAMED_BIT */,
@@ -82,7 +82,7 @@ import {
     message_group_registrations /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_registrations,
     _encode_RegistrationTypes_registrations,
-} from '../MSAbstractService/RegistrationTypes-registrations.ta';
+} from '../MSAbstractService/RegistrationTypes-registrations.ta.js';
 export {
     RegistrationTypes_registrations,
     RegistrationTypes_registrations_auto_action_registrations /* IMPORTED_LONG_NAMED_BIT */,
@@ -99,19 +99,19 @@ export {
     message_group_registrations /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_registrations,
     _encode_RegistrationTypes_registrations,
-} from '../MSAbstractService/RegistrationTypes-registrations.ta';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../MSAbstractService/RegistrationTypes-registrations.ta.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 import {
     MessageGroupsRestriction,
     _decode_MessageGroupsRestriction,
     _encode_MessageGroupsRestriction,
-} from '../MSAbstractService/MessageGroupsRestriction.ta';
+} from '../MSAbstractService/MessageGroupsRestriction.ta.js';
 export {
     MessageGroupsRestriction,
     _decode_MessageGroupsRestriction,
     _encode_MessageGroupsRestriction,
-} from '../MSAbstractService/MessageGroupsRestriction.ta';
+} from '../MSAbstractService/MessageGroupsRestriction.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegistrationTypes */
 /**

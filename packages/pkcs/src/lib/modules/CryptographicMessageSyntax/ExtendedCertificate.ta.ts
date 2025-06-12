@@ -4,37 +4,37 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ExtendedCertificateInfo,
     _decode_ExtendedCertificateInfo,
     _encode_ExtendedCertificateInfo,
-} from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta";
+} from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta.js";
 import {
     Signature,
     _decode_Signature,
     _encode_Signature,
-} from "../CryptographicMessageSyntax/Signature.ta";
+} from "../CryptographicMessageSyntax/Signature.ta.js";
 import {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.js";
 export {
     ExtendedCertificateInfo,
     _decode_ExtendedCertificateInfo,
     _encode_ExtendedCertificateInfo,
-} from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta";
+} from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta.js";
 export {
     Signature,
     _decode_Signature,
     _encode_Signature,
-} from "../CryptographicMessageSyntax/Signature.ta";
+} from "../CryptographicMessageSyntax/Signature.ta.js";
 export {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificate */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Ack_error,
     _decode_Ack_error,
     _encode_Ack_error,
-} from '../E-health-send-and-ack/Ack-error.ta';
+} from '../E-health-send-and-ack/Ack-error.ta.js';
 export {
     Ack_error,
     _decode_Ack_error,
     _encode_Ack_error,
-} from '../E-health-send-and-ack/Ack-error.ta';
+} from '../E-health-send-and-ack/Ack-error.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Ack */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SystemTiming_sourceType,
     _enum_for_SystemTiming_sourceType,
@@ -77,7 +77,7 @@ import {
     slavedTimingTerminationSignal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SystemTiming_sourceType,
     _encode_SystemTiming_sourceType,
-} from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta';
+} from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta.js';
 export {
     SystemTiming_sourceType,
     _enum_for_SystemTiming_sourceType,
@@ -89,17 +89,17 @@ export {
     slavedTimingTerminationSignal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SystemTiming_sourceType,
     _encode_SystemTiming_sourceType,
-} from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta';
+} from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta.js';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SystemTiming */
 /**

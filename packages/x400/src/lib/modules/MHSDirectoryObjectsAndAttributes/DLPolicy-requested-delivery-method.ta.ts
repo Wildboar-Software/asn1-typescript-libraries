@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestedDeliveryMethod,
     _decode_RequestedDeliveryMethod,
     _encode_RequestedDeliveryMethod,
-} from '../MTSAbstractService/RequestedDeliveryMethod.ta';
+} from '../MTSAbstractService/RequestedDeliveryMethod.ta.js';
 export {
     RequestedDeliveryMethod,
     _decode_RequestedDeliveryMethod,
     _encode_RequestedDeliveryMethod,
-} from '../MTSAbstractService/RequestedDeliveryMethod.ta';
+} from '../MTSAbstractService/RequestedDeliveryMethod.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DLPolicy_requested_delivery_method */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,25 +91,25 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa';
-export { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa';
-import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-import { mhs_supported_attributes } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-attributes.oa';
-export { mhs_supported_attributes } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-attributes.oa';
-import { mhs_supported_automatic_actions } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-automatic-actions.oa';
-export { mhs_supported_automatic_actions } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-automatic-actions.oa';
-import { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-matching-rules.oa';
-export { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-matching-rules.oa';
-import { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa';
-export { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa';
-import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa';
-export { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa';
-import { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va';
-export { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.js';
+export { applicationEntity } from '@wildboar/x500/src/lib/modules/SelectedObjectClasses/applicationEntity.oa.js';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+import { mhs_supported_attributes } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-attributes.oa.js';
+export { mhs_supported_attributes } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-attributes.oa.js';
+import { mhs_supported_automatic_actions } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-automatic-actions.oa.js';
+export { mhs_supported_automatic_actions } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-automatic-actions.oa.js';
+import { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-matching-rules.oa.js';
+export { mhs_supported_matching_rules } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-matching-rules.oa.js';
+import { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa.js';
+export { mhs_supported_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-supported-content-types.oa.js';
+import { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.js';
+export { protocolInformation } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/protocolInformation.oa.js';
+import { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va.js';
+export { id_oc_mhs_message_store } from '../MHSObjectIdentifiers/id-oc-mhs-message-store.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mhs_message_store */
 /**

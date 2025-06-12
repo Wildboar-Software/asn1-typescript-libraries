@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { aa_countersignature } from "../CryptographicMessageSyntax-2010/aa-countersignature.oa";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { aa_countersignature } from "../CryptographicMessageSyntax-2010/aa-countersignature.oa";
+import { aa_countersignature } from "../CryptographicMessageSyntax-2010/aa-countersignature.oa.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { aa_countersignature } from "../CryptographicMessageSyntax-2010/aa-countersignature.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION UnsignedAttributes */
 /**

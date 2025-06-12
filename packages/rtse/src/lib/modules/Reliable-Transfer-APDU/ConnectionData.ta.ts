@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
-export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
+export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
 import {
   SessionConnectionIdentifier,
   _decode_SessionConnectionIdentifier,
   _encode_SessionConnectionIdentifier,
-} from '../Reliable-Transfer-APDU/SessionConnectionIdentifier.ta';
+} from '../Reliable-Transfer-APDU/SessionConnectionIdentifier.ta.js';
 export {
   SessionConnectionIdentifier,
   _decode_SessionConnectionIdentifier,
   _encode_SessionConnectionIdentifier,
-} from '../Reliable-Transfer-APDU/SessionConnectionIdentifier.ta';
+} from '../Reliable-Transfer-APDU/SessionConnectionIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectionData */
 /**

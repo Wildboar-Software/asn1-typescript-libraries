@@ -4,52 +4,52 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from "../PkiPmiExternalDataTypes/AdministrationDomainName.ta";
+} from "../PkiPmiExternalDataTypes/AdministrationDomainName.ta.js";
 import {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from "../PkiPmiExternalDataTypes/CountryName.ta";
+} from "../PkiPmiExternalDataTypes/CountryName.ta.js";
 import {
     NetworkAddress,
     _decode_NetworkAddress,
     _encode_NetworkAddress,
-} from "../PkiPmiExternalDataTypes/NetworkAddress.ta";
+} from "../PkiPmiExternalDataTypes/NetworkAddress.ta.js";
 import {
     NumericUserIdentifier,
     _decode_NumericUserIdentifier,
     _encode_NumericUserIdentifier,
-} from "../PkiPmiExternalDataTypes/NumericUserIdentifier.ta";
+} from "../PkiPmiExternalDataTypes/NumericUserIdentifier.ta.js";
 import {
     OrganizationalUnitNames,
     _decode_OrganizationalUnitNames,
     _encode_OrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/OrganizationalUnitNames.ta";
+} from "../PkiPmiExternalDataTypes/OrganizationalUnitNames.ta.js";
 import {
     OrganizationName,
     _decode_OrganizationName,
     _encode_OrganizationName,
-} from "../PkiPmiExternalDataTypes/OrganizationName.ta";
+} from "../PkiPmiExternalDataTypes/OrganizationName.ta.js";
 import {
     PersonalName,
     _decode_PersonalName,
     _encode_PersonalName,
-} from "../PkiPmiExternalDataTypes/PersonalName.ta";
+} from "../PkiPmiExternalDataTypes/PersonalName.ta.js";
 import {
     PrivateDomainName,
     _decode_PrivateDomainName,
     _encode_PrivateDomainName,
-} from "../PkiPmiExternalDataTypes/PrivateDomainName.ta";
+} from "../PkiPmiExternalDataTypes/PrivateDomainName.ta.js";
 import {
     TerminalIdentifier,
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
-} from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta";
+} from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BuiltInStandardAttributes */
 /**

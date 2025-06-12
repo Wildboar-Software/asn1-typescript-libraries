@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   DestTransactionID,
   _decode_DestTransactionID,
   _encode_DestTransactionID,
-} from '../TCAPMessages/DestTransactionID.ta';
+} from '../TCAPMessages/DestTransactionID.ta.js';
 export {
   DestTransactionID,
   _decode_DestTransactionID,
   _encode_DestTransactionID,
-} from '../TCAPMessages/DestTransactionID.ta';
+} from '../TCAPMessages/DestTransactionID.ta.js';
 import {
   Abort_reason,
   _decode_Abort_reason,
   _encode_Abort_reason,
-} from '../TCAPMessages/Abort-reason.ta';
+} from '../TCAPMessages/Abort-reason.ta.js';
 export {
   Abort_reason,
   _decode_Abort_reason,
   _encode_Abort_reason,
-} from '../TCAPMessages/Abort-reason.ta';
+} from '../TCAPMessages/Abort-reason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Abort */
 /**

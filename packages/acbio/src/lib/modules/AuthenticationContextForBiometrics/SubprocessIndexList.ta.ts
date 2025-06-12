@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
-} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.js';
 export {
     SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
-} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubprocessIndexList */
 /**

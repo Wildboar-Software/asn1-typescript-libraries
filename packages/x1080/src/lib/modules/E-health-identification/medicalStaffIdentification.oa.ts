@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_med_staff } from '../E-health-identification/id-med-staff.va';
-export { id_med_staff } from '../E-health-identification/id-med-staff.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_med_staff } from '../E-health-identification/id-med-staff.va.js';
+export { id_med_staff } from '../E-health-identification/id-med-staff.va.js';
 import {
     MedicalStaffIdentification,
     _decode_MedicalStaffIdentification,
     _encode_MedicalStaffIdentification,
-} from '../E-health-identification/MedicalStaffIdentification.ta';
+} from '../E-health-identification/MedicalStaffIdentification.ta.js';
 export {
     MedicalStaffIdentification,
     _decode_MedicalStaffIdentification,
     _encode_MedicalStaffIdentification,
-} from '../E-health-identification/MedicalStaffIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/MedicalStaffIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION medicalStaffIdentification */
 /**

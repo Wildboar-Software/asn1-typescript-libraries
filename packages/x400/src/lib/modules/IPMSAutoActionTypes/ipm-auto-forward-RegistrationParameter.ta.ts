@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IPMAutoForwardRegistrationParameter,
     _decode_IPMAutoForwardRegistrationParameter,
     _encode_IPMAutoForwardRegistrationParameter,
-} from '../IPMSAutoActionTypes/IPMAutoForwardRegistrationParameter.ta';
+} from '../IPMSAutoActionTypes/IPMAutoForwardRegistrationParameter.ta.js';
 export {
     IPMAutoForwardRegistrationParameter,
     _decode_IPMAutoForwardRegistrationParameter,
     _encode_IPMAutoForwardRegistrationParameter,
-} from '../IPMSAutoActionTypes/IPMAutoForwardRegistrationParameter.ta';
+} from '../IPMSAutoActionTypes/IPMAutoForwardRegistrationParameter.ta.js';
 import {
     AutoForwardRegistrationParameter88,
     _decode_AutoForwardRegistrationParameter88,
     _encode_AutoForwardRegistrationParameter88,
-} from '../IPMSAutoActionTypes/AutoForwardRegistrationParameter88.ta';
+} from '../IPMSAutoActionTypes/AutoForwardRegistrationParameter88.ta.js';
 export {
     AutoForwardRegistrationParameter88,
     _decode_AutoForwardRegistrationParameter88,
     _encode_AutoForwardRegistrationParameter88,
-} from '../IPMSAutoActionTypes/AutoForwardRegistrationParameter88.ta';
+} from '../IPMSAutoActionTypes/AutoForwardRegistrationParameter88.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ipm_auto_forward_RegistrationParameter */
 /**

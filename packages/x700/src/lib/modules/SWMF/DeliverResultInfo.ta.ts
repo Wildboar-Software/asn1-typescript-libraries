@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
-} from '../SWMF/DeliverId.ta';
+} from '../SWMF/DeliverId.ta.js';
 export {
     DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
-} from '../SWMF/DeliverId.ta';
+} from '../SWMF/DeliverId.ta.js';
 import {
     DeliverResult,
     DeliverResult_pass /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -100,7 +100,7 @@ import {
     unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliverResult,
     _encode_DeliverResult,
-} from '../SWMF/DeliverResult.ta';
+} from '../SWMF/DeliverResult.ta.js';
 export {
     DeliverResult,
     DeliverResult_pass /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -125,17 +125,17 @@ export {
     unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliverResult,
     _encode_DeliverResult,
-} from '../SWMF/DeliverResult.ta';
+} from '../SWMF/DeliverResult.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliverResultInfo */
 /**

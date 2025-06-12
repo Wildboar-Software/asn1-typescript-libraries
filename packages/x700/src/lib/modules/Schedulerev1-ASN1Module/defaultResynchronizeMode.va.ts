@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ResynchronizeMode,
     _decode_ResynchronizeMode,
     _encode_ResynchronizeMode,
-} from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta';
+} from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta.js';
 export {
     ResynchronizeMode,
     _decode_ResynchronizeMode,
     _encode_ResynchronizeMode,
-} from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta';
+} from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultResynchronizeMode */
 /**

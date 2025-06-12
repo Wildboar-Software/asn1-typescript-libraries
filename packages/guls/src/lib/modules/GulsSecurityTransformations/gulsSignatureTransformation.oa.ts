@@ -66,17 +66,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ObjectIdentifier,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-import { KEY_INFORMATION } from './KEY-INFORMATION.oca';
-export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca';
-import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+import { KEY_INFORMATION } from './KEY-INFORMATION.oca.js';
+export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.js';
+import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.js';
 import {
     gulsSignatureTransformation_XformedDataType,
     _decode_gulsSignatureTransformation_XformedDataType,
     _encode_gulsSignatureTransformation_XformedDataType,
-} from "../GulsSecurityTransformations/gulsSignatureTransformation-XformedDataType.ta";
+} from "../GulsSecurityTransformations/gulsSignatureTransformation-XformedDataType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION gulsSignatureTransformation */
 /**

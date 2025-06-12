@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 export {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OriginatorInfo */
 /**

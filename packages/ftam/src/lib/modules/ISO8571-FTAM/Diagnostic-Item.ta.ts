@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Diagnostic_Item_diagnostic_type,
   Diagnostic_Item_diagnostic_type_informative /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Diagnostic_Item_diagnostic_type,
   _encode_Diagnostic_Item_diagnostic_type,
-} from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta';
+} from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.js';
 export {
   Diagnostic_Item_diagnostic_type,
   Diagnostic_Item_diagnostic_type_informative /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
   permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Diagnostic_Item_diagnostic_type,
   _encode_Diagnostic_Item_diagnostic_type,
-} from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta';
+} from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.js';
 import {
   Entity_Reference,
   Entity_Reference_no_categorization_possible /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -104,7 +104,7 @@ import {
   responding_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Entity_Reference,
   _encode_Entity_Reference,
-} from '../ISO8571-FTAM/Entity-Reference.ta';
+} from '../ISO8571-FTAM/Entity-Reference.ta.js';
 export {
   Entity_Reference,
   Entity_Reference_no_categorization_possible /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -121,7 +121,7 @@ export {
   responding_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Entity_Reference,
   _encode_Entity_Reference,
-} from '../ISO8571-FTAM/Entity-Reference.ta';
+} from '../ISO8571-FTAM/Entity-Reference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Diagnostic_Item */
 /**

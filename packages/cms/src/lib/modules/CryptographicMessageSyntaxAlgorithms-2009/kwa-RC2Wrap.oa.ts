@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
+import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_alg_CMSRC2wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMSRC2wrap.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_alg_CMSRC2wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMSRC2wrap.va.js";
 import {
     RC2wrapParameter,
     _decode_RC2wrapParameter,
     _encode_RC2wrapParameter,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta.js";
+export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -27,14 +27,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_alg_CMSRC2wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMSRC2wrap.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_alg_CMSRC2wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMSRC2wrap.va.js";
 export {
     RC2wrapParameter,
     _decode_RC2wrapParameter,
     _encode_RC2wrapParameter,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION kwa_RC2Wrap */
 /**

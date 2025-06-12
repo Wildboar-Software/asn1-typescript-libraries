@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va";
+import { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va.js";
 import {
     MessageDigest,
     _decode_MessageDigest,
     _encode_MessageDigest,
-} from "../CryptographicMessageSyntax-2010/MessageDigest.ta";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va";
+} from "../CryptographicMessageSyntax-2010/MessageDigest.ta.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va.js";
 export {
     MessageDigest,
     _decode_MessageDigest,
     _encode_MessageDigest,
-} from "../CryptographicMessageSyntax-2010/MessageDigest.ta";
+} from "../CryptographicMessageSyntax-2010/MessageDigest.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_messageDigest */
 /**

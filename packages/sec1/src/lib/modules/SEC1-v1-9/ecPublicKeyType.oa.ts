@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va";
-export { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va";
-import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta";
-export { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va.js";
+export { id_ecPublicKey } from "../SEC1-v1-9/id-ecPublicKey.va.js";
+import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.js";
+export { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ecPublicKeyType */

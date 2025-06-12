@@ -6,27 +6,27 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.js";
 import {
     MessageImprint,
     _decode_MessageImprint,
     _encode_MessageImprint,
-} from "../PKIXTSP/MessageImprint.ta";
+} from "../PKIXTSP/MessageImprint.ta.js";
 import {
     TimeStampReq_version,
     _decode_TimeStampReq_version,
     _encode_TimeStampReq_version,
-} from "../PKIXTSP/TimeStampReq-version.ta";
+} from "../PKIXTSP/TimeStampReq-version.ta.js";
 import {
     TSAPolicyId,
     _decode_TSAPolicyId,
     _encode_TSAPolicyId,
-} from "../PKIXTSP/TSAPolicyId.ta";
+} from "../PKIXTSP/TSAPolicyId.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeStampReq */
 /**

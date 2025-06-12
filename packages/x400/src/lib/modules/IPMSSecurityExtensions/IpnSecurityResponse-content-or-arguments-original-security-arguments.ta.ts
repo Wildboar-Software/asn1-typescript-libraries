@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OriginalContentIntegrityCheck,
     _decode_OriginalContentIntegrityCheck,
     _encode_OriginalContentIntegrityCheck,
-} from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta';
+} from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta.js';
 export {
     OriginalContentIntegrityCheck,
     _decode_OriginalContentIntegrityCheck,
     _encode_OriginalContentIntegrityCheck,
-} from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta';
+} from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta.js';
 import {
     OriginalMessageOriginAuthenticationCheck,
     _decode_OriginalMessageOriginAuthenticationCheck,
     _encode_OriginalMessageOriginAuthenticationCheck,
-} from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta';
+} from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta.js';
 export {
     OriginalMessageOriginAuthenticationCheck,
     _decode_OriginalMessageOriginAuthenticationCheck,
     _encode_OriginalMessageOriginAuthenticationCheck,
-} from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta';
+} from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta.js';
 import {
     OriginalMessageToken,
     _decode_OriginalMessageToken,
     _encode_OriginalMessageToken,
-} from '../IPMSSecurityExtensions/OriginalMessageToken.ta';
+} from '../IPMSSecurityExtensions/OriginalMessageToken.ta.js';
 export {
     OriginalMessageToken,
     _decode_OriginalMessageToken,
     _encode_OriginalMessageToken,
-} from '../IPMSSecurityExtensions/OriginalMessageToken.ta';
+} from '../IPMSSecurityExtensions/OriginalMessageToken.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments_original_security_arguments */
 /**

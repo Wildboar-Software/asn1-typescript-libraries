@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca";
-export { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca.js";
+export { DMI_EXTENSION } from "../Attribute-ASN1Module/DMI-EXTENSION.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ManagementExtensionSet */

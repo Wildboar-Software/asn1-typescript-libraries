@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from '../X790ASN1Module/TelephoneNumber.ta';
+} from '../X790ASN1Module/TelephoneNumber.ta.js';
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from '../X790ASN1Module/TelephoneNumber.ta';
+} from '../X790ASN1Module/TelephoneNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TelephoneNumberList */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PostOfficeBoxAddress,
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
-} from '../MTSAbstractService/PostOfficeBoxAddress.ta';
+} from '../MTSAbstractService/PostOfficeBoxAddress.ta.js';
 export {
     PostOfficeBoxAddress,
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
-} from '../MTSAbstractService/PostOfficeBoxAddress.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/PostOfficeBoxAddress.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION post_office_box_address */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-import { id_signedData } from "../CryptographicMessageSyntax-2010/id-signedData.va";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+import { id_signedData } from "../CryptographicMessageSyntax-2010/id-signedData.va.js";
 import {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from "../CryptographicMessageSyntax-2010/SignedData.ta";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { id_signedData } from "../CryptographicMessageSyntax-2010/id-signedData.va";
+} from "../CryptographicMessageSyntax-2010/SignedData.ta.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { id_signedData } from "../CryptographicMessageSyntax-2010/id-signedData.va.js";
 export {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from "../CryptographicMessageSyntax-2010/SignedData.ta";
+} from "../CryptographicMessageSyntax-2010/SignedData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_SignedData */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ScheduledManagedObjectsList_Item,
     _decode_ScheduledManagedObjectsList_Item,
     _encode_ScheduledManagedObjectsList_Item,
-} from '../Schedulerev1-ASN1Module/ScheduledManagedObjectsList-Item.ta';
+} from '../Schedulerev1-ASN1Module/ScheduledManagedObjectsList-Item.ta.js';
 export {
     ScheduledManagedObjectsList_Item,
     _decode_ScheduledManagedObjectsList_Item,
     _encode_ScheduledManagedObjectsList_Item,
-} from '../Schedulerev1-ASN1Module/ScheduledManagedObjectsList-Item.ta';
+} from '../Schedulerev1-ASN1Module/ScheduledManagedObjectsList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ScheduledManagedObjectsList */
 /**

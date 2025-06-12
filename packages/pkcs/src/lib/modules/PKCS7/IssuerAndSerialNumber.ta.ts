@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IssuerAndSerialNumber */
 /**

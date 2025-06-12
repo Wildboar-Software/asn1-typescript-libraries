@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.js";
 import {
     SinglePubInfo_pubMethod,
     _decode_SinglePubInfo_pubMethod,
     _encode_SinglePubInfo_pubMethod,
-} from "../PKIXCRMF-2009/SinglePubInfo-pubMethod.ta";
+} from "../PKIXCRMF-2009/SinglePubInfo-pubMethod.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SinglePubInfo */
 /**

@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-import { signedData } from '../CmsTelebiometric/signedData.oa';
-export { signedData } from '../CmsTelebiometric/signedData.oa';
-import { envelopedData } from '../CmsTelebiometric/envelopedData.oa';
-export { envelopedData } from '../CmsTelebiometric/envelopedData.oa';
-import { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa';
-export { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+import { signedData } from '../CmsTelebiometric/signedData.oa.js';
+export { signedData } from '../CmsTelebiometric/signedData.oa.js';
+import { envelopedData } from '../CmsTelebiometric/envelopedData.oa.js';
+export { envelopedData } from '../CmsTelebiometric/envelopedData.oa.js';
+import { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa.js';
+export { ct_authEnvelopedData } from '../CmsTelebiometric/ct-authEnvelopedData.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION TelebSupportedcontentTypes */
 /**

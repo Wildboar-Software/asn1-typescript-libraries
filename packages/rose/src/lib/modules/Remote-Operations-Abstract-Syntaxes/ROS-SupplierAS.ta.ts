@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 export {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 import {
   ROS,
   _decode_ROS,
   _encode_ROS,
-} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta.js';
 export {
   ROS,
   _decode_ROS,
   _encode_ROS,
-} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ROS_SupplierAS */
 /**

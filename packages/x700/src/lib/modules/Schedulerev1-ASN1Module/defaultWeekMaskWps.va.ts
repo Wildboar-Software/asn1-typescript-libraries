@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
 export {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
-import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
-export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
+import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
+export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
 import {
     DaysOfWeek,
     DaysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -96,7 +96,7 @@ import {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DaysOfWeek,
     _encode_DaysOfWeek,
-} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta.js';
 export {
     DaysOfWeek,
     DaysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -115,17 +115,17 @@ export {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DaysOfWeek,
     _encode_DaysOfWeek,
-} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta.js';
 import {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 export {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultWeekMaskWps */
 /**

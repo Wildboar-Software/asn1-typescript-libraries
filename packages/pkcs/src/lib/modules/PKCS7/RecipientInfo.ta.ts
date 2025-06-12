@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyAgreementRecipientInfo,
     _decode_KeyAgreementRecipientInfo,
     _encode_KeyAgreementRecipientInfo,
-} from "../PKCS7/KeyAgreementRecipientInfo.ta";
+} from "../PKCS7/KeyAgreementRecipientInfo.ta.js";
 import {
     KeyEncryptionKeyRecipientInfo,
     _decode_KeyEncryptionKeyRecipientInfo,
     _encode_KeyEncryptionKeyRecipientInfo,
-} from "../PKCS7/KeyEncryptionKeyRecipientInfo.ta";
+} from "../PKCS7/KeyEncryptionKeyRecipientInfo.ta.js";
 import {
     KeyTransportRecipientInfo,
     _decode_KeyTransportRecipientInfo,
     _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta";
+} from "../PKCS7/KeyTransportRecipientInfo.ta.js";
 export {
     KeyAgreementRecipientInfo,
     _decode_KeyAgreementRecipientInfo,
     _encode_KeyAgreementRecipientInfo,
-} from "../PKCS7/KeyAgreementRecipientInfo.ta";
+} from "../PKCS7/KeyAgreementRecipientInfo.ta.js";
 export {
     KeyEncryptionKeyRecipientInfo,
     _decode_KeyEncryptionKeyRecipientInfo,
     _encode_KeyEncryptionKeyRecipientInfo,
-} from "../PKCS7/KeyEncryptionKeyRecipientInfo.ta";
+} from "../PKCS7/KeyEncryptionKeyRecipientInfo.ta.js";
 export {
     KeyTransportRecipientInfo,
     _decode_KeyTransportRecipientInfo,
     _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta";
+} from "../PKCS7/KeyTransportRecipientInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**

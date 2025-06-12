@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FieldID,
     _decode_FieldID,
     _encode_FieldID,
-} from "../ANSI-X9-42/FieldID.ta";
+} from "../ANSI-X9-42/FieldID.ta.js";
 export {
     FieldID,
     _decode_FieldID,
     _encode_FieldID,
-} from "../ANSI-X9-42/FieldID.ta";
+} from "../ANSI-X9-42/FieldID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FiniteFields */
 /**

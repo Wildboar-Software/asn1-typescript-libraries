@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_ct } from '../CmsTelebiometric/id-ct.va';
-export { id_ct } from '../CmsTelebiometric/id-ct.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_ct } from '../CmsTelebiometric/id-ct.va.js';
+export { id_ct } from '../CmsTelebiometric/id-ct.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_ct_authEnvelopedData */
 /**

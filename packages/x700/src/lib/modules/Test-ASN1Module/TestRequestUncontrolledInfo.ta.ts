@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
-} from '../Test-ASN1Module/TestCategoryInformation.ta';
+} from '../Test-ASN1Module/TestCategoryInformation.ta.js';
 export {
     TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
-} from '../Test-ASN1Module/TestCategoryInformation.ta';
+} from '../Test-ASN1Module/TestCategoryInformation.ta.js';
 import {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 export {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 import {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 export {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 import {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 export {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 import {
     ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
-} from '../Test-ASN1Module/ToBeTestedMORTs.ta';
+} from '../Test-ASN1Module/ToBeTestedMORTs.ta.js';
 export {
     ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
-} from '../Test-ASN1Module/ToBeTestedMORTs.ta';
+} from '../Test-ASN1Module/ToBeTestedMORTs.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestRequestUncontrolledInfo */
 /**

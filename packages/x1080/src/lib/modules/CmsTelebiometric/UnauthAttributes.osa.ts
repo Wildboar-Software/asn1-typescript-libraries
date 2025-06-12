@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { aa_CEKReference } from '../CmsTelebiometric/aa-CEKReference.oa';
-export { aa_CEKReference } from '../CmsTelebiometric/aa-CEKReference.oa';
-import { aa_CEKMaxDecrypts } from '../CmsTelebiometric/aa-CEKMaxDecrypts.oa';
-export { aa_CEKMaxDecrypts } from '../CmsTelebiometric/aa-CEKMaxDecrypts.oa';
-import { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa';
-export { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { aa_CEKReference } from '../CmsTelebiometric/aa-CEKReference.oa.js';
+export { aa_CEKReference } from '../CmsTelebiometric/aa-CEKReference.oa.js';
+import { aa_CEKMaxDecrypts } from '../CmsTelebiometric/aa-CEKMaxDecrypts.oa.js';
+export { aa_CEKMaxDecrypts } from '../CmsTelebiometric/aa-CEKMaxDecrypts.oa.js';
+import { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa.js';
+export { aa_KEKDerivationAlg } from '../CmsTelebiometric/aa-KEKDerivationAlg.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION UnauthAttributes */
 /**

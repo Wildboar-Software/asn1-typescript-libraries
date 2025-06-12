@@ -65,61 +65,61 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     DeliveryControls88,
     _decode_DeliveryControls88,
     _encode_DeliveryControls88,
-} from '../MTSAbstractService88/DeliveryControls88.ta';
+} from '../MTSAbstractService88/DeliveryControls88.ta.js';
 export {
     DeliveryControls88,
     _decode_DeliveryControls88,
     _encode_DeliveryControls88,
-} from '../MTSAbstractService88/DeliveryControls88.ta';
+} from '../MTSAbstractService88/DeliveryControls88.ta.js';
 import {
     Waiting,
     _decode_Waiting,
     _encode_Waiting,
-} from '../MTSAbstractService/Waiting.ta';
+} from '../MTSAbstractService/Waiting.ta.js';
 export {
     Waiting,
     _decode_Waiting,
     _encode_Waiting,
-} from '../MTSAbstractService/Waiting.ta';
-import { control_violates_registration } from '../MTSAbstractService/control-violates-registration.oa';
-export { control_violates_registration } from '../MTSAbstractService/control-violates-registration.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va';
-export { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MTSAbstractService/Waiting.ta.js';
+import { control_violates_registration } from '../MTSAbstractService/control-violates-registration.oa.js';
+export { control_violates_registration } from '../MTSAbstractService/control-violates-registration.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va.js';
+export { op_delivery_control } from '../MTSAccessProtocol/op-delivery-control.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION delivery_control_88 */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { dhHybridOneFlow } from "../ANSI-X9-42/dhHybridOneFlow.va";
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
+import { dhHybridOneFlow } from "../ANSI-X9-42/dhHybridOneFlow.va.js";
+import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
 import {
     SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
-} from "../ANSI-X9-42/SchemeParameters.ta";
-export { dhHybridOneFlow } from "../ANSI-X9-42/dhHybridOneFlow.va";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
+} from "../ANSI-X9-42/SchemeParameters.ta.js";
+export { dhHybridOneFlow } from "../ANSI-X9-42/dhHybridOneFlow.va.js";
+export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
 export {
     SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
-} from "../ANSI-X9-42/SchemeParameters.ta";
+} from "../ANSI-X9-42/SchemeParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Schemes_Union5_Intersection0_Element */
 /**

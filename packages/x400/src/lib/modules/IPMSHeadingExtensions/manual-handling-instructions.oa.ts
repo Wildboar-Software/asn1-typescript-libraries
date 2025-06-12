@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ManualHandlingInstructions,
     _decode_ManualHandlingInstructions,
     _encode_ManualHandlingInstructions,
-} from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta';
+} from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta.js';
 export {
     ManualHandlingInstructions,
     _decode_ManualHandlingInstructions,
     _encode_ManualHandlingInstructions,
-} from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta';
-import { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va';
-export { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta.js';
+import { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va.js';
+export { id_hex_manual_handling_instructions } from '../IPMSObjectIdentifiers/id-hex-manual-handling-instructions.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION manual_handling_instructions */
 /**

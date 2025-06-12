@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va.js";
 import {
     RSAES_OAEP_params,
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
-} from "../PKCS-1/RSAES-OAEP-params.ta";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-export { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va";
+} from "../PKCS-1/RSAES-OAEP-params.ta.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va.js";
 export {
     RSAES_OAEP_params,
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
-} from "../PKCS-1/RSAES-OAEP-params.ta";
+} from "../PKCS-1/RSAES-OAEP-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union10_Intersection0_Element */
 /**

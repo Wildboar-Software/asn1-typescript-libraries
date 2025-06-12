@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Component,
   _decode_Component,
   _encode_Component,
-} from '../TCAPMessages/Component.ta';
+} from '../TCAPMessages/Component.ta.js';
 export {
   Component,
   _decode_Component,
   _encode_Component,
-} from '../TCAPMessages/Component.ta';
+} from '../TCAPMessages/Component.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ComponentPortion */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { c2onb239v5 } from "../ANSI-X9-62/c2onb239v5.va";
-import { CURVES } from "../ANSI-X9-62/CURVES.oca";
-export { c2onb239v5 } from "../ANSI-X9-62/c2onb239v5.va";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca";
+import { c2onb239v5 } from "../ANSI-X9-62/c2onb239v5.va.js";
+import { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
+export { c2onb239v5 } from "../ANSI-X9-62/c2onb239v5.va.js";
+export { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union14_Intersection0_Element */
 /**

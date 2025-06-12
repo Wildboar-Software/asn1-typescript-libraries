@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthEnvelopedData,
     _decode_AuthEnvelopedData,
     _encode_AuthEnvelopedData,
-} from '../CmsTelebiometric/AuthEnvelopedData.ta';
+} from '../CmsTelebiometric/AuthEnvelopedData.ta.js';
 export {
     AuthEnvelopedData,
     _decode_AuthEnvelopedData,
     _encode_AuthEnvelopedData,
-} from '../CmsTelebiometric/AuthEnvelopedData.ta';
-import { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va';
-export { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../CmsTelebiometric/AuthEnvelopedData.ta.js';
+import { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va.js';
+export { id_ct_authEnvelopedData } from '../CmsTelebiometric/id-ct-authEnvelopedData.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ct_authEnvelopedData */
 /**

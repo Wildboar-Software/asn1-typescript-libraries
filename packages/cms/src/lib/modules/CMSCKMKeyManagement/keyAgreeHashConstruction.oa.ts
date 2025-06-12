@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
-import { id_ckm_key_agree_hash } from "../CMSObjectIdentifiers/id-ckm-key-agree-hash.va";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
+import { id_ckm_key_agree_hash } from "../CMSObjectIdentifiers/id-ckm-key-agree-hash.va.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,14 +24,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_ckm_key_agree_hash } from "../CMSObjectIdentifiers/id-ckm-key-agree-hash.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_ckm_key_agree_hash } from "../CMSObjectIdentifiers/id-ckm-key-agree-hash.va.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION keyAgreeHashConstruction */
 /**

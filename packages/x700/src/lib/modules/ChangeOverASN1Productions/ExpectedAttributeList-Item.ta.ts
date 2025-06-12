@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ModifyOperator,
     ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.js';
 export {
     ModifyOperator,
     ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,8 +91,8 @@ export {
     setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta';
-import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.js';
+import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExpectedAttributeList_Item */
 /**

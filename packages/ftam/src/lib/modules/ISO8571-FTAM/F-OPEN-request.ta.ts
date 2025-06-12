@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_OPEN_request_processing_mode,
   F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -80,7 +80,7 @@ import {
   f_erase /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_F_OPEN_request_processing_mode,
   _encode_F_OPEN_request_processing_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta.js';
 export {
   F_OPEN_request_processing_mode,
   F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -95,47 +95,47 @@ export {
   f_erase /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_F_OPEN_request_processing_mode,
   _encode_F_OPEN_request_processing_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta.js';
 import {
   F_OPEN_request_contents_type,
   _decode_F_OPEN_request_contents_type,
   _encode_F_OPEN_request_contents_type,
-} from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta.js';
 export {
   F_OPEN_request_contents_type,
   _decode_F_OPEN_request_contents_type,
   _encode_F_OPEN_request_contents_type,
-} from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta.js';
 import {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 export {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta';
+} from '../ISO8571-FTAM/Activity-Identifier.ta.js';
 export {
   Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta';
+} from '../ISO8571-FTAM/Activity-Identifier.ta.js';
 import {
   F_OPEN_request_recovery_mode,
   F_OPEN_request_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -146,7 +146,7 @@ import {
   at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_request_recovery_mode,
   _encode_F_OPEN_request_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.js';
 export {
   F_OPEN_request_recovery_mode,
   F_OPEN_request_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -157,27 +157,27 @@ export {
   at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_request_recovery_mode,
   _encode_F_OPEN_request_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.js';
 import {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta';
+} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.js';
 export {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta';
+} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.js';
 import {
   Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta';
+} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.js';
 export {
   Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta';
+} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_OPEN_request */
 /**

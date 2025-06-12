@@ -65,69 +65,69 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 export {
   State_Result,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 import {
   Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 export {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 import {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 export {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 import {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 export {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 export {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 import {
   F_OPEN_response_recovery_mode,
   F_OPEN_response_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -138,7 +138,7 @@ import {
   at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_response_recovery_mode,
   _encode_F_OPEN_response_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.js';
 export {
   F_OPEN_response_recovery_mode,
   F_OPEN_response_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -149,17 +149,17 @@ export {
   at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_response_recovery_mode,
   _encode_F_OPEN_response_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta';
+} from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.js';
 import {
   Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta';
+} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.js';
 export {
   Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta';
+} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_OPEN_response */
 /**

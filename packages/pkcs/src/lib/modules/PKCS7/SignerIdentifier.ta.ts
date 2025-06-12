@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "../PKCS7/IssuerAndSerialNumber.ta";
+} from "../PKCS7/IssuerAndSerialNumber.ta.js";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../PKCS7/SubjectKeyIdentifier.ta";
+} from "../PKCS7/SubjectKeyIdentifier.ta.js";
 export {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "../PKCS7/IssuerAndSerialNumber.ta";
+} from "../PKCS7/IssuerAndSerialNumber.ta.js";
 export {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../PKCS7/SubjectKeyIdentifier.ta";
+} from "../PKCS7/SubjectKeyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignerIdentifier */
 /**

@@ -65,39 +65,39 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta';
-export { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.js';
+export { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.js';
 import {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 export {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 import {
   EncodedCharacterString,
   _decode_EncodedCharacterString,
   _encode_EncodedCharacterString,
-} from '../FastInfoset/EncodedCharacterString.ta';
+} from '../FastInfoset/EncodedCharacterString.ta.js';
 export {
   EncodedCharacterString,
   _decode_EncodedCharacterString,
   _encode_EncodedCharacterString,
-} from '../FastInfoset/EncodedCharacterString.ta';
+} from '../FastInfoset/EncodedCharacterString.ta.js';
 import {
   NameSurrogate,
   _decode_NameSurrogate,
   _encode_NameSurrogate,
-} from '../FastInfoset/NameSurrogate.ta';
+} from '../FastInfoset/NameSurrogate.ta.js';
 export {
   NameSurrogate,
   _decode_NameSurrogate,
   _encode_NameSurrogate,
-} from '../FastInfoset/NameSurrogate.ta';
+} from '../FastInfoset/NameSurrogate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Document_initial_vocabulary */
 /**

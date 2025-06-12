@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     InformationCategory,
     _decode_InformationCategory,
     _encode_InformationCategory,
-} from '../IPMSHeadingExtensions/InformationCategory.ta';
+} from '../IPMSHeadingExtensions/InformationCategory.ta.js';
 export {
     InformationCategory,
     _decode_InformationCategory,
     _encode_InformationCategory,
-} from '../IPMSHeadingExtensions/InformationCategory.ta';
+} from '../IPMSHeadingExtensions/InformationCategory.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InformationCategories */
 /**

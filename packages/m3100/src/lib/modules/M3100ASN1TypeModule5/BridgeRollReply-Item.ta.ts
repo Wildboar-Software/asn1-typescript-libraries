@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 import {
     PointerOrNull,
     _decode_PointerOrNull,
     _encode_PointerOrNull,
-} from '../ASN1DefinedTypesModule/PointerOrNull.ta';
+} from '../ASN1DefinedTypesModule/PointerOrNull.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BridgeRollReply_Item */
 /**

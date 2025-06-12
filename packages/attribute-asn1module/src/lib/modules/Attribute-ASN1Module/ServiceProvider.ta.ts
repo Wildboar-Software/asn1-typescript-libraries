@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta";
-export { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta.js";
+export { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attribute-ASN1Module/ServiceUser.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ServiceProvider */

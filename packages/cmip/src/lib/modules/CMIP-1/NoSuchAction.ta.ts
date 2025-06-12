@@ -65,26 +65,26 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta';
+} from '../CMIP-1/ObjectClass.ta.js';
 export {
   ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta';
-import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca';
-export { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca';
-import { ActionSet } from '../CMIP-1/ActionSet.osa';
-export { ActionSet } from '../CMIP-1/ActionSet.osa';
+} from '../CMIP-1/ObjectClass.ta.js';
+import { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.js';
+export { CMIP_ACTION } from '../CMIP-1/CMIP-ACTION.oca.js';
+import { ActionSet } from '../CMIP-1/ActionSet.osa.js';
+export { ActionSet } from '../CMIP-1/ActionSet.osa.js';
 import {
     ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
-} from '../CMIP-1/ActionTypeId.ta';
+} from '../CMIP-1/ActionTypeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NoSuchAction */
 /**

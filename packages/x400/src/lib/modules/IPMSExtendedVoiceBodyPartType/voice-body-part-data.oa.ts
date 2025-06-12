@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     VoiceData,
     _decode_VoiceData,
     _encode_VoiceData,
-} from '../IPMSExtendedVoiceBodyPartType/VoiceData.ta';
+} from '../IPMSExtendedVoiceBodyPartType/VoiceData.ta.js';
 export {
     VoiceData,
     _decode_VoiceData,
     _encode_VoiceData,
-} from '../IPMSExtendedVoiceBodyPartType/VoiceData.ta';
-import { id_et_voice } from '../IPMSObjectIdentifiers/id-et-voice.va';
-export { id_et_voice } from '../IPMSObjectIdentifiers/id-et-voice.va';
+} from '../IPMSExtendedVoiceBodyPartType/VoiceData.ta.js';
+import { id_et_voice } from '../IPMSObjectIdentifiers/id-et-voice.va.js';
+export { id_et_voice } from '../IPMSObjectIdentifiers/id-et-voice.va.js';
 
 /* START_OF_SYMBOL_DEFINITION voice_body_part_data */
 /**

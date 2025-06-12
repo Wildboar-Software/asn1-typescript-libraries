@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca";
+import { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.js";
 import {
     SimpleString,
     _decode_SimpleString,
     _encode_SimpleString,
-} from "../CMSDBKeyManagement/SimpleString.ta";
-import { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va";
-export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca";
+} from "../CMSDBKeyManagement/SimpleString.ta.js";
+import { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.js";
+export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.js";
 export {
     SimpleString,
     _decode_SimpleString,
     _encode_SimpleString,
-} from "../CMSDBKeyManagement/SimpleString.ta";
-export { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va";
+} from "../CMSDBKeyManagement/SimpleString.ta.js";
+export { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.js";
 
 /* START_OF_SYMBOL_DEFINITION simpleString */
 /**

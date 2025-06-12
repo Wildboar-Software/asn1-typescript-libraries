@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNPDAUBasicCodeField,
     FNPDAUBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
     forwarded_for_physical_rendition_and_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNPDAUBasicCodeField,
     _encode_FNPDAUBasicCodeField,
-} from '../EDIMSInformationObjects/FNPDAUBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNPDAUBasicCodeField.ta.js';
 export {
     FNPDAUBasicCodeField,
     FNPDAUBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,17 +83,17 @@ export {
     forwarded_for_physical_rendition_and_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNPDAUBasicCodeField,
     _encode_FNPDAUBasicCodeField,
-} from '../EDIMSInformationObjects/FNPDAUBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNPDAUBasicCodeField.ta.js';
 import {
     FNPDAUDiagnosticField,
     _decode_FNPDAUDiagnosticField,
     _encode_FNPDAUDiagnosticField,
-} from '../EDIMSInformationObjects/FNPDAUDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNPDAUDiagnosticField.ta.js';
 export {
     FNPDAUDiagnosticField,
     _decode_FNPDAUDiagnosticField,
     _encode_FNPDAUDiagnosticField,
-} from '../EDIMSInformationObjects/FNPDAUDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNPDAUDiagnosticField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FNPDAUReasonCodeField */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ReplyWantBack,
   _decode_ReplyWantBack,
   _encode_ReplyWantBack,
-} from '../SCVP-2009/ReplyWantBack.ta';
+} from '../SCVP-2009/ReplyWantBack.ta.js';
 export {
   ReplyWantBack,
   _decode_ReplyWantBack,
   _encode_ReplyWantBack,
-} from '../SCVP-2009/ReplyWantBack.ta';
+} from '../SCVP-2009/ReplyWantBack.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReplyWantBacks */
 /**

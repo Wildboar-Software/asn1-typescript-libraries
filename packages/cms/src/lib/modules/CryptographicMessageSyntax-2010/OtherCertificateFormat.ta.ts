@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CERT-FMT.oca";
-export { SupportedCertFormats } from "../CryptographicMessageSyntax-2010/SupportedCertFormats.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CERT-FMT.oca.js";
+export { SupportedCertFormats } from "../CryptographicMessageSyntax-2010/SupportedCertFormats.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OtherCertificateFormat */
 /**

@@ -5,39 +5,39 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax2004/ContentType.ta";
+} from "../CryptographicMessageSyntax2004/ContentType.ta.js";
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.js";
 import {
     ESSVersion,
     _decode_ESSVersion,
     _encode_ESSVersion,
-} from "../ExtendedSecurityServices-2006/ESSVersion.ta";
+} from "../ExtendedSecurityServices-2006/ESSVersion.ta.js";
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax2004/ContentType.ta";
+} from "../CryptographicMessageSyntax2004/ContentType.ta.js";
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.js";
 export {
     ESSVersion,
     ESSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ESSVersion,
     _encode_ESSVersion,
-} from "../ExtendedSecurityServices-2006/ESSVersion.ta";
+} from "../ExtendedSecurityServices-2006/ESSVersion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Receipt */
 /**

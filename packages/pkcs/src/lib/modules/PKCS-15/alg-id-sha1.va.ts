@@ -1,8 +1,8 @@
 /* eslint-disable */
 import * as asn1 from "asn1-ts";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { sha_1 } from "../CryptographicMessageSyntax/sha-1.va";
-export { sha_1 } from "../CryptographicMessageSyntax/sha-1.va";
+import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { sha_1 } from "../CryptographicMessageSyntax/sha-1.va.js";
+export { sha_1 } from "../CryptographicMessageSyntax/sha-1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION alg_id_sha1 */
 /**

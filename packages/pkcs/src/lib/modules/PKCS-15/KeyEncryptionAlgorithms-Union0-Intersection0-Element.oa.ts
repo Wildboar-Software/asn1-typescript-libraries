@@ -1,7 +1,7 @@
 import type { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntax/id-alg-CMS3DESwrap.va";
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntax/id-alg-CMS3DESwrap.va.js";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 
 /**
  * ### ASN.1 Definition

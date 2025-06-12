@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimeStampReportMode,
     _enum_for_TimeStampReportMode,
@@ -77,7 +77,7 @@ import {
     individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
-} from '../SummarizationASN1Productions/TimeStampReportMode.ta';
+} from '../SummarizationASN1Productions/TimeStampReportMode.ta.js';
 export {
     TimeStampReportMode,
     _enum_for_TimeStampReportMode,
@@ -89,7 +89,7 @@ export {
     individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
-} from '../SummarizationASN1Productions/TimeStampReportMode.ta';
+} from '../SummarizationASN1Productions/TimeStampReportMode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION timeStampingDefault */
 /**

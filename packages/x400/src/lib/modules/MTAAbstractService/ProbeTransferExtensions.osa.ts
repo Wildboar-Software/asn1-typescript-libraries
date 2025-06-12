@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { recipient_reassignment_prohibited } from '../MTSAbstractService/recipient-reassignment-prohibited.oa';
-export { recipient_reassignment_prohibited } from '../MTSAbstractService/recipient-reassignment-prohibited.oa';
-import { dl_expansion_prohibited } from '../MTSAbstractService/dl-expansion-prohibited.oa';
-export { dl_expansion_prohibited } from '../MTSAbstractService/dl-expansion-prohibited.oa';
-import { conversion_with_loss_prohibited } from '../MTSAbstractService/conversion-with-loss-prohibited.oa';
-export { conversion_with_loss_prohibited } from '../MTSAbstractService/conversion-with-loss-prohibited.oa';
-import { originator_certificate } from '../MTSAbstractService/originator-certificate.oa';
-export { originator_certificate } from '../MTSAbstractService/originator-certificate.oa';
-import { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-export { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-import { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-export { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-import { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa';
-export { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa';
-import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa';
-export { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { recipient_reassignment_prohibited } from '../MTSAbstractService/recipient-reassignment-prohibited.oa.js';
+export { recipient_reassignment_prohibited } from '../MTSAbstractService/recipient-reassignment-prohibited.oa.js';
+import { dl_expansion_prohibited } from '../MTSAbstractService/dl-expansion-prohibited.oa.js';
+export { dl_expansion_prohibited } from '../MTSAbstractService/dl-expansion-prohibited.oa.js';
+import { conversion_with_loss_prohibited } from '../MTSAbstractService/conversion-with-loss-prohibited.oa.js';
+export { conversion_with_loss_prohibited } from '../MTSAbstractService/conversion-with-loss-prohibited.oa.js';
+import { originator_certificate } from '../MTSAbstractService/originator-certificate.oa.js';
+export { originator_certificate } from '../MTSAbstractService/originator-certificate.oa.js';
+import { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+export { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+import { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+export { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+import { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa.js';
+export { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa.js';
+import { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.js';
+export { internal_trace_information } from '../MTAAbstractService/internal-trace-information.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ProbeTransferExtensions */
 /**

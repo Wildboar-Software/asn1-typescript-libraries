@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RTOACapdu,
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.js';
 export {
     RTOACapdu,
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.js';
 import {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.js';
 export {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CPA_PPDU_x410_mode_parameters */
 /**

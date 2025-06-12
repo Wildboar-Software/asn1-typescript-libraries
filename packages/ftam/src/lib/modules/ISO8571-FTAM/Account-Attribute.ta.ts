@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 export {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Account_Attribute */
 /**

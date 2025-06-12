@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va.js";
 import {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta.js";
 import {
     RSAPublicKey,
     _decode_RSAPublicKey,
     _encode_RSAPublicKey,
-} from "../PKIXAlgs-2009/RSAPublicKey.ta";
+} from "../PKIXAlgs-2009/RSAPublicKey.ta.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -31,19 +31,19 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va.js";
 export {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta.js";
 export {
     RSAPublicKey,
     _decode_RSAPublicKey,
     _encode_RSAPublicKey,
-} from "../PKIXAlgs-2009/RSAPublicKey.ta";
+} from "../PKIXAlgs-2009/RSAPublicKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_rsaSSA_PSS */
 /**

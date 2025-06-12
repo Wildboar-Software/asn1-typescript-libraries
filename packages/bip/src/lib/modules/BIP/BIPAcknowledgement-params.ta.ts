@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GUISelectEvent_AcknowledgementParams,
   _decode_GUISelectEvent_AcknowledgementParams,
   _encode_GUISelectEvent_AcknowledgementParams,
-} from '../BIP/GUISelectEvent-AcknowledgementParams.ta';
+} from '../BIP/GUISelectEvent-AcknowledgementParams.ta.js';
 export {
   GUISelectEvent_AcknowledgementParams,
   _decode_GUISelectEvent_AcknowledgementParams,
   _encode_GUISelectEvent_AcknowledgementParams,
-} from '../BIP/GUISelectEvent-AcknowledgementParams.ta';
+} from '../BIP/GUISelectEvent-AcknowledgementParams.ta.js';
 import {
   GUIStateEvent_AcknowledgementParams,
   _decode_GUIStateEvent_AcknowledgementParams,
   _encode_GUIStateEvent_AcknowledgementParams,
-} from '../BIP/GUIStateEvent-AcknowledgementParams.ta';
+} from '../BIP/GUIStateEvent-AcknowledgementParams.ta.js';
 export {
   GUIStateEvent_AcknowledgementParams,
   _decode_GUIStateEvent_AcknowledgementParams,
   _encode_GUIStateEvent_AcknowledgementParams,
-} from '../BIP/GUIStateEvent-AcknowledgementParams.ta';
+} from '../BIP/GUIStateEvent-AcknowledgementParams.ta.js';
 import {
   GUIProgressEvent_AcknowledgementParams,
   _decode_GUIProgressEvent_AcknowledgementParams,
   _encode_GUIProgressEvent_AcknowledgementParams,
-} from '../BIP/GUIProgressEvent-AcknowledgementParams.ta';
+} from '../BIP/GUIProgressEvent-AcknowledgementParams.ta.js';
 export {
   GUIProgressEvent_AcknowledgementParams,
   _decode_GUIProgressEvent_AcknowledgementParams,
   _encode_GUIProgressEvent_AcknowledgementParams,
-} from '../BIP/GUIProgressEvent-AcknowledgementParams.ta';
+} from '../BIP/GUIProgressEvent-AcknowledgementParams.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPAcknowledgement_params */
 /**

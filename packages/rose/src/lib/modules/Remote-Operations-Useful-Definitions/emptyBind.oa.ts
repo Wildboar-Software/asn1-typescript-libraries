@@ -65,33 +65,33 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
-import { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa';
-export { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
+import { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa.js';
+export { refuse } from '../Remote-Operations-Useful-Definitions/refuse.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION emptyBind */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION MSExtensionItem */
 /**

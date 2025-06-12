@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PBKDF2_SaltSourcesAlgorithmIdentifier,
     _decode_PBKDF2_SaltSourcesAlgorithmIdentifier,
     _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta.js";
 export {
     PBKDF2_SaltSourcesAlgorithmIdentifier,
     _decode_PBKDF2_SaltSourcesAlgorithmIdentifier,
     _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params_salt */
 /**

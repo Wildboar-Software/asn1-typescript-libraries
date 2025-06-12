@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AE_title,
   _decode_AE_title,
   _encode_AE_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.js';
 import {
   ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
@@ -80,7 +80,7 @@ import {
   receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name-side.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name-side.ta.js';
 export {
   ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
@@ -90,7 +90,7 @@ export {
   receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name_side,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name-side.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name-side.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER_owners_name */
 /**

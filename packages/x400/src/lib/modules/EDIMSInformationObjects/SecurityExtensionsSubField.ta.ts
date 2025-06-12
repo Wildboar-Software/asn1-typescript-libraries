@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../EDIMSInformationObjects/ExtensionField.ta';
+} from '../EDIMSInformationObjects/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../EDIMSInformationObjects/ExtensionField.ta';
+} from '../EDIMSInformationObjects/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityExtensionsSubField */
 /**

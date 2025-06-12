@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta";
-export { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta";
-import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta";
-export { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta";
-import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta";
-export { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js";
+export { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js";
+import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.js";
+export { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.js";
+import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta.js";
+export { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ThresholdInfo */

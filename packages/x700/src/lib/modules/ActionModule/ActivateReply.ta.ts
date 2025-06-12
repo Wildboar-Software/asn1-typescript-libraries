@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OperationalState,
     _enum_for_OperationalState,
@@ -75,7 +75,7 @@ import {
     enabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_OperationalState,
     _encode_OperationalState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.js';
 export {
     OperationalState,
     _enum_for_OperationalState,
@@ -85,7 +85,7 @@ export {
     enabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_OperationalState,
     _encode_OperationalState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.js';
 import {
     ActivateReply_responseCode,
     ActivateReply_responseCode_successResponse /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -94,7 +94,7 @@ import {
     serviceProviderErrorResponse /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ActivateReply_responseCode,
     _encode_ActivateReply_responseCode,
-} from '../ActionModule/ActivateReply-responseCode.ta';
+} from '../ActionModule/ActivateReply-responseCode.ta.js';
 export {
     ActivateReply_responseCode,
     ActivateReply_responseCode_successResponse /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,17 +103,17 @@ export {
     serviceProviderErrorResponse /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ActivateReply_responseCode,
     _encode_ActivateReply_responseCode,
-} from '../ActionModule/ActivateReply-responseCode.ta';
+} from '../ActionModule/ActivateReply-responseCode.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ActivateReply */
 /**

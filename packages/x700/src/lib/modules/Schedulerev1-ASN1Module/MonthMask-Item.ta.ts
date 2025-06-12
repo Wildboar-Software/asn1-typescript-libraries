@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DaysOfMonth,
     _decode_DaysOfMonth,
     _encode_DaysOfMonth,
-} from '../Schedulerev1-ASN1Module/DaysOfMonth.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfMonth.ta.js';
 export {
     DaysOfMonth,
     _decode_DaysOfMonth,
     _encode_DaysOfMonth,
-} from '../Schedulerev1-ASN1Module/DaysOfMonth.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfMonth.ta.js';
 import {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 export {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MonthMask_Item */
 /**

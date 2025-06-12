@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EquivalentClassification,
     _decode_EquivalentClassification,
     _encode_EquivalentClassification,
-} from "../SIOsAccessControl-MODULE/EquivalentClassification.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentClassification.ta.js";
 export {
     EquivalentClassification,
     _decode_EquivalentClassification,
     _encode_EquivalentClassification,
-} from "../SIOsAccessControl-MODULE/EquivalentClassification.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentClassification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EquivalentClassifications */
 /**

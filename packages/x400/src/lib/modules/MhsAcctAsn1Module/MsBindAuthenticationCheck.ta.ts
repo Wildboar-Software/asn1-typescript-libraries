@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthenticationCheck,
     AuthenticationCheck_validated /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
     failed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationCheck,
     _encode_AuthenticationCheck,
-} from '../MhsAcctAsn1Module/AuthenticationCheck.ta';
+} from '../MhsAcctAsn1Module/AuthenticationCheck.ta.js';
 export {
     AuthenticationCheck,
     AuthenticationCheck_validated /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
     failed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationCheck,
     _encode_AuthenticationCheck,
-} from '../MhsAcctAsn1Module/AuthenticationCheck.ta';
+} from '../MhsAcctAsn1Module/AuthenticationCheck.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MsBindAuthenticationCheck */
 /**

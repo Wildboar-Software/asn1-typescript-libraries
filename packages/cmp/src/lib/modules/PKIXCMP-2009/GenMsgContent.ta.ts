@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InfoTypeAndValue,
   _decode_InfoTypeAndValue,
   _encode_InfoTypeAndValue,
-} from '../PKIXCMP-2009/InfoTypeAndValue.ta';
+} from '../PKIXCMP-2009/InfoTypeAndValue.ta.js';
 export {
   InfoTypeAndValue,
   _decode_InfoTypeAndValue,
   _encode_InfoTypeAndValue,
-} from '../PKIXCMP-2009/InfoTypeAndValue.ta';
+} from '../PKIXCMP-2009/InfoTypeAndValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GenMsgContent */
 /**

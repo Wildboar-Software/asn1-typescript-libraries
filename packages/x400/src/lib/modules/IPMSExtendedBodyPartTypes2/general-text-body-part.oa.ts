@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { general_text_body_part_parameters } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-parameters.oa';
-export { general_text_body_part_parameters } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-parameters.oa';
-import { general_text_body_part_data } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-data.oa';
-export { general_text_body_part_data } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-data.oa';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
-export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { general_text_body_part_parameters } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-parameters.oa.js';
+export { general_text_body_part_parameters } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-parameters.oa.js';
+import { general_text_body_part_data } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-data.oa.js';
+export { general_text_body_part_data } from '../IPMSExtendedBodyPartTypes2/general-text-body-part-data.oa.js';
+import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
+export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION general_text_body_part */
 /**

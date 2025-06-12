@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION FirstPdvExplicit */
 /**

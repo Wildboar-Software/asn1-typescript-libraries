@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ACSE_apdu,
     _decode_ACSE_apdu,
     _encode_ACSE_apdu,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/ACSE-apdu.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/ACSE-apdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION acse_abstract_syntax */
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa";
-import { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.js";
+import { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va.js";
 import {
     RandomNonce,
     _decode_RandomNonce,
     _encode_RandomNonce,
-} from "../PKCS-9/RandomNonce.ta";
+} from "../PKCS-9/RandomNonce.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION randomNonce */
 /**

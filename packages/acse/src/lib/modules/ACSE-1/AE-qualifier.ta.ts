@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 export {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AE_qualifier */
 /**

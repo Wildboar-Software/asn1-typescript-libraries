@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { id_PBES2 } from "../PKCS5v2-1/id-PBES2.va";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_PBES2 } from "../PKCS5v2-1/id-PBES2.va.js";
 import {
     PBES2_params,
     _decode_PBES2_params,
     _encode_PBES2_params,
-} from "../PKCS5v2-1/PBES2-params.ta";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-export { id_PBES2 } from "../PKCS5v2-1/id-PBES2.va";
+} from "../PKCS5v2-1/PBES2-params.ta.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_PBES2 } from "../PKCS5v2-1/id-PBES2.va.js";
 export {
     PBES2_params,
     _decode_PBES2_params,
     _encode_PBES2_params,
-} from "../PKCS5v2-1/PBES2-params.ta";
+} from "../PKCS5v2-1/PBES2-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBES2Algorithms_Union0_Intersection0_Element */
 /**

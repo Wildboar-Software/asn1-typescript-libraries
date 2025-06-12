@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ModifyOperator,
     ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.js';
 export {
     ModifyOperator,
     ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,12 +91,12 @@ export {
     setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta';
-import { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca';
-export { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca';
-import { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa';
-export { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.js';
+import { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.js';
+export { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.js';
+import { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.js';
+export { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.js';
+import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModificationList_Item */
 /**

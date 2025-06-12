@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AllOrFirstTier,
     _decode_AllOrFirstTier,
     _encode_AllOrFirstTier,
-} from "../ExtendedSecurityServices-2006/AllOrFirstTier.ta";
+} from "../ExtendedSecurityServices-2006/AllOrFirstTier.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 export {
     AllOrFirstTier,
     AllOrFirstTier_allReceipts /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -19,12 +19,12 @@ export {
     firstTierRecipients /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AllOrFirstTier,
     _encode_AllOrFirstTier,
-} from "../ExtendedSecurityServices-2006/AllOrFirstTier.ta";
+} from "../ExtendedSecurityServices-2006/AllOrFirstTier.ta.js";
 export {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ReceiptsFrom */
 /**

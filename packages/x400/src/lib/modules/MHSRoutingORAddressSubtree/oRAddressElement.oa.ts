@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,21 +91,21 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-import { routingAdvice } from '../MHSRoutingORAddressSubtree/routingAdvice.oa';
-export { routingAdvice } from '../MHSRoutingORAddressSubtree/routingAdvice.oa';
-import { expressionMatches } from '../MHSRoutingORAddressSubtree/expressionMatches.oa';
-export { expressionMatches } from '../MHSRoutingORAddressSubtree/expressionMatches.oa';
-import { nextLevelComplete } from '../MHSRoutingORAddressSubtree/nextLevelComplete.oa';
-export { nextLevelComplete } from '../MHSRoutingORAddressSubtree/nextLevelComplete.oa';
-import { recipientMDAssignedAlternateRecipient } from '../MHSRoutingORAddressSubtree/recipientMDAssignedAlternateRecipient.oa';
-export { recipientMDAssignedAlternateRecipient } from '../MHSRoutingORAddressSubtree/recipientMDAssignedAlternateRecipient.oa';
-import { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-or-address-element.va';
-export { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-or-address-element.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+import { routingAdvice } from '../MHSRoutingORAddressSubtree/routingAdvice.oa.js';
+export { routingAdvice } from '../MHSRoutingORAddressSubtree/routingAdvice.oa.js';
+import { expressionMatches } from '../MHSRoutingORAddressSubtree/expressionMatches.oa.js';
+export { expressionMatches } from '../MHSRoutingORAddressSubtree/expressionMatches.oa.js';
+import { nextLevelComplete } from '../MHSRoutingORAddressSubtree/nextLevelComplete.oa.js';
+export { nextLevelComplete } from '../MHSRoutingORAddressSubtree/nextLevelComplete.oa.js';
+import { recipientMDAssignedAlternateRecipient } from '../MHSRoutingORAddressSubtree/recipientMDAssignedAlternateRecipient.oa.js';
+export { recipientMDAssignedAlternateRecipient } from '../MHSRoutingORAddressSubtree/recipientMDAssignedAlternateRecipient.oa.js';
+import { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-or-address-element.va.js';
+export { id_oc_mhs_or_address_element } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-or-address-element.va.js';
 
 /* START_OF_SYMBOL_DEFINITION oRAddressElement */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertificateList,
   _decode_CertificateList,
   _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js';
 import {
   OCSPResponse,
   _decode_OCSPResponse,
   _encode_OCSPResponse,
-} from '@wildboar/ocsp/src/lib/modules/OCSP-2013-08/OCSPResponse.ta';
+} from '@wildboar/ocsp/src/lib/modules/OCSP-2013-08/OCSPResponse.ta.js';
 import {
   OtherRevInfo,
   _decode_OtherRevInfo,
   _encode_OtherRevInfo,
-} from '../SCVP-2009/OtherRevInfo.ta';
+} from '../SCVP-2009/OtherRevInfo.ta.js';
 export {
   OtherRevInfo,
   _decode_OtherRevInfo,
   _encode_OtherRevInfo,
-} from '../SCVP-2009/OtherRevInfo.ta';
+} from '../SCVP-2009/OtherRevInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevocationInfo */
 /**

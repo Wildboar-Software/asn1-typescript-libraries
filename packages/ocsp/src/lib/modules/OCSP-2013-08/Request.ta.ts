@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.js";
 import {
     CertID,
     _decode_CertID,
     _encode_CertID,
-} from "../OCSP-2013-08/CertID.ta";
+} from "../OCSP-2013-08/CertID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Request */
 /**

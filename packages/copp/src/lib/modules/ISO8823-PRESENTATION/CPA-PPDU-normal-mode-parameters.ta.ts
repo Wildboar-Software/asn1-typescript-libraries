@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta';
+} from '../ISO8823-PRESENTATION/Protocol-version.ta.js';
 export {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta';
+} from '../ISO8823-PRESENTATION/Protocol-version.ta.js';
 import {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.js';
 export {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.js';
 import {
     Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.js';
 export {
     Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.js';
 import {
     Presentation_requirements,
     Presentation_requirements_context_management /* IMPORTED_LONG_NAMED_BIT */,
@@ -108,7 +108,7 @@ import {
     restoration /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Presentation_requirements,
     _encode_Presentation_requirements,
-} from '../ISO8823-PRESENTATION/Presentation-requirements.ta';
+} from '../ISO8823-PRESENTATION/Presentation-requirements.ta.js';
 export {
     Presentation_requirements,
     Presentation_requirements_context_management /* IMPORTED_LONG_NAMED_BIT */,
@@ -117,7 +117,7 @@ export {
     restoration /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Presentation_requirements,
     _encode_Presentation_requirements,
-} from '../ISO8823-PRESENTATION/Presentation-requirements.ta';
+} from '../ISO8823-PRESENTATION/Presentation-requirements.ta.js';
 import {
     User_session_requirements,
     User_session_requirements_half_duplex /* IMPORTED_LONG_NAMED_BIT */,
@@ -148,7 +148,7 @@ import {
     data_separation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_User_session_requirements,
     _encode_User_session_requirements,
-} from '../ISO8823-PRESENTATION/User-session-requirements.ta';
+} from '../ISO8823-PRESENTATION/User-session-requirements.ta.js';
 export {
     User_session_requirements,
     User_session_requirements_half_duplex /* IMPORTED_LONG_NAMED_BIT */,
@@ -179,7 +179,7 @@ export {
     data_separation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_User_session_requirements,
     _encode_User_session_requirements,
-} from '../ISO8823-PRESENTATION/User-session-requirements.ta';
+} from '../ISO8823-PRESENTATION/User-session-requirements.ta.js';
 import {
     Protocol_options,
     Protocol_options_nominated_context /* IMPORTED_LONG_NAMED_BIT */,
@@ -190,7 +190,7 @@ import {
     packed_encoding_rules /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_options,
     _encode_Protocol_options,
-} from '../ISO8823-PRESENTATION/Protocol-options.ta';
+} from '../ISO8823-PRESENTATION/Protocol-options.ta.js';
 export {
     Protocol_options,
     Protocol_options_nominated_context /* IMPORTED_LONG_NAMED_BIT */,
@@ -201,27 +201,27 @@ export {
     packed_encoding_rules /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_options,
     _encode_Protocol_options,
-} from '../ISO8823-PRESENTATION/Protocol-options.ta';
+} from '../ISO8823-PRESENTATION/Protocol-options.ta.js';
 import {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.js';
 export {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
-} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.js';
 import {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 export {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CPA_PPDU_normal_mode_parameters */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Waiting,
     _decode_Waiting,
     _encode_Waiting,
-} from '../MTSAbstractService/Waiting.ta';
+} from '../MTSAbstractService/Waiting.ta.js';
 export {
     Waiting,
     _decode_Waiting,
     _encode_Waiting,
-} from '../MTSAbstractService/Waiting.ta';
+} from '../MTSAbstractService/Waiting.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 import {
     Operations,
     Operations_probe_submission_or_report_delivery /* IMPORTED_LONG_NAMED_BIT */,
@@ -94,7 +94,7 @@ import {
     message_submission_or_message_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from '../MTSAbstractService/Operations.ta';
+} from '../MTSAbstractService/Operations.ta.js';
 export {
     Operations,
     Operations_probe_submission_or_report_delivery /* IMPORTED_LONG_NAMED_BIT */,
@@ -103,7 +103,7 @@ export {
     message_submission_or_message_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from '../MTSAbstractService/Operations.ta';
+} from '../MTSAbstractService/Operations.ta.js';
 import {
     WaitingMessages,
     WaitingMessages_long_content /* IMPORTED_LONG_NAMED_BIT */,
@@ -114,7 +114,7 @@ import {
     other_security_labels /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_WaitingMessages,
     _encode_WaitingMessages,
-} from '../MTSAbstractService/WaitingMessages.ta';
+} from '../MTSAbstractService/WaitingMessages.ta.js';
 export {
     WaitingMessages,
     WaitingMessages_long_content /* IMPORTED_LONG_NAMED_BIT */,
@@ -125,27 +125,27 @@ export {
     other_security_labels /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_WaitingMessages,
     _encode_WaitingMessages,
-} from '../MTSAbstractService/WaitingMessages.ta';
+} from '../MTSAbstractService/WaitingMessages.ta.js';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     EncodedInformationTypes,
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
-} from '../MTSAbstractService/EncodedInformationTypes.ta';
+} from '../MTSAbstractService/EncodedInformationTypes.ta.js';
 export {
     EncodedInformationTypes,
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
-} from '../MTSAbstractService/EncodedInformationTypes.ta';
+} from '../MTSAbstractService/EncodedInformationTypes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliveryControlResult */
 /**

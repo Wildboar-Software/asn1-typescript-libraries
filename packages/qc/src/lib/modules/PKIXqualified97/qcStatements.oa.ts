@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
-import { id_pe_qcStatements } from "../PKIXqualified97/id-pe-qcStatements.va";
+import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.js";
+import { id_pe_qcStatements } from "../PKIXqualified97/id-pe-qcStatements.va.js";
 import {
     QCStatements,
     _decode_QCStatements,
     _encode_QCStatements,
-} from "../PKIXqualified97/QCStatements.ta";
+} from "../PKIXqualified97/QCStatements.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION qcStatements */
 /**

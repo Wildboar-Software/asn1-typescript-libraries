@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass,
     IA5String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PublicKeyAndChallenge */
 /**

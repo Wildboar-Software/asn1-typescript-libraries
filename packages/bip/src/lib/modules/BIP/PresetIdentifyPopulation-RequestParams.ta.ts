@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 export {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 import {
   BioAPI_IDENTIFY_POPULATION,
   _decode_BioAPI_IDENTIFY_POPULATION,
   _encode_BioAPI_IDENTIFY_POPULATION,
-} from '../BIP/BioAPI-IDENTIFY-POPULATION.ta';
+} from '../BIP/BioAPI-IDENTIFY-POPULATION.ta.js';
 export {
   BioAPI_IDENTIFY_POPULATION,
   _decode_BioAPI_IDENTIFY_POPULATION,
   _encode_BioAPI_IDENTIFY_POPULATION,
-} from '../BIP/BioAPI-IDENTIFY-POPULATION.ta';
+} from '../BIP/BioAPI-IDENTIFY-POPULATION.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PresetIdentifyPopulation_RequestParams */
 /**

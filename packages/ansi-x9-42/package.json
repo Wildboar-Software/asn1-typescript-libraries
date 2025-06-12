@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/ansi-x9-42",
-    "version": "1.0.3",
+    "type": "module",
+    "version": "2.0.0",
     "description": "ANSI X9.42 ASN.1 Data Structures in TypeScript",
     "keywords": [
         "ansi",

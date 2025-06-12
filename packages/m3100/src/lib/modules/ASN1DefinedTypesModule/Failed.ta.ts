@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LogicalProblem,
     _decode_LogicalProblem,
     _encode_LogicalProblem,
-} from '../ASN1DefinedTypesModule/LogicalProblem.ta';
+} from '../ASN1DefinedTypesModule/LogicalProblem.ta.js';
 export {
     LogicalProblem,
     _decode_LogicalProblem,
     _encode_LogicalProblem,
-} from '../ASN1DefinedTypesModule/LogicalProblem.ta';
+} from '../ASN1DefinedTypesModule/LogicalProblem.ta.js';
 import {
     ResourceProblem,
     _decode_ResourceProblem,
     _encode_ResourceProblem,
-} from '../ASN1DefinedTypesModule/ResourceProblem.ta';
+} from '../ASN1DefinedTypesModule/ResourceProblem.ta.js';
 export {
     ResourceProblem,
     _decode_ResourceProblem,
     _encode_ResourceProblem,
-} from '../ASN1DefinedTypesModule/ResourceProblem.ta';
+} from '../ASN1DefinedTypesModule/ResourceProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Failed */
 /**

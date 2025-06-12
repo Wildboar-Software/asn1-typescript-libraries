@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from '../TimeRepresentation/TimeStamp.ta';
+} from '../TimeRepresentation/TimeStamp.ta.js';
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from '../TimeRepresentation/TimeStamp.ta';
+} from '../TimeRepresentation/TimeStamp.ta.js';
 import {
     CumLeapSeconds,
     _decode_CumLeapSeconds,
     _encode_CumLeapSeconds,
-} from '../TimeRepresentation/CumLeapSeconds.ta';
+} from '../TimeRepresentation/CumLeapSeconds.ta.js';
 export {
     CumLeapSeconds,
     _decode_CumLeapSeconds,
     _encode_CumLeapSeconds,
-} from '../TimeRepresentation/CumLeapSeconds.ta';
+} from '../TimeRepresentation/CumLeapSeconds.ta.js';
 import {
     TimeZone,
     TimeZone_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
     unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TimeZone,
     _encode_TimeZone,
-} from '../TimeRepresentation/TimeZone.ta';
+} from '../TimeRepresentation/TimeZone.ta.js';
 export {
     TimeZone,
     TimeZone_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
     unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TimeZone,
     _encode_TimeZone,
-} from '../TimeRepresentation/TimeZone.ta';
+} from '../TimeRepresentation/TimeZone.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ClockTime */
 /**

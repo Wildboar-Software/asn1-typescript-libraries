@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PerRecipientReport,
     _decode_PerRecipientReport,
     _encode_PerRecipientReport,
-} from '../MSGeneralAttributeTypes/PerRecipientReport.ta';
+} from '../MSGeneralAttributeTypes/PerRecipientReport.ta.js';
 export {
     PerRecipientReport,
     _decode_PerRecipientReport,
     _encode_PerRecipientReport,
-} from '../MSGeneralAttributeTypes/PerRecipientReport.ta';
+} from '../MSGeneralAttributeTypes/PerRecipientReport.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportLocation */
 /**

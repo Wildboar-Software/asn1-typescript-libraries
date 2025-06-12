@@ -67,27 +67,27 @@ import {
   ASN1TagClass,
   ASN1UniversalType,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 export {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 import {
   PartialAttributeList,
   _decode_PartialAttributeList,
   _encode_PartialAttributeList,
-} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.js';
 export {
   PartialAttributeList,
   _decode_PartialAttributeList,
   _encode_PartialAttributeList,
-} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SearchResultEntry */
 /**

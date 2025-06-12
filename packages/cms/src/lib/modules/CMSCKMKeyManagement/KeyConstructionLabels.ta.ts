@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyConstructionLabel,
     _decode_KeyConstructionLabel,
     _encode_KeyConstructionLabel,
-} from "../CMSCKMKeyManagement/KeyConstructionLabel.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.js";
 export {
     KeyConstructionLabel,
     _decode_KeyConstructionLabel,
     _encode_KeyConstructionLabel,
-} from "../CMSCKMKeyManagement/KeyConstructionLabel.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyConstructionLabels */
 /**

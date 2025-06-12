@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientReference,
     _decode_RecipientReference,
     _encode_RecipientReference,
-} from '../EDIMSInformationObjects/RecipientReference.ta';
+} from '../EDIMSInformationObjects/RecipientReference.ta.js';
 export {
     RecipientReference,
     _decode_RecipientReference,
     _encode_RecipientReference,
-} from '../EDIMSInformationObjects/RecipientReference.ta';
+} from '../EDIMSInformationObjects/RecipientReference.ta.js';
 import {
     RecipientReferenceQualifier,
     _decode_RecipientReferenceQualifier,
     _encode_RecipientReferenceQualifier,
-} from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta';
+} from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta.js';
 export {
     RecipientReferenceQualifier,
     _decode_RecipientReferenceQualifier,
     _encode_RecipientReferenceQualifier,
-} from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta';
+} from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RecipientReferenceField */
 /**

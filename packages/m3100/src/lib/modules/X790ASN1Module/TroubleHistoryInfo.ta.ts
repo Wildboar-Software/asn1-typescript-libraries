@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     TroubleFound,
     _decode_TroubleFound,
     _encode_TroubleFound,
-} from '../X790ASN1Module/TroubleFound.ta';
+} from '../X790ASN1Module/TroubleFound.ta.js';
 export {
     TroubleFound,
     _decode_TroubleFound,
     _encode_TroubleFound,
-} from '../X790ASN1Module/TroubleFound.ta';
+} from '../X790ASN1Module/TroubleFound.ta.js';
 import {
     ActivityDuration,
     _decode_ActivityDuration,
     _encode_ActivityDuration,
-} from '../X790ASN1Module/ActivityDuration.ta';
+} from '../X790ASN1Module/ActivityDuration.ta.js';
 export {
     ActivityDuration,
     _decode_ActivityDuration,
     _encode_ActivityDuration,
-} from '../X790ASN1Module/ActivityDuration.ta';
+} from '../X790ASN1Module/ActivityDuration.ta.js';
 import {
     AdditionalTroubleInfoList,
     _decode_AdditionalTroubleInfoList,
     _encode_AdditionalTroubleInfoList,
-} from '../X790ASN1Module/AdditionalTroubleInfoList.ta';
+} from '../X790ASN1Module/AdditionalTroubleInfoList.ta.js';
 export {
     AdditionalTroubleInfoList,
     _decode_AdditionalTroubleInfoList,
     _encode_AdditionalTroubleInfoList,
-} from '../X790ASN1Module/AdditionalTroubleInfoList.ta';
+} from '../X790ASN1Module/AdditionalTroubleInfoList.ta.js';
 import {
     AuthorizationList,
     _decode_AuthorizationList,
     _encode_AuthorizationList,
-} from '../X790ASN1Module/AuthorizationList.ta';
+} from '../X790ASN1Module/AuthorizationList.ta.js';
 export {
     AuthorizationList,
     _decode_AuthorizationList,
     _encode_AuthorizationList,
-} from '../X790ASN1Module/AuthorizationList.ta';
+} from '../X790ASN1Module/AuthorizationList.ta.js';
 import {
     CancelRequestedByManager,
     _decode_CancelRequestedByManager,
     _encode_CancelRequestedByManager,
-} from '../X790ASN1Module/CancelRequestedByManager.ta';
+} from '../X790ASN1Module/CancelRequestedByManager.ta.js';
 export {
     CancelRequestedByManager,
     _decode_CancelRequestedByManager,
     _encode_CancelRequestedByManager,
-} from '../X790ASN1Module/CancelRequestedByManager.ta';
+} from '../X790ASN1Module/CancelRequestedByManager.ta.js';
 import {
     CloseOutVerification,
     _enum_for_CloseOutVerification,
@@ -141,7 +141,7 @@ import {
     deniedCloseOutNarrDisputed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CloseOutVerification,
     _encode_CloseOutVerification,
-} from '../X790ASN1Module/CloseOutVerification.ta';
+} from '../X790ASN1Module/CloseOutVerification.ta.js';
 export {
     CloseOutVerification,
     _enum_for_CloseOutVerification,
@@ -157,57 +157,57 @@ export {
     deniedCloseOutNarrDisputed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CloseOutVerification,
     _encode_CloseOutVerification,
-} from '../X790ASN1Module/CloseOutVerification.ta';
+} from '../X790ASN1Module/CloseOutVerification.ta.js';
 import {
     CommitmentTime,
     _decode_CommitmentTime,
     _encode_CommitmentTime,
-} from '../X790ASN1Module/CommitmentTime.ta';
+} from '../X790ASN1Module/CommitmentTime.ta.js';
 export {
     CommitmentTime,
     _decode_CommitmentTime,
     _encode_CommitmentTime,
-} from '../X790ASN1Module/CommitmentTime.ta';
+} from '../X790ASN1Module/CommitmentTime.ta.js';
 import {
     PerceivedTroubleSeverity,
     _decode_PerceivedTroubleSeverity,
     _encode_PerceivedTroubleSeverity,
-} from '../X790ASN1Module/PerceivedTroubleSeverity.ta';
+} from '../X790ASN1Module/PerceivedTroubleSeverity.ta.js';
 export {
     PerceivedTroubleSeverity,
     _decode_PerceivedTroubleSeverity,
     _encode_PerceivedTroubleSeverity,
-} from '../X790ASN1Module/PerceivedTroubleSeverity.ta';
+} from '../X790ASN1Module/PerceivedTroubleSeverity.ta.js';
 import {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 export {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 import {
     TroubleReportNumberList,
     _decode_TroubleReportNumberList,
     _encode_TroubleReportNumberList,
-} from '../X790ASN1Module/TroubleReportNumberList.ta';
+} from '../X790ASN1Module/TroubleReportNumberList.ta.js';
 export {
     TroubleReportNumberList,
     _decode_TroubleReportNumberList,
     _encode_TroubleReportNumberList,
-} from '../X790ASN1Module/TroubleReportNumberList.ta';
+} from '../X790ASN1Module/TroubleReportNumberList.ta.js';
 import {
     TroubleType,
     _decode_TroubleType,
     _encode_TroubleType,
-} from '../X790ASN1Module/TroubleType.ta';
+} from '../X790ASN1Module/TroubleType.ta.js';
 export {
     TroubleType,
     _decode_TroubleType,
     _encode_TroubleType,
-} from '../X790ASN1Module/TroubleType.ta';
+} from '../X790ASN1Module/TroubleType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TroubleHistoryInfo */
 /**

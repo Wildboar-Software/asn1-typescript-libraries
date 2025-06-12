@@ -69,27 +69,27 @@ import {
   ASN1Construction,
   ASN1UniversalType,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 export {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 import {
   AttributeValue,
   _decode_AttributeValue,
   _encode_AttributeValue,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.js';
 export {
   AttributeValue,
   _decode_AttributeValue,
   _encode_AttributeValue,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PartialAttribute */
 /**

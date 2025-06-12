@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CombinerAlgorithmIdentifier */
 /**

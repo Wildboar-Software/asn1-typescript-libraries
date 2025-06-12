@@ -1,15 +1,15 @@
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
 import {
     id_tokenizedParts,
-} from "../CMSObjectIdentifiers/id-tokenizedParts.va";
+} from "../CMSObjectIdentifiers/id-tokenizedParts.va.js";
 import {
     TokenizedParts,
     _decode_TokenizedParts,
     _encode_TokenizedParts,
-} from "./TokenizedParts.ta";
+} from "./TokenizedParts.ta.js";
 
 // This module was created manually, because the ASN.1 compiler did not output it
 // for some reason.

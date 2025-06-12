@@ -4,69 +4,69 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 import {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta";
+} from "../PKCS7/DigestAlgorithmIdentifiers.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
 import {
     KeyTransportRecipientInfo,
     _decode_KeyTransportRecipientInfo,
     _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta";
+} from "../PKCS7/KeyTransportRecipientInfo.ta.js";
 import {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../PKCS7/SignerInfo.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerInfo.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 export {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta";
+} from "../PKCS7/DigestAlgorithmIdentifiers.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
 export {
     KeyTransportRecipientInfo,
     _decode_KeyTransportRecipientInfo,
     _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta";
+} from "../PKCS7/KeyTransportRecipientInfo.ta.js";
 export {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../PKCS7/SignerInfo.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerInfo.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedAndEnvelopedData */
 /**

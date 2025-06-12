@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
-} from '../IPMSHeadingExtensions/BodyPartNumber.ta';
+} from '../IPMSHeadingExtensions/BodyPartNumber.ta.js';
 export {
     BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
-} from '../IPMSHeadingExtensions/BodyPartNumber.ta';
+} from '../IPMSHeadingExtensions/BodyPartNumber.ta.js';
 import {
     ForwardedContentToken_Item_body_part_choice,
     _decode_ForwardedContentToken_Item_body_part_choice,
     _encode_ForwardedContentToken_Item_body_part_choice,
-} from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta';
+} from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta.js';
 export {
     ForwardedContentToken_Item_body_part_choice,
     _decode_ForwardedContentToken_Item_body_part_choice,
     _encode_ForwardedContentToken_Item_body_part_choice,
-} from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta';
+} from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ForwardedContentToken_Item */
 /**

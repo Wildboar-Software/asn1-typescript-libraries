@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from '../ISO8823-PRESENTATION/Presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Presentation-selector.ta.js';
 export {
     Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
-} from '../ISO8823-PRESENTATION/Presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Presentation-selector.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Called_presentation_selector */
 /**

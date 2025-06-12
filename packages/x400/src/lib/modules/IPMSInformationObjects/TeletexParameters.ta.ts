@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 export {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TeletexParameters */
 /**

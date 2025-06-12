@@ -1,15 +1,15 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { pkcs_9_at_extendedCertificateAttributes } from "../PKCS-9/pkcs-9-at-extendedCertificateAttributes.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { pkcs_9_at_extendedCertificateAttributes } from "../PKCS-9/pkcs-9-at-extendedCertificateAttributes.va.js";
 
 /* START_OF_SYMBOL_DEFINITION extendedCertificateAttributes */
 /**

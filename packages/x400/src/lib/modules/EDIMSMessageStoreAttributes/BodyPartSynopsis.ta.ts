@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageBodyPartSynopsis,
     _decode_MessageBodyPartSynopsis,
     _encode_MessageBodyPartSynopsis,
-} from '../EDIMSMessageStoreAttributes/MessageBodyPartSynopsis.ta';
+} from '../EDIMSMessageStoreAttributes/MessageBodyPartSynopsis.ta.js';
 export {
     MessageBodyPartSynopsis,
     _decode_MessageBodyPartSynopsis,
     _encode_MessageBodyPartSynopsis,
-} from '../EDIMSMessageStoreAttributes/MessageBodyPartSynopsis.ta';
+} from '../EDIMSMessageStoreAttributes/MessageBodyPartSynopsis.ta.js';
 import {
     NonMessageBodyPartSynopsis,
     _decode_NonMessageBodyPartSynopsis,
     _encode_NonMessageBodyPartSynopsis,
-} from '../EDIMSMessageStoreAttributes/NonMessageBodyPartSynopsis.ta';
+} from '../EDIMSMessageStoreAttributes/NonMessageBodyPartSynopsis.ta.js';
 export {
     NonMessageBodyPartSynopsis,
     _decode_NonMessageBodyPartSynopsis,
     _encode_NonMessageBodyPartSynopsis,
-} from '../EDIMSMessageStoreAttributes/NonMessageBodyPartSynopsis.ta';
+} from '../EDIMSMessageStoreAttributes/NonMessageBodyPartSynopsis.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartSynopsis */
 /**

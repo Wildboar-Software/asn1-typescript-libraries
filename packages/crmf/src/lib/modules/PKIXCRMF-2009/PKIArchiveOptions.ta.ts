@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     BOOLEAN,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKIXCRMF-2009/EncryptedKey.ta";
+} from "../PKIXCRMF-2009/EncryptedKey.ta.js";
 import {
     KeyGenParameters,
     _decode_KeyGenParameters,
     _encode_KeyGenParameters,
-} from "../PKIXCRMF-2009/KeyGenParameters.ta";
+} from "../PKIXCRMF-2009/KeyGenParameters.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKIXCRMF-2009/EncryptedKey.ta";
+} from "../PKIXCRMF-2009/EncryptedKey.ta.js";
 export {
     KeyGenParameters,
     _decode_KeyGenParameters,
     _encode_KeyGenParameters,
-} from "../PKIXCRMF-2009/KeyGenParameters.ta";
+} from "../PKIXCRMF-2009/KeyGenParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKIArchiveOptions */
 /**

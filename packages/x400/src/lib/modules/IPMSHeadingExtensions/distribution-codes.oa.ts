@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DistributionCodes,
     _decode_DistributionCodes,
     _encode_DistributionCodes,
-} from '../IPMSHeadingExtensions/DistributionCodes.ta';
+} from '../IPMSHeadingExtensions/DistributionCodes.ta.js';
 export {
     DistributionCodes,
     _decode_DistributionCodes,
     _encode_DistributionCodes,
-} from '../IPMSHeadingExtensions/DistributionCodes.ta';
-import { id_hex_distribution_codes } from '../IPMSObjectIdentifiers/id-hex-distribution-codes.va';
-export { id_hex_distribution_codes } from '../IPMSObjectIdentifiers/id-hex-distribution-codes.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/DistributionCodes.ta.js';
+import { id_hex_distribution_codes } from '../IPMSObjectIdentifiers/id-hex-distribution-codes.va.js';
+export { id_hex_distribution_codes } from '../IPMSObjectIdentifiers/id-hex-distribution-codes.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION distribution_codes */
 /**

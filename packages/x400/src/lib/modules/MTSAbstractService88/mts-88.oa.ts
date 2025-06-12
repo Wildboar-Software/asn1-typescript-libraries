@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca';
-export { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-import { mts_forced_access_contract_88 } from '../MTSAbstractService88/mts-forced-access-contract-88.oa';
-export { mts_forced_access_contract_88 } from '../MTSAbstractService88/mts-forced-access-contract-88.oa';
-import { mts_access_contract_88 } from '../MTSAbstractService88/mts-access-contract-88.oa';
-export { mts_access_contract_88 } from '../MTSAbstractService88/mts-access-contract-88.oa';
-import { id_ot_mts } from '../MTSObjectIdentifiers/id-ot-mts.va';
-export { id_ot_mts } from '../MTSObjectIdentifiers/id-ot-mts.va';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca';
-export { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.js';
+export { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.js';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+import { mts_forced_access_contract_88 } from '../MTSAbstractService88/mts-forced-access-contract-88.oa.js';
+export { mts_forced_access_contract_88 } from '../MTSAbstractService88/mts-forced-access-contract-88.oa.js';
+import { mts_access_contract_88 } from '../MTSAbstractService88/mts-access-contract-88.oa.js';
+export { mts_access_contract_88 } from '../MTSAbstractService88/mts-access-contract-88.oa.js';
+import { id_ot_mts } from '../MTSObjectIdentifiers/id-ot-mts.va.js';
+export { id_ot_mts } from '../MTSObjectIdentifiers/id-ot-mts.va.js';
+import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.js';
+export { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mts_88 */
 /**

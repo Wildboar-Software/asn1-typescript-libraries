@@ -3,29 +3,29 @@ import {
     Parameters,
     _decode_Parameters,
     _encode_Parameters,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/Parameters.ta";
+} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/Parameters.ta.js";
 import { ASN1Element as _Element, OPTIONAL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ECPrivateKey,
     _decode_ECPrivateKey,
     _encode_ECPrivateKey,
-} from "../PKCS-15/ECPrivateKey.ta";
+} from "../PKCS-15/ECPrivateKey.ta.js";
 import {
     KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
-} from "../PKCS-15/KeyInfo.ta";
+} from "../PKCS-15/KeyInfo.ta.js";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 import {
     PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
-} from "../PKCS-15/PublicKeyOperations.ta";
+} from "../PKCS-15/PublicKeyOperations.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PrivateECKeyAttributes */
 /**

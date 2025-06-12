@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObservationScan,
     _decode_ObservationScan,
     _encode_ObservationScan,
-} from '../SummarizationASN1Productions/ObservationScan.ta';
+} from '../SummarizationASN1Productions/ObservationScan.ta.js';
 export {
     ObservationScan,
     _decode_ObservationScan,
     _encode_ObservationScan,
-} from '../SummarizationASN1Productions/ObservationScan.ta';
+} from '../SummarizationASN1Productions/ObservationScan.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObservationScanList */
 /**

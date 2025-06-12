@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKIPublicationInfo_action,
     _decode_PKIPublicationInfo_action,
     _encode_PKIPublicationInfo_action,
-} from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta";
+} from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta.js";
 import {
     SinglePubInfo,
     _decode_SinglePubInfo,
     _encode_SinglePubInfo,
-} from "../PKIXCRMF-2009/SinglePubInfo.ta";
+} from "../PKIXCRMF-2009/SinglePubInfo.ta.js";
 export {
     dontPublish /* IMPORTED_SHORT_NAMED_INTEGER */,
     PKIPublicationInfo_action,
@@ -23,12 +23,12 @@ export {
     pleasePublish /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PKIPublicationInfo_action,
     _encode_PKIPublicationInfo_action,
-} from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta";
+} from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta.js";
 export {
     SinglePubInfo,
     _decode_SinglePubInfo,
     _encode_SinglePubInfo,
-} from "../PKIXCRMF-2009/SinglePubInfo.ta";
+} from "../PKIXCRMF-2009/SinglePubInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKIPublicationInfo */
 /**

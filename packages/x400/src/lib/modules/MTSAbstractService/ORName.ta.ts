@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
+} from '../MTSAbstractService/ORAddress.ta.js';
 export {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
+} from '../MTSAbstractService/ORAddress.ta.js';
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 import {
     BuiltInStandardAttributes,
     _decode_BuiltInStandardAttributes,
     _encode_BuiltInStandardAttributes,
-} from '../MTSAbstractService/BuiltInStandardAttributes.ta';
+} from '../MTSAbstractService/BuiltInStandardAttributes.ta.js';
 export {
     BuiltInStandardAttributes,
     _decode_BuiltInStandardAttributes,
     _encode_BuiltInStandardAttributes,
-} from '../MTSAbstractService/BuiltInStandardAttributes.ta';
+} from '../MTSAbstractService/BuiltInStandardAttributes.ta.js';
 import {
     BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
-} from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta';
+} from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta.js';
 export {
     BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
-} from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta';
+} from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta.js';
 import {
     ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
-} from '../MTSAbstractService/ExtensionAttributes.ta';
+} from '../MTSAbstractService/ExtensionAttributes.ta.js';
 export {
     ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
-} from '../MTSAbstractService/ExtensionAttributes.ta';
+} from '../MTSAbstractService/ExtensionAttributes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ORName */
 /**

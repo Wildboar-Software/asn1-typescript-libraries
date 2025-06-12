@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from '../CmsTelebiometric/KeyAgreeRecipientInfo.ta';
+} from '../CmsTelebiometric/KeyAgreeRecipientInfo.ta.js';
 export {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from '../CmsTelebiometric/KeyAgreeRecipientInfo.ta';
+} from '../CmsTelebiometric/KeyAgreeRecipientInfo.ta.js';
 import {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from '../CmsTelebiometric/KEKRecipientInfo.ta';
+} from '../CmsTelebiometric/KEKRecipientInfo.ta.js';
 export {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from '../CmsTelebiometric/KEKRecipientInfo.ta';
+} from '../CmsTelebiometric/KEKRecipientInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**

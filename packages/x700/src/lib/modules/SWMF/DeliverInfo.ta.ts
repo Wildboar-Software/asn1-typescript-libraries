@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
-} from '../SWMF/DeliverId.ta';
+} from '../SWMF/DeliverId.ta.js';
 export {
     DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
-} from '../SWMF/DeliverId.ta';
+} from '../SWMF/DeliverId.ta.js';
 import {
     DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
-} from '../SWMF/DistributedSoftware.ta';
+} from '../SWMF/DistributedSoftware.ta.js';
 export {
     DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
-} from '../SWMF/DistributedSoftware.ta';
+} from '../SWMF/DistributedSoftware.ta.js';
 import {
     Destination,
     _decode_Destination,
     _encode_Destination,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Destination.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Destination.ta.js';
 export {
     Destination,
     _decode_Destination,
     _encode_Destination,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Destination.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Destination.ta.js';
 import {
     TransferInfo,
     _decode_TransferInfo,
     _encode_TransferInfo,
-} from '../SWMF/TransferInfo.ta';
+} from '../SWMF/TransferInfo.ta.js';
 export {
     TransferInfo,
     _decode_TransferInfo,
     _encode_TransferInfo,
-} from '../SWMF/TransferInfo.ta';
+} from '../SWMF/TransferInfo.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliverInfo */
 /**

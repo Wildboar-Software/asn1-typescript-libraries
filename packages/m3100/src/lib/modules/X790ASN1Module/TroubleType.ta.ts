@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TroubleType_number,
     TroubleType_number_noDialToneGroup /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -458,7 +458,7 @@ import {
     testAssist /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TroubleType_number,
     _encode_TroubleType_number,
-} from '../X790ASN1Module/TroubleType-number.ta';
+} from '../X790ASN1Module/TroubleType-number.ta.js';
 export {
     TroubleType_number,
     TroubleType_number_noDialToneGroup /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -851,7 +851,7 @@ export {
     testAssist /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TroubleType_number,
     _encode_TroubleType_number,
-} from '../X790ASN1Module/TroubleType-number.ta';
+} from '../X790ASN1Module/TroubleType-number.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TroubleType */
 /**

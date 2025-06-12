@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.js';
 export {
     ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ApplicableManagedObjectClassList */
 /**

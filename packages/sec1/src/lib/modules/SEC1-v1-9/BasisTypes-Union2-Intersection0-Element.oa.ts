@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta";
-export { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta";
-import { ppBasis } from "../SEC1-v1-9/ppBasis.va";
-export { ppBasis } from "../SEC1-v1-9/ppBasis.va";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta.js";
+export { Pentanomial, _decode_Pentanomial, _encode_Pentanomial } from "../SEC1-v1-9/Pentanomial.ta.js";
+import { ppBasis } from "../SEC1-v1-9/ppBasis.va.js";
+export { ppBasis } from "../SEC1-v1-9/ppBasis.va.js";
+import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union2_Intersection0_Element */

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LastReq_Item,
   _decode_LastReq_Item,
   _encode_LastReq_Item,
-} from '../KerberosV5Spec2/LastReq-Item.ta';
+} from '../KerberosV5Spec2/LastReq-Item.ta.js';
 export {
   LastReq_Item,
   _decode_LastReq_Item,
   _encode_LastReq_Item,
-} from '../KerberosV5Spec2/LastReq-Item.ta';
+} from '../KerberosV5Spec2/LastReq-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LastReq */
 /**

@@ -3,16 +3,16 @@ import {
     BasicOCSPResponse,
     _decode_BasicOCSPResponse,
     _encode_BasicOCSPResponse,
-} from "../OCSP-2013-08/BasicOCSPResponse.ta";
-import { id_pkix_ocsp_basic } from "../OCSP-2013-08/id-pkix-ocsp-basic.va";
-import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca";
+} from "../OCSP-2013-08/BasicOCSPResponse.ta.js";
+import { id_pkix_ocsp_basic } from "../OCSP-2013-08/id-pkix-ocsp-basic.va.js";
+import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.js";
 export {
     BasicOCSPResponse,
     _decode_BasicOCSPResponse,
     _encode_BasicOCSPResponse,
-} from "../OCSP-2013-08/BasicOCSPResponse.ta";
-export { id_pkix_ocsp_basic } from "../OCSP-2013-08/id-pkix-ocsp-basic.va";
-export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca";
+} from "../OCSP-2013-08/BasicOCSPResponse.ta.js";
+export { id_pkix_ocsp_basic } from "../OCSP-2013-08/id-pkix-ocsp-basic.va.js";
+export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION basicResponse */
 /**

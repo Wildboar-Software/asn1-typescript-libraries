@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PathnameandVersion,
     _decode_PathnameandVersion,
     _encode_PathnameandVersion,
-} from '../IPMSFileTransferBodyPartType/PathnameandVersion.ta';
+} from '../IPMSFileTransferBodyPartType/PathnameandVersion.ta.js';
 export {
     PathnameandVersion,
     _decode_PathnameandVersion,
     _encode_PathnameandVersion,
-} from '../IPMSFileTransferBodyPartType/PathnameandVersion.ta';
+} from '../IPMSFileTransferBodyPartType/PathnameandVersion.ta.js';
 import {
     CrossReference,
     _decode_CrossReference,
     _encode_CrossReference,
-} from '../IPMSFileTransferBodyPartType/CrossReference.ta';
+} from '../IPMSFileTransferBodyPartType/CrossReference.ta.js';
 export {
     CrossReference,
     _decode_CrossReference,
     _encode_CrossReference,
-} from '../IPMSFileTransferBodyPartType/CrossReference.ta';
+} from '../IPMSFileTransferBodyPartType/CrossReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FileIdentifier */
 /**

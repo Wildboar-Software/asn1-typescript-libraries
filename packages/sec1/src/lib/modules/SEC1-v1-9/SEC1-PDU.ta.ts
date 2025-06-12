@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta";
-export { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta";
-import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta";
-export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta";
-import { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta";
-export { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta";
-import { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta";
-export { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta";
-import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta";
-export { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.js";
+export { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.js";
+import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.js";
+export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.js";
+import { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.js";
+export { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.js";
+import { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.js";
+export { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.js";
+import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.js";
+export { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SEC1_PDU */

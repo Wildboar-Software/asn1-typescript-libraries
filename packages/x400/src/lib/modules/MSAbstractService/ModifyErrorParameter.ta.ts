@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 import {
     ModifyProblem,
     ModifyProblem_attribute_not_present /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -90,7 +90,7 @@ import {
     modify_restriction_problem /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyProblem,
     _encode_ModifyProblem,
-} from '../MSAbstractService/ModifyProblem.ta';
+} from '../MSAbstractService/ModifyProblem.ta.js';
 export {
     ModifyProblem,
     ModifyProblem_attribute_not_present /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,7 +105,7 @@ export {
     modify_restriction_problem /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyProblem,
     _encode_ModifyProblem,
-} from '../MSAbstractService/ModifyProblem.ta';
+} from '../MSAbstractService/ModifyProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModifyErrorParameter */
 /**

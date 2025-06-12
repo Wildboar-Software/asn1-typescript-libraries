@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 export {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DestinationADMD */
 /**

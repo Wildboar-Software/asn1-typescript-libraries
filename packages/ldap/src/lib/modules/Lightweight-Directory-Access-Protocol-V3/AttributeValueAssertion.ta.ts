@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 export {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 import {
   AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
-} from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.js';
 export {
   AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
-} from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeValueAssertion */
 /**

@@ -6,9 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { ContentSet } from "../CryptographicMessageSyntax-2010/ContentSet.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { ContentSet } from "../CryptographicMessageSyntax-2010/ContentSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
@@ -91,7 +91,7 @@ import {
   recapture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
-} from '../BIP/BioAPI-GUI-RESPONSE.ta';
+} from '../BIP/BioAPI-GUI-RESPONSE.ta.js';
 export {
   BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
@@ -117,17 +117,17 @@ export {
   recapture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
-} from '../BIP/BioAPI-GUI-RESPONSE.ta';
+} from '../BIP/BioAPI-GUI-RESPONSE.ta.js';
 import {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 export {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GUIStateEvent_AcknowledgementParams */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-content.va';
-export { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-content.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-content.va.js';
+export { id_x1080_1_cms_content } from '../E-health-common/id-x1080-1-cms-content.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_health_term_rsp */
 /**

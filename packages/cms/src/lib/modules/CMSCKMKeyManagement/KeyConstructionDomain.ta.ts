@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DomainMaintenanceLevel,
     _decode_DomainMaintenanceLevel,
     _encode_DomainMaintenanceLevel,
-} from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta";
+} from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta.js";
 import {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../CMSCKMKeyManagement/DomainName.ta";
+} from "../CMSCKMKeyManagement/DomainName.ta.js";
 import {
     DomainParams,
     _decode_DomainParams,
     _encode_DomainParams,
-} from "../CMSCKMKeyManagement/DomainParams.ta";
+} from "../CMSCKMKeyManagement/DomainParams.ta.js";
 export {
     DomainMaintenanceLevel,
     _decode_DomainMaintenanceLevel,
     _encode_DomainMaintenanceLevel,
-} from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta";
+} from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta.js";
 export {
     DomainName,
     _decode_DomainName,
     _encode_DomainName,
-} from "../CMSCKMKeyManagement/DomainName.ta";
+} from "../CMSCKMKeyManagement/DomainName.ta.js";
 export {
     DomainParams,
     _decode_DomainParams,
     _encode_DomainParams,
-} from "../CMSCKMKeyManagement/DomainParams.ta";
+} from "../CMSCKMKeyManagement/DomainParams.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyConstructionDomain */
 /**

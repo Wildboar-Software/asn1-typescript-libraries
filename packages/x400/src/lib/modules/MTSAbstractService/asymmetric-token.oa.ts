@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AsymmetricToken,
     _decode_AsymmetricToken,
     _encode_AsymmetricToken,
-} from '../MTSAbstractService/AsymmetricToken.ta';
+} from '../MTSAbstractService/AsymmetricToken.ta.js';
 export {
     AsymmetricToken,
     _decode_AsymmetricToken,
     _encode_AsymmetricToken,
-} from '../MTSAbstractService/AsymmetricToken.ta';
-import { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va';
-export { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va';
-import { TOKEN } from '../MTSAbstractService/TOKEN.oca';
-export { TOKEN } from '../MTSAbstractService/TOKEN.oca';
+} from '../MTSAbstractService/AsymmetricToken.ta.js';
+import { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va.js';
+export { id_tok_asymmetricToken } from '../MTSObjectIdentifiers/id-tok-asymmetricToken.va.js';
+import { TOKEN } from '../MTSAbstractService/TOKEN.oca.js';
+export { TOKEN } from '../MTSAbstractService/TOKEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION asymmetric_token */
 /**

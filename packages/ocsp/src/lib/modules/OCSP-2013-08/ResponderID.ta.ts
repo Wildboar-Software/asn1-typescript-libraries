@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.js";
 import {
     KeyHash,
     _decode_KeyHash,
     _encode_KeyHash,
-} from "../OCSP-2013-08/KeyHash.ta";
+} from "../OCSP-2013-08/KeyHash.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ResponderID */
 /**

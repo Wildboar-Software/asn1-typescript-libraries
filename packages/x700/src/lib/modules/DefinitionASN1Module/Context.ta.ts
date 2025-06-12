@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Context_keyword,
     _decode_Context_keyword,
     _encode_Context_keyword,
-} from '../DefinitionASN1Module/Context-keyword.ta';
+} from '../DefinitionASN1Module/Context-keyword.ta.js';
 export {
     Context_keyword,
     _decode_Context_keyword,
     _encode_Context_keyword,
-} from '../DefinitionASN1Module/Context-keyword.ta';
+} from '../DefinitionASN1Module/Context-keyword.ta.js';
 import {
     Context_representation,
     _enum_for_Context_representation,
@@ -91,7 +91,7 @@ import {
     sPECIFIC_ERROR /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Context_representation,
     _encode_Context_representation,
-} from '../DefinitionASN1Module/Context-representation.ta';
+} from '../DefinitionASN1Module/Context-representation.ta.js';
 export {
     Context_representation,
     _enum_for_Context_representation,
@@ -107,7 +107,7 @@ export {
     sPECIFIC_ERROR /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Context_representation,
     _encode_Context_representation,
-} from '../DefinitionASN1Module/Context-representation.ta';
+} from '../DefinitionASN1Module/Context-representation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Context */
 /**

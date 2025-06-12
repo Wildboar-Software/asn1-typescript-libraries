@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-import { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va";
-import { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa";
-import { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa";
-import { mda_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha384.oa";
-import { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa";
-import { pk_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaSSA-PSS.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+import { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va.js";
+import { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa.js";
+import { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa.js";
+import { mda_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha384.oa.js";
+import { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa.js";
+import { pk_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaSSA-PSS.oa.js";
 import {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta";
-import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
-import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta.js";
+import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
+import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -34,23 +34,23 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va";
-export { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa";
-export { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa";
-export { mda_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha384.oa";
-export { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa";
-export { pk_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaSSA-PSS.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_RSASSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSASSA-PSS.va.js";
+export { mda_sha224 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha224.oa.js";
+export { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa.js";
+export { mda_sha384 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha384.oa.js";
+export { mda_sha512 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha512.oa.js";
+export { pk_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaSSA-PSS.oa.js";
 export {
     RSASSA_PSS_params,
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta";
-export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSASSA-PSS-params.ta.js";
+export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
+export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION sa_rsaSSA_PSS */
 /**

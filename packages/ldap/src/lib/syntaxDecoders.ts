@@ -1,6 +1,6 @@
-import type LDAPSyntaxDecoder from "./types/LDAPSyntaxDecoder";
+import type LDAPSyntaxDecoder from "./types/LDAPSyntaxDecoder.js";
 import { ASN1Element, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "asn1-ts";
-import decodeLDAPOID from "./decodeLDAPOID";
+import decodeLDAPOID from "./decodeLDAPOID.js";
 
 export
 const bitString: LDAPSyntaxDecoder = (value: Uint8Array): ASN1Element => {

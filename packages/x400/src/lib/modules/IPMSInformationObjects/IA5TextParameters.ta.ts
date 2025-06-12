@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Repertoire,
     _enum_for_Repertoire,
@@ -75,7 +75,7 @@ import {
     ia5 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Repertoire,
     _encode_Repertoire,
-} from '../IPMSInformationObjects/Repertoire.ta';
+} from '../IPMSInformationObjects/Repertoire.ta.js';
 export {
     Repertoire,
     _enum_for_Repertoire,
@@ -85,7 +85,7 @@ export {
     ia5 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Repertoire,
     _encode_Repertoire,
-} from '../IPMSInformationObjects/Repertoire.ta';
+} from '../IPMSInformationObjects/Repertoire.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IA5TextParameters */
 /**

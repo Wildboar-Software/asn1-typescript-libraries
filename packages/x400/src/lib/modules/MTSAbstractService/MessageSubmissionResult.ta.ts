@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
-} from '../MTSAbstractService/MessageSubmissionIdentifier.ta';
+} from '../MTSAbstractService/MessageSubmissionIdentifier.ta.js';
 export {
     MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
-} from '../MTSAbstractService/MessageSubmissionIdentifier.ta';
+} from '../MTSAbstractService/MessageSubmissionIdentifier.ta.js';
 import {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 export {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageSubmissionResult */
 /**

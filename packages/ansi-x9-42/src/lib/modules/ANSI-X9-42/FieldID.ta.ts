@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION FieldID */
 /**

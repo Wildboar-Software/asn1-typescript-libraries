@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IsdnNumber,
     _decode_IsdnNumber,
     _encode_IsdnNumber,
-} from '../TCAP-Examples/IsdnNumber.ta';
+} from '../TCAP-Examples/IsdnNumber.ta.js';
 export {
     IsdnNumber,
     _decode_IsdnNumber,
     _encode_IsdnNumber,
-} from '../TCAP-Examples/IsdnNumber.ta';
+} from '../TCAP-Examples/IsdnNumber.ta.js';
 import {
     BasicServiceIndicator,
     _enum_for_BasicServiceIndicator,
@@ -85,7 +85,7 @@ import {
     unrestrictedDigital /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BasicServiceIndicator,
     _encode_BasicServiceIndicator,
-} from '../TCAP-Examples/BasicServiceIndicator.ta';
+} from '../TCAP-Examples/BasicServiceIndicator.ta.js';
 export {
     BasicServiceIndicator,
     _enum_for_BasicServiceIndicator,
@@ -95,7 +95,7 @@ export {
     unrestrictedDigital /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BasicServiceIndicator,
     _encode_BasicServiceIndicator,
-} from '../TCAP-Examples/BasicServiceIndicator.ta';
+} from '../TCAP-Examples/BasicServiceIndicator.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RequestArgument */
 /**

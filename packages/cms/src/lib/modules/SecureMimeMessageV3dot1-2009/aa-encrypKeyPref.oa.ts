@@ -1,17 +1,17 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va.js";
 import {
     SMIMEEncryptionKeyPreference,
     _decode_SMIMEEncryptionKeyPreference,
     _encode_SMIMEEncryptionKeyPreference,
-} from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta";
-export { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va";
+} from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.js";
+export { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va.js";
 export {
     SMIMEEncryptionKeyPreference,
     _decode_SMIMEEncryptionKeyPreference,
     _encode_SMIMEEncryptionKeyPreference,
-} from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta";
+} from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_encrypKeyPref */
 /**

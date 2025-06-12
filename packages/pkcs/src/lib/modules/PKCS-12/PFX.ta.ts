@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MacData,
     _decode_MacData,
     _encode_MacData,
-} from "../PKCS-12/MacData.ta";
+} from "../PKCS-12/MacData.ta.js";
 import {
     PFX_version,
     _decode_PFX_version,
     _encode_PFX_version,
-} from "../PKCS-12/PFX-version.ta";
+} from "../PKCS-12/PFX-version.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PFX */
 /**

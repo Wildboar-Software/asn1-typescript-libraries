@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterThreshold_Item } from "../Attribute-ASN1Module/CounterThreshold-Item.ta";
-export { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterThreshold_Item } from "../Attribute-ASN1Module/CounterThreshold-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterThreshold_Item } from "../Attribute-ASN1Module/CounterThreshold-Item.ta.js";
+export { CounterThreshold_Item, _decode_CounterThreshold_Item, _encode_CounterThreshold_Item } from "../Attribute-ASN1Module/CounterThreshold-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CounterThreshold */

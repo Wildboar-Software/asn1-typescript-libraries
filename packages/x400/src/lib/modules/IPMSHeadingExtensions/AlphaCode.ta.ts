@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
-import { ub_alpha_code_length } from '../IPMSUpperBounds/ub-alpha-code-length.va';
-export { ub_alpha_code_length } from '../IPMSUpperBounds/ub-alpha-code-length.va';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
+import { ub_alpha_code_length } from '../IPMSUpperBounds/ub-alpha-code-length.va.js';
+export { ub_alpha_code_length } from '../IPMSUpperBounds/ub-alpha-code-length.va.js';
 
 /* START_OF_SYMBOL_DEFINITION AlphaCode */
 /**

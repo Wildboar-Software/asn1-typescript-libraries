@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { tdes_cbc_in_ecies } from "../SEC1-v1-9/tdes-cbc-in-ecies.va";
-export { tdes_cbc_in_ecies } from "../SEC1-v1-9/tdes-cbc-in-ecies.va";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { tdes_cbc_in_ecies } from "../SEC1-v1-9/tdes-cbc-in-ecies.va.js";
+export { tdes_cbc_in_ecies } from "../SEC1-v1-9/tdes-cbc-in-ecies.va.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SYMENCSet_Union1_Intersection0_Element */

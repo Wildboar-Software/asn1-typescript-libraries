@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectionType,
     _decode_ConnectionType,
     _encode_ConnectionType,
-} from '../ASN1DefinedTypesModule/ConnectionType.ta';
+} from '../ASN1DefinedTypesModule/ConnectionType.ta.js';
 export {
     ConnectionType,
     _decode_ConnectionType,
     _encode_ConnectionType,
-} from '../ASN1DefinedTypesModule/ConnectionType.ta';
+} from '../ASN1DefinedTypesModule/ConnectionType.ta.js';
 import {
     ConnectionTypeBi,
     _decode_ConnectionTypeBi,
     _encode_ConnectionTypeBi,
-} from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta';
+} from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta.js';
 export {
     ConnectionTypeBi,
     _decode_ConnectionTypeBi,
     _encode_ConnectionTypeBi,
-} from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta';
+} from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta.js';
 import {
     AddLeg,
     _decode_AddLeg,
     _encode_AddLeg,
-} from '../ASN1DefinedTypesModule/AddLeg.ta';
+} from '../ASN1DefinedTypesModule/AddLeg.ta.js';
 export {
     AddLeg,
     _decode_AddLeg,
     _encode_AddLeg,
-} from '../ASN1DefinedTypesModule/AddLeg.ta';
+} from '../ASN1DefinedTypesModule/AddLeg.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectInformation_Item_itemType */
 /**

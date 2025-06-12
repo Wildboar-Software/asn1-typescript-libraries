@@ -65,22 +65,22 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIStatusInfo,
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
-} from '../PKIXCMP-2009/PKIStatusInfo.ta';
+} from '../PKIXCMP-2009/PKIStatusInfo.ta.js';
 import {
   CertId,
   _decode_CertId,
   _encode_CertId,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta.js';
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevRepContent */
 /**

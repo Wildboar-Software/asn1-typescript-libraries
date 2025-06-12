@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../ASN1SOAP/Identifier.ta';
+} from '../ASN1SOAP/Identifier.ta.js';
 export {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../ASN1SOAP/Identifier.ta';
+} from '../ASN1SOAP/Identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Content_encoded_value */
 /**

@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.js";
 import {
     AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,
     _encode_AuthorityInfoAccessSyntax,
-} from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta";
+} from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ServiceLocator */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } from "../Attribute-ASN1Module/NotifyThreshold.ta";
-export { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } from "../Attribute-ASN1Module/NotifyThreshold.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } from "../Attribute-ASN1Module/NotifyThreshold.ta.js";
+export { NotifyThreshold, _decode_NotifyThreshold, _encode_NotifyThreshold } from "../Attribute-ASN1Module/NotifyThreshold.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION GaugeThreshold_Item */

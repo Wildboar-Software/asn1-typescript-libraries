@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 export {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 import {
   RelativeLDAPDN,
   _decode_RelativeLDAPDN,
   _encode_RelativeLDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.js';
 export {
   RelativeLDAPDN,
   _decode_RelativeLDAPDN,
   _encode_RelativeLDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModifyDNRequest */
 /**

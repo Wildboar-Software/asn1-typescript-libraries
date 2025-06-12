@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta";
-export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta";
-import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta";
-export { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta";
-import { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta";
-export { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta.js";
+export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta.js";
+import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.js";
+export { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.js";
+import { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.js";
+export { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.js";
 import {
     Version,
     _decode_Version,
     _encode_Version,
     v1,
-} from "./Version.ta";
+} from "./Version.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TBBSecurityAssertions */

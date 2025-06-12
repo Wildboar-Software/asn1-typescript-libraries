@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 export {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 import {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 export {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 import {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_FRAMEWORK_SCHEMA */
 /**

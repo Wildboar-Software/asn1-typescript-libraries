@@ -1,11 +1,11 @@
 /* eslint-disable */
-import type { OBJECT_CLASS } from "@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca";
+import type { OBJECT_CLASS } from "@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa";
-import { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va";
-import { PKCSEntityAttributeSet } from "../PKCS-9/PKCSEntityAttributeSet.osa";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js";
+import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js";
+import { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va.js";
+import { PKCSEntityAttributeSet } from "../PKCS-9/PKCSEntityAttributeSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcsEntity */
 /**

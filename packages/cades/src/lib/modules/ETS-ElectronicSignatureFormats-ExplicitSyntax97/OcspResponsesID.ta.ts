@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta";
-export { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
-export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta.js";
+export { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta.js";
+import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
+export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OcspResponsesID */

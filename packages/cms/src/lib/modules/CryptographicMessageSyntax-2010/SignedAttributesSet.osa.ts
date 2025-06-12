@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { CMSProfileAttributes } from "../CMSProfileAttributes/CMSProfileAttributes.osa";
-import { aa_contentType } from "../CryptographicMessageSyntax-2010/aa-contentType.oa";
-import { aa_messageDigest } from "../CryptographicMessageSyntax-2010/aa-messageDigest.oa";
-import { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTime.oa";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { tokenizedParts } from "../TokenizationManifest/tokenizedParts.oa";
+import { CMSProfileAttributes } from "../CMSProfileAttributes/CMSProfileAttributes.osa.js";
+import { aa_contentType } from "../CryptographicMessageSyntax-2010/aa-contentType.oa.js";
+import { aa_messageDigest } from "../CryptographicMessageSyntax-2010/aa-messageDigest.oa.js";
+import { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTime.oa.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { tokenizedParts } from "../TokenizationManifest/tokenizedParts.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedAttributesSet */
 /**

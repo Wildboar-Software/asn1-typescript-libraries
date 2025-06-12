@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta";
-export { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta";
-import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta";
-export { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta.js";
+export { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta.js";
+import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.js";
+export { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SPUserNotice */

@@ -3,16 +3,16 @@ import {
     AuthenticatedData,
     _decode_AuthenticatedData,
     _encode_AuthenticatedData,
-} from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-import { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va";
+} from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta.js";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+import { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va.js";
 export {
     AuthenticatedData,
     _decode_AuthenticatedData,
     _encode_AuthenticatedData,
-} from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va";
+} from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_AuthenticatedData */
 /**

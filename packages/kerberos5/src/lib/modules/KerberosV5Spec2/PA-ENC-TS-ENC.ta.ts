@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 export {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PA_ENC_TS_ENC */
 /**

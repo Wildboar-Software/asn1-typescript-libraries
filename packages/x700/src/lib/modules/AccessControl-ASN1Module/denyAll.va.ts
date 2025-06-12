@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DefaultAccess,
     _decode_DefaultAccess,
     _encode_DefaultAccess,
-} from '../AccessControl-ASN1Module/DefaultAccess.ta';
+} from '../AccessControl-ASN1Module/DefaultAccess.ta.js';
 export {
     DefaultAccess,
     _decode_DefaultAccess,
     _encode_DefaultAccess,
-} from '../AccessControl-ASN1Module/DefaultAccess.ta';
+} from '../AccessControl-ASN1Module/DefaultAccess.ta.js';
 import {
     EnforcementAction,
     _enum_for_EnforcementAction,
@@ -91,7 +91,7 @@ import {
     allow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EnforcementAction,
     _encode_EnforcementAction,
-} from '../AccessControl-ASN1Module/EnforcementAction.ta';
+} from '../AccessControl-ASN1Module/EnforcementAction.ta.js';
 export {
     EnforcementAction,
     _enum_for_EnforcementAction,
@@ -107,7 +107,7 @@ export {
     allow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EnforcementAction,
     _encode_EnforcementAction,
-} from '../AccessControl-ASN1Module/EnforcementAction.ta';
+} from '../AccessControl-ASN1Module/EnforcementAction.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION denyAll */
 /**

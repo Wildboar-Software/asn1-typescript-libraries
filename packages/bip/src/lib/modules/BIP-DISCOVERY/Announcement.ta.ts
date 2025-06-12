@@ -65,49 +65,49 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ProtocolVersion,
   _decode_ProtocolVersion,
   _encode_ProtocolVersion,
-} from '../BIP-DISCOVERY/ProtocolVersion.ta';
+} from '../BIP-DISCOVERY/ProtocolVersion.ta.js';
 export {
   ProtocolVersion,
   _decode_ProtocolVersion,
   _encode_ProtocolVersion,
-} from '../BIP-DISCOVERY/ProtocolVersion.ta';
+} from '../BIP-DISCOVERY/ProtocolVersion.ta.js';
 import {
   IPAddress,
   _decode_IPAddress,
   _encode_IPAddress,
-} from '../BIP-DISCOVERY/IPAddress.ta';
+} from '../BIP-DISCOVERY/IPAddress.ta.js';
 export {
   IPAddress,
   _decode_IPAddress,
   _encode_IPAddress,
-} from '../BIP-DISCOVERY/IPAddress.ta';
+} from '../BIP-DISCOVERY/IPAddress.ta.js';
 import {
   MACAddress,
   _decode_MACAddress,
   _encode_MACAddress,
-} from '../BIP-DISCOVERY/MACAddress.ta';
+} from '../BIP-DISCOVERY/MACAddress.ta.js';
 export {
   MACAddress,
   _decode_MACAddress,
   _encode_MACAddress,
-} from '../BIP-DISCOVERY/MACAddress.ta';
-import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta';
-export { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta';
+} from '../BIP-DISCOVERY/MACAddress.ta.js';
+import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.js';
+export { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.js';
 import {
   SecurityProtocol,
   _decode_SecurityProtocol,
   _encode_SecurityProtocol,
-} from '../BIP-DISCOVERY/SecurityProtocol.ta';
+} from '../BIP-DISCOVERY/SecurityProtocol.ta.js';
 export {
   SecurityProtocol,
   _decode_SecurityProtocol,
   _encode_SecurityProtocol,
-} from '../BIP-DISCOVERY/SecurityProtocol.ta';
+} from '../BIP-DISCOVERY/SecurityProtocol.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Announcement */
 /**

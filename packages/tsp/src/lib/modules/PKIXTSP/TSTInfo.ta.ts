@@ -7,37 +7,37 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta.js";
 import {
     Accuracy,
     _decode_Accuracy,
     _encode_Accuracy,
-} from "../PKIXTSP/Accuracy.ta";
+} from "../PKIXTSP/Accuracy.ta.js";
 import {
     MessageImprint,
     _decode_MessageImprint,
     _encode_MessageImprint,
-} from "../PKIXTSP/MessageImprint.ta";
+} from "../PKIXTSP/MessageImprint.ta.js";
 import {
     TSAPolicyId,
     _decode_TSAPolicyId,
     _encode_TSAPolicyId,
-} from "../PKIXTSP/TSAPolicyId.ta";
+} from "../PKIXTSP/TSAPolicyId.ta.js";
 import {
     TSTInfo_version,
     _decode_TSTInfo_version,
     _encode_TSTInfo_version,
-} from "../PKIXTSP/TSTInfo-version.ta";
+} from "../PKIXTSP/TSTInfo-version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TSTInfo */
 /**

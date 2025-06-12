@@ -65,16 +65,16 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca';
-export { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca';
-import { EventSet } from '../CMIP-1/EventSet.osa';
-export { EventSet } from '../CMIP-1/EventSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.js';
+export { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.js';
+import { EventSet } from '../CMIP-1/EventSet.osa.js';
+export { EventSet } from '../CMIP-1/EventSet.osa.js';
 import {
     EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
-} from '../CMIP-1/EventTypeId.ta';
+} from '../CMIP-1/EventTypeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InvalidArgumentValue_eventValue */
 /**

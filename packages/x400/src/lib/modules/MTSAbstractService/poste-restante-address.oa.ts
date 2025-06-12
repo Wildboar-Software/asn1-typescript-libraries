@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PosteRestanteAddress,
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
-} from '../MTSAbstractService/PosteRestanteAddress.ta';
+} from '../MTSAbstractService/PosteRestanteAddress.ta.js';
 export {
     PosteRestanteAddress,
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
-} from '../MTSAbstractService/PosteRestanteAddress.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/PosteRestanteAddress.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION poste_restante_address */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-import { MatchingRuleTable } from '../MSMatchingRules/MatchingRuleTable.osa';
-export { MatchingRuleTable } from '../MSMatchingRules/MatchingRuleTable.osa';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+import { MatchingRuleTable } from '../MSMatchingRules/MatchingRuleTable.osa.js';
+export { MatchingRuleTable } from '../MSMatchingRules/MatchingRuleTable.osa.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Abort_reason,
     Abort_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     invalid_ppdu_parameter_value /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Abort_reason,
     _encode_Abort_reason,
-} from '../ISO8823-PRESENTATION/Abort-reason.ta';
+} from '../ISO8823-PRESENTATION/Abort-reason.ta.js';
 export {
     Abort_reason,
     Abort_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,7 +103,7 @@ export {
     invalid_ppdu_parameter_value /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Abort_reason,
     _encode_Abort_reason,
-} from '../ISO8823-PRESENTATION/Abort-reason.ta';
+} from '../ISO8823-PRESENTATION/Abort-reason.ta.js';
 import {
     Event_identifier,
     Event_identifier_cp_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -174,7 +174,7 @@ import {
     s_activity_end_confirm /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Event_identifier,
     _encode_Event_identifier,
-} from '../ISO8823-PRESENTATION/Event-identifier.ta';
+} from '../ISO8823-PRESENTATION/Event-identifier.ta.js';
 export {
     Event_identifier,
     Event_identifier_cp_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -245,7 +245,7 @@ export {
     s_activity_end_confirm /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Event_identifier,
     _encode_Event_identifier,
-} from '../ISO8823-PRESENTATION/Event-identifier.ta';
+} from '../ISO8823-PRESENTATION/Event-identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ARP_PPDU */
 /**

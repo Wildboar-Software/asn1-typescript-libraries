@@ -4,22 +4,22 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CategoryGroup,
     _decode_CategoryGroup,
     _encode_CategoryGroup,
-} from "../SIOsAccessControl-MODULE/CategoryGroup.ta";
+} from "../SIOsAccessControl-MODULE/CategoryGroup.ta.js";
 import {
     Operation,
     _decode_Operation,
     _encode_Operation,
-} from "../SIOsAccessControl-MODULE/Operation.ta";
+} from "../SIOsAccessControl-MODULE/Operation.ta.js";
 export {
     CategoryGroup,
     _decode_CategoryGroup,
     _encode_CategoryGroup,
-} from "../SIOsAccessControl-MODULE/CategoryGroup.ta";
+} from "../SIOsAccessControl-MODULE/CategoryGroup.ta.js";
 export {
     all /* IMPORTED_SHORT_NAMED_INTEGER */,
     oneOrMore /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -30,7 +30,7 @@ export {
     Operation_onlyOne /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_Operation,
     _encode_Operation,
-} from "../SIOsAccessControl-MODULE/Operation.ta";
+} from "../SIOsAccessControl-MODULE/Operation.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OptionalCategoryGroup */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IntendedRecipientName,
     _decode_IntendedRecipientName,
     _encode_IntendedRecipientName,
-} from '../MTSAbstractService/IntendedRecipientName.ta';
+} from '../MTSAbstractService/IntendedRecipientName.ta.js';
 export {
     IntendedRecipientName,
     _decode_IntendedRecipientName,
     _encode_IntendedRecipientName,
-} from '../MTSAbstractService/IntendedRecipientName.ta';
+} from '../MTSAbstractService/IntendedRecipientName.ta.js';
 import {
     RedirectionReason,
     _enum_for_RedirectionReason,
@@ -91,7 +91,7 @@ import {
     alias /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RedirectionReason,
     _encode_RedirectionReason,
-} from '../MTSAbstractService/RedirectionReason.ta';
+} from '../MTSAbstractService/RedirectionReason.ta.js';
 export {
     RedirectionReason,
     _enum_for_RedirectionReason,
@@ -107,7 +107,7 @@ export {
     alias /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RedirectionReason,
     _encode_RedirectionReason,
-} from '../MTSAbstractService/RedirectionReason.ta';
+} from '../MTSAbstractService/RedirectionReason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Redirection */
 /**

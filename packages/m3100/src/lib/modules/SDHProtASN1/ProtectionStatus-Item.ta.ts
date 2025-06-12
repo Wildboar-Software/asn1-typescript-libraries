@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtectionStatus_Item_manualSwitch,
     _decode_ProtectionStatus_Item_manualSwitch,
     _encode_ProtectionStatus_Item_manualSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-manualSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-manualSwitch.ta.js';
 export {
     ProtectionStatus_Item_manualSwitch,
     _decode_ProtectionStatus_Item_manualSwitch,
     _encode_ProtectionStatus_Item_manualSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-manualSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-manualSwitch.ta.js';
 import {
     ProtectionStatus_Item_autoSwitch,
     _decode_ProtectionStatus_Item_autoSwitch,
     _encode_ProtectionStatus_Item_autoSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-autoSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-autoSwitch.ta.js';
 export {
     ProtectionStatus_Item_autoSwitch,
     _decode_ProtectionStatus_Item_autoSwitch,
     _encode_ProtectionStatus_Item_autoSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-autoSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-autoSwitch.ta.js';
 import {
     ProtectionStatus_Item_forcedSwitch,
     _decode_ProtectionStatus_Item_forcedSwitch,
     _encode_ProtectionStatus_Item_forcedSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-forcedSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-forcedSwitch.ta.js';
 export {
     ProtectionStatus_Item_forcedSwitch,
     _decode_ProtectionStatus_Item_forcedSwitch,
     _encode_ProtectionStatus_Item_forcedSwitch,
-} from '../SDHProtASN1/ProtectionStatus-Item-forcedSwitch.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-forcedSwitch.ta.js';
 import {
     ProtectionStatus_Item_lockout,
     _decode_ProtectionStatus_Item_lockout,
     _encode_ProtectionStatus_Item_lockout,
-} from '../SDHProtASN1/ProtectionStatus-Item-lockout.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-lockout.ta.js';
 export {
     ProtectionStatus_Item_lockout,
     _decode_ProtectionStatus_Item_lockout,
     _encode_ProtectionStatus_Item_lockout,
-} from '../SDHProtASN1/ProtectionStatus-Item-lockout.ta';
+} from '../SDHProtASN1/ProtectionStatus-Item-lockout.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item */
 /**

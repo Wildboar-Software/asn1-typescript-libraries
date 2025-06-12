@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RegistrantContactDetails,
   _decode_RegistrantContactDetails,
   _encode_RegistrantContactDetails,
-} from '../RINF-module/RegistrantContactDetails.ta';
+} from '../RINF-module/RegistrantContactDetails.ta.js';
 export {
   RegistrantContactDetails,
   _decode_RegistrantContactDetails,
   _encode_RegistrantContactDetails,
-} from '../RINF-module/RegistrantContactDetails.ta';
+} from '../RINF-module/RegistrantContactDetails.ta.js';
 import {
   RegistrationDetails_registrant_enciphered_registrant,
   _decode_RegistrationDetails_registrant_enciphered_registrant,
   _encode_RegistrationDetails_registrant_enciphered_registrant,
-} from '../RINF-module/RegistrationDetails-registrant-enciphered-registrant.ta';
+} from '../RINF-module/RegistrationDetails-registrant-enciphered-registrant.ta.js';
 export {
   RegistrationDetails_registrant_enciphered_registrant,
   _decode_RegistrationDetails_registrant_enciphered_registrant,
   _encode_RegistrationDetails_registrant_enciphered_registrant,
-} from '../RINF-module/RegistrationDetails-registrant-enciphered-registrant.ta';
+} from '../RINF-module/RegistrationDetails-registrant-enciphered-registrant.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegistrationDetails_registrant */
 /**

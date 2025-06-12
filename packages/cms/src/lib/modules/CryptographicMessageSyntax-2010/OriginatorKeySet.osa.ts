@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { KeyAgreePublicKeys } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreePublicKeys.osa";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { KeyAgreePublicKeys } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreePublicKeys.osa";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { KeyAgreePublicKeys } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreePublicKeys.osa.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { KeyAgreePublicKeys } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreePublicKeys.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OriginatorKeySet */
 /**

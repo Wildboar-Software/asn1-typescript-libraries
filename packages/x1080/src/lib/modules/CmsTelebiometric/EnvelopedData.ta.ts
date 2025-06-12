@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,27 +99,27 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from '../CmsTelebiometric/RecipientInfos.ta';
+} from '../CmsTelebiometric/RecipientInfos.ta.js';
 export {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from '../CmsTelebiometric/RecipientInfos.ta';
+} from '../CmsTelebiometric/RecipientInfos.ta.js';
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from '../CmsTelebiometric/EncryptedContentInfo.ta';
+} from '../CmsTelebiometric/EncryptedContentInfo.ta.js';
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from '../CmsTelebiometric/EncryptedContentInfo.ta';
+} from '../CmsTelebiometric/EncryptedContentInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**

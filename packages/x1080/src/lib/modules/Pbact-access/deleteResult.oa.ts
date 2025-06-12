@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
-} from '../Pbact-access/DeleteResult.ta';
+} from '../Pbact-access/DeleteResult.ta.js';
 export {
     DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
-} from '../Pbact-access/DeleteResult.ta';
-import { id_deleteResult } from '../Pbact-access/id-deleteResult.va';
-export { id_deleteResult } from '../Pbact-access/id-deleteResult.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../Pbact-access/DeleteResult.ta.js';
+import { id_deleteResult } from '../Pbact-access/id-deleteResult.va.js';
+export { id_deleteResult } from '../Pbact-access/id-deleteResult.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION deleteResult */
 /**

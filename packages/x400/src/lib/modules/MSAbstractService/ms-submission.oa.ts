@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { ms_message_submission } from '../MSAbstractService/ms-message-submission.oa';
-export { ms_message_submission } from '../MSAbstractService/ms-message-submission.oa';
-import { ms_probe_submission } from '../MSAbstractService/ms-probe-submission.oa';
-export { ms_probe_submission } from '../MSAbstractService/ms-probe-submission.oa';
-import { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-deferred-delivery.oa';
-export { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-deferred-delivery.oa';
-import { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa';
-export { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa';
-import { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va';
-export { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { ms_message_submission } from '../MSAbstractService/ms-message-submission.oa.js';
+export { ms_message_submission } from '../MSAbstractService/ms-message-submission.oa.js';
+import { ms_probe_submission } from '../MSAbstractService/ms-probe-submission.oa.js';
+export { ms_probe_submission } from '../MSAbstractService/ms-probe-submission.oa.js';
+import { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-deferred-delivery.oa.js';
+export { ms_cancel_deferred_delivery } from '../MSAbstractService/ms-cancel-deferred-delivery.oa.js';
+import { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa.js';
+export { ms_submission_control } from '../MSAbstractService/ms-submission-control.oa.js';
+import { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va.js';
+export { id_pt_ms_submission } from '../MSObjectIdentifiers/id-pt-ms-submission.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_submission */
 /**

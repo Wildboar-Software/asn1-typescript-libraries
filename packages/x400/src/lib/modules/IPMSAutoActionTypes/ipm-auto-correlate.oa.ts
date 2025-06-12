@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-import { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va';
-export { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
+} from '../MSAbstractService/AutoActionType.ta.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+import { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va.js';
+export { id_aa_ipm_auto_correlate } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-correlate.va.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ipm_auto_correlate */
 /**

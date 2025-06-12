@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TargetRoutingCollective,
     _decode_TargetRoutingCollective,
     _encode_TargetRoutingCollective,
-} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta';
+} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.js';
 export {
     TargetRoutingCollective,
     _decode_TargetRoutingCollective,
     _encode_TargetRoutingCollective,
-} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta';
+} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.js';
 import {
     NonDeliveryInformation,
     _decode_NonDeliveryInformation,
     _encode_NonDeliveryInformation,
-} from '../MHSRoutingORAddressSubtree/NonDeliveryInformation.ta';
+} from '../MHSRoutingORAddressSubtree/NonDeliveryInformation.ta.js';
 export {
     NonDeliveryInformation,
     _decode_NonDeliveryInformation,
     _encode_NonDeliveryInformation,
-} from '../MHSRoutingORAddressSubtree/NonDeliveryInformation.ta';
+} from '../MHSRoutingORAddressSubtree/NonDeliveryInformation.ta.js';
 import {
     AliasRedirection,
     _decode_AliasRedirection,
     _encode_AliasRedirection,
-} from '../MHSRoutingORAddressSubtree/AliasRedirection.ta';
+} from '../MHSRoutingORAddressSubtree/AliasRedirection.ta.js';
 export {
     AliasRedirection,
     _decode_AliasRedirection,
     _encode_AliasRedirection,
-} from '../MHSRoutingORAddressSubtree/AliasRedirection.ta';
+} from '../MHSRoutingORAddressSubtree/AliasRedirection.ta.js';
 import {
     DLExpansionInformation,
     _decode_DLExpansionInformation,
     _encode_DLExpansionInformation,
-} from '../MHSRoutingORAddressSubtree/DLExpansionInformation.ta';
+} from '../MHSRoutingORAddressSubtree/DLExpansionInformation.ta.js';
 export {
     DLExpansionInformation,
     _decode_DLExpansionInformation,
     _encode_DLExpansionInformation,
-} from '../MHSRoutingORAddressSubtree/DLExpansionInformation.ta';
+} from '../MHSRoutingORAddressSubtree/DLExpansionInformation.ta.js';
 import {
     DoubleEnvelopeInformation,
     _decode_DoubleEnvelopeInformation,
     _encode_DoubleEnvelopeInformation,
-} from '../MHSRoutingORAddressSubtree/DoubleEnvelopeInformation.ta';
+} from '../MHSRoutingORAddressSubtree/DoubleEnvelopeInformation.ta.js';
 export {
     DoubleEnvelopeInformation,
     _decode_DoubleEnvelopeInformation,
     _encode_DoubleEnvelopeInformation,
-} from '../MHSRoutingORAddressSubtree/DoubleEnvelopeInformation.ta';
+} from '../MHSRoutingORAddressSubtree/DoubleEnvelopeInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RoutingAdvice */
 /**

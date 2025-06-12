@@ -10,44 +10,44 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Version,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from "../PKI-Stub/Version.ta";
+} from "../PKI-Stub/Version.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../PKI-Stub/CertificateSerialNumber.ta";
+} from "../PKI-Stub/CertificateSerialNumber.ta.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
-import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
+} from "../PKI-Stub/AlgorithmIdentifier.ta.js";
+import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.js";
 import {
     Validity,
     _decode_Validity,
     _encode_Validity,
-} from "../PKI-Stub/Validity.ta";
+} from "../PKI-Stub/Validity.ta.js";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "../PKI-Stub/SubjectPublicKeyInfo.ta";
+} from "../PKI-Stub/SubjectPublicKeyInfo.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../PKI-Stub/UniqueIdentifier.ta";
+} from "../PKI-Stub/UniqueIdentifier.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../PKI-Stub/Extensions.ta";
+} from "../PKI-Stub/Extensions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertificate */
 /**

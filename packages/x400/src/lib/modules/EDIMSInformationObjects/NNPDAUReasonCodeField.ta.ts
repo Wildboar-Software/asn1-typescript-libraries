@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NNPDAUBasicCodeField,
     NNPDAUBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     physical_rendition_not_performed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNPDAUBasicCodeField,
     _encode_NNPDAUBasicCodeField,
-} from '../EDIMSInformationObjects/NNPDAUBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNPDAUBasicCodeField.ta.js';
 export {
     NNPDAUBasicCodeField,
     NNPDAUBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     physical_rendition_not_performed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNPDAUBasicCodeField,
     _encode_NNPDAUBasicCodeField,
-} from '../EDIMSInformationObjects/NNPDAUBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNPDAUBasicCodeField.ta.js';
 import {
     NNPDAUDiagnosticField,
     NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incorrect /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -122,7 +122,7 @@ import {
     physical_rendition_attributes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNPDAUDiagnosticField,
     _encode_NNPDAUDiagnosticField,
-} from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta.js';
 export {
     NNPDAUDiagnosticField,
     NNPDAUDiagnosticField_undeliverable_mail_physical_delivery_address_incorrect /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -157,7 +157,7 @@ export {
     physical_rendition_attributes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNPDAUDiagnosticField,
     _encode_NNPDAUDiagnosticField,
-} from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NNPDAUReasonCodeField */
 /**

@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CommonFields,
     _decode_CommonFields,
     _encode_CommonFields,
-} from '../EDIMSInformationObjects/CommonFields.ta';
+} from '../EDIMSInformationObjects/CommonFields.ta.js';
 export {
     CommonFields,
     _decode_CommonFields,
     _encode_CommonFields,
-} from '../EDIMSInformationObjects/CommonFields.ta';
+} from '../EDIMSInformationObjects/CommonFields.ta.js';
 import {
     NNReasonCodeField,
     _decode_NNReasonCodeField,
     _encode_NNReasonCodeField,
-} from '../EDIMSInformationObjects/NNReasonCodeField.ta';
+} from '../EDIMSInformationObjects/NNReasonCodeField.ta.js';
 export {
     NNReasonCodeField,
     _decode_NNReasonCodeField,
     _encode_NNReasonCodeField,
-} from '../EDIMSInformationObjects/NNReasonCodeField.ta';
+} from '../EDIMSInformationObjects/NNReasonCodeField.ta.js';
 import {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 export {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 import {
     NNExtensionsField,
     _decode_NNExtensionsField,
     _encode_NNExtensionsField,
-} from '../EDIMSInformationObjects/NNExtensionsField.ta';
+} from '../EDIMSInformationObjects/NNExtensionsField.ta.js';
 export {
     NNExtensionsField,
     _decode_NNExtensionsField,
     _encode_NNExtensionsField,
-} from '../EDIMSInformationObjects/NNExtensionsField.ta';
+} from '../EDIMSInformationObjects/NNExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NegativeNotificationFields */
 /**

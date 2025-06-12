@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ResponseSync,
     _enum_for_ResponseSync,
@@ -77,7 +77,7 @@ import {
     atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResponseSync,
     _encode_ResponseSync,
-} from '../RTMModule/ResponseSync.ta';
+} from '../RTMModule/ResponseSync.ta.js';
 export {
     ResponseSync,
     _enum_for_ResponseSync,
@@ -89,7 +89,7 @@ export {
     atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResponseSync,
     _encode_ResponseSync,
-} from '../RTMModule/ResponseSync.ta';
+} from '../RTMModule/ResponseSync.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultResponseSync */
 /**

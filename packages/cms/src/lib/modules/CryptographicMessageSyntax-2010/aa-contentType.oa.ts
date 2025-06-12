@@ -3,15 +3,15 @@ import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax-2010/ContentType.ta";
-import { id_contentType } from "../CryptographicMessageSyntax-2010/id-contentType.va";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+} from "../CryptographicMessageSyntax-2010/ContentType.ta.js";
+import { id_contentType } from "../CryptographicMessageSyntax-2010/id-contentType.va.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax-2010/ContentType.ta";
-export { id_contentType } from "../CryptographicMessageSyntax-2010/id-contentType.va";
+} from "../CryptographicMessageSyntax-2010/ContentType.ta.js";
+export { id_contentType } from "../CryptographicMessageSyntax-2010/id-contentType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_contentType */
 /**

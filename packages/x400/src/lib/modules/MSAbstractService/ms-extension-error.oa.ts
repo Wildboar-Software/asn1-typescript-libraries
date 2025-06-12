@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
-} from '../MSAbstractService/MSExtensionErrorParameter.ta';
+} from '../MSAbstractService/MSExtensionErrorParameter.ta.js';
 export {
     MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
-} from '../MSAbstractService/MSExtensionErrorParameter.ta';
-import { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va';
-export { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/MSExtensionErrorParameter.ta.js';
+import { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va.js';
+export { err_ms_extension_error } from '../MSAccessProtocol/err-ms-extension-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_extension_error */
 /**

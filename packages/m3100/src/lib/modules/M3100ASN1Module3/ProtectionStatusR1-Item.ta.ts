@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtectionStatusR1_Item_manualSwitch,
     _decode_ProtectionStatusR1_Item_manualSwitch,
     _encode_ProtectionStatusR1_Item_manualSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta.js';
 export {
     ProtectionStatusR1_Item_manualSwitch,
     _decode_ProtectionStatusR1_Item_manualSwitch,
     _encode_ProtectionStatusR1_Item_manualSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta.js';
 import {
     ProtectionStatusR1_Item_autoSwitch,
     _decode_ProtectionStatusR1_Item_autoSwitch,
     _encode_ProtectionStatusR1_Item_autoSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-autoSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-autoSwitch.ta.js';
 export {
     ProtectionStatusR1_Item_autoSwitch,
     _decode_ProtectionStatusR1_Item_autoSwitch,
     _encode_ProtectionStatusR1_Item_autoSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-autoSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-autoSwitch.ta.js';
 import {
     ProtectionStatusR1_Item_forcedSwitch,
     _decode_ProtectionStatusR1_Item_forcedSwitch,
     _encode_ProtectionStatusR1_Item_forcedSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta.js';
 export {
     ProtectionStatusR1_Item_forcedSwitch,
     _decode_ProtectionStatusR1_Item_forcedSwitch,
     _encode_ProtectionStatusR1_Item_forcedSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta.js';
 import {
     ProtectionStatusR1_Item_lockout,
     _decode_ProtectionStatusR1_Item_lockout,
     _encode_ProtectionStatusR1_Item_lockout,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta.js';
 export {
     ProtectionStatusR1_Item_lockout,
     _decode_ProtectionStatusR1_Item_lockout,
     _encode_ProtectionStatusR1_Item_lockout,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item */
 /**

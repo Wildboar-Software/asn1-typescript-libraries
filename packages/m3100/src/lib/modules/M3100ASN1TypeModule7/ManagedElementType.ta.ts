@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ManagedElementType_Item,
     _decode_ManagedElementType_Item,
     _encode_ManagedElementType_Item,
-} from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta';
+} from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta.js';
 export {
     ManagedElementType_Item,
     _decode_ManagedElementType_Item,
     _encode_ManagedElementType_Item,
-} from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta';
+} from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ManagedElementType */
 /**

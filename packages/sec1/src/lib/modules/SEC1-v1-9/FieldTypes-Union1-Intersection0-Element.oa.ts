@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta";
-export { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta";
-import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va";
-export { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va";
-import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
-export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta.js";
+export { Characteristic_two, _decode_Characteristic_two, _encode_Characteristic_two } from "../SEC1-v1-9/Characteristic-two.ta.js";
+import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.js";
+export { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.js";
+import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
+export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */

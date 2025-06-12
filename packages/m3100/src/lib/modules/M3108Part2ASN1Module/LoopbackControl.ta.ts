@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LoopbackControl_status,
     _enum_for_LoopbackControl_status,
@@ -77,7 +77,7 @@ import {
     endBLoopedBack /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_LoopbackControl_status,
     _encode_LoopbackControl_status,
-} from '../M3108Part2ASN1Module/LoopbackControl-status.ta';
+} from '../M3108Part2ASN1Module/LoopbackControl-status.ta.js';
 export {
     LoopbackControl_status,
     _enum_for_LoopbackControl_status,
@@ -89,7 +89,7 @@ export {
     endBLoopedBack /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_LoopbackControl_status,
     _encode_LoopbackControl_status,
-} from '../M3108Part2ASN1Module/LoopbackControl-status.ta';
+} from '../M3108Part2ASN1Module/LoopbackControl-status.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LoopbackControl */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PerRecipientDeliveryReportFields,
     _decode_PerRecipientDeliveryReportFields,
     _encode_PerRecipientDeliveryReportFields,
-} from '../MTSAbstractService/PerRecipientDeliveryReportFields.ta';
+} from '../MTSAbstractService/PerRecipientDeliveryReportFields.ta.js';
 export {
     PerRecipientDeliveryReportFields,
     _decode_PerRecipientDeliveryReportFields,
     _encode_PerRecipientDeliveryReportFields,
-} from '../MTSAbstractService/PerRecipientDeliveryReportFields.ta';
+} from '../MTSAbstractService/PerRecipientDeliveryReportFields.ta.js';
 import {
     PerRecipientNonDeliveryReportFields,
     _decode_PerRecipientNonDeliveryReportFields,
     _encode_PerRecipientNonDeliveryReportFields,
-} from '../MTSAbstractService/PerRecipientNonDeliveryReportFields.ta';
+} from '../MTSAbstractService/PerRecipientNonDeliveryReportFields.ta.js';
 export {
     PerRecipientNonDeliveryReportFields,
     _decode_PerRecipientNonDeliveryReportFields,
     _encode_PerRecipientNonDeliveryReportFields,
-} from '../MTSAbstractService/PerRecipientNonDeliveryReportFields.ta';
+} from '../MTSAbstractService/PerRecipientNonDeliveryReportFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientReportFields_report_type */
 /**

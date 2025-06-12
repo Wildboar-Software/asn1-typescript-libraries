@@ -4,28 +4,28 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Extensions.ta.js";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/GeneralName.ta.js";
 import {
     Request,
     _decode_Request,
     _encode_Request,
-} from "../OCSP-2013-08/Request.ta";
+} from "../OCSP-2013-08/Request.ta.js";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     Version,
     _decode_Version,
     _encode_Version,
-} from "../OCSP-2013-08/Version.ta";
+} from "../OCSP-2013-08/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSRequest */
 /**

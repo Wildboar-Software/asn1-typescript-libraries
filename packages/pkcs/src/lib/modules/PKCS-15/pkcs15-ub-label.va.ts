@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va";
-export { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va";
+import { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va.js";
+export { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs15_ub_label */
 /**

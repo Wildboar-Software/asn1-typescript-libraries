@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca';
-export { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.js';
+export { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.js';
 
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;

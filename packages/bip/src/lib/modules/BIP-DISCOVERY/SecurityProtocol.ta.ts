@@ -65,11 +65,11 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca';
-export { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca';
-import { SecurityProtocols } from '../BIP-DISCOVERY/SecurityProtocols.osa';
-export { SecurityProtocols } from '../BIP-DISCOVERY/SecurityProtocols.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.js';
+export { SECURITY_PROTOCOL } from '../BIP-DISCOVERY/SECURITY-PROTOCOL.oca.js';
+import { SecurityProtocols } from '../BIP-DISCOVERY/SecurityProtocols.osa.js';
+export { SecurityProtocols } from '../BIP-DISCOVERY/SecurityProtocols.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityProtocol */
 /**

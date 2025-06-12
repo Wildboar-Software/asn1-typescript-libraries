@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.js';
 import {
     ReadResult_result,
     _decode_ReadResult_result,
     _encode_ReadResult_result,
-} from '../Pbact-access/ReadResult-result.ta';
+} from '../Pbact-access/ReadResult-result.ta.js';
 export {
     ReadResult_result,
     _decode_ReadResult_result,
     _encode_ReadResult_result,
-} from '../Pbact-access/ReadResult-result.ta';
+} from '../Pbact-access/ReadResult-result.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReadResult */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Pathname_Attribute,
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
-} from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.js';
 export {
     Pathname_Attribute,
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
-} from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.js';
 import {
     Permitted_Actions_Attribute,
     Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -106,7 +106,7 @@ import {
     random_Order /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Permitted_Actions_Attribute,
     _encode_Permitted_Actions_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta.js';
 export {
     Permitted_Actions_Attribute,
     Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -137,97 +137,97 @@ export {
     random_Order /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Permitted_Actions_Attribute,
     _encode_Permitted_Actions_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta.js';
 import {
     Account_Attribute,
     _decode_Account_Attribute,
     _encode_Account_Attribute,
-} from '../IPMSFileTransferBodyPartType/Account-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Account-Attribute.ta.js';
 export {
     Account_Attribute,
     _decode_Account_Attribute,
     _encode_Account_Attribute,
-} from '../IPMSFileTransferBodyPartType/Account-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Account-Attribute.ta.js';
 import {
     Date_and_Time_Attribute,
     _decode_Date_and_Time_Attribute,
     _encode_Date_and_Time_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta.js';
 export {
     Date_and_Time_Attribute,
     _decode_Date_and_Time_Attribute,
     _encode_Date_and_Time_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta.js';
 import {
     User_Identity_Attribute,
     _decode_User_Identity_Attribute,
     _encode_User_Identity_Attribute,
-} from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta.js';
 export {
     User_Identity_Attribute,
     _decode_User_Identity_Attribute,
     _encode_User_Identity_Attribute,
-} from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta.js';
 import {
     Object_Availability_Attribute,
     _decode_Object_Availability_Attribute,
     _encode_Object_Availability_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta.js';
 export {
     Object_Availability_Attribute,
     _decode_Object_Availability_Attribute,
     _encode_Object_Availability_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta.js';
 import {
     Object_Size_Attribute,
     _decode_Object_Size_Attribute,
     _encode_Object_Size_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta.js';
 export {
     Object_Size_Attribute,
     _decode_Object_Size_Attribute,
     _encode_Object_Size_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta.js';
 import {
     Access_Control_Attribute,
     _decode_Access_Control_Attribute,
     _encode_Access_Control_Attribute,
-} from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta.js';
 export {
     Access_Control_Attribute,
     _decode_Access_Control_Attribute,
     _encode_Access_Control_Attribute,
-} from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta.js';
 import {
     Legal_Qualification_Attribute,
     _decode_Legal_Qualification_Attribute,
     _encode_Legal_Qualification_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta.js';
 export {
     Legal_Qualification_Attribute,
     _decode_Legal_Qualification_Attribute,
     _encode_Legal_Qualification_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta.js';
 import {
     Private_Use_Attribute,
     _decode_Private_Use_Attribute,
     _encode_Private_Use_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta.js';
 export {
     Private_Use_Attribute,
     _decode_Private_Use_Attribute,
     _encode_Private_Use_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta.js';
 import {
     Attribute_Extensions,
     _decode_Attribute_Extensions,
     _encode_Attribute_Extensions,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.js';
 export {
     Attribute_Extensions,
     _decode_Attribute_Extensions,
     _encode_Attribute_Extensions,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FileAttributes */
 /**

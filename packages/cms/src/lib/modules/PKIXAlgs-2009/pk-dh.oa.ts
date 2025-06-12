@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 import {
     DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
-} from "../PKIXAlgs-2009/DHPublicKey.ta";
-import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va";
+} from "../PKIXAlgs-2009/DHPublicKey.ta.js";
+import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.js";
 import {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../PKIXAlgs-2009/DomainParameters.ta";
+} from "../PKIXAlgs-2009/DomainParameters.ta.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -31,19 +31,19 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 export {
     DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
-} from "../PKIXAlgs-2009/DHPublicKey.ta";
-export { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va";
+} from "../PKIXAlgs-2009/DHPublicKey.ta.js";
+export { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.js";
 export {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../PKIXAlgs-2009/DomainParameters.ta";
+} from "../PKIXAlgs-2009/DomainParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_dh */
 /**

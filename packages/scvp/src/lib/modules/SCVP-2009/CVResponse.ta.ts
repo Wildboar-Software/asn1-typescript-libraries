@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ResponseStatus,
   _decode_ResponseStatus,
   _encode_ResponseStatus,
-} from '../SCVP-2009/ResponseStatus.ta';
+} from '../SCVP-2009/ResponseStatus.ta.js';
 import {
   RespValidationPolicy,
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
-} from '../SCVP-2009/RespValidationPolicy.ta';
+} from '../SCVP-2009/RespValidationPolicy.ta.js';
 import {
   RequestReference,
   _decode_RequestReference,
   _encode_RequestReference,
-} from '../SCVP-2009/RequestReference.ta';
+} from '../SCVP-2009/RequestReference.ta.js';
 import {
   GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js';
 import {
   ReplyObjects,
   _decode_ReplyObjects,
   _encode_ReplyObjects,
-} from '../SCVP-2009/ReplyObjects.ta';
+} from '../SCVP-2009/ReplyObjects.ta.js';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CVResponse */
 /**

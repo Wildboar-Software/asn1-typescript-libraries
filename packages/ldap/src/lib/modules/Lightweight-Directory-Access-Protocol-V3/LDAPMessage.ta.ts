@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   MessageID,
   _decode_MessageID,
   _encode_MessageID,
-} from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta.js';
 export {
   MessageID,
   _decode_MessageID,
   _encode_MessageID,
-} from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta.js';
 import {
   LDAPMessage_protocolOp,
   _decode_LDAPMessage_protocolOp,
   _encode_LDAPMessage_protocolOp,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPMessage-protocolOp.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPMessage-protocolOp.ta.js';
 export {
   LDAPMessage_protocolOp,
   _decode_LDAPMessage_protocolOp,
   _encode_LDAPMessage_protocolOp,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPMessage-protocolOp.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPMessage-protocolOp.ta.js';
 import {
   Controls,
   _decode_Controls,
   _encode_Controls,
-} from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta.js';
 export {
   Controls,
   _decode_Controls,
   _encode_Controls,
-} from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LDAPMessage */
 /**

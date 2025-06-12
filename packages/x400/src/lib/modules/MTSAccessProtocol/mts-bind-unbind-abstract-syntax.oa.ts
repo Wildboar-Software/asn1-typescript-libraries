@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MTSBindUnbindPDUs,
     _decode_MTSBindUnbindPDUs,
     _encode_MTSBindUnbindPDUs,
-} from '../MTSAccessProtocol/MTSBindUnbindPDUs.ta';
+} from '../MTSAccessProtocol/MTSBindUnbindPDUs.ta.js';
 export {
     MTSBindUnbindPDUs,
     _decode_MTSBindUnbindPDUs,
     _encode_MTSBindUnbindPDUs,
-} from '../MTSAccessProtocol/MTSBindUnbindPDUs.ta';
-import { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va';
-export { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va';
+} from '../MTSAccessProtocol/MTSBindUnbindPDUs.ta.js';
+import { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va.js';
+export { id_as_mts } from '../MHSProtocolObjectIdentifiers/id-as-mts.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mts_bind_unbind_abstract_syntax */
 /**

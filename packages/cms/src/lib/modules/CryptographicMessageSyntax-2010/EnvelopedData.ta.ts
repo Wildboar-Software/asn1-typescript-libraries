@@ -4,32 +4,32 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.js";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.js";
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.js";
 import {
     Attributes,
     _encode_Attributes,
     _decode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -46,22 +46,22 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.js";
 export {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.js";
 export {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**

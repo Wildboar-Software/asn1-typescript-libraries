@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
+import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
 import {
     _decode_Counter,
     _encode_Counter,
-} from "../ANSI-X9-42/Counter.ta";
-import { tripleDES } from "../ANSI-X9-42/tripleDES.va";
+} from "../ANSI-X9-42/Counter.ta.js";
+import { tripleDES } from "../ANSI-X9-42/tripleDES.va.js";
 
 /* START_OF_SYMBOL_DEFINITION KeySpecificAlgorithms */
 /**

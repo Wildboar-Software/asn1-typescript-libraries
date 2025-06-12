@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa';
-export { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa';
-import { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa';
-export { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa';
-import { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa';
-export { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa';
-import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca';
-export { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.js';
+export { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.js';
+import { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa.js';
+export { managementRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipClass.oa.js';
+import { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa.js';
+export { managementRelationshipMapping } from '../GrmDefinitionDirectoryASN1Module/managementRelationshipMapping.oa.js';
+import { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.js';
+export { CONTENT_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTENT-RULE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION registeredManagementRelationshipInformationCR */
 /**

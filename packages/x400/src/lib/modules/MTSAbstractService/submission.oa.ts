@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { message_submission } from '../MTSAbstractService/message-submission.oa';
-export { message_submission } from '../MTSAbstractService/message-submission.oa';
-import { probe_submission } from '../MTSAbstractService/probe-submission.oa';
-export { probe_submission } from '../MTSAbstractService/probe-submission.oa';
-import { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa';
-export { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa';
-import { submission_control } from '../MTSAbstractService/submission-control.oa';
-export { submission_control } from '../MTSAbstractService/submission-control.oa';
-import { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va';
-export { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { message_submission } from '../MTSAbstractService/message-submission.oa.js';
+export { message_submission } from '../MTSAbstractService/message-submission.oa.js';
+import { probe_submission } from '../MTSAbstractService/probe-submission.oa.js';
+export { probe_submission } from '../MTSAbstractService/probe-submission.oa.js';
+import { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa.js';
+export { cancel_deferred_delivery } from '../MTSAbstractService/cancel-deferred-delivery.oa.js';
+import { submission_control } from '../MTSAbstractService/submission-control.oa.js';
+export { submission_control } from '../MTSAbstractService/submission-control.oa.js';
+import { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va.js';
+export { id_pt_submission } from '../MTSObjectIdentifiers/id-pt-submission.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION submission */
 /**

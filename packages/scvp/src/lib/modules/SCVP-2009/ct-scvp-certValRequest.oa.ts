@@ -65,20 +65,20 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CVRequest,
   _decode_CVRequest,
   _encode_CVRequest,
-} from '../SCVP-2009/CVRequest.ta';
+} from '../SCVP-2009/CVRequest.ta.js';
 export {
   CVRequest,
   _decode_CVRequest,
   _encode_CVRequest,
-} from '../SCVP-2009/CVRequest.ta';
-import { id_ct_scvp_certValRequest } from '../SCVP-2009/id-ct-scvp-certValRequest.va';
-export { id_ct_scvp_certValRequest } from '../SCVP-2009/id-ct-scvp-certValRequest.va';
-import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca';
+} from '../SCVP-2009/CVRequest.ta.js';
+import { id_ct_scvp_certValRequest } from '../SCVP-2009/id-ct-scvp-certValRequest.va.js';
+export { id_ct_scvp_certValRequest } from '../SCVP-2009/id-ct-scvp-certValRequest.va.js';
+import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js';
 
 
 /* START_OF_SYMBOL_DEFINITION ct_scvp_certValRequest */

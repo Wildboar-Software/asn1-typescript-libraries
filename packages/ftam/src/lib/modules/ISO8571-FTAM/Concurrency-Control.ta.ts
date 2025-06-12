@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Lock,
   Lock_not_required /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
   no_access /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Lock,
   _encode_Lock,
-} from '../ISO8571-FTAM/Lock.ta';
+} from '../ISO8571-FTAM/Lock.ta.js';
 export {
   Lock,
   Lock_not_required /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,7 +91,7 @@ export {
   no_access /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Lock,
   _encode_Lock,
-} from '../ISO8571-FTAM/Lock.ta';
+} from '../ISO8571-FTAM/Lock.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Concurrency_Control */
 /**

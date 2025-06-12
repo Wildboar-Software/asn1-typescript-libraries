@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
-} from '../DialoguePDUs/AARQ-apdu-protocol-version.ta';
+} from '../DialoguePDUs/AARQ-apdu-protocol-version.ta.js';
 export {
     AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
-} from '../DialoguePDUs/AARQ-apdu-protocol-version.ta';
+} from '../DialoguePDUs/AARQ-apdu-protocol-version.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AARQ_apdu */
 /**

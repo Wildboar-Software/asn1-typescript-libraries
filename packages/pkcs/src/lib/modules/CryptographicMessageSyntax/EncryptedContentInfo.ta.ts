@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta.js";
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta";
+} from "../CryptographicMessageSyntax/ContentType.ta.js";
 import {
     EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
-} from "../CryptographicMessageSyntax/EncryptedContent.ta";
+} from "../CryptographicMessageSyntax/EncryptedContent.ta.js";
 export {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta.js";
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta";
+} from "../CryptographicMessageSyntax/ContentType.ta.js";
 export {
     EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
-} from "../CryptographicMessageSyntax/EncryptedContent.ta";
+} from "../CryptographicMessageSyntax/EncryptedContent.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**

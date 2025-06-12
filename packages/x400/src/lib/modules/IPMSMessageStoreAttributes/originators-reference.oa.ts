@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     OriginatorsReference,
     _decode_OriginatorsReference,
     _encode_OriginatorsReference,
-} from '../IPMSHeadingExtensions/OriginatorsReference.ta';
+} from '../IPMSHeadingExtensions/OriginatorsReference.ta.js';
 export {
     OriginatorsReference,
     _decode_OriginatorsReference,
     _encode_OriginatorsReference,
-} from '../IPMSHeadingExtensions/OriginatorsReference.ta';
-import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa';
-export { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa';
-import { id_hat_originators_reference } from '../IPMSObjectIdentifiers/id-hat-originators-reference.va';
-export { id_hat_originators_reference } from '../IPMSObjectIdentifiers/id-hat-originators-reference.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../IPMSHeadingExtensions/OriginatorsReference.ta.js';
+import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.js';
+export { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.js';
+import { id_hat_originators_reference } from '../IPMSObjectIdentifiers/id-hat-originators-reference.va.js';
+export { id_hat_originators_reference } from '../IPMSObjectIdentifiers/id-hat-originators-reference.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION originators_reference */
 /**

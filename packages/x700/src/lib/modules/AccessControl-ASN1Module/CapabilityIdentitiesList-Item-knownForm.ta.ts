@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
-} from '../AccessControl-ASN1Module/InitiatorName.ta';
+} from '../AccessControl-ASN1Module/InitiatorName.ta.js';
 export {
     InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
-} from '../AccessControl-ASN1Module/InitiatorName.ta';
+} from '../AccessControl-ASN1Module/InitiatorName.ta.js';
 import {
     SdaList,
     _decode_SdaList,
     _encode_SdaList,
-} from '../AccessControl-ASN1Module/SdaList.ta';
+} from '../AccessControl-ASN1Module/SdaList.ta.js';
 export {
     SdaList,
     _decode_SdaList,
     _encode_SdaList,
-} from '../AccessControl-ASN1Module/SdaList.ta';
+} from '../AccessControl-ASN1Module/SdaList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item_knownForm */
 /**

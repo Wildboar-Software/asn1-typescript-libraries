@@ -65,26 +65,26 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
-} from '../MTSAbstractService/ResponderCredentials.ta';
+} from '../MTSAbstractService/ResponderCredentials.ta.js';
 export {
     ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
-} from '../MTSAbstractService/ResponderCredentials.ta';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-import { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa';
-export { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MTSAbstractService/ResponderCredentials.ta.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+import { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa.js';
+export { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,7 +105,7 @@ import {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 export {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -126,37 +126,37 @@ export {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 import {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 export {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 import {
     AutoActionErrorIndication,
     _decode_AutoActionErrorIndication,
     _encode_AutoActionErrorIndication,
-} from '../MSAbstractService/AutoActionErrorIndication.ta';
+} from '../MSAbstractService/AutoActionErrorIndication.ta.js';
 export {
     AutoActionErrorIndication,
     _decode_AutoActionErrorIndication,
     _encode_AutoActionErrorIndication,
-} from '../MSAbstractService/AutoActionErrorIndication.ta';
+} from '../MSAbstractService/AutoActionErrorIndication.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from "./AutoActionType.ta"
+} from "./AutoActionType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MSBindResult */
 /**

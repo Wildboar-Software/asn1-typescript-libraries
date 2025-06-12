@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeleteSpecification_deleteModifier,
     _enum_for_DeleteSpecification_deleteModifier,
@@ -75,7 +75,7 @@ import {
     deletesContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DeleteSpecification_deleteModifier,
     _encode_DeleteSpecification_deleteModifier,
-} from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta';
+} from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.js';
 export {
     DeleteSpecification_deleteModifier,
     _enum_for_DeleteSpecification_deleteModifier,
@@ -85,17 +85,17 @@ export {
     deletesContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DeleteSpecification_deleteModifier,
     _encode_DeleteSpecification_deleteModifier,
-} from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta';
+} from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.js';
 import {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 export {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeleteSpecification */
 /**

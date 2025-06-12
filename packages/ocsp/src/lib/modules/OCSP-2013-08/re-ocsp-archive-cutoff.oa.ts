@@ -1,11 +1,11 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.js";
 import {
     ArchiveCutoff,
     _decode_ArchiveCutoff,
     _encode_ArchiveCutoff,
-} from "../OCSP-2013-08/ArchiveCutoff.ta";
-import { id_pkix_ocsp_archive_cutoff } from "../OCSP-2013-08/id-pkix-ocsp-archive-cutoff.va";
+} from "../OCSP-2013-08/ArchiveCutoff.ta.js";
+import { id_pkix_ocsp_archive_cutoff } from "../OCSP-2013-08/id-pkix-ocsp-archive-cutoff.va.js";
 
 /* START_OF_SYMBOL_DEFINITION re_ocsp_archive_cutoff */
 /**

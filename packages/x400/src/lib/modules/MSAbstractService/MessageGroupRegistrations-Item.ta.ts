@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageGroupNameAndDescriptor,
     _decode_MessageGroupNameAndDescriptor,
     _encode_MessageGroupNameAndDescriptor,
-} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta';
+} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.js';
 export {
     MessageGroupNameAndDescriptor,
     _decode_MessageGroupNameAndDescriptor,
     _encode_MessageGroupNameAndDescriptor,
-} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta';
+} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.js';
 import {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
+} from '../MSAbstractService/MessageGroupName.ta.js';
 export {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
+} from '../MSAbstractService/MessageGroupName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageGroupRegistrations_Item */
 /**

@@ -65,87 +65,87 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
-} from '../Test-ASN1Module/TestInvocationId.ta';
+} from '../Test-ASN1Module/TestInvocationId.ta.js';
 export {
     TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
-} from '../Test-ASN1Module/TestInvocationId.ta';
+} from '../Test-ASN1Module/TestInvocationId.ta.js';
 import {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 export {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 import {
     StartTime,
     _decode_StartTime,
     _encode_StartTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta.js';
 export {
     StartTime,
     _decode_StartTime,
     _encode_StartTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta.js';
 import {
     EndTime,
     _decode_EndTime,
     _encode_EndTime,
-} from '../Test-ASN1Module/EndTime.ta';
+} from '../Test-ASN1Module/EndTime.ta.js';
 export {
     EndTime,
     _decode_EndTime,
     _encode_EndTime,
-} from '../Test-ASN1Module/EndTime.ta';
+} from '../Test-ASN1Module/EndTime.ta.js';
 import {
     ActualStartTime,
     _decode_ActualStartTime,
     _encode_ActualStartTime,
-} from '../Test-ASN1Module/ActualStartTime.ta';
+} from '../Test-ASN1Module/ActualStartTime.ta.js';
 export {
     ActualStartTime,
     _decode_ActualStartTime,
     _encode_ActualStartTime,
-} from '../Test-ASN1Module/ActualStartTime.ta';
+} from '../Test-ASN1Module/ActualStartTime.ta.js';
 import {
     ActualStopTime,
     _decode_ActualStopTime,
     _encode_ActualStopTime,
-} from '../Test-ASN1Module/ActualStopTime.ta';
+} from '../Test-ASN1Module/ActualStopTime.ta.js';
 export {
     ActualStopTime,
     _decode_ActualStopTime,
     _encode_ActualStopTime,
-} from '../Test-ASN1Module/ActualStopTime.ta';
+} from '../Test-ASN1Module/ActualStopTime.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SchedulingConflictInfo */
 /**

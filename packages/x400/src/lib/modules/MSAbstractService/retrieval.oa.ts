@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { summarize } from '../MSAbstractService/summarize.oa';
-export { summarize } from '../MSAbstractService/summarize.oa';
-import { list } from '../MSAbstractService/list.oa';
-export { list } from '../MSAbstractService/list.oa';
-import { fetch } from '../MSAbstractService/fetch.oa';
-export { fetch } from '../MSAbstractService/fetch.oa';
-import { delete_ } from '../MSAbstractService/delete.oa';
-export { delete_ } from '../MSAbstractService/delete.oa';
-import { register_MS } from '../MSAbstractService/register-MS.oa';
-export { register_MS } from '../MSAbstractService/register-MS.oa';
-import { modify } from '../MSAbstractService/modify.oa';
-export { modify } from '../MSAbstractService/modify.oa';
-import { alert } from '../MSAbstractService/alert.oa';
-export { alert } from '../MSAbstractService/alert.oa';
-import { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va';
-export { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { summarize } from '../MSAbstractService/summarize.oa.js';
+export { summarize } from '../MSAbstractService/summarize.oa.js';
+import { list } from '../MSAbstractService/list.oa.js';
+export { list } from '../MSAbstractService/list.oa.js';
+import { fetch } from '../MSAbstractService/fetch.oa.js';
+export { fetch } from '../MSAbstractService/fetch.oa.js';
+import { delete_ } from '../MSAbstractService/delete.oa.js';
+export { delete_ } from '../MSAbstractService/delete.oa.js';
+import { register_MS } from '../MSAbstractService/register-MS.oa.js';
+export { register_MS } from '../MSAbstractService/register-MS.oa.js';
+import { modify } from '../MSAbstractService/modify.oa.js';
+export { modify } from '../MSAbstractService/modify.oa.js';
+import { alert } from '../MSAbstractService/alert.oa.js';
+export { alert } from '../MSAbstractService/alert.oa.js';
+import { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va.js';
+export { id_pt_retrieval_94 } from '../MSObjectIdentifiers/id-pt-retrieval-94.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION retrieval */
 /**

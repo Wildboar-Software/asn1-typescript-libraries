@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 export {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 import {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -86,7 +86,7 @@ import {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 export {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -97,19 +97,19 @@ export {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 import {
     DLExemptedRecipients,
     _decode_DLExemptedRecipients,
     _encode_DLExemptedRecipients,
-} from '../MTSAbstractService/DLExemptedRecipients.ta';
+} from '../MTSAbstractService/DLExemptedRecipients.ta.js';
 export {
     DLExemptedRecipients,
     _decode_DLExemptedRecipients,
     _encode_DLExemptedRecipients,
-} from '../MTSAbstractService/DLExemptedRecipients.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
+} from '../MTSAbstractService/DLExemptedRecipients.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dl_exempted_recipients */
 /**

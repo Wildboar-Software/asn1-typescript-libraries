@@ -1,13 +1,13 @@
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { id_contentLocation } from "./id-contentLocation.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { id_contentLocation } from "./id-contentLocation.va.js";
 import {
     URI,
     _decode_URI,
     _encode_URI,
-} from "./URI.ta";
+} from "./URI.ta.js";
 
 // This module was created manually, because the ASN.1 compiler did not output it
 // for some reason.

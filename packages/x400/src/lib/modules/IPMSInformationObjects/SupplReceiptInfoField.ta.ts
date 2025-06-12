@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 export {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SupplReceiptInfoField */
 /**

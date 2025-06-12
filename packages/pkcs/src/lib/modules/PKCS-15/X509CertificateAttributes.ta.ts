@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION X509CertificateAttributes */
 /**

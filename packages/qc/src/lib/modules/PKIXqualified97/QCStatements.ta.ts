@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     QCStatement,
     _decode_QCStatement,
     _encode_QCStatement,
-} from "../PKIXqualified97/QCStatement.ta";
+} from "../PKIXqualified97/QCStatement.ta.js";
 export {
     QCStatement,
     _decode_QCStatement,
     _encode_QCStatement,
-} from "../PKIXqualified97/QCStatement.ta";
+} from "../PKIXqualified97/QCStatement.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION QCStatements */
 /**

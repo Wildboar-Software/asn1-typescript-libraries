@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ContentInfo,
   _decode_ContentInfo,
   _encode_ContentInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SCVPResponses */
 /**

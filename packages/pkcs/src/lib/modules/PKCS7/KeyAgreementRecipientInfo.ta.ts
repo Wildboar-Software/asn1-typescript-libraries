@@ -5,39 +5,39 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.js";
 import {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from "../PKCS7/OriginatorIdentifierOrKey.ta";
+} from "../PKCS7/OriginatorIdentifierOrKey.ta.js";
 import {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from "../PKCS7/RecipientEncryptedKeys.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientEncryptedKeys.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.js";
 export {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from "../PKCS7/OriginatorIdentifierOrKey.ta";
+} from "../PKCS7/OriginatorIdentifierOrKey.ta.js";
 export {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from "../PKCS7/RecipientEncryptedKeys.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientEncryptedKeys.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreementRecipientInfo */
 /**

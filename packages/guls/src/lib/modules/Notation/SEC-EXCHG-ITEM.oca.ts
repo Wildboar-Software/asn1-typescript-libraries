@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca';
-export { SE_ERROR } from '../Notation/SE-ERROR.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
+export { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION SEC_EXCHG_ITEM */
 /**

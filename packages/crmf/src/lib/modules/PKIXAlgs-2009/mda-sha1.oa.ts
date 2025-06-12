@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 import {
     preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_sha1 } from "@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha1.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_sha1 } from "@wildboar/x500/src/lib/modules/AlgorithmObjectIdentifiers/id-sha1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION mda_sha1 */
 /**

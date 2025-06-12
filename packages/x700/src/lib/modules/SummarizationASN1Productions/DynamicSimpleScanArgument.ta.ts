@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
-} from '../SummarizationASN1Productions/ScanAttributeIdList.ta';
+} from '../SummarizationASN1Productions/ScanAttributeIdList.ta.js';
 export {
     ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
-} from '../SummarizationASN1Productions/ScanAttributeIdList.ta';
+} from '../SummarizationASN1Productions/ScanAttributeIdList.ta.js';
 import {
     NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta';
+} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.js';
 export {
     NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta';
+} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.js';
 import {
     DynamicSimpleScanArgument_scopeOrListChoice,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice,
-} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta';
+} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.js';
 export {
     DynamicSimpleScanArgument_scopeOrListChoice,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice,
-} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta';
+} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.js';
 import {
     SuppressObjectInstance,
     _decode_SuppressObjectInstance,
     _encode_SuppressObjectInstance,
-} from '../SummarizationASN1Productions/SuppressObjectInstance.ta';
+} from '../SummarizationASN1Productions/SuppressObjectInstance.ta.js';
 export {
     SuppressObjectInstance,
     _decode_SuppressObjectInstance,
     _encode_SuppressObjectInstance,
-} from '../SummarizationASN1Productions/SuppressObjectInstance.ta';
+} from '../SummarizationASN1Productions/SuppressObjectInstance.ta.js';
 import {
     OnceReportAttributeIdList,
     _decode_OnceReportAttributeIdList,
     _encode_OnceReportAttributeIdList,
-} from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta';
+} from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.js';
 export {
     OnceReportAttributeIdList,
     _decode_OnceReportAttributeIdList,
     _encode_OnceReportAttributeIdList,
-} from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta';
+} from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.js';
 import {
     TimeStampReportMode,
     _enum_for_TimeStampReportMode,
@@ -127,7 +127,7 @@ import {
     individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
-} from '../SummarizationASN1Productions/TimeStampReportMode.ta';
+} from '../SummarizationASN1Productions/TimeStampReportMode.ta.js';
 export {
     TimeStampReportMode,
     _enum_for_TimeStampReportMode,
@@ -139,7 +139,7 @@ export {
     individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
-} from '../SummarizationASN1Productions/TimeStampReportMode.ta';
+} from '../SummarizationASN1Productions/TimeStampReportMode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument */
 /**

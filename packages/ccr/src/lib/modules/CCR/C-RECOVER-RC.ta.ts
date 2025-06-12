@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ATOMIC_ACTION_IDENTIFIER,
   _decode_ATOMIC_ACTION_IDENTIFIER,
   _encode_ATOMIC_ACTION_IDENTIFIER,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.js';
 export {
   ATOMIC_ACTION_IDENTIFIER,
   _decode_ATOMIC_ACTION_IDENTIFIER,
   _encode_ATOMIC_ACTION_IDENTIFIER,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.js';
 import {
   BRANCH_IDENTIFIER,
   _decode_BRANCH_IDENTIFIER,
   _encode_BRANCH_IDENTIFIER,
-} from '../CCR/BRANCH-IDENTIFIER.ta';
+} from '../CCR/BRANCH-IDENTIFIER.ta.js';
 export {
   BRANCH_IDENTIFIER,
   _decode_BRANCH_IDENTIFIER,
   _encode_BRANCH_IDENTIFIER,
-} from '../CCR/BRANCH-IDENTIFIER.ta';
+} from '../CCR/BRANCH-IDENTIFIER.ta.js';
 import {
   C_RECOVER_RC_recovery_state,
   _enum_for_C_RECOVER_RC_recovery_state,
@@ -101,7 +101,7 @@ import {
   retry_later /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_RECOVER_RC_recovery_state,
   _encode_C_RECOVER_RC_recovery_state,
-} from '../CCR/C-RECOVER-RC-recovery-state.ta';
+} from '../CCR/C-RECOVER-RC-recovery-state.ta.js';
 export {
   C_RECOVER_RC_recovery_state,
   _enum_for_C_RECOVER_RC_recovery_state,
@@ -117,17 +117,17 @@ export {
   retry_later /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_RECOVER_RC_recovery_state,
   _encode_C_RECOVER_RC_recovery_state,
-} from '../CCR/C-RECOVER-RC-recovery-state.ta';
+} from '../CCR/C-RECOVER-RC-recovery-state.ta.js';
 import {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 export {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION C_RECOVER_RC */
 /**

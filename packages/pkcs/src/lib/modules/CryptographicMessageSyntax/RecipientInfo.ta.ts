@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from "../CryptographicMessageSyntax/KEKRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KEKRecipientInfo.ta.js";
 import {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyAgreeRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KeyAgreeRecipientInfo.ta.js";
 import {
     KeyTransRecipientInfo,
     _decode_KeyTransRecipientInfo,
     _encode_KeyTransRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta.js";
 export {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from "../CryptographicMessageSyntax/KEKRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KEKRecipientInfo.ta.js";
 export {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyAgreeRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KeyAgreeRecipientInfo.ta.js";
 export {
     KeyTransRecipientInfo,
     _decode_KeyTransRecipientInfo,
     _encode_KeyTransRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta";
+} from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**

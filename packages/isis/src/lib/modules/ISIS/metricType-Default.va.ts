@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   MetricType,
   _enum_for_MetricType,
@@ -75,7 +75,7 @@ import {
   external /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_MetricType,
   _encode_MetricType,
-} from '../ISIS/MetricType.ta';
+} from '../ISIS/MetricType.ta.js';
 export {
   MetricType,
   _enum_for_MetricType,
@@ -85,7 +85,7 @@ export {
   external /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_MetricType,
   _encode_MetricType,
-} from '../ISIS/MetricType.ta';
+} from '../ISIS/MetricType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION metricType_Default */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   UnitEventNotificationDisabler,
   _decode_UnitEventNotificationDisabler,
   _encode_UnitEventNotificationDisabler,
-} from '../BIP/UnitEventNotificationDisabler.ta';
+} from '../BIP/UnitEventNotificationDisabler.ta.js';
 export {
   UnitEventNotificationDisabler,
   _decode_UnitEventNotificationDisabler,
   _encode_UnitEventNotificationDisabler,
-} from '../BIP/UnitEventNotificationDisabler.ta';
+} from '../BIP/UnitEventNotificationDisabler.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UnitEventNotificationDisablers */
 /**

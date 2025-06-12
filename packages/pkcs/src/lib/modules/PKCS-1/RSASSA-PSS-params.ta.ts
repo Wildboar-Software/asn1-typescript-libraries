@@ -5,44 +5,44 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta";
+} from "../PKCS-1/HashAlgorithm.ta.js";
 import {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKCS-1/MaskGenAlgorithm.ta";
-import { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va";
-import { sha1 } from "../PKCS-1/sha1.va";
+} from "../PKCS-1/MaskGenAlgorithm.ta.js";
+import { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.js";
+import { sha1 } from "../PKCS-1/sha1.va.js";
 import {
     TrailerField,
     trailerFieldBC /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TrailerField,
     _encode_TrailerField,
-} from "../PKCS-1/TrailerField.ta";
+} from "../PKCS-1/TrailerField.ta.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta";
+} from "../PKCS-1/HashAlgorithm.ta.js";
 export {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKCS-1/MaskGenAlgorithm.ta";
-export { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va";
-export { sha1 } from "../PKCS-1/sha1.va";
+} from "../PKCS-1/MaskGenAlgorithm.ta.js";
+export { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.js";
+export { sha1 } from "../PKCS-1/sha1.va.js";
 export {
     TrailerField,
     trailerFieldBC /* IMPORTED_SHORT_NAMED_INTEGER */,
     TrailerField_trailerFieldBC /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_TrailerField,
     _encode_TrailerField,
-} from "../PKCS-1/TrailerField.ta";
+} from "../PKCS-1/TrailerField.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
 /**

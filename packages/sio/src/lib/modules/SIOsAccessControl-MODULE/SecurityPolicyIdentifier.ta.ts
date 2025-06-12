@@ -2,4 +2,4 @@ export {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from "@wildboar/x500/src/lib/modules/EnhancedSecurity/SecurityPolicyIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/EnhancedSecurity/SecurityPolicyIdentifier.ta.js";

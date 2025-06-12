@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Charging_Item,
   _decode_Charging_Item,
   _encode_Charging_Item,
-} from '../ISO8571-FTAM/Charging-Item.ta';
+} from '../ISO8571-FTAM/Charging-Item.ta.js';
 export {
   Charging_Item,
   _decode_Charging_Item,
   _encode_Charging_Item,
-} from '../ISO8571-FTAM/Charging-Item.ta';
+} from '../ISO8571-FTAM/Charging-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Charging */
 /**

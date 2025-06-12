@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta";
-export { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.js";
+export { IntervalsOfDay_Item, _decode_IntervalsOfDay_Item, _encode_IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION IntervalsOfDay */

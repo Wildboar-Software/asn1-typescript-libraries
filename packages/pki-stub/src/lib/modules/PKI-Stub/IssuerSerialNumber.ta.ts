@@ -9,14 +9,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
-export { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.js";
+export { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../PKI-Stub/CertificateSerialNumber.ta";
+} from "../PKI-Stub/CertificateSerialNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION IssuerSerialNumber */
 /**

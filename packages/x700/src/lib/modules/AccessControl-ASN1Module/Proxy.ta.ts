@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca';
-export { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca';
-import { ProxySet } from '../AccessControl-ASN1Module/ProxySet.osa';
-export { ProxySet } from '../AccessControl-ASN1Module/ProxySet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.js';
+export { AC_PROXY } from '../AccessControl-ASN1Module/AC-PROXY.oca.js';
+import { ProxySet } from '../AccessControl-ASN1Module/ProxySet.osa.js';
+export { ProxySet } from '../AccessControl-ASN1Module/ProxySet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Proxy */
 /**

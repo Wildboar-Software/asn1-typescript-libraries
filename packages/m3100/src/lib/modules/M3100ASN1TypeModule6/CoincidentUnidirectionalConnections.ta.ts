@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CoincidentUnprotectedUnidirectionalConnections,
     _decode_CoincidentUnprotectedUnidirectionalConnections,
     _encode_CoincidentUnprotectedUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentUnprotectedUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentUnprotectedUnidirectionalConnections.ta.js';
 export {
     CoincidentUnprotectedUnidirectionalConnections,
     _decode_CoincidentUnprotectedUnidirectionalConnections,
     _encode_CoincidentUnprotectedUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentUnprotectedUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentUnprotectedUnidirectionalConnections.ta.js';
 import {
     CoincidentProtectedUnidirectionalConnections,
     _decode_CoincidentProtectedUnidirectionalConnections,
     _encode_CoincidentProtectedUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentProtectedUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentProtectedUnidirectionalConnections.ta.js';
 export {
     CoincidentProtectedUnidirectionalConnections,
     _decode_CoincidentProtectedUnidirectionalConnections,
     _encode_CoincidentProtectedUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentProtectedUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentProtectedUnidirectionalConnections.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CoincidentUnidirectionalConnections */
 /**

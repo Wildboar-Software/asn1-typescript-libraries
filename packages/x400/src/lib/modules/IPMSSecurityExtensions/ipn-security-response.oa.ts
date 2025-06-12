@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IpnSecurityResponse,
     _decode_IpnSecurityResponse,
     _encode_IpnSecurityResponse,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse.ta';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse.ta.js';
 export {
     IpnSecurityResponse,
     _decode_IpnSecurityResponse,
     _encode_IpnSecurityResponse,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse.ta';
-import { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va';
-export { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse.ta.js';
+import { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va.js';
+export { id_sec_security_common_fields } from '../IPMSObjectIdentifiers/id-sec-security-common-fields.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ipn_security_response */
 /**

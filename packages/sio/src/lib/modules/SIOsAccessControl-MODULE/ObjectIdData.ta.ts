@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ObjectIdName,
     _decode_ObjectIdName,
     _encode_ObjectIdName,
-} from "../SIOsAccessControl-MODULE/ObjectIdName.ta";
+} from "../SIOsAccessControl-MODULE/ObjectIdName.ta.js";
 export {
     ObjectIdName,
     _decode_ObjectIdName,
     _encode_ObjectIdName,
-} from "../SIOsAccessControl-MODULE/ObjectIdName.ta";
+} from "../SIOsAccessControl-MODULE/ObjectIdName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ObjectIdData */
 /**

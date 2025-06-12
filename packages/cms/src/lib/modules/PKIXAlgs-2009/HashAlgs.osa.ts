@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
-import { mda_md2 } from "../PKIXAlgs-2009/mda-md2.oa";
-import { mda_md5 } from "../PKIXAlgs-2009/mda-md5.oa";
-import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
-export { mda_md2 } from "../PKIXAlgs-2009/mda-md2.oa";
-export { mda_md5 } from "../PKIXAlgs-2009/mda-md5.oa";
-export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
+import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
+import { mda_md2 } from "../PKIXAlgs-2009/mda-md2.oa.js";
+import { mda_md5 } from "../PKIXAlgs-2009/mda-md5.oa.js";
+import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
+export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
+export { mda_md2 } from "../PKIXAlgs-2009/mda-md2.oa.js";
+export { mda_md5 } from "../PKIXAlgs-2009/mda-md5.oa.js";
+export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION HashAlgs */
 /**

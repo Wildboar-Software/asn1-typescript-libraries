@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
-} from "../CryptographicMessageSyntax/RecipientInfo.ta";
+} from "../CryptographicMessageSyntax/RecipientInfo.ta.js";
 import {
     PasswordInfo,
     _decode_PasswordInfo,
     _encode_PasswordInfo,
-} from "../PKCS-15/PasswordInfo.ta";
+} from "../PKCS-15/PasswordInfo.ta.js";
 export {
     RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
-} from "../CryptographicMessageSyntax/RecipientInfo.ta";
+} from "../CryptographicMessageSyntax/RecipientInfo.ta.js";
 export {
     PasswordInfo,
     _decode_PasswordInfo,
     _encode_PasswordInfo,
-} from "../PKCS-15/PasswordInfo.ta";
+} from "../PKCS-15/PasswordInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item_keyInfo */
 /**

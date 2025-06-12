@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SecurityLevel, _enum_for_SecurityLevel, SecurityLevel_level1 /* IMPORTED_LONG_ENUMERATION_ITEM */, level1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta";
-export { SecurityLevel, _enum_for_SecurityLevel, SecurityLevel_level1 /* IMPORTED_LONG_ENUMERATION_ITEM */, level1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SecurityLevel, _enum_for_SecurityLevel, SecurityLevel_level1 /* IMPORTED_LONG_ENUMERATION_ITEM */, level1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta.js";
+export { SecurityLevel, _enum_for_SecurityLevel, SecurityLevel_level1 /* IMPORTED_LONG_ENUMERATION_ITEM */, level1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfile/SecurityLevel.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION FIPSLevel */

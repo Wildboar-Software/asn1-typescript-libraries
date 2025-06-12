@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/sio",
-    "version": "1.0.4",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Security Information Objects in TypeScript",
     "keywords": [
         "sio",
@@ -30,8 +31,8 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.1.5",
-        "@wildboar/pki-stub": "^1.1.8",
-        "@wildboar/ldap": "^1.2.14"
+        "@wildboar/x500": "2.x.x",
+        "@wildboar/pki-stub": "2.x.x",
+        "@wildboar/ldap": "2.x.x"
     }
 }

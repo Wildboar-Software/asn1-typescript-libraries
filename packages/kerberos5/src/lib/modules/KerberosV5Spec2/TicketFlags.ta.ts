@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KerberosFlags,
   _decode_KerberosFlags,
   _encode_KerberosFlags,
-} from '../KerberosV5Spec2/KerberosFlags.ta';
+} from '../KerberosV5Spec2/KerberosFlags.ta.js';
 export {
   KerberosFlags,
   _decode_KerberosFlags,
   _encode_KerberosFlags,
-} from '../KerberosV5Spec2/KerberosFlags.ta';
+} from '../KerberosV5Spec2/KerberosFlags.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TicketFlags */
 /**

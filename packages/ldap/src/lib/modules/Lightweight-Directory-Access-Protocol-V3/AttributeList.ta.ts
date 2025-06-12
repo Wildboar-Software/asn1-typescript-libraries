@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta.js';
 export {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeList */
 /**

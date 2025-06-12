@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca';
-export { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca';
-import { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-data.oa';
-export { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-data.oa';
-import { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa';
-export { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa';
-import { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa';
-export { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa';
-import { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encrypted-data.oa';
-export { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encrypted-data.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.js';
+export { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.js';
+import { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-data.oa.js';
+export { bind_token_signed_data } from '../MTSAbstractService/bind-token-signed-data.oa.js';
+import { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa.js';
+export { message_token_signed_data } from '../MTSAbstractService/message-token-signed-data.oa.js';
+import { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa.js';
+export { message_token_encrypted_data } from '../MTSAbstractService/message-token-encrypted-data.oa.js';
+import { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encrypted-data.oa.js';
+export { bind_token_encrypted_data } from '../MTSAbstractService/bind-token-encrypted-data.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION TokenDataTable */
 /**

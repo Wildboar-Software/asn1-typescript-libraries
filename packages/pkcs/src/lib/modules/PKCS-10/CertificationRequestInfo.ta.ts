@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS-10/Attributes.ta";
+} from "../PKCS-10/Attributes.ta.js";
 import {
     CertificationRequestInfo_version,
     _decode_CertificationRequestInfo_version,
     _encode_CertificationRequestInfo_version,
-} from "../PKCS-10/CertificationRequestInfo-version.ta";
+} from "../PKCS-10/CertificationRequestInfo-version.ta.js";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "../PKCS-10/SubjectPublicKeyInfo.ta";
+} from "../PKCS-10/SubjectPublicKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificationRequestInfo */
 /**

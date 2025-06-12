@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IPM,
     _decode_IPM,
     _encode_IPM,
-} from '../IPMSInformationObjects/IPM.ta';
+} from '../IPMSInformationObjects/IPM.ta.js';
 export {
     IPM,
     _decode_IPM,
     _encode_IPM,
-} from '../IPMSInformationObjects/IPM.ta';
+} from '../IPMSInformationObjects/IPM.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageData */
 /**

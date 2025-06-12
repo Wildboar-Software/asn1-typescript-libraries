@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
-export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
-import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta";
-export { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
+export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
+import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta.js";
+export { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CrlValidatedID */

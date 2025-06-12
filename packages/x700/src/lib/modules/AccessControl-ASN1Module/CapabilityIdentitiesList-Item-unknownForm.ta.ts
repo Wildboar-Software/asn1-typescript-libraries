@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca';
-export { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca';
-import { CapabilityIdentitiesSet } from '../AccessControl-ASN1Module/CapabilityIdentitiesSet.osa';
-export { CapabilityIdentitiesSet } from '../AccessControl-ASN1Module/CapabilityIdentitiesSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca.js';
+export { AC_CAP_IDENTITY } from '../AccessControl-ASN1Module/AC-CAP-IDENTITY.oca.js';
+import { CapabilityIdentitiesSet } from '../AccessControl-ASN1Module/CapabilityIdentitiesSet.osa.js';
+export { CapabilityIdentitiesSet } from '../AccessControl-ASN1Module/CapabilityIdentitiesSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item_unknownForm */
 /**

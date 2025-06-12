@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-import { ipm_auto_forward } from '../IPMSAutoActionTypes/ipm-auto-forward.oa';
-export { ipm_auto_forward } from '../IPMSAutoActionTypes/ipm-auto-forward.oa';
-import { ipm_auto_acknowledgement } from '../IPMSAutoActionTypes/ipm-auto-acknowledgement.oa';
-export { ipm_auto_acknowledgement } from '../IPMSAutoActionTypes/ipm-auto-acknowledgement.oa';
-import { ipm_auto_correlate } from '../IPMSAutoActionTypes/ipm-auto-correlate.oa';
-export { ipm_auto_correlate } from '../IPMSAutoActionTypes/ipm-auto-correlate.oa';
-import { ipm_auto_discard } from '../IPMSAutoActionTypes/ipm-auto-discard.oa';
-export { ipm_auto_discard } from '../IPMSAutoActionTypes/ipm-auto-discard.oa';
-import { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa';
-export { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+import { ipm_auto_forward } from '../IPMSAutoActionTypes/ipm-auto-forward.oa.js';
+export { ipm_auto_forward } from '../IPMSAutoActionTypes/ipm-auto-forward.oa.js';
+import { ipm_auto_acknowledgement } from '../IPMSAutoActionTypes/ipm-auto-acknowledgement.oa.js';
+export { ipm_auto_acknowledgement } from '../IPMSAutoActionTypes/ipm-auto-acknowledgement.oa.js';
+import { ipm_auto_correlate } from '../IPMSAutoActionTypes/ipm-auto-correlate.oa.js';
+export { ipm_auto_correlate } from '../IPMSAutoActionTypes/ipm-auto-correlate.oa.js';
+import { ipm_auto_discard } from '../IPMSAutoActionTypes/ipm-auto-discard.oa.js';
+export { ipm_auto_discard } from '../IPMSAutoActionTypes/ipm-auto-discard.oa.js';
+import { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa.js';
+export { ipm_auto_advise } from '../IPMSAutoActionTypes/ipm-auto-advise.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMAutoActions */
 /**

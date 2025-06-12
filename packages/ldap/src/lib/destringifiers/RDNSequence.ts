@@ -1,6 +1,6 @@
-import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue";
-import type { StringDecoderGetter } from "../types/StringDecoderGetter";
-import rdnFromString from "./RelativeDistinguishedName";
+import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue.js";
+import type { StringDecoderGetter } from "../types/StringDecoderGetter.js";
+import rdnFromString from "./RelativeDistinguishedName.js";
 
 type RDN = ATAV[];
 

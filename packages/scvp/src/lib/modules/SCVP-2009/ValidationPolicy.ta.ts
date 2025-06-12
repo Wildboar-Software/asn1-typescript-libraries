@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ValidationPolRef,
   _decode_ValidationPolRef,
   _encode_ValidationPolRef,
-} from '../SCVP-2009/ValidationPolRef.ta';
+} from '../SCVP-2009/ValidationPolRef.ta.js';
 export {
   ValidationPolRef,
   _decode_ValidationPolRef,
   _encode_ValidationPolRef,
-} from '../SCVP-2009/ValidationPolRef.ta';
+} from '../SCVP-2009/ValidationPolRef.ta.js';
 import {
   ValidationAlg,
   _decode_ValidationAlg,
   _encode_ValidationAlg,
-} from '../SCVP-2009/ValidationAlg.ta';
+} from '../SCVP-2009/ValidationAlg.ta.js';
 export {
   ValidationAlg,
   _decode_ValidationAlg,
   _encode_ValidationAlg,
-} from '../SCVP-2009/ValidationAlg.ta';
+} from '../SCVP-2009/ValidationAlg.ta.js';
 import {
   TrustAnchors,
   _decode_TrustAnchors,
   _encode_TrustAnchors,
-} from '../SCVP-2009/TrustAnchors.ta';
+} from '../SCVP-2009/TrustAnchors.ta.js';
 export {
   TrustAnchors,
   _decode_TrustAnchors,
   _encode_TrustAnchors,
-} from '../SCVP-2009/TrustAnchors.ta';
+} from '../SCVP-2009/TrustAnchors.ta.js';
 import {
   KeyUsage,
   KeyUsage_digitalSignature /* IMPORTED_LONG_NAMED_BIT */,
@@ -118,12 +118,12 @@ import {
   decipherOnly /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_KeyUsage,
   _encode_KeyUsage,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.js';
 import {
   KeyPurposeId,
   _decode_KeyPurposeId,
   _encode_KeyPurposeId,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyPurposeId.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyPurposeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ValidationPolicy */
 /**

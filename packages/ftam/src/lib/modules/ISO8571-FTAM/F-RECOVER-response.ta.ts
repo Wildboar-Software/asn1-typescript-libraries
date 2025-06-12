@@ -65,48 +65,48 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 export {
   State_Result,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 import {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 export {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 import {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 export {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 import {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 export {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_RECOVER_response */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BackupReply_reply,
     _decode_BackupReply_reply,
     _encode_BackupReply_reply,
-} from '../BackupRestoreASN1Module/BackupReply-reply.ta';
+} from '../BackupRestoreASN1Module/BackupReply-reply.ta.js';
 export {
     BackupReply_reply,
     _decode_BackupReply_reply,
     _encode_BackupReply_reply,
-} from '../BackupRestoreASN1Module/BackupReply-reply.ta';
+} from '../BackupRestoreASN1Module/BackupReply-reply.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BackupReply */
 /**

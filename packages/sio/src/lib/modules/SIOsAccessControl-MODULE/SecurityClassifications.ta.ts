@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from "../SIOsAccessControl-MODULE/SecurityClassification.ta";
+} from "../SIOsAccessControl-MODULE/SecurityClassification.ta.js";
 export {
     SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from "../SIOsAccessControl-MODULE/SecurityClassification.ta";
+} from "../SIOsAccessControl-MODULE/SecurityClassification.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityClassifications */
 /**

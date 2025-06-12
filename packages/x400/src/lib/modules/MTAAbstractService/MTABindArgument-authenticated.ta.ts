@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 export {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 import {
     InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
-} from '../MTSAbstractService/InitiatorCredentials.ta';
+} from '../MTSAbstractService/InitiatorCredentials.ta.js';
 export {
     InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
-} from '../MTSAbstractService/InitiatorCredentials.ta';
+} from '../MTSAbstractService/InitiatorCredentials.ta.js';
 import {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 export {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MTABindArgument_authenticated */
 /**

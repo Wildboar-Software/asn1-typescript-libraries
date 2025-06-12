@@ -1,66 +1,66 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PrivateDHKeyAttributes,
     _decode_PrivateDHKeyAttributes,
     _encode_PrivateDHKeyAttributes,
-} from "../PKCS-15/PrivateDHKeyAttributes.ta";
+} from "../PKCS-15/PrivateDHKeyAttributes.ta.js";
 import {
     PrivateDSAKeyAttributes,
     _decode_PrivateDSAKeyAttributes,
     _encode_PrivateDSAKeyAttributes,
-} from "../PKCS-15/PrivateDSAKeyAttributes.ta";
+} from "../PKCS-15/PrivateDSAKeyAttributes.ta.js";
 import {
     PrivateECKeyAttributes,
     _decode_PrivateECKeyAttributes,
     _encode_PrivateECKeyAttributes,
-} from "../PKCS-15/PrivateECKeyAttributes.ta";
+} from "../PKCS-15/PrivateECKeyAttributes.ta.js";
 import {
     PrivateKEAKeyAttributes,
     _decode_PrivateKEAKeyAttributes,
     _encode_PrivateKEAKeyAttributes,
-} from "../PKCS-15/PrivateKEAKeyAttributes.ta";
+} from "../PKCS-15/PrivateKEAKeyAttributes.ta.js";
 import {
     PrivateKeyObject,
     _get_decoder_for_PrivateKeyObject,
     _get_encoder_for_PrivateKeyObject,
-} from "../PKCS-15/PrivateKeyObject.ta";
+} from "../PKCS-15/PrivateKeyObject.ta.js";
 import {
     PrivateRSAKeyAttributes,
     _decode_PrivateRSAKeyAttributes,
     _encode_PrivateRSAKeyAttributes,
-} from "../PKCS-15/PrivateRSAKeyAttributes.ta";
+} from "../PKCS-15/PrivateRSAKeyAttributes.ta.js";
 export {
     PrivateDHKeyAttributes,
     _decode_PrivateDHKeyAttributes,
     _encode_PrivateDHKeyAttributes,
-} from "../PKCS-15/PrivateDHKeyAttributes.ta";
+} from "../PKCS-15/PrivateDHKeyAttributes.ta.js";
 export {
     PrivateDSAKeyAttributes,
     _decode_PrivateDSAKeyAttributes,
     _encode_PrivateDSAKeyAttributes,
-} from "../PKCS-15/PrivateDSAKeyAttributes.ta";
+} from "../PKCS-15/PrivateDSAKeyAttributes.ta.js";
 export {
     PrivateECKeyAttributes,
     _decode_PrivateECKeyAttributes,
     _encode_PrivateECKeyAttributes,
-} from "../PKCS-15/PrivateECKeyAttributes.ta";
+} from "../PKCS-15/PrivateECKeyAttributes.ta.js";
 export {
     PrivateKEAKeyAttributes,
     _decode_PrivateKEAKeyAttributes,
     _encode_PrivateKEAKeyAttributes,
-} from "../PKCS-15/PrivateKEAKeyAttributes.ta";
+} from "../PKCS-15/PrivateKEAKeyAttributes.ta.js";
 export {
     PrivateKeyObject,
     _get_decoder_for_PrivateKeyObject,
     _get_encoder_for_PrivateKeyObject,
-} from "../PKCS-15/PrivateKeyObject.ta";
+} from "../PKCS-15/PrivateKeyObject.ta.js";
 export {
     PrivateRSAKeyAttributes,
     _decode_PrivateRSAKeyAttributes,
     _encode_PrivateRSAKeyAttributes,
-} from "../PKCS-15/PrivateRSAKeyAttributes.ta";
+} from "../PKCS-15/PrivateRSAKeyAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PrivateKeyType */
 /**

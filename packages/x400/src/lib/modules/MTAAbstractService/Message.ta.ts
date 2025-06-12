@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageTransferEnvelope,
     _decode_MessageTransferEnvelope,
     _encode_MessageTransferEnvelope,
-} from '../MTAAbstractService/MessageTransferEnvelope.ta';
+} from '../MTAAbstractService/MessageTransferEnvelope.ta.js';
 export {
     MessageTransferEnvelope,
     _decode_MessageTransferEnvelope,
     _encode_MessageTransferEnvelope,
-} from '../MTAAbstractService/MessageTransferEnvelope.ta';
+} from '../MTAAbstractService/MessageTransferEnvelope.ta.js';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Message */
 /**

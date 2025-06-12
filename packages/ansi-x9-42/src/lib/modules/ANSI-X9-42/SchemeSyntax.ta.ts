@@ -1,31 +1,31 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SchemeIdentifier,
     _decode_SchemeIdentifier,
     _encode_SchemeIdentifier,
-} from "../ANSI-X9-42/SchemeIdentifier.ta";
+} from "../ANSI-X9-42/SchemeIdentifier.ta.js";
 import {
     SchemeNumber,
     _decode_SchemeNumber,
     _encode_SchemeNumber,
-} from "../ANSI-X9-42/SchemeNumber.ta";
+} from "../ANSI-X9-42/SchemeNumber.ta.js";
 import {
     SchemeOID,
     _decode_SchemeOID,
     _encode_SchemeOID,
-} from "../ANSI-X9-42/SchemeOID.ta";
+} from "../ANSI-X9-42/SchemeOID.ta.js";
 export {
     KeyDerivationMethod,
     _decode_KeyDerivationMethod,
     _encode_KeyDerivationMethod,
-} from "../ANSI-X9-42/KeyDerivationMethod.ta";
+} from "../ANSI-X9-42/KeyDerivationMethod.ta.js";
 export {
     SchemeIdentifier,
     _decode_SchemeIdentifier,
     _encode_SchemeIdentifier,
-} from "../ANSI-X9-42/SchemeIdentifier.ta";
+} from "../ANSI-X9-42/SchemeIdentifier.ta.js";
 export {
     dhEphem_sha1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     dhHybrid1_sha1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -47,12 +47,12 @@ export {
     _decode_SchemeNumber,
     _encode_SchemeNumber,
     _enum_for_SchemeNumber,
-} from "../ANSI-X9-42/SchemeNumber.ta";
+} from "../ANSI-X9-42/SchemeNumber.ta.js";
 export {
     SchemeOID,
     _decode_SchemeOID,
     _encode_SchemeOID,
-} from "../ANSI-X9-42/SchemeOID.ta";
+} from "../ANSI-X9-42/SchemeOID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SchemeSyntax */
 /**

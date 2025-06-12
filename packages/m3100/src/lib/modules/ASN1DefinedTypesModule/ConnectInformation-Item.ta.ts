@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectInformation_Item_itemType,
     _decode_ConnectInformation_Item_itemType,
     _encode_ConnectInformation_Item_itemType,
-} from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta';
+} from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta.js';
 export {
     ConnectInformation_Item_itemType,
     _decode_ConnectInformation_Item_itemType,
     _encode_ConnectInformation_Item_itemType,
-} from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta';
+} from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta.js';
 import {
     AdministrativeState,
     _enum_for_AdministrativeState,
@@ -87,7 +87,7 @@ import {
     shuttingDown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AdministrativeState,
     _encode_AdministrativeState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdministrativeState.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdministrativeState.ta.js';
 export {
     AdministrativeState,
     _enum_for_AdministrativeState,
@@ -99,47 +99,47 @@ export {
     shuttingDown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AdministrativeState,
     _encode_AdministrativeState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdministrativeState.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdministrativeState.ta.js';
 import {
     NamedCrossConnection,
     _decode_NamedCrossConnection,
     _encode_NamedCrossConnection,
-} from '../ASN1DefinedTypesModule/NamedCrossConnection.ta';
+} from '../ASN1DefinedTypesModule/NamedCrossConnection.ta.js';
 export {
     NamedCrossConnection,
     _decode_NamedCrossConnection,
     _encode_NamedCrossConnection,
-} from '../ASN1DefinedTypesModule/NamedCrossConnection.ta';
+} from '../ASN1DefinedTypesModule/NamedCrossConnection.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 import {
     UserLabel,
     _decode_UserLabel,
     _encode_UserLabel,
-} from '../ASN1DefinedTypesModule/UserLabel.ta';
+} from '../ASN1DefinedTypesModule/UserLabel.ta.js';
 export {
     UserLabel,
     _decode_UserLabel,
     _encode_UserLabel,
-} from '../ASN1DefinedTypesModule/UserLabel.ta';
+} from '../ASN1DefinedTypesModule/UserLabel.ta.js';
 import {
     Boolean,
     _decode_Boolean,
     _encode_Boolean,
-} from '../ASN1DefinedTypesModule/Boolean.ta';
+} from '../ASN1DefinedTypesModule/Boolean.ta.js';
 export {
     Boolean,
     _decode_Boolean,
     _encode_Boolean,
-} from '../ASN1DefinedTypesModule/Boolean.ta';
+} from '../ASN1DefinedTypesModule/Boolean.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectInformation_Item */
 /**

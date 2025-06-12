@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca";
-export { SupportedStatements } from "../PKIXqualified97/SupportedStatements.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.js";
+export { SupportedStatements } from "../PKIXqualified97/SupportedStatements.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION QCStatement */
 /**

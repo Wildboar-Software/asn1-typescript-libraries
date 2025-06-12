@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BindTokenEncryptedData,
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
-} from '../MTSAbstractService/BindTokenEncryptedData.ta';
+} from '../MTSAbstractService/BindTokenEncryptedData.ta.js';
 export {
     BindTokenEncryptedData,
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
-} from '../MTSAbstractService/BindTokenEncryptedData.ta';
-import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca';
-export { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca';
+} from '../MTSAbstractService/BindTokenEncryptedData.ta.js';
+import { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.js';
+export { TOKEN_DATA } from '../MTSAbstractService/TOKEN-DATA.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION bind_token_encrypted_data */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSPhysicalDeliveryCountry } from '../MHSRoutingORAddressSubtree/mHSPhysicalDeliveryCountry.oa';
-export { mHSPhysicalDeliveryCountry } from '../MHSRoutingORAddressSubtree/mHSPhysicalDeliveryCountry.oa';
-import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa';
-export { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa';
-import { id_nf_mhs_physical_delivery_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-physical-delivery-country.va';
-export { id_nf_mhs_physical_delivery_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-physical-delivery-country.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSPhysicalDeliveryCountry } from '../MHSRoutingORAddressSubtree/mHSPhysicalDeliveryCountry.oa.js';
+export { mHSPhysicalDeliveryCountry } from '../MHSRoutingORAddressSubtree/mHSPhysicalDeliveryCountry.oa.js';
+import { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.js';
+export { mHSCountryName } from '../MHSRoutingORAddressSubtree/mHSCountryName.oa.js';
+import { id_nf_mhs_physical_delivery_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-physical-delivery-country.va.js';
+export { id_nf_mhs_physical_delivery_country } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-physical-delivery-country.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountryNameForm */
 /**

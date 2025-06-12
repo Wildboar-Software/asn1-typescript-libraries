@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 import {
     BodyPartReference_stored_body_part,
     _decode_BodyPartReference_stored_body_part,
     _encode_BodyPartReference_stored_body_part,
-} from '../IPMSInformationObjects/BodyPartReference-stored-body-part.ta';
+} from '../IPMSInformationObjects/BodyPartReference-stored-body-part.ta.js';
 export {
     BodyPartReference_stored_body_part,
     _decode_BodyPartReference_stored_body_part,
     _encode_BodyPartReference_stored_body_part,
-} from '../IPMSInformationObjects/BodyPartReference-stored-body-part.ta';
+} from '../IPMSInformationObjects/BodyPartReference-stored-body-part.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartReference */
 /**

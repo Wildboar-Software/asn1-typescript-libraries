@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeSelection,
     _decode_AttributeSelection,
     _encode_AttributeSelection,
-} from '../MSAbstractService/AttributeSelection.ta';
+} from '../MSAbstractService/AttributeSelection.ta.js';
 export {
     AttributeSelection,
     _decode_AttributeSelection,
     _encode_AttributeSelection,
-} from '../MSAbstractService/AttributeSelection.ta';
+} from '../MSAbstractService/AttributeSelection.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntryInformationSelection */
 /**

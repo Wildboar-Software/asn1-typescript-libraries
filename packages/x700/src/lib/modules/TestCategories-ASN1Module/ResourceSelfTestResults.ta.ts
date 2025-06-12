@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IntermediateResponse,
     _enum_for_IntermediateResponse,
@@ -81,7 +81,7 @@ import {
     noAcknowledgement /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_IntermediateResponse,
     _encode_IntermediateResponse,
-} from '../TestCategories-ASN1Module/IntermediateResponse.ta';
+} from '../TestCategories-ASN1Module/IntermediateResponse.ta.js';
 export {
     IntermediateResponse,
     _enum_for_IntermediateResponse,
@@ -97,17 +97,17 @@ export {
     noAcknowledgement /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_IntermediateResponse,
     _encode_IntermediateResponse,
-} from '../TestCategories-ASN1Module/IntermediateResponse.ta';
+} from '../TestCategories-ASN1Module/IntermediateResponse.ta.js';
 import {
     ResourceSelfTestResults_nonIntermediate,
     _decode_ResourceSelfTestResults_nonIntermediate,
     _encode_ResourceSelfTestResults_nonIntermediate,
-} from '../TestCategories-ASN1Module/ResourceSelfTestResults-nonIntermediate.ta';
+} from '../TestCategories-ASN1Module/ResourceSelfTestResults-nonIntermediate.ta.js';
 export {
     ResourceSelfTestResults_nonIntermediate,
     _decode_ResourceSelfTestResults_nonIntermediate,
     _encode_ResourceSelfTestResults_nonIntermediate,
-} from '../TestCategories-ASN1Module/ResourceSelfTestResults-nonIntermediate.ta';
+} from '../TestCategories-ASN1Module/ResourceSelfTestResults-nonIntermediate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResourceSelfTestResults */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SignatureStatus,
     SignatureStatus_signature_absent /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     verification_failed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SignatureStatus,
     _encode_SignatureStatus,
-} from '../MSGeneralAttributeTypes/SignatureStatus.ta';
+} from '../MSGeneralAttributeTypes/SignatureStatus.ta.js';
 export {
     SignatureStatus,
     SignatureStatus_signature_absent /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,7 +111,7 @@ export {
     verification_failed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SignatureStatus,
     _encode_SignatureStatus,
-} from '../MSGeneralAttributeTypes/SignatureStatus.ta';
+} from '../MSGeneralAttributeTypes/SignatureStatus.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignatureVerificationStatus */
 /**

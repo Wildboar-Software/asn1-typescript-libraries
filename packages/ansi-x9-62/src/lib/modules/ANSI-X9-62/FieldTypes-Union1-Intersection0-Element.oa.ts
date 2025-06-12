@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va";
+import { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.js";
 import {
     Characteristic_two,
     _decode_Characteristic_two,
     _encode_Characteristic_two,
-} from "../ANSI-X9-62/Characteristic-two.ta";
-import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca";
-export { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va";
+} from "../ANSI-X9-62/Characteristic-two.ta.js";
+import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.js";
+export { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.js";
 export {
     Characteristic_two,
     _decode_Characteristic_two,
     _encode_Characteristic_two,
-} from "../ANSI-X9-62/Characteristic-two.ta";
-export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca";
+} from "../ANSI-X9-62/Characteristic-two.ta.js";
+export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 /**

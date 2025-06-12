@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BPUReportContentInformation,
     _decode_BPUReportContentInformation,
     _encode_BPUReportContentInformation,
-} from '../AuthenticationContextForBiometrics/BPUReportContentInformation.ta';
+} from '../AuthenticationContextForBiometrics/BPUReportContentInformation.ta.js';
 export {
     BPUReportContentInformation,
     _decode_BPUReportContentInformation,
     _encode_BPUReportContentInformation,
-} from '../AuthenticationContextForBiometrics/BPUReportContentInformation.ta';
-import { id_bpuReportContentInformation } from '../AuthenticationContextForBiometrics/id-bpuReportContentInformation.va';
-export { id_bpuReportContentInformation } from '../AuthenticationContextForBiometrics/id-bpuReportContentInformation.va';
+} from '../AuthenticationContextForBiometrics/BPUReportContentInformation.ta.js';
+import { id_bpuReportContentInformation } from '../AuthenticationContextForBiometrics/id-bpuReportContentInformation.va.js';
+export { id_bpuReportContentInformation } from '../AuthenticationContextForBiometrics/id-bpuReportContentInformation.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION bpuReportContentInformation */
 /**

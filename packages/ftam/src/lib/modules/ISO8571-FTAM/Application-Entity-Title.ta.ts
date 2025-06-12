@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AE_title,
   _decode_AE_title,
   _encode_AE_title,
-} from '../ISO8571-FTAM/AE-title.ta';
+} from '../ISO8571-FTAM/AE-title.ta.js';
 export {
   AE_title,
   _decode_AE_title,
   _encode_AE_title,
-} from '../ISO8571-FTAM/AE-title.ta';
+} from '../ISO8571-FTAM/AE-title.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Application_Entity_Title */
 /**

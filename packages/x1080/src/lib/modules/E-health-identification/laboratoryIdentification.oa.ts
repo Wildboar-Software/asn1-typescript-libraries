@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_lab } from '../E-health-identification/id-lab.va';
-export { id_lab } from '../E-health-identification/id-lab.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_lab } from '../E-health-identification/id-lab.va.js';
+export { id_lab } from '../E-health-identification/id-lab.va.js';
 import {
     LaboratoryIdentification,
     _decode_LaboratoryIdentification,
     _encode_LaboratoryIdentification,
-} from '../E-health-identification/LaboratoryIdentification.ta';
+} from '../E-health-identification/LaboratoryIdentification.ta.js';
 export {
     LaboratoryIdentification,
     _decode_LaboratoryIdentification,
     _encode_LaboratoryIdentification,
-} from '../E-health-identification/LaboratoryIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/LaboratoryIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION laboratoryIdentification */
 /**

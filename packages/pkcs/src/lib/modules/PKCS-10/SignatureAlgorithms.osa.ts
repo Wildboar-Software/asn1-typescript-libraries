@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
+import type { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SignatureAlgorithms */
 /**

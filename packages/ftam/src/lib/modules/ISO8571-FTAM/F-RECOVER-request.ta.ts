@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta';
+} from '../ISO8571-FTAM/Activity-Identifier.ta.js';
 export {
   Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta';
+} from '../ISO8571-FTAM/Activity-Identifier.ta.js';
 import {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta';
+} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.js';
 export {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta';
+} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_RECOVER_request */
 /**

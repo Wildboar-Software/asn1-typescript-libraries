@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncryptedContentInfo.ta.js";
 import {
     UnprotectedAttributes,
     _decode_UnprotectedAttributes,
     _encode_UnprotectedAttributes,
-} from "../CryptographicMessageSyntax/UnprotectedAttributes.ta";
+} from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -34,17 +34,17 @@ export {
     v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncryptedContentInfo.ta.js";
 export {
     UnprotectedAttributes,
     _decode_UnprotectedAttributes,
     _encode_UnprotectedAttributes,
-} from "../CryptographicMessageSyntax/UnprotectedAttributes.ta";
+} from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Range,
     _decode_Range,
     _encode_Range,
-} from '../MSAbstractService/Range.ta';
+} from '../MSAbstractService/Range.ta.js';
 export {
     Range,
     _decode_Range,
     _encode_Range,
-} from '../MSAbstractService/Range.ta';
+} from '../MSAbstractService/Range.ta.js';
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 import {
     OverrideRestrictions,
     OverrideRestrictions_override_content_types_restriction /* IMPORTED_LONG_NAMED_BIT */,
@@ -96,7 +96,7 @@ import {
     override_attribute_length_restriction /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OverrideRestrictions,
     _encode_OverrideRestrictions,
-} from '../MSAbstractService/OverrideRestrictions.ta';
+} from '../MSAbstractService/OverrideRestrictions.ta.js';
 export {
     OverrideRestrictions,
     OverrideRestrictions_override_content_types_restriction /* IMPORTED_LONG_NAMED_BIT */,
@@ -107,7 +107,7 @@ export {
     override_attribute_length_restriction /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OverrideRestrictions,
     _encode_OverrideRestrictions,
-} from '../MSAbstractService/OverrideRestrictions.ta';
+} from '../MSAbstractService/OverrideRestrictions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Selector */
 /**

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca";
-export { CMSContentTable } from "../CryptographicMessageSyntax/CMSContentTable.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca.js";
+export { CMSContentTable } from "../CryptographicMessageSyntax/CMSContentTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentInfo */
 /**

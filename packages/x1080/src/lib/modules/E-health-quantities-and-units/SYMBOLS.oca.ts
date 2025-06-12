@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     StringAttributes,
     StringAttributes_italic /* IMPORTED_LONG_NAMED_BIT */,
@@ -74,7 +74,7 @@ import {
     betweenParenthesis /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_StringAttributes,
     _encode_StringAttributes,
-} from '../E-health-quantities-and-units/StringAttributes.ta';
+} from '../E-health-quantities-and-units/StringAttributes.ta.js';
 export {
     StringAttributes,
     StringAttributes_italic /* IMPORTED_LONG_NAMED_BIT */,
@@ -83,7 +83,7 @@ export {
     betweenParenthesis /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_StringAttributes,
     _encode_StringAttributes,
-} from '../E-health-quantities-and-units/StringAttributes.ta';
+} from '../E-health-quantities-and-units/StringAttributes.ta.js';
 
 // Because of a mistake in the specification.
 type RELATIVE_IRI = RELATIVE_OID_IRI;

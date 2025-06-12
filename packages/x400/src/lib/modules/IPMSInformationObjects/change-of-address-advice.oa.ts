@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ChangeOfAddressAdvice,
     _decode_ChangeOfAddressAdvice,
     _encode_ChangeOfAddressAdvice,
-} from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta';
+} from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta.js';
 export {
     ChangeOfAddressAdvice,
     _decode_ChangeOfAddressAdvice,
     _encode_ChangeOfAddressAdvice,
-} from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta';
-import { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va';
-export { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSInformationObjects/ChangeOfAddressAdvice.ta.js';
+import { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va.js';
+export { id_on_change_of_address_advice } from '../IPMSObjectIdentifiers/id-on-change-of-address-advice.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION change_of_address_advice */
 /**

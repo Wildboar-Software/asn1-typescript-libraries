@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TONotCreated_reason,
     _enum_for_TONotCreated_reason,
@@ -83,7 +83,7 @@ import {
     associatedObjectNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TONotCreated_reason,
     _encode_TONotCreated_reason,
-} from '../Test-ASN1Module/TONotCreated-reason.ta';
+} from '../Test-ASN1Module/TONotCreated-reason.ta.js';
 export {
     TONotCreated_reason,
     _enum_for_TONotCreated_reason,
@@ -101,17 +101,17 @@ export {
     associatedObjectNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TONotCreated_reason,
     _encode_TONotCreated_reason,
-} from '../Test-ASN1Module/TONotCreated-reason.ta';
+} from '../Test-ASN1Module/TONotCreated-reason.ta.js';
 import {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.js';
 export {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TONotCreated */
 /**

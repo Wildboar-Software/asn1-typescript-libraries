@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKCReference,
   _decode_PKCReference,
   _encode_PKCReference,
-} from '../SCVP-2009/PKCReference.ta';
+} from '../SCVP-2009/PKCReference.ta.js';
 export {
   PKCReference,
   _decode_PKCReference,
   _encode_PKCReference,
-} from '../SCVP-2009/PKCReference.ta';
+} from '../SCVP-2009/PKCReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TrustAnchors */
 /**

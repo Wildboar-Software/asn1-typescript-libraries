@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta";
-export { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js";
+export { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION DiscriminatorConstruct */

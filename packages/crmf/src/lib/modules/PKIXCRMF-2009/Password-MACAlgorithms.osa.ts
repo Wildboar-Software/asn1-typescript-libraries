@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca";
-import { Password_MACAlgorithms_Union0_Intersection0_Element } from "../PKIXCRMF-2009/Password-MACAlgorithms-Union0-Intersection0-Element.oa";
+import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
+import { Password_MACAlgorithms_Union0_Intersection0_Element } from "../PKIXCRMF-2009/Password-MACAlgorithms-Union0-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION Password_MACAlgorithms */
 /**

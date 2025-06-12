@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.js';
 export {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.js';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -93,7 +93,7 @@ import {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 export {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -111,7 +111,7 @@ export {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SeverityIndicatingThreshold */
 /**

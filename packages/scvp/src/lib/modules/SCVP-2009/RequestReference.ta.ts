@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HashValue,
   _decode_HashValue,
   _encode_HashValue,
-} from '../SCVP-2009/HashValue.ta';
+} from '../SCVP-2009/HashValue.ta.js';
 export {
   HashValue,
   _decode_HashValue,
   _encode_HashValue,
-} from '../SCVP-2009/HashValue.ta';
+} from '../SCVP-2009/HashValue.ta.js';
 import {
   CVRequest,
   _decode_CVRequest,
   _encode_CVRequest,
-} from '../SCVP-2009/CVRequest.ta';
+} from '../SCVP-2009/CVRequest.ta.js';
 export {
   CVRequest,
   _decode_CVRequest,
   _encode_CVRequest,
-} from '../SCVP-2009/CVRequest.ta';
+} from '../SCVP-2009/CVRequest.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RequestReference */
 /**

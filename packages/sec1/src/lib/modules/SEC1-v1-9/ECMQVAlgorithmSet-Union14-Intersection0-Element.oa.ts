@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { mqvFull_sha512kdf_scheme } from "../SEC1-v1-9/mqvFull-sha512kdf-scheme.va";
-export { mqvFull_sha512kdf_scheme } from "../SEC1-v1-9/mqvFull-sha512kdf-scheme.va";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { mqvFull_sha512kdf_scheme } from "../SEC1-v1-9/mqvFull-sha512kdf-scheme.va.js";
+export { mqvFull_sha512kdf_scheme } from "../SEC1-v1-9/mqvFull-sha512kdf-scheme.va.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECMQVAlgorithmSet_Union14_Intersection0_Element */

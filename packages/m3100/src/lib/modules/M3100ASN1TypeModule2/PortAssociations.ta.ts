@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PortAssociation,
     _decode_PortAssociation,
     _encode_PortAssociation,
-} from '../M3100ASN1TypeModule2/PortAssociation.ta';
+} from '../M3100ASN1TypeModule2/PortAssociation.ta.js';
 export {
     PortAssociation,
     _decode_PortAssociation,
     _encode_PortAssociation,
-} from '../M3100ASN1TypeModule2/PortAssociation.ta';
+} from '../M3100ASN1TypeModule2/PortAssociation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PortAssociations */
 /**

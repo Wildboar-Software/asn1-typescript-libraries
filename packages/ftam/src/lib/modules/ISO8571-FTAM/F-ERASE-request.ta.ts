@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
-} from '../ISO8571-FTAM/FADU-Identity.ta';
+} from '../ISO8571-FTAM/FADU-Identity.ta.js';
 export {
   FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
-} from '../ISO8571-FTAM/FADU-Identity.ta';
+} from '../ISO8571-FTAM/FADU-Identity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_ERASE_request */
 /**

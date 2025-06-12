@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 export {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 import {
     BilateralDomain_domain_private_domain,
     _decode_BilateralDomain_domain_private_domain,
     _encode_BilateralDomain_domain_private_domain,
-} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta';
+} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta.js';
 export {
     BilateralDomain_domain_private_domain,
     _decode_BilateralDomain_domain_private_domain,
     _encode_BilateralDomain_domain_private_domain,
-} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta';
+} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BilateralDomain_domain */
 /**

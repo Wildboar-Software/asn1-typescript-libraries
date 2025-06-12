@@ -9,9 +9,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta";
-export { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta.js";
+export { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TrustAnchorList */

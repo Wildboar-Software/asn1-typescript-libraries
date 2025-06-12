@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { dhSinglePass_cofactorDH_sha384kdf_scheme } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha384kdf-scheme.va";
-export { dhSinglePass_cofactorDH_sha384kdf_scheme } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha384kdf-scheme.va";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { dhSinglePass_cofactorDH_sha384kdf_scheme } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha384kdf-scheme.va.js";
+export { dhSinglePass_cofactorDH_sha384kdf_scheme } from "../SEC1-v1-9/dhSinglePass-cofactorDH-sha384kdf-scheme.va.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECDHAlgorithmSet_Union10_Intersection0_Element */

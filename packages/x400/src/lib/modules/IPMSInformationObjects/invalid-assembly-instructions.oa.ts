@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartReferences,
     _decode_BodyPartReferences,
     _encode_BodyPartReferences,
-} from '../IPMSInformationObjects/BodyPartReferences.ta';
+} from '../IPMSInformationObjects/BodyPartReferences.ta.js';
 export {
     BodyPartReferences,
     _decode_BodyPartReferences,
     _encode_BodyPartReferences,
-} from '../IPMSInformationObjects/BodyPartReferences.ta';
-import { id_mst_invalid_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-invalid-assembly-instructions.va';
-export { id_mst_invalid_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-invalid-assembly-instructions.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../IPMSInformationObjects/BodyPartReferences.ta.js';
+import { id_mst_invalid_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-invalid-assembly-instructions.va.js';
+export { id_mst_invalid_assembly_instructions } from '../IPMSObjectIdentifiers/id-mst-invalid-assembly-instructions.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION invalid_assembly_instructions */
 /**

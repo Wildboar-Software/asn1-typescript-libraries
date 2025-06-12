@@ -65,35 +65,35 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CBEFFVersion_cbeff_major,
   CBEFFVersion_cbeff_major_version2 /* IMPORTED_LONG_NAMED_INTEGER */,
   version2 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_major,
   _encode_CBEFFVersion_cbeff_major,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta';
+} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.js';
 export {
   CBEFFVersion_cbeff_major,
   CBEFFVersion_cbeff_major_version2 /* IMPORTED_LONG_NAMED_INTEGER */,
   version2 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_major,
   _encode_CBEFFVersion_cbeff_major,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta';
+} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.js';
 import {
   CBEFFVersion_cbeff_minor,
   CBEFFVersion_cbeff_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
   version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_minor,
   _encode_CBEFFVersion_cbeff_minor,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta';
+} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.js';
 export {
   CBEFFVersion_cbeff_minor,
   CBEFFVersion_cbeff_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
   version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_minor,
   _encode_CBEFFVersion_cbeff_minor,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta';
+} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CBEFFVersion */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 export {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 import {
     AlarmStatus,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AlarmStatus.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AlarmStatus.ta.js';
 export {
     AlarmStatus,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AlarmStatus.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AlarmStatus.ta.js';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -103,7 +103,7 @@ import {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 export {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -121,12 +121,12 @@ export {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 import {
     EventTime,
     _decode_EventTime,
     _encode_EventTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/EventTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/EventTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ArcAlarmDetail */
 /**

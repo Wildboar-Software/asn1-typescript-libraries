@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_med_insur } from '../E-health-identification/id-med-insur.va';
-export { id_med_insur } from '../E-health-identification/id-med-insur.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_med_insur } from '../E-health-identification/id-med-insur.va.js';
+export { id_med_insur } from '../E-health-identification/id-med-insur.va.js';
 import {
     InsuranceIdentification,
     _decode_InsuranceIdentification,
     _encode_InsuranceIdentification,
-} from '../E-health-identification/InsuranceIdentification.ta';
+} from '../E-health-identification/InsuranceIdentification.ta.js';
 export {
     InsuranceIdentification,
     _decode_InsuranceIdentification,
     _encode_InsuranceIdentification,
-} from '../E-health-identification/InsuranceIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/InsuranceIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION insuranceIdentification */
 /**

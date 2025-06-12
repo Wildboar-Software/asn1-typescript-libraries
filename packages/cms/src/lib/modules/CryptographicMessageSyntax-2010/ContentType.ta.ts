@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentType */
 /**

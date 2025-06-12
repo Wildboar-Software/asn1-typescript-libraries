@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-algs.va";
-export { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-algs.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-algs.va.js";
+export { id_edwards_curve_algs } from "../Safecurves-pkix-18/id-edwards-curve-algs.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION id_X25519 */

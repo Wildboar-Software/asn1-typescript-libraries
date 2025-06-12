@@ -1,16 +1,16 @@
-import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
-import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta";
-import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta";
-import type { AttributeValue } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta";
-import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
-import type EqualityMatcher from "../lib/types/EqualityMatcher";
-import SubstringSelection from "../lib/types/SubstringSelection";
-import type SubstringsMatcher from "../lib/types/SubstringsMatcher";
-import type OrderingMatcher from "../lib/types/OrderingMatcher";
-import type ApproxMatcher from "../lib/types/ApproxMatcher";
-import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder";
-import encodeLDAPOID from "./encodeLDAPOID";
-import compareUint8Arrays from "./utils/compareUint8Arrays";
+import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
+import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.js";
+import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js";
+import type { AttributeValue } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.js";
+import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue.js";
+import type EqualityMatcher from "../lib/types/EqualityMatcher.js";
+import SubstringSelection from "../lib/types/SubstringSelection.js";
+import type SubstringsMatcher from "../lib/types/SubstringsMatcher.js";
+import type OrderingMatcher from "../lib/types/OrderingMatcher.js";
+import type ApproxMatcher from "../lib/types/ApproxMatcher.js";
+import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder.js";
+import encodeLDAPOID from "./encodeLDAPOID.js";
+import compareUint8Arrays from "./utils/compareUint8Arrays.js";
 
 export
 interface EvaluateFilterOptions {

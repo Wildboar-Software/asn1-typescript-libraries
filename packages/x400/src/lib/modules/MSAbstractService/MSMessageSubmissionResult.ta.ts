@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MSMessageSubmissionResult_mts_result,
     _decode_MSMessageSubmissionResult_mts_result,
     _encode_MSMessageSubmissionResult_mts_result,
-} from '../MSAbstractService/MSMessageSubmissionResult-mts-result.ta';
+} from '../MSAbstractService/MSMessageSubmissionResult-mts-result.ta.js';
 export {
     MSMessageSubmissionResult_mts_result,
     _decode_MSMessageSubmissionResult_mts_result,
     _encode_MSMessageSubmissionResult_mts_result,
-} from '../MSAbstractService/MSMessageSubmissionResult-mts-result.ta';
+} from '../MSAbstractService/MSMessageSubmissionResult-mts-result.ta.js';
 import {
     CommonSubmissionResults,
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
-} from '../MSAbstractService/CommonSubmissionResults.ta';
+} from '../MSAbstractService/CommonSubmissionResults.ta.js';
 export {
     CommonSubmissionResults,
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
-} from '../MSAbstractService/CommonSubmissionResults.ta';
+} from '../MSAbstractService/CommonSubmissionResults.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSMessageSubmissionResult */
 /**

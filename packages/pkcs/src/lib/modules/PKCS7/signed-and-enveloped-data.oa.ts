@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_signed_and_enveloped_data } from "../PKCS7/id-signed-and-enveloped-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+import { id_signed_and_enveloped_data } from "../PKCS7/id-signed-and-enveloped-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 import {
     SignedAndEnvelopedData,
     _decode_SignedAndEnvelopedData,
     _encode_SignedAndEnvelopedData,
-} from "../PKCS7/SignedAndEnvelopedData.ta";
-export { id_signed_and_enveloped_data } from "../PKCS7/id-signed-and-enveloped-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/SignedAndEnvelopedData.ta.js";
+export { id_signed_and_enveloped_data } from "../PKCS7/id-signed-and-enveloped-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     SignedAndEnvelopedData,
     _decode_SignedAndEnvelopedData,
     _encode_SignedAndEnvelopedData,
-} from "../PKCS7/SignedAndEnvelopedData.ta";
+} from "../PKCS7/SignedAndEnvelopedData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION signed_and_enveloped_data */
 /**

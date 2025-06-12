@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CancelProblem,
   _enum_for_CancelProblem,
@@ -77,7 +77,7 @@ import {
   notCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CancelProblem,
   _encode_CancelProblem,
-} from '../TCAP-Tools/CancelProblem.ta';
+} from '../TCAP-Tools/CancelProblem.ta.js';
 export {
   CancelProblem,
   _enum_for_CancelProblem,
@@ -89,17 +89,17 @@ export {
   notCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CancelProblem,
   _encode_CancelProblem,
-} from '../TCAP-Tools/CancelProblem.ta';
+} from '../TCAP-Tools/CancelProblem.ta.js';
 import {
   TCInvokeIdSet,
   _decode_TCInvokeIdSet,
   _encode_TCInvokeIdSet,
-} from '../TCAPMessages/TCInvokeIdSet.ta';
+} from '../TCAPMessages/TCInvokeIdSet.ta.js';
 export {
   TCInvokeIdSet,
   _decode_TCInvokeIdSet,
   _encode_TCInvokeIdSet,
-} from '../TCAPMessages/TCInvokeIdSet.ta';
+} from '../TCAPMessages/TCInvokeIdSet.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION cancelFailed_ParameterType */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta";
-export { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta.js";
+export { PrioritisedObject_Item, _decode_PrioritisedObject_Item, _encode_PrioritisedObject_Item } from "../Attribute-ASN1Module/PrioritisedObject-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION PrioritisedObject */

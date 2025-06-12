@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_regCtrl_protocolEncrKey } from "../PKIXCRMF-2009/id-regCtrl-protocolEncrKey.va";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_regCtrl_protocolEncrKey } from "../PKIXCRMF-2009/id-regCtrl-protocolEncrKey.va.js";
 import {
     ProtocolEncrKey,
     _decode_ProtocolEncrKey,
     _encode_ProtocolEncrKey,
-} from "../PKIXCRMF-2009/ProtocolEncrKey.ta";
+} from "../PKIXCRMF-2009/ProtocolEncrKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION regCtrl_protocolEncrKey */
 /**

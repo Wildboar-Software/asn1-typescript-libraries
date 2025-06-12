@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     MS_EITs,
     _decode_MS_EITs,
     _encode_MS_EITs,
-} from '../MSAbstractService/MS-EITs.ta';
+} from '../MSAbstractService/MS-EITs.ta.js';
 export {
     MS_EITs,
     _decode_MS_EITs,
     _encode_MS_EITs,
-} from '../MSAbstractService/MS-EITs.ta';
+} from '../MSAbstractService/MS-EITs.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FetchRestrictionError_problems_Item_restriction */
 /**

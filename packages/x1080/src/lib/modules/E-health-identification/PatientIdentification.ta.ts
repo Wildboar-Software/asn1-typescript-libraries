@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca';
-export { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca';
-import { PatientSchemes } from '../E-health-identification/PatientSchemes.osa';
-export { PatientSchemes } from '../E-health-identification/PatientSchemes.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.js';
+export { PATIENT_SCHEME } from '../E-health-identification/PATIENT-SCHEME.oca.js';
+import { PatientSchemes } from '../E-health-identification/PatientSchemes.osa.js';
+export { PatientSchemes } from '../E-health-identification/PatientSchemes.osa.js';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from './SchemeName.ta';
+} from './SchemeName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PatientIdentification */
 /**

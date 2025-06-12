@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_qt } from "../PKIX1Explicit-2009/id-qt.va";
-export { id_qt } from "../PKIX1Explicit-2009/id-qt.va";
+import { id_qt } from "../PKIX1Explicit-2009/id-qt.va.js";
+export { id_qt } from "../PKIX1Explicit-2009/id-qt.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_qt_cps */
 /**

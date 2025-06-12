@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa';
-export { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va';
-export { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.js';
+export { registeredInformation } from '../DefinitionDirectoryASN1Module/registeredInformation.oa.js';
+import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+import { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.js';
+export { mkmDirectoryNameForm } from '../MKMD/mkmDirectoryNameForm.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION registeredInformationNameForm */
 /**

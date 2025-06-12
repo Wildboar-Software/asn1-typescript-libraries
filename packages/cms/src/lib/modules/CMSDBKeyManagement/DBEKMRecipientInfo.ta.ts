@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DatabaseServerToKeyManager,
     _decode_DatabaseServerToKeyManager,
     _encode_DatabaseServerToKeyManager,
-} from "../CMSDBKeyManagement/DatabaseServerToKeyManager.ta";
+} from "../CMSDBKeyManagement/DatabaseServerToKeyManager.ta.js";
 import {
     MasterKeyEncryptedHMACkey,
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta";
+} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.js";
 export {
     DatabaseServerToKeyManager,
     _decode_DatabaseServerToKeyManager,
     _encode_DatabaseServerToKeyManager,
-} from "../CMSDBKeyManagement/DatabaseServerToKeyManager.ta";
+} from "../CMSDBKeyManagement/DatabaseServerToKeyManager.ta.js";
 export {
     MasterKeyEncryptedHMACkey,
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta";
+} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DBEKMRecipientInfo */
 /**

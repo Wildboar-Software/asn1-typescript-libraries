@@ -10,48 +10,48 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttCertVersion,
     _decode_AttCertVersion,
     _encode_AttCertVersion,
-} from "../PKI-Stub/AttCertVersion.ta";
-import { Holder, _decode_Holder, _encode_Holder } from "../PKI-Stub/Holder.ta";
+} from "../PKI-Stub/AttCertVersion.ta.js";
+import { Holder, _decode_Holder, _encode_Holder } from "../PKI-Stub/Holder.ta.js";
 import {
     AttCertIssuer,
     _decode_AttCertIssuer,
     _encode_AttCertIssuer,
-} from "../PKI-Stub/AttCertIssuer.ta";
+} from "../PKI-Stub/AttCertIssuer.ta.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "../PKI-Stub/AlgorithmIdentifier.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "../PKI-Stub/CertificateSerialNumber.ta";
+} from "../PKI-Stub/CertificateSerialNumber.ta.js";
 import {
     AttCertValidityPeriod,
     _decode_AttCertValidityPeriod,
     _encode_AttCertValidityPeriod,
-} from "../PKI-Stub/AttCertValidityPeriod.ta";
+} from "../PKI-Stub/AttCertValidityPeriod.ta.js";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "../PKI-Stub/Attribute.ta";
+} from "../PKI-Stub/Attribute.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../PKI-Stub/UniqueIdentifier.ta";
+} from "../PKI-Stub/UniqueIdentifier.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../PKI-Stub/Extensions.ta";
+} from "../PKI-Stub/Extensions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSAttributeCertificate */
 /**

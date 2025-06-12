@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
-} from '../RTMModule/ResponseTime.ta';
+} from '../RTMModule/ResponseTime.ta.js';
 export {
     ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
-} from '../RTMModule/ResponseTime.ta';
+} from '../RTMModule/ResponseTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION noEstimateOnResponseTimeError */
 /**

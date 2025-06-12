@@ -65,140 +65,140 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 export {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 import {
     ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
-} from '../EDIMSInformationObjects/ActionRequestField.ta';
+} from '../EDIMSInformationObjects/ActionRequestField.ta.js';
 export {
     ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
-} from '../EDIMSInformationObjects/ActionRequestField.ta';
+} from '../EDIMSInformationObjects/ActionRequestField.ta.js';
 import {
     EDINotificationRequestsField,
     _decode_EDINotificationRequestsField,
     _encode_EDINotificationRequestsField,
-} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.js';
 export {
     EDINotificationRequestsField,
     _decode_EDINotificationRequestsField,
     _encode_EDINotificationRequestsField,
-} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.js';
 import {
     ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
-} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta';
+} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.js';
 export {
     ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
-} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta';
+} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.js';
 import {
     InterchangeRecipientField,
     _decode_InterchangeRecipientField,
     _encode_InterchangeRecipientField,
-} from '../EDIMSInformationObjects/InterchangeRecipientField.ta';
+} from '../EDIMSInformationObjects/InterchangeRecipientField.ta.js';
 export {
     InterchangeRecipientField,
     _decode_InterchangeRecipientField,
     _encode_InterchangeRecipientField,
-} from '../EDIMSInformationObjects/InterchangeRecipientField.ta';
+} from '../EDIMSInformationObjects/InterchangeRecipientField.ta.js';
 import {
     RecipientReferenceField,
     _decode_RecipientReferenceField,
     _encode_RecipientReferenceField,
-} from '../EDIMSInformationObjects/RecipientReferenceField.ta';
+} from '../EDIMSInformationObjects/RecipientReferenceField.ta.js';
 export {
     RecipientReferenceField,
     _decode_RecipientReferenceField,
     _encode_RecipientReferenceField,
-} from '../EDIMSInformationObjects/RecipientReferenceField.ta';
+} from '../EDIMSInformationObjects/RecipientReferenceField.ta.js';
 import {
     InterchangeControlReferenceField,
     _decode_InterchangeControlReferenceField,
     _encode_InterchangeControlReferenceField,
-} from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta';
+} from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta.js';
 export {
     InterchangeControlReferenceField,
     _decode_InterchangeControlReferenceField,
     _encode_InterchangeControlReferenceField,
-} from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta';
+} from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta.js';
 import {
     ProcessingPriorityCodeField,
     _decode_ProcessingPriorityCodeField,
     _encode_ProcessingPriorityCodeField,
-} from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta';
+} from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.js';
 export {
     ProcessingPriorityCodeField,
     _decode_ProcessingPriorityCodeField,
     _encode_ProcessingPriorityCodeField,
-} from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta';
+} from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.js';
 import {
     AcknowledgementRequestField,
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
-} from '../EDIMSInformationObjects/AcknowledgementRequestField.ta';
+} from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.js';
 export {
     AcknowledgementRequestField,
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
-} from '../EDIMSInformationObjects/AcknowledgementRequestField.ta';
+} from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.js';
 import {
     CommunicationsAgreementIdField,
     _decode_CommunicationsAgreementIdField,
     _encode_CommunicationsAgreementIdField,
-} from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta';
+} from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta.js';
 export {
     CommunicationsAgreementIdField,
     _decode_CommunicationsAgreementIdField,
     _encode_CommunicationsAgreementIdField,
-} from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta';
+} from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta.js';
 import {
     TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
-} from '../EDIMSInformationObjects/TestIndicatorField.ta';
+} from '../EDIMSInformationObjects/TestIndicatorField.ta.js';
 export {
     TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
-} from '../EDIMSInformationObjects/TestIndicatorField.ta';
+} from '../EDIMSInformationObjects/TestIndicatorField.ta.js';
 import {
     AuthorizationInformationField,
     _decode_AuthorizationInformationField,
     _encode_AuthorizationInformationField,
-} from '../EDIMSInformationObjects/AuthorizationInformationField.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformationField.ta.js';
 export {
     AuthorizationInformationField,
     _decode_AuthorizationInformationField,
     _encode_AuthorizationInformationField,
-} from '../EDIMSInformationObjects/AuthorizationInformationField.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformationField.ta.js';
 import {
     RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
-} from '../EDIMSInformationObjects/RecipientExtensionsField.ta';
+} from '../EDIMSInformationObjects/RecipientExtensionsField.ta.js';
 export {
     RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
-} from '../EDIMSInformationObjects/RecipientExtensionsField.ta';
+} from '../EDIMSInformationObjects/RecipientExtensionsField.ta.js';
 import {
     id_for_action,
-} from "../EDIMSObjectIdentifiers/id-for-action.va";
+} from "../EDIMSObjectIdentifiers/id-for-action.va.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientsSubField */
 /**

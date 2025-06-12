@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
-} from '../MTAAbstractService/ArrivalTime.ta';
+} from '../MTAAbstractService/ArrivalTime.ta.js';
 export {
     ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
-} from '../MTAAbstractService/ArrivalTime.ta';
+} from '../MTAAbstractService/ArrivalTime.ta.js';
 import {
     RoutingAction,
     _enum_for_RoutingAction,
@@ -85,7 +85,7 @@ import {
     rerouted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RoutingAction,
     _encode_RoutingAction,
-} from '../MTAAbstractService/RoutingAction.ta';
+} from '../MTAAbstractService/RoutingAction.ta.js';
 export {
     RoutingAction,
     _enum_for_RoutingAction,
@@ -95,47 +95,47 @@ export {
     rerouted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RoutingAction,
     _encode_RoutingAction,
-} from '../MTAAbstractService/RoutingAction.ta';
+} from '../MTAAbstractService/RoutingAction.ta.js';
 import {
     MTASuppliedInformation_attempted,
     _decode_MTASuppliedInformation_attempted,
     _encode_MTASuppliedInformation_attempted,
-} from '../MTAAbstractService/MTASuppliedInformation-attempted.ta';
+} from '../MTAAbstractService/MTASuppliedInformation-attempted.ta.js';
 export {
     MTASuppliedInformation_attempted,
     _decode_MTASuppliedInformation_attempted,
     _encode_MTASuppliedInformation_attempted,
-} from '../MTAAbstractService/MTASuppliedInformation-attempted.ta';
+} from '../MTAAbstractService/MTASuppliedInformation-attempted.ta.js';
 import {
     InternalAdditionalActions,
     _decode_InternalAdditionalActions,
     _encode_InternalAdditionalActions,
-} from '../MTAAbstractService/InternalAdditionalActions.ta';
+} from '../MTAAbstractService/InternalAdditionalActions.ta.js';
 export {
     InternalAdditionalActions,
     _decode_InternalAdditionalActions,
     _encode_InternalAdditionalActions,
-} from '../MTAAbstractService/InternalAdditionalActions.ta';
+} from '../MTAAbstractService/InternalAdditionalActions.ta.js';
 import {
     DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
-} from '../MTAAbstractService/DeferredTime.ta';
+} from '../MTAAbstractService/DeferredTime.ta.js';
 export {
     DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
-} from '../MTAAbstractService/DeferredTime.ta';
+} from '../MTAAbstractService/DeferredTime.ta.js';
 import {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 export {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 import {
     OtherActions,
     OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
@@ -144,7 +144,7 @@ import {
     dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OtherActions,
     _encode_OtherActions,
-} from '../MTAAbstractService/OtherActions.ta';
+} from '../MTAAbstractService/OtherActions.ta.js';
 export {
     OtherActions,
     OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
@@ -153,7 +153,7 @@ export {
     dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OtherActions,
     _encode_OtherActions,
-} from '../MTAAbstractService/OtherActions.ta';
+} from '../MTAAbstractService/OtherActions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MTASuppliedInformation */
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca"
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js"
 import {
     EncKeyWithID,
     _decode_EncKeyWithID,
     _encode_EncKeyWithID,
-} from "../PKIXCRMF-2009/EncKeyWithID.ta";
-import { id_ct_encKeyWithID } from "../PKIXCRMF-2009/id-ct-encKeyWithID.va";
+} from "../PKIXCRMF-2009/EncKeyWithID.ta.js";
+import { id_ct_encKeyWithID } from "../PKIXCRMF-2009/id-ct-encKeyWithID.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_encKeyWithID */
 /**

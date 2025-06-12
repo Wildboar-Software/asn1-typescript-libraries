@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca";
+import { EXTENSION } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.js";
 import {
     BiometricSyntax,
     _decode_BiometricSyntax,
     _encode_BiometricSyntax,
-} from "../PKIXqualified97/BiometricSyntax.ta";
-import { id_pe_biometricInfo } from "../PKIXqualified97/id-pe-biometricInfo.va";
+} from "../PKIXqualified97/BiometricSyntax.ta.js";
+import { id_pe_biometricInfo } from "../PKIXqualified97/id-pe-biometricInfo.va.js";
 
 /* START_OF_SYMBOL_DEFINITION biometricInfo */
 /**

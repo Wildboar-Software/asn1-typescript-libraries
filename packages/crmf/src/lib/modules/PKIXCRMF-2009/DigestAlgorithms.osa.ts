@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
-import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa";
+import { DIGEST_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
+import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION DigestAlgorithms */
 /**

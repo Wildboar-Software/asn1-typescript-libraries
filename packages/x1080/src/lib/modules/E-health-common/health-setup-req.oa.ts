@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     E_setupRequest,
     _decode_E_setupRequest,
     _encode_E_setupRequest,
-} from '../E-health-common/E-setupRequest.ta';
+} from '../E-health-common/E-setupRequest.ta.js';
 export {
     E_setupRequest,
     _decode_E_setupRequest,
     _encode_E_setupRequest,
-} from '../E-health-common/E-setupRequest.ta';
-import { id_health_setup_req } from '../E-health-common/id-health-setup-req.va';
-export { id_health_setup_req } from '../E-health-common/id-health-setup-req.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../E-health-common/E-setupRequest.ta.js';
+import { id_health_setup_req } from '../E-health-common/id-health-setup-req.va.js';
+export { id_health_setup_req } from '../E-health-common/id-health-setup-req.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION health_setup_req */
 /**

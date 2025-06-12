@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_methods } from '../Telebiometrics/id-methods.va';
-export { id_methods } from '../Telebiometrics/id-methods.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_methods } from '../Telebiometrics/id-methods.va.js';
+export { id_methods } from '../Telebiometrics/id-methods.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_methods_psychology */
 /**

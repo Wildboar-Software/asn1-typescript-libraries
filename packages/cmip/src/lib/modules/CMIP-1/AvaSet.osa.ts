@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca';
-export { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.js';
+export { CMIP_AVA } from '../CMIP-1/CMIP-AVA.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION AvaSet */
 /**

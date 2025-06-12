@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionRequestProblem,
     AutoActionRequestProblem_unavailable_auto_action_type /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     not_willing_to_perform /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AutoActionRequestProblem,
     _encode_AutoActionRequestProblem,
-} from '../MSAbstractService/AutoActionRequestProblem.ta';
+} from '../MSAbstractService/AutoActionRequestProblem.ta.js';
 export {
     AutoActionRequestProblem,
     AutoActionRequestProblem_unavailable_auto_action_type /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,17 +87,17 @@ export {
     not_willing_to_perform /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AutoActionRequestProblem,
     _encode_AutoActionRequestProblem,
-} from '../MSAbstractService/AutoActionRequestProblem.ta';
+} from '../MSAbstractService/AutoActionRequestProblem.ta.js';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AutoActionRequestError_problems_Item */
 /**

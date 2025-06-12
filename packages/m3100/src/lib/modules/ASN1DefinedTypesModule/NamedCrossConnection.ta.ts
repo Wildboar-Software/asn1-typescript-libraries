@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CrossConnectionName,
     _decode_CrossConnectionName,
     _encode_CrossConnectionName,
-} from '../ASN1DefinedTypesModule/CrossConnectionName.ta';
+} from '../ASN1DefinedTypesModule/CrossConnectionName.ta.js';
 export {
     CrossConnectionName,
     _decode_CrossConnectionName,
     _encode_CrossConnectionName,
-} from '../ASN1DefinedTypesModule/CrossConnectionName.ta';
+} from '../ASN1DefinedTypesModule/CrossConnectionName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NamedCrossConnection */
 /**

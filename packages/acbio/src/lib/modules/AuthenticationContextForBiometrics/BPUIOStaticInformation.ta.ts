@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BiometricType,
     BiometricType_no_value_available /* IMPORTED_LONG_NAMED_BIT */,
@@ -104,7 +104,7 @@ import {
     signature_sign /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_BiometricType,
     _encode_BiometricType,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta.js';
 export {
     BiometricType,
     BiometricType_no_value_available /* IMPORTED_LONG_NAMED_BIT */,
@@ -143,37 +143,37 @@ export {
     signature_sign /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_BiometricType,
     _encode_BiometricType,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta.js';
 import {
     BiometricSubtype,
     _decode_BiometricSubtype,
     _encode_BiometricSubtype,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.js';
 export {
     BiometricSubtype,
     _decode_BiometricSubtype,
     _encode_BiometricSubtype,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.js';
 import {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../AuthenticationContextForBiometrics/DataType.ta';
+} from '../AuthenticationContextForBiometrics/DataType.ta.js';
 export {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../AuthenticationContextForBiometrics/DataType.ta';
+} from '../AuthenticationContextForBiometrics/DataType.ta.js';
 import {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 export {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUIOStaticInformation */
 /**

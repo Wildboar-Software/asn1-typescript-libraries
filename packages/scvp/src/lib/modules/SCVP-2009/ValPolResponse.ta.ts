@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta';
+} from '../SCVP-2009/CertChecks.ta.js';
 export {
   CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta';
+} from '../SCVP-2009/CertChecks.ta.js';
 import {
   WantBack,
   _decode_WantBack,
   _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta';
+} from '../SCVP-2009/WantBack.ta.js';
 export {
   WantBack,
   _decode_WantBack,
   _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta';
+} from '../SCVP-2009/WantBack.ta.js';
 import {
   AuthPolicy,
   _decode_AuthPolicy,
   _encode_AuthPolicy,
-} from '../SCVP-2009/AuthPolicy.ta';
+} from '../SCVP-2009/AuthPolicy.ta.js';
 export {
   AuthPolicy,
   _decode_AuthPolicy,
   _encode_AuthPolicy,
-} from '../SCVP-2009/AuthPolicy.ta';
+} from '../SCVP-2009/AuthPolicy.ta.js';
 import {
   ResponseTypes,
   _enum_for_ResponseTypes,
@@ -107,7 +107,7 @@ import {
   cached_and_non_cached /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ResponseTypes,
   _encode_ResponseTypes,
-} from '../SCVP-2009/ResponseTypes.ta';
+} from '../SCVP-2009/ResponseTypes.ta.js';
 export {
   ResponseTypes,
   _enum_for_ResponseTypes,
@@ -119,17 +119,17 @@ export {
   cached_and_non_cached /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ResponseTypes,
   _encode_ResponseTypes,
-} from '../SCVP-2009/ResponseTypes.ta';
+} from '../SCVP-2009/ResponseTypes.ta.js';
 import {
   RespValidationPolicy,
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
-} from '../SCVP-2009/RespValidationPolicy.ta';
+} from '../SCVP-2009/RespValidationPolicy.ta.js';
 export {
   RespValidationPolicy,
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
-} from '../SCVP-2009/RespValidationPolicy.ta';
+} from '../SCVP-2009/RespValidationPolicy.ta.js';
 import {
   RevocationInfoTypes,
   RevocationInfoTypes_fullCRLs /* IMPORTED_LONG_NAMED_BIT */,
@@ -142,7 +142,7 @@ import {
   oCSPResponses /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_RevocationInfoTypes,
   _encode_RevocationInfoTypes,
-} from '../SCVP-2009/RevocationInfoTypes.ta';
+} from '../SCVP-2009/RevocationInfoTypes.ta.js';
 export {
   RevocationInfoTypes,
   RevocationInfoTypes_fullCRLs /* IMPORTED_LONG_NAMED_BIT */,
@@ -155,17 +155,17 @@ export {
   oCSPResponses /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_RevocationInfoTypes,
   _encode_RevocationInfoTypes,
-} from '../SCVP-2009/RevocationInfoTypes.ta';
+} from '../SCVP-2009/RevocationInfoTypes.ta.js';
 import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
   KeyAgreePublicKey,
   _decode_KeyAgreePublicKey,
   _encode_KeyAgreePublicKey,
-} from '../SCVP-2009/KeyAgreePublicKey.ta';
+} from '../SCVP-2009/KeyAgreePublicKey.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ValPolResponse */
 /**

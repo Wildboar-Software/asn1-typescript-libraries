@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BiometricInformationTemplate,
   _decode_BiometricInformationTemplate,
   _encode_BiometricInformationTemplate,
-} from '../CBEFF-SMARTCARD-BIDO/BiometricInformationTemplate.ta';
+} from '../CBEFF-SMARTCARD-BIDO/BiometricInformationTemplate.ta.js';
 export {
   BiometricInformationTemplate,
   _decode_BiometricInformationTemplate,
   _encode_BiometricInformationTemplate,
-} from '../CBEFF-SMARTCARD-BIDO/BiometricInformationTemplate.ta';
+} from '../CBEFF-SMARTCARD-BIDO/BiometricInformationTemplate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GroupBIT */
 /**

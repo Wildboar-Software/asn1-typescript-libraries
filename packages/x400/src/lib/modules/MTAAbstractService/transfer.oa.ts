@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { message_transfer } from '../MTAAbstractService/message-transfer.oa';
-export { message_transfer } from '../MTAAbstractService/message-transfer.oa';
-import { probe_transfer } from '../MTAAbstractService/probe-transfer.oa';
-export { probe_transfer } from '../MTAAbstractService/probe-transfer.oa';
-import { report_transfer } from '../MTAAbstractService/report-transfer.oa';
-export { report_transfer } from '../MTAAbstractService/report-transfer.oa';
-import { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va';
-export { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { message_transfer } from '../MTAAbstractService/message-transfer.oa.js';
+export { message_transfer } from '../MTAAbstractService/message-transfer.oa.js';
+import { probe_transfer } from '../MTAAbstractService/probe-transfer.oa.js';
+export { probe_transfer } from '../MTAAbstractService/probe-transfer.oa.js';
+import { report_transfer } from '../MTAAbstractService/report-transfer.oa.js';
+export { report_transfer } from '../MTAAbstractService/report-transfer.oa.js';
+import { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va.js';
+export { id_pt_transfer } from '../MTSObjectIdentifiers/id-pt-transfer.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION transfer */
 /**

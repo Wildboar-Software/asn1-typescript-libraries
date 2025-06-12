@@ -65,70 +65,70 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
   CreateArgument,
   _decode_CreateArgument,
   _encode_CreateArgument,
-} from '../CMIP-1/CreateArgument.ta';
+} from '../CMIP-1/CreateArgument.ta.js';
 export {
   CreateArgument,
   _decode_CreateArgument,
   _encode_CreateArgument,
-} from '../CMIP-1/CreateArgument.ta';
+} from '../CMIP-1/CreateArgument.ta.js';
 import {
   CreateResult,
   _decode_CreateResult,
   _encode_CreateResult,
-} from '../CMIP-1/CreateResult.ta';
+} from '../CMIP-1/CreateResult.ta.js';
 export {
   CreateResult,
   _decode_CreateResult,
   _encode_CreateResult,
-} from '../CMIP-1/CreateResult.ta';
-import { classInstanceConflict } from '../CMIP-1/classInstanceConflict.oa';
-export { classInstanceConflict } from '../CMIP-1/classInstanceConflict.oa';
-import { duplicateManagedObjectInstance } from '../CMIP-1/duplicateManagedObjectInstance.oa';
-export { duplicateManagedObjectInstance } from '../CMIP-1/duplicateManagedObjectInstance.oa';
-import { invalidObjectInstance } from '../CMIP-1/invalidObjectInstance.oa';
-export { invalidObjectInstance } from '../CMIP-1/invalidObjectInstance.oa';
-import { missingAttributeValue } from '../CMIP-1/missingAttributeValue.oa';
-export { missingAttributeValue } from '../CMIP-1/missingAttributeValue.oa';
-import { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa';
-export { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa';
-import { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa';
-export { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa';
-import { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa';
-export { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa';
-import { processingFailure } from '../CMIP-1/processingFailure.oa';
-export { processingFailure } from '../CMIP-1/processingFailure.oa';
-import { accessDenied } from '../CMIP-1/accessDenied.oa';
-import { invalidAttributeValue } from '../CMIP-1/invalidAttributeValue.oa';
-import { noSuchAttribute } from '../CMIP-1/noSuchAttribute.oa';
+} from '../CMIP-1/CreateResult.ta.js';
+import { classInstanceConflict } from '../CMIP-1/classInstanceConflict.oa.js';
+export { classInstanceConflict } from '../CMIP-1/classInstanceConflict.oa.js';
+import { duplicateManagedObjectInstance } from '../CMIP-1/duplicateManagedObjectInstance.oa.js';
+export { duplicateManagedObjectInstance } from '../CMIP-1/duplicateManagedObjectInstance.oa.js';
+import { invalidObjectInstance } from '../CMIP-1/invalidObjectInstance.oa.js';
+export { invalidObjectInstance } from '../CMIP-1/invalidObjectInstance.oa.js';
+import { missingAttributeValue } from '../CMIP-1/missingAttributeValue.oa.js';
+export { missingAttributeValue } from '../CMIP-1/missingAttributeValue.oa.js';
+import { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa.js';
+export { noSuchObjectClass } from '../CMIP-1/noSuchObjectClass.oa.js';
+import { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa.js';
+export { noSuchObjectInstance } from '../CMIP-1/noSuchObjectInstance.oa.js';
+import { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa.js';
+export { noSuchReferenceObject } from '../CMIP-1/noSuchReferenceObject.oa.js';
+import { processingFailure } from '../CMIP-1/processingFailure.oa.js';
+export { processingFailure } from '../CMIP-1/processingFailure.oa.js';
+import { accessDenied } from '../CMIP-1/accessDenied.oa.js';
+import { invalidAttributeValue } from '../CMIP-1/invalidAttributeValue.oa.js';
+import { noSuchAttribute } from '../CMIP-1/noSuchAttribute.oa.js';
 
 
 /* START_OF_SYMBOL_DEFINITION m_Create */

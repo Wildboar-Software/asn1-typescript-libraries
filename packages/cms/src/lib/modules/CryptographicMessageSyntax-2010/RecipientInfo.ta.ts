@@ -1,56 +1,56 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KEKRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KEKRecipientInfo.ta.js";
 import {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientInfo.ta.js";
 import {
     KeyTransRecipientInfo,
     _decode_KeyTransRecipientInfo,
     _encode_KeyTransRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KeyTransRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KeyTransRecipientInfo.ta.js";
 import {
     OtherRecipientInfo,
     _decode_OtherRecipientInfo,
     _encode_OtherRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/OtherRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OtherRecipientInfo.ta.js";
 import {
     PasswordRecipientInfo,
     _decode_PasswordRecipientInfo,
     _encode_PasswordRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/PasswordRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/PasswordRecipientInfo.ta.js";
 export {
     KEKRecipientInfo,
     _decode_KEKRecipientInfo,
     _encode_KEKRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KEKRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KEKRecipientInfo.ta.js";
 export {
     KeyAgreeRecipientInfo,
     _decode_KeyAgreeRecipientInfo,
     _encode_KeyAgreeRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientInfo.ta.js";
 export {
     KeyTransRecipientInfo,
     _decode_KeyTransRecipientInfo,
     _encode_KeyTransRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/KeyTransRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/KeyTransRecipientInfo.ta.js";
 export {
     OtherRecipientInfo,
     _decode_OtherRecipientInfo,
     _encode_OtherRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/OtherRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OtherRecipientInfo.ta.js";
 export {
     PasswordRecipientInfo,
     _decode_PasswordRecipientInfo,
     _encode_PasswordRecipientInfo,
-} from "../CryptographicMessageSyntax-2010/PasswordRecipientInfo.ta";
+} from "../CryptographicMessageSyntax-2010/PasswordRecipientInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**

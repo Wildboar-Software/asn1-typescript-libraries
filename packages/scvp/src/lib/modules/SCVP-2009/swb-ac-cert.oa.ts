@@ -65,16 +65,16 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeCertificate,
   _decode_AttributeCertificate,
   _encode_AttributeCertificate,
-} from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta';
-import { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va';
-export { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
+} from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js';
+import { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va.js';
+export { id_swb_ac_cert } from '../SCVP-2009/id-swb-ac-cert.va.js';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION swb_ac_cert */
 /**

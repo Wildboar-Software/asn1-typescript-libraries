@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FunctionalUnits,
     FunctionalUnits_multipleObjectSelection /* IMPORTED_LONG_NAMED_BIT */,
@@ -80,7 +80,7 @@ import {
     cancelGet /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.js';
 export {
     FunctionalUnits,
     FunctionalUnits_multipleObjectSelection /* IMPORTED_LONG_NAMED_BIT */,
@@ -95,7 +95,7 @@ export {
     cancelGet /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CmiseFunctionalUnitsSelected */
 /**

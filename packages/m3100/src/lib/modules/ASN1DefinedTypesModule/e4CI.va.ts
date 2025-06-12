@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
-} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta';
+} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.js';
 export {
     CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
-} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta';
-import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va';
-export { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va';
+} from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.js';
+import { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.js';
+export { characteristicInfo } from '../ASN1DefinedTypesModule/characteristicInfo.va.js';
 
 /* START_OF_SYMBOL_DEFINITION e4CI */
 /**

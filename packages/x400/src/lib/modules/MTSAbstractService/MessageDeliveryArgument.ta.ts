@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
 export {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 import {
     MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
-} from '../MTSAbstractService/MessageDeliveryIdentifier.ta';
+} from '../MTSAbstractService/MessageDeliveryIdentifier.ta.js';
 export {
     MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
-} from '../MTSAbstractService/MessageDeliveryIdentifier.ta';
+} from '../MTSAbstractService/MessageDeliveryIdentifier.ta.js';
 import {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 export {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 import {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 export {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageDeliveryArgument */
 /**

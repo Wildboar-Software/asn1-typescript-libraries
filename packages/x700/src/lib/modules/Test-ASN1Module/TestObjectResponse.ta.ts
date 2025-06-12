@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TOName,
     _decode_TOName,
     _encode_TOName,
-} from '../Test-ASN1Module/TOName.ta';
+} from '../Test-ASN1Module/TOName.ta.js';
 export {
     TOName,
     _decode_TOName,
     _encode_TOName,
-} from '../Test-ASN1Module/TOName.ta';
+} from '../Test-ASN1Module/TOName.ta.js';
 import {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.js';
 export {
     AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestObjectResponse */
 /**

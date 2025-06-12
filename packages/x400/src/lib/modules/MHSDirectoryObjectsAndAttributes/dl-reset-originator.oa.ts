@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va';
-export { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va';
-import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
-export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va.js';
+export { id_con_dl_reset_originator } from '../MHSObjectIdentifiers/id-con-dl-reset-originator.va.js';
+import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
+export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dl_reset_originator */
 /**

@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
-} from '../BIP/BioAPI-BIR-HANDLE.ta';
+} from '../BIP/BioAPI-BIR-HANDLE.ta.js';
 export {
   BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
-} from '../BIP/BioAPI-BIR-HANDLE.ta';
+} from '../BIP/BioAPI-BIR-HANDLE.ta.js';
 import {
   BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
-} from '../BIP/BioAPI-FMR.ta';
+} from '../BIP/BioAPI-FMR.ta.js';
 export {
   BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
-} from '../BIP/BioAPI-FMR.ta';
+} from '../BIP/BioAPI-FMR.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Verify_ResponseParams */
 /**

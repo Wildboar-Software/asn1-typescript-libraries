@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
+} from '../MTSAbstractService/ORAddress.ta.js';
 export {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
+} from '../MTSAbstractService/ORAddress.ta.js';
 import {
     Capability,
     _decode_Capability,
     _encode_Capability,
-} from '../MHSDirectoryObjectsAndAttributes/Capability.ta';
+} from '../MHSDirectoryObjectsAndAttributes/Capability.ta.js';
 export {
     Capability,
     _decode_Capability,
     _encode_Capability,
-} from '../MHSDirectoryObjectsAndAttributes/Capability.ta';
+} from '../MHSDirectoryObjectsAndAttributes/Capability.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AddressCapabilities */
 /**

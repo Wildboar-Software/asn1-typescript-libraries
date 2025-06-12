@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestSuspendResumeError_Item,
     _decode_TestSuspendResumeError_Item,
     _encode_TestSuspendResumeError_Item,
-} from '../Test-ASN1Module/TestSuspendResumeError-Item.ta';
+} from '../Test-ASN1Module/TestSuspendResumeError-Item.ta.js';
 export {
     TestSuspendResumeError_Item,
     _decode_TestSuspendResumeError_Item,
     _encode_TestSuspendResumeError_Item,
-} from '../Test-ASN1Module/TestSuspendResumeError-Item.ta';
+} from '../Test-ASN1Module/TestSuspendResumeError-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestSuspendResumeError */
 /**

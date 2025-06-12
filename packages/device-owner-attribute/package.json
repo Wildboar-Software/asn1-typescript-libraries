@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/device-owner-attribute",
-    "version": "1.0.4",
+    "type": "module",
+    "version": "2.0.0",
     "description": "The Device Owner attribute defined in IETF RFC 5916 in TypeScript",
     "keywords": [
         "device",
@@ -30,6 +31,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.49"
+        "@wildboar/x500": "2.x.x"
     }
 }

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca";
-export { SupportedOtherRecipInfo } from "../CryptographicMessageSyntax-2010/SupportedOtherRecipInfo.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.js";
+export { SupportedOtherRecipInfo } from "../CryptographicMessageSyntax-2010/SupportedOtherRecipInfo.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OtherRecipientInfo */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OriginalContent,
     _decode_OriginalContent,
     _encode_OriginalContent,
-} from '../IPMSSecurityExtensions/OriginalContent.ta';
+} from '../IPMSSecurityExtensions/OriginalContent.ta.js';
 export {
     OriginalContent,
     _decode_OriginalContent,
     _encode_OriginalContent,
-} from '../IPMSSecurityExtensions/OriginalContent.ta';
+} from '../IPMSSecurityExtensions/OriginalContent.ta.js';
 import {
     IpnSecurityResponse_content_or_arguments_original_security_arguments,
     _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
     _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments-original-security-arguments.ta';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments-original-security-arguments.ta.js';
 export {
     IpnSecurityResponse_content_or_arguments_original_security_arguments,
     _decode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
     _encode_IpnSecurityResponse_content_or_arguments_original_security_arguments,
-} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments-original-security-arguments.ta';
+} from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments-original-security-arguments.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IpnSecurityResponse_content_or_arguments */
 /**

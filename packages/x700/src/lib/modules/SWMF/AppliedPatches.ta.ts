@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta';
-export { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta.js';
+export { Patch, _decode_Patch, _encode_Patch } from '../SWMF/Patch.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AppliedPatches */
 /**

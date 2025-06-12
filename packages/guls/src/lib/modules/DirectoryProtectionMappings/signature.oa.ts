@@ -65,13 +65,13 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-import { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa';
-export { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa';
-import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca';
-export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+import { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa.js';
+export { dirSignatureTransformation } from '../GulsSecurityTransformations/dirSignatureTransformation.oa.js';
+import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.js';
+export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION signature */
 /**

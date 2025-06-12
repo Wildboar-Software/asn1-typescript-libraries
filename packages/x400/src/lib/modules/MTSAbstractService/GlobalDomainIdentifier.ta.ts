@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from '../MTSAbstractService/CountryName.ta';
+} from '../MTSAbstractService/CountryName.ta.js';
 export {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from '../MTSAbstractService/CountryName.ta';
+} from '../MTSAbstractService/CountryName.ta.js';
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 export {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 import {
     PrivateDomainIdentifier,
     _decode_PrivateDomainIdentifier,
     _encode_PrivateDomainIdentifier,
-} from '../MTSAbstractService/PrivateDomainIdentifier.ta';
+} from '../MTSAbstractService/PrivateDomainIdentifier.ta.js';
 export {
     PrivateDomainIdentifier,
     _decode_PrivateDomainIdentifier,
     _encode_PrivateDomainIdentifier,
-} from '../MTSAbstractService/PrivateDomainIdentifier.ta';
+} from '../MTSAbstractService/PrivateDomainIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GlobalDomainIdentifier */
 /**

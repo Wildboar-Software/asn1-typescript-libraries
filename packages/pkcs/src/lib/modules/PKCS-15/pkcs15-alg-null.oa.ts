@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.js";
 export {
     compute_checksum /* IMPORTED_SHORT_NAMED_BIT */,
     compute_signature /* IMPORTED_SHORT_NAMED_BIT */,
@@ -22,8 +22,8 @@ export {
     verify_signature /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from "../PKCS-15/Operations.ta";
-export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca";
+} from "../PKCS-15/Operations.ta.js";
+export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs15_alg_null */
 /**

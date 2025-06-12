@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtocolVersion,
     ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -74,7 +74,7 @@ import {
     version2 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.js';
 export {
     ProtocolVersion,
     ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -83,7 +83,7 @@ export {
     version2 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtocolVersionSupported */
 /**

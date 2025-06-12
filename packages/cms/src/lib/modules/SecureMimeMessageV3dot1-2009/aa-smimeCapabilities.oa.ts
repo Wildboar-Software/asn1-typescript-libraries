@@ -3,15 +3,15 @@ import {
     SMIMECapabilities,
     _decode_SMIMECapabilities,
     _encode_SMIMECapabilities,
-} from "../AlgorithmInformation-2009/SMIMECapabilities.ta";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va";
+} from "../AlgorithmInformation-2009/SMIMECapabilities.ta.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.js";
 export {
     SMIMECapabilities,
     _decode_SMIMECapabilities,
     _encode_SMIMECapabilities,
-} from "../AlgorithmInformation-2009/SMIMECapabilities.ta";
-export { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va";
+} from "../AlgorithmInformation-2009/SMIMECapabilities.ta.js";
+export { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_smimeCapabilities */
 /**

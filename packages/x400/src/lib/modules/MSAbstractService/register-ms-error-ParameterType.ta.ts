@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegistrationProblem,
     _enum_for_RegistrationProblem,
@@ -77,7 +77,7 @@ import {
     registration_limit_exceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RegistrationProblem,
     _encode_RegistrationProblem,
-} from '../MSAbstractService/RegistrationProblem.ta';
+} from '../MSAbstractService/RegistrationProblem.ta.js';
 export {
     RegistrationProblem,
     _enum_for_RegistrationProblem,
@@ -89,17 +89,17 @@ export {
     registration_limit_exceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RegistrationProblem,
     _encode_RegistrationProblem,
-} from '../MSAbstractService/RegistrationProblem.ta';
+} from '../MSAbstractService/RegistrationProblem.ta.js';
 import {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MSAbstractService/RegistrationTypes.ta';
+} from '../MSAbstractService/RegistrationTypes.ta.js';
 export {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MSAbstractService/RegistrationTypes.ta';
+} from '../MSAbstractService/RegistrationTypes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION register_ms_error_ParameterType */
 /**

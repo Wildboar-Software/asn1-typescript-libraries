@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
-} from '../CSModule/ScriptId.ta';
+} from '../CSModule/ScriptId.ta.js';
 export {
     ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
-} from '../CSModule/ScriptId.ta';
+} from '../CSModule/ScriptId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ScriptList */
 /**

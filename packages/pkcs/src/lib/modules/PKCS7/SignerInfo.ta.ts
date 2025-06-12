@@ -4,59 +4,59 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
 import {
     DigestEncryptionAlgorithmIdentifier,
     _decode_DigestEncryptionAlgorithmIdentifier,
     _encode_DigestEncryptionAlgorithmIdentifier,
-} from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta.js";
 import {
     EncryptedDigest,
     _decode_EncryptedDigest,
     _encode_EncryptedDigest,
-} from "../PKCS7/EncryptedDigest.ta";
+} from "../PKCS7/EncryptedDigest.ta.js";
 import {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../PKCS7/SignerIdentifier.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerIdentifier.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
 export {
     DigestEncryptionAlgorithmIdentifier,
     _decode_DigestEncryptionAlgorithmIdentifier,
     _encode_DigestEncryptionAlgorithmIdentifier,
-} from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta.js";
 export {
     EncryptedDigest,
     _decode_EncryptedDigest,
     _encode_EncryptedDigest,
-} from "../PKCS7/EncryptedDigest.ta";
+} from "../PKCS7/EncryptedDigest.ta.js";
 export {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../PKCS7/SignerIdentifier.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerIdentifier.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignerInfo */
 /**

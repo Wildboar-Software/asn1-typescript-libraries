@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
-} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.js';
 export {
     SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
-} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta';
-import { defaultDaysOfMonth } from '../Schedulerev1-ASN1Module/defaultDaysOfMonth.va';
-export { defaultDaysOfMonth } from '../Schedulerev1-ASN1Module/defaultDaysOfMonth.va';
-import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
-export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
+} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.js';
+import { defaultDaysOfMonth } from '../Schedulerev1-ASN1Module/defaultDaysOfMonth.va.js';
+export { defaultDaysOfMonth } from '../Schedulerev1-ASN1Module/defaultDaysOfMonth.va.js';
+import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
+export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
 import {
     MonthMask,
     _decode_MonthMask,
     _encode_MonthMask,
-} from '../Schedulerev1-ASN1Module/MonthMask.ta';
+} from '../Schedulerev1-ASN1Module/MonthMask.ta.js';
 export {
     MonthMask,
     _decode_MonthMask,
     _encode_MonthMask,
-} from '../Schedulerev1-ASN1Module/MonthMask.ta';
+} from '../Schedulerev1-ASN1Module/MonthMask.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultSequenceOfMonths */
 /**

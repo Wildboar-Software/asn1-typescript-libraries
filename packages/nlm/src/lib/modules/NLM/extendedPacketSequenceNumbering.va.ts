@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { aoi } from '../NLM/aoi.va';
-export { aoi } from '../NLM/aoi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { aoi } from '../NLM/aoi.va.js';
+export { aoi } from '../NLM/aoi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION extendedPacketSequenceNumbering */
 /**

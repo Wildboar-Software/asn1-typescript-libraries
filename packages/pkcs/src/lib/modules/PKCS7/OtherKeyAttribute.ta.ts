@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { OTHER_KEY_ATTRIBUTE } from "../PKCS7/OTHER-KEY-ATTRIBUTE.oca";
-export { OtherKeyAttributeTable } from "../PKCS7/OtherKeyAttributeTable.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { OTHER_KEY_ATTRIBUTE } from "../PKCS7/OTHER-KEY-ATTRIBUTE.oca.js";
+export { OtherKeyAttributeTable } from "../PKCS7/OtherKeyAttributeTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttribute */
 /**

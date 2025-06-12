@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PrimaryBodyPart,
     _decode_PrimaryBodyPart,
     _encode_PrimaryBodyPart,
-} from '../EDIMSInformationObjects/PrimaryBodyPart.ta';
+} from '../EDIMSInformationObjects/PrimaryBodyPart.ta.js';
 export {
     PrimaryBodyPart,
     _decode_PrimaryBodyPart,
     _encode_PrimaryBodyPart,
-} from '../EDIMSInformationObjects/PrimaryBodyPart.ta';
+} from '../EDIMSInformationObjects/PrimaryBodyPart.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PrimaryOrRemoved */
 /**

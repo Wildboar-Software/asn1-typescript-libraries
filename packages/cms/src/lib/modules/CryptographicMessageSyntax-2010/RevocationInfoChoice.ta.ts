@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OtherRevocationInfoFormat,
     _decode_OtherRevocationInfoFormat,
     _encode_OtherRevocationInfoFormat,
-} from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta";
+} from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta.js";
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js";
 export {
     OtherRevocationInfoFormat,
     _decode_OtherRevocationInfoFormat,
     _encode_OtherRevocationInfoFormat,
-} from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta";
+} from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta.js";
 export {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RevocationInfoChoice */
 /**

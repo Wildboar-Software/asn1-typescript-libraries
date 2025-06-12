@@ -4,19 +4,19 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
-export { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
+export { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DigestInfo */
 /**

@@ -65,26 +65,26 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca';
-export { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.js';
+export { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.js';
 import {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from "./SessionType.ta";
+} from "./SessionType.ta.js";
 import {
     ExchangeMode,
     ExchangeMode_sync,
     _decode_ExchangeMode,
     _encode_ExchangeMode,
-} from "./ExchangeMode.ta";
+} from "./ExchangeMode.ta.js";
 import {
     Requirements,
     Requirements_none,
     _decode_Requirements,
     _encode_Requirements,
-} from "./Requirements.ta";
+} from "./Requirements.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION RequestContent_content */

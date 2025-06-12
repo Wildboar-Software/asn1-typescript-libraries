@@ -5,8 +5,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 /**

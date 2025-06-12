@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 import {
     TemplateLabel,
     _decode_TemplateLabel,
     _encode_TemplateLabel,
-} from '../DefinitionASN1Module/TemplateLabel.ta';
+} from '../DefinitionASN1Module/TemplateLabel.ta.js';
 export {
     TemplateLabel,
     _decode_TemplateLabel,
     _encode_TemplateLabel,
-} from '../DefinitionASN1Module/TemplateLabel.ta';
+} from '../DefinitionASN1Module/TemplateLabel.ta.js';
 import {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 export {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 import {
     OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.js';
 export {
     OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.js';
 import {
     OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
-} from '../DefinitionASN1Module/OptionallyRegisteredAs.ta';
+} from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.js';
 export {
     OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
-} from '../DefinitionASN1Module/OptionallyRegisteredAs.ta';
+} from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RoleSpecifier */
 /**

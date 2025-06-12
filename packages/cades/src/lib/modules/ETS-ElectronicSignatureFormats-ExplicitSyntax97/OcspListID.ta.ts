@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspResponsesID.ta";
-export { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspResponsesID.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspResponsesID.ta.js";
+export { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspResponsesID.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OcspListID */

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 export {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 import {
   BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
-} from '../BIP/BioAPI-BIR-HANDLE.ta';
+} from '../BIP/BioAPI-BIR-HANDLE.ta.js';
 export {
   BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
-} from '../BIP/BioAPI-BIR-HANDLE.ta';
+} from '../BIP/BioAPI-BIR-HANDLE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GetHeaderFromHandle_RequestParams */
 /**

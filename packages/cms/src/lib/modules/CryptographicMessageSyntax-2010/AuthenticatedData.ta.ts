@@ -4,57 +4,57 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
-} from "../CryptographicMessageSyntax-2010/AuthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/AuthAttributes.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 import {
     MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.js";
 import {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.js";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.js";
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.js";
 import {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.js";
 export {
     AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
-} from "../CryptographicMessageSyntax-2010/AuthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/AuthAttributes.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -71,42 +71,42 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 export {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 export {
     MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.js";
 export {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.js";
 export {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.js";
 export {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.js";
 export {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticatedData */
 /**

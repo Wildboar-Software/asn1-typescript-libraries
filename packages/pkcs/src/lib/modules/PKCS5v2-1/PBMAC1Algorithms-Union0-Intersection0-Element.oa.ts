@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { id_PBMAC1 } from "../PKCS5v2-1/id-PBMAC1.va";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_PBMAC1 } from "../PKCS5v2-1/id-PBMAC1.va.js";
 import {
     PBMAC1_params,
     _decode_PBMAC1_params,
     _encode_PBMAC1_params,
-} from "../PKCS5v2-1/PBMAC1-params.ta";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-export { id_PBMAC1 } from "../PKCS5v2-1/id-PBMAC1.va";
+} from "../PKCS5v2-1/PBMAC1-params.ta.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_PBMAC1 } from "../PKCS5v2-1/id-PBMAC1.va.js";
 export {
     PBMAC1_params,
     _decode_PBMAC1_params,
     _encode_PBMAC1_params,
-} from "../PKCS5v2-1/PBMAC1-params.ta";
+} from "../PKCS5v2-1/PBMAC1-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBMAC1Algorithms_Union0_Intersection0_Element */
 /**

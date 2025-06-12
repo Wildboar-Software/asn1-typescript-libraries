@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
 import {
     ECPKRestrictions,
     _decode_ECPKRestrictions,
     _encode_ECPKRestrictions,
-} from "../ANSI-X9-62/ECPKRestrictions.ta";
-import { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
+} from "../ANSI-X9-62/ECPKRestrictions.ta.js";
+import { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
 export {
     ECPKRestrictions,
     _decode_ECPKRestrictions,
     _encode_ECPKRestrictions,
-} from "../ANSI-X9-62/ECPKRestrictions.ta";
-export { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va";
+} from "../ANSI-X9-62/ECPKRestrictions.ta.js";
+export { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 /**

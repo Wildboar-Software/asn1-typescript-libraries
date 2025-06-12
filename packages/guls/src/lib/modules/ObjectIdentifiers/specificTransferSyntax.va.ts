@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { genericULS } from '../ObjectIdentifiers/genericULS.va';
-export { genericULS } from '../ObjectIdentifiers/genericULS.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { genericULS } from '../ObjectIdentifiers/genericULS.va.js';
+export { genericULS } from '../ObjectIdentifiers/genericULS.va.js';
 
 /* START_OF_SYMBOL_DEFINITION specificTransferSyntax */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa";
-export { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa";
-import { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa";
-export { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa";
-import { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa";
-export { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa";
-import { ECPKAlgorithms_Union3_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union3-Intersection0-Element.oa";
-export { ECPKAlgorithms_Union3_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union3-Intersection0-Element.oa";
-import { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union4-Intersection0-Element.oa";
-export { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union4-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa.js";
+export { ecPublicKeyType } from "../SEC1-v1-9/ecPublicKeyType.oa.js";
+import { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa.js";
+export { ecPublicKeyTypeRestricted } from "../SEC1-v1-9/ecPublicKeyTypeRestricted.oa.js";
+import { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa.js";
+export { ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/ecPublicKeyTypeSupplemented.oa.js";
+import { ECPKAlgorithms_Union3_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union3-Intersection0-Element.oa.js";
+export { ECPKAlgorithms_Union3_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union3-Intersection0-Element.oa.js";
+import { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union4-Intersection0-Element.oa.js";
+export { ECPKAlgorithms_Union4_Intersection0_Element } from "../SEC1-v1-9/ECPKAlgorithms-Union4-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECPKAlgorithms */

@@ -4,51 +4,51 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from "../CMSSigncryption/Certificates.ta";
+} from "../CMSSigncryption/Certificates.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 import {
     ContentInformation,
     _decode_ContentInformation,
     _encode_ContentInformation,
-} from "../CMSSigncryption/ContentInformation.ta";
-import { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta";
+} from "../CMSSigncryption/ContentInformation.ta.js";
+import { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta.js";
 import {
     Signcrypters,
     _decode_Signcrypters,
     _encode_Signcrypters,
-} from "../CMSSigncryption/Signcrypters.ta";
+} from "../CMSSigncryption/Signcrypters.ta.js";
 export {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from "../CMSSigncryption/Certificates.ta";
+} from "../CMSSigncryption/Certificates.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 export {
     ContentInformation,
     _decode_ContentInformation,
     _encode_ContentInformation,
-} from "../CMSSigncryption/ContentInformation.ta";
-export { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta";
+} from "../CMSSigncryption/ContentInformation.ta.js";
+export { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta.js";
 export {
     Signcrypters,
     _decode_Signcrypters,
     _encode_Signcrypters,
-} from "../CMSSigncryption/Signcrypters.ta";
+} from "../CMSSigncryption/Signcrypters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SigncryptedData */
 /**

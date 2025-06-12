@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta";
-export { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta.js";
+export { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta.js";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SignerLocation */

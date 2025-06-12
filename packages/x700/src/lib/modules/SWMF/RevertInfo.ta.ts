@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RevertInfo_Item,
     _decode_RevertInfo_Item,
     _encode_RevertInfo_Item,
-} from '../SWMF/RevertInfo-Item.ta';
+} from '../SWMF/RevertInfo-Item.ta.js';
 export {
     RevertInfo_Item,
     _decode_RevertInfo_Item,
     _encode_RevertInfo_Item,
-} from '../SWMF/RevertInfo-Item.ta';
+} from '../SWMF/RevertInfo-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevertInfo */
 /**

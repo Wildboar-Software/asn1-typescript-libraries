@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca';
-export { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca';
-import { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa';
-export { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.js';
+export { CMIP_ATTRIBUTE } from '@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.js';
+import { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.js';
+export { AttributeSet } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.js';
 import {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 export {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '../MetricModule/TimePeriod.ta.js';
+import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeMeasure */
 /**

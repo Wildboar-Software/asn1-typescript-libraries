@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 export {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Context_keyword */
 /**

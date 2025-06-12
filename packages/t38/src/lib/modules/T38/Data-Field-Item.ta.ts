@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Data_Field_Item_field_type,
   _enum_for_Data_Field_Item_field_type,
@@ -95,7 +95,7 @@ import {
   v34rate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Data_Field_Item_field_type,
   _encode_Data_Field_Item_field_type,
-} from '../T38/Data-Field-Item-field-type.ta';
+} from '../T38/Data-Field-Item-field-type.ta.js';
 export {
   Data_Field_Item_field_type,
   _enum_for_Data_Field_Item_field_type,
@@ -125,7 +125,7 @@ export {
   v34rate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Data_Field_Item_field_type,
   _encode_Data_Field_Item_field_type,
-} from '../T38/Data-Field-Item-field-type.ta';
+} from '../T38/Data-Field-Item-field-type.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Data_Field_Item */
 /**

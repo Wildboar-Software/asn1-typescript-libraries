@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PollReqContent_Item,
   _decode_PollReqContent_Item,
   _encode_PollReqContent_Item,
-} from '../PKIXCMP-2009/PollReqContent-Item.ta';
+} from '../PKIXCMP-2009/PollReqContent-Item.ta.js';
 export {
   PollReqContent_Item,
   _decode_PollReqContent_Item,
   _encode_PollReqContent_Item,
-} from '../PKIXCMP-2009/PollReqContent-Item.ta';
+} from '../PKIXCMP-2009/PollReqContent-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PollReqContent */
 /**

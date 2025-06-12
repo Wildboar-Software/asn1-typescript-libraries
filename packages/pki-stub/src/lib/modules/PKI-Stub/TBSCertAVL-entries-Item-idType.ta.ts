@@ -9,17 +9,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKCertIdentifier,
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
-} from "../PKI-Stub/PKCertIdentifier.ta";
+} from "../PKI-Stub/PKCertIdentifier.ta.js";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from "../PKI-Stub/DistinguishedName.ta";
+} from "../PKI-Stub/DistinguishedName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertAVL_entries_Item_idType */
 /**

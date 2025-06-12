@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeleteProblem,
     DeleteProblem_child_entry_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -80,7 +80,7 @@ import {
     stored_message_exists /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeleteProblem,
     _encode_DeleteProblem,
-} from '../MSAbstractService/DeleteProblem.ta';
+} from '../MSAbstractService/DeleteProblem.ta.js';
 export {
     DeleteProblem,
     DeleteProblem_child_entry_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -95,17 +95,17 @@ export {
     stored_message_exists /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeleteProblem,
     _encode_DeleteProblem,
-} from '../MSAbstractService/DeleteProblem.ta';
+} from '../MSAbstractService/DeleteProblem.ta.js';
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeleteError_problems_Item */
 /**

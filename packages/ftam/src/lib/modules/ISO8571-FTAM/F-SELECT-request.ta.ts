@@ -65,77 +65,77 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Select_Attributes,
   _decode_Select_Attributes,
   _encode_Select_Attributes,
-} from '../ISO8571-FTAM/Select-Attributes.ta';
+} from '../ISO8571-FTAM/Select-Attributes.ta.js';
 export {
   Select_Attributes,
   _decode_Select_Attributes,
   _encode_Select_Attributes,
-} from '../ISO8571-FTAM/Select-Attributes.ta';
+} from '../ISO8571-FTAM/Select-Attributes.ta.js';
 import {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 import {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 export {
   Concurrency_Control,
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta';
+} from '../ISO8571-FTAM/Concurrency-Control.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 export {
   Account,
   _decode_Account,
   _encode_Account,
-} from '../ISO8571-FTAM/Account.ta';
+} from '../ISO8571-FTAM/Account.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_SELECT_request */
 /**

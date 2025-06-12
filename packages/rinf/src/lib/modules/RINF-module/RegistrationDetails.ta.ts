@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RegistrationDetails_registrant,
   _decode_RegistrationDetails_registrant,
   _encode_RegistrationDetails_registrant,
-} from '../RINF-module/RegistrationDetails-registrant.ta';
+} from '../RINF-module/RegistrationDetails-registrant.ta.js';
 export {
   RegistrationDetails_registrant,
   _decode_RegistrationDetails_registrant,
   _encode_RegistrationDetails_registrant,
-} from '../RINF-module/RegistrationDetails-registrant.ta';
+} from '../RINF-module/RegistrationDetails-registrant.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegistrationDetails */
 /**

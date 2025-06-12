@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { crlTypes } from "../PKCS-9/crlTypes.va";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { crlTypes } from "../PKCS-9/crlTypes.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { crlTypes } from "../PKCS-9/crlTypes.va.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { crlTypes } from "../PKCS-9/crlTypes.va.js";
 
 /* START_OF_SYMBOL_DEFINITION x509CRL */
 /**

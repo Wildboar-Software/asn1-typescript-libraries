@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActualStartTime,
     _decode_ActualStartTime,
     _encode_ActualStartTime,
-} from '../Test-ASN1Module/ActualStartTime.ta';
+} from '../Test-ASN1Module/ActualStartTime.ta.js';
 export {
     ActualStartTime,
     _decode_ActualStartTime,
     _encode_ActualStartTime,
-} from '../Test-ASN1Module/ActualStartTime.ta';
+} from '../Test-ASN1Module/ActualStartTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultActualStartTime */
 /**

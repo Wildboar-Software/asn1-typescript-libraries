@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtendedSubject,
     _decode_ExtendedSubject,
     _encode_ExtendedSubject,
-} from '../IPMSHeadingExtensions/ExtendedSubject.ta';
+} from '../IPMSHeadingExtensions/ExtendedSubject.ta.js';
 export {
     ExtendedSubject,
     _decode_ExtendedSubject,
     _encode_ExtendedSubject,
-} from '../IPMSHeadingExtensions/ExtendedSubject.ta';
-import { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va';
-export { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/ExtendedSubject.ta.js';
+import { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va.js';
+export { id_hex_extended_subject } from '../IPMSObjectIdentifiers/id-hex-extended-subject.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION extended_subject */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GeneralTextParameters,
     _decode_GeneralTextParameters,
     _encode_GeneralTextParameters,
-} from '../IPMSExtendedBodyPartTypes2/GeneralTextParameters.ta';
+} from '../IPMSExtendedBodyPartTypes2/GeneralTextParameters.ta.js';
 export {
     GeneralTextParameters,
     _decode_GeneralTextParameters,
     _encode_GeneralTextParameters,
-} from '../IPMSExtendedBodyPartTypes2/GeneralTextParameters.ta';
-import { id_ep_general_text } from '../IPMSObjectIdentifiers/id-ep-general-text.va';
-export { id_ep_general_text } from '../IPMSObjectIdentifiers/id-ep-general-text.va';
+} from '../IPMSExtendedBodyPartTypes2/GeneralTextParameters.ta.js';
+import { id_ep_general_text } from '../IPMSObjectIdentifiers/id-ep-general-text.va.js';
+export { id_ep_general_text } from '../IPMSObjectIdentifiers/id-ep-general-text.va.js';
 
 /* START_OF_SYMBOL_DEFINITION general_text_body_part_parameters */
 /**

@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NonReceiptFields,
     _decode_NonReceiptFields,
     _encode_NonReceiptFields,
-} from '../IPMSInformationObjects/NonReceiptFields.ta';
+} from '../IPMSInformationObjects/NonReceiptFields.ta.js';
 export {
     NonReceiptFields,
     _decode_NonReceiptFields,
     _encode_NonReceiptFields,
-} from '../IPMSInformationObjects/NonReceiptFields.ta';
+} from '../IPMSInformationObjects/NonReceiptFields.ta.js';
 import {
     ReceiptFields,
     _decode_ReceiptFields,
     _encode_ReceiptFields,
-} from '../IPMSInformationObjects/ReceiptFields.ta';
+} from '../IPMSInformationObjects/ReceiptFields.ta.js';
 export {
     ReceiptFields,
     _decode_ReceiptFields,
     _encode_ReceiptFields,
-} from '../IPMSInformationObjects/ReceiptFields.ta';
+} from '../IPMSInformationObjects/ReceiptFields.ta.js';
 import {
     OtherNotificationTypeFields,
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
-} from '../IPMSInformationObjects/OtherNotificationTypeFields.ta';
+} from '../IPMSInformationObjects/OtherNotificationTypeFields.ta.js';
 export {
     OtherNotificationTypeFields,
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
-} from '../IPMSInformationObjects/OtherNotificationTypeFields.ta';
+} from '../IPMSInformationObjects/OtherNotificationTypeFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IPN_choice */
 /**

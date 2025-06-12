@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 export {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 import {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION E_terminateRequest */
 /**

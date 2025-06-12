@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   UDPTLPacket_error_recovery_fec_info,
   _decode_UDPTLPacket_error_recovery_fec_info,
   _encode_UDPTLPacket_error_recovery_fec_info,
-} from '../T38/UDPTLPacket-error-recovery-fec-info.ta';
+} from '../T38/UDPTLPacket-error-recovery-fec-info.ta.js';
 export {
   UDPTLPacket_error_recovery_fec_info,
   _decode_UDPTLPacket_error_recovery_fec_info,
   _encode_UDPTLPacket_error_recovery_fec_info,
-} from '../T38/UDPTLPacket-error-recovery-fec-info.ta';
+} from '../T38/UDPTLPacket-error-recovery-fec-info.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UDPTLPacket_error_recovery */
 /**

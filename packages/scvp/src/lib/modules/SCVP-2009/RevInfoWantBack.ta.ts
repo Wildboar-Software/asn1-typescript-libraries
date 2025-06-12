@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
-} from '../SCVP-2009/RevocationInfos.ta';
+} from '../SCVP-2009/RevocationInfos.ta.js';
 export {
   RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
-} from '../SCVP-2009/RevocationInfos.ta';
+} from '../SCVP-2009/RevocationInfos.ta.js';
 import {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 export {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevInfoWantBack */
 /**

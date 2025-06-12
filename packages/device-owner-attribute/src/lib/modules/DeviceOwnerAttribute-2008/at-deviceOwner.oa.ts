@@ -65,10 +65,10 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa";
-import { id_deviceOwner } from "../DeviceOwnerAttribute-2008/id-deviceOwner.va";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.js";
+import { id_deviceOwner } from "../DeviceOwnerAttribute-2008/id-deviceOwner.va.js";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION at_deviceOwner */

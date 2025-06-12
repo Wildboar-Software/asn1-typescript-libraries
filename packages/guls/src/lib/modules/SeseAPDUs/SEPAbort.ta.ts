@@ -65,29 +65,29 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 export {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
-export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
+} from '../SeseAPDUs/InvocationId.ta.js';
+import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
+export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
 import {
   ProblemCode,
   _decode_ProblemCode,
   _encode_ProblemCode,
-} from '../SeseAPDUs/ProblemCode.ta';
+} from '../SeseAPDUs/ProblemCode.ta.js';
 export {
   ProblemCode,
   _decode_ProblemCode,
   _encode_ProblemCode,
-} from '../SeseAPDUs/ProblemCode.ta';
+} from '../SeseAPDUs/ProblemCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SEPAbort */
 /**

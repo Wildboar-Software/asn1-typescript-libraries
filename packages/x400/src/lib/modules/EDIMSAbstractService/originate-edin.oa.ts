@@ -65,55 +65,55 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     originate_edin_ArgumentType,
     _decode_originate_edin_ArgumentType,
     _encode_originate_edin_ArgumentType,
-} from '../EDIMSAbstractService/originate-edin-ArgumentType.ta';
+} from '../EDIMSAbstractService/originate-edin-ArgumentType.ta.js';
 export {
     originate_edin_ArgumentType,
     _decode_originate_edin_ArgumentType,
     _encode_originate_edin_ArgumentType,
-} from '../EDIMSAbstractService/originate-edin-ArgumentType.ta';
+} from '../EDIMSAbstractService/originate-edin-ArgumentType.ta.js';
 import {
     originate_edin_ResultType,
     _decode_originate_edin_ResultType,
     _encode_originate_edin_ResultType,
-} from '../EDIMSAbstractService/originate-edin-ResultType.ta';
+} from '../EDIMSAbstractService/originate-edin-ResultType.ta.js';
 export {
     originate_edin_ResultType,
     _decode_originate_edin_ResultType,
     _encode_originate_edin_ResultType,
-} from '../EDIMSAbstractService/originate-edin-ResultType.ta';
-import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../EDIMSAbstractService/originate-edin-ResultType.ta.js';
+import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION originate_edin */
 /**

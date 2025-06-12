@@ -1,9 +1,9 @@
 
 
-import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
-import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta";
-import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta";
-import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta";
+import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
+import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.js";
+import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.js";
+import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.js";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier } from "asn1-ts";
 import stringifyFilter from "../lib/stringifiers/Filter";

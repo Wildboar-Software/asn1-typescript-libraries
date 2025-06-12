@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceOfDays,
     _decode_SequenceOfDays,
     _encode_SequenceOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta.js';
 export {
     SequenceOfDays,
     _decode_SequenceOfDays,
     _encode_SequenceOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta';
-import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
-export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va';
+} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta.js';
+import { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
+export { defaultIntervalsOfDayWps } from '../Schedulerev1-ASN1Module/defaultIntervalsOfDayWps.va.js';
 import {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 export {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultSequenceOfDays */
 /**

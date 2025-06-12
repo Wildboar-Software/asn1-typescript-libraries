@@ -1,41 +1,41 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificate as AttributeCertificateV1,
     _decode_AttributeCertificate as _decode_AttributeCertificateV1,
     _encode_AttributeCertificate as _encode_AttributeCertificateV1,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import {
     AttributeCertificate as AttributeCertificateV2,
     _decode_AttributeCertificate as _decode_AttributeCertificateV2,
     _encode_AttributeCertificate as _encode_AttributeCertificateV2,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
-} from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta";
+} from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta.js";
 import {
     OtherCertificateFormat,
     _decode_OtherCertificateFormat,
     _encode_OtherCertificateFormat,
-} from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta";
+} from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta.js";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
 export {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
-} from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta";
+} from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta.js";
 export {
     OtherCertificateFormat,
     _decode_OtherCertificateFormat,
     _encode_OtherCertificateFormat,
-} from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta";
+} from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateChoices */
 /**

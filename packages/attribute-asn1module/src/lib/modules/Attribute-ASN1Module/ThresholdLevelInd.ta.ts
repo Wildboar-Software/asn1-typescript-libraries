@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta";
-export { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta";
-import { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta";
-export { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta.js";
+export { ThresholdLevelInd_up, _decode_ThresholdLevelInd_up, _encode_ThresholdLevelInd_up } from "../Attribute-ASN1Module/ThresholdLevelInd-up.ta.js";
+import { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta.js";
+export { ThresholdLevelInd_down, _decode_ThresholdLevelInd_down, _encode_ThresholdLevelInd_down } from "../Attribute-ASN1Module/ThresholdLevelInd-down.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ThresholdLevelInd */

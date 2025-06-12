@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca";
-export { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca";
+import { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SIOsAccessControl-MODULE/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SignatureAlgorithms */
 /**

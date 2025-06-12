@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ExternalSAID,
   _decode_ExternalSAID,
   _encode_ExternalSAID,
-} from '../Notation/ExternalSAID.ta';
+} from '../Notation/ExternalSAID.ta.js';
 export {
   ExternalSAID,
   _decode_ExternalSAID,
   _encode_ExternalSAID,
-} from '../Notation/ExternalSAID.ta';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
+} from '../Notation/ExternalSAID.ta.js';
+import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION FirstPdvExternal */
 /**

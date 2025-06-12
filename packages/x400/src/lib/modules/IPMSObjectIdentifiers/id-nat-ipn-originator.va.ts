@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta';
-export { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta';
-import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va';
-export { id_nat } from '../IPMSObjectIdentifiers/id-nat.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.js';
+export { ID, _decode_ID, _encode_ID } from '../IPMSObjectIdentifiers/ID.ta.js';
+import { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.js';
+export { id_nat } from '../IPMSObjectIdentifiers/id-nat.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_nat_ipn_originator */
 /**

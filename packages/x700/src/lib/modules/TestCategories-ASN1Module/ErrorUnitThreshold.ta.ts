@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UnitsType,
     _decode_UnitsType,
     _encode_UnitsType,
-} from '../TestCategories-ASN1Module/UnitsType.ta';
+} from '../TestCategories-ASN1Module/UnitsType.ta.js';
 export {
     UnitsType,
     _decode_UnitsType,
     _encode_UnitsType,
-} from '../TestCategories-ASN1Module/UnitsType.ta';
+} from '../TestCategories-ASN1Module/UnitsType.ta.js';
 import {
     UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
-} from '../TestCategories-ASN1Module/UnitsTotal.ta';
+} from '../TestCategories-ASN1Module/UnitsTotal.ta.js';
 export {
     UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
-} from '../TestCategories-ASN1Module/UnitsTotal.ta';
+} from '../TestCategories-ASN1Module/UnitsTotal.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ErrorUnitThreshold */
 /**

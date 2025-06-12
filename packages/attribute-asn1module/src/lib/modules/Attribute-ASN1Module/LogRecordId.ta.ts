@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta";
-export { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta.js";
+export { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION LogRecordId */

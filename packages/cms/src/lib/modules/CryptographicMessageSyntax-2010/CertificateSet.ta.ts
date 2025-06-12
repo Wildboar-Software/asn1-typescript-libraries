@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateChoices,
     _decode_CertificateChoices,
     _encode_CertificateChoices,
-} from "../CryptographicMessageSyntax-2010/CertificateChoices.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateChoices.ta.js";
 export {
     CertificateChoices,
     _decode_CertificateChoices,
     _encode_CertificateChoices,
-} from "../CryptographicMessageSyntax-2010/CertificateChoices.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateChoices.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateSet */
 /**

@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta';
-export { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta';
-import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va';
-export { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.js';
+export { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.js';
+import { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.js';
+export { id_parameter } from '../MhsAcctObjectIdentifiers/id-parameter.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_parameter_improperlySpecifiedRecipients */
 /**

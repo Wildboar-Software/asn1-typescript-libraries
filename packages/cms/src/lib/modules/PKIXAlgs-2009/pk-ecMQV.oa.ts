@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 import {
     ECParameters,
     _decode_ECParameters,
     _encode_ECParameters,
-} from "../PKIXAlgs-2009/ECParameters.ta";
+} from "../PKIXAlgs-2009/ECParameters.ta.js";
 import {
     ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
-} from "../PKIXAlgs-2009/ECPoint.ta";
-import { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va";
+} from "../PKIXAlgs-2009/ECPoint.ta.js";
+import { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -31,19 +31,19 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
 export {
     ECParameters,
     _decode_ECParameters,
     _encode_ECParameters,
-} from "../PKIXAlgs-2009/ECParameters.ta";
+} from "../PKIXAlgs-2009/ECParameters.ta.js";
 export {
     ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
-} from "../PKIXAlgs-2009/ECPoint.ta";
-export { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va";
+} from "../PKIXAlgs-2009/ECPoint.ta.js";
+export { id_ecMQV } from "../PKIXAlgs-2009/id-ecMQV.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_ecMQV */
 /**

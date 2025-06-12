@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va.js";
 import {
     KEA_Params_Id,
     _decode_KEA_Params_Id,
     _encode_KEA_Params_Id,
-} from "../PKIXAlgs-2009/KEA-Params-Id.ta";
+} from "../PKIXAlgs-2009/KEA-Params-Id.ta.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -26,14 +26,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va.js";
 export {
     KEA_Params_Id,
     _decode_KEA_Params_Id,
     _encode_KEA_Params_Id,
-} from "../PKIXAlgs-2009/KEA-Params-Id.ta";
+} from "../PKIXAlgs-2009/KEA-Params-Id.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_kea */
 /**

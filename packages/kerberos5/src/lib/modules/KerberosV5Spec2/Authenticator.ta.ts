@@ -65,87 +65,87 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 export {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 import {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 export {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   EncryptionKey,
   _decode_EncryptionKey,
   _encode_EncryptionKey,
-} from '../KerberosV5Spec2/EncryptionKey.ta';
+} from '../KerberosV5Spec2/EncryptionKey.ta.js';
 export {
   EncryptionKey,
   _decode_EncryptionKey,
   _encode_EncryptionKey,
-} from '../KerberosV5Spec2/EncryptionKey.ta';
+} from '../KerberosV5Spec2/EncryptionKey.ta.js';
 import {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 export {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 import {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta';
+} from '../KerberosV5Spec2/AuthorizationData.ta.js';
 export {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta';
+} from '../KerberosV5Spec2/AuthorizationData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Authenticator */
 /**

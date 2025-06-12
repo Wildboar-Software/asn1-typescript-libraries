@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ATOMIC_ACTION_IDENTIFIER,
   _decode_ATOMIC_ACTION_IDENTIFIER,
   _encode_ATOMIC_ACTION_IDENTIFIER,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.js';
 export {
   ATOMIC_ACTION_IDENTIFIER,
   _decode_ATOMIC_ACTION_IDENTIFIER,
   _encode_ATOMIC_ACTION_IDENTIFIER,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.js';
 import {
   C_BEGIN_RI_branch_suffix,
   _decode_C_BEGIN_RI_branch_suffix,
   _encode_C_BEGIN_RI_branch_suffix,
-} from '../CCR/C-BEGIN-RI-branch-suffix.ta';
+} from '../CCR/C-BEGIN-RI-branch-suffix.ta.js';
 export {
   C_BEGIN_RI_branch_suffix,
   _decode_C_BEGIN_RI_branch_suffix,
   _encode_C_BEGIN_RI_branch_suffix,
-} from '../CCR/C-BEGIN-RI-branch-suffix.ta';
+} from '../CCR/C-BEGIN-RI-branch-suffix.ta.js';
 import {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 export {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION C_BEGIN_RI */
 /**

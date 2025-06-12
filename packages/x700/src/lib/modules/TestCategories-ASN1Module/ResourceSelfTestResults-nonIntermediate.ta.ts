@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 export {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta';
+} from '../Test-ASN1Module/TimeoutPeriod.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResourceSelfTestResults_nonIntermediate */
 /**

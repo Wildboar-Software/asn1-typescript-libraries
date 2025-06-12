@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ecwkt_specifiedParameters } from "../SEC1-v1-9/ecwkt-specifiedParameters.va";
-export { ecwkt_specifiedParameters } from "../SEC1-v1-9/ecwkt-specifiedParameters.va";
-import { ECWKTParameters, _decode_ECWKTParameters, _encode_ECWKTParameters } from "../SEC1-v1-9/ECWKTParameters.ta";
-export { ECWKTParameters, _decode_ECWKTParameters, _encode_ECWKTParameters } from "../SEC1-v1-9/ECWKTParameters.ta";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ecwkt_specifiedParameters } from "../SEC1-v1-9/ecwkt-specifiedParameters.va.js";
+export { ecwkt_specifiedParameters } from "../SEC1-v1-9/ecwkt-specifiedParameters.va.js";
+import { ECWKTParameters, _decode_ECWKTParameters, _encode_ECWKTParameters } from "../SEC1-v1-9/ECWKTParameters.ta.js";
+export { ECWKTParameters, _decode_ECWKTParameters, _encode_ECWKTParameters } from "../SEC1-v1-9/ECWKTParameters.ta.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECWKTAlgorithmSet_Union1_Intersection0_Element */

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BridgeRollReply_Item,
     _decode_BridgeRollReply_Item,
     _encode_BridgeRollReply_Item,
-} from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta';
+} from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta.js';
 export {
     BridgeRollReply_Item,
     _decode_BridgeRollReply_Item,
     _encode_BridgeRollReply_Item,
-} from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta';
+} from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BridgeRollReply */
 /**

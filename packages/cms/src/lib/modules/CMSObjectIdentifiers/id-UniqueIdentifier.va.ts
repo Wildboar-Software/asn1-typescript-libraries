@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-export { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
+import { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va.js";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_UniqueIdentifier */
 /**

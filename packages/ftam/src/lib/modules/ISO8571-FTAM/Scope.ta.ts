@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Scope_Item,
   _decode_Scope_Item,
   _encode_Scope_Item,
-} from '../ISO8571-FTAM/Scope-Item.ta';
+} from '../ISO8571-FTAM/Scope-Item.ta.js';
 export {
   Scope_Item,
   _decode_Scope_Item,
   _encode_Scope_Item,
-} from '../ISO8571-FTAM/Scope-Item.ta';
+} from '../ISO8571-FTAM/Scope-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Scope */
 /**

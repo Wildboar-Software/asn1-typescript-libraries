@@ -65,97 +65,97 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KDCOptions,
   _decode_KDCOptions,
   _encode_KDCOptions,
-} from '../KerberosV5Spec2/KDCOptions.ta';
+} from '../KerberosV5Spec2/KDCOptions.ta.js';
 export {
   KDCOptions,
   _decode_KDCOptions,
   _encode_KDCOptions,
-} from '../KerberosV5Spec2/KDCOptions.ta';
+} from '../KerberosV5Spec2/KDCOptions.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 export {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 import {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 export {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 import {
   HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
-} from '../KerberosV5Spec2/HostAddresses.ta';
+} from '../KerberosV5Spec2/HostAddresses.ta.js';
 export {
   HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
-} from '../KerberosV5Spec2/HostAddresses.ta';
+} from '../KerberosV5Spec2/HostAddresses.ta.js';
 import {
   EncryptedData,
   _decode_EncryptedData,
   _encode_EncryptedData,
-} from '../KerberosV5Spec2/EncryptedData.ta';
+} from '../KerberosV5Spec2/EncryptedData.ta.js';
 export {
   EncryptedData,
   _decode_EncryptedData,
   _encode_EncryptedData,
-} from '../KerberosV5Spec2/EncryptedData.ta';
+} from '../KerberosV5Spec2/EncryptedData.ta.js';
 import {
   Ticket,
   _decode_Ticket,
   _encode_Ticket,
-} from '../KerberosV5Spec2/Ticket.ta';
+} from '../KerberosV5Spec2/Ticket.ta.js';
 export {
   Ticket,
   _decode_Ticket,
   _encode_Ticket,
-} from '../KerberosV5Spec2/Ticket.ta';
+} from '../KerberosV5Spec2/Ticket.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KDC_REQ_BODY */
 /**

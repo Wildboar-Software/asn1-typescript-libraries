@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
+export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DDO */
 /**

@@ -65,119 +65,119 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 export {
   State_Result,
   _decode_State_Result,
   _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta';
+} from '../ISO8571-FTAM/State-Result.ta.js';
 import {
   Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 export {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 import {
   Protocol_Version,
   _decode_Protocol_Version,
   _encode_Protocol_Version,
-} from '../ISO8571-FTAM/Protocol-Version.ta';
+} from '../ISO8571-FTAM/Protocol-Version.ta.js';
 export {
   Protocol_Version,
   _decode_Protocol_Version,
   _encode_Protocol_Version,
-} from '../ISO8571-FTAM/Protocol-Version.ta';
+} from '../ISO8571-FTAM/Protocol-Version.ta.js';
 import {
   Implementation_Information,
   _decode_Implementation_Information,
   _encode_Implementation_Information,
-} from '../ISO8571-FTAM/Implementation-Information.ta';
+} from '../ISO8571-FTAM/Implementation-Information.ta.js';
 export {
   Implementation_Information,
   _decode_Implementation_Information,
   _encode_Implementation_Information,
-} from '../ISO8571-FTAM/Implementation-Information.ta';
+} from '../ISO8571-FTAM/Implementation-Information.ta.js';
 import {
   Service_Class,
   _decode_Service_Class,
   _encode_Service_Class,
-} from '../ISO8571-FTAM/Service-Class.ta';
+} from '../ISO8571-FTAM/Service-Class.ta.js';
 export {
   Service_Class,
   _decode_Service_Class,
   _encode_Service_Class,
-} from '../ISO8571-FTAM/Service-Class.ta';
+} from '../ISO8571-FTAM/Service-Class.ta.js';
 import {
   Functional_Units,
   _decode_Functional_Units,
   _encode_Functional_Units,
-} from '../ISO8571-FTAM/Functional-Units.ta';
+} from '../ISO8571-FTAM/Functional-Units.ta.js';
 export {
   Functional_Units,
   _decode_Functional_Units,
   _encode_Functional_Units,
-} from '../ISO8571-FTAM/Functional-Units.ta';
+} from '../ISO8571-FTAM/Functional-Units.ta.js';
 import {
   Attribute_Groups,
   _decode_Attribute_Groups,
   _encode_Attribute_Groups,
-} from '../ISO8571-FTAM/Attribute-Groups.ta';
+} from '../ISO8571-FTAM/Attribute-Groups.ta.js';
 export {
   Attribute_Groups,
   _decode_Attribute_Groups,
   _encode_Attribute_Groups,
-} from '../ISO8571-FTAM/Attribute-Groups.ta';
+} from '../ISO8571-FTAM/Attribute-Groups.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   FTAM_Quality_of_Service,
   _decode_FTAM_Quality_of_Service,
   _encode_FTAM_Quality_of_Service,
-} from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta';
+} from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.js';
 export {
   FTAM_Quality_of_Service,
   _decode_FTAM_Quality_of_Service,
   _encode_FTAM_Quality_of_Service,
-} from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta';
+} from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.js';
 import {
   Contents_Type_List,
   _decode_Contents_Type_List,
   _encode_Contents_Type_List,
-} from '../ISO8571-FTAM/Contents-Type-List.ta';
+} from '../ISO8571-FTAM/Contents-Type-List.ta.js';
 export {
   Contents_Type_List,
   _decode_Contents_Type_List,
   _encode_Contents_Type_List,
-} from '../ISO8571-FTAM/Contents-Type-List.ta';
+} from '../ISO8571-FTAM/Contents-Type-List.ta.js';
 import {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 export {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_INITIALIZE_response */
 /**

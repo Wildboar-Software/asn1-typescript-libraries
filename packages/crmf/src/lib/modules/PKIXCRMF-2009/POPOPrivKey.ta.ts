@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     BIT_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta.js";
 import {
     PKMACValue,
     _decode_PKMACValue,
     _encode_PKMACValue,
-} from "../PKIXCRMF-2009/PKMACValue.ta";
+} from "../PKIXCRMF-2009/PKMACValue.ta.js";
 import {
     SubsequentMessage,
     _decode_SubsequentMessage,
     _encode_SubsequentMessage,
-} from "../PKIXCRMF-2009/SubsequentMessage.ta";
+} from "../PKIXCRMF-2009/SubsequentMessage.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION POPOPrivKey */
 /**

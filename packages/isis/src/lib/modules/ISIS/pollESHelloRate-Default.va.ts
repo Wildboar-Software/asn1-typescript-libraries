@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Timer,
     _decode_Timer,
     _encode_Timer,
-} from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta";
+} from "@wildboar/gmi-attributemodule/src/lib/modules/GMI-AttributeModule/Timer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pollESHelloRate_Default */
 /**

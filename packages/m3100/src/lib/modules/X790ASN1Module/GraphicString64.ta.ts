@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GraphicStringBase,
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
-} from '../X790ASN1Module/GraphicStringBase.ta';
+} from '../X790ASN1Module/GraphicStringBase.ta.js';
 export {
     GraphicStringBase,
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
-} from '../X790ASN1Module/GraphicStringBase.ta';
+} from '../X790ASN1Module/GraphicStringBase.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GraphicString64 */
 /**

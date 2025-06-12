@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalPhysicalDeliveryPersonalName,
     _decode_UniversalPhysicalDeliveryPersonalName,
     _encode_UniversalPhysicalDeliveryPersonalName,
-} from '../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta';
+} from '../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta.js';
 export {
     UniversalPhysicalDeliveryPersonalName,
     _decode_UniversalPhysicalDeliveryPersonalName,
     _encode_UniversalPhysicalDeliveryPersonalName,
-} from '../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalPhysicalDeliveryPersonalName.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_physical_delivery_personal_name */
 /**

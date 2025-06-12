@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActivityCode_number,
     ActivityCode_number_approved /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -96,7 +96,7 @@ import {
     transfer /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ActivityCode_number,
     _encode_ActivityCode_number,
-} from '../X790ASN1Module/ActivityCode-number.ta';
+} from '../X790ASN1Module/ActivityCode-number.ta.js';
 export {
     ActivityCode_number,
     ActivityCode_number_approved /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -127,7 +127,7 @@ export {
     transfer /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ActivityCode_number,
     _encode_ActivityCode_number,
-} from '../X790ASN1Module/ActivityCode-number.ta';
+} from '../X790ASN1Module/ActivityCode-number.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ActivityCode */
 /**

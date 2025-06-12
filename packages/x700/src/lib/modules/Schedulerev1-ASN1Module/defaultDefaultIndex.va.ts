@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DefaultIndex,
     _decode_DefaultIndex,
     _encode_DefaultIndex,
-} from '../Schedulerev1-ASN1Module/DefaultIndex.ta';
+} from '../Schedulerev1-ASN1Module/DefaultIndex.ta.js';
 export {
     DefaultIndex,
     _decode_DefaultIndex,
     _encode_DefaultIndex,
-} from '../Schedulerev1-ASN1Module/DefaultIndex.ta';
+} from '../Schedulerev1-ASN1Module/DefaultIndex.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultDefaultIndex */
 /**

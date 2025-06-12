@@ -4,49 +4,49 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta";
+} from "../PKCS7/OriginatorInfo.ta.js";
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientInfos.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../PKCS7/Attributes.ta";
+} from "../PKCS7/Attributes.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta";
+} from "../PKCS7/EncryptedContentInfo.ta.js";
 export {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta";
+} from "../PKCS7/OriginatorInfo.ta.js";
 export {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientInfos.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**

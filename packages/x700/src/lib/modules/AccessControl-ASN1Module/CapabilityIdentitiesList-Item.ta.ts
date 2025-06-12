@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CapabilityIdentitiesList_Item_knownForm,
     _decode_CapabilityIdentitiesList_Item_knownForm,
     _encode_CapabilityIdentitiesList_Item_knownForm,
-} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-knownForm.ta';
+} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-knownForm.ta.js';
 export {
     CapabilityIdentitiesList_Item_knownForm,
     _decode_CapabilityIdentitiesList_Item_knownForm,
     _encode_CapabilityIdentitiesList_Item_knownForm,
-} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-knownForm.ta';
+} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-knownForm.ta.js';
 import {
     CapabilityIdentitiesList_Item_unknownForm,
     _decode_CapabilityIdentitiesList_Item_unknownForm,
     _encode_CapabilityIdentitiesList_Item_unknownForm,
-} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-unknownForm.ta';
+} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-unknownForm.ta.js';
 export {
     CapabilityIdentitiesList_Item_unknownForm,
     _decode_CapabilityIdentitiesList_Item_unknownForm,
     _encode_CapabilityIdentitiesList_Item_unknownForm,
-} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-unknownForm.ta';
+} from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item-unknownForm.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CapabilityIdentitiesList_Item */
 /**

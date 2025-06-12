@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
-export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
+export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
 import {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 export {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SECURITY_EXCHANGE */
 /**

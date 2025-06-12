@@ -5,39 +5,39 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 import {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 export {
     EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NamedKeyEncryptedData */
 /**

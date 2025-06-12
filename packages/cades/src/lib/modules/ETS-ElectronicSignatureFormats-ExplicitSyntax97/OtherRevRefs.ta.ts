@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OTHER_REVOCATION_REF } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OTHER-REVOCATION-REF.oca";
-export { OTHER_REVOCATION_REF } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OTHER-REVOCATION-REF.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OTHER_REVOCATION_REF } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OTHER-REVOCATION-REF.oca.js";
+export { OTHER_REVOCATION_REF } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OTHER-REVOCATION-REF.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OtherRevRefs */

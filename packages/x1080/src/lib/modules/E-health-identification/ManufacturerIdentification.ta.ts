@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca';
-export { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca';
-import { ManufacturerSchemes } from '../E-health-identification/ManufacturerSchemes.osa';
-export { ManufacturerSchemes } from '../E-health-identification/ManufacturerSchemes.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca.js';
+export { MANUFACTURER_SCHEME } from '../E-health-identification/MANUFACTURER-SCHEME.oca.js';
+import { ManufacturerSchemes } from '../E-health-identification/ManufacturerSchemes.osa.js';
+export { ManufacturerSchemes } from '../E-health-identification/ManufacturerSchemes.osa.js';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from './SchemeName.ta';
+} from './SchemeName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ManufacturerIdentification */
 /**

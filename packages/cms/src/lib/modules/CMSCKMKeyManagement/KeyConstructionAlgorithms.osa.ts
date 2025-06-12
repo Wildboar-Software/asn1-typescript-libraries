@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
-import { keyAgreeHashConstruction } from "../CMSCKMKeyManagement/keyAgreeHashConstruction.oa";
-import { keyAgreeMultipleEncryptionConstruction } from "../CMSCKMKeyManagement/keyAgreeMultipleEncryptionConstruction.oa";
-import { keyTransportConstruction } from "../CMSCKMKeyManagement/keyTransportConstruction.oa";
-import { symmetricConstruction } from "../CMSCKMKeyManagement/symmetricConstruction.oa";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
-export { keyAgreeHashConstruction } from "../CMSCKMKeyManagement/keyAgreeHashConstruction.oa";
-export { keyAgreeMultipleEncryptionConstruction } from "../CMSCKMKeyManagement/keyAgreeMultipleEncryptionConstruction.oa";
-export { keyTransportConstruction } from "../CMSCKMKeyManagement/keyTransportConstruction.oa";
-export { symmetricConstruction } from "../CMSCKMKeyManagement/symmetricConstruction.oa";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
+import { keyAgreeHashConstruction } from "../CMSCKMKeyManagement/keyAgreeHashConstruction.oa.js";
+import { keyAgreeMultipleEncryptionConstruction } from "../CMSCKMKeyManagement/keyAgreeMultipleEncryptionConstruction.oa.js";
+import { keyTransportConstruction } from "../CMSCKMKeyManagement/keyTransportConstruction.oa.js";
+import { symmetricConstruction } from "../CMSCKMKeyManagement/symmetricConstruction.oa.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
+export { keyAgreeHashConstruction } from "../CMSCKMKeyManagement/keyAgreeHashConstruction.oa.js";
+export { keyAgreeMultipleEncryptionConstruction } from "../CMSCKMKeyManagement/keyAgreeMultipleEncryptionConstruction.oa.js";
+export { keyTransportConstruction } from "../CMSCKMKeyManagement/keyTransportConstruction.oa.js";
+export { symmetricConstruction } from "../CMSCKMKeyManagement/symmetricConstruction.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyConstructionAlgorithms */
 /**

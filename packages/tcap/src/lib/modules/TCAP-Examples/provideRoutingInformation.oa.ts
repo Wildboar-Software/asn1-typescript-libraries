@@ -65,61 +65,61 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     RequestArgument,
     _decode_RequestArgument,
     _encode_RequestArgument,
-} from '../TCAP-Examples/RequestArgument.ta';
+} from '../TCAP-Examples/RequestArgument.ta.js';
 export {
     RequestArgument,
     _decode_RequestArgument,
     _encode_RequestArgument,
-} from '../TCAP-Examples/RequestArgument.ta';
+} from '../TCAP-Examples/RequestArgument.ta.js';
 import {
     RoutingInformation,
     _decode_RoutingInformation,
     _encode_RoutingInformation,
-} from '../TCAP-Examples/RoutingInformation.ta';
+} from '../TCAP-Examples/RoutingInformation.ta.js';
 export {
     RoutingInformation,
     _decode_RoutingInformation,
     _encode_RoutingInformation,
-} from '../TCAP-Examples/RoutingInformation.ta';
-import { invalidCalledNumber } from '../TCAP-Examples/invalidCalledNumber.oa';
-export { invalidCalledNumber } from '../TCAP-Examples/invalidCalledNumber.oa';
-import { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.oa';
-export { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.oa';
-import { calledBarred } from '../TCAP-Examples/calledBarred.oa';
-export { calledBarred } from '../TCAP-Examples/calledBarred.oa';
-import { processingFailure } from '../TCAP-Examples/processingFailure.oa';
-export { processingFailure } from '../TCAP-Examples/processingFailure.oa';
-import { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa';
-export { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa';
+} from '../TCAP-Examples/RoutingInformation.ta.js';
+import { invalidCalledNumber } from '../TCAP-Examples/invalidCalledNumber.oa.js';
+export { invalidCalledNumber } from '../TCAP-Examples/invalidCalledNumber.oa.js';
+import { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.oa.js';
+export { subscriberNotReachable } from '../TCAP-Examples/subscriberNotReachable.oa.js';
+import { calledBarred } from '../TCAP-Examples/calledBarred.oa.js';
+export { calledBarred } from '../TCAP-Examples/calledBarred.oa.js';
+import { processingFailure } from '../TCAP-Examples/processingFailure.oa.js';
+export { processingFailure } from '../TCAP-Examples/processingFailure.oa.js';
+import { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa.js';
+export { getCallingPartyAddress } from '../TCAP-Examples/getCallingPartyAddress.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION provideRoutingInformation */
 /**

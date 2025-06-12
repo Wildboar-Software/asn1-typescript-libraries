@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ATTRIBUTE,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     id_clearanceSponsor,
-} from "./id-clearanceSponsor.va";
+} from "./id-clearanceSponsor.va.js";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
 import {
     caseIgnoreMatch,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION at_clearanceSponsor */

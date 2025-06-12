@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
-export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
+export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
 import {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 export {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
-import { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa';
-export { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa';
-import { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa';
-export { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa';
-import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va';
-export { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
-export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
+} from '../Notation/Identifier.ta.js';
+import { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa.js';
+export { offeredIds } from '../GulsSecurityExchanges/offeredIds.oa.js';
+import { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa.js';
+export { acceptedIds } from '../GulsSecurityExchanges/acceptedIds.oa.js';
+import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.js';
+export { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.js';
+import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
+export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION simpleNegotiationSE */
 /**

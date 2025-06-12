@@ -1,15 +1,15 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { caseExactMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseExactMatch.oa";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { caseExactMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseExactMatch.oa.js";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
-import { pkcs_9_at_challengePassword } from "../PKCS-9/pkcs-9-at-challengePassword.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
+import { pkcs_9_at_challengePassword } from "../PKCS-9/pkcs-9-at-challengePassword.va.js";
 
 /* START_OF_SYMBOL_DEFINITION challengePassword */
 /**

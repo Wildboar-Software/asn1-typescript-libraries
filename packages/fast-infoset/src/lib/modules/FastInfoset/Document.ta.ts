@@ -65,77 +65,77 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Document_additional_data_additional_datum,
   _decode_Document_additional_data_additional_datum,
   _encode_Document_additional_data_additional_datum,
-} from '../FastInfoset/Document-additional-data-additional-datum.ta';
+} from '../FastInfoset/Document-additional-data-additional-datum.ta.js';
 export {
   Document_additional_data_additional_datum,
   _decode_Document_additional_data_additional_datum,
   _encode_Document_additional_data_additional_datum,
-} from '../FastInfoset/Document-additional-data-additional-datum.ta';
+} from '../FastInfoset/Document-additional-data-additional-datum.ta.js';
 import {
   Document_initial_vocabulary,
   _decode_Document_initial_vocabulary,
   _encode_Document_initial_vocabulary,
-} from '../FastInfoset/Document-initial-vocabulary.ta';
+} from '../FastInfoset/Document-initial-vocabulary.ta.js';
 export {
   Document_initial_vocabulary,
   _decode_Document_initial_vocabulary,
   _encode_Document_initial_vocabulary,
-} from '../FastInfoset/Document-initial-vocabulary.ta';
+} from '../FastInfoset/Document-initial-vocabulary.ta.js';
 import {
   Notation,
   _decode_Notation,
   _encode_Notation,
-} from '../FastInfoset/Notation.ta';
+} from '../FastInfoset/Notation.ta.js';
 export {
   Notation,
   _decode_Notation,
   _encode_Notation,
-} from '../FastInfoset/Notation.ta';
+} from '../FastInfoset/Notation.ta.js';
 import {
   UnparsedEntity,
   _decode_UnparsedEntity,
   _encode_UnparsedEntity,
-} from '../FastInfoset/UnparsedEntity.ta';
+} from '../FastInfoset/UnparsedEntity.ta.js';
 export {
   UnparsedEntity,
   _decode_UnparsedEntity,
   _encode_UnparsedEntity,
-} from '../FastInfoset/UnparsedEntity.ta';
+} from '../FastInfoset/UnparsedEntity.ta.js';
 import {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 export {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 import {
   NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
-} from '../FastInfoset/NonIdentifyingStringOrIndex.ta';
+} from '../FastInfoset/NonIdentifyingStringOrIndex.ta.js';
 export {
   NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
-} from '../FastInfoset/NonIdentifyingStringOrIndex.ta';
+} from '../FastInfoset/NonIdentifyingStringOrIndex.ta.js';
 import {
   Document_children_Item,
   _decode_Document_children_Item,
   _encode_Document_children_Item,
-} from '../FastInfoset/Document-children-Item.ta';
+} from '../FastInfoset/Document-children-Item.ta.js';
 export {
   Document_children_Item,
   _decode_Document_children_Item,
   _encode_Document_children_Item,
-} from '../FastInfoset/Document-children-Item.ta';
+} from '../FastInfoset/Document-children-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Document */
 /**

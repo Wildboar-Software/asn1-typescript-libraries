@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca';
-export { SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca';
-import { SecurityCategoriesTable } from '../MTSAbstractService/SecurityCategoriesTable.osa';
-export { SecurityCategoriesTable } from '../MTSAbstractService/SecurityCategoriesTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca.js';
+export { SECURITY_CATEGORY } from '../MTSAbstractService/SECURITY-CATEGORY.oca.js';
+import { SecurityCategoriesTable } from '../MTSAbstractService/SecurityCategoriesTable.osa.js';
+export { SecurityCategoriesTable } from '../MTSAbstractService/SecurityCategoriesTable.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityCategory */
 /**

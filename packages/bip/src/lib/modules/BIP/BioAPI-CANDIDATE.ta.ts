@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_CANDIDATE_bir,
   _decode_BioAPI_CANDIDATE_bir,
   _encode_BioAPI_CANDIDATE_bir,
-} from '../BIP/BioAPI-CANDIDATE-bir.ta';
+} from '../BIP/BioAPI-CANDIDATE-bir.ta.js';
 export {
   BioAPI_CANDIDATE_bir,
   _decode_BioAPI_CANDIDATE_bir,
   _encode_BioAPI_CANDIDATE_bir,
-} from '../BIP/BioAPI-CANDIDATE-bir.ta';
+} from '../BIP/BioAPI-CANDIDATE-bir.ta.js';
 import {
   BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
-} from '../BIP/BioAPI-FMR.ta';
+} from '../BIP/BioAPI-FMR.ta.js';
 export {
   BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
-} from '../BIP/BioAPI-FMR.ta';
+} from '../BIP/BioAPI-FMR.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_CANDIDATE */
 /**

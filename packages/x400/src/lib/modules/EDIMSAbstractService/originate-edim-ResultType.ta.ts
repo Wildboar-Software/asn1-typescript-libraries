@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
-} from '../MTSAbstractService/MessageSubmissionIdentifier.ta';
+} from '../MTSAbstractService/MessageSubmissionIdentifier.ta.js';
 export {
     MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
-} from '../MTSAbstractService/MessageSubmissionIdentifier.ta';
+} from '../MTSAbstractService/MessageSubmissionIdentifier.ta.js';
 import {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 export {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION originate_edim_ResultType */
 /**

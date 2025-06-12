@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NameType,
     _decode_NameType,
     _encode_NameType,
-} from '../X790ASN1Module/NameType.ta';
+} from '../X790ASN1Module/NameType.ta.js';
 export {
     NameType,
     _decode_NameType,
     _encode_NameType,
-} from '../X790ASN1Module/NameType.ta';
+} from '../X790ASN1Module/NameType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ServiceId */
 /**

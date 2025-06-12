@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthorizingUsersSubfield,
     _decode_AuthorizingUsersSubfield,
     _encode_AuthorizingUsersSubfield,
-} from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta';
+} from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta.js';
 export {
     AuthorizingUsersSubfield,
     _decode_AuthorizingUsersSubfield,
     _encode_AuthorizingUsersSubfield,
-} from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta';
+} from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthorizingUsersField */
 /**

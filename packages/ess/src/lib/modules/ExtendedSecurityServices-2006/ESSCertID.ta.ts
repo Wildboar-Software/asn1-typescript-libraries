@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from "../ExtendedSecurityServices-2006/Hash.ta";
+} from "../ExtendedSecurityServices-2006/Hash.ta.js";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../ExtendedSecurityServices-2006/IssuerSerial.ta";
+} from "../ExtendedSecurityServices-2006/IssuerSerial.ta.js";
 export {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from "../ExtendedSecurityServices-2006/Hash.ta";
+} from "../ExtendedSecurityServices-2006/Hash.ta.js";
 export {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../ExtendedSecurityServices-2006/IssuerSerial.ta";
+} from "../ExtendedSecurityServices-2006/IssuerSerial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ESSCertID */
 /**

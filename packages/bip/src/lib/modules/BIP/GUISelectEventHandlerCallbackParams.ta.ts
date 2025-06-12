@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
-} from '../BIP/MemoryAddress.ta';
+} from '../BIP/MemoryAddress.ta.js';
 export {
   MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
-} from '../BIP/MemoryAddress.ta';
+} from '../BIP/MemoryAddress.ta.js';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 import {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 export {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 import {
   BioAPI_GUI_ENROLL_TYPE,
   BioAPI_GUI_ENROLL_TYPE_testVerify /* IMPORTED_LONG_NAMED_BIT */,
@@ -114,7 +114,7 @@ import {
   multipleCapture /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_GUI_ENROLL_TYPE,
   _encode_BioAPI_GUI_ENROLL_TYPE,
-} from '../BIP/BioAPI-GUI-ENROLL-TYPE.ta';
+} from '../BIP/BioAPI-GUI-ENROLL-TYPE.ta.js';
 export {
   BioAPI_GUI_ENROLL_TYPE,
   BioAPI_GUI_ENROLL_TYPE_testVerify /* IMPORTED_LONG_NAMED_BIT */,
@@ -123,7 +123,7 @@ export {
   multipleCapture /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_GUI_ENROLL_TYPE,
   _encode_BioAPI_GUI_ENROLL_TYPE,
-} from '../BIP/BioAPI-GUI-ENROLL-TYPE.ta';
+} from '../BIP/BioAPI-GUI-ENROLL-TYPE.ta.js';
 import {
   BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
@@ -145,7 +145,7 @@ import {
   enroll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
-} from '../BIP/BioAPI-GUI-OPERATION.ta';
+} from '../BIP/BioAPI-GUI-OPERATION.ta.js';
 export {
   BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
@@ -167,7 +167,7 @@ export {
   enroll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
-} from '../BIP/BioAPI-GUI-OPERATION.ta';
+} from '../BIP/BioAPI-GUI-OPERATION.ta.js';
 import {
   BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
@@ -179,7 +179,7 @@ import {
   afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
-} from '../BIP/BioAPI-GUI-MOMENT.ta';
+} from '../BIP/BioAPI-GUI-MOMENT.ta.js';
 export {
   BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
@@ -191,27 +191,27 @@ export {
   afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
-} from '../BIP/BioAPI-GUI-MOMENT.ta';
+} from '../BIP/BioAPI-GUI-MOMENT.ta.js';
 import {
   BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
-} from '../BIP/BioAPI-RETURN.ta';
+} from '../BIP/BioAPI-RETURN.ta.js';
 export {
   BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
-} from '../BIP/BioAPI-RETURN.ta';
+} from '../BIP/BioAPI-RETURN.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 import {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -252,7 +252,7 @@ import {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 export {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -293,7 +293,7 @@ export {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GUISelectEventHandlerCallbackParams */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AlphaCode,
     _decode_AlphaCode,
     _encode_AlphaCode,
-} from '../IPMSHeadingExtensions/AlphaCode.ta';
+} from '../IPMSHeadingExtensions/AlphaCode.ta.js';
 export {
     AlphaCode,
     _decode_AlphaCode,
     _encode_AlphaCode,
-} from '../IPMSHeadingExtensions/AlphaCode.ta';
+} from '../IPMSHeadingExtensions/AlphaCode.ta.js';
 import {
     ORDescriptor,
     _decode_ORDescriptor,
     _encode_ORDescriptor,
-} from '../IPMSInformationObjects/ORDescriptor.ta';
+} from '../IPMSInformationObjects/ORDescriptor.ta.js';
 export {
     ORDescriptor,
     _decode_ORDescriptor,
     _encode_ORDescriptor,
-} from '../IPMSInformationObjects/ORDescriptor.ta';
+} from '../IPMSInformationObjects/ORDescriptor.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DistributionCode */
 /**

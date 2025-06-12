@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectName,
     _decode_ObjectName,
     _encode_ObjectName,
-} from '../MTSAbstractService/ObjectName.ta';
+} from '../MTSAbstractService/ObjectName.ta.js';
 export {
     ObjectName,
     _decode_ObjectName,
     _encode_ObjectName,
-} from '../MTSAbstractService/ObjectName.ta';
+} from '../MTSAbstractService/ObjectName.ta.js';
 import {
     MessagesWaiting,
     _decode_MessagesWaiting,
     _encode_MessagesWaiting,
-} from '../MTSAbstractService/MessagesWaiting.ta';
+} from '../MTSAbstractService/MessagesWaiting.ta.js';
 export {
     MessagesWaiting,
     _decode_MessagesWaiting,
     _encode_MessagesWaiting,
-} from '../MTSAbstractService/MessagesWaiting.ta';
+} from '../MTSAbstractService/MessagesWaiting.ta.js';
 import {
     ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
-} from '../MTSAbstractService/ResponderCredentials.ta';
+} from '../MTSAbstractService/ResponderCredentials.ta.js';
 export {
     ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
-} from '../MTSAbstractService/ResponderCredentials.ta';
+} from '../MTSAbstractService/ResponderCredentials.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MTSBindResult */
 /**

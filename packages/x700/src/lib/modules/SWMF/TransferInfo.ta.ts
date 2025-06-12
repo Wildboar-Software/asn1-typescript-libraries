@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca';
-export { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca';
-import { TransferInfoSet } from '../SWMF/TransferInfoSet.osa';
-export { TransferInfoSet } from '../SWMF/TransferInfoSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.js';
+export { SWMF_TRANSFER } from '../SWMF/SWMF-TRANSFER.oca.js';
+import { TransferInfoSet } from '../SWMF/TransferInfoSet.osa.js';
+export { TransferInfoSet } from '../SWMF/TransferInfoSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION TransferInfo */
 /**

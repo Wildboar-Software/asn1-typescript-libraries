@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshold_Item } from "../Attribute-ASN1Module/GaugeThreshold-Item.ta";
-export { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshold_Item } from "../Attribute-ASN1Module/GaugeThreshold-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshold_Item } from "../Attribute-ASN1Module/GaugeThreshold-Item.ta.js";
+export { GaugeThreshold_Item, _decode_GaugeThreshold_Item, _encode_GaugeThreshold_Item } from "../Attribute-ASN1Module/GaugeThreshold-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION GaugeThreshold */

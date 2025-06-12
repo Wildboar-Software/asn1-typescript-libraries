@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RequestType,
   _decode_RequestType,
   _encode_RequestType,
-} from '../CMAIL/RequestType.ta';
+} from '../CMAIL/RequestType.ta.js';
 export {
   RequestType,
   _decode_RequestType,
   _encode_RequestType,
-} from '../CMAIL/RequestType.ta';
+} from '../CMAIL/RequestType.ta.js';
 import {
   ResponseType,
   _decode_ResponseType,
   _encode_ResponseType,
-} from '../CMAIL/ResponseType.ta';
+} from '../CMAIL/ResponseType.ta.js';
 export {
   ResponseType,
   _decode_ResponseType,
   _encode_ResponseType,
-} from '../CMAIL/ResponseType.ta';
+} from '../CMAIL/ResponseType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecretQuestionType */
 /**

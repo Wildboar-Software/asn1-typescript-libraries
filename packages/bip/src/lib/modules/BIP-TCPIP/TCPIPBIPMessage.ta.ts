@@ -65,31 +65,31 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   TCPIPBIPMessage_version,
   TCPIPBIPMessage_version_version_1 /* IMPORTED_LONG_NAMED_INTEGER */,
   version_1 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_TCPIPBIPMessage_version,
   _encode_TCPIPBIPMessage_version,
-} from '../BIP-TCPIP/TCPIPBIPMessage-version.ta';
+} from '../BIP-TCPIP/TCPIPBIPMessage-version.ta.js';
 export {
   TCPIPBIPMessage_version,
   TCPIPBIPMessage_version_version_1 /* IMPORTED_LONG_NAMED_INTEGER */,
   version_1 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_TCPIPBIPMessage_version,
   _encode_TCPIPBIPMessage_version,
-} from '../BIP-TCPIP/TCPIPBIPMessage-version.ta';
+} from '../BIP-TCPIP/TCPIPBIPMessage-version.ta.js';
 import {
   TCPIPBIPMessage_content,
   _decode_TCPIPBIPMessage_content,
   _encode_TCPIPBIPMessage_content,
-} from '../BIP-TCPIP/TCPIPBIPMessage-content.ta';
+} from '../BIP-TCPIP/TCPIPBIPMessage-content.ta.js';
 export {
   TCPIPBIPMessage_content,
   _decode_TCPIPBIPMessage_content,
   _encode_TCPIPBIPMessage_content,
-} from '../BIP-TCPIP/TCPIPBIPMessage-content.ta';
+} from '../BIP-TCPIP/TCPIPBIPMessage-content.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TCPIPBIPMessage */
 /**

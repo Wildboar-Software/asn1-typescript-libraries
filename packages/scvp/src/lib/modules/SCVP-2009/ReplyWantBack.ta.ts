@@ -65,11 +65,11 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-import { AllWantBacks } from '../SCVP-2009/AllWantBacks.osa';
-export { AllWantBacks } from '../SCVP-2009/AllWantBacks.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+import { AllWantBacks } from '../SCVP-2009/AllWantBacks.osa.js';
+export { AllWantBacks } from '../SCVP-2009/AllWantBacks.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ReplyWantBack */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RefuseReason,
   RefuseReason_rtsBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
   unacceptableDialogueMode /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RefuseReason,
   _encode_RefuseReason,
-} from '../Reliable-Transfer-APDU/RefuseReason.ta';
+} from '../Reliable-Transfer-APDU/RefuseReason.ta.js';
 export {
   RefuseReason,
   RefuseReason_rtsBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,9 +91,9 @@ export {
   unacceptableDialogueMode /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RefuseReason,
   _encode_RefuseReason,
-} from '../Reliable-Transfer-APDU/RefuseReason.ta';
-import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
-export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
+} from '../Reliable-Transfer-APDU/RefuseReason.ta.js';
+import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
+export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION RTORJapdu */
 /**

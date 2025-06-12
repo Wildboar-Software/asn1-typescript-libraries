@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionTypeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionTypeId.ta.js';
 export {
     ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionTypeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionTypeId.ta.js';
 import {
     FilterList,
     _decode_FilterList,
     _encode_FilterList,
-} from '../AccessControl-ASN1Module/FilterList.ta';
+} from '../AccessControl-ASN1Module/FilterList.ta.js';
 export {
     FilterList,
     _decode_FilterList,
     _encode_FilterList,
-} from '../AccessControl-ASN1Module/FilterList.ta';
+} from '../AccessControl-ASN1Module/FilterList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ActionFilterList_Item */
 /**

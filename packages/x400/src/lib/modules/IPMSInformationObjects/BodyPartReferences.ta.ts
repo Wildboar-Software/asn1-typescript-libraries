@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
-} from '../IPMSInformationObjects/BodyPartReference.ta';
+} from '../IPMSInformationObjects/BodyPartReference.ta.js';
 export {
     BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
-} from '../IPMSInformationObjects/BodyPartReference.ta';
+} from '../IPMSInformationObjects/BodyPartReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartReferences */
 /**

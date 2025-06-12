@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     E_terminateError,
     _decode_E_terminateError,
     _encode_E_terminateError,
-} from '../E-health-common/E-terminateError.ta';
+} from '../E-health-common/E-terminateError.ta.js';
 export {
     E_terminateError,
     _decode_E_terminateError,
     _encode_E_terminateError,
-} from '../E-health-common/E-terminateError.ta';
-import { id_health_term_err } from '../E-health-common/id-health-term-err.va';
-export { id_health_term_err } from '../E-health-common/id-health-term-err.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../E-health-common/E-terminateError.ta.js';
+import { id_health_term_err } from '../E-health-common/id-health-term-err.va.js';
+export { id_health_term_err } from '../E-health-common/id-health-term-err.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION health_term_err */
 /**

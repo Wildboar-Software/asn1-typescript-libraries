@@ -4,37 +4,37 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SingleAttribute,
     _decode_SingleAttribute,
     _encode_SingleAttribute,
-} from "../PKIX-CommonTypes-2009/SingleAttribute.ta";
+} from "../PKIX-CommonTypes-2009/SingleAttribute.ta.js";
 import {
     CertRequest,
     _decode_CertRequest,
     _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta";
+} from "../PKIXCRMF-2009/CertRequest.ta.js";
 import {
     ProofOfPossession,
     _decode_ProofOfPossession,
     _encode_ProofOfPossession,
-} from "../PKIXCRMF-2009/ProofOfPossession.ta";
+} from "../PKIXCRMF-2009/ProofOfPossession.ta.js";
 export {
     SingleAttribute,
     _decode_SingleAttribute,
     _encode_SingleAttribute,
-} from "../PKIX-CommonTypes-2009/SingleAttribute.ta";
+} from "../PKIX-CommonTypes-2009/SingleAttribute.ta.js";
 export {
     CertRequest,
     _decode_CertRequest,
     _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta";
+} from "../PKIXCRMF-2009/CertRequest.ta.js";
 export {
     ProofOfPossession,
     _decode_ProofOfPossession,
     _encode_ProofOfPossession,
-} from "../PKIXCRMF-2009/ProofOfPossession.ta";
+} from "../PKIXCRMF-2009/ProofOfPossession.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReqMsg */
 /**

@@ -5,23 +5,23 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessControlRule,
     _decode_AccessControlRule,
     _encode_AccessControlRule,
-} from "../PKCS-15/AccessControlRule.ta";
+} from "../PKCS-15/AccessControlRule.ta.js";
 import {
     CommonObjectFlags,
     _decode_CommonObjectFlags,
     _encode_CommonObjectFlags,
-} from "../PKCS-15/CommonObjectFlags.ta";
+} from "../PKCS-15/CommonObjectFlags.ta.js";
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
+} from "../PKCS-15/Identifier.ta.js";
+import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonObjectAttributes */
 /**

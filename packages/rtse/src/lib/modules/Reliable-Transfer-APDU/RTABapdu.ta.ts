@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AbortReason,
   AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
   transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_AbortReason,
   _encode_AbortReason,
-} from '../Reliable-Transfer-APDU/AbortReason.ta';
+} from '../Reliable-Transfer-APDU/AbortReason.ta.js';
 export {
   AbortReason,
   AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -107,9 +107,9 @@ export {
   transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_AbortReason,
   _encode_AbortReason,
-} from '../Reliable-Transfer-APDU/AbortReason.ta';
-import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
-export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca';
+} from '../Reliable-Transfer-APDU/AbortReason.ta.js';
+import { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
+export { OPEN } from '../Reliable-Transfer-APDU/OPEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION RTABapdu */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PrivAssignErr,
     _decode_PrivAssignErr,
     _encode_PrivAssignErr,
-} from '../Pbact-access/PrivAssignErr.ta';
+} from '../Pbact-access/PrivAssignErr.ta.js';
 export {
     PrivAssignErr,
     _decode_PrivAssignErr,
     _encode_PrivAssignErr,
-} from '../Pbact-access/PrivAssignErr.ta';
+} from '../Pbact-access/PrivAssignErr.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PrivAssignResult_result */
 /**

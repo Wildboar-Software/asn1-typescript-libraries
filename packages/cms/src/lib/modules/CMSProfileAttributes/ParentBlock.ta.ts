@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HashPointer,
     _decode_HashPointer,
     _encode_HashPointer,
-} from "../CMSProfileAttributes/HashPointer.ta";
+} from "../CMSProfileAttributes/HashPointer.ta.js";
 export {
     HashPointer,
     _decode_HashPointer,
     _encode_HashPointer,
-} from "../CMSProfileAttributes/HashPointer.ta";
+} from "../CMSProfileAttributes/HashPointer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ParentBlock */
 /**

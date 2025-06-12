@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SMIMECapability,
     _decode_SMIMECapability,
     _encode_SMIMECapability,
-} from "../AlgorithmInformation-2009/SMIMECapability.ta";
+} from "../AlgorithmInformation-2009/SMIMECapability.ta.js";
 export {
     SMIMECapability,
     _decode_SMIMECapability,
     _encode_SMIMECapability,
-} from "../AlgorithmInformation-2009/SMIMECapability.ta";
+} from "../AlgorithmInformation-2009/SMIMECapability.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SMIMECapabilities */
 /**

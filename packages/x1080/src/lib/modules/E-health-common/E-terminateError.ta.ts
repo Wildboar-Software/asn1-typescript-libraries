@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 export {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 import {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 import {
     TerminateError,
     _enum_for_TerminateError,
@@ -97,7 +97,7 @@ import {
     invalidSessionId /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TerminateError,
     _encode_TerminateError,
-} from '../E-health-common/TerminateError.ta';
+} from '../E-health-common/TerminateError.ta.js';
 export {
     TerminateError,
     _enum_for_TerminateError,
@@ -109,7 +109,7 @@ export {
     invalidSessionId /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TerminateError,
     _encode_TerminateError,
-} from '../E-health-common/TerminateError.ta';
+} from '../E-health-common/TerminateError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION E_terminateError */
 /**

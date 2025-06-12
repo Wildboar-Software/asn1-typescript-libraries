@@ -65,13 +65,13 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-import { probe } from '../Remote-Operations-Useful-Definitions/probe.oa';
-export { probe } from '../Remote-Operations-Useful-Definitions/probe.oa';
-import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa';
-export { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { probe } from '../Remote-Operations-Useful-Definitions/probe.oa.js';
+export { probe } from '../Remote-Operations-Useful-Definitions/probe.oa.js';
+import { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa.js';
+export { acknowledge } from '../Remote-Operations-Useful-Definitions/acknowledge.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION ProbeAndAcknowledge */
 /**

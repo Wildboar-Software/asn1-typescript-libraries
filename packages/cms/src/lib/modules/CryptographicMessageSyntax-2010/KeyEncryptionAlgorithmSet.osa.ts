@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-import { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgs.osa";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-export { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgs.osa";
+import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+import { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgs.osa.js";
+export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+export { KeyWrapAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgs.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyEncryptionAlgorithmSet */
 /**

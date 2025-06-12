@@ -1,14 +1,14 @@
-import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
+import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
 import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue";
-import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta";
-import { PartialAttribute } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta";
-import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta";
-import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta";
-import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta";
+import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.js";
+import { PartialAttribute } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.js";
+import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.js";
+import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.js";
+import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.js";
 import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "asn1-ts";
-import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta";
+import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js";
 import SubstringSelection from "../lib/types/SubstringSelection";
 
 // Filter ::= CHOICE {

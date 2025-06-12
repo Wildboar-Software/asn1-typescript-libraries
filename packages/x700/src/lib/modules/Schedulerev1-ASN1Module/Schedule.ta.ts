@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceOfDays,
     _decode_SequenceOfDays,
     _encode_SequenceOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta.js';
 export {
     SequenceOfDays,
     _decode_SequenceOfDays,
     _encode_SequenceOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfDays.ta.js';
 import {
     SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
-} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.js';
 export {
     SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
-} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.js';
 import {
     SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
-} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.js';
 export {
     SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
-} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.js';
 import {
     SequenceOfTypeOfDays,
     _decode_SequenceOfTypeOfDays,
     _encode_SequenceOfTypeOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta.js';
 export {
     SequenceOfTypeOfDays,
     _decode_SequenceOfTypeOfDays,
     _encode_SequenceOfTypeOfDays,
-} from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Schedule */
 /**

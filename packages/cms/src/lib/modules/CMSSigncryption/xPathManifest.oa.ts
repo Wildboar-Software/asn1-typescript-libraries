@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { xPath } from "../CMSObjectIdentifiers/xPath.va";
-import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca";
+import { xPath } from "../CMSObjectIdentifiers/xPath.va.js";
+import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.js";
 import {
     XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
-} from "../CMSSigncryption/XPathSet.ta";
-export { xPath } from "../CMSObjectIdentifiers/xPath.va";
-export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca";
+} from "../CMSSigncryption/XPathSet.ta.js";
+export { xPath } from "../CMSObjectIdentifiers/xPath.va.js";
+export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.js";
 export {
     XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
-} from "../CMSSigncryption/XPathSet.ta";
+} from "../CMSSigncryption/XPathSet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION xPathManifest */
 /**

@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     Digest,
     _decode_Digest,
     _encode_Digest,
-} from "../CryptographicMessageSyntax-2010/Digest.ta";
+} from "../CryptographicMessageSyntax-2010/Digest.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -41,22 +41,22 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     Digest,
     _decode_Digest,
     _encode_Digest,
-} from "../CryptographicMessageSyntax-2010/Digest.ta";
+} from "../CryptographicMessageSyntax-2010/Digest.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 export {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DigestedData */
 /**

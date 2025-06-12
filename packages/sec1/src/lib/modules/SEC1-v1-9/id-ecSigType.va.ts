@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va";
-export { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.js";
+export { ansi_X9_62 } from "../SEC1-v1-9/ansi-X9-62.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION id_ecSigType */

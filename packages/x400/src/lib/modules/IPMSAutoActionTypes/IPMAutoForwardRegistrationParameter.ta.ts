@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 import {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 export {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 import {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 export {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 import {
     BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
-} from '../IPMSInformationObjects/BodyPart.ta';
+} from '../IPMSInformationObjects/BodyPart.ta.js';
 export {
     BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
-} from '../IPMSInformationObjects/BodyPart.ta';
+} from '../IPMSInformationObjects/BodyPart.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 import {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 export {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 import {
     IPMAutoForwardOptions,
     IPMAutoForwardOptions_forward_all_object_types /* IMPORTED_LONG_NAMED_BIT */,
@@ -142,7 +142,7 @@ import {
     delete_delivered_object /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_IPMAutoForwardOptions,
     _encode_IPMAutoForwardOptions,
-} from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta';
+} from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.js';
 export {
     IPMAutoForwardOptions,
     IPMAutoForwardOptions_forward_all_object_types /* IMPORTED_LONG_NAMED_BIT */,
@@ -159,7 +159,7 @@ export {
     delete_delivered_object /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_IPMAutoForwardOptions,
     _encode_IPMAutoForwardOptions,
-} from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta';
+} from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMAutoForwardRegistrationParameter */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SpecifiedECDomain,
     _decode_SpecifiedECDomain,
     _encode_SpecifiedECDomain,
-} from "../ANSI-X9-62/SpecifiedECDomain.ta";
-export { ANSIX9NamedDomains } from "../ANSI-X9-62/ANSIX9NamedDomains.osa";
-export { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca";
+} from "../ANSI-X9-62/SpecifiedECDomain.ta.js";
+export { ANSIX9NamedDomains } from "../ANSI-X9-62/ANSIX9NamedDomains.osa.js";
+export { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.js";
 export {
     SpecifiedECDomain,
     _decode_SpecifiedECDomain,
     _encode_SpecifiedECDomain,
-} from "../ANSI-X9-62/SpecifiedECDomain.ta";
+} from "../ANSI-X9-62/SpecifiedECDomain.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ECDomainParameters */
 /**

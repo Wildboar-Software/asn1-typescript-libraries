@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_WRITE_request_file_access_data_unit_Operation,
   F_WRITE_request_file_access_data_unit_Operation_insert /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   extend /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_WRITE_request_file_access_data_unit_Operation,
   _encode_F_WRITE_request_file_access_data_unit_Operation,
-} from '../ISO8571-FTAM/F-WRITE-request-file-access-data-unit-Operation.ta';
+} from '../ISO8571-FTAM/F-WRITE-request-file-access-data-unit-Operation.ta.js';
 export {
   F_WRITE_request_file_access_data_unit_Operation,
   F_WRITE_request_file_access_data_unit_Operation_insert /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,27 +87,27 @@ export {
   extend /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_WRITE_request_file_access_data_unit_Operation,
   _encode_F_WRITE_request_file_access_data_unit_Operation,
-} from '../ISO8571-FTAM/F-WRITE-request-file-access-data-unit-Operation.ta';
+} from '../ISO8571-FTAM/F-WRITE-request-file-access-data-unit-Operation.ta.js';
 import {
   FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
-} from '../ISO8571-FTAM/FADU-Identity.ta';
+} from '../ISO8571-FTAM/FADU-Identity.ta.js';
 export {
   FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
-} from '../ISO8571-FTAM/FADU-Identity.ta';
+} from '../ISO8571-FTAM/FADU-Identity.ta.js';
 import {
   FADU_Lock,
   _decode_FADU_Lock,
   _encode_FADU_Lock,
-} from '../ISO8571-FTAM/FADU-Lock.ta';
+} from '../ISO8571-FTAM/FADU-Lock.ta.js';
 export {
   FADU_Lock,
   _decode_FADU_Lock,
   _encode_FADU_Lock,
-} from '../ISO8571-FTAM/FADU-Lock.ta';
+} from '../ISO8571-FTAM/FADU-Lock.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_WRITE_request */
 /**

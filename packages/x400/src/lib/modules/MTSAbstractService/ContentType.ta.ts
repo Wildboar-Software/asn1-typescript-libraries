@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BuiltInContentType,
     _decode_BuiltInContentType,
     _encode_BuiltInContentType,
-} from '../MTSAbstractService/BuiltInContentType.ta';
+} from '../MTSAbstractService/BuiltInContentType.ta.js';
 export {
     BuiltInContentType,
     _decode_BuiltInContentType,
     _encode_BuiltInContentType,
-} from '../MTSAbstractService/BuiltInContentType.ta';
+} from '../MTSAbstractService/BuiltInContentType.ta.js';
 import {
     ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
-} from '../MTSAbstractService/ExtendedContentType.ta';
+} from '../MTSAbstractService/ExtendedContentType.ta.js';
 export {
     ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
-} from '../MTSAbstractService/ExtendedContentType.ta';
+} from '../MTSAbstractService/ExtendedContentType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ContentType */
 /**

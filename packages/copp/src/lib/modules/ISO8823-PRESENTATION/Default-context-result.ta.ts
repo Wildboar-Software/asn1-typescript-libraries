@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Result,
     Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Result,
     _encode_Result,
-} from '../ISO8823-PRESENTATION/Result.ta';
+} from '../ISO8823-PRESENTATION/Result.ta.js';
 export {
     Result,
     Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Result,
     _encode_Result,
-} from '../ISO8823-PRESENTATION/Result.ta';
+} from '../ISO8823-PRESENTATION/Result.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Default_context_result */
 /**

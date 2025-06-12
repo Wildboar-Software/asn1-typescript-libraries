@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MS_EITs,
     _decode_MS_EITs,
     _encode_MS_EITs,
-} from '../MSAbstractService/MS-EITs.ta';
+} from '../MSAbstractService/MS-EITs.ta.js';
 export {
     MS_EITs,
     _decode_MS_EITs,
     _encode_MS_EITs,
-} from '../MSAbstractService/MS-EITs.ta';
+} from '../MSAbstractService/MS-EITs.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item_restriction */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KRB_SAFE_BODY,
   _decode_KRB_SAFE_BODY,
   _encode_KRB_SAFE_BODY,
-} from '../KerberosV5Spec2/KRB-SAFE-BODY.ta';
+} from '../KerberosV5Spec2/KRB-SAFE-BODY.ta.js';
 export {
   KRB_SAFE_BODY,
   _decode_KRB_SAFE_BODY,
   _encode_KRB_SAFE_BODY,
-} from '../KerberosV5Spec2/KRB-SAFE-BODY.ta';
+} from '../KerberosV5Spec2/KRB-SAFE-BODY.ta.js';
 import {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 export {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KRB_SAFE */
 /**

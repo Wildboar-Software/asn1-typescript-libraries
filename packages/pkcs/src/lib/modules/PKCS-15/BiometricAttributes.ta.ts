@@ -6,23 +6,23 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     BiometricFlags,
     _decode_BiometricFlags,
     _encode_BiometricFlags,
-} from "../PKCS-15/BiometricFlags.ta";
+} from "../PKCS-15/BiometricFlags.ta.js";
 import {
     BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
-} from "../PKCS-15/BiometricType.ta";
-import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+} from "../PKCS-15/BiometricType.ta.js";
+import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 import {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 export {
     BiometricFlags,
     BiometricFlags_change_disabled /* IMPORTED_LONG_NAMED_BIT */,
@@ -41,18 +41,18 @@ export {
     unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_BiometricFlags,
     _encode_BiometricFlags,
-} from "../PKCS-15/BiometricFlags.ta";
+} from "../PKCS-15/BiometricFlags.ta.js";
 export {
     BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
-} from "../PKCS-15/BiometricType.ta";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+} from "../PKCS-15/BiometricType.ta.js";
+export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 export {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BiometricAttributes */
 /**

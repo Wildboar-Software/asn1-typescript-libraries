@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UNIT_SCHEMA,
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
-} from '../BIP/BioAPI-UNIT-SCHEMA.ta';
+} from '../BIP/BioAPI-UNIT-SCHEMA.ta.js';
 export {
   BioAPI_UNIT_SCHEMA,
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
-} from '../BIP/BioAPI-UNIT-SCHEMA.ta';
+} from '../BIP/BioAPI-UNIT-SCHEMA.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION QueryUnits_ResponseParams */
 /**

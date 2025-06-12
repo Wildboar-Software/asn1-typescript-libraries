@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     auto_action_request_error_ParameterType_problems_Item,
     _decode_auto_action_request_error_ParameterType_problems_Item,
     _encode_auto_action_request_error_ParameterType_problems_Item,
-} from '../MSAbstractService/auto-action-request-error-ParameterType-problems-Item.ta';
+} from '../MSAbstractService/auto-action-request-error-ParameterType-problems-Item.ta.js';
 export {
     auto_action_request_error_ParameterType_problems_Item,
     _decode_auto_action_request_error_ParameterType_problems_Item,
     _encode_auto_action_request_error_ParameterType_problems_Item,
-} from '../MSAbstractService/auto-action-request-error-ParameterType-problems-Item.ta';
+} from '../MSAbstractService/auto-action-request-error-ParameterType-problems-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION auto_action_request_error_ParameterType */
 /**

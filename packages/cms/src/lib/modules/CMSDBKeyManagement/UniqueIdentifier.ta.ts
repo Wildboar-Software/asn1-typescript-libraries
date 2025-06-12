@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     UniqueID,
     _decode_UniqueID,
     _encode_UniqueID,
-} from "../CMSDBKeyManagement/UniqueID.ta";
+} from "../CMSDBKeyManagement/UniqueID.ta.js";
 export {
     UniqueID,
     _decode_UniqueID,
     _encode_UniqueID,
-} from "../CMSDBKeyManagement/UniqueID.ta";
+} from "../CMSDBKeyManagement/UniqueID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UniqueIdentifier */
 /**

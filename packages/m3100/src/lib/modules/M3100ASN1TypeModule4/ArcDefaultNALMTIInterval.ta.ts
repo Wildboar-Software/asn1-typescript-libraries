@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
-} from '../M3100ASN1TypeModule4/ArcTime.ta';
+} from '../M3100ASN1TypeModule4/ArcTime.ta.js';
 export {
     ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
-} from '../M3100ASN1TypeModule4/ArcTime.ta';
+} from '../M3100ASN1TypeModule4/ArcTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ArcDefaultNALMTIInterval */
 /**

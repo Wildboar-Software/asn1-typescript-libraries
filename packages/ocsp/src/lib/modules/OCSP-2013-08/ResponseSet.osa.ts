@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { basicResponse } from "../OCSP-2013-08/basicResponse.oa";
-import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca";
-export { basicResponse } from "../OCSP-2013-08/basicResponse.oa";
-export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca";
+import { basicResponse } from "../OCSP-2013-08/basicResponse.oa.js";
+import { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.js";
+export { basicResponse } from "../OCSP-2013-08/basicResponse.oa.js";
+export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ResponseSet */
 /**

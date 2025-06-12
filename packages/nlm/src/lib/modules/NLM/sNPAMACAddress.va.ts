@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { sseoi } from '../NLM/sseoi.va';
-export { sseoi } from '../NLM/sseoi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { sseoi } from '../NLM/sseoi.va.js';
+export { sseoi } from '../NLM/sseoi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION sNPAMACAddress */
 /**

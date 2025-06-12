@@ -1,40 +1,40 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Address,
     _decode_Address,
     _encode_Address,
-} from "../CMSProfileAttributes/Address.ta";
+} from "../CMSProfileAttributes/Address.ta.js";
 import {
     DBRecord,
     _decode_DBRecord,
     _encode_DBRecord,
-} from "../CMSProfileAttributes/DBRecord.ta";
-import { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta";
+} from "../CMSProfileAttributes/DBRecord.ta.js";
+import { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta.js";
 import {
     RFID,
     _decode_RFID,
     _encode_RFID,
-} from "../CMSProfileAttributes/RFID.ta";
-import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta";
+} from "../CMSProfileAttributes/RFID.ta.js";
+import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.js";
 export {
     Address,
     _decode_Address,
     _encode_Address,
-} from "../CMSProfileAttributes/Address.ta";
+} from "../CMSProfileAttributes/Address.ta.js";
 export {
     DBRecord,
     _decode_DBRecord,
     _encode_DBRecord,
-} from "../CMSProfileAttributes/DBRecord.ta";
-export { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta";
+} from "../CMSProfileAttributes/DBRecord.ta.js";
+export { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta.js";
 export {
     RFID,
     _decode_RFID,
     _encode_RFID,
-} from "../CMSProfileAttributes/RFID.ta";
-export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta";
+} from "../CMSProfileAttributes/RFID.ta.js";
+export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Pointer */
 /**

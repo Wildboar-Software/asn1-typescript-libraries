@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BindingError_integer,
     BindingError_integer_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     unacceptable_security_context /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_BindingError_integer,
     _encode_BindingError_integer,
-} from '../MhsAcctAsn1Module/BindingError-integer.ta';
+} from '../MhsAcctAsn1Module/BindingError-integer.ta.js';
 export {
     BindingError_integer,
     BindingError_integer_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,17 +91,17 @@ export {
     unacceptable_security_context /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_BindingError_integer,
     _encode_BindingError_integer,
-} from '../MhsAcctAsn1Module/BindingError-integer.ta';
+} from '../MhsAcctAsn1Module/BindingError-integer.ta.js';
 import {
     MSBindError,
     _decode_MSBindError,
     _encode_MSBindError,
-} from '../MhsAcctAsn1Module/MSBindError.ta';
+} from '../MhsAcctAsn1Module/MSBindError.ta.js';
 export {
     MSBindError,
     _decode_MSBindError,
     _encode_MSBindError,
-} from '../MhsAcctAsn1Module/MSBindError.ta';
+} from '../MhsAcctAsn1Module/MSBindError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BindingError */
 /**

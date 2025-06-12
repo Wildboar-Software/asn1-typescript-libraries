@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 export {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 import {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 export {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 import {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 export {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION change_auto_forwarding_ArgumentType */
 /**

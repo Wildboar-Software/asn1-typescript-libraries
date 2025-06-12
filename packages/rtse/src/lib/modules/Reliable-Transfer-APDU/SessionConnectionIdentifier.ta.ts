@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CallingSSuserReference,
   _decode_CallingSSuserReference,
   _encode_CallingSSuserReference,
-} from '../Reliable-Transfer-APDU/CallingSSuserReference.ta';
+} from '../Reliable-Transfer-APDU/CallingSSuserReference.ta.js';
 export {
   CallingSSuserReference,
   _decode_CallingSSuserReference,
   _encode_CallingSSuserReference,
-} from '../Reliable-Transfer-APDU/CallingSSuserReference.ta';
+} from '../Reliable-Transfer-APDU/CallingSSuserReference.ta.js';
 import {
   CommonReference,
   _decode_CommonReference,
   _encode_CommonReference,
-} from '../Reliable-Transfer-APDU/CommonReference.ta';
+} from '../Reliable-Transfer-APDU/CommonReference.ta.js';
 export {
   CommonReference,
   _decode_CommonReference,
   _encode_CommonReference,
-} from '../Reliable-Transfer-APDU/CommonReference.ta';
+} from '../Reliable-Transfer-APDU/CommonReference.ta.js';
 import {
   AdditionalReferenceInformation,
   _decode_AdditionalReferenceInformation,
   _encode_AdditionalReferenceInformation,
-} from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta';
+} from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta.js';
 export {
   AdditionalReferenceInformation,
   _decode_AdditionalReferenceInformation,
   _encode_AdditionalReferenceInformation,
-} from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta';
+} from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SessionConnectionIdentifier */
 /**

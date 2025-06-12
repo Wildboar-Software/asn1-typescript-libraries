@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca';
-export { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.js';
+export { CMIP_ATTRIBUTE } from '../CMIP-1/CMIP-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeSet */
 /**

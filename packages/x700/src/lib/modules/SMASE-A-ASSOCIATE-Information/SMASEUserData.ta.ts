@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FunctionalUnitPackage,
     _decode_FunctionalUnitPackage,
     _encode_FunctionalUnitPackage,
-} from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta';
+} from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta.js';
 export {
     FunctionalUnitPackage,
     _decode_FunctionalUnitPackage,
     _encode_FunctionalUnitPackage,
-} from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta';
+} from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta.js';
 import {
     Reason,
     Reason_smfusNotSupported /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     smfuNegotiationRefused /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Reason,
     _encode_Reason,
-} from '../SMASE-A-ASSOCIATE-Information/Reason.ta';
+} from '../SMASE-A-ASSOCIATE-Information/Reason.ta.js';
 export {
     Reason,
     Reason_smfusNotSupported /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -101,7 +101,7 @@ export {
     smfuNegotiationRefused /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Reason,
     _encode_Reason,
-} from '../SMASE-A-ASSOCIATE-Information/Reason.ta';
+} from '../SMASE-A-ASSOCIATE-Information/Reason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SMASEUserData */
 /**

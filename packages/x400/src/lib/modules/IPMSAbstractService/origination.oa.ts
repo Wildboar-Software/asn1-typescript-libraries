@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { originate_probe } from '../IPMSAbstractService/originate-probe.oa';
-export { originate_probe } from '../IPMSAbstractService/originate-probe.oa';
-import { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa';
-export { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa';
-import { originate_rn } from '../IPMSAbstractService/originate-rn.oa';
-export { originate_rn } from '../IPMSAbstractService/originate-rn.oa';
-import { originate_on } from '../IPMSAbstractService/originate-on.oa';
-export { originate_on } from '../IPMSAbstractService/originate-on.oa';
-import { id_pt_origination } from '../IPMSObjectIdentifiers/id-pt-origination.va';
-export { id_pt_origination } from '../IPMSObjectIdentifiers/id-pt-origination.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { originate_probe } from '../IPMSAbstractService/originate-probe.oa.js';
+export { originate_probe } from '../IPMSAbstractService/originate-probe.oa.js';
+import { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa.js';
+export { originate_ipm } from '../IPMSAbstractService/originate-ipm.oa.js';
+import { originate_rn } from '../IPMSAbstractService/originate-rn.oa.js';
+export { originate_rn } from '../IPMSAbstractService/originate-rn.oa.js';
+import { originate_on } from '../IPMSAbstractService/originate-on.oa.js';
+export { originate_on } from '../IPMSAbstractService/originate-on.oa.js';
+import { id_pt_origination } from '../IPMSObjectIdentifiers/id-pt-origination.va.js';
+export { id_pt_origination } from '../IPMSObjectIdentifiers/id-pt-origination.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION origination */
 /**

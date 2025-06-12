@@ -1,7 +1,7 @@
-import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
-import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta";
-import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta";
-import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta";
+import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
+import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.js";
+import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.js";
+import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.js";
 
 const mustBeEscaped = new Set([
     "\x00",

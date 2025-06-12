@@ -5,27 +5,27 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterKeyAlgorithmIdentifier,
     _decode_MasterKeyAlgorithmIdentifier,
     _encode_MasterKeyAlgorithmIdentifier,
-} from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta";
+} from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta.js";
 import {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.js";
 export {
     MasterKeyAlgorithmIdentifier,
     _decode_MasterKeyAlgorithmIdentifier,
     _encode_MasterKeyAlgorithmIdentifier,
-} from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta";
+} from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta.js";
 export {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta";
+} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MasterKeyEncryptedHMACkey */
 /**

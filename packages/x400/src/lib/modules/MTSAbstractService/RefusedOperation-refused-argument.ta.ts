@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RefusedArgument,
     RefusedArgument_user_name /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -102,7 +102,7 @@ import {
     permissible_security_context /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefusedArgument,
     _encode_RefusedArgument,
-} from '../MTSAbstractService/RefusedArgument.ta';
+} from '../MTSAbstractService/RefusedArgument.ta.js';
 export {
     RefusedArgument,
     RefusedArgument_user_name /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -139,14 +139,14 @@ export {
     permissible_security_context /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefusedArgument,
     _encode_RefusedArgument,
-} from '../MTSAbstractService/RefusedArgument.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
+} from '../MTSAbstractService/RefusedArgument.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
 import {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from "./ExtensionType.ta";
+} from "./ExtensionType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RefusedOperation_refused_argument */
 /**

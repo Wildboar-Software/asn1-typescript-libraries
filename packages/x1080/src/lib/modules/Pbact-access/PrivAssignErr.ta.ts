@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CmsErrorCode,
     _enum_for_CmsErrorCode,
@@ -157,7 +157,7 @@ import {
     other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CmsErrorCode,
     _encode_CmsErrorCode,
-} from '../CmsTelebiometric/CmsErrorCode.ta';
+} from '../CmsTelebiometric/CmsErrorCode.ta.js';
 export {
     CmsErrorCode,
     _enum_for_CmsErrorCode,
@@ -249,7 +249,7 @@ export {
     other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CmsErrorCode,
     _encode_CmsErrorCode,
-} from '../CmsTelebiometric/CmsErrorCode.ta';
+} from '../CmsTelebiometric/CmsErrorCode.ta.js';
 import {
     AssignErr,
     _enum_for_AssignErr,
@@ -257,7 +257,7 @@ import {
     invalidAttributeCertificate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AssignErr,
     _encode_AssignErr,
-} from '../Pbact-access/AssignErr.ta';
+} from '../Pbact-access/AssignErr.ta.js';
 export {
     AssignErr,
     _enum_for_AssignErr,
@@ -265,7 +265,7 @@ export {
     invalidAttributeCertificate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AssignErr,
     _encode_AssignErr,
-} from '../Pbact-access/AssignErr.ta';
+} from '../Pbact-access/AssignErr.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PrivAssignErr */
 /**

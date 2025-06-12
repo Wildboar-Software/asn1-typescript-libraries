@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -83,7 +83,7 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
 export {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -97,23 +97,23 @@ export {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     AddressCapabilities,
     _decode_AddressCapabilities,
     _encode_AddressCapabilities,
-} from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta';
+} from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta.js';
 export {
     AddressCapabilities,
     _decode_AddressCapabilities,
     _encode_AddressCapabilities,
-} from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta';
-import { addressCapabilitiesMatch } from '../MHSDirectoryObjectsAndAttributes/addressCapabilitiesMatch.oa';
-export { addressCapabilitiesMatch } from '../MHSDirectoryObjectsAndAttributes/addressCapabilitiesMatch.oa';
-import { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses-with-capabilities.va';
-export { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses-with-capabilities.va';
+} from '../MHSDirectoryObjectsAndAttributes/AddressCapabilities.ta.js';
+import { addressCapabilitiesMatch } from '../MHSDirectoryObjectsAndAttributes/addressCapabilitiesMatch.oa.js';
+export { addressCapabilitiesMatch } from '../MHSDirectoryObjectsAndAttributes/addressCapabilitiesMatch.oa.js';
+import { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses-with-capabilities.va.js';
+export { id_at_mhs_or_addresses_with_capabilities } from '../MHSObjectIdentifiers/id-at-mhs-or-addresses-with-capabilities.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mhs_or_addresses_with_capabilities */
 /**

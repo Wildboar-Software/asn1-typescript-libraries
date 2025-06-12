@@ -5,8 +5,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 /**

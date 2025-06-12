@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSProtocolObjectIdentifiers/ID.ta';
+} from '../MHSProtocolObjectIdentifiers/ID.ta.js';
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSProtocolObjectIdentifiers/ID.ta';
-import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va';
-export { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va';
+} from '../MHSProtocolObjectIdentifiers/ID.ta.js';
+import { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.js';
+export { id_as } from '../MHSProtocolObjectIdentifiers/id-as.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_as_ms_88 */
 /**

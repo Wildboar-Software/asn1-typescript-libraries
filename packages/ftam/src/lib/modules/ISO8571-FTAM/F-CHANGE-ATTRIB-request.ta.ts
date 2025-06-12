@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 export {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_CHANGE_ATTRIB_request */
 /**

@@ -6,47 +6,47 @@ import {
     NULL,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
-} from "../PKCS-15/KeyInfo.ta";
+} from "../PKCS-15/KeyInfo.ta.js";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 import {
     PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
-} from "../PKCS-15/PublicKeyOperations.ta";
+} from "../PKCS-15/PublicKeyOperations.ta.js";
 import {
     RSAPrivateKeyObject,
     _decode_RSAPrivateKeyObject,
     _encode_RSAPrivateKeyObject,
-} from "../PKCS-15/RSAPrivateKeyObject.ta";
+} from "../PKCS-15/RSAPrivateKeyObject.ta.js";
 export {
     KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
-} from "../PKCS-15/KeyInfo.ta";
+} from "../PKCS-15/KeyInfo.ta.js";
 export {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 export {
     PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
-} from "../PKCS-15/PublicKeyOperations.ta";
+} from "../PKCS-15/PublicKeyOperations.ta.js";
 export {
     RSAPrivateKeyObject,
     _decode_RSAPrivateKeyObject,
     _encode_RSAPrivateKeyObject,
-} from "../PKCS-15/RSAPrivateKeyObject.ta";
+} from "../PKCS-15/RSAPrivateKeyObject.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PrivateRSAKeyAttributes */
 /**

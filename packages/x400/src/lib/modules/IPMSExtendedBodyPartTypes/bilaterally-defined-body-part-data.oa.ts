@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
-} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.js';
 export {
     BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
-} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta';
-import { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilaterally-defined.va';
-export { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilaterally-defined.va';
+} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.js';
+import { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilaterally-defined.va.js';
+export { id_et_bilaterally_defined } from '../IPMSObjectIdentifiers/id-et-bilaterally-defined.va.js';
 
 /* START_OF_SYMBOL_DEFINITION bilaterally_defined_body_part_data */
 /**

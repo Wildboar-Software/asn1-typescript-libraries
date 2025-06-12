@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReportDeliveryEnvelope,
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
-} from '../MTSAbstractService/ReportDeliveryEnvelope.ta';
+} from '../MTSAbstractService/ReportDeliveryEnvelope.ta.js';
 export {
     ReportDeliveryEnvelope,
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
-} from '../MTSAbstractService/ReportDeliveryEnvelope.ta';
+} from '../MTSAbstractService/ReportDeliveryEnvelope.ta.js';
 import {
     InformationObject,
     _decode_InformationObject,
     _encode_InformationObject,
-} from '../EDIMSInformationObjects/InformationObject.ta';
+} from '../EDIMSInformationObjects/InformationObject.ta.js';
 export {
     InformationObject,
     _decode_InformationObject,
     _encode_InformationObject,
-} from '../EDIMSInformationObjects/InformationObject.ta';
+} from '../EDIMSInformationObjects/InformationObject.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION receive_report_ArgumentType */
 /**

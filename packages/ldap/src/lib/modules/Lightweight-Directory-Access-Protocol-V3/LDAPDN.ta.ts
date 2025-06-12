@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js';
 export {
   LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LDAPDN */
 /**

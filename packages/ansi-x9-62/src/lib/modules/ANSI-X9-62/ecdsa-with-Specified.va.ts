@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va";
-export { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va";
+import { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va.js";
+export { id_ecSigType } from "../ANSI-X9-62/id-ecSigType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ecdsa_with_Specified */
 /**

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-import { gnBasis } from "../ANSI-X9-62/gnBasis.va";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-export { gnBasis } from "../ANSI-X9-62/gnBasis.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+import { gnBasis } from "../ANSI-X9-62/gnBasis.va.js";
+export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+export { gnBasis } from "../ANSI-X9-62/gnBasis.va.js";
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union0_Intersection0_Element */
 /**

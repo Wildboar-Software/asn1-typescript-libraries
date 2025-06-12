@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeSel_attSelect_allAttr,
     _decode_AttributeSel_attSelect_allAttr,
     _encode_AttributeSel_attSelect_allAttr,
-} from '../Pbact-access/AttributeSel-attSelect-allAttr.ta';
+} from '../Pbact-access/AttributeSel-attSelect-allAttr.ta.js';
 export {
     AttributeSel_attSelect_allAttr,
     _decode_AttributeSel_attSelect_allAttr,
     _encode_AttributeSel_attSelect_allAttr,
-} from '../Pbact-access/AttributeSel-attSelect-allAttr.ta';
+} from '../Pbact-access/AttributeSel-attSelect-allAttr.ta.js';
 import {
     AttributeSel_attSelect_attributes_Item,
     _decode_AttributeSel_attSelect_attributes_Item,
     _encode_AttributeSel_attSelect_attributes_Item,
-} from '../Pbact-access/AttributeSel-attSelect-attributes-Item.ta';
+} from '../Pbact-access/AttributeSel-attSelect-attributes-Item.ta.js';
 export {
     AttributeSel_attSelect_attributes_Item,
     _decode_AttributeSel_attSelect_attributes_Item,
     _encode_AttributeSel_attSelect_attributes_Item,
-} from '../Pbact-access/AttributeSel-attSelect-attributes-Item.ta';
+} from '../Pbact-access/AttributeSel-attSelect-attributes-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeSel_attSelect */
 /**

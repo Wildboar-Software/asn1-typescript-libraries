@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 export {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 import {
     SuspectIntervals,
     _decode_SuspectIntervals,
     _encode_SuspectIntervals,
-} from '../SummarizationASN1Productions/SuspectIntervals.ta';
+} from '../SummarizationASN1Productions/SuspectIntervals.ta.js';
 export {
     SuspectIntervals,
     _decode_SuspectIntervals,
     _encode_SuspectIntervals,
-} from '../SummarizationASN1Productions/SuspectIntervals.ta';
+} from '../SummarizationASN1Productions/SuspectIntervals.ta.js';
 import {
     BufferedObservationList,
     _decode_BufferedObservationList,
     _encode_BufferedObservationList,
-} from '../SummarizationASN1Productions/BufferedObservationList.ta';
+} from '../SummarizationASN1Productions/BufferedObservationList.ta.js';
 export {
     BufferedObservationList,
     _decode_BufferedObservationList,
     _encode_BufferedObservationList,
-} from '../SummarizationASN1Productions/BufferedObservationList.ta';
+} from '../SummarizationASN1Productions/BufferedObservationList.ta.js';
 import {
     IncompleteScan,
     IncompleteScan_sizeExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -106,7 +106,7 @@ import {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
-} from '../SummarizationASN1Productions/IncompleteScan.ta';
+} from '../SummarizationASN1Productions/IncompleteScan.ta.js';
 export {
     IncompleteScan,
     IncompleteScan_sizeExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -117,27 +117,27 @@ export {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
-} from '../SummarizationASN1Productions/IncompleteScan.ta';
+} from '../SummarizationASN1Productions/IncompleteScan.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BufferedScanReportInformation */
 /**

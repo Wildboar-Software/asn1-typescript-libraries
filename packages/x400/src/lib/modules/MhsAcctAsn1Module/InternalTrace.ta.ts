@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     InternalTraceInformation,
     _decode_InternalTraceInformation,
     _encode_InternalTraceInformation,
-} from '../MTAAbstractService/InternalTraceInformation.ta';
+} from '../MTAAbstractService/InternalTraceInformation.ta.js';
 export {
     InternalTraceInformation,
     _decode_InternalTraceInformation,
     _encode_InternalTraceInformation,
-} from '../MTAAbstractService/InternalTraceInformation.ta';
+} from '../MTAAbstractService/InternalTraceInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InternalTrace */
 /**

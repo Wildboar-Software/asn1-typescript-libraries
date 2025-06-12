@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 export {
   AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js';
 import {
   SubstringFilter_substrings_substring,
   _decode_SubstringFilter_substrings_substring,
   _encode_SubstringFilter_substrings_substring,
-} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.js';
 export {
   SubstringFilter_substrings_substring,
   _decode_SubstringFilter_substrings_substring,
   _encode_SubstringFilter_substrings_substring,
-} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubstringFilter */
 /**

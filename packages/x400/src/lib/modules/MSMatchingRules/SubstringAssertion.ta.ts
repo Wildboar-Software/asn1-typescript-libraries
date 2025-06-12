@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubstringAssertion_Item,
     _decode_SubstringAssertion_Item,
     _encode_SubstringAssertion_Item,
-} from '../MSMatchingRules/SubstringAssertion-Item.ta';
+} from '../MSMatchingRules/SubstringAssertion-Item.ta.js';
 export {
     SubstringAssertion_Item,
     _decode_SubstringAssertion_Item,
     _encode_SubstringAssertion_Item,
-} from '../MSMatchingRules/SubstringAssertion-Item.ta';
+} from '../MSMatchingRules/SubstringAssertion-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubstringAssertion */
 /**

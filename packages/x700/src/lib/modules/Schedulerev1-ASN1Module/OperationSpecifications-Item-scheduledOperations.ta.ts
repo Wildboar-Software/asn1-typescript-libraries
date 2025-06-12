@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ModificationList,
     _decode_ModificationList,
     _encode_ModificationList,
-} from '../Schedulerev1-ASN1Module/ModificationList.ta';
+} from '../Schedulerev1-ASN1Module/ModificationList.ta.js';
 export {
     ModificationList,
     _decode_ModificationList,
     _encode_ModificationList,
-} from '../Schedulerev1-ASN1Module/ModificationList.ta';
+} from '../Schedulerev1-ASN1Module/ModificationList.ta.js';
 import {
     ActionInfo,
     _decode_ActionInfo,
     _encode_ActionInfo,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionInfo.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionInfo.ta.js';
 export {
     ActionInfo,
     _decode_ActionInfo,
     _encode_ActionInfo,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionInfo.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionInfo.ta.js';
 import {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.js';
 export {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OperationSpecifications_Item_scheduledOperations */
 /**

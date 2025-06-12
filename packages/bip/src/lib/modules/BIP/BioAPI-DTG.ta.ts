@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_DATE,
   _decode_BioAPI_DATE,
   _encode_BioAPI_DATE,
-} from '../BIP/BioAPI-DATE.ta';
+} from '../BIP/BioAPI-DATE.ta.js';
 export {
   BioAPI_DATE,
   _decode_BioAPI_DATE,
   _encode_BioAPI_DATE,
-} from '../BIP/BioAPI-DATE.ta';
+} from '../BIP/BioAPI-DATE.ta.js';
 import {
   BioAPI_TIME,
   _decode_BioAPI_TIME,
   _encode_BioAPI_TIME,
-} from '../BIP/BioAPI-TIME.ta';
+} from '../BIP/BioAPI-TIME.ta.js';
 export {
   BioAPI_TIME,
   _decode_BioAPI_TIME,
   _encode_BioAPI_TIME,
-} from '../BIP/BioAPI-TIME.ta';
+} from '../BIP/BioAPI-TIME.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_DTG */
 /**

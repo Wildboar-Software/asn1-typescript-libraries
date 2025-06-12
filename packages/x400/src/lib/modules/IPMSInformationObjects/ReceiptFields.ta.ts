@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
-} from '../IPMSInformationObjects/ReceiptTimeField.ta';
+} from '../IPMSInformationObjects/ReceiptTimeField.ta.js';
 export {
     ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
-} from '../IPMSInformationObjects/ReceiptTimeField.ta';
+} from '../IPMSInformationObjects/ReceiptTimeField.ta.js';
 import {
     AcknowledgmentModeField,
     _enum_for_AcknowledgmentModeField,
@@ -85,7 +85,7 @@ import {
     automatic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AcknowledgmentModeField,
     _encode_AcknowledgmentModeField,
-} from '../IPMSInformationObjects/AcknowledgmentModeField.ta';
+} from '../IPMSInformationObjects/AcknowledgmentModeField.ta.js';
 export {
     AcknowledgmentModeField,
     _enum_for_AcknowledgmentModeField,
@@ -95,27 +95,27 @@ export {
     automatic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AcknowledgmentModeField,
     _encode_AcknowledgmentModeField,
-} from '../IPMSInformationObjects/AcknowledgmentModeField.ta';
+} from '../IPMSInformationObjects/AcknowledgmentModeField.ta.js';
 import {
     SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
-} from '../IPMSInformationObjects/SupplReceiptInfoField.ta';
+} from '../IPMSInformationObjects/SupplReceiptInfoField.ta.js';
 export {
     SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
-} from '../IPMSInformationObjects/SupplReceiptInfoField.ta';
+} from '../IPMSInformationObjects/SupplReceiptInfoField.ta.js';
 import {
     RNExtensionsField,
     _decode_RNExtensionsField,
     _encode_RNExtensionsField,
-} from '../IPMSInformationObjects/RNExtensionsField.ta';
+} from '../IPMSInformationObjects/RNExtensionsField.ta.js';
 export {
     RNExtensionsField,
     _decode_RNExtensionsField,
     _encode_RNExtensionsField,
-} from '../IPMSInformationObjects/RNExtensionsField.ta';
+} from '../IPMSInformationObjects/RNExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReceiptFields */
 /**

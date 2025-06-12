@@ -1,7 +1,7 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
-import { CrlID, _decode_CrlID, _encode_CrlID } from "../OCSP-2013-08/CrlID.ta";
-import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.js";
+import { CrlID, _decode_CrlID, _encode_CrlID } from "../OCSP-2013-08/CrlID.ta.js";
+import { id_pkix_ocsp_crl } from "../OCSP-2013-08/id-pkix-ocsp-crl.va.js";
 
 /* START_OF_SYMBOL_DEFINITION re_ocsp_crl */
 /**

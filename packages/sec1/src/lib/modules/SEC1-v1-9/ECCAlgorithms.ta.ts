@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta";
-export { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.js";
+export { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithms */

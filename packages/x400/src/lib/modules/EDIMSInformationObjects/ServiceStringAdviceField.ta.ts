@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ComponentDataElementSeparator,
     _decode_ComponentDataElementSeparator,
     _encode_ComponentDataElementSeparator,
-} from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta';
+} from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.js';
 export {
     ComponentDataElementSeparator,
     _decode_ComponentDataElementSeparator,
     _encode_ComponentDataElementSeparator,
-} from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta';
+} from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.js';
 import {
     DataElementSeparator,
     _decode_DataElementSeparator,
     _encode_DataElementSeparator,
-} from '../EDIMSInformationObjects/DataElementSeparator.ta';
+} from '../EDIMSInformationObjects/DataElementSeparator.ta.js';
 export {
     DataElementSeparator,
     _decode_DataElementSeparator,
     _encode_DataElementSeparator,
-} from '../EDIMSInformationObjects/DataElementSeparator.ta';
+} from '../EDIMSInformationObjects/DataElementSeparator.ta.js';
 import {
     DecimalNotation,
     _decode_DecimalNotation,
     _encode_DecimalNotation,
-} from '../EDIMSInformationObjects/DecimalNotation.ta';
+} from '../EDIMSInformationObjects/DecimalNotation.ta.js';
 export {
     DecimalNotation,
     _decode_DecimalNotation,
     _encode_DecimalNotation,
-} from '../EDIMSInformationObjects/DecimalNotation.ta';
+} from '../EDIMSInformationObjects/DecimalNotation.ta.js';
 import {
     ReleaseIndicator,
     _decode_ReleaseIndicator,
     _encode_ReleaseIndicator,
-} from '../EDIMSInformationObjects/ReleaseIndicator.ta';
+} from '../EDIMSInformationObjects/ReleaseIndicator.ta.js';
 export {
     ReleaseIndicator,
     _decode_ReleaseIndicator,
     _encode_ReleaseIndicator,
-} from '../EDIMSInformationObjects/ReleaseIndicator.ta';
+} from '../EDIMSInformationObjects/ReleaseIndicator.ta.js';
 import {
     Reserved,
     _decode_Reserved,
     _encode_Reserved,
-} from '../EDIMSInformationObjects/Reserved.ta';
+} from '../EDIMSInformationObjects/Reserved.ta.js';
 export {
     Reserved,
     _decode_Reserved,
     _encode_Reserved,
-} from '../EDIMSInformationObjects/Reserved.ta';
+} from '../EDIMSInformationObjects/Reserved.ta.js';
 import {
     SegmentTerminator,
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
-} from '../EDIMSInformationObjects/SegmentTerminator.ta';
+} from '../EDIMSInformationObjects/SegmentTerminator.ta.js';
 export {
     SegmentTerminator,
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
-} from '../EDIMSInformationObjects/SegmentTerminator.ta';
+} from '../EDIMSInformationObjects/SegmentTerminator.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ServiceStringAdviceField */
 /**

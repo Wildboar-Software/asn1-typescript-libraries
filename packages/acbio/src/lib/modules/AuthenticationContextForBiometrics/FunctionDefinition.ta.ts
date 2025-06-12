@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubprocessName,
     _enum_for_SubprocessName,
@@ -91,7 +91,7 @@ import {
     decision_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SubprocessName,
     _encode_SubprocessName,
-} from '../AuthenticationContextForBiometrics/SubprocessName.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessName.ta.js';
 export {
     SubprocessName,
     _enum_for_SubprocessName,
@@ -117,27 +117,27 @@ export {
     decision_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SubprocessName,
     _encode_SubprocessName,
-} from '../AuthenticationContextForBiometrics/SubprocessName.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessName.ta.js';
 import {
     SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
-} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.js';
 export {
     SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
-} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.js';
 import {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 export {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FunctionDefinition */
 /**

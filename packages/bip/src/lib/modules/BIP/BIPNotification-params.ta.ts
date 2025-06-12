@@ -65,97 +65,97 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   MasterDeletionEvent_NotificationParams,
   _decode_MasterDeletionEvent_NotificationParams,
   _encode_MasterDeletionEvent_NotificationParams,
-} from '../BIP/MasterDeletionEvent-NotificationParams.ta';
+} from '../BIP/MasterDeletionEvent-NotificationParams.ta.js';
 export {
   MasterDeletionEvent_NotificationParams,
   _decode_MasterDeletionEvent_NotificationParams,
   _encode_MasterDeletionEvent_NotificationParams,
-} from '../BIP/MasterDeletionEvent-NotificationParams.ta';
+} from '../BIP/MasterDeletionEvent-NotificationParams.ta.js';
 import {
   UnitEvent_NotificationParams,
   _decode_UnitEvent_NotificationParams,
   _encode_UnitEvent_NotificationParams,
-} from '../BIP/UnitEvent-NotificationParams.ta';
+} from '../BIP/UnitEvent-NotificationParams.ta.js';
 export {
   UnitEvent_NotificationParams,
   _decode_UnitEvent_NotificationParams,
   _encode_UnitEvent_NotificationParams,
-} from '../BIP/UnitEvent-NotificationParams.ta';
+} from '../BIP/UnitEvent-NotificationParams.ta.js';
 import {
   GUISelectEvent_NotificationParams,
   _decode_GUISelectEvent_NotificationParams,
   _encode_GUISelectEvent_NotificationParams,
-} from '../BIP/GUISelectEvent-NotificationParams.ta';
+} from '../BIP/GUISelectEvent-NotificationParams.ta.js';
 export {
   GUISelectEvent_NotificationParams,
   _decode_GUISelectEvent_NotificationParams,
   _encode_GUISelectEvent_NotificationParams,
-} from '../BIP/GUISelectEvent-NotificationParams.ta';
+} from '../BIP/GUISelectEvent-NotificationParams.ta.js';
 import {
   GUIStateEvent_NotificationParams,
   _decode_GUIStateEvent_NotificationParams,
   _encode_GUIStateEvent_NotificationParams,
-} from '../BIP/GUIStateEvent-NotificationParams.ta';
+} from '../BIP/GUIStateEvent-NotificationParams.ta.js';
 export {
   GUIStateEvent_NotificationParams,
   _decode_GUIStateEvent_NotificationParams,
   _encode_GUIStateEvent_NotificationParams,
-} from '../BIP/GUIStateEvent-NotificationParams.ta';
+} from '../BIP/GUIStateEvent-NotificationParams.ta.js';
 import {
   GUIProgressEvent_NotificationParams,
   _decode_GUIProgressEvent_NotificationParams,
   _encode_GUIProgressEvent_NotificationParams,
-} from '../BIP/GUIProgressEvent-NotificationParams.ta';
+} from '../BIP/GUIProgressEvent-NotificationParams.ta.js';
 export {
   GUIProgressEvent_NotificationParams,
   _decode_GUIProgressEvent_NotificationParams,
   _encode_GUIProgressEvent_NotificationParams,
-} from '../BIP/GUIProgressEvent-NotificationParams.ta';
+} from '../BIP/GUIProgressEvent-NotificationParams.ta.js';
 import {
   BSPRegistrationEvent_NotificationParams,
   _decode_BSPRegistrationEvent_NotificationParams,
   _encode_BSPRegistrationEvent_NotificationParams,
-} from '../BIP/BSPRegistrationEvent-NotificationParams.ta';
+} from '../BIP/BSPRegistrationEvent-NotificationParams.ta.js';
 export {
   BSPRegistrationEvent_NotificationParams,
   _decode_BSPRegistrationEvent_NotificationParams,
   _encode_BSPRegistrationEvent_NotificationParams,
-} from '../BIP/BSPRegistrationEvent-NotificationParams.ta';
+} from '../BIP/BSPRegistrationEvent-NotificationParams.ta.js';
 import {
   BSPUnregistrationEvent_NotificationParams,
   _decode_BSPUnregistrationEvent_NotificationParams,
   _encode_BSPUnregistrationEvent_NotificationParams,
-} from '../BIP/BSPUnregistrationEvent-NotificationParams.ta';
+} from '../BIP/BSPUnregistrationEvent-NotificationParams.ta.js';
 export {
   BSPUnregistrationEvent_NotificationParams,
   _decode_BSPUnregistrationEvent_NotificationParams,
   _encode_BSPUnregistrationEvent_NotificationParams,
-} from '../BIP/BSPUnregistrationEvent-NotificationParams.ta';
+} from '../BIP/BSPUnregistrationEvent-NotificationParams.ta.js';
 import {
   BFPRegistrationEvent_NotificationParams,
   _decode_BFPRegistrationEvent_NotificationParams,
   _encode_BFPRegistrationEvent_NotificationParams,
-} from '../BIP/BFPRegistrationEvent-NotificationParams.ta';
+} from '../BIP/BFPRegistrationEvent-NotificationParams.ta.js';
 export {
   BFPRegistrationEvent_NotificationParams,
   _decode_BFPRegistrationEvent_NotificationParams,
   _encode_BFPRegistrationEvent_NotificationParams,
-} from '../BIP/BFPRegistrationEvent-NotificationParams.ta';
+} from '../BIP/BFPRegistrationEvent-NotificationParams.ta.js';
 import {
   BFPUnregistrationEvent_NotificationParams,
   _decode_BFPUnregistrationEvent_NotificationParams,
   _encode_BFPUnregistrationEvent_NotificationParams,
-} from '../BIP/BFPUnregistrationEvent-NotificationParams.ta';
+} from '../BIP/BFPUnregistrationEvent-NotificationParams.ta.js';
 export {
   BFPUnregistrationEvent_NotificationParams,
   _decode_BFPUnregistrationEvent_NotificationParams,
   _encode_BFPUnregistrationEvent_NotificationParams,
-} from '../BIP/BFPUnregistrationEvent-NotificationParams.ta';
+} from '../BIP/BFPUnregistrationEvent-NotificationParams.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPNotification_params */
 /**

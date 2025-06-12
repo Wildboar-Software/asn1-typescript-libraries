@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.js";
 import {
     POPOSigningKeyInput_authInfo,
     _decode_POPOSigningKeyInput_authInfo,
     _encode_POPOSigningKeyInput_authInfo,
-} from "../PKIXCRMF-2009/POPOSigningKeyInput-authInfo.ta";
+} from "../PKIXCRMF-2009/POPOSigningKeyInput-authInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION POPOSigningKeyInput */
 /**

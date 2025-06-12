@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from '../CmsTelebiometric/IssuerAndSerialNumber.ta';
+} from '../CmsTelebiometric/IssuerAndSerialNumber.ta.js';
 export {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from '../CmsTelebiometric/IssuerAndSerialNumber.ta';
+} from '../CmsTelebiometric/IssuerAndSerialNumber.ta.js';
 import {
     OriginatorPublicKey,
     _decode_OriginatorPublicKey,
     _encode_OriginatorPublicKey,
-} from '../CmsTelebiometric/OriginatorPublicKey.ta';
+} from '../CmsTelebiometric/OriginatorPublicKey.ta.js';
 export {
     OriginatorPublicKey,
     _decode_OriginatorPublicKey,
     _encode_OriginatorPublicKey,
-} from '../CmsTelebiometric/OriginatorPublicKey.ta';
+} from '../CmsTelebiometric/OriginatorPublicKey.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OriginatorIdentifierOrKey */
 /**

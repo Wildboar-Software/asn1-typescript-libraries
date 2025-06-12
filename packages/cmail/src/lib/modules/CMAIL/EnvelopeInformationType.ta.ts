@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ContentEnvelopeInformationType,
   _decode_ContentEnvelopeInformationType,
   _encode_ContentEnvelopeInformationType,
-} from '../CMAIL/ContentEnvelopeInformationType.ta';
+} from '../CMAIL/ContentEnvelopeInformationType.ta.js';
 export {
   ContentEnvelopeInformationType,
   _decode_ContentEnvelopeInformationType,
   _encode_ContentEnvelopeInformationType,
-} from '../CMAIL/ContentEnvelopeInformationType.ta';
+} from '../CMAIL/ContentEnvelopeInformationType.ta.js';
 import {
   EntitiesType,
   _decode_EntitiesType,
   _encode_EntitiesType,
-} from '../CMAIL/EntitiesType.ta';
+} from '../CMAIL/EntitiesType.ta.js';
 export {
   EntitiesType,
   _decode_EntitiesType,
   _encode_EntitiesType,
-} from '../CMAIL/EntitiesType.ta';
+} from '../CMAIL/EntitiesType.ta.js';
 import {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 export {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EnvelopeInformationType */
 /**

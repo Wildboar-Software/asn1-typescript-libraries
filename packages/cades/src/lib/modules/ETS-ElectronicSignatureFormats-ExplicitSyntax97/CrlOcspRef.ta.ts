@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta";
-export { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta";
-import { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta";
-export { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta";
-import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta";
-export { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.js";
+export { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.js";
+import { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.js";
+export { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.js";
+import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta.js";
+export { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CrlOcspRef */

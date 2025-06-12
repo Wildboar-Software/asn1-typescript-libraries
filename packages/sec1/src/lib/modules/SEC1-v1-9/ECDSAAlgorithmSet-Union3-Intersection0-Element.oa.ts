@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ecdsa_with_Sha224 } from "../SEC1-v1-9/ecdsa-with-Sha224.va";
-export { ecdsa_with_Sha224 } from "../SEC1-v1-9/ecdsa-with-Sha224.va";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ecdsa_with_Sha224 } from "../SEC1-v1-9/ecdsa-with-Sha224.va.js";
+export { ecdsa_with_Sha224 } from "../SEC1-v1-9/ecdsa-with-Sha224.va.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECDSAAlgorithmSet_Union3_Intersection0_Element */

@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubjectEDIMField,
     _decode_SubjectEDIMField,
     _encode_SubjectEDIMField,
-} from '../EDIMSInformationObjects/SubjectEDIMField.ta';
+} from '../EDIMSInformationObjects/SubjectEDIMField.ta.js';
 export {
     SubjectEDIMField,
     _decode_SubjectEDIMField,
     _encode_SubjectEDIMField,
-} from '../EDIMSInformationObjects/SubjectEDIMField.ta';
+} from '../EDIMSInformationObjects/SubjectEDIMField.ta.js';
 import {
     EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
-} from '../EDIMSInformationObjects/EDINOriginatorField.ta';
+} from '../EDIMSInformationObjects/EDINOriginatorField.ta.js';
 export {
     EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
-} from '../EDIMSInformationObjects/EDINOriginatorField.ta';
+} from '../EDIMSInformationObjects/EDINOriginatorField.ta.js';
 import {
     FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
-} from '../EDIMSInformationObjects/FirstRecipientField.ta';
+} from '../EDIMSInformationObjects/FirstRecipientField.ta.js';
 export {
     FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
-} from '../EDIMSInformationObjects/FirstRecipientField.ta';
+} from '../EDIMSInformationObjects/FirstRecipientField.ta.js';
 import {
     NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
-} from '../EDIMSInformationObjects/NotificationTimeField.ta';
+} from '../EDIMSInformationObjects/NotificationTimeField.ta.js';
 export {
     NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
-} from '../EDIMSInformationObjects/NotificationTimeField.ta';
+} from '../EDIMSInformationObjects/NotificationTimeField.ta.js';
 import {
     SecurityElementsField,
     _decode_SecurityElementsField,
     _encode_SecurityElementsField,
-} from '../EDIMSInformationObjects/SecurityElementsField.ta';
+} from '../EDIMSInformationObjects/SecurityElementsField.ta.js';
 export {
     SecurityElementsField,
     _decode_SecurityElementsField,
     _encode_SecurityElementsField,
-} from '../EDIMSInformationObjects/SecurityElementsField.ta';
+} from '../EDIMSInformationObjects/SecurityElementsField.ta.js';
 import {
     EDINInitiatorField,
     _enum_for_EDINInitiatorField,
@@ -127,7 +127,7 @@ import {
     internal_ms /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EDINInitiatorField,
     _encode_EDINInitiatorField,
-} from '../EDIMSInformationObjects/EDINInitiatorField.ta';
+} from '../EDIMSInformationObjects/EDINInitiatorField.ta.js';
 export {
     EDINInitiatorField,
     _enum_for_EDINInitiatorField,
@@ -139,17 +139,17 @@ export {
     internal_ms /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EDINInitiatorField,
     _encode_EDINInitiatorField,
-} from '../EDIMSInformationObjects/EDINInitiatorField.ta';
+} from '../EDIMSInformationObjects/EDINInitiatorField.ta.js';
 import {
     NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
-} from '../EDIMSInformationObjects/NotificationExtensionsField.ta';
+} from '../EDIMSInformationObjects/NotificationExtensionsField.ta.js';
 export {
     NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
-} from '../EDIMSInformationObjects/NotificationExtensionsField.ta';
+} from '../EDIMSInformationObjects/NotificationExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CommonFields */
 /**

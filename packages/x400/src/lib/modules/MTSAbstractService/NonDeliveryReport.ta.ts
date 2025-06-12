@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NonDeliveryReasonCode,
     NonDeliveryReasonCode_transfer_failure /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     transfer_failure_for_security_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
-} from '../MTSAbstractService/NonDeliveryReasonCode.ta';
+} from '../MTSAbstractService/NonDeliveryReasonCode.ta.js';
 export {
     NonDeliveryReasonCode,
     NonDeliveryReasonCode_transfer_failure /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,7 +111,7 @@ export {
     transfer_failure_for_security_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
-} from '../MTSAbstractService/NonDeliveryReasonCode.ta';
+} from '../MTSAbstractService/NonDeliveryReasonCode.ta.js';
 import {
     NonDeliveryDiagnosticCode,
     NonDeliveryDiagnosticCode_unrecognised_OR_name /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -274,7 +274,7 @@ import {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
-} from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta';
+} from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.js';
 export {
     NonDeliveryDiagnosticCode,
     NonDeliveryDiagnosticCode_unrecognised_OR_name /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -437,7 +437,7 @@ export {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
-} from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta';
+} from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NonDeliveryReport */
 /**

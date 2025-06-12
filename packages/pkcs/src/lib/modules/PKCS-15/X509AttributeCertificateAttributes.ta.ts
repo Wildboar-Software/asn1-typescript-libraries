@@ -5,27 +5,27 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.js";
 import {
     GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION X509AttributeCertificateAttributes */
 /**

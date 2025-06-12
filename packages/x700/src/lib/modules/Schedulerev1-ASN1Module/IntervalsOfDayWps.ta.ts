@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IntervalsOfDayWps_Item,
     _decode_IntervalsOfDayWps_Item,
     _encode_IntervalsOfDayWps_Item,
-} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta';
+} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta.js';
 export {
     IntervalsOfDayWps_Item,
     _decode_IntervalsOfDayWps_Item,
     _encode_IntervalsOfDayWps_Item,
-} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta';
+} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IntervalsOfDayWps */
 /**

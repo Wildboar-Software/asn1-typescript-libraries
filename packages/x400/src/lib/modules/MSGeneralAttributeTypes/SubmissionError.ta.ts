@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
-} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta';
+} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.js';
 export {
     ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
-} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta';
+} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.js';
 import {
     SecurityProblem,
     SecurityProblem_assemby_instructions_conflict_with_security_services /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -152,7 +152,7 @@ import {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from '../MTSAbstractService/SecurityProblem.ta';
+} from '../MTSAbstractService/SecurityProblem.ta.js';
 export {
     SecurityProblem,
     SecurityProblem_assemby_instructions_conflict_with_security_services /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -229,47 +229,47 @@ export {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from '../MTSAbstractService/SecurityProblem.ta';
+} from '../MTSAbstractService/SecurityProblem.ta.js';
 import {
     ServiceErrorParameter,
     _decode_ServiceErrorParameter,
     _encode_ServiceErrorParameter,
-} from '../MSAbstractService/ServiceErrorParameter.ta';
+} from '../MSAbstractService/ServiceErrorParameter.ta.js';
 export {
     ServiceErrorParameter,
     _decode_ServiceErrorParameter,
     _encode_ServiceErrorParameter,
-} from '../MSAbstractService/ServiceErrorParameter.ta';
+} from '../MSAbstractService/ServiceErrorParameter.ta.js';
 import {
     MessageGroupErrorParameter,
     _decode_MessageGroupErrorParameter,
     _encode_MessageGroupErrorParameter,
-} from '../MSAbstractService/MessageGroupErrorParameter.ta';
+} from '../MSAbstractService/MessageGroupErrorParameter.ta.js';
 export {
     MessageGroupErrorParameter,
     _decode_MessageGroupErrorParameter,
     _encode_MessageGroupErrorParameter,
-} from '../MSAbstractService/MessageGroupErrorParameter.ta';
+} from '../MSAbstractService/MessageGroupErrorParameter.ta.js';
 import {
     MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
-} from '../MSAbstractService/MSExtensionErrorParameter.ta';
+} from '../MSAbstractService/MSExtensionErrorParameter.ta.js';
 export {
     MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
-} from '../MSAbstractService/MSExtensionErrorParameter.ta';
+} from '../MSAbstractService/MSExtensionErrorParameter.ta.js';
 import {
     EntryClassErrorParameter,
     _decode_EntryClassErrorParameter,
     _encode_EntryClassErrorParameter,
-} from '../MSAbstractService/EntryClassErrorParameter.ta';
+} from '../MSAbstractService/EntryClassErrorParameter.ta.js';
 export {
     EntryClassErrorParameter,
     _decode_EntryClassErrorParameter,
     _encode_EntryClassErrorParameter,
-} from '../MSAbstractService/EntryClassErrorParameter.ta';
+} from '../MSAbstractService/EntryClassErrorParameter.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubmissionError */
 /**

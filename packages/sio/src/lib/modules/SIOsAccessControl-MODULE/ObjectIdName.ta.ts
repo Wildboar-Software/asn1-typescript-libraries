@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
 export {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
-export { ubObjectIdNameLength } from "../SIOsAccessControl-MODULE/ubObjectIdNameLength.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
+export { ubObjectIdNameLength } from "../SIOsAccessControl-MODULE/ubObjectIdNameLength.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ObjectIdName */
 /**

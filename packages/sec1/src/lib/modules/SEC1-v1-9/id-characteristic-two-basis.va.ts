@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va";
-export { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.js";
+export { characteristic_two_field } from "../SEC1-v1-9/characteristic-two-field.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION id_characteristic_two_basis */

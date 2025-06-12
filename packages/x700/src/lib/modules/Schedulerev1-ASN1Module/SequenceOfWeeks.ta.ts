@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
 export {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SequenceOfWeeks */
 /**

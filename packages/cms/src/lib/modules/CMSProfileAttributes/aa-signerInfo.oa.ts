@@ -1,13 +1,13 @@
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { id_signerInfo } from "./id-signerInfo.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { id_signerInfo } from "./id-signerInfo.va.js";
 import {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../CryptographicMessageSyntax-2010/SignerInfo.ta";
+} from "../CryptographicMessageSyntax-2010/SignerInfo.ta.js";
 
 // This module was created manually, because the ASN.1 compiler did not output it
 // for some reason.

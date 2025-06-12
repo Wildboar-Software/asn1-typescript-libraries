@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/tal",
-    "version": "1.0.7",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Trust Anchor Lists in TypeScript",
     "keywords": [
         "tal",
@@ -33,9 +34,9 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.1.5",
-        "@wildboar/ldap": "*",
-        "@wildboar/pki-stub": "^1.1.7"
+        "@wildboar/x500": "2.x.x",
+        "@wildboar/ldap": "2.x.x",
+        "@wildboar/pki-stub": "2.x.x"
     }
 }
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
-import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
-export { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa";
+import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
+import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa.js";
+export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
+export { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreementAlgorithmSet */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AP_title,
     _decode_AP_title,
     _encode_AP_title,
-} from "@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta";
+} from "@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.js";
 import {
     AE_qualifier,
     _decode_AE_qualifier,
     _encode_AE_qualifier,
-} from "@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta";
+} from "@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Application_Entity_Title */
 /**

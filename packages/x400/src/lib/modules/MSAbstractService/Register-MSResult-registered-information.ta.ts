@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionRegistration,
     _decode_AutoActionRegistration,
     _encode_AutoActionRegistration,
-} from '../MSAbstractService/AutoActionRegistration.ta';
+} from '../MSAbstractService/AutoActionRegistration.ta.js';
 export {
     AutoActionRegistration,
     _decode_AutoActionRegistration,
     _encode_AutoActionRegistration,
-} from '../MSAbstractService/AutoActionRegistration.ta';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MSAbstractService/AutoActionRegistration.ta.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     UARegistration,
     _decode_UARegistration,
     _encode_UARegistration,
-} from '../MSAbstractService/UARegistration.ta';
+} from '../MSAbstractService/UARegistration.ta.js';
 export {
     UARegistration,
     _decode_UARegistration,
     _encode_UARegistration,
-} from '../MSAbstractService/UARegistration.ta';
+} from '../MSAbstractService/UARegistration.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 import {
     MessageGroupNameAndDescriptor,
     _decode_MessageGroupNameAndDescriptor,
     _encode_MessageGroupNameAndDescriptor,
-} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta';
+} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.js';
 export {
     MessageGroupNameAndDescriptor,
     _decode_MessageGroupNameAndDescriptor,
     _encode_MessageGroupNameAndDescriptor,
-} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta';
+} from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.js';
 import {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 export {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Register_MSResult_registered_information */
 /**

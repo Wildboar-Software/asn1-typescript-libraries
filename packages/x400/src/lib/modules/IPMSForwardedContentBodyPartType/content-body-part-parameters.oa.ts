@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ForwardedContentParameters,
     _decode_ForwardedContentParameters,
     _encode_ForwardedContentParameters,
-} from '../IPMSForwardedContentBodyPartType/ForwardedContentParameters.ta';
+} from '../IPMSForwardedContentBodyPartType/ForwardedContentParameters.ta.js';
 export {
     ForwardedContentParameters,
     _decode_ForwardedContentParameters,
     _encode_ForwardedContentParameters,
-} from '../IPMSForwardedContentBodyPartType/ForwardedContentParameters.ta';
-import { id_ep_content } from '../IPMSObjectIdentifiers/id-ep-content.va';
-export { id_ep_content } from '../IPMSObjectIdentifiers/id-ep-content.va';
+} from '../IPMSForwardedContentBodyPartType/ForwardedContentParameters.ta.js';
+import { id_ep_content } from '../IPMSObjectIdentifiers/id-ep-content.va.js';
+export { id_ep_content } from '../IPMSObjectIdentifiers/id-ep-content.va.js';
 import {
     ExtendedContentType,
-} from "../MTSAbstractService/ExtendedContentType.ta";
+} from "../MTSAbstractService/ExtendedContentType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION content_body_part_parameters */
 /**

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca";
-export { SupportedKeyAttributes } from "../CryptographicMessageSyntax-2010/SupportedKeyAttributes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.js";
+export { SupportedKeyAttributes } from "../CryptographicMessageSyntax-2010/SupportedKeyAttributes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttribute */
 /**

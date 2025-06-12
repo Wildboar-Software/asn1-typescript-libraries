@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 export {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmInformation */
 /**

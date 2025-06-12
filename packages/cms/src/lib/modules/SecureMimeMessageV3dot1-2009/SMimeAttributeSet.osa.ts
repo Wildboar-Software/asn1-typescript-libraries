@@ -1,9 +1,9 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/aa-encrypKeyPref.oa";
-import { aa_smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/aa-smimeCapabilities.oa";
-export { aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/aa-encrypKeyPref.oa";
-export { aa_smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/aa-smimeCapabilities.oa";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/aa-encrypKeyPref.oa.js";
+import { aa_smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/aa-smimeCapabilities.oa.js";
+export { aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/aa-encrypKeyPref.oa.js";
+export { aa_smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/aa-smimeCapabilities.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SMimeAttributeSet */
 /**

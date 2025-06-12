@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_sha384 } from "../NIST-SHA2/id-sha384.va";
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_sha384 } from "../NIST-SHA2/id-sha384.va.js";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms_Union3_Intersection0_Element */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Result,
   Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Result,
   _encode_Result,
-} from '../ACSE-1/Result.ta';
+} from '../ACSE-1/Result.ta.js';
 export {
   Result,
   Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,17 +87,17 @@ export {
   provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Result,
   _encode_Result,
-} from '../ACSE-1/Result.ta';
+} from '../ACSE-1/Result.ta.js';
 import {
   Concrete_syntax_name,
   _decode_Concrete_syntax_name,
   _encode_Concrete_syntax_name,
-} from '../ACSE-1/Concrete-syntax-name.ta';
+} from '../ACSE-1/Concrete-syntax-name.ta.js';
 export {
   Concrete_syntax_name,
   _decode_Concrete_syntax_name,
   _encode_Concrete_syntax_name,
-} from '../ACSE-1/Concrete-syntax-name.ta';
+} from '../ACSE-1/Concrete-syntax-name.ta.js';
 import {
   P_context_result_list_Item_provider_reason,
   P_context_result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -110,7 +110,7 @@ import {
   local_limit_on_DCS_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_P_context_result_list_Item_provider_reason,
   _encode_P_context_result_list_Item_provider_reason,
-} from '../ACSE-1/P-context-result-list-Item-provider-reason.ta';
+} from '../ACSE-1/P-context-result-list-Item-provider-reason.ta.js';
 export {
   P_context_result_list_Item_provider_reason,
   P_context_result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -123,7 +123,7 @@ export {
   local_limit_on_DCS_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_P_context_result_list_Item_provider_reason,
   _encode_P_context_result_list_Item_provider_reason,
-} from '../ACSE-1/P-context-result-list-Item-provider-reason.ta';
+} from '../ACSE-1/P-context-result-list-Item-provider-reason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION P_context_result_list_Item */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CloseOutVerification,
     _enum_for_CloseOutVerification,
@@ -81,7 +81,7 @@ import {
     deniedCloseOutNarrDisputed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CloseOutVerification,
     _encode_CloseOutVerification,
-} from '../X790ASN1Module/CloseOutVerification.ta';
+} from '../X790ASN1Module/CloseOutVerification.ta.js';
 export {
     CloseOutVerification,
     _enum_for_CloseOutVerification,
@@ -97,7 +97,7 @@ export {
     deniedCloseOutNarrDisputed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_CloseOutVerification,
     _encode_CloseOutVerification,
-} from '../X790ASN1Module/CloseOutVerification.ta';
+} from '../X790ASN1Module/CloseOutVerification.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION closeOutVerificationCloseOutVerificationInitial */
 /**

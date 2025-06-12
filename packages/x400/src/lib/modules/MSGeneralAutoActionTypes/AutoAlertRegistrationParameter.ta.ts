@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 import {
     AlertDestination,
     _decode_AlertDestination,
     _encode_AlertDestination,
-} from '../MSGeneralAutoActionTypes/AlertDestination.ta';
+} from '../MSGeneralAutoActionTypes/AlertDestination.ta.js';
 export {
     AlertDestination,
     _decode_AlertDestination,
     _encode_AlertDestination,
-} from '../MSGeneralAutoActionTypes/AlertDestination.ta';
+} from '../MSGeneralAutoActionTypes/AlertDestination.ta.js';
 import {
     EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
-} from '../MSAbstractService/EntryInformationSelection.ta';
+} from '../MSAbstractService/EntryInformationSelection.ta.js';
 export {
     EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
-} from '../MSAbstractService/EntryInformationSelection.ta';
+} from '../MSAbstractService/EntryInformationSelection.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AutoAlertRegistrationParameter */
 /**

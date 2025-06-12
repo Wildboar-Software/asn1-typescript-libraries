@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIStatusInfo,
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
-} from '../PKIXCMP-2009/PKIStatusInfo.ta';
+} from '../PKIXCMP-2009/PKIStatusInfo.ta.js';
 export {
   PKIStatusInfo,
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
-} from '../PKIXCMP-2009/PKIStatusInfo.ta';
+} from '../PKIXCMP-2009/PKIStatusInfo.ta.js';
 import {
   CertifiedKeyPair,
   _decode_CertifiedKeyPair,
   _encode_CertifiedKeyPair,
-} from '../PKIXCMP-2009/CertifiedKeyPair.ta';
+} from '../PKIXCMP-2009/CertifiedKeyPair.ta.js';
 export {
   CertifiedKeyPair,
   _decode_CertifiedKeyPair,
   _encode_CertifiedKeyPair,
-} from '../PKIXCMP-2009/CertifiedKeyPair.ta';
+} from '../PKIXCMP-2009/CertifiedKeyPair.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertResponse */
 /**

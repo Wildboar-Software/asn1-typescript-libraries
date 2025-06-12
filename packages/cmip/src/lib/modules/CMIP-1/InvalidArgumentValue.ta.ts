@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ActionInfo,
   _decode_ActionInfo,
   _encode_ActionInfo,
-} from '../CMIP-1/ActionInfo.ta';
+} from '../CMIP-1/ActionInfo.ta.js';
 export {
   ActionInfo,
   _decode_ActionInfo,
   _encode_ActionInfo,
-} from '../CMIP-1/ActionInfo.ta';
+} from '../CMIP-1/ActionInfo.ta.js';
 import {
   InvalidArgumentValue_eventValue,
   _decode_InvalidArgumentValue_eventValue,
   _encode_InvalidArgumentValue_eventValue,
-} from '../CMIP-1/InvalidArgumentValue-eventValue.ta';
+} from '../CMIP-1/InvalidArgumentValue-eventValue.ta.js';
 export {
   InvalidArgumentValue_eventValue,
   _decode_InvalidArgumentValue_eventValue,
   _encode_InvalidArgumentValue_eventValue,
-} from '../CMIP-1/InvalidArgumentValue-eventValue.ta';
+} from '../CMIP-1/InvalidArgumentValue-eventValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InvalidArgumentValue */
 /**

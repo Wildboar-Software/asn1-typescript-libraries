@@ -65,12 +65,12 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION OrderedAttribute_attribute_values_Item */
 /**

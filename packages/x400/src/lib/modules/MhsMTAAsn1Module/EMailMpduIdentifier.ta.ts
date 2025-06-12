@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MTSIdentifier,
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
-} from '../MTSAbstractService/MTSIdentifier.ta';
+} from '../MTSAbstractService/MTSIdentifier.ta.js';
 export {
     MTSIdentifier,
     _decode_MTSIdentifier,
     _encode_MTSIdentifier,
-} from '../MTSAbstractService/MTSIdentifier.ta';
+} from '../MTSAbstractService/MTSIdentifier.ta.js';
 import {
     GenericMessageId,
     _decode_GenericMessageId,
     _encode_GenericMessageId,
-} from '../MhsMTAAsn1Module/GenericMessageId.ta';
+} from '../MhsMTAAsn1Module/GenericMessageId.ta.js';
 export {
     GenericMessageId,
     _decode_GenericMessageId,
     _encode_GenericMessageId,
-} from '../MhsMTAAsn1Module/GenericMessageId.ta';
+} from '../MhsMTAAsn1Module/GenericMessageId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailMpduIdentifier */
 /**

@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../MTSAbstractService/Password.ta';
+} from '../MTSAbstractService/Password.ta.js';
 export {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../MTSAbstractService/Password.ta';
+} from '../MTSAbstractService/Password.ta.js';
 import {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from '../MTSAbstractService/StrongCredentials.ta';
+} from '../MTSAbstractService/StrongCredentials.ta.js';
 export {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from '../MTSAbstractService/StrongCredentials.ta';
+} from '../MTSAbstractService/StrongCredentials.ta.js';
 import {
     ProtectedPassword,
     _decode_ProtectedPassword,
     _encode_ProtectedPassword,
-} from '../MTSAbstractService/ProtectedPassword.ta';
+} from '../MTSAbstractService/ProtectedPassword.ta.js';
 export {
     ProtectedPassword,
     _decode_ProtectedPassword,
     _encode_ProtectedPassword,
-} from '../MTSAbstractService/ProtectedPassword.ta';
+} from '../MTSAbstractService/ProtectedPassword.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Credentials */
 /**

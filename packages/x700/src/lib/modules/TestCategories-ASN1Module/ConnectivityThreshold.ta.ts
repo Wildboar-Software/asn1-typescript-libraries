@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectivityThreshold_time,
     _decode_ConnectivityThreshold_time,
     _encode_ConnectivityThreshold_time,
-} from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta';
+} from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta.js';
 export {
     ConnectivityThreshold_time,
     _decode_ConnectivityThreshold_time,
     _encode_ConnectivityThreshold_time,
-} from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta';
+} from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta.js';
 import {
     RawData,
     _decode_RawData,
     _encode_RawData,
-} from '../TestCategories-ASN1Module/RawData.ta';
+} from '../TestCategories-ASN1Module/RawData.ta.js';
 export {
     RawData,
     _decode_RawData,
     _encode_RawData,
-} from '../TestCategories-ASN1Module/RawData.ta';
+} from '../TestCategories-ASN1Module/RawData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectivityThreshold */
 /**

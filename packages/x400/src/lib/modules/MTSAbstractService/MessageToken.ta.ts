@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Token,
     _decode_Token,
     _encode_Token,
-} from '../MTSAbstractService/Token.ta';
+} from '../MTSAbstractService/Token.ta.js';
 export {
     Token,
     _decode_Token,
     _encode_Token,
-} from '../MTSAbstractService/Token.ta';
+} from '../MTSAbstractService/Token.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageToken */
 /**

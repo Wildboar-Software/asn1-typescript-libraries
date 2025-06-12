@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNExtensionsSubField,
     _decode_FNExtensionsSubField,
     _encode_FNExtensionsSubField,
-} from '../EDIMSInformationObjects/FNExtensionsSubField.ta';
+} from '../EDIMSInformationObjects/FNExtensionsSubField.ta.js';
 export {
     FNExtensionsSubField,
     _decode_FNExtensionsSubField,
     _encode_FNExtensionsSubField,
-} from '../EDIMSInformationObjects/FNExtensionsSubField.ta';
+} from '../EDIMSInformationObjects/FNExtensionsSubField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FNExtensionsField */
 /**

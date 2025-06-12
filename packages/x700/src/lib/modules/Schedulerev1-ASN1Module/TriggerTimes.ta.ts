@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Time24Wps,
     _decode_Time24Wps,
     _encode_Time24Wps,
-} from '../Schedulerev1-ASN1Module/Time24Wps.ta';
+} from '../Schedulerev1-ASN1Module/Time24Wps.ta.js';
 export {
     Time24Wps,
     _decode_Time24Wps,
     _encode_Time24Wps,
-} from '../Schedulerev1-ASN1Module/Time24Wps.ta';
+} from '../Schedulerev1-ASN1Module/Time24Wps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TriggerTimes */
 /**

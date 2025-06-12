@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, originated_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, redirected_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, dl_expanded_by /* IMPORTED_SHORT_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta";
-export { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, originated_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, redirected_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, dl_expanded_by /* IMPORTED_SHORT_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta";
-import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta";
-export { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, originated_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, redirected_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, dl_expanded_by /* IMPORTED_SHORT_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.js";
+export { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, originated_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, redirected_by /* IMPORTED_SHORT_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, dl_expanded_by /* IMPORTED_SHORT_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.js";
+import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.js";
+export { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION Restriction */

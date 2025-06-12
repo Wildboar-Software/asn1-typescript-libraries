@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MarkingData,
     _decode_MarkingData,
     _encode_MarkingData,
-} from "../SIOsAccessControl-MODULE/MarkingData.ta";
+} from "../SIOsAccessControl-MODULE/MarkingData.ta.js";
 export {
     MarkingData,
     _decode_MarkingData,
     _encode_MarkingData,
-} from "../SIOsAccessControl-MODULE/MarkingData.ta";
+} from "../SIOsAccessControl-MODULE/MarkingData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MarkingDataInfo */
 /**

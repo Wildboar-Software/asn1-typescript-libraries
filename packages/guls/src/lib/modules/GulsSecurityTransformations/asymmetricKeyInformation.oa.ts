@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   asymmetricKeyInformation_KiType,
   _decode_asymmetricKeyInformation_KiType,
   _encode_asymmetricKeyInformation_KiType,
-} from '../GulsSecurityTransformations/asymmetricKeyInformation-KiType.ta';
+} from '../GulsSecurityTransformations/asymmetricKeyInformation-KiType.ta.js';
 export {
   asymmetricKeyInformation_KiType,
   _decode_asymmetricKeyInformation_KiType,
   _encode_asymmetricKeyInformation_KiType,
-} from '../GulsSecurityTransformations/asymmetricKeyInformation-KiType.ta';
-import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca';
-export { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca';
+} from '../GulsSecurityTransformations/asymmetricKeyInformation-KiType.ta.js';
+import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.js';
+export { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION asymmetricKeyInformation */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectivityPointer,
     _decode_ConnectivityPointer,
     _encode_ConnectivityPointer,
-} from '../ASN1DefinedTypesModule/ConnectivityPointer.ta';
+} from '../ASN1DefinedTypesModule/ConnectivityPointer.ta.js';
 export {
     ConnectivityPointer,
     _decode_ConnectivityPointer,
     _encode_ConnectivityPointer,
-} from '../ASN1DefinedTypesModule/ConnectivityPointer.ta';
+} from '../ASN1DefinedTypesModule/ConnectivityPointer.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CTPUpstreamPointer */
 /**

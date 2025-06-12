@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { QUANTITY } from '../E-health-quantities-and-units/QUANTITY.oca';
-export { QUANTITY } from '../E-health-quantities-and-units/QUANTITY.oca';
-import { UNIT } from '../E-health-quantities-and-units/UNIT.oca';
-export { UNIT } from '../E-health-quantities-and-units/UNIT.oca';
-import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca';
-export { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { QUANTITY } from '../E-health-quantities-and-units/QUANTITY.oca.js';
+export { QUANTITY } from '../E-health-quantities-and-units/QUANTITY.oca.js';
+import { UNIT } from '../E-health-quantities-and-units/UNIT.oca.js';
+export { UNIT } from '../E-health-quantities-and-units/UNIT.oca.js';
+import { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.js';
+export { SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.js';
 import {
     NormalValues,
     _decode_NormalValues,
     _encode_NormalValues,
-} from '../E-health-Data-Message/NormalValues.ta';
+} from '../E-health-Data-Message/NormalValues.ta.js';
 export {
     NormalValues,
     _decode_NormalValues,
     _encode_NormalValues,
-} from '../E-health-Data-Message/NormalValues.ta';
+} from '../E-health-Data-Message/NormalValues.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DataMessage */
 /**

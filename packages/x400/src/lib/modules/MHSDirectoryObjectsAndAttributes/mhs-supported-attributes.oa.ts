@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -83,7 +83,7 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
 export {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -97,23 +97,23 @@ export {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa';
-export { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa';
-import { id_at_mhs_supported_attributes } from '../MHSObjectIdentifiers/id-at-mhs-supported-attributes.va';
-export { id_at_mhs_supported_attributes } from '../MHSObjectIdentifiers/id-at-mhs-supported-attributes.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+import { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.js';
+export { objectIdentifierMatch } from '@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.js';
+import { id_at_mhs_supported_attributes } from '../MHSObjectIdentifiers/id-at-mhs-supported-attributes.va.js';
+export { id_at_mhs_supported_attributes } from '../MHSObjectIdentifiers/id-at-mhs-supported-attributes.va.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "../MSAbstractService/AttributeType.ta";
+} from "../MSAbstractService/AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION mhs_supported_attributes */
 /**

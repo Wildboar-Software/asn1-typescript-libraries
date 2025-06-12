@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PortSignalRateAndMappingList_Item,
     _decode_PortSignalRateAndMappingList_Item,
     _encode_PortSignalRateAndMappingList_Item,
-} from '../M3100ASN1TypeModule2/PortSignalRateAndMappingList-Item.ta';
+} from '../M3100ASN1TypeModule2/PortSignalRateAndMappingList-Item.ta.js';
 export {
     PortSignalRateAndMappingList_Item,
     _decode_PortSignalRateAndMappingList_Item,
     _encode_PortSignalRateAndMappingList_Item,
-} from '../M3100ASN1TypeModule2/PortSignalRateAndMappingList-Item.ta';
+} from '../M3100ASN1TypeModule2/PortSignalRateAndMappingList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PortSignalRateAndMappingList */
 /**

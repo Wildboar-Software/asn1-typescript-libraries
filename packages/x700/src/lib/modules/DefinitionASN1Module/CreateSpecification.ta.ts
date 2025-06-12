@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CreateSpecification_createModifier,
     CreateSpecification_createModifier_withReferenceObject /* IMPORTED_LONG_NAMED_BIT */,
@@ -74,7 +74,7 @@ import {
     withAutomaticInstanceNaming /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_CreateSpecification_createModifier,
     _encode_CreateSpecification_createModifier,
-} from '../DefinitionASN1Module/CreateSpecification-createModifier.ta';
+} from '../DefinitionASN1Module/CreateSpecification-createModifier.ta.js';
 export {
     CreateSpecification_createModifier,
     CreateSpecification_createModifier_withReferenceObject /* IMPORTED_LONG_NAMED_BIT */,
@@ -83,17 +83,17 @@ export {
     withAutomaticInstanceNaming /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_CreateSpecification_createModifier,
     _encode_CreateSpecification_createModifier,
-} from '../DefinitionASN1Module/CreateSpecification-createModifier.ta';
+} from '../DefinitionASN1Module/CreateSpecification-createModifier.ta.js';
 import {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 export {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CreateSpecification */
 /**

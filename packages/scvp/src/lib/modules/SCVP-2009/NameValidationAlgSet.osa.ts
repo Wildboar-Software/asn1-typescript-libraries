@@ -65,11 +65,11 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { POLICY } from '../SCVP-2009/POLICY.oca';
-export { POLICY } from '../SCVP-2009/POLICY.oca';
-import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa';
-export { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { POLICY } from '../SCVP-2009/POLICY.oca.js';
+export { POLICY } from '../SCVP-2009/POLICY.oca.js';
+import { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.js';
+export { svp_nameValAlg } from '../SCVP-2009/svp-nameValAlg.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION NameValidationAlgSet */
 /**

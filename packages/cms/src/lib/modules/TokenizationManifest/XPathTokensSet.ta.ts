@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TokenServiceProvider,
     _decode_TokenServiceProvider,
     _encode_TokenServiceProvider,
-} from "../TokenizationManifest/TokenServiceProvider.ta";
+} from "../TokenizationManifest/TokenServiceProvider.ta.js";
 import {
     XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
-} from "../TokenizationManifest/XPathSet.ta";
+} from "../TokenizationManifest/XPathSet.ta.js";
 export {
     TokenServiceProvider,
     _decode_TokenServiceProvider,
     _encode_TokenServiceProvider,
-} from "../TokenizationManifest/TokenServiceProvider.ta";
+} from "../TokenizationManifest/TokenServiceProvider.ta.js";
 export {
     XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
-} from "../TokenizationManifest/XPathSet.ta";
+} from "../TokenizationManifest/XPathSet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION XPathTokensSet */
 /**

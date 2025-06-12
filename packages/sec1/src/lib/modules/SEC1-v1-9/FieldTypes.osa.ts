@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
-export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
-import { FieldTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union0-Intersection0-Element.oa";
-export { FieldTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union0-Intersection0-Element.oa";
-import { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union1-Intersection0-Element.oa";
-export { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union1-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
+export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
+import { FieldTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union0-Intersection0-Element.oa.js";
+export { FieldTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union0-Intersection0-Element.oa.js";
+import { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union1-Intersection0-Element.oa.js";
+export { FieldTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/FieldTypes-Union1-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes */

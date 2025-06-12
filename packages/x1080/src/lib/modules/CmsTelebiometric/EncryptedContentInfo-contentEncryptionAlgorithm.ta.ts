@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca';
-export { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca';
-import { SymmetricEncryptionAlgorithms } from '../CmsTelebiometric/SymmetricEncryptionAlgorithms.osa';
-export { SymmetricEncryptionAlgorithms } from '../CmsTelebiometric/SymmetricEncryptionAlgorithms.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js';
+export { ALGORITHM } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js';
+import { SymmetricEncryptionAlgorithms } from '../CmsTelebiometric/SymmetricEncryptionAlgorithms.osa.js';
+export { SymmetricEncryptionAlgorithms } from '../CmsTelebiometric/SymmetricEncryptionAlgorithms.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo_contentEncryptionAlgorithm */
 /**

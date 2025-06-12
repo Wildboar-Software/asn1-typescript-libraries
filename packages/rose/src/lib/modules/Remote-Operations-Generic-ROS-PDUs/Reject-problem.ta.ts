@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GeneralProblem,
   GeneralProblem_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_GeneralProblem,
   _encode_GeneralProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/GeneralProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/GeneralProblem.ta.js';
 export {
   GeneralProblem,
   GeneralProblem_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
   badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_GeneralProblem,
   _encode_GeneralProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/GeneralProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/GeneralProblem.ta.js';
 import {
   InvokeProblem,
   InvokeProblem_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -108,7 +108,7 @@ import {
   unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_InvokeProblem,
   _encode_InvokeProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeProblem.ta.js';
 export {
   InvokeProblem,
   InvokeProblem_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -129,7 +129,7 @@ export {
   unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_InvokeProblem,
   _encode_InvokeProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeProblem.ta.js';
 import {
   ReturnResultProblem,
   ReturnResultProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -139,7 +139,7 @@ import {
   mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ReturnResultProblem,
   _encode_ReturnResultProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResultProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResultProblem.ta.js';
 export {
   ReturnResultProblem,
   ReturnResultProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -149,7 +149,7 @@ export {
   mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ReturnResultProblem,
   _encode_ReturnResultProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResultProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResultProblem.ta.js';
 import {
   ReturnErrorProblem,
   ReturnErrorProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -163,7 +163,7 @@ import {
   mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ReturnErrorProblem,
   _encode_ReturnErrorProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta.js';
 export {
   ReturnErrorProblem,
   ReturnErrorProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -177,7 +177,7 @@ export {
   mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ReturnErrorProblem,
   _encode_ReturnErrorProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Reject_problem */
 /**

@@ -65,23 +65,23 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-import { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa';
-export { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa';
-import { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa';
-export { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa';
-import { swb_pkc_revocation_info } from '../SCVP-2009/swb-pkc-revocation-info.oa';
-export { swb_pkc_revocation_info } from '../SCVP-2009/swb-pkc-revocation-info.oa';
-import { swb_pkc_public_key_info } from '../SCVP-2009/swb-pkc-public-key-info.oa';
-export { swb_pkc_public_key_info } from '../SCVP-2009/swb-pkc-public-key-info.oa';
-import { swb_pkc_all_cert_paths } from '../SCVP-2009/swb-pkc-all-cert-paths.oa';
-export { swb_pkc_all_cert_paths } from '../SCVP-2009/swb-pkc-all-cert-paths.oa';
-import { swb_pkc_ee_revocation_info } from '../SCVP-2009/swb-pkc-ee-revocation-info.oa';
-export { swb_pkc_ee_revocation_info } from '../SCVP-2009/swb-pkc-ee-revocation-info.oa';
-import { swb_pkc_CAs_revocation_info } from '../SCVP-2009/swb-pkc-CAs-revocation-info.oa';
-export { swb_pkc_CAs_revocation_info } from '../SCVP-2009/swb-pkc-CAs-revocation-info.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+import { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa.js';
+export { swb_pkc_cert } from '../SCVP-2009/swb-pkc-cert.oa.js';
+import { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa.js';
+export { swb_pkc_best_cert_path } from '../SCVP-2009/swb-pkc-best-cert-path.oa.js';
+import { swb_pkc_revocation_info } from '../SCVP-2009/swb-pkc-revocation-info.oa.js';
+export { swb_pkc_revocation_info } from '../SCVP-2009/swb-pkc-revocation-info.oa.js';
+import { swb_pkc_public_key_info } from '../SCVP-2009/swb-pkc-public-key-info.oa.js';
+export { swb_pkc_public_key_info } from '../SCVP-2009/swb-pkc-public-key-info.oa.js';
+import { swb_pkc_all_cert_paths } from '../SCVP-2009/swb-pkc-all-cert-paths.oa.js';
+export { swb_pkc_all_cert_paths } from '../SCVP-2009/swb-pkc-all-cert-paths.oa.js';
+import { swb_pkc_ee_revocation_info } from '../SCVP-2009/swb-pkc-ee-revocation-info.oa.js';
+export { swb_pkc_ee_revocation_info } from '../SCVP-2009/swb-pkc-ee-revocation-info.oa.js';
+import { swb_pkc_CAs_revocation_info } from '../SCVP-2009/swb-pkc-CAs-revocation-info.oa.js';
+export { swb_pkc_CAs_revocation_info } from '../SCVP-2009/swb-pkc-CAs-revocation-info.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION WantBackSet */
 /**

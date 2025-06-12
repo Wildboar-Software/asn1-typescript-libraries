@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Element,
   _decode_Element,
   _encode_Element,
-} from '../FastInfoset/Element.ta';
+} from '../FastInfoset/Element.ta.js';
 export {
   Element,
   _decode_Element,
   _encode_Element,
-} from '../FastInfoset/Element.ta';
+} from '../FastInfoset/Element.ta.js';
 import {
   ProcessingInstruction,
   _decode_ProcessingInstruction,
   _encode_ProcessingInstruction,
-} from '../FastInfoset/ProcessingInstruction.ta';
+} from '../FastInfoset/ProcessingInstruction.ta.js';
 export {
   ProcessingInstruction,
   _decode_ProcessingInstruction,
   _encode_ProcessingInstruction,
-} from '../FastInfoset/ProcessingInstruction.ta';
+} from '../FastInfoset/ProcessingInstruction.ta.js';
 import {
   Comment,
   _decode_Comment,
   _encode_Comment,
-} from '../FastInfoset/Comment.ta';
+} from '../FastInfoset/Comment.ta.js';
 export {
   Comment,
   _decode_Comment,
   _encode_Comment,
-} from '../FastInfoset/Comment.ta';
+} from '../FastInfoset/Comment.ta.js';
 import {
   DocumentTypeDeclaration,
   _decode_DocumentTypeDeclaration,
   _encode_DocumentTypeDeclaration,
-} from '../FastInfoset/DocumentTypeDeclaration.ta';
+} from '../FastInfoset/DocumentTypeDeclaration.ta.js';
 export {
   DocumentTypeDeclaration,
   _decode_DocumentTypeDeclaration,
   _encode_DocumentTypeDeclaration,
-} from '../FastInfoset/DocumentTypeDeclaration.ta';
+} from '../FastInfoset/DocumentTypeDeclaration.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Document_children_Item */
 /**

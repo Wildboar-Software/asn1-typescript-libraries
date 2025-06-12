@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 export {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 import {
   SETransfer,
   _decode_SETransfer,
   _encode_SETransfer,
-} from '../SeseAPDUs/SETransfer.ta';
+} from '../SeseAPDUs/SETransfer.ta.js';
 export {
   SETransfer,
   _decode_SETransfer,
   _encode_SETransfer,
-} from '../SeseAPDUs/SETransfer.ta';
+} from '../SeseAPDUs/SETransfer.ta.js';
 import {
   SEUAbort,
   _decode_SEUAbort,
   _encode_SEUAbort,
-} from '../SeseAPDUs/SEUAbort.ta';
+} from '../SeseAPDUs/SEUAbort.ta.js';
 export {
   SEUAbort,
   _decode_SEUAbort,
   _encode_SEUAbort,
-} from '../SeseAPDUs/SEUAbort.ta';
+} from '../SeseAPDUs/SEUAbort.ta.js';
 import {
   SEPAbort,
   _decode_SEPAbort,
   _encode_SEPAbort,
-} from '../SeseAPDUs/SEPAbort.ta';
+} from '../SeseAPDUs/SEPAbort.ta.js';
 export {
   SEPAbort,
   _decode_SEPAbort,
   _encode_SEPAbort,
-} from '../SeseAPDUs/SEPAbort.ta';
+} from '../SeseAPDUs/SEPAbort.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SESEapdus */
 /**

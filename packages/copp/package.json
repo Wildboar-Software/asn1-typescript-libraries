@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/copp",
-    "version": "1.0.4",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Connection-oriented presentation protocol (COPP) data structures and business logic in TypeScript",
     "keywords": [
         "copp",

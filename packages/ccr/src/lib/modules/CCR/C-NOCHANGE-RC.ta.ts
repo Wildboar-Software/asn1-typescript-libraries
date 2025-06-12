@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   C_NOCHANGE_RC_outcome,
   _enum_for_C_NOCHANGE_RC_outcome,
@@ -79,7 +79,7 @@ import {
   no_change /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_NOCHANGE_RC_outcome,
   _encode_C_NOCHANGE_RC_outcome,
-} from '../CCR/C-NOCHANGE-RC-outcome.ta';
+} from '../CCR/C-NOCHANGE-RC-outcome.ta.js';
 export {
   C_NOCHANGE_RC_outcome,
   _enum_for_C_NOCHANGE_RC_outcome,
@@ -93,17 +93,17 @@ export {
   no_change /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_NOCHANGE_RC_outcome,
   _encode_C_NOCHANGE_RC_outcome,
-} from '../CCR/C-NOCHANGE-RC-outcome.ta';
+} from '../CCR/C-NOCHANGE-RC-outcome.ta.js';
 import {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 export {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION C_NOCHANGE_RC */
 /**

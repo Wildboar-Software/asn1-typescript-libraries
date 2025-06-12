@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
-import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
-export { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
+import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
+export { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
 /**

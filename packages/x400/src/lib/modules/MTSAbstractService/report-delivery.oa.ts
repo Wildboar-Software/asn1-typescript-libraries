@@ -65,63 +65,63 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     ReportDeliveryArgument,
     _decode_ReportDeliveryArgument,
     _encode_ReportDeliveryArgument,
-} from '../MTSAbstractService/ReportDeliveryArgument.ta';
+} from '../MTSAbstractService/ReportDeliveryArgument.ta.js';
 export {
     ReportDeliveryArgument,
     _decode_ReportDeliveryArgument,
     _encode_ReportDeliveryArgument,
-} from '../MTSAbstractService/ReportDeliveryArgument.ta';
+} from '../MTSAbstractService/ReportDeliveryArgument.ta.js';
 import {
     ReportDeliveryResult,
     _decode_ReportDeliveryResult,
     _encode_ReportDeliveryResult,
-} from '../MTSAbstractService/ReportDeliveryResult.ta';
+} from '../MTSAbstractService/ReportDeliveryResult.ta.js';
 export {
     ReportDeliveryResult,
     _decode_ReportDeliveryResult,
     _encode_ReportDeliveryResult,
-} from '../MTSAbstractService/ReportDeliveryResult.ta';
-import { delivery_control_violated } from '../MTSAbstractService/delivery-control-violated.oa';
-export { delivery_control_violated } from '../MTSAbstractService/delivery-control-violated.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_report_delivery } from '../MTSAccessProtocol/op-report-delivery.va';
-export { op_report_delivery } from '../MTSAccessProtocol/op-report-delivery.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MTSAbstractService/ReportDeliveryResult.ta.js';
+import { delivery_control_violated } from '../MTSAbstractService/delivery-control-violated.oa.js';
+export { delivery_control_violated } from '../MTSAbstractService/delivery-control-violated.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_report_delivery } from '../MTSAccessProtocol/op-report-delivery.va.js';
+export { op_report_delivery } from '../MTSAccessProtocol/op-report-delivery.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION report_delivery */
 /**

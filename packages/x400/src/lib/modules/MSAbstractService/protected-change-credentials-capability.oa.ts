@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ChangeCredentialsAlgorithms,
     _decode_ChangeCredentialsAlgorithms,
     _encode_ChangeCredentialsAlgorithms,
-} from '../MSAbstractService/ChangeCredentialsAlgorithms.ta';
+} from '../MSAbstractService/ChangeCredentialsAlgorithms.ta.js';
 export {
     ChangeCredentialsAlgorithms,
     _decode_ChangeCredentialsAlgorithms,
     _encode_ChangeCredentialsAlgorithms,
-} from '../MSAbstractService/ChangeCredentialsAlgorithms.ta';
-import { id_ext_protected_change_credentials_capability } from '../MSObjectIdentifiers/id-ext-protected-change-credentials-capability.va';
-export { id_ext_protected_change_credentials_capability } from '../MSObjectIdentifiers/id-ext-protected-change-credentials-capability.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../MSAbstractService/ChangeCredentialsAlgorithms.ta.js';
+import { id_ext_protected_change_credentials_capability } from '../MSObjectIdentifiers/id-ext-protected-change-credentials-capability.va.js';
+export { id_ext_protected_change_credentials_capability } from '../MSObjectIdentifiers/id-ext-protected-change-credentials-capability.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION protected_change_credentials_capability */
 /**

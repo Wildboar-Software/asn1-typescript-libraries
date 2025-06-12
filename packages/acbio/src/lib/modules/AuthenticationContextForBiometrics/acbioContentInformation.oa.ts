@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ACBioContentInformation,
     _decode_ACBioContentInformation,
     _encode_ACBioContentInformation,
-} from '../AuthenticationContextForBiometrics/ACBioContentInformation.ta';
+} from '../AuthenticationContextForBiometrics/ACBioContentInformation.ta.js';
 export {
     ACBioContentInformation,
     _decode_ACBioContentInformation,
     _encode_ACBioContentInformation,
-} from '../AuthenticationContextForBiometrics/ACBioContentInformation.ta';
-import { id_acbioContentInformation } from '../AuthenticationContextForBiometrics/id-acbioContentInformation.va';
-export { id_acbioContentInformation } from '../AuthenticationContextForBiometrics/id-acbioContentInformation.va';
+} from '../AuthenticationContextForBiometrics/ACBioContentInformation.ta.js';
+import { id_acbioContentInformation } from '../AuthenticationContextForBiometrics/id-acbioContentInformation.va.js';
+export { id_acbioContentInformation } from '../AuthenticationContextForBiometrics/id-acbioContentInformation.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION acbioContentInformation */
 /**

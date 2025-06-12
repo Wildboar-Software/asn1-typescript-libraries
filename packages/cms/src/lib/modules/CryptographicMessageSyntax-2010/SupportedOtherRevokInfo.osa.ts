@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca";
-export { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca";
+import { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca.js";
+export { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedOtherRevokInfo */
 /**

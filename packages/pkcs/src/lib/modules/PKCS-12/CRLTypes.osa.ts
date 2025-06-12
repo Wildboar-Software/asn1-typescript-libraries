@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { x509CRL } from "../PKCS-12/x509CRL.oa";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { x509CRL } from "../PKCS-12/x509CRL.oa";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { x509CRL } from "../PKCS-12/x509CRL.oa.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { x509CRL } from "../PKCS-12/x509CRL.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION CRLTypes */
 /**

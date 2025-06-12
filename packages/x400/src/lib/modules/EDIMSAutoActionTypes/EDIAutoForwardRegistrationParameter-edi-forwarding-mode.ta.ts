@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NewRecipient,
     _decode_NewRecipient,
     _encode_NewRecipient,
-} from '../EDIMSAutoActionTypes/NewRecipient.ta';
+} from '../EDIMSAutoActionTypes/NewRecipient.ta.js';
 export {
     NewRecipient,
     _decode_NewRecipient,
     _encode_NewRecipient,
-} from '../EDIMSAutoActionTypes/NewRecipient.ta';
+} from '../EDIMSAutoActionTypes/NewRecipient.ta.js';
 import {
     ForwardWithRespAccepted,
     _decode_ForwardWithRespAccepted,
     _encode_ForwardWithRespAccepted,
-} from '../EDIMSAutoActionTypes/ForwardWithRespAccepted.ta';
+} from '../EDIMSAutoActionTypes/ForwardWithRespAccepted.ta.js';
 export {
     ForwardWithRespAccepted,
     _decode_ForwardWithRespAccepted,
     _encode_ForwardWithRespAccepted,
-} from '../EDIMSAutoActionTypes/ForwardWithRespAccepted.ta';
+} from '../EDIMSAutoActionTypes/ForwardWithRespAccepted.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter_edi_forwarding_mode */
 /**

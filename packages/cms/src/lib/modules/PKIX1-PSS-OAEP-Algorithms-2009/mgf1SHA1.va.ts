@@ -1,23 +1,23 @@
 /* eslint-disable */
-import { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va";
-import { MaskGenAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+import { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va.js";
+import { MaskGenAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
-export { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
+export { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va.js";
 export {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     DERElement,
 } from "asn1-ts";

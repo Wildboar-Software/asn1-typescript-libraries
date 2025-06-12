@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
-import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa";
-import { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa";
-import { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa";
-import { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa";
-import { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa";
-import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
-export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa";
-export { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa";
-export { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa";
-export { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa";
-export { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
+import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.js";
+import { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa.js";
+import { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa.js";
+import { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa.js";
+import { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa.js";
+import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
+export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.js";
+export { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa.js";
+export { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa.js";
+export { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa.js";
+export { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa.js";
+export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PublicKeys */
 /**

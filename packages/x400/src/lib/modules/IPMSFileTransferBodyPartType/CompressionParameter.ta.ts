@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca';
-export { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca';
-import { CompressionAlgorithmTable } from '../IPMSFileTransferBodyPartType/CompressionAlgorithmTable.osa';
-export { CompressionAlgorithmTable } from '../IPMSFileTransferBodyPartType/CompressionAlgorithmTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca.js';
+export { COMPRESSION_ALGORITHM } from '../IPMSFileTransferBodyPartType/COMPRESSION-ALGORITHM.oca.js';
+import { CompressionAlgorithmTable } from '../IPMSFileTransferBodyPartType/CompressionAlgorithmTable.osa.js';
+export { CompressionAlgorithmTable } from '../IPMSFileTransferBodyPartType/CompressionAlgorithmTable.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION CompressionParameter */
 /**

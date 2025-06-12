@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../TestCategories-ASN1Module/DataType.ta';
+} from '../TestCategories-ASN1Module/DataType.ta.js';
 export {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../TestCategories-ASN1Module/DataType.ta';
+} from '../TestCategories-ASN1Module/DataType.ta.js';
 import {
     DataCategory,
     DataCategory_bits /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     packets /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DataCategory,
     _encode_DataCategory,
-} from '../TestCategories-ASN1Module/DataCategory.ta';
+} from '../TestCategories-ASN1Module/DataCategory.ta.js';
 export {
     DataCategory,
     DataCategory_bits /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -101,37 +101,37 @@ export {
     packets /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DataCategory,
     _encode_DataCategory,
-} from '../TestCategories-ASN1Module/DataCategory.ta';
+} from '../TestCategories-ASN1Module/DataCategory.ta.js';
 import {
     DataSize,
     _decode_DataSize,
     _encode_DataSize,
-} from '../TestCategories-ASN1Module/DataSize.ta';
+} from '../TestCategories-ASN1Module/DataSize.ta.js';
 export {
     DataSize,
     _decode_DataSize,
     _encode_DataSize,
-} from '../TestCategories-ASN1Module/DataSize.ta';
+} from '../TestCategories-ASN1Module/DataSize.ta.js';
 import {
     UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
-} from '../TestCategories-ASN1Module/UnitsTotal.ta';
+} from '../TestCategories-ASN1Module/UnitsTotal.ta.js';
 export {
     UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
-} from '../TestCategories-ASN1Module/UnitsTotal.ta';
+} from '../TestCategories-ASN1Module/UnitsTotal.ta.js';
 import {
     DataRate,
     _decode_DataRate,
     _encode_DataRate,
-} from '../TestCategories-ASN1Module/DataRate.ta';
+} from '../TestCategories-ASN1Module/DataRate.ta.js';
 export {
     DataRate,
     _decode_DataRate,
     _encode_DataRate,
-} from '../TestCategories-ASN1Module/DataRate.ta';
+} from '../TestCategories-ASN1Module/DataRate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DataUnits */
 /**

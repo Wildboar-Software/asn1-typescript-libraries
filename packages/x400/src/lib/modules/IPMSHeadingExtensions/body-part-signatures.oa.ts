@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartSignatures,
     _decode_BodyPartSignatures,
     _encode_BodyPartSignatures,
-} from '../IPMSHeadingExtensions/BodyPartSignatures.ta';
+} from '../IPMSHeadingExtensions/BodyPartSignatures.ta.js';
 export {
     BodyPartSignatures,
     _decode_BodyPartSignatures,
     _encode_BodyPartSignatures,
-} from '../IPMSHeadingExtensions/BodyPartSignatures.ta';
-import { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va';
-export { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/BodyPartSignatures.ta.js';
+import { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va.js';
+export { id_hex_body_part_signatures } from '../IPMSObjectIdentifiers/id-hex-body-part-signatures.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION body_part_signatures */
 /**

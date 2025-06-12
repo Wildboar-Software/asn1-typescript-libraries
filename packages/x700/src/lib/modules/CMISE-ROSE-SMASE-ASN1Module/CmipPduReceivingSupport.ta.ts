@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CmipPduType,
     CmipPduType_m_get_invoke /* IMPORTED_LONG_NAMED_BIT */,
@@ -162,7 +162,7 @@ import {
     rosReject /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_CmipPduType,
     _encode_CmipPduType,
-} from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta';
+} from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta.js';
 export {
     CmipPduType,
     CmipPduType_m_get_invoke /* IMPORTED_LONG_NAMED_BIT */,
@@ -259,7 +259,7 @@ export {
     rosReject /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_CmipPduType,
     _encode_CmipPduType,
-} from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta';
+} from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CmipPduReceivingSupport */
 /**

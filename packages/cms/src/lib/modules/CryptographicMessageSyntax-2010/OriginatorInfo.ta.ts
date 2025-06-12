@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax-2010/CertificateSet.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateSet.ta.js";
 import {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta";
+} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax-2010/CertificateSet.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateSet.ta.js";
 export {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta";
+} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OriginatorInfo */
 /**

@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta';
+} from '../ISO8571-FTAM/Access-Request.ta.js';
 import {
   Concurrency_Access,
   _decode_Concurrency_Access,
   _encode_Concurrency_Access,
-} from '../ISO8571-FTAM/Concurrency-Access.ta';
+} from '../ISO8571-FTAM/Concurrency-Access.ta.js';
 export {
   Concurrency_Access,
   _decode_Concurrency_Access,
   _encode_Concurrency_Access,
-} from '../ISO8571-FTAM/Concurrency-Access.ta';
+} from '../ISO8571-FTAM/Concurrency-Access.ta.js';
 import {
   User_Identity,
   _decode_User_Identity,
   _encode_User_Identity,
-} from '../ISO8571-FTAM/User-Identity.ta';
+} from '../ISO8571-FTAM/User-Identity.ta.js';
 export {
   User_Identity,
   _decode_User_Identity,
   _encode_User_Identity,
-} from '../ISO8571-FTAM/User-Identity.ta';
+} from '../ISO8571-FTAM/User-Identity.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Application_Entity_Title,
   _decode_Application_Entity_Title,
   _encode_Application_Entity_Title,
-} from '../ISO8571-FTAM/Application-Entity-Title.ta';
+} from '../ISO8571-FTAM/Application-Entity-Title.ta.js';
 export {
   Application_Entity_Title,
   _decode_Application_Entity_Title,
   _encode_Application_Entity_Title,
-} from '../ISO8571-FTAM/Application-Entity-Title.ta';
+} from '../ISO8571-FTAM/Application-Entity-Title.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Control_Element */
 /**

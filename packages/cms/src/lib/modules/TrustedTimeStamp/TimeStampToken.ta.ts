@@ -4,7 +4,7 @@ import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../CryptographicMessageSyntax-2010/ContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/ContentInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeStampToken */
 /**

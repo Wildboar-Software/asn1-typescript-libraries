@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttachSessionLocalReference,
   _decode_AttachSessionLocalReference,
   _encode_AttachSessionLocalReference,
-} from '../BIP/AttachSessionLocalReference.ta';
+} from '../BIP/AttachSessionLocalReference.ta.js';
 export {
   AttachSessionLocalReference,
   _decode_AttachSessionLocalReference,
   _encode_AttachSessionLocalReference,
-} from '../BIP/AttachSessionLocalReference.ta';
+} from '../BIP/AttachSessionLocalReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttachSessionLocalReferences */
 /**

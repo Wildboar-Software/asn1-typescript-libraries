@@ -4,29 +4,29 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from "../CryptographicMessageSyntax-2010/OriginatorIdentifierOrKey.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorIdentifierOrKey.ta.js";
 import {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKeys.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKeys.ta.js";
 import {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
+} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.js";
+export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -43,22 +43,22 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from "../CryptographicMessageSyntax-2010/OriginatorIdentifierOrKey.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorIdentifierOrKey.ta.js";
 export {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKeys.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKeys.ta.js";
 export {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta";
+} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
 /**

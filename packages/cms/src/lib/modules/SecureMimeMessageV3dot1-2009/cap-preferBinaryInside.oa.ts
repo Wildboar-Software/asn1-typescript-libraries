@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-import { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+import { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va.js";
 
 /* START_OF_SYMBOL_DEFINITION cap_preferBinaryInside */
 /**

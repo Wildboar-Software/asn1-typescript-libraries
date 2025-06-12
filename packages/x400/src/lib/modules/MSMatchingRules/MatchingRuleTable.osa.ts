@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-import { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa';
-export { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa';
-import { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa';
-export { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+import { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa.js';
+export { GeneralMatchingRules } from '../MSMatchingRules/GeneralMatchingRules.osa.js';
+import { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa.js';
+export { ContentSpecificMatchingRules } from '../MSMatchingRules/ContentSpecificMatchingRules.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION MatchingRuleTable */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     G3FacsimileNonBasicParameters,
     G3FacsimileNonBasicParameters_two_dimensional /* IMPORTED_LONG_NAMED_BIT */,
@@ -118,7 +118,7 @@ import {
     processable_mode_26 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta';
+} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.js';
 export {
     G3FacsimileNonBasicParameters,
     G3FacsimileNonBasicParameters_two_dimensional /* IMPORTED_LONG_NAMED_BIT */,
@@ -171,17 +171,17 @@ export {
     processable_mode_26 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta';
+} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.js';
 import {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 export {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NonBasicParameters */
 /**

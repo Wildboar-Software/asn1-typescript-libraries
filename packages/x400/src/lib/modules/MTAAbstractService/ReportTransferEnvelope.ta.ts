@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReportIdentifier,
     _decode_ReportIdentifier,
     _encode_ReportIdentifier,
-} from '../MTAAbstractService/ReportIdentifier.ta';
+} from '../MTAAbstractService/ReportIdentifier.ta.js';
 export {
     ReportIdentifier,
     _decode_ReportIdentifier,
     _encode_ReportIdentifier,
-} from '../MTAAbstractService/ReportIdentifier.ta';
+} from '../MTAAbstractService/ReportIdentifier.ta.js';
 import {
     ReportDestinationName,
     _decode_ReportDestinationName,
     _encode_ReportDestinationName,
-} from '../MTAAbstractService/ReportDestinationName.ta';
+} from '../MTAAbstractService/ReportDestinationName.ta.js';
 export {
     ReportDestinationName,
     _decode_ReportDestinationName,
     _encode_ReportDestinationName,
-} from '../MTAAbstractService/ReportDestinationName.ta';
+} from '../MTAAbstractService/ReportDestinationName.ta.js';
 import {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from '../MTAAbstractService/TraceInformation.ta';
+} from '../MTAAbstractService/TraceInformation.ta.js';
 export {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from '../MTAAbstractService/TraceInformation.ta';
+} from '../MTAAbstractService/TraceInformation.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportTransferEnvelope */
 /**

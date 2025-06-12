@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa';
-export { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa';
-import { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa';
-export { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa';
-import { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va';
-export { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa.js';
+export { mHSCommonName } from '../MHSRoutingORAddressSubtree/mHSCommonName.oa.js';
+import { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa.js';
+export { mHSCommonNameAttribute } from '../MHSRoutingORAddressSubtree/mHSCommonNameAttribute.oa.js';
+import { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va.js';
+export { id_nf_mhs_common_name } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-common-name.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSCommonNameForm */
 /**

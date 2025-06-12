@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
-export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
+export { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.js";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OtherCertID */

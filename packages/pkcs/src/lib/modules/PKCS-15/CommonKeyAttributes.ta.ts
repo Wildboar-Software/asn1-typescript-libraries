@@ -6,32 +6,32 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
+} from "../PKCS-15/Identifier.ta.js";
 import {
     KeyAccessFlags,
     _decode_KeyAccessFlags,
     _encode_KeyAccessFlags,
-} from "../PKCS-15/KeyAccessFlags.ta";
+} from "../PKCS-15/KeyAccessFlags.ta.js";
 import {
     KeyUsageFlags,
     _decode_KeyUsageFlags,
     _encode_KeyUsageFlags,
-} from "../PKCS-15/KeyUsageFlags.ta";
+} from "../PKCS-15/KeyUsageFlags.ta.js";
 import {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
+} from "../PKCS-15/Identifier.ta.js";
 export {
     alwaysSensitive /* IMPORTED_SHORT_NAMED_BIT */,
     extractable /* IMPORTED_SHORT_NAMED_BIT */,
@@ -46,7 +46,7 @@ export {
     sensitive /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_KeyAccessFlags,
     _encode_KeyAccessFlags,
-} from "../PKCS-15/KeyAccessFlags.ta";
+} from "../PKCS-15/KeyAccessFlags.ta.js";
 export {
     decrypt /* IMPORTED_SHORT_NAMED_BIT */,
     derive /* IMPORTED_SHORT_NAMED_BIT */,
@@ -71,12 +71,12 @@ export {
     wrap /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_KeyUsageFlags,
     _encode_KeyUsageFlags,
-} from "../PKCS-15/KeyUsageFlags.ta";
+} from "../PKCS-15/KeyUsageFlags.ta.js";
 export {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonKeyAttributes */
 /**

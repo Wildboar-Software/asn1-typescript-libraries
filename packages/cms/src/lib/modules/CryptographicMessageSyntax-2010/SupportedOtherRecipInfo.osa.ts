@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca";
-export { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca";
+import { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.js";
+export { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedOtherRecipInfo */
 /**

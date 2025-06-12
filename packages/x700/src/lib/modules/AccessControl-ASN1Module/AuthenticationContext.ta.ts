@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca';
-export { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca';
-import { AuthenticationContextSet } from '../AccessControl-ASN1Module/AuthenticationContextSet.osa';
-export { AuthenticationContextSet } from '../AccessControl-ASN1Module/AuthenticationContextSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca.js';
+export { AC_AUTH_CONTEXT } from '../AccessControl-ASN1Module/AC-AUTH-CONTEXT.oca.js';
+import { AuthenticationContextSet } from '../AccessControl-ASN1Module/AuthenticationContextSet.osa.js';
+export { AuthenticationContextSet } from '../AccessControl-ASN1Module/AuthenticationContextSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationContext */
 /**

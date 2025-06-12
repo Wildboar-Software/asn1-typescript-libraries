@@ -3,16 +3,16 @@ import {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../PKCS7/DigestedData.ta";
-import { id_digested_data } from "../PKCS7/id-digested-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/DigestedData.ta.js";
+import { id_digested_data } from "../PKCS7/id-digested-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../PKCS7/DigestedData.ta";
-export { id_digested_data } from "../PKCS7/id-digested-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/DigestedData.ta.js";
+export { id_digested_data } from "../PKCS7/id-digested-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION digested_data */
 /**

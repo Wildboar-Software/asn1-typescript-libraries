@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   OR_Set,
   _decode_OR_Set,
   _encode_OR_Set,
-} from '../ISO8571-FTAM/OR-Set.ta';
+} from '../ISO8571-FTAM/OR-Set.ta.js';
 export {
   OR_Set,
   _decode_OR_Set,
   _encode_OR_Set,
-} from '../ISO8571-FTAM/OR-Set.ta';
+} from '../ISO8571-FTAM/OR-Set.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Attribute_Value_Assertions */
 /**

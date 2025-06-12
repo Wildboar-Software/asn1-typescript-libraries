@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FingerPrint,
     _decode_FingerPrint,
     _encode_FingerPrint,
-} from "../PKCS-15/FingerPrint.ta";
+} from "../PKCS-15/FingerPrint.ta.js";
 import {
     IrisScan,
     _decode_IrisScan,
     _encode_IrisScan,
-} from "../PKCS-15/IrisScan.ta";
+} from "../PKCS-15/IrisScan.ta.js";
 export {
     FingerPrint,
     _decode_FingerPrint,
     _encode_FingerPrint,
-} from "../PKCS-15/FingerPrint.ta";
+} from "../PKCS-15/FingerPrint.ta.js";
 export {
     IrisScan,
     _decode_IrisScan,
     _encode_IrisScan,
-} from "../PKCS-15/IrisScan.ta";
+} from "../PKCS-15/IrisScan.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BiometricType */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RC2ParameterVersion,
     _decode_RC2ParameterVersion,
     _encode_RC2ParameterVersion,
-} from "../CryptographicMessageSyntax/RC2ParameterVersion.ta";
+} from "../CryptographicMessageSyntax/RC2ParameterVersion.ta.js";
 export {
     RC2ParameterVersion,
     _decode_RC2ParameterVersion,
     _encode_RC2ParameterVersion,
-} from "../CryptographicMessageSyntax/RC2ParameterVersion.ta";
+} from "../CryptographicMessageSyntax/RC2ParameterVersion.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RC2wrapParameter */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Extension_Set_Identifier,
   _decode_Extension_Set_Identifier,
   _encode_Extension_Set_Identifier,
-} from '../ISO8571-FTAM/Extension-Set-Identifier.ta';
+} from '../ISO8571-FTAM/Extension-Set-Identifier.ta.js';
 export {
   Extension_Set_Identifier,
   _decode_Extension_Set_Identifier,
   _encode_Extension_Set_Identifier,
-} from '../ISO8571-FTAM/Extension-Set-Identifier.ta';
+} from '../ISO8571-FTAM/Extension-Set-Identifier.ta.js';
 import {
   Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
   _decode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
   _encode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
-} from '../ISO8571-FTAM/Attribute-Extensions-Pattern-Item-extension-set-attribute-Patterns-Item.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions-Pattern-Item-extension-set-attribute-Patterns-Item.ta.js';
 export {
   Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
   _decode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
   _encode_Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item,
-} from '../ISO8571-FTAM/Attribute-Extensions-Pattern-Item-extension-set-attribute-Patterns-Item.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions-Pattern-Item-extension-set-attribute-Patterns-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Attribute_Extensions_Pattern_Item */
 /**

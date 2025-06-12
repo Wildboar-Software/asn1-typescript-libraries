@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca";
-import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va";
+import { MATCHING_RULE } from "@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js";
+import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.js";
 import {
     PKCS9String,
     _decode_PKCS9String,
     _encode_PKCS9String,
-} from "../PKCS-9/PKCS9String.ta";
+} from "../PKCS-9/PKCS9String.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs9CaseIgnoreMatch */
 /**

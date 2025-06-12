@@ -65,35 +65,35 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../MSAbstractService/AutoActionType.ta.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 import {
     AutoAlertRegistrationParameter,
     _decode_AutoAlertRegistrationParameter,
     _encode_AutoAlertRegistrationParameter,
-} from '../MSGeneralAutoActionTypes/AutoAlertRegistrationParameter.ta';
+} from '../MSGeneralAutoActionTypes/AutoAlertRegistrationParameter.ta.js';
 export {
     AutoAlertRegistrationParameter,
     _decode_AutoAlertRegistrationParameter,
     _encode_AutoAlertRegistrationParameter,
-} from '../MSGeneralAutoActionTypes/AutoAlertRegistrationParameter.ta';
-import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa';
-export { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa';
-import { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va';
-export { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
+} from '../MSGeneralAutoActionTypes/AutoAlertRegistrationParameter.ta.js';
+import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.js';
+export { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.js';
+import { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va.js';
+export { id_act_auto_alert } from '../MSObjectIdentifiers/id-act-auto-alert.va.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION auto_alert */
 /**

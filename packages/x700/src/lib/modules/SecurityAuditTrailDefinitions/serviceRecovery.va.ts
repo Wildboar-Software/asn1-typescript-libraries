@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ServiceReportCause,
     _decode_ServiceReportCause,
     _encode_ServiceReportCause,
-} from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta';
+} from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta.js';
 export {
     ServiceReportCause,
     _decode_ServiceReportCause,
     _encode_ServiceReportCause,
-} from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta';
-import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceReportCause.va';
-export { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceReportCause.va';
+} from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta.js';
+import { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceReportCause.va.js';
+export { serviceReportCause } from '../SecurityAuditTrailDefinitions/serviceReportCause.va.js';
 
 /* START_OF_SYMBOL_DEFINITION serviceRecovery */
 /**

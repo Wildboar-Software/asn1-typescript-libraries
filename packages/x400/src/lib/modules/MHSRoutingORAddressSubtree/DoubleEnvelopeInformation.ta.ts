@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddressAndDirectoryName,
     _decode_ORAddressAndDirectoryName,
     _encode_ORAddressAndDirectoryName,
-} from '../MHSRoutingORAddressSubtree/ORAddressAndDirectoryName.ta';
+} from '../MHSRoutingORAddressSubtree/ORAddressAndDirectoryName.ta.js';
 export {
     ORAddressAndDirectoryName,
     _decode_ORAddressAndDirectoryName,
     _encode_ORAddressAndDirectoryName,
-} from '../MHSRoutingORAddressSubtree/ORAddressAndDirectoryName.ta';
+} from '../MHSRoutingORAddressSubtree/ORAddressAndDirectoryName.ta.js';
 import {
     AlgorithmInformation,
     _decode_AlgorithmInformation,
     _encode_AlgorithmInformation,
-} from '../MHSRoutingORAddressSubtree/AlgorithmInformation.ta';
+} from '../MHSRoutingORAddressSubtree/AlgorithmInformation.ta.js';
 export {
     AlgorithmInformation,
     _decode_AlgorithmInformation,
     _encode_AlgorithmInformation,
-} from '../MHSRoutingORAddressSubtree/AlgorithmInformation.ta';
+} from '../MHSRoutingORAddressSubtree/AlgorithmInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DoubleEnvelopeInformation */
 /**

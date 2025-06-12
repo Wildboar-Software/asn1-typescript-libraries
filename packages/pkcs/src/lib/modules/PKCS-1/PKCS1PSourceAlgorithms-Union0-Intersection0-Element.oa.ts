@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 import {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKCS-1/EncodingParameters.ta";
-import { id_pSpecified } from "../PKCS-1/id-pSpecified.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+} from "../PKCS-1/EncodingParameters.ta.js";
+import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 export {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKCS-1/EncodingParameters.ta";
-export { id_pSpecified } from "../PKCS-1/id-pSpecified.va";
+} from "../PKCS-1/EncodingParameters.ta.js";
+export { id_pSpecified } from "../PKCS-1/id-pSpecified.va.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1PSourceAlgorithms_Union0_Intersection0_Element */
 /**

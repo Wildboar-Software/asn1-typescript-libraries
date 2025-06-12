@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { signedDataACBio } from '../AuthenticationContextForBiometrics/signedDataACBio.oa';
-export { signedDataACBio } from '../AuthenticationContextForBiometrics/signedDataACBio.oa';
-import { authenticatedDataACBio } from '../AuthenticationContextForBiometrics/authenticatedDataACBio.oa';
-export { authenticatedDataACBio } from '../AuthenticationContextForBiometrics/authenticatedDataACBio.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { signedDataACBio } from '../AuthenticationContextForBiometrics/signedDataACBio.oa.js';
+export { signedDataACBio } from '../AuthenticationContextForBiometrics/signedDataACBio.oa.js';
+import { authenticatedDataACBio } from '../AuthenticationContextForBiometrics/authenticatedDataACBio.oa.js';
+export { authenticatedDataACBio } from '../AuthenticationContextForBiometrics/authenticatedDataACBio.oa.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentTypeACBio */
 /**

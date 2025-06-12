@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta";
-export { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta.js";
+export { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ComponentAddress */

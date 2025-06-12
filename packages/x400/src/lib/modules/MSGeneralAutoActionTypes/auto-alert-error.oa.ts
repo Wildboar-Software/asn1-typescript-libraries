@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     AutoAlertErrorIndication,
     _decode_AutoAlertErrorIndication,
     _encode_AutoAlertErrorIndication,
-} from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta';
+} from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta.js';
 export {
     AutoAlertErrorIndication,
     _decode_AutoAlertErrorIndication,
     _encode_AutoAlertErrorIndication,
-} from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta';
-import { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va';
-export { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../MSGeneralAutoActionTypes/AutoAlertErrorIndication.ta.js';
+import { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va.js';
+export { id_aae_auto_alert_error } from '../MSObjectIdentifiers/id-aae-auto-alert-error.va.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION auto_alert_error */
 /**

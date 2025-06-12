@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SecurityIdentity,
   _decode_SecurityIdentity,
   _encode_SecurityIdentity,
-} from '../Notation/SecurityIdentity.ta';
+} from '../Notation/SecurityIdentity.ta.js';
 export {
   SecurityIdentity,
   _decode_SecurityIdentity,
   _encode_SecurityIdentity,
-} from '../Notation/SecurityIdentity.ta';
+} from '../Notation/SecurityIdentity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION symmetricKeyInformation_KiType */
 /**

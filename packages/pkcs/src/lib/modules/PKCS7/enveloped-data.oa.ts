@@ -3,16 +3,16 @@ import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "../PKCS7/EnvelopedData.ta";
-import { id_enveloped_data } from "../PKCS7/id-enveloped-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/EnvelopedData.ta.js";
+import { id_enveloped_data } from "../PKCS7/id-enveloped-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "../PKCS7/EnvelopedData.ta";
-export { id_enveloped_data } from "../PKCS7/id-enveloped-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/EnvelopedData.ta.js";
+export { id_enveloped_data } from "../PKCS7/id-enveloped-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION enveloped_data */
 /**

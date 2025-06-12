@@ -5,80 +5,80 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js";
 import {
     EquivalentPolicies,
     _decode_EquivalentPolicies,
     _encode_EquivalentPolicies,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta.js";
 import {
     ObjectIdData,
     _decode_ObjectIdData,
     _encode_ObjectIdData,
-} from "../SIOsAccessControl-MODULE/ObjectIdData.ta";
+} from "../SIOsAccessControl-MODULE/ObjectIdData.ta.js";
 import {
     SecurityClassifications,
     _decode_SecurityClassifications,
     _encode_SecurityClassifications,
-} from "../SIOsAccessControl-MODULE/SecurityClassifications.ta";
+} from "../SIOsAccessControl-MODULE/SecurityClassifications.ta.js";
 import {
     SPIF_SecurityCategories,
     _decode_SPIF_SecurityCategories,
     _encode_SPIF_SecurityCategories,
-} from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta";
+} from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta.js";
 import {
     UpdateInformationData,
     _decode_UpdateInformationData,
     _encode_UpdateInformationData,
-} from "../SIOsAccessControl-MODULE/UpdateInformationData.ta";
+} from "../SIOsAccessControl-MODULE/UpdateInformationData.ta.js";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     VersionInformationData,
     _decode_VersionInformationData,
     _encode_VersionInformationData,
-} from "../SIOsAccessControl-MODULE/VersionInformationData.ta";
+} from "../SIOsAccessControl-MODULE/VersionInformationData.ta.js";
 export {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js";
 export {
     EquivalentPolicies,
     _decode_EquivalentPolicies,
     _encode_EquivalentPolicies,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta.js";
 export {
     ObjectIdData,
     _decode_ObjectIdData,
     _encode_ObjectIdData,
-} from "../SIOsAccessControl-MODULE/ObjectIdData.ta";
+} from "../SIOsAccessControl-MODULE/ObjectIdData.ta.js";
 export {
     SecurityClassifications,
     _decode_SecurityClassifications,
     _encode_SecurityClassifications,
-} from "../SIOsAccessControl-MODULE/SecurityClassifications.ta";
+} from "../SIOsAccessControl-MODULE/SecurityClassifications.ta.js";
 export {
     SPIF_SecurityCategories,
     _decode_SPIF_SecurityCategories,
     _encode_SPIF_SecurityCategories,
-} from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta";
+} from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta.js";
 export {
     UpdateInformationData,
     _decode_UpdateInformationData,
     _encode_UpdateInformationData,
-} from "../SIOsAccessControl-MODULE/UpdateInformationData.ta";
+} from "../SIOsAccessControl-MODULE/UpdateInformationData.ta.js";
 export {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     VersionInformationData,
     VersionInformationData_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_VersionInformationData,
     _encode_VersionInformationData,
-} from "../SIOsAccessControl-MODULE/VersionInformationData.ta";
+} from "../SIOsAccessControl-MODULE/VersionInformationData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SPIF */
 /**

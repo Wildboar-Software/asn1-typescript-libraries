@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CompressionParameter,
     _decode_CompressionParameter,
     _encode_CompressionParameter,
-} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta';
+} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.js';
 export {
     CompressionParameter,
     _decode_CompressionParameter,
     _encode_CompressionParameter,
-} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta';
-import { id_edi_compression } from '../EDIMSObjectIdentifiers/id-edi-compression.va';
-export { id_edi_compression } from '../EDIMSObjectIdentifiers/id-edi-compression.va';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
-export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
+} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.js';
+import { id_edi_compression } from '../EDIMSObjectIdentifiers/id-edi-compression.va.js';
+export { id_edi_compression } from '../EDIMSObjectIdentifiers/id-edi-compression.va.js';
+import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
+export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION primary_body_part_compression_indication */
 /**

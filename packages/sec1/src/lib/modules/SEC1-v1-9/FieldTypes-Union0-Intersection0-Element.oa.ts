@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta";
-export { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta";
-import { prime_field } from "../SEC1-v1-9/prime-field.va";
-export { prime_field } from "../SEC1-v1-9/prime-field.va";
-import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
-export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.js";
+export { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.js";
+import { prime_field } from "../SEC1-v1-9/prime-field.va.js";
+export { prime_field } from "../SEC1-v1-9/prime-field.va.js";
+import { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
+export { FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */

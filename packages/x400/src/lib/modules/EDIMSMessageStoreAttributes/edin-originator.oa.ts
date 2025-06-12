@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
-} from '../EDIMSInformationObjects/EDINOriginatorField.ta';
+} from '../EDIMSInformationObjects/EDINOriginatorField.ta.js';
 export {
     EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
-} from '../EDIMSInformationObjects/EDINOriginatorField.ta';
-import { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa';
-export { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa';
-import { id_nat_edin_originator } from '../EDIMSObjectIdentifiers/id-nat-edin-originator.va';
-export { id_nat_edin_originator } from '../EDIMSObjectIdentifiers/id-nat-edin-originator.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../EDIMSInformationObjects/EDINOriginatorField.ta.js';
+import { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa.js';
+export { oRNameMatch } from '../MSMatchingRules/oRNameMatch.oa.js';
+import { id_nat_edin_originator } from '../EDIMSObjectIdentifiers/id-nat-edin-originator.va.js';
+export { id_nat_edin_originator } from '../EDIMSObjectIdentifiers/id-nat-edin-originator.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION edin_originator */
 /**

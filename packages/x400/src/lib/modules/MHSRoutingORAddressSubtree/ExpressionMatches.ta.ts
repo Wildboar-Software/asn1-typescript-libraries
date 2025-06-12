@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExpressionMatch,
     _decode_ExpressionMatch,
     _encode_ExpressionMatch,
-} from '../MHSRoutingORAddressSubtree/ExpressionMatch.ta';
+} from '../MHSRoutingORAddressSubtree/ExpressionMatch.ta.js';
 export {
     ExpressionMatch,
     _decode_ExpressionMatch,
     _encode_ExpressionMatch,
-} from '../MHSRoutingORAddressSubtree/ExpressionMatch.ta';
+} from '../MHSRoutingORAddressSubtree/ExpressionMatch.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExpressionMatches */
 /**

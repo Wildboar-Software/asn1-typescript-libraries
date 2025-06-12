@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
-} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta';
+} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.js';
 export {
     SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
-} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta';
-import { defaultWeekMaskWps } from '../Schedulerev1-ASN1Module/defaultWeekMaskWps.va';
-export { defaultWeekMaskWps } from '../Schedulerev1-ASN1Module/defaultWeekMaskWps.va';
+} from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.js';
+import { defaultWeekMaskWps } from '../Schedulerev1-ASN1Module/defaultWeekMaskWps.va.js';
+export { defaultWeekMaskWps } from '../Schedulerev1-ASN1Module/defaultWeekMaskWps.va.js';
 import {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
 export {
     WeekMaskWps,
     _decode_WeekMaskWps,
     _encode_WeekMaskWps,
-} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/WeekMaskWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultSequenceOfWeeks */
 /**

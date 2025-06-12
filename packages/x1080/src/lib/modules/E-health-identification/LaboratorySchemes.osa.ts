@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca';
-export { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca.js';
+export { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION LaboratorySchemes */
 /**

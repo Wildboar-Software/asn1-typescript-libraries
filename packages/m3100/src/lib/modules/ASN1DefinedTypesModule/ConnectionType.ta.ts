@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExplicitPtoP,
     _decode_ExplicitPtoP,
     _encode_ExplicitPtoP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta.js';
 export {
     ExplicitPtoP,
     _decode_ExplicitPtoP,
     _encode_ExplicitPtoP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta.js';
 import {
     PtoTPPool,
     _decode_PtoTPPool,
     _encode_PtoTPPool,
-} from '../ASN1DefinedTypesModule/PtoTPPool.ta';
+} from '../ASN1DefinedTypesModule/PtoTPPool.ta.js';
 export {
     PtoTPPool,
     _decode_PtoTPPool,
     _encode_PtoTPPool,
-} from '../ASN1DefinedTypesModule/PtoTPPool.ta';
+} from '../ASN1DefinedTypesModule/PtoTPPool.ta.js';
 import {
     ExplicitPtoMP,
     _decode_ExplicitPtoMP,
     _encode_ExplicitPtoMP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoMP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoMP.ta.js';
 export {
     ExplicitPtoMP,
     _decode_ExplicitPtoMP,
     _encode_ExplicitPtoMP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoMP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoMP.ta.js';
 import {
     PtoMPools,
     _decode_PtoMPools,
     _encode_PtoMPools,
-} from '../ASN1DefinedTypesModule/PtoMPools.ta';
+} from '../ASN1DefinedTypesModule/PtoMPools.ta.js';
 export {
     PtoMPools,
     _decode_PtoMPools,
     _encode_PtoMPools,
-} from '../ASN1DefinedTypesModule/PtoMPools.ta';
+} from '../ASN1DefinedTypesModule/PtoMPools.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectionType */
 /**

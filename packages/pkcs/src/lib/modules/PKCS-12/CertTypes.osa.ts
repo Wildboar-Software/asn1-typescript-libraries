@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa";
-import { x509Certificate } from "../PKCS-12/x509Certificate.oa";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa";
-export { x509Certificate } from "../PKCS-12/x509Certificate.oa";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa.js";
+import { x509Certificate } from "../PKCS-12/x509Certificate.oa.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { sdsiCertificate } from "../PKCS-12/sdsiCertificate.oa.js";
+export { x509Certificate } from "../PKCS-12/x509Certificate.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION CertTypes */
 /**

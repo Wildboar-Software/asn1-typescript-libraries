@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateType,
     _decode_CertificateType,
     _encode_CertificateType,
-} from "../PKCS-15/CertificateType.ta";
+} from "../PKCS-15/CertificateType.ta.js";
 import {
     PathOrObjects,
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta";
+} from "../PKCS-15/PathOrObjects.ta.js";
 export {
     CertificateType,
     _decode_CertificateType,
     _encode_CertificateType,
-} from "../PKCS-15/CertificateType.ta";
+} from "../PKCS-15/CertificateType.ta.js";
 export {
     PathOrObjects,
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta";
+} from "../PKCS-15/PathOrObjects.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Certificates */
 /**

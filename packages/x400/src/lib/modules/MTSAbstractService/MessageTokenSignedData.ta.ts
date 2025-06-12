@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ContentConfidentialityAlgorithmIdentifier,
     _decode_ContentConfidentialityAlgorithmIdentifier,
     _encode_ContentConfidentialityAlgorithmIdentifier,
-} from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta';
+} from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta.js';
 export {
     ContentConfidentialityAlgorithmIdentifier,
     _decode_ContentConfidentialityAlgorithmIdentifier,
     _encode_ContentConfidentialityAlgorithmIdentifier,
-} from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta';
+} from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta.js';
 import {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 export {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 import {
     MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
-} from '../MTSAbstractService/MessageSecurityLabel.ta';
+} from '../MTSAbstractService/MessageSecurityLabel.ta.js';
 export {
     MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
-} from '../MTSAbstractService/MessageSecurityLabel.ta';
+} from '../MTSAbstractService/MessageSecurityLabel.ta.js';
 import {
     ProofOfDeliveryRequest,
     _enum_for_ProofOfDeliveryRequest,
@@ -105,7 +105,7 @@ import {
     proof_of_delivery_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProofOfDeliveryRequest,
     _encode_ProofOfDeliveryRequest,
-} from '../MTSAbstractService/ProofOfDeliveryRequest.ta';
+} from '../MTSAbstractService/ProofOfDeliveryRequest.ta.js';
 export {
     ProofOfDeliveryRequest,
     _enum_for_ProofOfDeliveryRequest,
@@ -115,7 +115,7 @@ export {
     proof_of_delivery_requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProofOfDeliveryRequest,
     _encode_ProofOfDeliveryRequest,
-} from '../MTSAbstractService/ProofOfDeliveryRequest.ta';
+} from '../MTSAbstractService/ProofOfDeliveryRequest.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageTokenSignedData */
 /**

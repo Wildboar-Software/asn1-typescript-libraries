@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ApplicationCrossReference,
     _decode_ApplicationCrossReference,
     _encode_ApplicationCrossReference,
-} from '../EDIMSInformationObjects/ApplicationCrossReference.ta';
+} from '../EDIMSInformationObjects/ApplicationCrossReference.ta.js';
 export {
     ApplicationCrossReference,
     _decode_ApplicationCrossReference,
     _encode_ApplicationCrossReference,
-} from '../EDIMSInformationObjects/ApplicationCrossReference.ta';
+} from '../EDIMSInformationObjects/ApplicationCrossReference.ta.js';
 import {
     MessageReference,
     _decode_MessageReference,
     _encode_MessageReference,
-} from '../EDIMSInformationObjects/MessageReference.ta';
+} from '../EDIMSInformationObjects/MessageReference.ta.js';
 export {
     MessageReference,
     _decode_MessageReference,
     _encode_MessageReference,
-} from '../EDIMSInformationObjects/MessageReference.ta';
+} from '../EDIMSInformationObjects/MessageReference.ta.js';
 import {
     BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
-} from '../EDIMSInformationObjects/BodyPartReference.ta';
+} from '../EDIMSInformationObjects/BodyPartReference.ta.js';
 export {
     BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
-} from '../EDIMSInformationObjects/BodyPartReference.ta';
+} from '../EDIMSInformationObjects/BodyPartReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CrossReferencingInformationSubField */
 /**

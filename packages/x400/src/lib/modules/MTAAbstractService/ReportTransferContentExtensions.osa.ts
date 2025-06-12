@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-export { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+export { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportTransferContentExtensions */
 /**

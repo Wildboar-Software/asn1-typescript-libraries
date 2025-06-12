@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Bandwidth_Item,
     _decode_Bandwidth_Item,
     _encode_Bandwidth_Item,
-} from '../M3100ASN1TypeModule2/Bandwidth-Item.ta';
+} from '../M3100ASN1TypeModule2/Bandwidth-Item.ta.js';
 export {
     Bandwidth_Item,
     _decode_Bandwidth_Item,
     _encode_Bandwidth_Item,
-} from '../M3100ASN1TypeModule2/Bandwidth-Item.ta';
+} from '../M3100ASN1TypeModule2/Bandwidth-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Bandwidth */
 /**

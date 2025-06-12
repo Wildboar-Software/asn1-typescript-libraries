@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { change_credentials } from '../MTSAbstractService/change-credentials.oa';
-export { change_credentials } from '../MTSAbstractService/change-credentials.oa';
-import { register_88 } from '../MTSAbstractService88/register-88.oa';
-export { register_88 } from '../MTSAbstractService88/register-88.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va';
-export { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { change_credentials } from '../MTSAbstractService/change-credentials.oa.js';
+export { change_credentials } from '../MTSAbstractService/change-credentials.oa.js';
+import { register_88 } from '../MTSAbstractService88/register-88.oa.js';
+export { register_88 } from '../MTSAbstractService88/register-88.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va.js';
+export { id_pt_administration } from '../MTSObjectIdentifiers/id-pt-administration.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION administration_88 */
 /**

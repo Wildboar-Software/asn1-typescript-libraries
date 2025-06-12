@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.js';
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.js';
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.js';
 export {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateSerialNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IssuerAndSerialNumber */
 /**

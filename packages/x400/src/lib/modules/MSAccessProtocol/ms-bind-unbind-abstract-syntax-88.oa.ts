@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MSBindUnbindPDUs88,
     _decode_MSBindUnbindPDUs88,
     _encode_MSBindUnbindPDUs88,
-} from '../MSAccessProtocol/MSBindUnbindPDUs88.ta';
+} from '../MSAccessProtocol/MSBindUnbindPDUs88.ta.js';
 export {
     MSBindUnbindPDUs88,
     _decode_MSBindUnbindPDUs88,
     _encode_MSBindUnbindPDUs88,
-} from '../MSAccessProtocol/MSBindUnbindPDUs88.ta';
-import { id_as_ms_88 } from '../MHSProtocolObjectIdentifiers/id-as-ms-88.va';
-export { id_as_ms_88 } from '../MHSProtocolObjectIdentifiers/id-as-ms-88.va';
+} from '../MSAccessProtocol/MSBindUnbindPDUs88.ta.js';
+import { id_as_ms_88 } from '../MHSProtocolObjectIdentifiers/id-as-ms-88.va.js';
+export { id_as_ms_88 } from '../MHSProtocolObjectIdentifiers/id-as-ms-88.va.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_bind_unbind_abstract_syntax_88 */
 /**

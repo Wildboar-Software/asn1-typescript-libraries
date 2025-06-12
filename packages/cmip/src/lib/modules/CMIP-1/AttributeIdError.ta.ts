@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeIdError_errorStatus,
   _enum_for_AttributeIdError_errorStatus,
@@ -75,7 +75,7 @@ import {
   noSuchAttribute /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_AttributeIdError_errorStatus,
   _encode_AttributeIdError_errorStatus,
-} from '../CMIP-1/AttributeIdError-errorStatus.ta';
+} from '../CMIP-1/AttributeIdError-errorStatus.ta.js';
 export {
   AttributeIdError_errorStatus,
   _enum_for_AttributeIdError_errorStatus,
@@ -85,17 +85,17 @@ export {
   noSuchAttribute /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_AttributeIdError_errorStatus,
   _encode_AttributeIdError_errorStatus,
-} from '../CMIP-1/AttributeIdError-errorStatus.ta';
+} from '../CMIP-1/AttributeIdError-errorStatus.ta.js';
 import {
   AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
-} from '../CMIP-1/AttributeId.ta';
+} from '../CMIP-1/AttributeId.ta.js';
 export {
   AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
-} from '../CMIP-1/AttributeId.ta';
+} from '../CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeIdError */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HashValueType_algorithmOID,
   _enum_for_HashValueType_algorithmOID,
@@ -75,7 +75,7 @@ import {
   sha_256 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_HashValueType_algorithmOID,
   _encode_HashValueType_algorithmOID,
-} from '../CMAIL/HashValueType-algorithmOID.ta';
+} from '../CMAIL/HashValueType-algorithmOID.ta.js';
 export {
   HashValueType_algorithmOID,
   _enum_for_HashValueType_algorithmOID,
@@ -85,7 +85,7 @@ export {
   sha_256 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_HashValueType_algorithmOID,
   _encode_HashValueType_algorithmOID,
-} from '../CMAIL/HashValueType-algorithmOID.ta';
+} from '../CMAIL/HashValueType-algorithmOID.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION HashValueType */
 /**

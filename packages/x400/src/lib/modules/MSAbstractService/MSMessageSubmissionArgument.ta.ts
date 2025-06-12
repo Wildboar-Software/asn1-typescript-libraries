@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageSubmissionArgument,
     _decode_MessageSubmissionArgument,
     _encode_MessageSubmissionArgument,
-} from '../MTSAbstractService/MessageSubmissionArgument.ta';
+} from '../MTSAbstractService/MessageSubmissionArgument.ta.js';
 export {
     MessageSubmissionArgument,
     _decode_MessageSubmissionArgument,
     _encode_MessageSubmissionArgument,
-} from '../MTSAbstractService/MessageSubmissionArgument.ta';
+} from '../MTSAbstractService/MessageSubmissionArgument.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 import {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 export {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSMessageSubmissionArgument */
 /**

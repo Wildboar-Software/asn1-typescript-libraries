@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,13 +91,13 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa';
-export { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa';
-import { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-physical-delivery-country-name.va';
-export { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-physical-delivery-country-name.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa.js';
+export { mHSCountry } from '../MHSRoutingORAddressSubtree/mHSCountry.oa.js';
+import { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-physical-delivery-country-name.va.js';
+export { id_oc_mhs_physical_delivery_country_name } from '../MHSRoutingObjectIdentifiers/id-oc-mhs-physical-delivery-country-name.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSPhysicalDeliveryCountry */
 /**

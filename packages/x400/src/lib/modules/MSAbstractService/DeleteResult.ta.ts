@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeleteResult_delete_result_94,
     _decode_DeleteResult_delete_result_94,
     _encode_DeleteResult_delete_result_94,
-} from '../MSAbstractService/DeleteResult-delete-result-94.ta';
+} from '../MSAbstractService/DeleteResult-delete-result-94.ta.js';
 export {
     DeleteResult_delete_result_94,
     _decode_DeleteResult_delete_result_94,
     _encode_DeleteResult_delete_result_94,
-} from '../MSAbstractService/DeleteResult-delete-result-94.ta';
+} from '../MSAbstractService/DeleteResult-delete-result-94.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeleteResult */
 /**

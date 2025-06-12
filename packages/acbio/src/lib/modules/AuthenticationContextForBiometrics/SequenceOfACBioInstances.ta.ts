@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ACBioInstance,
     _decode_ACBioInstance,
     _encode_ACBioInstance,
-} from '../AuthenticationContextForBiometrics/ACBioInstance.ta';
+} from '../AuthenticationContextForBiometrics/ACBioInstance.ta.js';
 export {
     ACBioInstance,
     _decode_ACBioInstance,
     _encode_ACBioInstance,
-} from '../AuthenticationContextForBiometrics/ACBioInstance.ta';
+} from '../AuthenticationContextForBiometrics/ACBioInstance.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SequenceOfACBioInstances */
 /**

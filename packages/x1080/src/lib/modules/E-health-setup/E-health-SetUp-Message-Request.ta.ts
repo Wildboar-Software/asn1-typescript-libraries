@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca';
-export { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca';
-import { Simple_Messages } from '../E-health-send-and-ack/Simple-Messages.osa';
-export { Simple_Messages } from '../E-health-send-and-ack/Simple-Messages.osa';
-import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca';
-export { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca';
-import { CR_Sequences } from '../E-health-command-response/CR-Sequences.osa';
-export { CR_Sequences } from '../E-health-command-response/CR-Sequences.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.js';
+export { SIMPLE_MESSAGE } from '../E-health-send-and-ack/SIMPLE-MESSAGE.oca.js';
+import { Simple_Messages } from '../E-health-send-and-ack/Simple-Messages.osa.js';
+export { Simple_Messages } from '../E-health-send-and-ack/Simple-Messages.osa.js';
+import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.js';
+export { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.js';
+import { CR_Sequences } from '../E-health-command-response/CR-Sequences.osa.js';
+export { CR_Sequences } from '../E-health-command-response/CR-Sequences.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION E_health_SetUp_Message_Request */
 /**

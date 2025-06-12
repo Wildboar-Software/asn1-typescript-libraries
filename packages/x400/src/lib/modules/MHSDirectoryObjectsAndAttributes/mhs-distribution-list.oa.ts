@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,49 +91,49 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-import { mhs_dl_submit_permissions } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-submit-permissions.oa';
-export { mhs_dl_submit_permissions } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-submit-permissions.oa';
-import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa';
-export { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa';
-import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa';
-export { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa';
-import { organizationName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationName.oa';
-export { organizationName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationName.oa';
-import { organizationalUnitName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationalUnitName.oa';
-export { organizationalUnitName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationalUnitName.oa';
-import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa';
-import { seeAlso } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/seeAlso.oa';
-export { seeAlso } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/seeAlso.oa';
-import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa';
-export { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa';
-import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa';
-export { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa';
-import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa';
-export { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa';
-import { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa';
-export { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa';
-import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa';
-export { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa';
-import { mhs_dl_policy } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-policy.oa';
-export { mhs_dl_policy } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-policy.oa';
-import { mhs_dl_subscription_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-subscription-service.oa';
-export { mhs_dl_subscription_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-subscription-service.oa';
-import { mhs_dl_archive_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-archive-service.oa';
-export { mhs_dl_archive_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-archive-service.oa';
-import { mhs_dl_related_lists } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-related-lists.oa';
-export { mhs_dl_related_lists } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-related-lists.oa';
-import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa';
-export { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa';
-import { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-distribution-list.va';
-export { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-distribution-list.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+import { mhs_dl_submit_permissions } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-submit-permissions.oa.js';
+export { mhs_dl_submit_permissions } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-submit-permissions.oa.js';
+import { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.js';
+export { mhs_or_addresses } from '../MHSDirectoryObjectsAndAttributes/mhs-or-addresses.oa.js';
+import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.js';
+export { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.js';
+import { organizationName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationName.oa.js';
+export { organizationName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationName.oa.js';
+import { organizationalUnitName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationalUnitName.oa.js';
+export { organizationalUnitName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/organizationalUnitName.oa.js';
+import { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+export { owner } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/owner.oa.js';
+import { seeAlso } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/seeAlso.oa.js';
+export { seeAlso } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/seeAlso.oa.js';
+import { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.js';
+export { mhs_maximum_content_length } from '../MHSDirectoryObjectsAndAttributes/mhs-maximum-content-length.oa.js';
+import { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.js';
+export { mhs_deliverable_content_types } from '../MHSDirectoryObjectsAndAttributes/mhs-deliverable-content-types.oa.js';
+import { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.js';
+export { mhs_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-acceptable-eits.oa.js';
+import { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa.js';
+export { mhs_exclusively_acceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-exclusively-acceptable-eits.oa.js';
+import { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa.js';
+export { mhs_unacceptable_eits } from '../MHSDirectoryObjectsAndAttributes/mhs-unacceptable-eits.oa.js';
+import { mhs_dl_policy } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-policy.oa.js';
+export { mhs_dl_policy } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-policy.oa.js';
+import { mhs_dl_subscription_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-subscription-service.oa.js';
+export { mhs_dl_subscription_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-subscription-service.oa.js';
+import { mhs_dl_archive_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-archive-service.oa.js';
+export { mhs_dl_archive_service } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-archive-service.oa.js';
+import { mhs_dl_related_lists } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-related-lists.oa.js';
+export { mhs_dl_related_lists } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-related-lists.oa.js';
+import { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.js';
+export { mhs_dl_members } from '../MHSDirectoryObjectsAndAttributes/mhs-dl-members.oa.js';
+import { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-distribution-list.va.js';
+export { id_oc_mhs_distribution_list } from '../MHSObjectIdentifiers/id-oc-mhs-distribution-list.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mhs_distribution_list */
 /**

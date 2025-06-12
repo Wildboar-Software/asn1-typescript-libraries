@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegisterResult_non_empty_result,
     _decode_RegisterResult_non_empty_result,
     _encode_RegisterResult_non_empty_result,
-} from '../MTSAbstractService/RegisterResult-non-empty-result.ta';
+} from '../MTSAbstractService/RegisterResult-non-empty-result.ta.js';
 export {
     RegisterResult_non_empty_result,
     _decode_RegisterResult_non_empty_result,
     _encode_RegisterResult_non_empty_result,
-} from '../MTSAbstractService/RegisterResult-non-empty-result.ta';
+} from '../MTSAbstractService/RegisterResult-non-empty-result.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegisterResult */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNUAMSBasicCodeField,
     FNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -80,7 +80,7 @@ import {
     forwarded_by_edi_ms /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSBasicCodeField,
     _encode_FNUAMSBasicCodeField,
-} from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.js';
 export {
     FNUAMSBasicCodeField,
     FNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -95,7 +95,7 @@ export {
     forwarded_by_edi_ms /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSBasicCodeField,
     _encode_FNUAMSBasicCodeField,
-} from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta';
+} from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.js';
 import {
     FNUAMSDiagnosticField,
     FNUAMSDiagnosticField_recipient_name_changed /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -104,7 +104,7 @@ import {
     recipient_name_deleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSDiagnosticField,
     _encode_FNUAMSDiagnosticField,
-} from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.js';
 export {
     FNUAMSDiagnosticField,
     FNUAMSDiagnosticField_recipient_name_changed /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -113,17 +113,17 @@ export {
     recipient_name_deleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSDiagnosticField,
     _encode_FNUAMSDiagnosticField,
-} from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta';
+} from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.js';
 import {
     FNUAMSSecurityCheckField,
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
-} from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta';
+} from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.js';
 export {
     FNUAMSSecurityCheckField,
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
-} from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta';
+} from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FNUAMSReasonCodeField */
 /**

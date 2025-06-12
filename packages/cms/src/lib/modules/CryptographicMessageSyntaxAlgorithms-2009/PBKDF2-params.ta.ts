@@ -5,29 +5,29 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va.js";
 import {
     PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta.js";
 import {
     PBKDF2_PRFsAlgorithmIdentifier,
     _decode_PBKDF2_PRFsAlgorithmIdentifier,
     _encode_PBKDF2_PRFsAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta";
-export { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.js";
+export { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va.js";
 export {
     PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta.js";
 export {
     PBKDF2_PRFsAlgorithmIdentifier,
     _decode_PBKDF2_PRFsAlgorithmIdentifier,
     _encode_PBKDF2_PRFsAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params */
 /**

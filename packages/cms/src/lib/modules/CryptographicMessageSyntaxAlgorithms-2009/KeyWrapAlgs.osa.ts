@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-import { kwa_3DESWrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-3DESWrap.oa";
-import { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC2Wrap.oa";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-export { kwa_3DESWrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-3DESWrap.oa";
-export { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC2Wrap.oa";
+import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+import { kwa_3DESWrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-3DESWrap.oa.js";
+import { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC2Wrap.oa.js";
+export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+export { kwa_3DESWrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-3DESWrap.oa.js";
+export { kwa_RC2Wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/kwa-RC2Wrap.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyWrapAlgs */
 /**

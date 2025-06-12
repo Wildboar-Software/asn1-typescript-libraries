@@ -65,29 +65,29 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
+import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION refuse */
 /**

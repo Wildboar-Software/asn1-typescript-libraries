@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ASO_qualifier_form1,
   _decode_ASO_qualifier_form1,
   _encode_ASO_qualifier_form1,
-} from '../ACSE-1/ASO-qualifier-form1.ta';
+} from '../ACSE-1/ASO-qualifier-form1.ta.js';
 export {
   ASO_qualifier_form1,
   _decode_ASO_qualifier_form1,
   _encode_ASO_qualifier_form1,
-} from '../ACSE-1/ASO-qualifier-form1.ta';
+} from '../ACSE-1/ASO-qualifier-form1.ta.js';
 import {
   ASO_qualifier_form2,
   _decode_ASO_qualifier_form2,
   _encode_ASO_qualifier_form2,
-} from '../ACSE-1/ASO-qualifier-form2.ta';
+} from '../ACSE-1/ASO-qualifier-form2.ta.js';
 export {
   ASO_qualifier_form2,
   _decode_ASO_qualifier_form2,
   _encode_ASO_qualifier_form2,
-} from '../ACSE-1/ASO-qualifier-form2.ta';
+} from '../ACSE-1/ASO-qualifier-form2.ta.js';
 import {
   ASO_qualifier_form3,
   _decode_ASO_qualifier_form3,
   _encode_ASO_qualifier_form3,
-} from '../ACSE-1/ASO-qualifier-form3.ta';
+} from '../ACSE-1/ASO-qualifier-form3.ta.js';
 export {
   ASO_qualifier_form3,
   _decode_ASO_qualifier_form3,
   _encode_ASO_qualifier_form3,
-} from '../ACSE-1/ASO-qualifier-form3.ta';
+} from '../ACSE-1/ASO-qualifier-form3.ta.js';
 import {
   ASO_qualifier_form4,
   _decode_ASO_qualifier_form4,
   _encode_ASO_qualifier_form4,
-} from '../ACSE-1/ASO-qualifier-form4.ta';
+} from '../ACSE-1/ASO-qualifier-form4.ta.js';
 export {
   ASO_qualifier_form4,
   _decode_ASO_qualifier_form4,
   _encode_ASO_qualifier_form4,
-} from '../ACSE-1/ASO-qualifier-form4.ta';
+} from '../ACSE-1/ASO-qualifier-form4.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ASO_qualifier */
 /**

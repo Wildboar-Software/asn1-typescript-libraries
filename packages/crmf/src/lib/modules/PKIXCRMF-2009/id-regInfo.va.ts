@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_pkip } from "../PKIXCRMF-2009/id-pkip.va";
-export { id_pkip } from "../PKIXCRMF-2009/id-pkip.va";
+import { id_pkip } from "../PKIXCRMF-2009/id-pkip.va.js";
+export { id_pkip } from "../PKIXCRMF-2009/id-pkip.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_regInfo */
 /**

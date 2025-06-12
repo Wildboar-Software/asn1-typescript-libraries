@@ -4,39 +4,39 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKCS7/EncryptedKey.ta";
+} from "../PKCS7/EncryptedKey.ta.js";
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.js";
 import {
     RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
-} from "../PKCS7/RecipientIdentifier.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientIdentifier.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKCS7/EncryptedKey.ta";
+} from "../PKCS7/EncryptedKey.ta.js";
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.js";
 export {
     RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
-} from "../PKCS7/RecipientIdentifier.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/RecipientIdentifier.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyTransportRecipientInfo */
 /**

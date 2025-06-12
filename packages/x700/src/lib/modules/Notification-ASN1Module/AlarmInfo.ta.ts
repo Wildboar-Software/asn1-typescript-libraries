@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 export {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 import {
     SpecificProblems,
     _decode_SpecificProblems,
     _encode_SpecificProblems,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificProblems.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificProblems.ta.js';
 export {
     SpecificProblems,
     _decode_SpecificProblems,
     _encode_SpecificProblems,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificProblems.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificProblems.ta.js';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -103,7 +103,7 @@ import {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 export {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
@@ -121,27 +121,27 @@ export {
     cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 import {
     BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/BackedUpStatus.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/BackedUpStatus.ta.js';
 export {
     BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/BackedUpStatus.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/BackedUpStatus.ta.js';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     TrendIndication,
     _enum_for_TrendIndication,
@@ -153,7 +153,7 @@ import {
     moreSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TrendIndication,
     _encode_TrendIndication,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta.js';
 export {
     TrendIndication,
     _enum_for_TrendIndication,
@@ -165,87 +165,87 @@ export {
     moreSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TrendIndication,
     _encode_TrendIndication,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta.js';
 import {
     ThresholdInfo,
     _decode_ThresholdInfo,
     _encode_ThresholdInfo,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ThresholdInfo.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ThresholdInfo.ta.js';
 export {
     ThresholdInfo,
     _decode_ThresholdInfo,
     _encode_ThresholdInfo,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ThresholdInfo.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ThresholdInfo.ta.js';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 export {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 import {
     AttributeValueChangeDefinition,
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.js';
 export {
     AttributeValueChangeDefinition,
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.js';
 import {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.js';
 export {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.js';
 import {
     ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.js';
 export {
     ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AlarmInfo */
 /**

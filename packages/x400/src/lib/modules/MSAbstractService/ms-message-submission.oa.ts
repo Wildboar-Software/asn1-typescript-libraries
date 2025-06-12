@@ -65,81 +65,81 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     MSMessageSubmissionArgument,
     _decode_MSMessageSubmissionArgument,
     _encode_MSMessageSubmissionArgument,
-} from '../MSAbstractService/MSMessageSubmissionArgument.ta';
+} from '../MSAbstractService/MSMessageSubmissionArgument.ta.js';
 export {
     MSMessageSubmissionArgument,
     _decode_MSMessageSubmissionArgument,
     _encode_MSMessageSubmissionArgument,
-} from '../MSAbstractService/MSMessageSubmissionArgument.ta';
+} from '../MSAbstractService/MSMessageSubmissionArgument.ta.js';
 import {
     MSMessageSubmissionResult,
     _decode_MSMessageSubmissionResult,
     _encode_MSMessageSubmissionResult,
-} from '../MSAbstractService/MSMessageSubmissionResult.ta';
+} from '../MSAbstractService/MSMessageSubmissionResult.ta.js';
 export {
     MSMessageSubmissionResult,
     _decode_MSMessageSubmissionResult,
     _encode_MSMessageSubmissionResult,
-} from '../MSAbstractService/MSMessageSubmissionResult.ta';
-import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-import { message_group_error } from '../MSAbstractService/message-group-error.oa';
-export { message_group_error } from '../MSAbstractService/message-group-error.oa';
-import { entry_class_error } from '../MSAbstractService/entry-class-error.oa';
-export { entry_class_error } from '../MSAbstractService/entry-class-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_ms_message_submission } from '../MSAccessProtocol/op-ms-message-submission.va';
-export { op_ms_message_submission } from '../MSAccessProtocol/op-ms-message-submission.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MSAbstractService/MSMessageSubmissionResult.ta.js';
+import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+import { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+export { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+import { entry_class_error } from '../MSAbstractService/entry-class-error.oa.js';
+export { entry_class_error } from '../MSAbstractService/entry-class-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_ms_message_submission } from '../MSAccessProtocol/op-ms-message-submission.va.js';
+export { op_ms_message_submission } from '../MSAccessProtocol/op-ms-message-submission.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_message_submission */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
@@ -75,7 +75,7 @@ import {
     ipm_auto_forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
-} from '../IPMSInformationObjects/NonReceiptReasonField.ta';
+} from '../IPMSInformationObjects/NonReceiptReasonField.ta.js';
 export {
     NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
@@ -85,7 +85,7 @@ export {
     ipm_auto_forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
-} from '../IPMSInformationObjects/NonReceiptReasonField.ta';
+} from '../IPMSInformationObjects/NonReceiptReasonField.ta.js';
 import {
     DiscardReasonField,
     _enum_for_DiscardReasonField,
@@ -99,7 +99,7 @@ import {
     not_used /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DiscardReasonField,
     _encode_DiscardReasonField,
-} from '../IPMSInformationObjects/DiscardReasonField.ta';
+} from '../IPMSInformationObjects/DiscardReasonField.ta.js';
 export {
     DiscardReasonField,
     _enum_for_DiscardReasonField,
@@ -113,37 +113,37 @@ export {
     not_used /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DiscardReasonField,
     _encode_DiscardReasonField,
-} from '../IPMSInformationObjects/DiscardReasonField.ta';
+} from '../IPMSInformationObjects/DiscardReasonField.ta.js';
 import {
     AutoForwardCommentField,
     _decode_AutoForwardCommentField,
     _encode_AutoForwardCommentField,
-} from '../IPMSInformationObjects/AutoForwardCommentField.ta';
+} from '../IPMSInformationObjects/AutoForwardCommentField.ta.js';
 export {
     AutoForwardCommentField,
     _decode_AutoForwardCommentField,
     _encode_AutoForwardCommentField,
-} from '../IPMSInformationObjects/AutoForwardCommentField.ta';
+} from '../IPMSInformationObjects/AutoForwardCommentField.ta.js';
 import {
     ReturnedIPMField,
     _decode_ReturnedIPMField,
     _encode_ReturnedIPMField,
-} from '../IPMSInformationObjects/ReturnedIPMField.ta';
+} from '../IPMSInformationObjects/ReturnedIPMField.ta.js';
 export {
     ReturnedIPMField,
     _decode_ReturnedIPMField,
     _encode_ReturnedIPMField,
-} from '../IPMSInformationObjects/ReturnedIPMField.ta';
+} from '../IPMSInformationObjects/ReturnedIPMField.ta.js';
 import {
     NRNExtensionsField,
     _decode_NRNExtensionsField,
     _encode_NRNExtensionsField,
-} from '../IPMSInformationObjects/NRNExtensionsField.ta';
+} from '../IPMSInformationObjects/NRNExtensionsField.ta.js';
 export {
     NRNExtensionsField,
     _decode_NRNExtensionsField,
     _encode_NRNExtensionsField,
-} from '../IPMSInformationObjects/NRNExtensionsField.ta';
+} from '../IPMSInformationObjects/NRNExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NonReceiptFields */
 /**

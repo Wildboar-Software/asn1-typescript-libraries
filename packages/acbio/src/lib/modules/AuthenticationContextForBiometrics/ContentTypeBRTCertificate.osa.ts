@@ -65,12 +65,12 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { brtCertificate } from '../AuthenticationContextForBiometrics/brtCertificate.oa';
-export { brtCertificate } from '../AuthenticationContextForBiometrics/brtCertificate.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { brtCertificate } from '../AuthenticationContextForBiometrics/brtCertificate.oa.js';
+export { brtCertificate } from '../AuthenticationContextForBiometrics/brtCertificate.oa.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentTypeBRTCertificate */
 /**

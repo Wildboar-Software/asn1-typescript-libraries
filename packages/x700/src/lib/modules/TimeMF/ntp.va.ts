@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SynchronizationProtocolType,
     _decode_SynchronizationProtocolType,
     _encode_SynchronizationProtocolType,
-} from '../TimeMF/SynchronizationProtocolType.ta';
+} from '../TimeMF/SynchronizationProtocolType.ta.js';
 export {
     SynchronizationProtocolType,
     _decode_SynchronizationProtocolType,
     _encode_SynchronizationProtocolType,
-} from '../TimeMF/SynchronizationProtocolType.ta';
+} from '../TimeMF/SynchronizationProtocolType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ntp */
 /**

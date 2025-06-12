@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca';
-export { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca';
-import { LaboratorySchemes } from '../E-health-identification/LaboratorySchemes.osa';
-export { LaboratorySchemes } from '../E-health-identification/LaboratorySchemes.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca.js';
+export { LABORATORY_SCHEME } from '../E-health-identification/LABORATORY-SCHEME.oca.js';
+import { LaboratorySchemes } from '../E-health-identification/LaboratorySchemes.osa.js';
+export { LaboratorySchemes } from '../E-health-identification/LaboratorySchemes.osa.js';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from './SchemeName.ta';
+} from './SchemeName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LaboratoryIdentification */
 /**

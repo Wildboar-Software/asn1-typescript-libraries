@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 export {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 export {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 import {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 export {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 import {
     MessageClass_objects,
     _enum_for_MessageClass_objects,
@@ -127,7 +127,7 @@ import {
     both /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_MessageClass_objects,
     _encode_MessageClass_objects,
-} from '../MTSAbstractService/MessageClass-objects.ta';
+} from '../MTSAbstractService/MessageClass-objects.ta.js';
 export {
     MessageClass_objects,
     _enum_for_MessageClass_objects,
@@ -139,27 +139,27 @@ export {
     both /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_MessageClass_objects,
     _encode_MessageClass_objects,
-} from '../MTSAbstractService/MessageClass-objects.ta';
+} from '../MTSAbstractService/MessageClass-objects.ta.js';
 import {
     Restriction,
     _decode_Restriction,
     _encode_Restriction,
-} from '../MTSAbstractService/Restriction.ta';
+} from '../MTSAbstractService/Restriction.ta.js';
 export {
     Restriction,
     _decode_Restriction,
     _encode_Restriction,
-} from '../MTSAbstractService/Restriction.ta';
+} from '../MTSAbstractService/Restriction.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageClass */
 /**

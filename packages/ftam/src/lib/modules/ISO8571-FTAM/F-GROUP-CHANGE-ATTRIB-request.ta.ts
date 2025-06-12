@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 export {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 import {
   Error_Action,
   Error_Action_terminate /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
   continue_ /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Error_Action,
   _encode_Error_Action,
-} from '../ISO8571-FTAM/Error-Action.ta';
+} from '../ISO8571-FTAM/Error-Action.ta.js';
 export {
   Error_Action,
   Error_Action_terminate /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -93,27 +93,27 @@ export {
   continue_ /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Error_Action,
   _encode_Error_Action,
-} from '../ISO8571-FTAM/Error-Action.ta';
+} from '../ISO8571-FTAM/Error-Action.ta.js';
 import {
   Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
-} from '../ISO8571-FTAM/Request-Operation-Result.ta';
+} from '../ISO8571-FTAM/Request-Operation-Result.ta.js';
 export {
   Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
-} from '../ISO8571-FTAM/Request-Operation-Result.ta';
+} from '../ISO8571-FTAM/Request-Operation-Result.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_GROUP_CHANGE_ATTRIB_request */
 /**

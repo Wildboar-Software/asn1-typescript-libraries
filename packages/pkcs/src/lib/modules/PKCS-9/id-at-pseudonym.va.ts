@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_at } from "@wildboar/x500/src/lib/modules/UsefulDefinitions/id-at.va";
+import { id_at } from "@wildboar/x500/src/lib/modules/UsefulDefinitions/id-at.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_at_pseudonym */
 /**

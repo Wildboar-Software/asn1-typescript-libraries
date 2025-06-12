@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { regInfo_certReq } from "../PKIXCRMF-2009/regInfo-certReq.oa";
-import { regInfo_utf8Pairs } from "../PKIXCRMF-2009/regInfo-utf8Pairs.oa";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { regInfo_certReq } from "../PKIXCRMF-2009/regInfo-certReq.oa.js";
+import { regInfo_utf8Pairs } from "../PKIXCRMF-2009/regInfo-utf8Pairs.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION RegInfoSet */
 /**

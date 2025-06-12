@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PointCapacity,
     _decode_PointCapacity,
     _encode_PointCapacity,
-} from '../M3100ASN1TypeModule2/PointCapacity.ta';
+} from '../M3100ASN1TypeModule2/PointCapacity.ta.js';
 export {
     PointCapacity,
     _decode_PointCapacity,
     _encode_PointCapacity,
-} from '../M3100ASN1TypeModule2/PointCapacity.ta';
+} from '../M3100ASN1TypeModule2/PointCapacity.ta.js';
 import {
     NWTPList,
     _decode_NWTPList,
     _encode_NWTPList,
-} from '../M3100ASN1TypeModule2/NWTPList.ta';
+} from '../M3100ASN1TypeModule2/NWTPList.ta.js';
 export {
     NWTPList,
     _decode_NWTPList,
     _encode_NWTPList,
-} from '../M3100ASN1TypeModule2/NWTPList.ta';
+} from '../M3100ASN1TypeModule2/NWTPList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AddCapacityToTopologicalLinkEndResult */
 /**

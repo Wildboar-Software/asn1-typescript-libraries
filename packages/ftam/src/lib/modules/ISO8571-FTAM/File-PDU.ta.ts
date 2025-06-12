@@ -65,267 +65,267 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_SELECT_request,
   _decode_F_SELECT_request,
   _encode_F_SELECT_request,
-} from '../ISO8571-FTAM/F-SELECT-request.ta';
+} from '../ISO8571-FTAM/F-SELECT-request.ta.js';
 export {
   F_SELECT_request,
   _decode_F_SELECT_request,
   _encode_F_SELECT_request,
-} from '../ISO8571-FTAM/F-SELECT-request.ta';
+} from '../ISO8571-FTAM/F-SELECT-request.ta.js';
 import {
   F_SELECT_response,
   _decode_F_SELECT_response,
   _encode_F_SELECT_response,
-} from '../ISO8571-FTAM/F-SELECT-response.ta';
+} from '../ISO8571-FTAM/F-SELECT-response.ta.js';
 export {
   F_SELECT_response,
   _decode_F_SELECT_response,
   _encode_F_SELECT_response,
-} from '../ISO8571-FTAM/F-SELECT-response.ta';
+} from '../ISO8571-FTAM/F-SELECT-response.ta.js';
 import {
   F_DESELECT_request,
   _decode_F_DESELECT_request,
   _encode_F_DESELECT_request,
-} from '../ISO8571-FTAM/F-DESELECT-request.ta';
+} from '../ISO8571-FTAM/F-DESELECT-request.ta.js';
 export {
   F_DESELECT_request,
   _decode_F_DESELECT_request,
   _encode_F_DESELECT_request,
-} from '../ISO8571-FTAM/F-DESELECT-request.ta';
+} from '../ISO8571-FTAM/F-DESELECT-request.ta.js';
 import {
   F_DESELECT_response,
   _decode_F_DESELECT_response,
   _encode_F_DESELECT_response,
-} from '../ISO8571-FTAM/F-DESELECT-response.ta';
+} from '../ISO8571-FTAM/F-DESELECT-response.ta.js';
 export {
   F_DESELECT_response,
   _decode_F_DESELECT_response,
   _encode_F_DESELECT_response,
-} from '../ISO8571-FTAM/F-DESELECT-response.ta';
+} from '../ISO8571-FTAM/F-DESELECT-response.ta.js';
 import {
   F_CREATE_request,
   _decode_F_CREATE_request,
   _encode_F_CREATE_request,
-} from '../ISO8571-FTAM/F-CREATE-request.ta';
+} from '../ISO8571-FTAM/F-CREATE-request.ta.js';
 export {
   F_CREATE_request,
   _decode_F_CREATE_request,
   _encode_F_CREATE_request,
-} from '../ISO8571-FTAM/F-CREATE-request.ta';
+} from '../ISO8571-FTAM/F-CREATE-request.ta.js';
 import {
   F_CREATE_response,
   _decode_F_CREATE_response,
   _encode_F_CREATE_response,
-} from '../ISO8571-FTAM/F-CREATE-response.ta';
+} from '../ISO8571-FTAM/F-CREATE-response.ta.js';
 export {
   F_CREATE_response,
   _decode_F_CREATE_response,
   _encode_F_CREATE_response,
-} from '../ISO8571-FTAM/F-CREATE-response.ta';
+} from '../ISO8571-FTAM/F-CREATE-response.ta.js';
 import {
   F_DELETE_request,
   _decode_F_DELETE_request,
   _encode_F_DELETE_request,
-} from '../ISO8571-FTAM/F-DELETE-request.ta';
+} from '../ISO8571-FTAM/F-DELETE-request.ta.js';
 export {
   F_DELETE_request,
   _decode_F_DELETE_request,
   _encode_F_DELETE_request,
-} from '../ISO8571-FTAM/F-DELETE-request.ta';
+} from '../ISO8571-FTAM/F-DELETE-request.ta.js';
 import {
   F_DELETE_response,
   _decode_F_DELETE_response,
   _encode_F_DELETE_response,
-} from '../ISO8571-FTAM/F-DELETE-response.ta';
+} from '../ISO8571-FTAM/F-DELETE-response.ta.js';
 export {
   F_DELETE_response,
   _decode_F_DELETE_response,
   _encode_F_DELETE_response,
-} from '../ISO8571-FTAM/F-DELETE-response.ta';
+} from '../ISO8571-FTAM/F-DELETE-response.ta.js';
 import {
   F_READ_ATTRIB_request,
   _decode_F_READ_ATTRIB_request,
   _encode_F_READ_ATTRIB_request,
-} from '../ISO8571-FTAM/F-READ-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-READ-ATTRIB-request.ta.js';
 export {
   F_READ_ATTRIB_request,
   _decode_F_READ_ATTRIB_request,
   _encode_F_READ_ATTRIB_request,
-} from '../ISO8571-FTAM/F-READ-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-READ-ATTRIB-request.ta.js';
 import {
   F_READ_ATTRIB_response,
   _decode_F_READ_ATTRIB_response,
   _encode_F_READ_ATTRIB_response,
-} from '../ISO8571-FTAM/F-READ-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-READ-ATTRIB-response.ta.js';
 export {
   F_READ_ATTRIB_response,
   _decode_F_READ_ATTRIB_response,
   _encode_F_READ_ATTRIB_response,
-} from '../ISO8571-FTAM/F-READ-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-READ-ATTRIB-response.ta.js';
 import {
   F_CHANGE_ATTRIB_request,
   _decode_F_CHANGE_ATTRIB_request,
   _encode_F_CHANGE_ATTRIB_request,
-} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-request.ta.js';
 export {
   F_CHANGE_ATTRIB_request,
   _decode_F_CHANGE_ATTRIB_request,
   _encode_F_CHANGE_ATTRIB_request,
-} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-request.ta.js';
 import {
   F_CHANGE_ATTRIB_response,
   _decode_F_CHANGE_ATTRIB_response,
   _encode_F_CHANGE_ATTRIB_response,
-} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-response.ta.js';
 export {
   F_CHANGE_ATTRIB_response,
   _decode_F_CHANGE_ATTRIB_response,
   _encode_F_CHANGE_ATTRIB_response,
-} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-ATTRIB-response.ta.js';
 import {
   F_OPEN_request,
   _decode_F_OPEN_request,
   _encode_F_OPEN_request,
-} from '../ISO8571-FTAM/F-OPEN-request.ta';
+} from '../ISO8571-FTAM/F-OPEN-request.ta.js';
 export {
   F_OPEN_request,
   _decode_F_OPEN_request,
   _encode_F_OPEN_request,
-} from '../ISO8571-FTAM/F-OPEN-request.ta';
+} from '../ISO8571-FTAM/F-OPEN-request.ta.js';
 import {
   F_OPEN_response,
   _decode_F_OPEN_response,
   _encode_F_OPEN_response,
-} from '../ISO8571-FTAM/F-OPEN-response.ta';
+} from '../ISO8571-FTAM/F-OPEN-response.ta.js';
 export {
   F_OPEN_response,
   _decode_F_OPEN_response,
   _encode_F_OPEN_response,
-} from '../ISO8571-FTAM/F-OPEN-response.ta';
+} from '../ISO8571-FTAM/F-OPEN-response.ta.js';
 import {
   F_CLOSE_request,
   _decode_F_CLOSE_request,
   _encode_F_CLOSE_request,
-} from '../ISO8571-FTAM/F-CLOSE-request.ta';
+} from '../ISO8571-FTAM/F-CLOSE-request.ta.js';
 export {
   F_CLOSE_request,
   _decode_F_CLOSE_request,
   _encode_F_CLOSE_request,
-} from '../ISO8571-FTAM/F-CLOSE-request.ta';
+} from '../ISO8571-FTAM/F-CLOSE-request.ta.js';
 import {
   F_CLOSE_response,
   _decode_F_CLOSE_response,
   _encode_F_CLOSE_response,
-} from '../ISO8571-FTAM/F-CLOSE-response.ta';
+} from '../ISO8571-FTAM/F-CLOSE-response.ta.js';
 export {
   F_CLOSE_response,
   _decode_F_CLOSE_response,
   _encode_F_CLOSE_response,
-} from '../ISO8571-FTAM/F-CLOSE-response.ta';
+} from '../ISO8571-FTAM/F-CLOSE-response.ta.js';
 import {
   F_BEGIN_GROUP_request,
   _decode_F_BEGIN_GROUP_request,
   _encode_F_BEGIN_GROUP_request,
-} from '../ISO8571-FTAM/F-BEGIN-GROUP-request.ta';
+} from '../ISO8571-FTAM/F-BEGIN-GROUP-request.ta.js';
 export {
   F_BEGIN_GROUP_request,
   _decode_F_BEGIN_GROUP_request,
   _encode_F_BEGIN_GROUP_request,
-} from '../ISO8571-FTAM/F-BEGIN-GROUP-request.ta';
+} from '../ISO8571-FTAM/F-BEGIN-GROUP-request.ta.js';
 import {
   F_BEGIN_GROUP_response,
   _decode_F_BEGIN_GROUP_response,
   _encode_F_BEGIN_GROUP_response,
-} from '../ISO8571-FTAM/F-BEGIN-GROUP-response.ta';
+} from '../ISO8571-FTAM/F-BEGIN-GROUP-response.ta.js';
 export {
   F_BEGIN_GROUP_response,
   _decode_F_BEGIN_GROUP_response,
   _encode_F_BEGIN_GROUP_response,
-} from '../ISO8571-FTAM/F-BEGIN-GROUP-response.ta';
+} from '../ISO8571-FTAM/F-BEGIN-GROUP-response.ta.js';
 import {
   F_END_GROUP_request,
   _decode_F_END_GROUP_request,
   _encode_F_END_GROUP_request,
-} from '../ISO8571-FTAM/F-END-GROUP-request.ta';
+} from '../ISO8571-FTAM/F-END-GROUP-request.ta.js';
 export {
   F_END_GROUP_request,
   _decode_F_END_GROUP_request,
   _encode_F_END_GROUP_request,
-} from '../ISO8571-FTAM/F-END-GROUP-request.ta';
+} from '../ISO8571-FTAM/F-END-GROUP-request.ta.js';
 import {
   F_END_GROUP_response,
   _decode_F_END_GROUP_response,
   _encode_F_END_GROUP_response,
-} from '../ISO8571-FTAM/F-END-GROUP-response.ta';
+} from '../ISO8571-FTAM/F-END-GROUP-response.ta.js';
 export {
   F_END_GROUP_response,
   _decode_F_END_GROUP_response,
   _encode_F_END_GROUP_response,
-} from '../ISO8571-FTAM/F-END-GROUP-response.ta';
+} from '../ISO8571-FTAM/F-END-GROUP-response.ta.js';
 import {
   F_RECOVER_request,
   _decode_F_RECOVER_request,
   _encode_F_RECOVER_request,
-} from '../ISO8571-FTAM/F-RECOVER-request.ta';
+} from '../ISO8571-FTAM/F-RECOVER-request.ta.js';
 export {
   F_RECOVER_request,
   _decode_F_RECOVER_request,
   _encode_F_RECOVER_request,
-} from '../ISO8571-FTAM/F-RECOVER-request.ta';
+} from '../ISO8571-FTAM/F-RECOVER-request.ta.js';
 import {
   F_RECOVER_response,
   _decode_F_RECOVER_response,
   _encode_F_RECOVER_response,
-} from '../ISO8571-FTAM/F-RECOVER-response.ta';
+} from '../ISO8571-FTAM/F-RECOVER-response.ta.js';
 export {
   F_RECOVER_response,
   _decode_F_RECOVER_response,
   _encode_F_RECOVER_response,
-} from '../ISO8571-FTAM/F-RECOVER-response.ta';
+} from '../ISO8571-FTAM/F-RECOVER-response.ta.js';
 import {
   F_LOCATE_request,
   _decode_F_LOCATE_request,
   _encode_F_LOCATE_request,
-} from '../ISO8571-FTAM/F-LOCATE-request.ta';
+} from '../ISO8571-FTAM/F-LOCATE-request.ta.js';
 export {
   F_LOCATE_request,
   _decode_F_LOCATE_request,
   _encode_F_LOCATE_request,
-} from '../ISO8571-FTAM/F-LOCATE-request.ta';
+} from '../ISO8571-FTAM/F-LOCATE-request.ta.js';
 import {
   F_LOCATE_response,
   _decode_F_LOCATE_response,
   _encode_F_LOCATE_response,
-} from '../ISO8571-FTAM/F-LOCATE-response.ta';
+} from '../ISO8571-FTAM/F-LOCATE-response.ta.js';
 export {
   F_LOCATE_response,
   _decode_F_LOCATE_response,
   _encode_F_LOCATE_response,
-} from '../ISO8571-FTAM/F-LOCATE-response.ta';
+} from '../ISO8571-FTAM/F-LOCATE-response.ta.js';
 import {
   F_ERASE_request,
   _decode_F_ERASE_request,
   _encode_F_ERASE_request,
-} from '../ISO8571-FTAM/F-ERASE-request.ta';
+} from '../ISO8571-FTAM/F-ERASE-request.ta.js';
 export {
   F_ERASE_request,
   _decode_F_ERASE_request,
   _encode_F_ERASE_request,
-} from '../ISO8571-FTAM/F-ERASE-request.ta';
+} from '../ISO8571-FTAM/F-ERASE-request.ta.js';
 import {
   F_ERASE_response,
   _decode_F_ERASE_response,
   _encode_F_ERASE_response,
-} from '../ISO8571-FTAM/F-ERASE-response.ta';
+} from '../ISO8571-FTAM/F-ERASE-response.ta.js';
 export {
   F_ERASE_response,
   _decode_F_ERASE_response,
   _encode_F_ERASE_response,
-} from '../ISO8571-FTAM/F-ERASE-response.ta';
+} from '../ISO8571-FTAM/F-ERASE-response.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION File_PDU */
 /**

@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { fupoi } from '../CommonMgt/fupoi.va';
-export { fupoi } from '../CommonMgt/fupoi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { fupoi } from '../CommonMgt/fupoi.va.js';
+export { fupoi } from '../CommonMgt/fupoi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION informationEventReports */
 /**

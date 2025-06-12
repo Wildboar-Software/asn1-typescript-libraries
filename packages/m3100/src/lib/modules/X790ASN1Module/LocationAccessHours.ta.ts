@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekMask,
     _decode_WeekMask,
     _encode_WeekMask,
-} from '../X790ASN1Module/WeekMask.ta';
+} from '../X790ASN1Module/WeekMask.ta.js';
 export {
     WeekMask,
     _decode_WeekMask,
     _encode_WeekMask,
-} from '../X790ASN1Module/WeekMask.ta';
+} from '../X790ASN1Module/WeekMask.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LocationAccessHours */
 /**

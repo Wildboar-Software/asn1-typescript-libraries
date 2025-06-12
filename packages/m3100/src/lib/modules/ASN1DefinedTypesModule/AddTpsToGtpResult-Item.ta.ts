@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 export {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 import {
     AddedTps,
     _decode_AddedTps,
     _encode_AddedTps,
-} from '../ASN1DefinedTypesModule/AddedTps.ta';
+} from '../ASN1DefinedTypesModule/AddedTps.ta.js';
 export {
     AddedTps,
     _decode_AddedTps,
     _encode_AddedTps,
-} from '../ASN1DefinedTypesModule/AddedTps.ta';
+} from '../ASN1DefinedTypesModule/AddedTps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AddTpsToGtpResult_Item */
 /**

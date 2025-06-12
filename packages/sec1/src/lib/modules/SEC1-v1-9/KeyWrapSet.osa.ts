@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { KeyWrapSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union0-Intersection0-Element.oa";
-export { KeyWrapSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union0-Intersection0-Element.oa";
-import { KeyWrapSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union1-Intersection0-Element.oa";
-export { KeyWrapSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union1-Intersection0-Element.oa";
-import { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union2-Intersection0-Element.oa";
-export { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union2-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { KeyWrapSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union0-Intersection0-Element.oa.js";
+export { KeyWrapSet_Union0_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union0-Intersection0-Element.oa.js";
+import { KeyWrapSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union1-Intersection0-Element.oa.js";
+export { KeyWrapSet_Union1_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union1-Intersection0-Element.oa.js";
+import { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union2-Intersection0-Element.oa.js";
+export { KeyWrapSet_Union2_Intersection0_Element } from "../SEC1-v1-9/KeyWrapSet-Union2-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION KeyWrapSet */

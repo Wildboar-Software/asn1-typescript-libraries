@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     X121Address,
     _decode_X121Address,
     _encode_X121Address,
-} from "../PkiPmiExternalDataTypes/X121Address.ta";
+} from "../PkiPmiExternalDataTypes/X121Address.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION NetworkAddress */
 /**

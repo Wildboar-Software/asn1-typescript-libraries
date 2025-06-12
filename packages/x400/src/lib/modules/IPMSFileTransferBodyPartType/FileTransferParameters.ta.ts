@@ -66,68 +66,68 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ObjectIdentifier,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelatedStoredFile,
     _decode_RelatedStoredFile,
     _encode_RelatedStoredFile,
-} from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta';
+} from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta.js';
 export {
     RelatedStoredFile,
     _decode_RelatedStoredFile,
     _encode_RelatedStoredFile,
-} from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta';
+} from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta.js';
 import {
     ContentsTypeParameter,
     _decode_ContentsTypeParameter,
     _encode_ContentsTypeParameter,
-} from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta';
+} from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta.js';
 export {
     ContentsTypeParameter,
     _decode_ContentsTypeParameter,
     _encode_ContentsTypeParameter,
-} from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta';
+} from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta.js';
 import {
     EnvironmentParameter,
     _decode_EnvironmentParameter,
     _encode_EnvironmentParameter,
-} from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta';
+} from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta.js';
 export {
     EnvironmentParameter,
     _decode_EnvironmentParameter,
     _encode_EnvironmentParameter,
-} from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta';
+} from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta.js';
 import {
     CompressionParameter,
     _decode_CompressionParameter,
     _encode_CompressionParameter,
-} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta';
+} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.js';
 export {
     CompressionParameter,
     _decode_CompressionParameter,
     _encode_CompressionParameter,
-} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta';
+} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.js';
 import {
     FileAttributes,
     _decode_FileAttributes,
     _encode_FileAttributes,
-} from '../IPMSFileTransferBodyPartType/FileAttributes.ta';
+} from '../IPMSFileTransferBodyPartType/FileAttributes.ta.js';
 export {
     FileAttributes,
     _decode_FileAttributes,
     _encode_FileAttributes,
-} from '../IPMSFileTransferBodyPartType/FileAttributes.ta';
+} from '../IPMSFileTransferBodyPartType/FileAttributes.ta.js';
 import {
     ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta';
+} from '../IPMSInformationObjects/ExtensionsField.ta.js';
 export {
     ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta';
-import { Contents_Type_Attribute_document_type } from './Contents-Type-Attribute-document-type.ta';
+} from '../IPMSInformationObjects/ExtensionsField.ta.js';
+import { Contents_Type_Attribute_document_type } from './Contents-Type-Attribute-document-type.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FileTransferParameters */
 /**

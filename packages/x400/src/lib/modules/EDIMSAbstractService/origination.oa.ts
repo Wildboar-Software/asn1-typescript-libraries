@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { originate_probe } from '../EDIMSAbstractService/originate-probe.oa';
-export { originate_probe } from '../EDIMSAbstractService/originate-probe.oa';
-import { originate_edim } from '../EDIMSAbstractService/originate-edim.oa';
-export { originate_edim } from '../EDIMSAbstractService/originate-edim.oa';
-import { originate_edin } from '../EDIMSAbstractService/originate-edin.oa';
-export { originate_edin } from '../EDIMSAbstractService/originate-edin.oa';
-import { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va';
-export { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { originate_probe } from '../EDIMSAbstractService/originate-probe.oa.js';
+export { originate_probe } from '../EDIMSAbstractService/originate-probe.oa.js';
+import { originate_edim } from '../EDIMSAbstractService/originate-edim.oa.js';
+export { originate_edim } from '../EDIMSAbstractService/originate-edim.oa.js';
+import { originate_edin } from '../EDIMSAbstractService/originate-edin.oa.js';
+export { originate_edin } from '../EDIMSAbstractService/originate-edin.oa.js';
+import { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va.js';
+export { id_pt_origination } from '../EDIMSObjectIdentifiers/id-pt-origination.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION origination */
 /**

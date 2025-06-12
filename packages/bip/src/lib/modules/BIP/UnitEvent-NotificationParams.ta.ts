@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 import {
   BioAPI_UNIT_SCHEMA,
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
-} from '../BIP/BioAPI-UNIT-SCHEMA.ta';
+} from '../BIP/BioAPI-UNIT-SCHEMA.ta.js';
 export {
   BioAPI_UNIT_SCHEMA,
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
-} from '../BIP/BioAPI-UNIT-SCHEMA.ta';
+} from '../BIP/BioAPI-UNIT-SCHEMA.ta.js';
 import {
   BioAPI_UNIT_EVENT_TYPE,
   _enum_for_BioAPI_UNIT_EVENT_TYPE,
@@ -111,7 +111,7 @@ import {
   sourceRemoved /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.js';
 export {
   BioAPI_UNIT_EVENT_TYPE,
   _enum_for_BioAPI_UNIT_EVENT_TYPE,
@@ -127,7 +127,7 @@ export {
   sourceRemoved /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UnitEvent_NotificationParams */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 export {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 import {
   Override,
   Override_create_failure /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
   delete_and_create_with_new_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Override,
   _encode_Override,
-} from '../ISO8571-FTAM/Override.ta';
+} from '../ISO8571-FTAM/Override.ta.js';
 export {
   Override,
   Override_create_failure /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -101,47 +101,47 @@ export {
   delete_and_create_with_new_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Override,
   _encode_Override,
-} from '../ISO8571-FTAM/Override.ta';
+} from '../ISO8571-FTAM/Override.ta.js';
 import {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 export {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 import {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 export {
   Change_Attributes,
   _decode_Change_Attributes,
   _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta';
+} from '../ISO8571-FTAM/Change-Attributes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_COPY_request */
 /**

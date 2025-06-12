@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
-} from '../IPMSSecurityExtensions/BodyPartTokens.ta';
+} from '../IPMSSecurityExtensions/BodyPartTokens.ta.js';
 export {
     BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
-} from '../IPMSSecurityExtensions/BodyPartTokens.ta';
-import { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va';
-export { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../IPMSSecurityExtensions/BodyPartTokens.ta.js';
+import { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va.js';
+export { id_mst_originator_body_part_encryption_token } from '../IPMSObjectIdentifiers/id-mst-originator-body-part-encryption-token.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION originator_body_part_encryption_token */
 /**

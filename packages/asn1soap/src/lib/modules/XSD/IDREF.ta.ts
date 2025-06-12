@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta';
-export { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.js';
+export { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IDREF */
 /**

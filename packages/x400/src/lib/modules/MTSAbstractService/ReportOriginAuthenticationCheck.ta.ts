@@ -72,12 +72,12 @@ import {
     _root_component_type_list_2_spec_for_SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_ReportOriginAuthenticationCheck,
     _encode_SIGNATURE as _encode_ReportOriginAuthenticationCheck,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportOriginAuthenticationCheck */
 /**

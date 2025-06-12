@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
-import { ub_pds_parameter_length } from '../MTSUpperBounds/ub-pds-parameter-length.va';
-export { ub_pds_parameter_length } from '../MTSUpperBounds/ub-pds-parameter-length.va';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
+import { ub_pds_parameter_length } from '../MTSUpperBounds/ub-pds-parameter-length.va.js';
+export { ub_pds_parameter_length } from '../MTSUpperBounds/ub-pds-parameter-length.va.js';
 
 /* START_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 /**

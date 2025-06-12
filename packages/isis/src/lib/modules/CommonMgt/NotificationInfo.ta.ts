@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Parameter,
   _decode_Parameter,
   _encode_Parameter,
-} from '../CommonMgt/Parameter.ta';
+} from '../CommonMgt/Parameter.ta.js';
 export {
   Parameter,
   _decode_Parameter,
   _encode_Parameter,
-} from '../CommonMgt/Parameter.ta';
+} from '../CommonMgt/Parameter.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NotificationInfo */
 /**

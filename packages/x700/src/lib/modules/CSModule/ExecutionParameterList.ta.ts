@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExecutionParameter,
     _decode_ExecutionParameter,
     _encode_ExecutionParameter,
-} from '../CSModule/ExecutionParameter.ta';
+} from '../CSModule/ExecutionParameter.ta.js';
 export {
     ExecutionParameter,
     _decode_ExecutionParameter,
     _encode_ExecutionParameter,
-} from '../CSModule/ExecutionParameter.ta';
+} from '../CSModule/ExecutionParameter.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExecutionParameterList */
 /**

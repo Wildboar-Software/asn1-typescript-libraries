@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Contents_Type_Attribute_document_type,
   _decode_Contents_Type_Attribute_document_type,
   _encode_Contents_Type_Attribute_document_type,
-} from '../ISO8571-FTAM/Contents-Type-Attribute-document-type.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute-document-type.ta.js';
 export {
   Contents_Type_Attribute_document_type,
   _decode_Contents_Type_Attribute_document_type,
   _encode_Contents_Type_Attribute_document_type,
-} from '../ISO8571-FTAM/Contents-Type-Attribute-document-type.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute-document-type.ta.js';
 import {
   Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
   _decode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
   _encode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
-} from '../ISO8571-FTAM/Contents-Type-Attribute-constraint-set-and-abstract-Syntax.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute-constraint-set-and-abstract-Syntax.ta.js';
 export {
   Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
   _decode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
   _encode_Contents_Type_Attribute_constraint_set_and_abstract_Syntax,
-} from '../ISO8571-FTAM/Contents-Type-Attribute-constraint-set-and-abstract-Syntax.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute-constraint-set-and-abstract-Syntax.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Attribute */
 /**

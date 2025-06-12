@@ -65,45 +65,45 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     CallingPartyAddress,
     _decode_CallingPartyAddress,
     _encode_CallingPartyAddress,
-} from '../TCAP-Examples/CallingPartyAddress.ta';
+} from '../TCAP-Examples/CallingPartyAddress.ta.js';
 export {
     CallingPartyAddress,
     _decode_CallingPartyAddress,
     _encode_CallingPartyAddress,
-} from '../TCAP-Examples/CallingPartyAddress.ta';
-import { callingPartyAddressNotAvailable } from '../TCAP-Examples/callingPartyAddressNotAvailable.oa';
-export { callingPartyAddressNotAvailable } from '../TCAP-Examples/callingPartyAddressNotAvailable.oa';
-import { processingFailure } from '../TCAP-Examples/processingFailure.oa';
-export { processingFailure } from '../TCAP-Examples/processingFailure.oa';
+} from '../TCAP-Examples/CallingPartyAddress.ta.js';
+import { callingPartyAddressNotAvailable } from '../TCAP-Examples/callingPartyAddressNotAvailable.oa.js';
+export { callingPartyAddressNotAvailable } from '../TCAP-Examples/callingPartyAddressNotAvailable.oa.js';
+import { processingFailure } from '../TCAP-Examples/processingFailure.oa.js';
+export { processingFailure } from '../TCAP-Examples/processingFailure.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION getCallingPartyAddress */
 /**

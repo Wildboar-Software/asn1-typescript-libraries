@@ -65,39 +65,39 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Attribute_Value_Assertions,
   _decode_Attribute_Value_Assertions,
   _encode_Attribute_Value_Assertions,
-} from '../ISO8571-FTAM/Attribute-Value-Assertions.ta';
+} from '../ISO8571-FTAM/Attribute-Value-Assertions.ta.js';
 export {
   Attribute_Value_Assertions,
   _decode_Attribute_Value_Assertions,
   _encode_Attribute_Value_Assertions,
-} from '../ISO8571-FTAM/Attribute-Value-Assertions.ta';
-import { Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta';
-export { Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta';
+} from '../ISO8571-FTAM/Attribute-Value-Assertions.ta.js';
+import { Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta.js';
+export { Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 import {
   Attribute_Names,
   Attribute_Names_read_pathname /* IMPORTED_LONG_NAMED_BIT */,
@@ -148,7 +148,7 @@ import {
   read_private_use /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Attribute_Names,
   _encode_Attribute_Names,
-} from '../ISO8571-FTAM/Attribute-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Names.ta.js';
 export {
   Attribute_Names,
   Attribute_Names_read_pathname /* IMPORTED_LONG_NAMED_BIT */,
@@ -199,17 +199,17 @@ export {
   read_private_use /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Attribute_Names,
   _encode_Attribute_Names,
-} from '../ISO8571-FTAM/Attribute-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Names.ta.js';
 import {
   Attribute_Extension_Names,
   _decode_Attribute_Extension_Names,
   _encode_Attribute_Extension_Names,
-} from '../ISO8571-FTAM/Attribute-Extension-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Extension-Names.ta.js';
 export {
   Attribute_Extension_Names,
   _decode_Attribute_Extension_Names,
   _encode_Attribute_Extension_Names,
-} from '../ISO8571-FTAM/Attribute-Extension-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Extension-Names.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_LIST_request */
 /**

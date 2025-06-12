@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { REV_INFO } from '../SCVP-2009/REV-INFO.oca';
-export { REV_INFO } from '../SCVP-2009/REV-INFO.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { REV_INFO } from '../SCVP-2009/REV-INFO.oca.js';
+export { REV_INFO } from '../SCVP-2009/REV-INFO.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION OtherRevInfo */
 /**

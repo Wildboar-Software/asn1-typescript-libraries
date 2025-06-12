@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Object_Availability_Attribute_actual_values,
   Object_Availability_Attribute_actual_values_immediate_availability /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
   deferred_availability /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Object_Availability_Attribute_actual_values,
   _encode_Object_Availability_Attribute_actual_values,
-} from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta';
+} from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta.js';
 export {
   Object_Availability_Attribute_actual_values,
   Object_Availability_Attribute_actual_values_immediate_availability /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
   deferred_availability /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Object_Availability_Attribute_actual_values,
   _encode_Object_Availability_Attribute_actual_values,
-} from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta';
+} from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Object_Availability_Attribute */
 /**

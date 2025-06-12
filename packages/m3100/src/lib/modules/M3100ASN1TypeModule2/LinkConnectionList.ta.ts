@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectionList,
     _decode_ConnectionList,
     _encode_ConnectionList,
-} from '../M3100ASN1TypeModule2/ConnectionList.ta';
+} from '../M3100ASN1TypeModule2/ConnectionList.ta.js';
 export {
     ConnectionList,
     _decode_ConnectionList,
     _encode_ConnectionList,
-} from '../M3100ASN1TypeModule2/ConnectionList.ta';
+} from '../M3100ASN1TypeModule2/ConnectionList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LinkConnectionList */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SupportedProtocol,
     _decode_SupportedProtocol,
     _encode_SupportedProtocol,
-} from '../NLM/SupportedProtocol.ta';
+} from '../NLM/SupportedProtocol.ta.js';
 export {
     SupportedProtocol,
     _decode_SupportedProtocol,
     _encode_SupportedProtocol,
-} from '../NLM/SupportedProtocol.ta';
+} from '../NLM/SupportedProtocol.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SupportedProtocols */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniDialoguePDU,
     _decode_UniDialoguePDU,
     _encode_UniDialoguePDU,
-} from '../UnidialoguePDUs/UniDialoguePDU.ta';
+} from '../UnidialoguePDUs/UniDialoguePDU.ta.js';
 export {
     UniDialoguePDU,
     _decode_UniDialoguePDU,
     _encode_UniDialoguePDU,
-} from '../UnidialoguePDUs/UniDialoguePDU.ta';
-import { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va';
-export { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va';
+} from '../UnidialoguePDUs/UniDialoguePDU.ta.js';
+import { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va.js';
+export { uniDialogue_as_id } from '../UnidialoguePDUs/uniDialogue-as-id.va.js';
 
 /* START_OF_SYMBOL_DEFINITION uniDialogue_abstract_syntax */
 /**

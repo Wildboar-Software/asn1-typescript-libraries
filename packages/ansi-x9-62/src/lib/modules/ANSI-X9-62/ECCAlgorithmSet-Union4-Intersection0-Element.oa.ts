@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.js";
 import {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va";
+} from "../ANSI-X9-62/HashAlgorithm.ta.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta";
+} from "../ANSI-X9-62/HashAlgorithm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union4_Intersection0_Element */
 /**

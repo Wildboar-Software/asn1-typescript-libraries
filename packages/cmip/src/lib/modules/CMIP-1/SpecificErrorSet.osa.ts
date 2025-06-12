@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca';
-export { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca.js';
+export { CMIP_SPECIFICERROR } from '../CMIP-1/CMIP-SPECIFICERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION SpecificErrorSet */
 /**

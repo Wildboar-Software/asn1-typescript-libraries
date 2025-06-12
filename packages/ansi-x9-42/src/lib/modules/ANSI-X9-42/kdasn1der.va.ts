@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va";
-export { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va";
+import { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va.js";
+export { keyDerivationMethod } from "../ANSI-X9-42/keyDerivationMethod.va.js";
 
 /* START_OF_SYMBOL_DEFINITION kdasn1der */
 /**

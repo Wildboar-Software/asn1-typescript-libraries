@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Result_list,
     _decode_Result_list,
     _encode_Result_list,
-} from '../ISO8823-PRESENTATION/Result-list.ta';
+} from '../ISO8823-PRESENTATION/Result-list.ta.js';
 export {
     Result_list,
     _decode_Result_list,
     _encode_Result_list,
-} from '../ISO8823-PRESENTATION/Result-list.ta';
+} from '../ISO8823-PRESENTATION/Result-list.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Presentation_context_addition_result_list */
 /**

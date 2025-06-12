@@ -4,17 +4,17 @@ import {
     ASN1TagClass as _TagClass,
     PrintableString,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     URL_urlWithDigest,
     _decode_URL_urlWithDigest,
     _encode_URL_urlWithDigest,
-} from "../PKCS-15/URL-urlWithDigest.ta";
+} from "../PKCS-15/URL-urlWithDigest.ta.js";
 export {
     URL_urlWithDigest,
     _decode_URL_urlWithDigest,
     _encode_URL_urlWithDigest,
-} from "../PKCS-15/URL-urlWithDigest.ta";
+} from "../PKCS-15/URL-urlWithDigest.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION URL */
 /**

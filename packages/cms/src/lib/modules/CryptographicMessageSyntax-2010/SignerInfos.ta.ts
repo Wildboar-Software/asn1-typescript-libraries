@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../CryptographicMessageSyntax-2010/SignerInfo.ta";
+} from "../CryptographicMessageSyntax-2010/SignerInfo.ta.js";
 export {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../CryptographicMessageSyntax-2010/SignerInfo.ta";
+} from "../CryptographicMessageSyntax-2010/SignerInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignerInfos */
 /**

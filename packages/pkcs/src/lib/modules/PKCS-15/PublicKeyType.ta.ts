@@ -1,66 +1,66 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PublicDHKeyAttributes,
     _decode_PublicDHKeyAttributes,
     _encode_PublicDHKeyAttributes,
-} from "../PKCS-15/PublicDHKeyAttributes.ta";
+} from "../PKCS-15/PublicDHKeyAttributes.ta.js";
 import {
     PublicDSAKeyAttributes,
     _decode_PublicDSAKeyAttributes,
     _encode_PublicDSAKeyAttributes,
-} from "../PKCS-15/PublicDSAKeyAttributes.ta";
+} from "../PKCS-15/PublicDSAKeyAttributes.ta.js";
 import {
     PublicECKeyAttributes,
     _decode_PublicECKeyAttributes,
     _encode_PublicECKeyAttributes,
-} from "../PKCS-15/PublicECKeyAttributes.ta";
+} from "../PKCS-15/PublicECKeyAttributes.ta.js";
 import {
     PublicKEAKeyAttributes,
     _decode_PublicKEAKeyAttributes,
     _encode_PublicKEAKeyAttributes,
-} from "../PKCS-15/PublicKEAKeyAttributes.ta";
+} from "../PKCS-15/PublicKEAKeyAttributes.ta.js";
 import {
     PublicKeyObject,
     _get_decoder_for_PublicKeyObject,
     _get_encoder_for_PublicKeyObject,
-} from "../PKCS-15/PublicKeyObject.ta";
+} from "../PKCS-15/PublicKeyObject.ta.js";
 import {
     PublicRSAKeyAttributes,
     _decode_PublicRSAKeyAttributes,
     _encode_PublicRSAKeyAttributes,
-} from "../PKCS-15/PublicRSAKeyAttributes.ta";
+} from "../PKCS-15/PublicRSAKeyAttributes.ta.js";
 export {
     PublicDHKeyAttributes,
     _decode_PublicDHKeyAttributes,
     _encode_PublicDHKeyAttributes,
-} from "../PKCS-15/PublicDHKeyAttributes.ta";
+} from "../PKCS-15/PublicDHKeyAttributes.ta.js";
 export {
     PublicDSAKeyAttributes,
     _decode_PublicDSAKeyAttributes,
     _encode_PublicDSAKeyAttributes,
-} from "../PKCS-15/PublicDSAKeyAttributes.ta";
+} from "../PKCS-15/PublicDSAKeyAttributes.ta.js";
 export {
     PublicECKeyAttributes,
     _decode_PublicECKeyAttributes,
     _encode_PublicECKeyAttributes,
-} from "../PKCS-15/PublicECKeyAttributes.ta";
+} from "../PKCS-15/PublicECKeyAttributes.ta.js";
 export {
     PublicKEAKeyAttributes,
     _decode_PublicKEAKeyAttributes,
     _encode_PublicKEAKeyAttributes,
-} from "../PKCS-15/PublicKEAKeyAttributes.ta";
+} from "../PKCS-15/PublicKEAKeyAttributes.ta.js";
 export {
     PublicKeyObject,
     _get_decoder_for_PublicKeyObject,
     _get_encoder_for_PublicKeyObject,
-} from "../PKCS-15/PublicKeyObject.ta";
+} from "../PKCS-15/PublicKeyObject.ta.js";
 export {
     PublicRSAKeyAttributes,
     _decode_PublicRSAKeyAttributes,
     _encode_PublicRSAKeyAttributes,
-} from "../PKCS-15/PublicRSAKeyAttributes.ta";
+} from "../PKCS-15/PublicRSAKeyAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PublicKeyType */
 /**

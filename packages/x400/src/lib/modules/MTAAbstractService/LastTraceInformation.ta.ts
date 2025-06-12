@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
-} from '../MTAAbstractService/ArrivalTime.ta';
+} from '../MTAAbstractService/ArrivalTime.ta.js';
 export {
     ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
-} from '../MTAAbstractService/ArrivalTime.ta';
+} from '../MTAAbstractService/ArrivalTime.ta.js';
 import {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 export {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 import {
     ReportType,
     _decode_ReportType,
     _encode_ReportType,
-} from '../MTSAbstractService/ReportType.ta';
+} from '../MTSAbstractService/ReportType.ta.js';
 export {
     ReportType,
     _decode_ReportType,
     _encode_ReportType,
-} from '../MTSAbstractService/ReportType.ta';
+} from '../MTSAbstractService/ReportType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LastTraceInformation */
 /**

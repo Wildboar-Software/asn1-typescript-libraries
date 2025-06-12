@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageSubmissionPDUs,
     _decode_MessageSubmissionPDUs,
     _encode_MessageSubmissionPDUs,
-} from '../MTSAccessProtocol/MessageSubmissionPDUs.ta';
+} from '../MTSAccessProtocol/MessageSubmissionPDUs.ta.js';
 export {
     MessageSubmissionPDUs,
     _decode_MessageSubmissionPDUs,
     _encode_MessageSubmissionPDUs,
-} from '../MTSAccessProtocol/MessageSubmissionPDUs.ta';
-import { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va';
-export { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va';
+} from '../MTSAccessProtocol/MessageSubmissionPDUs.ta.js';
+import { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va.js';
+export { id_as_msse } from '../MHSProtocolObjectIdentifiers/id-as-msse.va.js';
 
 /* START_OF_SYMBOL_DEFINITION message_submission_abstract_syntax */
 /**

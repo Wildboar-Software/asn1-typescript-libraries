@@ -4,18 +4,18 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OCSPResponseStatus,
     _decode_OCSPResponseStatus,
     _encode_OCSPResponseStatus,
     _enum_for_OCSPResponseStatus,
-} from "../OCSP-2013-08/OCSPResponseStatus.ta";
+} from "../OCSP-2013-08/OCSPResponseStatus.ta.js";
 import {
     ResponseBytes,
     _decode_ResponseBytes,
     _encode_ResponseBytes,
-} from "../OCSP-2013-08/ResponseBytes.ta";
+} from "../OCSP-2013-08/ResponseBytes.ta.js";
 export {
     internalError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     malformedRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -33,12 +33,12 @@ export {
     _decode_OCSPResponseStatus,
     _encode_OCSPResponseStatus,
     _enum_for_OCSPResponseStatus,
-} from "../OCSP-2013-08/OCSPResponseStatus.ta";
+} from "../OCSP-2013-08/OCSPResponseStatus.ta.js";
 export {
     ResponseBytes,
     _decode_ResponseBytes,
     _encode_ResponseBytes,
-} from "../OCSP-2013-08/ResponseBytes.ta";
+} from "../OCSP-2013-08/ResponseBytes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OCSPResponse */
 /**

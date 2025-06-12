@@ -65,28 +65,28 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.js';
 export {
     ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectClass.ta.js';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
-import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1Module/ErrorId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
+import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1Module/ErrorId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CommonError */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TeletexDomainDefinedAttributes,
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
-} from '../MTSAbstractService/TeletexDomainDefinedAttributes.ta';
+} from '../MTSAbstractService/TeletexDomainDefinedAttributes.ta.js';
 export {
     TeletexDomainDefinedAttributes,
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
-} from '../MTSAbstractService/TeletexDomainDefinedAttributes.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/TeletexDomainDefinedAttributes.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION teletex_domain_defined_attributes */
 /**

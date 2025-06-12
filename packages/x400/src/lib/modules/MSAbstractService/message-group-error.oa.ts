@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     MessageGroupErrorParameter,
     _decode_MessageGroupErrorParameter,
     _encode_MessageGroupErrorParameter,
-} from '../MSAbstractService/MessageGroupErrorParameter.ta';
+} from '../MSAbstractService/MessageGroupErrorParameter.ta.js';
 export {
     MessageGroupErrorParameter,
     _decode_MessageGroupErrorParameter,
     _encode_MessageGroupErrorParameter,
-} from '../MSAbstractService/MessageGroupErrorParameter.ta';
-import { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va';
-export { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/MessageGroupErrorParameter.ta.js';
+import { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va.js';
+export { err_message_group_error } from '../MSAccessProtocol/err-message-group-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION message_group_error */
 /**

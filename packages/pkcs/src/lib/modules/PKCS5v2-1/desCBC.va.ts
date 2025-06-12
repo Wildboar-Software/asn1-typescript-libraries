@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { oiw } from "../PKCS5v2-1/oiw.va";
-export { oiw } from "../PKCS5v2-1/oiw.va";
+import { oiw } from "../PKCS5v2-1/oiw.va.js";
+export { oiw } from "../PKCS5v2-1/oiw.va.js";
 
 /* START_OF_SYMBOL_DEFINITION desCBC */
 /**

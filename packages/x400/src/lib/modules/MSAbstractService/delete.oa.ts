@@ -65,73 +65,73 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     DeleteArgument,
     _decode_DeleteArgument,
     _encode_DeleteArgument,
-} from '../MSAbstractService/DeleteArgument.ta';
+} from '../MSAbstractService/DeleteArgument.ta.js';
 export {
     DeleteArgument,
     _decode_DeleteArgument,
     _encode_DeleteArgument,
-} from '../MSAbstractService/DeleteArgument.ta';
+} from '../MSAbstractService/DeleteArgument.ta.js';
 import {
     DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
-} from '../MSAbstractService/DeleteResult.ta';
+} from '../MSAbstractService/DeleteResult.ta.js';
 export {
     DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
-} from '../MSAbstractService/DeleteResult.ta';
-import { delete_error } from '../MSAbstractService/delete-error.oa';
-export { delete_error } from '../MSAbstractService/delete-error.oa';
-import { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa';
-export { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa';
-import { range_error } from '../MSAbstractService/range-error.oa';
-export { range_error } from '../MSAbstractService/range-error.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { sequence_number_error } from '../MSAbstractService/sequence-number-error.oa';
-export { sequence_number_error } from '../MSAbstractService/sequence-number-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { entry_class_error } from '../MSAbstractService/entry-class-error.oa';
-export { entry_class_error } from '../MSAbstractService/entry-class-error.oa';
-import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_delete } from '../MSAccessProtocol/op-delete.va';
-export { op_delete } from '../MSAccessProtocol/op-delete.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MSAbstractService/DeleteResult.ta.js';
+import { delete_error } from '../MSAbstractService/delete-error.oa.js';
+export { delete_error } from '../MSAbstractService/delete-error.oa.js';
+import { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa.js';
+export { invalid_parameters_error } from '../MSAbstractService/invalid-parameters-error.oa.js';
+import { range_error } from '../MSAbstractService/range-error.oa.js';
+export { range_error } from '../MSAbstractService/range-error.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { sequence_number_error } from '../MSAbstractService/sequence-number-error.oa.js';
+export { sequence_number_error } from '../MSAbstractService/sequence-number-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { entry_class_error } from '../MSAbstractService/entry-class-error.oa.js';
+export { entry_class_error } from '../MSAbstractService/entry-class-error.oa.js';
+import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_delete } from '../MSAccessProtocol/op-delete.va.js';
+export { op_delete } from '../MSAccessProtocol/op-delete.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION delete_ */
 /**

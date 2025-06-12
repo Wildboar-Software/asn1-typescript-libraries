@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va";
-export { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va";
+import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.js";
+export { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dh_public_number */
 /**

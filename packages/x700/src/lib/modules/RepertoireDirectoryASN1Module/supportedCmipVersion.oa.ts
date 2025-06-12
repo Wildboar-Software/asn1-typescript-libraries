@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -83,7 +83,7 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
 export {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -97,9 +97,9 @@ export {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     ProtocolVersion,
     ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -108,7 +108,7 @@ import {
     version2 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.js';
 export {
     ProtocolVersion,
     ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -117,11 +117,11 @@ export {
     version2 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
-} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa';
-export { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa';
-import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va';
-export { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va';
+} from '@wildboar/cmip/src/lib/modules/CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.js';
+import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.js';
+export { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.js';
+import { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.js';
+export { mkmDirectoryAttributeType } from '../MKMD/mkmDirectoryAttributeType.va.js';
 
 /* START_OF_SYMBOL_DEFINITION supportedCmipVersion */
 /**

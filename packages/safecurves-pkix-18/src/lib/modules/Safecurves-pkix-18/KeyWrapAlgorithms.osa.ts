@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-import { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa";
-export { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa";
-import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa";
-export { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+import { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa.js";
+export { kwa_aes128_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes128-wrap.oa.js";
+import { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.js";
+export { kwa_aes256_wrap } from "../CMSAesRsaesOaep-2009/kwa-aes256-wrap.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION KeyWrapAlgorithms */

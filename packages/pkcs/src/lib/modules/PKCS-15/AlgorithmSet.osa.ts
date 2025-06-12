@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa";
-import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca";
-export { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa";
-export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca";
+import { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa.js";
+import { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.js";
+export { pkcs15_alg_null } from "../PKCS-15/pkcs15-alg-null.oa.js";
+export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmSet */
 /**

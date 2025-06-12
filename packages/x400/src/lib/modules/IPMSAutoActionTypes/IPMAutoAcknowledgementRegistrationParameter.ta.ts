@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
-} from '../IPMSInformationObjects/SupplReceiptInfoField.ta';
+} from '../IPMSInformationObjects/SupplReceiptInfoField.ta.js';
 export {
     SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
-} from '../IPMSInformationObjects/SupplReceiptInfoField.ta';
+} from '../IPMSInformationObjects/SupplReceiptInfoField.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMAutoAcknowledgementRegistrationParameter */
 /**

@@ -65,25 +65,25 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
+} from '../MTSAbstractService/ORAddress.ta.js';
 export {
     ORAddress,
     _decode_ORAddress,
     _encode_ORAddress,
-} from '../MTSAbstractService/ORAddress.ta';
-import { id_mr_oraddress_elements_match } from '../MSObjectIdentifiers/id-mr-oraddress-elements-match.va';
-export { id_mr_oraddress_elements_match } from '../MSObjectIdentifiers/id-mr-oraddress-elements-match.va';
+} from '../MTSAbstractService/ORAddress.ta.js';
+import { id_mr_oraddress_elements_match } from '../MSObjectIdentifiers/id-mr-oraddress-elements-match.va.js';
+export { id_mr_oraddress_elements_match } from '../MSObjectIdentifiers/id-mr-oraddress-elements-match.va.js';
 
 /* START_OF_SYMBOL_DEFINITION oRAddressElementsMatch */
 /**

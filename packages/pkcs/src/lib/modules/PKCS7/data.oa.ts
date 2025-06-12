@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta";
-import { id_data } from "../PKCS7/id-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
-export { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta";
-export { id_data } from "../PKCS7/id-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+import { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta.js";
+import { id_data } from "../PKCS7/id-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
+export { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta.js";
+export { id_data } from "../PKCS7/id-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION data */
 /**

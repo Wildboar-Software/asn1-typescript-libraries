@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ContentTypeACBioContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeACBioContentInfo.osa';
-export { ContentTypeACBioContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeACBioContentInfo.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ContentTypeACBioContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeACBioContentInfo.osa.js';
+export { ContentTypeACBioContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeACBioContentInfo.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfoACBio */
 /**

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Tokenized,
     _decode_Tokenized,
     _encode_Tokenized,
-} from "../TokenizationManifest/Tokenized.ta";
+} from "../TokenizationManifest/Tokenized.ta.js";
 export {
     Tokenized,
     _decode_Tokenized,
     _encode_Tokenized,
-} from "../TokenizationManifest/Tokenized.ta";
+} from "../TokenizationManifest/Tokenized.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TokenizedParts */
 /**

@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DigestInfo,
     _decode_DigestInfo,
     _encode_DigestInfo,
-} from "../PKCS7/DigestInfo.ta";
+} from "../PKCS7/DigestInfo.ta.js";
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta";
+} from "../PKCS7/ENCRYPTED.ta.js";
 export {
     DigestInfo,
     _decode_DigestInfo,
     _encode_DigestInfo,
-} from "../PKCS7/DigestInfo.ta";
+} from "../PKCS7/DigestInfo.ta.js";
 export {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta";
+} from "../PKCS7/ENCRYPTED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedDigest */
 /**

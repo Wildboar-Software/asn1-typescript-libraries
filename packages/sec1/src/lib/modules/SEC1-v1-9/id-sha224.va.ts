@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_sha } from "../SEC1-v1-9/id-sha.va";
-export { id_sha } from "../SEC1-v1-9/id-sha.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_sha } from "../SEC1-v1-9/id-sha.va.js";
+export { id_sha } from "../SEC1-v1-9/id-sha.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION id_sha224 */

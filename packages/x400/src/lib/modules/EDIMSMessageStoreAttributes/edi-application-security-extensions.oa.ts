@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     EDIApplicationSecurityExtension,
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.js';
 export {
     EDIApplicationSecurityExtension,
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta';
-import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa';
-export { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa';
-import { id_hat_edi_application_security_extensions } from '../EDIMSObjectIdentifiers/id-hat-edi-application-security-extensions.va';
-export { id_hat_edi_application_security_extensions } from '../EDIMSObjectIdentifiers/id-hat-edi-application-security-extensions.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.js';
+import { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.js';
+export { bitStringMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/bitStringMatch.oa.js';
+import { id_hat_edi_application_security_extensions } from '../EDIMSObjectIdentifiers/id-hat-edi-application-security-extensions.va.js';
+export { id_hat_edi_application_security_extensions } from '../EDIMSObjectIdentifiers/id-hat-edi-application-security-extensions.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION edi_application_security_extensions */
 /**

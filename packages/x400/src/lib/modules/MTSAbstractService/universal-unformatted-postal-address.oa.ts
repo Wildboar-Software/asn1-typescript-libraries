@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalUnformattedPostalAddress,
     _decode_UniversalUnformattedPostalAddress,
     _encode_UniversalUnformattedPostalAddress,
-} from '../MTSAbstractService/UniversalUnformattedPostalAddress.ta';
+} from '../MTSAbstractService/UniversalUnformattedPostalAddress.ta.js';
 export {
     UniversalUnformattedPostalAddress,
     _decode_UniversalUnformattedPostalAddress,
     _encode_UniversalUnformattedPostalAddress,
-} from '../MTSAbstractService/UniversalUnformattedPostalAddress.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalUnformattedPostalAddress.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_unformatted_postal_address */
 /**

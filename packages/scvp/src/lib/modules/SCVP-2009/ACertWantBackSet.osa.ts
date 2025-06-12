@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-import { swb_ac_cert } from '../SCVP-2009/swb-ac-cert.oa';
-export { swb_ac_cert } from '../SCVP-2009/swb-ac-cert.oa';
-import { swb_aa_cert_path } from '../SCVP-2009/swb-aa-cert-path.oa';
-export { swb_aa_cert_path } from '../SCVP-2009/swb-aa-cert-path.oa';
-import { swb_aa_revocation_info } from '../SCVP-2009/swb-aa-revocation-info.oa';
-export { swb_aa_revocation_info } from '../SCVP-2009/swb-aa-revocation-info.oa';
-import { swb_ac_revocation_info } from '../SCVP-2009/swb-ac-revocation-info.oa';
-export { swb_ac_revocation_info } from '../SCVP-2009/swb-ac-revocation-info.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+import { swb_ac_cert } from '../SCVP-2009/swb-ac-cert.oa.js';
+export { swb_ac_cert } from '../SCVP-2009/swb-ac-cert.oa.js';
+import { swb_aa_cert_path } from '../SCVP-2009/swb-aa-cert-path.oa.js';
+export { swb_aa_cert_path } from '../SCVP-2009/swb-aa-cert-path.oa.js';
+import { swb_aa_revocation_info } from '../SCVP-2009/swb-aa-revocation-info.oa.js';
+export { swb_aa_revocation_info } from '../SCVP-2009/swb-aa-revocation-info.oa.js';
+import { swb_ac_revocation_info } from '../SCVP-2009/swb-ac-revocation-info.oa.js';
+export { swb_ac_revocation_info } from '../SCVP-2009/swb-ac-revocation-info.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION ACertWantBackSet */
 /**

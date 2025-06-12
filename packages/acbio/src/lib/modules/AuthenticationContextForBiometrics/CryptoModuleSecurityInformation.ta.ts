@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CryptoModuleSecurity,
     _decode_CryptoModuleSecurity,
     _encode_CryptoModuleSecurity,
-} from '../AuthenticationContextForBiometrics/CryptoModuleSecurity.ta';
+} from '../AuthenticationContextForBiometrics/CryptoModuleSecurity.ta.js';
 export {
     CryptoModuleSecurity,
     _decode_CryptoModuleSecurity,
     _encode_CryptoModuleSecurity,
-} from '../AuthenticationContextForBiometrics/CryptoModuleSecurity.ta';
+} from '../AuthenticationContextForBiometrics/CryptoModuleSecurity.ta.js';
 import {
     URI,
     _decode_URI,
     _encode_URI,
-} from '../AuthenticationContextForBiometrics/URI.ta';
+} from '../AuthenticationContextForBiometrics/URI.ta.js';
 export {
     URI,
     _decode_URI,
     _encode_URI,
-} from '../AuthenticationContextForBiometrics/URI.ta';
+} from '../AuthenticationContextForBiometrics/URI.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CryptoModuleSecurityInformation */
 /**

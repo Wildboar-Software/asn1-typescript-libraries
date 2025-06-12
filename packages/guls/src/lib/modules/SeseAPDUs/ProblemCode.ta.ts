@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GeneralProblem,
   _enum_for_GeneralProblem,
@@ -73,7 +73,7 @@ import {
   invalidAPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_GeneralProblem,
   _encode_GeneralProblem,
-} from '../SeseAPDUs/GeneralProblem.ta';
+} from '../SeseAPDUs/GeneralProblem.ta.js';
 export {
   GeneralProblem,
   _enum_for_GeneralProblem,
@@ -81,7 +81,7 @@ export {
   invalidAPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_GeneralProblem,
   _encode_GeneralProblem,
-} from '../SeseAPDUs/GeneralProblem.ta';
+} from '../SeseAPDUs/GeneralProblem.ta.js';
 import {
   TransferProblem,
   _enum_for_TransferProblem,
@@ -97,7 +97,7 @@ import {
   alternatingSequenceError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_TransferProblem,
   _encode_TransferProblem,
-} from '../SeseAPDUs/TransferProblem.ta';
+} from '../SeseAPDUs/TransferProblem.ta.js';
 export {
   TransferProblem,
   _enum_for_TransferProblem,
@@ -113,7 +113,7 @@ export {
   alternatingSequenceError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_TransferProblem,
   _encode_TransferProblem,
-} from '../SeseAPDUs/TransferProblem.ta';
+} from '../SeseAPDUs/TransferProblem.ta.js';
 import {
   AbortProblem,
   _enum_for_AbortProblem,
@@ -129,7 +129,7 @@ import {
   mistypedErrorParameter /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_AbortProblem,
   _encode_AbortProblem,
-} from '../SeseAPDUs/AbortProblem.ta';
+} from '../SeseAPDUs/AbortProblem.ta.js';
 export {
   AbortProblem,
   _enum_for_AbortProblem,
@@ -145,7 +145,7 @@ export {
   mistypedErrorParameter /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_AbortProblem,
   _encode_AbortProblem,
-} from '../SeseAPDUs/AbortProblem.ta';
+} from '../SeseAPDUs/AbortProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProblemCode */
 /**

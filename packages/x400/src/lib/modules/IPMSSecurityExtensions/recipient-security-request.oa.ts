@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientSecurityRequest,
     RecipientSecurityRequest_content_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
@@ -78,7 +78,7 @@ import {
     ipn_proof /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RecipientSecurityRequest,
     _encode_RecipientSecurityRequest,
-} from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta';
+} from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta.js';
 export {
     RecipientSecurityRequest,
     RecipientSecurityRequest_content_non_repudiation /* IMPORTED_LONG_NAMED_BIT */,
@@ -91,11 +91,11 @@ export {
     ipn_proof /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RecipientSecurityRequest,
     _encode_RecipientSecurityRequest,
-} from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta';
-import { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va';
-export { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta.js';
+import { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va.js';
+export { id_sec_ipm_security_request } from '../IPMSObjectIdentifiers/id-sec-ipm-security-request.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION recipient_security_request */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RunningBSPLocalReference,
   _decode_RunningBSPLocalReference,
   _encode_RunningBSPLocalReference,
-} from '../BIP/RunningBSPLocalReference.ta';
+} from '../BIP/RunningBSPLocalReference.ta.js';
 export {
   RunningBSPLocalReference,
   _decode_RunningBSPLocalReference,
   _encode_RunningBSPLocalReference,
-} from '../BIP/RunningBSPLocalReference.ta';
+} from '../BIP/RunningBSPLocalReference.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RunningBSPLocalReferences */
 /**

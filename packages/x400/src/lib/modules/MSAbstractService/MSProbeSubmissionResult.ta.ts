@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbeSubmissionResult,
     _decode_ProbeSubmissionResult,
     _encode_ProbeSubmissionResult,
-} from '../MTSAbstractService/ProbeSubmissionResult.ta';
+} from '../MTSAbstractService/ProbeSubmissionResult.ta.js';
 export {
     ProbeSubmissionResult,
     _decode_ProbeSubmissionResult,
     _encode_ProbeSubmissionResult,
-} from '../MTSAbstractService/ProbeSubmissionResult.ta';
+} from '../MTSAbstractService/ProbeSubmissionResult.ta.js';
 import {
     CommonSubmissionResults,
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
-} from '../MSAbstractService/CommonSubmissionResults.ta';
+} from '../MSAbstractService/CommonSubmissionResults.ta.js';
 export {
     CommonSubmissionResults,
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
-} from '../MSAbstractService/CommonSubmissionResults.ta';
+} from '../MSAbstractService/CommonSubmissionResults.ta.js';
 import {
     ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta';
+} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.js';
 export {
     ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta';
+} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.js';
 import {
     ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
-} from '../MTSAbstractService/ProbeSubmissionTime.ta';
+} from '../MTSAbstractService/ProbeSubmissionTime.ta.js';
 export {
     ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
-} from '../MTSAbstractService/ProbeSubmissionTime.ta';
+} from '../MTSAbstractService/ProbeSubmissionTime.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSProbeSubmissionResult */
 /**

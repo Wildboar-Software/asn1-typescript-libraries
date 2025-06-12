@@ -65,101 +65,101 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AUDT_apdu_protocol_version,
     AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AUDT_apdu_protocol_version,
     _encode_AUDT_apdu_protocol_version,
-} from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta';
+} from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta.js';
 export {
     AUDT_apdu_protocol_version,
     AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AUDT_apdu_protocol_version,
     _encode_AUDT_apdu_protocol_version,
-} from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta';
+} from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta.js';
 import {
     ASO_context_name,
     _decode_ASO_context_name,
     _encode_ASO_context_name,
-} from '../Connectionless-ACSE-1/ASO-context-name.ta';
+} from '../Connectionless-ACSE-1/ASO-context-name.ta.js';
 export {
     ASO_context_name,
     _decode_ASO_context_name,
     _encode_ASO_context_name,
-} from '../Connectionless-ACSE-1/ASO-context-name.ta';
+} from '../Connectionless-ACSE-1/ASO-context-name.ta.js';
 import {
     AP_title,
     _decode_AP_title,
     _encode_AP_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.js';
 export {
     AP_title,
     _decode_AP_title,
     _encode_AP_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.js';
 import {
     AE_qualifier,
     _decode_AE_qualifier,
     _encode_AE_qualifier,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.js';
 export {
     AE_qualifier,
     _decode_AE_qualifier,
     _encode_AE_qualifier,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.js';
 import {
     AP_invocation_id,
     _decode_AP_invocation_id,
     _encode_AP_invocation_id,
-} from '../Connectionless-ACSE-1/AP-invocation-id.ta';
+} from '../Connectionless-ACSE-1/AP-invocation-id.ta.js';
 export {
     AP_invocation_id,
     _decode_AP_invocation_id,
     _encode_AP_invocation_id,
-} from '../Connectionless-ACSE-1/AP-invocation-id.ta';
+} from '../Connectionless-ACSE-1/AP-invocation-id.ta.js';
 import {
     AE_invocation_id,
     _decode_AE_invocation_id,
     _encode_AE_invocation_id,
-} from '../Connectionless-ACSE-1/AE-invocation-id.ta';
+} from '../Connectionless-ACSE-1/AE-invocation-id.ta.js';
 export {
     AE_invocation_id,
     _decode_AE_invocation_id,
     _encode_AE_invocation_id,
-} from '../Connectionless-ACSE-1/AE-invocation-id.ta';
+} from '../Connectionless-ACSE-1/AE-invocation-id.ta.js';
 import {
     Mechanism_name,
     _decode_Mechanism_name,
     _encode_Mechanism_name,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta.js';
 export {
     Mechanism_name,
     _decode_Mechanism_name,
     _encode_Mechanism_name,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta.js';
 import {
     Authentication_value,
     _decode_Authentication_value,
     _encode_Authentication_value,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta.js';
 export {
     Authentication_value,
     _decode_Authentication_value,
     _encode_Authentication_value,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta.js';
 import {
     Default_P_context,
     _decode_Default_P_context,
     _encode_Default_P_context,
-} from '../Connectionless-ACSE-1/Default-P-context.ta';
+} from '../Connectionless-ACSE-1/Default-P-context.ta.js';
 export {
     Default_P_context,
     _decode_Default_P_context,
     _encode_Default_P_context,
-} from '../Connectionless-ACSE-1/Default-P-context.ta';
+} from '../Connectionless-ACSE-1/Default-P-context.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AUDT_apdu */
 /**

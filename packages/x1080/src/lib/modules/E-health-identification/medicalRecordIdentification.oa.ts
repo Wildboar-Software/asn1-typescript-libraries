@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_med_rec } from '../E-health-identification/id-med-rec.va';
-export { id_med_rec } from '../E-health-identification/id-med-rec.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_med_rec } from '../E-health-identification/id-med-rec.va.js';
+export { id_med_rec } from '../E-health-identification/id-med-rec.va.js';
 import {
     MedicalRecordIdentification,
     _decode_MedicalRecordIdentification,
     _encode_MedicalRecordIdentification,
-} from '../E-health-identification/MedicalRecordIdentification.ta';
+} from '../E-health-identification/MedicalRecordIdentification.ta.js';
 export {
     MedicalRecordIdentification,
     _decode_MedicalRecordIdentification,
     _encode_MedicalRecordIdentification,
-} from '../E-health-identification/MedicalRecordIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/MedicalRecordIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION medicalRecordIdentification */
 /**

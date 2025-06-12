@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveryError,
     DeliveryError_delivery_control_violation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     unsupported_critical_function /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliveryError,
     _encode_DeliveryError,
-} from '../MhsAcctAsn1Module/DeliveryError.ta';
+} from '../MhsAcctAsn1Module/DeliveryError.ta.js';
 export {
     DeliveryError,
     DeliveryError_delivery_control_violation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,7 +91,7 @@ export {
     unsupported_critical_function /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliveryError,
     _encode_DeliveryError,
-} from '../MhsAcctAsn1Module/DeliveryError.ta';
+} from '../MhsAcctAsn1Module/DeliveryError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageDeliveryErrors */
 /**

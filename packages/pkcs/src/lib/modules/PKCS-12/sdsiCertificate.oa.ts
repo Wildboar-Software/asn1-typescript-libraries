@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { IA5String, ObjectIdentifier as _OID } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { certTypes } from "../PKCS-9/certTypes.va";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { certTypes } from "../PKCS-9/certTypes.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { certTypes } from "../PKCS-9/certTypes.va.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { certTypes } from "../PKCS-9/certTypes.va.js";
 
 /* START_OF_SYMBOL_DEFINITION sdsiCertificate */
 /**

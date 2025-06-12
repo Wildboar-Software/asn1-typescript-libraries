@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.js';
 export {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificates.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificate */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 export {
     Name,
     _decode_Name,
     _encode_Name,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js';
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.js';
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UserInformation */
 /**

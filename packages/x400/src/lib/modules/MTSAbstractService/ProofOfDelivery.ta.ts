@@ -69,12 +69,12 @@ import {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_ProofOfDelivery,
     _encode_SIGNATURE as _encode_ProofOfDelivery,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProofOfDelivery */
 /**

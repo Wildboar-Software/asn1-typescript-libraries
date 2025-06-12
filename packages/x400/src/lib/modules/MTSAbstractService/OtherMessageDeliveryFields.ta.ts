@@ -65,127 +65,127 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveredContentType,
     _decode_DeliveredContentType,
     _encode_DeliveredContentType,
-} from '../MTSAbstractService/DeliveredContentType.ta';
+} from '../MTSAbstractService/DeliveredContentType.ta.js';
 export {
     DeliveredContentType,
     _decode_DeliveredContentType,
     _encode_DeliveredContentType,
-} from '../MTSAbstractService/DeliveredContentType.ta';
+} from '../MTSAbstractService/DeliveredContentType.ta.js';
 import {
     DeliveredOriginatorName,
     _decode_DeliveredOriginatorName,
     _encode_DeliveredOriginatorName,
-} from '../MTSAbstractService/DeliveredOriginatorName.ta';
+} from '../MTSAbstractService/DeliveredOriginatorName.ta.js';
 export {
     DeliveredOriginatorName,
     _decode_DeliveredOriginatorName,
     _encode_DeliveredOriginatorName,
-} from '../MTSAbstractService/DeliveredOriginatorName.ta';
+} from '../MTSAbstractService/DeliveredOriginatorName.ta.js';
 import {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 import {
     Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 import {
     DeliveryFlags,
     DeliveryFlags_implicit_conversion_prohibited /* IMPORTED_LONG_NAMED_BIT */,
     implicit_conversion_prohibited /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
-} from '../MTSAbstractService/DeliveryFlags.ta';
+} from '../MTSAbstractService/DeliveryFlags.ta.js';
 export {
     DeliveryFlags,
     DeliveryFlags_implicit_conversion_prohibited /* IMPORTED_LONG_NAMED_BIT */,
     implicit_conversion_prohibited /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
-} from '../MTSAbstractService/DeliveryFlags.ta';
+} from '../MTSAbstractService/DeliveryFlags.ta.js';
 import {
     OtherRecipientNames,
     _decode_OtherRecipientNames,
     _encode_OtherRecipientNames,
-} from '../MTSAbstractService/OtherRecipientNames.ta';
+} from '../MTSAbstractService/OtherRecipientNames.ta.js';
 export {
     OtherRecipientNames,
     _decode_OtherRecipientNames,
     _encode_OtherRecipientNames,
-} from '../MTSAbstractService/OtherRecipientNames.ta';
+} from '../MTSAbstractService/OtherRecipientNames.ta.js';
 import {
     ThisRecipientName,
     _decode_ThisRecipientName,
     _encode_ThisRecipientName,
-} from '../MTSAbstractService/ThisRecipientName.ta';
+} from '../MTSAbstractService/ThisRecipientName.ta.js';
 export {
     ThisRecipientName,
     _decode_ThisRecipientName,
     _encode_ThisRecipientName,
-} from '../MTSAbstractService/ThisRecipientName.ta';
+} from '../MTSAbstractService/ThisRecipientName.ta.js';
 import {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.js';
 export {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.js';
 import {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 export {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 import {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 export {
     MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
-} from '../MTSAbstractService/MessageSubmissionTime.ta';
+} from '../MTSAbstractService/MessageSubmissionTime.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OtherMessageDeliveryFields */
 /**

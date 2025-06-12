@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_swb } from '../SCVP-2009/id-swb.va';
-export { id_swb } from '../SCVP-2009/id-swb.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_swb } from '../SCVP-2009/id-swb.va.js';
+export { id_swb } from '../SCVP-2009/id-swb.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_swb_relayed_responses */
 /**

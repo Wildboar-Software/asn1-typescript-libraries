@@ -1,19 +1,19 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { bagtypes } from "../PKCS-12/bagtypes.va";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { bagtypes } from "../PKCS-12/bagtypes.va.js";
 import {
     CertBag,
     _decode_CertBag,
     _encode_CertBag,
-} from "../PKCS-12/CertBag.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { bagtypes } from "../PKCS-12/bagtypes.va";
+} from "../PKCS-12/CertBag.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { bagtypes } from "../PKCS-12/bagtypes.va.js";
 export {
     CertBag,
     _decode_CertBag,
     _encode_CertBag,
-} from "../PKCS-12/CertBag.ta";
+} from "../PKCS-12/CertBag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION certBag */
 /**

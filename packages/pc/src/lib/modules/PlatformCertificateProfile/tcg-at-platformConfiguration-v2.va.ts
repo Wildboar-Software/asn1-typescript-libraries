@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-at-platformConfiguration.va";
-export { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-at-platformConfiguration.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-at-platformConfiguration.va.js";
+export { tcg_at_platformConfiguration } from "../PlatformCertificateProfile/tcg-at-platformConfiguration.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION tcg_at_platformConfiguration_v2 */

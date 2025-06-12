@@ -1,6 +1,6 @@
-import { stringifyAttributeTypeAndValue } from "./AttributeTypeAndValue";
-import type StringEncoderGetter from "../types/StringEncoderGetter";
-import type AttributeTypeAndValue from "../types/AttributeTypeAndValue";
+import { stringifyAttributeTypeAndValue } from "./AttributeTypeAndValue.js";
+import type StringEncoderGetter from "../types/StringEncoderGetter.js";
+import type AttributeTypeAndValue from "../types/AttributeTypeAndValue.js";
 import type { OBJECT_IDENTIFIER } from "asn1-ts";
 
 export

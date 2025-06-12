@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BRTCertificateList,
     _decode_BRTCertificateList,
     _encode_BRTCertificateList,
-} from '../AuthenticationContextForBiometrics/BRTCertificateList.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateList.ta.js';
 export {
     BRTCertificateList,
     _decode_BRTCertificateList,
     _encode_BRTCertificateList,
-} from '../AuthenticationContextForBiometrics/BRTCertificateList.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateList.ta.js';
 import {
     BRTCertificateReferrerList,
     _decode_BRTCertificateReferrerList,
     _encode_BRTCertificateReferrerList,
-} from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta.js';
 export {
     BRTCertificateReferrerList,
     _decode_BRTCertificateReferrerList,
     _encode_BRTCertificateReferrerList,
-} from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BRTCertificateInformation */
 /**

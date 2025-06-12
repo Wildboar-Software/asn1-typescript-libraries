@@ -2,16 +2,16 @@
 import {
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../ANSI-X9-42/DomainParameters.ta";
-import { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca";
-import { gfPrime } from "../ANSI-X9-42/gfPrime.va";
+} from "../ANSI-X9-42/DomainParameters.ta.js";
+import { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.js";
+import { gfPrime } from "../ANSI-X9-42/gfPrime.va.js";
 export {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../ANSI-X9-42/DomainParameters.ta";
-export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca";
-export { gfPrime } from "../ANSI-X9-42/gfPrime.va";
+} from "../ANSI-X9-42/DomainParameters.ta.js";
+export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.js";
+export { gfPrime } from "../ANSI-X9-42/gfPrime.va.js";
 
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */
 /**

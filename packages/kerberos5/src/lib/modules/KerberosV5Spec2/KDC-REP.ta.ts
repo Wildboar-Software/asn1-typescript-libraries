@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PA_DATA,
   _decode_PA_DATA,
   _encode_PA_DATA,
-} from '../KerberosV5Spec2/PA-DATA.ta';
+} from '../KerberosV5Spec2/PA-DATA.ta.js';
 export {
   PA_DATA,
   _decode_PA_DATA,
   _encode_PA_DATA,
-} from '../KerberosV5Spec2/PA-DATA.ta';
+} from '../KerberosV5Spec2/PA-DATA.ta.js';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   Ticket,
   _decode_Ticket,
   _encode_Ticket,
-} from '../KerberosV5Spec2/Ticket.ta';
+} from '../KerberosV5Spec2/Ticket.ta.js';
 export {
   Ticket,
   _decode_Ticket,
   _encode_Ticket,
-} from '../KerberosV5Spec2/Ticket.ta';
+} from '../KerberosV5Spec2/Ticket.ta.js';
 import {
   EncryptedData,
   _decode_EncryptedData,
   _encode_EncryptedData,
-} from '../KerberosV5Spec2/EncryptedData.ta';
+} from '../KerberosV5Spec2/EncryptedData.ta.js';
 export {
   EncryptedData,
   _decode_EncryptedData,
   _encode_EncryptedData,
-} from '../KerberosV5Spec2/EncryptedData.ta';
+} from '../KerberosV5Spec2/EncryptedData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KDC_REP */
 /**

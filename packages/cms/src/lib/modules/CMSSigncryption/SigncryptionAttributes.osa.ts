@@ -1,9 +1,9 @@
 /* eslint-disable */
-import { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa";
-import { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa";
-export { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa";
+import { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa.js";
+import { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa.js";
+export { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SigncryptionAttributes */
 /**

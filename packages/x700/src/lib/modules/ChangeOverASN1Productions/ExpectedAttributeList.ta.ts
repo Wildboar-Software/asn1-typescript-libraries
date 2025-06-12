@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExpectedAttributeList_Item,
     _decode_ExpectedAttributeList_Item,
     _encode_ExpectedAttributeList_Item,
-} from '../ChangeOverASN1Productions/ExpectedAttributeList-Item.ta';
+} from '../ChangeOverASN1Productions/ExpectedAttributeList-Item.ta.js';
 export {
     ExpectedAttributeList_Item,
     _decode_ExpectedAttributeList_Item,
     _encode_ExpectedAttributeList_Item,
-} from '../ChangeOverASN1Productions/ExpectedAttributeList-Item.ta';
+} from '../ChangeOverASN1Productions/ExpectedAttributeList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExpectedAttributeList */
 /**

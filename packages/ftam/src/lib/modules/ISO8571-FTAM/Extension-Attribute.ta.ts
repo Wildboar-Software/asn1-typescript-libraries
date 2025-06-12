@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { Extension_Attributes } from '../ISO8571-FTAM/Extension-Attributes.osa';
-export { Extension_Attributes } from '../ISO8571-FTAM/Extension-Attributes.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { Extension_Attributes } from '../ISO8571-FTAM/Extension-Attributes.osa.js';
+export { Extension_Attributes } from '../ISO8571-FTAM/Extension-Attributes.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Extension_Attribute */
 /**

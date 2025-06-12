@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
-import { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta";
-export { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta";
-import { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta";
-export { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
+import { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta.js";
+export { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta.js";
+import { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta.js";
+export { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ArchiveTimeStamp */

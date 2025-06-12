@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_drug_manufac } from '../E-health-identification/id-drug-manufac.va';
-export { id_drug_manufac } from '../E-health-identification/id-drug-manufac.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_drug_manufac } from '../E-health-identification/id-drug-manufac.va.js';
+export { id_drug_manufac } from '../E-health-identification/id-drug-manufac.va.js';
 import {
     ManufacturerIdentification,
     _decode_ManufacturerIdentification,
     _encode_ManufacturerIdentification,
-} from '../E-health-identification/ManufacturerIdentification.ta';
+} from '../E-health-identification/ManufacturerIdentification.ta.js';
 export {
     ManufacturerIdentification,
     _decode_ManufacturerIdentification,
     _encode_ManufacturerIdentification,
-} from '../E-health-identification/ManufacturerIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/ManufacturerIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION manufacturerIdentification */
 /**

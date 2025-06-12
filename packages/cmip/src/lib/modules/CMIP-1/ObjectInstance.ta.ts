@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   DistinguishedName,
   _decode_DistinguishedName,
   _encode_DistinguishedName,
-} from '../CMIP-1/DistinguishedName.ta';
+} from '../CMIP-1/DistinguishedName.ta.js';
 export {
   DistinguishedName,
   _decode_DistinguishedName,
   _encode_DistinguishedName,
-} from '../CMIP-1/DistinguishedName.ta';
+} from '../CMIP-1/DistinguishedName.ta.js';
 import {
   RDNSequence,
   _decode_RDNSequence,
   _encode_RDNSequence,
-} from '../CMIP-1/RDNSequence.ta';
+} from '../CMIP-1/RDNSequence.ta.js';
 export {
   RDNSequence,
   _decode_RDNSequence,
   _encode_RDNSequence,
-} from '../CMIP-1/RDNSequence.ta';
+} from '../CMIP-1/RDNSequence.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObjectInstance */
 /**

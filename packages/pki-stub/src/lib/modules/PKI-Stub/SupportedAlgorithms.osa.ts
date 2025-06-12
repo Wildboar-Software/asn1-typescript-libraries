@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca";
+import { ALGORITHM } from "../PKI-Stub/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedAlgorithms */
 /**

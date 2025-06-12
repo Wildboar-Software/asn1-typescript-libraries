@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-import { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa';
-export { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa';
-import { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa';
-export { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa';
-import { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa';
-export { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa';
-import { auto_delete } from '../MSGeneralAutoActionTypes/auto-delete.oa';
-export { auto_delete } from '../MSGeneralAutoActionTypes/auto-delete.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+import { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa.js';
+export { auto_alert } from '../MSGeneralAutoActionTypes/auto-alert.oa.js';
+import { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa.js';
+export { auto_modify } from '../MSGeneralAutoActionTypes/auto-modify.oa.js';
+import { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa.js';
+export { auto_correlate_reports } from '../MSGeneralAutoActionTypes/auto-correlate-reports.oa.js';
+import { auto_delete } from '../MSGeneralAutoActionTypes/auto-delete.oa.js';
+export { auto_delete } from '../MSGeneralAutoActionTypes/auto-delete.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION GeneralAutoActions */
 /**

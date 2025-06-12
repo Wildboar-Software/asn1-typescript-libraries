@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 export {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertBundles */
 /**

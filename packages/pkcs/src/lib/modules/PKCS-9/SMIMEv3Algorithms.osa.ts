@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SMIMEv3Algorithms */
 /**

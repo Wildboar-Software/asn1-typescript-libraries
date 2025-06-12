@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta";
-export { DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta";
-import { FilterItem, _decode_FilterItem, _encode_FilterItem } from "@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta";
-export { FilterItem, _decode_FilterItem, _encode_FilterItem } from "@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta";
-import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta";
-export { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta.js";
+export { DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta.js";
+import { FilterItem, _decode_FilterItem, _encode_FilterItem } from "@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.js";
+export { FilterItem, _decode_FilterItem, _encode_FilterItem } from "@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.js";
+import { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js";
+export { CMISFilter, _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION defaultDiscriminatorConstruct */

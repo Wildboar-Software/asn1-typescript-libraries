@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { file_transfer_body_part_parameters } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-parameters.oa';
-export { file_transfer_body_part_parameters } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-parameters.oa';
-import { file_transfer_body_part_data } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-data.oa';
-export { file_transfer_body_part_data } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-data.oa';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
-export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { file_transfer_body_part_parameters } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-parameters.oa.js';
+export { file_transfer_body_part_parameters } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-parameters.oa.js';
+import { file_transfer_body_part_data } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-data.oa.js';
+export { file_transfer_body_part_data } from '../IPMSFileTransferBodyPartType/file-transfer-body-part-data.oa.js';
+import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
+export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION file_transfer_body_part */
 /**

@@ -65,31 +65,31 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AARE_apdu_protocol_version,
   AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   version1 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_AARE_apdu_protocol_version,
   _encode_AARE_apdu_protocol_version,
-} from '../ACSE-1/AARE-apdu-protocol-version.ta';
+} from '../ACSE-1/AARE-apdu-protocol-version.ta.js';
 export {
   AARE_apdu_protocol_version,
   AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   version1 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_AARE_apdu_protocol_version,
   _encode_AARE_apdu_protocol_version,
-} from '../ACSE-1/AARE-apdu-protocol-version.ta';
+} from '../ACSE-1/AARE-apdu-protocol-version.ta.js';
 import {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 export {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 import {
   Associate_result,
   Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -100,7 +100,7 @@ import {
   rejected_transient /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Associate_result,
   _encode_Associate_result,
-} from '../ACSE-1/Associate-result.ta';
+} from '../ACSE-1/Associate-result.ta.js';
 export {
   Associate_result,
   Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,57 +111,57 @@ export {
   rejected_transient /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Associate_result,
   _encode_Associate_result,
-} from '../ACSE-1/Associate-result.ta';
+} from '../ACSE-1/Associate-result.ta.js';
 import {
   Associate_source_diagnostic,
   _decode_Associate_source_diagnostic,
   _encode_Associate_source_diagnostic,
-} from '../ACSE-1/Associate-source-diagnostic.ta';
+} from '../ACSE-1/Associate-source-diagnostic.ta.js';
 export {
   Associate_source_diagnostic,
   _decode_Associate_source_diagnostic,
   _encode_Associate_source_diagnostic,
-} from '../ACSE-1/Associate-source-diagnostic.ta';
+} from '../ACSE-1/Associate-source-diagnostic.ta.js';
 import {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ACSE-1/AP-title.ta';
+} from '../ACSE-1/AP-title.ta.js';
 export {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ACSE-1/AP-title.ta';
+} from '../ACSE-1/AP-title.ta.js';
 import {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ACSE-1/AE-qualifier.ta';
+} from '../ACSE-1/AE-qualifier.ta.js';
 export {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ACSE-1/AE-qualifier.ta';
+} from '../ACSE-1/AE-qualifier.ta.js';
 import {
   AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
-} from '../ACSE-1/AP-invocation-identifier.ta';
+} from '../ACSE-1/AP-invocation-identifier.ta.js';
 export {
   AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
-} from '../ACSE-1/AP-invocation-identifier.ta';
+} from '../ACSE-1/AP-invocation-identifier.ta.js';
 import {
   AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
-} from '../ACSE-1/AE-invocation-identifier.ta';
+} from '../ACSE-1/AE-invocation-identifier.ta.js';
 export {
   AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
-} from '../ACSE-1/AE-invocation-identifier.ta';
+} from '../ACSE-1/AE-invocation-identifier.ta.js';
 import {
   ACSE_requirements,
   ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */,
@@ -174,7 +174,7 @@ import {
   nested_association /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
-} from '../ACSE-1/ACSE-requirements.ta';
+} from '../ACSE-1/ACSE-requirements.ta.js';
 export {
   ACSE_requirements,
   ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */,
@@ -187,77 +187,77 @@ export {
   nested_association /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
-} from '../ACSE-1/ACSE-requirements.ta';
+} from '../ACSE-1/ACSE-requirements.ta.js';
 import {
   Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
-} from '../ACSE-1/Mechanism-name.ta';
+} from '../ACSE-1/Mechanism-name.ta.js';
 export {
   Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
-} from '../ACSE-1/Mechanism-name.ta';
+} from '../ACSE-1/Mechanism-name.ta.js';
 import {
   Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
-} from '../ACSE-1/Authentication-value.ta';
+} from '../ACSE-1/Authentication-value.ta.js';
 export {
   Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
-} from '../ACSE-1/Authentication-value.ta';
+} from '../ACSE-1/Authentication-value.ta.js';
 import {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 export {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 import {
   Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
-} from '../ACSE-1/Implementation-data.ta';
+} from '../ACSE-1/Implementation-data.ta.js';
 export {
   Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
-} from '../ACSE-1/Implementation-data.ta';
+} from '../ACSE-1/Implementation-data.ta.js';
 import {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 import {
   P_context_result_list,
   _decode_P_context_result_list,
   _encode_P_context_result_list,
-} from '../ACSE-1/P-context-result-list.ta';
+} from '../ACSE-1/P-context-result-list.ta.js';
 export {
   P_context_result_list,
   _decode_P_context_result_list,
   _encode_P_context_result_list,
-} from '../ACSE-1/P-context-result-list.ta';
+} from '../ACSE-1/P-context-result-list.ta.js';
 import {
   ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
-} from '../ACSE-1/ASOI-tag.ta';
+} from '../ACSE-1/ASOI-tag.ta.js';
 export {
   ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
-} from '../ACSE-1/ASOI-tag.ta';
+} from '../ACSE-1/ASOI-tag.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AARE_apdu */
 /**

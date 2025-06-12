@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { originator_certificate } from '../MTSAbstractService/originator-certificate.oa';
-export { originator_certificate } from '../MTSAbstractService/originator-certificate.oa';
-import { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-export { message_security_label } from '../MTSAbstractService/message-security-label.oa';
-import { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-export { content_correlator } from '../MTSAbstractService/content-correlator.oa';
-import { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa';
-export { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-import { recipient_reassignment_prohibited } from "./recipient-reassignment-prohibited.oa";
-import { dl_expansion_prohibited } from "./dl-expansion-prohibited.oa";
-import { conversion_with_loss_prohibited } from "./conversion-with-loss-prohibited.oa";
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { originator_certificate } from '../MTSAbstractService/originator-certificate.oa.js';
+export { originator_certificate } from '../MTSAbstractService/originator-certificate.oa.js';
+import { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+export { message_security_label } from '../MTSAbstractService/message-security-label.oa.js';
+import { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+export { content_correlator } from '../MTSAbstractService/content-correlator.oa.js';
+import { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa.js';
+export { probe_origin_authentication_check } from '../MTSAbstractService/probe-origin-authentication-check.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+import { recipient_reassignment_prohibited } from "./recipient-reassignment-prohibited.oa.js";
+import { dl_expansion_prohibited } from "./dl-expansion-prohibited.oa.js";
+import { conversion_with_loss_prohibited } from "./conversion-with-loss-prohibited.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PerProbeSubmissionExtensions */
 /**

@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     V42BisCompressionParameter,
     _decode_V42BisCompressionParameter,
     _encode_V42BisCompressionParameter,
-} from '../EDIMSInformationObjects/V42BisCompressionParameter.ta';
+} from '../EDIMSInformationObjects/V42BisCompressionParameter.ta.js';
 export {
     V42BisCompressionParameter,
     _decode_V42BisCompressionParameter,
     _encode_V42BisCompressionParameter,
-} from '../EDIMSInformationObjects/V42BisCompressionParameter.ta';
-import { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va';
-export { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va';
-import { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca';
-export { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca';
+} from '../EDIMSInformationObjects/V42BisCompressionParameter.ta.js';
+import { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va.js';
+export { id_edi_compression_v42bis } from '../EDIMSObjectIdentifiers/id-edi-compression-v42bis.va.js';
+import { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca.js';
+export { COMPRESSION_ALGORITHM } from '../EDIMSInformationObjects/COMPRESSION-ALGORITHM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION v42BisCompression */
 /**

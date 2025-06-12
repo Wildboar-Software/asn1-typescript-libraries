@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GenericTimeTypeChoice,
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
-} from '../XSD/GenericTimeTypeChoice.ta';
+} from '../XSD/GenericTimeTypeChoice.ta.js';
 export {
   GenericTimeTypeChoice,
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
-} from '../XSD/GenericTimeTypeChoice.ta';
+} from '../XSD/GenericTimeTypeChoice.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Date */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DaysOfWeek,
     DaysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -84,7 +84,7 @@ import {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DaysOfWeek,
     _encode_DaysOfWeek,
-} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta.js';
 export {
     DaysOfWeek,
     DaysOfWeek_sunday /* IMPORTED_LONG_NAMED_BIT */,
@@ -103,17 +103,17 @@ export {
     saturday /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_DaysOfWeek,
     _encode_DaysOfWeek,
-} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta';
+} from '../Schedulerev1-ASN1Module/DaysOfWeek.ta.js';
 import {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 export {
     TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
-} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION WeekMaskWps_Item */
 /**

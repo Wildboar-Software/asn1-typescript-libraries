@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Type_of_msg,
   _decode_Type_of_msg,
   _encode_Type_of_msg,
-} from '../T38/Type-of-msg.ta';
+} from '../T38/Type-of-msg.ta.js';
 export {
   Type_of_msg,
   _decode_Type_of_msg,
   _encode_Type_of_msg,
-} from '../T38/Type-of-msg.ta';
+} from '../T38/Type-of-msg.ta.js';
 import {
   Data_Field,
   _decode_Data_Field,
   _encode_Data_Field,
-} from '../T38/Data-Field.ta';
+} from '../T38/Data-Field.ta.js';
 export {
   Data_Field,
   _decode_Data_Field,
   _encode_Data_Field,
-} from '../T38/Data-Field.ta';
+} from '../T38/Data-Field.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IFPPacket */
 /**

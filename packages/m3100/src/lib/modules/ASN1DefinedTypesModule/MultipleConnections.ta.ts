@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MultipleConnections_Item,
     _decode_MultipleConnections_Item,
     _encode_MultipleConnections_Item,
-} from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta';
+} from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta.js';
 export {
     MultipleConnections_Item,
     _decode_MultipleConnections_Item,
     _encode_MultipleConnections_Item,
-} from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta';
+} from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MultipleConnections */
 /**

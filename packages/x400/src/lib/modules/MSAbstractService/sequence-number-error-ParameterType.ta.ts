@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     sequence_number_error_ParameterType_problems_Item,
     _decode_sequence_number_error_ParameterType_problems_Item,
     _encode_sequence_number_error_ParameterType_problems_Item,
-} from '../MSAbstractService/sequence-number-error-ParameterType-problems-Item.ta';
+} from '../MSAbstractService/sequence-number-error-ParameterType-problems-Item.ta.js';
 export {
     sequence_number_error_ParameterType_problems_Item,
     _decode_sequence_number_error_ParameterType_problems_Item,
     _encode_sequence_number_error_ParameterType_problems_Item,
-} from '../MSAbstractService/sequence-number-error-ParameterType-problems-Item.ta';
+} from '../MSAbstractService/sequence-number-error-ParameterType-problems-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION sequence_number_error_ParameterType */
 /**

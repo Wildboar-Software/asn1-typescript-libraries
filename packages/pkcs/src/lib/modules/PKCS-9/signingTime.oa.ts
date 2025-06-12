@@ -1,15 +1,15 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va.js";
 import {
     SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
-} from "../PKCS-9/SigningTime.ta";
-import { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa";
+} from "../PKCS-9/SigningTime.ta.js";
+import { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION signingTime */
 /**

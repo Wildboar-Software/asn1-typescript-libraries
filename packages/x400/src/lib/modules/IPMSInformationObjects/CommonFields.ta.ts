@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubjectIPMField,
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
-} from '../IPMSInformationObjects/SubjectIPMField.ta';
+} from '../IPMSInformationObjects/SubjectIPMField.ta.js';
 export {
     SubjectIPMField,
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
-} from '../IPMSInformationObjects/SubjectIPMField.ta';
+} from '../IPMSInformationObjects/SubjectIPMField.ta.js';
 import {
     IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
-} from '../IPMSInformationObjects/IPNOriginatorField.ta';
+} from '../IPMSInformationObjects/IPNOriginatorField.ta.js';
 export {
     IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
-} from '../IPMSInformationObjects/IPNOriginatorField.ta';
+} from '../IPMSInformationObjects/IPNOriginatorField.ta.js';
 import {
     IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
-} from '../IPMSInformationObjects/IPMIntendedRecipientField.ta';
+} from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.js';
 export {
     IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
-} from '../IPMSInformationObjects/IPMIntendedRecipientField.ta';
+} from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.js';
 import {
     ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
-} from '../IPMSInformationObjects/ConversionEITsField.ta';
+} from '../IPMSInformationObjects/ConversionEITsField.ta.js';
 export {
     ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
-} from '../IPMSInformationObjects/ConversionEITsField.ta';
+} from '../IPMSInformationObjects/ConversionEITsField.ta.js';
 import {
     NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
-} from '../IPMSInformationObjects/NotificationExtensionsField.ta';
+} from '../IPMSInformationObjects/NotificationExtensionsField.ta.js';
 export {
     NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
-} from '../IPMSInformationObjects/NotificationExtensionsField.ta';
+} from '../IPMSInformationObjects/NotificationExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CommonFields */
 /**

@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_kp } from '../SCVP-2009/id-kp.va';
-export { id_kp } from '../SCVP-2009/id-kp.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_kp } from '../SCVP-2009/id-kp.va.js';
+export { id_kp } from '../SCVP-2009/id-kp.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_kp_scvpServer */
 /**

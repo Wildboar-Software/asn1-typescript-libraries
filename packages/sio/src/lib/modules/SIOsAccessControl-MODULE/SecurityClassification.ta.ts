@@ -6,57 +6,57 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ClassificationName,
     _decode_ClassificationName,
     _encode_ClassificationName,
-} from "../SIOsAccessControl-MODULE/ClassificationName.ta";
+} from "../SIOsAccessControl-MODULE/ClassificationName.ta.js";
 import {
     EquivalentClassifications,
     _decode_EquivalentClassifications,
     _encode_EquivalentClassifications,
-} from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta.js";
 import {
     LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta";
+} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.js";
 import {
     MarkingDataInfo,
     _decode_MarkingDataInfo,
     _encode_MarkingDataInfo,
-} from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta";
+} from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta.js";
 import {
     OptionalCategoryGroups,
     _decode_OptionalCategoryGroups,
     _encode_OptionalCategoryGroups,
-} from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta";
+} from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta.js";
 export {
     ClassificationName,
     _decode_ClassificationName,
     _encode_ClassificationName,
-} from "../SIOsAccessControl-MODULE/ClassificationName.ta";
+} from "../SIOsAccessControl-MODULE/ClassificationName.ta.js";
 export {
     EquivalentClassifications,
     _decode_EquivalentClassifications,
     _encode_EquivalentClassifications,
-} from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta.js";
 export {
     LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta";
+} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.js";
 export {
     MarkingDataInfo,
     _decode_MarkingDataInfo,
     _encode_MarkingDataInfo,
-} from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta";
+} from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta.js";
 export {
     OptionalCategoryGroups,
     _decode_OptionalCategoryGroups,
     _encode_OptionalCategoryGroups,
-} from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta";
+} from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityClassification */
 /**

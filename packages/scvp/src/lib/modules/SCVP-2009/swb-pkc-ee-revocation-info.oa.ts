@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RevInfoWantBack,
   _decode_RevInfoWantBack,
   _encode_RevInfoWantBack,
-} from '../SCVP-2009/RevInfoWantBack.ta';
+} from '../SCVP-2009/RevInfoWantBack.ta.js';
 export {
   RevInfoWantBack,
   _decode_RevInfoWantBack,
   _encode_RevInfoWantBack,
-} from '../SCVP-2009/RevInfoWantBack.ta';
-import { id_swb_pkc_ee_revocation_info } from '../SCVP-2009/id-swb-pkc-ee-revocation-info.va';
-export { id_swb_pkc_ee_revocation_info } from '../SCVP-2009/id-swb-pkc-ee-revocation-info.va';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
+} from '../SCVP-2009/RevInfoWantBack.ta.js';
+import { id_swb_pkc_ee_revocation_info } from '../SCVP-2009/id-swb-pkc-ee-revocation-info.va.js';
+export { id_swb_pkc_ee_revocation_info } from '../SCVP-2009/id-swb-pkc-ee-revocation-info.va.js';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION swb_pkc_ee_revocation_info */
 /**

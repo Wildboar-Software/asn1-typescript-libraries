@@ -11,34 +11,34 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Version,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from "../PKI-Stub/Version.ta";
+} from "../PKI-Stub/Version.ta.js";
 import {
     AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
-} from "../PKI-Stub/AvlSerialNumber.ta";
+} from "../PKI-Stub/AvlSerialNumber.ta.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
-import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta";
+} from "../PKI-Stub/AlgorithmIdentifier.ta.js";
+import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.js";
 import {
     TBSCertAVL_entries_Item,
     _decode_TBSCertAVL_entries_Item,
     _encode_TBSCertAVL_entries_Item,
-} from "../PKI-Stub/TBSCertAVL-entries-Item.ta";
+} from "../PKI-Stub/TBSCertAVL-entries-Item.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../PKI-Stub/Extensions.ta";
+} from "../PKI-Stub/Extensions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertAVL */
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { id_mgf1 } from "../PKCS-1/id-mgf1.va";
-import { MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta";
-import { sha1 } from "../PKCS-1/sha1.va";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { id_mgf1 } from "../PKCS-1/id-mgf1.va.js";
+import { MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta.js";
+import { sha1 } from "../PKCS-1/sha1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION mgf1SHA1 */
 /**

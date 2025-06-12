@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 export {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta';
+} from '../IPMSInformationObjects/AutoForwardComment.ta.js';
 import {
     IA5TextBodyPart,
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
-} from '../IPMSInformationObjects/IA5TextBodyPart.ta';
+} from '../IPMSInformationObjects/IA5TextBodyPart.ta.js';
 export {
     IA5TextBodyPart,
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
-} from '../IPMSInformationObjects/IA5TextBodyPart.ta';
+} from '../IPMSInformationObjects/IA5TextBodyPart.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ForwardingInformation1988 */
 /**

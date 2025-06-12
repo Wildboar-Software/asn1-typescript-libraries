@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ClaimedAttributes, _decode_ClaimedAttributes, _encode_ClaimedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/ClaimedAttributes.ta";
-export { ClaimedAttributes, _decode_ClaimedAttributes, _encode_ClaimedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/ClaimedAttributes.ta";
-import { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CertifiedAttributes.ta";
-export { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CertifiedAttributes.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ClaimedAttributes, _decode_ClaimedAttributes, _encode_ClaimedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/ClaimedAttributes.ta.js";
+export { ClaimedAttributes, _decode_ClaimedAttributes, _encode_ClaimedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/ClaimedAttributes.ta.js";
+import { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CertifiedAttributes.ta.js";
+export { CertifiedAttributes, _decode_CertifiedAttributes, _encode_CertifiedAttributes } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CertifiedAttributes.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SignerAttribute_Item */

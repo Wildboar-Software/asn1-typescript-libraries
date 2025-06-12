@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKCS7/EncryptedKey.ta";
+} from "../PKCS7/EncryptedKey.ta.js";
 import {
     KeyAgreementRecipientIdentifier,
     _decode_KeyAgreementRecipientIdentifier,
     _encode_KeyAgreementRecipientIdentifier,
-} from "../PKCS7/KeyAgreementRecipientIdentifier.ta";
+} from "../PKCS7/KeyAgreementRecipientIdentifier.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../PKCS7/EncryptedKey.ta";
+} from "../PKCS7/EncryptedKey.ta.js";
 export {
     KeyAgreementRecipientIdentifier,
     _decode_KeyAgreementRecipientIdentifier,
     _encode_KeyAgreementRecipientIdentifier,
-} from "../PKCS7/KeyAgreementRecipientIdentifier.ta";
+} from "../PKCS7/KeyAgreementRecipientIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientEncryptedKey */
 /**

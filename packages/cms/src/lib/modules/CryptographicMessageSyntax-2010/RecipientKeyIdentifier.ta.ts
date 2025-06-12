@@ -5,27 +5,27 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OtherKeyAttribute,
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta";
+} from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta.js";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.js";
 export {
     OtherKeyAttribute,
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta";
+} from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta.js";
 export {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientKeyIdentifier */
 /**

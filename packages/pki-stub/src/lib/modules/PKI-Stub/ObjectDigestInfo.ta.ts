@@ -12,7 +12,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ObjectDigestInfo_digestedObjectType,
     _enum_for_ObjectDigestInfo_digestedObjectType,
@@ -24,7 +24,7 @@ import {
     otherObjectTypes /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectDigestInfo_digestedObjectType,
     _encode_ObjectDigestInfo_digestedObjectType,
-} from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta";
+} from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta.js";
 export {
     ObjectDigestInfo_digestedObjectType,
     _enum_for_ObjectDigestInfo_digestedObjectType,
@@ -36,12 +36,12 @@ export {
     otherObjectTypes /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectDigestInfo_digestedObjectType,
     _encode_ObjectDigestInfo_digestedObjectType,
-} from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta";
+} from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKI-Stub/AlgorithmIdentifier.ta";
+} from "../PKI-Stub/AlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ObjectDigestInfo */
 /**

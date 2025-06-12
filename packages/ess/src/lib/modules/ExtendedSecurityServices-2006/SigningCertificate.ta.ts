@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ESSCertID,
     _decode_ESSCertID,
     _encode_ESSCertID,
-} from "../ExtendedSecurityServices-2006/ESSCertID.ta";
+} from "../ExtendedSecurityServices-2006/ESSCertID.ta.js";
 import {
     PolicyInformation,
     _decode_PolicyInformation,
     _encode_PolicyInformation,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.js";
 export {
     ESSCertID,
     _decode_ESSCertID,
     _encode_ESSCertID,
-} from "../ExtendedSecurityServices-2006/ESSCertID.ta";
+} from "../ExtendedSecurityServices-2006/ESSCertID.ta.js";
 export {
     PolicyInformation,
     _decode_PolicyInformation,
     _encode_PolicyInformation,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SigningCertificate */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AE_title_form1,
   _decode_AE_title_form1,
   _encode_AE_title_form1,
-} from '../ACSE-1/AE-title-form1.ta';
+} from '../ACSE-1/AE-title-form1.ta.js';
 export {
   AE_title_form1,
   _decode_AE_title_form1,
   _encode_AE_title_form1,
-} from '../ACSE-1/AE-title-form1.ta';
+} from '../ACSE-1/AE-title-form1.ta.js';
 import {
   AE_title_form2,
   _decode_AE_title_form2,
   _encode_AE_title_form2,
-} from '../ACSE-1/AE-title-form2.ta';
+} from '../ACSE-1/AE-title-form2.ta.js';
 export {
   AE_title_form2,
   _decode_AE_title_form2,
   _encode_AE_title_form2,
-} from '../ACSE-1/AE-title-form2.ta';
+} from '../ACSE-1/AE-title-form2.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AE_title */
 /**

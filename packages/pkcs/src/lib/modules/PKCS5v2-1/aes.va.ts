@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { nistAlgorithms } from "../PKCS5v2-1/nistAlgorithms.va";
-export { nistAlgorithms } from "../PKCS5v2-1/nistAlgorithms.va";
+import { nistAlgorithms } from "../PKCS5v2-1/nistAlgorithms.va.js";
+export { nistAlgorithms } from "../PKCS5v2-1/nistAlgorithms.va.js";
 
 /* START_OF_SYMBOL_DEFINITION aes */
 /**

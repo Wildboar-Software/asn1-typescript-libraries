@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '../E-health-send-and-ack/ERROR.oca';
-export { ERROR } from '../E-health-send-and-ack/ERROR.oca';
-import { Simple_Message_Errors } from '../E-health-send-and-ack/Simple-Message-Errors.osa';
-export { Simple_Message_Errors } from '../E-health-send-and-ack/Simple-Message-Errors.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '../E-health-send-and-ack/ERROR.oca.js';
+export { ERROR } from '../E-health-send-and-ack/ERROR.oca.js';
+import { Simple_Message_Errors } from '../E-health-send-and-ack/Simple-Message-Errors.osa.js';
+export { Simple_Message_Errors } from '../E-health-send-and-ack/Simple-Message-Errors.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Ack_error */
 /**

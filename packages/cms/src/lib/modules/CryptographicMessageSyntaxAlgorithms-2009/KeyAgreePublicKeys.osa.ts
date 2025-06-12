@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreePublicKeys */
 /**

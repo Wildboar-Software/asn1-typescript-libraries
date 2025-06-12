@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedPrivateKeyInfo,
     _decode_EncryptedPrivateKeyInfo,
     _encode_EncryptedPrivateKeyInfo,
-} from "../AsymmetricKeyPackageModuleV1/EncryptedPrivateKeyInfo.ta";
+} from "../AsymmetricKeyPackageModuleV1/EncryptedPrivateKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS8ShroudedKeyBag */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-import { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation-list-indicator.oa';
-export { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation-list-indicator.oa';
-import { precedence } from '../IPMSHeadingExtensions/precedence.oa';
-export { precedence } from '../IPMSHeadingExtensions/precedence.oa';
-import { recipient_security_request } from '../IPMSSecurityExtensions/recipient-security-request.oa';
-export { recipient_security_request } from '../IPMSSecurityExtensions/recipient-security-request.oa';
-import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa';
-export { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+import { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation-list-indicator.oa.js';
+export { circulation_list_indicator } from '../IPMSHeadingExtensions/circulation-list-indicator.oa.js';
+import { precedence } from '../IPMSHeadingExtensions/precedence.oa.js';
+export { precedence } from '../IPMSHeadingExtensions/precedence.oa.js';
+import { recipient_security_request } from '../IPMSSecurityExtensions/recipient-security-request.oa.js';
+export { recipient_security_request } from '../IPMSSecurityExtensions/recipient-security-request.oa.js';
+import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.js';
+export { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION RecipientExtensions */
 /**

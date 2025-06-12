@@ -65,11 +65,11 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-import { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa';
-export { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+import { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa.js';
+export { swb_relayed_responses } from '../SCVP-2009/swb-relayed-responses.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION AnyWantBackSet */
 /**

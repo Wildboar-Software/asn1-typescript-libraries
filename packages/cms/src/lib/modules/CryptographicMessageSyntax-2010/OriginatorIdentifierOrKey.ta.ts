@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta";
+} from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta.js";
 import {
     OriginatorPublicKey,
     _decode_OriginatorPublicKey,
     _encode_OriginatorPublicKey,
-} from "../CryptographicMessageSyntax-2010/OriginatorPublicKey.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorPublicKey.ta.js";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.js";
 export {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta";
+} from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta.js";
 export {
     OriginatorPublicKey,
     _decode_OriginatorPublicKey,
     _encode_OriginatorPublicKey,
-} from "../CryptographicMessageSyntax-2010/OriginatorPublicKey.ta";
+} from "../CryptographicMessageSyntax-2010/OriginatorPublicKey.ta.js";
 export {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OriginatorIdentifierOrKey */
 /**

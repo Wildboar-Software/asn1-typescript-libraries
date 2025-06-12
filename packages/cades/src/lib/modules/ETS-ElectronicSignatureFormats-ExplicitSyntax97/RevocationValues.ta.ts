@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateList, _decode_CertificateList, _encode_CertificateList
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta";
-import { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta";
-export { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta";
-import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta";
-export { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js";
+import { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta.js";
+export { BasicOCSPResponse, _decode_BasicOCSPResponse, _encode_BasicOCSPResponse } from "@wildboar/ocsp/src/lib/modules/OCSP-2013-08/BasicOCSPResponse.ta.js";
+import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta.js";
+export { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevVals.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION RevocationValues */

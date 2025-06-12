@@ -6,9 +6,9 @@ import {
     OPTIONAL,
     UTF8String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta";
-export { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.js";
+export { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DIRRecord */
 /**

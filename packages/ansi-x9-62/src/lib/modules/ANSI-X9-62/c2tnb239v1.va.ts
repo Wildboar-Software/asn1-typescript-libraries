@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va";
-export { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va";
+import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.js";
+export { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.js";
 
 /* START_OF_SYMBOL_DEFINITION c2tnb239v1 */
 /**

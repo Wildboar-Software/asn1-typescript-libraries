@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Equality_Comparision,
   Equality_Comparision_no_value_available_matches /* IMPORTED_LONG_NAMED_BIT */,
@@ -74,7 +74,7 @@ import {
   equals_matches /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
-} from '../ISO8571-FTAM/Equality-Comparision.ta';
+} from '../ISO8571-FTAM/Equality-Comparision.ta.js';
 export {
   Equality_Comparision,
   Equality_Comparision_no_value_available_matches /* IMPORTED_LONG_NAMED_BIT */,
@@ -83,7 +83,7 @@ export {
   equals_matches /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
-} from '../ISO8571-FTAM/Equality-Comparision.ta';
+} from '../ISO8571-FTAM/Equality-Comparision.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Object_Identifier_Pattern */
 /**

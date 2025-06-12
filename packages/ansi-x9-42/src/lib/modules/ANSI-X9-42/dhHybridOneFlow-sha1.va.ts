@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { namedScheme } from "../ANSI-X9-42/namedScheme.va";
-export { namedScheme } from "../ANSI-X9-42/namedScheme.va";
+import { namedScheme } from "../ANSI-X9-42/namedScheme.va.js";
+export { namedScheme } from "../ANSI-X9-42/namedScheme.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dhHybridOneFlow_sha1 */
 /**

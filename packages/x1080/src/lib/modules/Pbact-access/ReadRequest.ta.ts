@@ -65,42 +65,42 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CommonReqComp,
     _decode_CommonReqComp,
     _encode_CommonReqComp,
-} from '../Pbact-access/CommonReqComp.ta';
+} from '../Pbact-access/CommonReqComp.ta.js';
 export {
     CommonReqComp,
     _decode_CommonReqComp,
     _encode_CommonReqComp,
-} from '../Pbact-access/CommonReqComp.ta';
+} from '../Pbact-access/CommonReqComp.ta.js';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/DistinguishedName.ta.js';
 import {
     InformationSelection,
     _decode_InformationSelection,
     _encode_InformationSelection,
-} from '../Pbact-access/InformationSelection.ta';
+} from '../Pbact-access/InformationSelection.ta.js';
 export {
     InformationSelection,
     _decode_InformationSelection,
     _encode_InformationSelection,
-} from '../Pbact-access/InformationSelection.ta';
+} from '../Pbact-access/InformationSelection.ta.js';
 import {
     AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
-} from '../Pbact-access/AttributeCertificates.ta';
+} from '../Pbact-access/AttributeCertificates.ta.js';
 export {
     AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
-} from '../Pbact-access/AttributeCertificates.ta';
+} from '../Pbact-access/AttributeCertificates.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReadRequest */
 /**

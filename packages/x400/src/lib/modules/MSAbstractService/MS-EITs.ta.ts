@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MS_EIT,
     _decode_MS_EIT,
     _encode_MS_EIT,
-} from '../MSAbstractService/MS-EIT.ta';
+} from '../MSAbstractService/MS-EIT.ta.js';
 export {
     MS_EIT,
     _decode_MS_EIT,
     _encode_MS_EIT,
-} from '../MSAbstractService/MS-EIT.ta';
+} from '../MSAbstractService/MS-EIT.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MS_EITs */
 /**

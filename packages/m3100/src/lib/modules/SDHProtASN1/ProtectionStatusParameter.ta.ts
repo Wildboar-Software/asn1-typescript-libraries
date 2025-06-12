@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtectionStatus,
     _decode_ProtectionStatus,
     _encode_ProtectionStatus,
-} from '../SDHProtASN1/ProtectionStatus.ta';
+} from '../SDHProtASN1/ProtectionStatus.ta.js';
 export {
     ProtectionStatus,
     _decode_ProtectionStatus,
     _encode_ProtectionStatus,
-} from '../SDHProtASN1/ProtectionStatus.ta';
+} from '../SDHProtASN1/ProtectionStatus.ta.js';
 import {
     ProtectionDirection,
     _enum_for_ProtectionDirection,
@@ -87,7 +87,7 @@ import {
     bidirectional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProtectionDirection,
     _encode_ProtectionDirection,
-} from '../SDHProtASN1/ProtectionDirection.ta';
+} from '../SDHProtASN1/ProtectionDirection.ta.js';
 export {
     ProtectionDirection,
     _enum_for_ProtectionDirection,
@@ -99,7 +99,7 @@ export {
     bidirectional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ProtectionDirection,
     _encode_ProtectionDirection,
-} from '../SDHProtASN1/ProtectionDirection.ta';
+} from '../SDHProtASN1/ProtectionDirection.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatusParameter */
 /**

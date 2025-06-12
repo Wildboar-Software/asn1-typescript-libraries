@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Packages,
     _decode_Packages,
     _encode_Packages,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta.js';
 export {
     Packages,
     _decode_Packages,
     _encode_Packages,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Packages.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PackageConflict_Item */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
 import {
     SignerInfo,
     _decode_SignerInfo,
     _encode_SignerInfo,
-} from "../CryptographicMessageSyntax/SignerInfo.ta";
-import { pkcs_9_at_counterSignature } from "../PKCS-9/pkcs-9-at-counterSignature.va";
+} from "../CryptographicMessageSyntax/SignerInfo.ta.js";
+import { pkcs_9_at_counterSignature } from "../PKCS-9/pkcs-9-at-counterSignature.va.js";
 
 /* START_OF_SYMBOL_DEFINITION counterSignature */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 export {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 import {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
@@ -95,7 +95,7 @@ import {
   any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta';
+} from '../BIP/BioAPI-BIR-PURPOSE.ta.js';
 export {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
@@ -115,57 +115,57 @@ export {
   any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta';
+} from '../BIP/BioAPI-BIR-PURPOSE.ta.js';
 import {
   BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
-} from '../BIP/BioAPI-BIR-SUBTYPE.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE.ta.js';
 export {
   BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
-} from '../BIP/BioAPI-BIR-SUBTYPE.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE.ta.js';
 import {
   BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.js';
 export {
   BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.js';
 import {
   BioAPI_INPUT_BIR,
   _decode_BioAPI_INPUT_BIR,
   _encode_BioAPI_INPUT_BIR,
-} from '../BIP/BioAPI-INPUT-BIR.ta';
+} from '../BIP/BioAPI-INPUT-BIR.ta.js';
 export {
   BioAPI_INPUT_BIR,
   _decode_BioAPI_INPUT_BIR,
   _encode_BioAPI_INPUT_BIR,
-} from '../BIP/BioAPI-INPUT-BIR.ta';
+} from '../BIP/BioAPI-INPUT-BIR.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 import {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 export {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Enroll_RequestParams */
 /**

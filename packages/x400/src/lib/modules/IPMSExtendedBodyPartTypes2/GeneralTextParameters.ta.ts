@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CharacterSetRegistration,
     _decode_CharacterSetRegistration,
     _encode_CharacterSetRegistration,
-} from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta';
+} from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta.js';
 export {
     CharacterSetRegistration,
     _decode_CharacterSetRegistration,
     _encode_CharacterSetRegistration,
-} from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta';
+} from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GeneralTextParameters */
 /**

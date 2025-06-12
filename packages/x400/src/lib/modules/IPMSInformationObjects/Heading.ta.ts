@@ -65,137 +65,137 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
-} from '../IPMSInformationObjects/ThisIPMField.ta';
+} from '../IPMSInformationObjects/ThisIPMField.ta.js';
 export {
     ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
-} from '../IPMSInformationObjects/ThisIPMField.ta';
+} from '../IPMSInformationObjects/ThisIPMField.ta.js';
 import {
     OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
-} from '../IPMSInformationObjects/OriginatorField.ta';
+} from '../IPMSInformationObjects/OriginatorField.ta.js';
 export {
     OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
-} from '../IPMSInformationObjects/OriginatorField.ta';
+} from '../IPMSInformationObjects/OriginatorField.ta.js';
 import {
     AuthorizingUsersField,
     _decode_AuthorizingUsersField,
     _encode_AuthorizingUsersField,
-} from '../IPMSInformationObjects/AuthorizingUsersField.ta';
+} from '../IPMSInformationObjects/AuthorizingUsersField.ta.js';
 export {
     AuthorizingUsersField,
     _decode_AuthorizingUsersField,
     _encode_AuthorizingUsersField,
-} from '../IPMSInformationObjects/AuthorizingUsersField.ta';
+} from '../IPMSInformationObjects/AuthorizingUsersField.ta.js';
 import {
     PrimaryRecipientsField,
     _decode_PrimaryRecipientsField,
     _encode_PrimaryRecipientsField,
-} from '../IPMSInformationObjects/PrimaryRecipientsField.ta';
+} from '../IPMSInformationObjects/PrimaryRecipientsField.ta.js';
 export {
     PrimaryRecipientsField,
     _decode_PrimaryRecipientsField,
     _encode_PrimaryRecipientsField,
-} from '../IPMSInformationObjects/PrimaryRecipientsField.ta';
+} from '../IPMSInformationObjects/PrimaryRecipientsField.ta.js';
 import {
     CopyRecipientsField,
     _decode_CopyRecipientsField,
     _encode_CopyRecipientsField,
-} from '../IPMSInformationObjects/CopyRecipientsField.ta';
+} from '../IPMSInformationObjects/CopyRecipientsField.ta.js';
 export {
     CopyRecipientsField,
     _decode_CopyRecipientsField,
     _encode_CopyRecipientsField,
-} from '../IPMSInformationObjects/CopyRecipientsField.ta';
+} from '../IPMSInformationObjects/CopyRecipientsField.ta.js';
 import {
     BlindCopyRecipientsField,
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
-} from '../IPMSInformationObjects/BlindCopyRecipientsField.ta';
+} from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.js';
 export {
     BlindCopyRecipientsField,
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
-} from '../IPMSInformationObjects/BlindCopyRecipientsField.ta';
+} from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.js';
 import {
     RepliedToIPMField,
     _decode_RepliedToIPMField,
     _encode_RepliedToIPMField,
-} from '../IPMSInformationObjects/RepliedToIPMField.ta';
+} from '../IPMSInformationObjects/RepliedToIPMField.ta.js';
 export {
     RepliedToIPMField,
     _decode_RepliedToIPMField,
     _encode_RepliedToIPMField,
-} from '../IPMSInformationObjects/RepliedToIPMField.ta';
+} from '../IPMSInformationObjects/RepliedToIPMField.ta.js';
 import {
     ObsoletedIPMsField,
     _decode_ObsoletedIPMsField,
     _encode_ObsoletedIPMsField,
-} from '../IPMSInformationObjects/ObsoletedIPMsField.ta';
+} from '../IPMSInformationObjects/ObsoletedIPMsField.ta.js';
 export {
     ObsoletedIPMsField,
     _decode_ObsoletedIPMsField,
     _encode_ObsoletedIPMsField,
-} from '../IPMSInformationObjects/ObsoletedIPMsField.ta';
+} from '../IPMSInformationObjects/ObsoletedIPMsField.ta.js';
 import {
     RelatedIPMsField,
     _decode_RelatedIPMsField,
     _encode_RelatedIPMsField,
-} from '../IPMSInformationObjects/RelatedIPMsField.ta';
+} from '../IPMSInformationObjects/RelatedIPMsField.ta.js';
 export {
     RelatedIPMsField,
     _decode_RelatedIPMsField,
     _encode_RelatedIPMsField,
-} from '../IPMSInformationObjects/RelatedIPMsField.ta';
+} from '../IPMSInformationObjects/RelatedIPMsField.ta.js';
 import {
     SubjectField,
     _decode_SubjectField,
     _encode_SubjectField,
-} from '../IPMSInformationObjects/SubjectField.ta';
+} from '../IPMSInformationObjects/SubjectField.ta.js';
 export {
     SubjectField,
     _decode_SubjectField,
     _encode_SubjectField,
-} from '../IPMSInformationObjects/SubjectField.ta';
+} from '../IPMSInformationObjects/SubjectField.ta.js';
 import {
     ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
-} from '../IPMSInformationObjects/ExpiryTimeField.ta';
+} from '../IPMSInformationObjects/ExpiryTimeField.ta.js';
 export {
     ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
-} from '../IPMSInformationObjects/ExpiryTimeField.ta';
+} from '../IPMSInformationObjects/ExpiryTimeField.ta.js';
 import {
     ReplyTimeField,
     _decode_ReplyTimeField,
     _encode_ReplyTimeField,
-} from '../IPMSInformationObjects/ReplyTimeField.ta';
+} from '../IPMSInformationObjects/ReplyTimeField.ta.js';
 export {
     ReplyTimeField,
     _decode_ReplyTimeField,
     _encode_ReplyTimeField,
-} from '../IPMSInformationObjects/ReplyTimeField.ta';
+} from '../IPMSInformationObjects/ReplyTimeField.ta.js';
 import {
     ReplyRecipientsField,
     _decode_ReplyRecipientsField,
     _encode_ReplyRecipientsField,
-} from '../IPMSInformationObjects/ReplyRecipientsField.ta';
+} from '../IPMSInformationObjects/ReplyRecipientsField.ta.js';
 export {
     ReplyRecipientsField,
     _decode_ReplyRecipientsField,
     _encode_ReplyRecipientsField,
-} from '../IPMSInformationObjects/ReplyRecipientsField.ta';
+} from '../IPMSInformationObjects/ReplyRecipientsField.ta.js';
 import {
     ImportanceField,
     _enum_for_ImportanceField,
@@ -207,7 +207,7 @@ import {
     high /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ImportanceField,
     _encode_ImportanceField,
-} from '../IPMSInformationObjects/ImportanceField.ta';
+} from '../IPMSInformationObjects/ImportanceField.ta.js';
 export {
     ImportanceField,
     _enum_for_ImportanceField,
@@ -219,7 +219,7 @@ export {
     high /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ImportanceField,
     _encode_ImportanceField,
-} from '../IPMSInformationObjects/ImportanceField.ta';
+} from '../IPMSInformationObjects/ImportanceField.ta.js';
 import {
     SensitivityField,
     _enum_for_SensitivityField,
@@ -230,7 +230,7 @@ import {
     company_confidential /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SensitivityField,
     _encode_SensitivityField,
-} from '../IPMSInformationObjects/SensitivityField.ta';
+} from '../IPMSInformationObjects/SensitivityField.ta.js';
 export {
     SensitivityField,
     _enum_for_SensitivityField,
@@ -241,27 +241,27 @@ export {
     company_confidential /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SensitivityField,
     _encode_SensitivityField,
-} from '../IPMSInformationObjects/SensitivityField.ta';
+} from '../IPMSInformationObjects/SensitivityField.ta.js';
 import {
     AutoForwardedField,
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
-} from '../IPMSInformationObjects/AutoForwardedField.ta';
+} from '../IPMSInformationObjects/AutoForwardedField.ta.js';
 export {
     AutoForwardedField,
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
-} from '../IPMSInformationObjects/AutoForwardedField.ta';
+} from '../IPMSInformationObjects/AutoForwardedField.ta.js';
 import {
     ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta';
+} from '../IPMSInformationObjects/ExtensionsField.ta.js';
 export {
     ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta';
+} from '../IPMSInformationObjects/ExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Heading */
 /**

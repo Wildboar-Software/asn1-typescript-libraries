@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from '../MSAbstractService/NumberRange.ta';
+} from '../MSAbstractService/NumberRange.ta.js';
 export {
     NumberRange,
     _decode_NumberRange,
     _encode_NumberRange,
-} from '../MSAbstractService/NumberRange.ta';
+} from '../MSAbstractService/NumberRange.ta.js';
 import {
     TimeRange,
     _decode_TimeRange,
     _encode_TimeRange,
-} from '../MSAbstractService/TimeRange.ta';
+} from '../MSAbstractService/TimeRange.ta.js';
 export {
     TimeRange,
     _decode_TimeRange,
     _encode_TimeRange,
-} from '../MSAbstractService/TimeRange.ta';
+} from '../MSAbstractService/TimeRange.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Range */
 /**

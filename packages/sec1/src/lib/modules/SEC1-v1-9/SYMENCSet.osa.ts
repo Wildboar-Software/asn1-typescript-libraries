@@ -65,25 +65,25 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { SYMENCSet_Union0_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union0-Intersection0-Element.oa";
-export { SYMENCSet_Union0_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union0-Intersection0-Element.oa";
-import { SYMENCSet_Union1_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union1-Intersection0-Element.oa";
-export { SYMENCSet_Union1_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union1-Intersection0-Element.oa";
-import { SYMENCSet_Union2_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union2-Intersection0-Element.oa";
-export { SYMENCSet_Union2_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union2-Intersection0-Element.oa";
-import { SYMENCSet_Union3_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union3-Intersection0-Element.oa";
-export { SYMENCSet_Union3_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union3-Intersection0-Element.oa";
-import { SYMENCSet_Union4_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union4-Intersection0-Element.oa";
-export { SYMENCSet_Union4_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union4-Intersection0-Element.oa";
-import { SYMENCSet_Union5_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union5-Intersection0-Element.oa";
-export { SYMENCSet_Union5_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union5-Intersection0-Element.oa";
-import { SYMENCSet_Union6_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union6-Intersection0-Element.oa";
-export { SYMENCSet_Union6_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union6-Intersection0-Element.oa";
-import { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union7-Intersection0-Element.oa";
-export { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union7-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { SYMENCSet_Union0_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union0-Intersection0-Element.oa.js";
+export { SYMENCSet_Union0_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union0-Intersection0-Element.oa.js";
+import { SYMENCSet_Union1_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union1-Intersection0-Element.oa.js";
+export { SYMENCSet_Union1_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union1-Intersection0-Element.oa.js";
+import { SYMENCSet_Union2_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union2-Intersection0-Element.oa.js";
+export { SYMENCSet_Union2_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union2-Intersection0-Element.oa.js";
+import { SYMENCSet_Union3_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union3-Intersection0-Element.oa.js";
+export { SYMENCSet_Union3_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union3-Intersection0-Element.oa.js";
+import { SYMENCSet_Union4_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union4-Intersection0-Element.oa.js";
+export { SYMENCSet_Union4_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union4-Intersection0-Element.oa.js";
+import { SYMENCSet_Union5_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union5-Intersection0-Element.oa.js";
+export { SYMENCSet_Union5_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union5-Intersection0-Element.oa.js";
+import { SYMENCSet_Union6_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union6-Intersection0-Element.oa.js";
+export { SYMENCSet_Union6_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union6-Intersection0-Element.oa.js";
+import { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union7-Intersection0-Element.oa.js";
+export { SYMENCSet_Union7_Intersection0_Element } from "../SEC1-v1-9/SYMENCSet-Union7-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SYMENCSet */

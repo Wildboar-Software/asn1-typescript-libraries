@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
-} from '../EDIMSInformationObjects/TestIndicatorField.ta';
+} from '../EDIMSInformationObjects/TestIndicatorField.ta.js';
 export {
     TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
-} from '../EDIMSInformationObjects/TestIndicatorField.ta';
-import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa';
-export { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa';
-import { id_rat_test_indicator_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-test-indicator-for-this-recipient.va';
-export { id_rat_test_indicator_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-test-indicator-for-this-recipient.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../EDIMSInformationObjects/TestIndicatorField.ta.js';
+import { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.js';
+export { booleanMatch } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/booleanMatch.oa.js';
+import { id_rat_test_indicator_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-test-indicator-for-this-recipient.va.js';
+export { id_rat_test_indicator_for_this_recipient } from '../EDIMSObjectIdentifiers/id-rat-test-indicator-for-this-recipient.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION test_indicator_for_this_recipient */
 /**

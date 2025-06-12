@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncodedSPIF,
     _decode_EncodedSPIF,
     _encode_EncodedSPIF,
-} from "../SIOsAccessControl-MODULE/EncodedSPIF.ta";
+} from "../SIOsAccessControl-MODULE/EncodedSPIF.ta.js";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../SIOsAccessControl-MODULE/SIGNED.ta";
+} from "../SIOsAccessControl-MODULE/SIGNED.ta.js";
 export {
     EncodedSPIF,
     _decode_EncodedSPIF,
     _encode_EncodedSPIF,
-} from "../SIOsAccessControl-MODULE/EncodedSPIF.ta";
+} from "../SIOsAccessControl-MODULE/EncodedSPIF.ta.js";
 export {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../SIOsAccessControl-MODULE/SIGNED.ta";
+} from "../SIOsAccessControl-MODULE/SIGNED.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecurityPolicyInformationFile */
 /**

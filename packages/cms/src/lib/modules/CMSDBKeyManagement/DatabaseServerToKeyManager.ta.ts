@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MasterKeyEncryptedHMACkey,
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta";
+} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta";
+} from "../CMSDBKeyManagement/UniqueIdentifier.ta.js";
 export {
     MasterKeyEncryptedHMACkey,
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta";
+} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.js";
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta";
+} from "../CMSDBKeyManagement/UniqueIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DatabaseServerToKeyManager */
 /**

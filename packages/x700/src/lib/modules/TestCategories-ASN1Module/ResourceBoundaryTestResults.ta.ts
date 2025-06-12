@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SignalReceived,
     _decode_SignalReceived,
     _encode_SignalReceived,
-} from '../TestCategories-ASN1Module/SignalReceived.ta';
+} from '../TestCategories-ASN1Module/SignalReceived.ta.js';
 export {
     SignalReceived,
     _decode_SignalReceived,
     _encode_SignalReceived,
-} from '../TestCategories-ASN1Module/SignalReceived.ta';
+} from '../TestCategories-ASN1Module/SignalReceived.ta.js';
 import {
     IntermediateResourceBoundaryTestOutcome,
     _enum_for_IntermediateResourceBoundaryTestOutcome,
@@ -89,7 +89,7 @@ import {
     waitDurationTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_IntermediateResourceBoundaryTestOutcome,
     _encode_IntermediateResourceBoundaryTestOutcome,
-} from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta';
+} from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta.js';
 export {
     IntermediateResourceBoundaryTestOutcome,
     _enum_for_IntermediateResourceBoundaryTestOutcome,
@@ -103,7 +103,7 @@ export {
     waitDurationTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_IntermediateResourceBoundaryTestOutcome,
     _encode_IntermediateResourceBoundaryTestOutcome,
-} from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta';
+} from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResourceBoundaryTestResults */
 /**

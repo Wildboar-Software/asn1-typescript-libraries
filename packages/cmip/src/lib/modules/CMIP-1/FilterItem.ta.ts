@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../CMIP-1/Attribute.ta';
+} from '../CMIP-1/Attribute.ta.js';
 export {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../CMIP-1/Attribute.ta';
+} from '../CMIP-1/Attribute.ta.js';
 import {
   FilterItem_substrings_Item,
   _decode_FilterItem_substrings_Item,
   _encode_FilterItem_substrings_Item,
-} from '../CMIP-1/FilterItem-substrings-Item.ta';
+} from '../CMIP-1/FilterItem-substrings-Item.ta.js';
 export {
   FilterItem_substrings_Item,
   _decode_FilterItem_substrings_Item,
   _encode_FilterItem_substrings_Item,
-} from '../CMIP-1/FilterItem-substrings-Item.ta';
+} from '../CMIP-1/FilterItem-substrings-Item.ta.js';
 import {
   AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
-} from '../CMIP-1/AttributeId.ta';
+} from '../CMIP-1/AttributeId.ta.js';
 export {
   AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
-} from '../CMIP-1/AttributeId.ta';
+} from '../CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FilterItem */
 /**

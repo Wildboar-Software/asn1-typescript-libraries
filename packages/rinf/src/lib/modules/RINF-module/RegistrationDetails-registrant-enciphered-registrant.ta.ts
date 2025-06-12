@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AlgorithmIdentifier,
   _decode_AlgorithmIdentifier,
   _encode_AlgorithmIdentifier,
-} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta';
+} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegistrationDetails_registrant_enciphered_registrant */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
 export {
     MessageDeliveryEnvelope,
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
-} from '../MTSAbstractService/MessageDeliveryEnvelope.ta';
-import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta';
-export { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta';
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.js';
+import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.js';
+export { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION receive_on_ArgumentType */
 /**

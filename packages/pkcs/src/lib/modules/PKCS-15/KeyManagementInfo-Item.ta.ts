@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
+} from "../PKCS-15/Identifier.ta.js";
 import {
     KeyManagementInfo_Item_keyInfo,
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
-} from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta";
+} from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.js";
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
+} from "../PKCS-15/Identifier.ta.js";
 export {
     KeyManagementInfo_Item_keyInfo,
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
-} from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta";
+} from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item */
 /**

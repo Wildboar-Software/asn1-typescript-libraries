@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeSet,
     _decode_AttributeSet,
     _encode_AttributeSet,
-} from "../PKIX-CommonTypes-2009/AttributeSet.ta";
+} from "../PKIX-CommonTypes-2009/AttributeSet.ta.js";
 export {
     AttributeSet,
     _decode_AttributeSet,
     _encode_AttributeSet,
-} from "../PKIX-CommonTypes-2009/AttributeSet.ta";
+} from "../PKIX-CommonTypes-2009/AttributeSet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Attributes */
 /**

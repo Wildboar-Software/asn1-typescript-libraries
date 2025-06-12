@@ -65,23 +65,23 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa';
-export { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa';
-import { m_CancelGet } from '../CMIP-1/m-CancelGet.oa';
-export { m_CancelGet } from '../CMIP-1/m-CancelGet.oa';
-import { m_Create } from '../CMIP-1/m-Create.oa';
-export { m_Create } from '../CMIP-1/m-Create.oa';
-import { m_Delete } from '../CMIP-1/m-Delete.oa';
-export { m_Delete } from '../CMIP-1/m-Delete.oa';
-import { m_EventReport_Confirmed } from '../CMIP-1/m-EventReport-Confirmed.oa';
-export { m_EventReport_Confirmed } from '../CMIP-1/m-EventReport-Confirmed.oa';
-import { m_Get } from '../CMIP-1/m-Get.oa';
-export { m_Get } from '../CMIP-1/m-Get.oa';
-import { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa';
-export { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa.js';
+export { m_Action_Confirmed } from '../CMIP-1/m-Action-Confirmed.oa.js';
+import { m_CancelGet } from '../CMIP-1/m-CancelGet.oa.js';
+export { m_CancelGet } from '../CMIP-1/m-CancelGet.oa.js';
+import { m_Create } from '../CMIP-1/m-Create.oa.js';
+export { m_Create } from '../CMIP-1/m-Create.oa.js';
+import { m_Delete } from '../CMIP-1/m-Delete.oa.js';
+export { m_Delete } from '../CMIP-1/m-Delete.oa.js';
+import { m_EventReport_Confirmed } from '../CMIP-1/m-EventReport-Confirmed.oa.js';
+export { m_EventReport_Confirmed } from '../CMIP-1/m-EventReport-Confirmed.oa.js';
+import { m_Get } from '../CMIP-1/m-Get.oa.js';
+export { m_Get } from '../CMIP-1/m-Get.oa.js';
+import { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa.js';
+export { m_Set_Confirmed } from '../CMIP-1/m-Set-Confirmed.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION CMIP_Confirmed_Operations */
 /**

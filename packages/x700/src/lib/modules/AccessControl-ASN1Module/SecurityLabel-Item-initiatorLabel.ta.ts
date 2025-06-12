@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SecurityLabel_Item_initiatorLabel_clearance,
     _decode_SecurityLabel_Item_initiatorLabel_clearance,
     _encode_SecurityLabel_Item_initiatorLabel_clearance,
-} from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta';
+} from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta.js';
 export {
     SecurityLabel_Item_initiatorLabel_clearance,
     _decode_SecurityLabel_Item_initiatorLabel_clearance,
     _encode_SecurityLabel_Item_initiatorLabel_clearance,
-} from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta';
+} from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityLabel_Item_initiatorLabel */
 /**

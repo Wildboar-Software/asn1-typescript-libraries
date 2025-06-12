@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta";
-export { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta.js";
+export { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ComponentClass */

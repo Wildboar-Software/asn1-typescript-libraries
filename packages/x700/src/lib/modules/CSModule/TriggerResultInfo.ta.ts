@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
-} from '../CSModule/TriggerId.ta';
+} from '../CSModule/TriggerId.ta.js';
 export {
     TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
-} from '../CSModule/TriggerId.ta';
+} from '../CSModule/TriggerId.ta.js';
 import {
     TriggerResultInfo_resultType,
     _decode_TriggerResultInfo_resultType,
     _encode_TriggerResultInfo_resultType,
-} from '../CSModule/TriggerResultInfo-resultType.ta';
+} from '../CSModule/TriggerResultInfo-resultType.ta.js';
 export {
     TriggerResultInfo_resultType,
     _decode_TriggerResultInfo_resultType,
     _encode_TriggerResultInfo_resultType,
-} from '../CSModule/TriggerResultInfo-resultType.ta';
+} from '../CSModule/TriggerResultInfo-resultType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TriggerResultInfo */
 /**

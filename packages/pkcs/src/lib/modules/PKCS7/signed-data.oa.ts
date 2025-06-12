@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_signed_data } from "../PKCS7/id-signed-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+import { id_signed_data } from "../PKCS7/id-signed-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 import {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from "../PKCS7/SignedData.ta";
-export { id_signed_data } from "../PKCS7/id-signed-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/SignedData.ta.js";
+export { id_signed_data } from "../PKCS7/id-signed-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from "../PKCS7/SignedData.ta";
+} from "../PKCS7/SignedData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION signed_data */
 /**

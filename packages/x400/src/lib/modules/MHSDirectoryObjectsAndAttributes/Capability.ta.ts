@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
-} from '../MTSAbstractService/ExtendedContentType.ta';
+} from '../MTSAbstractService/ExtendedContentType.ta.js';
 export {
     ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
-} from '../MTSAbstractService/ExtendedContentType.ta';
+} from '../MTSAbstractService/ExtendedContentType.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 export {
     EncodedInformationTypesConstraints,
     _decode_EncodedInformationTypesConstraints,
     _encode_EncodedInformationTypesConstraints,
-} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta';
+} from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.js';
 import {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 export {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Capability */
 /**

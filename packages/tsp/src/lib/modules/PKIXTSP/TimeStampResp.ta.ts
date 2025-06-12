@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PKIStatusInfo,
     _decode_PKIStatusInfo,
     _encode_PKIStatusInfo,
-} from "../PKIXTSP/PKIStatusInfo.ta";
+} from "../PKIXTSP/PKIStatusInfo.ta.js";
 import {
     TimeStampToken,
     _decode_TimeStampToken,
     _encode_TimeStampToken,
-} from "../PKIXTSP/TimeStampToken.ta";
+} from "../PKIXTSP/TimeStampToken.ta.js";
 export {
     PKIStatusInfo,
     _decode_PKIStatusInfo,
     _encode_PKIStatusInfo,
-} from "../PKIXTSP/PKIStatusInfo.ta";
+} from "../PKIXTSP/PKIStatusInfo.ta.js";
 export {
     TimeStampToken,
     _decode_TimeStampToken,
     _encode_TimeStampToken,
-} from "../PKIXTSP/TimeStampToken.ta";
+} from "../PKIXTSP/TimeStampToken.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeStampResp */
 /**

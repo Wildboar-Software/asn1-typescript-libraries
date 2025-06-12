@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR,
   _decode_BioAPI_BIR,
   _encode_BioAPI_BIR,
-} from '../BIP/BioAPI-BIR.ta';
+} from '../BIP/BioAPI-BIR.ta.js';
 export {
   BioAPI_BIR,
   _decode_BioAPI_BIR,
   _encode_BioAPI_BIR,
-} from '../BIP/BioAPI-BIR.ta';
+} from '../BIP/BioAPI-BIR.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_BIR_ARRAY_POPULATION */
 /**

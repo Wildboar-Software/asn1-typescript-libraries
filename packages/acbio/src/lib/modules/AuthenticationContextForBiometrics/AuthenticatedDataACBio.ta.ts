@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AUTHENTICATEDDATA,
     _get_decoder_for_AUTHENTICATEDDATA,
     _get_encoder_for_AUTHENTICATEDDATA,
-} from '../AuthenticationContextForBiometrics/AUTHENTICATEDDATA.ta';
+} from '../AuthenticationContextForBiometrics/AUTHENTICATEDDATA.ta.js';
 export {
     AUTHENTICATEDDATA,
     _get_decoder_for_AUTHENTICATEDDATA,
     _get_encoder_for_AUTHENTICATEDDATA,
-} from '../AuthenticationContextForBiometrics/AUTHENTICATEDDATA.ta';
+} from '../AuthenticationContextForBiometrics/AUTHENTICATEDDATA.ta.js';
 import {
     EncapsulatedContentInfoACBio,
     _decode_EncapsulatedContentInfoACBio,
     _encode_EncapsulatedContentInfoACBio,
-} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta';
+} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta.js';
 export {
     EncapsulatedContentInfoACBio,
     _decode_EncapsulatedContentInfoACBio,
     _encode_EncapsulatedContentInfoACBio,
-} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta';
+} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthenticatedDataACBio */
 /**

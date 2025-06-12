@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca';
-export { SE_ERROR } from '../Notation/SE-ERROR.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
+export { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
 import {
   Negotiation_SEI,
   _decode_Negotiation_SEI,
   _encode_Negotiation_SEI,
-} from '../GulsSecurityExchanges/Negotiation-SEI.ta';
+} from '../GulsSecurityExchanges/Negotiation-SEI.ta.js';
 export {
   Negotiation_SEI,
   _decode_Negotiation_SEI,
   _encode_Negotiation_SEI,
-} from '../GulsSecurityExchanges/Negotiation-SEI.ta';
-import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
-export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
+} from '../GulsSecurityExchanges/Negotiation-SEI.ta.js';
+import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
+export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION acceptedIds */
 /**

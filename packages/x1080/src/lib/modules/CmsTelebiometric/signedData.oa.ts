@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from '../CmsTelebiometric/SignedData.ta';
+} from '../CmsTelebiometric/SignedData.ta.js';
 export {
     SignedData,
     _decode_SignedData,
     _encode_SignedData,
-} from '../CmsTelebiometric/SignedData.ta';
-import { id_signedData } from '../CmsTelebiometric/id-signedData.va';
-export { id_signedData } from '../CmsTelebiometric/id-signedData.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../CmsTelebiometric/SignedData.ta.js';
+import { id_signedData } from '../CmsTelebiometric/id-signedData.va.js';
+export { id_signedData } from '../CmsTelebiometric/id-signedData.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION signedData */
 /**

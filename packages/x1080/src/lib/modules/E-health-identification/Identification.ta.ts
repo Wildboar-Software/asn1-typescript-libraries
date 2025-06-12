@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-import { Categories } from '../E-health-identification/Categories.osa';
-export { Categories } from '../E-health-identification/Categories.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+import { Categories } from '../E-health-identification/Categories.osa.js';
+export { Categories } from '../E-health-identification/Categories.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Identification */
 /**

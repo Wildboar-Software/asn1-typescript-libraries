@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union9_Intersection0_Element */
 /**

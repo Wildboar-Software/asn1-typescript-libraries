@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     MSString,
     _decode_MSString,
     _encode_MSString,
-} from '../MSMatchingRules/MSString.ta';
+} from '../MSMatchingRules/MSString.ta.js';
 export {
     MSString,
     _decode_MSString,
     _encode_MSString,
-} from '../MSMatchingRules/MSString.ta';
-import { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va';
-export { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va';
-import { id_mr_msstring_list_elements_match } from '../MSObjectIdentifiers/id-mr-msstring-list-elements-match.va';
-export { id_mr_msstring_list_elements_match } from '../MSObjectIdentifiers/id-mr-msstring-list-elements-match.va';
+} from '../MSMatchingRules/MSString.ta.js';
+import { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va.js';
+export { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va.js';
+import { id_mr_msstring_list_elements_match } from '../MSObjectIdentifiers/id-mr-msstring-list-elements-match.va.js';
+export { id_mr_msstring_list_elements_match } from '../MSObjectIdentifiers/id-mr-msstring-list-elements-match.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mSStringListElementsMatch */
 /**

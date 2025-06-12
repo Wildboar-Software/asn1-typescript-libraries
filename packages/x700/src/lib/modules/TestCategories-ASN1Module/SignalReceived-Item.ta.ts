@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.oca';
-export { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.oca';
-import { SignalTypeSet } from '../TestCategories-ASN1Module/SignalTypeSet.osa';
-export { SignalTypeSet } from '../TestCategories-ASN1Module/SignalTypeSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.oca.js';
+export { CDTC_SIGNAL_TYPE } from '../TestCategories-ASN1Module/CDTC-SIGNAL-TYPE.oca.js';
+import { SignalTypeSet } from '../TestCategories-ASN1Module/SignalTypeSet.osa.js';
+export { SignalTypeSet } from '../TestCategories-ASN1Module/SignalTypeSet.osa.js';
 import {
     MORTs,
     _decode_MORTs,
     _encode_MORTs,
-} from '../Test-ASN1Module/MORTs.ta';
+} from '../Test-ASN1Module/MORTs.ta.js';
 export {
     MORTs,
     _decode_MORTs,
     _encode_MORTs,
-} from '../Test-ASN1Module/MORTs.ta';
+} from '../Test-ASN1Module/MORTs.ta.js';
 import {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 export {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignalReceived_Item */
 /**

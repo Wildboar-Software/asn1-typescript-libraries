@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     ServiceErrorParameter,
     _decode_ServiceErrorParameter,
     _encode_ServiceErrorParameter,
-} from '../MSAbstractService/ServiceErrorParameter.ta';
+} from '../MSAbstractService/ServiceErrorParameter.ta.js';
 export {
     ServiceErrorParameter,
     _decode_ServiceErrorParameter,
     _encode_ServiceErrorParameter,
-} from '../MSAbstractService/ServiceErrorParameter.ta';
-import { err_service_error } from '../MSAccessProtocol/err-service-error.va';
-export { err_service_error } from '../MSAccessProtocol/err-service-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/ServiceErrorParameter.ta.js';
+import { err_service_error } from '../MSAccessProtocol/err-service-error.va.js';
+export { err_service_error } from '../MSAccessProtocol/err-service-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION service_error */
 /**

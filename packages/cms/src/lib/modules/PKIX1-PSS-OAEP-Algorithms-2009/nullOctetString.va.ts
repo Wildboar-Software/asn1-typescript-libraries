@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta";
+import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.js";
 export {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION nullOctetString */
 /**

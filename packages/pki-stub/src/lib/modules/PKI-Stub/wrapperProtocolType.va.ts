@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { ds } from "../PKI-Stub/ds.va";
+import { ds } from "../PKI-Stub/ds.va.js";
 
 /* START_OF_SYMBOL_DEFINITION wrapperProtocolType */
 /**

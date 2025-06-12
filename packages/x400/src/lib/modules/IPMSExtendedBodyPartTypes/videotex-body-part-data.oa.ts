@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
-} from '../IPMSInformationObjects/VideotexData.ta';
+} from '../IPMSInformationObjects/VideotexData.ta.js';
 export {
     VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
-} from '../IPMSInformationObjects/VideotexData.ta';
-import { id_et_videotex } from '../IPMSObjectIdentifiers/id-et-videotex.va';
-export { id_et_videotex } from '../IPMSObjectIdentifiers/id-et-videotex.va';
+} from '../IPMSInformationObjects/VideotexData.ta.js';
+import { id_et_videotex } from '../IPMSObjectIdentifiers/id-et-videotex.va.js';
+export { id_et_videotex } from '../IPMSObjectIdentifiers/id-et-videotex.va.js';
 
 /* START_OF_SYMBOL_DEFINITION videotex_body_part_data */
 /**

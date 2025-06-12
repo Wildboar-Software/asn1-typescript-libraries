@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa';
-export { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa';
-import { modify_error } from '../MSAbstractService/modify-error.oa';
-export { modify_error } from '../MSAbstractService/modify-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { message_group_error } from '../MSAbstractService/message-group-error.oa';
-export { message_group_error } from '../MSAbstractService/message-group-error.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+import { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.js';
+export { auto_alert_error } from '../MSGeneralAutoActionTypes/auto-alert-error.oa.js';
+import { modify_error } from '../MSAbstractService/modify-error.oa.js';
+export { modify_error } from '../MSAbstractService/modify-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+export { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION GeneralAutoActionErrors */
 /**

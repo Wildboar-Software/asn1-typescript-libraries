@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   FADU_Identity_first_last,
   FADU_Identity_first_last_first /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
   last /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_first_last,
   _encode_FADU_Identity_first_last,
-} from '../ISO8571-FTAM/FADU-Identity-first-last.ta';
+} from '../ISO8571-FTAM/FADU-Identity-first-last.ta.js';
 export {
   FADU_Identity_first_last,
   FADU_Identity_first_last_first /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
   last /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_first_last,
   _encode_FADU_Identity_first_last,
-} from '../ISO8571-FTAM/FADU-Identity-first-last.ta';
+} from '../ISO8571-FTAM/FADU-Identity-first-last.ta.js';
 import {
   FADU_Identity_relative,
   FADU_Identity_relative_previous /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -94,7 +94,7 @@ import {
   next /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_relative,
   _encode_FADU_Identity_relative,
-} from '../ISO8571-FTAM/FADU-Identity-relative.ta';
+} from '../ISO8571-FTAM/FADU-Identity-relative.ta.js';
 export {
   FADU_Identity_relative,
   FADU_Identity_relative_previous /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,7 +105,7 @@ export {
   next /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_relative,
   _encode_FADU_Identity_relative,
-} from '../ISO8571-FTAM/FADU-Identity-relative.ta';
+} from '../ISO8571-FTAM/FADU-Identity-relative.ta.js';
 import {
   FADU_Identity_begin_end,
   FADU_Identity_begin_end_begin /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -114,7 +114,7 @@ import {
   end /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_begin_end,
   _encode_FADU_Identity_begin_end,
-} from '../ISO8571-FTAM/FADU-Identity-begin-end.ta';
+} from '../ISO8571-FTAM/FADU-Identity-begin-end.ta.js';
 export {
   FADU_Identity_begin_end,
   FADU_Identity_begin_end_begin /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -123,17 +123,17 @@ export {
   end /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_FADU_Identity_begin_end,
   _encode_FADU_Identity_begin_end,
-} from '../ISO8571-FTAM/FADU-Identity-begin-end.ta';
+} from '../ISO8571-FTAM/FADU-Identity-begin-end.ta.js';
 import {
   Node_Name,
   _decode_Node_Name,
   _encode_Node_Name,
-} from '../ISO8571-FTAM/Node-Name.ta';
+} from '../ISO8571-FTAM/Node-Name.ta.js';
 export {
   Node_Name,
   _decode_Node_Name,
   _encode_Node_Name,
-} from '../ISO8571-FTAM/Node-Name.ta';
+} from '../ISO8571-FTAM/Node-Name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FADU_Identity */
 /**

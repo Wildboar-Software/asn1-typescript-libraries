@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestSource,
     _enum_for_RequestSource,
@@ -75,7 +75,7 @@ import {
     remote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestSource,
     _encode_RequestSource,
-} from '../SDHProtASN1/RequestSource.ta';
+} from '../SDHProtASN1/RequestSource.ta.js';
 export {
     RequestSource,
     _enum_for_RequestSource,
@@ -85,7 +85,7 @@ export {
     remote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestSource,
     _encode_RequestSource,
-} from '../SDHProtASN1/RequestSource.ta';
+} from '../SDHProtASN1/RequestSource.ta.js';
 import {
     SwitchStatus,
     _enum_for_SwitchStatus,
@@ -97,7 +97,7 @@ import {
     operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchStatus,
     _encode_SwitchStatus,
-} from '../SDHProtASN1/SwitchStatus.ta';
+} from '../SDHProtASN1/SwitchStatus.ta.js';
 export {
     SwitchStatus,
     _enum_for_SwitchStatus,
@@ -109,27 +109,27 @@ export {
     operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchStatus,
     _encode_SwitchStatus,
-} from '../SDHProtASN1/SwitchStatus.ta';
+} from '../SDHProtASN1/SwitchStatus.ta.js';
 import {
     FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
-} from '../SDHProtASN1/FromAndToProtectionUnit.ta';
+} from '../SDHProtASN1/FromAndToProtectionUnit.ta.js';
 export {
     FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
-} from '../SDHProtASN1/FromAndToProtectionUnit.ta';
+} from '../SDHProtASN1/FromAndToProtectionUnit.ta.js';
 import {
     AutoSwitchReason,
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
-} from '../SDHProtASN1/AutoSwitchReason.ta';
+} from '../SDHProtASN1/AutoSwitchReason.ta.js';
 export {
     AutoSwitchReason,
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
-} from '../SDHProtASN1/AutoSwitchReason.ta';
+} from '../SDHProtASN1/AutoSwitchReason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item_autoSwitch */
 /**

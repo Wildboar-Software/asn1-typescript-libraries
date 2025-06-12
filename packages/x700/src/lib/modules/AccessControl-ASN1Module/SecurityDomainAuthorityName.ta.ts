@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.js';
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.js';
 import {
     Proxy,
     _decode_Proxy,
     _encode_Proxy,
-} from '../AccessControl-ASN1Module/Proxy.ta';
+} from '../AccessControl-ASN1Module/Proxy.ta.js';
 export {
     Proxy,
     _decode_Proxy,
     _encode_Proxy,
-} from '../AccessControl-ASN1Module/Proxy.ta';
+} from '../AccessControl-ASN1Module/Proxy.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityDomainAuthorityName */
 /**

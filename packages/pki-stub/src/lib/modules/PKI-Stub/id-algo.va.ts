@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { algorithms } from "../PKI-Stub/algorithms.va";
+import { algorithms } from "../PKI-Stub/algorithms.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_algo */
 /**

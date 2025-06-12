@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
-import { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyTransportAlgs.osa";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
-export { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyTransportAlgs.osa";
+import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
+import { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyTransportAlgs.osa.js";
+export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
+export { KeyTransportAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyTransportAlgs.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyTransportAlgorithmSet */
 /**

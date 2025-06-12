@@ -9,9 +9,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { TrustAnchorList, _decode_TrustAnchorList, _encode_TrustAnchorList } from "../TrustAnchorInfoModule/TrustAnchorList.ta";
-import { id_ct_trustAnchorList } from "../TrustAnchorInfoModule/id-ct-trustAnchorList.va";
-import { PKCS7_CONTENT_TYPE } from "../TrustAnchorInfoModule/PKCS7-CONTENT-TYPE.oca";
+import { TrustAnchorList, _decode_TrustAnchorList, _encode_TrustAnchorList } from "../TrustAnchorInfoModule/TrustAnchorList.ta.js";
+import { id_ct_trustAnchorList } from "../TrustAnchorInfoModule/id-ct-trustAnchorList.va.js";
+import { PKCS7_CONTENT_TYPE } from "../TrustAnchorInfoModule/PKCS7-CONTENT-TYPE.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION trust_anchor_list */

@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IncompleteCopy,
     _decode_IncompleteCopy,
     _encode_IncompleteCopy,
-} from '../IPMSHeadingExtensions/IncompleteCopy.ta';
+} from '../IPMSHeadingExtensions/IncompleteCopy.ta.js';
 export {
     IncompleteCopy,
     _decode_IncompleteCopy,
     _encode_IncompleteCopy,
-} from '../IPMSHeadingExtensions/IncompleteCopy.ta';
-import { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va';
-export { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/IncompleteCopy.ta.js';
+import { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va.js';
+export { id_hex_incomplete_copy } from '../IPMSObjectIdentifiers/id-hex-incomplete-copy.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION incomplete_copy */
 /**

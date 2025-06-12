@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     VideotexSyntax,
     VideotexSyntax_ids /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     data_syntax3 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_VideotexSyntax,
     _encode_VideotexSyntax,
-} from '../IPMSInformationObjects/VideotexSyntax.ta';
+} from '../IPMSInformationObjects/VideotexSyntax.ta.js';
 export {
     VideotexSyntax,
     VideotexSyntax_ids /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,7 +91,7 @@ export {
     data_syntax3 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_VideotexSyntax,
     _encode_VideotexSyntax,
-} from '../IPMSInformationObjects/VideotexSyntax.ta';
+} from '../IPMSInformationObjects/VideotexSyntax.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION VideotexParameters */
 /**

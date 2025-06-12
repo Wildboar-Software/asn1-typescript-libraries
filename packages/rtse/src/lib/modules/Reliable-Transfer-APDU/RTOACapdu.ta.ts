@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ConnectionData,
   _decode_ConnectionData,
   _encode_ConnectionData,
-} from '../Reliable-Transfer-APDU/ConnectionData.ta';
+} from '../Reliable-Transfer-APDU/ConnectionData.ta.js';
 export {
   ConnectionData,
   _decode_ConnectionData,
   _encode_ConnectionData,
-} from '../Reliable-Transfer-APDU/ConnectionData.ta';
+} from '../Reliable-Transfer-APDU/ConnectionData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RTOACapdu */
 /**

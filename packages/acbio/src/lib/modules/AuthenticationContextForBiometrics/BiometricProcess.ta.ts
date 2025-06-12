@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubprocessIndexList,
     _decode_SubprocessIndexList,
     _encode_SubprocessIndexList,
-} from '../AuthenticationContextForBiometrics/SubprocessIndexList.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndexList.ta.js';
 export {
     SubprocessIndexList,
     _decode_SubprocessIndexList,
     _encode_SubprocessIndexList,
-} from '../AuthenticationContextForBiometrics/SubprocessIndexList.ta';
+} from '../AuthenticationContextForBiometrics/SubprocessIndexList.ta.js';
 import {
     BPUIOExecutionInformationList,
     _decode_BPUIOExecutionInformationList,
     _encode_BPUIOExecutionInformationList,
-} from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta';
+} from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta.js';
 export {
     BPUIOExecutionInformationList,
     _decode_BPUIOExecutionInformationList,
     _encode_BPUIOExecutionInformationList,
-} from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta';
+} from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BiometricProcess */
 /**

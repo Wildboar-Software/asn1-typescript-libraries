@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ContentTypeACBio } from '../AuthenticationContextForBiometrics/ContentTypeACBio.osa';
-export { ContentTypeACBio } from '../AuthenticationContextForBiometrics/ContentTypeACBio.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ContentTypeACBio } from '../AuthenticationContextForBiometrics/ContentTypeACBio.osa.js';
+export { ContentTypeACBio } from '../AuthenticationContextForBiometrics/ContentTypeACBio.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ACBioInstance */
 /**

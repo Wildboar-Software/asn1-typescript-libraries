@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestedCapacity,
     _decode_RequestedCapacity,
     _encode_RequestedCapacity,
-} from '../M3100ASN1TypeModule2/RequestedCapacity.ta';
+} from '../M3100ASN1TypeModule2/RequestedCapacity.ta.js';
 export {
     RequestedCapacity,
     _decode_RequestedCapacity,
     _encode_RequestedCapacity,
-} from '../M3100ASN1TypeModule2/RequestedCapacity.ta';
+} from '../M3100ASN1TypeModule2/RequestedCapacity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RemoveCapacityFromTopologicalLinkInformation */
 /**

@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca';
-export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.js';
+export { PROTECTION_MAPPING } from '../Notation/PROTECTION-MAPPING.oca.js';
 import {
   PROTECTED,
   _get_decoder_for_PROTECTED,
   _get_encoder_for_PROTECTED,
-} from '../Notation/PROTECTED.ta';
+} from '../Notation/PROTECTED.ta.js';
 export {
   PROTECTED,
   _get_decoder_for_PROTECTED,
   _get_encoder_for_PROTECTED,
-} from '../Notation/PROTECTED.ta';
+} from '../Notation/PROTECTED.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PROTECTED_Q */
 /**

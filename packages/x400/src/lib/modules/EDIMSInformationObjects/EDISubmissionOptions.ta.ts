@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
-} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta';
+} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.js';
 export {
     BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
-} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta';
+} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDISubmissionOptions */
 /**

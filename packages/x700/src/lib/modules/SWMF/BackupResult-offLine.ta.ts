@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BackupResult_offLine_result,
     _decode_BackupResult_offLine_result,
     _encode_BackupResult_offLine_result,
-} from '../SWMF/BackupResult-offLine-result.ta';
+} from '../SWMF/BackupResult-offLine-result.ta.js';
 export {
     BackupResult_offLine_result,
     _decode_BackupResult_offLine_result,
     _encode_BackupResult_offLine_result,
-} from '../SWMF/BackupResult-offLine-result.ta';
+} from '../SWMF/BackupResult-offLine-result.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BackupResult_offLine */
 /**

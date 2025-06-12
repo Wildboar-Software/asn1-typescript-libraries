@@ -65,39 +65,39 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Bind,
   _decode_Bind,
   _encode_Bind,
-} from '../Remote-Operations-Generic-ROS-PDUs/Bind.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Bind.ta.js';
 export {
   Bind,
   _decode_Bind,
   _encode_Bind,
-} from '../Remote-Operations-Generic-ROS-PDUs/Bind.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Bind.ta.js';
 import {
   Unbind,
   _decode_Unbind,
   _encode_Unbind,
-} from '../Remote-Operations-Generic-ROS-PDUs/Unbind.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Unbind.ta.js';
 export {
   Unbind,
   _decode_Unbind,
   _encode_Unbind,
-} from '../Remote-Operations-Generic-ROS-PDUs/Unbind.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Unbind.ta.js';
 import {
   ROS_SingleAS,
   _decode_ROS_SingleAS,
   _encode_ROS_SingleAS,
-} from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta';
+} from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta.js';
 export {
   ROS_SingleAS,
   _decode_ROS_SingleAS,
   _encode_ROS_SingleAS,
-} from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta';
-import { combine } from '../Remote-Operations-Useful-Definitions/combine.oa';
-export { combine } from '../Remote-Operations-Useful-Definitions/combine.oa';
+} from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta.js';
+import { combine } from '../Remote-Operations-Useful-Definitions/combine.oa.js';
+export { combine } from '../Remote-Operations-Useful-Definitions/combine.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION AllValues */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Contents_Type_Attribute_document_type,
     _decode_Contents_Type_Attribute_document_type,
     _encode_Contents_Type_Attribute_document_type,
-} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-document-type.ta';
+} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-document-type.ta.js';
 export {
     Contents_Type_Attribute_document_type,
     _decode_Contents_Type_Attribute_document_type,
     _encode_Contents_Type_Attribute_document_type,
-} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-document-type.ta';
+} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-document-type.ta.js';
 import {
     Contents_Type_Attribute_constraint_set_and_abstract_syntax,
     _decode_Contents_Type_Attribute_constraint_set_and_abstract_syntax,
     _encode_Contents_Type_Attribute_constraint_set_and_abstract_syntax,
-} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-constraint-set-and-abstract-syntax.ta';
+} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-constraint-set-and-abstract-syntax.ta.js';
 export {
     Contents_Type_Attribute_constraint_set_and_abstract_syntax,
     _decode_Contents_Type_Attribute_constraint_set_and_abstract_syntax,
     _encode_Contents_Type_Attribute_constraint_set_and_abstract_syntax,
-} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-constraint-set-and-abstract-syntax.ta';
+} from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute-constraint-set-and-abstract-syntax.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Attribute */
 /**

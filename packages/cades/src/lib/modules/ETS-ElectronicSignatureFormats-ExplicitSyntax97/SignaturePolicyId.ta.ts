@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta";
-export { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta";
-import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta";
-export { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta";
-import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta";
-export { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.js";
+export { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.js";
+import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.js";
+export { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.js";
+import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta.js";
+export { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SignaturePolicyId */

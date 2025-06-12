@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SecretQuestionType,
   _decode_SecretQuestionType,
   _encode_SecretQuestionType,
-} from '../CMAIL/SecretQuestionType.ta';
+} from '../CMAIL/SecretQuestionType.ta.js';
 export {
   SecretQuestionType,
   _decode_SecretQuestionType,
   _encode_SecretQuestionType,
-} from '../CMAIL/SecretQuestionType.ta';
+} from '../CMAIL/SecretQuestionType.ta.js';
 import {
   CipheredEnvelopeKeyType,
   _decode_CipheredEnvelopeKeyType,
   _encode_CipheredEnvelopeKeyType,
-} from '../CMAIL/CipheredEnvelopeKeyType.ta';
+} from '../CMAIL/CipheredEnvelopeKeyType.ta.js';
 export {
   CipheredEnvelopeKeyType,
   _decode_CipheredEnvelopeKeyType,
   _encode_CipheredEnvelopeKeyType,
-} from '../CMAIL/CipheredEnvelopeKeyType.ta';
+} from '../CMAIL/CipheredEnvelopeKeyType.ta.js';
 import {
   CertificateType,
   _decode_CertificateType,
   _encode_CertificateType,
-} from '../CMAIL/CertificateType.ta';
+} from '../CMAIL/CertificateType.ta.js';
 export {
   CertificateType,
   _decode_CertificateType,
   _encode_CertificateType,
-} from '../CMAIL/CertificateType.ta';
+} from '../CMAIL/CertificateType.ta.js';
 import {
   EntityType_type,
   _enum_for_EntityType_type,
@@ -109,7 +109,7 @@ import {
   transit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_EntityType_type,
   _encode_EntityType_type,
-} from '../CMAIL/EntityType-type.ta';
+} from '../CMAIL/EntityType-type.ta.js';
 export {
   EntityType_type,
   _enum_for_EntityType_type,
@@ -123,12 +123,12 @@ export {
   transit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_EntityType_type,
   _encode_EntityType_type,
-} from '../CMAIL/EntityType-type.ta';
+} from '../CMAIL/EntityType-type.ta.js';
 import {
     String,
     _decode_String,
     _encode_String,
-} from '../XSD/String.ta';
+} from '../XSD/String.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntityType */
 /**

@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AbsenceAdvice,
     _decode_AbsenceAdvice,
     _encode_AbsenceAdvice,
-} from '../IPMSInformationObjects/AbsenceAdvice.ta';
+} from '../IPMSInformationObjects/AbsenceAdvice.ta.js';
 export {
     AbsenceAdvice,
     _decode_AbsenceAdvice,
     _encode_AbsenceAdvice,
-} from '../IPMSInformationObjects/AbsenceAdvice.ta';
-import { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va';
-export { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSInformationObjects/AbsenceAdvice.ta.js';
+import { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va.js';
+export { id_on_absence_advice } from '../IPMSObjectIdentifiers/id-on-absence-advice.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION absence_advice */
 /**

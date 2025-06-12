@@ -4,32 +4,32 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../AsymmetricKeyPackageModuleV1/Attributes.ta";
+} from "../AsymmetricKeyPackageModuleV1/Attributes.ta.js";
 import {
     PrivateKey,
     _decode_PrivateKey,
     _encode_PrivateKey,
-} from "../AsymmetricKeyPackageModuleV1/PrivateKey.ta";
+} from "../AsymmetricKeyPackageModuleV1/PrivateKey.ta.js";
 import {
     PrivateKeyAlgorithmIdentifier,
     _decode_PrivateKeyAlgorithmIdentifier,
     _encode_PrivateKeyAlgorithmIdentifier,
-} from "../AsymmetricKeyPackageModuleV1/PrivateKeyAlgorithmIdentifier.ta";
+} from "../AsymmetricKeyPackageModuleV1/PrivateKeyAlgorithmIdentifier.ta.js";
 import {
     Version,
     _decode_Version,
     _encode_Version,
-} from "../AsymmetricKeyPackageModuleV1/Version.ta";
+} from "../AsymmetricKeyPackageModuleV1/Version.ta.js";
 import {
     PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
-} from "../AsymmetricKeyPackageModuleV1/PublicKey.ta";
+} from "../AsymmetricKeyPackageModuleV1/PublicKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OneAsymmetricKey */
 /**

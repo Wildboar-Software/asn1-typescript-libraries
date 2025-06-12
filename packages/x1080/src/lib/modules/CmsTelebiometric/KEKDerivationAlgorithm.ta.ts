@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from '../CmsTelebiometric/PBKDF2-params.ta';
+} from '../CmsTelebiometric/PBKDF2-params.ta.js';
 export {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from '../CmsTelebiometric/PBKDF2-params.ta';
+} from '../CmsTelebiometric/PBKDF2-params.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KEKDerivationAlgorithm */
 /**

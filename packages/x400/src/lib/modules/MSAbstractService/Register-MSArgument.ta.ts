@@ -65,107 +65,107 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionRegistration,
     _decode_AutoActionRegistration,
     _encode_AutoActionRegistration,
-} from '../MSAbstractService/AutoActionRegistration.ta';
+} from '../MSAbstractService/AutoActionRegistration.ta.js';
 export {
     AutoActionRegistration,
     _decode_AutoActionRegistration,
     _encode_AutoActionRegistration,
-} from '../MSAbstractService/AutoActionRegistration.ta';
+} from '../MSAbstractService/AutoActionRegistration.ta.js';
 import {
     AutoActionDeregistration,
     _decode_AutoActionDeregistration,
     _encode_AutoActionDeregistration,
-} from '../MSAbstractService/AutoActionDeregistration.ta';
+} from '../MSAbstractService/AutoActionDeregistration.ta.js';
 export {
     AutoActionDeregistration,
     _decode_AutoActionDeregistration,
     _encode_AutoActionDeregistration,
-} from '../MSAbstractService/AutoActionDeregistration.ta';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MSAbstractService/AutoActionDeregistration.ta.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     Register_MSArgument_change_credentials,
     _decode_Register_MSArgument_change_credentials,
     _encode_Register_MSArgument_change_credentials,
-} from '../MSAbstractService/Register-MSArgument-change-credentials.ta';
+} from '../MSAbstractService/Register-MSArgument-change-credentials.ta.js';
 export {
     Register_MSArgument_change_credentials,
     _decode_Register_MSArgument_change_credentials,
     _encode_Register_MSArgument_change_credentials,
-} from '../MSAbstractService/Register-MSArgument-change-credentials.ta';
+} from '../MSAbstractService/Register-MSArgument-change-credentials.ta.js';
 import {
     SecurityLabel,
     _decode_SecurityLabel,
     _encode_SecurityLabel,
-} from '../MTSAbstractService/SecurityLabel.ta';
+} from '../MTSAbstractService/SecurityLabel.ta.js';
 export {
     SecurityLabel,
     _decode_SecurityLabel,
     _encode_SecurityLabel,
-} from '../MTSAbstractService/SecurityLabel.ta';
+} from '../MTSAbstractService/SecurityLabel.ta.js';
 import {
     UARegistration,
     _decode_UARegistration,
     _encode_UARegistration,
-} from '../MSAbstractService/UARegistration.ta';
+} from '../MSAbstractService/UARegistration.ta.js';
 export {
     UARegistration,
     _decode_UARegistration,
     _encode_UARegistration,
-} from '../MSAbstractService/UARegistration.ta';
+} from '../MSAbstractService/UARegistration.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 import {
     MessageGroupRegistrations,
     _decode_MessageGroupRegistrations,
     _encode_MessageGroupRegistrations,
-} from '../MSAbstractService/MessageGroupRegistrations.ta';
+} from '../MSAbstractService/MessageGroupRegistrations.ta.js';
 export {
     MessageGroupRegistrations,
     _decode_MessageGroupRegistrations,
     _encode_MessageGroupRegistrations,
-} from '../MSAbstractService/MessageGroupRegistrations.ta';
+} from '../MSAbstractService/MessageGroupRegistrations.ta.js';
 import {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MSAbstractService/RegistrationTypes.ta';
+} from '../MSAbstractService/RegistrationTypes.ta.js';
 export {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MSAbstractService/RegistrationTypes.ta';
+} from '../MSAbstractService/RegistrationTypes.ta.js';
 import {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 export {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Register_MSArgument */
 /**

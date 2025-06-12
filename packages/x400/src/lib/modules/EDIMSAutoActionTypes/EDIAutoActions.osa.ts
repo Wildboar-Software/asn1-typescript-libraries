@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-import { edi_auto_correlate } from '../EDIMSAutoActionTypes/edi-auto-correlate.oa';
-export { edi_auto_correlate } from '../EDIMSAutoActionTypes/edi-auto-correlate.oa';
-import { edi_auto_forward } from '../EDIMSAutoActionTypes/edi-auto-forward.oa';
-export { edi_auto_forward } from '../EDIMSAutoActionTypes/edi-auto-forward.oa';
-import { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-acknowledgement.oa';
-export { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-acknowledgement.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+import { edi_auto_correlate } from '../EDIMSAutoActionTypes/edi-auto-correlate.oa.js';
+export { edi_auto_correlate } from '../EDIMSAutoActionTypes/edi-auto-correlate.oa.js';
+import { edi_auto_forward } from '../EDIMSAutoActionTypes/edi-auto-forward.oa.js';
+export { edi_auto_forward } from '../EDIMSAutoActionTypes/edi-auto-forward.oa.js';
+import { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-acknowledgement.oa.js';
+export { edi_auto_acknowledgement } from '../EDIMSAutoActionTypes/edi-auto-acknowledgement.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIAutoActions */
 /**

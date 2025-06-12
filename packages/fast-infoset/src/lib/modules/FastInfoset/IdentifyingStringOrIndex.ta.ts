@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 export {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IdentifyingStringOrIndex */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 export {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 import {
     TypeOfMTSUser,
     public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -92,7 +92,7 @@ import {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
-} from '../MTSAbstractService/TypeOfMTSUser.ta';
+} from '../MTSAbstractService/TypeOfMTSUser.ta.js';
 export {
     TypeOfMTSUser,
     public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -109,27 +109,27 @@ export {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
-} from '../MTSAbstractService/TypeOfMTSUser.ta';
+} from '../MTSAbstractService/TypeOfMTSUser.ta.js';
 import {
     RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
-} from '../MTSAbstractService/RecipientCertificate.ta';
+} from '../MTSAbstractService/RecipientCertificate.ta.js';
 export {
     RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
-} from '../MTSAbstractService/RecipientCertificate.ta';
+} from '../MTSAbstractService/RecipientCertificate.ta.js';
 import {
     ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
-} from '../MTSAbstractService/ProofOfDelivery.ta';
+} from '../MTSAbstractService/ProofOfDelivery.ta.js';
 export {
     ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
-} from '../MTSAbstractService/ProofOfDelivery.ta';
+} from '../MTSAbstractService/ProofOfDelivery.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientDeliveryReportFields */
 /**

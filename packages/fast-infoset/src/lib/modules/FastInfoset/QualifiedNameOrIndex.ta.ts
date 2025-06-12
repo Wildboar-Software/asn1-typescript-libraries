@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   QualifiedNameOrIndex_literal_qualified_name,
   _decode_QualifiedNameOrIndex_literal_qualified_name,
   _encode_QualifiedNameOrIndex_literal_qualified_name,
-} from '../FastInfoset/QualifiedNameOrIndex-literal-qualified-name.ta';
+} from '../FastInfoset/QualifiedNameOrIndex-literal-qualified-name.ta.js';
 export {
   QualifiedNameOrIndex_literal_qualified_name,
   _decode_QualifiedNameOrIndex_literal_qualified_name,
   _encode_QualifiedNameOrIndex_literal_qualified_name,
-} from '../FastInfoset/QualifiedNameOrIndex-literal-qualified-name.ta';
+} from '../FastInfoset/QualifiedNameOrIndex-literal-qualified-name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION QualifiedNameOrIndex */
 /**

@@ -4,43 +4,43 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
 import {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.js";
 import {
     PSourceAlgorithm,
     _decode_PSourceAlgorithm,
     _encode_PSourceAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta";
-import { pSpecifiedEmpty } from "../PKIX1-PSS-OAEP-Algorithms-2009/pSpecifiedEmpty.va";
-import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.js";
+import { pSpecifiedEmpty } from "../PKIX1-PSS-OAEP-Algorithms-2009/pSpecifiedEmpty.va.js";
+import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.js";
 export {
     MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta";
-export { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.js";
+export { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.js";
 export {
     PSourceAlgorithm,
     _decode_PSourceAlgorithm,
     _encode_PSourceAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta";
-export { pSpecifiedEmpty } from "../PKIX1-PSS-OAEP-Algorithms-2009/pSpecifiedEmpty.va";
-export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.js";
+export { pSpecifiedEmpty } from "../PKIX1-PSS-OAEP-Algorithms-2009/pSpecifiedEmpty.va.js";
+export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION RSAES_OAEP_params */
 /**

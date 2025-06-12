@@ -11,12 +11,12 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
-import { CertificatePoliciesSyntax, _decode_CertificatePoliciesSyntax, _encode_CertificatePoliciesSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/CertificatePoliciesSyntax.ta";
-import { CertPolicyFlags, CertPolicyFlags_inhibitPolicyMapping /* IMPORTED_LONG_NAMED_BIT */, inhibitPolicyMapping /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_requireExplicitPolicy /* IMPORTED_LONG_NAMED_BIT */, requireExplicitPolicy /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_inhibitAnyPolicy /* IMPORTED_LONG_NAMED_BIT */, inhibitAnyPolicy /* IMPORTED_SHORT_NAMED_BIT */, _decode_CertPolicyFlags, _encode_CertPolicyFlags } from "../TrustAnchorInfoModule/CertPolicyFlags.ta";
-import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConstraintsSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/NameConstraintsSyntax.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
+import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
+import { CertificatePoliciesSyntax, _decode_CertificatePoliciesSyntax, _encode_CertificatePoliciesSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/CertificatePoliciesSyntax.ta.js";
+import { CertPolicyFlags, CertPolicyFlags_inhibitPolicyMapping /* IMPORTED_LONG_NAMED_BIT */, inhibitPolicyMapping /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_requireExplicitPolicy /* IMPORTED_LONG_NAMED_BIT */, requireExplicitPolicy /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_inhibitAnyPolicy /* IMPORTED_LONG_NAMED_BIT */, inhibitAnyPolicy /* IMPORTED_SHORT_NAMED_BIT */, _decode_CertPolicyFlags, _encode_CertPolicyFlags } from "../TrustAnchorInfoModule/CertPolicyFlags.ta.js";
+import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConstraintsSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/NameConstraintsSyntax.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CertPathControls */

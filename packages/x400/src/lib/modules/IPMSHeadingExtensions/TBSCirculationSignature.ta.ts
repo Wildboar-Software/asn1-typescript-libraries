@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CirculationSignatureAlgorithmIdentifier,
     _decode_CirculationSignatureAlgorithmIdentifier,
     _encode_CirculationSignatureAlgorithmIdentifier,
-} from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta';
+} from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta.js';
 export {
     CirculationSignatureAlgorithmIdentifier,
     _decode_CirculationSignatureAlgorithmIdentifier,
     _encode_CirculationSignatureAlgorithmIdentifier,
-} from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta';
+} from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta.js';
 import {
     ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
-} from '../IPMSInformationObjects/ThisIPMField.ta';
+} from '../IPMSInformationObjects/ThisIPMField.ta.js';
 export {
     ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
-} from '../IPMSInformationObjects/ThisIPMField.ta';
+} from '../IPMSInformationObjects/ThisIPMField.ta.js';
 import {
     CirculationTime,
     _decode_CirculationTime,
     _encode_CirculationTime,
-} from '../IPMSHeadingExtensions/CirculationTime.ta';
+} from '../IPMSHeadingExtensions/CirculationTime.ta.js';
 export {
     CirculationTime,
     _decode_CirculationTime,
     _encode_CirculationTime,
-} from '../IPMSHeadingExtensions/CirculationTime.ta';
+} from '../IPMSHeadingExtensions/CirculationTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TBSCirculationSignature */
 /**

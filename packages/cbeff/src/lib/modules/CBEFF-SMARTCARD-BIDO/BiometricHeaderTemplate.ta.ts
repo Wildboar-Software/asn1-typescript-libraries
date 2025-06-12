@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta";
-export { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta";
-export { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta";
-import { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta";
-export { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta";
-import { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta";
-export { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta";
-import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta";
-export { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta";
-import { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta";
-export { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta";
-import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta";
-export { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta";
-import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta";
-export { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta";
-import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta";
-export { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta";
-import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta";
-export { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.js";
+export { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.js";
+import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.js";
+export { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.js";
+import { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.js";
+export { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.js";
+import { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.js";
+export { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.js";
+import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.js";
+export { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.js";
+import { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.js";
+export { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.js";
+import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.js";
+export { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.js";
+import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.js";
+export { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.js";
+import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.js";
+export { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.js";
+import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.js";
+export { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION BiometricHeaderTemplate */

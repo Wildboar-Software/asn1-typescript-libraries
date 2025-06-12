@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { PBKDF2Algorithms } from "../PKCS5v2-1/PBKDF2Algorithms.osa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { PBKDF2Algorithms } from "../PKCS5v2-1/PBKDF2Algorithms.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithms */
 /**

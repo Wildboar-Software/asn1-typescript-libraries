@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { id_signcryptedData } from "../CMSObjectIdentifiers/id-signcryptedData.va";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-export { id_signcryptedData } from "../CMSObjectIdentifiers/id-signcryptedData.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
+import { id_signcryptedData } from "../CMSObjectIdentifiers/id-signcryptedData.va.js";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { id_signcryptedData } from "../CMSObjectIdentifiers/id-signcryptedData.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION signcryption_manifest */
 /**

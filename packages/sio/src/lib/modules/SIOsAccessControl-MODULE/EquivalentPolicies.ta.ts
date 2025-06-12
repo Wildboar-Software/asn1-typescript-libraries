@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EquivalentPolicy,
     _decode_EquivalentPolicy,
     _encode_EquivalentPolicy,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta.js";
 export {
     EquivalentPolicy,
     _decode_EquivalentPolicy,
     _encode_EquivalentPolicy,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta";
+} from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EquivalentPolicies */
 /**

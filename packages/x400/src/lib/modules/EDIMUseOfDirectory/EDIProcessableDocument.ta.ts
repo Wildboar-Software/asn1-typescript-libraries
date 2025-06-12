@@ -65,77 +65,77 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
-} from '../EDIMSInformationObjects/SyntaxVersion.ta';
+} from '../EDIMSInformationObjects/SyntaxVersion.ta.js';
 export {
     SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
-} from '../EDIMSInformationObjects/SyntaxVersion.ta';
+} from '../EDIMSInformationObjects/SyntaxVersion.ta.js';
 import {
     SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
-} from '../EDIMSInformationObjects/SyntaxIdentifier.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifier.ta.js';
 export {
     SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
-} from '../EDIMSInformationObjects/SyntaxIdentifier.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifier.ta.js';
 import {
     EDIMessageTypeFieldSubField,
     _decode_EDIMessageTypeFieldSubField,
     _encode_EDIMessageTypeFieldSubField,
-} from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta';
+} from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.js';
 export {
     EDIMessageTypeFieldSubField,
     _decode_EDIMessageTypeFieldSubField,
     _encode_EDIMessageTypeFieldSubField,
-} from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta';
+} from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.js';
 import {
     DocumentVersion,
     _decode_DocumentVersion,
     _encode_DocumentVersion,
-} from '../EDIMUseOfDirectory/DocumentVersion.ta';
+} from '../EDIMUseOfDirectory/DocumentVersion.ta.js';
 export {
     DocumentVersion,
     _decode_DocumentVersion,
     _encode_DocumentVersion,
-} from '../EDIMUseOfDirectory/DocumentVersion.ta';
+} from '../EDIMUseOfDirectory/DocumentVersion.ta.js';
 import {
     DocumentRelease,
     _decode_DocumentRelease,
     _encode_DocumentRelease,
-} from '../EDIMUseOfDirectory/DocumentRelease.ta';
+} from '../EDIMUseOfDirectory/DocumentRelease.ta.js';
 export {
     DocumentRelease,
     _decode_DocumentRelease,
     _encode_DocumentRelease,
-} from '../EDIMUseOfDirectory/DocumentRelease.ta';
+} from '../EDIMUseOfDirectory/DocumentRelease.ta.js';
 import {
     ControllingAgency,
     _decode_ControllingAgency,
     _encode_ControllingAgency,
-} from '../EDIMUseOfDirectory/ControllingAgency.ta';
+} from '../EDIMUseOfDirectory/ControllingAgency.ta.js';
 export {
     ControllingAgency,
     _decode_ControllingAgency,
     _encode_ControllingAgency,
-} from '../EDIMUseOfDirectory/ControllingAgency.ta';
+} from '../EDIMUseOfDirectory/ControllingAgency.ta.js';
 import {
     AssociationAssignedCode,
     _decode_AssociationAssignedCode,
     _encode_AssociationAssignedCode,
-} from '../EDIMUseOfDirectory/AssociationAssignedCode.ta';
+} from '../EDIMUseOfDirectory/AssociationAssignedCode.ta.js';
 export {
     AssociationAssignedCode,
     _decode_AssociationAssignedCode,
     _encode_AssociationAssignedCode,
-} from '../EDIMUseOfDirectory/AssociationAssignedCode.ta';
+} from '../EDIMUseOfDirectory/AssociationAssignedCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIProcessableDocument */
 /**

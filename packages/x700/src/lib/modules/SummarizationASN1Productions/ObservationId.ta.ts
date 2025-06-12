@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
-} from '../SummarizationASN1Productions/ScanAttributeIdList.ta';
+} from '../SummarizationASN1Productions/ScanAttributeIdList.ta.js';
 export {
     ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
-} from '../SummarizationASN1Productions/ScanAttributeIdList.ta';
+} from '../SummarizationASN1Productions/ScanAttributeIdList.ta.js';
 import {
     NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta';
+} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.js';
 export {
     NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta';
+} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObservationId */
 /**

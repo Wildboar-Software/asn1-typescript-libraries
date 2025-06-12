@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
-} from '../MTAAbstractService/ActualRecipientName.ta';
+} from '../MTAAbstractService/ActualRecipientName.ta.js';
 export {
     ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
-} from '../MTAAbstractService/ActualRecipientName.ta';
+} from '../MTAAbstractService/ActualRecipientName.ta.js';
 import {
     OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
-} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta';
+} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.js';
 export {
     OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
-} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta';
+} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.js';
 import {
     PerRecipientIndicators,
     PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
@@ -106,7 +106,7 @@ import {
     reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
-} from '../MTAAbstractService/PerRecipientIndicators.ta';
+} from '../MTAAbstractService/PerRecipientIndicators.ta.js';
 export {
     PerRecipientIndicators,
     PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
@@ -127,47 +127,47 @@ export {
     reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
-} from '../MTAAbstractService/PerRecipientIndicators.ta';
+} from '../MTAAbstractService/PerRecipientIndicators.ta.js';
 import {
     LastTraceInformation,
     _decode_LastTraceInformation,
     _encode_LastTraceInformation,
-} from '../MTAAbstractService/LastTraceInformation.ta';
+} from '../MTAAbstractService/LastTraceInformation.ta.js';
 export {
     LastTraceInformation,
     _decode_LastTraceInformation,
     _encode_LastTraceInformation,
-} from '../MTAAbstractService/LastTraceInformation.ta';
+} from '../MTAAbstractService/LastTraceInformation.ta.js';
 import {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTAAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTAAbstractService/OriginallyIntendedRecipientName.ta.js';
 export {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTAAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTAAbstractService/OriginallyIntendedRecipientName.ta.js';
 import {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 export {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientReportTransferFields */
 /**

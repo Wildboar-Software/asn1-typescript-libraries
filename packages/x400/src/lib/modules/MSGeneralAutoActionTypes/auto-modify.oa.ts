@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../MSAbstractService/AutoActionType.ta.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 import {
     AutoModifyRegistrationParameter,
     _decode_AutoModifyRegistrationParameter,
     _encode_AutoModifyRegistrationParameter,
-} from '../MSGeneralAutoActionTypes/AutoModifyRegistrationParameter.ta';
+} from '../MSGeneralAutoActionTypes/AutoModifyRegistrationParameter.ta.js';
 export {
     AutoModifyRegistrationParameter,
     _decode_AutoModifyRegistrationParameter,
     _encode_AutoModifyRegistrationParameter,
-} from '../MSGeneralAutoActionTypes/AutoModifyRegistrationParameter.ta';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { modify_error } from '../MSAbstractService/modify-error.oa';
-export { modify_error } from '../MSAbstractService/modify-error.oa';
-import { message_group_error } from '../MSAbstractService/message-group-error.oa';
-export { message_group_error } from '../MSAbstractService/message-group-error.oa';
-import { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va';
-export { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
+} from '../MSGeneralAutoActionTypes/AutoModifyRegistrationParameter.ta.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { modify_error } from '../MSAbstractService/modify-error.oa.js';
+export { modify_error } from '../MSAbstractService/modify-error.oa.js';
+import { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+export { message_group_error } from '../MSAbstractService/message-group-error.oa.js';
+import { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va.js';
+export { id_act_auto_modify } from '../MSObjectIdentifiers/id-act-auto-modify.va.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION auto_modify */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestState,
     _enum_for_RequestState,
@@ -77,7 +77,7 @@ import {
     denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestState,
     _encode_RequestState,
-} from '../X790ASN1Module/RequestState.ta';
+} from '../X790ASN1Module/RequestState.ta.js';
 export {
     RequestState,
     _enum_for_RequestState,
@@ -89,7 +89,7 @@ export {
     denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestState,
     _encode_RequestState,
-} from '../X790ASN1Module/RequestState.ta';
+} from '../X790ASN1Module/RequestState.ta.js';
 import {
     ActivityType,
     ActivityType_after_hours_repair /* IMPORTED_LONG_NAMED_BIT */,
@@ -112,7 +112,7 @@ import {
     release /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ActivityType,
     _encode_ActivityType,
-} from '../X790ASN1Module/ActivityType.ta';
+} from '../X790ASN1Module/ActivityType.ta.js';
 export {
     ActivityType,
     ActivityType_after_hours_repair /* IMPORTED_LONG_NAMED_BIT */,
@@ -135,27 +135,27 @@ export {
     release /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_ActivityType,
     _encode_ActivityType,
-} from '../X790ASN1Module/ActivityType.ta';
+} from '../X790ASN1Module/ActivityType.ta.js';
 import {
     AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
-} from '../X790ASN1Module/AuthorizationTime.ta';
+} from '../X790ASN1Module/AuthorizationTime.ta.js';
 export {
     AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
-} from '../X790ASN1Module/AuthorizationTime.ta';
+} from '../X790ASN1Module/AuthorizationTime.ta.js';
 import {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 export {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthorizationList_Item */
 /**

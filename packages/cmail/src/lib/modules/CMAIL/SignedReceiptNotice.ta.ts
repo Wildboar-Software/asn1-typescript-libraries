@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SignedReceiptNoticeType,
   _decode_SignedReceiptNoticeType,
   _encode_SignedReceiptNoticeType,
-} from '../CMAIL/SignedReceiptNoticeType.ta';
+} from '../CMAIL/SignedReceiptNoticeType.ta.js';
 export {
   SignedReceiptNoticeType,
   _decode_SignedReceiptNoticeType,
   _encode_SignedReceiptNoticeType,
-} from '../CMAIL/SignedReceiptNoticeType.ta';
+} from '../CMAIL/SignedReceiptNoticeType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignedReceiptNotice */
 /**

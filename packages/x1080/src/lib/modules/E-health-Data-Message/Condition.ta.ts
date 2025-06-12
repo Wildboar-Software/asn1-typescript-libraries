@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONDITION } from '../E-health-Data-Message/CONDITION.oca';
-export { CONDITION } from '../E-health-Data-Message/CONDITION.oca';
-import { Conditions } from '../E-health-Data-Message/Conditions.osa';
-export { Conditions } from '../E-health-Data-Message/Conditions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONDITION } from '../E-health-Data-Message/CONDITION.oca.js';
+export { CONDITION } from '../E-health-Data-Message/CONDITION.oca.js';
+import { Conditions } from '../E-health-Data-Message/Conditions.osa.js';
+export { Conditions } from '../E-health-Data-Message/Conditions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Condition */
 /**

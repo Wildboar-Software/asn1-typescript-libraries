@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SettlementPolicy,
     _decode_SettlementPolicy,
     _encode_SettlementPolicy,
-} from '../MhsAcctAsn1Module/SettlementPolicy.ta';
+} from '../MhsAcctAsn1Module/SettlementPolicy.ta.js';
 export {
     SettlementPolicy,
     _decode_SettlementPolicy,
     _encode_SettlementPolicy,
-} from '../MhsAcctAsn1Module/SettlementPolicy.ta';
+} from '../MhsAcctAsn1Module/SettlementPolicy.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION d36 */
 /**

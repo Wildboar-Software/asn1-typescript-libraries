@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LoopbackTestResult_passed,
     _decode_LoopbackTestResult_passed,
     _encode_LoopbackTestResult_passed,
-} from '../TestCategories-ASN1Module/LoopbackTestResult-passed.ta';
+} from '../TestCategories-ASN1Module/LoopbackTestResult-passed.ta.js';
 export {
     LoopbackTestResult_passed,
     _decode_LoopbackTestResult_passed,
     _encode_LoopbackTestResult_passed,
-} from '../TestCategories-ASN1Module/LoopbackTestResult-passed.ta';
+} from '../TestCategories-ASN1Module/LoopbackTestResult-passed.ta.js';
 import {
     LoopbackFailInfo,
     LoopbackFailInfo_errorRatioThresholdExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     loopbackTimeoutExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_LoopbackFailInfo,
     _encode_LoopbackFailInfo,
-} from '../TestCategories-ASN1Module/LoopbackFailInfo.ta';
+} from '../TestCategories-ASN1Module/LoopbackFailInfo.ta.js';
 export {
     LoopbackFailInfo,
     LoopbackFailInfo_errorRatioThresholdExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -93,7 +93,7 @@ export {
     loopbackTimeoutExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_LoopbackFailInfo,
     _encode_LoopbackFailInfo,
-} from '../TestCategories-ASN1Module/LoopbackFailInfo.ta';
+} from '../TestCategories-ASN1Module/LoopbackFailInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LoopbackTestResult */
 /**

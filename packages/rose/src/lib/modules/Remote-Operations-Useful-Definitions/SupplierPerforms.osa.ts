@@ -65,12 +65,12 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-import { Forward } from './Forward.osa';
-import { Reverse } from './Reverse.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { OPERATION_PACKAGE } from '../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+import { Forward } from './Forward.osa.js';
+import { Reverse } from './Reverse.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION SupplierPerforms */
 /**

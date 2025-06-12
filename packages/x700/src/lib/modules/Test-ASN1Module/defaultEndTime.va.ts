@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EndTime,
     _decode_EndTime,
     _encode_EndTime,
-} from '../Test-ASN1Module/EndTime.ta';
+} from '../Test-ASN1Module/EndTime.ta.js';
 export {
     EndTime,
     _decode_EndTime,
     _encode_EndTime,
-} from '../Test-ASN1Module/EndTime.ta';
+} from '../Test-ASN1Module/EndTime.ta.js';
 import {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 export {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultEndTime */
 /**

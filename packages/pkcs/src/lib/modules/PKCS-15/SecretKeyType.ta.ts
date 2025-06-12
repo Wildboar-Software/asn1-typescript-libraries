@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GenericSecretKeyAttributes,
     _decode_GenericSecretKeyAttributes,
     _encode_GenericSecretKeyAttributes,
-} from "../PKCS-15/GenericSecretKeyAttributes.ta";
+} from "../PKCS-15/GenericSecretKeyAttributes.ta.js";
 import {
     OtherKey,
     _decode_OtherKey,
     _encode_OtherKey,
-} from "../PKCS-15/OtherKey.ta";
+} from "../PKCS-15/OtherKey.ta.js";
 import {
     SecretKeyObject,
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
-} from "../PKCS-15/SecretKeyObject.ta";
+} from "../PKCS-15/SecretKeyObject.ta.js";
 export {
     GenericSecretKeyAttributes,
     _decode_GenericSecretKeyAttributes,
     _encode_GenericSecretKeyAttributes,
-} from "../PKCS-15/GenericSecretKeyAttributes.ta";
+} from "../PKCS-15/GenericSecretKeyAttributes.ta.js";
 export {
     OtherKey,
     _decode_OtherKey,
     _encode_OtherKey,
-} from "../PKCS-15/OtherKey.ta";
+} from "../PKCS-15/OtherKey.ta.js";
 export {
     SecretKeyObject,
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
-} from "../PKCS-15/SecretKeyObject.ta";
+} from "../PKCS-15/SecretKeyObject.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SecretKeyType */
 /**

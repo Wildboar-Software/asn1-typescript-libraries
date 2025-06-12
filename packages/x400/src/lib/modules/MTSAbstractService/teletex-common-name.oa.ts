@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from '../MTSAbstractService/TeletexCommonName.ta';
+} from '../MTSAbstractService/TeletexCommonName.ta.js';
 export {
     TeletexCommonName,
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
-} from '../MTSAbstractService/TeletexCommonName.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/TeletexCommonName.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION teletex_common_name */
 /**

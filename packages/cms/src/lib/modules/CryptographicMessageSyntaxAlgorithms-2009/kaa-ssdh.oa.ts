@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
+import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
 import {
     optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_alg_SSDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-SSDH.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_alg_SSDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-SSDH.va.js";
 import {
     KeyWrapAlgorithm,
     _decode_KeyWrapAlgorithm,
     _encode_KeyWrapAlgorithm,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta";
-import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.js";
+import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
+export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -29,16 +29,16 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_alg_SSDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-SSDH.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_alg_SSDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-SSDH.va.js";
 export {
     KeyWrapAlgorithm,
     _decode_KeyWrapAlgorithm,
     _encode_KeyWrapAlgorithm,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta";
-export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.js";
+export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION kaa_ssdh */
 /**

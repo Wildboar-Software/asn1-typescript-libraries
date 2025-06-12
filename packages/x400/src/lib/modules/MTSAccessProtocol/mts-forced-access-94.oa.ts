@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-import { REALIZATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/REALIZATION.oca';
-export { REALIZATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/REALIZATION.oca';
-import { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa';
-export { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa';
-import { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa';
-export { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa';
-import { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa';
-export { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa';
-import { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa';
-export { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa';
-import { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa';
-export { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa';
-import { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-delivery-abstract-syntax.oa';
-export { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-delivery-abstract-syntax.oa';
-import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa';
-export { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa';
-import { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa';
-export { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa';
-import { id_ac_mts_forced_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-access-94.va';
-export { id_ac_mts_forced_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-access-94.va';
-import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca';
-export { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+import { REALIZATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/REALIZATION.oca.js';
+export { REALIZATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/REALIZATION.oca.js';
+import { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa.js';
+export { mts_forced_access_contract } from '../MTSAbstractService/mts-forced-access-contract.oa.js';
+import { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa.js';
+export { acse } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/acse.oa.js';
+import { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa.js';
+export { pData } from '@wildboar/rose/src/lib/modules/Remote-Operations-Realizations/pData.oa.js';
+import { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa.js';
+export { acse_abstract_syntax } from '@wildboar/rose/src/lib/modules/Remote-Operations-Abstract-Syntaxes/acse-abstract-syntax.oa.js';
+import { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa.js';
+export { message_submission_abstract_syntax } from '../MTSAccessProtocol/message-submission-abstract-syntax.oa.js';
+import { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-delivery-abstract-syntax.oa.js';
+export { message_delivery_abstract_syntax } from '../MTSAccessProtocol/message-delivery-abstract-syntax.oa.js';
+import { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa.js';
+export { message_administration_abstract_syntax_94 } from '../MTSAccessProtocol/message-administration-abstract-syntax-94.oa.js';
+import { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa.js';
+export { mts_bind_unbind_abstract_syntax } from '../MTSAccessProtocol/mts-bind-unbind-abstract-syntax.oa.js';
+import { id_ac_mts_forced_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-access-94.va.js';
+export { id_ac_mts_forced_access_94 } from '../MHSProtocolObjectIdentifiers/id-ac-mts-forced-access-94.va.js';
+import { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.js';
+export { APPLICATION_CONTEXT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects-extensions/APPLICATION-CONTEXT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mts_forced_access_94 */
 /**

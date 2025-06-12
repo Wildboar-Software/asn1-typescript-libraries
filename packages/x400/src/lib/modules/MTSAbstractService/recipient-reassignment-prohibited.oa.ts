@@ -69,15 +69,15 @@ import {
     Criticality_for_delivery /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 import {
     RecipientReassignmentProhibited,
     _enum_for_RecipientReassignmentProhibited,
     recipient_reassignment_allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RecipientReassignmentProhibited,
     _encode_RecipientReassignmentProhibited,
-} from '../MTSAbstractService/RecipientReassignmentProhibited.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
+} from '../MTSAbstractService/RecipientReassignmentProhibited.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION recipient_reassignment_prohibited */
 /**

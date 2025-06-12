@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NameBinding,
     _decode_NameBinding,
     _encode_NameBinding,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta.js';
 export {
     NameBinding,
     _decode_NameBinding,
     _encode_NameBinding,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NameBinding.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SupportedNameBindingList */
 /**

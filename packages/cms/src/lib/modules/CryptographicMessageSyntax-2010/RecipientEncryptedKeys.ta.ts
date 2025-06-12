@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     RecipientEncryptedKey,
     _decode_RecipientEncryptedKey,
     _encode_RecipientEncryptedKey,
-} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta.js";
 export {
     RecipientEncryptedKey,
     _decode_RecipientEncryptedKey,
     _encode_RecipientEncryptedKey,
-} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RecipientEncryptedKeys */
 /**

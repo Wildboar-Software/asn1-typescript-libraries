@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { ECWKTAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union0-Intersection0-Element.oa";
-export { ECWKTAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union0-Intersection0-Element.oa";
-import { ECWKTAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union1-Intersection0-Element.oa";
-export { ECWKTAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union1-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { ECWKTAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union0-Intersection0-Element.oa.js";
+export { ECWKTAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union0-Intersection0-Element.oa.js";
+import { ECWKTAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union1-Intersection0-Element.oa.js";
+export { ECWKTAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECWKTAlgorithmSet-Union1-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECWKTAlgorithmSet */

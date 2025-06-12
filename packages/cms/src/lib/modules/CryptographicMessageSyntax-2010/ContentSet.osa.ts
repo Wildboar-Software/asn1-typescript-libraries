@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-import { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa";
-import { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa";
-import { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa";
-import { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa";
-import { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa";
-import { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa";
-export { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa";
-export { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa";
-export { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa";
-export { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa";
-export { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+import { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa.js";
+import { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa.js";
+import { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa.js";
+import { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa.js";
+import { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa.js";
+import { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa.js";
+export { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa.js";
+export { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa.js";
+export { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa.js";
+export { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa.js";
+export { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentSet */
 /**

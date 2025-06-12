@@ -65,217 +65,217 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BindRequest,
   _decode_BindRequest,
   _encode_BindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta.js';
 export {
   BindRequest,
   _decode_BindRequest,
   _encode_BindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta.js';
 import {
   BindResponse,
   _decode_BindResponse,
   _encode_BindResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta.js';
 export {
   BindResponse,
   _decode_BindResponse,
   _encode_BindResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta.js';
 import {
   UnbindRequest,
   _decode_UnbindRequest,
   _encode_UnbindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta.js';
 export {
   UnbindRequest,
   _decode_UnbindRequest,
   _encode_UnbindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta.js';
 import {
   SearchRequest,
   _decode_SearchRequest,
   _encode_SearchRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest.ta.js';
 export {
   SearchRequest,
   _decode_SearchRequest,
   _encode_SearchRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest.ta.js';
 import {
   SearchResultEntry,
   _decode_SearchResultEntry,
   _encode_SearchResultEntry,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.js';
 export {
   SearchResultEntry,
   _decode_SearchResultEntry,
   _encode_SearchResultEntry,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.js';
 import {
   SearchResultDone,
   _decode_SearchResultDone,
   _encode_SearchResultDone,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta.js';
 export {
   SearchResultDone,
   _decode_SearchResultDone,
   _encode_SearchResultDone,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta.js';
 import {
   SearchResultReference,
   _decode_SearchResultReference,
   _encode_SearchResultReference,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta.js';
 export {
   SearchResultReference,
   _decode_SearchResultReference,
   _encode_SearchResultReference,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta.js';
 import {
   ModifyRequest,
   _decode_ModifyRequest,
   _encode_ModifyRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta.js';
 export {
   ModifyRequest,
   _decode_ModifyRequest,
   _encode_ModifyRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta.js';
 import {
   ModifyResponse,
   _decode_ModifyResponse,
   _encode_ModifyResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta.js';
 export {
   ModifyResponse,
   _decode_ModifyResponse,
   _encode_ModifyResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta.js';
 import {
   AddRequest,
   _decode_AddRequest,
   _encode_AddRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta.js';
 export {
   AddRequest,
   _decode_AddRequest,
   _encode_AddRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta.js';
 import {
   AddResponse,
   _decode_AddResponse,
   _encode_AddResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta.js';
 export {
   AddResponse,
   _decode_AddResponse,
   _encode_AddResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta.js';
 import {
   DelRequest,
   _decode_DelRequest,
   _encode_DelRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta.js';
 export {
   DelRequest,
   _decode_DelRequest,
   _encode_DelRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta.js';
 import {
   DelResponse,
   _decode_DelResponse,
   _encode_DelResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta.js';
 export {
   DelResponse,
   _decode_DelResponse,
   _encode_DelResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta.js';
 import {
   ModifyDNRequest,
   _decode_ModifyDNRequest,
   _encode_ModifyDNRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta.js';
 export {
   ModifyDNRequest,
   _decode_ModifyDNRequest,
   _encode_ModifyDNRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta.js';
 import {
   ModifyDNResponse,
   _decode_ModifyDNResponse,
   _encode_ModifyDNResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta.js';
 export {
   ModifyDNResponse,
   _decode_ModifyDNResponse,
   _encode_ModifyDNResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta.js';
 import {
   CompareRequest,
   _decode_CompareRequest,
   _encode_CompareRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta.js';
 export {
   CompareRequest,
   _decode_CompareRequest,
   _encode_CompareRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta.js';
 import {
   CompareResponse,
   _decode_CompareResponse,
   _encode_CompareResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta.js';
 export {
   CompareResponse,
   _decode_CompareResponse,
   _encode_CompareResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta.js';
 import {
   AbandonRequest,
   _decode_AbandonRequest,
   _encode_AbandonRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta.js';
 export {
   AbandonRequest,
   _decode_AbandonRequest,
   _encode_AbandonRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta.js';
 import {
   ExtendedRequest,
   _decode_ExtendedRequest,
   _encode_ExtendedRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta.js';
 export {
   ExtendedRequest,
   _decode_ExtendedRequest,
   _encode_ExtendedRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta.js';
 import {
   ExtendedResponse,
   _decode_ExtendedResponse,
   _encode_ExtendedResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedResponse.ta.js';
 export {
   ExtendedResponse,
   _decode_ExtendedResponse,
   _encode_ExtendedResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedResponse.ta.js';
 import {
   IntermediateResponse,
   _decode_IntermediateResponse,
   _encode_IntermediateResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta.js';
 export {
   IntermediateResponse,
   _decode_IntermediateResponse,
   _encode_IntermediateResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LDAPMessage_protocolOp */
 /**

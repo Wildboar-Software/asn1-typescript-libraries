@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { proi } from '../CommonMgt/proi.va';
-export { proi } from '../CommonMgt/proi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { proi } from '../CommonMgt/proi.va.js';
+export { proi } from '../CommonMgt/proi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION responseCode */
 /**

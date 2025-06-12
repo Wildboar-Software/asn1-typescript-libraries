@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveryReport,
     _decode_DeliveryReport,
     _encode_DeliveryReport,
-} from '../MTSAbstractService/DeliveryReport.ta';
+} from '../MTSAbstractService/DeliveryReport.ta.js';
 export {
     DeliveryReport,
     _decode_DeliveryReport,
     _encode_DeliveryReport,
-} from '../MTSAbstractService/DeliveryReport.ta';
+} from '../MTSAbstractService/DeliveryReport.ta.js';
 import {
     NonDeliveryReport,
     _decode_NonDeliveryReport,
     _encode_NonDeliveryReport,
-} from '../MTSAbstractService/NonDeliveryReport.ta';
+} from '../MTSAbstractService/NonDeliveryReport.ta.js';
 export {
     NonDeliveryReport,
     _decode_NonDeliveryReport,
     _encode_NonDeliveryReport,
-} from '../MTSAbstractService/NonDeliveryReport.ta';
+} from '../MTSAbstractService/NonDeliveryReport.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportType */
 /**

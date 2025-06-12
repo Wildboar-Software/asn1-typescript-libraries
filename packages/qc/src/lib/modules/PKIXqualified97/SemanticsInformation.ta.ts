@@ -5,17 +5,17 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     NameRegistrationAuthorities,
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
-} from "../PKIXqualified97/NameRegistrationAuthorities.ta";
+} from "../PKIXqualified97/NameRegistrationAuthorities.ta.js";
 export {
     NameRegistrationAuthorities,
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
-} from "../PKIXqualified97/NameRegistrationAuthorities.ta";
+} from "../PKIXqualified97/NameRegistrationAuthorities.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SemanticsInformation */
 /**

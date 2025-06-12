@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION AUTO_ACTION_ERROR */
 /**

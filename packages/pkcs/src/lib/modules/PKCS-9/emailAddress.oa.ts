@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { IA5String } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { pkcs_9_at_emailAddress } from "../PKCS-9/pkcs-9-at-emailAddress.va";
-import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { pkcs_9_at_emailAddress } from "../PKCS-9/pkcs-9-at-emailAddress.va.js";
+import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION emailAddress */
 /**

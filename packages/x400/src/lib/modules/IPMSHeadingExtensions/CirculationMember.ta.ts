@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientSpecifier,
     _decode_RecipientSpecifier,
     _encode_RecipientSpecifier,
-} from '../IPMSInformationObjects/RecipientSpecifier.ta';
+} from '../IPMSInformationObjects/RecipientSpecifier.ta.js';
 export {
     RecipientSpecifier,
     _decode_RecipientSpecifier,
     _encode_RecipientSpecifier,
-} from '../IPMSInformationObjects/RecipientSpecifier.ta';
+} from '../IPMSInformationObjects/RecipientSpecifier.ta.js';
 import {
     Checkmark,
     _decode_Checkmark,
     _encode_Checkmark,
-} from '../IPMSHeadingExtensions/Checkmark.ta';
+} from '../IPMSHeadingExtensions/Checkmark.ta.js';
 export {
     Checkmark,
     _decode_Checkmark,
     _encode_Checkmark,
-} from '../IPMSHeadingExtensions/Checkmark.ta';
+} from '../IPMSHeadingExtensions/Checkmark.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CirculationMember */
 /**

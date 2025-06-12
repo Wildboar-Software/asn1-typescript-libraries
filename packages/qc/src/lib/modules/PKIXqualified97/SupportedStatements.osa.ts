@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca";
-import { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa";
-import { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca";
-export { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa";
-export { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa";
+import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.js";
+import { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa.js";
+import { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa.js";
+export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.js";
+export { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa.js";
+export { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportedStatements */
 /**

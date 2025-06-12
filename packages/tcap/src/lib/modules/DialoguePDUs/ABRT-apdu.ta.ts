@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ABRT_source,
     ABRT_source_dialogue_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
     dialogue_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ABRT_source,
     _encode_ABRT_source,
-} from '../DialoguePDUs/ABRT-source.ta';
+} from '../DialoguePDUs/ABRT-source.ta.js';
 export {
     ABRT_source,
     ABRT_source_dialogue_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
     dialogue_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ABRT_source,
     _encode_ABRT_source,
-} from '../DialoguePDUs/ABRT-source.ta';
+} from '../DialoguePDUs/ABRT-source.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ABRT_apdu */
 /**

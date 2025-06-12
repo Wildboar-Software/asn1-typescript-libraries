@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca";
-export { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca";
-import { SupportedEncryptionAlgorithms } from "../ERS/SupportedEncryptionAlgorithms.osa";
-export { SupportedEncryptionAlgorithms } from "../ERS/SupportedEncryptionAlgorithms.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.js";
+export { ENCINFO_TYPE } from "../ERS/ENCINFO-TYPE.oca.js";
+import { SupportedEncryptionAlgorithms } from "../ERS/SupportedEncryptionAlgorithms.osa.js";
+export { SupportedEncryptionAlgorithms } from "../ERS/SupportedEncryptionAlgorithms.osa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION EncryptionInfo */

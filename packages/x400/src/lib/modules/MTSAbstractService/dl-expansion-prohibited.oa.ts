@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 export {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 import {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -86,7 +86,7 @@ import {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 export {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -97,7 +97,7 @@ export {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 import {
     DLExpansionProhibited,
     _enum_for_DLExpansionProhibited,
@@ -106,7 +106,7 @@ import {
     DLExpansionProhibited_dl_expansion_prohibited /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_DLExpansionProhibited,
     _encode_DLExpansionProhibited,
-} from '../MTSAbstractService/DLExpansionProhibited.ta';
+} from '../MTSAbstractService/DLExpansionProhibited.ta.js';
 export {
     DLExpansionProhibited,
     _enum_for_DLExpansionProhibited,
@@ -115,9 +115,9 @@ export {
     DLExpansionProhibited_dl_expansion_prohibited /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_DLExpansionProhibited,
     _encode_DLExpansionProhibited,
-} from '../MTSAbstractService/DLExpansionProhibited.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
+} from '../MTSAbstractService/DLExpansionProhibited.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dl_expansion_prohibited */
 /**

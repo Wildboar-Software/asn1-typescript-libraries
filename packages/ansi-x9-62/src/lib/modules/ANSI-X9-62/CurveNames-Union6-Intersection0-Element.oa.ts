@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { CURVES } from "../ANSI-X9-62/CURVES.oca";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca";
-import { c2tnb191v3 } from "./c2tnb191v3.va";
+import { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
+export { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
+import { c2tnb191v3 } from "./c2tnb191v3.va.js";
 
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union6_Intersection0_Element */
 /**

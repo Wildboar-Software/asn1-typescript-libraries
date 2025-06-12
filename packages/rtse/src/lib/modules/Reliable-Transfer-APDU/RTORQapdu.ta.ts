@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RTORQapdu_dialogueMode,
   RTORQapdu_dialogueMode_monologue /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
   twa /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RTORQapdu_dialogueMode,
   _encode_RTORQapdu_dialogueMode,
-} from '../Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta';
+} from '../Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta.js';
 export {
   RTORQapdu_dialogueMode,
   RTORQapdu_dialogueMode_monologue /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,17 +83,17 @@ export {
   twa /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RTORQapdu_dialogueMode,
   _encode_RTORQapdu_dialogueMode,
-} from '../Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta';
+} from '../Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta.js';
 import {
   ConnectionData,
   _decode_ConnectionData,
   _encode_ConnectionData,
-} from '../Reliable-Transfer-APDU/ConnectionData.ta';
+} from '../Reliable-Transfer-APDU/ConnectionData.ta.js';
 export {
   ConnectionData,
   _decode_ConnectionData,
   _encode_ConnectionData,
-} from '../Reliable-Transfer-APDU/ConnectionData.ta';
+} from '../Reliable-Transfer-APDU/ConnectionData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RTORQapdu */
 /**

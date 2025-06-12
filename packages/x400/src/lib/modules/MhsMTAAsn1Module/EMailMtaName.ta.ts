@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 export {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 import {
     GenericName,
     _decode_GenericName,
     _encode_GenericName,
-} from '../MhsMTAAsn1Module/GenericName.ta';
+} from '../MhsMTAAsn1Module/GenericName.ta.js';
 export {
     GenericName,
     _decode_GenericName,
     _encode_GenericName,
-} from '../MhsMTAAsn1Module/GenericName.ta';
+} from '../MhsMTAAsn1Module/GenericName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailMtaName */
 /**

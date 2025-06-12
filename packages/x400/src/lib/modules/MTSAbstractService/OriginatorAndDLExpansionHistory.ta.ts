@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OriginatorAndDLExpansion,
     _decode_OriginatorAndDLExpansion,
     _encode_OriginatorAndDLExpansion,
-} from '../MTSAbstractService/OriginatorAndDLExpansion.ta';
+} from '../MTSAbstractService/OriginatorAndDLExpansion.ta.js';
 export {
     OriginatorAndDLExpansion,
     _decode_OriginatorAndDLExpansion,
     _encode_OriginatorAndDLExpansion,
-} from '../MTSAbstractService/OriginatorAndDLExpansion.ta';
+} from '../MTSAbstractService/OriginatorAndDLExpansion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OriginatorAndDLExpansionHistory */
 /**

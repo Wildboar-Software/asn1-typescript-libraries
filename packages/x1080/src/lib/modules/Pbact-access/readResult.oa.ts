@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReadResult,
     _decode_ReadResult,
     _encode_ReadResult,
-} from '../Pbact-access/ReadResult.ta';
+} from '../Pbact-access/ReadResult.ta.js';
 export {
     ReadResult,
     _decode_ReadResult,
     _encode_ReadResult,
-} from '../Pbact-access/ReadResult.ta';
-import { id_readResult } from '../Pbact-access/id-readResult.va';
-export { id_readResult } from '../Pbact-access/id-readResult.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../Pbact-access/ReadResult.ta.js';
+import { id_readResult } from '../Pbact-access/id-readResult.va.js';
+export { id_readResult } from '../Pbact-access/id-readResult.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION readResult */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js';
 export {
     CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/CMISFilter.ta.js';
 import {
     FilterItem,
     _decode_FilterItem,
     _encode_FilterItem,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.js';
 export {
     FilterItem,
     _decode_FilterItem,
     _encode_FilterItem,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/FilterItem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION scanningFilterDefault */
 /**

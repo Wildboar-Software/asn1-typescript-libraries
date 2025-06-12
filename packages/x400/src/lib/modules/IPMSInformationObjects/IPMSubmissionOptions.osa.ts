@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-import { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa';
-export { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa';
-import { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa';
-export { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa';
-import { originator_forwarded_content_token } from '../IPMSInformationObjects/originator-forwarded-content-token.oa';
-export { originator_forwarded_content_token } from '../IPMSInformationObjects/originator-forwarded-content-token.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+import { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa.js';
+export { ipm_assembly_instructions } from '../IPMSInformationObjects/ipm-assembly-instructions.oa.js';
+import { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa.js';
+export { originator_body_part_encryption_token } from '../IPMSInformationObjects/originator-body-part-encryption-token.oa.js';
+import { originator_forwarded_content_token } from '../IPMSInformationObjects/originator-forwarded-content-token.oa.js';
+export { originator_forwarded_content_token } from '../IPMSInformationObjects/originator-forwarded-content-token.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMSubmissionOptions */
 /**

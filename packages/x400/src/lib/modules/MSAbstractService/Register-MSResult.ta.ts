@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Register_MSResult_registered_information,
     _decode_Register_MSResult_registered_information,
     _encode_Register_MSResult_registered_information,
-} from '../MSAbstractService/Register-MSResult-registered-information.ta';
+} from '../MSAbstractService/Register-MSResult-registered-information.ta.js';
 export {
     Register_MSResult_registered_information,
     _decode_Register_MSResult_registered_information,
     _encode_Register_MSResult_registered_information,
-} from '../MSAbstractService/Register-MSResult-registered-information.ta';
+} from '../MSAbstractService/Register-MSResult-registered-information.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Register_MSResult */
 /**

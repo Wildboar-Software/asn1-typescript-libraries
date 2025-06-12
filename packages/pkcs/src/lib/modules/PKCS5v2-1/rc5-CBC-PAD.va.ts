@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va";
-export { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va";
+import { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va.js";
+export { encryptionAlgorithm } from "../PKCS5v2-1/encryptionAlgorithm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION rc5_CBC_PAD */
 /**

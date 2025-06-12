@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../TestCategories-ASN1Module/DataType.ta';
+} from '../TestCategories-ASN1Module/DataType.ta.js';
 export {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../TestCategories-ASN1Module/DataType.ta';
+} from '../TestCategories-ASN1Module/DataType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PatternType */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FetchRestrictionProblem,
     FetchRestrictionProblem_content_type_problem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     maximum_length_problem /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FetchRestrictionProblem,
     _encode_FetchRestrictionProblem,
-} from '../MSAbstractService/FetchRestrictionProblem.ta';
+} from '../MSAbstractService/FetchRestrictionProblem.ta.js';
 export {
     FetchRestrictionProblem,
     FetchRestrictionProblem_content_type_problem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,17 +87,17 @@ export {
     maximum_length_problem /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FetchRestrictionProblem,
     _encode_FetchRestrictionProblem,
-} from '../MSAbstractService/FetchRestrictionProblem.ta';
+} from '../MSAbstractService/FetchRestrictionProblem.ta.js';
 import {
     fetch_restriction_error_ParameterType_problems_Item_restriction,
     _decode_fetch_restriction_error_ParameterType_problems_Item_restriction,
     _encode_fetch_restriction_error_ParameterType_problems_Item_restriction,
-} from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta';
+} from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta.js';
 export {
     fetch_restriction_error_ParameterType_problems_Item_restriction,
     _decode_fetch_restriction_error_ParameterType_problems_Item_restriction,
     _encode_fetch_restriction_error_ParameterType_problems_Item_restriction,
-} from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta';
+} from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType_problems_Item */
 /**

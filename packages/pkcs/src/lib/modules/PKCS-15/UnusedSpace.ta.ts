@@ -4,29 +4,29 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessControlRule,
     _decode_AccessControlRule,
     _encode_AccessControlRule,
-} from "../PKCS-15/AccessControlRule.ta";
+} from "../PKCS-15/AccessControlRule.ta.js";
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
-import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+} from "../PKCS-15/Identifier.ta.js";
+import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 export {
     AccessControlRule,
     _decode_AccessControlRule,
     _encode_AccessControlRule,
-} from "../PKCS-15/AccessControlRule.ta";
+} from "../PKCS-15/AccessControlRule.ta.js";
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from "../PKCS-15/Identifier.ta";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+} from "../PKCS-15/Identifier.ta.js";
+export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION UnusedSpace */
 /**

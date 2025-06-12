@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PredefinedBiometricType,
     _decode_PredefinedBiometricType,
     _encode_PredefinedBiometricType,
-} from "../PKIXqualified97/PredefinedBiometricType.ta";
+} from "../PKIXqualified97/PredefinedBiometricType.ta.js";
 export {
     handwritten_signature /* IMPORTED_SHORT_NAMED_INTEGER */,
     picture /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -14,7 +14,7 @@ export {
     PredefinedBiometricType_picture /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_PredefinedBiometricType,
     _encode_PredefinedBiometricType,
-} from "../PKIXqualified97/PredefinedBiometricType.ta";
+} from "../PKIXqualified97/PredefinedBiometricType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TypeOfBiometricData */
 /**

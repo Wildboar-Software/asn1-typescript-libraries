@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ROS,
   _decode_ROS,
   _encode_ROS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ROS.ta.js';
 import {
     ReturnResult,
     _decode_ReturnResult,
     _encode_ReturnResult,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Component */
 /**

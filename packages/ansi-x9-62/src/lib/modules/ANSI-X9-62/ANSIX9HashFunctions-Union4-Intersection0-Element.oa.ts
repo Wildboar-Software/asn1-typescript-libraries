@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { id_SHA256 } from "../ANSI-X9-62/id-SHA256.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union4_Intersection0_Element */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     PointToMultipoint_toTps_Item,
     _decode_PointToMultipoint_toTps_Item,
     _encode_PointToMultipoint_toTps_Item,
-} from '../ASN1DefinedTypesModule/PointToMultipoint-toTps-Item.ta';
+} from '../ASN1DefinedTypesModule/PointToMultipoint-toTps-Item.ta.js';
 export {
     PointToMultipoint_toTps_Item,
     _decode_PointToMultipoint_toTps_Item,
     _encode_PointToMultipoint_toTps_Item,
-} from '../ASN1DefinedTypesModule/PointToMultipoint-toTps-Item.ta';
+} from '../ASN1DefinedTypesModule/PointToMultipoint-toTps-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PointToMultipoint */
 /**

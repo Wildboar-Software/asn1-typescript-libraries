@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NNUAMSBasicCodeField,
     NNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     security_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUAMSBasicCodeField,
     _encode_NNUAMSBasicCodeField,
-} from '../EDIMSInformationObjects/NNUAMSBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNUAMSBasicCodeField.ta.js';
 export {
     NNUAMSBasicCodeField,
     NNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,7 +103,7 @@ export {
     security_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUAMSBasicCodeField,
     _encode_NNUAMSBasicCodeField,
-} from '../EDIMSInformationObjects/NNUAMSBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNUAMSBasicCodeField.ta.js';
 import {
     NNUAMSDiagnosticField,
     NNUAMSDiagnosticField_protocol_violation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -178,7 +178,7 @@ import {
     compression_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUAMSDiagnosticField,
     _encode_NNUAMSDiagnosticField,
-} from '../EDIMSInformationObjects/NNUAMSDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNUAMSDiagnosticField.ta.js';
 export {
     NNUAMSDiagnosticField,
     NNUAMSDiagnosticField_protocol_violation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -253,7 +253,7 @@ export {
     compression_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUAMSDiagnosticField,
     _encode_NNUAMSDiagnosticField,
-} from '../EDIMSInformationObjects/NNUAMSDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNUAMSDiagnosticField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NNUAMSReasonCodeField */
 /**

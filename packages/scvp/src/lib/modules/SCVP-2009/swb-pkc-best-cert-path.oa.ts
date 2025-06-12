@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 export {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
-import { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va';
-export { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
+} from '../SCVP-2009/CertBundle.ta.js';
+import { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va.js';
+export { id_swb_pkc_best_cert_path } from '../SCVP-2009/id-swb-pkc-best-cert-path.va.js';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION swb_pkc_best_cert_path */
 /**

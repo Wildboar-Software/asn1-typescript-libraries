@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ForwardedContentToken,
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
-} from '../IPMSSecurityExtensions/ForwardedContentToken.ta';
+} from '../IPMSSecurityExtensions/ForwardedContentToken.ta.js';
 export {
     ForwardedContentToken,
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
-} from '../IPMSSecurityExtensions/ForwardedContentToken.ta';
-import { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va';
-export { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../IPMSSecurityExtensions/ForwardedContentToken.ta.js';
+import { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va.js';
+export { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION originator_forwarded_content_token */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIMessages,
   _decode_PKIMessages,
   _encode_PKIMessages,
-} from '../PKIXCMP-2009/PKIMessages.ta';
+} from '../PKIXCMP-2009/PKIMessages.ta.js';
 export {
   PKIMessages,
   _decode_PKIMessages,
   _encode_PKIMessages,
-} from '../PKIXCMP-2009/PKIMessages.ta';
+} from '../PKIXCMP-2009/PKIMessages.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NestedMessageContent */
 /**

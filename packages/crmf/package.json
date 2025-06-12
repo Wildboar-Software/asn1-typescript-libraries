@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/crmf",
-    "version": "1.0.3",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Certificate Request Message Syntax in TypeScript",
     "keywords": [
         "crmf",
@@ -31,6 +32,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.49"
+        "@wildboar/x500": "2.x.x"
     }
 }

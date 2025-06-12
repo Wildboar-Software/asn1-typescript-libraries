@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekDayTranslationList_Item,
     _decode_WeekDayTranslationList_Item,
     _encode_WeekDayTranslationList_Item,
-} from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta';
+} from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta.js';
 export {
     WeekDayTranslationList_Item,
     _decode_WeekDayTranslationList_Item,
     _encode_WeekDayTranslationList_Item,
-} from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta';
+} from '../Schedulerev1-ASN1Module/WeekDayTranslationList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION WeekDayTranslationList */
 /**

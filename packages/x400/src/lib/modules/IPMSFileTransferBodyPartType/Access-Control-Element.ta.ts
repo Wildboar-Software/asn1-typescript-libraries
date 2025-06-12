@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Access_Request,
     Access_Request_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -86,7 +86,7 @@ import {
     delete_object /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Access_Request,
     _encode_Access_Request,
-} from '../IPMSFileTransferBodyPartType/Access-Request.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Request.ta.js';
 export {
     Access_Request,
     Access_Request_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -107,47 +107,47 @@ export {
     delete_object /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Access_Request,
     _encode_Access_Request,
-} from '../IPMSFileTransferBodyPartType/Access-Request.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Request.ta.js';
 import {
     Concurrency_Access,
     _decode_Concurrency_Access,
     _encode_Concurrency_Access,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Concurrency-Access.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Concurrency-Access.ta.js';
 export {
     Concurrency_Access,
     _decode_Concurrency_Access,
     _encode_Concurrency_Access,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Concurrency-Access.ta';
+} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Concurrency-Access.ta.js';
 import {
     User_Identity,
     _decode_User_Identity,
     _encode_User_Identity,
-} from '../IPMSFileTransferBodyPartType/User-Identity.ta';
+} from '../IPMSFileTransferBodyPartType/User-Identity.ta.js';
 export {
     User_Identity,
     _decode_User_Identity,
     _encode_User_Identity,
-} from '../IPMSFileTransferBodyPartType/User-Identity.ta';
+} from '../IPMSFileTransferBodyPartType/User-Identity.ta.js';
 import {
     Access_Passwords,
     _decode_Access_Passwords,
     _encode_Access_Passwords,
-} from '../IPMSFileTransferBodyPartType/Access-Passwords.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Passwords.ta.js';
 export {
     Access_Passwords,
     _decode_Access_Passwords,
     _encode_Access_Passwords,
-} from '../IPMSFileTransferBodyPartType/Access-Passwords.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Passwords.ta.js';
 import {
     Application_Entity_Title,
     _decode_Application_Entity_Title,
     _encode_Application_Entity_Title,
-} from '../IPMSFileTransferBodyPartType/Application-Entity-Title.ta';
+} from '../IPMSFileTransferBodyPartType/Application-Entity-Title.ta.js';
 export {
     Application_Entity_Title,
     _decode_Application_Entity_Title,
     _encode_Application_Entity_Title,
-} from '../IPMSFileTransferBodyPartType/Application-Entity-Title.ta';
+} from '../IPMSFileTransferBodyPartType/Application-Entity-Title.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Control_Element */
 /**

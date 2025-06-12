@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca";
+import { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va.js";
 import {
     RC2CBCParameter,
     _decode_RC2CBCParameter,
     _encode_RC2CBCParameter,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2CBCParameter.ta";
-export { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2CBCParameter.ta.js";
+export { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -27,14 +27,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va.js";
 export {
     RC2CBCParameter,
     _decode_RC2CBCParameter,
     _encode_RC2CBCParameter,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2CBCParameter.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2CBCParameter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION cea_RC2_cbc */
 /**

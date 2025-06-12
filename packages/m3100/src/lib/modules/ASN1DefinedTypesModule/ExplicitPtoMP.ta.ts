@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExplicitTP,
     _decode_ExplicitTP,
     _encode_ExplicitTP,
-} from '../ASN1DefinedTypesModule/ExplicitTP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitTP.ta.js';
 export {
     ExplicitTP,
     _decode_ExplicitTP,
     _encode_ExplicitTP,
-} from '../ASN1DefinedTypesModule/ExplicitTP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitTP.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExplicitPtoMP */
 /**

@@ -65,12 +65,12 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta";
-export { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.js";
+export { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION OtherHashAlgAndValue */

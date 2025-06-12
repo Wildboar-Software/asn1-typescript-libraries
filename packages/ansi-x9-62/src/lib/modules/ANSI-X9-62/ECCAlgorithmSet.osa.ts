@@ -1,27 +1,27 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { ECCAlgorithmSet_Union0_Intersection0_Element } from "./ECCAlgorithmSet-Union0-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union1_Intersection0_Element } from "./ECCAlgorithmSet-Union1-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union2_Intersection0_Element } from "./ECCAlgorithmSet-Union2-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union3_Intersection0_Element } from "./ECCAlgorithmSet-Union3-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union4_Intersection0_Element } from "./ECCAlgorithmSet-Union4-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union5_Intersection0_Element } from "./ECCAlgorithmSet-Union5-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union6_Intersection0_Element } from "./ECCAlgorithmSet-Union6-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union7_Intersection0_Element } from "./ECCAlgorithmSet-Union7-Intersection0-Element.oa";
-import { ECCAlgorithmSet_Union8_Intersection0_Element } from "./ECCAlgorithmSet-Union8-Intersection0-Element.oa";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va";
-export { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va";
-export { ecdsa_with_Sha224 } from "../ANSI-X9-62/ecdsa-with-Sha224.va";
-export { ecdsa_with_Sha256 } from "../ANSI-X9-62/ecdsa-with-Sha256.va";
-export { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va";
-export { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va";
-export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { ECCAlgorithmSet_Union0_Intersection0_Element } from "./ECCAlgorithmSet-Union0-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union1_Intersection0_Element } from "./ECCAlgorithmSet-Union1-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union2_Intersection0_Element } from "./ECCAlgorithmSet-Union2-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union3_Intersection0_Element } from "./ECCAlgorithmSet-Union3-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union4_Intersection0_Element } from "./ECCAlgorithmSet-Union4-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union5_Intersection0_Element } from "./ECCAlgorithmSet-Union5-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union6_Intersection0_Element } from "./ECCAlgorithmSet-Union6-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union7_Intersection0_Element } from "./ECCAlgorithmSet-Union7-Intersection0-Element.oa.js";
+import { ECCAlgorithmSet_Union8_Intersection0_Element } from "./ECCAlgorithmSet-Union8-Intersection0-Element.oa.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va.js";
+export { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.js";
+export { ecdsa_with_Sha224 } from "../ANSI-X9-62/ecdsa-with-Sha224.va.js";
+export { ecdsa_with_Sha256 } from "../ANSI-X9-62/ecdsa-with-Sha256.va.js";
+export { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.js";
+export { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.js";
+export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta";
+} from "../ANSI-X9-62/HashAlgorithm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IsdnNumber,
     _decode_IsdnNumber,
     _encode_IsdnNumber,
-} from '../TCAP-Examples/IsdnNumber.ta';
+} from '../TCAP-Examples/IsdnNumber.ta.js';
 export {
     IsdnNumber,
     _decode_IsdnNumber,
     _encode_IsdnNumber,
-} from '../TCAP-Examples/IsdnNumber.ta';
+} from '../TCAP-Examples/IsdnNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CallingPartyAddress */
 /**

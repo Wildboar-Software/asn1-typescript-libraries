@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TroubleFound,
     _decode_TroubleFound,
     _encode_TroubleFound,
-} from '../X790ASN1Module/TroubleFound.ta';
+} from '../X790ASN1Module/TroubleFound.ta.js';
 export {
     TroubleFound,
     _decode_TroubleFound,
     _encode_TroubleFound,
-} from '../X790ASN1Module/TroubleFound.ta';
+} from '../X790ASN1Module/TroubleFound.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION troubleFoundTroubleFoundInitial */
 /**

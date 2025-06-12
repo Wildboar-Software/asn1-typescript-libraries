@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
-export { Schemes } from "../ANSI-X9-42/Schemes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
+export { Schemes } from "../ANSI-X9-42/Schemes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SchemeIdentifier */
 /**

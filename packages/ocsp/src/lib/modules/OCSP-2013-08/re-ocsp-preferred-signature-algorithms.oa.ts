@@ -1,11 +1,11 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
-import { id_pkix_ocsp_pref_sig_algs } from "../OCSP-2013-08/id-pkix-ocsp-pref-sig-algs.va";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.js";
+import { id_pkix_ocsp_pref_sig_algs } from "../OCSP-2013-08/id-pkix-ocsp-pref-sig-algs.va.js";
 import {
     PreferredSignatureAlgorithms,
     _decode_PreferredSignatureAlgorithms,
     _encode_PreferredSignatureAlgorithms,
-} from "../OCSP-2013-08/PreferredSignatureAlgorithms.ta";
+} from "../OCSP-2013-08/PreferredSignatureAlgorithms.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION re_ocsp_preferred_signature_algorithms */
 /**

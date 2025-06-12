@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Any_sub_type,
   Any_sub_type_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -82,7 +82,7 @@ import {
   little_finger /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Any_sub_type,
   _encode_Any_sub_type,
-} from '../CBEFF-DATA-ELEMENTS/Any-sub-type.ta';
+} from '../CBEFF-DATA-ELEMENTS/Any-sub-type.ta.js';
 export {
   Any_sub_type,
   Any_sub_type_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -99,7 +99,7 @@ export {
   little_finger /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Any_sub_type,
   _encode_Any_sub_type,
-} from '../CBEFF-DATA-ELEMENTS/Any-sub-type.ta';
+} from '../CBEFF-DATA-ELEMENTS/Any-sub-type.ta.js';
 import {
   Vein_only,
   Vein_only_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -116,7 +116,7 @@ import {
   reserved2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Vein_only,
   _encode_Vein_only,
-} from '../CBEFF-DATA-ELEMENTS/Vein-only.ta';
+} from '../CBEFF-DATA-ELEMENTS/Vein-only.ta.js';
 export {
   Vein_only,
   Vein_only_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -133,7 +133,7 @@ export {
   reserved2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Vein_only,
   _encode_Vein_only,
-} from '../CBEFF-DATA-ELEMENTS/Vein-only.ta';
+} from '../CBEFF-DATA-ELEMENTS/Vein-only.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BiometricSubtype */
 /**

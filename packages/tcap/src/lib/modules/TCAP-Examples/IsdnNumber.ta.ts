@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TypeOfAddress,
     _enum_for_TypeOfAddress,
     _decode_TypeOfAddress,
     _encode_TypeOfAddress,
-} from '../TCAP-Examples/TypeOfAddress.ta';
+} from '../TCAP-Examples/TypeOfAddress.ta.js';
 import {
     TelephonyString,
     _decode_TelephonyString,
     _encode_TelephonyString,
-} from '../TCAP-Examples/TelephonyString.ta';
+} from '../TCAP-Examples/TelephonyString.ta.js';
 export {
     TelephonyString,
     _decode_TelephonyString,
     _encode_TelephonyString,
-} from '../TCAP-Examples/TelephonyString.ta';
+} from '../TCAP-Examples/TelephonyString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IsdnNumber */
 /**

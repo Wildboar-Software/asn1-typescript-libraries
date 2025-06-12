@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va";
-export { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va";
+import { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va.js";
+export { id_publicKeyType } from "../ANSI-X9-62/id-publicKeyType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ecPublicKey */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubmissionError,
     SubmissionError_submission_control_violated /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -90,7 +90,7 @@ import {
     remote_bind_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SubmissionError,
     _encode_SubmissionError,
-} from '../MhsAcctAsn1Module/SubmissionError.ta';
+} from '../MhsAcctAsn1Module/SubmissionError.ta.js';
 export {
     SubmissionError,
     SubmissionError_submission_control_violated /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,7 +115,7 @@ export {
     remote_bind_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SubmissionError,
     _encode_SubmissionError,
-} from '../MhsAcctAsn1Module/SubmissionError.ta';
+} from '../MhsAcctAsn1Module/SubmissionError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubmissionControlErrors */
 /**

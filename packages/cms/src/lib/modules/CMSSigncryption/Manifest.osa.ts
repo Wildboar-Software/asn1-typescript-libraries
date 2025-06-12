@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca";
-import { xPathManifest } from "../CMSSigncryption/xPathManifest.oa";
-export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca";
-export { xPathManifest } from "../CMSSigncryption/xPathManifest.oa";
+import { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.js";
+import { xPathManifest } from "../CMSSigncryption/xPathManifest.oa.js";
+export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.js";
+export { xPathManifest } from "../CMSSigncryption/xPathManifest.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION Manifest */
 /**

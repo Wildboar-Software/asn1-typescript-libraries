@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtensionORAddressComponents,
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
-} from '../MTSAbstractService/ExtensionORAddressComponents.ta';
+} from '../MTSAbstractService/ExtensionORAddressComponents.ta.js';
 export {
     ExtensionORAddressComponents,
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
-} from '../MTSAbstractService/ExtensionORAddressComponents.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/ExtensionORAddressComponents.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION extension_OR_address_components */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MTABindArgument_authenticated,
     _decode_MTABindArgument_authenticated,
     _encode_MTABindArgument_authenticated,
-} from '../MTAAbstractService/MTABindArgument-authenticated.ta';
+} from '../MTAAbstractService/MTABindArgument-authenticated.ta.js';
 export {
     MTABindArgument_authenticated,
     _decode_MTABindArgument_authenticated,
     _encode_MTABindArgument_authenticated,
-} from '../MTAAbstractService/MTABindArgument-authenticated.ta';
+} from '../MTAAbstractService/MTABindArgument-authenticated.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MTABindArgument */
 /**

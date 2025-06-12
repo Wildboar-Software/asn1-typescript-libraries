@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AttributeCertificate,
   _decode_AttributeCertificate,
   _encode_AttributeCertificate,
-} from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta';
+} from '@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js';
 import {
   SCVPCertID,
   _decode_SCVPCertID,
   _encode_SCVPCertID,
-} from '../SCVP-2009/SCVPCertID.ta';
+} from '../SCVP-2009/SCVPCertID.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ACReference */
 /**

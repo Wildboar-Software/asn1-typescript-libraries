@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-import { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+import { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va.js";
 import {
     DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
-} from "../PKIXAlgs-2009/DHPublicKey.ta";
+} from "../PKIXAlgs-2009/DHPublicKey.ta.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -26,14 +26,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va.js";
 export {
     DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
-} from "../PKIXAlgs-2009/DHPublicKey.ta";
+} from "../PKIXAlgs-2009/DHPublicKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pk_originator_dh */
 /**

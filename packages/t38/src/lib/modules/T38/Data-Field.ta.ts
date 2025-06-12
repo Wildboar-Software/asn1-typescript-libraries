@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Data_Field_Item,
   _decode_Data_Field_Item,
   _encode_Data_Field_Item,
-} from '../T38/Data-Field-Item.ta';
+} from '../T38/Data-Field-Item.ta.js';
 export {
   Data_Field_Item,
   _decode_Data_Field_Item,
   _encode_Data_Field_Item,
-} from '../T38/Data-Field-Item.ta';
+} from '../T38/Data-Field-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Data_Field */
 /**

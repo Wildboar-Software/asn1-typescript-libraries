@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DTEAddress_numberingPlanId,
     _enum_for_DTEAddress_numberingPlanId,
@@ -77,7 +77,7 @@ import {
     e164 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DTEAddress_numberingPlanId,
     _encode_DTEAddress_numberingPlanId,
-} from '../NLM/DTEAddress-numberingPlanId.ta';
+} from '../NLM/DTEAddress-numberingPlanId.ta.js';
 export {
     DTEAddress_numberingPlanId,
     _enum_for_DTEAddress_numberingPlanId,
@@ -89,7 +89,7 @@ export {
     e164 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DTEAddress_numberingPlanId,
     _encode_DTEAddress_numberingPlanId,
-} from '../NLM/DTEAddress-numberingPlanId.ta';
+} from '../NLM/DTEAddress-numberingPlanId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DTEAddress */
 /**

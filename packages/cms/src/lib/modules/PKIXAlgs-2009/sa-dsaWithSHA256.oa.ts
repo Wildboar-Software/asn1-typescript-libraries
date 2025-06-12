@@ -1,19 +1,19 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-import { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+import { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa.js";
 import {
     DSA_Sig_Value,
     _decode_DSA_Sig_Value,
     _encode_DSA_Sig_Value,
-} from "../PKIXAlgs-2009/DSA-Sig-Value.ta";
-import { dsa_with_sha256 } from "../PKIXAlgs-2009/dsa-with-sha256.va";
-import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca";
+} from "../PKIXAlgs-2009/DSA-Sig-Value.ta.js";
+import { dsa_with_sha256 } from "../PKIXAlgs-2009/dsa-with-sha256.va.js";
+import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.js";
+export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -31,18 +31,18 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { mda_sha256 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mda-sha256.oa.js";
 export {
     DSA_Sig_Value,
     _decode_DSA_Sig_Value,
     _encode_DSA_Sig_Value,
-} from "../PKIXAlgs-2009/DSA-Sig-Value.ta";
-export { dsa_with_sha256 } from "../PKIXAlgs-2009/dsa-with-sha256.va";
-export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa";
+} from "../PKIXAlgs-2009/DSA-Sig-Value.ta.js";
+export { dsa_with_sha256 } from "../PKIXAlgs-2009/dsa-with-sha256.va.js";
+export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION sa_dsaWithSHA256 */
 /**

@@ -4,23 +4,23 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/HASH.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/HASH.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/DigestAlgorithmIdentifier.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DigestedData */
 /**

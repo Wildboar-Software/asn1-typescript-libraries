@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AttributeCertificateIdentifier, _decode_AttributeCertificateIdentifier, _encode_AttributeCertificateIdentifier } from "../PlatformCertificateProfile/AttributeCertificateIdentifier.ta";
-export { AttributeCertificateIdentifier, _decode_AttributeCertificateIdentifier, _encode_AttributeCertificateIdentifier } from "../PlatformCertificateProfile/AttributeCertificateIdentifier.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AttributeCertificateIdentifier, _decode_AttributeCertificateIdentifier, _encode_AttributeCertificateIdentifier } from "../PlatformCertificateProfile/AttributeCertificateIdentifier.ta.js";
+export { AttributeCertificateIdentifier, _decode_AttributeCertificateIdentifier, _encode_AttributeCertificateIdentifier } from "../PlatformCertificateProfile/AttributeCertificateIdentifier.ta.js";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/IssuerSerial.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CertificateIdentifier */

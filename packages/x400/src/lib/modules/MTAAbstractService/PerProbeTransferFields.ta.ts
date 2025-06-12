@@ -65,107 +65,107 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbeIdentifier,
     _decode_ProbeIdentifier,
     _encode_ProbeIdentifier,
-} from '../MTAAbstractService/ProbeIdentifier.ta';
+} from '../MTAAbstractService/ProbeIdentifier.ta.js';
 export {
     ProbeIdentifier,
     _decode_ProbeIdentifier,
     _encode_ProbeIdentifier,
-} from '../MTAAbstractService/ProbeIdentifier.ta';
+} from '../MTAAbstractService/ProbeIdentifier.ta.js';
 import {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTAAbstractService/OriginatorName.ta';
+} from '../MTAAbstractService/OriginatorName.ta.js';
 export {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTAAbstractService/OriginatorName.ta';
+} from '../MTAAbstractService/OriginatorName.ta.js';
 import {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 export {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 import {
     PerDomainBilateralInformation,
     _decode_PerDomainBilateralInformation,
     _encode_PerDomainBilateralInformation,
-} from '../MTAAbstractService/PerDomainBilateralInformation.ta';
+} from '../MTAAbstractService/PerDomainBilateralInformation.ta.js';
 export {
     PerDomainBilateralInformation,
     _decode_PerDomainBilateralInformation,
     _encode_PerDomainBilateralInformation,
-} from '../MTAAbstractService/PerDomainBilateralInformation.ta';
+} from '../MTAAbstractService/PerDomainBilateralInformation.ta.js';
 import {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from '../MTAAbstractService/TraceInformation.ta';
+} from '../MTAAbstractService/TraceInformation.ta.js';
 export {
     TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
-} from '../MTAAbstractService/TraceInformation.ta';
+} from '../MTAAbstractService/TraceInformation.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerProbeTransferFields */
 /**

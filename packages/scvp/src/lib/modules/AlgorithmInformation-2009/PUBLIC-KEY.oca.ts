@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { KeyUsage } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -20,7 +20,7 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PUBLIC_KEY */
 /**

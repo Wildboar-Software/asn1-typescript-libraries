@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { Scrypt_params, _decode_Scrypt_params, _encode_Scrypt_params } from "../Scrypt-0/Scrypt-params.ta";
-import { id_scrypt } from "../Scrypt-0/id-scrypt.va";
-import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
+import { Scrypt_params, _decode_Scrypt_params, _encode_Scrypt_params } from "../Scrypt-0/Scrypt-params.ta.js";
+import { id_scrypt } from "../Scrypt-0/id-scrypt.va.js";
+import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION scrypt */

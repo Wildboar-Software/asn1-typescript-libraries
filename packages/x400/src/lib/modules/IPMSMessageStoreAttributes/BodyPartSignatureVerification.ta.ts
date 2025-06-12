@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartSignatureVerification_Item,
     _decode_BodyPartSignatureVerification_Item,
     _encode_BodyPartSignatureVerification_Item,
-} from '../IPMSMessageStoreAttributes/BodyPartSignatureVerification-Item.ta';
+} from '../IPMSMessageStoreAttributes/BodyPartSignatureVerification-Item.ta.js';
 export {
     BodyPartSignatureVerification_Item,
     _decode_BodyPartSignatureVerification_Item,
     _encode_BodyPartSignatureVerification_Item,
-} from '../IPMSMessageStoreAttributes/BodyPartSignatureVerification-Item.ta';
+} from '../IPMSMessageStoreAttributes/BodyPartSignatureVerification-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartSignatureVerification */
 /**

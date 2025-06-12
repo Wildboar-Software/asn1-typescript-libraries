@@ -65,65 +65,65 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     RegisterArgument,
     _decode_RegisterArgument,
     _encode_RegisterArgument,
-} from '../MTSAbstractService/RegisterArgument.ta';
+} from '../MTSAbstractService/RegisterArgument.ta.js';
 export {
     RegisterArgument,
     _decode_RegisterArgument,
     _encode_RegisterArgument,
-} from '../MTSAbstractService/RegisterArgument.ta';
+} from '../MTSAbstractService/RegisterArgument.ta.js';
 import {
     RegisterResult,
     _decode_RegisterResult,
     _encode_RegisterResult,
-} from '../MTSAbstractService/RegisterResult.ta';
+} from '../MTSAbstractService/RegisterResult.ta.js';
 export {
     RegisterResult,
     _decode_RegisterResult,
     _encode_RegisterResult,
-} from '../MTSAbstractService/RegisterResult.ta';
-import { register_rejected } from '../MTSAbstractService/register-rejected.oa';
-export { register_rejected } from '../MTSAbstractService/register-rejected.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { operation_refused } from '../MTSAbstractService/operation-refused.oa';
-export { operation_refused } from '../MTSAbstractService/operation-refused.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_register } from '../MTSAccessProtocol/op-register.va';
-export { op_register } from '../MTSAccessProtocol/op-register.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MTSAbstractService/RegisterResult.ta.js';
+import { register_rejected } from '../MTSAbstractService/register-rejected.oa.js';
+export { register_rejected } from '../MTSAbstractService/register-rejected.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { operation_refused } from '../MTSAbstractService/operation-refused.oa.js';
+export { operation_refused } from '../MTSAbstractService/operation-refused.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_register } from '../MTSAccessProtocol/op-register.va.js';
+export { op_register } from '../MTSAccessProtocol/op-register.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION register */
 /**

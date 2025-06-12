@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_sha384 } from "../SEC1-v1-9/id-sha384.va";
-export { id_sha384 } from "../SEC1-v1-9/id-sha384.va";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_sha384 } from "../SEC1-v1-9/id-sha384.va.js";
+export { id_sha384 } from "../SEC1-v1-9/id-sha384.va.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION HashFunctions_Union3_Intersection0_Element */

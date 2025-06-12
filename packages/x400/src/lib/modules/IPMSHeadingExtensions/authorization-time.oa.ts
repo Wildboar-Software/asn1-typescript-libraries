@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
-} from '../IPMSHeadingExtensions/AuthorizationTime.ta';
+} from '../IPMSHeadingExtensions/AuthorizationTime.ta.js';
 export {
     AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
-} from '../IPMSHeadingExtensions/AuthorizationTime.ta';
-import { id_hex_authorization_time } from '../IPMSObjectIdentifiers/id-hex-authorization-time.va';
-export { id_hex_authorization_time } from '../IPMSObjectIdentifiers/id-hex-authorization-time.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/AuthorizationTime.ta.js';
+import { id_hex_authorization_time } from '../IPMSObjectIdentifiers/id-hex-authorization-time.va.js';
+export { id_hex_authorization_time } from '../IPMSObjectIdentifiers/id-hex-authorization-time.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION authorization_time */
 /**

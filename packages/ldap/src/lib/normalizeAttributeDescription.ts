@@ -1,5 +1,5 @@
-import type { AttributeDescription } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta";
-import bytesToAscii from "./utils/bytesToAscii";
+import type { AttributeDescription } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.js";
+import bytesToAscii from "./utils/bytesToAscii.js";
 
 const SEMI_COLON: number = ";".charCodeAt(0);
 

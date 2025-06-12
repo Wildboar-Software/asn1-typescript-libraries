@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     POPOPrivKey,
     _decode_POPOPrivKey,
     _encode_POPOPrivKey,
-} from "../PKIXCRMF-2009/POPOPrivKey.ta";
+} from "../PKIXCRMF-2009/POPOPrivKey.ta.js";
 import {
     POPOSigningKey,
     _decode_POPOSigningKey,
     _encode_POPOSigningKey,
-} from "../PKIXCRMF-2009/POPOSigningKey.ta";
+} from "../PKIXCRMF-2009/POPOSigningKey.ta.js";
 export {
     POPOPrivKey,
     _decode_POPOPrivKey,
     _encode_POPOPrivKey,
-} from "../PKIXCRMF-2009/POPOPrivKey.ta";
+} from "../PKIXCRMF-2009/POPOPrivKey.ta.js";
 export {
     POPOSigningKey,
     _decode_POPOSigningKey,
     _encode_POPOSigningKey,
-} from "../PKIXCRMF-2009/POPOSigningKey.ta";
+} from "../PKIXCRMF-2009/POPOSigningKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ProofOfPossession */
 /**

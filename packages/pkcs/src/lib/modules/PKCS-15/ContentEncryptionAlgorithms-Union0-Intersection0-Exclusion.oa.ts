@@ -1,7 +1,7 @@
 import type { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.js";
 
 /**
  * ### ASN.1 Definition

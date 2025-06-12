@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca';
-export { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-import { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa';
-export { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa';
-import { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va';
-export { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va';
-import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca';
-export { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.js';
+export { ROS_OBJECT_CLASS } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.js';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+import { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa.js';
+export { edims_access_contract } from '../EDIMSFunctionalObjects/edims-access-contract.oa.js';
+import { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va.js';
+export { id_ot_edimg_user } from '../EDIMSObjectIdentifiers/id-ot-edimg-user.va.js';
+import { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.js';
+export { MHS_OBJECT } from '../MTSAbstractService/MHS-OBJECT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION edimg_user */
 /**

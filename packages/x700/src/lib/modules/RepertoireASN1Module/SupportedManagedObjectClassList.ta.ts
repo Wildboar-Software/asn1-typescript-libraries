@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
-} from '../RepertoireASN1Module/GdmoObjectClass.ta';
+} from '../RepertoireASN1Module/GdmoObjectClass.ta.js';
 export {
     GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
-} from '../RepertoireASN1Module/GdmoObjectClass.ta';
+} from '../RepertoireASN1Module/GdmoObjectClass.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SupportedManagedObjectClassList */
 /**

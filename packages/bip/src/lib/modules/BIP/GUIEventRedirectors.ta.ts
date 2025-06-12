@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GUIEventRedirector,
   _decode_GUIEventRedirector,
   _encode_GUIEventRedirector,
-} from '../BIP/GUIEventRedirector.ta';
+} from '../BIP/GUIEventRedirector.ta.js';
 export {
   GUIEventRedirector,
   _decode_GUIEventRedirector,
   _encode_GUIEventRedirector,
-} from '../BIP/GUIEventRedirector.ta';
+} from '../BIP/GUIEventRedirector.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GUIEventRedirectors */
 /**

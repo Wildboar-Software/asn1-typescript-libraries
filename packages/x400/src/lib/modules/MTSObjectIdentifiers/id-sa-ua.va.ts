@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta';
-export { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta';
-import { id_sa } from '../MTSObjectIdentifiers/id-sa.va';
-export { id_sa } from '../MTSObjectIdentifiers/id-sa.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.js';
+export { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.js';
+import { id_sa } from '../MTSObjectIdentifiers/id-sa.va.js';
+export { id_sa } from '../MTSObjectIdentifiers/id-sa.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_sa_ua */
 /**

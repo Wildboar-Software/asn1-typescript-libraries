@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifier.oa';
-export { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifier.oa';
-import { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa';
-export { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa';
-import { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va';
-export { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifier.oa.js';
+export { mHSTerminalIdentifier } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifier.oa.js';
+import { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa.js';
+export { mHSTerminalIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSTerminalIdentifierAttribute.oa.js';
+import { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va.js';
+export { id_nf_mhs_terminal_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-terminal-identifier.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSTerminalIdentifierNameForm */
 /**

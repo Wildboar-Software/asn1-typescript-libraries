@@ -65,327 +65,327 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_CHANGE_PREFIX_request,
   _decode_F_CHANGE_PREFIX_request,
   _encode_F_CHANGE_PREFIX_request,
-} from '../ISO8571-FTAM/F-CHANGE-PREFIX-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-PREFIX-request.ta.js';
 export {
   F_CHANGE_PREFIX_request,
   _decode_F_CHANGE_PREFIX_request,
   _encode_F_CHANGE_PREFIX_request,
-} from '../ISO8571-FTAM/F-CHANGE-PREFIX-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-PREFIX-request.ta.js';
 import {
   F_CHANGE_PREFIX_response,
   _decode_F_CHANGE_PREFIX_response,
   _encode_F_CHANGE_PREFIX_response,
-} from '../ISO8571-FTAM/F-CHANGE-PREFIX-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-PREFIX-response.ta.js';
 export {
   F_CHANGE_PREFIX_response,
   _decode_F_CHANGE_PREFIX_response,
   _encode_F_CHANGE_PREFIX_response,
-} from '../ISO8571-FTAM/F-CHANGE-PREFIX-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-PREFIX-response.ta.js';
 import {
   F_LIST_request,
   _decode_F_LIST_request,
   _encode_F_LIST_request,
-} from '../ISO8571-FTAM/F-LIST-request.ta';
+} from '../ISO8571-FTAM/F-LIST-request.ta.js';
 export {
   F_LIST_request,
   _decode_F_LIST_request,
   _encode_F_LIST_request,
-} from '../ISO8571-FTAM/F-LIST-request.ta';
+} from '../ISO8571-FTAM/F-LIST-request.ta.js';
 import {
   F_LIST_response,
   _decode_F_LIST_response,
   _encode_F_LIST_response,
-} from '../ISO8571-FTAM/F-LIST-response.ta';
+} from '../ISO8571-FTAM/F-LIST-response.ta.js';
 export {
   F_LIST_response,
   _decode_F_LIST_response,
   _encode_F_LIST_response,
-} from '../ISO8571-FTAM/F-LIST-response.ta';
+} from '../ISO8571-FTAM/F-LIST-response.ta.js';
 import {
   F_GROUP_SELECT_request,
   _decode_F_GROUP_SELECT_request,
   _encode_F_GROUP_SELECT_request,
-} from '../ISO8571-FTAM/F-GROUP-SELECT-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-SELECT-request.ta.js';
 export {
   F_GROUP_SELECT_request,
   _decode_F_GROUP_SELECT_request,
   _encode_F_GROUP_SELECT_request,
-} from '../ISO8571-FTAM/F-GROUP-SELECT-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-SELECT-request.ta.js';
 import {
   F_GROUP_SELECT_response,
   _decode_F_GROUP_SELECT_response,
   _encode_F_GROUP_SELECT_response,
-} from '../ISO8571-FTAM/F-GROUP-SELECT-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-SELECT-response.ta.js';
 export {
   F_GROUP_SELECT_response,
   _decode_F_GROUP_SELECT_response,
   _encode_F_GROUP_SELECT_response,
-} from '../ISO8571-FTAM/F-GROUP-SELECT-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-SELECT-response.ta.js';
 import {
   F_GROUP_DELETE_request,
   _decode_F_GROUP_DELETE_request,
   _encode_F_GROUP_DELETE_request,
-} from '../ISO8571-FTAM/F-GROUP-DELETE-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-DELETE-request.ta.js';
 export {
   F_GROUP_DELETE_request,
   _decode_F_GROUP_DELETE_request,
   _encode_F_GROUP_DELETE_request,
-} from '../ISO8571-FTAM/F-GROUP-DELETE-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-DELETE-request.ta.js';
 import {
   F_GROUP_DELETE_response,
   _decode_F_GROUP_DELETE_response,
   _encode_F_GROUP_DELETE_response,
-} from '../ISO8571-FTAM/F-GROUP-DELETE-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-DELETE-response.ta.js';
 export {
   F_GROUP_DELETE_response,
   _decode_F_GROUP_DELETE_response,
   _encode_F_GROUP_DELETE_response,
-} from '../ISO8571-FTAM/F-GROUP-DELETE-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-DELETE-response.ta.js';
 import {
   F_GROUP_MOVE_request,
   _decode_F_GROUP_MOVE_request,
   _encode_F_GROUP_MOVE_request,
-} from '../ISO8571-FTAM/F-GROUP-MOVE-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-MOVE-request.ta.js';
 export {
   F_GROUP_MOVE_request,
   _decode_F_GROUP_MOVE_request,
   _encode_F_GROUP_MOVE_request,
-} from '../ISO8571-FTAM/F-GROUP-MOVE-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-MOVE-request.ta.js';
 import {
   F_GROUP_MOVE_response,
   _decode_F_GROUP_MOVE_response,
   _encode_F_GROUP_MOVE_response,
-} from '../ISO8571-FTAM/F-GROUP-MOVE-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-MOVE-response.ta.js';
 export {
   F_GROUP_MOVE_response,
   _decode_F_GROUP_MOVE_response,
   _encode_F_GROUP_MOVE_response,
-} from '../ISO8571-FTAM/F-GROUP-MOVE-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-MOVE-response.ta.js';
 import {
   F_GROUP_COPY_request,
   _decode_F_GROUP_COPY_request,
   _encode_F_GROUP_COPY_request,
-} from '../ISO8571-FTAM/F-GROUP-COPY-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-COPY-request.ta.js';
 export {
   F_GROUP_COPY_request,
   _decode_F_GROUP_COPY_request,
   _encode_F_GROUP_COPY_request,
-} from '../ISO8571-FTAM/F-GROUP-COPY-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-COPY-request.ta.js';
 import {
   F_GROUP_COPY_response,
   _decode_F_GROUP_COPY_response,
   _encode_F_GROUP_COPY_response,
-} from '../ISO8571-FTAM/F-GROUP-COPY-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-COPY-response.ta.js';
 export {
   F_GROUP_COPY_response,
   _decode_F_GROUP_COPY_response,
   _encode_F_GROUP_COPY_response,
-} from '../ISO8571-FTAM/F-GROUP-COPY-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-COPY-response.ta.js';
 import {
   F_GROUP_LIST_request,
   _decode_F_GROUP_LIST_request,
   _encode_F_GROUP_LIST_request,
-} from '../ISO8571-FTAM/F-GROUP-LIST-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-LIST-request.ta.js';
 export {
   F_GROUP_LIST_request,
   _decode_F_GROUP_LIST_request,
   _encode_F_GROUP_LIST_request,
-} from '../ISO8571-FTAM/F-GROUP-LIST-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-LIST-request.ta.js';
 import {
   F_GROUP_LIST_response,
   _decode_F_GROUP_LIST_response,
   _encode_F_GROUP_LIST_response,
-} from '../ISO8571-FTAM/F-GROUP-LIST-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-LIST-response.ta.js';
 export {
   F_GROUP_LIST_response,
   _decode_F_GROUP_LIST_response,
   _encode_F_GROUP_LIST_response,
-} from '../ISO8571-FTAM/F-GROUP-LIST-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-LIST-response.ta.js';
 import {
   F_GROUP_CHANGE_ATTRIB_request,
   _decode_F_GROUP_CHANGE_ATTRIB_request,
   _encode_F_GROUP_CHANGE_ATTRIB_request,
-} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-request.ta.js';
 export {
   F_GROUP_CHANGE_ATTRIB_request,
   _decode_F_GROUP_CHANGE_ATTRIB_request,
   _encode_F_GROUP_CHANGE_ATTRIB_request,
-} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-request.ta.js';
 import {
   F_GROUP_CHANGE_ATTRIB_response,
   _decode_F_GROUP_CHANGE_ATTRIB_response,
   _encode_F_GROUP_CHANGE_ATTRIB_response,
-} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-response.ta.js';
 export {
   F_GROUP_CHANGE_ATTRIB_response,
   _decode_F_GROUP_CHANGE_ATTRIB_response,
   _encode_F_GROUP_CHANGE_ATTRIB_response,
-} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-GROUP-CHANGE-ATTRIB-response.ta.js';
 import {
   F_SELECT_ANOTHER_request,
   _decode_F_SELECT_ANOTHER_request,
   _encode_F_SELECT_ANOTHER_request,
-} from '../ISO8571-FTAM/F-SELECT-ANOTHER-request.ta';
+} from '../ISO8571-FTAM/F-SELECT-ANOTHER-request.ta.js';
 export {
   F_SELECT_ANOTHER_request,
   _decode_F_SELECT_ANOTHER_request,
   _encode_F_SELECT_ANOTHER_request,
-} from '../ISO8571-FTAM/F-SELECT-ANOTHER-request.ta';
+} from '../ISO8571-FTAM/F-SELECT-ANOTHER-request.ta.js';
 import {
   F_SELECT_ANOTHER_response,
   _decode_F_SELECT_ANOTHER_response,
   _encode_F_SELECT_ANOTHER_response,
-} from '../ISO8571-FTAM/F-SELECT-ANOTHER-response.ta';
+} from '../ISO8571-FTAM/F-SELECT-ANOTHER-response.ta.js';
 export {
   F_SELECT_ANOTHER_response,
   _decode_F_SELECT_ANOTHER_response,
   _encode_F_SELECT_ANOTHER_response,
-} from '../ISO8571-FTAM/F-SELECT-ANOTHER-response.ta';
+} from '../ISO8571-FTAM/F-SELECT-ANOTHER-response.ta.js';
 import {
   F_CREATE_DIRECTORY_request,
   _decode_F_CREATE_DIRECTORY_request,
   _encode_F_CREATE_DIRECTORY_request,
-} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-request.ta';
+} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-request.ta.js';
 export {
   F_CREATE_DIRECTORY_request,
   _decode_F_CREATE_DIRECTORY_request,
   _encode_F_CREATE_DIRECTORY_request,
-} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-request.ta';
+} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-request.ta.js';
 import {
   F_CREATE_DIRECTORY_response,
   _decode_F_CREATE_DIRECTORY_response,
   _encode_F_CREATE_DIRECTORY_response,
-} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-response.ta';
+} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-response.ta.js';
 export {
   F_CREATE_DIRECTORY_response,
   _decode_F_CREATE_DIRECTORY_response,
   _encode_F_CREATE_DIRECTORY_response,
-} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-response.ta';
+} from '../ISO8571-FTAM/F-CREATE-DIRECTORY-response.ta.js';
 import {
   F_LINK_request,
   _decode_F_LINK_request,
   _encode_F_LINK_request,
-} from '../ISO8571-FTAM/F-LINK-request.ta';
+} from '../ISO8571-FTAM/F-LINK-request.ta.js';
 export {
   F_LINK_request,
   _decode_F_LINK_request,
   _encode_F_LINK_request,
-} from '../ISO8571-FTAM/F-LINK-request.ta';
+} from '../ISO8571-FTAM/F-LINK-request.ta.js';
 import {
   F_LINK_response,
   _decode_F_LINK_response,
   _encode_F_LINK_response,
-} from '../ISO8571-FTAM/F-LINK-response.ta';
+} from '../ISO8571-FTAM/F-LINK-response.ta.js';
 export {
   F_LINK_response,
   _decode_F_LINK_response,
   _encode_F_LINK_response,
-} from '../ISO8571-FTAM/F-LINK-response.ta';
+} from '../ISO8571-FTAM/F-LINK-response.ta.js';
 import {
   F_UNLINK_request,
   _decode_F_UNLINK_request,
   _encode_F_UNLINK_request,
-} from '../ISO8571-FTAM/F-UNLINK-request.ta';
+} from '../ISO8571-FTAM/F-UNLINK-request.ta.js';
 export {
   F_UNLINK_request,
   _decode_F_UNLINK_request,
   _encode_F_UNLINK_request,
-} from '../ISO8571-FTAM/F-UNLINK-request.ta';
+} from '../ISO8571-FTAM/F-UNLINK-request.ta.js';
 import {
   F_UNLINK_response,
   _decode_F_UNLINK_response,
   _encode_F_UNLINK_response,
-} from '../ISO8571-FTAM/F-UNLINK-response.ta';
+} from '../ISO8571-FTAM/F-UNLINK-response.ta.js';
 export {
   F_UNLINK_response,
   _decode_F_UNLINK_response,
   _encode_F_UNLINK_response,
-} from '../ISO8571-FTAM/F-UNLINK-response.ta';
+} from '../ISO8571-FTAM/F-UNLINK-response.ta.js';
 import {
   F_READ_LINK_ATTRIB_request,
   _decode_F_READ_LINK_ATTRIB_request,
   _encode_F_READ_LINK_ATTRIB_request,
-} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-request.ta.js';
 export {
   F_READ_LINK_ATTRIB_request,
   _decode_F_READ_LINK_ATTRIB_request,
   _encode_F_READ_LINK_ATTRIB_request,
-} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-request.ta.js';
 import {
   F_READ_LINK_ATTRIB_response,
   _decode_F_READ_LINK_ATTRIB_response,
   _encode_F_READ_LINK_ATTRIB_response,
-} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-response.ta.js';
 export {
   F_READ_LINK_ATTRIB_response,
   _decode_F_READ_LINK_ATTRIB_response,
   _encode_F_READ_LINK_ATTRIB_response,
-} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-READ-LINK-ATTRIB-response.ta.js';
 import {
   F_CHANGE_LINK_ATTRIB_request,
   _decode_F_CHANGE_LINK_ATTRIB_request,
   _encode_F_CHANGE_LINK_ATTRIB_request,
-} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-request.ta.js';
 export {
   F_CHANGE_LINK_ATTRIB_request,
   _decode_F_CHANGE_LINK_ATTRIB_request,
   _encode_F_CHANGE_LINK_ATTRIB_request,
-} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-request.ta';
+} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-request.ta.js';
 import {
   F_CHANGE_LINK_ATTRIB_response,
   _decode_F_CHANGE_LINK_ATTRIB_response,
   _encode_F_CHANGE_LINK_ATTRIB_response,
-} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-response.ta.js';
 export {
   F_CHANGE_LINK_ATTRIB_response,
   _decode_F_CHANGE_LINK_ATTRIB_response,
   _encode_F_CHANGE_LINK_ATTRIB_response,
-} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-response.ta';
+} from '../ISO8571-FTAM/F-CHANGE-LINK-ATTRIB-response.ta.js';
 import {
   F_MOVE_request,
   _decode_F_MOVE_request,
   _encode_F_MOVE_request,
-} from '../ISO8571-FTAM/F-MOVE-request.ta';
+} from '../ISO8571-FTAM/F-MOVE-request.ta.js';
 export {
   F_MOVE_request,
   _decode_F_MOVE_request,
   _encode_F_MOVE_request,
-} from '../ISO8571-FTAM/F-MOVE-request.ta';
+} from '../ISO8571-FTAM/F-MOVE-request.ta.js';
 import {
   F_MOVE_response,
   _decode_F_MOVE_response,
   _encode_F_MOVE_response,
-} from '../ISO8571-FTAM/F-MOVE-response.ta';
+} from '../ISO8571-FTAM/F-MOVE-response.ta.js';
 export {
   F_MOVE_response,
   _decode_F_MOVE_response,
   _encode_F_MOVE_response,
-} from '../ISO8571-FTAM/F-MOVE-response.ta';
+} from '../ISO8571-FTAM/F-MOVE-response.ta.js';
 import {
   F_COPY_request,
   _decode_F_COPY_request,
   _encode_F_COPY_request,
-} from '../ISO8571-FTAM/F-COPY-request.ta';
+} from '../ISO8571-FTAM/F-COPY-request.ta.js';
 export {
   F_COPY_request,
   _decode_F_COPY_request,
   _encode_F_COPY_request,
-} from '../ISO8571-FTAM/F-COPY-request.ta';
+} from '../ISO8571-FTAM/F-COPY-request.ta.js';
 import {
   F_COPY_response,
   _decode_F_COPY_response,
   _encode_F_COPY_response,
-} from '../ISO8571-FTAM/F-COPY-response.ta';
+} from '../ISO8571-FTAM/F-COPY-response.ta.js';
 export {
   F_COPY_response,
   _decode_F_COPY_response,
   _encode_F_COPY_response,
-} from '../ISO8571-FTAM/F-COPY-response.ta';
+} from '../ISO8571-FTAM/F-COPY-response.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FSM_PDU */
 /**

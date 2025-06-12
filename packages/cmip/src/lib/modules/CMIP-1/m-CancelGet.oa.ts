@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
   InvokeIDType,
   _decode_InvokeIDType,
   _encode_InvokeIDType,
-} from '../CMIP-1/InvokeIDType.ta';
+} from '../CMIP-1/InvokeIDType.ta.js';
 export {
   InvokeIDType,
   _decode_InvokeIDType,
   _encode_InvokeIDType,
-} from '../CMIP-1/InvokeIDType.ta';
-import { mistypedOperation } from '../CMIP-1/mistypedOperation.oa';
-export { mistypedOperation } from '../CMIP-1/mistypedOperation.oa';
-import { noSuchInvokeId } from '../CMIP-1/noSuchInvokeId.oa';
-export { noSuchInvokeId } from '../CMIP-1/noSuchInvokeId.oa';
-import { processingFailure } from '../CMIP-1/processingFailure.oa';
-export { processingFailure } from '../CMIP-1/processingFailure.oa';
+} from '../CMIP-1/InvokeIDType.ta.js';
+import { mistypedOperation } from '../CMIP-1/mistypedOperation.oa.js';
+export { mistypedOperation } from '../CMIP-1/mistypedOperation.oa.js';
+import { noSuchInvokeId } from '../CMIP-1/noSuchInvokeId.oa.js';
+export { noSuchInvokeId } from '../CMIP-1/noSuchInvokeId.oa.js';
+import { processingFailure } from '../CMIP-1/processingFailure.oa.js';
+export { processingFailure } from '../CMIP-1/processingFailure.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION m_CancelGet */
 /**

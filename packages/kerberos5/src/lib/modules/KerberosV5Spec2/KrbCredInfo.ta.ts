@@ -65,67 +65,67 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   EncryptionKey,
   _decode_EncryptionKey,
   _encode_EncryptionKey,
-} from '../KerberosV5Spec2/EncryptionKey.ta';
+} from '../KerberosV5Spec2/EncryptionKey.ta.js';
 export {
   EncryptionKey,
   _decode_EncryptionKey,
   _encode_EncryptionKey,
-} from '../KerberosV5Spec2/EncryptionKey.ta';
+} from '../KerberosV5Spec2/EncryptionKey.ta.js';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   TicketFlags,
   _decode_TicketFlags,
   _encode_TicketFlags,
-} from '../KerberosV5Spec2/TicketFlags.ta';
+} from '../KerberosV5Spec2/TicketFlags.ta.js';
 export {
   TicketFlags,
   _decode_TicketFlags,
   _encode_TicketFlags,
-} from '../KerberosV5Spec2/TicketFlags.ta';
+} from '../KerberosV5Spec2/TicketFlags.ta.js';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
-} from '../KerberosV5Spec2/HostAddresses.ta';
+} from '../KerberosV5Spec2/HostAddresses.ta.js';
 export {
   HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
-} from '../KerberosV5Spec2/HostAddresses.ta';
+} from '../KerberosV5Spec2/HostAddresses.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KrbCredInfo */
 /**

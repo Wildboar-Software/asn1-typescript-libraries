@@ -65,97 +65,97 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Pathname_Pattern,
   _decode_Pathname_Pattern,
   _encode_Pathname_Pattern,
-} from '../ISO8571-FTAM/Pathname-Pattern.ta';
+} from '../ISO8571-FTAM/Pathname-Pattern.ta.js';
 export {
   Pathname_Pattern,
   _decode_Pathname_Pattern,
   _encode_Pathname_Pattern,
-} from '../ISO8571-FTAM/Pathname-Pattern.ta';
+} from '../ISO8571-FTAM/Pathname-Pattern.ta.js';
 import {
   Integer_Pattern,
   _decode_Integer_Pattern,
   _encode_Integer_Pattern,
-} from '../ISO8571-FTAM/Integer-Pattern.ta';
+} from '../ISO8571-FTAM/Integer-Pattern.ta.js';
 export {
   Integer_Pattern,
   _decode_Integer_Pattern,
   _encode_Integer_Pattern,
-} from '../ISO8571-FTAM/Integer-Pattern.ta';
+} from '../ISO8571-FTAM/Integer-Pattern.ta.js';
 import {
   Bitstring_Pattern,
   _decode_Bitstring_Pattern,
   _encode_Bitstring_Pattern,
-} from '../ISO8571-FTAM/Bitstring-Pattern.ta';
+} from '../ISO8571-FTAM/Bitstring-Pattern.ta.js';
 export {
   Bitstring_Pattern,
   _decode_Bitstring_Pattern,
   _encode_Bitstring_Pattern,
-} from '../ISO8571-FTAM/Bitstring-Pattern.ta';
+} from '../ISO8571-FTAM/Bitstring-Pattern.ta.js';
 import {
   Contents_Type_Pattern,
   _decode_Contents_Type_Pattern,
   _encode_Contents_Type_Pattern,
-} from '../ISO8571-FTAM/Contents-Type-Pattern.ta';
+} from '../ISO8571-FTAM/Contents-Type-Pattern.ta.js';
 export {
   Contents_Type_Pattern,
   _decode_Contents_Type_Pattern,
   _encode_Contents_Type_Pattern,
-} from '../ISO8571-FTAM/Contents-Type-Pattern.ta';
+} from '../ISO8571-FTAM/Contents-Type-Pattern.ta.js';
 import {
   String_Pattern,
   _decode_String_Pattern,
   _encode_String_Pattern,
-} from '../ISO8571-FTAM/String-Pattern.ta';
+} from '../ISO8571-FTAM/String-Pattern.ta.js';
 export {
   String_Pattern,
   _decode_String_Pattern,
   _encode_String_Pattern,
-} from '../ISO8571-FTAM/String-Pattern.ta';
+} from '../ISO8571-FTAM/String-Pattern.ta.js';
 import {
   Date_and_Time_Pattern,
   _decode_Date_and_Time_Pattern,
   _encode_Date_and_Time_Pattern,
-} from '../ISO8571-FTAM/Date-and-Time-Pattern.ta';
+} from '../ISO8571-FTAM/Date-and-Time-Pattern.ta.js';
 export {
   Date_and_Time_Pattern,
   _decode_Date_and_Time_Pattern,
   _encode_Date_and_Time_Pattern,
-} from '../ISO8571-FTAM/Date-and-Time-Pattern.ta';
+} from '../ISO8571-FTAM/Date-and-Time-Pattern.ta.js';
 import {
   User_Identity_Pattern,
   _decode_User_Identity_Pattern,
   _encode_User_Identity_Pattern,
-} from '../ISO8571-FTAM/User-Identity-Pattern.ta';
+} from '../ISO8571-FTAM/User-Identity-Pattern.ta.js';
 export {
   User_Identity_Pattern,
   _decode_User_Identity_Pattern,
   _encode_User_Identity_Pattern,
-} from '../ISO8571-FTAM/User-Identity-Pattern.ta';
+} from '../ISO8571-FTAM/User-Identity-Pattern.ta.js';
 import {
   Boolean_Pattern,
   _decode_Boolean_Pattern,
   _encode_Boolean_Pattern,
-} from '../ISO8571-FTAM/Boolean-Pattern.ta';
+} from '../ISO8571-FTAM/Boolean-Pattern.ta.js';
 export {
   Boolean_Pattern,
   _decode_Boolean_Pattern,
   _encode_Boolean_Pattern,
-} from '../ISO8571-FTAM/Boolean-Pattern.ta';
+} from '../ISO8571-FTAM/Boolean-Pattern.ta.js';
 import {
   Attribute_Extensions_Pattern,
   _decode_Attribute_Extensions_Pattern,
   _encode_Attribute_Extensions_Pattern,
-} from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.js';
 export {
   Attribute_Extensions_Pattern,
   _decode_Attribute_Extensions_Pattern,
   _encode_Attribute_Extensions_Pattern,
-} from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AND_Set_Item */
 /**

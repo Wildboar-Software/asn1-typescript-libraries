@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 export {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 import {
     EDIMIdentifier,
     _decode_EDIMIdentifier,
     _encode_EDIMIdentifier,
-} from '../EDIMSInformationObjects/EDIMIdentifier.ta';
+} from '../EDIMSInformationObjects/EDIMIdentifier.ta.js';
 export {
     EDIMIdentifier,
     _decode_EDIMIdentifier,
     _encode_EDIMIdentifier,
-} from '../EDIMSInformationObjects/EDIMIdentifier.ta';
+} from '../EDIMSInformationObjects/EDIMIdentifier.ta.js';
 import {
     FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
-} from '../EDIMSInformationObjects/FirstRecipientField.ta';
+} from '../EDIMSInformationObjects/FirstRecipientField.ta.js';
 export {
     FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
-} from '../EDIMSInformationObjects/FirstRecipientField.ta';
+} from '../EDIMSInformationObjects/FirstRecipientField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDINReceiverField */
 /**

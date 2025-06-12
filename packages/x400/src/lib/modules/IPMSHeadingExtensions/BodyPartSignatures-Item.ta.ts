@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
-} from '../IPMSHeadingExtensions/BodyPartNumber.ta';
+} from '../IPMSHeadingExtensions/BodyPartNumber.ta.js';
 export {
     BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
-} from '../IPMSHeadingExtensions/BodyPartNumber.ta';
+} from '../IPMSHeadingExtensions/BodyPartNumber.ta.js';
 import {
     BodyPartSignature,
     _decode_BodyPartSignature,
     _encode_BodyPartSignature,
-} from '../IPMSHeadingExtensions/BodyPartSignature.ta';
+} from '../IPMSHeadingExtensions/BodyPartSignature.ta.js';
 export {
     BodyPartSignature,
     _decode_BodyPartSignature,
     _encode_BodyPartSignature,
-} from '../IPMSHeadingExtensions/BodyPartSignature.ta';
+} from '../IPMSHeadingExtensions/BodyPartSignature.ta.js';
 import {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 export {
     CertificateAssertion,
     _decode_CertificateAssertion,
     _encode_CertificateAssertion,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/CertificateAssertion.ta.js';
 import {
     ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
-} from '../MTSAbstractService/ExtendedCertificates.ta';
+} from '../MTSAbstractService/ExtendedCertificates.ta.js';
 export {
     ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
-} from '../MTSAbstractService/ExtendedCertificates.ta';
+} from '../MTSAbstractService/ExtendedCertificates.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartSignatures_Item */
 /**

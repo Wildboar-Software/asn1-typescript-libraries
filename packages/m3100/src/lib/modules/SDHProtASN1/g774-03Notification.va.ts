@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { sdhProt } from '../SDHProtASN1/sdhProt.va';
-export { sdhProt } from '../SDHProtASN1/sdhProt.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { sdhProt } from '../SDHProtASN1/sdhProt.va.js';
+export { sdhProt } from '../SDHProtASN1/sdhProt.va.js';
 
 /* START_OF_SYMBOL_DEFINITION g774_03Notification */
 /**

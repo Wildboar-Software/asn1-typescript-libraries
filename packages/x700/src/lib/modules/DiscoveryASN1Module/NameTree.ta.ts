@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RDNInfo,
     _decode_RDNInfo,
     _encode_RDNInfo,
-} from '../DiscoveryASN1Module/RDNInfo.ta';
+} from '../DiscoveryASN1Module/RDNInfo.ta.js';
 export {
     RDNInfo,
     _decode_RDNInfo,
     _encode_RDNInfo,
-} from '../DiscoveryASN1Module/RDNInfo.ta';
+} from '../DiscoveryASN1Module/RDNInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NameTree */
 // TODO: CHECK_RECURSIVE_DEFINITION

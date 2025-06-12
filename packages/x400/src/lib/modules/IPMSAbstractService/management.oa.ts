@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.oa';
-export { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.oa';
-import { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa';
-export { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa';
-import { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa';
-export { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa';
-import { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va';
-export { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.oa.js';
+export { change_auto_discard } from '../IPMSAbstractService/change-auto-discard.oa.js';
+import { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa.js';
+export { change_auto_acknowledgment } from '../IPMSAbstractService/change-auto-acknowledgment.oa.js';
+import { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa.js';
+export { change_auto_forwarding } from '../IPMSAbstractService/change-auto-forwarding.oa.js';
+import { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va.js';
+export { id_pt_management } from '../IPMSObjectIdentifiers/id-pt-management.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION management */
 /**

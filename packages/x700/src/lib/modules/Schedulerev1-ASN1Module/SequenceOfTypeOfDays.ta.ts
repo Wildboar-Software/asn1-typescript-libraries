@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TypeOfDaysMaskWps,
     _decode_TypeOfDaysMaskWps,
     _encode_TypeOfDaysMaskWps,
-} from '../Schedulerev1-ASN1Module/TypeOfDaysMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDaysMaskWps.ta.js';
 export {
     TypeOfDaysMaskWps,
     _decode_TypeOfDaysMaskWps,
     _encode_TypeOfDaysMaskWps,
-} from '../Schedulerev1-ASN1Module/TypeOfDaysMaskWps.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDaysMaskWps.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SequenceOfTypeOfDays */
 /**

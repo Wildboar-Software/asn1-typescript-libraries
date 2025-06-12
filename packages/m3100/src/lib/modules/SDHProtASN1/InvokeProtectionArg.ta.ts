@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SwitchType,
     _enum_for_SwitchType,
@@ -77,7 +77,7 @@ import {
     lockout /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchType,
     _encode_SwitchType,
-} from '../SDHProtASN1/SwitchType.ta';
+} from '../SDHProtASN1/SwitchType.ta.js';
 export {
     SwitchType,
     _enum_for_SwitchType,
@@ -89,27 +89,27 @@ export {
     lockout /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchType,
     _encode_SwitchType,
-} from '../SDHProtASN1/SwitchType.ta';
+} from '../SDHProtASN1/SwitchType.ta.js';
 import {
     ProtectionEntity,
     _decode_ProtectionEntity,
     _encode_ProtectionEntity,
-} from '../SDHProtASN1/ProtectionEntity.ta';
+} from '../SDHProtASN1/ProtectionEntity.ta.js';
 export {
     ProtectionEntity,
     _decode_ProtectionEntity,
     _encode_ProtectionEntity,
-} from '../SDHProtASN1/ProtectionEntity.ta';
+} from '../SDHProtASN1/ProtectionEntity.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InvokeProtectionArg */
 /**

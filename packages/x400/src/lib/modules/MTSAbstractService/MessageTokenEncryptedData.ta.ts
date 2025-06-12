@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
-} from '../MTSAbstractService/EncryptionKey.ta';
+} from '../MTSAbstractService/EncryptionKey.ta.js';
 export {
     EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
-} from '../MTSAbstractService/EncryptionKey.ta';
+} from '../MTSAbstractService/EncryptionKey.ta.js';
 import {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 export {
     ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
-} from '../MTSAbstractService/ContentIntegrityCheck.ta';
+} from '../MTSAbstractService/ContentIntegrityCheck.ta.js';
 import {
     MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
-} from '../MTSAbstractService/MessageSecurityLabel.ta';
+} from '../MTSAbstractService/MessageSecurityLabel.ta.js';
 export {
     MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
-} from '../MTSAbstractService/MessageSecurityLabel.ta';
+} from '../MTSAbstractService/MessageSecurityLabel.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageTokenEncryptedData */
 /**

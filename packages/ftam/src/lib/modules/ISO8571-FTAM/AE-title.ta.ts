@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ISO8571-FTAM/AP-title.ta';
+} from '../ISO8571-FTAM/AP-title.ta.js';
 export {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ISO8571-FTAM/AP-title.ta';
+} from '../ISO8571-FTAM/AP-title.ta.js';
 import {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ISO8571-FTAM/AE-qualifier.ta';
+} from '../ISO8571-FTAM/AE-qualifier.ta.js';
 export {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ISO8571-FTAM/AE-qualifier.ta';
+} from '../ISO8571-FTAM/AE-qualifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AE_title */
 /**

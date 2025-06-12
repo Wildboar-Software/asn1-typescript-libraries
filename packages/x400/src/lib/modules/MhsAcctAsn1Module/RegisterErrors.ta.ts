@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AdministrationError,
     AdministrationError_register_rejected /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     remote_bind_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AdministrationError,
     _encode_AdministrationError,
-} from '../MhsAcctAsn1Module/AdministrationError.ta';
+} from '../MhsAcctAsn1Module/AdministrationError.ta.js';
 export {
     AdministrationError,
     AdministrationError_register_rejected /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -91,7 +91,7 @@ export {
     remote_bind_error /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AdministrationError,
     _encode_AdministrationError,
-} from '../MhsAcctAsn1Module/AdministrationError.ta';
+} from '../MhsAcctAsn1Module/AdministrationError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegisterErrors */
 /**

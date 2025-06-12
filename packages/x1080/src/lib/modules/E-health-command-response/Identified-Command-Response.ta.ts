@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Identified_Command_Response_command,
     _decode_Identified_Command_Response_command,
     _encode_Identified_Command_Response_command,
-} from '../E-health-command-response/Identified-Command-Response-command.ta';
+} from '../E-health-command-response/Identified-Command-Response-command.ta.js';
 export {
     Identified_Command_Response_command,
     _decode_Identified_Command_Response_command,
     _encode_Identified_Command_Response_command,
-} from '../E-health-command-response/Identified-Command-Response-command.ta';
+} from '../E-health-command-response/Identified-Command-Response-command.ta.js';
 import {
     Identified_Command_Response_response,
     _decode_Identified_Command_Response_response,
     _encode_Identified_Command_Response_response,
-} from '../E-health-command-response/Identified-Command-Response-response.ta';
+} from '../E-health-command-response/Identified-Command-Response-response.ta.js';
 export {
     Identified_Command_Response_response,
     _decode_Identified_Command_Response_response,
     _encode_Identified_Command_Response_response,
-} from '../E-health-command-response/Identified-Command-Response-response.ta';
+} from '../E-health-command-response/Identified-Command-Response-response.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Identified_Command_Response */
 /**

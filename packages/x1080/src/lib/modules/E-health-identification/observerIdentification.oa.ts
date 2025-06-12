@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_observer } from '../E-health-identification/id-observer.va';
-export { id_observer } from '../E-health-identification/id-observer.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_observer } from '../E-health-identification/id-observer.va.js';
+export { id_observer } from '../E-health-identification/id-observer.va.js';
 import {
     ObserverIdentification,
     _decode_ObserverIdentification,
     _encode_ObserverIdentification,
-} from '../E-health-identification/ObserverIdentification.ta';
+} from '../E-health-identification/ObserverIdentification.ta.js';
 export {
     ObserverIdentification,
     _decode_ObserverIdentification,
     _encode_ObserverIdentification,
-} from '../E-health-identification/ObserverIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/ObserverIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION observerIdentification */
 /**

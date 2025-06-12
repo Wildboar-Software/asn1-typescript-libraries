@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   NoSuchArgument_actionId,
   _decode_NoSuchArgument_actionId,
   _encode_NoSuchArgument_actionId,
-} from '../CMIP-1/NoSuchArgument-actionId.ta';
+} from '../CMIP-1/NoSuchArgument-actionId.ta.js';
 export {
   NoSuchArgument_actionId,
   _decode_NoSuchArgument_actionId,
   _encode_NoSuchArgument_actionId,
-} from '../CMIP-1/NoSuchArgument-actionId.ta';
+} from '../CMIP-1/NoSuchArgument-actionId.ta.js';
 import {
   NoSuchArgument_eventId,
   _decode_NoSuchArgument_eventId,
   _encode_NoSuchArgument_eventId,
-} from '../CMIP-1/NoSuchArgument-eventId.ta';
+} from '../CMIP-1/NoSuchArgument-eventId.ta.js';
 export {
   NoSuchArgument_eventId,
   _decode_NoSuchArgument_eventId,
   _encode_NoSuchArgument_eventId,
-} from '../CMIP-1/NoSuchArgument-eventId.ta';
+} from '../CMIP-1/NoSuchArgument-eventId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NoSuchArgument */
 /**

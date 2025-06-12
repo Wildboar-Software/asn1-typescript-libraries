@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va';
-export { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va.js';
+export { id_mst_suspend_auto_acknowledgement } from '../IPMSObjectIdentifiers/id-mst-suspend-auto-acknowledgement.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION suspend_auto_acknowledgement */
 /**

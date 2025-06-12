@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProofOfSubmission,
     _decode_ProofOfSubmission,
     _encode_ProofOfSubmission,
-} from '../MTSAbstractService/ProofOfSubmission.ta';
+} from '../MTSAbstractService/ProofOfSubmission.ta.js';
 export {
     ProofOfSubmission,
     _decode_ProofOfSubmission,
     _encode_ProofOfSubmission,
-} from '../MTSAbstractService/ProofOfSubmission.ta';
+} from '../MTSAbstractService/ProofOfSubmission.ta.js';
 import {
     OriginatingMTACertificate,
     _decode_OriginatingMTACertificate,
     _encode_OriginatingMTACertificate,
-} from '../MTSAbstractService/OriginatingMTACertificate.ta';
+} from '../MTSAbstractService/OriginatingMTACertificate.ta.js';
 export {
     OriginatingMTACertificate,
     _decode_OriginatingMTACertificate,
     _encode_OriginatingMTACertificate,
-} from '../MTSAbstractService/OriginatingMTACertificate.ta';
+} from '../MTSAbstractService/OriginatingMTACertificate.ta.js';
 import {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 export {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubmissionProof */
 /**

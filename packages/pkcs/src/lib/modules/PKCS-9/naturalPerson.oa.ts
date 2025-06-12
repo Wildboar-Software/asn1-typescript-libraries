@@ -1,11 +1,11 @@
 /* eslint-disable */
-import type { OBJECT_CLASS } from "@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca";
+import type { OBJECT_CLASS } from "@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta";
-import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa";
-import { NaturalPersonAttributeSet } from "../PKCS-9/NaturalPersonAttributeSet.osa";
-import { pkcs_9_oc_naturalPerson } from "../PKCS-9/pkcs-9-oc-naturalPerson.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js";
+import { top } from "@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js";
+import { NaturalPersonAttributeSet } from "../PKCS-9/NaturalPersonAttributeSet.osa.js";
+import { pkcs_9_oc_naturalPerson } from "../PKCS-9/pkcs-9-oc-naturalPerson.va.js";
 
 /* START_OF_SYMBOL_DEFINITION naturalPerson */
 /**

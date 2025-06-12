@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
-} from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta';
+} from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.js';
 export {
     ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
-} from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta';
+} from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.js';
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 import {
     DeliveryService,
     _decode_DeliveryService,
     _encode_DeliveryService,
-} from '../MhsAcctAsn1Module/DeliveryService.ta';
+} from '../MhsAcctAsn1Module/DeliveryService.ta.js';
 export {
     DeliveryService,
     _decode_DeliveryService,
     _encode_DeliveryService,
-} from '../MhsAcctAsn1Module/DeliveryService.ta';
+} from '../MhsAcctAsn1Module/DeliveryService.ta.js';
 import {
     ConversionStatistics,
     _decode_ConversionStatistics,
     _encode_ConversionStatistics,
-} from '../MhsAcctAsn1Module/ConversionStatistics.ta';
+} from '../MhsAcctAsn1Module/ConversionStatistics.ta.js';
 export {
     ConversionStatistics,
     _decode_ConversionStatistics,
     _encode_ConversionStatistics,
-} from '../MhsAcctAsn1Module/ConversionStatistics.ta';
+} from '../MhsAcctAsn1Module/ConversionStatistics.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliveredRecipientField */
 /**

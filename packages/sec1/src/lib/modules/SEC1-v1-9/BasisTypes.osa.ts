@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-import { BasisTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union0-Intersection0-Element.oa";
-export { BasisTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union0-Intersection0-Element.oa";
-import { BasisTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union1-Intersection0-Element.oa";
-export { BasisTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union1-Intersection0-Element.oa";
-import { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union2-Intersection0-Element.oa";
-export { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union2-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+import { BasisTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union0-Intersection0-Element.oa.js";
+export { BasisTypes_Union0_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union0-Intersection0-Element.oa.js";
+import { BasisTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union1-Intersection0-Element.oa.js";
+export { BasisTypes_Union1_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union1-Intersection0-Element.oa.js";
+import { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union2-Intersection0-Element.oa.js";
+export { BasisTypes_Union2_Intersection0_Element } from "../SEC1-v1-9/BasisTypes-Union2-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes */

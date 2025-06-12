@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SystemTiming,
     _decode_SystemTiming,
     _encode_SystemTiming,
-} from '../ASN1DefinedTypesModule/SystemTiming.ta';
+} from '../ASN1DefinedTypesModule/SystemTiming.ta.js';
 export {
     SystemTiming,
     _decode_SystemTiming,
     _encode_SystemTiming,
-} from '../ASN1DefinedTypesModule/SystemTiming.ta';
+} from '../ASN1DefinedTypesModule/SystemTiming.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SystemTimingSource */
 /**

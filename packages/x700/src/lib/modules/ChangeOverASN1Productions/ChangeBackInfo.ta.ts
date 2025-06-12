@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     OptionalObject,
     _decode_OptionalObject,
     _encode_OptionalObject,
-} from '../ChangeOverASN1Productions/OptionalObject.ta';
+} from '../ChangeOverASN1Productions/OptionalObject.ta.js';
 export {
     OptionalObject,
     _decode_OptionalObject,
     _encode_OptionalObject,
-} from '../ChangeOverASN1Productions/OptionalObject.ta';
+} from '../ChangeOverASN1Productions/OptionalObject.ta.js';
 import {
     ExpectedAttributeList,
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
-} from '../ChangeOverASN1Productions/ExpectedAttributeList.ta';
+} from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.js';
 export {
     ExpectedAttributeList,
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
-} from '../ChangeOverASN1Productions/ExpectedAttributeList.ta';
+} from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ChangeBackInfo */
 /**

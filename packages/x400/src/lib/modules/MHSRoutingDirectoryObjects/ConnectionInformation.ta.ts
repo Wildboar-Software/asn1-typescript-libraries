@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va';
-export { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va.js';
+export { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va.js';
 import {
     AuthenticationMethod,
     AuthenticationMethod_no_authentication /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -78,7 +78,7 @@ import {
     strong_authentication /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationMethod,
     _encode_AuthenticationMethod,
-} from '../MHSRoutingDirectoryObjects/AuthenticationMethod.ta';
+} from '../MHSRoutingDirectoryObjects/AuthenticationMethod.ta.js';
 export {
     AuthenticationMethod,
     AuthenticationMethod_no_authentication /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -89,7 +89,7 @@ export {
     strong_authentication /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationMethod,
     _encode_AuthenticationMethod,
-} from '../MHSRoutingDirectoryObjects/AuthenticationMethod.ta';
+} from '../MHSRoutingDirectoryObjects/AuthenticationMethod.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectionInformation */
 /**

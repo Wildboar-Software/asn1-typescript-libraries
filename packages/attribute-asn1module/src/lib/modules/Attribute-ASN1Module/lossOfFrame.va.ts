@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ProbableCause, _decode_ProbableCause, _encode_ProbableCause } from "../Attribute-ASN1Module/ProbableCause.ta";
-export { ProbableCause, _decode_ProbableCause, _encode_ProbableCause } from "../Attribute-ASN1Module/ProbableCause.ta";
-import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va";
-export { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ProbableCause, _decode_ProbableCause, _encode_ProbableCause } from "../Attribute-ASN1Module/ProbableCause.ta.js";
+export { ProbableCause, _decode_ProbableCause, _encode_ProbableCause } from "../Attribute-ASN1Module/ProbableCause.ta.js";
+import { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.js";
+export { arfProbableCause } from "../Attribute-ASN1Module/arfProbableCause.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION lossOfFrame */

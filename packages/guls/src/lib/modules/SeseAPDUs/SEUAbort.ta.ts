@@ -65,31 +65,31 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 export {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
-import { noInvocationId } from '../SeseAPDUs/noInvocationId.va';
-export { noInvocationId } from '../SeseAPDUs/noInvocationId.va';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
-export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
+} from '../SeseAPDUs/InvocationId.ta.js';
+import { noInvocationId } from '../SeseAPDUs/noInvocationId.va.js';
+export { noInvocationId } from '../SeseAPDUs/noInvocationId.va.js';
+import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
+export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
 import {
   SEerror,
   _decode_SEerror,
   _encode_SEerror,
-} from '../SeseAPDUs/SEerror.ta';
+} from '../SeseAPDUs/SEerror.ta.js';
 export {
   SEerror,
   _decode_SEerror,
   _encode_SEerror,
-} from '../SeseAPDUs/SEerror.ta';
+} from '../SeseAPDUs/SEerror.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SEUAbort */
 /**

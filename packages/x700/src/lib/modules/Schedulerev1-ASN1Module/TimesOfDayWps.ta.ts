@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IntervalsOfDayWps,
     _decode_IntervalsOfDayWps,
     _encode_IntervalsOfDayWps,
-} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps.ta.js';
 export {
     IntervalsOfDayWps,
     _decode_IntervalsOfDayWps,
     _encode_IntervalsOfDayWps,
-} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps.ta';
+} from '../Schedulerev1-ASN1Module/IntervalsOfDayWps.ta.js';
 import {
     TriggerTimes,
     _decode_TriggerTimes,
     _encode_TriggerTimes,
-} from '../Schedulerev1-ASN1Module/TriggerTimes.ta';
+} from '../Schedulerev1-ASN1Module/TriggerTimes.ta.js';
 export {
     TriggerTimes,
     _decode_TriggerTimes,
     _encode_TriggerTimes,
-} from '../Schedulerev1-ASN1Module/TriggerTimes.ta';
+} from '../Schedulerev1-ASN1Module/TriggerTimes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TimesOfDayWps */
 /**

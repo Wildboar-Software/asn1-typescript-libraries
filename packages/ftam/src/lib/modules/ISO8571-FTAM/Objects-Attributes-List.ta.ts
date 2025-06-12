@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Read_Attributes,
   _decode_Read_Attributes,
   _encode_Read_Attributes,
-} from '../ISO8571-FTAM/Read-Attributes.ta';
+} from '../ISO8571-FTAM/Read-Attributes.ta.js';
 export {
   Read_Attributes,
   _decode_Read_Attributes,
   _encode_Read_Attributes,
-} from '../ISO8571-FTAM/Read-Attributes.ta';
+} from '../ISO8571-FTAM/Read-Attributes.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Objects_Attributes_List */
 /**

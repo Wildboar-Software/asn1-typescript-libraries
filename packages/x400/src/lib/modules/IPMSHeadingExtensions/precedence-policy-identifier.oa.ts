@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PrecedencePolicyIdentifier,
     _decode_PrecedencePolicyIdentifier,
     _encode_PrecedencePolicyIdentifier,
-} from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta';
+} from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.js';
 export {
     PrecedencePolicyIdentifier,
     _decode_PrecedencePolicyIdentifier,
     _encode_PrecedencePolicyIdentifier,
-} from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta';
-import { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va';
-export { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
+} from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.js';
+import { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va.js';
+export { id_hex_precedence_policy_id } from '../IPMSObjectIdentifiers/id-hex-precedence-policy-id.va.js';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION precedence_policy_identifier */
 /**

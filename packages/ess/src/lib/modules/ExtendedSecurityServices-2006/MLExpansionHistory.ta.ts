@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MLData,
     _decode_MLData,
     _encode_MLData,
-} from "../ExtendedSecurityServices-2006/MLData.ta";
+} from "../ExtendedSecurityServices-2006/MLData.ta.js";
 export {
     MLData,
     _decode_MLData,
     _encode_MLData,
-} from "../ExtendedSecurityServices-2006/MLData.ta";
+} from "../ExtendedSecurityServices-2006/MLData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MLExpansionHistory */
 /**

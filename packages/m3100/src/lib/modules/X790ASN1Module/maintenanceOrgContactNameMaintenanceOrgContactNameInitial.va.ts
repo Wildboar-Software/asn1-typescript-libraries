@@ -65,87 +65,87 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 export {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 import {
     PersonNumber,
     _decode_PersonNumber,
     _encode_PersonNumber,
-} from '../X790ASN1Module/PersonNumber.ta';
+} from '../X790ASN1Module/PersonNumber.ta.js';
 export {
     PersonNumber,
     _decode_PersonNumber,
     _encode_PersonNumber,
-} from '../X790ASN1Module/PersonNumber.ta';
+} from '../X790ASN1Module/PersonNumber.ta.js';
 import {
     PersonName,
     _decode_PersonName,
     _encode_PersonName,
-} from '../X790ASN1Module/PersonName.ta';
+} from '../X790ASN1Module/PersonName.ta.js';
 export {
     PersonName,
     _decode_PersonName,
     _encode_PersonName,
-} from '../X790ASN1Module/PersonName.ta';
+} from '../X790ASN1Module/PersonName.ta.js';
 import {
     PersonPhone,
     _decode_PersonPhone,
     _encode_PersonPhone,
-} from '../X790ASN1Module/PersonPhone.ta';
+} from '../X790ASN1Module/PersonPhone.ta.js';
 export {
     PersonPhone,
     _decode_PersonPhone,
     _encode_PersonPhone,
-} from '../X790ASN1Module/PersonPhone.ta';
+} from '../X790ASN1Module/PersonPhone.ta.js';
 import {
     PersonLocation,
     _decode_PersonLocation,
     _encode_PersonLocation,
-} from '../X790ASN1Module/PersonLocation.ta';
+} from '../X790ASN1Module/PersonLocation.ta.js';
 export {
     PersonLocation,
     _decode_PersonLocation,
     _encode_PersonLocation,
-} from '../X790ASN1Module/PersonLocation.ta';
+} from '../X790ASN1Module/PersonLocation.ta.js';
 import {
     PersonEmail,
     _decode_PersonEmail,
     _encode_PersonEmail,
-} from '../X790ASN1Module/PersonEmail.ta';
+} from '../X790ASN1Module/PersonEmail.ta.js';
 export {
     PersonEmail,
     _decode_PersonEmail,
     _encode_PersonEmail,
-} from '../X790ASN1Module/PersonEmail.ta';
+} from '../X790ASN1Module/PersonEmail.ta.js';
 import {
     PersonFax,
     _decode_PersonFax,
     _encode_PersonFax,
-} from '../X790ASN1Module/PersonFax.ta';
+} from '../X790ASN1Module/PersonFax.ta.js';
 export {
     PersonFax,
     _decode_PersonFax,
     _encode_PersonFax,
-} from '../X790ASN1Module/PersonFax.ta';
+} from '../X790ASN1Module/PersonFax.ta.js';
 import {
     PersonRespon,
     _decode_PersonRespon,
     _encode_PersonRespon,
-} from '../X790ASN1Module/PersonRespon.ta';
+} from '../X790ASN1Module/PersonRespon.ta.js';
 export {
     PersonRespon,
     _decode_PersonRespon,
     _encode_PersonRespon,
-} from '../X790ASN1Module/PersonRespon.ta';
+} from '../X790ASN1Module/PersonRespon.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION maintenanceOrgContactNameMaintenanceOrgContactNameInitial */
 /**

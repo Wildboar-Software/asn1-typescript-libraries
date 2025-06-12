@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 export {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 import {
     Induced,
     _enum_for_Induced,
     _decode_Induced,
     _encode_Induced,
-} from '../UsageMeteringFunction/Induced.ta';
+} from '../UsageMeteringFunction/Induced.ta.js';
 import {
     ReportingEvent,
     _enum_for_ReportingEvent,
     _decode_ReportingEvent,
     _encode_ReportingEvent,
-} from '../UsageMeteringFunction/ReportingEvent.ta';
+} from '../UsageMeteringFunction/ReportingEvent.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NotificationCause */
 /**

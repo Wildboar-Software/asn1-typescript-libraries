@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CVStatusCode,
   _enum_for_CVStatusCode,
@@ -129,7 +129,7 @@ import {
   unrecognizedCritRequestExt /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CVStatusCode,
   _encode_CVStatusCode,
-} from '../SCVP-2009/CVStatusCode.ta';
+} from '../SCVP-2009/CVStatusCode.ta.js';
 export {
   CVStatusCode,
   _enum_for_CVStatusCode,
@@ -193,7 +193,7 @@ export {
   unrecognizedCritRequestExt /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CVStatusCode,
   _encode_CVStatusCode,
-} from '../SCVP-2009/CVStatusCode.ta';
+} from '../SCVP-2009/CVStatusCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResponseStatus */
 /**

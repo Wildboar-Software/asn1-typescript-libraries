@@ -3,14 +3,14 @@ import {
     ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECPoint.ta";
+} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECPoint.ta.js";
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ECPublicKeyChoice */
 /**

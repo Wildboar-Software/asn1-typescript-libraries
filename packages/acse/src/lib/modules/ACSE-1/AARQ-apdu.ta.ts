@@ -65,71 +65,71 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   AARQ_apdu_protocol_version,
   AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   version1 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_AARQ_apdu_protocol_version,
   _encode_AARQ_apdu_protocol_version,
-} from '../ACSE-1/AARQ-apdu-protocol-version.ta';
+} from '../ACSE-1/AARQ-apdu-protocol-version.ta.js';
 export {
   AARQ_apdu_protocol_version,
   AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   version1 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_AARQ_apdu_protocol_version,
   _encode_AARQ_apdu_protocol_version,
-} from '../ACSE-1/AARQ-apdu-protocol-version.ta';
+} from '../ACSE-1/AARQ-apdu-protocol-version.ta.js';
 import {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 export {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 import {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ACSE-1/AP-title.ta';
+} from '../ACSE-1/AP-title.ta.js';
 export {
   AP_title,
   _decode_AP_title,
   _encode_AP_title,
-} from '../ACSE-1/AP-title.ta';
+} from '../ACSE-1/AP-title.ta.js';
 import {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ACSE-1/AE-qualifier.ta';
+} from '../ACSE-1/AE-qualifier.ta.js';
 export {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
-} from '../ACSE-1/AE-qualifier.ta';
+} from '../ACSE-1/AE-qualifier.ta.js';
 import {
   AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
-} from '../ACSE-1/AP-invocation-identifier.ta';
+} from '../ACSE-1/AP-invocation-identifier.ta.js';
 export {
   AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
-} from '../ACSE-1/AP-invocation-identifier.ta';
+} from '../ACSE-1/AP-invocation-identifier.ta.js';
 import {
   AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
-} from '../ACSE-1/AE-invocation-identifier.ta';
+} from '../ACSE-1/AE-invocation-identifier.ta.js';
 export {
   AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
-} from '../ACSE-1/AE-invocation-identifier.ta';
+} from '../ACSE-1/AE-invocation-identifier.ta.js';
 import {
   ACSE_requirements,
   ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */,
@@ -142,7 +142,7 @@ import {
   nested_association /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
-} from '../ACSE-1/ACSE-requirements.ta';
+} from '../ACSE-1/ACSE-requirements.ta.js';
 export {
   ACSE_requirements,
   ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */,
@@ -155,77 +155,77 @@ export {
   nested_association /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
-} from '../ACSE-1/ACSE-requirements.ta';
+} from '../ACSE-1/ACSE-requirements.ta.js';
 import {
   Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
-} from '../ACSE-1/Mechanism-name.ta';
+} from '../ACSE-1/Mechanism-name.ta.js';
 export {
   Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
-} from '../ACSE-1/Mechanism-name.ta';
+} from '../ACSE-1/Mechanism-name.ta.js';
 import {
   Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
-} from '../ACSE-1/Authentication-value.ta';
+} from '../ACSE-1/Authentication-value.ta.js';
 export {
   Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
-} from '../ACSE-1/Authentication-value.ta';
+} from '../ACSE-1/Authentication-value.ta.js';
 import {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 export {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 import {
   Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
-} from '../ACSE-1/Implementation-data.ta';
+} from '../ACSE-1/Implementation-data.ta.js';
 export {
   Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
-} from '../ACSE-1/Implementation-data.ta';
+} from '../ACSE-1/Implementation-data.ta.js';
 import {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 import {
   Syntactic_context_list,
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
-} from '../ACSE-1/Syntactic-context-list.ta';
+} from '../ACSE-1/Syntactic-context-list.ta.js';
 export {
   Syntactic_context_list,
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
-} from '../ACSE-1/Syntactic-context-list.ta';
+} from '../ACSE-1/Syntactic-context-list.ta.js';
 import {
   ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
-} from '../ACSE-1/ASOI-tag.ta';
+} from '../ACSE-1/ASOI-tag.ta.js';
 export {
   ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
-} from '../ACSE-1/ASOI-tag.ta';
+} from '../ACSE-1/ASOI-tag.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AARQ_apdu */
 /**

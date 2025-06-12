@@ -65,87 +65,87 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertReferences,
   _decode_CertReferences,
   _encode_CertReferences,
-} from '../SCVP-2009/CertReferences.ta';
+} from '../SCVP-2009/CertReferences.ta.js';
 export {
   CertReferences,
   _decode_CertReferences,
   _encode_CertReferences,
-} from '../SCVP-2009/CertReferences.ta';
+} from '../SCVP-2009/CertReferences.ta.js';
 import {
   CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta';
+} from '../SCVP-2009/CertChecks.ta.js';
 export {
   CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta';
+} from '../SCVP-2009/CertChecks.ta.js';
 import {
   WantBack,
   _decode_WantBack,
   _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta';
+} from '../SCVP-2009/WantBack.ta.js';
 export {
   WantBack,
   _decode_WantBack,
   _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta';
+} from '../SCVP-2009/WantBack.ta.js';
 import {
   ValidationPolicy,
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
-} from '../SCVP-2009/ValidationPolicy.ta';
+} from '../SCVP-2009/ValidationPolicy.ta.js';
 export {
   ValidationPolicy,
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
-} from '../SCVP-2009/ValidationPolicy.ta';
+} from '../SCVP-2009/ValidationPolicy.ta.js';
 import {
   ResponseFlags,
   _decode_ResponseFlags,
   _encode_ResponseFlags,
-} from '../SCVP-2009/ResponseFlags.ta';
+} from '../SCVP-2009/ResponseFlags.ta.js';
 export {
   ResponseFlags,
   _decode_ResponseFlags,
   _encode_ResponseFlags,
-} from '../SCVP-2009/ResponseFlags.ta';
+} from '../SCVP-2009/ResponseFlags.ta.js';
 import {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 export {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta';
+} from '../SCVP-2009/CertBundle.ta.js';
 import {
   RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
-} from '../SCVP-2009/RevocationInfos.ta';
+} from '../SCVP-2009/RevocationInfos.ta.js';
 export {
   RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
-} from '../SCVP-2009/RevocationInfos.ta';
+} from '../SCVP-2009/RevocationInfos.ta.js';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 export {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Query */
 /**

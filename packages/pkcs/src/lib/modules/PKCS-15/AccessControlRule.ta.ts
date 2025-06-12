@@ -4,17 +4,17 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AccessMode,
     _decode_AccessMode,
     _encode_AccessMode,
-} from "../PKCS-15/AccessMode.ta";
+} from "../PKCS-15/AccessMode.ta.js";
 import {
     SecurityCondition,
     _decode_SecurityCondition,
     _encode_SecurityCondition,
-} from "../PKCS-15/SecurityCondition.ta";
+} from "../PKCS-15/SecurityCondition.ta.js";
 export {
     AccessMode,
     AccessMode_execute /* IMPORTED_LONG_NAMED_BIT */,
@@ -25,12 +25,12 @@ export {
     update /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AccessMode,
     _encode_AccessMode,
-} from "../PKCS-15/AccessMode.ta";
+} from "../PKCS-15/AccessMode.ta.js";
 export {
     SecurityCondition,
     _decode_SecurityCondition,
     _encode_SecurityCondition,
-} from "../PKCS-15/SecurityCondition.ta";
+} from "../PKCS-15/SecurityCondition.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AccessControlRule */
 /**

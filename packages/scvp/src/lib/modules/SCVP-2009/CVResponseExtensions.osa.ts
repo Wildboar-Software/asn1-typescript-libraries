@@ -65,8 +65,8 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION CVResponseExtensions */
 /**

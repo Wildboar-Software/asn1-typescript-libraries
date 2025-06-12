@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { CURVE } from "../PKIXAlgs-2009/CURVE.oca";
-import { sect163k1 } from "../PKIXAlgs-2009/sect163k1.va";
-export { CURVE } from "../PKIXAlgs-2009/CURVE.oca";
-export { sect163k1 } from "../PKIXAlgs-2009/sect163k1.va";
+import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.js";
+import { sect163k1 } from "../PKIXAlgs-2009/sect163k1.va.js";
+export { CURVE } from "../PKIXAlgs-2009/CURVE.oca.js";
+export { sect163k1 } from "../PKIXAlgs-2009/sect163k1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION NamedCurve_Union1_Intersection0_Element */
 /**

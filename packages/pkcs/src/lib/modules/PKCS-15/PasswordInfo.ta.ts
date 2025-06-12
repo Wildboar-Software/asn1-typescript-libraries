@@ -4,14 +4,14 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
+export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PasswordInfo */
 /**

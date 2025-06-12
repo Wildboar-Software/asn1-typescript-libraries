@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.js';
 export {
     OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.js';
 import {
     OptionalIdentifierAndRole,
     _decode_OptionalIdentifierAndRole,
     _encode_OptionalIdentifierAndRole,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifierAndRole.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifierAndRole.ta.js';
 export {
     OptionalIdentifierAndRole,
     _decode_OptionalIdentifierAndRole,
     _encode_OptionalIdentifierAndRole,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifierAndRole.ta';
+} from '../GrmAttributeDefinitionModule/OptionalIdentifierAndRole.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RelationshipOperation */
 /**

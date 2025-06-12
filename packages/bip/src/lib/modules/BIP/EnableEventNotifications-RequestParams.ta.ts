@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_UNIT_EVENT_TYPE_MASK,
   BioAPI_UNIT_EVENT_TYPE_MASK_insert /* IMPORTED_LONG_NAMED_BIT */,
@@ -90,7 +90,7 @@ import {
   sourceRemoved /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.js';
 export {
   BioAPI_UNIT_EVENT_TYPE_MASK,
   BioAPI_UNIT_EVENT_TYPE_MASK_insert /* IMPORTED_LONG_NAMED_BIT */,
@@ -105,7 +105,7 @@ export {
   sourceRemoved /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EnableEventNotifications_RequestParams */
 /**

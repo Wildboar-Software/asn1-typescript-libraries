@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta";
-import { id_pda_placeOfBirth } from "../PKIXqualified97/id-pda-placeOfBirth.va";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js";
+import { id_pda_placeOfBirth } from "../PKIXqualified97/id-pda-placeOfBirth.va.js";
 
 /* START_OF_SYMBOL_DEFINITION placeOfBirth */
 /**

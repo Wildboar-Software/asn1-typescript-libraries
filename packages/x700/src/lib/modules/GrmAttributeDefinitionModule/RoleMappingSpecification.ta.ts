@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 export {
     Identifier,
     _decode_Identifier,
     _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta';
+} from '../DefinitionASN1Module/Identifier.ta.js';
 import {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 export {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta';
+} from '../DefinitionASN1Module/TemplateList.ta.js';
 import {
     Representation,
     _decode_Representation,
     _encode_Representation,
-} from '../GrmAttributeDefinitionModule/Representation.ta';
+} from '../GrmAttributeDefinitionModule/Representation.ta.js';
 export {
     Representation,
     _decode_Representation,
     _encode_Representation,
-} from '../GrmAttributeDefinitionModule/Representation.ta';
+} from '../GrmAttributeDefinitionModule/Representation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RoleMappingSpecification */
 /**

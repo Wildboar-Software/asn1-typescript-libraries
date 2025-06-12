@@ -65,35 +65,35 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { ECDHAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union0-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union0-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union1-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union1-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union2-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union2-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union3-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union3-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union4-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union4-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union5-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union5-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union6-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union6-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union7_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union7-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union7_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union7-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union8_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union8-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union8_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union8-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union9_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union9-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union9_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union9-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union10_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union10-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union10_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union10-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union11-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union11-Intersection0-Element.oa";
-import { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union12-Intersection0-Element.oa";
-export { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union12-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { ECDHAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union0-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union0-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union1-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union1-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union2-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union2-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union3-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union3-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union4-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union4-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union5-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union5-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union6-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union6-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union7_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union7-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union7_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union7-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union8_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union8-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union8_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union8-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union9_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union9-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union9_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union9-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union10_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union10-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union10_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union10-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union11-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union11_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union11-Intersection0-Element.oa.js";
+import { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union12-Intersection0-Element.oa.js";
+export { ECDHAlgorithmSet_Union12_Intersection0_Element } from "../SEC1-v1-9/ECDHAlgorithmSet-Union12-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECDHAlgorithmSet */

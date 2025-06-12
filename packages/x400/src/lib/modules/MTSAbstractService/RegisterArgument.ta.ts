@@ -65,87 +65,87 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UserName,
     _decode_UserName,
     _encode_UserName,
-} from '../MTSAbstractService/UserName.ta';
+} from '../MTSAbstractService/UserName.ta.js';
 export {
     UserName,
     _decode_UserName,
     _encode_UserName,
-} from '../MTSAbstractService/UserName.ta';
+} from '../MTSAbstractService/UserName.ta.js';
 import {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta';
+} from '../MTSAbstractService/UserAddress.ta.js';
 export {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta';
+} from '../MTSAbstractService/UserAddress.ta.js';
 import {
     DeliverableClass,
     _decode_DeliverableClass,
     _encode_DeliverableClass,
-} from '../MTSAbstractService/DeliverableClass.ta';
+} from '../MTSAbstractService/DeliverableClass.ta.js';
 export {
     DeliverableClass,
     _decode_DeliverableClass,
     _encode_DeliverableClass,
-} from '../MTSAbstractService/DeliverableClass.ta';
+} from '../MTSAbstractService/DeliverableClass.ta.js';
 import {
     DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta';
+} from '../MTSAbstractService/DefaultDeliveryControls.ta.js';
 export {
     DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta';
+} from '../MTSAbstractService/DefaultDeliveryControls.ta.js';
 import {
     Redirections,
     _decode_Redirections,
     _encode_Redirections,
-} from '../MTSAbstractService/Redirections.ta';
+} from '../MTSAbstractService/Redirections.ta.js';
 export {
     Redirections,
     _decode_Redirections,
     _encode_Redirections,
-} from '../MTSAbstractService/Redirections.ta';
+} from '../MTSAbstractService/Redirections.ta.js';
 import {
     RestrictedDelivery,
     _decode_RestrictedDelivery,
     _encode_RestrictedDelivery,
-} from '../MTSAbstractService/RestrictedDelivery.ta';
+} from '../MTSAbstractService/RestrictedDelivery.ta.js';
 export {
     RestrictedDelivery,
     _decode_RestrictedDelivery,
     _encode_RestrictedDelivery,
-} from '../MTSAbstractService/RestrictedDelivery.ta';
+} from '../MTSAbstractService/RestrictedDelivery.ta.js';
 import {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MTSAbstractService/RegistrationTypes.ta';
+} from '../MTSAbstractService/RegistrationTypes.ta.js';
 export {
     RegistrationTypes,
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
-} from '../MTSAbstractService/RegistrationTypes.ta';
+} from '../MTSAbstractService/RegistrationTypes.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RegisterArgument */
 /**

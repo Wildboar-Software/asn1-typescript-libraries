@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca';
-export { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.js';
+export { INFO_TYPE_AND_VALUE } from '../PKIXCMP-2009/INFO-TYPE-AND-VALUE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION SupportedInfoSet */
 /**

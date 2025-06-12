@@ -2,16 +2,16 @@
 import {
     _decode_DBEKMRecipientInfo,
     _encode_DBEKMRecipientInfo,
-} from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta";
-import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca";
-import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va";
+} from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.js";
+import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.js";
+import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.js";
 export {
     DBEKMRecipientInfo,
     _decode_DBEKMRecipientInfo,
     _encode_DBEKMRecipientInfo,
-} from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta";
-export { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca";
-export { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va";
+} from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.js";
+export { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.js";
+export { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dbekmRecipientInfo */
 /**

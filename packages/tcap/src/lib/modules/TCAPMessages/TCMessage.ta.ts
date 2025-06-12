@@ -65,33 +65,33 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Unidirectional,
   _decode_Unidirectional,
   _encode_Unidirectional,
-} from '../TCAPMessages/Unidirectional.ta';
+} from '../TCAPMessages/Unidirectional.ta.js';
 export {
   Unidirectional,
   _decode_Unidirectional,
   _encode_Unidirectional,
-} from '../TCAPMessages/Unidirectional.ta';
-import { Begin, _decode_Begin, _encode_Begin } from '../TCAPMessages/Begin.ta';
-export { Begin, _decode_Begin, _encode_Begin } from '../TCAPMessages/Begin.ta';
-import { End, _decode_End, _encode_End } from '../TCAPMessages/End.ta';
-export { End, _decode_End, _encode_End } from '../TCAPMessages/End.ta';
+} from '../TCAPMessages/Unidirectional.ta.js';
+import { Begin, _decode_Begin, _encode_Begin } from '../TCAPMessages/Begin.ta.js';
+export { Begin, _decode_Begin, _encode_Begin } from '../TCAPMessages/Begin.ta.js';
+import { End, _decode_End, _encode_End } from '../TCAPMessages/End.ta.js';
+export { End, _decode_End, _encode_End } from '../TCAPMessages/End.ta.js';
 import {
   Continue,
   _decode_Continue,
   _encode_Continue,
-} from '../TCAPMessages/Continue.ta';
+} from '../TCAPMessages/Continue.ta.js';
 export {
   Continue,
   _decode_Continue,
   _encode_Continue,
-} from '../TCAPMessages/Continue.ta';
-import { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta';
-export { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta';
+} from '../TCAPMessages/Continue.ta.js';
+import { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta.js';
+export { Abort, _decode_Abort, _encode_Abort } from '../TCAPMessages/Abort.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TCMessage */
 /**

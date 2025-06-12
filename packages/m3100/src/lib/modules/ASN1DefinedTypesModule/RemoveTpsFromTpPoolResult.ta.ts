@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RemoveTpsFromTpPoolResult_Item,
     _decode_RemoveTpsFromTpPoolResult_Item,
     _encode_RemoveTpsFromTpPoolResult_Item,
-} from '../ASN1DefinedTypesModule/RemoveTpsFromTpPoolResult-Item.ta';
+} from '../ASN1DefinedTypesModule/RemoveTpsFromTpPoolResult-Item.ta.js';
 export {
     RemoveTpsFromTpPoolResult_Item,
     _decode_RemoveTpsFromTpPoolResult_Item,
     _encode_RemoveTpsFromTpPoolResult_Item,
-} from '../ASN1DefinedTypesModule/RemoveTpsFromTpPoolResult-Item.ta';
+} from '../ASN1DefinedTypesModule/RemoveTpsFromTpPoolResult-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RemoveTpsFromTpPoolResult */
 /**

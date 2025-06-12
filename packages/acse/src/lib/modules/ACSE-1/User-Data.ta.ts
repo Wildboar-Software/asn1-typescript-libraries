@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   User_information,
   _decode_User_information,
   _encode_User_information,
-} from '../ACSE-1/User-information.ta';
+} from '../ACSE-1/User-information.ta.js';
 export {
   User_information,
   _decode_User_information,
   _encode_User_information,
-} from '../ACSE-1/User-information.ta';
+} from '../ACSE-1/User-information.ta.js';
 import {
   Simply_encoded_data,
   _decode_Simply_encoded_data,
   _encode_Simply_encoded_data,
-} from '../ACSE-1/Simply-encoded-data.ta';
+} from '../ACSE-1/Simply-encoded-data.ta.js';
 export {
   Simply_encoded_data,
   _decode_Simply_encoded_data,
   _encode_Simply_encoded_data,
-} from '../ACSE-1/Simply-encoded-data.ta';
+} from '../ACSE-1/Simply-encoded-data.ta.js';
 import {
   PDV_list,
   _decode_PDV_list,
   _encode_PDV_list,
-} from '../ACSE-1/PDV-list.ta';
+} from '../ACSE-1/PDV-list.ta.js';
 export {
   PDV_list,
   _decode_PDV_list,
   _encode_PDV_list,
-} from '../ACSE-1/PDV-list.ta';
+} from '../ACSE-1/PDV-list.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION User_Data */
 /**

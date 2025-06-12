@@ -6,17 +6,17 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OtherKeyAttribute,
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta";
+} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.js";
 export {
     OtherKeyAttribute,
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta";
+} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KEKIdentifier */
 /**

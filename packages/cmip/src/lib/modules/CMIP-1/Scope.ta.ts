@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Scope_namedNumbers,
   Scope_namedNumbers_baseObject /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   wholeSubtree /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Scope_namedNumbers,
   _encode_Scope_namedNumbers,
-} from '../CMIP-1/Scope-namedNumbers.ta';
+} from '../CMIP-1/Scope-namedNumbers.ta.js';
 export {
   Scope_namedNumbers,
   Scope_namedNumbers_baseObject /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
   wholeSubtree /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Scope_namedNumbers,
   _encode_Scope_namedNumbers,
-} from '../CMIP-1/Scope-namedNumbers.ta';
+} from '../CMIP-1/Scope-namedNumbers.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Scope */
 /**

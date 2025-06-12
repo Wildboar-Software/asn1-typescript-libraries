@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GlobalDomainIdentifier,
     _decode_GlobalDomainIdentifier,
     _encode_GlobalDomainIdentifier,
-} from '../MTSAbstractService/GlobalDomainIdentifier.ta';
+} from '../MTSAbstractService/GlobalDomainIdentifier.ta.js';
 export {
     GlobalDomainIdentifier,
     _decode_GlobalDomainIdentifier,
     _encode_GlobalDomainIdentifier,
-} from '../MTSAbstractService/GlobalDomainIdentifier.ta';
+} from '../MTSAbstractService/GlobalDomainIdentifier.ta.js';
 import {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 export {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta';
+} from '../MTSAbstractService/MTAName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION mta_name_Type */
 /**

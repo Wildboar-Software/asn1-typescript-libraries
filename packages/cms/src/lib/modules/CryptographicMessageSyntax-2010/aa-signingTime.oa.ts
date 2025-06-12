@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va";
+import { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va.js";
 import {
     SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
-} from "../CryptographicMessageSyntax-2010/SigningTime.ta";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va";
+} from "../CryptographicMessageSyntax-2010/SigningTime.ta.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va.js";
 export {
     SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
-} from "../CryptographicMessageSyntax-2010/SigningTime.ta";
+} from "../CryptographicMessageSyntax-2010/SigningTime.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION aa_signingTime */
 /**

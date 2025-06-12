@@ -4,23 +4,23 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from "../ExtendedSecurityServices-2006/Hash.ta";
-import { id_sha256 } from "../ExtendedSecurityServices-2006/id-sha256.va";
+} from "../ExtendedSecurityServices-2006/Hash.ta.js";
+import { id_sha256 } from "../ExtendedSecurityServices-2006/id-sha256.va.js";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
     _encode_IssuerSerial,
-} from "../ExtendedSecurityServices-2006/IssuerSerial.ta";
+} from "../ExtendedSecurityServices-2006/IssuerSerial.ta.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ESSCertIDv2 */
 /**

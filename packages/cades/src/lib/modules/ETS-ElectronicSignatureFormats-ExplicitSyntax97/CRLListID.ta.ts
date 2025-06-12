@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta";
-export { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta.js";
+export { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlValidatedID.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CRLListID */

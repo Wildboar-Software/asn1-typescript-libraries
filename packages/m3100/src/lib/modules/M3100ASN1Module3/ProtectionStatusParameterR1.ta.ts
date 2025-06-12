@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtectionStatusR1,
     _decode_ProtectionStatusR1,
     _encode_ProtectionStatusR1,
-} from '../M3100ASN1Module3/ProtectionStatusR1.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1.ta.js';
 export {
     ProtectionStatusR1,
     _decode_ProtectionStatusR1,
     _encode_ProtectionStatusR1,
-} from '../M3100ASN1Module3/ProtectionStatusR1.ta';
+} from '../M3100ASN1Module3/ProtectionStatusR1.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatusParameterR1 */
 /**

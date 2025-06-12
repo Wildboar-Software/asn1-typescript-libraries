@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
-} from '../MTAAbstractService/DeferredTime.ta';
+} from '../MTAAbstractService/DeferredTime.ta.js';
 export {
     DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
-} from '../MTAAbstractService/DeferredTime.ta';
+} from '../MTAAbstractService/DeferredTime.ta.js';
 import {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 export {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 import {
     OtherActions,
     OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
@@ -94,7 +94,7 @@ import {
     dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OtherActions,
     _encode_OtherActions,
-} from '../MTAAbstractService/OtherActions.ta';
+} from '../MTAAbstractService/OtherActions.ta.js';
 export {
     OtherActions,
     OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
@@ -103,7 +103,7 @@ export {
     dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OtherActions,
     _encode_OtherActions,
-} from '../MTAAbstractService/OtherActions.ta';
+} from '../MTAAbstractService/OtherActions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AdditionalActions */
 /**

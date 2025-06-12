@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
+import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
 import {
     Pentanomial,
     _decode_Pentanomial,
     _encode_Pentanomial,
-} from "../ANSI-X9-62/Pentanomial.ta";
-import { ppBasis } from "../ANSI-X9-62/ppBasis.va";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
+} from "../ANSI-X9-62/Pentanomial.ta.js";
+import { ppBasis } from "../ANSI-X9-62/ppBasis.va.js";
+export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
 export {
     Pentanomial,
     _decode_Pentanomial,
     _encode_Pentanomial,
-} from "../ANSI-X9-62/Pentanomial.ta";
-export { ppBasis } from "../ANSI-X9-62/ppBasis.va";
+} from "../ANSI-X9-62/Pentanomial.ta.js";
+export { ppBasis } from "../ANSI-X9-62/ppBasis.va.js";
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union2_Intersection0_Element */
 /**

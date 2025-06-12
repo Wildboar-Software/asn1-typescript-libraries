@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SaslCredentials,
   _decode_SaslCredentials,
   _encode_SaslCredentials,
-} from '../Lightweight-Directory-Access-Protocol-V3/SaslCredentials.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SaslCredentials.ta.js';
 export {
   SaslCredentials,
   _decode_SaslCredentials,
   _encode_SaslCredentials,
-} from '../Lightweight-Directory-Access-Protocol-V3/SaslCredentials.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SaslCredentials.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationChoice */
 /**

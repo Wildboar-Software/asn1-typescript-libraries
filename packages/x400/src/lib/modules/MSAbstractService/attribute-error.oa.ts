@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     attribute_error_ParameterType,
     _decode_attribute_error_ParameterType,
     _encode_attribute_error_ParameterType,
-} from '../MSAbstractService/attribute-error-ParameterType.ta';
+} from '../MSAbstractService/attribute-error-ParameterType.ta.js';
 export {
     attribute_error_ParameterType,
     _decode_attribute_error_ParameterType,
     _encode_attribute_error_ParameterType,
-} from '../MSAbstractService/attribute-error-ParameterType.ta';
-import { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va';
-export { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/attribute-error-ParameterType.ta.js';
+import { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va.js';
+export { err_attribute_error } from '../MSAccessProtocol/err-attribute-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION attribute_error */
 /**

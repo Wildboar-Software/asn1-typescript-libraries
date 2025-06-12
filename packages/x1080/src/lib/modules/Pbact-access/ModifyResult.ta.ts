@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ModifyResult_result,
     _decode_ModifyResult_result,
     _encode_ModifyResult_result,
-} from '../Pbact-access/ModifyResult-result.ta';
+} from '../Pbact-access/ModifyResult-result.ta.js';
 export {
     ModifyResult_result,
     _decode_ModifyResult_result,
     _encode_ModifyResult_result,
-} from '../Pbact-access/ModifyResult-result.ta';
+} from '../Pbact-access/ModifyResult-result.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModifyResult */
 /**

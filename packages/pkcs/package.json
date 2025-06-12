@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/pkcs",
-    "version": "1.0.7",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Public Key Cryptography Standard PDUs in TypeScript",
     "keywords": [
         "pkcs",
@@ -35,11 +36,11 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.1.5",
-        "@wildboar/ansi-x9-62": "^1.0.5",
-        "@wildboar/cms": "^1.0.5",
-        "@wildboar/ansi-x9-42": "1.0.3",
-        "@wildboar/ldap": "^1.2.12",
-        "@wildboar/pki-stub": "^1.1.8"
+        "@wildboar/x500": "2.x.x",
+        "@wildboar/ansi-x9-62": "2.x.x",
+        "@wildboar/cms": "2.x.x",
+        "@wildboar/ansi-x9-42": "2.x.x",
+        "@wildboar/ldap": "2.x.x",
+        "@wildboar/pki-stub": "2.x.x"
     }
 }

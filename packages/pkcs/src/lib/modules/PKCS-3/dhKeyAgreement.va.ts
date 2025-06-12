@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { pkcs_3 } from "../PKCS-3/pkcs-3.va";
-export { pkcs_3 } from "../PKCS-3/pkcs-3.va";
+import { pkcs_3 } from "../PKCS-3/pkcs-3.va.js";
+export { pkcs_3 } from "../PKCS-3/pkcs-3.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dhKeyAgreement */
 /**

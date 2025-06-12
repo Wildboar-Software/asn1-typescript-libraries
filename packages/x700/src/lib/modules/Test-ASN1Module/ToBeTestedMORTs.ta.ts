@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     ToBeTestedMORTs_scopedSet,
     _decode_ToBeTestedMORTs_scopedSet,
     _encode_ToBeTestedMORTs_scopedSet,
-} from '../Test-ASN1Module/ToBeTestedMORTs-scopedSet.ta';
+} from '../Test-ASN1Module/ToBeTestedMORTs-scopedSet.ta.js';
 export {
     ToBeTestedMORTs_scopedSet,
     _decode_ToBeTestedMORTs_scopedSet,
     _encode_ToBeTestedMORTs_scopedSet,
-} from '../Test-ASN1Module/ToBeTestedMORTs-scopedSet.ta';
+} from '../Test-ASN1Module/ToBeTestedMORTs-scopedSet.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ToBeTestedMORTs */
 /**

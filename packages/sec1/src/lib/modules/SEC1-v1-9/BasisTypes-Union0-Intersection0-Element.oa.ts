@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { gnBasis } from "../SEC1-v1-9/gnBasis.va";
-export { gnBasis } from "../SEC1-v1-9/gnBasis.va";
-import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
-export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { gnBasis } from "../SEC1-v1-9/gnBasis.va.js";
+export { gnBasis } from "../SEC1-v1-9/gnBasis.va.js";
+import { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
+export { CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union0_Intersection0_Element */

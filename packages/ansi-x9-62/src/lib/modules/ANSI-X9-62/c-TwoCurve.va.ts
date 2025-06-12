@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va";
-export { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va";
+import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.js";
+export { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.js";
 
 /* START_OF_SYMBOL_DEFINITION c_TwoCurve */
 /**

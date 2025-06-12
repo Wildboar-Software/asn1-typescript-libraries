@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca";
+import { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca.js";
 import {
     _decode_KeyConstructRecipientInfo,
     _encode_KeyConstructRecipientInfo,
-} from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta";
-import { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va";
-export { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca";
+} from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta.js";
+import { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.js";
+export { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca.js";
 export {
     KeyConstructRecipientInfo,
     _decode_KeyConstructRecipientInfo,
     _encode_KeyConstructRecipientInfo,
-} from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta";
-export { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va";
+} from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta.js";
+export { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ckmRecipientInfo */
 /**

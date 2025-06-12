@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 export {
   BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta';
+} from '../BIP/BioAPI-HANDLE.ta.js';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 import {
   BioAPI_DB_ACCESS_TYPE,
   BioAPI_DB_ACCESS_TYPE_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -104,7 +104,7 @@ import {
   write /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_DB_ACCESS_TYPE,
   _encode_BioAPI_DB_ACCESS_TYPE,
-} from '../BIP/BioAPI-DB-ACCESS-TYPE.ta';
+} from '../BIP/BioAPI-DB-ACCESS-TYPE.ta.js';
 export {
   BioAPI_DB_ACCESS_TYPE,
   BioAPI_DB_ACCESS_TYPE_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -113,7 +113,7 @@ export {
   write /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_DB_ACCESS_TYPE,
   _encode_BioAPI_DB_ACCESS_TYPE,
-} from '../BIP/BioAPI-DB-ACCESS-TYPE.ta';
+} from '../BIP/BioAPI-DB-ACCESS-TYPE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DbCreate_RequestParams */
 /**

@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca';
-export { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca';
-import { ServiceSpecificSet } from '../UsageMeteringFunction/ServiceSpecificSet.osa';
-export { ServiceSpecificSet } from '../UsageMeteringFunction/ServiceSpecificSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.js';
+export { UMF_SERVICE } from '../UsageMeteringFunction/UMF-SERVICE.oca.js';
+import { ServiceSpecificSet } from '../UsageMeteringFunction/ServiceSpecificSet.osa.js';
+export { ServiceSpecificSet } from '../UsageMeteringFunction/ServiceSpecificSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION ServiceSpecificId */
 /**

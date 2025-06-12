@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 export {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 import {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../MTSAbstractService/Password.ta';
+} from '../MTSAbstractService/Password.ta.js';
 export {
     Password,
     _decode_Password,
     _encode_Password,
-} from '../MTSAbstractService/Password.ta';
+} from '../MTSAbstractService/Password.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectedPassword */
 /**

@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     InformationCategory,
     _decode_InformationCategory,
     _encode_InformationCategory,
-} from '../IPMSHeadingExtensions/InformationCategory.ta';
+} from '../IPMSHeadingExtensions/InformationCategory.ta.js';
 export {
     InformationCategory,
     _decode_InformationCategory,
     _encode_InformationCategory,
-} from '../IPMSHeadingExtensions/InformationCategory.ta';
-import { informationCategoryMatch } from '../IPMSMessageStoreAttributes/informationCategoryMatch.oa';
-export { informationCategoryMatch } from '../IPMSMessageStoreAttributes/informationCategoryMatch.oa';
-import { id_hat_information_category } from '../IPMSObjectIdentifiers/id-hat-information-category.va';
-export { id_hat_information_category } from '../IPMSObjectIdentifiers/id-hat-information-category.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../IPMSHeadingExtensions/InformationCategory.ta.js';
+import { informationCategoryMatch } from '../IPMSMessageStoreAttributes/informationCategoryMatch.oa.js';
+export { informationCategoryMatch } from '../IPMSMessageStoreAttributes/informationCategoryMatch.oa.js';
+import { id_hat_information_category } from '../IPMSObjectIdentifiers/id-hat-information-category.va.js';
+export { id_hat_information_category } from '../IPMSObjectIdentifiers/id-hat-information-category.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION information_category */
 /**

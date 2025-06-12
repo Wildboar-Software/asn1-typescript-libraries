@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
-} from '../M3100ASN1TypeModule4/ArcTime.ta';
+} from '../M3100ASN1TypeModule4/ArcTime.ta.js';
 export {
     ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
-} from '../M3100ASN1TypeModule4/ArcTime.ta';
+} from '../M3100ASN1TypeModule4/ArcTime.ta.js';
 import {
     ArcState,
     _enum_for_ArcState,
@@ -89,7 +89,7 @@ import {
     nalmTimedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ArcState,
     _encode_ArcState,
-} from '../M3100ASN1TypeModule4/ArcState.ta';
+} from '../M3100ASN1TypeModule4/ArcState.ta.js';
 export {
     ArcState,
     _enum_for_ArcState,
@@ -103,17 +103,17 @@ export {
     nalmTimedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ArcState,
     _encode_ArcState,
-} from '../M3100ASN1TypeModule4/ArcState.ta';
+} from '../M3100ASN1TypeModule4/ArcState.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ArcControlRequest */
 /**

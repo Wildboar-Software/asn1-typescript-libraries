@@ -69,9 +69,9 @@ import {
   SubjectPublicKeyInfo,
   _decode_SubjectPublicKeyInfo,
   _encode_SubjectPublicKeyInfo,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta';
-import { id_swb_pkc_public_key_info } from '../SCVP-2009/id-swb-pkc-public-key-info.va';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.js';
+import { id_swb_pkc_public_key_info } from '../SCVP-2009/id-swb-pkc-public-key-info.va.js';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION swb_pkc_public_key_info */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProtectedXC,
     _decode_ProtectedXC,
     _encode_ProtectedXC,
-} from '../M3100ASN1TypeModule6/ProtectedXC.ta';
+} from '../M3100ASN1TypeModule6/ProtectedXC.ta.js';
 export {
     ProtectedXC,
     _decode_ProtectedXC,
     _encode_ProtectedXC,
-} from '../M3100ASN1TypeModule6/ProtectedXC.ta';
+} from '../M3100ASN1TypeModule6/ProtectedXC.ta.js';
 import {
     MulticastXC,
     _decode_MulticastXC,
     _encode_MulticastXC,
-} from '../M3100ASN1TypeModule6/MulticastXC.ta';
+} from '../M3100ASN1TypeModule6/MulticastXC.ta.js';
 export {
     MulticastXC,
     _decode_MulticastXC,
     _encode_MulticastXC,
-} from '../M3100ASN1TypeModule6/MulticastXC.ta';
+} from '../M3100ASN1TypeModule6/MulticastXC.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CoincidentProtectedUnidirectionalConnections */
 /**

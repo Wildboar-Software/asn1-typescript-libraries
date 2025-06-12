@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { PrintableString } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { id_pda_countryOfCitizenship } from "../PKIXqualified97/id-pda-countryOfCitizenship.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { id_pda_countryOfCitizenship } from "../PKIXqualified97/id-pda-countryOfCitizenship.va.js";
 
 /* START_OF_SYMBOL_DEFINITION countryOfCitizenship */
 /**

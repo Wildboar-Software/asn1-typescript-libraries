@@ -65,25 +65,25 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     DistributionCode,
     _decode_DistributionCode,
     _encode_DistributionCode,
-} from '../IPMSHeadingExtensions/DistributionCode.ta';
+} from '../IPMSHeadingExtensions/DistributionCode.ta.js';
 export {
     DistributionCode,
     _decode_DistributionCode,
     _encode_DistributionCode,
-} from '../IPMSHeadingExtensions/DistributionCode.ta';
-import { id_mr_distribution_code } from '../IPMSObjectIdentifiers/id-mr-distribution-code.va';
-export { id_mr_distribution_code } from '../IPMSObjectIdentifiers/id-mr-distribution-code.va';
+} from '../IPMSHeadingExtensions/DistributionCode.ta.js';
+import { id_mr_distribution_code } from '../IPMSObjectIdentifiers/id-mr-distribution-code.va.js';
+export { id_mr_distribution_code } from '../IPMSObjectIdentifiers/id-mr-distribution-code.va.js';
 
 /* START_OF_SYMBOL_DEFINITION distributionCodeMatch */
 /**

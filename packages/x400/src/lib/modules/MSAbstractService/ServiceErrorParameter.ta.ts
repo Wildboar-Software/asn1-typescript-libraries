@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ServiceProblem,
     ServiceProblem_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     unwilling_to_perform /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
-} from '../MSAbstractService/ServiceProblem.ta';
+} from '../MSAbstractService/ServiceProblem.ta.js';
 export {
     ServiceProblem,
     ServiceProblem_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     unwilling_to_perform /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
-} from '../MSAbstractService/ServiceProblem.ta';
+} from '../MSAbstractService/ServiceProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ServiceErrorParameter */
 /**

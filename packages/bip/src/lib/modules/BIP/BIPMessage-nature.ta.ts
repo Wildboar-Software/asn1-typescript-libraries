@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BIPRequest,
   _decode_BIPRequest,
   _encode_BIPRequest,
-} from '../BIP/BIPRequest.ta';
+} from '../BIP/BIPRequest.ta.js';
 export {
   BIPRequest,
   _decode_BIPRequest,
   _encode_BIPRequest,
-} from '../BIP/BIPRequest.ta';
+} from '../BIP/BIPRequest.ta.js';
 import {
   BIPResponse,
   _decode_BIPResponse,
   _encode_BIPResponse,
-} from '../BIP/BIPResponse.ta';
+} from '../BIP/BIPResponse.ta.js';
 export {
   BIPResponse,
   _decode_BIPResponse,
   _encode_BIPResponse,
-} from '../BIP/BIPResponse.ta';
+} from '../BIP/BIPResponse.ta.js';
 import {
   BIPNotification,
   _decode_BIPNotification,
   _encode_BIPNotification,
-} from '../BIP/BIPNotification.ta';
+} from '../BIP/BIPNotification.ta.js';
 export {
   BIPNotification,
   _decode_BIPNotification,
   _encode_BIPNotification,
-} from '../BIP/BIPNotification.ta';
+} from '../BIP/BIPNotification.ta.js';
 import {
   BIPAcknowledgement,
   _decode_BIPAcknowledgement,
   _encode_BIPAcknowledgement,
-} from '../BIP/BIPAcknowledgement.ta';
+} from '../BIP/BIPAcknowledgement.ta.js';
 export {
   BIPAcknowledgement,
   _decode_BIPAcknowledgement,
   _encode_BIPAcknowledgement,
-} from '../BIP/BIPAcknowledgement.ta';
+} from '../BIP/BIPAcknowledgement.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPMessage_nature */
 /**

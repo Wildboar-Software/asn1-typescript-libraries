@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { GeneralizedTime } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { generalizedTimeMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeMatch.oa";
-import { pkcs_9_at_dateOfBirth } from "../PKCS-9/pkcs-9-at-dateOfBirth.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { generalizedTimeMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/generalizedTimeMatch.oa.js";
+import { pkcs_9_at_dateOfBirth } from "../PKCS-9/pkcs-9-at-dateOfBirth.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dateOfBirth */
 /**

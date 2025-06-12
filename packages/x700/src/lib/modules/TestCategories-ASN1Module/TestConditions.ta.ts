@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestConditions_first,
     TestConditions_first_testIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
     waitIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_first,
     _encode_TestConditions_first,
-} from '../TestCategories-ASN1Module/TestConditions-first.ta';
+} from '../TestCategories-ASN1Module/TestConditions-first.ta.js';
 export {
     TestConditions_first,
     TestConditions_first_testIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,7 +87,7 @@ export {
     waitIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_first,
     _encode_TestConditions_first,
-} from '../TestCategories-ASN1Module/TestConditions-first.ta';
+} from '../TestCategories-ASN1Module/TestConditions-first.ta.js';
 import {
     TestConditions_second,
     TestConditions_second_customerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -96,7 +96,7 @@ import {
     noCustomerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_second,
     _encode_TestConditions_second,
-} from '../TestCategories-ASN1Module/TestConditions-second.ta';
+} from '../TestCategories-ASN1Module/TestConditions-second.ta.js';
 export {
     TestConditions_second,
     TestConditions_second_customerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,7 +105,7 @@ export {
     noCustomerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_second,
     _encode_TestConditions_second,
-} from '../TestCategories-ASN1Module/TestConditions-second.ta';
+} from '../TestCategories-ASN1Module/TestConditions-second.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestConditions */
 /**

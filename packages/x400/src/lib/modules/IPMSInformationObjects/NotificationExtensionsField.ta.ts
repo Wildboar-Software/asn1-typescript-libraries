@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IPMSExtension,
     _decode_IPMSExtension,
     _encode_IPMSExtension,
-} from '../IPMSInformationObjects/IPMSExtension.ta';
+} from '../IPMSInformationObjects/IPMSExtension.ta.js';
 export {
     IPMSExtension,
     _decode_IPMSExtension,
     _encode_IPMSExtension,
-} from '../IPMSInformationObjects/IPMSExtension.ta';
+} from '../IPMSInformationObjects/IPMSExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NotificationExtensionsField */
 /**

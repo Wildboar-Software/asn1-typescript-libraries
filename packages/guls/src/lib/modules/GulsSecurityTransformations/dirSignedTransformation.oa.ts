@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va';
-export { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.js';
+export { securityTransformations } from '../ObjectIdentifiers/securityTransformations.va.js';
 import {
   dirSignedTransformation_XformedDataType,
   _decode_dirSignedTransformation_XformedDataType,
   _encode_dirSignedTransformation_XformedDataType,
-} from '../GulsSecurityTransformations/dirSignedTransformation-XformedDataType.ta';
+} from '../GulsSecurityTransformations/dirSignedTransformation-XformedDataType.ta.js';
 export {
   dirSignedTransformation_XformedDataType,
   _decode_dirSignedTransformation_XformedDataType,
   _encode_dirSignedTransformation_XformedDataType,
-} from '../GulsSecurityTransformations/dirSignedTransformation-XformedDataType.ta';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca';
+} from '../GulsSecurityTransformations/dirSignedTransformation-XformedDataType.ta.js';
+import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
+export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dirSignedTransformation */
 /**

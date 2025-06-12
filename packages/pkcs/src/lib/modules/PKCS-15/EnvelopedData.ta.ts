@@ -4,32 +4,32 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Attribute.ta.js";
 import {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax/OriginatorInfo.ta";
+} from "../CryptographicMessageSyntax/OriginatorInfo.ta.js";
 import {
     RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax/RecipientInfos.ta";
+} from "../CryptographicMessageSyntax/RecipientInfos.ta.js";
 import {
     EncryptedContentInfo,
     _get_decoder_for_EncryptedContentInfo,
     _get_encoder_for_EncryptedContentInfo,
-} from "../PKCS-15/EncryptedContentInfo.ta";
+} from "../PKCS-15/EncryptedContentInfo.ta.js";
 import {
     EnvelopedData_version,
     _get_decoder_for_EnvelopedData_version,
     _get_encoder_for_EnvelopedData_version,
-} from "../PKCS-15/EnvelopedData-version.ta";
+} from "../PKCS-15/EnvelopedData-version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**

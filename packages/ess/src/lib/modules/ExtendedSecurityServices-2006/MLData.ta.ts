@@ -5,27 +5,27 @@ import {
     GeneralizedTime,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EntityIdentifier,
     _decode_EntityIdentifier,
     _encode_EntityIdentifier,
-} from "../ExtendedSecurityServices-2006/EntityIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/EntityIdentifier.ta.js";
 import {
     MLReceiptPolicy,
     _decode_MLReceiptPolicy,
     _encode_MLReceiptPolicy,
-} from "../ExtendedSecurityServices-2006/MLReceiptPolicy.ta";
+} from "../ExtendedSecurityServices-2006/MLReceiptPolicy.ta.js";
 export {
     EntityIdentifier,
     _decode_EntityIdentifier,
     _encode_EntityIdentifier,
-} from "../ExtendedSecurityServices-2006/EntityIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/EntityIdentifier.ta.js";
 export {
     MLReceiptPolicy,
     _decode_MLReceiptPolicy,
     _encode_MLReceiptPolicy,
-} from "../ExtendedSecurityServices-2006/MLReceiptPolicy.ta";
+} from "../ExtendedSecurityServices-2006/MLReceiptPolicy.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MLData */
 /**

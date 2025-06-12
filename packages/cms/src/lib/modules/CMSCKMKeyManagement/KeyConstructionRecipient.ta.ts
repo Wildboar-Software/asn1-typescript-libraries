@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedRecipientID,
     _decode_EncryptedRecipientID,
     _encode_EncryptedRecipientID,
-} from "../CMSCKMKeyManagement/EncryptedRecipientID.ta";
+} from "../CMSCKMKeyManagement/EncryptedRecipientID.ta.js";
 import {
     KeyConstructionLabels,
     _decode_KeyConstructionLabels,
     _encode_KeyConstructionLabels,
-} from "../CMSCKMKeyManagement/KeyConstructionLabels.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.js";
 export {
     EncryptedRecipientID,
     _decode_EncryptedRecipientID,
     _encode_EncryptedRecipientID,
-} from "../CMSCKMKeyManagement/EncryptedRecipientID.ta";
+} from "../CMSCKMKeyManagement/EncryptedRecipientID.ta.js";
 export {
     KeyConstructionLabels,
     _decode_KeyConstructionLabels,
     _encode_KeyConstructionLabels,
-} from "../CMSCKMKeyManagement/KeyConstructionLabels.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyConstructionRecipient */
 /**

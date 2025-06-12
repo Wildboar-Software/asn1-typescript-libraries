@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelationshipInstance,
     _decode_RelationshipInstance,
     _encode_RelationshipInstance,
-} from '../ChangeOverASN1Productions/RelationshipInstance.ta';
+} from '../ChangeOverASN1Productions/RelationshipInstance.ta.js';
 export {
     RelationshipInstance,
     _decode_RelationshipInstance,
     _encode_RelationshipInstance,
-} from '../ChangeOverASN1Productions/RelationshipInstance.ta';
+} from '../ChangeOverASN1Productions/RelationshipInstance.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NoSuchRelationship */
 /**

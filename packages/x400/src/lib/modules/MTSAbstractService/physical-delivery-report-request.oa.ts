@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 export {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta';
+} from '../MTSAbstractService/ExtensionType.ta.js';
 import {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -86,7 +86,7 @@ import {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 export {
     Criticality,
     Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
@@ -97,7 +97,7 @@ export {
     for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta';
+} from '../MTSAbstractService/Criticality.ta.js';
 import {
     PhysicalDeliveryReportRequest,
     PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -110,7 +110,7 @@ import {
     return_of_notification_by_MHS_and_PDS /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PhysicalDeliveryReportRequest,
     _encode_PhysicalDeliveryReportRequest,
-} from '../MTSAbstractService/PhysicalDeliveryReportRequest.ta';
+} from '../MTSAbstractService/PhysicalDeliveryReportRequest.ta.js';
 export {
     PhysicalDeliveryReportRequest,
     PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -123,9 +123,9 @@ export {
     return_of_notification_by_MHS_and_PDS /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PhysicalDeliveryReportRequest,
     _encode_PhysicalDeliveryReportRequest,
-} from '../MTSAbstractService/PhysicalDeliveryReportRequest.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
+} from '../MTSAbstractService/PhysicalDeliveryReportRequest.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_report_request */
 /**

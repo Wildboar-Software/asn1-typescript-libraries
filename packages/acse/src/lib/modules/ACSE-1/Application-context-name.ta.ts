@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 export {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Application_context_name */
 /**

@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfile/ComponentIdentifier.ta";
-export { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfile/ComponentIdentifier.ta";
-import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta";
-export { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta";
-import { Properties, _decode_Properties, _encode_Properties } from "../PlatformCertificateProfile/Properties.ta";
-export { Properties, _decode_Properties, _encode_Properties } from "../PlatformCertificateProfile/Properties.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfile/ComponentIdentifier.ta.js";
+export { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfile/ComponentIdentifier.ta.js";
+import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.js";
+export { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.js";
+import { Properties, _decode_Properties, _encode_Properties } from "../PlatformCertificateProfile/Properties.ta.js";
+export { Properties, _decode_Properties, _encode_Properties } from "../PlatformCertificateProfile/Properties.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION PlatformConfiguration */

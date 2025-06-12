@@ -5,29 +5,29 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va.js";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta";
+} from "../PKCS5v2-1/AlgorithmIdentifier.ta.js";
 import {
     PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
-} from "../PKCS5v2-1/PBKDF2-params-salt.ta";
-export { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va";
+} from "../PKCS5v2-1/PBKDF2-params-salt.ta.js";
+export { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta";
+} from "../PKCS5v2-1/AlgorithmIdentifier.ta.js";
 export {
     PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
-} from "../PKCS5v2-1/PBKDF2-params-salt.ta";
+} from "../PKCS5v2-1/PBKDF2-params-salt.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params */
 /**

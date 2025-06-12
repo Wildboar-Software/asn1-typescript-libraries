@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EncryptedParameters,
     _decode_EncryptedParameters,
     _encode_EncryptedParameters,
-} from '../IPMSInformationObjects/EncryptedParameters.ta';
+} from '../IPMSInformationObjects/EncryptedParameters.ta.js';
 export {
     EncryptedParameters,
     _decode_EncryptedParameters,
     _encode_EncryptedParameters,
-} from '../IPMSInformationObjects/EncryptedParameters.ta';
+} from '../IPMSInformationObjects/EncryptedParameters.ta.js';
 import {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from '../IPMSInformationObjects/EncryptedData.ta';
+} from '../IPMSInformationObjects/EncryptedData.ta.js';
 export {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from '../IPMSInformationObjects/EncryptedData.ta';
+} from '../IPMSInformationObjects/EncryptedData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncryptedBodyPart */
 /**

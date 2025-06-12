@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -106,7 +106,7 @@ import {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 export {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -147,7 +147,7 @@ export {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 import {
   BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
@@ -173,7 +173,7 @@ import {
   recapture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
-} from '../BIP/BioAPI-GUI-RESPONSE.ta';
+} from '../BIP/BioAPI-GUI-RESPONSE.ta.js';
 export {
   BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
@@ -199,7 +199,7 @@ export {
   recapture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
-} from '../BIP/BioAPI-GUI-RESPONSE.ta';
+} from '../BIP/BioAPI-GUI-RESPONSE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NotifyGUISelectEvent_ResponseParams */
 /**

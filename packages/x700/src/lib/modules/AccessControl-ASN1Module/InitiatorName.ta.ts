@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.js';
 export {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/DistinguishedName.ta.js';
 import {
     AE_title,
     _decode_AE_title,
     _encode_AE_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta';
+} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-title.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InitiatorName */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DLExpansion,
     _decode_DLExpansion,
     _encode_DLExpansion,
-} from '../MTSAbstractService/DLExpansion.ta';
+} from '../MTSAbstractService/DLExpansion.ta.js';
 export {
     DLExpansion,
     _decode_DLExpansion,
     _encode_DLExpansion,
-} from '../MTSAbstractService/DLExpansion.ta';
+} from '../MTSAbstractService/DLExpansion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DLExpansionHistory */
 /**

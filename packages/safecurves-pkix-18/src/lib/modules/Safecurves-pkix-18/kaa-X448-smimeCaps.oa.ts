@@ -65,15 +65,15 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta";
-export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta";
-import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca";
-import { id_X448 } from "../Safecurves-pkix-18/id-X448.va";
-export { id_X448 } from "../Safecurves-pkix-18/id-X448.va";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta.js";
+export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AlgorithmInformation-2009/AlgorithmIdentifier.ta.js";
+import { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.js";
+import { id_X448 } from "../Safecurves-pkix-18/id-X448.va.js";
+export { id_X448 } from "../Safecurves-pkix-18/id-X448.va.js";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION kaa_X448_smimeCaps */

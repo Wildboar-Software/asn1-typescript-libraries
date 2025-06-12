@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
-export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
-import { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa";
-export { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa";
-import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa";
-export { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
+export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
+import { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa.js";
+export { noticeToUser } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/noticeToUser.oa.js";
+import { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa.js";
+export { pointerToSigPolSpec } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/pointerToSigPolSpec.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SupportedSigPolicyQualifiers */

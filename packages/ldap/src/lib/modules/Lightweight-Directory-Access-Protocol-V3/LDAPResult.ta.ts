@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LDAPResult_resultCode,
   _enum_for_LDAPResult_resultCode,
@@ -149,7 +149,7 @@ import {
   other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_LDAPResult_resultCode,
   _encode_LDAPResult_resultCode,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta.js';
 export {
   LDAPResult_resultCode,
   _enum_for_LDAPResult_resultCode,
@@ -233,37 +233,37 @@ export {
   other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_LDAPResult_resultCode,
   _encode_LDAPResult_resultCode,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta.js';
 import {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 export {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 import {
   LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js';
 export {
   LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.js';
 import {
   Referral,
   _decode_Referral,
   _encode_Referral,
-} from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.js';
 export {
   Referral,
   _decode_Referral,
   _encode_Referral,
-} from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LDAPResult */
 /**

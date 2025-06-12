@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from '../MTSAbstractService/PhysicalDeliveryCountryName.ta';
+} from '../MTSAbstractService/PhysicalDeliveryCountryName.ta.js';
 export {
     PhysicalDeliveryCountryName,
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
-} from '../MTSAbstractService/PhysicalDeliveryCountryName.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/PhysicalDeliveryCountryName.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION physical_delivery_country_name */
 /**

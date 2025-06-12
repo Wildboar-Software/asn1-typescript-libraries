@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va";
-export { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va";
+import { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va.js";
+export { digestAlgorithm } from "../PKCS5v2-1/digestAlgorithm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_hmacWithSHA256 */
 /**

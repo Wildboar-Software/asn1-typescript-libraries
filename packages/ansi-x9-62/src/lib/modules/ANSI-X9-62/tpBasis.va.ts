@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two-basis.va";
-export { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two-basis.va";
+import { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two-basis.va.js";
+export { id_characteristic_two_basis } from "../ANSI-X9-62/id-characteristic-two-basis.va.js";
 
 /* START_OF_SYMBOL_DEFINITION tpBasis */
 /**

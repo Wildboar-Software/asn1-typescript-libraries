@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -79,7 +79,7 @@ import {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 export {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -93,17 +93,17 @@ export {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 import {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_UNIT_LIST_ELEMENT */
 /**

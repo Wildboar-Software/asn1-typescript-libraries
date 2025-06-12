@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-import { mta_connect } from '../MTAAbstractService/mta-connect.oa';
-export { mta_connect } from '../MTAAbstractService/mta-connect.oa';
-import { transfer } from '../MTAAbstractService/transfer.oa';
-export { transfer } from '../MTAAbstractService/transfer.oa';
-import { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va';
-export { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+import { mta_connect } from '../MTAAbstractService/mta-connect.oa.js';
+export { mta_connect } from '../MTAAbstractService/mta-connect.oa.js';
+import { transfer } from '../MTAAbstractService/transfer.oa.js';
+export { transfer } from '../MTAAbstractService/transfer.oa.js';
+import { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va.js';
+export { id_ct_mta_transfer } from '../MTSObjectIdentifiers/id-ct-mta-transfer.va.js';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mta_transfer */
 /**

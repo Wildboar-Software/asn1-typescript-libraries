@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -106,7 +106,7 @@ import {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 export {
   BioAPI_BIR_SUBTYPE_MASK,
   BioAPI_BIR_SUBTYPE_MASK_left /* IMPORTED_LONG_NAMED_BIT */,
@@ -147,27 +147,27 @@ export {
   right_vein_wrist /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
-} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta';
+} from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_GUI_BITMAP */
 /**

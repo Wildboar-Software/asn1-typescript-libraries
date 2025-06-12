@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   NonWrappingCounter,
   _decode_NonWrappingCounter,
   _encode_NonWrappingCounter,
-} from '../CommonMgt/NonWrappingCounter.ta';
+} from '../CommonMgt/NonWrappingCounter.ta.js';
 export {
   NonWrappingCounter,
   _decode_NonWrappingCounter,
   _encode_NonWrappingCounter,
-} from '../CommonMgt/NonWrappingCounter.ta';
+} from '../CommonMgt/NonWrappingCounter.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION counterInitialValue */
 /**

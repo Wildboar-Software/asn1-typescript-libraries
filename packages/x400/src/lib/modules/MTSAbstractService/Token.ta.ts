@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { TOKEN } from '../MTSAbstractService/TOKEN.oca';
-export { TOKEN } from '../MTSAbstractService/TOKEN.oca';
-import { TokensTable } from '../MTSAbstractService/TokensTable.osa';
-export { TokensTable } from '../MTSAbstractService/TokensTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { TOKEN } from '../MTSAbstractService/TOKEN.oca.js';
+export { TOKEN } from '../MTSAbstractService/TOKEN.oca.js';
+import { TokensTable } from '../MTSAbstractService/TokensTable.osa.js';
+export { TokensTable } from '../MTSAbstractService/TokensTable.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION Token */
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
 import {
     ConstructionAlgorithms,
     _decode_ConstructionAlgorithms,
     _encode_ConstructionAlgorithms,
-} from "../CMSCKMKeyManagement/ConstructionAlgorithms.ta";
-import { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+} from "../CMSCKMKeyManagement/ConstructionAlgorithms.ta.js";
+import { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,14 +24,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 export {
     ConstructionAlgorithms,
     _decode_ConstructionAlgorithms,
     _encode_ConstructionAlgorithms,
-} from "../CMSCKMKeyManagement/ConstructionAlgorithms.ta";
-export { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va";
+} from "../CMSCKMKeyManagement/ConstructionAlgorithms.ta.js";
+export { id_ckm_symmetric } from "../CMSObjectIdentifiers/id-ckm-symmetric.va.js";
 
 /* START_OF_SYMBOL_DEFINITION symmetricConstruction */
 /**

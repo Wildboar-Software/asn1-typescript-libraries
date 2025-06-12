@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObsoletedEDIMsSubfield,
     _decode_ObsoletedEDIMsSubfield,
     _encode_ObsoletedEDIMsSubfield,
-} from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta';
+} from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta.js';
 export {
     ObsoletedEDIMsSubfield,
     _decode_ObsoletedEDIMsSubfield,
     _encode_ObsoletedEDIMsSubfield,
-} from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta';
+} from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObsoletedEDIMsField */
 /**

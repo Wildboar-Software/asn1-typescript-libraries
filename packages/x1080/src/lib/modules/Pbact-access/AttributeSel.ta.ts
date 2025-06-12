@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeSel_attSelect,
     _decode_AttributeSel_attSelect,
     _encode_AttributeSel_attSelect,
-} from '../Pbact-access/AttributeSel-attSelect.ta';
+} from '../Pbact-access/AttributeSel-attSelect.ta.js';
 export {
     AttributeSel_attSelect,
     _decode_AttributeSel_attSelect,
     _encode_AttributeSel_attSelect,
-} from '../Pbact-access/AttributeSel-attSelect.ta';
+} from '../Pbact-access/AttributeSel-attSelect.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeSel */
 /**

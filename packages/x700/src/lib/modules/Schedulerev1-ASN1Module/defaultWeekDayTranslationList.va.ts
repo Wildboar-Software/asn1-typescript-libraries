@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     WeekDayTranslationList,
     _decode_WeekDayTranslationList,
     _encode_WeekDayTranslationList,
-} from '../Schedulerev1-ASN1Module/WeekDayTranslationList.ta';
+} from '../Schedulerev1-ASN1Module/WeekDayTranslationList.ta.js';
 export {
     WeekDayTranslationList,
     _decode_WeekDayTranslationList,
     _encode_WeekDayTranslationList,
-} from '../Schedulerev1-ASN1Module/WeekDayTranslationList.ta';
+} from '../Schedulerev1-ASN1Module/WeekDayTranslationList.ta.js';
 import {
     WeekDay,
     _enum_for_WeekDay,
@@ -95,7 +95,7 @@ import {
     saturday /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_WeekDay,
     _encode_WeekDay,
-} from '../Schedulerev1-ASN1Module/WeekDay.ta';
+} from '../Schedulerev1-ASN1Module/WeekDay.ta.js';
 export {
     WeekDay,
     _enum_for_WeekDay,
@@ -115,7 +115,7 @@ export {
     saturday /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_WeekDay,
     _encode_WeekDay,
-} from '../Schedulerev1-ASN1Module/WeekDay.ta';
+} from '../Schedulerev1-ASN1Module/WeekDay.ta.js';
 import {
     TypeOfDay,
     TypeOfDay_workday /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -156,7 +156,7 @@ import {
     specialDay16 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfDay,
     _encode_TypeOfDay,
-} from '../Schedulerev1-ASN1Module/TypeOfDay.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDay.ta.js';
 export {
     TypeOfDay,
     TypeOfDay_workday /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -197,7 +197,7 @@ export {
     specialDay16 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfDay,
     _encode_TypeOfDay,
-} from '../Schedulerev1-ASN1Module/TypeOfDay.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDay.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION defaultWeekDayTranslationList */
 /**

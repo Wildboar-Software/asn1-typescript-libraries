@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Simply_encoded_data,
     _decode_Simply_encoded_data,
     _encode_Simply_encoded_data,
-} from '../ISO8823-PRESENTATION/Simply-encoded-data.ta';
+} from '../ISO8823-PRESENTATION/Simply-encoded-data.ta.js';
 export {
     Simply_encoded_data,
     _decode_Simply_encoded_data,
     _encode_Simply_encoded_data,
-} from '../ISO8823-PRESENTATION/Simply-encoded-data.ta';
+} from '../ISO8823-PRESENTATION/Simply-encoded-data.ta.js';
 import {
     Fully_encoded_data,
     _decode_Fully_encoded_data,
     _encode_Fully_encoded_data,
-} from '../ISO8823-PRESENTATION/Fully-encoded-data.ta';
+} from '../ISO8823-PRESENTATION/Fully-encoded-data.ta.js';
 export {
     Fully_encoded_data,
     _decode_Fully_encoded_data,
     _encode_Fully_encoded_data,
-} from '../ISO8823-PRESENTATION/Fully-encoded-data.ta';
+} from '../ISO8823-PRESENTATION/Fully-encoded-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION User_data */
 /**

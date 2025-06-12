@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TextualRepresentation,
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
-} from '../DefinitionASN1Module/TextualRepresentation.ta';
+} from '../DefinitionASN1Module/TextualRepresentation.ta.js';
 export {
     TextualRepresentation,
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
-} from '../DefinitionASN1Module/TextualRepresentation.ta';
+} from '../DefinitionASN1Module/TextualRepresentation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ASN1ModuleContents */
 /**

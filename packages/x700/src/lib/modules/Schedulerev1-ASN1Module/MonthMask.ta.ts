@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MonthMask_Item,
     _decode_MonthMask_Item,
     _encode_MonthMask_Item,
-} from '../Schedulerev1-ASN1Module/MonthMask-Item.ta';
+} from '../Schedulerev1-ASN1Module/MonthMask-Item.ta.js';
 export {
     MonthMask_Item,
     _decode_MonthMask_Item,
     _encode_MonthMask_Item,
-} from '../Schedulerev1-ASN1Module/MonthMask-Item.ta';
+} from '../Schedulerev1-ASN1Module/MonthMask-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MonthMask */
 /**

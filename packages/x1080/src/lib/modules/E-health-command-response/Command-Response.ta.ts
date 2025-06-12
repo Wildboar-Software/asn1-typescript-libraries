@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-} from '../E-health-setup/EncryptionOptions.ta';
+} from '../E-health-setup/EncryptionOptions.ta.js';
 export {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-} from '../E-health-setup/EncryptionOptions.ta';
+} from '../E-health-setup/EncryptionOptions.ta.js';
 import {
     IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
-} from '../E-health-setup/IntegrityOptions.ta';
+} from '../E-health-setup/IntegrityOptions.ta.js';
 export {
     IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
-} from '../E-health-setup/IntegrityOptions.ta';
+} from '../E-health-setup/IntegrityOptions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Command_Response */
 /**

@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     dl_administrator_annotation_Type,
     _decode_dl_administrator_annotation_Type,
     _encode_dl_administrator_annotation_Type,
-} from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta';
+} from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta.js';
 export {
     dl_administrator_annotation_Type,
     _decode_dl_administrator_annotation_Type,
     _encode_dl_administrator_annotation_Type,
-} from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta';
-import { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va';
-export { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va';
-import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
-export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca';
+} from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta.js';
+import { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va.js';
+export { id_con_dl_administrator_annotation } from '../MHSObjectIdentifiers/id-con-dl-administrator-annotation.va.js';
+import { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
+export { CONTEXT } from '@wildboar/x500/src/lib/modules/InformationFramework/CONTEXT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dl_administrator_annotation */
 /**

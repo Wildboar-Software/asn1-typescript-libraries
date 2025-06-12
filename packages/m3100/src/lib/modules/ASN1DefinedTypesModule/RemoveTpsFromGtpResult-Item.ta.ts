@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 export {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 import {
     RemoveTpsResultInformation,
     _decode_RemoveTpsResultInformation,
     _encode_RemoveTpsResultInformation,
-} from '../ASN1DefinedTypesModule/RemoveTpsResultInformation.ta';
+} from '../ASN1DefinedTypesModule/RemoveTpsResultInformation.ta.js';
 export {
     RemoveTpsResultInformation,
     _decode_RemoveTpsResultInformation,
     _encode_RemoveTpsResultInformation,
-} from '../ASN1DefinedTypesModule/RemoveTpsResultInformation.ta';
+} from '../ASN1DefinedTypesModule/RemoveTpsResultInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RemoveTpsFromGtpResult_Item */
 /**

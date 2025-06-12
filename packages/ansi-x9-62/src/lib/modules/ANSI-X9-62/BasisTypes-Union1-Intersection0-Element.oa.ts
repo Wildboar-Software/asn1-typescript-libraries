@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-import { tpBasis } from "../ANSI-X9-62/tpBasis.va";
+import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+import { tpBasis } from "../ANSI-X9-62/tpBasis.va.js";
 import {
     Trinomial,
     _decode_Trinomial,
     _encode_Trinomial,
-} from "../ANSI-X9-62/Trinomial.ta";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-export { tpBasis } from "../ANSI-X9-62/tpBasis.va";
+} from "../ANSI-X9-62/Trinomial.ta.js";
+export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+export { tpBasis } from "../ANSI-X9-62/tpBasis.va.js";
 export {
     Trinomial,
     _decode_Trinomial,
     _encode_Trinomial,
-} from "../ANSI-X9-62/Trinomial.ta";
+} from "../ANSI-X9-62/Trinomial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union1_Intersection0_Element */
 /**

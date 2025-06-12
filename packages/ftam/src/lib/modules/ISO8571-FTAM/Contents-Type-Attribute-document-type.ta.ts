@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Document_Type_Name,
   _decode_Document_Type_Name,
   _encode_Document_Type_Name,
-} from '../ISO8571-FTAM/Document-Type-Name.ta';
+} from '../ISO8571-FTAM/Document-Type-Name.ta.js';
 export {
   Document_Type_Name,
   _decode_Document_Type_Name,
   _encode_Document_Type_Name,
-} from '../ISO8571-FTAM/Document-Type-Name.ta';
+} from '../ISO8571-FTAM/Document-Type-Name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Attribute_document_type */
 /**

@@ -3,16 +3,16 @@ import {
     AsymmetricKeyPackage,
     _decode_AsymmetricKeyPackage,
     _encode_AsymmetricKeyPackage,
-} from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta";
-import { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca";
+} from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.js";
+import { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.js";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.js";
 export {
     AsymmetricKeyPackage,
     _decode_AsymmetricKeyPackage,
     _encode_AsymmetricKeyPackage,
-} from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta";
-export { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca";
+} from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.js";
+export { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_asymmetric_key_package */
 /**

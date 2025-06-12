@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 export {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 import {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 export {
     SessionId,
     _decode_SessionId,
     _encode_SessionId,
-} from '../E-health-common/SessionId.ta';
+} from '../E-health-common/SessionId.ta.js';
 import {
     Requirements,
     _enum_for_Requirements,
@@ -99,7 +99,7 @@ import {
     with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
-} from '../E-health-common/Requirements.ta';
+} from '../E-health-common/Requirements.ta.js';
 export {
     Requirements,
     _enum_for_Requirements,
@@ -113,27 +113,27 @@ export {
     with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
-} from '../E-health-common/Requirements.ta';
+} from '../E-health-common/Requirements.ta.js';
 import {
     VoiceOptions,
     _decode_VoiceOptions,
     _encode_VoiceOptions,
-} from '../E-health-common/VoiceOptions.ta';
+} from '../E-health-common/VoiceOptions.ta.js';
 export {
     VoiceOptions,
     _decode_VoiceOptions,
     _encode_VoiceOptions,
-} from '../E-health-common/VoiceOptions.ta';
+} from '../E-health-common/VoiceOptions.ta.js';
 import {
     VideoOptions,
     _decode_VideoOptions,
     _encode_VideoOptions,
-} from '../E-health-common/VideoOptions.ta';
+} from '../E-health-common/VideoOptions.ta.js';
 export {
     VideoOptions,
     _decode_VideoOptions,
     _encode_VideoOptions,
-} from '../E-health-common/VideoOptions.ta';
+} from '../E-health-common/VideoOptions.ta.js';
 import {
     ReturnMode,
     _enum_for_ReturnMode,
@@ -143,7 +143,7 @@ import {
     batch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReturnMode,
     _encode_ReturnMode,
-} from '../E-health-common/ReturnMode.ta';
+} from '../E-health-common/ReturnMode.ta.js';
 export {
     ReturnMode,
     _enum_for_ReturnMode,
@@ -153,11 +153,11 @@ export {
     batch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReturnMode,
     _encode_ReturnMode,
-} from '../E-health-common/ReturnMode.ta';
-import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca';
-export { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca';
-import { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa';
-export { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa';
+} from '../E-health-common/ReturnMode.ta.js';
+import { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.js';
+export { INTERACTIVE_OPERATION } from '../E-health-common/INTERACTIVE-OPERATION.oca.js';
+import { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa.js';
+export { SupportedOperationTypes } from '../E-health-common/SupportedOperationTypes.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION E_setupRequest */
 /**

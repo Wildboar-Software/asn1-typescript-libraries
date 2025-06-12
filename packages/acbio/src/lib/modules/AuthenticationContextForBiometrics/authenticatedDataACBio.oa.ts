@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthenticatedDataACBio,
     _decode_AuthenticatedDataACBio,
     _encode_AuthenticatedDataACBio,
-} from '../AuthenticationContextForBiometrics/AuthenticatedDataACBio.ta';
+} from '../AuthenticationContextForBiometrics/AuthenticatedDataACBio.ta.js';
 export {
     AuthenticatedDataACBio,
     _decode_AuthenticatedDataACBio,
     _encode_AuthenticatedDataACBio,
-} from '../AuthenticationContextForBiometrics/AuthenticatedDataACBio.ta';
-import { id_authenticatedDataACBio } from '../AuthenticationContextForBiometrics/id-authenticatedDataACBio.va';
-export { id_authenticatedDataACBio } from '../AuthenticationContextForBiometrics/id-authenticatedDataACBio.va';
+} from '../AuthenticationContextForBiometrics/AuthenticatedDataACBio.ta.js';
+import { id_authenticatedDataACBio } from '../AuthenticationContextForBiometrics/id-authenticatedDataACBio.va.js';
+export { id_authenticatedDataACBio } from '../AuthenticationContextForBiometrics/id-authenticatedDataACBio.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION authenticatedDataACBio */
 /**

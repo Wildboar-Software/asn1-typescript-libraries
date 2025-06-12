@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SCVPResponses,
   _decode_SCVPResponses,
   _encode_SCVPResponses,
-} from '../SCVP-2009/SCVPResponses.ta';
+} from '../SCVP-2009/SCVPResponses.ta.js';
 export {
   SCVPResponses,
   _decode_SCVPResponses,
   _encode_SCVPResponses,
-} from '../SCVP-2009/SCVPResponses.ta';
-import { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va';
-export { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va';
-import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
-export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca';
+} from '../SCVP-2009/SCVPResponses.ta.js';
+import { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va.js';
+export { id_swb_relayed_responses } from '../SCVP-2009/id-swb-relayed-responses.va.js';
+import { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
+export { WANT_BACK } from '../SCVP-2009/WANT-BACK.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION swb_relayed_responses */
 /**

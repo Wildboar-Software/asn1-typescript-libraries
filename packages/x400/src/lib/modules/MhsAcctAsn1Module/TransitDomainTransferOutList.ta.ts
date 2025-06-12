@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TransferRecipientField,
     _decode_TransferRecipientField,
     _encode_TransferRecipientField,
-} from '../MhsAcctAsn1Module/TransferRecipientField.ta';
+} from '../MhsAcctAsn1Module/TransferRecipientField.ta.js';
 export {
     TransferRecipientField,
     _decode_TransferRecipientField,
     _encode_TransferRecipientField,
-} from '../MhsAcctAsn1Module/TransferRecipientField.ta';
+} from '../MhsAcctAsn1Module/TransferRecipientField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TransitDomainTransferOutList */
 /**

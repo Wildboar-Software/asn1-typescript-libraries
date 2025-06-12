@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ClockValue,
     _decode_ClockValue,
     _encode_ClockValue,
-} from '../TimeMF/ClockValue.ta';
+} from '../TimeMF/ClockValue.ta.js';
 export {
     ClockValue,
     _decode_ClockValue,
     _encode_ClockValue,
-} from '../TimeMF/ClockValue.ta';
+} from '../TimeMF/ClockValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ClockResetInfo */
 /**

@@ -65,34 +65,34 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
-} from '../IPMSInformationObjects/G3FacsimileData.ta';
+} from '../IPMSInformationObjects/G3FacsimileData.ta.js';
 export {
     G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
-} from '../IPMSInformationObjects/G3FacsimileData.ta';
-import { id_bat_g3_facsimile_data } from '../IPMSObjectIdentifiers/id-bat-g3-facsimile-data.va';
-export { id_bat_g3_facsimile_data } from '../IPMSObjectIdentifiers/id-bat-g3-facsimile-data.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../IPMSInformationObjects/G3FacsimileData.ta.js';
+import { id_bat_g3_facsimile_data } from '../IPMSObjectIdentifiers/id-bat-g3-facsimile-data.va.js';
+export { id_bat_g3_facsimile_data } from '../IPMSObjectIdentifiers/id-bat-g3-facsimile-data.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION g3_facsimile_data */
 /**

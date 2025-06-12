@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
-} from '../MTSAbstractService/ActualRecipientName.ta';
+} from '../MTSAbstractService/ActualRecipientName.ta.js';
 export {
     ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
-} from '../MTSAbstractService/ActualRecipientName.ta';
+} from '../MTSAbstractService/ActualRecipientName.ta.js';
 import {
     ReportType,
     _decode_ReportType,
     _encode_ReportType,
-} from '../MTSAbstractService/ReportType.ta';
+} from '../MTSAbstractService/ReportType.ta.js';
 export {
     ReportType,
     _decode_ReportType,
     _encode_ReportType,
-} from '../MTSAbstractService/ReportType.ta';
+} from '../MTSAbstractService/ReportType.ta.js';
 import {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 export {
     ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.js';
 import {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.js';
 export {
     OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
-} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta';
+} from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.js';
 import {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 export {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta';
+} from '../MTSAbstractService/SupplementaryInformation.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientReportDeliveryFields */
 /**

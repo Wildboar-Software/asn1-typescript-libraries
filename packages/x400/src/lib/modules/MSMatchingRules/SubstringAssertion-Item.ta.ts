@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MSString,
     _decode_MSString,
     _encode_MSString,
-} from '../MSMatchingRules/MSString.ta';
+} from '../MSMatchingRules/MSString.ta.js';
 export {
     MSString,
     _decode_MSString,
     _encode_MSString,
-} from '../MSMatchingRules/MSString.ta';
-import { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va';
-export { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va';
+} from '../MSMatchingRules/MSString.ta.js';
+import { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va.js';
+export { ub_msstring_match } from '../MSUpperBounds/ub-msstring-match.va.js';
 
 /* START_OF_SYMBOL_DEFINITION SubstringAssertion_Item */
 /**

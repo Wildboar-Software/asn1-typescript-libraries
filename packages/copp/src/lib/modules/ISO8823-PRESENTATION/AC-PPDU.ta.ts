@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Presentation_context_addition_list,
     _decode_Presentation_context_addition_list,
     _encode_Presentation_context_addition_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-addition-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-addition-list.ta.js';
 export {
     Presentation_context_addition_list,
     _decode_Presentation_context_addition_list,
     _encode_Presentation_context_addition_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-addition-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-addition-list.ta.js';
 import {
     Presentation_context_deletion_list,
     _decode_Presentation_context_deletion_list,
     _encode_Presentation_context_deletion_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-deletion-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-deletion-list.ta.js';
 export {
     Presentation_context_deletion_list,
     _decode_Presentation_context_deletion_list,
     _encode_Presentation_context_deletion_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-deletion-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-deletion-list.ta.js';
 import {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 export {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AC_PPDU */
 /**

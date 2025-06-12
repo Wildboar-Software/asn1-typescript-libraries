@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CryptoModuleSecurityInformation,
     _decode_CryptoModuleSecurityInformation,
     _encode_CryptoModuleSecurityInformation,
-} from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta';
+} from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta.js';
 export {
     CryptoModuleSecurityInformation,
     _decode_CryptoModuleSecurityInformation,
     _encode_CryptoModuleSecurityInformation,
-} from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta';
+} from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta.js';
 import {
     BiometricProcessSecurityInformation,
     _decode_BiometricProcessSecurityInformation,
     _encode_BiometricProcessSecurityInformation,
-} from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta.js';
 export {
     BiometricProcessSecurityInformation,
     _decode_BiometricProcessSecurityInformation,
     _encode_BiometricProcessSecurityInformation,
-} from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta.js';
 import {
     SecurityEvaluationExtensionInformation,
     _decode_SecurityEvaluationExtensionInformation,
     _encode_SecurityEvaluationExtensionInformation,
-} from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta';
+} from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta.js';
 export {
     SecurityEvaluationExtensionInformation,
     _decode_SecurityEvaluationExtensionInformation,
     _encode_SecurityEvaluationExtensionInformation,
-} from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta';
+} from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUSecurityReport */
 /**

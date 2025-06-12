@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca';
-export { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca.js';
+export { CDTC_TEST_RESULTS } from '../TestCategories-ASN1Module/CDTC-TEST-RESULTS.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION InternalResourceSet */
 /**

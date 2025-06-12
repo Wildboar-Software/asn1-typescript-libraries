@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100InformationModel.va';
-export { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100InformationModel.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100InformationModel.va.js';
+export { m3100InformationModel } from '../ASN1DefinedTypesModule/m3100InformationModel.va.js';
 
 /* START_OF_SYMBOL_DEFINITION m3100Notification */
 /**

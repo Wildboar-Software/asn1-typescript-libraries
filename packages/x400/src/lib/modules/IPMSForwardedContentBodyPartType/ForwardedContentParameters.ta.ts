@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 export {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 import {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 export {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 import {
     MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
-} from '../MTSAbstractService/MessageDeliveryIdentifier.ta';
+} from '../MTSAbstractService/MessageDeliveryIdentifier.ta.js';
 export {
     MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
-} from '../MTSAbstractService/MessageDeliveryIdentifier.ta';
+} from '../MTSAbstractService/MessageDeliveryIdentifier.ta.js';
 import {
     SubmissionProof,
     _decode_SubmissionProof,
     _encode_SubmissionProof,
-} from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta';
+} from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta.js';
 export {
     SubmissionProof,
     _decode_SubmissionProof,
     _encode_SubmissionProof,
-} from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta';
+} from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ForwardedContentParameters */
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_regCtrl_oldCertID } from "../PKIXCRMF-2009/id-regCtrl-oldCertID.va";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_regCtrl_oldCertID } from "../PKIXCRMF-2009/id-regCtrl-oldCertID.va.js";
 import {
     OldCertId,
     _decode_OldCertId,
     _encode_OldCertId,
-} from "../PKIXCRMF-2009/OldCertId.ta";
+} from "../PKIXCRMF-2009/OldCertId.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION regCtrl_oldCertID */
 /**

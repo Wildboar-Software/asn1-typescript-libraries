@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifier.oa';
-export { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifier.oa';
-import { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa';
-export { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa';
-import { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va';
-export { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifier.oa.js';
+export { mHSNumericUserIdentifier } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifier.oa.js';
+import { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa.js';
+export { mHSNumericUserIdentifierAttribute } from '../MHSRoutingORAddressSubtree/mHSNumericUserIdentifierAttribute.oa.js';
+import { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va.js';
+export { id_nf_mhs_numeric_user_identifier } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-numeric-user-identifier.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSNumericUserIdentifierNameForm */
 /**

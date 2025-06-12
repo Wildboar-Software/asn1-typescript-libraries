@@ -4,19 +4,19 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FingerPrint_finger,
     _decode_FingerPrint_finger,
     _encode_FingerPrint_finger,
     _enum_for_FingerPrint_finger,
-} from "../PKCS-15/FingerPrint-finger.ta";
+} from "../PKCS-15/FingerPrint-finger.ta.js";
 import {
     FingerPrint_hand,
     _decode_FingerPrint_hand,
     _encode_FingerPrint_hand,
     _enum_for_FingerPrint_hand,
-} from "../PKCS-15/FingerPrint-hand.ta";
+} from "../PKCS-15/FingerPrint-hand.ta.js";
 export {
     FingerPrint_finger,
     FingerPrint_finger_littleFinger /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -32,7 +32,7 @@ export {
     _decode_FingerPrint_finger,
     _encode_FingerPrint_finger,
     _enum_for_FingerPrint_finger,
-} from "../PKCS-15/FingerPrint-finger.ta";
+} from "../PKCS-15/FingerPrint-finger.ta.js";
 export {
     FingerPrint_hand,
     FingerPrint_hand_left /* IMPORTED_LONG_ENUMERATION_ITEM */,
@@ -42,7 +42,7 @@ export {
     _decode_FingerPrint_hand,
     _encode_FingerPrint_hand,
     _enum_for_FingerPrint_hand,
-} from "../PKCS-15/FingerPrint-hand.ta";
+} from "../PKCS-15/FingerPrint-hand.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FingerPrint */
 /**

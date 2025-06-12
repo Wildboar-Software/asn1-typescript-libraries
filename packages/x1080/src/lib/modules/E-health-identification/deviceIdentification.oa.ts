@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_med_device } from '../E-health-identification/id-med-device.va';
-export { id_med_device } from '../E-health-identification/id-med-device.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_med_device } from '../E-health-identification/id-med-device.va.js';
+export { id_med_device } from '../E-health-identification/id-med-device.va.js';
 import {
     DeviceIdentification,
     _decode_DeviceIdentification,
     _encode_DeviceIdentification,
-} from '../E-health-identification/DeviceIdentification.ta';
+} from '../E-health-identification/DeviceIdentification.ta.js';
 export {
     DeviceIdentification,
     _decode_DeviceIdentification,
     _encode_DeviceIdentification,
-} from '../E-health-identification/DeviceIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/DeviceIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION deviceIdentification */
 /**

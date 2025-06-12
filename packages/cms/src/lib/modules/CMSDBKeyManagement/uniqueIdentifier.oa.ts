@@ -3,15 +3,15 @@ import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta";
-import { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+} from "../CMSDBKeyManagement/UniqueIdentifier.ta.js";
+import { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 export {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta";
-export { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va";
+} from "../CMSDBKeyManagement/UniqueIdentifier.ta.js";
+export { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.js";
 
 /* START_OF_SYMBOL_DEFINITION uniqueIdentifier */
 /**

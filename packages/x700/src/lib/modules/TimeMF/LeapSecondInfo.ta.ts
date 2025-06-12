@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LeapIndication,
     _enum_for_LeapIndication,
@@ -79,7 +79,7 @@ import {
     alarmCondition /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_LeapIndication,
     _encode_LeapIndication,
-} from '../TimeMF/LeapIndication.ta';
+} from '../TimeMF/LeapIndication.ta.js';
 export {
     LeapIndication,
     _enum_for_LeapIndication,
@@ -93,17 +93,17 @@ export {
     alarmCondition /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_LeapIndication,
     _encode_LeapIndication,
-} from '../TimeMF/LeapIndication.ta';
+} from '../TimeMF/LeapIndication.ta.js';
 import {
     DateOfLeap,
     _decode_DateOfLeap,
     _encode_DateOfLeap,
-} from '../TimeMF/DateOfLeap.ta';
+} from '../TimeMF/DateOfLeap.ta.js';
 export {
     DateOfLeap,
     _decode_DateOfLeap,
     _encode_DateOfLeap,
-} from '../TimeMF/DateOfLeap.ta';
+} from '../TimeMF/DateOfLeap.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LeapSecondInfo */
 /**

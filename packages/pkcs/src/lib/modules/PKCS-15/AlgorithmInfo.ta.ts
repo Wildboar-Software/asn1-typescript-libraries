@@ -6,19 +6,19 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
-export { AlgorithmSet } from "../PKCS-15/AlgorithmSet.osa";
-export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca";
+} from "../PKCS-15/Reference.ta.js";
+export { AlgorithmSet } from "../PKCS-15/AlgorithmSet.osa.js";
+export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.js";
 export {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AlgorithmInfo */
 /**

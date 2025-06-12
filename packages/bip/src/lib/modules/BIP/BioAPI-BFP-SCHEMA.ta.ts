@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -89,7 +89,7 @@ import {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 export {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -103,37 +103,37 @@ export {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 import {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 export {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 import {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 export {
   BioAPI_VERSION,
   _decode_BioAPI_VERSION,
   _encode_BioAPI_VERSION,
-} from '../BIP/BioAPI-VERSION.ta';
+} from '../BIP/BioAPI-VERSION.ta.js';
 import {
   BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.js';
 export {
   BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.js';
 import {
   BioAPI_BIR_BIOMETRIC_TYPE,
   BioAPI_BIR_BIOMETRIC_TYPE_typeMultipleBiometricTypes /* IMPORTED_LONG_NAMED_BIT */,
@@ -174,7 +174,7 @@ import {
   typePassword /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_BIOMETRIC_TYPE,
   _encode_BioAPI_BIR_BIOMETRIC_TYPE,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.js';
 export {
   BioAPI_BIR_BIOMETRIC_TYPE,
   BioAPI_BIR_BIOMETRIC_TYPE_typeMultipleBiometricTypes /* IMPORTED_LONG_NAMED_BIT */,
@@ -215,27 +215,27 @@ export {
   typePassword /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_BIR_BIOMETRIC_TYPE,
   _encode_BioAPI_BIR_BIOMETRIC_TYPE,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta';
+} from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 import {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_BFP_SCHEMA */
 /**

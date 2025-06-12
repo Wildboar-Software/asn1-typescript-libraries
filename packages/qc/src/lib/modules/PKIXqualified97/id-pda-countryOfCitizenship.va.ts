@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta";
-import { id_pda } from "../PKIXqualified97/id-pda.va";
+import { AttributeType } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeType.ta.js";
+import { id_pda } from "../PKIXqualified97/id-pda.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pda_countryOfCitizenship */
 /**

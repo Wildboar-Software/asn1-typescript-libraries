@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-import { ms_connect } from '../MSAbstractService/ms-connect.oa';
-export { ms_connect } from '../MSAbstractService/ms-connect.oa';
-import { retrieval } from '../MSAbstractService/retrieval.oa';
-export { retrieval } from '../MSAbstractService/retrieval.oa';
-import { ms_submission } from '../MSAbstractService/ms-submission.oa';
-export { ms_submission } from '../MSAbstractService/ms-submission.oa';
-import { administration } from '../MTSAbstractService/administration.oa';
-export { administration } from '../MTSAbstractService/administration.oa';
-import { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va';
-export { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+import { ms_connect } from '../MSAbstractService/ms-connect.oa.js';
+export { ms_connect } from '../MSAbstractService/ms-connect.oa.js';
+import { retrieval } from '../MSAbstractService/retrieval.oa.js';
+export { retrieval } from '../MSAbstractService/retrieval.oa.js';
+import { ms_submission } from '../MSAbstractService/ms-submission.oa.js';
+export { ms_submission } from '../MSAbstractService/ms-submission.oa.js';
+import { administration } from '../MTSAbstractService/administration.oa.js';
+export { administration } from '../MTSAbstractService/administration.oa.js';
+import { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va.js';
+export { id_crt_ms_access_94 } from '../MSObjectIdentifiers/id-crt-ms-access-94.va.js';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_access_contract_94 */
 /**

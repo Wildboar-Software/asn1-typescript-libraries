@@ -65,77 +65,77 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     GroupObjects,
     _decode_GroupObjects,
     _encode_GroupObjects,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/GroupObjects.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/GroupObjects.ta.js';
 export {
     GroupObjects,
     _decode_GroupObjects,
     _encode_GroupObjects,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/GroupObjects.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/GroupObjects.ta.js';
 import {
     RequestIdentifier,
     _decode_RequestIdentifier,
     _encode_RequestIdentifier,
-} from '../RTMModule/RequestIdentifier.ta';
+} from '../RTMModule/RequestIdentifier.ta.js';
 export {
     RequestIdentifier,
     _decode_RequestIdentifier,
     _encode_RequestIdentifier,
-} from '../RTMModule/RequestIdentifier.ta';
+} from '../RTMModule/RequestIdentifier.ta.js';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 export {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 import {
     ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
-} from '../RTMModule/ResponseTime.ta';
+} from '../RTMModule/ResponseTime.ta.js';
 export {
     ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
-} from '../RTMModule/ResponseTime.ta';
+} from '../RTMModule/ResponseTime.ta.js';
 import {
     Integer,
     _decode_Integer,
     _encode_Integer,
-} from '../MetricModule/Integer.ta';
+} from '../MetricModule/Integer.ta.js';
 export {
     Integer,
     _decode_Integer,
     _encode_Integer,
-} from '../MetricModule/Integer.ta';
+} from '../MetricModule/Integer.ta.js';
 import {
     ResponseSync,
     _enum_for_ResponseSync,
@@ -147,7 +147,7 @@ import {
     atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResponseSync,
     _encode_ResponseSync,
-} from '../RTMModule/ResponseSync.ta';
+} from '../RTMModule/ResponseSync.ta.js';
 export {
     ResponseSync,
     _enum_for_ResponseSync,
@@ -159,37 +159,37 @@ export {
     atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResponseSync,
     _encode_ResponseSync,
-} from '../RTMModule/ResponseSync.ta';
+} from '../RTMModule/ResponseSync.ta.js';
 import {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 export {
     TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
-} from '../MetricModule/TimePeriod.ta';
+} from '../MetricModule/TimePeriod.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResponseConfirmationInfo */
 /**

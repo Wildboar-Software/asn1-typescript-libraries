@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { fieldType } from "../ANSI-X9-42/fieldType.va";
-export { fieldType } from "../ANSI-X9-42/fieldType.va";
+import { fieldType } from "../ANSI-X9-42/fieldType.va.js";
+export { fieldType } from "../ANSI-X9-42/fieldType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION gfPrime */
 /**

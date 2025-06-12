@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ESSPrivacyMark,
     _decode_ESSPrivacyMark,
     _encode_ESSPrivacyMark,
-} from "../ExtendedSecurityServices-2006/ESSPrivacyMark.ta";
+} from "../ExtendedSecurityServices-2006/ESSPrivacyMark.ta.js";
 import {
     SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
-} from "../ExtendedSecurityServices-2006/SecurityCategories.ta";
+} from "../ExtendedSecurityServices-2006/SecurityCategories.ta.js";
 import {
     SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from "../ExtendedSecurityServices-2006/SecurityClassification.ta";
+} from "../ExtendedSecurityServices-2006/SecurityClassification.ta.js";
 import {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from "../ExtendedSecurityServices-2006/SecurityPolicyIdentifier.ta";
+} from "../ExtendedSecurityServices-2006/SecurityPolicyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ESSSecurityLabel */
 /**

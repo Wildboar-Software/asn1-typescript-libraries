@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa';
-export { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa';
-import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa';
-export { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa';
-import { mts_bind } from '../MTSAbstractService/mts-bind.oa';
-export { mts_bind } from '../MTSAbstractService/mts-bind.oa';
-import { mts_unbind } from '../MTSAbstractService/mts-unbind.oa';
-export { mts_unbind } from '../MTSAbstractService/mts-unbind.oa';
-import { id_cp_mts_connect } from '../MTSObjectIdentifiers/id-cp-mts-connect.va';
-export { id_cp_mts_connect } from '../MTSObjectIdentifiers/id-cp-mts-connect.va';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa.js';
+export { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa.js';
+import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.js';
+export { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.js';
+import { mts_bind } from '../MTSAbstractService/mts-bind.oa.js';
+export { mts_bind } from '../MTSAbstractService/mts-bind.oa.js';
+import { mts_unbind } from '../MTSAbstractService/mts-unbind.oa.js';
+export { mts_unbind } from '../MTSAbstractService/mts-unbind.oa.js';
+import { id_cp_mts_connect } from '../MTSObjectIdentifiers/id-cp-mts-connect.va.js';
+export { id_cp_mts_connect } from '../MTSObjectIdentifiers/id-cp-mts-connect.va.js';
+import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mts_connect */
 /**

@@ -1,14 +1,14 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
 import {
     ExtensionRequest,
     _decode_ExtensionRequest,
     _encode_ExtensionRequest,
-} from "../PKCS-9/ExtensionRequest.ta";
-import { pkcs_9_at_extensionRequest } from "../PKCS-9/pkcs-9-at-extensionRequest.va";
+} from "../PKCS-9/ExtensionRequest.ta.js";
+import { pkcs_9_at_extensionRequest } from "../PKCS-9/pkcs-9-at-extensionRequest.va.js";
 
 /* START_OF_SYMBOL_DEFINITION extensionRequest */
 /**

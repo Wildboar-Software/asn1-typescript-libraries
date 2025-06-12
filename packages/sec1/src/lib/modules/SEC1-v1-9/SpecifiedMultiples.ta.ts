@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta";
-export { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta.js";
+export { SpecifiedMultiples_Item, _decode_SpecifiedMultiples_Item, _encode_SpecifiedMultiples_Item } from "../SEC1-v1-9/SpecifiedMultiples-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SpecifiedMultiples */

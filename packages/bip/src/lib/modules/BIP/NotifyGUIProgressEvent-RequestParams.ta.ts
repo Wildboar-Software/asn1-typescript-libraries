@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 import {
   BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
@@ -109,7 +109,7 @@ import {
   BioAPI_GUI_OPERATION_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
-} from '../BIP/BioAPI-GUI-OPERATION.ta';
+} from '../BIP/BioAPI-GUI-OPERATION.ta.js';
 export {
   BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
@@ -123,7 +123,7 @@ export {
   BioAPI_GUI_OPERATION_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
-} from '../BIP/BioAPI-GUI-OPERATION.ta';
+} from '../BIP/BioAPI-GUI-OPERATION.ta.js';
 import {
   BioAPI_GUI_SUBOPERATION,
   _enum_for_BioAPI_GUI_SUBOPERATION,
@@ -134,7 +134,7 @@ import {
   BioAPI_GUI_SUBOPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_SUBOPERATION,
   _encode_BioAPI_GUI_SUBOPERATION,
-} from '../BIP/BioAPI-GUI-SUBOPERATION.ta';
+} from '../BIP/BioAPI-GUI-SUBOPERATION.ta.js';
 export {
   BioAPI_GUI_SUBOPERATION,
   _enum_for_BioAPI_GUI_SUBOPERATION,
@@ -145,7 +145,7 @@ export {
   BioAPI_GUI_SUBOPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_SUBOPERATION,
   _encode_BioAPI_GUI_SUBOPERATION,
-} from '../BIP/BioAPI-GUI-SUBOPERATION.ta';
+} from '../BIP/BioAPI-GUI-SUBOPERATION.ta.js';
 import {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
@@ -162,7 +162,7 @@ import {
   any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta';
+} from '../BIP/BioAPI-BIR-PURPOSE.ta.js';
 export {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
@@ -179,7 +179,7 @@ export {
   any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta';
+} from '../BIP/BioAPI-BIR-PURPOSE.ta.js';
 import {
   BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
@@ -191,7 +191,7 @@ import {
   afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
-} from '../BIP/BioAPI-GUI-MOMENT.ta';
+} from '../BIP/BioAPI-GUI-MOMENT.ta.js';
 export {
   BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
@@ -203,27 +203,27 @@ export {
   afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
-} from '../BIP/BioAPI-GUI-MOMENT.ta';
+} from '../BIP/BioAPI-GUI-MOMENT.ta.js';
 import {
   UnsignedByte,
   _decode_UnsignedByte,
   _encode_UnsignedByte,
-} from '../BIP/UnsignedByte.ta';
+} from '../BIP/UnsignedByte.ta.js';
 export {
   UnsignedByte,
   _decode_UnsignedByte,
   _encode_UnsignedByte,
-} from '../BIP/UnsignedByte.ta';
+} from '../BIP/UnsignedByte.ta.js';
 import {
   BioAPI_GUI_BITMAP_ARRAY,
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
-} from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta';
+} from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.js';
 export {
   BioAPI_GUI_BITMAP_ARRAY,
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
-} from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta';
+} from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NotifyGUIProgressEvent_RequestParams */
 /**

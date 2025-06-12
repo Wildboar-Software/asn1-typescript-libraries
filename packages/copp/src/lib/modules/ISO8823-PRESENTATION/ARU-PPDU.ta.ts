@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ARU_PPDU_x400_mode_parameters,
     _decode_ARU_PPDU_x400_mode_parameters,
     _encode_ARU_PPDU_x400_mode_parameters,
-} from '../ISO8823-PRESENTATION/ARU-PPDU-x400-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU-x400-mode-parameters.ta.js';
 export {
     ARU_PPDU_x400_mode_parameters,
     _decode_ARU_PPDU_x400_mode_parameters,
     _encode_ARU_PPDU_x400_mode_parameters,
-} from '../ISO8823-PRESENTATION/ARU-PPDU-x400-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU-x400-mode-parameters.ta.js';
 import {
     ARU_PPDU_normal_mode_parameters,
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/ARU-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU-normal-mode-parameters.ta.js';
 export {
     ARU_PPDU_normal_mode_parameters,
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/ARU-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/ARU-PPDU-normal-mode-parameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU */
 /**

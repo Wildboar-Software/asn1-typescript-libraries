@@ -65,31 +65,31 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
-import { id_et_content } from '../IPMSObjectIdentifiers/id-et-content.va';
-export { id_et_content } from '../IPMSObjectIdentifiers/id-et-content.va';
+} from '../MTSAbstractService/Content.ta.js';
+import { id_et_content } from '../IPMSObjectIdentifiers/id-et-content.va.js';
+export { id_et_content } from '../IPMSObjectIdentifiers/id-et-content.va.js';
 import {
     ExtendedContentType,
-} from "../MTSAbstractService/ExtendedContentType.ta";
+} from "../MTSAbstractService/ExtendedContentType.ta.js";
 import {
     EXTENDED_BODY_PART_TYPE,
-} from "../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca";
+} from "../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js";
 import {
     content_body_part_data,
-} from './content-body-part-data.oa';
+} from './content-body-part-data.oa.js';
 import {
     content_body_part_parameters,
-} from './content-body-part-parameters.oa';
+} from './content-body-part-parameters.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION content_body_part */
 /**

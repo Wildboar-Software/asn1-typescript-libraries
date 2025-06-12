@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 export {
     ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.js';
 import {
     AlarmStatus,
     _enum_for_AlarmStatus,
@@ -95,7 +95,7 @@ import {
     activePending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
-} from '../ASN1DefinedTypesModule/AlarmStatus.ta';
+} from '../ASN1DefinedTypesModule/AlarmStatus.ta.js';
 export {
     AlarmStatus,
     _enum_for_AlarmStatus,
@@ -115,7 +115,7 @@ export {
     activePending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
-} from '../ASN1DefinedTypesModule/AlarmStatus.ta';
+} from '../ASN1DefinedTypesModule/AlarmStatus.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CurrentProblem */
 /**

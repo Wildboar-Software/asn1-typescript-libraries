@@ -65,200 +65,200 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ThisEDIMField,
     _decode_ThisEDIMField,
     _encode_ThisEDIMField,
-} from '../EDIMSInformationObjects/ThisEDIMField.ta';
+} from '../EDIMSInformationObjects/ThisEDIMField.ta.js';
 export {
     ThisEDIMField,
     _decode_ThisEDIMField,
     _encode_ThisEDIMField,
-} from '../EDIMSInformationObjects/ThisEDIMField.ta';
+} from '../EDIMSInformationObjects/ThisEDIMField.ta.js';
 import {
     OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
-} from '../EDIMSInformationObjects/OriginatorField.ta';
+} from '../EDIMSInformationObjects/OriginatorField.ta.js';
 export {
     OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
-} from '../EDIMSInformationObjects/OriginatorField.ta';
+} from '../EDIMSInformationObjects/OriginatorField.ta.js';
 import {
     RecipientsField,
     _decode_RecipientsField,
     _encode_RecipientsField,
-} from '../EDIMSInformationObjects/RecipientsField.ta';
+} from '../EDIMSInformationObjects/RecipientsField.ta.js';
 export {
     RecipientsField,
     _decode_RecipientsField,
     _encode_RecipientsField,
-} from '../EDIMSInformationObjects/RecipientsField.ta';
+} from '../EDIMSInformationObjects/RecipientsField.ta.js';
 import {
     EDINReceiverField,
     _decode_EDINReceiverField,
     _encode_EDINReceiverField,
-} from '../EDIMSInformationObjects/EDINReceiverField.ta';
+} from '../EDIMSInformationObjects/EDINReceiverField.ta.js';
 export {
     EDINReceiverField,
     _decode_EDINReceiverField,
     _encode_EDINReceiverField,
-} from '../EDIMSInformationObjects/EDINReceiverField.ta';
+} from '../EDIMSInformationObjects/EDINReceiverField.ta.js';
 import {
     ResponsibilityForwarded,
     _decode_ResponsibilityForwarded,
     _encode_ResponsibilityForwarded,
-} from '../EDIMSInformationObjects/ResponsibilityForwarded.ta';
+} from '../EDIMSInformationObjects/ResponsibilityForwarded.ta.js';
 export {
     ResponsibilityForwarded,
     _decode_ResponsibilityForwarded,
     _encode_ResponsibilityForwarded,
-} from '../EDIMSInformationObjects/ResponsibilityForwarded.ta';
+} from '../EDIMSInformationObjects/ResponsibilityForwarded.ta.js';
 import {
     EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
-} from '../EDIMSInformationObjects/EDIBodyPartType.ta';
+} from '../EDIMSInformationObjects/EDIBodyPartType.ta.js';
 export {
     EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
-} from '../EDIMSInformationObjects/EDIBodyPartType.ta';
+} from '../EDIMSInformationObjects/EDIBodyPartType.ta.js';
 import {
     IncompleteCopyField,
     _decode_IncompleteCopyField,
     _encode_IncompleteCopyField,
-} from '../EDIMSInformationObjects/IncompleteCopyField.ta';
+} from '../EDIMSInformationObjects/IncompleteCopyField.ta.js';
 export {
     IncompleteCopyField,
     _decode_IncompleteCopyField,
     _encode_IncompleteCopyField,
-} from '../EDIMSInformationObjects/IncompleteCopyField.ta';
+} from '../EDIMSInformationObjects/IncompleteCopyField.ta.js';
 import {
     ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
-} from '../EDIMSInformationObjects/ExpiryTimeField.ta';
+} from '../EDIMSInformationObjects/ExpiryTimeField.ta.js';
 export {
     ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
-} from '../EDIMSInformationObjects/ExpiryTimeField.ta';
+} from '../EDIMSInformationObjects/ExpiryTimeField.ta.js';
 import {
     RelatedMessagesField,
     _decode_RelatedMessagesField,
     _encode_RelatedMessagesField,
-} from '../EDIMSInformationObjects/RelatedMessagesField.ta';
+} from '../EDIMSInformationObjects/RelatedMessagesField.ta.js';
 export {
     RelatedMessagesField,
     _decode_RelatedMessagesField,
     _encode_RelatedMessagesField,
-} from '../EDIMSInformationObjects/RelatedMessagesField.ta';
+} from '../EDIMSInformationObjects/RelatedMessagesField.ta.js';
 import {
     ObsoletedEDIMsField,
     _decode_ObsoletedEDIMsField,
     _encode_ObsoletedEDIMsField,
-} from '../EDIMSInformationObjects/ObsoletedEDIMsField.ta';
+} from '../EDIMSInformationObjects/ObsoletedEDIMsField.ta.js';
 export {
     ObsoletedEDIMsField,
     _decode_ObsoletedEDIMsField,
     _encode_ObsoletedEDIMsField,
-} from '../EDIMSInformationObjects/ObsoletedEDIMsField.ta';
+} from '../EDIMSInformationObjects/ObsoletedEDIMsField.ta.js';
 import {
     EDIApplicationSecurityElementsField,
     _decode_EDIApplicationSecurityElementsField,
     _encode_EDIApplicationSecurityElementsField,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.js';
 export {
     EDIApplicationSecurityElementsField,
     _decode_EDIApplicationSecurityElementsField,
     _encode_EDIApplicationSecurityElementsField,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.js';
 import {
     CrossReferencingInformationField,
     _decode_CrossReferencingInformationField,
     _encode_CrossReferencingInformationField,
-} from '../EDIMSInformationObjects/CrossReferencingInformationField.ta';
+} from '../EDIMSInformationObjects/CrossReferencingInformationField.ta.js';
 export {
     CrossReferencingInformationField,
     _decode_CrossReferencingInformationField,
     _encode_CrossReferencingInformationField,
-} from '../EDIMSInformationObjects/CrossReferencingInformationField.ta';
+} from '../EDIMSInformationObjects/CrossReferencingInformationField.ta.js';
 import {
     EDIMessageTypeField,
     _decode_EDIMessageTypeField,
     _encode_EDIMessageTypeField,
-} from '../EDIMSInformationObjects/EDIMessageTypeField.ta';
+} from '../EDIMSInformationObjects/EDIMessageTypeField.ta.js';
 export {
     EDIMessageTypeField,
     _decode_EDIMessageTypeField,
     _encode_EDIMessageTypeField,
-} from '../EDIMSInformationObjects/EDIMessageTypeField.ta';
+} from '../EDIMSInformationObjects/EDIMessageTypeField.ta.js';
 import {
     ServiceStringAdviceField,
     _decode_ServiceStringAdviceField,
     _encode_ServiceStringAdviceField,
-} from '../EDIMSInformationObjects/ServiceStringAdviceField.ta';
+} from '../EDIMSInformationObjects/ServiceStringAdviceField.ta.js';
 export {
     ServiceStringAdviceField,
     _decode_ServiceStringAdviceField,
     _encode_ServiceStringAdviceField,
-} from '../EDIMSInformationObjects/ServiceStringAdviceField.ta';
+} from '../EDIMSInformationObjects/ServiceStringAdviceField.ta.js';
 import {
     SyntaxIdentifierField,
     _decode_SyntaxIdentifierField,
     _encode_SyntaxIdentifierField,
-} from '../EDIMSInformationObjects/SyntaxIdentifierField.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifierField.ta.js';
 export {
     SyntaxIdentifierField,
     _decode_SyntaxIdentifierField,
     _encode_SyntaxIdentifierField,
-} from '../EDIMSInformationObjects/SyntaxIdentifierField.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifierField.ta.js';
 import {
     InterchangeSenderField,
     _decode_InterchangeSenderField,
     _encode_InterchangeSenderField,
-} from '../EDIMSInformationObjects/InterchangeSenderField.ta';
+} from '../EDIMSInformationObjects/InterchangeSenderField.ta.js';
 export {
     InterchangeSenderField,
     _decode_InterchangeSenderField,
     _encode_InterchangeSenderField,
-} from '../EDIMSInformationObjects/InterchangeSenderField.ta';
+} from '../EDIMSInformationObjects/InterchangeSenderField.ta.js';
 import {
     DateAndTimeOfPreparationField,
     _decode_DateAndTimeOfPreparationField,
     _encode_DateAndTimeOfPreparationField,
-} from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta';
+} from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta.js';
 export {
     DateAndTimeOfPreparationField,
     _decode_DateAndTimeOfPreparationField,
     _encode_DateAndTimeOfPreparationField,
-} from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta';
+} from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta.js';
 import {
     ApplicationReferenceField,
     _decode_ApplicationReferenceField,
     _encode_ApplicationReferenceField,
-} from '../EDIMSInformationObjects/ApplicationReferenceField.ta';
+} from '../EDIMSInformationObjects/ApplicationReferenceField.ta.js';
 export {
     ApplicationReferenceField,
     _decode_ApplicationReferenceField,
     _encode_ApplicationReferenceField,
-} from '../EDIMSInformationObjects/ApplicationReferenceField.ta';
+} from '../EDIMSInformationObjects/ApplicationReferenceField.ta.js';
 import {
     HeadingExtensionsField,
     _decode_HeadingExtensionsField,
     _encode_HeadingExtensionsField,
-} from '../EDIMSInformationObjects/HeadingExtensionsField.ta';
+} from '../EDIMSInformationObjects/HeadingExtensionsField.ta.js';
 export {
     HeadingExtensionsField,
     _decode_HeadingExtensionsField,
     _encode_HeadingExtensionsField,
-} from '../EDIMSInformationObjects/HeadingExtensionsField.ta';
+} from '../EDIMSInformationObjects/HeadingExtensionsField.ta.js';
 import {
     id_bp_edifact_ISO646,
-} from "../EDIMSObjectIdentifiers/id-bp-edifact-ISO646.va";
+} from "../EDIMSObjectIdentifiers/id-bp-edifact-ISO646.va.js";
 
 /* START_OF_SYMBOL_DEFINITION Heading */
 /**

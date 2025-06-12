@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 export {
     MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta';
+} from '../MTSAbstractService/MessageDeliveryTime.ta.js';
 import {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 export {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta';
+} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.js';
 import {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 export {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageParameters */
 /**

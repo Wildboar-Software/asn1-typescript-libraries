@@ -65,81 +65,81 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Version,
     Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from '../AuthenticationContextForBiometrics/Version.ta';
+} from '../AuthenticationContextForBiometrics/Version.ta.js';
 export {
     Version,
     Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from '../AuthenticationContextForBiometrics/Version.ta';
+} from '../AuthenticationContextForBiometrics/Version.ta.js';
 import {
     HashList,
     _decode_HashList,
     _encode_HashList,
-} from '../AuthenticationContextForBiometrics/HashList.ta';
+} from '../AuthenticationContextForBiometrics/HashList.ta.js';
 export {
     HashList,
     _decode_HashList,
     _encode_HashList,
-} from '../AuthenticationContextForBiometrics/HashList.ta';
+} from '../AuthenticationContextForBiometrics/HashList.ta.js';
 import {
     URI,
     _decode_URI,
     _encode_URI,
-} from '../AuthenticationContextForBiometrics/URI.ta';
+} from '../AuthenticationContextForBiometrics/URI.ta.js';
 export {
     URI,
     _decode_URI,
     _encode_URI,
-} from '../AuthenticationContextForBiometrics/URI.ta';
+} from '../AuthenticationContextForBiometrics/URI.ta.js';
 import {
     PatronFormat,
     _decode_PatronFormat,
     _encode_PatronFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta.js';
 export {
     PatronFormat,
     _decode_PatronFormat,
     _encode_PatronFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta';
+} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta.js';
 import {
     UserInformation,
     _decode_UserInformation,
     _encode_UserInformation,
-} from '../AuthenticationContextForBiometrics/UserInformation.ta';
+} from '../AuthenticationContextForBiometrics/UserInformation.ta.js';
 export {
     UserInformation,
     _decode_UserInformation,
     _encode_UserInformation,
-} from '../AuthenticationContextForBiometrics/UserInformation.ta';
+} from '../AuthenticationContextForBiometrics/UserInformation.ta.js';
 import {
     PKICertificateInformation,
     _decode_PKICertificateInformation,
     _encode_PKICertificateInformation,
-} from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta';
+} from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.js';
 export {
     PKICertificateInformation,
     _decode_PKICertificateInformation,
     _encode_PKICertificateInformation,
-} from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta';
+} from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.js';
 import {
     SequenceOfACBioInstances,
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
-} from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta';
+} from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.js';
 export {
     SequenceOfACBioInstances,
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
-} from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta';
+} from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BDBForBRTC */
 /**

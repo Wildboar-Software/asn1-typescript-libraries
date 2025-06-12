@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_regInfo_utf8Pairs } from "../PKIXCRMF-2009/id-regInfo-utf8Pairs.va";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_regInfo_utf8Pairs } from "../PKIXCRMF-2009/id-regInfo-utf8Pairs.va.js";
 import {
     UTF8Pairs,
     _decode_UTF8Pairs,
     _encode_UTF8Pairs,
-} from "../PKIXCRMF-2009/UTF8Pairs.ta";
+} from "../PKIXCRMF-2009/UTF8Pairs.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION regInfo_utf8Pairs */
 /**

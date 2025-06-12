@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta";
+import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta.js";
 export {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKCS-1/EncodingParameters.ta";
+} from "../PKCS-1/EncodingParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION emptyString */
 /**

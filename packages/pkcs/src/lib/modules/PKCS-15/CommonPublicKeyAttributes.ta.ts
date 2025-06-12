@@ -4,13 +4,13 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
-import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
+import { Usage, _decode_Usage, _encode_Usage } from "../PKCS-15/Usage.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonPublicKeyAttributes */
 /**

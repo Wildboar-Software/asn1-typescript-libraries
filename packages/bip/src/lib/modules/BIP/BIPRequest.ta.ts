@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 import {
   BIPRequest_params,
   _decode_BIPRequest_params,
   _encode_BIPRequest_params,
-} from '../BIP/BIPRequest-params.ta';
+} from '../BIP/BIPRequest-params.ta.js';
 export {
   BIPRequest_params,
   _decode_BIPRequest_params,
   _encode_BIPRequest_params,
-} from '../BIP/BIPRequest-params.ta';
+} from '../BIP/BIPRequest-params.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPRequest */
 /**

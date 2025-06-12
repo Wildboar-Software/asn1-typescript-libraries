@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 export {
     SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta';
+} from '../MSAbstractService/SequenceNumber.ta.js';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '../MSAbstractService/Attribute.ta';
+} from '../MSAbstractService/Attribute.ta.js';
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '../MSAbstractService/Attribute.ta';
+} from '../MSAbstractService/Attribute.ta.js';
 import {
     AttributeValueCount,
     _decode_AttributeValueCount,
     _encode_AttributeValueCount,
-} from '../MSAbstractService/AttributeValueCount.ta';
+} from '../MSAbstractService/AttributeValueCount.ta.js';
 export {
     AttributeValueCount,
     _decode_AttributeValueCount,
     _encode_AttributeValueCount,
-} from '../MSAbstractService/AttributeValueCount.ta';
+} from '../MSAbstractService/AttributeValueCount.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntryInformation */
 /**

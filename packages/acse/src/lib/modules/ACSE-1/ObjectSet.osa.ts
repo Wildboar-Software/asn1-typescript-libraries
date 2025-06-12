@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca';
-export { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca.js';
+export { MECHANISM_NAME } from '../ACSE-1/MECHANISM-NAME.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ObjectSet */
 /**

@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js';
 export {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js';
 import {
     AttributeCertificateV2,
     _decode_AttributeCertificateV2,
     _encode_AttributeCertificateV2,
-} from '../AuthenticationContextForBiometrics/AttributeCertificateV2.ta';
+} from '../AuthenticationContextForBiometrics/AttributeCertificateV2.ta.js';
 export {
     AttributeCertificateV2,
     _decode_AttributeCertificateV2,
     _encode_AttributeCertificateV2,
-} from '../AuthenticationContextForBiometrics/AttributeCertificateV2.ta';
+} from '../AuthenticationContextForBiometrics/AttributeCertificateV2.ta.js';
 import {
     OtherCertificateFormat,
     _decode_OtherCertificateFormat,
     _encode_OtherCertificateFormat,
-} from '../AuthenticationContextForBiometrics/OtherCertificateFormat.ta';
+} from '../AuthenticationContextForBiometrics/OtherCertificateFormat.ta.js';
 export {
     OtherCertificateFormat,
     _decode_OtherCertificateFormat,
     _encode_OtherCertificateFormat,
-} from '../AuthenticationContextForBiometrics/OtherCertificateFormat.ta';
+} from '../AuthenticationContextForBiometrics/OtherCertificateFormat.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertificateChoices */
 /**

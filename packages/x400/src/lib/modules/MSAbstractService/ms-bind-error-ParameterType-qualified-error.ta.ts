@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BindProblem,
     _enum_for_BindProblem,
@@ -81,7 +81,7 @@ import {
     inadequate_association_confidentiality /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BindProblem,
     _encode_BindProblem,
-} from '../MSAbstractService/BindProblem.ta';
+} from '../MSAbstractService/BindProblem.ta.js';
 export {
     BindProblem,
     _enum_for_BindProblem,
@@ -97,7 +97,7 @@ export {
     inadequate_association_confidentiality /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BindProblem,
     _encode_BindProblem,
-} from '../MSAbstractService/BindProblem.ta';
+} from '../MSAbstractService/BindProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ms_bind_error_ParameterType_qualified_error */
 /**

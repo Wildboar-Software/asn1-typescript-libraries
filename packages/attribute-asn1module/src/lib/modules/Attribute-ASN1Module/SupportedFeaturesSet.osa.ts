@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca";
-export { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca.js";
+export { DMI_SUPPORTEDFEATURES } from "../Attribute-ASN1Module/DMI-SUPPORTEDFEATURES.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SupportedFeaturesSet */

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EnvelopedData.ta.js";
 import {
     EncryptedValue,
     _decode_EncryptedValue,
     _encode_EncryptedValue,
-} from "../PKIXCRMF-2009/EncryptedValue.ta";
+} from "../PKIXCRMF-2009/EncryptedValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedKey */
 /**

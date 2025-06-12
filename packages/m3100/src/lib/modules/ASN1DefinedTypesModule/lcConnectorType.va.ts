@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectorType,
     _decode_ConnectorType,
     _encode_ConnectorType,
-} from '../ASN1DefinedTypesModule/ConnectorType.ta';
+} from '../ASN1DefinedTypesModule/ConnectorType.ta.js';
 export {
     ConnectorType,
     _decode_ConnectorType,
     _encode_ConnectorType,
-} from '../ASN1DefinedTypesModule/ConnectorType.ta';
+} from '../ASN1DefinedTypesModule/ConnectorType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION lcConnectorType */
 /**

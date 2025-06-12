@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RTABapdu,
     _decode_RTABapdu,
     _encode_RTABapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTABapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTABapdu.ta.js';
 export {
     RTABapdu,
     _decode_RTABapdu,
     _encode_RTABapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTABapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTABapdu.ta.js';
 import {
     AbortReason,
     AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -96,7 +96,7 @@ import {
     transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AbortReason,
     _encode_AbortReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/AbortReason.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/AbortReason.ta.js';
 export {
     AbortReason,
     AbortReason_localSystemProblem /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -117,9 +117,9 @@ export {
     transferCompleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AbortReason,
     _encode_AbortReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/AbortReason.ta';
-import { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca';
-export { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/AbortReason.ta.js';
+import { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca.js';
+export { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU_x400_mode_parameters */
 /**

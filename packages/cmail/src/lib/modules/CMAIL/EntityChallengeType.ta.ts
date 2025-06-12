@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SecretQuestionType,
   _decode_SecretQuestionType,
   _encode_SecretQuestionType,
-} from '../CMAIL/SecretQuestionType.ta';
+} from '../CMAIL/SecretQuestionType.ta.js';
 export {
   SecretQuestionType,
   _decode_SecretQuestionType,
   _encode_SecretQuestionType,
-} from '../CMAIL/SecretQuestionType.ta';
+} from '../CMAIL/SecretQuestionType.ta.js';
 import {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 export {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EntityChallengeType */
 /**

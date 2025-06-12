@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from '../E-health-identification/SchemeName.ta';
+} from '../E-health-identification/SchemeName.ta.js';
 export {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from '../E-health-identification/SchemeName.ta';
+} from '../E-health-identification/SchemeName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION INSURANCE_SCHEME */
 /**

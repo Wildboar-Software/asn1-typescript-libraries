@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va';
-export { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va.js';
+export { m3108Part2Identifier } from '../M3108Part2ASN1Module/m3108Part2Identifier.va.js';
 
 /* START_OF_SYMBOL_DEFINITION m3108Part2Parameter */
 /**

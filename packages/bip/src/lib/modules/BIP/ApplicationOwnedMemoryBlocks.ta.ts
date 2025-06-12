@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ApplicationOwnedMemoryBlock,
   _decode_ApplicationOwnedMemoryBlock,
   _encode_ApplicationOwnedMemoryBlock,
-} from '../BIP/ApplicationOwnedMemoryBlock.ta';
+} from '../BIP/ApplicationOwnedMemoryBlock.ta.js';
 export {
   ApplicationOwnedMemoryBlock,
   _decode_ApplicationOwnedMemoryBlock,
   _encode_ApplicationOwnedMemoryBlock,
-} from '../BIP/ApplicationOwnedMemoryBlock.ta';
+} from '../BIP/ApplicationOwnedMemoryBlock.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ApplicationOwnedMemoryBlocks */
 /**

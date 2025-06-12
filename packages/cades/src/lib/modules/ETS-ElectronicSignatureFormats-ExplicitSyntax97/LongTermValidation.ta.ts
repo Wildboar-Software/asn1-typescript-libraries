@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta";
-export { LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta.js";
+export { LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta.js";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CertificateSet.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CertificateSet.ta.js";
 import {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RevocationInfoChoices.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION LongTermValidation */
 /**

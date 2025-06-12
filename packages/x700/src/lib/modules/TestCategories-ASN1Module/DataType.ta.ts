@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IntegerDataType,
     IntegerDataType_allBitOn /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     pn20 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IntegerDataType,
     _encode_IntegerDataType,
-} from '../TestCategories-ASN1Module/IntegerDataType.ta';
+} from '../TestCategories-ASN1Module/IntegerDataType.ta.js';
 export {
     IntegerDataType,
     IntegerDataType_allBitOn /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,7 +99,7 @@ export {
     pn20 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IntegerDataType,
     _encode_IntegerDataType,
-} from '../TestCategories-ASN1Module/IntegerDataType.ta';
+} from '../TestCategories-ASN1Module/IntegerDataType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DataType */
 /**

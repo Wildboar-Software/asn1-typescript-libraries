@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CombinerAlgorithms */
 /**

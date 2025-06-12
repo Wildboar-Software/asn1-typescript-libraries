@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/nlm",
-    "version": "1.0.4",
+    "type": "module",
+    "version": "2.0.0",
     "description": "ITU X.283 Network Layer Management ASN.1 data structures in TypeScript",
     "keywords": [
         "x283",
@@ -32,6 +33,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.1"
+        "@wildboar/pki-stub": "2.x.x"
     }
 }

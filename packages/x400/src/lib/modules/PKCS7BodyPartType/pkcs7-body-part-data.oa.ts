@@ -65,14 +65,14 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta";
-import { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va';
-export { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va';
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/ContentInfo.ta.js";
+import { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va.js';
+export { id_et_pkcs7 } from '../IPMSObjectIdentifiers/id-et-pkcs7.va.js';
 
 /* START_OF_SYMBOL_DEFINITION pkcs7_body_part_data */
 /**

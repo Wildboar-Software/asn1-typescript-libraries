@@ -65,97 +65,97 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GetResult,
   _decode_GetResult,
   _encode_GetResult,
-} from '../CMIP-1/GetResult.ta';
+} from '../CMIP-1/GetResult.ta.js';
 export {
   GetResult,
   _decode_GetResult,
   _encode_GetResult,
-} from '../CMIP-1/GetResult.ta';
+} from '../CMIP-1/GetResult.ta.js';
 import {
   GetListError,
   _decode_GetListError,
   _encode_GetListError,
-} from '../CMIP-1/GetListError.ta';
+} from '../CMIP-1/GetListError.ta.js';
 export {
   GetListError,
   _decode_GetListError,
   _encode_GetListError,
-} from '../CMIP-1/GetListError.ta';
+} from '../CMIP-1/GetListError.ta.js';
 import {
   SetResult,
   _decode_SetResult,
   _encode_SetResult,
-} from '../CMIP-1/SetResult.ta';
+} from '../CMIP-1/SetResult.ta.js';
 export {
   SetResult,
   _decode_SetResult,
   _encode_SetResult,
-} from '../CMIP-1/SetResult.ta';
+} from '../CMIP-1/SetResult.ta.js';
 import {
   SetListError,
   _decode_SetListError,
   _encode_SetListError,
-} from '../CMIP-1/SetListError.ta';
+} from '../CMIP-1/SetListError.ta.js';
 export {
   SetListError,
   _decode_SetListError,
   _encode_SetListError,
-} from '../CMIP-1/SetListError.ta';
+} from '../CMIP-1/SetListError.ta.js';
 import {
   ActionResult,
   _decode_ActionResult,
   _encode_ActionResult,
-} from '../CMIP-1/ActionResult.ta';
+} from '../CMIP-1/ActionResult.ta.js';
 export {
   ActionResult,
   _decode_ActionResult,
   _encode_ActionResult,
-} from '../CMIP-1/ActionResult.ta';
+} from '../CMIP-1/ActionResult.ta.js';
 import {
   ProcessingFailure,
   _decode_ProcessingFailure,
   _encode_ProcessingFailure,
-} from '../CMIP-1/ProcessingFailure.ta';
+} from '../CMIP-1/ProcessingFailure.ta.js';
 export {
   ProcessingFailure,
   _decode_ProcessingFailure,
   _encode_ProcessingFailure,
-} from '../CMIP-1/ProcessingFailure.ta';
+} from '../CMIP-1/ProcessingFailure.ta.js';
 import {
   DeleteResult,
   _decode_DeleteResult,
   _encode_DeleteResult,
-} from '../CMIP-1/DeleteResult.ta';
+} from '../CMIP-1/DeleteResult.ta.js';
 export {
   DeleteResult,
   _decode_DeleteResult,
   _encode_DeleteResult,
-} from '../CMIP-1/DeleteResult.ta';
+} from '../CMIP-1/DeleteResult.ta.js';
 import {
   ActionError,
   _decode_ActionError,
   _encode_ActionError,
-} from '../CMIP-1/ActionError.ta';
+} from '../CMIP-1/ActionError.ta.js';
 export {
   ActionError,
   _decode_ActionError,
   _encode_ActionError,
-} from '../CMIP-1/ActionError.ta';
+} from '../CMIP-1/ActionError.ta.js';
 import {
   DeleteError,
   _decode_DeleteError,
   _encode_DeleteError,
-} from '../CMIP-1/DeleteError.ta';
+} from '../CMIP-1/DeleteError.ta.js';
 export {
   DeleteError,
   _decode_DeleteError,
   _encode_DeleteError,
-} from '../CMIP-1/DeleteError.ta';
+} from '../CMIP-1/DeleteError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LinkedReplyArgument */
 /**

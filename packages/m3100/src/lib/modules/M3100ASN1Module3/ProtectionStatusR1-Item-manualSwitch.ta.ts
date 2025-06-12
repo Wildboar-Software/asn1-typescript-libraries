@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SwitchStatus,
     _enum_for_SwitchStatus,
@@ -77,7 +77,7 @@ import {
     operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchStatus,
     _encode_SwitchStatus,
-} from '../SDHProtASN1/SwitchStatus.ta';
+} from '../SDHProtASN1/SwitchStatus.ta.js';
 export {
     SwitchStatus,
     _enum_for_SwitchStatus,
@@ -89,17 +89,17 @@ export {
     operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchStatus,
     _encode_SwitchStatus,
-} from '../SDHProtASN1/SwitchStatus.ta';
+} from '../SDHProtASN1/SwitchStatus.ta.js';
 import {
     FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
-} from '../M3100ASN1Module3/FromAndToProtectionUnit.ta';
+} from '../M3100ASN1Module3/FromAndToProtectionUnit.ta.js';
 export {
     FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
-} from '../M3100ASN1Module3/FromAndToProtectionUnit.ta';
+} from '../M3100ASN1Module3/FromAndToProtectionUnit.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item_manualSwitch */
 /**

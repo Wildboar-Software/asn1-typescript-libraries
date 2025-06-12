@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 export {
   SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
-} from '../BIP/SignedInt.ta';
+} from '../BIP/SignedInt.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_FMR */
 /**

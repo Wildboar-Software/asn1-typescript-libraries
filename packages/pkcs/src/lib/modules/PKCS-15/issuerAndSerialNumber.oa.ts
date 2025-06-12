@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca";
-export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.js";
+export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.js";
+export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION issuerAndSerialNumber */
 /**

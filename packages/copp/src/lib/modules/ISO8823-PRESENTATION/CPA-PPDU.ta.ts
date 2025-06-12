@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Mode_selector,
     _decode_Mode_selector,
     _encode_Mode_selector,
-} from '../ISO8823-PRESENTATION/Mode-selector.ta';
+} from '../ISO8823-PRESENTATION/Mode-selector.ta.js';
 export {
     Mode_selector,
     _decode_Mode_selector,
     _encode_Mode_selector,
-} from '../ISO8823-PRESENTATION/Mode-selector.ta';
+} from '../ISO8823-PRESENTATION/Mode-selector.ta.js';
 import {
     CPA_PPDU_x410_mode_parameters,
     _decode_CPA_PPDU_x410_mode_parameters,
     _encode_CPA_PPDU_x410_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPA-PPDU-x410-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPA-PPDU-x410-mode-parameters.ta.js';
 export {
     CPA_PPDU_x410_mode_parameters,
     _decode_CPA_PPDU_x410_mode_parameters,
     _encode_CPA_PPDU_x410_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPA-PPDU-x410-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPA-PPDU-x410-mode-parameters.ta.js';
 import {
     CPA_PPDU_normal_mode_parameters,
     _decode_CPA_PPDU_normal_mode_parameters,
     _encode_CPA_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPA-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPA-PPDU-normal-mode-parameters.ta.js';
 export {
     CPA_PPDU_normal_mode_parameters,
     _decode_CPA_PPDU_normal_mode_parameters,
     _encode_CPA_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPA-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPA-PPDU-normal-mode-parameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CPA_PPDU */
 /**

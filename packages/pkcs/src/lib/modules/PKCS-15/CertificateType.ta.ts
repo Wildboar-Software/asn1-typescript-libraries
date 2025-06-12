@@ -1,86 +1,86 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateObject,
     _get_decoder_for_CertificateObject,
     _get_encoder_for_CertificateObject,
-} from "../PKCS-15/CertificateObject.ta";
+} from "../PKCS-15/CertificateObject.ta.js";
 import {
     CVCertificateAttributes,
     _decode_CVCertificateAttributes,
     _encode_CVCertificateAttributes,
-} from "../PKCS-15/CVCertificateAttributes.ta";
+} from "../PKCS-15/CVCertificateAttributes.ta.js";
 import {
     PGPCertificateAttributes,
     _decode_PGPCertificateAttributes,
     _encode_PGPCertificateAttributes,
-} from "../PKCS-15/PGPCertificateAttributes.ta";
+} from "../PKCS-15/PGPCertificateAttributes.ta.js";
 import {
     SPKICertificateAttributes,
     _decode_SPKICertificateAttributes,
     _encode_SPKICertificateAttributes,
-} from "../PKCS-15/SPKICertificateAttributes.ta";
+} from "../PKCS-15/SPKICertificateAttributes.ta.js";
 import {
     WTLSCertificateAttributes,
     _decode_WTLSCertificateAttributes,
     _encode_WTLSCertificateAttributes,
-} from "../PKCS-15/WTLSCertificateAttributes.ta";
+} from "../PKCS-15/WTLSCertificateAttributes.ta.js";
 import {
     X509AttributeCertificateAttributes,
     _decode_X509AttributeCertificateAttributes,
     _encode_X509AttributeCertificateAttributes,
-} from "../PKCS-15/X509AttributeCertificateAttributes.ta";
+} from "../PKCS-15/X509AttributeCertificateAttributes.ta.js";
 import {
     X509CertificateAttributes,
     _decode_X509CertificateAttributes,
     _encode_X509CertificateAttributes,
-} from "../PKCS-15/X509CertificateAttributes.ta";
+} from "../PKCS-15/X509CertificateAttributes.ta.js";
 import {
     X9_68CertificateAttributes,
     _decode_X9_68CertificateAttributes,
     _encode_X9_68CertificateAttributes,
-} from "../PKCS-15/X9-68CertificateAttributes.ta";
+} from "../PKCS-15/X9-68CertificateAttributes.ta.js";
 export {
     CertificateObject,
     _get_decoder_for_CertificateObject,
     _get_encoder_for_CertificateObject,
-} from "../PKCS-15/CertificateObject.ta";
+} from "../PKCS-15/CertificateObject.ta.js";
 export {
     CVCertificateAttributes,
     _decode_CVCertificateAttributes,
     _encode_CVCertificateAttributes,
-} from "../PKCS-15/CVCertificateAttributes.ta";
+} from "../PKCS-15/CVCertificateAttributes.ta.js";
 export {
     PGPCertificateAttributes,
     _decode_PGPCertificateAttributes,
     _encode_PGPCertificateAttributes,
-} from "../PKCS-15/PGPCertificateAttributes.ta";
+} from "../PKCS-15/PGPCertificateAttributes.ta.js";
 export {
     SPKICertificateAttributes,
     _decode_SPKICertificateAttributes,
     _encode_SPKICertificateAttributes,
-} from "../PKCS-15/SPKICertificateAttributes.ta";
+} from "../PKCS-15/SPKICertificateAttributes.ta.js";
 export {
     WTLSCertificateAttributes,
     _decode_WTLSCertificateAttributes,
     _encode_WTLSCertificateAttributes,
-} from "../PKCS-15/WTLSCertificateAttributes.ta";
+} from "../PKCS-15/WTLSCertificateAttributes.ta.js";
 export {
     X509AttributeCertificateAttributes,
     _decode_X509AttributeCertificateAttributes,
     _encode_X509AttributeCertificateAttributes,
-} from "../PKCS-15/X509AttributeCertificateAttributes.ta";
+} from "../PKCS-15/X509AttributeCertificateAttributes.ta.js";
 export {
     X509CertificateAttributes,
     _decode_X509CertificateAttributes,
     _encode_X509CertificateAttributes,
-} from "../PKCS-15/X509CertificateAttributes.ta";
+} from "../PKCS-15/X509CertificateAttributes.ta.js";
 export {
     X9_68CertificateAttributes,
     _decode_X9_68CertificateAttributes,
     _encode_X9_68CertificateAttributes,
-} from "../PKCS-15/X9-68CertificateAttributes.ta";
+} from "../PKCS-15/X9-68CertificateAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateType */
 /**

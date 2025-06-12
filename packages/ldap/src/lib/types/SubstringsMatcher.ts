@@ -1,5 +1,5 @@
 import { ASN1Element } from "asn1-ts";
-import SubstringSelection from "./SubstringSelection";
+import SubstringSelection from "./SubstringSelection.js";
 
 export
 type SubstringsFunction = (

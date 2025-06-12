@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { PKCS1PSourceAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1PSourceAlgorithms-Union0-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { PKCS1PSourceAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1PSourceAlgorithms-Union0-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1PSourceAlgorithms */
 /**

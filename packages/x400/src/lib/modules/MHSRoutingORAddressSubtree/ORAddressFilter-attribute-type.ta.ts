@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
 export {
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta';
-import { ub_domain_defined_attribute_type_length } from '../MTSUpperBounds/ub-domain-defined-attribute-type-length.va';
-export { ub_domain_defined_attribute_type_length } from '../MTSUpperBounds/ub-domain-defined-attribute-type-length.va';
+} from '../MTSAbstractService/UniversalOrBMPString.ta.js';
+import { ub_domain_defined_attribute_type_length } from '../MTSUpperBounds/ub-domain-defined-attribute-type-length.va.js';
+export { ub_domain_defined_attribute_type_length } from '../MTSUpperBounds/ub-domain-defined-attribute-type-length.va.js';
 
 /* START_OF_SYMBOL_DEFINITION ORAddressFilter_attribute_type */
 /**

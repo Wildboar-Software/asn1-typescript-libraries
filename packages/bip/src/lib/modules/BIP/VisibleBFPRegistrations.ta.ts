@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   VisibleBFPRegistration,
   _decode_VisibleBFPRegistration,
   _encode_VisibleBFPRegistration,
-} from '../BIP/VisibleBFPRegistration.ta';
+} from '../BIP/VisibleBFPRegistration.ta.js';
 export {
   VisibleBFPRegistration,
   _decode_VisibleBFPRegistration,
   _encode_VisibleBFPRegistration,
-} from '../BIP/VisibleBFPRegistration.ta';
+} from '../BIP/VisibleBFPRegistration.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION VisibleBFPRegistrations */
 /**

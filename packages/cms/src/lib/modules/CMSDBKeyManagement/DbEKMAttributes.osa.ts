@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { uniqueIdentifier } from "../CMSDBKeyManagement/uniqueIdentifier.oa";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { uniqueIdentifier } from "../CMSDBKeyManagement/uniqueIdentifier.oa";
+import { uniqueIdentifier } from "../CMSDBKeyManagement/uniqueIdentifier.oa.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { uniqueIdentifier } from "../CMSDBKeyManagement/uniqueIdentifier.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION DbEKMAttributes */
 /**

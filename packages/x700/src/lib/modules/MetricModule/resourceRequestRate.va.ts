@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SpecificIdentifier,
     _decode_SpecificIdentifier,
     _encode_SpecificIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta.js';
 export {
     SpecificIdentifier,
     _decode_SpecificIdentifier,
     _encode_SpecificIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta';
-import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va';
-export { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificIdentifier.ta.js';
+import { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.js';
+export { moaSpecificProblems } from '../MetricModule/moaSpecificProblems.va.js';
 
 /* START_OF_SYMBOL_DEFINITION resourceRequestRate */
 /**

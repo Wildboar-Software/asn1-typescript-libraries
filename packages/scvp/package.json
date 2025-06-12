@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/scvp",
-    "version": "1.0.6",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Server-based Certificate Validation Protocol PDUs in TypeScript",
     "keywords": [
         "scvp",
@@ -33,12 +34,12 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.1.5",
-        "@wildboar/cms": "^1.0.5",
-        "@wildboar/pki-stub": "^1.1.8",
-        "@wildboar/ldap": "^1.2.13",
-        "@wildboar/ansi-x9-42": "^1.0.3",
-        "@wildboar/ansi-x9-62": "^1.0.5",
-        "@wildboar/ocsp": "^1.0.6"
+        "@wildboar/x500": "2.x.x",
+        "@wildboar/cms": "2.x.x",
+        "@wildboar/pki-stub": "2.x.x",
+        "@wildboar/ldap": "2.x.x",
+        "@wildboar/ansi-x9-42": "2.x.x",
+        "@wildboar/ansi-x9-62": "2.x.x",
+        "@wildboar/ocsp": "2.x.x"
     }
 }

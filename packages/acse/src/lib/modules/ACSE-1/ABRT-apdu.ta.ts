@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ABRT_source,
   ABRT_source_acse_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
   acse_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ABRT_source,
   _encode_ABRT_source,
-} from '../ACSE-1/ABRT-source.ta';
+} from '../ACSE-1/ABRT-source.ta.js';
 export {
   ABRT_source,
   ABRT_source_acse_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
   acse_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ABRT_source,
   _encode_ABRT_source,
-} from '../ACSE-1/ABRT-source.ta';
+} from '../ACSE-1/ABRT-source.ta.js';
 import {
   ABRT_diagnostic,
   _enum_for_ABRT_diagnostic,
@@ -101,7 +101,7 @@ import {
   authentication_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ABRT_diagnostic,
   _encode_ABRT_diagnostic,
-} from '../ACSE-1/ABRT-diagnostic.ta';
+} from '../ACSE-1/ABRT-diagnostic.ta.js';
 export {
   ABRT_diagnostic,
   _enum_for_ABRT_diagnostic,
@@ -119,37 +119,37 @@ export {
   authentication_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ABRT_diagnostic,
   _encode_ABRT_diagnostic,
-} from '../ACSE-1/ABRT-diagnostic.ta';
+} from '../ACSE-1/ABRT-diagnostic.ta.js';
 import {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 import {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 export {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 import {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 export {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ABRT_apdu */
 /**

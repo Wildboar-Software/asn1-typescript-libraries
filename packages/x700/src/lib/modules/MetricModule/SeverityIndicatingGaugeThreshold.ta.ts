@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SeverityIndicatingGaugeThreshold_Item,
     _decode_SeverityIndicatingGaugeThreshold_Item,
     _encode_SeverityIndicatingGaugeThreshold_Item,
-} from '../MetricModule/SeverityIndicatingGaugeThreshold-Item.ta';
+} from '../MetricModule/SeverityIndicatingGaugeThreshold-Item.ta.js';
 export {
     SeverityIndicatingGaugeThreshold_Item,
     _decode_SeverityIndicatingGaugeThreshold_Item,
     _encode_SeverityIndicatingGaugeThreshold_Item,
-} from '../MetricModule/SeverityIndicatingGaugeThreshold-Item.ta';
+} from '../MetricModule/SeverityIndicatingGaugeThreshold-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SeverityIndicatingGaugeThreshold */
 /**

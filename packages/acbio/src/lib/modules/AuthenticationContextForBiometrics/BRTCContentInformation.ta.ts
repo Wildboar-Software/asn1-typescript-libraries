@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SBHForBRTC,
     _decode_SBHForBRTC,
     _encode_SBHForBRTC,
-} from '../AuthenticationContextForBiometrics/SBHForBRTC.ta';
+} from '../AuthenticationContextForBiometrics/SBHForBRTC.ta.js';
 export {
     SBHForBRTC,
     _decode_SBHForBRTC,
     _encode_SBHForBRTC,
-} from '../AuthenticationContextForBiometrics/SBHForBRTC.ta';
+} from '../AuthenticationContextForBiometrics/SBHForBRTC.ta.js';
 import {
     BDBForBRTC,
     _decode_BDBForBRTC,
     _encode_BDBForBRTC,
-} from '../AuthenticationContextForBiometrics/BDBForBRTC.ta';
+} from '../AuthenticationContextForBiometrics/BDBForBRTC.ta.js';
 export {
     BDBForBRTC,
     _decode_BDBForBRTC,
     _encode_BDBForBRTC,
-} from '../AuthenticationContextForBiometrics/BDBForBRTC.ta';
+} from '../AuthenticationContextForBiometrics/BDBForBRTC.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BRTCContentInformation */
 /**

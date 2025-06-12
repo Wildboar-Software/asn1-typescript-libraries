@@ -4,59 +4,59 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 import {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 import {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta";
+} from "../PKCS7/DigestAlgorithmIdentifiers.ta.js";
 import {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../PKCS7/SignerInfos.ta";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerInfos.ta.js";
+import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 export {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta";
+} from "../PKCS7/CertificateRevocationLists.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta";
+} from "../PKCS7/CertificateSet.ta.js";
 export {
     ContentInfo,
     _decode_ContentInfo,
     _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta";
+} from "../PKCS7/ContentInfo.ta.js";
 export {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta";
+} from "../PKCS7/DigestAlgorithmIdentifiers.ta.js";
 export {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../PKCS7/SignerInfos.ta";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta";
+} from "../PKCS7/SignerInfos.ta.js";
+export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedData */
 /**

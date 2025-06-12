@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca';
-export { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.js';
+export { CR_SEQUENCE } from '../E-health-command-response/CR-SEQUENCE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION CR_Sequences */
 /**

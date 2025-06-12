@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_nvae } from '../SCVP-2009/id-nvae.va';
-export { id_nvae } from '../SCVP-2009/id-nvae.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_nvae } from '../SCVP-2009/id-nvae.va.js';
+export { id_nvae } from '../SCVP-2009/id-nvae.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_nvae_name_mismatch */
 /**

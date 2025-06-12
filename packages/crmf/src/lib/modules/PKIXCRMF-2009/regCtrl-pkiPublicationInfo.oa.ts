@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_regCtrl_pkiPublicationInfo } from "../PKIXCRMF-2009/id-regCtrl-pkiPublicationInfo.va";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_regCtrl_pkiPublicationInfo } from "../PKIXCRMF-2009/id-regCtrl-pkiPublicationInfo.va.js";
 import {
     PKIPublicationInfo,
     _decode_PKIPublicationInfo,
     _encode_PKIPublicationInfo,
-} from "../PKIXCRMF-2009/PKIPublicationInfo.ta";
+} from "../PKIXCRMF-2009/PKIPublicationInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION regCtrl_pkiPublicationInfo */
 /**

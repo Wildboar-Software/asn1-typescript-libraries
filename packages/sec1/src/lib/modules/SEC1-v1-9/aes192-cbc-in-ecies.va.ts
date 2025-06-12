@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va";
-export { secg_scheme } from "../SEC1-v1-9/secg-scheme.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.js";
+export { secg_scheme } from "../SEC1-v1-9/secg-scheme.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION aes192_cbc_in_ecies */

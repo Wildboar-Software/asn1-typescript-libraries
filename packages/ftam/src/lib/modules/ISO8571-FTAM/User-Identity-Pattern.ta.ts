@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   String_Pattern,
   _decode_String_Pattern,
   _encode_String_Pattern,
-} from '../ISO8571-FTAM/String-Pattern.ta';
+} from '../ISO8571-FTAM/String-Pattern.ta.js';
 export {
   String_Pattern,
   _decode_String_Pattern,
   _encode_String_Pattern,
-} from '../ISO8571-FTAM/String-Pattern.ta';
+} from '../ISO8571-FTAM/String-Pattern.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION User_Identity_Pattern */
 /**

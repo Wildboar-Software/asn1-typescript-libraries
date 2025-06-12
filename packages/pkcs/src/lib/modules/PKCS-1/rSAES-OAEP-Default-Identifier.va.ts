@@ -1,15 +1,15 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va";
-import { RSAES_AlgorithmIdentifier } from "../PKCS-1/RSAES-AlgorithmIdentifier.ta";
-import { mgf1SHA1 } from "./mgf1SHA1.va";
-import { pSpecifiedEmpty } from "./pSpecifiedEmpty.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va.js";
+import { RSAES_AlgorithmIdentifier } from "../PKCS-1/RSAES-AlgorithmIdentifier.ta.js";
+import { mgf1SHA1 } from "./mgf1SHA1.va.js";
+import { pSpecifiedEmpty } from "./pSpecifiedEmpty.va.js";
 import {
     RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
-} from "./RSAES-OAEP-params.ta";
-import { sha1 } from "./sha1.va";
+} from "./RSAES-OAEP-params.ta.js";
+import { sha1 } from "./sha1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION rSAES_OAEP_Default_Identifier */
 /**

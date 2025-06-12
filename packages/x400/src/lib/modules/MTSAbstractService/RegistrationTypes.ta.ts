@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegistrationTypes_standard_parameters,
     RegistrationTypes_standard_parameters_user_name /* IMPORTED_LONG_NAMED_BIT */,
@@ -82,7 +82,7 @@ import {
     restricted_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_standard_parameters,
     _encode_RegistrationTypes_standard_parameters,
-} from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta';
+} from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.js';
 export {
     RegistrationTypes_standard_parameters,
     RegistrationTypes_standard_parameters_user_name /* IMPORTED_LONG_NAMED_BIT */,
@@ -99,16 +99,16 @@ export {
     restricted_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_standard_parameters,
     _encode_RegistrationTypes_standard_parameters,
-} from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa';
-export { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa';
+} from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.js';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa.js';
+export { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa.js';
 import {
     ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
-} from "./ExtensionType.ta";
+} from "./ExtensionType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RegistrationTypes */
 /**

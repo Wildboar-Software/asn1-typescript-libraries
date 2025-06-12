@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta';
-export { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.js';
+export { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.js';
 import {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 export {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta';
+} from '../FastInfoset/NonEmptyOctetString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Document_additional_data_additional_datum */
 /**

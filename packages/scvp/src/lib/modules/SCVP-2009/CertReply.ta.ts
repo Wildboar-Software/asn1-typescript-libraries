@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertReference,
   _decode_CertReference,
   _encode_CertReference,
-} from '../SCVP-2009/CertReference.ta';
+} from '../SCVP-2009/CertReference.ta.js';
 export {
   CertReference,
   _decode_CertReference,
   _encode_CertReference,
-} from '../SCVP-2009/CertReference.ta';
+} from '../SCVP-2009/CertReference.ta.js';
 import {
   ReplyStatus,
   _enum_for_ReplyStatus,
@@ -99,7 +99,7 @@ import {
   wantBackUnsatisfied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ReplyStatus,
   _encode_ReplyStatus,
-} from '../SCVP-2009/ReplyStatus.ta';
+} from '../SCVP-2009/ReplyStatus.ta.js';
 export {
   ReplyStatus,
   _enum_for_ReplyStatus,
@@ -123,37 +123,37 @@ export {
   wantBackUnsatisfied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ReplyStatus,
   _encode_ReplyStatus,
-} from '../SCVP-2009/ReplyStatus.ta';
+} from '../SCVP-2009/ReplyStatus.ta.js';
 import {
   ReplyChecks,
   _decode_ReplyChecks,
   _encode_ReplyChecks,
-} from '../SCVP-2009/ReplyChecks.ta';
+} from '../SCVP-2009/ReplyChecks.ta.js';
 export {
   ReplyChecks,
   _decode_ReplyChecks,
   _encode_ReplyChecks,
-} from '../SCVP-2009/ReplyChecks.ta';
+} from '../SCVP-2009/ReplyChecks.ta.js';
 import {
   ReplyWantBacks,
   _decode_ReplyWantBacks,
   _encode_ReplyWantBacks,
-} from '../SCVP-2009/ReplyWantBacks.ta';
+} from '../SCVP-2009/ReplyWantBacks.ta.js';
 export {
   ReplyWantBacks,
   _decode_ReplyWantBacks,
   _encode_ReplyWantBacks,
-} from '../SCVP-2009/ReplyWantBacks.ta';
+} from '../SCVP-2009/ReplyWantBacks.ta.js';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 export {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CertReply */
 /**

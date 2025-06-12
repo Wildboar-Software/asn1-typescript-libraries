@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BuiltInEncodedInformationTypes,
     BuiltInEncodedInformationTypes_unknown /* IMPORTED_LONG_NAMED_BIT */,
@@ -87,7 +87,7 @@ import {
     BuiltInEncodedInformationTypes_mixed_mode /* IMPORTED_LONG_NAMED_BIT */,
     _decode_BuiltInEncodedInformationTypes,
     _encode_BuiltInEncodedInformationTypes,
-} from '../MTSAbstractService/BuiltInEncodedInformationTypes.ta';
+} from '../MTSAbstractService/BuiltInEncodedInformationTypes.ta.js';
 export {
     BuiltInEncodedInformationTypes,
     BuiltInEncodedInformationTypes_unknown /* IMPORTED_LONG_NAMED_BIT */,
@@ -109,27 +109,27 @@ export {
     BuiltInEncodedInformationTypes_mixed_mode /* IMPORTED_LONG_NAMED_BIT */,
     _decode_BuiltInEncodedInformationTypes,
     _encode_BuiltInEncodedInformationTypes,
-} from '../MTSAbstractService/BuiltInEncodedInformationTypes.ta';
+} from '../MTSAbstractService/BuiltInEncodedInformationTypes.ta.js';
 import {
     NonBasicParameters,
     _decode_NonBasicParameters,
     _encode_NonBasicParameters,
-} from '../MTSAbstractService/NonBasicParameters.ta';
+} from '../MTSAbstractService/NonBasicParameters.ta.js';
 export {
     NonBasicParameters,
     _decode_NonBasicParameters,
     _encode_NonBasicParameters,
-} from '../MTSAbstractService/NonBasicParameters.ta';
+} from '../MTSAbstractService/NonBasicParameters.ta.js';
 import {
     ExtendedEncodedInformationTypes,
     _decode_ExtendedEncodedInformationTypes,
     _encode_ExtendedEncodedInformationTypes,
-} from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta.js';
 export {
     ExtendedEncodedInformationTypes,
     _decode_ExtendedEncodedInformationTypes,
     _encode_ExtendedEncodedInformationTypes,
-} from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta';
+} from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta.js';
 import {
     G3FacsimileNonBasicParameters,
     G3FacsimileNonBasicParameters_two_dimensional /* IMPORTED_LONG_NAMED_BIT */,
@@ -181,7 +181,7 @@ import {
     processable_mode_26 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta';
+} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.js';
 export {
     G3FacsimileNonBasicParameters,
     G3FacsimileNonBasicParameters_two_dimensional /* IMPORTED_LONG_NAMED_BIT */,
@@ -233,17 +233,17 @@ export {
     processable_mode_26 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
-} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta';
+} from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.js';
 import {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 export {
     TeletexNonBasicParameters,
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
-} from '../MTSAbstractService/TeletexNonBasicParameters.ta';
+} from '../MTSAbstractService/TeletexNonBasicParameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncodedInformationTypes */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta";
-export { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta";
-import { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta";
-export { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta";
-import { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta";
-export { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta";
-export { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta";
-import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta";
-export { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.js";
+export { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.js";
+import { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta.js";
+export { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta.js";
+import { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.js";
+export { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.js";
+import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.js";
+export { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.js";
+import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.js";
+export { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SpecifiedECDomain */

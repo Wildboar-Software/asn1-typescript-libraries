@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
-import { kaa_esdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-esdh.oa";
-import { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.oa";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca";
-export { kaa_esdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-esdh.oa";
-export { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.oa";
+import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
+import { kaa_esdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-esdh.oa.js";
+import { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.oa.js";
+export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.js";
+export { kaa_esdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-esdh.oa.js";
+export { kaa_ssdh } from "../CryptographicMessageSyntaxAlgorithms-2009/kaa-ssdh.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreementAlgs */
 /**

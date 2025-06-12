@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestPatternSequence,
     _decode_TestPatternSequence,
     _encode_TestPatternSequence,
-} from '../TestCategories-ASN1Module/TestPatternSequence.ta';
+} from '../TestCategories-ASN1Module/TestPatternSequence.ta.js';
 export {
     TestPatternSequence,
     _decode_TestPatternSequence,
     _encode_TestPatternSequence,
-} from '../TestCategories-ASN1Module/TestPatternSequence.ta';
+} from '../TestCategories-ASN1Module/TestPatternSequence.ta.js';
 import {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 export {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 import {
     LoopbackError,
     _decode_LoopbackError,
     _encode_LoopbackError,
-} from '../TestCategories-ASN1Module/LoopbackError.ta';
+} from '../TestCategories-ASN1Module/LoopbackError.ta.js';
 export {
     LoopbackError,
     _decode_LoopbackError,
     _encode_LoopbackError,
-} from '../TestCategories-ASN1Module/LoopbackError.ta';
+} from '../TestCategories-ASN1Module/LoopbackError.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LoopbackTestInfo */
 /**

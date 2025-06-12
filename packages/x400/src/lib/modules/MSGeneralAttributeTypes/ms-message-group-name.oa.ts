@@ -65,44 +65,44 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
+} from '../MSAbstractService/MessageGroupName.ta.js';
 export {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
-import { mSStringListMatch } from '../MSMatchingRules/mSStringListMatch.oa';
-export { mSStringListMatch } from '../MSMatchingRules/mSStringListMatch.oa';
-import { mSSingleSubstringListMatch } from '../MSMatchingRules/mSSingleSubstringListMatch.oa';
-export { mSSingleSubstringListMatch } from '../MSMatchingRules/mSSingleSubstringListMatch.oa';
-import { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElementsMatch.oa';
-export { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElementsMatch.oa';
-import { mSSingleSubstringListElementsMatch } from '../MSMatchingRules/mSSingleSubstringListElementsMatch.oa';
-export { mSSingleSubstringListElementsMatch } from '../MSMatchingRules/mSSingleSubstringListElementsMatch.oa';
-import { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa';
-export { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa';
-import { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message-group-name.va';
-export { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message-group-name.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../MSAbstractService/MessageGroupName.ta.js';
+import { mSStringListMatch } from '../MSMatchingRules/mSStringListMatch.oa.js';
+export { mSStringListMatch } from '../MSMatchingRules/mSStringListMatch.oa.js';
+import { mSSingleSubstringListMatch } from '../MSMatchingRules/mSSingleSubstringListMatch.oa.js';
+export { mSSingleSubstringListMatch } from '../MSMatchingRules/mSSingleSubstringListMatch.oa.js';
+import { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElementsMatch.oa.js';
+export { mSStringListElementsMatch } from '../MSMatchingRules/mSStringListElementsMatch.oa.js';
+import { mSSingleSubstringListElementsMatch } from '../MSMatchingRules/mSSingleSubstringListElementsMatch.oa.js';
+export { mSSingleSubstringListElementsMatch } from '../MSMatchingRules/mSSingleSubstringListElementsMatch.oa.js';
+import { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa.js';
+export { valueCountMatch } from '../MSMatchingRules/valueCountMatch.oa.js';
+import { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message-group-name.va.js';
+export { id_att_message_group_name } from '../MSObjectIdentifiers/id-att-message-group-name.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ms_message_group_name */
 /**

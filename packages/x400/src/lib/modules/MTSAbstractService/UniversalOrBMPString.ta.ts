@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalOrBMPString_character_encoding,
     _decode_UniversalOrBMPString_character_encoding,
     _encode_UniversalOrBMPString_character_encoding,
-} from '../MTSAbstractService/UniversalOrBMPString-character-encoding.ta';
+} from '../MTSAbstractService/UniversalOrBMPString-character-encoding.ta.js';
 export {
     UniversalOrBMPString_character_encoding,
     _decode_UniversalOrBMPString_character_encoding,
     _encode_UniversalOrBMPString_character_encoding,
-} from '../MTSAbstractService/UniversalOrBMPString-character-encoding.ta';
+} from '../MTSAbstractService/UniversalOrBMPString-character-encoding.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UniversalOrBMPString */
 /**

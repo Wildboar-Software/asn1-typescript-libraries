@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PositiveNotificationFields,
     _decode_PositiveNotificationFields,
     _encode_PositiveNotificationFields,
-} from '../EDIMSInformationObjects/PositiveNotificationFields.ta';
+} from '../EDIMSInformationObjects/PositiveNotificationFields.ta.js';
 export {
     PositiveNotificationFields,
     _decode_PositiveNotificationFields,
     _encode_PositiveNotificationFields,
-} from '../EDIMSInformationObjects/PositiveNotificationFields.ta';
+} from '../EDIMSInformationObjects/PositiveNotificationFields.ta.js';
 import {
     NegativeNotificationFields,
     _decode_NegativeNotificationFields,
     _encode_NegativeNotificationFields,
-} from '../EDIMSInformationObjects/NegativeNotificationFields.ta';
+} from '../EDIMSInformationObjects/NegativeNotificationFields.ta.js';
 export {
     NegativeNotificationFields,
     _decode_NegativeNotificationFields,
     _encode_NegativeNotificationFields,
-} from '../EDIMSInformationObjects/NegativeNotificationFields.ta';
+} from '../EDIMSInformationObjects/NegativeNotificationFields.ta.js';
 import {
     ForwardedNotificationFields,
     _decode_ForwardedNotificationFields,
     _encode_ForwardedNotificationFields,
-} from '../EDIMSInformationObjects/ForwardedNotificationFields.ta';
+} from '../EDIMSInformationObjects/ForwardedNotificationFields.ta.js';
 export {
     ForwardedNotificationFields,
     _decode_ForwardedNotificationFields,
     _encode_ForwardedNotificationFields,
-} from '../EDIMSInformationObjects/ForwardedNotificationFields.ta';
+} from '../EDIMSInformationObjects/ForwardedNotificationFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIN */
 /**

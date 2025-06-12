@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../CryptographicMessageSyntax/CertificateRevocationLists.ta";
+} from "../CryptographicMessageSyntax/CertificateRevocationLists.ta.js";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax/CertificateSet.ta";
+} from "../CryptographicMessageSyntax/CertificateSet.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 import {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifiers.ta";
+} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifiers.ta.js";
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.js";
 import {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../CryptographicMessageSyntax/SignerInfos.ta";
+} from "../CryptographicMessageSyntax/SignerInfos.ta.js";
 export {
     CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
-} from "../CryptographicMessageSyntax/CertificateRevocationLists.ta";
+} from "../CryptographicMessageSyntax/CertificateRevocationLists.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax/CertificateSet.ta";
+} from "../CryptographicMessageSyntax/CertificateSet.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -59,22 +59,22 @@ export {
     v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 export {
     DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifiers.ta";
+} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifiers.ta.js";
 export {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.js";
 export {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../CryptographicMessageSyntax/SignerInfos.ta";
+} from "../CryptographicMessageSyntax/SignerInfos.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedData */
 /**

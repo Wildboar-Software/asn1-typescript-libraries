@@ -65,51 +65,51 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../MSAbstractService/AutoActionType.ta.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 import {
     EDIAutoAcknowledgementRegistrationParameter,
     _decode_EDIAutoAcknowledgementRegistrationParameter,
     _encode_EDIAutoAcknowledgementRegistrationParameter,
-} from '../EDIMSAutoActionTypes/EDIAutoAcknowledgementRegistrationParameter.ta';
+} from '../EDIMSAutoActionTypes/EDIAutoAcknowledgementRegistrationParameter.ta.js';
 export {
     EDIAutoAcknowledgementRegistrationParameter,
     _decode_EDIAutoAcknowledgementRegistrationParameter,
     _encode_EDIAutoAcknowledgementRegistrationParameter,
-} from '../EDIMSAutoActionTypes/EDIAutoAcknowledgementRegistrationParameter.ta';
-import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-import { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa';
-export { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa';
-import { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va';
-export { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
+} from '../EDIMSAutoActionTypes/EDIAutoAcknowledgementRegistrationParameter.ta.js';
+import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+import { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa.js';
+export { duplicate_edin } from '../EDIMSAutoActionTypes/duplicate-edin.oa.js';
+import { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va.js';
+export { id_act_edi_auto_acknowledgement } from '../EDIMSObjectIdentifiers/id-act-edi-auto-acknowledgement.va.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION edi_auto_acknowledgement */
 /**

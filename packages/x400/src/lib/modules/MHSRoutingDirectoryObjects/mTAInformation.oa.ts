@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,21 +91,21 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mTAName } from '../MHSRoutingDirectoryObjects/mTAName.oa';
-export { mTAName } from '../MHSRoutingDirectoryObjects/mTAName.oa';
-import { globalDomainIdentifier } from '../MHSRoutingDirectoryObjects/globalDomainIdentifier.oa';
-export { globalDomainIdentifier } from '../MHSRoutingDirectoryObjects/globalDomainIdentifier.oa';
-import { mTAPassword } from '../MHSRoutingDirectoryObjects/mTAPassword.oa';
-export { mTAPassword } from '../MHSRoutingDirectoryObjects/mTAPassword.oa';
-import { specificPasswords } from '../MHSRoutingDirectoryObjects/specificPasswords.oa';
-export { specificPasswords } from '../MHSRoutingDirectoryObjects/specificPasswords.oa';
-import { callingPSAPs } from '../MHSRoutingDirectoryObjects/callingPSAPs.oa';
-export { callingPSAPs } from '../MHSRoutingDirectoryObjects/callingPSAPs.oa';
-import { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-information.va';
-export { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-information.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mTAName } from '../MHSRoutingDirectoryObjects/mTAName.oa.js';
+export { mTAName } from '../MHSRoutingDirectoryObjects/mTAName.oa.js';
+import { globalDomainIdentifier } from '../MHSRoutingDirectoryObjects/globalDomainIdentifier.oa.js';
+export { globalDomainIdentifier } from '../MHSRoutingDirectoryObjects/globalDomainIdentifier.oa.js';
+import { mTAPassword } from '../MHSRoutingDirectoryObjects/mTAPassword.oa.js';
+export { mTAPassword } from '../MHSRoutingDirectoryObjects/mTAPassword.oa.js';
+import { specificPasswords } from '../MHSRoutingDirectoryObjects/specificPasswords.oa.js';
+export { specificPasswords } from '../MHSRoutingDirectoryObjects/specificPasswords.oa.js';
+import { callingPSAPs } from '../MHSRoutingDirectoryObjects/callingPSAPs.oa.js';
+export { callingPSAPs } from '../MHSRoutingDirectoryObjects/callingPSAPs.oa.js';
+import { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-information.va.js';
+export { id_oc_mta_information } from '../MHSRoutingObjectIdentifiers/id-oc-mta-information.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mTAInformation */
 /**

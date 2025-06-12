@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Constraint_Set_Name,
     _decode_Constraint_Set_Name,
     _encode_Constraint_Set_Name,
-} from '../IPMSFileTransferBodyPartType/Constraint-Set-Name.ta';
+} from '../IPMSFileTransferBodyPartType/Constraint-Set-Name.ta.js';
 export {
     Constraint_Set_Name,
     _decode_Constraint_Set_Name,
     _encode_Constraint_Set_Name,
-} from '../IPMSFileTransferBodyPartType/Constraint-Set-Name.ta';
+} from '../IPMSFileTransferBodyPartType/Constraint-Set-Name.ta.js';
 import {
     Abstract_Syntax_Name,
     _decode_Abstract_Syntax_Name,
     _encode_Abstract_Syntax_Name,
-} from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta';
+} from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta.js';
 export {
     Abstract_Syntax_Name,
     _decode_Abstract_Syntax_Name,
     _encode_Abstract_Syntax_Name,
-} from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta';
+} from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Attribute_constraint_set_and_abstract_syntax */
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
+import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
+export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION KEY_AGREEMENT */
 /**

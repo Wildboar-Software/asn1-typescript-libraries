@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExecutionType,
     _decode_ExecutionType,
     _encode_ExecutionType,
-} from '../CSModule/ExecutionType.ta';
+} from '../CSModule/ExecutionType.ta.js';
 export {
     ExecutionType,
     _decode_ExecutionType,
     _encode_ExecutionType,
-} from '../CSModule/ExecutionType.ta';
+} from '../CSModule/ExecutionType.ta.js';
 import {
     ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
-} from '../CSModule/ErrorCode.ta';
+} from '../CSModule/ErrorCode.ta.js';
 export {
     ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
-} from '../CSModule/ErrorCode.ta';
+} from '../CSModule/ErrorCode.ta.js';
 import {
     ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
-} from '../CSModule/ExecutionResultType.ta';
+} from '../CSModule/ExecutionResultType.ta.js';
 export {
     ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
-} from '../CSModule/ExecutionResultType.ta';
+} from '../CSModule/ExecutionResultType.ta.js';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.js';
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResultInfoFromThread */
 /**

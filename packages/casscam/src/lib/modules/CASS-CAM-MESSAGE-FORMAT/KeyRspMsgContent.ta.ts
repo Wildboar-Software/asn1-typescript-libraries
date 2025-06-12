@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta";
-export { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.js";
+export { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION KeyRspMsgContent */

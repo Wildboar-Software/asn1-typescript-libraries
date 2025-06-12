@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta';
+} from '../ISO8571-FTAM/Pathname-Attribute.ta.js';
 export {
   Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta';
+} from '../ISO8571-FTAM/Pathname-Attribute.ta.js';
 import {
   Scope_Item_retrieval_scope,
   Scope_Item_retrieval_scope_child /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
   all /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Scope_Item_retrieval_scope,
   _encode_Scope_Item_retrieval_scope,
-} from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta';
+} from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta.js';
 export {
   Scope_Item_retrieval_scope,
   Scope_Item_retrieval_scope_child /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -93,7 +93,7 @@ export {
   all /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Scope_Item_retrieval_scope,
   _encode_Scope_Item_retrieval_scope,
-} from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta';
+} from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Scope_Item */
 /**

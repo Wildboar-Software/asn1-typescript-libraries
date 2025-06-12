@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { id_regCtrl_regToken } from "../PKIXCRMF-2009/id-regCtrl-regToken.va";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { id_regCtrl_regToken } from "../PKIXCRMF-2009/id-regCtrl-regToken.va.js";
 import {
     RegToken,
     _decode_RegToken,
     _encode_RegToken,
-} from "../PKIXCRMF-2009/RegToken.ta";
+} from "../PKIXCRMF-2009/RegToken.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION regCtrl_regToken */
 /**

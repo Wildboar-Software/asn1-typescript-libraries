@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
-} from '../TestCategories-ASN1Module/TestPattern.ta';
+} from '../TestCategories-ASN1Module/TestPattern.ta.js';
 export {
     TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
-} from '../TestCategories-ASN1Module/TestPattern.ta';
+} from '../TestCategories-ASN1Module/TestPattern.ta.js';
 import {
     TestDirection,
     TestDirection_atoZ /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -90,7 +90,7 @@ import {
     receiveFromNearEnd /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestDirection,
     _encode_TestDirection,
-} from '../TestCategories-ASN1Module/TestDirection.ta';
+} from '../TestCategories-ASN1Module/TestDirection.ta.js';
 export {
     TestDirection,
     TestDirection_atoZ /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -105,17 +105,17 @@ export {
     receiveFromNearEnd /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestDirection,
     _encode_TestDirection,
-} from '../TestCategories-ASN1Module/TestDirection.ta';
+} from '../TestCategories-ASN1Module/TestDirection.ta.js';
 import {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 export {
     Timespec,
     _decode_Timespec,
     _encode_Timespec,
-} from '../Test-ASN1Module/Timespec.ta';
+} from '../Test-ASN1Module/Timespec.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectionTestResults */
 /**

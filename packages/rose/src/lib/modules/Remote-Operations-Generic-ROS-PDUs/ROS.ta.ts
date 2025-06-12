@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 export {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 import {
   Invoke,
   _decode_Invoke,
   _encode_Invoke,
-} from '../Remote-Operations-Generic-ROS-PDUs/Invoke.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Invoke.ta.js';
 export {
   Invoke,
   _decode_Invoke,
   _encode_Invoke,
-} from '../Remote-Operations-Generic-ROS-PDUs/Invoke.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Invoke.ta.js';
 import {
   ReturnResult,
   _decode_ReturnResult,
   _encode_ReturnResult,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta.js';
 export {
   ReturnResult,
   _decode_ReturnResult,
   _encode_ReturnResult,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnResult.ta.js';
 import {
   ReturnError,
   _decode_ReturnError,
   _encode_ReturnError,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnError.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnError.ta.js';
 export {
   ReturnError,
   _decode_ReturnError,
   _encode_ReturnError,
-} from '../Remote-Operations-Generic-ROS-PDUs/ReturnError.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/ReturnError.ta.js';
 import {
   Reject,
   _decode_Reject,
   _encode_Reject,
-} from '../Remote-Operations-Generic-ROS-PDUs/Reject.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Reject.ta.js';
 export {
   Reject,
   _decode_Reject,
   _encode_Reject,
-} from '../Remote-Operations-Generic-ROS-PDUs/Reject.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/Reject.ta.js';
 import {
   RejectProblem,
   RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -158,7 +158,7 @@ import {
   returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RejectProblem,
   _encode_RejectProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.js';
 export {
   RejectProblem,
   RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -201,7 +201,7 @@ export {
   returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_RejectProblem,
   _encode_RejectProblem,
-} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ROS */
 /**

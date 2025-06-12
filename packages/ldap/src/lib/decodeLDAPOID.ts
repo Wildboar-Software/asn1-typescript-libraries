@@ -1,5 +1,5 @@
 import { OBJECT_IDENTIFIER, ObjectIdentifier } from "asn1-ts";
-import type { LDAPOID } from "./modules/Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta";
+import type { LDAPOID } from "./modules/Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.js";
 
 export
 function decodeLDAPOID (ldapoid: LDAPOID): OBJECT_IDENTIFIER {

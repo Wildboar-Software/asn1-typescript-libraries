@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa';
-export { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa';
-import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa';
-export { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa';
-import { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va';
-export { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa.js';
+export { mHSPostalCode } from '../MHSRoutingORAddressSubtree/mHSPostalCode.oa.js';
+import { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.js';
+export { mHSPostalCodeAttribute } from '../MHSRoutingORAddressSubtree/mHSPostalCodeAttribute.oa.js';
+import { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va.js';
+export { id_nf_mhs_postal_code } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-postal-code.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSPostalCodeNameForm */
 /**

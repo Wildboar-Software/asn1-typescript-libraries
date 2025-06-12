@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_pkix } from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/id-pkix.va";
+import { id_pkix } from "@wildboar/x500/src/lib/modules/PkiPmiExternalDataTypes/id-pkix.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pkip */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EncryptionToken,
     _decode_EncryptionToken,
     _encode_EncryptionToken,
-} from '../IPMSSecurityExtensions/EncryptionToken.ta';
+} from '../IPMSSecurityExtensions/EncryptionToken.ta.js';
 export {
     EncryptionToken,
     _decode_EncryptionToken,
     _encode_EncryptionToken,
-} from '../IPMSSecurityExtensions/EncryptionToken.ta';
+} from '../IPMSSecurityExtensions/EncryptionToken.ta.js';
 import {
     BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
-} from '../IPMSSecurityExtensions/BodyPartTokens.ta';
+} from '../IPMSSecurityExtensions/BodyPartTokens.ta.js';
 export {
     BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
-} from '../IPMSSecurityExtensions/BodyPartTokens.ta';
+} from '../IPMSSecurityExtensions/BodyPartTokens.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPartTokens_Item_body_part_choice */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Attribute_Names,
   Attribute_Names_read_pathname /* IMPORTED_LONG_NAMED_BIT */,
@@ -116,7 +116,7 @@ import {
   read_private_use /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Attribute_Names,
   _encode_Attribute_Names,
-} from '../ISO8571-FTAM/Attribute-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Names.ta.js';
 export {
   Attribute_Names,
   Attribute_Names_read_pathname /* IMPORTED_LONG_NAMED_BIT */,
@@ -167,17 +167,17 @@ export {
   read_private_use /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Attribute_Names,
   _encode_Attribute_Names,
-} from '../ISO8571-FTAM/Attribute-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Names.ta.js';
 import {
   Attribute_Extension_Names,
   _decode_Attribute_Extension_Names,
   _encode_Attribute_Extension_Names,
-} from '../ISO8571-FTAM/Attribute-Extension-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Extension-Names.ta.js';
 export {
   Attribute_Extension_Names,
   _decode_Attribute_Extension_Names,
   _encode_Attribute_Extension_Names,
-} from '../ISO8571-FTAM/Attribute-Extension-Names.ta';
+} from '../ISO8571-FTAM/Attribute-Extension-Names.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_READ_LINK_ATTRIB_request */
 /**

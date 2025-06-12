@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta";
-export { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta";
-import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta";
-export { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.js";
+export { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.js";
+import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta.js";
+export { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CommitmentTypeIndication */

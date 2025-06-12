@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 import {
     TBSAsymmetricToken_name,
     _decode_TBSAsymmetricToken_name,
     _encode_TBSAsymmetricToken_name,
-} from '../MTSAbstractService/TBSAsymmetricToken-name.ta';
+} from '../MTSAbstractService/TBSAsymmetricToken-name.ta.js';
 export {
     TBSAsymmetricToken_name,
     _decode_TBSAsymmetricToken_name,
     _encode_TBSAsymmetricToken_name,
-} from '../MTSAbstractService/TBSAsymmetricToken-name.ta';
+} from '../MTSAbstractService/TBSAsymmetricToken-name.ta.js';
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 export {
     Time,
     _decode_Time,
     _encode_Time,
-} from '../MTSAbstractService/Time.ta';
+} from '../MTSAbstractService/Time.ta.js';
 import {
     TokenData,
     _decode_TokenData,
     _encode_TokenData,
-} from '../MTSAbstractService/TokenData.ta';
+} from '../MTSAbstractService/TokenData.ta.js';
 export {
     TokenData,
     _decode_TokenData,
     _encode_TokenData,
-} from '../MTSAbstractService/TokenData.ta';
+} from '../MTSAbstractService/TokenData.ta.js';
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.js';
 export {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/ENCRYPTED.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TBSAsymmetricToken */
 /**

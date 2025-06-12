@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CertificateSelectors,
     _decode_CertificateSelectors,
     _encode_CertificateSelectors,
-} from '../MTSAbstractService/CertificateSelectors.ta';
+} from '../MTSAbstractService/CertificateSelectors.ta.js';
 export {
     CertificateSelectors,
     _decode_CertificateSelectors,
     _encode_CertificateSelectors,
-} from '../MTSAbstractService/CertificateSelectors.ta';
-import { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va';
-export { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+} from '../MTSAbstractService/CertificateSelectors.ta.js';
+import { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va.js';
+export { id_ext_originator_certificate_selectors_override } from '../MSObjectIdentifiers/id-ext-originator-certificate-selectors-override.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION originator_certificate_selectors_override */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ApplicationContext,
     _decode_ApplicationContext,
     _encode_ApplicationContext,
-} from '../MhsMTAAsn1Module/ApplicationContext.ta';
+} from '../MhsMTAAsn1Module/ApplicationContext.ta.js';
 export {
     ApplicationContext,
     _decode_ApplicationContext,
     _encode_ApplicationContext,
-} from '../MhsMTAAsn1Module/ApplicationContext.ta';
+} from '../MhsMTAAsn1Module/ApplicationContext.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ApplicationContexts */
 /**

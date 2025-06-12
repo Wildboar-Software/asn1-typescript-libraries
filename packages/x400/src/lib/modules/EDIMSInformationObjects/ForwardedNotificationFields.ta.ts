@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CommonFields,
     _decode_CommonFields,
     _encode_CommonFields,
-} from '../EDIMSInformationObjects/CommonFields.ta';
+} from '../EDIMSInformationObjects/CommonFields.ta.js';
 export {
     CommonFields,
     _decode_CommonFields,
     _encode_CommonFields,
-} from '../EDIMSInformationObjects/CommonFields.ta';
+} from '../EDIMSInformationObjects/CommonFields.ta.js';
 import {
     ForwardedTo,
     _decode_ForwardedTo,
     _encode_ForwardedTo,
-} from '../EDIMSInformationObjects/ForwardedTo.ta';
+} from '../EDIMSInformationObjects/ForwardedTo.ta.js';
 export {
     ForwardedTo,
     _decode_ForwardedTo,
     _encode_ForwardedTo,
-} from '../EDIMSInformationObjects/ForwardedTo.ta';
+} from '../EDIMSInformationObjects/ForwardedTo.ta.js';
 import {
     FNReasonCodeField,
     _decode_FNReasonCodeField,
     _encode_FNReasonCodeField,
-} from '../EDIMSInformationObjects/FNReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNReasonCodeField.ta.js';
 export {
     FNReasonCodeField,
     _decode_FNReasonCodeField,
     _encode_FNReasonCodeField,
-} from '../EDIMSInformationObjects/FNReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNReasonCodeField.ta.js';
 import {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 export {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 import {
     FNExtensionsField,
     _decode_FNExtensionsField,
     _encode_FNExtensionsField,
-} from '../EDIMSInformationObjects/FNExtensionsField.ta';
+} from '../EDIMSInformationObjects/FNExtensionsField.ta.js';
 export {
     FNExtensionsField,
     _decode_FNExtensionsField,
     _encode_FNExtensionsField,
-} from '../EDIMSInformationObjects/FNExtensionsField.ta';
+} from '../EDIMSInformationObjects/FNExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ForwardedNotificationFields */
 /**

@@ -4,69 +4,69 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 import {
     SignatureInformation,
     _decode_SignatureInformation,
     _encode_SignatureInformation,
-} from "../CMSSigncryption/SignatureInformation.ta";
+} from "../CMSSigncryption/SignatureInformation.ta.js";
 import {
     SigncryptedDataAlgorithmIdentifier,
     _decode_SigncryptedDataAlgorithmIdentifier,
     _encode_SigncryptedDataAlgorithmIdentifier,
-} from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta";
+} from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta.js";
 import {
     SigncrypterIDs,
     _decode_SigncrypterIDs,
     _encode_SigncrypterIDs,
-} from "../CMSSigncryption/SigncrypterIDs.ta";
+} from "../CMSSigncryption/SigncrypterIDs.ta.js";
 import {
     SigncryptionValue,
     _decode_SigncryptionValue,
     _encode_SigncryptionValue,
-} from "../CMSSigncryption/SigncryptionValue.ta";
+} from "../CMSSigncryption/SigncryptionValue.ta.js";
 import {
     UnSigncryptedAttributes,
     _decode_UnSigncryptedAttributes,
     _encode_UnSigncryptedAttributes,
-} from "../CMSSigncryption/UnSigncryptedAttributes.ta";
+} from "../CMSSigncryption/UnSigncryptedAttributes.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta";
+} from "../CMSSigncryption/CMSVersion.ta.js";
 export {
     SignatureInformation,
     _decode_SignatureInformation,
     _encode_SignatureInformation,
-} from "../CMSSigncryption/SignatureInformation.ta";
+} from "../CMSSigncryption/SignatureInformation.ta.js";
 export {
     SigncryptedDataAlgorithmIdentifier,
     _decode_SigncryptedDataAlgorithmIdentifier,
     _encode_SigncryptedDataAlgorithmIdentifier,
-} from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta";
+} from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta.js";
 export {
     SigncrypterIDs,
     _decode_SigncrypterIDs,
     _encode_SigncrypterIDs,
-} from "../CMSSigncryption/SigncrypterIDs.ta";
+} from "../CMSSigncryption/SigncrypterIDs.ta.js";
 export {
     SigncryptionValue,
     _decode_SigncryptionValue,
     _encode_SigncryptionValue,
-} from "../CMSSigncryption/SigncryptionValue.ta";
+} from "../CMSSigncryption/SigncryptionValue.ta.js";
 export {
     UnSigncryptedAttributes,
     _decode_UnSigncryptedAttributes,
     _encode_UnSigncryptedAttributes,
-} from "../CMSSigncryption/UnSigncryptedAttributes.ta";
+} from "../CMSSigncryption/UnSigncryptedAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Signcrypter */
 /**

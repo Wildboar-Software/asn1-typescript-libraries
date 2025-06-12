@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
-} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta';
+} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.js';
 export {
     BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
-} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta';
-import { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va';
-export { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
-export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
+} from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.js';
+import { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va.js';
+export { id_ext_invalid_assembly_instructions } from '../EDIMSObjectIdentifiers/id-ext-invalid-assembly-instructions.va.js';
+import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
+export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION invalid_assembly_instructions */
 /**

@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_ext_modify_retrieval_status_capability } from '../MSObjectIdentifiers/id-ext-modify-retrieval-status-capability.va';
-export { id_ext_modify_retrieval_status_capability } from '../MSObjectIdentifiers/id-ext-modify-retrieval-status-capability.va';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_ext_modify_retrieval_status_capability } from '../MSObjectIdentifiers/id-ext-modify-retrieval-status-capability.va.js';
+export { id_ext_modify_retrieval_status_capability } from '../MSObjectIdentifiers/id-ext-modify-retrieval-status-capability.va.js';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION modify_retrieval_status_capability */
 /**

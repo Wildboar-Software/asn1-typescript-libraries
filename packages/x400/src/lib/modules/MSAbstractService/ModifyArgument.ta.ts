@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 export {
     EntryClass,
     EntryClass_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -107,37 +107,37 @@ export {
     auto_action_log /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
-} from '../MSAbstractService/EntryClass.ta';
+} from '../MSAbstractService/EntryClass.ta.js';
 import {
     ModifyArgument_entries,
     _decode_ModifyArgument_entries,
     _encode_ModifyArgument_entries,
-} from '../MSAbstractService/ModifyArgument-entries.ta';
+} from '../MSAbstractService/ModifyArgument-entries.ta.js';
 export {
     ModifyArgument_entries,
     _decode_ModifyArgument_entries,
     _encode_ModifyArgument_entries,
-} from '../MSAbstractService/ModifyArgument-entries.ta';
+} from '../MSAbstractService/ModifyArgument-entries.ta.js';
 import {
     EntryModification,
     _decode_EntryModification,
     _encode_EntryModification,
-} from '../MSAbstractService/EntryModification.ta';
+} from '../MSAbstractService/EntryModification.ta.js';
 export {
     EntryModification,
     _decode_EntryModification,
     _encode_EntryModification,
-} from '../MSAbstractService/EntryModification.ta';
+} from '../MSAbstractService/EntryModification.ta.js';
 import {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 export {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ModifyArgument */
 /**

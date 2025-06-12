@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     IA5String,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DigestInfoWithDefault,
     _decode_DigestInfoWithDefault,
     _encode_DigestInfoWithDefault,
-} from "../PKCS-15/DigestInfoWithDefault.ta";
+} from "../PKCS-15/DigestInfoWithDefault.ta.js";
 export {
     DigestInfoWithDefault,
     _decode_DigestInfoWithDefault,
     _encode_DigestInfoWithDefault,
-} from "../PKCS-15/DigestInfoWithDefault.ta";
+} from "../PKCS-15/DigestInfoWithDefault.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION URL_urlWithDigest */
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateV2 */
 /**

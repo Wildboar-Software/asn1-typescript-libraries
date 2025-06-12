@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,19 +91,19 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { moduleReference } from '../DefinitionDirectoryASN1Module/moduleReference.oa';
-export { moduleReference } from '../DefinitionDirectoryASN1Module/moduleReference.oa';
-import { asn1ModuleContents } from '../DefinitionDirectoryASN1Module/asn1ModuleContents.oa';
-export { asn1ModuleContents } from '../DefinitionDirectoryASN1Module/asn1ModuleContents.oa';
-import { asn1Version } from '../DefinitionDirectoryASN1Module/asn1Version.oa';
-export { asn1Version } from '../DefinitionDirectoryASN1Module/asn1Version.oa';
-import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa';
-export { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa';
-import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
-export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { moduleReference } from '../DefinitionDirectoryASN1Module/moduleReference.oa.js';
+export { moduleReference } from '../DefinitionDirectoryASN1Module/moduleReference.oa.js';
+import { asn1ModuleContents } from '../DefinitionDirectoryASN1Module/asn1ModuleContents.oa.js';
+export { asn1ModuleContents } from '../DefinitionDirectoryASN1Module/asn1ModuleContents.oa.js';
+import { asn1Version } from '../DefinitionDirectoryASN1Module/asn1Version.oa.js';
+export { asn1Version } from '../DefinitionDirectoryASN1Module/asn1Version.oa.js';
+import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.js';
+export { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.js';
+import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
+export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
 
 /* START_OF_SYMBOL_DEFINITION asn1Module */
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { PBES2Algorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/PBES2Algorithms-Union0-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { PBES2Algorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/PBES2Algorithms-Union0-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PBES2Algorithms */
 /**

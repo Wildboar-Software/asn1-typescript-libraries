@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Pointers,
     _decode_Pointers,
     _encode_Pointers,
-} from "../CMSProfileAttributes/Pointers.ta";
+} from "../CMSProfileAttributes/Pointers.ta.js";
 import {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta";
+} from "../CryptographicMessageSyntax-2010/DigestedData.ta.js";
 export {
     Pointers,
     _decode_Pointers,
     _encode_Pointers,
-} from "../CMSProfileAttributes/Pointers.ta";
+} from "../CMSProfileAttributes/Pointers.ta.js";
 export {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta";
+} from "../CryptographicMessageSyntax-2010/DigestedData.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION HashPointer */
 /**

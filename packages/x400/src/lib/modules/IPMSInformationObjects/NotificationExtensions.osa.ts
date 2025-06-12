@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-import { ipn_security_response } from '../IPMSSecurityExtensions/ipn-security-response.oa';
-export { ipn_security_response } from '../IPMSSecurityExtensions/ipn-security-response.oa';
-import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa';
-export { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+import { ipn_security_response } from '../IPMSSecurityExtensions/ipn-security-response.oa.js';
+export { ipn_security_response } from '../IPMSSecurityExtensions/ipn-security-response.oa.js';
+import { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.js';
+export { PrivateIPMSExtensions } from '../IPMSInformationObjects/PrivateIPMSExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION NotificationExtensions */
 /**

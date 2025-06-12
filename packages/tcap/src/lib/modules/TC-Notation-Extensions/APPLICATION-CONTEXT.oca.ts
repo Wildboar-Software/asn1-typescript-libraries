@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
 import {
     DialogueMode,
     _enum_for_DialogueMode,
@@ -77,7 +77,7 @@ import {
     unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DialogueMode,
     _encode_DialogueMode,
-} from '../TC-Notation-Extensions/DialogueMode.ta';
+} from '../TC-Notation-Extensions/DialogueMode.ta.js';
 export {
     DialogueMode,
     _enum_for_DialogueMode,
@@ -87,7 +87,7 @@ export {
     unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DialogueMode,
     _encode_DialogueMode,
-} from '../TC-Notation-Extensions/DialogueMode.ta';
+} from '../TC-Notation-Extensions/DialogueMode.ta.js';
 import {
     Termination,
     _enum_for_Termination,
@@ -97,7 +97,7 @@ import {
     prearranged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Termination,
     _encode_Termination,
-} from '../TC-Notation-Extensions/Termination.ta';
+} from '../TC-Notation-Extensions/Termination.ta.js';
 export {
     Termination,
     _enum_for_Termination,
@@ -107,7 +107,7 @@ export {
     prearranged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Termination,
     _encode_Termination,
-} from '../TC-Notation-Extensions/Termination.ta';
+} from '../TC-Notation-Extensions/Termination.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION APPLICATION_CONTEXT */
 /**

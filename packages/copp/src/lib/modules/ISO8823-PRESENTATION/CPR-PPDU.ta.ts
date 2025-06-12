@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CPR_PPDU_x400_mode_parameters,
     _decode_CPR_PPDU_x400_mode_parameters,
     _encode_CPR_PPDU_x400_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPR-PPDU-x400-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPR-PPDU-x400-mode-parameters.ta.js';
 export {
     CPR_PPDU_x400_mode_parameters,
     _decode_CPR_PPDU_x400_mode_parameters,
     _encode_CPR_PPDU_x400_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPR-PPDU-x400-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPR-PPDU-x400-mode-parameters.ta.js';
 import {
     CPR_PPDU_normal_mode_parameters,
     _decode_CPR_PPDU_normal_mode_parameters,
     _encode_CPR_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPR-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPR-PPDU-normal-mode-parameters.ta.js';
 export {
     CPR_PPDU_normal_mode_parameters,
     _decode_CPR_PPDU_normal_mode_parameters,
     _encode_CPR_PPDU_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/CPR-PPDU-normal-mode-parameters.ta';
+} from '../ISO8823-PRESENTATION/CPR-PPDU-normal-mode-parameters.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CPR_PPDU */
 /**

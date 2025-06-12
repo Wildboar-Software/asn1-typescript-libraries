@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_INPUT_BIR_inputBIR,
   _decode_BioAPI_INPUT_BIR_inputBIR,
   _encode_BioAPI_INPUT_BIR_inputBIR,
-} from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta';
+} from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta.js';
 export {
   BioAPI_INPUT_BIR_inputBIR,
   _decode_BioAPI_INPUT_BIR_inputBIR,
   _encode_BioAPI_INPUT_BIR_inputBIR,
-} from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta';
+} from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_INPUT_BIR */
 /**

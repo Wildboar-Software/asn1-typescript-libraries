@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DomainParameters,
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "@wildboar/ansi-x9-42/src/lib/modules/ANSI-X9-42/DomainParameters.ta";
+} from "@wildboar/ansi-x9-42/src/lib/modules/ANSI-X9-42/DomainParameters.ta.js";
 import {
     ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
-} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECDomainParameters.ta";
+} from "@wildboar/ansi-x9-62/src/lib/modules/ANSI-X9-62/ECDomainParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DomainParams */
 /**

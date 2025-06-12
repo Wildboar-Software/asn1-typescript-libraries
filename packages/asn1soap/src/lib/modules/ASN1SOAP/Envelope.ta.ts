@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta';
-export { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.js';
+export { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.js';
 import {
   Envelope_body_or_fault,
   _decode_Envelope_body_or_fault,
   _encode_Envelope_body_or_fault,
-} from '../ASN1SOAP/Envelope-body-or-fault.ta';
+} from '../ASN1SOAP/Envelope-body-or-fault.ta.js';
 export {
   Envelope_body_or_fault,
   _decode_Envelope_body_or_fault,
   _encode_Envelope_body_or_fault,
-} from '../ASN1SOAP/Envelope-body-or-fault.ta';
+} from '../ASN1SOAP/Envelope-body-or-fault.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Envelope */
 /**

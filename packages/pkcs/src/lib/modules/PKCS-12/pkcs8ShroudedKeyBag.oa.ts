@@ -1,19 +1,19 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { bagtypes } from "../PKCS-12/bagtypes.va";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { bagtypes } from "../PKCS-12/bagtypes.va.js";
 import {
     PKCS8ShroudedKeyBag,
     _decode_PKCS8ShroudedKeyBag,
     _encode_PKCS8ShroudedKeyBag,
-} from "../PKCS-12/PKCS8ShroudedKeyBag.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { bagtypes } from "../PKCS-12/bagtypes.va";
+} from "../PKCS-12/PKCS8ShroudedKeyBag.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { bagtypes } from "../PKCS-12/bagtypes.va.js";
 export {
     PKCS8ShroudedKeyBag,
     _decode_PKCS8ShroudedKeyBag,
     _encode_PKCS8ShroudedKeyBag,
-} from "../PKCS-12/PKCS8ShroudedKeyBag.ta";
+} from "../PKCS-12/PKCS8ShroudedKeyBag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs8ShroudedKeyBag */
 /**

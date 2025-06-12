@@ -65,36 +65,36 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
-} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta';
+} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.js';
 export {
     SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
-} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta';
-import { mTSIdentifierMatch } from '../MSMatchingRules/mTSIdentifierMatch.oa';
-export { mTSIdentifierMatch } from '../MSMatchingRules/mTSIdentifierMatch.oa';
-import { id_att_subject_submission_identifier } from '../MSObjectIdentifiers/id-att-subject-submission-identifier.va';
-export { id_att_subject_submission_identifier } from '../MSObjectIdentifiers/id-att-subject-submission-identifier.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.js';
+import { mTSIdentifierMatch } from '../MSMatchingRules/mTSIdentifierMatch.oa.js';
+export { mTSIdentifierMatch } from '../MSMatchingRules/mTSIdentifierMatch.oa.js';
+import { id_att_subject_submission_identifier } from '../MSObjectIdentifiers/id-att-subject-submission-identifier.va.js';
+export { id_att_subject_submission_identifier } from '../MSObjectIdentifiers/id-att-subject-submission-identifier.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION mt_subject_submission_identifier */
 /**

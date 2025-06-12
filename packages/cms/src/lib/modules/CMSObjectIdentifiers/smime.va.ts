@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
-export { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.js";
 
 /* START_OF_SYMBOL_DEFINITION smime */
 /**

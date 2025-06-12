@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_aa } from "../SecureMimeMessageV3dot1-2009/id-aa.va";
-export { id_aa } from "../SecureMimeMessageV3dot1-2009/id-aa.va";
+import { id_aa } from "../SecureMimeMessageV3dot1-2009/id-aa.va.js";
+export { id_aa } from "../SecureMimeMessageV3dot1-2009/id-aa.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_aa_encrypKeyPref */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca";
-import { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageAuthAlgs.osa";
-export { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca";
-export { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageAuthAlgs.osa";
+import { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
+import { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageAuthAlgs.osa.js";
+export { MAC_ALGORITHM } from "../AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
+export { MessageAuthAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/MessageAuthAlgs.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION MessageAuthenticationCodeAlgorithmSet */
 /**

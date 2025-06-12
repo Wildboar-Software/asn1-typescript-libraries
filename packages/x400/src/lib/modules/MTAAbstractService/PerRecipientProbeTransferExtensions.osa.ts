@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa';
-export { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa';
-import { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa';
-export { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa';
-import { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa';
-export { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa';
-import { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-export { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa.js';
+export { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa.js';
+import { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.js';
+export { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.js';
+import { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.js';
+export { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.js';
+import { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+export { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientProbeTransferExtensions */
 /**

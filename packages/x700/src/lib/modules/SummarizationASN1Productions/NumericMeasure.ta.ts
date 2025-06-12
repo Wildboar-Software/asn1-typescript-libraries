@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.js';
 export {
     ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.js';
 import {
     NumericMeasure_qualifiedValue,
     _decode_NumericMeasure_qualifiedValue,
     _encode_NumericMeasure_qualifiedValue,
-} from '../SummarizationASN1Productions/NumericMeasure-qualifiedValue.ta';
+} from '../SummarizationASN1Productions/NumericMeasure-qualifiedValue.ta.js';
 export {
     NumericMeasure_qualifiedValue,
     _decode_NumericMeasure_qualifiedValue,
     _encode_NumericMeasure_qualifiedValue,
-} from '../SummarizationASN1Productions/NumericMeasure-qualifiedValue.ta';
+} from '../SummarizationASN1Productions/NumericMeasure-qualifiedValue.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NumericMeasure */
 /**

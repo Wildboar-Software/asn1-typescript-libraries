@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta";
-export { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta.js";
+export { SupportedFeatures_Item, _decode_SupportedFeatures_Item, _encode_SupportedFeatures_Item } from "../Attribute-ASN1Module/SupportedFeatures-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SupportedFeatures */

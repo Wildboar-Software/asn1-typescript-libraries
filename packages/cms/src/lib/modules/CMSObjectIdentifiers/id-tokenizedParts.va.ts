@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { id_tokenization_manifest } from "../CMSObjectIdentifiers/id-tokenization-manifest.va";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-export { id_tokenization_manifest } from "../CMSObjectIdentifiers/id-tokenization-manifest.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
+import { id_tokenization_manifest } from "../CMSObjectIdentifiers/id-tokenization-manifest.va.js";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { id_tokenization_manifest } from "../CMSObjectIdentifiers/id-tokenization-manifest.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_tokenizedParts */
 /**

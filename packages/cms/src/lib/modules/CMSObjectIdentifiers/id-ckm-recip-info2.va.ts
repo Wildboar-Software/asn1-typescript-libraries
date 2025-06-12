@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { iso, ObjectIdentifier as _OID } from "asn1-ts";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ckm_recip_info2 */
 /**

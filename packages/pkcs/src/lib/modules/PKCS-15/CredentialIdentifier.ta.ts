@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CredentialIdentifier */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ErrorCode_Item,
     ErrorCode_Item_noError /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     unauthorizedAccessError /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ErrorCode_Item,
     _encode_ErrorCode_Item,
-} from '../CSModule/ErrorCode-Item.ta';
+} from '../CSModule/ErrorCode-Item.ta.js';
 export {
     ErrorCode_Item,
     ErrorCode_Item_noError /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,7 +111,7 @@ export {
     unauthorizedAccessError /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ErrorCode_Item,
     _encode_ErrorCode_Item,
-} from '../CSModule/ErrorCode-Item.ta';
+} from '../CSModule/ErrorCode-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ErrorCode */
 /**

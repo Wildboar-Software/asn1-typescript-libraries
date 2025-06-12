@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Completeness,
     _enum_for_Completeness,
@@ -77,7 +77,7 @@ import {
     knownNotComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Completeness,
     _encode_Completeness,
-} from '../MdmpmfASN1Module/Completeness.ta';
+} from '../MdmpmfASN1Module/Completeness.ta.js';
 export {
     Completeness,
     _enum_for_Completeness,
@@ -89,17 +89,17 @@ export {
     knownNotComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Completeness,
     _encode_Completeness,
-} from '../MdmpmfASN1Module/Completeness.ta';
+} from '../MdmpmfASN1Module/Completeness.ta.js';
 import {
     Membership,
     _decode_Membership,
     _encode_Membership,
-} from '../MdmpmfASN1Module/Membership.ta';
+} from '../MdmpmfASN1Module/Membership.ta.js';
 export {
     Membership,
     _decode_Membership,
     _encode_Membership,
-} from '../MdmpmfASN1Module/Membership.ta';
+} from '../MdmpmfASN1Module/Membership.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ListMembershipReply */
 /**

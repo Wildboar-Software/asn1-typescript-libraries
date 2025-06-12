@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     MarkingCodes,
     _decode_MarkingCodes,
     _encode_MarkingCodes,
-} from "../SIOsAccessControl-MODULE/MarkingCodes.ta";
+} from "../SIOsAccessControl-MODULE/MarkingCodes.ta.js";
 import {
     MarkingPhrase,
     _decode_MarkingPhrase,
     _encode_MarkingPhrase,
-} from "../SIOsAccessControl-MODULE/MarkingPhrase.ta";
+} from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.js";
 export {
     MarkingCodes,
     _decode_MarkingCodes,
     _encode_MarkingCodes,
-} from "../SIOsAccessControl-MODULE/MarkingCodes.ta";
+} from "../SIOsAccessControl-MODULE/MarkingCodes.ta.js";
 export {
     MarkingPhrase,
     _decode_MarkingPhrase,
     _encode_MarkingPhrase,
-} from "../SIOsAccessControl-MODULE/MarkingPhrase.ta";
+} from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MarkingData */
 /**

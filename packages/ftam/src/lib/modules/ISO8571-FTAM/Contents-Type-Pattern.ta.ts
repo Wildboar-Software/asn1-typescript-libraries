@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Object_Identifier_Pattern,
   _decode_Object_Identifier_Pattern,
   _encode_Object_Identifier_Pattern,
-} from '../ISO8571-FTAM/Object-Identifier-Pattern.ta';
+} from '../ISO8571-FTAM/Object-Identifier-Pattern.ta.js';
 export {
   Object_Identifier_Pattern,
   _decode_Object_Identifier_Pattern,
   _encode_Object_Identifier_Pattern,
-} from '../ISO8571-FTAM/Object-Identifier-Pattern.ta';
+} from '../ISO8571-FTAM/Object-Identifier-Pattern.ta.js';
 import {
   Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
-} from '../ISO8571-FTAM/Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern.ta';
+} from '../ISO8571-FTAM/Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern.ta.js';
 export {
   Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   _decode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
   _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
-} from '../ISO8571-FTAM/Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern.ta';
+} from '../ISO8571-FTAM/Contents-Type-Pattern-constraint-set-abstract-Syntax-Pattern.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Pattern */
 /**

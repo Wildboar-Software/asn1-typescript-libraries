@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HTMLString,
   _decode_HTMLString,
   _encode_HTMLString,
-} from '../RINF-module/HTMLString.ta';
+} from '../RINF-module/HTMLString.ta.js';
 export {
   HTMLString,
   _decode_HTMLString,
   _encode_HTMLString,
-} from '../RINF-module/HTMLString.ta';
+} from '../RINF-module/HTMLString.ta.js';
 import {
   RegistrationDetails,
   _decode_RegistrationDetails,
   _encode_RegistrationDetails,
-} from '../RINF-module/RegistrationDetails.ta';
+} from '../RINF-module/RegistrationDetails.ta.js';
 export {
   RegistrationDetails,
   _decode_RegistrationDetails,
   _encode_RegistrationDetails,
-} from '../RINF-module/RegistrationDetails.ta';
+} from '../RINF-module/RegistrationDetails.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Information */
 /**

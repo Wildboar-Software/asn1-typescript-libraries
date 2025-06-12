@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
-import { dhPublicNumber } from "../ANSI-X9-42/dhPublicNumber.va";
+import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
+export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
+import { dhPublicNumber } from "../ANSI-X9-42/dhPublicNumber.va.js";
 import {
     _decode_DomainParameters,
     _encode_DomainParameters,
-} from "../ANSI-X9-42/DomainParameters.ta";
+} from "../ANSI-X9-42/DomainParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DHPublicNumbers */
 /**

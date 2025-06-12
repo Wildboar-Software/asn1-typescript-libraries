@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IA5TextParameters,
     _decode_IA5TextParameters,
     _encode_IA5TextParameters,
-} from '../IPMSInformationObjects/IA5TextParameters.ta';
+} from '../IPMSInformationObjects/IA5TextParameters.ta.js';
 export {
     IA5TextParameters,
     _decode_IA5TextParameters,
     _encode_IA5TextParameters,
-} from '../IPMSInformationObjects/IA5TextParameters.ta';
+} from '../IPMSInformationObjects/IA5TextParameters.ta.js';
 import {
     IA5TextData,
     _decode_IA5TextData,
     _encode_IA5TextData,
-} from '../IPMSInformationObjects/IA5TextData.ta';
+} from '../IPMSInformationObjects/IA5TextData.ta.js';
 export {
     IA5TextData,
     _decode_IA5TextData,
     _encode_IA5TextData,
-} from '../IPMSInformationObjects/IA5TextData.ta';
+} from '../IPMSInformationObjects/IA5TextData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IA5TextBodyPart */
 /**

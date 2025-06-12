@@ -9,27 +9,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerSerialNumber,
     _decode_IssuerSerialNumber,
     _encode_IssuerSerialNumber,
-} from "../PKI-Stub/IssuerSerialNumber.ta";
+} from "../PKI-Stub/IssuerSerialNumber.ta.js";
 import {
     FingerPrint,
     _get_decoder_for_FingerPrint,
     _get_encoder_for_FingerPrint,
-} from "../PKI-Stub/FingerPrint.ta";
+} from "../PKI-Stub/FingerPrint.ta.js";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "../PKI-Stub/Certificate.ta";
+} from "../PKI-Stub/Certificate.ta.js";
 import {
     PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
-} from "../PKI-Stub/PublicKey.ta";
+} from "../PKI-Stub/PublicKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCertIdentifier */
 /**

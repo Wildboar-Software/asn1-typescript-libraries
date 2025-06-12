@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
-} from '../MTAAbstractService/RecipientName.ta';
+} from '../MTAAbstractService/RecipientName.ta.js';
 export {
     RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
-} from '../MTAAbstractService/RecipientName.ta';
+} from '../MTAAbstractService/RecipientName.ta.js';
 import {
     OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
-} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta';
+} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.js';
 export {
     OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
-} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta';
+} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.js';
 import {
     PerRecipientIndicators,
     PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
@@ -106,7 +106,7 @@ import {
     reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
-} from '../MTAAbstractService/PerRecipientIndicators.ta';
+} from '../MTAAbstractService/PerRecipientIndicators.ta.js';
 export {
     PerRecipientIndicators,
     PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
@@ -127,7 +127,7 @@ export {
     reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
-} from '../MTAAbstractService/PerRecipientIndicators.ta';
+} from '../MTAAbstractService/PerRecipientIndicators.ta.js';
 import {
     ExplicitConversion,
     ExplicitConversion_ia5_text_to_teletex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -152,7 +152,7 @@ import {
     videotex_to_teletex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
-} from '../MTSAbstractService/ExplicitConversion.ta';
+} from '../MTSAbstractService/ExplicitConversion.ta.js';
 export {
     ExplicitConversion,
     ExplicitConversion_ia5_text_to_teletex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -177,17 +177,17 @@ export {
     videotex_to_teletex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
-} from '../MTSAbstractService/ExplicitConversion.ta';
+} from '../MTSAbstractService/ExplicitConversion.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientMessageTransferFields */
 /**

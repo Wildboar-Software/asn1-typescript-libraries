@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Pointer,
     _decode_Pointer,
     _encode_Pointer,
-} from "../CMSProfileAttributes/Pointer.ta";
+} from "../CMSProfileAttributes/Pointer.ta.js";
 export {
     Pointer,
     _decode_Pointer,
     _encode_Pointer,
-} from "../CMSProfileAttributes/Pointer.ta";
+} from "../CMSProfileAttributes/Pointer.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Pointers */
 /**

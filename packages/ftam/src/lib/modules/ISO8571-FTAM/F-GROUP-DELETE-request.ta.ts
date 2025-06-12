@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
-} from '../ISO8571-FTAM/Request-Operation-Result.ta';
+} from '../ISO8571-FTAM/Request-Operation-Result.ta.js';
 export {
   Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
-} from '../ISO8571-FTAM/Request-Operation-Result.ta';
+} from '../ISO8571-FTAM/Request-Operation-Result.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_GROUP_DELETE_request */
 /**

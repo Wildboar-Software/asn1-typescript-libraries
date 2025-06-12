@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     InvokeExerciseReply_Item,
     _decode_InvokeExerciseReply_Item,
     _encode_InvokeExerciseReply_Item,
-} from '../SDHProtASN1/InvokeExerciseReply-Item.ta';
+} from '../SDHProtASN1/InvokeExerciseReply-Item.ta.js';
 export {
     InvokeExerciseReply_Item,
     _decode_InvokeExerciseReply_Item,
     _encode_InvokeExerciseReply_Item,
-} from '../SDHProtASN1/InvokeExerciseReply-Item.ta';
+} from '../SDHProtASN1/InvokeExerciseReply-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InvokeExerciseReply */
 /**

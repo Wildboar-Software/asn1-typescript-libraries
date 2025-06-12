@@ -11,13 +11,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { TrustAnchorInfoVersion, TrustAnchorInfoVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta";
-import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta";
-import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta";
-import { TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta";
-import { CertPathControls, _decode_CertPathControls, _encode_CertPathControls } from "../TrustAnchorInfoModule/CertPathControls.ta";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { TrustAnchorInfoVersion, TrustAnchorInfoVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.js";
+import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.js";
+import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta.js";
+import { TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta.js";
+import { CertPathControls, _decode_CertPathControls, _encode_CertPathControls } from "../TrustAnchorInfoModule/CertPathControls.ta.js";
+import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TrustAnchorInfo */

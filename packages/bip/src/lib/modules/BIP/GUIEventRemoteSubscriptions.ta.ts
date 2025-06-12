@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   GUIEventRemoteSubscription,
   _decode_GUIEventRemoteSubscription,
   _encode_GUIEventRemoteSubscription,
-} from '../BIP/GUIEventRemoteSubscription.ta';
+} from '../BIP/GUIEventRemoteSubscription.ta.js';
 export {
   GUIEventRemoteSubscription,
   _decode_GUIEventRemoteSubscription,
   _encode_GUIEventRemoteSubscription,
-} from '../BIP/GUIEventRemoteSubscription.ta';
+} from '../BIP/GUIEventRemoteSubscription.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GUIEventRemoteSubscriptions */
 /**

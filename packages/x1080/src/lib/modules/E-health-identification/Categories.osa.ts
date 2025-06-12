@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-import { patientIdentification } from '../E-health-identification/patientIdentification.oa';
-export { patientIdentification } from '../E-health-identification/patientIdentification.oa';
-import { medicalStaffIdentification } from '../E-health-identification/medicalStaffIdentification.oa';
-export { medicalStaffIdentification } from '../E-health-identification/medicalStaffIdentification.oa';
-import { observerIdentification } from '../E-health-identification/observerIdentification.oa';
-export { observerIdentification } from '../E-health-identification/observerIdentification.oa';
-import { pharmaceuticalStaffIdentification } from '../E-health-identification/pharmaceuticalStaffIdentification.oa';
-export { pharmaceuticalStaffIdentification } from '../E-health-identification/pharmaceuticalStaffIdentification.oa';
-import { laboratoryIdentification } from '../E-health-identification/laboratoryIdentification.oa';
-export { laboratoryIdentification } from '../E-health-identification/laboratoryIdentification.oa';
-import { manufacturerIdentification } from '../E-health-identification/manufacturerIdentification.oa';
-export { manufacturerIdentification } from '../E-health-identification/manufacturerIdentification.oa';
-import { deviceIdentification } from '../E-health-identification/deviceIdentification.oa';
-export { deviceIdentification } from '../E-health-identification/deviceIdentification.oa';
-import { softwareIdentification } from '../E-health-identification/softwareIdentification.oa';
-export { softwareIdentification } from '../E-health-identification/softwareIdentification.oa';
-import { insuranceIdentification } from '../E-health-identification/insuranceIdentification.oa';
-export { insuranceIdentification } from '../E-health-identification/insuranceIdentification.oa';
-import { medicalRecordIdentification } from '../E-health-identification/medicalRecordIdentification.oa';
-export { medicalRecordIdentification } from '../E-health-identification/medicalRecordIdentification.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+import { patientIdentification } from '../E-health-identification/patientIdentification.oa.js';
+export { patientIdentification } from '../E-health-identification/patientIdentification.oa.js';
+import { medicalStaffIdentification } from '../E-health-identification/medicalStaffIdentification.oa.js';
+export { medicalStaffIdentification } from '../E-health-identification/medicalStaffIdentification.oa.js';
+import { observerIdentification } from '../E-health-identification/observerIdentification.oa.js';
+export { observerIdentification } from '../E-health-identification/observerIdentification.oa.js';
+import { pharmaceuticalStaffIdentification } from '../E-health-identification/pharmaceuticalStaffIdentification.oa.js';
+export { pharmaceuticalStaffIdentification } from '../E-health-identification/pharmaceuticalStaffIdentification.oa.js';
+import { laboratoryIdentification } from '../E-health-identification/laboratoryIdentification.oa.js';
+export { laboratoryIdentification } from '../E-health-identification/laboratoryIdentification.oa.js';
+import { manufacturerIdentification } from '../E-health-identification/manufacturerIdentification.oa.js';
+export { manufacturerIdentification } from '../E-health-identification/manufacturerIdentification.oa.js';
+import { deviceIdentification } from '../E-health-identification/deviceIdentification.oa.js';
+export { deviceIdentification } from '../E-health-identification/deviceIdentification.oa.js';
+import { softwareIdentification } from '../E-health-identification/softwareIdentification.oa.js';
+export { softwareIdentification } from '../E-health-identification/softwareIdentification.oa.js';
+import { insuranceIdentification } from '../E-health-identification/insuranceIdentification.oa.js';
+export { insuranceIdentification } from '../E-health-identification/insuranceIdentification.oa.js';
+import { medicalRecordIdentification } from '../E-health-identification/medicalRecordIdentification.oa.js';
+export { medicalRecordIdentification } from '../E-health-identification/medicalRecordIdentification.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION Categories */
 /**

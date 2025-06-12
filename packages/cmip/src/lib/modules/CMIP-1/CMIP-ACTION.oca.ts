@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ActionTypeId,
   _decode_ActionTypeId,
   _encode_ActionTypeId,
-} from '../CMIP-1/ActionTypeId.ta';
+} from '../CMIP-1/ActionTypeId.ta.js';
 export {
   ActionTypeId,
   _decode_ActionTypeId,
   _encode_ActionTypeId,
-} from '../CMIP-1/ActionTypeId.ta';
+} from '../CMIP-1/ActionTypeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CMIP_ACTION */
 /**

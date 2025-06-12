@@ -1,14 +1,14 @@
 /* eslint-disable */
 import * as asn1 from "asn1-ts";
-import { AlgorithmIdentifier } from "../PKCS5v2-1/AlgorithmIdentifier.ta";
-import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
+import { AlgorithmIdentifier } from "../PKCS5v2-1/AlgorithmIdentifier.ta.js";
+import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta";
-export { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va";
+} from "../PKCS5v2-1/AlgorithmIdentifier.ta.js";
+export { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION algid_hmacWithSHA1 */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
-} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta';
+} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta.js';
 export {
     DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
-} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta';
+} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta.js';
 import {
     ObjectList,
     _decode_ObjectList,
     _encode_ObjectList,
-} from '../SummarizationASN1Productions/ObjectList.ta';
+} from '../SummarizationASN1Productions/ObjectList.ta.js';
 export {
     ObjectList,
     _decode_ObjectList,
     _encode_ObjectList,
-} from '../SummarizationASN1Productions/ObjectList.ta';
+} from '../SummarizationASN1Productions/ObjectList.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument_scopeOrListChoice */
 /**

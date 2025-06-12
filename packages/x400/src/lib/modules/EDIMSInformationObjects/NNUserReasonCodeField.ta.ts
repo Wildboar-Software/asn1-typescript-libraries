@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NNUserBasicCodeField,
     NNUserBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -92,7 +92,7 @@ import {
     user_defined_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUserBasicCodeField,
     _encode_NNUserBasicCodeField,
-} from '../EDIMSInformationObjects/NNUserBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNUserBasicCodeField.ta.js';
 export {
     NNUserBasicCodeField,
     NNUserBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -119,21 +119,21 @@ export {
     user_defined_reason /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUserBasicCodeField,
     _encode_NNUserBasicCodeField,
-} from '../EDIMSInformationObjects/NNUserBasicCodeField.ta';
+} from '../EDIMSInformationObjects/NNUserBasicCodeField.ta.js';
 import {
     NNUserDiagnosticField,
     NNUserDiagnosticField_compression_unsupported /* IMPORTED_LONG_NAMED_INTEGER */,
     compression_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUserDiagnosticField,
     _encode_NNUserDiagnosticField,
-} from '../EDIMSInformationObjects/NNUserDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNUserDiagnosticField.ta.js';
 export {
     NNUserDiagnosticField,
     NNUserDiagnosticField_compression_unsupported /* IMPORTED_LONG_NAMED_INTEGER */,
     compression_unsupported /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_NNUserDiagnosticField,
     _encode_NNUserDiagnosticField,
-} from '../EDIMSInformationObjects/NNUserDiagnosticField.ta';
+} from '../EDIMSInformationObjects/NNUserDiagnosticField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NNUserReasonCodeField */
 /**

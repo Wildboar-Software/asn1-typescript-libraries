@@ -5,17 +5,17 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.js";
 export {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedRecipientID */
 /**

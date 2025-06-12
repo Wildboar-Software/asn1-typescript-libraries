@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { bagtypes } from "../PKCS-12/bagtypes.va";
-import { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { bagtypes } from "../PKCS-12/bagtypes.va";
-export { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { bagtypes } from "../PKCS-12/bagtypes.va.js";
+import { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { bagtypes } from "../PKCS-12/bagtypes.va.js";
+export { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION crlBag */
 /**

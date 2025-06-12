@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     JoinXCReply_Item_success,
     _decode_JoinXCReply_Item_success,
     _encode_JoinXCReply_Item_success,
-} from '../M3100ASN1TypeModule6/JoinXCReply-Item-success.ta';
+} from '../M3100ASN1TypeModule6/JoinXCReply-Item-success.ta.js';
 export {
     JoinXCReply_Item_success,
     _decode_JoinXCReply_Item_success,
     _encode_JoinXCReply_Item_success,
-} from '../M3100ASN1TypeModule6/JoinXCReply-Item-success.ta';
+} from '../M3100ASN1TypeModule6/JoinXCReply-Item-success.ta.js';
 import {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION JoinXCReply_Item */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { nloi } from '../NLM/nloi.va';
-export { nloi } from '../NLM/nloi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { nloi } from '../NLM/nloi.va.js';
+export { nloi } from '../NLM/nloi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION acoi */
 /**

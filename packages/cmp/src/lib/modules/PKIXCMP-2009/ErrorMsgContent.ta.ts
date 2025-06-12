@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIStatusInfo,
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
-} from '../PKIXCMP-2009/PKIStatusInfo.ta';
+} from '../PKIXCMP-2009/PKIStatusInfo.ta.js';
 export {
   PKIStatusInfo,
   _decode_PKIStatusInfo,
   _encode_PKIStatusInfo,
-} from '../PKIXCMP-2009/PKIStatusInfo.ta';
+} from '../PKIXCMP-2009/PKIStatusInfo.ta.js';
 import {
   PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
-} from '../PKIXCMP-2009/PKIFreeText.ta';
+} from '../PKIXCMP-2009/PKIFreeText.ta.js';
 export {
   PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
-} from '../PKIXCMP-2009/PKIFreeText.ta';
+} from '../PKIXCMP-2009/PKIFreeText.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ErrorMsgContent */
 /**

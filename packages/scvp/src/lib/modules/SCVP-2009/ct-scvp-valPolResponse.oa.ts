@@ -65,20 +65,20 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ValPolResponse,
   _decode_ValPolResponse,
   _encode_ValPolResponse,
-} from '../SCVP-2009/ValPolResponse.ta';
+} from '../SCVP-2009/ValPolResponse.ta.js';
 export {
   ValPolResponse,
   _decode_ValPolResponse,
   _encode_ValPolResponse,
-} from '../SCVP-2009/ValPolResponse.ta';
-import { id_ct_scvp_valPolResponse } from '../SCVP-2009/id-ct-scvp-valPolResponse.va';
-export { id_ct_scvp_valPolResponse } from '../SCVP-2009/id-ct-scvp-valPolResponse.va';
-import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca';
+} from '../SCVP-2009/ValPolResponse.ta.js';
+import { id_ct_scvp_valPolResponse } from '../SCVP-2009/id-ct-scvp-valPolResponse.va.js';
+export { id_ct_scvp_valPolResponse } from '../SCVP-2009/id-ct-scvp-valPolResponse.va.js';
+import { CONTENT_TYPE } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js';
 
 
 /* START_OF_SYMBOL_DEFINITION ct_scvp_valPolResponse */

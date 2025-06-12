@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { MATCHING_RULE } from "@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca";
-import { pkcs_9_mr_signingTimeMatch } from "../PKCS-9/pkcs-9-mr-signingTimeMatch.va";
+import { MATCHING_RULE } from "@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js";
+import { pkcs_9_mr_signingTimeMatch } from "../PKCS-9/pkcs-9-mr-signingTimeMatch.va.js";
 import {
     SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
-} from "../PKCS-9/SigningTime.ta";
+} from "../PKCS-9/SigningTime.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION signingTimeMatch */
 /**

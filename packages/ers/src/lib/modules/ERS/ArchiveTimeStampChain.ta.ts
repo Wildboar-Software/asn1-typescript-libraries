@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } from "../ERS/ArchiveTimeStamp.ta";
-export { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } from "../ERS/ArchiveTimeStamp.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } from "../ERS/ArchiveTimeStamp.ta.js";
+export { ArchiveTimeStamp, _decode_ArchiveTimeStamp, _encode_ArchiveTimeStamp } from "../ERS/ArchiveTimeStamp.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ArchiveTimeStampChain */

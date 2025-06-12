@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_signcryptedData } from "../CMSSigncryption/id-signcryptedData.va";
+import { id_signcryptedData } from "../CMSSigncryption/id-signcryptedData.va.js";
 import {
     SigncryptedData,
     _decode_SigncryptedData,
     _encode_SigncryptedData,
-} from "../CMSSigncryption/SigncryptedData.ta";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { id_signcryptedData } from "../CMSSigncryption/id-signcryptedData.va";
+} from "../CMSSigncryption/SigncryptedData.ta.js";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { id_signcryptedData } from "../CMSSigncryption/id-signcryptedData.va.js";
 export {
     SigncryptedData,
     _decode_SigncryptedData,
     _encode_SigncryptedData,
-} from "../CMSSigncryption/SigncryptedData.ta";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "../CMSSigncryption/SigncryptedData.ta.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_SigncryptedData */
 /**

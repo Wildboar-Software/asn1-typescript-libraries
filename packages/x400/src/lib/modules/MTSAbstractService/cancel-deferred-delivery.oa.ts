@@ -65,63 +65,63 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     CancelDeferredDeliveryArgument,
     _decode_CancelDeferredDeliveryArgument,
     _encode_CancelDeferredDeliveryArgument,
-} from '../MTSAbstractService/CancelDeferredDeliveryArgument.ta';
+} from '../MTSAbstractService/CancelDeferredDeliveryArgument.ta.js';
 export {
     CancelDeferredDeliveryArgument,
     _decode_CancelDeferredDeliveryArgument,
     _encode_CancelDeferredDeliveryArgument,
-} from '../MTSAbstractService/CancelDeferredDeliveryArgument.ta';
+} from '../MTSAbstractService/CancelDeferredDeliveryArgument.ta.js';
 import {
     CancelDeferredDeliveryResult,
     _decode_CancelDeferredDeliveryResult,
     _encode_CancelDeferredDeliveryResult,
-} from '../MTSAbstractService/CancelDeferredDeliveryResult.ta';
+} from '../MTSAbstractService/CancelDeferredDeliveryResult.ta.js';
 export {
     CancelDeferredDeliveryResult,
     _decode_CancelDeferredDeliveryResult,
     _encode_CancelDeferredDeliveryResult,
-} from '../MTSAbstractService/CancelDeferredDeliveryResult.ta';
-import { deferred_delivery_cancellation_rejected } from '../MTSAbstractService/deferred-delivery-cancellation-rejected.oa';
-export { deferred_delivery_cancellation_rejected } from '../MTSAbstractService/deferred-delivery-cancellation-rejected.oa';
-import { message_submission_identifier_invalid } from '../MTSAbstractService/message-submission-identifier-invalid.oa';
-export { message_submission_identifier_invalid } from '../MTSAbstractService/message-submission-identifier-invalid.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-export { operationObject1 } from '../MTSAbstractService/operationObject1.oa';
-import { op_cancel_deferred_delivery } from '../MTSAccessProtocol/op-cancel-deferred-delivery.va';
-export { op_cancel_deferred_delivery } from '../MTSAccessProtocol/op-cancel-deferred-delivery.va';
-import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
-export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca';
+} from '../MTSAbstractService/CancelDeferredDeliveryResult.ta.js';
+import { deferred_delivery_cancellation_rejected } from '../MTSAbstractService/deferred-delivery-cancellation-rejected.oa.js';
+export { deferred_delivery_cancellation_rejected } from '../MTSAbstractService/deferred-delivery-cancellation-rejected.oa.js';
+import { message_submission_identifier_invalid } from '../MTSAbstractService/message-submission-identifier-invalid.oa.js';
+export { message_submission_identifier_invalid } from '../MTSAbstractService/message-submission-identifier-invalid.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+export { operationObject1 } from '../MTSAbstractService/operationObject1.oa.js';
+import { op_cancel_deferred_delivery } from '../MTSAccessProtocol/op-cancel-deferred-delivery.va.js';
+export { op_cancel_deferred_delivery } from '../MTSAccessProtocol/op-cancel-deferred-delivery.va.js';
+import { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
+export { ABSTRACT_OPERATION } from '../MTSAbstractService/ABSTRACT-OPERATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION cancel_deferred_delivery */
 /**

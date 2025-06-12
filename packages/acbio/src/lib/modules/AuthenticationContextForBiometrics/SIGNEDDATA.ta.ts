@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.js';
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,50 +99,50 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.js';
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js';
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js';
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from '../AuthenticationContextForBiometrics/CertificateSet.ta';
+} from '../AuthenticationContextForBiometrics/CertificateSet.ta.js';
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from '../AuthenticationContextForBiometrics/CertificateSet.ta';
+} from '../AuthenticationContextForBiometrics/CertificateSet.ta.js';
 import {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta';
+} from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta.js';
 export {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta';
+} from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta.js';
 import {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta.js';
 export {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/SignerInfos.ta.js';
 import type {
     EncapsulatedContentInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta';
+} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SIGNEDDATA */
 /**

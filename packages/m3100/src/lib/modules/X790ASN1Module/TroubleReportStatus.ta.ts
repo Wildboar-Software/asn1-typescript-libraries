@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TroubleReportStatus_number,
     TroubleReportStatus_number_screening /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -140,7 +140,7 @@ import {
     techLeftSite /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TroubleReportStatus_number,
     _encode_TroubleReportStatus_number,
-} from '../X790ASN1Module/TroubleReportStatus-number.ta';
+} from '../X790ASN1Module/TroubleReportStatus-number.ta.js';
 export {
     TroubleReportStatus_number,
     TroubleReportStatus_number_screening /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -215,7 +215,7 @@ export {
     techLeftSite /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TroubleReportStatus_number,
     _encode_TroubleReportStatus_number,
-} from '../X790ASN1Module/TroubleReportStatus-number.ta';
+} from '../X790ASN1Module/TroubleReportStatus-number.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TroubleReportStatus */
 /**

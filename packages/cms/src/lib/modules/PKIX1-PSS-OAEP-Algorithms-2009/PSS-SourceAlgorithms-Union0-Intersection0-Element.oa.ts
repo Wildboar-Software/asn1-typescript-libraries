@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca";
+import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.js";
 import {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta";
-import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.js";
+import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.js";
+export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -24,14 +24,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 export {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta";
-export { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.js";
+export { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.js";
 
 /* START_OF_SYMBOL_DEFINITION PSS_SourceAlgorithms_Union0_Intersection0_Element */
 /**

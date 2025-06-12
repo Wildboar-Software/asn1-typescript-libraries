@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RTORQapdu,
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.js';
 export {
     RTORQapdu,
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.js';
 import {
     RTORQapdu_dialogueMode,
     RTORQapdu_dialogueMode_monologue /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     twa /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RTORQapdu_dialogueMode,
     _encode_RTORQapdu_dialogueMode,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta.js';
 export {
     RTORQapdu_dialogueMode,
     RTORQapdu_dialogueMode_monologue /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -93,17 +93,17 @@ export {
     twa /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RTORQapdu_dialogueMode,
     _encode_RTORQapdu_dialogueMode,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu-dialogueMode.ta.js';
 import {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.js';
 export {
     ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/ConnectionData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CP_type_x410_mode_parameters */
 /**

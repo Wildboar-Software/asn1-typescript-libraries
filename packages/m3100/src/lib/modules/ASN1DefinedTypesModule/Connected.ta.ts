@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PointToPoint,
     _decode_PointToPoint,
     _encode_PointToPoint,
-} from '../ASN1DefinedTypesModule/PointToPoint.ta';
+} from '../ASN1DefinedTypesModule/PointToPoint.ta.js';
 export {
     PointToPoint,
     _decode_PointToPoint,
     _encode_PointToPoint,
-} from '../ASN1DefinedTypesModule/PointToPoint.ta';
+} from '../ASN1DefinedTypesModule/PointToPoint.ta.js';
 import {
     PointToMultipoint,
     _decode_PointToMultipoint,
     _encode_PointToMultipoint,
-} from '../ASN1DefinedTypesModule/PointToMultipoint.ta';
+} from '../ASN1DefinedTypesModule/PointToMultipoint.ta.js';
 export {
     PointToMultipoint,
     _decode_PointToMultipoint,
     _encode_PointToMultipoint,
-} from '../ASN1DefinedTypesModule/PointToMultipoint.ta';
+} from '../ASN1DefinedTypesModule/PointToMultipoint.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Connected */
 /**

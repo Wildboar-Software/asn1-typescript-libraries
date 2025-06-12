@@ -1,11 +1,11 @@
 /* eslint-disable */
-import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
+import type { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.js";
 import {
     AcceptableResponses,
     _decode_AcceptableResponses,
     _encode_AcceptableResponses,
-} from "../OCSP-2013-08/AcceptableResponses.ta";
-import { id_pkix_ocsp_response } from "../OCSP-2013-08/id-pkix-ocsp-response.va";
+} from "../OCSP-2013-08/AcceptableResponses.ta.js";
+import { id_pkix_ocsp_response } from "../OCSP-2013-08/id-pkix-ocsp-response.va.js";
 
 /* START_OF_SYMBOL_DEFINITION re_ocsp_response */
 /**

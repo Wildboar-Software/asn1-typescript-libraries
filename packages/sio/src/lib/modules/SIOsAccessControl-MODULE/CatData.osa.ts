@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca";
-export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca";
+import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.js";
+export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION CatData */
 /**

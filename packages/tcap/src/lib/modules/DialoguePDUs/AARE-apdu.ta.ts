@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
-} from '../DialoguePDUs/AARE-apdu-protocol-version.ta';
+} from '../DialoguePDUs/AARE-apdu-protocol-version.ta.js';
 export {
     AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
-} from '../DialoguePDUs/AARE-apdu-protocol-version.ta';
+} from '../DialoguePDUs/AARE-apdu-protocol-version.ta.js';
 import {
     Associate_result,
     Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     reject_permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_result,
     _encode_Associate_result,
-} from '../DialoguePDUs/Associate-result.ta';
+} from '../DialoguePDUs/Associate-result.ta.js';
 export {
     Associate_result,
     Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -97,17 +97,17 @@ export {
     reject_permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_result,
     _encode_Associate_result,
-} from '../DialoguePDUs/Associate-result.ta';
+} from '../DialoguePDUs/Associate-result.ta.js';
 import {
     Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
-} from '../DialoguePDUs/Associate-source-diagnostic.ta';
+} from '../DialoguePDUs/Associate-source-diagnostic.ta.js';
 export {
     Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
-} from '../DialoguePDUs/Associate-source-diagnostic.ta';
+} from '../DialoguePDUs/Associate-source-diagnostic.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AARE_apdu */
 /**

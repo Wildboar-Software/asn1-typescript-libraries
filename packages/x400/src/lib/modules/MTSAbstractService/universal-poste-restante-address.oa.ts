@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalPosteRestanteAddress,
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
-} from '../MTSAbstractService/UniversalPosteRestanteAddress.ta';
+} from '../MTSAbstractService/UniversalPosteRestanteAddress.ta.js';
 export {
     UniversalPosteRestanteAddress,
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
-} from '../MTSAbstractService/UniversalPosteRestanteAddress.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalPosteRestanteAddress.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_poste_restante_address */
 /**

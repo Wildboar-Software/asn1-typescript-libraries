@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js';
 export {
     CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.js';
 import {
     OtherRevocationInfoFormat,
     _decode_OtherRevocationInfoFormat,
     _encode_OtherRevocationInfoFormat,
-} from '../AuthenticationContextForBiometrics/OtherRevocationInfoFormat.ta';
+} from '../AuthenticationContextForBiometrics/OtherRevocationInfoFormat.ta.js';
 export {
     OtherRevocationInfoFormat,
     _decode_OtherRevocationInfoFormat,
     _encode_OtherRevocationInfoFormat,
-} from '../AuthenticationContextForBiometrics/OtherRevocationInfoFormat.ta';
+} from '../AuthenticationContextForBiometrics/OtherRevocationInfoFormat.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevocationInfoChoice */
 /**

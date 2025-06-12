@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va";
-import { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va";
-import { PSourceAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta";
+import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.js";
+import { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va.js";
+import { PSourceAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.js";
 export {
     EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta";
-export { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va";
-export { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.js";
+export { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.js";
+export { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va.js";
 export {
     PSourceAlgorithm,
     _decode_PSourceAlgorithm,
     _encode_PSourceAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.js";
 import {
     AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     ASN1TagClass,
     ASN1Construction,

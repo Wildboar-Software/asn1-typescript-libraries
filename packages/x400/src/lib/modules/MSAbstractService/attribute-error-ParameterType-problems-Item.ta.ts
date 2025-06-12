@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeProblem,
     AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from '../MSAbstractService/AttributeProblem.ta';
+} from '../MSAbstractService/AttributeProblem.ta.js';
 export {
     AttributeProblem,
     AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,17 +103,17 @@ export {
     single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from '../MSAbstractService/AttributeProblem.ta';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MSAbstractService/AttributeProblem.ta.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION attribute_error_ParameterType_problems_Item */

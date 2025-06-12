@@ -65,28 +65,28 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { Query, _decode_Query, _encode_Query } from '../SCVP-2009/Query.ta';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { Query, _decode_Query, _encode_Query } from '../SCVP-2009/Query.ta.js';
 import {
   GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.js';
 import {
   GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
-} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta';
+} from '@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.js';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 import {
   AlgorithmIdentifier,
   _encode_AlgorithmIdentifier,
   _decode_AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CVRequest */
 /**

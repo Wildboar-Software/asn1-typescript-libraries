@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageGroupProblem,
     MessageGroupProblem_name_not_registered /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     group_depth_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_MessageGroupProblem,
     _encode_MessageGroupProblem,
-} from '../MSAbstractService/MessageGroupProblem.ta';
+} from '../MSAbstractService/MessageGroupProblem.ta.js';
 export {
     MessageGroupProblem,
     MessageGroupProblem_name_not_registered /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,17 +103,17 @@ export {
     group_depth_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_MessageGroupProblem,
     _encode_MessageGroupProblem,
-} from '../MSAbstractService/MessageGroupProblem.ta';
+} from '../MSAbstractService/MessageGroupProblem.ta.js';
 import {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
+} from '../MSAbstractService/MessageGroupName.ta.js';
 export {
     MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
-} from '../MSAbstractService/MessageGroupName.ta';
+} from '../MSAbstractService/MessageGroupName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageGroupErrorParameter */
 /**

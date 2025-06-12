@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta";
+} from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta.js";
 import {
     EncryptionAlgorithmIdentifier,
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
-} from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta";
+} from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.js";
 export {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta";
+} from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta.js";
 export {
     EncryptionAlgorithmIdentifier,
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
-} from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta";
+} from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedPrivateKeyInfo */
 /**

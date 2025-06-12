@@ -65,77 +65,77 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     NotificationCause,
     _decode_NotificationCause,
     _encode_NotificationCause,
-} from '../UsageMeteringFunction/NotificationCause.ta';
+} from '../UsageMeteringFunction/NotificationCause.ta.js';
 export {
     NotificationCause,
     _decode_NotificationCause,
     _encode_NotificationCause,
-} from '../UsageMeteringFunction/NotificationCause.ta';
+} from '../UsageMeteringFunction/NotificationCause.ta.js';
 import {
     UsageInfo,
     _decode_UsageInfo,
     _encode_UsageInfo,
-} from '../UsageMeteringDataInfo/UsageInfo.ta';
+} from '../UsageMeteringDataInfo/UsageInfo.ta.js';
 export {
     UsageInfo,
     _decode_UsageInfo,
     _encode_UsageInfo,
-} from '../UsageMeteringDataInfo/UsageInfo.ta';
+} from '../UsageMeteringDataInfo/UsageInfo.ta.js';
 import {
     AuditInfo,
     _decode_AuditInfo,
     _encode_AuditInfo,
-} from '../UsageMeteringFunction/AuditInfo.ta';
+} from '../UsageMeteringFunction/AuditInfo.ta.js';
 export {
     AuditInfo,
     _decode_AuditInfo,
     _encode_AuditInfo,
-} from '../UsageMeteringFunction/AuditInfo.ta';
+} from '../UsageMeteringFunction/AuditInfo.ta.js';
 import {
     DataErrors,
     _decode_DataErrors,
     _encode_DataErrors,
-} from '../UsageMeteringFunction/DataErrors.ta';
+} from '../UsageMeteringFunction/DataErrors.ta.js';
 export {
     DataErrors,
     _decode_DataErrors,
     _encode_DataErrors,
-} from '../UsageMeteringFunction/DataErrors.ta';
+} from '../UsageMeteringFunction/DataErrors.ta.js';
 import {
     ProviderId,
     _decode_ProviderId,
     _encode_ProviderId,
-} from '../UsageMeteringFunction/ProviderId.ta';
+} from '../UsageMeteringFunction/ProviderId.ta.js';
 export {
     ProviderId,
     _decode_ProviderId,
     _encode_ProviderId,
-} from '../UsageMeteringFunction/ProviderId.ta';
+} from '../UsageMeteringFunction/ProviderId.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UsageDataInfo */
 /**

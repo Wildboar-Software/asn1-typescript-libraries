@@ -65,207 +65,207 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertReqMessages,
   _decode_CertReqMessages,
   _encode_CertReqMessages,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertReqMessages.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertReqMessages.ta.js';
 export {
   CertReqMessages,
   _decode_CertReqMessages,
   _encode_CertReqMessages,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertReqMessages.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertReqMessages.ta.js';
 import {
   CertRepMessage,
   _decode_CertRepMessage,
   _encode_CertRepMessage,
-} from '../PKIXCMP-2009/CertRepMessage.ta';
+} from '../PKIXCMP-2009/CertRepMessage.ta.js';
 export {
   CertRepMessage,
   _decode_CertRepMessage,
   _encode_CertRepMessage,
-} from '../PKIXCMP-2009/CertRepMessage.ta';
+} from '../PKIXCMP-2009/CertRepMessage.ta.js';
 import {
   CertificationRequest,
   _decode_CertificationRequest,
   _encode_CertificationRequest,
-} from '@wildboar/pkcs/src/lib/modules/PKCS-10/CertificationRequest.ta';
+} from '@wildboar/pkcs/src/lib/modules/PKCS-10/CertificationRequest.ta.js';
 export {
   CertificationRequest,
   _decode_CertificationRequest,
   _encode_CertificationRequest,
-} from '@wildboar/pkcs/src/lib/modules/PKCS-10/CertificationRequest.ta';
+} from '@wildboar/pkcs/src/lib/modules/PKCS-10/CertificationRequest.ta.js';
 import {
   POPODecKeyChallContent,
   _decode_POPODecKeyChallContent,
   _encode_POPODecKeyChallContent,
-} from '../PKIXCMP-2009/POPODecKeyChallContent.ta';
+} from '../PKIXCMP-2009/POPODecKeyChallContent.ta.js';
 export {
   POPODecKeyChallContent,
   _decode_POPODecKeyChallContent,
   _encode_POPODecKeyChallContent,
-} from '../PKIXCMP-2009/POPODecKeyChallContent.ta';
+} from '../PKIXCMP-2009/POPODecKeyChallContent.ta.js';
 import {
   POPODecKeyRespContent,
   _decode_POPODecKeyRespContent,
   _encode_POPODecKeyRespContent,
-} from '../PKIXCMP-2009/POPODecKeyRespContent.ta';
+} from '../PKIXCMP-2009/POPODecKeyRespContent.ta.js';
 export {
   POPODecKeyRespContent,
   _decode_POPODecKeyRespContent,
   _encode_POPODecKeyRespContent,
-} from '../PKIXCMP-2009/POPODecKeyRespContent.ta';
+} from '../PKIXCMP-2009/POPODecKeyRespContent.ta.js';
 import {
   KeyRecRepContent,
   _decode_KeyRecRepContent,
   _encode_KeyRecRepContent,
-} from '../PKIXCMP-2009/KeyRecRepContent.ta';
+} from '../PKIXCMP-2009/KeyRecRepContent.ta.js';
 export {
   KeyRecRepContent,
   _decode_KeyRecRepContent,
   _encode_KeyRecRepContent,
-} from '../PKIXCMP-2009/KeyRecRepContent.ta';
+} from '../PKIXCMP-2009/KeyRecRepContent.ta.js';
 import {
   RevReqContent,
   _decode_RevReqContent,
   _encode_RevReqContent,
-} from '../PKIXCMP-2009/RevReqContent.ta';
+} from '../PKIXCMP-2009/RevReqContent.ta.js';
 export {
   RevReqContent,
   _decode_RevReqContent,
   _encode_RevReqContent,
-} from '../PKIXCMP-2009/RevReqContent.ta';
+} from '../PKIXCMP-2009/RevReqContent.ta.js';
 import {
   RevRepContent,
   _decode_RevRepContent,
   _encode_RevRepContent,
-} from '../PKIXCMP-2009/RevRepContent.ta';
+} from '../PKIXCMP-2009/RevRepContent.ta.js';
 export {
   RevRepContent,
   _decode_RevRepContent,
   _encode_RevRepContent,
-} from '../PKIXCMP-2009/RevRepContent.ta';
+} from '../PKIXCMP-2009/RevRepContent.ta.js';
 import {
   CAKeyUpdAnnContent,
   _decode_CAKeyUpdAnnContent,
   _encode_CAKeyUpdAnnContent,
-} from '../PKIXCMP-2009/CAKeyUpdAnnContent.ta';
+} from '../PKIXCMP-2009/CAKeyUpdAnnContent.ta.js';
 export {
   CAKeyUpdAnnContent,
   _decode_CAKeyUpdAnnContent,
   _encode_CAKeyUpdAnnContent,
-} from '../PKIXCMP-2009/CAKeyUpdAnnContent.ta';
+} from '../PKIXCMP-2009/CAKeyUpdAnnContent.ta.js';
 import {
   CertAnnContent,
   _decode_CertAnnContent,
   _encode_CertAnnContent,
-} from '../PKIXCMP-2009/CertAnnContent.ta';
+} from '../PKIXCMP-2009/CertAnnContent.ta.js';
 export {
   CertAnnContent,
   _decode_CertAnnContent,
   _encode_CertAnnContent,
-} from '../PKIXCMP-2009/CertAnnContent.ta';
+} from '../PKIXCMP-2009/CertAnnContent.ta.js';
 import {
   RevAnnContent,
   _decode_RevAnnContent,
   _encode_RevAnnContent,
-} from '../PKIXCMP-2009/RevAnnContent.ta';
+} from '../PKIXCMP-2009/RevAnnContent.ta.js';
 export {
   RevAnnContent,
   _decode_RevAnnContent,
   _encode_RevAnnContent,
-} from '../PKIXCMP-2009/RevAnnContent.ta';
+} from '../PKIXCMP-2009/RevAnnContent.ta.js';
 import {
   CRLAnnContent,
   _decode_CRLAnnContent,
   _encode_CRLAnnContent,
-} from '../PKIXCMP-2009/CRLAnnContent.ta';
+} from '../PKIXCMP-2009/CRLAnnContent.ta.js';
 export {
   CRLAnnContent,
   _decode_CRLAnnContent,
   _encode_CRLAnnContent,
-} from '../PKIXCMP-2009/CRLAnnContent.ta';
+} from '../PKIXCMP-2009/CRLAnnContent.ta.js';
 import {
   PKIConfirmContent,
   _decode_PKIConfirmContent,
   _encode_PKIConfirmContent,
-} from '../PKIXCMP-2009/PKIConfirmContent.ta';
+} from '../PKIXCMP-2009/PKIConfirmContent.ta.js';
 export {
   PKIConfirmContent,
   _decode_PKIConfirmContent,
   _encode_PKIConfirmContent,
-} from '../PKIXCMP-2009/PKIConfirmContent.ta';
+} from '../PKIXCMP-2009/PKIConfirmContent.ta.js';
 import {
   NestedMessageContent,
   _decode_NestedMessageContent,
   _encode_NestedMessageContent,
-} from '../PKIXCMP-2009/NestedMessageContent.ta';
+} from '../PKIXCMP-2009/NestedMessageContent.ta.js';
 export {
   NestedMessageContent,
   _decode_NestedMessageContent,
   _encode_NestedMessageContent,
-} from '../PKIXCMP-2009/NestedMessageContent.ta';
+} from '../PKIXCMP-2009/NestedMessageContent.ta.js';
 import {
   GenMsgContent,
   _decode_GenMsgContent,
   _encode_GenMsgContent,
-} from '../PKIXCMP-2009/GenMsgContent.ta';
+} from '../PKIXCMP-2009/GenMsgContent.ta.js';
 export {
   GenMsgContent,
   _decode_GenMsgContent,
   _encode_GenMsgContent,
-} from '../PKIXCMP-2009/GenMsgContent.ta';
+} from '../PKIXCMP-2009/GenMsgContent.ta.js';
 import {
   GenRepContent,
   _decode_GenRepContent,
   _encode_GenRepContent,
-} from '../PKIXCMP-2009/GenRepContent.ta';
+} from '../PKIXCMP-2009/GenRepContent.ta.js';
 export {
   GenRepContent,
   _decode_GenRepContent,
   _encode_GenRepContent,
-} from '../PKIXCMP-2009/GenRepContent.ta';
+} from '../PKIXCMP-2009/GenRepContent.ta.js';
 import {
   ErrorMsgContent,
   _decode_ErrorMsgContent,
   _encode_ErrorMsgContent,
-} from '../PKIXCMP-2009/ErrorMsgContent.ta';
+} from '../PKIXCMP-2009/ErrorMsgContent.ta.js';
 export {
   ErrorMsgContent,
   _decode_ErrorMsgContent,
   _encode_ErrorMsgContent,
-} from '../PKIXCMP-2009/ErrorMsgContent.ta';
+} from '../PKIXCMP-2009/ErrorMsgContent.ta.js';
 import {
   CertConfirmContent,
   _decode_CertConfirmContent,
   _encode_CertConfirmContent,
-} from '../PKIXCMP-2009/CertConfirmContent.ta';
+} from '../PKIXCMP-2009/CertConfirmContent.ta.js';
 export {
   CertConfirmContent,
   _decode_CertConfirmContent,
   _encode_CertConfirmContent,
-} from '../PKIXCMP-2009/CertConfirmContent.ta';
+} from '../PKIXCMP-2009/CertConfirmContent.ta.js';
 import {
   PollReqContent,
   _decode_PollReqContent,
   _encode_PollReqContent,
-} from '../PKIXCMP-2009/PollReqContent.ta';
+} from '../PKIXCMP-2009/PollReqContent.ta.js';
 export {
   PollReqContent,
   _decode_PollReqContent,
   _encode_PollReqContent,
-} from '../PKIXCMP-2009/PollReqContent.ta';
+} from '../PKIXCMP-2009/PollReqContent.ta.js';
 import {
   PollRepContent,
   _decode_PollRepContent,
   _encode_PollRepContent,
-} from '../PKIXCMP-2009/PollRepContent.ta';
+} from '../PKIXCMP-2009/PollRepContent.ta.js';
 export {
   PollRepContent,
   _decode_PollRepContent,
   _encode_PollRepContent,
-} from '../PKIXCMP-2009/PollRepContent.ta';
+} from '../PKIXCMP-2009/PollRepContent.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PKIBody */
 /**

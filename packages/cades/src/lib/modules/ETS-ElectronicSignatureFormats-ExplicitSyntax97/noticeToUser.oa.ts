@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va";
-export { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va";
-import { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta";
-export { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta";
-import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
-export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va.js";
+export { id_spq_ets_unotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-unotice.va.js";
+import { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta.js";
+export { SPUserNotice, _decode_SPUserNotice, _encode_SPUserNotice } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPUserNotice.ta.js";
+import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
+export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION noticeToUser */

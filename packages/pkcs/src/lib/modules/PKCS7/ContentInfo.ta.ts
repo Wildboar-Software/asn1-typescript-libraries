@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
-export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
+export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentInfo */
 /**

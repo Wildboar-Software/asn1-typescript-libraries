@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { ECDSAAlgorithmSet } from "../SEC1-v1-9/ECDSAAlgorithmSet.osa";
-export { ECDSAAlgorithmSet } from "../SEC1-v1-9/ECDSAAlgorithmSet.osa";
-import { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa";
-export { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa";
-import { ECMQVAlgorithmSet } from "../SEC1-v1-9/ECMQVAlgorithmSet.osa";
-export { ECMQVAlgorithmSet } from "../SEC1-v1-9/ECMQVAlgorithmSet.osa";
-import { ECIESAlgorithmSet } from "../SEC1-v1-9/ECIESAlgorithmSet.osa";
-export { ECIESAlgorithmSet } from "../SEC1-v1-9/ECIESAlgorithmSet.osa";
-import { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa";
-export { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { ECDSAAlgorithmSet } from "../SEC1-v1-9/ECDSAAlgorithmSet.osa.js";
+export { ECDSAAlgorithmSet } from "../SEC1-v1-9/ECDSAAlgorithmSet.osa.js";
+import { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa.js";
+export { ECDHAlgorithmSet } from "../SEC1-v1-9/ECDHAlgorithmSet.osa.js";
+import { ECMQVAlgorithmSet } from "../SEC1-v1-9/ECMQVAlgorithmSet.osa.js";
+export { ECMQVAlgorithmSet } from "../SEC1-v1-9/ECMQVAlgorithmSet.osa.js";
+import { ECIESAlgorithmSet } from "../SEC1-v1-9/ECIESAlgorithmSet.osa.js";
+export { ECIESAlgorithmSet } from "../SEC1-v1-9/ECIESAlgorithmSet.osa.js";
+import { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa.js";
+export { ECWKTAlgorithmSet } from "../SEC1-v1-9/ECWKTAlgorithmSet.osa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet */

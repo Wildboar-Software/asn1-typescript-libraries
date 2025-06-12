@@ -5,27 +5,27 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertTemplate,
     _decode_CertTemplate,
     _encode_CertTemplate,
-} from "../PKIXCRMF-2009/CertTemplate.ta";
+} from "../PKIXCRMF-2009/CertTemplate.ta.js";
 import {
     Controls,
     _decode_Controls,
     _encode_Controls,
-} from "../PKIXCRMF-2009/Controls.ta";
+} from "../PKIXCRMF-2009/Controls.ta.js";
 export {
     CertTemplate,
     _decode_CertTemplate,
     _encode_CertTemplate,
-} from "../PKIXCRMF-2009/CertTemplate.ta";
+} from "../PKIXCRMF-2009/CertTemplate.ta.js";
 export {
     Controls,
     _decode_Controls,
     _encode_Controls,
-} from "../PKIXCRMF-2009/Controls.ta";
+} from "../PKIXCRMF-2009/Controls.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertRequest */
 /**

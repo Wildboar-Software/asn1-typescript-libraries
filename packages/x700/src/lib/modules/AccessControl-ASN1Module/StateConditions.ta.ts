@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     StateConditions_Item,
     _decode_StateConditions_Item,
     _encode_StateConditions_Item,
-} from '../AccessControl-ASN1Module/StateConditions-Item.ta';
+} from '../AccessControl-ASN1Module/StateConditions-Item.ta.js';
 export {
     StateConditions_Item,
     _decode_StateConditions_Item,
     _encode_StateConditions_Item,
-} from '../AccessControl-ASN1Module/StateConditions-Item.ta';
+} from '../AccessControl-ASN1Module/StateConditions-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION StateConditions */
 /**

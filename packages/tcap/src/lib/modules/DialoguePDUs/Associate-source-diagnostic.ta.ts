@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Associate_source_diagnostic_dialogue_service_user,
     _decode_Associate_source_diagnostic_dialogue_service_user,
     _encode_Associate_source_diagnostic_dialogue_service_user,
-} from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-user.ta';
+} from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-user.ta.js';
 import {
     Associate_source_diagnostic_dialogue_service_provider,
     _decode_Associate_source_diagnostic_dialogue_service_provider,
     _encode_Associate_source_diagnostic_dialogue_service_provider,
-} from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-provider.ta';
+} from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-provider.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Associate_source_diagnostic */
 /**

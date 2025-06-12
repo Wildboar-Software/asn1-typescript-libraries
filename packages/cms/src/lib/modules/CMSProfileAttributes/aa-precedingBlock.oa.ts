@@ -1,13 +1,13 @@
-import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { id_precedingBlock } from "./id-precedingBlock.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { id_precedingBlock } from "./id-precedingBlock.va.js";
 import {
     HashPointer,
     _decode_HashPointer,
     _encode_HashPointer,
-} from "./HashPointer.ta";
+} from "./HashPointer.ta.js";
 
 // This module was created manually, because the ASN.1 compiler did not output it
 // for some reason.

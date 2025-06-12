@@ -1,10 +1,10 @@
 import * as asn1 from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralName.ta.js";
 
 // CertId ::= SEQUENCE {
 //     issuer           GeneralName,

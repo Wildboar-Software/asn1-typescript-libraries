@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HashAlgorithm,
   _decode_HashAlgorithm,
   _encode_HashAlgorithm,
-} from '../SCVP-2009/HashAlgorithm.ta';
+} from '../SCVP-2009/HashAlgorithm.ta.js';
 import {
     AlgorithmIdentifier,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta';
-import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa';
-export { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js';
+import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.js';
+export { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION HashValue */
 /**

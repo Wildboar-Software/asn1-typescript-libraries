@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Proxy,
     _decode_Proxy,
     _encode_Proxy,
-} from '../AccessControl-ASN1Module/Proxy.ta';
+} from '../AccessControl-ASN1Module/Proxy.ta.js';
 export {
     Proxy,
     _decode_Proxy,
     _encode_Proxy,
-} from '../AccessControl-ASN1Module/Proxy.ta';
+} from '../AccessControl-ASN1Module/Proxy.ta.js';
 import {
     InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
-} from '../AccessControl-ASN1Module/InitiatorName.ta';
+} from '../AccessControl-ASN1Module/InitiatorName.ta.js';
 export {
     InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
-} from '../AccessControl-ASN1Module/InitiatorName.ta';
+} from '../AccessControl-ASN1Module/InitiatorName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AccessControlList_Item */
 /**

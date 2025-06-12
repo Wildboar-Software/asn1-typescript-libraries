@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Summary_present_Item,
     _decode_Summary_present_Item,
     _encode_Summary_present_Item,
-} from '../MSAbstractService/Summary-present-Item.ta';
+} from '../MSAbstractService/Summary-present-Item.ta.js';
 export {
     Summary_present_Item,
     _decode_Summary_present_Item,
     _encode_Summary_present_Item,
-} from '../MSAbstractService/Summary-present-Item.ta';
+} from '../MSAbstractService/Summary-present-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Summary */
 /**

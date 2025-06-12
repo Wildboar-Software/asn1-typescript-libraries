@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IndependentTestResponse,
     _decode_IndependentTestResponse,
     _encode_IndependentTestResponse,
-} from '../Test-ASN1Module/IndependentTestResponse.ta';
+} from '../Test-ASN1Module/IndependentTestResponse.ta.js';
 export {
     IndependentTestResponse,
     _decode_IndependentTestResponse,
     _encode_IndependentTestResponse,
-} from '../Test-ASN1Module/IndependentTestResponse.ta';
+} from '../Test-ASN1Module/IndependentTestResponse.ta.js';
 import {
     RelatedTestResponse,
     _decode_RelatedTestResponse,
     _encode_RelatedTestResponse,
-} from '../Test-ASN1Module/RelatedTestResponse.ta';
+} from '../Test-ASN1Module/RelatedTestResponse.ta.js';
 export {
     RelatedTestResponse,
     _decode_RelatedTestResponse,
     _encode_RelatedTestResponse,
-} from '../Test-ASN1Module/RelatedTestResponse.ta';
+} from '../Test-ASN1Module/RelatedTestResponse.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestRequestControlledResponse */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSRoutingObjectIdentifiers/ID.ta';
+} from '../MHSRoutingObjectIdentifiers/ID.ta.js';
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSRoutingObjectIdentifiers/ID.ta';
-import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va';
-export { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va';
+} from '../MHSRoutingObjectIdentifiers/ID.ta.js';
+import { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.js';
+export { id_oc } from '../MHSRoutingObjectIdentifiers/id-oc.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_oc_mhs_admd */
 /**

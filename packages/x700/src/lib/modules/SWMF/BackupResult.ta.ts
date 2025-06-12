@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BackupResult_inLine,
     _decode_BackupResult_inLine,
     _encode_BackupResult_inLine,
-} from '../SWMF/BackupResult-inLine.ta';
+} from '../SWMF/BackupResult-inLine.ta.js';
 export {
     BackupResult_inLine,
     _decode_BackupResult_inLine,
     _encode_BackupResult_inLine,
-} from '../SWMF/BackupResult-inLine.ta';
+} from '../SWMF/BackupResult-inLine.ta.js';
 import {
     BackupResult_local,
     _decode_BackupResult_local,
     _encode_BackupResult_local,
-} from '../SWMF/BackupResult-local.ta';
+} from '../SWMF/BackupResult-local.ta.js';
 export {
     BackupResult_local,
     _decode_BackupResult_local,
     _encode_BackupResult_local,
-} from '../SWMF/BackupResult-local.ta';
+} from '../SWMF/BackupResult-local.ta.js';
 import {
     BackupResult_offLine,
     _decode_BackupResult_offLine,
     _encode_BackupResult_offLine,
-} from '../SWMF/BackupResult-offLine.ta';
+} from '../SWMF/BackupResult-offLine.ta.js';
 export {
     BackupResult_offLine,
     _decode_BackupResult_offLine,
     _encode_BackupResult_offLine,
-} from '../SWMF/BackupResult-offLine.ta';
+} from '../SWMF/BackupResult-offLine.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BackupResult */
 /**

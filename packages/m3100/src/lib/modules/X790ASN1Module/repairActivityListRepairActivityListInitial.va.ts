@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RepairActivityList,
     _decode_RepairActivityList,
     _encode_RepairActivityList,
-} from '../X790ASN1Module/RepairActivityList.ta';
+} from '../X790ASN1Module/RepairActivityList.ta.js';
 export {
     RepairActivityList,
     _decode_RepairActivityList,
     _encode_RepairActivityList,
-} from '../X790ASN1Module/RepairActivityList.ta';
+} from '../X790ASN1Module/RepairActivityList.ta.js';
 import {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 export {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 import {
     ActivityCode,
     _decode_ActivityCode,
     _encode_ActivityCode,
-} from '../X790ASN1Module/ActivityCode.ta';
+} from '../X790ASN1Module/ActivityCode.ta.js';
 export {
     ActivityCode,
     _decode_ActivityCode,
     _encode_ActivityCode,
-} from '../X790ASN1Module/ActivityCode.ta';
+} from '../X790ASN1Module/ActivityCode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION repairActivityListRepairActivityListInitial */
 /**

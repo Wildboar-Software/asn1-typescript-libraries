@@ -65,97 +65,97 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_READ_request,
   _decode_F_READ_request,
   _encode_F_READ_request,
-} from '../ISO8571-FTAM/F-READ-request.ta';
+} from '../ISO8571-FTAM/F-READ-request.ta.js';
 export {
   F_READ_request,
   _decode_F_READ_request,
   _encode_F_READ_request,
-} from '../ISO8571-FTAM/F-READ-request.ta';
+} from '../ISO8571-FTAM/F-READ-request.ta.js';
 import {
   F_WRITE_request,
   _decode_F_WRITE_request,
   _encode_F_WRITE_request,
-} from '../ISO8571-FTAM/F-WRITE-request.ta';
+} from '../ISO8571-FTAM/F-WRITE-request.ta.js';
 export {
   F_WRITE_request,
   _decode_F_WRITE_request,
   _encode_F_WRITE_request,
-} from '../ISO8571-FTAM/F-WRITE-request.ta';
+} from '../ISO8571-FTAM/F-WRITE-request.ta.js';
 import {
   F_DATA_END_request,
   _decode_F_DATA_END_request,
   _encode_F_DATA_END_request,
-} from '../ISO8571-FTAM/F-DATA-END-request.ta';
+} from '../ISO8571-FTAM/F-DATA-END-request.ta.js';
 export {
   F_DATA_END_request,
   _decode_F_DATA_END_request,
   _encode_F_DATA_END_request,
-} from '../ISO8571-FTAM/F-DATA-END-request.ta';
+} from '../ISO8571-FTAM/F-DATA-END-request.ta.js';
 import {
   F_TRANSFER_END_request,
   _decode_F_TRANSFER_END_request,
   _encode_F_TRANSFER_END_request,
-} from '../ISO8571-FTAM/F-TRANSFER-END-request.ta';
+} from '../ISO8571-FTAM/F-TRANSFER-END-request.ta.js';
 export {
   F_TRANSFER_END_request,
   _decode_F_TRANSFER_END_request,
   _encode_F_TRANSFER_END_request,
-} from '../ISO8571-FTAM/F-TRANSFER-END-request.ta';
+} from '../ISO8571-FTAM/F-TRANSFER-END-request.ta.js';
 import {
   F_TRANSFER_END_response,
   _decode_F_TRANSFER_END_response,
   _encode_F_TRANSFER_END_response,
-} from '../ISO8571-FTAM/F-TRANSFER-END-response.ta';
+} from '../ISO8571-FTAM/F-TRANSFER-END-response.ta.js';
 export {
   F_TRANSFER_END_response,
   _decode_F_TRANSFER_END_response,
   _encode_F_TRANSFER_END_response,
-} from '../ISO8571-FTAM/F-TRANSFER-END-response.ta';
+} from '../ISO8571-FTAM/F-TRANSFER-END-response.ta.js';
 import {
   F_CANCEL_request,
   _decode_F_CANCEL_request,
   _encode_F_CANCEL_request,
-} from '../ISO8571-FTAM/F-CANCEL-request.ta';
+} from '../ISO8571-FTAM/F-CANCEL-request.ta.js';
 export {
   F_CANCEL_request,
   _decode_F_CANCEL_request,
   _encode_F_CANCEL_request,
-} from '../ISO8571-FTAM/F-CANCEL-request.ta';
+} from '../ISO8571-FTAM/F-CANCEL-request.ta.js';
 import {
   F_CANCEL_response,
   _decode_F_CANCEL_response,
   _encode_F_CANCEL_response,
-} from '../ISO8571-FTAM/F-CANCEL-response.ta';
+} from '../ISO8571-FTAM/F-CANCEL-response.ta.js';
 export {
   F_CANCEL_response,
   _decode_F_CANCEL_response,
   _encode_F_CANCEL_response,
-} from '../ISO8571-FTAM/F-CANCEL-response.ta';
+} from '../ISO8571-FTAM/F-CANCEL-response.ta.js';
 import {
   F_RESTART_request,
   _decode_F_RESTART_request,
   _encode_F_RESTART_request,
-} from '../ISO8571-FTAM/F-RESTART-request.ta';
+} from '../ISO8571-FTAM/F-RESTART-request.ta.js';
 export {
   F_RESTART_request,
   _decode_F_RESTART_request,
   _encode_F_RESTART_request,
-} from '../ISO8571-FTAM/F-RESTART-request.ta';
+} from '../ISO8571-FTAM/F-RESTART-request.ta.js';
 import {
   F_RESTART_response,
   _decode_F_RESTART_response,
   _encode_F_RESTART_response,
-} from '../ISO8571-FTAM/F-RESTART-response.ta';
+} from '../ISO8571-FTAM/F-RESTART-response.ta.js';
 export {
   F_RESTART_response,
   _decode_F_RESTART_response,
   _encode_F_RESTART_response,
-} from '../ISO8571-FTAM/F-RESTART-response.ta';
+} from '../ISO8571-FTAM/F-RESTART-response.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Bulk_Data_PDU */
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-export { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
+import { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va.js";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION xmlMarkup */
 /**

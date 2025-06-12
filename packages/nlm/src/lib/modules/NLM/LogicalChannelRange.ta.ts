@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LogicalChannelId,
     _decode_LogicalChannelId,
     _encode_LogicalChannelId,
-} from '../NLM/LogicalChannelId.ta';
+} from '../NLM/LogicalChannelId.ta.js';
 export {
     LogicalChannelId,
     _decode_LogicalChannelId,
     _encode_LogicalChannelId,
-} from '../NLM/LogicalChannelId.ta';
+} from '../NLM/LogicalChannelId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LogicalChannelRange */
 /**

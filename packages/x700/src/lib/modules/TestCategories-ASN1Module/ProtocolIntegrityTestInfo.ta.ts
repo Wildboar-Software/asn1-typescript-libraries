@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PDUSequence,
     _decode_PDUSequence,
     _encode_PDUSequence,
-} from '../TestCategories-ASN1Module/PDUSequence.ta';
+} from '../TestCategories-ASN1Module/PDUSequence.ta.js';
 export {
     PDUSequence,
     _decode_PDUSequence,
     _encode_PDUSequence,
-} from '../TestCategories-ASN1Module/PDUSequence.ta';
+} from '../TestCategories-ASN1Module/PDUSequence.ta.js';
 import {
     PDUReception,
     _decode_PDUReception,
     _encode_PDUReception,
-} from '../TestCategories-ASN1Module/PDUReception.ta';
+} from '../TestCategories-ASN1Module/PDUReception.ta.js';
 export {
     PDUReception,
     _decode_PDUReception,
     _encode_PDUReception,
-} from '../TestCategories-ASN1Module/PDUReception.ta';
+} from '../TestCategories-ASN1Module/PDUReception.ta.js';
 import {
     WaitingInterval,
     _decode_WaitingInterval,
     _encode_WaitingInterval,
-} from '../TestCategories-ASN1Module/WaitingInterval.ta';
+} from '../TestCategories-ASN1Module/WaitingInterval.ta.js';
 export {
     WaitingInterval,
     _decode_WaitingInterval,
     _encode_WaitingInterval,
-} from '../TestCategories-ASN1Module/WaitingInterval.ta';
+} from '../TestCategories-ASN1Module/WaitingInterval.ta.js';
 import {
     StartTime,
     _decode_StartTime,
     _encode_StartTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta.js';
 export {
     StartTime,
     _decode_StartTime,
     _encode_StartTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StartTime.ta.js';
 import {
     StopTime,
     _decode_StopTime,
     _encode_StopTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StopTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StopTime.ta.js';
 export {
     StopTime,
     _decode_StopTime,
     _encode_StopTime,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StopTime.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/StopTime.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProtocolIntegrityTestInfo */
 /**

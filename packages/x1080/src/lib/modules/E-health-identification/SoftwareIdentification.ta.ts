@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca';
-export { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca';
-import { SoftwareSchemes } from '../E-health-identification/SoftwareSchemes.osa';
-export { SoftwareSchemes } from '../E-health-identification/SoftwareSchemes.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca.js';
+export { SOFTWARE_SCHEME } from '../E-health-identification/SOFTWARE-SCHEME.oca.js';
+import { SoftwareSchemes } from '../E-health-identification/SoftwareSchemes.osa.js';
+export { SoftwareSchemes } from '../E-health-identification/SoftwareSchemes.osa.js';
 import {
     SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
-} from './SchemeName.ta';
+} from './SchemeName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SoftwareIdentification */
 /**

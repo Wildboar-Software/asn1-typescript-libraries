@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNED.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNED.ta.js';
 import {
     TBSAsymmetricToken,
     _decode_TBSAsymmetricToken,
     _encode_TBSAsymmetricToken,
-} from '../MTSAbstractService/TBSAsymmetricToken.ta';
+} from '../MTSAbstractService/TBSAsymmetricToken.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AsymmetricToken */
 /**

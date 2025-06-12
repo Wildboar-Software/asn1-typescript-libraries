@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertRequest,
     _decode_CertRequest,
     _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta";
+} from "../PKIXCRMF-2009/CertRequest.ta.js";
 export {
     CertRequest,
     _decode_CertRequest,
     _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta";
+} from "../PKIXCRMF-2009/CertRequest.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertReq */
 /**

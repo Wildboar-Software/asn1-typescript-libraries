@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { dhStatic } from "../ANSI-X9-42/dhStatic.va";
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
+import { dhStatic } from "../ANSI-X9-42/dhStatic.va.js";
+import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
 import {
     SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
-} from "../ANSI-X9-42/SchemeParameters.ta";
-export { dhStatic } from "../ANSI-X9-42/dhStatic.va";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
+} from "../ANSI-X9-42/SchemeParameters.ta.js";
+export { dhStatic } from "../ANSI-X9-42/dhStatic.va.js";
+export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
 export {
     SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
-} from "../ANSI-X9-42/SchemeParameters.ta";
+} from "../ANSI-X9-42/SchemeParameters.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Schemes_Union0_Intersection0_Element */
 /**

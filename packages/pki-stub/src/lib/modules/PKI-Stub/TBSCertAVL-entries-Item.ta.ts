@@ -10,22 +10,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,
     _encode_TBSCertAVL_entries_Item_idType,
-} from "../PKI-Stub/TBSCertAVL-entries-Item-idType.ta";
+} from "../PKI-Stub/TBSCertAVL-entries-Item-idType.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "../PKI-Stub/Extensions.ta";
+} from "../PKI-Stub/Extensions.ta.js";
 import {
     ScopeRestrictions,
     _decode_ScopeRestrictions,
     _encode_ScopeRestrictions,
-} from "../AuthenticationFramework/ScopeRestrictions.ta";
+} from "../AuthenticationFramework/ScopeRestrictions.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TBSCertAVL_entries_Item */
 /**

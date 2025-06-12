@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.js';
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FromAndToProtectionUnit */
 /**

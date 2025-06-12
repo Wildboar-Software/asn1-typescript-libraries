@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BRTCertificate,
     _decode_BRTCertificate,
     _encode_BRTCertificate,
-} from '../AuthenticationContextForBiometrics/BRTCertificate.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificate.ta.js';
 export {
     BRTCertificate,
     _decode_BRTCertificate,
     _encode_BRTCertificate,
-} from '../AuthenticationContextForBiometrics/BRTCertificate.ta';
-import { id_brtCertificate } from '../AuthenticationContextForBiometrics/id-brtCertificate.va';
-export { id_brtCertificate } from '../AuthenticationContextForBiometrics/id-brtCertificate.va';
+} from '../AuthenticationContextForBiometrics/BRTCertificate.ta.js';
+import { id_brtCertificate } from '../AuthenticationContextForBiometrics/id-brtCertificate.va.js';
+export { id_brtCertificate } from '../AuthenticationContextForBiometrics/id-brtCertificate.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION brtCertificate */
 /**

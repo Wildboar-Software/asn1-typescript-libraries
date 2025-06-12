@@ -4,42 +4,42 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax-2010/CertificateSet.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateSet.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 import {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta";
+} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.js";
 import {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../CryptographicMessageSyntax-2010/SignerInfos.ta";
+} from "../CryptographicMessageSyntax-2010/SignerInfos.ta.js";
 export {
     CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-} from "../CryptographicMessageSyntax-2010/CertificateSet.ta";
+} from "../CryptographicMessageSyntax-2010/CertificateSet.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -56,27 +56,27 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 export {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.js";
 export {
     RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
-} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta";
+} from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.js";
 export {
     SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
-} from "../CryptographicMessageSyntax-2010/SignerInfos.ta";
+} from "../CryptographicMessageSyntax-2010/SignerInfos.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignedData */
 /**

@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTSAbstractService/OriginatorName.ta';
+} from '../MTSAbstractService/OriginatorName.ta.js';
 export {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTSAbstractService/OriginatorName.ta';
+} from '../MTSAbstractService/OriginatorName.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 import {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 export {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 import {
     DeferredDeliveryTime,
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
-} from '../MTSAbstractService/DeferredDeliveryTime.ta';
+} from '../MTSAbstractService/DeferredDeliveryTime.ta.js';
 export {
     DeferredDeliveryTime,
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
-} from '../MTSAbstractService/DeferredDeliveryTime.ta';
+} from '../MTSAbstractService/DeferredDeliveryTime.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PerMessageAutoForwardFields */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
-export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
+export { SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.js';
 import {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 export {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
-import { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredentials.oa';
-export { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredentials.oa';
-import { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa';
-export { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa';
-import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va';
-export { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va';
-import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
-export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca';
+} from '../Notation/Identifier.ta.js';
+import { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredentials.oa.js';
+export { initiatorCredentials } from '../GulsSecurityExchanges/initiatorCredentials.oa.js';
+import { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa.js';
+export { responderCredentials } from '../GulsSecurityExchanges/responderCredentials.oa.js';
+import { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.js';
+export { securityExchanges } from '../ObjectIdentifiers/securityExchanges.va.js';
+import { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
+export { SECURITY_EXCHANGE } from '../Notation/SECURITY-EXCHANGE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION dirAuthenticationTwoWay */
 /**

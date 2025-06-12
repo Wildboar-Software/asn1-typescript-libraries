@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OneAsymmetricKey,
     _decode_OneAsymmetricKey,
     _encode_OneAsymmetricKey,
-} from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta";
+} from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.js";
 export {
     OneAsymmetricKey,
     _decode_OneAsymmetricKey,
     _encode_OneAsymmetricKey,
-} from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta";
+} from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AsymmetricKeyPackage */
 /**

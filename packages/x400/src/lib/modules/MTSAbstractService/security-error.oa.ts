@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     SecurityProblem,
     SecurityProblem_assemby_instructions_conflict_with_security_services /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -162,7 +162,7 @@ import {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from '../MTSAbstractService/SecurityProblem.ta';
+} from '../MTSAbstractService/SecurityProblem.ta.js';
 export {
     SecurityProblem,
     SecurityProblem_assemby_instructions_conflict_with_security_services /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -239,11 +239,11 @@ export {
     unsupported_security_policy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from '../MTSAbstractService/SecurityProblem.ta';
-import { err_security_error } from '../MTSAccessProtocol/err-security-error.va';
-export { err_security_error } from '../MTSAccessProtocol/err-security-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MTSAbstractService/SecurityProblem.ta.js';
+import { err_security_error } from '../MTSAccessProtocol/err-security-error.va.js';
+export { err_security_error } from '../MTSAccessProtocol/err-security-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION security_error */
 /**

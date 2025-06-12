@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     ipm_auto_discard_error_ParameterType,
     _decode_ipm_auto_discard_error_ParameterType,
     _encode_ipm_auto_discard_error_ParameterType,
-} from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta';
+} from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta.js';
 export {
     ipm_auto_discard_error_ParameterType,
     _decode_ipm_auto_discard_error_ParameterType,
     _encode_ipm_auto_discard_error_ParameterType,
-} from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta';
-import { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va';
-export { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../IPMSAutoActionTypes/ipm-auto-discard-error-ParameterType.ta.js';
+import { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va.js';
+export { id_aae_auto_discard_error } from '../IPMSObjectIdentifiers/id-aae-auto-discard-error.va.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ipm_auto_discard_error */
 /**

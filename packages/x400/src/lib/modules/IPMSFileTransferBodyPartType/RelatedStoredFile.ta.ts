@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelatedStoredFile_Item,
     _decode_RelatedStoredFile_Item,
     _encode_RelatedStoredFile_Item,
-} from '../IPMSFileTransferBodyPartType/RelatedStoredFile-Item.ta';
+} from '../IPMSFileTransferBodyPartType/RelatedStoredFile-Item.ta.js';
 export {
     RelatedStoredFile_Item,
     _decode_RelatedStoredFile_Item,
     _encode_RelatedStoredFile_Item,
-} from '../IPMSFileTransferBodyPartType/RelatedStoredFile-Item.ta';
+} from '../IPMSFileTransferBodyPartType/RelatedStoredFile-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RelatedStoredFile */
 /**

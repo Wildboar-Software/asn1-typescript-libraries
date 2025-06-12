@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DateTranslationList_Item,
     _decode_DateTranslationList_Item,
     _encode_DateTranslationList_Item,
-} from '../Schedulerev1-ASN1Module/DateTranslationList-Item.ta';
+} from '../Schedulerev1-ASN1Module/DateTranslationList-Item.ta.js';
 export {
     DateTranslationList_Item,
     _decode_DateTranslationList_Item,
     _encode_DateTranslationList_Item,
-} from '../Schedulerev1-ASN1Module/DateTranslationList-Item.ta';
+} from '../Schedulerev1-ASN1Module/DateTranslationList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DateTranslationList */
 /**

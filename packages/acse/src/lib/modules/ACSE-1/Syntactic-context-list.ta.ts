@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Context_list,
   _decode_Context_list,
   _encode_Context_list,
-} from '../ACSE-1/Context-list.ta';
+} from '../ACSE-1/Context-list.ta.js';
 export {
   Context_list,
   _decode_Context_list,
   _encode_Context_list,
-} from '../ACSE-1/Context-list.ta';
+} from '../ACSE-1/Context-list.ta.js';
 import {
   Default_Context_List,
   _decode_Default_Context_List,
   _encode_Default_Context_List,
-} from '../ACSE-1/Default-Context-List.ta';
+} from '../ACSE-1/Default-Context-List.ta.js';
 export {
   Default_Context_List,
   _decode_Default_Context_List,
   _encode_Default_Context_List,
-} from '../ACSE-1/Default-Context-List.ta';
+} from '../ACSE-1/Default-Context-List.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Syntactic_context_list */
 /**

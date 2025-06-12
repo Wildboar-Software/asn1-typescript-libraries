@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { ecPublicKeyType } from "../ANSI-X9-62/ecPublicKeyType.oa";
-import { ecPublicKeyTypeRestricted } from "../ANSI-X9-62/ecPublicKeyTypeRestricted.oa";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { ecPublicKeyType } from "../ANSI-X9-62/ecPublicKeyType.oa";
-export { ecPublicKeyTypeRestricted } from "../ANSI-X9-62/ecPublicKeyTypeRestricted.oa";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { ecPublicKeyType } from "../ANSI-X9-62/ecPublicKeyType.oa.js";
+import { ecPublicKeyTypeRestricted } from "../ANSI-X9-62/ecPublicKeyTypeRestricted.oa.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { ecPublicKeyType } from "../ANSI-X9-62/ecPublicKeyType.oa.js";
+export { ecPublicKeyTypeRestricted } from "../ANSI-X9-62/ecPublicKeyTypeRestricted.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION ECPKAlgorithms */
 /**

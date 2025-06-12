@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SIGNEDDATA,
     _get_decoder_for_SIGNEDDATA,
     _get_encoder_for_SIGNEDDATA,
-} from '../AuthenticationContextForBiometrics/SIGNEDDATA.ta';
+} from '../AuthenticationContextForBiometrics/SIGNEDDATA.ta.js';
 export {
     SIGNEDDATA,
     _get_decoder_for_SIGNEDDATA,
     _get_encoder_for_SIGNEDDATA,
-} from '../AuthenticationContextForBiometrics/SIGNEDDATA.ta';
+} from '../AuthenticationContextForBiometrics/SIGNEDDATA.ta.js';
 import {
     EncapsulatedContentInfoACBio,
     _decode_EncapsulatedContentInfoACBio,
     _encode_EncapsulatedContentInfoACBio,
-} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta';
+} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta.js';
 export {
     EncapsulatedContentInfoACBio,
     _decode_EncapsulatedContentInfoACBio,
     _encode_EncapsulatedContentInfoACBio,
-} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta';
+} from '../AuthenticationContextForBiometrics/EncapsulatedContentInfoACBio.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignedDataACBio */
 /**

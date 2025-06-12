@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -83,7 +83,7 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
 export {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -97,23 +97,23 @@ export {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js';
 export {
     DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta';
-import { ub_edi_string_size } from '../EDIMSUpperBounds/ub-edi-string-size.va';
-export { ub_edi_string_size } from '../EDIMSUpperBounds/ub-edi-string-size.va';
-import { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va';
-export { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.js';
+import { ub_edi_string_size } from '../EDIMSUpperBounds/ub-edi-string-size.va.js';
+export { ub_edi_string_size } from '../EDIMSUpperBounds/ub-edi-string-size.va.js';
+import { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va.js';
+export { id_dat_edi_routing_address } from '../EDIMUseOfDirectory/id-dat-edi-routing-address.va.js';
 
 /* START_OF_SYMBOL_DEFINITION edi_routing_address */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 import {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta";
-import { id_mgf1 } from "../PKCS-1/id-mgf1.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
+} from "../PKCS-1/HashAlgorithm.ta.js";
+import { id_mgf1 } from "../PKCS-1/id-mgf1.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
 export {
     HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta";
-export { id_mgf1 } from "../PKCS-1/id-mgf1.va";
+} from "../PKCS-1/HashAlgorithm.ta.js";
+export { id_mgf1 } from "../PKCS-1/id-mgf1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms_Union0_Intersection0_Element */
 /**

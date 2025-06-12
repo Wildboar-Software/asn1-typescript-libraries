@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 export {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta';
+} from '../KerberosV5Spec2/Checksum.ta.js';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta';
+} from '../KerberosV5Spec2/AuthorizationData.ta.js';
 export {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta';
+} from '../KerberosV5Spec2/AuthorizationData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AD_KDCIssued */
 /**

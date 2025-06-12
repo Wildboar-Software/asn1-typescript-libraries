@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyManagementInfo_Item,
     _decode_KeyManagementInfo_Item,
     _encode_KeyManagementInfo_Item,
-} from "../PKCS-15/KeyManagementInfo-Item.ta";
+} from "../PKCS-15/KeyManagementInfo-Item.ta.js";
 export {
     KeyManagementInfo_Item,
     _decode_KeyManagementInfo_Item,
     _encode_KeyManagementInfo_Item,
-} from "../PKCS-15/KeyManagementInfo-Item.ta";
+} from "../PKCS-15/KeyManagementInfo-Item.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo */
 /**

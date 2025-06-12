@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelationshipOperation,
     _decode_RelationshipOperation,
     _encode_RelationshipOperation,
-} from '../GrmAttributeDefinitionModule/RelationshipOperation.ta';
+} from '../GrmAttributeDefinitionModule/RelationshipOperation.ta.js';
 export {
     RelationshipOperation,
     _decode_RelationshipOperation,
     _encode_RelationshipOperation,
-} from '../GrmAttributeDefinitionModule/RelationshipOperation.ta';
+} from '../GrmAttributeDefinitionModule/RelationshipOperation.ta.js';
 import {
     MapsTo,
     _decode_MapsTo,
     _encode_MapsTo,
-} from '../GrmAttributeDefinitionModule/MapsTo.ta';
+} from '../GrmAttributeDefinitionModule/MapsTo.ta.js';
 export {
     MapsTo,
     _decode_MapsTo,
     _encode_MapsTo,
-} from '../GrmAttributeDefinitionModule/MapsTo.ta';
+} from '../GrmAttributeDefinitionModule/MapsTo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MappingPair */
 /**

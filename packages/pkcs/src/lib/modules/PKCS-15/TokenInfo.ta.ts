@@ -6,59 +6,59 @@ import {
     OPTIONAL,
     PrintableString,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmInfo,
     _decode_AlgorithmInfo,
     _encode_AlgorithmInfo,
-} from "../PKCS-15/AlgorithmInfo.ta";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
+} from "../PKCS-15/AlgorithmInfo.ta.js";
+import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
 import {
     LastUpdate,
     _decode_LastUpdate,
     _encode_LastUpdate,
-} from "../PKCS-15/LastUpdate.ta";
+} from "../PKCS-15/LastUpdate.ta.js";
 import {
     RecordInfo,
     _decode_RecordInfo,
     _encode_RecordInfo,
-} from "../PKCS-15/RecordInfo.ta";
+} from "../PKCS-15/RecordInfo.ta.js";
 import {
     SecurityEnvironmentInfo,
     _decode_SecurityEnvironmentInfo,
     _encode_SecurityEnvironmentInfo,
-} from "../PKCS-15/SecurityEnvironmentInfo.ta";
+} from "../PKCS-15/SecurityEnvironmentInfo.ta.js";
 import {
     TokenFlags,
     _decode_TokenFlags,
     _encode_TokenFlags,
-} from "../PKCS-15/TokenFlags.ta";
+} from "../PKCS-15/TokenFlags.ta.js";
 import {
     TokenInfo_version,
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
-} from "../PKCS-15/TokenInfo-version.ta";
+} from "../PKCS-15/TokenInfo-version.ta.js";
 export {
     AlgorithmInfo,
     _decode_AlgorithmInfo,
     _encode_AlgorithmInfo,
-} from "../PKCS-15/AlgorithmInfo.ta";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
+} from "../PKCS-15/AlgorithmInfo.ta.js";
+export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
 export {
     LastUpdate,
     _decode_LastUpdate,
     _encode_LastUpdate,
-} from "../PKCS-15/LastUpdate.ta";
+} from "../PKCS-15/LastUpdate.ta.js";
 export {
     RecordInfo,
     _decode_RecordInfo,
     _encode_RecordInfo,
-} from "../PKCS-15/RecordInfo.ta";
+} from "../PKCS-15/RecordInfo.ta.js";
 export {
     SecurityEnvironmentInfo,
     _decode_SecurityEnvironmentInfo,
     _encode_SecurityEnvironmentInfo,
-} from "../PKCS-15/SecurityEnvironmentInfo.ta";
+} from "../PKCS-15/SecurityEnvironmentInfo.ta.js";
 export {
     eidCompliant /* IMPORTED_SHORT_NAMED_BIT */,
     loginRequired /* IMPORTED_SHORT_NAMED_BIT */,
@@ -71,14 +71,14 @@ export {
     TokenFlags_readonly /* IMPORTED_LONG_NAMED_BIT */,
     _decode_TokenFlags,
     _encode_TokenFlags,
-} from "../PKCS-15/TokenFlags.ta";
+} from "../PKCS-15/TokenFlags.ta.js";
 export {
     TokenInfo_version,
     TokenInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
-} from "../PKCS-15/TokenInfo-version.ta";
+} from "../PKCS-15/TokenInfo-version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TokenInfo */
 /**

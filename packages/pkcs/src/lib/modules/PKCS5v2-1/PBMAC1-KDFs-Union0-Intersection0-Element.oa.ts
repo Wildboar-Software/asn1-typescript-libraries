@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { id_PBKDF2 } from "../PKCS5v2-1/id-PBKDF2.va";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_PBKDF2 } from "../PKCS5v2-1/id-PBKDF2.va.js";
 import {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from "../PKCS5v2-1/PBKDF2-params.ta";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-export { id_PBKDF2 } from "../PKCS5v2-1/id-PBKDF2.va";
+} from "../PKCS5v2-1/PBKDF2-params.ta.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_PBKDF2 } from "../PKCS5v2-1/id-PBKDF2.va.js";
 export {
     PBKDF2_params,
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
-} from "../PKCS5v2-1/PBKDF2-params.ta";
+} from "../PKCS5v2-1/PBKDF2-params.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PBMAC1_KDFs_Union0_Intersection0_Element */
 /**

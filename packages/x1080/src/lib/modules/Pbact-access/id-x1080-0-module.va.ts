@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_x1080_0 } from '../Pbact-access/id-x1080-0.va';
-export { id_x1080_0 } from '../Pbact-access/id-x1080-0.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_x1080_0 } from '../Pbact-access/id-x1080-0.va.js';
+export { id_x1080_0 } from '../Pbact-access/id-x1080-0.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_x1080_0_module */
 /**

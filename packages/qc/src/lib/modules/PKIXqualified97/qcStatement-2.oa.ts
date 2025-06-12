@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_qcs_pkixQCSyntax_v2 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v2.va";
-import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca";
+import { id_qcs_pkixQCSyntax_v2 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v2.va.js";
+import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.js";
 import {
     SemanticsInformation,
     _decode_SemanticsInformation,
     _encode_SemanticsInformation,
-} from "../PKIXqualified97/SemanticsInformation.ta";
-export { id_qcs_pkixQCSyntax_v2 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v2.va";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca";
+} from "../PKIXqualified97/SemanticsInformation.ta.js";
+export { id_qcs_pkixQCSyntax_v2 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v2.va.js";
+export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.js";
 export {
     SemanticsInformation,
     _decode_SemanticsInformation,
     _encode_SemanticsInformation,
-} from "../PKIXqualified97/SemanticsInformation.ta";
+} from "../PKIXqualified97/SemanticsInformation.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION qcStatement_2 */
 /**

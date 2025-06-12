@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca";
+import { MAC_ALGORITHM } from "@wildboar/cms/src/lib/modules/AlgorithmInformation-2009/MAC-ALGORITHM.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_PasswordBasedMac } from "../PKIXCRMF-2009/id-PasswordBasedMac.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_PasswordBasedMac } from "../PKIXCRMF-2009/id-PasswordBasedMac.va.js";
 import {
     PBMParameter,
     _decode_PBMParameter,
     _encode_PBMParameter,
-} from "../PKIXCRMF-2009/PBMParameter.ta";
+} from "../PKIXCRMF-2009/PBMParameter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Password_MACAlgorithms_Union0_Intersection0_Element */
 /**

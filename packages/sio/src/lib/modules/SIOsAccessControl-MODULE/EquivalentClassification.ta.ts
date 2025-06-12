@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Applied,
     _decode_Applied,
     _encode_Applied,
-} from "../SIOsAccessControl-MODULE/Applied.ta";
+} from "../SIOsAccessControl-MODULE/Applied.ta.js";
 import {
     LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta";
+} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.js";
 export {
     Applied,
     Applied_both /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -26,12 +26,12 @@ export {
     encrypt /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Applied,
     _encode_Applied,
-} from "../SIOsAccessControl-MODULE/Applied.ta";
+} from "../SIOsAccessControl-MODULE/Applied.ta.js";
 export {
     LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta";
+} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EquivalentClassification */
 /**

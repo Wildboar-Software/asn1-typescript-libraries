@@ -65,51 +65,51 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
+} from '../MSAbstractService/AutoActionType.ta.js';
 export {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from '../MSAbstractService/AutoActionType.ta';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
+} from '../MSAbstractService/AutoActionType.ta.js';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
 import {
     IPMAutoDiscardRegistrationParameter,
     _decode_IPMAutoDiscardRegistrationParameter,
     _encode_IPMAutoDiscardRegistrationParameter,
-} from '../IPMSAutoActionTypes/IPMAutoDiscardRegistrationParameter.ta';
+} from '../IPMSAutoActionTypes/IPMAutoDiscardRegistrationParameter.ta.js';
 export {
     IPMAutoDiscardRegistrationParameter,
     _decode_IPMAutoDiscardRegistrationParameter,
     _encode_IPMAutoDiscardRegistrationParameter,
-} from '../IPMSAutoActionTypes/IPMAutoDiscardRegistrationParameter.ta';
-import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-import { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa';
-export { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa';
-import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-import { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va';
-export { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
+} from '../IPMSAutoActionTypes/IPMAutoDiscardRegistrationParameter.ta.js';
+import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+import { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa.js';
+export { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa.js';
+import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+import { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va.js';
+export { id_aa_ipm_auto_discard } from '../IPMSObjectIdentifiers/id-aa-ipm-auto-discard.va.js';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ipm_auto_discard */
 /**

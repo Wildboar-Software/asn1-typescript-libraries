@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca";
-export { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca";
+import { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca.js";
+export { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttributeTable */
 /**

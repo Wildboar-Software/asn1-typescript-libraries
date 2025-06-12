@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
-} from '../MTSAbstractService/ExtendedCertificate.ta';
+} from '../MTSAbstractService/ExtendedCertificate.ta.js';
 export {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
-} from '../MTSAbstractService/ExtendedCertificate.ta';
+} from '../MTSAbstractService/ExtendedCertificate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificates */
 /**

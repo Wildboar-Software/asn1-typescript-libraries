@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PDUType,
     _decode_PDUType,
     _encode_PDUType,
-} from '../TestCategories-ASN1Module/PDUType.ta';
+} from '../TestCategories-ASN1Module/PDUType.ta.js';
 export {
     PDUType,
     _decode_PDUType,
     _encode_PDUType,
-} from '../TestCategories-ASN1Module/PDUType.ta';
+} from '../TestCategories-ASN1Module/PDUType.ta.js';
 import {
     Parameter,
     _decode_Parameter,
     _encode_Parameter,
-} from '../TestCategories-ASN1Module/Parameter.ta';
+} from '../TestCategories-ASN1Module/Parameter.ta.js';
 export {
     Parameter,
     _decode_Parameter,
     _encode_Parameter,
-} from '../TestCategories-ASN1Module/Parameter.ta';
+} from '../TestCategories-ASN1Module/Parameter.ta.js';
 import {
     ContCond,
     _decode_ContCond,
     _encode_ContCond,
-} from '../TestCategories-ASN1Module/ContCond.ta';
+} from '../TestCategories-ASN1Module/ContCond.ta.js';
 export {
     ContCond,
     _decode_ContCond,
     _encode_ContCond,
-} from '../TestCategories-ASN1Module/ContCond.ta';
+} from '../TestCategories-ASN1Module/ContCond.ta.js';
 import {
     WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
-} from '../TestCategories-ASN1Module/WaitDuration.ta';
+} from '../TestCategories-ASN1Module/WaitDuration.ta.js';
 export {
     WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
-} from '../TestCategories-ASN1Module/WaitDuration.ta';
+} from '../TestCategories-ASN1Module/WaitDuration.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PDUSequence */
 /**

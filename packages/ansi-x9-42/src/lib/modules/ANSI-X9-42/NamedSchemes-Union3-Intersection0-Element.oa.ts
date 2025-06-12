@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca";
-import { dhHybrid1_sha1 } from "./dhHybrid1-sha1.va";
+import { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
+export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.js";
+import { dhHybrid1_sha1 } from "./dhHybrid1-sha1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION NamedSchemes_Union3_Intersection0_Element */
 /**

@@ -7,25 +7,25 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 import {
     PinFlags,
     _decode_PinFlags,
     _encode_PinFlags,
-} from "../PKCS-15/PinFlags.ta";
+} from "../PKCS-15/PinFlags.ta.js";
 import {
     PinType,
     _decode_PinType,
     _encode_PinType,
     _enum_for_PinType,
-} from "../PKCS-15/PinType.ta";
+} from "../PKCS-15/PinType.ta.js";
 import {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
+} from "../PKCS-15/Reference.ta.js";
+export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
 export {
     case_sensitive /* IMPORTED_SHORT_NAMED_BIT */,
     change_disabled /* IMPORTED_SHORT_NAMED_BIT */,
@@ -54,7 +54,7 @@ export {
     unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PinFlags,
     _encode_PinFlags,
-} from "../PKCS-15/PinFlags.ta";
+} from "../PKCS-15/PinFlags.ta.js";
 export {
     ascii_numeric /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     bcd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -70,12 +70,12 @@ export {
     _decode_PinType,
     _encode_PinType,
     _enum_for_PinType,
-} from "../PKCS-15/PinType.ta";
+} from "../PKCS-15/PinType.ta.js";
 export {
     Reference,
     _decode_Reference,
     _encode_Reference,
-} from "../PKCS-15/Reference.ta";
+} from "../PKCS-15/Reference.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PinAttributes */
 /**

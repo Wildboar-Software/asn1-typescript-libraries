@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Integer,
     _decode_Integer,
     _encode_Integer,
-} from '../SDHProtASN1/Integer.ta';
+} from '../SDHProtASN1/Integer.ta.js';
 export {
     Integer,
     _decode_Integer,
     _encode_Integer,
-} from '../SDHProtASN1/Integer.ta';
+} from '../SDHProtASN1/Integer.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SDHMSPriority */
 /**

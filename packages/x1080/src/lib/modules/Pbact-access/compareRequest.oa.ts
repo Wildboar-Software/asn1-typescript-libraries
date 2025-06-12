@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CompareRequest,
     _decode_CompareRequest,
     _encode_CompareRequest,
-} from '../Pbact-access/CompareRequest.ta';
+} from '../Pbact-access/CompareRequest.ta.js';
 export {
     CompareRequest,
     _decode_CompareRequest,
     _encode_CompareRequest,
-} from '../Pbact-access/CompareRequest.ta';
-import { id_compareRequest } from '../Pbact-access/id-compareRequest.va';
-export { id_compareRequest } from '../Pbact-access/id-compareRequest.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../Pbact-access/CompareRequest.ta.js';
+import { id_compareRequest } from '../Pbact-access/id-compareRequest.va.js';
+export { id_compareRequest } from '../Pbact-access/id-compareRequest.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION compareRequest */
 /**

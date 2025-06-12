@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION User_information */
 /**

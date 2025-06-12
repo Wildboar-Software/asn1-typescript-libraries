@@ -65,67 +65,67 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RTORQapdu,
   _decode_RTORQapdu,
   _encode_RTORQapdu,
-} from '../Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '../Reliable-Transfer-APDU/RTORQapdu.ta.js';
 export {
   RTORQapdu,
   _decode_RTORQapdu,
   _encode_RTORQapdu,
-} from '../Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '../Reliable-Transfer-APDU/RTORQapdu.ta.js';
 import {
   RTOACapdu,
   _decode_RTOACapdu,
   _encode_RTOACapdu,
-} from '../Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '../Reliable-Transfer-APDU/RTOACapdu.ta.js';
 export {
   RTOACapdu,
   _decode_RTOACapdu,
   _encode_RTOACapdu,
-} from '../Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '../Reliable-Transfer-APDU/RTOACapdu.ta.js';
 import {
   RTORJapdu,
   _decode_RTORJapdu,
   _encode_RTORJapdu,
-} from '../Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '../Reliable-Transfer-APDU/RTORJapdu.ta.js';
 export {
   RTORJapdu,
   _decode_RTORJapdu,
   _encode_RTORJapdu,
-} from '../Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '../Reliable-Transfer-APDU/RTORJapdu.ta.js';
 import {
   RTTPapdu,
   _decode_RTTPapdu,
   _encode_RTTPapdu,
-} from '../Reliable-Transfer-APDU/RTTPapdu.ta';
+} from '../Reliable-Transfer-APDU/RTTPapdu.ta.js';
 export {
   RTTPapdu,
   _decode_RTTPapdu,
   _encode_RTTPapdu,
-} from '../Reliable-Transfer-APDU/RTTPapdu.ta';
+} from '../Reliable-Transfer-APDU/RTTPapdu.ta.js';
 import {
   RTTRapdu,
   _decode_RTTRapdu,
   _encode_RTTRapdu,
-} from '../Reliable-Transfer-APDU/RTTRapdu.ta';
+} from '../Reliable-Transfer-APDU/RTTRapdu.ta.js';
 export {
   RTTRapdu,
   _decode_RTTRapdu,
   _encode_RTTRapdu,
-} from '../Reliable-Transfer-APDU/RTTRapdu.ta';
+} from '../Reliable-Transfer-APDU/RTTRapdu.ta.js';
 import {
   RTABapdu,
   _decode_RTABapdu,
   _encode_RTABapdu,
-} from '../Reliable-Transfer-APDU/RTABapdu.ta';
+} from '../Reliable-Transfer-APDU/RTABapdu.ta.js';
 export {
   RTABapdu,
   _decode_RTABapdu,
   _encode_RTABapdu,
-} from '../Reliable-Transfer-APDU/RTABapdu.ta';
+} from '../Reliable-Transfer-APDU/RTABapdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RTSE_apdus */
 /**

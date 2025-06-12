@@ -1,19 +1,19 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { bagtypes } from "../PKCS-12/bagtypes.va";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { bagtypes } from "../PKCS-12/bagtypes.va.js";
 import {
     SafeContents,
     _decode_SafeContents,
     _encode_SafeContents,
-} from "../PKCS-12/SafeContents.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { bagtypes } from "../PKCS-12/bagtypes.va";
+} from "../PKCS-12/SafeContents.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { bagtypes } from "../PKCS-12/bagtypes.va.js";
 export {
     SafeContents,
     _decode_SafeContents,
     _encode_SafeContents,
-} from "../PKCS-12/SafeContents.ta";
+} from "../PKCS-12/SafeContents.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION safeContentsBag */
 /**

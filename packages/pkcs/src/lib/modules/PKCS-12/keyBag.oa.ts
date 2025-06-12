@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-import { bagtypes } from "../PKCS-12/bagtypes.va";
-import { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { bagtypes } from "../PKCS-12/bagtypes.va";
-export { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+import { bagtypes } from "../PKCS-12/bagtypes.va.js";
+import { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { bagtypes } from "../PKCS-12/bagtypes.va.js";
+export { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION keyBag */
 /**

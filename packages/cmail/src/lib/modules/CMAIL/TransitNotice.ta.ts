@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   TransitNoticeType,
   _decode_TransitNoticeType,
   _encode_TransitNoticeType,
-} from '../CMAIL/TransitNoticeType.ta';
+} from '../CMAIL/TransitNoticeType.ta.js';
 export {
   TransitNoticeType,
   _decode_TransitNoticeType,
   _encode_TransitNoticeType,
-} from '../CMAIL/TransitNoticeType.ta';
+} from '../CMAIL/TransitNoticeType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TransitNotice */
 /**

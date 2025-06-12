@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/clacse",
-    "version": "1.0.2",
+    "type": "module",
+    "version": "2.0.0",
     "description": "Connectionless ACSE in TypeScript",
     "keywords": [
         "connectionless",

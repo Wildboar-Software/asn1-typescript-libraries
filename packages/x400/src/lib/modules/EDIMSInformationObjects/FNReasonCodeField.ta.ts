@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNUAMSReasonCodeField,
     _decode_FNUAMSReasonCodeField,
     _encode_FNUAMSReasonCodeField,
-} from '../EDIMSInformationObjects/FNUAMSReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNUAMSReasonCodeField.ta.js';
 export {
     FNUAMSReasonCodeField,
     _decode_FNUAMSReasonCodeField,
     _encode_FNUAMSReasonCodeField,
-} from '../EDIMSInformationObjects/FNUAMSReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNUAMSReasonCodeField.ta.js';
 import {
     FNUserReasonCodeField,
     _decode_FNUserReasonCodeField,
     _encode_FNUserReasonCodeField,
-} from '../EDIMSInformationObjects/FNUserReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNUserReasonCodeField.ta.js';
 export {
     FNUserReasonCodeField,
     _decode_FNUserReasonCodeField,
     _encode_FNUserReasonCodeField,
-} from '../EDIMSInformationObjects/FNUserReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNUserReasonCodeField.ta.js';
 import {
     FNPDAUReasonCodeField,
     _decode_FNPDAUReasonCodeField,
     _encode_FNPDAUReasonCodeField,
-} from '../EDIMSInformationObjects/FNPDAUReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNPDAUReasonCodeField.ta.js';
 export {
     FNPDAUReasonCodeField,
     _decode_FNPDAUReasonCodeField,
     _encode_FNPDAUReasonCodeField,
-} from '../EDIMSInformationObjects/FNPDAUReasonCodeField.ta';
+} from '../EDIMSInformationObjects/FNPDAUReasonCodeField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FNReasonCodeField */
 /**

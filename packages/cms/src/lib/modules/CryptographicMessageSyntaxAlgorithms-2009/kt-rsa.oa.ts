@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-import { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+import { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.js";
+export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -25,11 +25,11 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-export { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+export { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.js";
 
 /* START_OF_SYMBOL_DEFINITION kt_rsa */
 /**

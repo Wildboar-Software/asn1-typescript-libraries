@@ -1,12 +1,12 @@
 /* eslint-disable */
 import { BMPString } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { caseIgnoreMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa";
-import { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { caseIgnoreMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/caseIgnoreMatch.oa.js";
+import { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va.js";
 
 /* START_OF_SYMBOL_DEFINITION friendlyName */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_INDICATOR_STATUS,
   _enum_for_BioAPI_INDICATOR_STATUS,
@@ -81,7 +81,7 @@ import {
   failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
-} from '../BIP/BioAPI-INDICATOR-STATUS.ta';
+} from '../BIP/BioAPI-INDICATOR-STATUS.ta.js';
 export {
   BioAPI_INDICATOR_STATUS,
   _enum_for_BioAPI_INDICATOR_STATUS,
@@ -97,7 +97,7 @@ export {
   failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
-} from '../BIP/BioAPI-INDICATOR-STATUS.ta';
+} from '../BIP/BioAPI-INDICATOR-STATUS.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GetIndicatorStatus_ResponseParams */
 /**

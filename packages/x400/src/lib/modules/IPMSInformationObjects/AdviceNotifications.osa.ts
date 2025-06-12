@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca';
-import { absence_advice } from '../IPMSInformationObjects/absence-advice.oa';
-export { absence_advice } from '../IPMSInformationObjects/absence-advice.oa';
-import { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa';
-export { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+export { IPMS_EXTENSION } from '../IPMSInformationObjects/IPMS-EXTENSION.oca.js';
+import { absence_advice } from '../IPMSInformationObjects/absence-advice.oa.js';
+export { absence_advice } from '../IPMSInformationObjects/absence-advice.oa.js';
+import { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa.js';
+export { change_of_address_advice } from '../IPMSInformationObjects/change-of-address-advice.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION AdviceNotifications */
 /**

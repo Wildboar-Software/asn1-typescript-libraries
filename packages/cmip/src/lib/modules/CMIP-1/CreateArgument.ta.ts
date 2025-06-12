@@ -65,57 +65,57 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta';
+} from '../CMIP-1/ObjectClass.ta.js';
 export {
   ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta';
+} from '../CMIP-1/ObjectClass.ta.js';
 import {
   CreateArgument_managedOrSuperiorObjectInstance,
   _decode_CreateArgument_managedOrSuperiorObjectInstance,
   _encode_CreateArgument_managedOrSuperiorObjectInstance,
-} from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta';
+} from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta.js';
 export {
   CreateArgument_managedOrSuperiorObjectInstance,
   _decode_CreateArgument_managedOrSuperiorObjectInstance,
   _encode_CreateArgument_managedOrSuperiorObjectInstance,
-} from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta';
+} from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta.js';
 import {
   AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
-} from '../CMIP-1/AccessControl.ta';
+} from '../CMIP-1/AccessControl.ta.js';
 export {
   AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
-} from '../CMIP-1/AccessControl.ta';
+} from '../CMIP-1/AccessControl.ta.js';
 import {
   ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
-} from '../CMIP-1/ObjectInstance.ta';
+} from '../CMIP-1/ObjectInstance.ta.js';
 export {
   ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
-} from '../CMIP-1/ObjectInstance.ta';
+} from '../CMIP-1/ObjectInstance.ta.js';
 import {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../CMIP-1/Attribute.ta';
+} from '../CMIP-1/Attribute.ta.js';
 export {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../CMIP-1/Attribute.ta';
+} from '../CMIP-1/Attribute.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CreateArgument */
 /**

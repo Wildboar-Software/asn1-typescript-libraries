@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 export {
     InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
-import { OPEN } from '../RTMModule/OPEN.oca';
-export { OPEN } from '../RTMModule/OPEN.oca';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
+import { OPEN } from '../RTMModule/OPEN.oca.js';
+export { OPEN } from '../RTMModule/OPEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION RequestIdentifier */
 /**

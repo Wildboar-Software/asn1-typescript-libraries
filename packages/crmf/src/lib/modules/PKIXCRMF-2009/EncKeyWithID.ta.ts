@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     EncKeyWithID_identifier,
     _decode_EncKeyWithID_identifier,
     _encode_EncKeyWithID_identifier,
-} from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta";
+} from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta.js";
 import {
     PrivateKeyInfo,
     _decode_PrivateKeyInfo,
     _encode_PrivateKeyInfo,
-} from "../PKIXCRMF-2009/PrivateKeyInfo.ta";
+} from "../PKIXCRMF-2009/PrivateKeyInfo.ta.js";
 export {
     EncKeyWithID_identifier,
     _decode_EncKeyWithID_identifier,
     _encode_EncKeyWithID_identifier,
-} from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta";
+} from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta.js";
 export {
     PrivateKeyInfo,
     _decode_PrivateKeyInfo,
     _encode_PrivateKeyInfo,
-} from "../PKIXCRMF-2009/PrivateKeyInfo.ta";
+} from "../PKIXCRMF-2009/PrivateKeyInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncKeyWithID */
 /**

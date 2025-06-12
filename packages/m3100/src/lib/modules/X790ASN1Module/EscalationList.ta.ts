@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EscalationList_Item,
     _decode_EscalationList_Item,
     _encode_EscalationList_Item,
-} from '../X790ASN1Module/EscalationList-Item.ta';
+} from '../X790ASN1Module/EscalationList-Item.ta.js';
 export {
     EscalationList_Item,
     _decode_EscalationList_Item,
     _encode_EscalationList_Item,
-} from '../X790ASN1Module/EscalationList-Item.ta';
+} from '../X790ASN1Module/EscalationList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EscalationList */
 /**

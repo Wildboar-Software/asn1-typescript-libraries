@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageClass,
     _decode_MessageClass,
     _encode_MessageClass,
-} from '../MTSAbstractService/MessageClass.ta';
+} from '../MTSAbstractService/MessageClass.ta.js';
 export {
     MessageClass,
     _decode_MessageClass,
     _encode_MessageClass,
-} from '../MTSAbstractService/MessageClass.ta';
+} from '../MTSAbstractService/MessageClass.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RedirectionClass */
 /**

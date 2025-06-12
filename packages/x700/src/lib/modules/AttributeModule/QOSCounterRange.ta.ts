@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     QOSErrorCounter,
     _decode_QOSErrorCounter,
     _encode_QOSErrorCounter,
-} from '../AttributeModule/QOSErrorCounter.ta';
+} from '../AttributeModule/QOSErrorCounter.ta.js';
 export {
     QOSErrorCounter,
     _decode_QOSErrorCounter,
     _encode_QOSErrorCounter,
-} from '../AttributeModule/QOSErrorCounter.ta';
+} from '../AttributeModule/QOSErrorCounter.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION QOSCounterRange */
 /**

@@ -1,7 +1,7 @@
 import { BERElement, ObjectIdentifier } from "asn1-ts";
-import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue";
-import type { StringDecoderGetter } from "../types/StringDecoderGetter";
-import isDigit from "../utils/isDigit";
+import type { AttributeTypeAndValue as ATAV } from "../types/AttributeTypeAndValue.js";
+import type { StringDecoderGetter } from "../types/StringDecoderGetter.js";
+import isDigit from "../utils/isDigit.js";
 
 const oidRegex = /^(0|1|2)\.\d+(?:\.\d+)+$/;
 

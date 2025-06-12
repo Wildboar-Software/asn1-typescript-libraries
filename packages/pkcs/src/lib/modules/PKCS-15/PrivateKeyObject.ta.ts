@@ -1,36 +1,36 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CommonKeyAttributes,
     _decode_CommonKeyAttributes,
     _encode_CommonKeyAttributes,
-} from "../PKCS-15/CommonKeyAttributes.ta";
+} from "../PKCS-15/CommonKeyAttributes.ta.js";
 import {
     CommonPrivateKeyAttributes,
     _decode_CommonPrivateKeyAttributes,
     _encode_CommonPrivateKeyAttributes,
-} from "../PKCS-15/CommonPrivateKeyAttributes.ta";
+} from "../PKCS-15/CommonPrivateKeyAttributes.ta.js";
 import {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 export {
     CommonKeyAttributes,
     _decode_CommonKeyAttributes,
     _encode_CommonKeyAttributes,
-} from "../PKCS-15/CommonKeyAttributes.ta";
+} from "../PKCS-15/CommonKeyAttributes.ta.js";
 export {
     CommonPrivateKeyAttributes,
     _decode_CommonPrivateKeyAttributes,
     _encode_CommonPrivateKeyAttributes,
-} from "../PKCS-15/CommonPrivateKeyAttributes.ta";
+} from "../PKCS-15/CommonPrivateKeyAttributes.ta.js";
 export {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PrivateKeyObject */
 /**

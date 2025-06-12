@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa';
-export { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa';
-import { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa';
-export { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
-export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa.js';
+export { g3_facsimile_body_part_parameters } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-parameters.oa.js';
+import { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa.js';
+export { g3_facsimile_body_part_data } from '../IPMSExtendedBodyPartTypes/g3-facsimile-body-part-data.oa.js';
+import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
+export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION g3_facsimile_body_part */
 /**

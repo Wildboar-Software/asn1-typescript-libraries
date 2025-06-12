@@ -4,27 +4,27 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 import {
     Digest,
     _decode_Digest,
     _encode_Digest,
-} from "../CryptographicMessageSyntax/Digest.ta";
+} from "../CryptographicMessageSyntax/Digest.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.js";
 import {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -39,22 +39,22 @@ export {
     v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta";
+} from "../CryptographicMessageSyntax/CMSVersion.ta.js";
 export {
     Digest,
     _decode_Digest,
     _encode_Digest,
-} from "../CryptographicMessageSyntax/Digest.ta";
+} from "../CryptographicMessageSyntax/Digest.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.js";
 export {
     EncapsulatedContentInfo,
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta";
+} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DigestedData */
 /**

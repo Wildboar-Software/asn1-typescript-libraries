@@ -3,16 +3,16 @@ import {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../PKCS7/EncryptedData.ta";
-import { id_encrypted_data } from "../PKCS7/id-encrypted-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/EncryptedData.ta.js";
+import { id_encrypted_data } from "../PKCS7/id-encrypted-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
-} from "../PKCS7/EncryptedData.ta";
-export { id_encrypted_data } from "../PKCS7/id-encrypted-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/EncryptedData.ta.js";
+export { id_encrypted_data } from "../PKCS7/id-encrypted-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION encrypted_data */
 /**

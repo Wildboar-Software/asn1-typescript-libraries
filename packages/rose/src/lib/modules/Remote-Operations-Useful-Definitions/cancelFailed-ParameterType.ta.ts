@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CancelProblem,
   _enum_for_CancelProblem,
@@ -77,7 +77,7 @@ import {
   operationNotCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CancelProblem,
   _encode_CancelProblem,
-} from '../Remote-Operations-Useful-Definitions/CancelProblem.ta';
+} from '../Remote-Operations-Useful-Definitions/CancelProblem.ta.js';
 export {
   CancelProblem,
   _enum_for_CancelProblem,
@@ -89,17 +89,17 @@ export {
   operationNotCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CancelProblem,
   _encode_CancelProblem,
-} from '../Remote-Operations-Useful-Definitions/CancelProblem.ta';
+} from '../Remote-Operations-Useful-Definitions/CancelProblem.ta.js';
 import {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 export {
   InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
-} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta';
+} from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION cancelFailed_ParameterType */
 /**

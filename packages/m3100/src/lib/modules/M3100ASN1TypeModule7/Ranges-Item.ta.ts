@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeChoiceInteger,
     _decode_AttributeChoiceInteger,
     _encode_AttributeChoiceInteger,
-} from '../M3100ASN1TypeModule7/AttributeChoiceInteger.ta';
+} from '../M3100ASN1TypeModule7/AttributeChoiceInteger.ta.js';
 export {
     AttributeChoiceInteger,
     _decode_AttributeChoiceInteger,
     _encode_AttributeChoiceInteger,
-} from '../M3100ASN1TypeModule7/AttributeChoiceInteger.ta';
+} from '../M3100ASN1TypeModule7/AttributeChoiceInteger.ta.js';
 import {
     AttributeChoiceReal,
     _decode_AttributeChoiceReal,
     _encode_AttributeChoiceReal,
-} from '../M3100ASN1TypeModule7/AttributeChoiceReal.ta';
+} from '../M3100ASN1TypeModule7/AttributeChoiceReal.ta.js';
 export {
     AttributeChoiceReal,
     _decode_AttributeChoiceReal,
     _encode_AttributeChoiceReal,
-} from '../M3100ASN1TypeModule7/AttributeChoiceReal.ta';
+} from '../M3100ASN1TypeModule7/AttributeChoiceReal.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Ranges_Item */
 /**

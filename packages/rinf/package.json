@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/rinf",
-    "version": "1.0.5",
+    "type": "module",
+    "version": "2.0.0",
     "description": "object Identifier Resolution (ORS) Registration Information (RINF) data structures in TypeScript",
     "keywords": [
         "rinf",
@@ -34,6 +35,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.3"
+        "@wildboar/pki-stub": "2.x.x"
     }
 }

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Destination, _decode_Destination, _encode_Destination } from "../Attribute-ASN1Module/Destination.ta";
-export { Destination, _decode_Destination, _encode_Destination } from "../Attribute-ASN1Module/Destination.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Destination, _decode_Destination, _encode_Destination } from "../Attribute-ASN1Module/Destination.ta.js";
+export { Destination, _decode_Destination, _encode_Destination } from "../Attribute-ASN1Module/Destination.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ActiveDestination */

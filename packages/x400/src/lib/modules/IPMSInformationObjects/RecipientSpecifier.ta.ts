@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORDescriptor,
     _decode_ORDescriptor,
     _encode_ORDescriptor,
-} from '../IPMSInformationObjects/ORDescriptor.ta';
+} from '../IPMSInformationObjects/ORDescriptor.ta.js';
 export {
     ORDescriptor,
     _decode_ORDescriptor,
     _encode_ORDescriptor,
-} from '../IPMSInformationObjects/ORDescriptor.ta';
+} from '../IPMSInformationObjects/ORDescriptor.ta.js';
 import {
     NotificationRequests,
     NotificationRequests_rn /* IMPORTED_LONG_NAMED_BIT */,
@@ -90,7 +90,7 @@ import {
     suppress_an /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_NotificationRequests,
     _encode_NotificationRequests,
-} from '../IPMSInformationObjects/NotificationRequests.ta';
+} from '../IPMSInformationObjects/NotificationRequests.ta.js';
 export {
     NotificationRequests,
     NotificationRequests_rn /* IMPORTED_LONG_NAMED_BIT */,
@@ -105,17 +105,17 @@ export {
     suppress_an /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_NotificationRequests,
     _encode_NotificationRequests,
-} from '../IPMSInformationObjects/NotificationRequests.ta';
+} from '../IPMSInformationObjects/NotificationRequests.ta.js';
 import {
     RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
-} from '../IPMSInformationObjects/RecipientExtensionsField.ta';
+} from '../IPMSInformationObjects/RecipientExtensionsField.ta.js';
 export {
     RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
-} from '../IPMSInformationObjects/RecipientExtensionsField.ta';
+} from '../IPMSInformationObjects/RecipientExtensionsField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RecipientSpecifier */
 /**

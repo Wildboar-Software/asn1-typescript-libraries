@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 export {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta';
+} from '../ISO8571-FTAM/Access-Passwords.ta.js';
 import {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta';
+} from '../ISO8571-FTAM/Path-Access-Passwords.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_CHANGE_PREFIX_request */
 /**

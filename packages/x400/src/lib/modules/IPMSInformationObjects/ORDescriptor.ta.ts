@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 export {
     ORName,
     _decode_ORName,
     _encode_ORName,
-} from '../MTSAbstractService/ORName.ta';
+} from '../MTSAbstractService/ORName.ta.js';
 import {
     FreeFormName,
     _decode_FreeFormName,
     _encode_FreeFormName,
-} from '../IPMSInformationObjects/FreeFormName.ta';
+} from '../IPMSInformationObjects/FreeFormName.ta.js';
 export {
     FreeFormName,
     _decode_FreeFormName,
     _encode_FreeFormName,
-} from '../IPMSInformationObjects/FreeFormName.ta';
+} from '../IPMSInformationObjects/FreeFormName.ta.js';
 import {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from '../IPMSInformationObjects/TelephoneNumber.ta';
+} from '../IPMSInformationObjects/TelephoneNumber.ta.js';
 export {
     TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
-} from '../IPMSInformationObjects/TelephoneNumber.ta';
+} from '../IPMSInformationObjects/TelephoneNumber.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ORDescriptor */
 /**

@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ATOMIC_ACTION_IDENTIFIER_owners_name,
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta.js';
 export {
   ATOMIC_ACTION_IDENTIFIER_owners_name,
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta.js';
 import {
   ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.js';
 export {
   ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta';
+} from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER */
 /**

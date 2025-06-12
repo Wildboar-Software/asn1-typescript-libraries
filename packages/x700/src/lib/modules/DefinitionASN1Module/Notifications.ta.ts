@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Notifications_Item,
     _decode_Notifications_Item,
     _encode_Notifications_Item,
-} from '../DefinitionASN1Module/Notifications-Item.ta';
+} from '../DefinitionASN1Module/Notifications-Item.ta.js';
 export {
     Notifications_Item,
     _decode_Notifications_Item,
     _encode_Notifications_Item,
-} from '../DefinitionASN1Module/Notifications-Item.ta';
+} from '../DefinitionASN1Module/Notifications-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Notifications */
 /**

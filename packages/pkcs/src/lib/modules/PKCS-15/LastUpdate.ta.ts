@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element, GeneralizedTime } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ReferencedValue,
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
-} from "../PKCS-15/ReferencedValue.ta";
+} from "../PKCS-15/ReferencedValue.ta.js";
 export {
     ReferencedValue,
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
-} from "../PKCS-15/ReferencedValue.ta";
+} from "../PKCS-15/ReferencedValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION LastUpdate */
 /**

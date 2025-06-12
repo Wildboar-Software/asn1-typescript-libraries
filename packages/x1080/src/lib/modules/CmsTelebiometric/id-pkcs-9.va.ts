@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va';
-export { id_pkcs } from '../CmsTelebiometric/id-pkcs.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.js';
+export { id_pkcs } from '../CmsTelebiometric/id-pkcs.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_pkcs_9 */
 /**

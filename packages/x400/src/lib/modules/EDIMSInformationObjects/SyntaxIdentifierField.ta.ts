@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
-} from '../EDIMSInformationObjects/SyntaxIdentifier.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifier.ta.js';
 export {
     SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
-} from '../EDIMSInformationObjects/SyntaxIdentifier.ta';
+} from '../EDIMSInformationObjects/SyntaxIdentifier.ta.js';
 import {
     SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
-} from '../EDIMSInformationObjects/SyntaxVersion.ta';
+} from '../EDIMSInformationObjects/SyntaxVersion.ta.js';
 export {
     SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
-} from '../EDIMSInformationObjects/SyntaxVersion.ta';
+} from '../EDIMSInformationObjects/SyntaxVersion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SyntaxIdentifierField */
 /**

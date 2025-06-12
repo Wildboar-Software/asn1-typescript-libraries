@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AARQ_apdu,
     _decode_AARQ_apdu,
     _encode_AARQ_apdu,
-} from '../DialoguePDUs/AARQ-apdu.ta';
+} from '../DialoguePDUs/AARQ-apdu.ta.js';
 export {
     AARQ_apdu,
     _decode_AARQ_apdu,
     _encode_AARQ_apdu,
-} from '../DialoguePDUs/AARQ-apdu.ta';
+} from '../DialoguePDUs/AARQ-apdu.ta.js';
 import {
     AARE_apdu,
     _decode_AARE_apdu,
     _encode_AARE_apdu,
-} from '../DialoguePDUs/AARE-apdu.ta';
+} from '../DialoguePDUs/AARE-apdu.ta.js';
 export {
     AARE_apdu,
     _decode_AARE_apdu,
     _encode_AARE_apdu,
-} from '../DialoguePDUs/AARE-apdu.ta';
+} from '../DialoguePDUs/AARE-apdu.ta.js';
 import {
     ABRT_apdu,
     _decode_ABRT_apdu,
     _encode_ABRT_apdu,
-} from '../DialoguePDUs/ABRT-apdu.ta';
+} from '../DialoguePDUs/ABRT-apdu.ta.js';
 export {
     ABRT_apdu,
     _decode_ABRT_apdu,
     _encode_ABRT_apdu,
-} from '../DialoguePDUs/ABRT-apdu.ta';
+} from '../DialoguePDUs/ABRT-apdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DialoguePDU */
 /**

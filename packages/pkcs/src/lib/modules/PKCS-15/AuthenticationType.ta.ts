@@ -1,56 +1,56 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthenticationObject,
     _get_decoder_for_AuthenticationObject,
     _get_encoder_for_AuthenticationObject,
-} from "../PKCS-15/AuthenticationObject.ta";
+} from "../PKCS-15/AuthenticationObject.ta.js";
 import {
     AuthKeyAttributes,
     _decode_AuthKeyAttributes,
     _encode_AuthKeyAttributes,
-} from "../PKCS-15/AuthKeyAttributes.ta";
+} from "../PKCS-15/AuthKeyAttributes.ta.js";
 import {
     BiometricAttributes,
     _decode_BiometricAttributes,
     _encode_BiometricAttributes,
-} from "../PKCS-15/BiometricAttributes.ta";
+} from "../PKCS-15/BiometricAttributes.ta.js";
 import {
     ExternalAuthObjectAttributes,
     _decode_ExternalAuthObjectAttributes,
     _encode_ExternalAuthObjectAttributes,
-} from "../PKCS-15/ExternalAuthObjectAttributes.ta";
+} from "../PKCS-15/ExternalAuthObjectAttributes.ta.js";
 import {
     PinAttributes,
     _decode_PinAttributes,
     _encode_PinAttributes,
-} from "../PKCS-15/PinAttributes.ta";
+} from "../PKCS-15/PinAttributes.ta.js";
 export {
     AuthenticationObject,
     _get_decoder_for_AuthenticationObject,
     _get_encoder_for_AuthenticationObject,
-} from "../PKCS-15/AuthenticationObject.ta";
+} from "../PKCS-15/AuthenticationObject.ta.js";
 export {
     AuthKeyAttributes,
     _decode_AuthKeyAttributes,
     _encode_AuthKeyAttributes,
-} from "../PKCS-15/AuthKeyAttributes.ta";
+} from "../PKCS-15/AuthKeyAttributes.ta.js";
 export {
     BiometricAttributes,
     _decode_BiometricAttributes,
     _encode_BiometricAttributes,
-} from "../PKCS-15/BiometricAttributes.ta";
+} from "../PKCS-15/BiometricAttributes.ta.js";
 export {
     ExternalAuthObjectAttributes,
     _decode_ExternalAuthObjectAttributes,
     _encode_ExternalAuthObjectAttributes,
-} from "../PKCS-15/ExternalAuthObjectAttributes.ta";
+} from "../PKCS-15/ExternalAuthObjectAttributes.ta.js";
 export {
     PinAttributes,
     _decode_PinAttributes,
     _encode_PinAttributes,
-} from "../PKCS-15/PinAttributes.ta";
+} from "../PKCS-15/PinAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationType */
 /**

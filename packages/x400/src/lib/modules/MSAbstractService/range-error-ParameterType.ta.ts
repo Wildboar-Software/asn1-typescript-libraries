@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RangeProblem,
     RangeProblem_reversed /* IMPORTED_LONG_NAMED_INTEGER */,
     reversed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RangeProblem,
     _encode_RangeProblem,
-} from '../MSAbstractService/RangeProblem.ta';
+} from '../MSAbstractService/RangeProblem.ta.js';
 export {
     RangeProblem,
     RangeProblem_reversed /* IMPORTED_LONG_NAMED_INTEGER */,
     reversed /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RangeProblem,
     _encode_RangeProblem,
-} from '../MSAbstractService/RangeProblem.ta';
+} from '../MSAbstractService/RangeProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION range_error_ParameterType */
 /**

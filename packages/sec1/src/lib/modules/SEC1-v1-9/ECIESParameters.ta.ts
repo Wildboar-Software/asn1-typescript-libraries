@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta";
-export { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta";
-import { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta";
-export { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta";
-import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta";
-export { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.js";
+export { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.js";
+import { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.js";
+export { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.js";
+import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.js";
+export { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECIESParameters */

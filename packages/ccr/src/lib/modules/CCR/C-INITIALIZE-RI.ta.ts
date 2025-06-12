@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   C_INITIALIZE_RI_version_number,
   C_INITIALIZE_RI_version_number_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -74,7 +74,7 @@ import {
   version2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_C_INITIALIZE_RI_version_number,
   _encode_C_INITIALIZE_RI_version_number,
-} from '../CCR/C-INITIALIZE-RI-version-number.ta';
+} from '../CCR/C-INITIALIZE-RI-version-number.ta.js';
 export {
   C_INITIALIZE_RI_version_number,
   C_INITIALIZE_RI_version_number_version1 /* IMPORTED_LONG_NAMED_BIT */,
@@ -83,17 +83,17 @@ export {
   version2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_C_INITIALIZE_RI_version_number,
   _encode_C_INITIALIZE_RI_version_number,
-} from '../CCR/C-INITIALIZE-RI-version-number.ta';
+} from '../CCR/C-INITIALIZE-RI-version-number.ta.js';
 import {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 export {
   User_data,
   _decode_User_data,
   _encode_User_data,
-} from '../CCR/User-data.ta';
+} from '../CCR/User-data.ta.js';
 import {
   Ccr_requirements,
   Ccr_requirements_static_commitment /* IMPORTED_LONG_NAMED_BIT */,
@@ -108,7 +108,7 @@ import {
   overlapped_recovery /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Ccr_requirements,
   _encode_Ccr_requirements,
-} from '../CCR/Ccr-requirements.ta';
+} from '../CCR/Ccr-requirements.ta.js';
 export {
   Ccr_requirements,
   Ccr_requirements_static_commitment /* IMPORTED_LONG_NAMED_BIT */,
@@ -123,7 +123,7 @@ export {
   overlapped_recovery /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Ccr_requirements,
   _encode_Ccr_requirements,
-} from '../CCR/Ccr-requirements.ta';
+} from '../CCR/Ccr-requirements.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION C_INITIALIZE_RI */
 /**

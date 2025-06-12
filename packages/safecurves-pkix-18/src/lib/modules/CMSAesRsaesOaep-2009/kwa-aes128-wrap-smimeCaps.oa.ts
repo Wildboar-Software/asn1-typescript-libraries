@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_aes128_wrap } from "../CMSAesRsaesOaep-2009/id-aes128-wrap.va";
-export { id_aes128_wrap } from "../CMSAesRsaesOaep-2009/id-aes128-wrap.va";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_aes128_wrap } from "../CMSAesRsaesOaep-2009/id-aes128-wrap.va.js";
+export { id_aes128_wrap } from "../CMSAesRsaesOaep-2009/id-aes128-wrap.va.js";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION kwa_aes128_wrap_smimeCaps */

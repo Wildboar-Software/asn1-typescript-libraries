@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '../Remote-Operations-Information-Objects/CONTRACT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION ROS_OBJECT_CLASS */
 /**

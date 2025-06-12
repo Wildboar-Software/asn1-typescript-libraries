@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca";
-import { id_pkix_ocsp_nocheck } from "../OCSP-2013-08/id-pkix-ocsp-nocheck.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { EXTENSION } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/EXTENSION.oca.js";
+import { id_pkix_ocsp_nocheck } from "../OCSP-2013-08/id-pkix-ocsp-nocheck.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ext_ocsp_nocheck */
 /**

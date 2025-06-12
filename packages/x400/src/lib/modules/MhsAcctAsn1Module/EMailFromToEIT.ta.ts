@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExplicitConversion,
     ExplicitConversion_ia5_text_to_teletex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -90,7 +90,7 @@ import {
     videotex_to_teletex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
-} from '../MTSAbstractService/ExplicitConversion.ta';
+} from '../MTSAbstractService/ExplicitConversion.ta.js';
 export {
     ExplicitConversion,
     ExplicitConversion_ia5_text_to_teletex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,17 +115,17 @@ export {
     videotex_to_teletex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
-} from '../MTSAbstractService/ExplicitConversion.ta';
+} from '../MTSAbstractService/ExplicitConversion.ta.js';
 import {
     GenericConversion,
     _decode_GenericConversion,
     _encode_GenericConversion,
-} from '../MhsAcctAsn1Module/GenericConversion.ta';
+} from '../MhsAcctAsn1Module/GenericConversion.ta.js';
 export {
     GenericConversion,
     _decode_GenericConversion,
     _encode_GenericConversion,
-} from '../MhsAcctAsn1Module/GenericConversion.ta';
+} from '../MhsAcctAsn1Module/GenericConversion.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailFromToEIT */
 /**

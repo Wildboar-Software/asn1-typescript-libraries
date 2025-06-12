@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
-} from '../Pbact-access/AttributeCertificates.ta';
+} from '../Pbact-access/AttributeCertificates.ta.js';
 export {
     AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
-} from '../Pbact-access/AttributeCertificates.ta';
+} from '../Pbact-access/AttributeCertificates.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CommonReqComp */
 /**

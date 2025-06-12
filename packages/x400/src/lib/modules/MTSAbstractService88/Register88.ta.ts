@@ -65,77 +65,77 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UserName,
     _decode_UserName,
     _encode_UserName,
-} from '../MTSAbstractService/UserName.ta';
+} from '../MTSAbstractService/UserName.ta.js';
 export {
     UserName,
     _decode_UserName,
     _encode_UserName,
-} from '../MTSAbstractService/UserName.ta';
+} from '../MTSAbstractService/UserName.ta.js';
 import {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta';
+} from '../MTSAbstractService/UserAddress.ta.js';
 export {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta';
+} from '../MTSAbstractService/UserAddress.ta.js';
 import {
     EncodedInformationTypes,
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
-} from '../MTSAbstractService/EncodedInformationTypes.ta';
+} from '../MTSAbstractService/EncodedInformationTypes.ta.js';
 export {
     EncodedInformationTypes,
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
-} from '../MTSAbstractService/EncodedInformationTypes.ta';
+} from '../MTSAbstractService/EncodedInformationTypes.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta';
+} from '../MTSAbstractService/DefaultDeliveryControls.ta.js';
 export {
     DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta';
+} from '../MTSAbstractService/DefaultDeliveryControls.ta.js';
 import {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 export {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 import {
     LabelAndRedirection,
     _decode_LabelAndRedirection,
     _encode_LabelAndRedirection,
-} from '../MTSAbstractService88/LabelAndRedirection.ta';
+} from '../MTSAbstractService88/LabelAndRedirection.ta.js';
 export {
     LabelAndRedirection,
     _decode_LabelAndRedirection,
     _encode_LabelAndRedirection,
-} from '../MTSAbstractService88/LabelAndRedirection.ta';
+} from '../MTSAbstractService88/LabelAndRedirection.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Register88 */
 /**

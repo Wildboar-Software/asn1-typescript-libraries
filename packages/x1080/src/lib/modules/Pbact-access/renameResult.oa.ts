@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RenameResult,
     _decode_RenameResult,
     _encode_RenameResult,
-} from '../Pbact-access/RenameResult.ta';
+} from '../Pbact-access/RenameResult.ta.js';
 export {
     RenameResult,
     _decode_RenameResult,
     _encode_RenameResult,
-} from '../Pbact-access/RenameResult.ta';
-import { id_renameResult } from '../Pbact-access/id-renameResult.va';
-export { id_renameResult } from '../Pbact-access/id-renameResult.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../Pbact-access/RenameResult.ta.js';
+import { id_renameResult } from '../Pbact-access/id-renameResult.va.js';
+export { id_renameResult } from '../Pbact-access/id-renameResult.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION renameResult */
 /**

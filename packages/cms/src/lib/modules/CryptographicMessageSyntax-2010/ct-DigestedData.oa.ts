@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 import {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta";
-import { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "../CryptographicMessageSyntax-2010/DigestedData.ta.js";
+import { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 export {
     DigestedData,
     _decode_DigestedData,
     _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta";
-export { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va";
+} from "../CryptographicMessageSyntax-2010/DigestedData.ta.js";
+export { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_DigestedData */
 /**

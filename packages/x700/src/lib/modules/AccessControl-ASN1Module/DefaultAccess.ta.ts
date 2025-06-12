@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EnforcementAction,
     _enum_for_EnforcementAction,
@@ -81,10 +81,10 @@ import {
     allow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EnforcementAction,
     _encode_EnforcementAction,
-} from '../AccessControl-ASN1Module/EnforcementAction.ta';
+} from '../AccessControl-ASN1Module/EnforcementAction.ta.js';
 import {
     deny,
-} from './deny.va';
+} from './deny.va.js';
 
 /* START_OF_SYMBOL_DEFINITION DefaultAccess */
 /**

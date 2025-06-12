@@ -4,47 +4,47 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 import {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.js";
 import {
     SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
-} from "../CryptographicMessageSyntax-2010/SignatureValue.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureValue.ta.js";
 import {
     SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
-} from "../CryptographicMessageSyntax-2010/SignedAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.js";
 import {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.js";
 export {
     Attributes,
     _decode_Attributes,
     _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta";
+} from "../CryptographicMessageSyntax-2010/Attributes.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -61,32 +61,32 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.js";
 export {
     SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.js";
 export {
     SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
-} from "../CryptographicMessageSyntax-2010/SignatureValue.ta";
+} from "../CryptographicMessageSyntax-2010/SignatureValue.ta.js";
 export {
     SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
-} from "../CryptographicMessageSyntax-2010/SignedAttributes.ta";
+} from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.js";
 export {
     SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SignerInfo */
 /**

@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BPUReport,
     _decode_BPUReport,
     _encode_BPUReport,
-} from '../AuthenticationContextForBiometrics/BPUReport.ta';
+} from '../AuthenticationContextForBiometrics/BPUReport.ta.js';
 export {
     BPUReport,
     _decode_BPUReport,
     _encode_BPUReport,
-} from '../AuthenticationContextForBiometrics/BPUReport.ta';
-import { id_bpuReport } from '../AuthenticationContextForBiometrics/id-bpuReport.va';
-export { id_bpuReport } from '../AuthenticationContextForBiometrics/id-bpuReport.va';
+} from '../AuthenticationContextForBiometrics/BPUReport.ta.js';
+import { id_bpuReport } from '../AuthenticationContextForBiometrics/id-bpuReport.va.js';
+export { id_bpuReport } from '../AuthenticationContextForBiometrics/id-bpuReport.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION bpuReport */
 /**

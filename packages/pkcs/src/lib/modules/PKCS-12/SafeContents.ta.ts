@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SafeBag,
     _decode_SafeBag,
     _encode_SafeBag,
-} from "../PKCS-12/SafeBag.ta";
+} from "../PKCS-12/SafeBag.ta.js";
 export {
     SafeBag,
     _decode_SafeBag,
     _encode_SafeBag,
-} from "../PKCS-12/SafeBag.ta";
+} from "../PKCS-12/SafeBag.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SafeContents */
 /**

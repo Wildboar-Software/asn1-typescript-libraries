@@ -65,21 +65,21 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   SNPAAddresses,
   _decode_SNPAAddresses,
   _encode_SNPAAddresses,
-} from '../ISIS/SNPAAddresses.ta';
+} from '../ISIS/SNPAAddresses.ta.js';
 export {
   SNPAAddresses,
   _decode_SNPAAddresses,
   _encode_SNPAAddresses,
-} from '../ISIS/SNPAAddresses.ta';
+} from '../ISIS/SNPAAddresses.ta.js';
 import {
   _decode_SNPAAddress,
   _encode_SNPAAddress,
-} from '@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta';
+} from '@wildboar/nlm/src/lib/modules/NLM/SNPAAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION sNPAAddresses_Default */
 /**

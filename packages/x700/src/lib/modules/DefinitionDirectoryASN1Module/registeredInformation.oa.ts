@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,21 +91,21 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-import { nameForm } from '../DefinitionDirectoryASN1Module/nameForm.oa';
-export { nameForm } from '../DefinitionDirectoryASN1Module/nameForm.oa';
-import { informationStatus } from '../DefinitionDirectoryASN1Module/informationStatus.oa';
-export { informationStatus } from '../DefinitionDirectoryASN1Module/informationStatus.oa';
-import { additionalInformation } from '../DefinitionDirectoryASN1Module/additionalInformation.oa';
-export { additionalInformation } from '../DefinitionDirectoryASN1Module/additionalInformation.oa';
-import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
-export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+import { nameForm } from '../DefinitionDirectoryASN1Module/nameForm.oa.js';
+export { nameForm } from '../DefinitionDirectoryASN1Module/nameForm.oa.js';
+import { informationStatus } from '../DefinitionDirectoryASN1Module/informationStatus.oa.js';
+export { informationStatus } from '../DefinitionDirectoryASN1Module/informationStatus.oa.js';
+import { additionalInformation } from '../DefinitionDirectoryASN1Module/additionalInformation.oa.js';
+export { additionalInformation } from '../DefinitionDirectoryASN1Module/additionalInformation.oa.js';
+import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
+export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
 
 /* START_OF_SYMBOL_DEFINITION registeredInformation */
 /**

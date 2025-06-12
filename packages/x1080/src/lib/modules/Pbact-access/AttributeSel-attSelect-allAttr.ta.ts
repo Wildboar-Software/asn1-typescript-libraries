@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeOperations,
     AttributeOperations_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -86,7 +86,7 @@ import {
     discloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AttributeOperations,
     _encode_AttributeOperations,
-} from '../Pbact-access/AttributeOperations.ta';
+} from '../Pbact-access/AttributeOperations.ta.js';
 export {
     AttributeOperations,
     AttributeOperations_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -107,7 +107,7 @@ export {
     discloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AttributeOperations,
     _encode_AttributeOperations,
-} from '../Pbact-access/AttributeOperations.ta';
+} from '../Pbact-access/AttributeOperations.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeSel_attSelect_allAttr */
 /**

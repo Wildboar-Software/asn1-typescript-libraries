@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Associate_source_diagnostic_acse_service_user,
   Associate_source_diagnostic_acse_service_user_null_ /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -98,7 +98,7 @@ import {
   authentication_required /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Associate_source_diagnostic_acse_service_user,
   _encode_Associate_source_diagnostic_acse_service_user,
-} from '../ACSE-1/Associate-source-diagnostic-acse-service-user.ta';
+} from '../ACSE-1/Associate-source-diagnostic-acse-service-user.ta.js';
 import {
   Associate_source_diagnostic_acse_service_provider,
   Associate_source_diagnostic_acse_service_provider_null_ /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -107,7 +107,7 @@ import {
   no_common_acse_version /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Associate_source_diagnostic_acse_service_provider,
   _encode_Associate_source_diagnostic_acse_service_provider,
-} from '../ACSE-1/Associate-source-diagnostic-acse-service-provider.ta';
+} from '../ACSE-1/Associate-source-diagnostic-acse-service-provider.ta.js';
 
 // Manually modified!
 // For some reason, the integers were implicitly encoded.

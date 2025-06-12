@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PremisesName,
     _decode_PremisesName,
     _encode_PremisesName,
-} from '../X790ASN1Module/PremisesName.ta';
+} from '../X790ASN1Module/PremisesName.ta.js';
 export {
     PremisesName,
     _decode_PremisesName,
     _encode_PremisesName,
-} from '../X790ASN1Module/PremisesName.ta';
+} from '../X790ASN1Module/PremisesName.ta.js';
 import {
     PremisesAddress,
     _decode_PremisesAddress,
     _encode_PremisesAddress,
-} from '../X790ASN1Module/PremisesAddress.ta';
+} from '../X790ASN1Module/PremisesAddress.ta.js';
 export {
     PremisesAddress,
     _decode_PremisesAddress,
     _encode_PremisesAddress,
-} from '../X790ASN1Module/PremisesAddress.ta';
+} from '../X790ASN1Module/PremisesAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ServiceLocationList_Item */
 /**

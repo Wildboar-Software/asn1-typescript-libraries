@@ -4,67 +4,67 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     KeyConstructionAlgorithmIdentifier,
     _decode_KeyConstructionAlgorithmIdentifier,
     _encode_KeyConstructionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta.js";
 import {
     KeyConstructionDomain,
     _decode_KeyConstructionDomain,
     _encode_KeyConstructionDomain,
-} from "../CMSCKMKeyManagement/KeyConstructionDomain.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionDomain.ta.js";
 import {
     KeyConstructionRecipient,
     _decode_KeyConstructionRecipient,
     _encode_KeyConstructionRecipient,
-} from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta.js";
 import {
     Version,
     _decode_Version,
     _encode_Version,
-} from "../CMSCKMKeyManagement/Version.ta";
+} from "../CMSCKMKeyManagement/Version.ta.js";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.js";
 import {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta";
+} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.js";
 export {
     KeyConstructionAlgorithmIdentifier,
     _decode_KeyConstructionAlgorithmIdentifier,
     _encode_KeyConstructionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta.js";
 export {
     KeyConstructionDomain,
     _decode_KeyConstructionDomain,
     _encode_KeyConstructionDomain,
-} from "../CMSCKMKeyManagement/KeyConstructionDomain.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionDomain.ta.js";
 export {
     KeyConstructionRecipient,
     _decode_KeyConstructionRecipient,
     _encode_KeyConstructionRecipient,
-} from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta";
+} from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta.js";
 export {
     Version,
     _decode_Version,
     _encode_Version,
-} from "../CMSCKMKeyManagement/Version.ta";
+} from "../CMSCKMKeyManagement/Version.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.js";
 export {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta";
+} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyConstructRecipientInfo */
 /**

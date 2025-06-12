@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Time,
     _decode_Time,
     _encode_Time,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Time.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Time.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION SigningTime */
 /**

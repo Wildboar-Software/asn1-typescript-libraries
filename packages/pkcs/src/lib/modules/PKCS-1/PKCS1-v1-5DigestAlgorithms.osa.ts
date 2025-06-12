@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { PKCS1_v1_5DigestAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union0-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union1_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union1-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union2-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union3_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union3-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union4_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union4-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union5_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union5-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union6_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union6-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union7_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union7-Intersection0-Element.oa";
-import { PKCS1_v1_5DigestAlgorithms_Union8_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union8-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { PKCS1_v1_5DigestAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union0-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union1_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union1-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union2_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union2-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union3_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union3-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union4_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union4-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union5_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union5-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union6_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union6-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union7_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union7-Intersection0-Element.oa.js";
+import { PKCS1_v1_5DigestAlgorithms_Union8_Intersection0_Element } from "../PKCS-1/PKCS1-v1-5DigestAlgorithms-Union8-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS1_v1_5DigestAlgorithms */
 /**

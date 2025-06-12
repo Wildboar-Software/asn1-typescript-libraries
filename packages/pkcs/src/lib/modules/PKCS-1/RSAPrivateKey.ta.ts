@@ -5,22 +5,22 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     OtherPrimeInfos,
     _decode_OtherPrimeInfos,
     _encode_OtherPrimeInfos,
-} from "../PKCS-1/OtherPrimeInfos.ta";
+} from "../PKCS-1/OtherPrimeInfos.ta.js";
 import {
     Version,
     _decode_Version,
     _encode_Version,
-} from "../PKCS-1/Version.ta";
+} from "../PKCS-1/Version.ta.js";
 export {
     OtherPrimeInfos,
     _decode_OtherPrimeInfos,
     _encode_OtherPrimeInfos,
-} from "../PKCS-1/OtherPrimeInfos.ta";
+} from "../PKCS-1/OtherPrimeInfos.ta.js";
 export {
     multi /* IMPORTED_SHORT_NAMED_INTEGER */,
     two_prime /* IMPORTED_SHORT_NAMED_INTEGER */,
@@ -29,7 +29,7 @@ export {
     Version_two_prime /* IMPORTED_LONG_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from "../PKCS-1/Version.ta";
+} from "../PKCS-1/Version.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION RSAPrivateKey */
 /**

@@ -65,67 +65,67 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_INITIALIZE_request,
   _decode_F_INITIALIZE_request,
   _encode_F_INITIALIZE_request,
-} from '../ISO8571-FTAM/F-INITIALIZE-request.ta';
+} from '../ISO8571-FTAM/F-INITIALIZE-request.ta.js';
 export {
   F_INITIALIZE_request,
   _decode_F_INITIALIZE_request,
   _encode_F_INITIALIZE_request,
-} from '../ISO8571-FTAM/F-INITIALIZE-request.ta';
+} from '../ISO8571-FTAM/F-INITIALIZE-request.ta.js';
 import {
   F_INITIALIZE_response,
   _decode_F_INITIALIZE_response,
   _encode_F_INITIALIZE_response,
-} from '../ISO8571-FTAM/F-INITIALIZE-response.ta';
+} from '../ISO8571-FTAM/F-INITIALIZE-response.ta.js';
 export {
   F_INITIALIZE_response,
   _decode_F_INITIALIZE_response,
   _encode_F_INITIALIZE_response,
-} from '../ISO8571-FTAM/F-INITIALIZE-response.ta';
+} from '../ISO8571-FTAM/F-INITIALIZE-response.ta.js';
 import {
   F_TERMINATE_request,
   _decode_F_TERMINATE_request,
   _encode_F_TERMINATE_request,
-} from '../ISO8571-FTAM/F-TERMINATE-request.ta';
+} from '../ISO8571-FTAM/F-TERMINATE-request.ta.js';
 export {
   F_TERMINATE_request,
   _decode_F_TERMINATE_request,
   _encode_F_TERMINATE_request,
-} from '../ISO8571-FTAM/F-TERMINATE-request.ta';
+} from '../ISO8571-FTAM/F-TERMINATE-request.ta.js';
 import {
   F_TERMINATE_response,
   _decode_F_TERMINATE_response,
   _encode_F_TERMINATE_response,
-} from '../ISO8571-FTAM/F-TERMINATE-response.ta';
+} from '../ISO8571-FTAM/F-TERMINATE-response.ta.js';
 export {
   F_TERMINATE_response,
   _decode_F_TERMINATE_response,
   _encode_F_TERMINATE_response,
-} from '../ISO8571-FTAM/F-TERMINATE-response.ta';
+} from '../ISO8571-FTAM/F-TERMINATE-response.ta.js';
 import {
   F_U_ABORT_request,
   _decode_F_U_ABORT_request,
   _encode_F_U_ABORT_request,
-} from '../ISO8571-FTAM/F-U-ABORT-request.ta';
+} from '../ISO8571-FTAM/F-U-ABORT-request.ta.js';
 export {
   F_U_ABORT_request,
   _decode_F_U_ABORT_request,
   _encode_F_U_ABORT_request,
-} from '../ISO8571-FTAM/F-U-ABORT-request.ta';
+} from '../ISO8571-FTAM/F-U-ABORT-request.ta.js';
 import {
   F_P_ABORT_request,
   _decode_F_P_ABORT_request,
   _encode_F_P_ABORT_request,
-} from '../ISO8571-FTAM/F-P-ABORT-request.ta';
+} from '../ISO8571-FTAM/F-P-ABORT-request.ta.js';
 export {
   F_P_ABORT_request,
   _decode_F_P_ABORT_request,
   _encode_F_P_ABORT_request,
-} from '../ISO8571-FTAM/F-P-ABORT-request.ta';
+} from '../ISO8571-FTAM/F-P-ABORT-request.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION FTAM_Regime_PDU */
 /**

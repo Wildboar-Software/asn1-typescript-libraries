@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
-import { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta";
-export { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
+import { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.js";
+export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.js";
+export { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ReferencedValue */
 /**

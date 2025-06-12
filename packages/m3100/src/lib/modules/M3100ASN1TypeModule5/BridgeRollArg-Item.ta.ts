@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     BridgeRollArg_Item_bridgeRollOperation,
     _enum_for_BridgeRollArg_Item_bridgeRollOperation,
@@ -87,7 +87,7 @@ import {
     releaseBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BridgeRollArg_Item_bridgeRollOperation,
     _encode_BridgeRollArg_Item_bridgeRollOperation,
-} from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta';
+} from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta.js';
 export {
     BridgeRollArg_Item_bridgeRollOperation,
     _enum_for_BridgeRollArg_Item_bridgeRollOperation,
@@ -99,17 +99,17 @@ export {
     releaseBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BridgeRollArg_Item_bridgeRollOperation,
     _encode_BridgeRollArg_Item_bridgeRollOperation,
-} from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta';
+} from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta.js';
 import {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 export {
     ManagementExtension,
     _decode_ManagementExtension,
     _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item */
 /**

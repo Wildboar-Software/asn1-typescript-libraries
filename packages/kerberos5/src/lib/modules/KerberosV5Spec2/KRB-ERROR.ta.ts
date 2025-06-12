@@ -65,67 +65,67 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 export {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 import {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 export {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 import {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 export {
   Realm,
   _decode_Realm,
   _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta';
+} from '../KerberosV5Spec2/Realm.ta.js';
 import {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta';
+} from '../KerberosV5Spec2/PrincipalName.ta.js';
 import {
   KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
-} from '../KerberosV5Spec2/KerberosString.ta';
+} from '../KerberosV5Spec2/KerberosString.ta.js';
 export {
   KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
-} from '../KerberosV5Spec2/KerberosString.ta';
+} from '../KerberosV5Spec2/KerberosString.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KRB_ERROR */
 /**

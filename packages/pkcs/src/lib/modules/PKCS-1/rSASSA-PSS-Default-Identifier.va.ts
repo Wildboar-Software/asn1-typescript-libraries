@@ -1,12 +1,12 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va";
-import type { RSASSA_AlgorithmIdentifier } from "../PKCS-1/RSASSA-AlgorithmIdentifier.ta";
-import { RSASSA_PSS_params, _encode_RSASSA_PSS_params } from "./RSASSA-PSS-params.ta";
-import { sha1 } from "./sha1.va";
-import { mgf1SHA1 } from "./mgf1SHA1.va";
-import { trailerFieldBC } from "./TrailerField.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va.js";
+import type { RSASSA_AlgorithmIdentifier } from "../PKCS-1/RSASSA-AlgorithmIdentifier.ta.js";
+import { RSASSA_PSS_params, _encode_RSASSA_PSS_params } from "./RSASSA-PSS-params.ta.js";
+import { sha1 } from "./sha1.va.js";
+import { mgf1SHA1 } from "./mgf1SHA1.va.js";
+import { trailerFieldBC } from "./TrailerField.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION rSASSA_PSS_Default_Identifier */
 /**

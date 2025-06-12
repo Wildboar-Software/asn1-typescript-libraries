@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 import {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "../CryptographicMessageSyntax-2010/EnvelopedData.ta";
-import { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "../CryptographicMessageSyntax-2010/EnvelopedData.ta.js";
+import { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 export {
     EnvelopedData,
     _decode_EnvelopedData,
     _encode_EnvelopedData,
-} from "../CryptographicMessageSyntax-2010/EnvelopedData.ta";
-export { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va";
+} from "../CryptographicMessageSyntax-2010/EnvelopedData.ta.js";
+export { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_EnvelopedData */
 /**

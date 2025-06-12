@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
-} from '../CmsTelebiometric/RecipientInfo.ta';
+} from '../CmsTelebiometric/RecipientInfo.ta.js';
 export {
     RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
-} from '../CmsTelebiometric/RecipientInfo.ta';
+} from '../CmsTelebiometric/RecipientInfo.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RecipientInfos */
 /**

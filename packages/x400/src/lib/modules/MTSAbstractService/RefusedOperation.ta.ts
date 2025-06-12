@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RefusedOperation_refused_argument,
     _decode_RefusedOperation_refused_argument,
     _encode_RefusedOperation_refused_argument,
-} from '../MTSAbstractService/RefusedOperation-refused-argument.ta';
+} from '../MTSAbstractService/RefusedOperation-refused-argument.ta.js';
 export {
     RefusedOperation_refused_argument,
     _decode_RefusedOperation_refused_argument,
     _encode_RefusedOperation_refused_argument,
-} from '../MTSAbstractService/RefusedOperation-refused-argument.ta';
+} from '../MTSAbstractService/RefusedOperation-refused-argument.ta.js';
 import {
     RefusalReason,
     RefusalReason_facility_unavailable /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
     parameter_unacceptable /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefusalReason,
     _encode_RefusalReason,
-} from '../MTSAbstractService/RefusalReason.ta';
+} from '../MTSAbstractService/RefusalReason.ta.js';
 export {
     RefusalReason,
     RefusalReason_facility_unavailable /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -97,7 +97,7 @@ export {
     parameter_unacceptable /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefusalReason,
     _encode_RefusalReason,
-} from '../MTSAbstractService/RefusalReason.ta';
+} from '../MTSAbstractService/RefusalReason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RefusedOperation */
 /**

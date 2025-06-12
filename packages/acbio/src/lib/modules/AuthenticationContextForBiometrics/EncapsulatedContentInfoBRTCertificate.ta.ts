@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ContentTypeBRTCertificateContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeBRTCertificateContentInfo.osa';
-export { ContentTypeBRTCertificateContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeBRTCertificateContentInfo.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ContentTypeBRTCertificateContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeBRTCertificateContentInfo.osa.js';
+export { ContentTypeBRTCertificateContentInfo } from '../AuthenticationContextForBiometrics/ContentTypeBRTCertificateContentInfo.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfoBRTCertificate */
 /**

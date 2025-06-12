@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NonStatisticalReportInformation,
     _decode_NonStatisticalReportInformation,
     _encode_NonStatisticalReportInformation,
-} from '../SummarizationASN1Productions/NonStatisticalReportInformation.ta';
+} from '../SummarizationASN1Productions/NonStatisticalReportInformation.ta.js';
 export {
     NonStatisticalReportInformation,
     _decode_NonStatisticalReportInformation,
     _encode_NonStatisticalReportInformation,
-} from '../SummarizationASN1Productions/NonStatisticalReportInformation.ta';
+} from '../SummarizationASN1Productions/NonStatisticalReportInformation.ta.js';
 import {
     AlgorithmOutputBuffer,
     _decode_AlgorithmOutputBuffer,
     _encode_AlgorithmOutputBuffer,
-} from '../SummarizationASN1Productions/AlgorithmOutputBuffer.ta';
+} from '../SummarizationASN1Productions/AlgorithmOutputBuffer.ta.js';
 export {
     AlgorithmOutputBuffer,
     _decode_AlgorithmOutputBuffer,
     _encode_AlgorithmOutputBuffer,
-} from '../SummarizationASN1Productions/AlgorithmOutputBuffer.ta';
+} from '../SummarizationASN1Productions/AlgorithmOutputBuffer.ta.js';
 import {
     AlgorithmParameters,
     _decode_AlgorithmParameters,
     _encode_AlgorithmParameters,
-} from '../SummarizationASN1Productions/AlgorithmParameters.ta';
+} from '../SummarizationASN1Productions/AlgorithmParameters.ta.js';
 export {
     AlgorithmParameters,
     _decode_AlgorithmParameters,
     _encode_AlgorithmParameters,
-} from '../SummarizationASN1Productions/AlgorithmParameters.ta';
+} from '../SummarizationASN1Productions/AlgorithmParameters.ta.js';
 import {
     IncompleteScan,
     IncompleteScan_sizeExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -106,7 +106,7 @@ import {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
-} from '../SummarizationASN1Productions/IncompleteScan.ta';
+} from '../SummarizationASN1Productions/IncompleteScan.ta.js';
 export {
     IncompleteScan,
     IncompleteScan_sizeExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -117,27 +117,27 @@ export {
     other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
-} from '../SummarizationASN1Productions/IncompleteScan.ta';
+} from '../SummarizationASN1Productions/IncompleteScan.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION StatisticalScanReportInformation */
 /**

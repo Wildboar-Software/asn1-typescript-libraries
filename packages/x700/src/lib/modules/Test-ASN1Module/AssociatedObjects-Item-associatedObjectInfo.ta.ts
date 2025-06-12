@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca';
-export { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca';
-import { AssociatedObjectSet } from '../Test-ASN1Module/AssociatedObjectSet.osa';
-export { AssociatedObjectSet } from '../Test-ASN1Module/AssociatedObjectSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca.js';
+export { TMF_OBJECT } from '../Test-ASN1Module/TMF-OBJECT.oca.js';
+import { AssociatedObjectSet } from '../Test-ASN1Module/AssociatedObjectSet.osa.js';
+export { AssociatedObjectSet } from '../Test-ASN1Module/AssociatedObjectSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION AssociatedObjects_Item_associatedObjectInfo */
 /**

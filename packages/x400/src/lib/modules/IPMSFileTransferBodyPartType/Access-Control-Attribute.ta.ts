@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Access_Control_Element,
     _decode_Access_Control_Element,
     _encode_Access_Control_Element,
-} from '../IPMSFileTransferBodyPartType/Access-Control-Element.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Control-Element.ta.js';
 export {
     Access_Control_Element,
     _decode_Access_Control_Element,
     _encode_Access_Control_Element,
-} from '../IPMSFileTransferBodyPartType/Access-Control-Element.ta';
+} from '../IPMSFileTransferBodyPartType/Access-Control-Element.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Control_Attribute */
 /**

@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../CryptographicMessageSyntax/AttributeValue.ta";
+} from "../CryptographicMessageSyntax/AttributeValue.ta.js";
 export {
     AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
-} from "../CryptographicMessageSyntax/AttributeValue.ta";
+} from "../CryptographicMessageSyntax/AttributeValue.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Attribute */
 /**

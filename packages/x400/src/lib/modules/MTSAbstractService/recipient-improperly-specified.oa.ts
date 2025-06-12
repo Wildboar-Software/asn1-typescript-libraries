@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
-} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta';
+} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.js';
 export {
     ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
-} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta';
-import { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va';
-export { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.js';
+import { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va.js';
+export { err_recipient_improperly_specified } from '../MTSAccessProtocol/err-recipient-improperly-specified.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION recipient_improperly_specified */
 /**

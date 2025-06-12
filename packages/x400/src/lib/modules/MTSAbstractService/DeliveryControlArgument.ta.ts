@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveryControls,
     _decode_DeliveryControls,
     _encode_DeliveryControls,
-} from '../MTSAbstractService/DeliveryControls.ta';
+} from '../MTSAbstractService/DeliveryControls.ta.js';
 export {
     DeliveryControls,
     _decode_DeliveryControls,
     _encode_DeliveryControls,
-} from '../MTSAbstractService/DeliveryControls.ta';
+} from '../MTSAbstractService/DeliveryControls.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 import {
     Operations,
     Operations_probe_submission_or_report_delivery /* IMPORTED_LONG_NAMED_BIT */,
@@ -94,7 +94,7 @@ import {
     message_submission_or_message_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from '../MTSAbstractService/Operations.ta';
+} from '../MTSAbstractService/Operations.ta.js';
 export {
     Operations,
     Operations_probe_submission_or_report_delivery /* IMPORTED_LONG_NAMED_BIT */,
@@ -103,57 +103,57 @@ export {
     message_submission_or_message_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Operations,
     _encode_Operations,
-} from '../MTSAbstractService/Operations.ta';
+} from '../MTSAbstractService/Operations.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '../MTSAbstractService/Priority.ta';
+} from '../MTSAbstractService/Priority.ta.js';
 import {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 export {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta';
+} from '../MTSAbstractService/ContentTypes.ta.js';
 import {
     PermissibleEncodedInformationTypes,
     _decode_PermissibleEncodedInformationTypes,
     _encode_PermissibleEncodedInformationTypes,
-} from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta';
+} from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta.js';
 export {
     PermissibleEncodedInformationTypes,
     _decode_PermissibleEncodedInformationTypes,
     _encode_PermissibleEncodedInformationTypes,
-} from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta';
+} from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta.js';
 import {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 export {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliveryControlArgument */
 /**

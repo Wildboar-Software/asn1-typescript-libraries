@@ -4,19 +4,19 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../CMSProfileAttributes/TimeStamp.ta";
-import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta";
+} from "../CMSProfileAttributes/TimeStamp.ta.js";
+import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.js";
 export {
     TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
-} from "../CMSProfileAttributes/TimeStamp.ta";
-export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta";
+} from "../CMSProfileAttributes/TimeStamp.ta.js";
+export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION TimeStamped */
 /**

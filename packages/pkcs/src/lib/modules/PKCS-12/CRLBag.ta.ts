@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { CRLTypes } from "../PKCS-12/CRLTypes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { CRLTypes } from "../PKCS-12/CRLTypes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION CRLBag */
 /**

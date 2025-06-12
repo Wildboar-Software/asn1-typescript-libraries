@@ -1,30 +1,30 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DataObject,
     _get_decoder_for_DataObject,
     _get_encoder_for_DataObject,
-} from "../PKCS-15/DataObject.ta";
+} from "../PKCS-15/DataObject.ta.js";
 import {
     ExternalIDO,
     _decode_ExternalIDO,
     _encode_ExternalIDO,
-} from "../PKCS-15/ExternalIDO.ta";
-import { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta";
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta";
+} from "../PKCS-15/ExternalIDO.ta.js";
+import { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.js";
+import { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.js";
 export {
     DataObject,
     _get_decoder_for_DataObject,
     _get_encoder_for_DataObject,
-} from "../PKCS-15/DataObject.ta";
+} from "../PKCS-15/DataObject.ta.js";
 export {
     ExternalIDO,
     _decode_ExternalIDO,
     _encode_ExternalIDO,
-} from "../PKCS-15/ExternalIDO.ta";
-export { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta";
-export { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta";
+} from "../PKCS-15/ExternalIDO.ta.js";
+export { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.js";
+export { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION DataType */
 /**

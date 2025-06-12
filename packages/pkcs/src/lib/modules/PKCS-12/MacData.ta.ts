@@ -6,12 +6,12 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     DigestInfo,
     _decode_DigestInfo,
     _encode_DigestInfo,
-} from "../PKCS7/DigestInfo.ta";
+} from "../PKCS7/DigestInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION MacData */
 /**

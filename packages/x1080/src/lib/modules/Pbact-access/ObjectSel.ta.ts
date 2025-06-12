@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectSel_objSelect,
     _decode_ObjectSel_objSelect,
     _encode_ObjectSel_objSelect,
-} from '../Pbact-access/ObjectSel-objSelect.ta';
+} from '../Pbact-access/ObjectSel-objSelect.ta.js';
 export {
     ObjectSel_objSelect,
     _decode_ObjectSel_objSelect,
     _encode_ObjectSel_objSelect,
-} from '../Pbact-access/ObjectSel-objSelect.ta';
+} from '../Pbact-access/ObjectSel-objSelect.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObjectSel */
 /**

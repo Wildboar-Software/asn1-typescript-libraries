@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/ansi-x9-62",
-    "version": "1.0.5",
+    "type": "module",
+    "version": "2.0.0",
     "description": "ANSI X9.62 ASN.1 Data Structures in TypeScript",
     "keywords": [
         "ansi",
@@ -29,6 +30,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/pki-stub": "^1.1.7"
+        "@wildboar/pki-stub": "2.x.x"
     }
 }

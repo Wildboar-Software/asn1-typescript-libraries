@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
-} from '../IPMSInformationObjects/MixedModeBodyPart.ta';
+} from '../IPMSInformationObjects/MixedModeBodyPart.ta.js';
 export {
     MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
-} from '../IPMSInformationObjects/MixedModeBodyPart.ta';
-import { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va';
-export { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va';
+} from '../IPMSInformationObjects/MixedModeBodyPart.ta.js';
+import { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va.js';
+export { id_et_mixed_mode } from '../IPMSObjectIdentifiers/id-et-mixed-mode.va.js';
 
 /* START_OF_SYMBOL_DEFINITION mixed_mode_body_part_data */
 /**

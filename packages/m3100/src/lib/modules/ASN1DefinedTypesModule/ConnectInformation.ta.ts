@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectInformation_Item,
     _decode_ConnectInformation_Item,
     _encode_ConnectInformation_Item,
-} from '../ASN1DefinedTypesModule/ConnectInformation-Item.ta';
+} from '../ASN1DefinedTypesModule/ConnectInformation-Item.ta.js';
 export {
     ConnectInformation_Item,
     _decode_ConnectInformation_Item,
     _encode_ConnectInformation_Item,
-} from '../ASN1DefinedTypesModule/ConnectInformation-Item.ta';
+} from '../ASN1DefinedTypesModule/ConnectInformation-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectInformation */
 /**

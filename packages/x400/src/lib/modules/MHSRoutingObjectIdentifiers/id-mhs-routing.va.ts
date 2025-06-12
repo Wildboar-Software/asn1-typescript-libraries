@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSRoutingObjectIdentifiers/ID.ta';
+} from '../MHSRoutingObjectIdentifiers/ID.ta.js';
 export {
     ID,
     _decode_ID,
     _encode_ID,
-} from '../MHSRoutingObjectIdentifiers/ID.ta';
+} from '../MHSRoutingObjectIdentifiers/ID.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION id_mhs_routing */
 /**

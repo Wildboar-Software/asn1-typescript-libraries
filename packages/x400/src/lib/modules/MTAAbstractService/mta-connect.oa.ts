@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa';
-export { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa';
-import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa';
-export { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa';
-import { mta_bind } from '../MTAAbstractService/mta-bind.oa';
-export { mta_bind } from '../MTAAbstractService/mta-bind.oa';
-import { mta_unbind } from '../MTAAbstractService/mta-unbind.oa';
-export { mta_unbind } from '../MTAAbstractService/mta-unbind.oa';
-import { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va';
-export { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa.js';
+export { emptyBind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyBind.oa.js';
+import { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.js';
+export { emptyUnbind } from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/emptyUnbind.oa.js';
+import { mta_bind } from '../MTAAbstractService/mta-bind.oa.js';
+export { mta_bind } from '../MTAAbstractService/mta-bind.oa.js';
+import { mta_unbind } from '../MTAAbstractService/mta-unbind.oa.js';
+export { mta_unbind } from '../MTAAbstractService/mta-unbind.oa.js';
+import { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va.js';
+export { id_cp_mta_connect } from '../MTSObjectIdentifiers/id-cp-mta-connect.va.js';
+import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mta_connect */
 /**

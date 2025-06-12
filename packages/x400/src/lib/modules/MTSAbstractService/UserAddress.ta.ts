@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UserAddress_x121,
     _decode_UserAddress_x121,
     _encode_UserAddress_x121,
-} from '../MTSAbstractService/UserAddress-x121.ta';
+} from '../MTSAbstractService/UserAddress-x121.ta.js';
 export {
     UserAddress_x121,
     _decode_UserAddress_x121,
     _encode_UserAddress_x121,
-} from '../MTSAbstractService/UserAddress-x121.ta';
+} from '../MTSAbstractService/UserAddress-x121.ta.js';
 import {
     PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
-} from '../MTSAbstractService/PSAPAddress.ta';
+} from '../MTSAbstractService/PSAPAddress.ta.js';
 export {
     PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
-} from '../MTSAbstractService/PSAPAddress.ta';
+} from '../MTSAbstractService/PSAPAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UserAddress */
 /**

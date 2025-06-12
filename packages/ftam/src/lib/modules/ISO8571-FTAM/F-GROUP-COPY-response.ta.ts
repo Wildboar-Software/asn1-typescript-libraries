@@ -65,48 +65,48 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 export {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 import {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 export {
   Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta';
+} from '../ISO8571-FTAM/Destination-File-Directory.ta.js';
 import {
   Operation_Result,
   _decode_Operation_Result,
   _encode_Operation_Result,
-} from '../ISO8571-FTAM/Operation-Result.ta';
+} from '../ISO8571-FTAM/Operation-Result.ta.js';
 export {
   Operation_Result,
   _decode_Operation_Result,
   _encode_Operation_Result,
-} from '../ISO8571-FTAM/Operation-Result.ta';
+} from '../ISO8571-FTAM/Operation-Result.ta.js';
 import {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 export {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_GROUP_COPY_response */
 /**

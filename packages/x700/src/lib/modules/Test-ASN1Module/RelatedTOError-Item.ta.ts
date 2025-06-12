@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TONotCreated,
     _decode_TONotCreated,
     _encode_TONotCreated,
-} from '../Test-ASN1Module/TONotCreated.ta';
+} from '../Test-ASN1Module/TONotCreated.ta.js';
 export {
     TONotCreated,
     _decode_TONotCreated,
     _encode_TONotCreated,
-} from '../Test-ASN1Module/TONotCreated.ta';
+} from '../Test-ASN1Module/TONotCreated.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RelatedTOError_Item */
 /**

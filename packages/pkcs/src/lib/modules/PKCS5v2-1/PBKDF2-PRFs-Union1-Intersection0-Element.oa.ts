@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { id_hmacWithSHA224 } from "../PKCS5v2-1/id-hmacWithSHA224.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-export { id_hmacWithSHA224 } from "../PKCS5v2-1/id-hmacWithSHA224.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { id_hmacWithSHA224 } from "../PKCS5v2-1/id-hmacWithSHA224.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+export { id_hmacWithSHA224 } from "../PKCS5v2-1/id-hmacWithSHA224.va.js";
 
 /* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs_Union1_Intersection0_Element */
 /**

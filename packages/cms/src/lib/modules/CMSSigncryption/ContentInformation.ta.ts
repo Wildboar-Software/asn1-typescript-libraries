@@ -4,19 +4,19 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from "../CMSSigncryption/Content.ta";
-import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta";
+} from "../CMSSigncryption/Content.ta.js";
+import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.js";
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from "../CMSSigncryption/Content.ta";
-export { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta";
+} from "../CMSSigncryption/Content.ta.js";
+export { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentInformation */
 /**

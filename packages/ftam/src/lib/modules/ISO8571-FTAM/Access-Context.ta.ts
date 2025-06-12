@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Access_Context_access_context,
   Access_Context_access_context_hierarchical_all_data_units /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
   unstructured_Single_data_unit /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Access_Context_access_context,
   _encode_Access_Context_access_context,
-} from '../ISO8571-FTAM/Access-Context-access-context.ta';
+} from '../ISO8571-FTAM/Access-Context-access-context.ta.js';
 export {
   Access_Context_access_context,
   Access_Context_access_context_hierarchical_all_data_units /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,7 +103,7 @@ export {
   unstructured_Single_data_unit /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Access_Context_access_context,
   _encode_Access_Context_access_context,
-} from '../ISO8571-FTAM/Access-Context-access-context.ta';
+} from '../ISO8571-FTAM/Access-Context-access-context.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Access_Context */
 /**

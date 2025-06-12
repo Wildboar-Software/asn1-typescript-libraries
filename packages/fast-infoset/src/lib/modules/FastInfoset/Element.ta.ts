@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   NamespaceAttribute,
   _decode_NamespaceAttribute,
   _encode_NamespaceAttribute,
-} from '../FastInfoset/NamespaceAttribute.ta';
+} from '../FastInfoset/NamespaceAttribute.ta.js';
 export {
   NamespaceAttribute,
   _decode_NamespaceAttribute,
   _encode_NamespaceAttribute,
-} from '../FastInfoset/NamespaceAttribute.ta';
+} from '../FastInfoset/NamespaceAttribute.ta.js';
 import {
   QualifiedNameOrIndex,
   _decode_QualifiedNameOrIndex,
   _encode_QualifiedNameOrIndex,
-} from '../FastInfoset/QualifiedNameOrIndex.ta';
+} from '../FastInfoset/QualifiedNameOrIndex.ta.js';
 export {
   QualifiedNameOrIndex,
   _decode_QualifiedNameOrIndex,
   _encode_QualifiedNameOrIndex,
-} from '../FastInfoset/QualifiedNameOrIndex.ta';
+} from '../FastInfoset/QualifiedNameOrIndex.ta.js';
 import {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../FastInfoset/Attribute.ta';
+} from '../FastInfoset/Attribute.ta.js';
 export {
   Attribute,
   _decode_Attribute,
   _encode_Attribute,
-} from '../FastInfoset/Attribute.ta';
+} from '../FastInfoset/Attribute.ta.js';
 import {
   Element_children_Item,
   _decode_Element_children_Item,
   _encode_Element_children_Item,
-} from '../FastInfoset/Element-children-Item.ta';
+} from '../FastInfoset/Element-children-Item.ta.js';
 export {
   Element_children_Item,
   _decode_Element_children_Item,
   _encode_Element_children_Item,
-} from '../FastInfoset/Element-children-Item.ta';
+} from '../FastInfoset/Element-children-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Element */
 /**

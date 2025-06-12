@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepairAction.va";
-export { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepairAction.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepairAction.va.js";
+export { arfProposedRepairAction } from "../Attribute-ASN1Module/arfProposedRepairAction.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION repairActionRequired */

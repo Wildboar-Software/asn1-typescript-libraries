@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Control,
   _decode_Control,
   _encode_Control,
-} from '../Lightweight-Directory-Access-Protocol-V3/Control.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Control.ta.js';
 export {
   Control,
   _decode_Control,
   _encode_Control,
-} from '../Lightweight-Directory-Access-Protocol-V3/Control.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Control.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Controls */
 /**

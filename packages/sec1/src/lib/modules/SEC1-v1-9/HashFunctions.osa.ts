@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { HashFunctions_Union0_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union0-Intersection0-Element.oa";
-export { HashFunctions_Union0_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union0-Intersection0-Element.oa";
-import { HashFunctions_Union1_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union1-Intersection0-Element.oa";
-export { HashFunctions_Union1_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union1-Intersection0-Element.oa";
-import { HashFunctions_Union2_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union2-Intersection0-Element.oa";
-export { HashFunctions_Union2_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union2-Intersection0-Element.oa";
-import { HashFunctions_Union3_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union3-Intersection0-Element.oa";
-export { HashFunctions_Union3_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union3-Intersection0-Element.oa";
-import { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union4-Intersection0-Element.oa";
-export { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union4-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { HashFunctions_Union0_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union0-Intersection0-Element.oa.js";
+export { HashFunctions_Union0_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union0-Intersection0-Element.oa.js";
+import { HashFunctions_Union1_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union1-Intersection0-Element.oa.js";
+export { HashFunctions_Union1_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union1-Intersection0-Element.oa.js";
+import { HashFunctions_Union2_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union2-Intersection0-Element.oa.js";
+export { HashFunctions_Union2_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union2-Intersection0-Element.oa.js";
+import { HashFunctions_Union3_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union3-Intersection0-Element.oa.js";
+export { HashFunctions_Union3_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union3-Intersection0-Element.oa.js";
+import { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union4-Intersection0-Element.oa.js";
+export { HashFunctions_Union4_Intersection0_Element } from "../SEC1-v1-9/HashFunctions-Union4-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION HashFunctions */

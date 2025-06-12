@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.js";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta";
+} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertID */
 /**

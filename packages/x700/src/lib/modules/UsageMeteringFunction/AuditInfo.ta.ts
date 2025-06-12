@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca';
-export { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca';
-import { AuditInfoSet } from '../UsageMeteringFunction/AuditInfoSet.osa';
-export { AuditInfoSet } from '../UsageMeteringFunction/AuditInfoSet.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.js';
+export { UMF_AUDIT } from '../UsageMeteringFunction/UMF-AUDIT.oca.js';
+import { AuditInfoSet } from '../UsageMeteringFunction/AuditInfoSet.osa.js';
+export { AuditInfoSet } from '../UsageMeteringFunction/AuditInfoSet.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION AuditInfo */
 /**

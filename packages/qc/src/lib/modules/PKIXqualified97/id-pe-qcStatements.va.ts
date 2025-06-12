@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_pe } from "../PKIX1Explicit88/id-pe.va";
+import { id_pe } from "../PKIX1Explicit88/id-pe.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_pe_qcStatements */
 /**

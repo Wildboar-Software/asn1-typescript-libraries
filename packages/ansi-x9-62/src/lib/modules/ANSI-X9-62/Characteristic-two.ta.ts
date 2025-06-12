@@ -6,9 +6,9 @@ import {
     INTEGER,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { BasisTypes } from "../ANSI-X9-62/BasisTypes.osa";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { BasisTypes } from "../ANSI-X9-62/BasisTypes.osa.js";
+export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION Characteristic_two */
 /**

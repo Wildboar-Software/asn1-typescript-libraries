@@ -1,8 +1,8 @@
 /* eslint-disable */
 import * as asn1 from "asn1-ts";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { HashAlgorithm } from "../PKCS-1/HashAlgorithm.ta";
-import { id_sha1 } from "../PKCS-1/id-sha1.va";
+import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { HashAlgorithm } from "../PKCS-1/HashAlgorithm.ta.js";
+import { id_sha1 } from "../PKCS-1/id-sha1.va.js";
 
 /* START_OF_SYMBOL_DEFINITION sha1 */
 /**

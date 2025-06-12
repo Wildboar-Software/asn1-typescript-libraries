@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca";
-export { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca";
+import { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa.js";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.js";
+export { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ContentSet */
 /**

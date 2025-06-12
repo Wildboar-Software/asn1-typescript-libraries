@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { cmoi } from '../CommonMgt/cmoi.va';
-export { cmoi } from '../CommonMgt/cmoi.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { cmoi } from '../CommonMgt/cmoi.va.js';
+export { cmoi } from '../CommonMgt/cmoi.va.js';
 
 /* START_OF_SYMBOL_DEFINITION poi */
 /**

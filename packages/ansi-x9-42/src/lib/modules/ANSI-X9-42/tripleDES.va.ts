@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { algorithm } from "../ANSI-X9-42/algorithm.va";
-export { algorithm } from "../ANSI-X9-42/algorithm.va";
+import { algorithm } from "../ANSI-X9-42/algorithm.va.js";
+export { algorithm } from "../ANSI-X9-42/algorithm.va.js";
 
 /* START_OF_SYMBOL_DEFINITION tripleDES */
 /**

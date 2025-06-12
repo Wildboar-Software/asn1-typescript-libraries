@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AuthorizationInformation,
     _decode_AuthorizationInformation,
     _encode_AuthorizationInformation,
-} from '../EDIMSInformationObjects/AuthorizationInformation.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformation.ta.js';
 export {
     AuthorizationInformation,
     _decode_AuthorizationInformation,
     _encode_AuthorizationInformation,
-} from '../EDIMSInformationObjects/AuthorizationInformation.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformation.ta.js';
 import {
     AuthorizationInformationQualifier,
     _decode_AuthorizationInformationQualifier,
     _encode_AuthorizationInformationQualifier,
-} from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta.js';
 export {
     AuthorizationInformationQualifier,
     _decode_AuthorizationInformationQualifier,
     _encode_AuthorizationInformationQualifier,
-} from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta';
+} from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AuthorizationInformationField */
 /**

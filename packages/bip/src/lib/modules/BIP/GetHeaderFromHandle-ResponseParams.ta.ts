@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_BIR_HEADER,
   _decode_BioAPI_BIR_HEADER,
   _encode_BioAPI_BIR_HEADER,
-} from '../BIP/BioAPI-BIR-HEADER.ta';
+} from '../BIP/BioAPI-BIR-HEADER.ta.js';
 export {
   BioAPI_BIR_HEADER,
   _decode_BioAPI_BIR_HEADER,
   _encode_BioAPI_BIR_HEADER,
-} from '../BIP/BioAPI-BIR-HEADER.ta';
+} from '../BIP/BioAPI-BIR-HEADER.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION GetHeaderFromHandle_ResponseParams */
 /**

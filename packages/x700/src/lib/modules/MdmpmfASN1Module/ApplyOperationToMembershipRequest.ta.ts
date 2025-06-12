@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SetArgument,
     _decode_SetArgument,
     _encode_SetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetArgument.ta.js';
 export {
     SetArgument,
     _decode_SetArgument,
     _encode_SetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetArgument.ta.js';
 import {
     ActionArgument,
     _decode_ActionArgument,
     _encode_ActionArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionArgument.ta.js';
 export {
     ActionArgument,
     _decode_ActionArgument,
     _encode_ActionArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionArgument.ta.js';
 import {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.js';
 export {
     GetArgument,
     _decode_GetArgument,
     _encode_GetArgument,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetArgument.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ApplyOperationToMembershipRequest */
 /**

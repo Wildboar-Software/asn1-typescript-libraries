@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConnectivityEndPoint,
     _decode_ConnectivityEndPoint,
     _encode_ConnectivityEndPoint,
-} from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta';
+} from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta.js';
 export {
     ConnectivityEndPoint,
     _decode_ConnectivityEndPoint,
     _encode_ConnectivityEndPoint,
-} from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta';
+} from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PtoPoint */
 /**

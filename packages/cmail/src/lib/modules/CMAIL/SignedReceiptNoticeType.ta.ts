@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   DigitalPostmarkType,
   _decode_DigitalPostmarkType,
   _encode_DigitalPostmarkType,
-} from '../CMAIL/DigitalPostmarkType.ta';
+} from '../CMAIL/DigitalPostmarkType.ta.js';
 export {
   DigitalPostmarkType,
   _decode_DigitalPostmarkType,
   _encode_DigitalPostmarkType,
-} from '../CMAIL/DigitalPostmarkType.ta';
+} from '../CMAIL/DigitalPostmarkType.ta.js';
 import {
   EntityEnvelopeInformationType,
   _decode_EntityEnvelopeInformationType,
   _encode_EntityEnvelopeInformationType,
-} from '../CMAIL/EntityEnvelopeInformationType.ta';
+} from '../CMAIL/EntityEnvelopeInformationType.ta.js';
 export {
   EntityEnvelopeInformationType,
   _decode_EntityEnvelopeInformationType,
   _encode_EntityEnvelopeInformationType,
-} from '../CMAIL/EntityEnvelopeInformationType.ta';
+} from '../CMAIL/EntityEnvelopeInformationType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SignedReceiptNoticeType */
 /**

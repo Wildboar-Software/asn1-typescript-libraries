@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { SecretTypes } from "../PKCS-12/SecretTypes.osa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { SecretTypes } from "../PKCS-12/SecretTypes.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SecretBag */
 /**

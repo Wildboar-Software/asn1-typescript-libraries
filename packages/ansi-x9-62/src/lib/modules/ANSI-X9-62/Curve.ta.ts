@@ -5,17 +5,17 @@ import {
     BIT_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     FieldElement,
     _decode_FieldElement,
     _encode_FieldElement,
-} from "../ANSI-X9-62/FieldElement.ta";
+} from "../ANSI-X9-62/FieldElement.ta.js";
 export {
     FieldElement,
     _decode_FieldElement,
     _encode_FieldElement,
-} from "../ANSI-X9-62/FieldElement.ta";
+} from "../ANSI-X9-62/FieldElement.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Curve */
 /**

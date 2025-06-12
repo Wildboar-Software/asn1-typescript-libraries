@@ -1,21 +1,21 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
-} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta";
+} from "@wildboar/x500/src/lib/modules/AttributeCertificateDefinitions/AttributeCertificate.ta.js";
 import {
     Certificate,
     _decode_Certificate,
     _encode_Certificate,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
 import {
     ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
-} from "../CryptographicMessageSyntax/ExtendedCertificate.ta";
+} from "../CryptographicMessageSyntax/ExtendedCertificate.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateChoices */
 /**

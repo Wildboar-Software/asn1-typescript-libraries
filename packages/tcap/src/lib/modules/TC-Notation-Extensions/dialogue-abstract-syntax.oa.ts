@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DialoguePDU,
     _decode_DialoguePDU,
     _encode_DialoguePDU,
-} from '../DialoguePDUs/DialoguePDU.ta';
+} from '../DialoguePDUs/DialoguePDU.ta.js';
 export {
     DialoguePDU,
     _decode_DialoguePDU,
     _encode_DialoguePDU,
-} from '../DialoguePDUs/DialoguePDU.ta';
-import { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va';
-export { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va';
+} from '../DialoguePDUs/DialoguePDU.ta.js';
+import { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va.js';
+export { dialogue_as_id } from '../DialoguePDUs/dialogue-as-id.va.js';
 
 /* START_OF_SYMBOL_DEFINITION dialogue_abstract_syntax */
 /**

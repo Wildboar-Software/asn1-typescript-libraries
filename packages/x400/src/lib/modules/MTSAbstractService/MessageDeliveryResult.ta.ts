@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
-} from '../MTSAbstractService/RecipientCertificate.ta';
+} from '../MTSAbstractService/RecipientCertificate.ta.js';
 export {
     RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
-} from '../MTSAbstractService/RecipientCertificate.ta';
+} from '../MTSAbstractService/RecipientCertificate.ta.js';
 import {
     ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
-} from '../MTSAbstractService/ProofOfDelivery.ta';
+} from '../MTSAbstractService/ProofOfDelivery.ta.js';
 export {
     ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
-} from '../MTSAbstractService/ProofOfDelivery.ta';
+} from '../MTSAbstractService/ProofOfDelivery.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageDeliveryResult */
 /**

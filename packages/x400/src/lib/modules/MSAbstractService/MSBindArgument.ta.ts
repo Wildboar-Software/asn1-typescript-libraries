@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ORAddressAndOrDirectoryName,
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
-} from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta';
+} from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.js';
 export {
     ORAddressAndOrDirectoryName,
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
-} from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta';
+} from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.js';
 import {
     InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
-} from '../MTSAbstractService/InitiatorCredentials.ta';
+} from '../MTSAbstractService/InitiatorCredentials.ta.js';
 export {
     InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
-} from '../MTSAbstractService/InitiatorCredentials.ta';
+} from '../MTSAbstractService/InitiatorCredentials.ta.js';
 import {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 export {
     SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
-} from '../MTSAbstractService/SecurityContext.ta';
+} from '../MTSAbstractService/SecurityContext.ta.js';
 import {
     Restrictions,
     _decode_Restrictions,
     _encode_Restrictions,
-} from '../MSAbstractService/Restrictions.ta';
+} from '../MSAbstractService/Restrictions.ta.js';
 export {
     Restrictions,
     _decode_Restrictions,
     _encode_Restrictions,
-} from '../MSAbstractService/Restrictions.ta';
+} from '../MSAbstractService/Restrictions.ta.js';
 import {
     RegistrationIdentifier,
     _decode_RegistrationIdentifier,
     _encode_RegistrationIdentifier,
-} from '../MSAbstractService/RegistrationIdentifier.ta';
+} from '../MSAbstractService/RegistrationIdentifier.ta.js';
 export {
     RegistrationIdentifier,
     _decode_RegistrationIdentifier,
     _encode_RegistrationIdentifier,
-} from '../MSAbstractService/RegistrationIdentifier.ta';
+} from '../MSAbstractService/RegistrationIdentifier.ta.js';
 import {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 export {
     MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
-} from '../MSAbstractService/MSExtensions.ta';
+} from '../MSAbstractService/MSExtensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSBindArgument */
 /**

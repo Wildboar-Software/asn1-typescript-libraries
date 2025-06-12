@@ -5,17 +5,17 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SecurityPolicyName,
     _decode_SecurityPolicyName,
     _encode_SecurityPolicyName,
-} from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta";
+} from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.js";
 export {
     SecurityPolicyName,
     _decode_SecurityPolicyName,
     _encode_SecurityPolicyName,
-} from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta";
+} from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EquivalentPolicy */
 /**

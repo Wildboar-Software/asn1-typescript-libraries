@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_GUI_EVENT_SUBSCRIPTION,
   _decode_BioAPI_GUI_EVENT_SUBSCRIPTION,
   _encode_BioAPI_GUI_EVENT_SUBSCRIPTION,
-} from '../BIP/BioAPI-GUI-EVENT-SUBSCRIPTION.ta';
+} from '../BIP/BioAPI-GUI-EVENT-SUBSCRIPTION.ta.js';
 export {
   BioAPI_GUI_EVENT_SUBSCRIPTION,
   _decode_BioAPI_GUI_EVENT_SUBSCRIPTION,
   _encode_BioAPI_GUI_EVENT_SUBSCRIPTION,
-} from '../BIP/BioAPI-GUI-EVENT-SUBSCRIPTION.ta';
+} from '../BIP/BioAPI-GUI-EVENT-SUBSCRIPTION.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION QueryGUIEventSubscriptions_ResponseParams */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSPRMD } from '../MHSRoutingORAddressSubtree/mHSPRMD.oa';
-export { mHSPRMD } from '../MHSRoutingORAddressSubtree/mHSPRMD.oa';
-import { mHSPRMDName } from '../MHSRoutingORAddressSubtree/mHSPRMDName.oa';
-export { mHSPRMDName } from '../MHSRoutingORAddressSubtree/mHSPRMDName.oa';
-import { id_nf_mhs_prmd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-prmd.va';
-export { id_nf_mhs_prmd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-prmd.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSPRMD } from '../MHSRoutingORAddressSubtree/mHSPRMD.oa.js';
+export { mHSPRMD } from '../MHSRoutingORAddressSubtree/mHSPRMD.oa.js';
+import { mHSPRMDName } from '../MHSRoutingORAddressSubtree/mHSPRMDName.oa.js';
+export { mHSPRMDName } from '../MHSRoutingORAddressSubtree/mHSPRMDName.oa.js';
+import { id_nf_mhs_prmd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-prmd.va.js';
+export { id_nf_mhs_prmd } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-prmd.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSPRMDNameForm */
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
-import { OID } from "../CMSObjectIdentifiers/OID.ta";
-import { smime } from "../CMSObjectIdentifiers/smime.va";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta";
-export { smime } from "../CMSObjectIdentifiers/smime.va";
+import { OID } from "../CMSObjectIdentifiers/OID.ta.js";
+import { smime } from "../CMSObjectIdentifiers/smime.va.js";
+export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.js";
+export { smime } from "../CMSObjectIdentifiers/smime.va.js";
 
 /* START_OF_SYMBOL_DEFINITION id_ct_authData */
 /**

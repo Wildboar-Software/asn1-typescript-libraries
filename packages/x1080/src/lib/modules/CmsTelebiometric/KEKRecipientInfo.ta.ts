@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,37 +99,37 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 import {
     KEKIdentifier,
     _decode_KEKIdentifier,
     _encode_KEKIdentifier,
-} from '../CmsTelebiometric/KEKIdentifier.ta';
+} from '../CmsTelebiometric/KEKIdentifier.ta.js';
 export {
     KEKIdentifier,
     _decode_KEKIdentifier,
     _encode_KEKIdentifier,
-} from '../CmsTelebiometric/KEKIdentifier.ta';
+} from '../CmsTelebiometric/KEKIdentifier.ta.js';
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta';
+} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.js';
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta';
+} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.js';
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from '../CmsTelebiometric/EncryptedKey.ta';
+} from '../CmsTelebiometric/EncryptedKey.ta.js';
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from '../CmsTelebiometric/EncryptedKey.ta';
+} from '../CmsTelebiometric/EncryptedKey.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KEKRecipientInfo */
 /**

@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va";
-export { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va";
-import { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta";
-export { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va.js";
+export { id_ecPublicKeyTypeSupplemented } from "../SEC1-v1-9/id-ecPublicKeyTypeSupplemented.va.js";
+import { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta.js";
+export { ECPKSupplements, _decode_ECPKSupplements, _encode_ECPKSupplements } from "../SEC1-v1-9/ECPKSupplements.ta.js";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeSupplemented */

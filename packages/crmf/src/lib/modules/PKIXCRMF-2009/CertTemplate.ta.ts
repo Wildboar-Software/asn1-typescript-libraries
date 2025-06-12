@@ -5,42 +5,42 @@ import {
     INTEGER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
 import {
     Extensions,
     _decode_Extensions,
     _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js";
 import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.js";
 import {
     SubjectPublicKeyInfo,
     _decode_SubjectPublicKeyInfo,
     _encode_SubjectPublicKeyInfo,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.js";
 import {
     UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/UniqueIdentifier.ta.js";
 import {
     Version,
     _decode_Version,
     _encode_Version,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Version.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Version.ta.js";
 import {
     OptionalValidity,
     _decode_OptionalValidity,
     _encode_OptionalValidity,
-} from "../PKIXCRMF-2009/OptionalValidity.ta";
+} from "../PKIXCRMF-2009/OptionalValidity.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertTemplate */
 /**

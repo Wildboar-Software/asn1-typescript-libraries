@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CommonCertificateAttributes,
     _decode_CommonCertificateAttributes,
     _encode_CommonCertificateAttributes,
-} from "../PKCS-15/CommonCertificateAttributes.ta";
+} from "../PKCS-15/CommonCertificateAttributes.ta.js";
 import {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 export {
     CommonCertificateAttributes,
     _decode_CommonCertificateAttributes,
     _encode_CommonCertificateAttributes,
-} from "../PKCS-15/CommonCertificateAttributes.ta";
+} from "../PKCS-15/CommonCertificateAttributes.ta.js";
 export {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificateObject */
 /**

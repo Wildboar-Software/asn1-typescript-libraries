@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReachabilityChangeSyntax_newState,
     _enum_for_ReachabilityChangeSyntax_newState,
@@ -75,7 +75,7 @@ import {
     up /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_newState,
     _encode_ReachabilityChangeSyntax_newState,
-} from '../NLM/ReachabilityChangeSyntax-newState.ta';
+} from '../NLM/ReachabilityChangeSyntax-newState.ta.js';
 export {
     ReachabilityChangeSyntax_newState,
     _enum_for_ReachabilityChangeSyntax_newState,
@@ -85,27 +85,27 @@ export {
     up /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_newState,
     _encode_ReachabilityChangeSyntax_newState,
-} from '../NLM/ReachabilityChangeSyntax-newState.ta';
+} from '../NLM/ReachabilityChangeSyntax-newState.ta.js';
 import {
     NAddress,
     _decode_NAddress,
     _encode_NAddress,
-} from '../NLM/NAddress.ta';
+} from '../NLM/NAddress.ta.js';
 export {
     NAddress,
     _decode_NAddress,
     _encode_NAddress,
-} from '../NLM/NAddress.ta';
+} from '../NLM/NAddress.ta.js';
 import {
     SNPAAddress,
     _decode_SNPAAddress,
     _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
+} from '../NLM/SNPAAddress.ta.js';
 export {
     SNPAAddress,
     _decode_SNPAAddress,
     _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta';
+} from '../NLM/SNPAAddress.ta.js';
 import {
     ReachabilityChangeSyntax_reason,
     _enum_for_ReachabilityChangeSyntax_reason,
@@ -115,7 +115,7 @@ import {
     circuitDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_reason,
     _encode_ReachabilityChangeSyntax_reason,
-} from '../NLM/ReachabilityChangeSyntax-reason.ta';
+} from '../NLM/ReachabilityChangeSyntax-reason.ta.js';
 export {
     ReachabilityChangeSyntax_reason,
     _enum_for_ReachabilityChangeSyntax_reason,
@@ -125,7 +125,7 @@ export {
     circuitDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_reason,
     _encode_ReachabilityChangeSyntax_reason,
-} from '../NLM/ReachabilityChangeSyntax-reason.ta';
+} from '../NLM/ReachabilityChangeSyntax-reason.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax */
 /**

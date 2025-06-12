@@ -65,41 +65,41 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     sequence_number_error_ParameterType,
     _decode_sequence_number_error_ParameterType,
     _encode_sequence_number_error_ParameterType,
-} from '../MSAbstractService/sequence-number-error-ParameterType.ta';
+} from '../MSAbstractService/sequence-number-error-ParameterType.ta.js';
 export {
     sequence_number_error_ParameterType,
     _decode_sequence_number_error_ParameterType,
     _encode_sequence_number_error_ParameterType,
-} from '../MSAbstractService/sequence-number-error-ParameterType.ta';
-import { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va';
-export { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MSAbstractService/sequence-number-error-ParameterType.ta.js';
+import { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va.js';
+export { err_sequence_number_error } from '../MSAccessProtocol/err-sequence-number-error.va.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION sequence_number_error */
 /**

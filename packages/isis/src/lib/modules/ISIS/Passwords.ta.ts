@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISIS/Password.ta';
+} from '../ISIS/Password.ta.js';
 export {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISIS/Password.ta';
+} from '../ISIS/Password.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Passwords */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KDC_REP,
   _decode_KDC_REP,
   _encode_KDC_REP,
-} from '../KerberosV5Spec2/KDC-REP.ta';
+} from '../KerberosV5Spec2/KDC-REP.ta.js';
 export {
   KDC_REP,
   _decode_KDC_REP,
   _encode_KDC_REP,
-} from '../KerberosV5Spec2/KDC-REP.ta';
+} from '../KerberosV5Spec2/KDC-REP.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AS_REP */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
-} from '../EDIMSInformationObjects/EDIBodyPartType.ta';
+} from '../EDIMSInformationObjects/EDIBodyPartType.ta.js';
 export {
     EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
-} from '../EDIMSInformationObjects/EDIBodyPartType.ta';
+} from '../EDIMSInformationObjects/EDIBodyPartType.ta.js';
 import {
     EDIProcessableDocument,
     _decode_EDIProcessableDocument,
     _encode_EDIProcessableDocument,
-} from '../EDIMUseOfDirectory/EDIProcessableDocument.ta';
+} from '../EDIMUseOfDirectory/EDIProcessableDocument.ta.js';
 export {
     EDIProcessableDocument,
     _decode_EDIProcessableDocument,
     _encode_EDIProcessableDocument,
-} from '../EDIMUseOfDirectory/EDIProcessableDocument.ta';
+} from '../EDIMUseOfDirectory/EDIProcessableDocument.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIUserCapability */
 /**

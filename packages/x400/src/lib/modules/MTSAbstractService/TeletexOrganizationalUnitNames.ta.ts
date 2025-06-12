@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TeletexOrganizationalUnitName,
     _decode_TeletexOrganizationalUnitName,
     _encode_TeletexOrganizationalUnitName,
-} from '../MTSAbstractService/TeletexOrganizationalUnitName.ta';
+} from '../MTSAbstractService/TeletexOrganizationalUnitName.ta.js';
 export {
     TeletexOrganizationalUnitName,
     _decode_TeletexOrganizationalUnitName,
     _encode_TeletexOrganizationalUnitName,
-} from '../MTSAbstractService/TeletexOrganizationalUnitName.ta';
+} from '../MTSAbstractService/TeletexOrganizationalUnitName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TeletexOrganizationalUnitNames */
 /**

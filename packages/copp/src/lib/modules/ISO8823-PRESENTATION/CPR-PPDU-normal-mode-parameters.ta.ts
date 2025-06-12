@@ -65,51 +65,51 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta';
+} from '../ISO8823-PRESENTATION/Protocol-version.ta.js';
 export {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta';
+} from '../ISO8823-PRESENTATION/Protocol-version.ta.js';
 import {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.js';
 export {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta';
+} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.js';
 import {
     Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.js';
 export {
     Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta';
+} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.js';
 import {
     Default_context_result,
     _decode_Default_context_result,
     _encode_Default_context_result,
-} from '../ISO8823-PRESENTATION/Default-context-result.ta';
+} from '../ISO8823-PRESENTATION/Default-context-result.ta.js';
 export {
     Default_context_result,
     _decode_Default_context_result,
     _encode_Default_context_result,
-} from '../ISO8823-PRESENTATION/Default-context-result.ta';
+} from '../ISO8823-PRESENTATION/Default-context-result.ta.js';
 import {
     Provider_reason,
     Provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -130,7 +130,7 @@ import {
     no_PSAP_available /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Provider_reason,
     _encode_Provider_reason,
-} from '../ISO8823-PRESENTATION/Provider-reason.ta';
+} from '../ISO8823-PRESENTATION/Provider-reason.ta.js';
 export {
     Provider_reason,
     Provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -151,17 +151,17 @@ export {
     no_PSAP_available /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Provider_reason,
     _encode_Provider_reason,
-} from '../ISO8823-PRESENTATION/Provider-reason.ta';
+} from '../ISO8823-PRESENTATION/Provider-reason.ta.js';
 import {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 export {
     User_data,
     _decode_User_data,
     _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta';
+} from '../ISO8823-PRESENTATION/User-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CPR_PPDU_normal_mode_parameters */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Authentication_value_other,
   _decode_Authentication_value_other,
   _encode_Authentication_value_other,
-} from '../ACSE-1/Authentication-value-other.ta';
+} from '../ACSE-1/Authentication-value-other.ta.js';
 export {
   Authentication_value_other,
   _decode_Authentication_value_other,
   _encode_Authentication_value_other,
-} from '../ACSE-1/Authentication-value-other.ta';
+} from '../ACSE-1/Authentication-value-other.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Authentication_value */
 /**

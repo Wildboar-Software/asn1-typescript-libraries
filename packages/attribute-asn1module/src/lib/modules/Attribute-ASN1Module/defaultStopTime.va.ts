@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta";
-export { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.js";
+export { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION defaultStopTime */

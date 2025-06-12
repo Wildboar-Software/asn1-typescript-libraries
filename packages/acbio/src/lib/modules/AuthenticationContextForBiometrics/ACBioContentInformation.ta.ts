@@ -65,51 +65,51 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Version,
     Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from '../AuthenticationContextForBiometrics/Version.ta';
+} from '../AuthenticationContextForBiometrics/Version.ta.js';
 export {
     Version,
     Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
-} from '../AuthenticationContextForBiometrics/Version.ta';
+} from '../AuthenticationContextForBiometrics/Version.ta.js';
 import {
     BPUInformation,
     _decode_BPUInformation,
     _encode_BPUInformation,
-} from '../AuthenticationContextForBiometrics/BPUInformation.ta';
+} from '../AuthenticationContextForBiometrics/BPUInformation.ta.js';
 export {
     BPUInformation,
     _decode_BPUInformation,
     _encode_BPUInformation,
-} from '../AuthenticationContextForBiometrics/BPUInformation.ta';
+} from '../AuthenticationContextForBiometrics/BPUInformation.ta.js';
 import {
     BiometricProcess,
     _decode_BiometricProcess,
     _encode_BiometricProcess,
-} from '../AuthenticationContextForBiometrics/BiometricProcess.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcess.ta.js';
 export {
     BiometricProcess,
     _decode_BiometricProcess,
     _encode_BiometricProcess,
-} from '../AuthenticationContextForBiometrics/BiometricProcess.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcess.ta.js';
 import {
     BRTCertificateInformation,
     _decode_BRTCertificateInformation,
     _encode_BRTCertificateInformation,
-} from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta.js';
 export {
     BRTCertificateInformation,
     _decode_BRTCertificateInformation,
     _encode_BRTCertificateInformation,
-} from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta';
+} from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ACBioContentInformation */
 /**

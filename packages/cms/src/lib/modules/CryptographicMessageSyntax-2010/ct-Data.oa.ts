@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-import { id_data } from "../CryptographicMessageSyntax-2010/id-data.va";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
-export { id_data } from "../CryptographicMessageSyntax-2010/id-data.va";
+import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+import { id_data } from "../CryptographicMessageSyntax-2010/id-data.va.js";
+export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
+export { id_data } from "../CryptographicMessageSyntax-2010/id-data.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ct_Data */
 /**

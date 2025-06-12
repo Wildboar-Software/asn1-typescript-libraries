@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca";
+import { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { des_ede3_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/des-ede3-cbc.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { des_ede3_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/des-ede3-cbc.va.js";
 import {
     IV,
     _decode_IV,
     _encode_IV,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta";
-export { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.js";
+export { CONTENT_ENCRYPTION } from "../AlgorithmInformation-2009/CONTENT-ENCRYPTION.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -27,14 +27,14 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { des_ede3_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/des-ede3-cbc.va";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { des_ede3_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/des-ede3-cbc.va.js";
 export {
     IV,
     _decode_IV,
     _encode_IV,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta";
+} from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION cea_3DES_cbc */
 /**

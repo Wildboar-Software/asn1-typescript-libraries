@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   VisibleEndpoint,
   _decode_VisibleEndpoint,
   _encode_VisibleEndpoint,
-} from '../BIP/VisibleEndpoint.ta';
+} from '../BIP/VisibleEndpoint.ta.js';
 export {
   VisibleEndpoint,
   _decode_VisibleEndpoint,
   _encode_VisibleEndpoint,
-} from '../BIP/VisibleEndpoint.ta';
+} from '../BIP/VisibleEndpoint.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION VisibleEndpoints */
 /**

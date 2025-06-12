@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   XMLStringWithNoCRLFHT,
   _decode_XMLStringWithNoCRLFHT,
   _encode_XMLStringWithNoCRLFHT,
-} from '../XSD/XMLStringWithNoCRLFHT.ta';
+} from '../XSD/XMLStringWithNoCRLFHT.ta.js';
 export {
   XMLStringWithNoCRLFHT,
   _decode_XMLStringWithNoCRLFHT,
   _encode_XMLStringWithNoCRLFHT,
-} from '../XSD/XMLStringWithNoCRLFHT.ta';
+} from '../XSD/XMLStringWithNoCRLFHT.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AnyURI */
 /**

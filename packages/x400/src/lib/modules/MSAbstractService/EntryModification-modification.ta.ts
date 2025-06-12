@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '../MSAbstractService/Attribute.ta';
+} from '../MSAbstractService/Attribute.ta.js';
 export {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
-} from '../MSAbstractService/Attribute.ta';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MSAbstractService/Attribute.ta.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     OrderedAttribute,
     _decode_OrderedAttribute,
     _encode_OrderedAttribute,
-} from '../MSAbstractService/OrderedAttribute.ta';
+} from '../MSAbstractService/OrderedAttribute.ta.js';
 export {
     OrderedAttribute,
     _decode_OrderedAttribute,
     _encode_OrderedAttribute,
-} from '../MSAbstractService/OrderedAttribute.ta';
+} from '../MSAbstractService/OrderedAttribute.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EntryModification_modification */
 /**

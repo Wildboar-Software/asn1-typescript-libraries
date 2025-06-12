@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { pkcs } from "../PKCS5v2-1/pkcs.va";
-export { pkcs } from "../PKCS5v2-1/pkcs.va";
+import { pkcs } from "../PKCS5v2-1/pkcs.va.js";
+export { pkcs } from "../PKCS5v2-1/pkcs.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs_5 */
 /**

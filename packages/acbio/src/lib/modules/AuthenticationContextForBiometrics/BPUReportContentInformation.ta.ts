@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BPUFunctionReport,
     _decode_BPUFunctionReport,
     _encode_BPUFunctionReport,
-} from '../AuthenticationContextForBiometrics/BPUFunctionReport.ta';
+} from '../AuthenticationContextForBiometrics/BPUFunctionReport.ta.js';
 export {
     BPUFunctionReport,
     _decode_BPUFunctionReport,
     _encode_BPUFunctionReport,
-} from '../AuthenticationContextForBiometrics/BPUFunctionReport.ta';
+} from '../AuthenticationContextForBiometrics/BPUFunctionReport.ta.js';
 import {
     BPUSecurityReport,
     _decode_BPUSecurityReport,
     _encode_BPUSecurityReport,
-} from '../AuthenticationContextForBiometrics/BPUSecurityReport.ta';
+} from '../AuthenticationContextForBiometrics/BPUSecurityReport.ta.js';
 export {
     BPUSecurityReport,
     _decode_BPUSecurityReport,
     _encode_BPUSecurityReport,
-} from '../AuthenticationContextForBiometrics/BPUSecurityReport.ta';
+} from '../AuthenticationContextForBiometrics/BPUSecurityReport.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUReportContentInformation */
 /**

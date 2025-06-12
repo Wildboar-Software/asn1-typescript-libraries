@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IndicatedTests,
     _decode_IndicatedTests,
     _encode_IndicatedTests,
-} from '../Test-ASN1Module/IndicatedTests.ta';
+} from '../Test-ASN1Module/IndicatedTests.ta.js';
 export {
     IndicatedTests,
     _decode_IndicatedTests,
     _encode_IndicatedTests,
-} from '../Test-ASN1Module/IndicatedTests.ta';
+} from '../Test-ASN1Module/IndicatedTests.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestTerminateInfo */
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { octetStringMatch } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/octetStringMatch.oa.js";
 import {
     MessageDigest,
     _decode_MessageDigest,
     _encode_MessageDigest,
-} from "../PKCS-9/MessageDigest.ta";
-import { pkcs_9_at_messageDigest } from "../PKCS-9/pkcs-9-at-messageDigest.va";
+} from "../PKCS-9/MessageDigest.ta.js";
+import { pkcs_9_at_messageDigest } from "../PKCS-9/pkcs-9-at-messageDigest.va.js";
 
 /* START_OF_SYMBOL_DEFINITION messageDigest */
 /**

@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Release_request_reason,
   Release_request_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -76,7 +76,7 @@ import {
   user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Release_request_reason,
   _encode_Release_request_reason,
-} from '../ACSE-1/Release-request-reason.ta';
+} from '../ACSE-1/Release-request-reason.ta.js';
 export {
   Release_request_reason,
   Release_request_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -87,37 +87,37 @@ export {
   user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Release_request_reason,
   _encode_Release_request_reason,
-} from '../ACSE-1/Release-request-reason.ta';
+} from '../ACSE-1/Release-request-reason.ta.js';
 import {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
-} from '../ACSE-1/Association-data.ta';
+} from '../ACSE-1/Association-data.ta.js';
 import {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 export {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 import {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 export {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RLRQ_apdu */
 /**

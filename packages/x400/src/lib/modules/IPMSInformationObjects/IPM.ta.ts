@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 export {
     Heading,
     _decode_Heading,
     _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta';
+} from '../IPMSInformationObjects/Heading.ta.js';
 import {
     Body,
     _decode_Body,
     _encode_Body,
-} from '../IPMSInformationObjects/Body.ta';
+} from '../IPMSInformationObjects/Body.ta.js';
 export {
     Body,
     _decode_Body,
     _encode_Body,
-} from '../IPMSInformationObjects/Body.ta';
+} from '../IPMSInformationObjects/Body.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION IPM */
 /**

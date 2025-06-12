@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddress.oa';
-export { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddress.oa';
-import { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa';
-export { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa';
-import { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va';
-export { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddress.oa.js';
+export { mHSExtendedNetworkAddress } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddress.oa.js';
+import { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa.js';
+export { mHSExtendedNetworkAddressAttribute } from '../MHSRoutingORAddressSubtree/mHSExtendedNetworkAddressAttribute.oa.js';
+import { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va.js';
+export { id_nf_mhs_extended_network_address } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-extended-network-address.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSExtendedNetworkAddressNameForm */
 /**

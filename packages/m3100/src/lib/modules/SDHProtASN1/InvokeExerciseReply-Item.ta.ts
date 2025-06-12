@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.js';
 export {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.js';
 import {
     LastAttemptResult,
     _decode_LastAttemptResult,
     _encode_LastAttemptResult,
-} from '../SDHProtASN1/LastAttemptResult.ta';
+} from '../SDHProtASN1/LastAttemptResult.ta.js';
 export {
     LastAttemptResult,
     _decode_LastAttemptResult,
     _encode_LastAttemptResult,
-} from '../SDHProtASN1/LastAttemptResult.ta';
+} from '../SDHProtASN1/LastAttemptResult.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InvokeExerciseReply_Item */
 /**

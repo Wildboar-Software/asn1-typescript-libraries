@@ -9,10 +9,10 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
-import { TBSCertificate, _decode_TBSCertificate, _encode_TBSCertificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/TBSCertificate.ta";
-import { TrustAnchorInfo, _decode_TrustAnchorInfo, _encode_TrustAnchorInfo } from "../TrustAnchorInfoModule/TrustAnchorInfo.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.js";
+import { TBSCertificate, _decode_TBSCertificate, _encode_TBSCertificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/TBSCertificate.ta.js";
+import { TrustAnchorInfo, _decode_TrustAnchorInfo, _encode_TrustAnchorInfo } from "../TrustAnchorInfoModule/TrustAnchorInfo.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION TrustAnchorChoice */

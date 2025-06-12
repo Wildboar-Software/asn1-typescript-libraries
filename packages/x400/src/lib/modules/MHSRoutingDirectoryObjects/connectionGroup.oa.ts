@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,27 +91,27 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa';
-import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa';
-import { enumeratedFlag } from '../MHSRoutingDirectoryObjects/enumeratedFlag.oa';
-export { enumeratedFlag } from '../MHSRoutingDirectoryObjects/enumeratedFlag.oa';
-import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa';
-export { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa';
-import { connectionType } from '../MHSRoutingDirectoryObjects/connectionType.oa';
-export { connectionType } from '../MHSRoutingDirectoryObjects/connectionType.oa';
-import { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword.oa';
-export { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword.oa';
-import { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa';
-export { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa';
-import { securityContext } from '../MHSRoutingDirectoryObjects/securityContext.oa';
-export { securityContext } from '../MHSRoutingDirectoryObjects/securityContext.oa';
-import { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-connection-group.va';
-export { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-connection-group.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+export { top } from '@wildboar/x500/src/lib/modules/InformationFramework/top.oa.js';
+import { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+export { commonName } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/commonName.oa.js';
+import { enumeratedFlag } from '../MHSRoutingDirectoryObjects/enumeratedFlag.oa.js';
+export { enumeratedFlag } from '../MHSRoutingDirectoryObjects/enumeratedFlag.oa.js';
+import { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.js';
+export { description } from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/description.oa.js';
+import { connectionType } from '../MHSRoutingDirectoryObjects/connectionType.oa.js';
+export { connectionType } from '../MHSRoutingDirectoryObjects/connectionType.oa.js';
+import { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword.oa.js';
+export { groupMTAPassword } from '../MHSRoutingDirectoryObjects/groupMTAPassword.oa.js';
+import { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa.js';
+export { memberMTA } from '../MHSRoutingDirectoryObjects/memberMTA.oa.js';
+import { securityContext } from '../MHSRoutingDirectoryObjects/securityContext.oa.js';
+export { securityContext } from '../MHSRoutingDirectoryObjects/securityContext.oa.js';
+import { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-connection-group.va.js';
+export { id_oc_connection_group } from '../MHSRoutingObjectIdentifiers/id-oc-connection-group.va.js';
 
 /* START_OF_SYMBOL_DEFINITION connectionGroup */
 /**

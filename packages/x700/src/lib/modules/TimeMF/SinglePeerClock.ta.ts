@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ClockAddress,
     _decode_ClockAddress,
     _encode_ClockAddress,
-} from '../TimeMF/ClockAddress.ta';
+} from '../TimeMF/ClockAddress.ta.js';
 export {
     ClockAddress,
     _decode_ClockAddress,
     _encode_ClockAddress,
-} from '../TimeMF/ClockAddress.ta';
+} from '../TimeMF/ClockAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SinglePeerClock */
 /**

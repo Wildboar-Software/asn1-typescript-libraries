@@ -65,47 +65,47 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta';
+} from '../KerberosV5Spec2/KerberosTime.ta.js';
 import {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 export {
   Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
-} from '../KerberosV5Spec2/Microseconds.ta';
+} from '../KerberosV5Spec2/Microseconds.ta.js';
 import {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 export {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 import {
   HostAddress,
   _decode_HostAddress,
   _encode_HostAddress,
-} from '../KerberosV5Spec2/HostAddress.ta';
+} from '../KerberosV5Spec2/HostAddress.ta.js';
 export {
   HostAddress,
   _decode_HostAddress,
   _encode_HostAddress,
-} from '../KerberosV5Spec2/HostAddress.ta';
+} from '../KerberosV5Spec2/HostAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncKrbPrivPart */
 /**

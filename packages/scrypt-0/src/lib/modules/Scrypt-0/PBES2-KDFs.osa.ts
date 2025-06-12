@@ -1,6 +1,6 @@
 /* eslint-disable */
-import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca";
-import { scrypt } from "../Scrypt-0/scrypt.oa";
+import type { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.js";
+import { scrypt } from "../Scrypt-0/scrypt.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION PBES2_KDFs */

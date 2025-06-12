@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LinkEndCharacteristics,
     _decode_LinkEndCharacteristics,
     _encode_LinkEndCharacteristics,
-} from '../M3108Part2ASN1Module/LinkEndCharacteristics.ta';
+} from '../M3108Part2ASN1Module/LinkEndCharacteristics.ta.js';
 export {
     LinkEndCharacteristics,
     _decode_LinkEndCharacteristics,
     _encode_LinkEndCharacteristics,
-} from '../M3108Part2ASN1Module/LinkEndCharacteristics.ta';
+} from '../M3108Part2ASN1Module/LinkEndCharacteristics.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SlcEnds */
 /**

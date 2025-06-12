@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SummarizeErrors,
     _decode_SummarizeErrors,
     _encode_SummarizeErrors,
-} from '../MhsAcctAsn1Module/SummarizeErrors.ta';
+} from '../MhsAcctAsn1Module/SummarizeErrors.ta.js';
 export {
     SummarizeErrors,
     _decode_SummarizeErrors,
     _encode_SummarizeErrors,
-} from '../MhsAcctAsn1Module/SummarizeErrors.ta';
+} from '../MhsAcctAsn1Module/SummarizeErrors.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ListErrors */
 /**

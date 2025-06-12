@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RealizationParameter_realization_type,
   _enum_for_RealizationParameter_realization_type,
@@ -75,7 +75,7 @@ import {
   transfer_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_RealizationParameter_realization_type,
   _encode_RealizationParameter_realization_type,
-} from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta';
+} from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta.js';
 export {
   RealizationParameter_realization_type,
   _enum_for_RealizationParameter_realization_type,
@@ -85,7 +85,7 @@ export {
   transfer_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_RealizationParameter_realization_type,
   _encode_RealizationParameter_realization_type,
-} from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta';
+} from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RealizationParameter */
 /**

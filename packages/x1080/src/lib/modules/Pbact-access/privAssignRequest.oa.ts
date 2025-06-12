@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PrivAssignRequest,
     _decode_PrivAssignRequest,
     _encode_PrivAssignRequest,
-} from '../Pbact-access/PrivAssignRequest.ta';
+} from '../Pbact-access/PrivAssignRequest.ta.js';
 export {
     PrivAssignRequest,
     _decode_PrivAssignRequest,
     _encode_PrivAssignRequest,
-} from '../Pbact-access/PrivAssignRequest.ta';
-import { id_privAssignRequest } from '../Pbact-access/id-privAssignRequest.va';
-export { id_privAssignRequest } from '../Pbact-access/id-privAssignRequest.va';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+} from '../Pbact-access/PrivAssignRequest.ta.js';
+import { id_privAssignRequest } from '../Pbact-access/id-privAssignRequest.va.js';
+export { id_privAssignRequest } from '../Pbact-access/id-privAssignRequest.va.js';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION privAssignRequest */
 /**

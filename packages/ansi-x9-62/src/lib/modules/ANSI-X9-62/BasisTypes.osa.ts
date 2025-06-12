@@ -1,22 +1,22 @@
 /* eslint-disable */
-import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-import { BasisTypes_Union0_Intersection0_Element } from "./BasisTypes-Union0-Intersection0-Element.oa";
-import { BasisTypes_Union1_Intersection0_Element } from "./BasisTypes-Union1-Intersection0-Element.oa";
-import { BasisTypes_Union2_Intersection0_Element } from "./BasisTypes-Union2-Intersection0-Element.oa";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca";
-export { gnBasis } from "../ANSI-X9-62/gnBasis.va";
+import { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+import { BasisTypes_Union0_Intersection0_Element } from "./BasisTypes-Union0-Intersection0-Element.oa.js";
+import { BasisTypes_Union1_Intersection0_Element } from "./BasisTypes-Union1-Intersection0-Element.oa.js";
+import { BasisTypes_Union2_Intersection0_Element } from "./BasisTypes-Union2-Intersection0-Element.oa.js";
+export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.js";
+export { gnBasis } from "../ANSI-X9-62/gnBasis.va.js";
 export {
     Pentanomial,
     _decode_Pentanomial,
     _encode_Pentanomial,
-} from "../ANSI-X9-62/Pentanomial.ta";
-export { ppBasis } from "../ANSI-X9-62/ppBasis.va";
-export { tpBasis } from "../ANSI-X9-62/tpBasis.va";
+} from "../ANSI-X9-62/Pentanomial.ta.js";
+export { ppBasis } from "../ANSI-X9-62/ppBasis.va.js";
+export { tpBasis } from "../ANSI-X9-62/tpBasis.va.js";
 export {
     Trinomial,
     _decode_Trinomial,
     _encode_Trinomial,
-} from "../ANSI-X9-62/Trinomial.ta";
+} from "../ANSI-X9-62/Trinomial.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION BasisTypes */
 /**

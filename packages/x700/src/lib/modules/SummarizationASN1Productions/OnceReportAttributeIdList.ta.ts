@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 export {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OnceReportAttributeIdList */
 /**

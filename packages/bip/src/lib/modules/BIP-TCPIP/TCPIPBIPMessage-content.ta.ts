@@ -65,19 +65,19 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BIPMessage,
   _decode_BIPMessage,
   _encode_BIPMessage,
-} from '../BIP/BIPMessage.ta';
+} from '../BIP/BIPMessage.ta.js';
 export {
   BIPMessage,
   _decode_BIPMessage,
   _encode_BIPMessage,
-} from '../BIP/BIPMessage.ta';
-import { basic_per_aligned } from '../BIP-TCPIP/basic-per-aligned.va';
-export { basic_per_aligned } from '../BIP-TCPIP/basic-per-aligned.va';
+} from '../BIP/BIPMessage.ta.js';
+import { basic_per_aligned } from '../BIP-TCPIP/basic-per-aligned.va.js';
+export { basic_per_aligned } from '../BIP-TCPIP/basic-per-aligned.va.js';
 
 /* START_OF_SYMBOL_DEFINITION TCPIPBIPMessage_content */
 /**

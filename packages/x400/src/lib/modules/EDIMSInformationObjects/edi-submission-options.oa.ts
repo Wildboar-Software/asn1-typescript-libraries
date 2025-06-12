@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EDISubmissionOptions,
     _decode_EDISubmissionOptions,
     _encode_EDISubmissionOptions,
-} from '../EDIMSInformationObjects/EDISubmissionOptions.ta';
+} from '../EDIMSInformationObjects/EDISubmissionOptions.ta.js';
 export {
     EDISubmissionOptions,
     _decode_EDISubmissionOptions,
     _encode_EDISubmissionOptions,
-} from '../EDIMSInformationObjects/EDISubmissionOptions.ta';
-import { id_ext_submission_options } from '../EDIMSObjectIdentifiers/id-ext-submission-options.va';
-export { id_ext_submission_options } from '../EDIMSObjectIdentifiers/id-ext-submission-options.va';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
-export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
+} from '../EDIMSInformationObjects/EDISubmissionOptions.ta.js';
+import { id_ext_submission_options } from '../EDIMSObjectIdentifiers/id-ext-submission-options.va.js';
+export { id_ext_submission_options } from '../EDIMSObjectIdentifiers/id-ext-submission-options.va.js';
+import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
+export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION edi_submission_options */
 /**

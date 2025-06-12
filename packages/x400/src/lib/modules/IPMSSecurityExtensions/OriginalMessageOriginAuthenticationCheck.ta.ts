@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageOriginAuthenticationCheck,
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
-} from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta';
+} from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.js';
 export {
     MessageOriginAuthenticationCheck,
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
-} from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta';
+} from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OriginalMessageOriginAuthenticationCheck */
 /**

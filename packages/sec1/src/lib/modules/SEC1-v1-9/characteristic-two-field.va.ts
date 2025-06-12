@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va";
-export { id_fieldType } from "../SEC1-v1-9/id-fieldType.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.js";
+export { id_fieldType } from "../SEC1-v1-9/id-fieldType.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION characteristic_two_field */

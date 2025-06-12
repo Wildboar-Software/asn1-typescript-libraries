@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 export {
   Password,
   _decode_Password,
   _encode_Password,
-} from '../ISO8571-FTAM/Password.ta';
+} from '../ISO8571-FTAM/Password.ta.js';
 import {
   Pass_Passwords,
   _decode_Pass_Passwords,
   _encode_Pass_Passwords,
-} from '../ISO8571-FTAM/Pass-Passwords.ta';
+} from '../ISO8571-FTAM/Pass-Passwords.ta.js';
 export {
   Pass_Passwords,
   _decode_Pass_Passwords,
   _encode_Pass_Passwords,
-} from '../ISO8571-FTAM/Pass-Passwords.ta';
+} from '../ISO8571-FTAM/Pass-Passwords.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Path_Access_Passwords_Item */
 /**

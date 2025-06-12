@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Relational_Comparision,
   Relational_Comparision_no_value_available_matches /* IMPORTED_LONG_NAMED_BIT */,
@@ -78,7 +78,7 @@ import {
   greater_than_matches /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Relational_Comparision,
   _encode_Relational_Comparision,
-} from '../ISO8571-FTAM/Relational-Comparision.ta';
+} from '../ISO8571-FTAM/Relational-Comparision.ta.js';
 export {
   Relational_Comparision,
   Relational_Comparision_no_value_available_matches /* IMPORTED_LONG_NAMED_BIT */,
@@ -91,7 +91,7 @@ export {
   greater_than_matches /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Relational_Comparision,
   _encode_Relational_Comparision,
-} from '../ISO8571-FTAM/Relational-Comparision.ta';
+} from '../ISO8571-FTAM/Relational-Comparision.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Integer_Pattern */
 /**

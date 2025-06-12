@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PKIStatus,
   PKIStatus_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
   keyUpdateWarning /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_PKIStatus,
   _encode_PKIStatus,
-} from '../PKIXCMP-2009/PKIStatus.ta';
+} from '../PKIXCMP-2009/PKIStatus.ta.js';
 export {
   PKIStatus,
   PKIStatus_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,22 +103,22 @@ export {
   keyUpdateWarning /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_PKIStatus,
   _encode_PKIStatus,
-} from '../PKIXCMP-2009/PKIStatus.ta';
+} from '../PKIXCMP-2009/PKIStatus.ta.js';
 import {
   CertId,
   _decode_CertId,
   _encode_CertId,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta.js';
 export {
   CertId,
   _decode_CertId,
   _encode_CertId,
-} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta';
+} from '@wildboar/crmf/src/lib/modules/PKIXCRMF-2009/CertId.ta.js';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RevAnnContent */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FunctionDefinition,
     _decode_FunctionDefinition,
     _encode_FunctionDefinition,
-} from '../AuthenticationContextForBiometrics/FunctionDefinition.ta';
+} from '../AuthenticationContextForBiometrics/FunctionDefinition.ta.js';
 export {
     FunctionDefinition,
     _decode_FunctionDefinition,
     _encode_FunctionDefinition,
-} from '../AuthenticationContextForBiometrics/FunctionDefinition.ta';
+} from '../AuthenticationContextForBiometrics/FunctionDefinition.ta.js';
 import {
     QualityEvaluation,
     _decode_QualityEvaluation,
     _encode_QualityEvaluation,
-} from '../AuthenticationContextForBiometrics/QualityEvaluation.ta';
+} from '../AuthenticationContextForBiometrics/QualityEvaluation.ta.js';
 export {
     QualityEvaluation,
     _decode_QualityEvaluation,
     _encode_QualityEvaluation,
-} from '../AuthenticationContextForBiometrics/QualityEvaluation.ta';
+} from '../AuthenticationContextForBiometrics/QualityEvaluation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUSubprocessInformation */
 /**

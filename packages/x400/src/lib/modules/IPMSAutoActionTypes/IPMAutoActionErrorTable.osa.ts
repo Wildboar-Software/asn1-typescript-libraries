@@ -65,35 +65,35 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-import { auto_forwarding_loop } from '../IPMSAutoActionTypes/auto-forwarding-loop.oa';
-export { auto_forwarding_loop } from '../IPMSAutoActionTypes/auto-forwarding-loop.oa';
-import { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa';
-export { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa';
-import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa';
-import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa';
-import { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa';
-export { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa';
-import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa';
-import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa';
-import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa';
-import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa';
-import { security_error } from '../MTSAbstractService/security-error.oa';
-export { security_error } from '../MTSAbstractService/security-error.oa';
-import { service_error } from '../MSAbstractService/service-error.oa';
-export { service_error } from '../MSAbstractService/service-error.oa';
-import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa';
-import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
-export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+import { auto_forwarding_loop } from '../IPMSAutoActionTypes/auto-forwarding-loop.oa.js';
+export { auto_forwarding_loop } from '../IPMSAutoActionTypes/auto-forwarding-loop.oa.js';
+import { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa.js';
+export { duplicate_ipn } from '../IPMSAutoActionTypes/duplicate-ipn.oa.js';
+import { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+export { element_of_service_not_subscribed } from '../MTSAbstractService/element-of-service-not-subscribed.oa.js';
+import { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+export { inconsistent_request } from '../MTSAbstractService/inconsistent-request.oa.js';
+import { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa.js';
+export { ipm_auto_discard_error } from '../IPMSAutoActionTypes/ipm-auto-discard-error.oa.js';
+import { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+export { ms_extension_error } from '../MSAbstractService/ms-extension-error.oa.js';
+import { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+export { originator_invalid } from '../MTSAbstractService/originator-invalid.oa.js';
+import { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+export { recipient_improperly_specified } from '../MTSAbstractService/recipient-improperly-specified.oa.js';
+import { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+export { remote_bind_error } from '../MTSAbstractService/remote-bind-error.oa.js';
+import { security_error } from '../MTSAbstractService/security-error.oa.js';
+export { security_error } from '../MTSAbstractService/security-error.oa.js';
+import { service_error } from '../MSAbstractService/service-error.oa.js';
+export { service_error } from '../MSAbstractService/service-error.oa.js';
+import { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+export { submission_control_violated } from '../MTSAbstractService/submission-control-violated.oa.js';
+import { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
+export { unsupported_critical_function } from '../MTSAbstractService/unsupported-critical-function.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMAutoActionErrorTable */
 /**

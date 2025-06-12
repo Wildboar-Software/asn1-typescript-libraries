@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExtendedNetworkAddress_e163_4_address,
     _decode_ExtendedNetworkAddress_e163_4_address,
     _encode_ExtendedNetworkAddress_e163_4_address,
-} from '../MTSAbstractService/ExtendedNetworkAddress-e163-4-address.ta';
+} from '../MTSAbstractService/ExtendedNetworkAddress-e163-4-address.ta.js';
 export {
     ExtendedNetworkAddress_e163_4_address,
     _decode_ExtendedNetworkAddress_e163_4_address,
     _encode_ExtendedNetworkAddress_e163_4_address,
-} from '../MTSAbstractService/ExtendedNetworkAddress-e163-4-address.ta';
+} from '../MTSAbstractService/ExtendedNetworkAddress-e163-4-address.ta.js';
 import {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta.js';
 export {
     PresentationAddress,
     _decode_PresentationAddress,
     _encode_PresentationAddress,
-} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta';
+} from '@wildboar/x500/src/lib/modules/SelectedAttributeTypes/PresentationAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExtendedNetworkAddress */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
-} from '../IPMSInformationObjects/G3FacsimileData.ta';
+} from '../IPMSInformationObjects/G3FacsimileData.ta.js';
 export {
     G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
-} from '../IPMSInformationObjects/G3FacsimileData.ta';
-import { id_et_g3_facsimile } from '../IPMSObjectIdentifiers/id-et-g3-facsimile.va';
-export { id_et_g3_facsimile } from '../IPMSObjectIdentifiers/id-et-g3-facsimile.va';
+} from '../IPMSInformationObjects/G3FacsimileData.ta.js';
+import { id_et_g3_facsimile } from '../IPMSObjectIdentifiers/id-et-g3-facsimile.va.js';
+export { id_et_g3_facsimile } from '../IPMSObjectIdentifiers/id-et-g3-facsimile.va.js';
 
 /* START_OF_SYMBOL_DEFINITION g3_facsimile_body_part_data */
 /**

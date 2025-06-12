@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../ECPrivateKey/ECPrivateKey-version.ta";
-export { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../ECPrivateKey/ECPrivateKey-version.ta";
-import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKIXAlgs-2009/ECParameters.ta";
-export { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKIXAlgs-2009/ECParameters.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../ECPrivateKey/ECPrivateKey-version.ta.js";
+export { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../ECPrivateKey/ECPrivateKey-version.ta.js";
+import { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKIXAlgs-2009/ECParameters.ta.js";
+export { ECParameters, _decode_ECParameters, _encode_ECParameters } from "../PKIXAlgs-2009/ECParameters.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECPrivateKey */

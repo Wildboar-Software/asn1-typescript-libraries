@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OperationSpecifications_Item,
     _decode_OperationSpecifications_Item,
     _encode_OperationSpecifications_Item,
-} from '../Schedulerev1-ASN1Module/OperationSpecifications-Item.ta';
+} from '../Schedulerev1-ASN1Module/OperationSpecifications-Item.ta.js';
 export {
     OperationSpecifications_Item,
     _decode_OperationSpecifications_Item,
     _encode_OperationSpecifications_Item,
-} from '../Schedulerev1-ASN1Module/OperationSpecifications-Item.ta';
+} from '../Schedulerev1-ASN1Module/OperationSpecifications-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OperationSpecifications */
 /**

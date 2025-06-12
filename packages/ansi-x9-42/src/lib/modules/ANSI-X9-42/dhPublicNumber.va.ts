@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { numberType } from "../ANSI-X9-42/numberType.va";
-export { numberType } from "../ANSI-X9-42/numberType.va";
+import { numberType } from "../ANSI-X9-42/numberType.va.js";
+export { numberType } from "../ANSI-X9-42/numberType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION dhPublicNumber */
 /**

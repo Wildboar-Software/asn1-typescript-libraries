@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta";
-export { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta";
-import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta";
-export { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.js";
+export { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.js";
+import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.js";
+export { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECPKRestrictions */

@@ -65,157 +65,157 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   C_INITIALIZE_RI,
   _decode_C_INITIALIZE_RI,
   _encode_C_INITIALIZE_RI,
-} from '../CCR/C-INITIALIZE-RI.ta';
+} from '../CCR/C-INITIALIZE-RI.ta.js';
 export {
   C_INITIALIZE_RI,
   _decode_C_INITIALIZE_RI,
   _encode_C_INITIALIZE_RI,
-} from '../CCR/C-INITIALIZE-RI.ta';
+} from '../CCR/C-INITIALIZE-RI.ta.js';
 import {
   C_INITIALIZE_RC,
   _decode_C_INITIALIZE_RC,
   _encode_C_INITIALIZE_RC,
-} from '../CCR/C-INITIALIZE-RC.ta';
+} from '../CCR/C-INITIALIZE-RC.ta.js';
 export {
   C_INITIALIZE_RC,
   _decode_C_INITIALIZE_RC,
   _encode_C_INITIALIZE_RC,
-} from '../CCR/C-INITIALIZE-RC.ta';
+} from '../CCR/C-INITIALIZE-RC.ta.js';
 import {
   C_BEGIN_RI,
   _decode_C_BEGIN_RI,
   _encode_C_BEGIN_RI,
-} from '../CCR/C-BEGIN-RI.ta';
+} from '../CCR/C-BEGIN-RI.ta.js';
 export {
   C_BEGIN_RI,
   _decode_C_BEGIN_RI,
   _encode_C_BEGIN_RI,
-} from '../CCR/C-BEGIN-RI.ta';
+} from '../CCR/C-BEGIN-RI.ta.js';
 import {
   C_BEGIN_RC,
   _decode_C_BEGIN_RC,
   _encode_C_BEGIN_RC,
-} from '../CCR/C-BEGIN-RC.ta';
+} from '../CCR/C-BEGIN-RC.ta.js';
 export {
   C_BEGIN_RC,
   _decode_C_BEGIN_RC,
   _encode_C_BEGIN_RC,
-} from '../CCR/C-BEGIN-RC.ta';
+} from '../CCR/C-BEGIN-RC.ta.js';
 import {
   C_PREPARE_RI,
   _decode_C_PREPARE_RI,
   _encode_C_PREPARE_RI,
-} from '../CCR/C-PREPARE-RI.ta';
+} from '../CCR/C-PREPARE-RI.ta.js';
 export {
   C_PREPARE_RI,
   _decode_C_PREPARE_RI,
   _encode_C_PREPARE_RI,
-} from '../CCR/C-PREPARE-RI.ta';
+} from '../CCR/C-PREPARE-RI.ta.js';
 import {
   C_READY_RI,
   _decode_C_READY_RI,
   _encode_C_READY_RI,
-} from '../CCR/C-READY-RI.ta';
+} from '../CCR/C-READY-RI.ta.js';
 export {
   C_READY_RI,
   _decode_C_READY_RI,
   _encode_C_READY_RI,
-} from '../CCR/C-READY-RI.ta';
+} from '../CCR/C-READY-RI.ta.js';
 import {
   C_COMMIT_RI,
   _decode_C_COMMIT_RI,
   _encode_C_COMMIT_RI,
-} from '../CCR/C-COMMIT-RI.ta';
+} from '../CCR/C-COMMIT-RI.ta.js';
 export {
   C_COMMIT_RI,
   _decode_C_COMMIT_RI,
   _encode_C_COMMIT_RI,
-} from '../CCR/C-COMMIT-RI.ta';
+} from '../CCR/C-COMMIT-RI.ta.js';
 import {
   C_COMMIT_RC,
   _decode_C_COMMIT_RC,
   _encode_C_COMMIT_RC,
-} from '../CCR/C-COMMIT-RC.ta';
+} from '../CCR/C-COMMIT-RC.ta.js';
 export {
   C_COMMIT_RC,
   _decode_C_COMMIT_RC,
   _encode_C_COMMIT_RC,
-} from '../CCR/C-COMMIT-RC.ta';
+} from '../CCR/C-COMMIT-RC.ta.js';
 import {
   C_ROLLBACK_RI,
   _decode_C_ROLLBACK_RI,
   _encode_C_ROLLBACK_RI,
-} from '../CCR/C-ROLLBACK-RI.ta';
+} from '../CCR/C-ROLLBACK-RI.ta.js';
 export {
   C_ROLLBACK_RI,
   _decode_C_ROLLBACK_RI,
   _encode_C_ROLLBACK_RI,
-} from '../CCR/C-ROLLBACK-RI.ta';
+} from '../CCR/C-ROLLBACK-RI.ta.js';
 import {
   C_ROLLBACK_RC,
   _decode_C_ROLLBACK_RC,
   _encode_C_ROLLBACK_RC,
-} from '../CCR/C-ROLLBACK-RC.ta';
+} from '../CCR/C-ROLLBACK-RC.ta.js';
 export {
   C_ROLLBACK_RC,
   _decode_C_ROLLBACK_RC,
   _encode_C_ROLLBACK_RC,
-} from '../CCR/C-ROLLBACK-RC.ta';
+} from '../CCR/C-ROLLBACK-RC.ta.js';
 import {
   C_RECOVER_RI,
   _decode_C_RECOVER_RI,
   _encode_C_RECOVER_RI,
-} from '../CCR/C-RECOVER-RI.ta';
+} from '../CCR/C-RECOVER-RI.ta.js';
 export {
   C_RECOVER_RI,
   _decode_C_RECOVER_RI,
   _encode_C_RECOVER_RI,
-} from '../CCR/C-RECOVER-RI.ta';
+} from '../CCR/C-RECOVER-RI.ta.js';
 import {
   C_RECOVER_RC,
   _decode_C_RECOVER_RC,
   _encode_C_RECOVER_RC,
-} from '../CCR/C-RECOVER-RC.ta';
+} from '../CCR/C-RECOVER-RC.ta.js';
 export {
   C_RECOVER_RC,
   _decode_C_RECOVER_RC,
   _encode_C_RECOVER_RC,
-} from '../CCR/C-RECOVER-RC.ta';
+} from '../CCR/C-RECOVER-RC.ta.js';
 import {
   C_NOCHANGE_RI,
   _decode_C_NOCHANGE_RI,
   _encode_C_NOCHANGE_RI,
-} from '../CCR/C-NOCHANGE-RI.ta';
+} from '../CCR/C-NOCHANGE-RI.ta.js';
 export {
   C_NOCHANGE_RI,
   _decode_C_NOCHANGE_RI,
   _encode_C_NOCHANGE_RI,
-} from '../CCR/C-NOCHANGE-RI.ta';
+} from '../CCR/C-NOCHANGE-RI.ta.js';
 import {
   C_NOCHANGE_RC,
   _decode_C_NOCHANGE_RC,
   _encode_C_NOCHANGE_RC,
-} from '../CCR/C-NOCHANGE-RC.ta';
+} from '../CCR/C-NOCHANGE-RC.ta.js';
 export {
   C_NOCHANGE_RC,
   _decode_C_NOCHANGE_RC,
   _encode_C_NOCHANGE_RC,
-} from '../CCR/C-NOCHANGE-RC.ta';
+} from '../CCR/C-NOCHANGE-RC.ta.js';
 import {
   C_CANCEL_RI,
   _decode_C_CANCEL_RI,
   _encode_C_CANCEL_RI,
-} from '../CCR/C-CANCEL-RI.ta';
+} from '../CCR/C-CANCEL-RI.ta.js';
 export {
   C_CANCEL_RI,
   _decode_C_CANCEL_RI,
   _encode_C_CANCEL_RI,
-} from '../CCR/C-CANCEL-RI.ta';
+} from '../CCR/C-CANCEL-RI.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CCR_APDUS */
 /**

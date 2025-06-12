@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ResultReportIndicator,
     _enum_for_ResultReportIndicator,
@@ -75,7 +75,7 @@ import {
     noResultReportForPassedSequences /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResultReportIndicator,
     _encode_ResultReportIndicator,
-} from '../TestCategories-ASN1Module/ResultReportIndicator.ta';
+} from '../TestCategories-ASN1Module/ResultReportIndicator.ta.js';
 export {
     ResultReportIndicator,
     _enum_for_ResultReportIndicator,
@@ -85,17 +85,17 @@ export {
     noResultReportForPassedSequences /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ResultReportIndicator,
     _encode_ResultReportIndicator,
-} from '../TestCategories-ASN1Module/ResultReportIndicator.ta';
+} from '../TestCategories-ASN1Module/ResultReportIndicator.ta.js';
 import {
     SequenceOfEvents,
     _decode_SequenceOfEvents,
     _encode_SequenceOfEvents,
-} from '../TestCategories-ASN1Module/SequenceOfEvents.ta';
+} from '../TestCategories-ASN1Module/SequenceOfEvents.ta.js';
 export {
     SequenceOfEvents,
     _decode_SequenceOfEvents,
     _encode_SequenceOfEvents,
-} from '../TestCategories-ASN1Module/SequenceOfEvents.ta';
+} from '../TestCategories-ASN1Module/SequenceOfEvents.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ResourceBoundaryTestInfo */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ValueSpecifier,
     _decode_ValueSpecifier,
     _encode_ValueSpecifier,
-} from '../DefinitionASN1Module/ValueSpecifier.ta';
+} from '../DefinitionASN1Module/ValueSpecifier.ta.js';
 export {
     ValueSpecifier,
     _decode_ValueSpecifier,
     _encode_ValueSpecifier,
-} from '../DefinitionASN1Module/ValueSpecifier.ta';
+} from '../DefinitionASN1Module/ValueSpecifier.ta.js';
 import {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 export {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta';
+} from '../DefinitionASN1Module/DefinedType.ta.js';
 import {
     PropertyList_getReplace,
     _enum_for_PropertyList_getReplace,
@@ -97,7 +97,7 @@ import {
     gET_REPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_getReplace,
     _encode_PropertyList_getReplace,
-} from '../DefinitionASN1Module/PropertyList-getReplace.ta';
+} from '../DefinitionASN1Module/PropertyList-getReplace.ta.js';
 export {
     PropertyList_getReplace,
     _enum_for_PropertyList_getReplace,
@@ -109,7 +109,7 @@ export {
     gET_REPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_getReplace,
     _encode_PropertyList_getReplace,
-} from '../DefinitionASN1Module/PropertyList-getReplace.ta';
+} from '../DefinitionASN1Module/PropertyList-getReplace.ta.js';
 import {
     PropertyList_addRemove,
     _enum_for_PropertyList_addRemove,
@@ -121,7 +121,7 @@ import {
     aDD_REMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_addRemove,
     _encode_PropertyList_addRemove,
-} from '../DefinitionASN1Module/PropertyList-addRemove.ta';
+} from '../DefinitionASN1Module/PropertyList-addRemove.ta.js';
 export {
     PropertyList_addRemove,
     _enum_for_PropertyList_addRemove,
@@ -133,17 +133,17 @@ export {
     aDD_REMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_addRemove,
     _encode_PropertyList_addRemove,
-} from '../DefinitionASN1Module/PropertyList-addRemove.ta';
+} from '../DefinitionASN1Module/PropertyList-addRemove.ta.js';
 import {
     AdditionalProperties,
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
-} from '../DefinitionASN1Module/AdditionalProperties.ta';
+} from '../DefinitionASN1Module/AdditionalProperties.ta.js';
 export {
     AdditionalProperties,
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
-} from '../DefinitionASN1Module/AdditionalProperties.ta';
+} from '../DefinitionASN1Module/AdditionalProperties.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PropertyList */
 /**

@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ContentTypeBPUReport } from '../AuthenticationContextForBiometrics/ContentTypeBPUReport.osa';
-export { ContentTypeBPUReport } from '../AuthenticationContextForBiometrics/ContentTypeBPUReport.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ContentTypeBPUReport } from '../AuthenticationContextForBiometrics/ContentTypeBPUReport.osa.js';
+export { ContentTypeBPUReport } from '../AuthenticationContextForBiometrics/ContentTypeBPUReport.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUReport */
 /**

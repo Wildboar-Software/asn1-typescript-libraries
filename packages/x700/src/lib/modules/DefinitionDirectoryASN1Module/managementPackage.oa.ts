@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,25 +91,25 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa';
-export { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa';
-import { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa';
-export { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa';
-import { attributes } from '../DefinitionDirectoryASN1Module/attributes.oa';
-export { attributes } from '../DefinitionDirectoryASN1Module/attributes.oa';
-import { attributeGroups } from '../DefinitionDirectoryASN1Module/attributeGroups.oa';
-export { attributeGroups } from '../DefinitionDirectoryASN1Module/attributeGroups.oa';
-import { actions } from '../DefinitionDirectoryASN1Module/actions.oa';
-export { actions } from '../DefinitionDirectoryASN1Module/actions.oa';
-import { notifications } from '../DefinitionDirectoryASN1Module/notifications.oa';
-export { notifications } from '../DefinitionDirectoryASN1Module/notifications.oa';
-import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa';
-export { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa';
-import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
-export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.js';
+export { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.js';
+import { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa.js';
+export { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa.js';
+import { attributes } from '../DefinitionDirectoryASN1Module/attributes.oa.js';
+export { attributes } from '../DefinitionDirectoryASN1Module/attributes.oa.js';
+import { attributeGroups } from '../DefinitionDirectoryASN1Module/attributeGroups.oa.js';
+export { attributeGroups } from '../DefinitionDirectoryASN1Module/attributeGroups.oa.js';
+import { actions } from '../DefinitionDirectoryASN1Module/actions.oa.js';
+export { actions } from '../DefinitionDirectoryASN1Module/actions.oa.js';
+import { notifications } from '../DefinitionDirectoryASN1Module/notifications.oa.js';
+export { notifications } from '../DefinitionDirectoryASN1Module/notifications.oa.js';
+import { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.js';
+export { optionallyRegisteredAs } from '../DefinitionDirectoryASN1Module/optionallyRegisteredAs.oa.js';
+import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
+export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
 
 /* START_OF_SYMBOL_DEFINITION managementPackage */
 /**

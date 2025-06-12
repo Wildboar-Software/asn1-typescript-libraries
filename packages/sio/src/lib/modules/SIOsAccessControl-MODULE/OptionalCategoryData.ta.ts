@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-export { CatData } from "../SIOsAccessControl-MODULE/CatData.osa";
-export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+export { CatData } from "../SIOsAccessControl-MODULE/CatData.osa.js";
+export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION OptionalCategoryData */
 /**

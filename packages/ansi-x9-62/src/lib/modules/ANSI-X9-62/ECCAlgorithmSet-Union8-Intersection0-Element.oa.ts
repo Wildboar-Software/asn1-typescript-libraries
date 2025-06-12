@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-import { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca";
-export { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va";
+import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+import { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.js";
+export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.js";
+export { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union8_Intersection0_Element */
 /**

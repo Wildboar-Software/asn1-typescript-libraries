@@ -1,66 +1,66 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AuthObjects,
     _decode_AuthObjects,
     _encode_AuthObjects,
-} from "../PKCS-15/AuthObjects.ta";
+} from "../PKCS-15/AuthObjects.ta.js";
 import {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from "../PKCS-15/Certificates.ta";
+} from "../PKCS-15/Certificates.ta.js";
 import {
     DataObjects,
     _decode_DataObjects,
     _encode_DataObjects,
-} from "../PKCS-15/DataObjects.ta";
+} from "../PKCS-15/DataObjects.ta.js";
 import {
     PrivateKeys,
     _decode_PrivateKeys,
     _encode_PrivateKeys,
-} from "../PKCS-15/PrivateKeys.ta";
+} from "../PKCS-15/PrivateKeys.ta.js";
 import {
     PublicKeys,
     _decode_PublicKeys,
     _encode_PublicKeys,
-} from "../PKCS-15/PublicKeys.ta";
+} from "../PKCS-15/PublicKeys.ta.js";
 import {
     SecretKeys,
     _decode_SecretKeys,
     _encode_SecretKeys,
-} from "../PKCS-15/SecretKeys.ta";
+} from "../PKCS-15/SecretKeys.ta.js";
 export {
     AuthObjects,
     _decode_AuthObjects,
     _encode_AuthObjects,
-} from "../PKCS-15/AuthObjects.ta";
+} from "../PKCS-15/AuthObjects.ta.js";
 export {
     Certificates,
     _decode_Certificates,
     _encode_Certificates,
-} from "../PKCS-15/Certificates.ta";
+} from "../PKCS-15/Certificates.ta.js";
 export {
     DataObjects,
     _decode_DataObjects,
     _encode_DataObjects,
-} from "../PKCS-15/DataObjects.ta";
+} from "../PKCS-15/DataObjects.ta.js";
 export {
     PrivateKeys,
     _decode_PrivateKeys,
     _encode_PrivateKeys,
-} from "../PKCS-15/PrivateKeys.ta";
+} from "../PKCS-15/PrivateKeys.ta.js";
 export {
     PublicKeys,
     _decode_PublicKeys,
     _encode_PublicKeys,
-} from "../PKCS-15/PublicKeys.ta";
+} from "../PKCS-15/PublicKeys.ta.js";
 export {
     SecretKeys,
     _decode_SecretKeys,
     _encode_SecretKeys,
-} from "../PKCS-15/SecretKeys.ta";
+} from "../PKCS-15/SecretKeys.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PKCS15Objects */
 /**

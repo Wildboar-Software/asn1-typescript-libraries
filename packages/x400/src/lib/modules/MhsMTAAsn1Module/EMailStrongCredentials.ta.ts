@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from '../MTSAbstractService/StrongCredentials.ta';
+} from '../MTSAbstractService/StrongCredentials.ta.js';
 export {
     StrongCredentials,
     _decode_StrongCredentials,
     _encode_StrongCredentials,
-} from '../MTSAbstractService/StrongCredentials.ta';
+} from '../MTSAbstractService/StrongCredentials.ta.js';
 import {
     GenericStrongCredentials,
     _decode_GenericStrongCredentials,
     _encode_GenericStrongCredentials,
-} from '../MhsMTAAsn1Module/GenericStrongCredentials.ta';
+} from '../MhsMTAAsn1Module/GenericStrongCredentials.ta.js';
 export {
     GenericStrongCredentials,
     _decode_GenericStrongCredentials,
     _encode_GenericStrongCredentials,
-} from '../MhsMTAAsn1Module/GenericStrongCredentials.ta';
+} from '../MhsMTAAsn1Module/GenericStrongCredentials.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailStrongCredentials */
 /**

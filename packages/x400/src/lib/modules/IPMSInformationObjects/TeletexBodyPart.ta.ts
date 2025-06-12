@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TeletexParameters,
     _decode_TeletexParameters,
     _encode_TeletexParameters,
-} from '../IPMSInformationObjects/TeletexParameters.ta';
+} from '../IPMSInformationObjects/TeletexParameters.ta.js';
 export {
     TeletexParameters,
     _decode_TeletexParameters,
     _encode_TeletexParameters,
-} from '../IPMSInformationObjects/TeletexParameters.ta';
+} from '../IPMSInformationObjects/TeletexParameters.ta.js';
 import {
     TeletexData,
     _decode_TeletexData,
     _encode_TeletexData,
-} from '../IPMSInformationObjects/TeletexData.ta';
+} from '../IPMSInformationObjects/TeletexData.ta.js';
 export {
     TeletexData,
     _decode_TeletexData,
     _encode_TeletexData,
-} from '../IPMSInformationObjects/TeletexData.ta';
+} from '../IPMSInformationObjects/TeletexData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TeletexBodyPart */
 /**

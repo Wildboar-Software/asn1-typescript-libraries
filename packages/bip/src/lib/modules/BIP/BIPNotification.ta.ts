@@ -65,37 +65,37 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta';
+} from '../BIP/EndpointIRI.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 import {
   BIPNotification_params,
   _decode_BIPNotification_params,
   _encode_BIPNotification_params,
-} from '../BIP/BIPNotification-params.ta';
+} from '../BIP/BIPNotification-params.ta.js';
 export {
   BIPNotification_params,
   _decode_BIPNotification_params,
   _encode_BIPNotification_params,
-} from '../BIP/BIPNotification-params.ta';
+} from '../BIP/BIPNotification-params.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BIPNotification */
 /**

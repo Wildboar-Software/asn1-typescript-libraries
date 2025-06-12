@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { MACAlgorithms_Union0_Intersection0_Element } from "../PKCS-15/MACAlgorithms-Union0-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { MACAlgorithms_Union0_Intersection0_Element } from "../PKCS-15/MACAlgorithms-Union0-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION MACAlgorithms */
 /**

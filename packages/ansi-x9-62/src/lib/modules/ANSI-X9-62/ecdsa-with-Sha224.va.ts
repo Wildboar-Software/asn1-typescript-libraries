@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va";
-export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va";
+import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.js";
+export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.js";
 
 /* START_OF_SYMBOL_DEFINITION ecdsa_with_Sha224 */
 /**

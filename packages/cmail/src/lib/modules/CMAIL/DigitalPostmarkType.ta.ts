@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HashValueType,
   _decode_HashValueType,
   _encode_HashValueType,
-} from '../CMAIL/HashValueType.ta';
+} from '../CMAIL/HashValueType.ta.js';
 export {
   HashValueType,
   _decode_HashValueType,
   _encode_HashValueType,
-} from '../CMAIL/HashValueType.ta';
+} from '../CMAIL/HashValueType.ta.js';
 import {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 export {
   SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
-} from '../CMAIL/SignatureType.ta';
+} from '../CMAIL/SignatureType.ta.js';
 import {
   DigitalPostmarkType_deliveryType,
   _enum_for_DigitalPostmarkType_deliveryType,
@@ -93,7 +93,7 @@ import {
   certifiedMail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_DigitalPostmarkType_deliveryType,
   _encode_DigitalPostmarkType_deliveryType,
-} from '../CMAIL/DigitalPostmarkType-deliveryType.ta';
+} from '../CMAIL/DigitalPostmarkType-deliveryType.ta.js';
 export {
   DigitalPostmarkType_deliveryType,
   _enum_for_DigitalPostmarkType_deliveryType,
@@ -101,12 +101,12 @@ export {
   certifiedMail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_DigitalPostmarkType_deliveryType,
   _encode_DigitalPostmarkType_deliveryType,
-} from '../CMAIL/DigitalPostmarkType-deliveryType.ta';
+} from '../CMAIL/DigitalPostmarkType-deliveryType.ta.js';
 import {
     String,
     _decode_String,
     _encode_String,
-} from '../XSD/String.ta';
+} from '../XSD/String.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DigitalPostmarkType */
 /**

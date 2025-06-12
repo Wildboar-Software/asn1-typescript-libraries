@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta";
-export { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta";
-import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta";
-export { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta.js";
+export { ECDSA_Sig_Value, _decode_ECDSA_Sig_Value, _encode_ECDSA_Sig_Value } from "../SEC1-v1-9/ECDSA-Sig-Value.ta.js";
+import { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta.js";
+export { ECDSA_Full_R, _decode_ECDSA_Full_R, _encode_ECDSA_Full_R } from "../SEC1-v1-9/ECDSA-Full-R.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECDSA_Signature */

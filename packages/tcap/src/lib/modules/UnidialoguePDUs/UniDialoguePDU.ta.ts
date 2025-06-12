@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AUDT_apdu,
     _decode_AUDT_apdu,
     _encode_AUDT_apdu,
-} from '../UnidialoguePDUs/AUDT-apdu.ta';
+} from '../UnidialoguePDUs/AUDT-apdu.ta.js';
 export {
     AUDT_apdu,
     _decode_AUDT_apdu,
     _encode_AUDT_apdu,
-} from '../UnidialoguePDUs/AUDT-apdu.ta';
+} from '../UnidialoguePDUs/AUDT-apdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION UniDialoguePDU */
 /**

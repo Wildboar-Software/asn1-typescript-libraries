@@ -65,67 +65,67 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RTORQapdu,
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.js';
 export {
     RTORQapdu,
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORQapdu.ta.js';
 import {
     RTOACapdu,
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.js';
 export {
     RTOACapdu,
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTOACapdu.ta.js';
 import {
     RTORJapdu,
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.js';
 export {
     RTORJapdu,
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.js';
 import {
     RTTPapdu,
     _decode_RTTPapdu,
     _encode_RTTPapdu,
-} from '../MTSAccessProtocol/RTTPapdu.ta';
+} from '../MTSAccessProtocol/RTTPapdu.ta.js';
 export {
     RTTPapdu,
     _decode_RTTPapdu,
     _encode_RTTPapdu,
-} from '../MTSAccessProtocol/RTTPapdu.ta';
+} from '../MTSAccessProtocol/RTTPapdu.ta.js';
 import {
     RTTRapdu,
     _decode_RTTRapdu,
     _encode_RTTRapdu,
-} from '../MTSAccessProtocol/RTTRapdu.ta';
+} from '../MTSAccessProtocol/RTTRapdu.ta.js';
 export {
     RTTRapdu,
     _decode_RTTRapdu,
     _encode_RTTRapdu,
-} from '../MTSAccessProtocol/RTTRapdu.ta';
+} from '../MTSAccessProtocol/RTTRapdu.ta.js';
 import {
     RTABapdu,
     _decode_RTABapdu,
     _encode_RTABapdu,
-} from '../MTSAccessProtocol/RTABapdu.ta';
+} from '../MTSAccessProtocol/RTABapdu.ta.js';
 export {
     RTABapdu,
     _decode_RTABapdu,
     _encode_RTABapdu,
-} from '../MTSAccessProtocol/RTABapdu.ta';
+} from '../MTSAccessProtocol/RTABapdu.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RTSE_apdus */
 /**

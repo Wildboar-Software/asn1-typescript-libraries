@@ -1,10 +1,10 @@
 /* eslint-disable */
 import { OCTET_STRING } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-export { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+export { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union2_Intersection0_Element */
 /**

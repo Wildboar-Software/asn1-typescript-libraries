@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SecurityAlarmCause, _decode_SecurityAlarmCause, _encode_SecurityAlarmCause } from "../Attribute-ASN1Module/SecurityAlarmCause.ta";
-export { SecurityAlarmCause, _decode_SecurityAlarmCause, _encode_SecurityAlarmCause } from "../Attribute-ASN1Module/SecurityAlarmCause.ta";
-import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.va";
-export { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SecurityAlarmCause, _decode_SecurityAlarmCause, _encode_SecurityAlarmCause } from "../Attribute-ASN1Module/SecurityAlarmCause.ta.js";
+export { SecurityAlarmCause, _decode_SecurityAlarmCause, _encode_SecurityAlarmCause } from "../Attribute-ASN1Module/SecurityAlarmCause.ta.js";
+import { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.va.js";
+export { securityAlarmCause } from "../Attribute-ASN1Module/securityAlarmCause.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION delayedInformation */

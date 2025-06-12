@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca';
-export { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.js';
+export { INFO_REPLY_IDENTIFIER } from '../SMModule/INFO-REPLY-IDENTIFIER.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION InfoReplyTable */
 /**

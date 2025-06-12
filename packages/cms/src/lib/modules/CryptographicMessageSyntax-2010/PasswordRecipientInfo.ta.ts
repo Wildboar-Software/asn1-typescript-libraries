@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 import {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.js";
 import {
     KeyDerivationAlgorithmIdentifier,
     _decode_KeyDerivationAlgorithmIdentifier,
     _encode_KeyDerivationAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/KeyDerivationAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/KeyDerivationAlgorithmIdentifier.ta.js";
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/KeyEncryptionAlgorithmIdentifier.ta.js";
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -41,22 +41,22 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta";
+} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.js";
 export {
     EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta";
+} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.js";
 export {
     KeyDerivationAlgorithmIdentifier,
     _decode_KeyDerivationAlgorithmIdentifier,
     _encode_KeyDerivationAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/KeyDerivationAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/KeyDerivationAlgorithmIdentifier.ta.js";
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/KeyEncryptionAlgorithmIdentifier.ta";
+} from "../CryptographicMessageSyntax-2010/KeyEncryptionAlgorithmIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PasswordRecipientInfo */
 /**

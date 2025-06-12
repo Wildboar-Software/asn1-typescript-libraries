@@ -4,22 +4,22 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInDomainDefinedAttributes.ta";
+} from "../PkiPmiExternalDataTypes/BuiltInDomainDefinedAttributes.ta.js";
 import {
     BuiltInStandardAttributes,
     _decode_BuiltInStandardAttributes,
     _encode_BuiltInStandardAttributes,
-} from "../PkiPmiExternalDataTypes/BuiltInStandardAttributes.ta";
+} from "../PkiPmiExternalDataTypes/BuiltInStandardAttributes.ta.js";
 import {
     ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
-} from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta";
+} from "../PkiPmiExternalDataTypes/ExtensionAttributes.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION ORAddress */
 /**

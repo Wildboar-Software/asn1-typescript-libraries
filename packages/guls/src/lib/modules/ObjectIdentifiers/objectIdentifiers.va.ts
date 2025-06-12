@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { modules } from '../ObjectIdentifiers/modules.va';
-export { modules } from '../ObjectIdentifiers/modules.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { modules } from '../ObjectIdentifiers/modules.va.js';
+export { modules } from '../ObjectIdentifiers/modules.va.js';
 
 /* START_OF_SYMBOL_DEFINITION objectIdentifiers */
 /**

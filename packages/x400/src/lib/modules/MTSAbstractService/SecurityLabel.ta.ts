@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from '../MTSAbstractService/SecurityPolicyIdentifier.ta';
+} from '../MTSAbstractService/SecurityPolicyIdentifier.ta.js';
 export {
     SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
-} from '../MTSAbstractService/SecurityPolicyIdentifier.ta';
+} from '../MTSAbstractService/SecurityPolicyIdentifier.ta.js';
 import {
     SecurityClassification,
     SecurityClassification_unmarked /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -92,7 +92,7 @@ import {
     top_secret /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from '../MTSAbstractService/SecurityClassification.ta';
+} from '../MTSAbstractService/SecurityClassification.ta.js';
 export {
     SecurityClassification,
     SecurityClassification_unmarked /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -109,27 +109,27 @@ export {
     top_secret /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
-} from '../MTSAbstractService/SecurityClassification.ta';
+} from '../MTSAbstractService/SecurityClassification.ta.js';
 import {
     PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
-} from '../MTSAbstractService/PrivacyMark.ta';
+} from '../MTSAbstractService/PrivacyMark.ta.js';
 export {
     PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
-} from '../MTSAbstractService/PrivacyMark.ta';
+} from '../MTSAbstractService/PrivacyMark.ta.js';
 import {
     SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
-} from '../MTSAbstractService/SecurityCategories.ta';
+} from '../MTSAbstractService/SecurityCategories.ta.js';
 export {
     SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
-} from '../MTSAbstractService/SecurityCategories.ta';
+} from '../MTSAbstractService/SecurityCategories.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityLabel */
 /**

@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SIGNATURE,
     _decode_SIGNATURE,
     _encode_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_ContentIntegrityCheck,
     _encode_SIGNATURE as _encode_ContentIntegrityCheck,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ContentIntegrityCheck */
 /**

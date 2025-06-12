@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ROS_SingleAS,
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.js';
 export {
     ROS_SingleAS,
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta';
-import { administration_88 } from '../MTSAbstractService88/administration-88.oa';
-export { administration_88 } from '../MTSAbstractService88/administration-88.oa';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Useful-Definitions/ROS-SingleAS.ta.js';
+import { administration_88 } from '../MTSAbstractService88/administration-88.oa.js';
+export { administration_88 } from '../MTSAbstractService88/administration-88.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageAdministrationPDUs88 */
 /**

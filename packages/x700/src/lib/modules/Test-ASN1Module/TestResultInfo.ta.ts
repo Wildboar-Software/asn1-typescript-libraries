@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
-} from '../Test-ASN1Module/TestInvocationId.ta';
+} from '../Test-ASN1Module/TestInvocationId.ta.js';
 export {
     TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
-} from '../Test-ASN1Module/TestInvocationId.ta';
+} from '../Test-ASN1Module/TestInvocationId.ta.js';
 import {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 export {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta';
+} from '../Test-ASN1Module/TestSessionId.ta.js';
 import {
     TestOutcome,
     TestOutcome_inconclusive /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -100,7 +100,7 @@ import {
     premature_termination /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestOutcome,
     _encode_TestOutcome,
-} from '../Test-ASN1Module/TestOutcome.ta';
+} from '../Test-ASN1Module/TestOutcome.ta.js';
 export {
     TestOutcome,
     TestOutcome_inconclusive /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,87 +115,87 @@ export {
     premature_termination /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestOutcome,
     _encode_TestOutcome,
-} from '../Test-ASN1Module/TestOutcome.ta';
+} from '../Test-ASN1Module/TestOutcome.ta.js';
 import {
     MORTs,
     _decode_MORTs,
     _encode_MORTs,
-} from '../Test-ASN1Module/MORTs.ta';
+} from '../Test-ASN1Module/MORTs.ta.js';
 export {
     MORTs,
     _decode_MORTs,
     _encode_MORTs,
-} from '../Test-ASN1Module/MORTs.ta';
+} from '../Test-ASN1Module/MORTs.ta.js';
 import {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 export {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta';
+} from '../Test-ASN1Module/AssociatedObjects.ta.js';
 import {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.js';
 export {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.js';
 import {
     ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.js';
 export {
     ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 export {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TestResultInfo */
 /**

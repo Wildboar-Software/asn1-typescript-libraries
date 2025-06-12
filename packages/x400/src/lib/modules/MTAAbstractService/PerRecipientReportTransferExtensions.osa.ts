@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca';
-import { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-export { redirection_history } from '../MTSAbstractService/redirection-history.oa';
-import { physical_forwarding_address } from '../MTSAbstractService/physical-forwarding-address.oa';
-export { physical_forwarding_address } from '../MTSAbstractService/physical-forwarding-address.oa';
-import { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa';
-export { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa';
-import { proof_of_delivery } from '../MTSAbstractService/proof-of-delivery.oa';
-export { proof_of_delivery } from '../MTSAbstractService/proof-of-delivery.oa';
-import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.js';
+import { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+export { redirection_history } from '../MTSAbstractService/redirection-history.oa.js';
+import { physical_forwarding_address } from '../MTSAbstractService/physical-forwarding-address.oa.js';
+export { physical_forwarding_address } from '../MTSAbstractService/physical-forwarding-address.oa.js';
+import { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa.js';
+export { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa.js';
+import { proof_of_delivery } from '../MTSAbstractService/proof-of-delivery.oa.js';
+export { proof_of_delivery } from '../MTSAbstractService/proof-of-delivery.oa.js';
+import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
+export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION PerRecipientReportTransferExtensions */
 /**

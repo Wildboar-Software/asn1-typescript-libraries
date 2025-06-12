@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
 import {
     RC2_CBC_Parameter,
     _decode_RC2_CBC_Parameter,
     _encode_RC2_CBC_Parameter,
-} from "../PKCS5v2-1/RC2-CBC-Parameter.ta";
-import { rc2CBC } from "../PKCS5v2-1/rc2CBC.va";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
+} from "../PKCS5v2-1/RC2-CBC-Parameter.ta.js";
+import { rc2CBC } from "../PKCS5v2-1/rc2CBC.va.js";
+export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
 export {
     RC2_CBC_Parameter,
     _decode_RC2_CBC_Parameter,
     _encode_RC2_CBC_Parameter,
-} from "../PKCS5v2-1/RC2-CBC-Parameter.ta";
-export { rc2CBC } from "../PKCS5v2-1/rc2CBC.va";
+} from "../PKCS5v2-1/RC2-CBC-Parameter.ta.js";
+export { rc2CBC } from "../PKCS5v2-1/rc2CBC.va.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union3_Intersection0_Element */
 /**

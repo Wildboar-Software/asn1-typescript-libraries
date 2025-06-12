@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va";
+import { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.js";
 import {
     SigncryptedKey,
     _decode_SigncryptedKey,
     _encode_SigncryptedKey,
-} from "../CMSSigncryption/SigncryptedKey.ta";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-export { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va";
+} from "../CMSSigncryption/SigncryptedKey.ta.js";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+export { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.js";
 export {
     SigncryptedKey,
     _decode_SigncryptedKey,
     _encode_SigncryptedKey,
-} from "../CMSSigncryption/SigncryptedKey.ta";
+} from "../CMSSigncryption/SigncryptedKey.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION signcryptedEnvelope */
 /**

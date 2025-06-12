@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EMailFromToEIT,
     _decode_EMailFromToEIT,
     _encode_EMailFromToEIT,
-} from '../MhsAcctAsn1Module/EMailFromToEIT.ta';
+} from '../MhsAcctAsn1Module/EMailFromToEIT.ta.js';
 export {
     EMailFromToEIT,
     _decode_EMailFromToEIT,
     _encode_EMailFromToEIT,
-} from '../MhsAcctAsn1Module/EMailFromToEIT.ta';
+} from '../MhsAcctAsn1Module/EMailFromToEIT.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConversionProcessingInfo */
 /**

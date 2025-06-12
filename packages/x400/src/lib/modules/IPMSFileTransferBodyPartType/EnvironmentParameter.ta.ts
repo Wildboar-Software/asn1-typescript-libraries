@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     GeneralIdentifier,
     _decode_GeneralIdentifier,
     _encode_GeneralIdentifier,
-} from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta';
+} from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta.js';
 export {
     GeneralIdentifier,
     _decode_GeneralIdentifier,
     _encode_GeneralIdentifier,
-} from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta';
+} from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EnvironmentParameter */
 /**

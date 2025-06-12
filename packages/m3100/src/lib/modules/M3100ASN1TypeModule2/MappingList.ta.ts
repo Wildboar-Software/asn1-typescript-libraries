@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PayloadLevel,
     _decode_PayloadLevel,
     _encode_PayloadLevel,
-} from '../M3100ASN1TypeModule2/PayloadLevel.ta';
+} from '../M3100ASN1TypeModule2/PayloadLevel.ta.js';
 export {
     PayloadLevel,
     _decode_PayloadLevel,
     _encode_PayloadLevel,
-} from '../M3100ASN1TypeModule2/PayloadLevel.ta';
+} from '../M3100ASN1TypeModule2/PayloadLevel.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MappingList */
 /**

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageParameters,
     _decode_MessageParameters,
     _encode_MessageParameters,
-} from '../IPMSInformationObjects/MessageParameters.ta';
+} from '../IPMSInformationObjects/MessageParameters.ta.js';
 export {
     MessageParameters,
     _decode_MessageParameters,
     _encode_MessageParameters,
-} from '../IPMSInformationObjects/MessageParameters.ta';
-import { id_ep_notification } from '../IPMSObjectIdentifiers/id-ep-notification.va';
-export { id_ep_notification } from '../IPMSObjectIdentifiers/id-ep-notification.va';
+} from '../IPMSInformationObjects/MessageParameters.ta.js';
+import { id_ep_notification } from '../IPMSObjectIdentifiers/id-ep-notification.va.js';
+export { id_ep_notification } from '../IPMSObjectIdentifiers/id-ep-notification.va.js';
 
 /* START_OF_SYMBOL_DEFINITION notification_body_part_parameters */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SIGNATURE,
     _decode_SIGNATURE,
@@ -73,12 +73,12 @@ import {
     _root_component_type_list_1_spec_for_SIGNATURE,
     _extension_additions_list_spec_for_SIGNATURE,
     _root_component_type_list_2_spec_for_SIGNATURE,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 export {
     SIGNATURE,
     _decode_SIGNATURE as _decode_MessageOriginAuthenticationCheck,
     _encode_SIGNATURE as _encode_MessageOriginAuthenticationCheck,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta';
+} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/SIGNATURE.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MessageOriginAuthenticationCheck */
 /**

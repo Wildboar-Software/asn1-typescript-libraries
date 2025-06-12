@@ -65,16 +65,16 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca';
-import { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa';
-export { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+export { AUTO_ACTION } from '../MSAbstractService/AUTO-ACTION.oca.js';
+import { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa.js';
+export { AutoActionTable } from '../MSGeneralAutoActionTypes/AutoActionTable.osa.js';
 import {
     AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
-} from "./AutoActionType.ta";
+} from "./AutoActionType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AutoActionRegistration */
 /**

@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestState,
     _enum_for_RequestState,
@@ -77,7 +77,7 @@ import {
     denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestState,
     _encode_RequestState,
-} from '../X790ASN1Module/RequestState.ta';
+} from '../X790ASN1Module/RequestState.ta.js';
 export {
     RequestState,
     _enum_for_RequestState,
@@ -89,27 +89,27 @@ export {
     denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestState,
     _encode_RequestState,
-} from '../X790ASN1Module/RequestState.ta';
+} from '../X790ASN1Module/RequestState.ta.js';
 import {
     EscalationTime,
     _decode_EscalationTime,
     _encode_EscalationTime,
-} from '../X790ASN1Module/EscalationTime.ta';
+} from '../X790ASN1Module/EscalationTime.ta.js';
 export {
     EscalationTime,
     _decode_EscalationTime,
     _encode_EscalationTime,
-} from '../X790ASN1Module/EscalationTime.ta';
+} from '../X790ASN1Module/EscalationTime.ta.js';
 import {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 export {
     PersonReach,
     _decode_PersonReach,
     _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta';
+} from '../X790ASN1Module/PersonReach.ta.js';
 import {
     OrgLevel,
     OrgLevel_no_escalation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -128,7 +128,7 @@ import {
     sixth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_OrgLevel,
     _encode_OrgLevel,
-} from '../X790ASN1Module/OrgLevel.ta';
+} from '../X790ASN1Module/OrgLevel.ta.js';
 export {
     OrgLevel,
     OrgLevel_no_escalation /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -147,7 +147,7 @@ export {
     sixth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_OrgLevel,
     _encode_OrgLevel,
-} from '../X790ASN1Module/OrgLevel.ta';
+} from '../X790ASN1Module/OrgLevel.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EscalationList_Item */
 /**

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   UnicodeLabels,
   _decode_UnicodeLabels,
   _encode_UnicodeLabels,
-} from '../CINF-module/UnicodeLabels.ta';
+} from '../CINF-module/UnicodeLabels.ta.js';
 export {
   UnicodeLabels,
   _decode_UnicodeLabels,
   _encode_UnicodeLabels,
-} from '../CINF-module/UnicodeLabels.ta';
+} from '../CINF-module/UnicodeLabels.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ChildDetails */
 /**

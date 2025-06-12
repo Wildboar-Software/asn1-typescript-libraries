@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../AuthenticationContextForBiometrics/DataType.ta';
+} from '../AuthenticationContextForBiometrics/DataType.ta.js';
 export {
     DataType,
     _decode_DataType,
     _encode_DataType,
-} from '../AuthenticationContextForBiometrics/DataType.ta';
+} from '../AuthenticationContextForBiometrics/DataType.ta.js';
 import {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 export {
     IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta';
+} from '../AuthenticationContextForBiometrics/IOIndex.ta.js';
 import {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from '../AuthenticationContextForBiometrics/Hash.ta';
+} from '../AuthenticationContextForBiometrics/Hash.ta.js';
 export {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from '../AuthenticationContextForBiometrics/Hash.ta';
+} from '../AuthenticationContextForBiometrics/Hash.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BPUIOExecutionInformation */
 /**

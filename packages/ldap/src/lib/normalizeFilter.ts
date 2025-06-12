@@ -1,4 +1,4 @@
-import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
+import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
 
 /**
  * Normalizes a Filter as specified in ITU Recommendation X.501 (2016), Annex Q.

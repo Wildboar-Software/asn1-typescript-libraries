@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HeaderBlock,
   _decode_HeaderBlock,
   _encode_HeaderBlock,
-} from '../ASN1SOAP/HeaderBlock.ta';
+} from '../ASN1SOAP/HeaderBlock.ta.js';
 export {
   HeaderBlock,
   _decode_HeaderBlock,
   _encode_HeaderBlock,
-} from '../ASN1SOAP/HeaderBlock.ta';
+} from '../ASN1SOAP/HeaderBlock.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Header */
 /**

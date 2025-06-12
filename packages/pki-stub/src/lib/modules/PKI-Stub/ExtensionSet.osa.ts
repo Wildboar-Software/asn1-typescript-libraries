@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import { EXTENSION } from "../PKI-Stub/EXTENSION.oca";
+import { EXTENSION } from "../PKI-Stub/EXTENSION.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION ExtensionSet */
 /**

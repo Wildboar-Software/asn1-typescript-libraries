@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { mHSOrganizationalUnit } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnit.oa';
-export { mHSOrganizationalUnit } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnit.oa';
-import { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa';
-export { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa';
-import { id_nf_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organizational-unit.va';
-export { id_nf_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organizational-unit.va';
-import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
-export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { mHSOrganizationalUnit } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnit.oa.js';
+export { mHSOrganizationalUnit } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnit.oa.js';
+import { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa.js';
+export { mHSOrganizationalUnitName } from '../MHSRoutingORAddressSubtree/mHSOrganizationalUnitName.oa.js';
+import { id_nf_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organizational-unit.va.js';
+export { id_nf_mhs_organizational_unit } from '../MHSRoutingObjectIdentifiers/id-nf-mhs-organizational-unit.va.js';
+import { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
+export { NAME_FORM } from '@wildboar/x500/src/lib/modules/InformationFramework/NAME-FORM.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mHSOrganizationalUnitNameForm */
 /**

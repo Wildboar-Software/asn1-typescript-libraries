@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     mta_name_Type,
     _decode_mta_name_Type,
     _encode_mta_name_Type,
-} from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta';
+} from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta.js';
 export {
     mta_name_Type,
     _decode_mta_name_Type,
     _encode_mta_name_Type,
-} from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta';
-import { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va';
-export { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va';
-import { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca';
-export { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca';
+} from '../MHSDirectoryObjectsAndAttributes/mta-name-Type.ta.js';
+import { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va.js';
+export { id_san_mta_name } from '../MHSObjectIdentifiers/id-san-mta-name.va.js';
+import { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca.js';
+export { OTHER_NAME } from '@wildboar/x500/src/lib/modules/CertificateExtensions/OTHER-NAME.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mta_name */
 /**

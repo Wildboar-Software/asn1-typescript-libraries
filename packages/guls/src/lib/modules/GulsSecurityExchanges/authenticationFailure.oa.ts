@@ -65,24 +65,24 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
+} from '../Notation/Identifier.ta.js';
 export {
   Identifier,
   _decode_Identifier,
   _encode_Identifier,
-} from '../Notation/Identifier.ta';
-import { SE_ERROR } from '../Notation/SE-ERROR.oca';
-export { SE_ERROR } from '../Notation/SE-ERROR.oca';
+} from '../Notation/Identifier.ta.js';
+import { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
+export { SE_ERROR } from '../Notation/SE-ERROR.oca.js';
 import {
     SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
-} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/SecurityProblem.ta";
+} from "@wildboar/x500/src/lib/modules/DirectoryAbstractService/SecurityProblem.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION authenticationFailure */
 /**

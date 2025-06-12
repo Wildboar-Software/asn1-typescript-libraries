@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubscriptionProblem,
     _enum_for_SubscriptionProblem,
@@ -75,7 +75,7 @@ import {
     mts_eos_not_subscribed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SubscriptionProblem,
     _encode_SubscriptionProblem,
-} from '../IPMSAbstractService/SubscriptionProblem.ta';
+} from '../IPMSAbstractService/SubscriptionProblem.ta.js';
 export {
     SubscriptionProblem,
     _enum_for_SubscriptionProblem,
@@ -85,7 +85,7 @@ export {
     mts_eos_not_subscribed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SubscriptionProblem,
     _encode_SubscriptionProblem,
-} from '../IPMSAbstractService/SubscriptionProblem.ta';
+} from '../IPMSAbstractService/SubscriptionProblem.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION subscription_error_ParameterType */
 /**

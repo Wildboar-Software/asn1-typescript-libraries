@@ -3,16 +3,16 @@ import {
     AuthenticatedData,
     _decode_AuthenticatedData,
     _encode_AuthenticatedData,
-} from "../PKCS7/AuthenticatedData.ta";
-import { id_authenticated_data } from "../PKCS7/id-authenticated-data.va";
-import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/AuthenticatedData.ta.js";
+import { id_authenticated_data } from "../PKCS7/id-authenticated-data.va.js";
+import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 export {
     AuthenticatedData,
     _decode_AuthenticatedData,
     _encode_AuthenticatedData,
-} from "../PKCS7/AuthenticatedData.ta";
-export { id_authenticated_data } from "../PKCS7/id-authenticated-data.va";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
+} from "../PKCS7/AuthenticatedData.ta.js";
+export { id_authenticated_data } from "../PKCS7/id-authenticated-data.va.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION authenticated_data */
 /**

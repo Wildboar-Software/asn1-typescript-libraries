@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 export {
   Int32,
   _decode_Int32,
   _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta';
+} from '../KerberosV5Spec2/Int32.ta.js';
 import {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 export {
   UInt32,
   _decode_UInt32,
   _encode_UInt32,
-} from '../KerberosV5Spec2/UInt32.ta';
+} from '../KerberosV5Spec2/UInt32.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**

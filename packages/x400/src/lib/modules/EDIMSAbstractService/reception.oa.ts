@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca';
-import { receive_report } from '../EDIMSAbstractService/receive-report.oa';
-export { receive_report } from '../EDIMSAbstractService/receive-report.oa';
-import { receive_edim } from '../EDIMSAbstractService/receive-edim.oa';
-export { receive_edim } from '../EDIMSAbstractService/receive-edim.oa';
-import { receive_edin } from '../EDIMSAbstractService/receive-edin.oa';
-export { receive_edin } from '../EDIMSAbstractService/receive-edin.oa';
-import { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va';
-export { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va';
-import { PORT } from '../MTSAbstractService/PORT.oca';
-export { PORT } from '../MTSAbstractService/PORT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION.oca.js';
+import { receive_report } from '../EDIMSAbstractService/receive-report.oa.js';
+export { receive_report } from '../EDIMSAbstractService/receive-report.oa.js';
+import { receive_edim } from '../EDIMSAbstractService/receive-edim.oa.js';
+export { receive_edim } from '../EDIMSAbstractService/receive-edim.oa.js';
+import { receive_edin } from '../EDIMSAbstractService/receive-edin.oa.js';
+export { receive_edin } from '../EDIMSAbstractService/receive-edin.oa.js';
+import { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va.js';
+export { id_pt_reception } from '../EDIMSObjectIdentifiers/id-pt-reception.va.js';
+import { PORT } from '../MTSAbstractService/PORT.oca.js';
+export { PORT } from '../MTSAbstractService/PORT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION reception */
 /**

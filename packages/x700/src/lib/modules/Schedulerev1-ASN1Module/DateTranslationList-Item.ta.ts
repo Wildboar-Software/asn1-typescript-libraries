@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Date,
     _decode_Date,
     _encode_Date,
-} from '../Schedulerev1-ASN1Module/Date.ta';
+} from '../Schedulerev1-ASN1Module/Date.ta.js';
 export {
     Date,
     _decode_Date,
     _encode_Date,
-} from '../Schedulerev1-ASN1Module/Date.ta';
+} from '../Schedulerev1-ASN1Module/Date.ta.js';
 import {
     TypeOfDay,
     TypeOfDay_workday /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -116,7 +116,7 @@ import {
     specialDay16 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfDay,
     _encode_TypeOfDay,
-} from '../Schedulerev1-ASN1Module/TypeOfDay.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDay.ta.js';
 export {
     TypeOfDay,
     TypeOfDay_workday /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -157,7 +157,7 @@ export {
     specialDay16 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfDay,
     _encode_TypeOfDay,
-} from '../Schedulerev1-ASN1Module/TypeOfDay.ta';
+} from '../Schedulerev1-ASN1Module/TypeOfDay.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DateTranslationList_Item */
 /**

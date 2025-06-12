@@ -65,9 +65,9 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va';
-export { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va.js';
+export { receiveLSPBufferSize } from '../ISIS/receiveLSPBufferSize.va.js';
 
 /* START_OF_SYMBOL_DEFINITION originatingL2LSPBufferSize_Default */
 /**

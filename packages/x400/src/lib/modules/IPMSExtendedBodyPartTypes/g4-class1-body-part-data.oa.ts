@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
-} from '../IPMSInformationObjects/G4Class1BodyPart.ta';
+} from '../IPMSInformationObjects/G4Class1BodyPart.ta.js';
 export {
     G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
-} from '../IPMSInformationObjects/G4Class1BodyPart.ta';
-import { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va';
-export { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va';
+} from '../IPMSInformationObjects/G4Class1BodyPart.ta.js';
+import { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va.js';
+export { id_et_g4_class1 } from '../IPMSObjectIdentifiers/id-et-g4-class1.va.js';
 
 /* START_OF_SYMBOL_DEFINITION g4_class1_body_part_data */
 /**

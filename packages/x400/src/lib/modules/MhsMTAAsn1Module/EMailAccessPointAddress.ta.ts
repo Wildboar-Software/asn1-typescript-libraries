@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
-} from '../MTSAbstractService/PSAPAddress.ta';
+} from '../MTSAbstractService/PSAPAddress.ta.js';
 export {
     PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
-} from '../MTSAbstractService/PSAPAddress.ta';
+} from '../MTSAbstractService/PSAPAddress.ta.js';
 import {
     GenericAddress,
     _decode_GenericAddress,
     _encode_GenericAddress,
-} from '../MhsMTAAsn1Module/GenericAddress.ta';
+} from '../MhsMTAAsn1Module/GenericAddress.ta.js';
 export {
     GenericAddress,
     _decode_GenericAddress,
     _encode_GenericAddress,
-} from '../MhsMTAAsn1Module/GenericAddress.ta';
+} from '../MhsMTAAsn1Module/GenericAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailAccessPointAddress */
 /**

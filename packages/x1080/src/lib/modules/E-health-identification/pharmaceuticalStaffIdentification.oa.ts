@@ -65,21 +65,21 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { id_pharm_staff } from '../E-health-identification/id-pharm-staff.va';
-export { id_pharm_staff } from '../E-health-identification/id-pharm-staff.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { id_pharm_staff } from '../E-health-identification/id-pharm-staff.va.js';
+export { id_pharm_staff } from '../E-health-identification/id-pharm-staff.va.js';
 import {
     PharmaceuticalStaffIdentification,
     _decode_PharmaceuticalStaffIdentification,
     _encode_PharmaceuticalStaffIdentification,
-} from '../E-health-identification/PharmaceuticalStaffIdentification.ta';
+} from '../E-health-identification/PharmaceuticalStaffIdentification.ta.js';
 export {
     PharmaceuticalStaffIdentification,
     _decode_PharmaceuticalStaffIdentification,
     _encode_PharmaceuticalStaffIdentification,
-} from '../E-health-identification/PharmaceuticalStaffIdentification.ta';
-import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
-export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca';
+} from '../E-health-identification/PharmaceuticalStaffIdentification.ta.js';
+import { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
+export { IDENTIFICATION } from '../E-health-identification/IDENTIFICATION.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION pharmaceuticalStaffIdentification */
 /**

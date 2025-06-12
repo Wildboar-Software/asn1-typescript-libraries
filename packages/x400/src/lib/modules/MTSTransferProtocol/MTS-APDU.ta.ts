@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Message,
     _decode_Message,
     _encode_Message,
-} from '../MTAAbstractService/Message.ta';
+} from '../MTAAbstractService/Message.ta.js';
 export {
     Message,
     _decode_Message,
     _encode_Message,
-} from '../MTAAbstractService/Message.ta';
+} from '../MTAAbstractService/Message.ta.js';
 import {
     Probe,
     _decode_Probe,
     _encode_Probe,
-} from '../MTAAbstractService/Probe.ta';
+} from '../MTAAbstractService/Probe.ta.js';
 export {
     Probe,
     _decode_Probe,
     _encode_Probe,
-} from '../MTAAbstractService/Probe.ta';
+} from '../MTAAbstractService/Probe.ta.js';
 import {
     Report,
     _decode_Report,
     _encode_Report,
-} from '../MTAAbstractService/Report.ta';
+} from '../MTAAbstractService/Report.ta.js';
 export {
     Report,
     _decode_Report,
     _encode_Report,
-} from '../MTAAbstractService/Report.ta';
+} from '../MTAAbstractService/Report.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MTS_APDU */
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { SupportingAlgorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union0-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union1_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union1-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union2_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union2-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union3_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union3-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union4_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union4-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union5_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union5-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union6_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union6-Intersection0-Element.oa";
-import { SupportingAlgorithms_Union7_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union7-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { SupportingAlgorithms_Union0_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union0-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union1_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union1-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union2_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union2-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union3_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union3-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union4_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union4-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union5_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union5-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union6_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union6-Intersection0-Element.oa.js";
+import { SupportingAlgorithms_Union7_Intersection0_Element } from "../PKCS5v2-1/SupportingAlgorithms-Union7-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms */
 /**

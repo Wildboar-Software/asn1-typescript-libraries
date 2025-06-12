@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca';
-import { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa';
-export { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa';
-import { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa';
-export { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+export { AUTO_ACTION_ERROR } from '../MSAbstractService/AUTO-ACTION-ERROR.oca.js';
+import { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa.js';
+export { GeneralAutoActionErrors } from '../MSGeneralAutoActionTypes/GeneralAutoActionErrors.osa.js';
+import { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa.js';
+export { ContentSpecificAutoActionErrors } from '../MSGeneralAutoActionTypes/ContentSpecificAutoActionErrors.osa.js';
 
 /* START_OF_SYMBOL_DEFINITION AutoActionErrorTable */
 /**

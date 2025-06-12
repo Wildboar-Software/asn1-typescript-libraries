@@ -1,9 +1,9 @@
 /* eslint-disable */
-import * as $ from "asn1-ts/dist/node/functional";
-import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta";
-import { emptyString } from "../PKCS-1/emptyString.va";
-import { id_pSpecified } from "../PKCS-1/id-pSpecified.va";
-import { PSourceAlgorithm } from "../PKCS-1/PSourceAlgorithm.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.js";
+import { emptyString } from "../PKCS-1/emptyString.va.js";
+import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.js";
+import { PSourceAlgorithm } from "../PKCS-1/PSourceAlgorithm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION pSpecifiedEmpty */
 /**

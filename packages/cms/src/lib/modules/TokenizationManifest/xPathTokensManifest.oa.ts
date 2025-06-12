@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va";
-import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca";
+import { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va.js";
+import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.js";
 import {
     XPathTokensSet,
     _decode_XPathTokensSet,
     _encode_XPathTokensSet,
-} from "../TokenizationManifest/XPathTokensSet.ta";
-export { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va";
-export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca";
+} from "../TokenizationManifest/XPathTokensSet.ta.js";
+export { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va.js";
+export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.js";
 export {
     XPathTokensSet,
     _decode_XPathTokensSet,
     _encode_XPathTokensSet,
-} from "../TokenizationManifest/XPathTokensSet.ta";
+} from "../TokenizationManifest/XPathTokensSet.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION xPathTokensManifest */
 /**

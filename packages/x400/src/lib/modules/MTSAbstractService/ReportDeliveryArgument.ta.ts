@@ -65,87 +65,87 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReportDeliveryEnvelope,
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
-} from '../MTSAbstractService/ReportDeliveryEnvelope.ta';
+} from '../MTSAbstractService/ReportDeliveryEnvelope.ta.js';
 export {
     ReportDeliveryEnvelope,
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
-} from '../MTSAbstractService/ReportDeliveryEnvelope.ta';
+} from '../MTSAbstractService/ReportDeliveryEnvelope.ta.js';
 import {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 export {
     Content,
     _decode_Content,
     _encode_Content,
-} from '../MTSAbstractService/Content.ta';
+} from '../MTSAbstractService/Content.ta.js';
 import {
     SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
-} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta';
+} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.js';
 export {
     SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
-} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta';
+} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 import {
     PerRecipientReportDeliveryFields,
     _decode_PerRecipientReportDeliveryFields,
     _encode_PerRecipientReportDeliveryFields,
-} from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta';
+} from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.js';
 export {
     PerRecipientReportDeliveryFields,
     _decode_PerRecipientReportDeliveryFields,
     _encode_PerRecipientReportDeliveryFields,
-} from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta';
+} from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReportDeliveryArgument */
 /**

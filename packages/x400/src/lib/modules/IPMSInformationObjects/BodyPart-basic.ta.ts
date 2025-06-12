@@ -65,107 +65,107 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     IA5TextBodyPart,
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
-} from '../IPMSInformationObjects/IA5TextBodyPart.ta';
+} from '../IPMSInformationObjects/IA5TextBodyPart.ta.js';
 export {
     IA5TextBodyPart,
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
-} from '../IPMSInformationObjects/IA5TextBodyPart.ta';
+} from '../IPMSInformationObjects/IA5TextBodyPart.ta.js';
 import {
     G3FacsimileBodyPart,
     _decode_G3FacsimileBodyPart,
     _encode_G3FacsimileBodyPart,
-} from '../IPMSInformationObjects/G3FacsimileBodyPart.ta';
+} from '../IPMSInformationObjects/G3FacsimileBodyPart.ta.js';
 export {
     G3FacsimileBodyPart,
     _decode_G3FacsimileBodyPart,
     _encode_G3FacsimileBodyPart,
-} from '../IPMSInformationObjects/G3FacsimileBodyPart.ta';
+} from '../IPMSInformationObjects/G3FacsimileBodyPart.ta.js';
 import {
     G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
-} from '../IPMSInformationObjects/G4Class1BodyPart.ta';
+} from '../IPMSInformationObjects/G4Class1BodyPart.ta.js';
 export {
     G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
-} from '../IPMSInformationObjects/G4Class1BodyPart.ta';
+} from '../IPMSInformationObjects/G4Class1BodyPart.ta.js';
 import {
     TeletexBodyPart,
     _decode_TeletexBodyPart,
     _encode_TeletexBodyPart,
-} from '../IPMSInformationObjects/TeletexBodyPart.ta';
+} from '../IPMSInformationObjects/TeletexBodyPart.ta.js';
 export {
     TeletexBodyPart,
     _decode_TeletexBodyPart,
     _encode_TeletexBodyPart,
-} from '../IPMSInformationObjects/TeletexBodyPart.ta';
+} from '../IPMSInformationObjects/TeletexBodyPart.ta.js';
 import {
     VideotexBodyPart,
     _decode_VideotexBodyPart,
     _encode_VideotexBodyPart,
-} from '../IPMSInformationObjects/VideotexBodyPart.ta';
+} from '../IPMSInformationObjects/VideotexBodyPart.ta.js';
 export {
     VideotexBodyPart,
     _decode_VideotexBodyPart,
     _encode_VideotexBodyPart,
-} from '../IPMSInformationObjects/VideotexBodyPart.ta';
+} from '../IPMSInformationObjects/VideotexBodyPart.ta.js';
 import {
     EncryptedBodyPart,
     _decode_EncryptedBodyPart,
     _encode_EncryptedBodyPart,
-} from '../IPMSInformationObjects/EncryptedBodyPart.ta';
+} from '../IPMSInformationObjects/EncryptedBodyPart.ta.js';
 export {
     EncryptedBodyPart,
     _decode_EncryptedBodyPart,
     _encode_EncryptedBodyPart,
-} from '../IPMSInformationObjects/EncryptedBodyPart.ta';
+} from '../IPMSInformationObjects/EncryptedBodyPart.ta.js';
 import {
     MessageBodyPart,
     _decode_MessageBodyPart,
     _encode_MessageBodyPart,
-} from '../IPMSInformationObjects/MessageBodyPart.ta';
+} from '../IPMSInformationObjects/MessageBodyPart.ta.js';
 export {
     MessageBodyPart,
     _decode_MessageBodyPart,
     _encode_MessageBodyPart,
-} from '../IPMSInformationObjects/MessageBodyPart.ta';
+} from '../IPMSInformationObjects/MessageBodyPart.ta.js';
 import {
     MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
-} from '../IPMSInformationObjects/MixedModeBodyPart.ta';
+} from '../IPMSInformationObjects/MixedModeBodyPart.ta.js';
 export {
     MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
-} from '../IPMSInformationObjects/MixedModeBodyPart.ta';
+} from '../IPMSInformationObjects/MixedModeBodyPart.ta.js';
 import {
     BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
-} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.js';
 export {
     BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
-} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.js';
 import {
     NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
-} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.js';
 export {
     NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
-} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta';
+} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BodyPart_basic */
 /**

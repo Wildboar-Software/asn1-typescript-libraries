@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     LocalDistinguishedName,
     _decode_LocalDistinguishedName,
     _encode_LocalDistinguishedName,
-} from '../NLM/LocalDistinguishedName.ta';
+} from '../NLM/LocalDistinguishedName.ta.js';
 export {
     LocalDistinguishedName,
     _decode_LocalDistinguishedName,
     _encode_LocalDistinguishedName,
-} from '../NLM/LocalDistinguishedName.ta';
+} from '../NLM/LocalDistinguishedName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION LocalDistinguishedNames */
 /**

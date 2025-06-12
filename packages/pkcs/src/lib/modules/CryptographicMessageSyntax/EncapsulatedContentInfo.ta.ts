@@ -5,17 +5,17 @@ import {
     OCTET_STRING,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta";
+} from "../CryptographicMessageSyntax/ContentType.ta.js";
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta";
+} from "../CryptographicMessageSyntax/ContentType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
 /**

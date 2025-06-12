@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AdditionalActions,
     _decode_AdditionalActions,
     _encode_AdditionalActions,
-} from '../MTAAbstractService/AdditionalActions.ta';
+} from '../MTAAbstractService/AdditionalActions.ta.js';
 export {
     AdditionalActions,
     _decode_AdditionalActions,
     _encode_AdditionalActions,
-} from '../MTAAbstractService/AdditionalActions.ta';
+} from '../MTAAbstractService/AdditionalActions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION InternalAdditionalActions */
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { CURVES } from "../ANSI-X9-62/CURVES.oca";
-import { prime192v3 } from "../ANSI-X9-62/prime192v3.va";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca";
-export { prime192v3 } from "../ANSI-X9-62/prime192v3.va";
+import { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
+import { prime192v3 } from "../ANSI-X9-62/prime192v3.va.js";
+export { CURVES } from "../ANSI-X9-62/CURVES.oca.js";
+export { prime192v3 } from "../ANSI-X9-62/prime192v3.va.js";
 
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union22_Intersection0_Element */
 /**

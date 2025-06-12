@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/clearance-sponsor-attribute",
-    "version": "1.0.4",
+    "type": "module",
+    "version": "2.0.0",
     "description": "The Clearance Sponsor attribute defined in IETF RFC 5917 in TypeScript",
     "keywords": [
         "clearance",
@@ -30,6 +31,6 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/x500": "^1.0.49"
+        "@wildboar/x500": "2.x.x"
     }
 }

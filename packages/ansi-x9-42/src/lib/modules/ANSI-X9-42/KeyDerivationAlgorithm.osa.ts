@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
-import { id_sha1 } from "../ANSI-X9-42/id-sha1.va";
+import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
+export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
+import { id_sha1 } from "../ANSI-X9-42/id-sha1.va.js";
 import {
     _decodeNull,
     _encodeNull,
-} from "asn1-ts/dist/node/functional";
+} from "asn1-ts/dist/functional.mjs";
 
 /* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithm */
 /**

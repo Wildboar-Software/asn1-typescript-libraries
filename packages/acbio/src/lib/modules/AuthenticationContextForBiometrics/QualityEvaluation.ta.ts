@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BiometricProcessQualityInformation,
     _decode_BiometricProcessQualityInformation,
     _encode_BiometricProcessQualityInformation,
-} from '../AuthenticationContextForBiometrics/BiometricProcessQualityInformation.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcessQualityInformation.ta.js';
 export {
     BiometricProcessQualityInformation,
     _decode_BiometricProcessQualityInformation,
     _encode_BiometricProcessQualityInformation,
-} from '../AuthenticationContextForBiometrics/BiometricProcessQualityInformation.ta';
+} from '../AuthenticationContextForBiometrics/BiometricProcessQualityInformation.ta.js';
 import {
     QualityEvaluationExtensionInformation,
     _decode_QualityEvaluationExtensionInformation,
     _encode_QualityEvaluationExtensionInformation,
-} from '../AuthenticationContextForBiometrics/QualityEvaluationExtensionInformation.ta';
+} from '../AuthenticationContextForBiometrics/QualityEvaluationExtensionInformation.ta.js';
 export {
     QualityEvaluationExtensionInformation,
     _decode_QualityEvaluationExtensionInformation,
     _encode_QualityEvaluationExtensionInformation,
-} from '../AuthenticationContextForBiometrics/QualityEvaluationExtensionInformation.ta';
+} from '../AuthenticationContextForBiometrics/QualityEvaluationExtensionInformation.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION QualityEvaluation */
 /**

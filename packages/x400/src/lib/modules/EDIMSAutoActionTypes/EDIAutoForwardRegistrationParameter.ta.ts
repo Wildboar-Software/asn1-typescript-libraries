@@ -65,57 +65,57 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 export {
     Filter,
     _decode_Filter,
     _encode_Filter,
-} from '../MSAbstractService/Filter.ta';
+} from '../MSAbstractService/Filter.ta.js';
 import {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 export {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 import {
     EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
-} from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta';
+} from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta.js';
 export {
     EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
-} from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta';
+} from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta.js';
 import {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 export {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta';
+} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIAutoForwardRegistrationParameter */
 /**

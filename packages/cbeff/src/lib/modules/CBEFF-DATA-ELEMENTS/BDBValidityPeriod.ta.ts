@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Date_Time,
   _decode_Date_Time,
   _encode_Date_Time,
-} from '../CBEFF-DATA-ELEMENTS/Date-Time.ta';
+} from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.js';
 export {
   Date_Time,
   _decode_Date_Time,
   _encode_Date_Time,
-} from '../CBEFF-DATA-ELEMENTS/Date-Time.ta';
+} from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BDBValidityPeriod */
 /**

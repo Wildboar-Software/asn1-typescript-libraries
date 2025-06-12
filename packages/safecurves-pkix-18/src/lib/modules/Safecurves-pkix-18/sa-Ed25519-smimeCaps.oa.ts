@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va";
-export { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va";
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va.js";
+export { id_Ed25519 } from "../Safecurves-pkix-18/id-Ed25519.va.js";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION sa_Ed25519_smimeCaps */

@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     UniversalUniquePostalName,
     _decode_UniversalUniquePostalName,
     _encode_UniversalUniquePostalName,
-} from '../MTSAbstractService/UniversalUniquePostalName.ta';
+} from '../MTSAbstractService/UniversalUniquePostalName.ta.js';
 export {
     UniversalUniquePostalName,
     _decode_UniversalUniquePostalName,
     _encode_UniversalUniquePostalName,
-} from '../MTSAbstractService/UniversalUniquePostalName.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/UniversalUniquePostalName.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION universal_unique_postal_name */
 /**

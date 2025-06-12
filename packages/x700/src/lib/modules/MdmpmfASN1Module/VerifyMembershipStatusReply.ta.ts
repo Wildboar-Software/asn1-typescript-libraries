@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta';
+} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js';
 import {
     MembershipStatus,
     _enum_for_MembershipStatus,
@@ -87,7 +87,7 @@ import {
     non_member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_MembershipStatus,
     _encode_MembershipStatus,
-} from '../MdmpmfASN1Module/MembershipStatus.ta';
+} from '../MdmpmfASN1Module/MembershipStatus.ta.js';
 export {
     MembershipStatus,
     _enum_for_MembershipStatus,
@@ -99,7 +99,7 @@ export {
     non_member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_MembershipStatus,
     _encode_MembershipStatus,
-} from '../MdmpmfASN1Module/MembershipStatus.ta';
+} from '../MdmpmfASN1Module/MembershipStatus.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION VerifyMembershipStatusReply */
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca";
-import { OAEP_PSSDigestAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union0-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union1_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union1-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union2_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union2-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union3_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union3-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union4_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union4-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union5_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union5-Intersection0-Element.oa";
-import { OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union6-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.js";
+import { OAEP_PSSDigestAlgorithms_Union0_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union0-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union1_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union1-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union2_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union2-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union3_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union3-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union4_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union4-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union5_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union5-Intersection0-Element.oa.js";
+import { OAEP_PSSDigestAlgorithms_Union6_Intersection0_Element } from "../PKCS-1/OAEP-PSSDigestAlgorithms-Union6-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms */
 /**

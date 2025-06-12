@@ -65,48 +65,48 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 export {
   Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta';
+} from '../ISO8571-FTAM/Action-Result.ta.js';
 import {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta';
+} from '../ISO8571-FTAM/Shared-ASE-Information.ta.js';
 import {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 export {
   Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta';
+} from '../ISO8571-FTAM/Diagnostic.ta.js';
 import {
   Request_Type,
   _decode_Request_Type,
   _encode_Request_Type,
-} from '../ISO8571-FTAM/Request-Type.ta';
+} from '../ISO8571-FTAM/Request-Type.ta.js';
 export {
   Request_Type,
   _decode_Request_Type,
   _encode_Request_Type,
-} from '../ISO8571-FTAM/Request-Type.ta';
+} from '../ISO8571-FTAM/Request-Type.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION F_CANCEL_request */
 /**

@@ -65,100 +65,100 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SecurityAlarmCause,
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta.js';
 export {
     SecurityAlarmCause,
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta.js';
 import {
     SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta.js';
 export {
     SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta.js';
 import {
     SecurityAlarmDetector,
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta.js';
 export {
     SecurityAlarmDetector,
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta.js';
 import {
     ServiceUser,
     _decode_ServiceUser,
     _encode_ServiceUser,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta.js';
 export {
     ServiceUser,
     _decode_ServiceUser,
     _encode_ServiceUser,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta.js';
 import {
     ServiceProvider,
     _decode_ServiceProvider,
     _encode_ServiceProvider,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta.js';
 export {
     ServiceProvider,
     _decode_ServiceProvider,
     _encode_ServiceProvider,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta.js';
 import {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.js';
 import {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 export {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.js';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.js';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.js';
 import {
     _enum_for_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta';
+} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SecurityAlarmInfo */
 /**

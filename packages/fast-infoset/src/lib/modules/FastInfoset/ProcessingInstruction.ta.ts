@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
-} from '../FastInfoset/IdentifyingStringOrIndex.ta';
+} from '../FastInfoset/IdentifyingStringOrIndex.ta.js';
 export {
   IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
-} from '../FastInfoset/IdentifyingStringOrIndex.ta';
+} from '../FastInfoset/IdentifyingStringOrIndex.ta.js';
 import {
   NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
-} from '../FastInfoset/NonIdentifyingStringOrIndex.ta';
+} from '../FastInfoset/NonIdentifyingStringOrIndex.ta.js';
 export {
   NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
-} from '../FastInfoset/NonIdentifyingStringOrIndex.ta';
+} from '../FastInfoset/NonIdentifyingStringOrIndex.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ProcessingInstruction */
 /**

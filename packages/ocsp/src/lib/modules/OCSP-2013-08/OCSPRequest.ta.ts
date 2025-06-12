@@ -4,27 +4,27 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Signature,
     _decode_Signature,
     _encode_Signature,
-} from "../OCSP-2013-08/Signature.ta";
+} from "../OCSP-2013-08/Signature.ta.js";
 import {
     TBSRequest,
     _decode_TBSRequest,
     _encode_TBSRequest,
-} from "../OCSP-2013-08/TBSRequest.ta";
+} from "../OCSP-2013-08/TBSRequest.ta.js";
 export {
     Signature,
     _decode_Signature,
     _encode_Signature,
-} from "../OCSP-2013-08/Signature.ta";
+} from "../OCSP-2013-08/Signature.ta.js";
 export {
     TBSRequest,
     _decode_TBSRequest,
     _encode_TBSRequest,
-} from "../OCSP-2013-08/TBSRequest.ta";
+} from "../OCSP-2013-08/TBSRequest.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION OCSPRequest */
 /**

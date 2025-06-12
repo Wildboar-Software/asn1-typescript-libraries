@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EMailMtsUserName,
     _decode_EMailMtsUserName,
     _encode_EMailMtsUserName,
-} from '../MhsMTAAsn1Module/EMailMtsUserName.ta';
+} from '../MhsMTAAsn1Module/EMailMtsUserName.ta.js';
 export {
     EMailMtsUserName,
     _decode_EMailMtsUserName,
     _encode_EMailMtsUserName,
-} from '../MhsMTAAsn1Module/EMailMtsUserName.ta';
+} from '../MhsMTAAsn1Module/EMailMtsUserName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EMailRedirections_address */
 /**

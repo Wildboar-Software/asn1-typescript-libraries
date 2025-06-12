@@ -1,6 +1,7 @@
 {
     "name": "@wildboar/x700",
-    "version": "1.0.5",
+    "type": "module",
+    "version": "2.0.0",
     "description": "X.700 management protocol data structures and business logic in TypeScript",
     "keywords": [
         "x700",
@@ -34,13 +35,13 @@
         "url": "https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/cmip": "^1.0.5",
-        "@wildboar/attribute-asn1module": "^1.0.4",
-        "@wildboar/rose": "^1.0.4",
-        "@wildboar/acse": "^1.0.7",
-        "@wildboar/x500": "^1.1.5",
-        "@wildboar/pki-stub": "^1.1.7",
-        "@wildboar/ldap": "^1.2.12",
-        "@wildboar/rtse": "^1.0.3"
+        "@wildboar/cmip": "2.x.x",
+        "@wildboar/attribute-asn1module": "2.x.x",
+        "@wildboar/rose": "2.x.x",
+        "@wildboar/acse": "2.x.x",
+        "@wildboar/x500": "2.x.x",
+        "@wildboar/pki-stub": "2.x.x",
+        "@wildboar/ldap": "2.x.x",
+        "@wildboar/rtse": "2.x.x"
     }
 }

@@ -9,17 +9,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     SIGNED,
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
-} from "../PKI-Stub/SIGNED.ta";
+} from "../PKI-Stub/SIGNED.ta.js";
 import {
     TBSCertificate,
     _decode_TBSCertificate,
     _encode_TBSCertificate,
-} from "../PKI-Stub/TBSCertificate.ta";
+} from "../PKI-Stub/TBSCertificate.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Certificate */
 /**

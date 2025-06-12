@@ -1,20 +1,20 @@
 /* eslint-disable */
-import { CURVE } from "../PKIXAlgs-2009/CURVE.oca";
-import { NamedCurve_Union0_Intersection0_Element } from "./NamedCurve-Union0-Intersection0-Element.oa";
-import { NamedCurve_Union1_Intersection0_Element } from "./NamedCurve-Union1-Intersection0-Element.oa";
-import { NamedCurve_Union2_Intersection0_Element } from "./NamedCurve-Union2-Intersection0-Element.oa";
-import { NamedCurve_Union3_Intersection0_Element } from "./NamedCurve-Union3-Intersection0-Element.oa";
-import { NamedCurve_Union4_Intersection0_Element } from "./NamedCurve-Union4-Intersection0-Element.oa";
-import { NamedCurve_Union5_Intersection0_Element } from "./NamedCurve-Union5-Intersection0-Element.oa";
-import { NamedCurve_Union6_Intersection0_Element } from "./NamedCurve-Union6-Intersection0-Element.oa";
-import { NamedCurve_Union7_Intersection0_Element } from "./NamedCurve-Union7-Intersection0-Element.oa";
-import { NamedCurve_Union8_Intersection0_Element } from "./NamedCurve-Union8-Intersection0-Element.oa";
-import { NamedCurve_Union9_Intersection0_Element } from "./NamedCurve-Union9-Intersection0-Element.oa";
-import { NamedCurve_Union10_Intersection0_Element } from "./NamedCurve-Union10-Intersection0-Element.oa";
-import { NamedCurve_Union11_Intersection0_Element } from "./NamedCurve-Union11-Intersection0-Element.oa";
-import { NamedCurve_Union12_Intersection0_Element } from "./NamedCurve-Union12-Intersection0-Element.oa";
-import { NamedCurve_Union13_Intersection0_Element } from "./NamedCurve-Union13-Intersection0-Element.oa";
-import { NamedCurve_Union14_Intersection0_Element } from "./NamedCurve-Union14-Intersection0-Element.oa";
+import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.js";
+import { NamedCurve_Union0_Intersection0_Element } from "./NamedCurve-Union0-Intersection0-Element.oa.js";
+import { NamedCurve_Union1_Intersection0_Element } from "./NamedCurve-Union1-Intersection0-Element.oa.js";
+import { NamedCurve_Union2_Intersection0_Element } from "./NamedCurve-Union2-Intersection0-Element.oa.js";
+import { NamedCurve_Union3_Intersection0_Element } from "./NamedCurve-Union3-Intersection0-Element.oa.js";
+import { NamedCurve_Union4_Intersection0_Element } from "./NamedCurve-Union4-Intersection0-Element.oa.js";
+import { NamedCurve_Union5_Intersection0_Element } from "./NamedCurve-Union5-Intersection0-Element.oa.js";
+import { NamedCurve_Union6_Intersection0_Element } from "./NamedCurve-Union6-Intersection0-Element.oa.js";
+import { NamedCurve_Union7_Intersection0_Element } from "./NamedCurve-Union7-Intersection0-Element.oa.js";
+import { NamedCurve_Union8_Intersection0_Element } from "./NamedCurve-Union8-Intersection0-Element.oa.js";
+import { NamedCurve_Union9_Intersection0_Element } from "./NamedCurve-Union9-Intersection0-Element.oa.js";
+import { NamedCurve_Union10_Intersection0_Element } from "./NamedCurve-Union10-Intersection0-Element.oa.js";
+import { NamedCurve_Union11_Intersection0_Element } from "./NamedCurve-Union11-Intersection0-Element.oa.js";
+import { NamedCurve_Union12_Intersection0_Element } from "./NamedCurve-Union12-Intersection0-Element.oa.js";
+import { NamedCurve_Union13_Intersection0_Element } from "./NamedCurve-Union13-Intersection0-Element.oa.js";
+import { NamedCurve_Union14_Intersection0_Element } from "./NamedCurve-Union14-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION NamedCurve */
 /**

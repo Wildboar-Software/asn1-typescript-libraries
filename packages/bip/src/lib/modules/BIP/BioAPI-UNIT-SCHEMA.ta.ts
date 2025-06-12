@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta';
+} from '../BIP/BioAPI-UUID.ta.js';
 import {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta';
+} from '../BIP/BioAPI-UNIT-ID.ta.js';
 import {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -99,7 +99,7 @@ import {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 export {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
@@ -113,17 +113,17 @@ export {
   sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta';
+} from '../BIP/BioAPI-CATEGORY.ta.js';
 import {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 export {
   BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
-} from '../BIP/BioAPI-STRING.ta';
+} from '../BIP/BioAPI-STRING.ta.js';
 import {
   BioAPI_UNIT_EVENT_TYPE_MASK,
   BioAPI_UNIT_EVENT_TYPE_MASK_insert /* IMPORTED_LONG_NAMED_BIT */,
@@ -138,7 +138,7 @@ import {
   sourceRemoved /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.js';
 export {
   BioAPI_UNIT_EVENT_TYPE_MASK,
   BioAPI_UNIT_EVENT_TYPE_MASK_insert /* IMPORTED_LONG_NAMED_BIT */,
@@ -153,27 +153,27 @@ export {
   sourceRemoved /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta';
+} from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.js';
 import {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta';
+} from '../BIP/BioAPI-DATA.ta.js';
 import {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 export {
   UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
-} from '../BIP/UnsignedInt.ta';
+} from '../BIP/UnsignedInt.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION BioAPI_UNIT_SCHEMA */
 /**

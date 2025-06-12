@@ -65,50 +65,50 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 export {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 import {
     ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
-} from '../EDIMSInformationObjects/ActionRequestField.ta';
+} from '../EDIMSInformationObjects/ActionRequestField.ta.js';
 export {
     ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
-} from '../EDIMSInformationObjects/ActionRequestField.ta';
+} from '../EDIMSInformationObjects/ActionRequestField.ta.js';
 import {
     EDINotificationRequestsField,
     _decode_EDINotificationRequestsField,
     _encode_EDINotificationRequestsField,
-} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.js';
 export {
     EDINotificationRequestsField,
     _decode_EDINotificationRequestsField,
     _encode_EDINotificationRequestsField,
-} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta';
+} from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.js';
 import {
     ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
-} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta';
+} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.js';
 export {
     ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
-} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta';
+} from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.js';
 import {
     id_for_action,
-} from "../EDIMSObjectIdentifiers/id-for-action.va";
+} from "../EDIMSObjectIdentifiers/id-for-action.va.js";
 
 /* START_OF_SYMBOL_DEFINITION NextRecipientFields */
 /**

@@ -9,10 +9,10 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
-import { _enum_for_AttributeUsage, userApplications, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta";
-import { tcg_at_tcgCredentialSpecification } from "../PlatformCertificateProfile/tcg-at-tcgCredentialSpecification.va";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
+import { _enum_for_AttributeUsage, userApplications, _decode_AttributeUsage, _encode_AttributeUsage } from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfile/TCGSpecificationVersion.ta.js";
+import { tcg_at_tcgCredentialSpecification } from "../PlatformCertificateProfile/tcg-at-tcgCredentialSpecification.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION tCGCredentialSpecification */

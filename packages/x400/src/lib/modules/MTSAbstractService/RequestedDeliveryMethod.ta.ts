@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestedDeliveryMethod_Item,
     RequestedDeliveryMethod_Item_any_delivery_method /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -90,7 +90,7 @@ import {
     telephone_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RequestedDeliveryMethod_Item,
     _encode_RequestedDeliveryMethod_Item,
-} from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta';
+} from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta.js';
 export {
     RequestedDeliveryMethod_Item,
     RequestedDeliveryMethod_Item_any_delivery_method /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,7 +115,7 @@ export {
     telephone_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RequestedDeliveryMethod_Item,
     _encode_RequestedDeliveryMethod_Item,
-} from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta';
+} from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION RequestedDeliveryMethod */
 /**

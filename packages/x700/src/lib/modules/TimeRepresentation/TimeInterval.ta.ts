@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Epochs,
     _decode_Epochs,
     _encode_Epochs,
-} from '../TimeRepresentation/Epochs.ta';
+} from '../TimeRepresentation/Epochs.ta.js';
 export {
     Epochs,
     _decode_Epochs,
     _encode_Epochs,
-} from '../TimeRepresentation/Epochs.ta';
+} from '../TimeRepresentation/Epochs.ta.js';
 import {
     Seconds,
     _decode_Seconds,
     _encode_Seconds,
-} from '../TimeRepresentation/Seconds.ta';
+} from '../TimeRepresentation/Seconds.ta.js';
 export {
     Seconds,
     _decode_Seconds,
     _encode_Seconds,
-} from '../TimeRepresentation/Seconds.ta';
+} from '../TimeRepresentation/Seconds.ta.js';
 import {
     Nanoseconds,
     _decode_Nanoseconds,
     _encode_Nanoseconds,
-} from '../TimeRepresentation/Nanoseconds.ta';
+} from '../TimeRepresentation/Nanoseconds.ta.js';
 export {
     Nanoseconds,
     _decode_Nanoseconds,
     _encode_Nanoseconds,
-} from '../TimeRepresentation/Nanoseconds.ta';
+} from '../TimeRepresentation/Nanoseconds.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TimeInterval */
 /**

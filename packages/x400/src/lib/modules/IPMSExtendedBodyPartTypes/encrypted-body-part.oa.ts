@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { encrypted_body_part_parameters } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-parameters.oa';
-export { encrypted_body_part_parameters } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-parameters.oa';
-import { encrypted_body_part_data } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-data.oa';
-export { encrypted_body_part_data } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-data.oa';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
-export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { encrypted_body_part_parameters } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-parameters.oa.js';
+export { encrypted_body_part_parameters } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-parameters.oa.js';
+import { encrypted_body_part_data } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-data.oa.js';
+export { encrypted_body_part_data } from '../IPMSExtendedBodyPartTypes/encrypted-body-part-data.oa.js';
+import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
+export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION encrypted_body_part */
 /**

@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PathOrObjects,
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta";
+} from "../PKCS-15/PathOrObjects.ta.js";
 import {
     PublicKeyType,
     _decode_PublicKeyType,
     _encode_PublicKeyType,
-} from "../PKCS-15/PublicKeyType.ta";
+} from "../PKCS-15/PublicKeyType.ta.js";
 export {
     PathOrObjects,
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta";
+} from "../PKCS-15/PathOrObjects.ta.js";
 export {
     PublicKeyType,
     _decode_PublicKeyType,
     _encode_PublicKeyType,
-} from "../PKCS-15/PublicKeyType.ta";
+} from "../PKCS-15/PublicKeyType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PublicKeys */
 /**

@@ -65,67 +65,67 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 export {
   ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta';
+} from '../ACSE-1/ASO-qualifier.ta.js';
 import {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 export {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta';
+} from '../ACSE-1/ASOI-identifier.ta.js';
 import {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 export {
   ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta';
+} from '../ACSE-1/ASO-context-name.ta.js';
 import {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 export {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta';
+} from '../ACSE-1/ASO-context-name-list.ta.js';
 import {
   Syntactic_context_list,
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
-} from '../ACSE-1/Syntactic-context-list.ta';
+} from '../ACSE-1/Syntactic-context-list.ta.js';
 export {
   Syntactic_context_list,
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
-} from '../ACSE-1/Syntactic-context-list.ta';
+} from '../ACSE-1/Syntactic-context-list.ta.js';
 import {
   User_information,
   _decode_User_information,
   _encode_User_information,
-} from '../ACSE-1/User-information.ta';
+} from '../ACSE-1/User-information.ta.js';
 export {
   User_information,
   _decode_User_information,
   _encode_User_information,
-} from '../ACSE-1/User-information.ta';
+} from '../ACSE-1/User-information.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ACRQ_apdu */
 /**

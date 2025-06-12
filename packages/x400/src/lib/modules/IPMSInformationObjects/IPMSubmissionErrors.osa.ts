@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca';
-import { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa';
-export { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa';
-import { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa';
-export { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.js';
+import { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa.js';
+export { invalid_assembly_instructions } from '../IPMSInformationObjects/invalid-assembly-instructions.oa.js';
+import { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa.js';
+export { invalid_ipn } from '../IPMSInformationObjects/invalid-ipn.oa.js';
 
 /* START_OF_SYMBOL_DEFINITION IPMSubmissionErrors */
 /**

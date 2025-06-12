@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 export {
     RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
-} from '../EDIMSInformationObjects/RecipientField.ta';
+} from '../EDIMSInformationObjects/RecipientField.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NewRecipient */
 /**

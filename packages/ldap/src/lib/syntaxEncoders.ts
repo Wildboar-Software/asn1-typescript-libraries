@@ -1,6 +1,6 @@
-import type LDAPSyntaxEncoder from "./types/LDAPSyntaxEncoder";
+import type LDAPSyntaxEncoder from "./types/LDAPSyntaxEncoder.js";
 import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "asn1-ts";
-import encodeLDAPOID from "./encodeLDAPOID";
+import encodeLDAPOID from "./encodeLDAPOID.js";
 
 // LDAPSyntaxEncoder = (value: ASN1Element) => Uint8Array;
 

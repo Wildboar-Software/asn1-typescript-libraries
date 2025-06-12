@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SignedDataACBio,
     _decode_SignedDataACBio,
     _encode_SignedDataACBio,
-} from '../AuthenticationContextForBiometrics/SignedDataACBio.ta';
+} from '../AuthenticationContextForBiometrics/SignedDataACBio.ta.js';
 export {
     SignedDataACBio,
     _decode_SignedDataACBio,
     _encode_SignedDataACBio,
-} from '../AuthenticationContextForBiometrics/SignedDataACBio.ta';
-import { id_signedDataACBio } from '../AuthenticationContextForBiometrics/id-signedDataACBio.va';
-export { id_signedDataACBio } from '../AuthenticationContextForBiometrics/id-signedDataACBio.va';
+} from '../AuthenticationContextForBiometrics/SignedDataACBio.ta.js';
+import { id_signedDataACBio } from '../AuthenticationContextForBiometrics/id-signedDataACBio.va.js';
+export { id_signedDataACBio } from '../AuthenticationContextForBiometrics/id-signedDataACBio.va.js';
 import type {
     CONTENT_TYPE,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION signedDataACBio */

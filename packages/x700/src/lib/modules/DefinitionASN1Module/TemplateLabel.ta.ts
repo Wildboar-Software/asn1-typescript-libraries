@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TemplateName,
     _decode_TemplateName,
     _encode_TemplateName,
-} from '../DefinitionASN1Module/TemplateName.ta';
+} from '../DefinitionASN1Module/TemplateName.ta.js';
 export {
     TemplateName,
     _decode_TemplateName,
     _encode_TemplateName,
-} from '../DefinitionASN1Module/TemplateName.ta';
+} from '../DefinitionASN1Module/TemplateName.ta.js';
 import {
     TemplateLabel_documentId,
     _decode_TemplateLabel_documentId,
     _encode_TemplateLabel_documentId,
-} from '../DefinitionASN1Module/TemplateLabel-documentId.ta';
+} from '../DefinitionASN1Module/TemplateLabel-documentId.ta.js';
 export {
     TemplateLabel_documentId,
     _decode_TemplateLabel_documentId,
     _encode_TemplateLabel_documentId,
-} from '../DefinitionASN1Module/TemplateLabel-documentId.ta';
+} from '../DefinitionASN1Module/TemplateLabel-documentId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION TemplateLabel */
 /**

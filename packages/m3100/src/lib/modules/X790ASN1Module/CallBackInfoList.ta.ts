@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CallBackInfoList_Item,
     _decode_CallBackInfoList_Item,
     _encode_CallBackInfoList_Item,
-} from '../X790ASN1Module/CallBackInfoList-Item.ta';
+} from '../X790ASN1Module/CallBackInfoList-Item.ta.js';
 export {
     CallBackInfoList_Item,
     _decode_CallBackInfoList_Item,
     _encode_CallBackInfoList_Item,
-} from '../X790ASN1Module/CallBackInfoList-Item.ta';
+} from '../X790ASN1Module/CallBackInfoList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CallBackInfoList */
 /**

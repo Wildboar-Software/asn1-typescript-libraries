@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca";
-import { PBMAC1_KDFs_Union0_Intersection0_Element } from "../PKCS5v2-1/PBMAC1-KDFs-Union0-Intersection0-Element.oa";
+import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.js";
+import { PBMAC1_KDFs_Union0_Intersection0_Element } from "../PKCS5v2-1/PBMAC1-KDFs-Union0-Intersection0-Element.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION PBMAC1_KDFs */
 /**

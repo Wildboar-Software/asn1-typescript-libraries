@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta";
-export { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta";
-import { PrioritisedObject_Item_priority, PrioritisedObject_Item_priority_highest /* IMPORTED_LONG_NAMED_INTEGER */, highest /* IMPORTED_SHORT_NAMED_INTEGER */, PrioritisedObject_Item_priority_lowest /* IMPORTED_LONG_NAMED_INTEGER */, lowest /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta";
-export { PrioritisedObject_Item_priority, PrioritisedObject_Item_priority_highest /* IMPORTED_LONG_NAMED_INTEGER */, highest /* IMPORTED_SHORT_NAMED_INTEGER */, PrioritisedObject_Item_priority_lowest /* IMPORTED_LONG_NAMED_INTEGER */, lowest /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js";
+export { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.js";
+import { PrioritisedObject_Item_priority, PrioritisedObject_Item_priority_highest /* IMPORTED_LONG_NAMED_INTEGER */, highest /* IMPORTED_SHORT_NAMED_INTEGER */, PrioritisedObject_Item_priority_lowest /* IMPORTED_LONG_NAMED_INTEGER */, lowest /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta.js";
+export { PrioritisedObject_Item_priority, PrioritisedObject_Item_priority_highest /* IMPORTED_LONG_NAMED_INTEGER */, highest /* IMPORTED_SHORT_NAMED_INTEGER */, PrioritisedObject_Item_priority_lowest /* IMPORTED_LONG_NAMED_INTEGER */, lowest /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION PrioritisedObject_Item */

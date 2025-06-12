@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Mode_selector_mode_value,
     Mode_selector_mode_value_x410_1984_mode /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -74,7 +74,7 @@ import {
     normal_mode /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Mode_selector_mode_value,
     _encode_Mode_selector_mode_value,
-} from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta';
+} from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta.js';
 export {
     Mode_selector_mode_value,
     Mode_selector_mode_value_x410_1984_mode /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -83,7 +83,7 @@ export {
     normal_mode /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Mode_selector_mode_value,
     _encode_Mode_selector_mode_value,
-} from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta';
+} from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Mode_selector */
 /**

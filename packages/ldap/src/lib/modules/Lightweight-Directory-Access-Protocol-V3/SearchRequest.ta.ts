@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 export {
   LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.js';
 import {
   SearchRequest_scope,
   _enum_for_SearchRequest_scope,
@@ -87,7 +87,7 @@ import {
   wholeSubtree /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_SearchRequest_scope,
   _encode_SearchRequest_scope,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-scope.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-scope.ta.js';
 export {
   SearchRequest_scope,
   _enum_for_SearchRequest_scope,
@@ -99,7 +99,7 @@ export {
   wholeSubtree /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_SearchRequest_scope,
   _encode_SearchRequest_scope,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-scope.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-scope.ta.js';
 import {
   SearchRequest_derefAliases,
   _enum_for_SearchRequest_derefAliases,
@@ -113,7 +113,7 @@ import {
   derefAlways /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_SearchRequest_derefAliases,
   _encode_SearchRequest_derefAliases,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-derefAliases.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-derefAliases.ta.js';
 export {
   SearchRequest_derefAliases,
   _enum_for_SearchRequest_derefAliases,
@@ -127,27 +127,27 @@ export {
   derefAlways /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_SearchRequest_derefAliases,
   _encode_SearchRequest_derefAliases,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-derefAliases.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-derefAliases.ta.js';
 import {
   Filter,
   _decode_Filter,
   _encode_Filter,
-} from '../Lightweight-Directory-Access-Protocol-V3/Filter.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Filter.ta.js';
 export {
   Filter,
   _decode_Filter,
   _encode_Filter,
-} from '../Lightweight-Directory-Access-Protocol-V3/Filter.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/Filter.ta.js';
 import {
   AttributeSelection,
   _decode_AttributeSelection,
   _encode_AttributeSelection,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta.js';
 export {
   AttributeSelection,
   _decode_AttributeSelection,
   _encode_AttributeSelection,
-} from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta';
+} from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SearchRequest */
 /**

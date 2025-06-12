@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ExplicitPtoP,
     _decode_ExplicitPtoP,
     _encode_ExplicitPtoP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta.js';
 export {
     ExplicitPtoP,
     _decode_ExplicitPtoP,
     _encode_ExplicitPtoP,
-} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta';
+} from '../ASN1DefinedTypesModule/ExplicitPtoP.ta.js';
 import {
     PtoTPPool,
     _decode_PtoTPPool,
     _encode_PtoTPPool,
-} from '../ASN1DefinedTypesModule/PtoTPPool.ta';
+} from '../ASN1DefinedTypesModule/PtoTPPool.ta.js';
 export {
     PtoTPPool,
     _decode_PtoTPPool,
     _encode_PtoTPPool,
-} from '../ASN1DefinedTypesModule/PtoTPPool.ta';
+} from '../ASN1DefinedTypesModule/PtoTPPool.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConnectionTypeBi */
 /**

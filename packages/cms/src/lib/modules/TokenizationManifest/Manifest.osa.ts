@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca";
-import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa";
-export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca";
-export { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa";
+import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.js";
+import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.js";
+export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.js";
+export { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION Manifest */
 /**

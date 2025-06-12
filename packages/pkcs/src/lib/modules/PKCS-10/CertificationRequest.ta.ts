@@ -5,27 +5,27 @@ import {
     ASN1TagClass as _TagClass,
     BIT_STRING,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKCS-10/AlgorithmIdentifier.ta";
+} from "../PKCS-10/AlgorithmIdentifier.ta.js";
 import {
     CertificationRequestInfo,
     _decode_CertificationRequestInfo,
     _encode_CertificationRequestInfo,
-} from "../PKCS-10/CertificationRequestInfo.ta";
+} from "../PKCS-10/CertificationRequestInfo.ta.js";
 export {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-} from "../PKCS-10/AlgorithmIdentifier.ta";
+} from "../PKCS-10/AlgorithmIdentifier.ta.js";
 export {
     CertificationRequestInfo,
     _decode_CertificationRequestInfo,
     _encode_CertificationRequestInfo,
-} from "../PKCS-10/CertificationRequestInfo.ta";
+} from "../PKCS-10/CertificationRequestInfo.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CertificationRequest */
 /**

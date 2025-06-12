@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { MACSet_Union0_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union0-Intersection0-Element.oa";
-export { MACSet_Union0_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union0-Intersection0-Element.oa";
-import { MACSet_Union1_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union1-Intersection0-Element.oa";
-export { MACSet_Union1_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union1-Intersection0-Element.oa";
-import { MACSet_Union2_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union2-Intersection0-Element.oa";
-export { MACSet_Union2_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union2-Intersection0-Element.oa";
-import { MACSet_Union3_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union3-Intersection0-Element.oa";
-export { MACSet_Union3_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union3-Intersection0-Element.oa";
-import { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-Intersection0-Element.oa";
-export { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { MACSet_Union0_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union0-Intersection0-Element.oa.js";
+export { MACSet_Union0_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union0-Intersection0-Element.oa.js";
+import { MACSet_Union1_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union1-Intersection0-Element.oa.js";
+export { MACSet_Union1_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union1-Intersection0-Element.oa.js";
+import { MACSet_Union2_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union2-Intersection0-Element.oa.js";
+export { MACSet_Union2_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union2-Intersection0-Element.oa.js";
+import { MACSet_Union3_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union3-Intersection0-Element.oa.js";
+export { MACSet_Union3_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union3-Intersection0-Element.oa.js";
+import { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-Intersection0-Element.oa.js";
+export { MACSet_Union4_Intersection0_Element } from "../SEC1-v1-9/MACSet-Union4-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION MACSet */

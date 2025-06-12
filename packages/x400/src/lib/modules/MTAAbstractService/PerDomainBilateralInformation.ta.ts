@@ -65,52 +65,52 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     BilateralDomain,
     _decode_BilateralDomain,
     _encode_BilateralDomain,
-} from '../MTAAbstractService/BilateralDomain.ta';
+} from '../MTAAbstractService/BilateralDomain.ta.js';
 export {
     BilateralDomain,
     _decode_BilateralDomain,
     _encode_BilateralDomain,
-} from '../MTAAbstractService/BilateralDomain.ta';
-import { BILATERAL } from '../MTAAbstractService/BILATERAL.oca';
-export { BILATERAL } from '../MTAAbstractService/BILATERAL.oca';
+} from '../MTAAbstractService/BilateralDomain.ta.js';
+import { BILATERAL } from '../MTAAbstractService/BILATERAL.oca.js';
+export { BILATERAL } from '../MTAAbstractService/BILATERAL.oca.js';
 import {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from '../MTSAbstractService/CountryName.ta';
+} from '../MTSAbstractService/CountryName.ta.js';
 export {
     CountryName,
     _decode_CountryName,
     _encode_CountryName,
-} from '../MTSAbstractService/CountryName.ta';
+} from '../MTSAbstractService/CountryName.ta.js';
 import {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 export {
     AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
-} from '../MTSAbstractService/AdministrationDomainName.ta';
+} from '../MTSAbstractService/AdministrationDomainName.ta.js';
 import {
     PrivateDomainIdentifier,
     _decode_PrivateDomainIdentifier,
     _encode_PrivateDomainIdentifier,
-} from '../MTSAbstractService/PrivateDomainIdentifier.ta';
+} from '../MTSAbstractService/PrivateDomainIdentifier.ta.js';
 export {
     PrivateDomainIdentifier,
     _decode_PrivateDomainIdentifier,
     _encode_PrivateDomainIdentifier,
-} from '../MTSAbstractService/PrivateDomainIdentifier.ta';
+} from '../MTSAbstractService/PrivateDomainIdentifier.ta.js';
 import {
     BilateralDomain_domain_private_domain,
-} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta';
+} from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta.js';
 
 // Manually edited.
 

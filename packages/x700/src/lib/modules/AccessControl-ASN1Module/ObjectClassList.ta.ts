@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ObjectClassList_Item,
     _decode_ObjectClassList_Item,
     _encode_ObjectClassList_Item,
-} from '../AccessControl-ASN1Module/ObjectClassList-Item.ta';
+} from '../AccessControl-ASN1Module/ObjectClassList-Item.ta.js';
 export {
     ObjectClassList_Item,
     _decode_ObjectClassList_Item,
     _encode_ObjectClassList_Item,
-} from '../AccessControl-ASN1Module/ObjectClassList-Item.ta';
+} from '../AccessControl-ASN1Module/ObjectClassList-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ObjectClassList */
 /**

@@ -65,29 +65,29 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Bind,
     _decode_Bind,
     _encode_Bind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Bind.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Bind.ta.js';
 export {
     Bind,
     _decode_Bind,
     _encode_Bind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Bind.ta';
-import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa';
-export { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Bind.ta.js';
+import { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa.js';
+export { ms_access_contract_88 } from '../MSAbstractService/ms-access-contract-88.oa.js';
 import {
     Unbind,
     _decode_Unbind,
     _encode_Unbind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta.js';
 export {
     Unbind,
     _decode_Unbind,
     _encode_Unbind,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Generic-ROS-PDUs/Unbind.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSBindUnbindPDUs88 */
 /**

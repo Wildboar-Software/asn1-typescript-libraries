@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EDIApplicationSecurityElement,
     _decode_EDIApplicationSecurityElement,
     _encode_EDIApplicationSecurityElement,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta.js';
 export {
     EDIApplicationSecurityElement,
     _decode_EDIApplicationSecurityElement,
     _encode_EDIApplicationSecurityElement,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta.js';
 import {
     EDIApplicationSecurityExtensions,
     _decode_EDIApplicationSecurityExtensions,
     _encode_EDIApplicationSecurityExtensions,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta.js';
 export {
     EDIApplicationSecurityExtensions,
     _decode_EDIApplicationSecurityExtensions,
     _encode_EDIApplicationSecurityExtensions,
-} from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta';
+} from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIApplicationSecurityElementsField */
 /**

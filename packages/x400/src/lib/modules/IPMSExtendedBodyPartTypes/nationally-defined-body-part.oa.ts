@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { nationally_defined_body_part_data } from '../IPMSExtendedBodyPartTypes/nationally-defined-body-part-data.oa';
-export { nationally_defined_body_part_data } from '../IPMSExtendedBodyPartTypes/nationally-defined-body-part-data.oa';
-import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
-export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { nationally_defined_body_part_data } from '../IPMSExtendedBodyPartTypes/nationally-defined-body-part-data.oa.js';
+export { nationally_defined_body_part_data } from '../IPMSExtendedBodyPartTypes/nationally-defined-body-part-data.oa.js';
+import { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
+export { EXTENDED_BODY_PART_TYPE } from '../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION nationally_defined_body_part */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageParameters,
     _decode_MessageParameters,
     _encode_MessageParameters,
-} from '../EDIMSInformationObjects/MessageParameters.ta';
+} from '../EDIMSInformationObjects/MessageParameters.ta.js';
 export {
     MessageParameters,
     _decode_MessageParameters,
     _encode_MessageParameters,
-} from '../EDIMSInformationObjects/MessageParameters.ta';
+} from '../EDIMSInformationObjects/MessageParameters.ta.js';
 import {
     MessageData,
     _decode_MessageData,
     _encode_MessageData,
-} from '../EDIMSInformationObjects/MessageData.ta';
+} from '../EDIMSInformationObjects/MessageData.ta.js';
 export {
     MessageData,
     _decode_MessageData,
     _encode_MessageData,
-} from '../EDIMSInformationObjects/MessageData.ta';
+} from '../EDIMSInformationObjects/MessageData.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION EDIMBodyPart */
 /**

@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 export {
     Priority,
     _decode_Priority,
     _encode_Priority,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Priority.ta.js';
 import {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 export {
     Code,
     _decode_Code,
     _encode_Code,
-} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta';
+} from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/Code.ta.js';
 import {
     mta_bind_error_ParameterType,
     mta_bind_error_ParameterType_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -100,7 +100,7 @@ import {
     inadequate_association_confidentiality /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_mta_bind_error_ParameterType,
     _encode_mta_bind_error_ParameterType,
-} from '../MTAAbstractService/mta-bind-error-ParameterType.ta';
+} from '../MTAAbstractService/mta-bind-error-ParameterType.ta.js';
 export {
     mta_bind_error_ParameterType,
     mta_bind_error_ParameterType_busy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -115,9 +115,9 @@ export {
     inadequate_association_confidentiality /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_mta_bind_error_ParameterType,
     _encode_mta_bind_error_ParameterType,
-} from '../MTAAbstractService/mta-bind-error-ParameterType.ta';
-import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
-export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca';
+} from '../MTAAbstractService/mta-bind-error-ParameterType.ta.js';
+import { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
+export { ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mta_bind_error */
 /**

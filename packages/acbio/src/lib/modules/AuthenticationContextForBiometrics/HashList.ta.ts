@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from '../AuthenticationContextForBiometrics/Hash.ta';
+} from '../AuthenticationContextForBiometrics/Hash.ta.js';
 export {
     Hash,
     _decode_Hash,
     _encode_Hash,
-} from '../AuthenticationContextForBiometrics/Hash.ta';
+} from '../AuthenticationContextForBiometrics/Hash.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION HashList */
 /**

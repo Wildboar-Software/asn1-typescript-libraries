@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CMIPAbortSource,
   _enum_for_CMIPAbortSource,
@@ -75,7 +75,7 @@ import {
   cmiseServiceProvider /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CMIPAbortSource,
   _encode_CMIPAbortSource,
-} from '../CMIP-A-ABORT-Information/CMIPAbortSource.ta';
+} from '../CMIP-A-ABORT-Information/CMIPAbortSource.ta.js';
 export {
   CMIPAbortSource,
   _enum_for_CMIPAbortSource,
@@ -85,7 +85,7 @@ export {
   cmiseServiceProvider /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CMIPAbortSource,
   _encode_CMIPAbortSource,
-} from '../CMIP-A-ABORT-Information/CMIPAbortSource.ta';
+} from '../CMIP-A-ABORT-Information/CMIPAbortSource.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION CMIPAbortInfo */
 /**

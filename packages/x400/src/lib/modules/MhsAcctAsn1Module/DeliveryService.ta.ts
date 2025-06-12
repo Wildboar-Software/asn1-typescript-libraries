@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveryServiceType,
     DeliveryServiceType_mhs_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     other_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliveryServiceType,
     _encode_DeliveryServiceType,
-} from '../MhsAcctAsn1Module/DeliveryServiceType.ta';
+} from '../MhsAcctAsn1Module/DeliveryServiceType.ta.js';
 export {
     DeliveryServiceType,
     DeliveryServiceType_mhs_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -111,27 +111,27 @@ export {
     other_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliveryServiceType,
     _encode_DeliveryServiceType,
-} from '../MhsAcctAsn1Module/DeliveryServiceType.ta';
+} from '../MhsAcctAsn1Module/DeliveryServiceType.ta.js';
 import {
     PerMessageComponentRate,
     _decode_PerMessageComponentRate,
     _encode_PerMessageComponentRate,
-} from '../MhsAcctAsn1Module/PerMessageComponentRate.ta';
+} from '../MhsAcctAsn1Module/PerMessageComponentRate.ta.js';
 export {
     PerMessageComponentRate,
     _decode_PerMessageComponentRate,
     _encode_PerMessageComponentRate,
-} from '../MhsAcctAsn1Module/PerMessageComponentRate.ta';
+} from '../MhsAcctAsn1Module/PerMessageComponentRate.ta.js';
 import {
     PerOctetComponentRate,
     _decode_PerOctetComponentRate,
     _encode_PerOctetComponentRate,
-} from '../MhsAcctAsn1Module/PerOctetComponentRate.ta';
+} from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.js';
 export {
     PerOctetComponentRate,
     _decode_PerOctetComponentRate,
     _encode_PerOctetComponentRate,
-} from '../MhsAcctAsn1Module/PerOctetComponentRate.ta';
+} from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DeliveryService */
 /**

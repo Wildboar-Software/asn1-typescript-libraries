@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ETYPE_INFO_ENTRY,
   _decode_ETYPE_INFO_ENTRY,
   _encode_ETYPE_INFO_ENTRY,
-} from '../KerberosV5Spec2/ETYPE-INFO-ENTRY.ta';
+} from '../KerberosV5Spec2/ETYPE-INFO-ENTRY.ta.js';
 export {
   ETYPE_INFO_ENTRY,
   _decode_ETYPE_INFO_ENTRY,
   _encode_ETYPE_INFO_ENTRY,
-} from '../KerberosV5Spec2/ETYPE-INFO-ENTRY.ta';
+} from '../KerberosV5Spec2/ETYPE-INFO-ENTRY.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ETYPE_INFO */
 /**

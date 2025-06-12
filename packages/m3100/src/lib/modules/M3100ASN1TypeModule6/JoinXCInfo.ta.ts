@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CoincidentUnidirectionalConnections,
     _decode_CoincidentUnidirectionalConnections,
     _encode_CoincidentUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta.js';
 export {
     CoincidentUnidirectionalConnections,
     _decode_CoincidentUnidirectionalConnections,
     _encode_CoincidentUnidirectionalConnections,
-} from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta';
+} from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION JoinXCInfo */
 /**

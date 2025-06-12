@@ -1,17 +1,17 @@
 /* eslint-disable */
-import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
+import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
 import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-import { id_RSAES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSAES-OAEP.va";
-import { pk_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaES-OAEP.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+import { id_RSAES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSAES-OAEP.va.js";
+import { pk_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaES-OAEP.oa.js";
 import {
     RSAES_OAEP_params,
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta";
-import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta.js";
+import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
+export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.js";
 export {
     absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
@@ -29,17 +29,17 @@ export {
     _decode_ParamOptions,
     _encode_ParamOptions,
     _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { id_RSAES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSAES-OAEP.va";
-export { pk_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaES-OAEP.oa";
+} from "../AlgorithmInformation-2009/ParamOptions.ta.js";
+export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { id_RSAES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSAES-OAEP.va.js";
+export { pk_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/pk-rsaES-OAEP.oa.js";
 export {
     RSAES_OAEP_params,
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa";
+} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta.js";
+export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION kta_rsaES_OAEP */
 /**

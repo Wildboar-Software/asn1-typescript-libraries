@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { dbekmRecipientInfo } from "../CMSDBKeyManagement/dbekmRecipientInfo.oa";
-import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca";
-export { dbekmRecipientInfo } from "../CMSDBKeyManagement/dbekmRecipientInfo.oa";
-export { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca";
+import { dbekmRecipientInfo } from "../CMSDBKeyManagement/dbekmRecipientInfo.oa.js";
+import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.js";
+export { dbekmRecipientInfo } from "../CMSDBKeyManagement/dbekmRecipientInfo.oa.js";
+export { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION DB_Encryption_Key_Management */
 /**

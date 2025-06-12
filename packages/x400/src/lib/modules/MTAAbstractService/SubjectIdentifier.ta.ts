@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageOrProbeIdentifier,
     _decode_MessageOrProbeIdentifier,
     _encode_MessageOrProbeIdentifier,
-} from '../MTAAbstractService/MessageOrProbeIdentifier.ta';
+} from '../MTAAbstractService/MessageOrProbeIdentifier.ta.js';
 export {
     MessageOrProbeIdentifier,
     _decode_MessageOrProbeIdentifier,
     _encode_MessageOrProbeIdentifier,
-} from '../MTAAbstractService/MessageOrProbeIdentifier.ta';
+} from '../MTAAbstractService/MessageOrProbeIdentifier.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION SubjectIdentifier */
 /**

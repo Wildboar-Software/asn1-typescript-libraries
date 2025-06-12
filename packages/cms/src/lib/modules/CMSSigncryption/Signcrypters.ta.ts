@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     Signcrypter,
     _decode_Signcrypter,
     _encode_Signcrypter,
-} from "../CMSSigncryption/Signcrypter.ta";
+} from "../CMSSigncryption/Signcrypter.ta.js";
 export {
     Signcrypter,
     _decode_Signcrypter,
     _encode_Signcrypter,
-} from "../CMSSigncryption/Signcrypter.ta";
+} from "../CMSSigncryption/Signcrypter.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION Signcrypters */
 /**

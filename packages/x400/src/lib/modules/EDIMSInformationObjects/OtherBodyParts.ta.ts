@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     EDIM_ExtendedBodyPart,
     _decode_EDIM_ExtendedBodyPart,
     _encode_EDIM_ExtendedBodyPart,
-} from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta';
+} from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta.js';
 export {
     EDIM_ExtendedBodyPart,
     _decode_EDIM_ExtendedBodyPart,
     _encode_EDIM_ExtendedBodyPart,
-} from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta';
+} from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION OtherBodyParts */
 /**

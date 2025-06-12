@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     PreferredSignatureAlgorithm,
     _decode_PreferredSignatureAlgorithm,
     _encode_PreferredSignatureAlgorithm,
-} from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta";
+} from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta.js";
 export {
     PreferredSignatureAlgorithm,
     _decode_PreferredSignatureAlgorithm,
     _encode_PreferredSignatureAlgorithm,
-} from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta";
+} from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION PreferredSignatureAlgorithms */
 /**

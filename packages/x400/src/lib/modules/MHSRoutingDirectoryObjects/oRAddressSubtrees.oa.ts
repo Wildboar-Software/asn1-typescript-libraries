@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -83,7 +83,7 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
 export {
     AttributeUsage,
     _enum_for_AttributeUsage,
@@ -97,21 +97,21 @@ export {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta';
-import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
-export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js';
+import { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
+export { SYNTAX_NAME } from '@wildboar/x500/src/lib/modules/InformationFramework/SYNTAX-NAME.oca.js';
 import {
     ORAddressSubtreeNames,
     _decode_ORAddressSubtreeNames,
     _encode_ORAddressSubtreeNames,
-} from '../MHSRoutingDirectoryObjects/ORAddressSubtreeNames.ta';
+} from '../MHSRoutingDirectoryObjects/ORAddressSubtreeNames.ta.js';
 export {
     ORAddressSubtreeNames,
     _decode_ORAddressSubtreeNames,
     _encode_ORAddressSubtreeNames,
-} from '../MHSRoutingDirectoryObjects/ORAddressSubtreeNames.ta';
-import { id_at_oraddress_subtrees } from '../MHSRoutingObjectIdentifiers/id-at-oraddress-subtrees.va';
-export { id_at_oraddress_subtrees } from '../MHSRoutingObjectIdentifiers/id-at-oraddress-subtrees.va';
+} from '../MHSRoutingDirectoryObjects/ORAddressSubtreeNames.ta.js';
+import { id_at_oraddress_subtrees } from '../MHSRoutingObjectIdentifiers/id-at-oraddress-subtrees.va.js';
+export { id_at_oraddress_subtrees } from '../MHSRoutingObjectIdentifiers/id-at-oraddress-subtrees.va.js';
 
 /* START_OF_SYMBOL_DEFINITION oRAddressSubtrees */
 /**

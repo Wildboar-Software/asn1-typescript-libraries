@@ -65,107 +65,107 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ProbeSubmissionArgument,
     _decode_ProbeSubmissionArgument,
     _encode_ProbeSubmissionArgument,
-} from '../MTSAbstractService/ProbeSubmissionArgument.ta';
+} from '../MTSAbstractService/ProbeSubmissionArgument.ta.js';
 export {
     ProbeSubmissionArgument,
     _decode_ProbeSubmissionArgument,
     _encode_ProbeSubmissionArgument,
-} from '../MTSAbstractService/ProbeSubmissionArgument.ta';
+} from '../MTSAbstractService/ProbeSubmissionArgument.ta.js';
 import {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta';
+} from '../MSAbstractService/MSSubmissionOptions.ta.js';
 import {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTSAbstractService/OriginatorName.ta';
+} from '../MTSAbstractService/OriginatorName.ta.js';
 export {
     OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
-} from '../MTSAbstractService/OriginatorName.ta';
+} from '../MTSAbstractService/OriginatorName.ta.js';
 import {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta';
+} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.js';
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta';
+} from '../MTSAbstractService/ContentType.ta.js';
 import {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta';
+} from '../MTSAbstractService/ContentIdentifier.ta.js';
 import {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta';
+} from '../MTSAbstractService/ContentLength.ta.js';
 import {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 export {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta';
+} from '../MTSAbstractService/PerMessageIndicators.ta.js';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta';
+} from '../MTSAbstractService/ExtensionField.ta.js';
 import {
     PerRecipientProbeSubmissionFields,
     _decode_PerRecipientProbeSubmissionFields,
     _encode_PerRecipientProbeSubmissionFields,
-} from '../MTSAbstractService/PerRecipientProbeSubmissionFields.ta';
+} from '../MTSAbstractService/PerRecipientProbeSubmissionFields.ta.js';
 export {
     PerRecipientProbeSubmissionFields,
     _decode_PerRecipientProbeSubmissionFields,
     _encode_PerRecipientProbeSubmissionFields,
-} from '../MTSAbstractService/PerRecipientProbeSubmissionFields.ta';
+} from '../MTSAbstractService/PerRecipientProbeSubmissionFields.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION MSProbeSubmissionArgument */
 /**

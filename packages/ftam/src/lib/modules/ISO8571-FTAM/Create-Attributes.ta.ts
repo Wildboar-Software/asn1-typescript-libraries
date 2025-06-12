@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta';
+} from '../ISO8571-FTAM/Pathname-Attribute.ta.js';
 export {
   Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta';
+} from '../ISO8571-FTAM/Pathname-Attribute.ta.js';
 import {
   Object_Type_Attribute,
   Object_Type_Attribute_file /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -86,7 +86,7 @@ import {
   reference /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Object_Type_Attribute,
   _encode_Object_Type_Attribute,
-} from '../ISO8571-FTAM/Object-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Type-Attribute.ta.js';
 export {
   Object_Type_Attribute,
   Object_Type_Attribute_file /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -97,7 +97,7 @@ export {
   reference /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Object_Type_Attribute,
   _encode_Object_Type_Attribute,
-} from '../ISO8571-FTAM/Object-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Type-Attribute.ta.js';
 import {
   Permitted_Actions_Attribute,
   Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -128,7 +128,7 @@ import {
   random_Order /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Permitted_Actions_Attribute,
   _encode_Permitted_Actions_Attribute,
-} from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta';
+} from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta.js';
 export {
   Permitted_Actions_Attribute,
   Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
@@ -159,87 +159,87 @@ export {
   random_Order /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Permitted_Actions_Attribute,
   _encode_Permitted_Actions_Attribute,
-} from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta';
+} from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta.js';
 import {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 export {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta';
+} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.js';
 import {
   Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
-} from '../ISO8571-FTAM/Account-Attribute.ta';
+} from '../ISO8571-FTAM/Account-Attribute.ta.js';
 export {
   Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
-} from '../ISO8571-FTAM/Account-Attribute.ta';
+} from '../ISO8571-FTAM/Account-Attribute.ta.js';
 import {
   Object_Availability_Attribute,
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
-} from '../ISO8571-FTAM/Object-Availability-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Availability-Attribute.ta.js';
 export {
   Object_Availability_Attribute,
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
-} from '../ISO8571-FTAM/Object-Availability-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Availability-Attribute.ta.js';
 import {
   Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
-} from '../ISO8571-FTAM/Object-Size-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Size-Attribute.ta.js';
 export {
   Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
-} from '../ISO8571-FTAM/Object-Size-Attribute.ta';
+} from '../ISO8571-FTAM/Object-Size-Attribute.ta.js';
 import {
   Access_Control_Attribute,
   _decode_Access_Control_Attribute,
   _encode_Access_Control_Attribute,
-} from '../ISO8571-FTAM/Access-Control-Attribute.ta';
+} from '../ISO8571-FTAM/Access-Control-Attribute.ta.js';
 export {
   Access_Control_Attribute,
   _decode_Access_Control_Attribute,
   _encode_Access_Control_Attribute,
-} from '../ISO8571-FTAM/Access-Control-Attribute.ta';
+} from '../ISO8571-FTAM/Access-Control-Attribute.ta.js';
 import {
   Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
-} from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta';
+} from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.js';
 export {
   Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
-} from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta';
+} from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.js';
 import {
   Private_Use_Attribute,
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
-} from '../ISO8571-FTAM/Private-Use-Attribute.ta';
+} from '../ISO8571-FTAM/Private-Use-Attribute.ta.js';
 export {
   Private_Use_Attribute,
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
-} from '../ISO8571-FTAM/Private-Use-Attribute.ta';
+} from '../ISO8571-FTAM/Private-Use-Attribute.ta.js';
 import {
   Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
-} from '../ISO8571-FTAM/Attribute-Extensions.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions.ta.js';
 export {
   Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
-} from '../ISO8571-FTAM/Attribute-Extensions.ta';
+} from '../ISO8571-FTAM/Attribute-Extensions.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Create_Attributes */
 /**

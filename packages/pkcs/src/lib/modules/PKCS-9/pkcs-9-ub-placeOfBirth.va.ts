@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
-import { ub_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-name.va";
+import { ub_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-name.va.js";
 
 /* START_OF_SYMBOL_DEFINITION pkcs_9_ub_placeOfBirth */
 /**

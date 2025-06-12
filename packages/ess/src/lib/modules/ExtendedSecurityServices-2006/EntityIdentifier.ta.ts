@@ -1,16 +1,16 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     IssuerAndSerialNumber,
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
-} from "@wildboar/x500/src/lib/modules/EnhancedSecurity/IssuerAndSerialNumber.ta";
+} from "@wildboar/x500/src/lib/modules/EnhancedSecurity/IssuerAndSerialNumber.ta.js";
 import {
     SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/SubjectKeyIdentifier.ta";
+} from "@wildboar/x500/src/lib/modules/CertificateExtensions/SubjectKeyIdentifier.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION EntityIdentifier */
 /**

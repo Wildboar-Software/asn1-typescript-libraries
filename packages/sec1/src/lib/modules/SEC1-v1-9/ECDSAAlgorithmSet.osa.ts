@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca";
-import { ECDSAAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union0-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union0-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union1-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union1-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union2-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union2-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union3-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union3-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union4-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union4-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union5-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union5-Intersection0-Element.oa";
-import { ECDSAAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union6-Intersection0-Element.oa";
-export { ECDSAAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union6-Intersection0-Element.oa";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+export { ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.js";
+import { ECDSAAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union0-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union0_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union0-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union1-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union1_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union1-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union2-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union2_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union2-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union3-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union3_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union3-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union4-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union4_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union4-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union5-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union5_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union5-Intersection0-Element.oa.js";
+import { ECDSAAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union6-Intersection0-Element.oa.js";
+export { ECDSAAlgorithmSet_Union6_Intersection0_Element } from "../SEC1-v1-9/ECDSAAlgorithmSet-Union6-Intersection0-Element.oa.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ECDSAAlgorithmSet */

@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Challenge,
   _decode_Challenge,
   _encode_Challenge,
-} from '../PKIXCMP-2009/Challenge.ta';
+} from '../PKIXCMP-2009/Challenge.ta.js';
 export {
   Challenge,
   _decode_Challenge,
   _encode_Challenge,
-} from '../PKIXCMP-2009/Challenge.ta';
+} from '../PKIXCMP-2009/Challenge.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION POPODecKeyChallContent */
 /**

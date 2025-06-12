@@ -65,37 +65,37 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PDUType,
     _decode_PDUType,
     _encode_PDUType,
-} from '../TestCategories-ASN1Module/PDUType.ta';
+} from '../TestCategories-ASN1Module/PDUType.ta.js';
 export {
     PDUType,
     _decode_PDUType,
     _encode_PDUType,
-} from '../TestCategories-ASN1Module/PDUType.ta';
+} from '../TestCategories-ASN1Module/PDUType.ta.js';
 import {
     Parameter,
     _decode_Parameter,
     _encode_Parameter,
-} from '../TestCategories-ASN1Module/Parameter.ta';
+} from '../TestCategories-ASN1Module/Parameter.ta.js';
 export {
     Parameter,
     _decode_Parameter,
     _encode_Parameter,
-} from '../TestCategories-ASN1Module/Parameter.ta';
+} from '../TestCategories-ASN1Module/Parameter.ta.js';
 import {
     ResponseTimeout,
     _decode_ResponseTimeout,
     _encode_ResponseTimeout,
-} from '../TestCategories-ASN1Module/ResponseTimeout.ta';
+} from '../TestCategories-ASN1Module/ResponseTimeout.ta.js';
 export {
     ResponseTimeout,
     _decode_ResponseTimeout,
     _encode_ResponseTimeout,
-} from '../TestCategories-ASN1Module/ResponseTimeout.ta';
+} from '../TestCategories-ASN1Module/ResponseTimeout.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PDUReception */
 /**

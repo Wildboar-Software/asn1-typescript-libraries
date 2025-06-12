@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TerminalType,
     TerminalType_telex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     videotex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TerminalType,
     _encode_TerminalType,
-} from '../MTSAbstractService/TerminalType.ta';
+} from '../MTSAbstractService/TerminalType.ta.js';
 export {
     TerminalType,
     TerminalType_telex /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,9 +99,9 @@ export {
     videotex /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TerminalType,
     _encode_TerminalType,
-} from '../MTSAbstractService/TerminalType.ta';
-import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
-export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca';
+} from '../MTSAbstractService/TerminalType.ta.js';
+import { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
+export { EXTENSION_ATTRIBUTE } from '../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION terminal_type */
 /**

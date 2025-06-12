@@ -65,41 +65,41 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca';
-import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
-export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
+export { ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.js';
+import { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
+export { OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.js';
 import {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 export {
   Priority,
   _decode_Priority,
   _encode_Priority,
-} from '../Remote-Operations-Information-Objects/Priority.ta';
+} from '../Remote-Operations-Information-Objects/Priority.ta.js';
 import {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
 export {
   Code,
   _decode_Code,
   _encode_Code,
-} from '../Remote-Operations-Information-Objects/Code.ta';
+} from '../Remote-Operations-Information-Objects/Code.ta.js';
 import {
   probe_ArgumentType,
   _decode_probe_ArgumentType,
   _encode_probe_ArgumentType,
-} from '../Remote-Operations-Useful-Definitions/probe-ArgumentType.ta';
+} from '../Remote-Operations-Useful-Definitions/probe-ArgumentType.ta.js';
 export {
   probe_ArgumentType,
   _decode_probe_ArgumentType,
   _encode_probe_ArgumentType,
-} from '../Remote-Operations-Useful-Definitions/probe-ArgumentType.ta';
+} from '../Remote-Operations-Useful-Definitions/probe-ArgumentType.ta.js';
 import {
   probe_ResultType,
   _enum_for_probe_ResultType,
@@ -111,7 +111,7 @@ import {
   unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_probe_ResultType,
   _encode_probe_ResultType,
-} from '../Remote-Operations-Useful-Definitions/probe-ResultType.ta';
+} from '../Remote-Operations-Useful-Definitions/probe-ResultType.ta.js';
 export {
   probe_ResultType,
   _enum_for_probe_ResultType,
@@ -123,7 +123,7 @@ export {
   unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_probe_ResultType,
   _encode_probe_ResultType,
-} from '../Remote-Operations-Useful-Definitions/probe-ResultType.ta';
+} from '../Remote-Operations-Useful-Definitions/probe-ResultType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION probe */
 /**

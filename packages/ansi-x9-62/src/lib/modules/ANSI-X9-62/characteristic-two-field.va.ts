@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
-import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va";
-export { id_fieldType } from "../ANSI-X9-62/id-fieldType.va";
+import { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.js";
+export { id_fieldType } from "../ANSI-X9-62/id-fieldType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION characteristic_two_field */
 /**

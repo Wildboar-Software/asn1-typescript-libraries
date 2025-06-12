@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { CorrelatedNotifications_Item, _decode_CorrelatedNotifications_Item, _encode_CorrelatedNotifications_Item } from "../Attribute-ASN1Module/CorrelatedNotifications-Item.ta";
-export { CorrelatedNotifications_Item, _decode_CorrelatedNotifications_Item, _encode_CorrelatedNotifications_Item } from "../Attribute-ASN1Module/CorrelatedNotifications-Item.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { CorrelatedNotifications_Item, _decode_CorrelatedNotifications_Item, _encode_CorrelatedNotifications_Item } from "../Attribute-ASN1Module/CorrelatedNotifications-Item.ta.js";
+export { CorrelatedNotifications_Item, _decode_CorrelatedNotifications_Item, _encode_CorrelatedNotifications_Item } from "../Attribute-ASN1Module/CorrelatedNotifications-Item.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION CorrelatedNotifications */

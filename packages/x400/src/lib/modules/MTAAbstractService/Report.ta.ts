@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReportTransferEnvelope,
     _decode_ReportTransferEnvelope,
     _encode_ReportTransferEnvelope,
-} from '../MTAAbstractService/ReportTransferEnvelope.ta';
+} from '../MTAAbstractService/ReportTransferEnvelope.ta.js';
 export {
     ReportTransferEnvelope,
     _decode_ReportTransferEnvelope,
     _encode_ReportTransferEnvelope,
-} from '../MTAAbstractService/ReportTransferEnvelope.ta';
+} from '../MTAAbstractService/ReportTransferEnvelope.ta.js';
 import {
     ReportTransferContent,
     _decode_ReportTransferContent,
     _encode_ReportTransferContent,
-} from '../MTAAbstractService/ReportTransferContent.ta';
+} from '../MTAAbstractService/ReportTransferContent.ta.js';
 export {
     ReportTransferContent,
     _decode_ReportTransferContent,
     _encode_ReportTransferContent,
-} from '../MTAAbstractService/ReportTransferContent.ta';
+} from '../MTAAbstractService/ReportTransferContent.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Report */
 /**

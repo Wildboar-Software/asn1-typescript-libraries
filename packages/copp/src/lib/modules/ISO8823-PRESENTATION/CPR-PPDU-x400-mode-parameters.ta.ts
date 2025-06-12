@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RTORJapdu,
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.js';
 export {
     RTORJapdu,
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RTORJapdu.ta.js';
 import {
     RefuseReason,
     RefuseReason_rtsBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -88,7 +88,7 @@ import {
     unacceptableDialogueMode /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefuseReason,
     _encode_RefuseReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RefuseReason.ta';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RefuseReason.ta.js';
 export {
     RefuseReason,
     RefuseReason_rtsBusy /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -101,9 +101,9 @@ export {
     unacceptableDialogueMode /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefuseReason,
     _encode_RefuseReason,
-} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RefuseReason.ta';
-import { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca';
-export { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca';
+} from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/RefuseReason.ta.js';
+import { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca.js';
+export { OPEN } from '@wildboar/rtse/src/lib/modules/Reliable-Transfer-APDU/OPEN.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION CPR_PPDU_x400_mode_parameters */
 /**

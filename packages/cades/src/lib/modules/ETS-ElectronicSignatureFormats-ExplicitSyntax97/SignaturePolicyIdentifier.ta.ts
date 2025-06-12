@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta";
-export { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta";
-import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta";
-export { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta.js";
+export { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta.js";
+import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.js";
+export { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.js";
 
 
 /* START_OF_SYMBOL_DEFINITION SignaturePolicyIdentifier */

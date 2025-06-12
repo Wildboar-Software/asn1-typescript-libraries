@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
-export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
+export { EDIM_EXTENSION } from '../EDIMSInformationObjects/EDIM-EXTENSION.oca.js';
 import {
     Criticality,
     _decode_Criticality,
     _encode_Criticality,
-} from '../EDIMSInformationObjects/Criticality.ta';
+} from '../EDIMSInformationObjects/Criticality.ta.js';
 export {
     Criticality,
     _decode_Criticality,
     _encode_Criticality,
-} from '../EDIMSInformationObjects/Criticality.ta';
+} from '../EDIMSInformationObjects/Criticality.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ExtensionField */
 /**

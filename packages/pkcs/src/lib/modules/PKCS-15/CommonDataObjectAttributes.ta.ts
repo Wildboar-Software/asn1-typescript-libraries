@@ -5,9 +5,9 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
+export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION CommonDataObjectAttributes */
 /**

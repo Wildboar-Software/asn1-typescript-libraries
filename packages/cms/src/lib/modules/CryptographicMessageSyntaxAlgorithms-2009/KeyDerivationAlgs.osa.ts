@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca";
-import { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBKDF2.oa";
-export { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca";
-export { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBKDF2.oa";
+import { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.js";
+import { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBKDF2.oa.js";
+export { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.js";
+export { kda_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/kda-PBKDF2.oa.js";
 
 /* START_OF_SYMBOL_DEFINITION KeyDerivationAlgs */
 /**

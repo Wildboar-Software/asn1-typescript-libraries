@@ -65,23 +65,23 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Content_encoded_value,
   _decode_Content_encoded_value,
   _encode_Content_encoded_value,
-} from '../ASN1SOAP/Content-encoded-value.ta';
+} from '../ASN1SOAP/Content-encoded-value.ta.js';
 export {
   Content_encoded_value,
   _decode_Content_encoded_value,
   _encode_Content_encoded_value,
-} from '../ASN1SOAP/Content-encoded-value.ta';
+} from '../ASN1SOAP/Content-encoded-value.ta.js';
 import {
   Document,
   _decode_Document,
   _encode_Document,
-} from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/Document.ta';
-import { finf_doc_no_decl } from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/finf-doc-no-decl.va';
+} from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/Document.ta.js';
+import { finf_doc_no_decl } from '@wildboar/fast-infoset/src/lib/modules/FastInfoset/finf-doc-no-decl.va.js';
 
 /* START_OF_SYMBOL_DEFINITION Content */
 /**

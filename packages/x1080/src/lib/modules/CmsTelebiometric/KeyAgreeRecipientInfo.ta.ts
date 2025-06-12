@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -82,7 +82,7 @@ import {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 export {
     CMSVersion,
     CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -99,47 +99,47 @@ export {
     v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
-} from '../CmsTelebiometric/CMSVersion.ta';
+} from '../CmsTelebiometric/CMSVersion.ta.js';
 import {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta';
+} from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta.js';
 export {
     OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
-} from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta';
+} from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta.js';
 import {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from '../CmsTelebiometric/UserKeyingMaterial.ta';
+} from '../CmsTelebiometric/UserKeyingMaterial.ta.js';
 export {
     UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
-} from '../CmsTelebiometric/UserKeyingMaterial.ta';
+} from '../CmsTelebiometric/UserKeyingMaterial.ta.js';
 import {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta';
+} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.js';
 export {
     KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
-} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta';
+} from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.js';
 import {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from '../CmsTelebiometric/RecipientEncryptedKeys.ta';
+} from '../CmsTelebiometric/RecipientEncryptedKeys.ta.js';
 export {
     RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
-} from '../CmsTelebiometric/RecipientEncryptedKeys.ta';
+} from '../CmsTelebiometric/RecipientEncryptedKeys.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
 /**

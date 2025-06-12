@@ -65,13 +65,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va";
-export { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va";
-import { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta";
-export { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta";
-import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
-export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va.js";
+export { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va.js";
+import { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta.js";
+export { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta.js";
+import { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
+export { SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.js";
 
 
 /* START_OF_SYMBOL_DEFINITION pointerToSigPolSpec */

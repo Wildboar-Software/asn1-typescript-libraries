@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { pDUDiscard } from '../NLM/pDUDiscard.va';
-export { pDUDiscard } from '../NLM/pDUDiscard.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { pDUDiscard } from '../NLM/pDUDiscard.va.js';
+export { pDUDiscard } from '../NLM/pDUDiscard.va.js';
 
 /* START_OF_SYMBOL_DEFINITION pDUDiscardIncorrectChecksum */
 /**

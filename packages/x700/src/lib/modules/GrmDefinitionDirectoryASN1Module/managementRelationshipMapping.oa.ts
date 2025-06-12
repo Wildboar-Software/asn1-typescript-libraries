@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
-export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
+export { OBJECT_CLASS } from '@wildboar/x500/src/lib/modules/InformationFramework/OBJECT-CLASS.oca.js';
 import {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -79,7 +79,7 @@ import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
 export {
     ObjectClassKind,
     _enum_for_ObjectClassKind,
@@ -91,25 +91,25 @@ export {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
-} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta';
-import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca';
-import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa';
-export { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa';
-import { mappedRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/mappedRelationshipClass.oa';
-export { mappedRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/mappedRelationshipClass.oa';
-import { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa';
-export { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa';
-import { roleMappingSpecificationSet } from '../GrmDefinitionDirectoryASN1Module/roleMappingSpecificationSet.oa';
-export { roleMappingSpecificationSet } from '../GrmDefinitionDirectoryASN1Module/roleMappingSpecificationSet.oa';
-import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa';
-export { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa';
-import { relationshipObject } from '../GrmDefinitionDirectoryASN1Module/relationshipObject.oa';
-export { relationshipObject } from '../GrmDefinitionDirectoryASN1Module/relationshipObject.oa';
-import { operationsMapping } from '../GrmDefinitionDirectoryASN1Module/operationsMapping.oa';
-export { operationsMapping } from '../GrmDefinitionDirectoryASN1Module/operationsMapping.oa';
-import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
-export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va';
+} from '@wildboar/x500/src/lib/modules/InformationFramework/ObjectClassKind.ta.js';
+import { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+export { ATTRIBUTE } from '@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js';
+import { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.js';
+export { managementTemplate } from '../DefinitionDirectoryASN1Module/managementTemplate.oa.js';
+import { mappedRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/mappedRelationshipClass.oa.js';
+export { mappedRelationshipClass } from '../GrmDefinitionDirectoryASN1Module/mappedRelationshipClass.oa.js';
+import { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa.js';
+export { behaviour } from '../DefinitionDirectoryASN1Module/behaviour.oa.js';
+import { roleMappingSpecificationSet } from '../GrmDefinitionDirectoryASN1Module/roleMappingSpecificationSet.oa.js';
+export { roleMappingSpecificationSet } from '../GrmDefinitionDirectoryASN1Module/roleMappingSpecificationSet.oa.js';
+import { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.js';
+export { registeredAs } from '../DefinitionDirectoryASN1Module/registeredAs.oa.js';
+import { relationshipObject } from '../GrmDefinitionDirectoryASN1Module/relationshipObject.oa.js';
+export { relationshipObject } from '../GrmDefinitionDirectoryASN1Module/relationshipObject.oa.js';
+import { operationsMapping } from '../GrmDefinitionDirectoryASN1Module/operationsMapping.oa.js';
+export { operationsMapping } from '../GrmDefinitionDirectoryASN1Module/operationsMapping.oa.js';
+import { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
+export { mkmDirectoryObjectClass } from '../MKMD/mkmDirectoryObjectClass.va.js';
 
 /* START_OF_SYMBOL_DEFINITION managementRelationshipMapping */
 /**

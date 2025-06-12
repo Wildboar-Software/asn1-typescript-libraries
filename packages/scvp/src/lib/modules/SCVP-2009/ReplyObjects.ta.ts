@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CertReply,
   _decode_CertReply,
   _encode_CertReply,
-} from '../SCVP-2009/CertReply.ta';
+} from '../SCVP-2009/CertReply.ta.js';
 export {
   CertReply,
   _decode_CertReply,
   _encode_CertReply,
-} from '../SCVP-2009/CertReply.ta';
+} from '../SCVP-2009/CertReply.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ReplyObjects */
 /**

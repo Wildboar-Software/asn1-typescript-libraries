@@ -65,22 +65,22 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ConvertPtoPToMulticastReply_Item_success,
     _decode_ConvertPtoPToMulticastReply_Item_success,
     _encode_ConvertPtoPToMulticastReply_Item_success,
-} from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item-success.ta';
+} from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item-success.ta.js';
 export {
     ConvertPtoPToMulticastReply_Item_success,
     _decode_ConvertPtoPToMulticastReply_Item_success,
     _encode_ConvertPtoPToMulticastReply_Item_success,
-} from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item-success.ta';
+} from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item-success.ta.js';
 import {
     Failed,
     _decode_Failed,
     _encode_Failed,
-} from '../ASN1DefinedTypesModule/Failed.ta';
+} from '../ASN1DefinedTypesModule/Failed.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION ConvertPtoPToMulticastReply_Item */
 /**

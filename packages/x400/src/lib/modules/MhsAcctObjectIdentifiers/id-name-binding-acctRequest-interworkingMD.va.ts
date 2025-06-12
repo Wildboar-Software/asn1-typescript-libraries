@@ -65,11 +65,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta';
-export { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta';
-import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va';
-export { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.js';
+export { ID, _decode_ID, _encode_ID } from '../MhsAcctObjectIdentifiers/ID.ta.js';
+import { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.js';
+export { id_name_binding } from '../MhsAcctObjectIdentifiers/id-name-binding.va.js';
 
 /* START_OF_SYMBOL_DEFINITION id_name_binding_acctRequest_interworkingMD */
 /**

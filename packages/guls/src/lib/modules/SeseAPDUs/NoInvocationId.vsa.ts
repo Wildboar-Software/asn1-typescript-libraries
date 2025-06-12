@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 export {
   InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
-} from '../SeseAPDUs/InvocationId.ta';
+} from '../SeseAPDUs/InvocationId.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION NoInvocationId */
 /**

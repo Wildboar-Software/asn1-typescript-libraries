@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca';
-export { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca.js';
+export { OTHERCERTIFICATE } from '../AuthenticationContextForBiometrics/OTHERCERTIFICATE.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION OtherCertificate */
 /**

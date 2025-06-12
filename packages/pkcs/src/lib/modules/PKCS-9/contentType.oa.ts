@@ -1,15 +1,15 @@
 /* eslint-disable */
-import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca";
+import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.js";
 import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta";
-import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa";
+} from "@wildboar/x500/src/lib/modules/InformationFramework/AttributeUsage.ta.js";
+import { objectIdentifierMatch } from "@wildboar/x500/src/lib/modules/InformationFramework/objectIdentifierMatch.oa.js";
 import {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
-} from "../PKCS-9/ContentType.ta";
-import { pkcs_9_at_contentType } from "../PKCS-9/pkcs-9-at-contentType.va";
+} from "../PKCS-9/ContentType.ta.js";
+import { pkcs_9_at_contentType } from "../PKCS-9/pkcs-9-at-contentType.va.js";
 
 /* START_OF_SYMBOL_DEFINITION contentType */
 /**

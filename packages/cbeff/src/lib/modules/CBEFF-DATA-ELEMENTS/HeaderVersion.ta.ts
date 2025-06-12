@@ -65,35 +65,35 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   HeaderVersion_header_major,
   HeaderVersion_header_major_version1 /* IMPORTED_LONG_NAMED_INTEGER */,
   version1 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_HeaderVersion_header_major,
   _encode_HeaderVersion_header_major,
-} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta';
+} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta.js';
 export {
   HeaderVersion_header_major,
   HeaderVersion_header_major_version1 /* IMPORTED_LONG_NAMED_INTEGER */,
   version1 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_HeaderVersion_header_major,
   _encode_HeaderVersion_header_major,
-} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta';
+} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta.js';
 import {
   HeaderVersion_header_minor,
   HeaderVersion_header_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
   version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_HeaderVersion_header_minor,
   _encode_HeaderVersion_header_minor,
-} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta';
+} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta.js';
 export {
   HeaderVersion_header_minor,
   HeaderVersion_header_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
   version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_HeaderVersion_header_minor,
   _encode_HeaderVersion_header_minor,
-} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta';
+} from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION HeaderVersion */
 /**

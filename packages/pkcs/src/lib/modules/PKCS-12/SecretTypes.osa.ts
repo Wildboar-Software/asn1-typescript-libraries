@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca";
+import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
+export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION SecretTypes */
 /**

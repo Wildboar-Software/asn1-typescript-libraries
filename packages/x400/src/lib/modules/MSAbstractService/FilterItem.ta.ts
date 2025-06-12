@@ -65,47 +65,47 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from '../MSAbstractService/AttributeValueAssertion.ta';
+} from '../MSAbstractService/AttributeValueAssertion.ta.js';
 export {
     AttributeValueAssertion,
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
-} from '../MSAbstractService/AttributeValueAssertion.ta';
+} from '../MSAbstractService/AttributeValueAssertion.ta.js';
 import {
     FilterItem_substrings,
     _decode_FilterItem_substrings,
     _encode_FilterItem_substrings,
-} from '../MSAbstractService/FilterItem-substrings.ta';
+} from '../MSAbstractService/FilterItem-substrings.ta.js';
 export {
     FilterItem_substrings,
     _decode_FilterItem_substrings,
     _encode_FilterItem_substrings,
-} from '../MSAbstractService/FilterItem-substrings.ta';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa';
+} from '../MSAbstractService/FilterItem-substrings.ta.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
+import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
+export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.js';
 import {
     MatchingRuleAssertion,
     _decode_MatchingRuleAssertion,
     _encode_MatchingRuleAssertion,
-} from '../MSAbstractService/MatchingRuleAssertion.ta';
+} from '../MSAbstractService/MatchingRuleAssertion.ta.js';
 export {
     MatchingRuleAssertion,
     _decode_MatchingRuleAssertion,
     _encode_MatchingRuleAssertion,
-} from '../MSAbstractService/MatchingRuleAssertion.ta';
+} from '../MSAbstractService/MatchingRuleAssertion.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from "./AttributeType.ta";
+} from "./AttributeType.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION FilterItem */
 /**

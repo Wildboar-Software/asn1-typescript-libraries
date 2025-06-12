@@ -65,7 +65,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeProblem,
     AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -84,7 +84,7 @@ import {
     single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from '../MSAbstractService/AttributeProblem.ta';
+} from '../MSAbstractService/AttributeProblem.ta.js';
 export {
     AttributeProblem,
     AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
@@ -103,17 +103,17 @@ export {
     single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
-} from '../MSAbstractService/AttributeProblem.ta';
+} from '../MSAbstractService/AttributeProblem.ta.js';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION AttributeError_problems_Item */
 /**

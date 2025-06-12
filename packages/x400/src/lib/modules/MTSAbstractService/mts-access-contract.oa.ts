@@ -65,23 +65,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca';
-import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca';
-import { mts_connect } from '../MTSAbstractService/mts-connect.oa';
-export { mts_connect } from '../MTSAbstractService/mts-connect.oa';
-import { submission } from '../MTSAbstractService/submission.oa';
-export { submission } from '../MTSAbstractService/submission.oa';
-import { delivery } from '../MTSAbstractService/delivery.oa';
-export { delivery } from '../MTSAbstractService/delivery.oa';
-import { administration } from '../MTSAbstractService/administration.oa';
-export { administration } from '../MTSAbstractService/administration.oa';
-import { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va';
-export { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va';
-import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
-export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+export { CONNECTION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.js';
+import { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+export { OPERATION_PACKAGE } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.js';
+import { mts_connect } from '../MTSAbstractService/mts-connect.oa.js';
+export { mts_connect } from '../MTSAbstractService/mts-connect.oa.js';
+import { submission } from '../MTSAbstractService/submission.oa.js';
+export { submission } from '../MTSAbstractService/submission.oa.js';
+import { delivery } from '../MTSAbstractService/delivery.oa.js';
+export { delivery } from '../MTSAbstractService/delivery.oa.js';
+import { administration } from '../MTSAbstractService/administration.oa.js';
+export { administration } from '../MTSAbstractService/administration.oa.js';
+import { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va.js';
+export { id_ct_mts_access } from '../MTSObjectIdentifiers/id-ct-mts-access.va.js';
+import { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
+export { CONTRACT } from '@wildboar/rose/src/lib/modules/Remote-Operations-Information-Objects/CONTRACT.oca.js';
 
 /* START_OF_SYMBOL_DEFINITION mts_access_contract */
 /**

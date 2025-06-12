@@ -65,7 +65,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Type_of_msg_t30_indicator,
   _enum_for_Type_of_msg_t30_indicator,
@@ -117,7 +117,7 @@ import {
   v33_14400_training /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Type_of_msg_t30_indicator,
   _encode_Type_of_msg_t30_indicator,
-} from '../T38/Type-of-msg-t30-indicator.ta';
+} from '../T38/Type-of-msg-t30-indicator.ta.js';
 export {
   Type_of_msg_t30_indicator,
   _enum_for_Type_of_msg_t30_indicator,
@@ -169,7 +169,7 @@ export {
   v33_14400_training /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Type_of_msg_t30_indicator,
   _encode_Type_of_msg_t30_indicator,
-} from '../T38/Type-of-msg-t30-indicator.ta';
+} from '../T38/Type-of-msg-t30-indicator.ta.js';
 import {
   Type_of_msg_t30_data,
   _enum_for_Type_of_msg_t30_data,
@@ -205,7 +205,7 @@ import {
   v33_14400 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Type_of_msg_t30_data,
   _encode_Type_of_msg_t30_data,
-} from '../T38/Type-of-msg-t30-data.ta';
+} from '../T38/Type-of-msg-t30-data.ta.js';
 export {
   Type_of_msg_t30_data,
   _enum_for_Type_of_msg_t30_data,
@@ -241,7 +241,7 @@ export {
   v33_14400 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Type_of_msg_t30_data,
   _encode_Type_of_msg_t30_data,
-} from '../T38/Type-of-msg-t30-data.ta';
+} from '../T38/Type-of-msg-t30-data.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Type_of_msg */
 /**

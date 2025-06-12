@@ -1,26 +1,26 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     CommonAuthenticationObjectAttributes,
     _decode_CommonAuthenticationObjectAttributes,
     _encode_CommonAuthenticationObjectAttributes,
-} from "../PKCS-15/CommonAuthenticationObjectAttributes.ta";
+} from "../PKCS-15/CommonAuthenticationObjectAttributes.ta.js";
 import {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 export {
     CommonAuthenticationObjectAttributes,
     _decode_CommonAuthenticationObjectAttributes,
     _encode_CommonAuthenticationObjectAttributes,
-} from "../PKCS-15/CommonAuthenticationObjectAttributes.ta";
+} from "../PKCS-15/CommonAuthenticationObjectAttributes.ta.js";
 export {
     PKCS15Object,
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta";
+} from "../PKCS-15/PKCS15Object.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION AuthenticationObject */
 /**

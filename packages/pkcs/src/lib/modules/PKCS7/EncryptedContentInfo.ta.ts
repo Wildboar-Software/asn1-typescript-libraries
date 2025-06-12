@@ -5,29 +5,29 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta.js";
 import {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta";
+} from "../PKCS7/ENCRYPTED.ta.js";
 export {
     ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta";
+} from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta.js";
 export {
     ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca";
-export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa";
+} from "../PKCS7/ENCRYPTED.ta.js";
+export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.js";
+export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**

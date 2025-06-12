@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-import { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+import { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va.js";
 import {
     SMIMECapabilitiesParametersForRC2CBC,
     _decode_SMIMECapabilitiesParametersForRC2CBC,
     _encode_SMIMECapabilitiesParametersForRC2CBC,
-} from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va";
+} from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va.js";
 export {
     SMIMECapabilitiesParametersForRC2CBC,
     _decode_SMIMECapabilitiesParametersForRC2CBC,
     _encode_SMIMECapabilitiesParametersForRC2CBC,
-} from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta";
+} from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION cap_RC2CBC */
 /**

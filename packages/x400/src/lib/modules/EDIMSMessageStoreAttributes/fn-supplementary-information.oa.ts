@@ -65,38 +65,38 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
+} from '../MSAbstractService/AttributeType.ta.js';
 export {
     AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta';
-import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
-export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca';
+} from '../MSAbstractService/AttributeType.ta.js';
+import { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
+export { MATCHING_RULE } from '@wildboar/x500/src/lib/modules/InformationFramework/MATCHING-RULE.oca.js';
 import {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
 export {
     EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
-} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta';
-import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa';
-export { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa';
-import { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa';
-export { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa';
-import { id_nat_fn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-fn-supplementary-info.va';
-export { id_nat_fn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-fn-supplementary-info.va';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta";
+} from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.js';
+import { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.js';
+export { mSStringMatch } from '../MSMatchingRules/mSStringMatch.oa.js';
+import { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa.js';
+export { mSSubstringsMatch } from '../MSMatchingRules/mSSubstringsMatch.oa.js';
+import { id_nat_fn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-fn-supplementary-info.va.js';
+export { id_nat_fn_supplementary_info } from '../EDIMSObjectIdentifiers/id-nat-fn-supplementary-info.va.js';
+import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.js';
+import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.js";
 
 /* START_OF_SYMBOL_DEFINITION fn_supplementary_information */
 /**

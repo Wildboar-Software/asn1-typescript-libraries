@@ -11,16 +11,16 @@ export {
     Digest,
     _decode_Digest,
     _encode_Digest,
-} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/Digest.ta";
+} from "@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/Digest.ta.js";
 
 import { ASN1Element, ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     HASH,
     _get_decoder_for_HASH,
     _get_encoder_for_HASH,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/HASH.ta";
-import { Attributes } from "../PKCS7/Attributes.ta";
+} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/HASH.ta.js";
+import { Attributes } from "../PKCS7/Attributes.ta.js";
 
 type ToBeHashed =
     | { content: _Element }

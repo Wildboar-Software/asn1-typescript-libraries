@@ -65,27 +65,27 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   PROTECTED_dirSign,
   _get_decoder_for_PROTECTED_dirSign,
   _get_encoder_for_PROTECTED_dirSign,
-} from '../Notation/PROTECTED-dirSign.ta';
+} from '../Notation/PROTECTED-dirSign.ta.js';
 export {
   PROTECTED_dirSign,
   _get_decoder_for_PROTECTED_dirSign,
   _get_encoder_for_PROTECTED_dirSign,
-} from '../Notation/PROTECTED-dirSign.ta';
+} from '../Notation/PROTECTED-dirSign.ta.js';
 import {
   SyntaxStructure,
   _decode_SyntaxStructure,
   _encode_SyntaxStructure,
-} from '../GenericProtectingTransferSyntax/SyntaxStructure.ta';
+} from '../GenericProtectingTransferSyntax/SyntaxStructure.ta.js';
 export {
   SyntaxStructure,
   _decode_SyntaxStructure,
   _encode_SyntaxStructure,
-} from '../GenericProtectingTransferSyntax/SyntaxStructure.ta';
+} from '../GenericProtectingTransferSyntax/SyntaxStructure.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PROTECTED */
 /**

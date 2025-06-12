@@ -65,27 +65,27 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TargetRoutingCollective,
     _decode_TargetRoutingCollective,
     _encode_TargetRoutingCollective,
-} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta';
+} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.js';
 export {
     TargetRoutingCollective,
     _decode_TargetRoutingCollective,
     _encode_TargetRoutingCollective,
-} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta';
+} from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.js';
 import {
     MHSDistributionListName,
     _decode_MHSDistributionListName,
     _encode_MHSDistributionListName,
-} from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta';
+} from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta.js';
 export {
     MHSDistributionListName,
     _decode_MHSDistributionListName,
     _encode_MHSDistributionListName,
-} from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta';
+} from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION DLExpansionInformation */
 /**

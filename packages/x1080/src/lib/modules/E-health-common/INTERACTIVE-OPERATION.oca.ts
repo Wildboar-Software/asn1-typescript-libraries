@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
-import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
-export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca';
+import * as $ from 'asn1-ts/dist/functional.mjs';
+import { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
+export { CONTENT_TYPE } from '../CmsTelebiometric/CONTENT-TYPE.oca.js';
 import {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 export {
     SessionType,
     _decode_SessionType,
     _encode_SessionType,
-} from '../E-health-common/SessionType.ta';
+} from '../E-health-common/SessionType.ta.js';
 import {
     Requirements,
     _enum_for_Requirements,
@@ -91,7 +91,7 @@ import {
     with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
-} from '../E-health-common/Requirements.ta';
+} from '../E-health-common/Requirements.ta.js';
 export {
     Requirements,
     _enum_for_Requirements,
@@ -105,7 +105,7 @@ export {
     with_2_way_video_and_voice /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
-} from '../E-health-common/Requirements.ta';
+} from '../E-health-common/Requirements.ta.js';
 import {
     ExchangeMode,
     _enum_for_ExchangeMode,
@@ -115,7 +115,7 @@ import {
     async /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ExchangeMode,
     _encode_ExchangeMode,
-} from '../E-health-common/ExchangeMode.ta';
+} from '../E-health-common/ExchangeMode.ta.js';
 export {
     ExchangeMode,
     _enum_for_ExchangeMode,
@@ -125,7 +125,7 @@ export {
     async /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ExchangeMode,
     _encode_ExchangeMode,
-} from '../E-health-common/ExchangeMode.ta';
+} from '../E-health-common/ExchangeMode.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION INTERACTIVE_OPERATION */
 /**

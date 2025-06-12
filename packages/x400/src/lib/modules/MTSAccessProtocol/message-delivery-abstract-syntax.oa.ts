@@ -65,19 +65,19 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     MessageDeliveryPDUs,
     _decode_MessageDeliveryPDUs,
     _encode_MessageDeliveryPDUs,
-} from '../MTSAccessProtocol/MessageDeliveryPDUs.ta';
+} from '../MTSAccessProtocol/MessageDeliveryPDUs.ta.js';
 export {
     MessageDeliveryPDUs,
     _decode_MessageDeliveryPDUs,
     _encode_MessageDeliveryPDUs,
-} from '../MTSAccessProtocol/MessageDeliveryPDUs.ta';
-import { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va';
-export { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va';
+} from '../MTSAccessProtocol/MessageDeliveryPDUs.ta.js';
+import { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va.js';
+export { id_as_mdse_94 } from '../MHSProtocolObjectIdentifiers/id-as-mdse-94.va.js';
 
 /* START_OF_SYMBOL_DEFINITION message_delivery_abstract_syntax */
 /**

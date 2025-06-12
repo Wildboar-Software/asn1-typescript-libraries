@@ -65,9 +65,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
-import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va";
-export { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va";
+import * as $ from "asn1-ts/dist/functional.mjs";
+import { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.js";
+export { id_ecSigType } from "../SEC1-v1-9/id-ecSigType.va.js";
 
 
 /* START_OF_SYMBOL_DEFINITION ecdsa_with_Sha256 */

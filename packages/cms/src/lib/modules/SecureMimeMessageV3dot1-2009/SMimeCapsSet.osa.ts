@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-import { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa";
-import { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca";
-export { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa";
-export { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa";
-import { SMimeCaps as PKIXAlgs_SMimeCaps } from "../PKIXAlgs-2009/SMimeCaps.osa";
-import { SMimeCaps as CryptographicMessageSyntaxAlgorithms_SMimeCaps } from "../CryptographicMessageSyntaxAlgorithms-2009/SMimeCaps.osa";
-import { SMimeCaps as PKIX1_PSS_OAEP_Algorithms_SMimeCaps } from "../PKIX1-PSS-OAEP-Algorithms-2009/SMimeCaps.osa";
+import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+import { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa.js";
+import { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa.js";
+export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.js";
+export { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa.js";
+export { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa.js";
+import { SMimeCaps as PKIXAlgs_SMimeCaps } from "../PKIXAlgs-2009/SMimeCaps.osa.js";
+import { SMimeCaps as CryptographicMessageSyntaxAlgorithms_SMimeCaps } from "../CryptographicMessageSyntaxAlgorithms-2009/SMimeCaps.osa.js";
+import { SMimeCaps as PKIX1_PSS_OAEP_Algorithms_SMimeCaps } from "../PKIX1-PSS-OAEP-Algorithms-2009/SMimeCaps.osa.js";
 
 /* START_OF_SYMBOL_DEFINITION SMimeCapsSet */
 /**

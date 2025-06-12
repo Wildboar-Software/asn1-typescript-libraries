@@ -65,17 +65,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     PremisesAddress,
     _decode_PremisesAddress,
     _encode_PremisesAddress,
-} from '../X790ASN1Module/PremisesAddress.ta';
+} from '../X790ASN1Module/PremisesAddress.ta.js';
 export {
     PremisesAddress,
     _decode_PremisesAddress,
     _encode_PremisesAddress,
-} from '../X790ASN1Module/PremisesAddress.ta';
+} from '../X790ASN1Module/PremisesAddress.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION PersonLocation */
 /**

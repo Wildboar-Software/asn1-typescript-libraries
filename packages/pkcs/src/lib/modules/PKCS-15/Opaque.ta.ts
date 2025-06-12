@@ -1,17 +1,17 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
-import * as $ from "asn1-ts/dist/node/functional";
+import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
+} from "../PKCS-15/ObjectValue.ta.js";
 export {
     ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca";
+} from "../PKCS-15/ObjectValue.ta.js";
+export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.js";
 
 /* START_OF_SYMBOL_DEFINITION Opaque */
 /**

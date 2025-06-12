@@ -1,6 +1,6 @@
 
 
-import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta";
+import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.js";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier } from "asn1-ts";
 import destringifyFilter from "../lib/destringifiers/Filter";

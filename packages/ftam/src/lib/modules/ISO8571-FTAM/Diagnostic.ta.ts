@@ -65,17 +65,17 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/node/functional';
+import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Diagnostic_Item,
   _decode_Diagnostic_Item,
   _encode_Diagnostic_Item,
-} from '../ISO8571-FTAM/Diagnostic-Item.ta';
+} from '../ISO8571-FTAM/Diagnostic-Item.ta.js';
 export {
   Diagnostic_Item,
   _decode_Diagnostic_Item,
   _encode_Diagnostic_Item,
-} from '../ISO8571-FTAM/Diagnostic-Item.ta';
+} from '../ISO8571-FTAM/Diagnostic-Item.ta.js';
 
 /* START_OF_SYMBOL_DEFINITION Diagnostic */
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
+import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
 import {
     Counter,
     _decode_Counter,
     _encode_Counter,
-} from "../ANSI-X9-42/Counter.ta";
-import { tripleDES } from "../ANSI-X9-42/tripleDES.va";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca";
+} from "../ANSI-X9-42/Counter.ta.js";
+import { tripleDES } from "../ANSI-X9-42/tripleDES.va.js";
+export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.js";
 export {
     Counter,
     _decode_Counter,
     _encode_Counter,
-} from "../ANSI-X9-42/Counter.ta";
-export { tripleDES } from "../ANSI-X9-42/tripleDES.va";
+} from "../ANSI-X9-42/Counter.ta.js";
+export { tripleDES } from "../ANSI-X9-42/tripleDES.va.js";
 
 /* START_OF_SYMBOL_DEFINITION KeySpecificAlgorithms_Union0_Intersection0_Element */
 /**
