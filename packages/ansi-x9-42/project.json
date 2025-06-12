@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ansi-x9-42/**/*.ts"]
+                "lintFilePatterns": ["packages/ansi-x9-42/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/ansi-x9-42",
                 "tsConfig": "packages/ansi-x9-42/tsconfig.lib.json",
                 "packageJson": "packages/ansi-x9-42/package.json",
-                "main": "packages/ansi-x9-42/src/index.ts",
+                "main": "packages/ansi-x9-42/src/index.mts",
                 "assets": [
                     "packages/ansi-x9-42/*.md",
                     "packages/ansi-x9-42/LICENSE.txt"

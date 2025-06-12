@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/tcap/**/*.ts"]
+                "lintFilePatterns": ["packages/tcap/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/tcap",
                 "tsConfig": "packages/tcap/tsconfig.lib.json",
                 "packageJson": "packages/tcap/package.json",
-                "main": "packages/tcap/src/index.ts",
+                "main": "packages/tcap/src/index.mts",
                 "assets": ["packages/tcap/*.md", "packages/tcap/LICENSE.txt"]
             }
         }

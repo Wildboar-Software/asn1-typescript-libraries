@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/fast-infoset/**/*.ts"]
+                "lintFilePatterns": ["packages/fast-infoset/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/fast-infoset",
                 "tsConfig": "packages/fast-infoset/tsconfig.lib.json",
                 "packageJson": "packages/fast-infoset/package.json",
-                "main": "packages/fast-infoset/src/index.ts",
+                "main": "packages/fast-infoset/src/index.mts",
                 "assets": [
                     "packages/fast-infoset/*.md",
                     "packages/fast-infoset/LICENSE.txt"

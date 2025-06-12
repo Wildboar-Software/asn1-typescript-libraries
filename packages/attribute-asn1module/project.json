@@ -11,7 +11,7 @@
                 "outputPath": "dist/packages/attribute-asn1module",
                 "tsConfig": "packages/attribute-asn1module/tsconfig.lib.json",
                 "packageJson": "packages/attribute-asn1module/package.json",
-                "main": "packages/attribute-asn1module/src/index.ts",
+                "main": "packages/attribute-asn1module/src/index.mts",
                 "assets": [
                     "packages/attribute-asn1module/*.md",
                     "packages/attribute-asn1module/LICENSE.txt"
@@ -21,7 +21,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/attribute-asn1module/**/*.ts"]
+                "lintFilePatterns": ["packages/attribute-asn1module/**/*.mts"]
             }
         },
         "test": {

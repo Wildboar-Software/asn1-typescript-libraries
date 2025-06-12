@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/scvp/**/*.ts"]
+                "lintFilePatterns": ["packages/scvp/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/scvp",
                 "tsConfig": "packages/scvp/tsconfig.lib.json",
                 "packageJson": "packages/scvp/package.json",
-                "main": "packages/scvp/src/index.ts",
+                "main": "packages/scvp/src/index.mts",
                 "assets": ["packages/scvp/*.md", "packages/scvp/LICENSE.txt"]
             }
         }

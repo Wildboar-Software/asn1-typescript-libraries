@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/casscam",
                 "tsConfig": "packages/casscam/tsconfig.lib.json",
                 "packageJson": "packages/casscam/package.json",
-                "main": "packages/casscam/src/index.ts",
+                "main": "packages/casscam/src/index.mts",
                 "assets": ["packages/casscam/*.md", "packages/casscam/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/casscam/**/*.ts"]
+                "lintFilePatterns": ["packages/casscam/**/*.mts"]
             }
         },
         "test": {

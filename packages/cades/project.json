@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/cades",
                 "tsConfig": "packages/cades/tsconfig.lib.json",
                 "packageJson": "packages/cades/package.json",
-                "main": "packages/cades/src/index.ts",
+                "main": "packages/cades/src/index.mts",
                 "assets": ["packages/cades/*.md", "packages/cades/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/cades/**/*.ts"]
+                "lintFilePatterns": ["packages/cades/**/*.mts"]
             }
         },
         "test": {

@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/rtse/**/*.ts"]
+                "lintFilePatterns": ["packages/rtse/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/rtse",
                 "tsConfig": "packages/rtse/tsconfig.lib.json",
                 "packageJson": "packages/rtse/package.json",
-                "main": "packages/rtse/src/index.ts",
+                "main": "packages/rtse/src/index.mts",
                 "assets": ["packages/rtse/*.md", "packages/rtse/LICENSE.txt"]
             }
         }

@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/acse/**/*.ts"]
+                "lintFilePatterns": ["packages/acse/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/acse",
                 "tsConfig": "packages/acse/tsconfig.lib.json",
                 "packageJson": "packages/acse/package.json",
-                "main": "packages/acse/src/index.ts",
+                "main": "packages/acse/src/index.mts",
                 "assets": ["packages/acse/*.md", "packages/acse/LICENSE.txt"]
             }
         }

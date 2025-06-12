@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/nlm",
                 "tsConfig": "packages/nlm/tsconfig.lib.json",
                 "packageJson": "packages/nlm/package.json",
-                "main": "packages/nlm/src/index.ts",
+                "main": "packages/nlm/src/index.mts",
                 "assets": ["packages/nlm/*.md", "packages/nlm/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/nlm/**/*.ts"]
+                "lintFilePatterns": ["packages/nlm/**/*.mts"]
             }
         },
         "test": {

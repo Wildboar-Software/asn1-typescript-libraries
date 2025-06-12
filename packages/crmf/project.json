@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/crmf/**/*.ts"]
+                "lintFilePatterns": ["packages/crmf/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/crmf",
                 "tsConfig": "packages/crmf/tsconfig.lib.json",
                 "packageJson": "packages/crmf/package.json",
-                "main": "packages/crmf/src/index.ts",
+                "main": "packages/crmf/src/index.mts",
                 "assets": ["packages/crmf/*.md", "packages/crmf/LICENSE.txt"]
             }
         }

@@ -11,7 +11,7 @@
                 "outputPath": "dist/packages/gmi-attributemodule",
                 "tsConfig": "packages/gmi-attributemodule/tsconfig.lib.json",
                 "packageJson": "packages/gmi-attributemodule/package.json",
-                "main": "packages/gmi-attributemodule/src/index.ts",
+                "main": "packages/gmi-attributemodule/src/index.mts",
                 "assets": [
                     "packages/gmi-attributemodule/*.md",
                     "packages/gmi-attributemodule/LICENSE.txt"
@@ -21,7 +21,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/gmi-attributemodule/**/*.ts"]
+                "lintFilePatterns": ["packages/gmi-attributemodule/**/*.mts"]
             }
         },
         "test": {

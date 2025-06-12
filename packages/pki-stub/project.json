@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/pki-stub",
                 "tsConfig": "packages/pki-stub/tsconfig.lib.json",
                 "packageJson": "packages/pki-stub/package.json",
-                "main": "packages/pki-stub/src/index.ts",
+                "main": "packages/pki-stub/src/index.mts",
                 "assets": ["packages/pki-stub/*.md", "packages/pki-stub/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/pki-stub/**/*.ts"]
+                "lintFilePatterns": ["packages/pki-stub/**/*.mts"]
             }
         },
         "test": {

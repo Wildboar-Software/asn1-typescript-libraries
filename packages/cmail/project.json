@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/cmail/**/*.ts"]
+                "lintFilePatterns": ["packages/cmail/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/cmail",
                 "tsConfig": "packages/cmail/tsconfig.lib.json",
                 "packageJson": "packages/cmail/package.json",
-                "main": "packages/cmail/src/index.ts",
+                "main": "packages/cmail/src/index.mts",
                 "assets": ["packages/cmail/*.md", "packages/cmail/LICENSE.txt"]
             }
         }

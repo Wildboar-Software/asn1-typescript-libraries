@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/x400",
                 "tsConfig": "packages/x400/tsconfig.lib.json",
                 "packageJson": "packages/x400/package.json",
-                "main": "packages/x400/src/index.ts",
+                "main": "packages/x400/src/index.mts",
                 "assets": ["packages/x400/*.md", "packages/x400/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/x400/**/*.ts"]
+                "lintFilePatterns": ["packages/x400/**/*.mts"]
             }
         },
         "test": {

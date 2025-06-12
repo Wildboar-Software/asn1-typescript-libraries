@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/sec1",
                 "tsConfig": "packages/sec1/tsconfig.lib.json",
                 "packageJson": "packages/sec1/package.json",
-                "main": "packages/sec1/src/index.ts",
+                "main": "packages/sec1/src/index.mts",
                 "assets": ["packages/sec1/*.md", "packages/sec1/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/sec1/**/*.ts"]
+                "lintFilePatterns": ["packages/sec1/**/*.mts"]
             }
         },
         "test": {

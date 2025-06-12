@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/guls/**/*.ts"]
+                "lintFilePatterns": ["packages/guls/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/guls",
                 "tsConfig": "packages/guls/tsconfig.lib.json",
                 "packageJson": "packages/guls/package.json",
-                "main": "packages/guls/src/index.ts",
+                "main": "packages/guls/src/index.mts",
                 "assets": ["packages/guls/*.md", "packages/guls/LICENSE.txt"]
             }
         }

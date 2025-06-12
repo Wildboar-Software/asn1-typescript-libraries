@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/isis/**/*.ts"]
+                "lintFilePatterns": ["packages/isis/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/isis",
                 "tsConfig": "packages/isis/tsconfig.lib.json",
                 "packageJson": "packages/isis/package.json",
-                "main": "packages/isis/src/index.ts",
+                "main": "packages/isis/src/index.mts",
                 "assets": ["packages/isis/*.md", "packages/isis/LICENSE.txt"]
             }
         }

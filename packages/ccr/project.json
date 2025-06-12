@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ccr/**/*.ts"]
+                "lintFilePatterns": ["packages/ccr/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/ccr",
                 "tsConfig": "packages/ccr/tsconfig.lib.json",
                 "packageJson": "packages/ccr/package.json",
-                "main": "packages/ccr/src/index.ts",
+                "main": "packages/ccr/src/index.mts",
                 "assets": ["packages/ccr/*.md", "packages/ccr/LICENSE.txt"]
             }
         }

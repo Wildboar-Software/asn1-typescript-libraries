@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/rose/**/*.ts"]
+                "lintFilePatterns": ["packages/rose/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/rose",
                 "tsConfig": "packages/rose/tsconfig.lib.json",
                 "packageJson": "packages/rose/package.json",
-                "main": "packages/rose/src/index.ts",
+                "main": "packages/rose/src/index.mts",
                 "assets": ["packages/rose/*.md", "packages/rose/LICENSE.txt"]
             }
         }

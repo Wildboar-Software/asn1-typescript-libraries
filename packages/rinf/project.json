@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/rinf/**/*.ts"]
+                "lintFilePatterns": ["packages/rinf/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/rinf",
                 "tsConfig": "packages/rinf/tsconfig.lib.json",
                 "packageJson": "packages/rinf/package.json",
-                "main": "packages/rinf/src/index.ts",
+                "main": "packages/rinf/src/index.mts",
                 "assets": ["packages/rinf/*.md", "packages/rinf/LICENSE.txt"]
             }
         }

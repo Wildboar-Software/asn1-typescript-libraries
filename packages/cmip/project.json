@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/cmip/**/*.ts"]
+                "lintFilePatterns": ["packages/cmip/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/cmip",
                 "tsConfig": "packages/cmip/tsconfig.lib.json",
                 "packageJson": "packages/cmip/package.json",
-                "main": "packages/cmip/src/index.ts",
+                "main": "packages/cmip/src/index.mts",
                 "assets": ["packages/cmip/*.md", "packages/cmip/LICENSE.txt"]
             }
         }

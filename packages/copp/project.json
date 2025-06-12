@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/copp",
                 "tsConfig": "packages/copp/tsconfig.lib.json",
                 "packageJson": "packages/copp/package.json",
-                "main": "packages/copp/src/index.ts",
+                "main": "packages/copp/src/index.mts",
                 "assets": ["packages/copp/*.md", "packages/copp/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/copp/**/*.ts"]
+                "lintFilePatterns": ["packages/copp/**/*.mts"]
             }
         },
         "test": {

@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/x500/**/*.ts"]
+                "lintFilePatterns": ["packages/x500/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/x500",
                 "tsConfig": "packages/x500/tsconfig.lib.json",
                 "packageJson": "packages/x500/package.json",
-                "main": "packages/x500/src/index.ts",
+                "main": "packages/x500/src/index.mts",
                 "assets": ["packages/x500/*.md", "packages/x500/LICENSE.txt"]
             }
         }

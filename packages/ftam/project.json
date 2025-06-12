@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ftam/**/*.ts"]
+                "lintFilePatterns": ["packages/ftam/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/ftam",
                 "tsConfig": "packages/ftam/tsconfig.lib.json",
                 "packageJson": "packages/ftam/package.json",
-                "main": "packages/ftam/src/index.ts",
+                "main": "packages/ftam/src/index.mts",
                 "assets": ["packages/ftam/*.md", "packages/ftam/LICENSE.txt"]
             }
         }

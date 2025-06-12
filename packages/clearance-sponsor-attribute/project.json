@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/clearance-sponsor-attribute/**/*.ts"]
+                "lintFilePatterns": ["packages/clearance-sponsor-attribute/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/clearance-sponsor-attribute",
                 "tsConfig": "packages/clearance-sponsor-attribute/tsconfig.lib.json",
                 "packageJson": "packages/clearance-sponsor-attribute/package.json",
-                "main": "packages/clearance-sponsor-attribute/src/index.ts",
+                "main": "packages/clearance-sponsor-attribute/src/index.mts",
                 "assets": [
                     "packages/clearance-sponsor-attribute/*.md",
                     "packages/clearance-sponsor-attribute/LICENSE.txt"

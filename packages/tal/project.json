@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/tal/**/*.ts"]
+                "lintFilePatterns": ["packages/tal/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/tal",
                 "tsConfig": "packages/tal/tsconfig.lib.json",
                 "packageJson": "packages/tal/package.json",
-                "main": "packages/tal/src/index.ts",
+                "main": "packages/tal/src/index.mts",
                 "assets": ["packages/tal/*.md", "packages/tal/LICENSE.txt"]
             }
         }

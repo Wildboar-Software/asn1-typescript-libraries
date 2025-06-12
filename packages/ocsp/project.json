@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ocsp/**/*.ts"]
+                "lintFilePatterns": ["packages/ocsp/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/ocsp",
                 "tsConfig": "packages/ocsp/tsconfig.lib.json",
                 "packageJson": "packages/ocsp/package.json",
-                "main": "packages/ocsp/src/index.ts",
+                "main": "packages/ocsp/src/index.mts",
                 "assets": ["packages/ocsp/*.md", "packages/ocsp/LICENSE.txt"]
             }
         }

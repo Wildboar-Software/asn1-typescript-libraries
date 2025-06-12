@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/bip/**/*.ts"]
+                "lintFilePatterns": ["packages/bip/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/bip",
                 "tsConfig": "packages/bip/tsconfig.lib.json",
                 "packageJson": "packages/bip/package.json",
-                "main": "packages/bip/src/index.ts",
+                "main": "packages/bip/src/index.mts",
                 "assets": ["packages/bip/*.md", "packages/bip/LICENSE.txt"]
             }
         }

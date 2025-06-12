@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/acbio",
                 "tsConfig": "packages/acbio/tsconfig.lib.json",
                 "packageJson": "packages/acbio/package.json",
-                "main": "packages/acbio/src/index.ts",
+                "main": "packages/acbio/src/index.mts",
                 "assets": ["packages/acbio/*.md", "packages/acbio/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/acbio/**/*.ts"]
+                "lintFilePatterns": ["packages/acbio/**/*.mts"]
             }
         },
         "test": {

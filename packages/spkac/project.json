@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/spkac/**/*.ts"]
+                "lintFilePatterns": ["packages/spkac/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/spkac",
                 "tsConfig": "packages/spkac/tsconfig.lib.json",
                 "packageJson": "packages/spkac/package.json",
-                "main": "packages/spkac/src/index.ts",
+                "main": "packages/spkac/src/index.mts",
                 "assets": ["packages/spkac/*.md", "packages/spkac/LICENSE.txt"]
             }
         }

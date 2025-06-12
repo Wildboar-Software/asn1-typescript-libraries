@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ldap/**/*.ts"]
+                "lintFilePatterns": ["packages/ldap/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/ldap",
                 "tsConfig": "packages/ldap/tsconfig.lib.json",
                 "packageJson": "packages/ldap/package.json",
-                "main": "packages/ldap/src/index.ts",
+                "main": "packages/ldap/src/index.mts",
                 "assets": ["packages/ldap/*.md", "packages/ldap/LICENSE.txt"]
             }
         }

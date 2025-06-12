@@ -11,14 +11,14 @@
                 "outputPath": "dist/packages/m3100",
                 "tsConfig": "packages/m3100/tsconfig.lib.json",
                 "packageJson": "packages/m3100/package.json",
-                "main": "packages/m3100/src/index.ts",
+                "main": "packages/m3100/src/index.mts",
                 "assets": ["packages/m3100/*.md", "packages/m3100/LICENSE.txt"]
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/m3100/**/*.ts"]
+                "lintFilePatterns": ["packages/m3100/**/*.mts"]
             }
         },
         "test": {

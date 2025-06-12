@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/cbeff/**/*.ts"]
+                "lintFilePatterns": ["packages/cbeff/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/cbeff",
                 "tsConfig": "packages/cbeff/tsconfig.lib.json",
                 "packageJson": "packages/cbeff/package.json",
-                "main": "packages/cbeff/src/index.ts",
+                "main": "packages/cbeff/src/index.mts",
                 "assets": ["packages/cbeff/*.md", "packages/cbeff/LICENSE.txt"]
             }
         }

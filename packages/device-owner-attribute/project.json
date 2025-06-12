@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/device-owner-attribute/**/*.ts"]
+                "lintFilePatterns": ["packages/device-owner-attribute/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/device-owner-attribute",
                 "tsConfig": "packages/device-owner-attribute/tsconfig.lib.json",
                 "packageJson": "packages/device-owner-attribute/package.json",
-                "main": "packages/device-owner-attribute/src/index.ts",
+                "main": "packages/device-owner-attribute/src/index.mts",
                 "assets": [
                     "packages/device-owner-attribute/*.md",
                     "packages/device-owner-attribute/LICENSE.txt"

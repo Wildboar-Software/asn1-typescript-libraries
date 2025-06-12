@@ -11,7 +11,7 @@
                 "outputPath": "dist/packages/ec-private-key",
                 "tsConfig": "packages/ec-private-key/tsconfig.lib.json",
                 "packageJson": "packages/ec-private-key/package.json",
-                "main": "packages/ec-private-key/src/index.ts",
+                "main": "packages/ec-private-key/src/index.mts",
                 "assets": [
                     "packages/ec-private-key/*.md",
                     "packages/ec-private-key/LICENSE.txt"
@@ -21,7 +21,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/ec-private-key/**/*.ts"]
+                "lintFilePatterns": ["packages/ec-private-key/**/*.mts"]
             }
         },
         "test": {

@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/cinf/**/*.ts"]
+                "lintFilePatterns": ["packages/cinf/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/cinf",
                 "tsConfig": "packages/cinf/tsconfig.lib.json",
                 "packageJson": "packages/cinf/package.json",
-                "main": "packages/cinf/src/index.ts",
+                "main": "packages/cinf/src/index.mts",
                 "assets": ["packages/cinf/*.md", "packages/cinf/LICENSE.txt"]
             }
         }

@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/kerberos5/**/*.ts"]
+                "lintFilePatterns": ["packages/kerberos5/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/kerberos5",
                 "tsConfig": "packages/kerberos5/tsconfig.lib.json",
                 "packageJson": "packages/kerberos5/package.json",
-                "main": "packages/kerberos5/src/index.ts",
+                "main": "packages/kerberos5/src/index.mts",
                 "assets": ["packages/kerberos5/*.md", "packages/kerberos5/LICENSE.txt"]
             }
         }

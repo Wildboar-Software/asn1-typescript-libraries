@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/iso-9798-3-sasl/**/*.ts"]
+                "lintFilePatterns": ["packages/iso-9798-3-sasl/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/iso-9798-3-sasl",
                 "tsConfig": "packages/iso-9798-3-sasl/tsconfig.lib.json",
                 "packageJson": "packages/iso-9798-3-sasl/package.json",
-                "main": "packages/iso-9798-3-sasl/src/index.ts",
+                "main": "packages/iso-9798-3-sasl/src/index.mts",
                 "assets": [
                     "packages/iso-9798-3-sasl/*.md",
                     "packages/iso-9798-3-sasl/LICENSE.txt"

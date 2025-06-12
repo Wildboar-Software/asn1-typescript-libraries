@@ -7,7 +7,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["packages/usm/**/*.ts"]
+                "lintFilePatterns": ["packages/usm/**/*.mts"]
             }
         },
         "test": {
@@ -25,7 +25,7 @@
                 "outputPath": "dist/packages/usm",
                 "tsConfig": "packages/usm/tsconfig.lib.json",
                 "packageJson": "packages/usm/package.json",
-                "main": "packages/usm/src/index.ts",
+                "main": "packages/usm/src/index.mts",
                 "assets": ["packages/usm/*.md", "packages/usm/LICENSE.txt"]
             }
         }
