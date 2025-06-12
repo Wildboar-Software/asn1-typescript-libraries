@@ -16,6 +16,11 @@ programming languages, or if you have any other questions, please contact us at
 Due to both Jest not supporting ESM (yet), the tests are broken and will stay
 broken for as long as it takes. I hate the entire Javashit ecosystem.
 
+I wanted to use `esbuild` or `swc` for faster compilation, but both of these
+will not be much faster due to type-checking still being done by TypeScript.
+The TypeScript compiler is being ported to Go anyway, and once that's done, it
+will be nearly as fast.
+
 ## Remove all unused imports
 
 This is slow and will crash from running out of memory if you try this for the
