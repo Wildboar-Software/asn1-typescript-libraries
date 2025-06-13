@@ -126,6 +126,11 @@ export {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_ProbeSubmissionResult,
+    _root_component_type_list_2_spec_for_ProbeSubmissionResult,
+    _extension_additions_list_spec_for_ProbeSubmissionResult,
+} from '../MTSAbstractService/ProbeSubmissionResult.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION MSProbeSubmissionResult */
 /**
@@ -229,34 +234,7 @@ export class MSProbeSubmissionResult {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'probe-submission-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'probe-submission-time',
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_ProbeSubmissionResult,
     new $.ComponentSpec(
         'ms-probe-result',
         true,
@@ -276,7 +254,9 @@ export const _root_component_type_list_1_spec_for_MSProbeSubmissionResult: $.Com
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_ProbeSubmissionResult,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSProbeSubmissionResult */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionResult */
@@ -288,7 +268,9 @@ export const _root_component_type_list_2_spec_for_MSProbeSubmissionResult: $.Com
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_MSProbeSubmissionResult: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_ProbeSubmissionResult,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSProbeSubmissionResult */

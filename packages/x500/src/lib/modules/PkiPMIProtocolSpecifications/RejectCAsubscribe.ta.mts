@@ -69,6 +69,9 @@ export {
     _encode_CASPversion,
     _enum_for_CASPversion,
 } from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CASPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION RejectCAsubscribe */
 /**
@@ -173,20 +176,7 @@ export class RejectCAsubscribe {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_RejectCAsubscribe: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CASPcommonComponents,
     new $.ComponentSpec(
         "reason",
         false,

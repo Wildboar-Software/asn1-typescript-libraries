@@ -126,6 +126,11 @@ export {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_MessageSubmissionResult,
+    _root_component_type_list_2_spec_for_MessageSubmissionResult,
+    _extension_additions_list_spec_for_MessageSubmissionResult,
+} from '../MTSAbstractService/MessageSubmissionResult.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION MSMessageSubmissionResult_mts_result */
 /**
@@ -224,34 +229,7 @@ export class MSMessageSubmissionResult_mts_result {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MSMessageSubmissionResult_mts_result: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'message-submission-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'message-submission-time',
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_MessageSubmissionResult,
     new $.ComponentSpec(
         'ms-message-result',
         true,
@@ -271,7 +249,9 @@ export const _root_component_type_list_1_spec_for_MSMessageSubmissionResult_mts_
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_MSMessageSubmissionResult_mts_result: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_MSMessageSubmissionResult_mts_result: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_MessageSubmissionResult,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSMessageSubmissionResult_mts_result */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSMessageSubmissionResult_mts_result */
@@ -283,7 +263,9 @@ export const _root_component_type_list_2_spec_for_MSMessageSubmissionResult_mts_
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_MSMessageSubmissionResult_mts_result: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_MSMessageSubmissionResult_mts_result: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_MessageSubmissionResult,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSMessageSubmissionResult_mts_result */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSMessageSubmissionResult_mts_result */

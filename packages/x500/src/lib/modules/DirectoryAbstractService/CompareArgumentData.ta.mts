@@ -64,6 +64,8 @@ import {
 import {
     CommonArguments,
     _root_component_type_list_1_spec_for_CommonArguments,
+    _root_component_type_list_2_spec_for_CommonArguments,
+    _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CompareArgumentData */
@@ -316,6 +318,7 @@ export const _root_component_type_list_1_spec_for_CompareArgumentData: $.Compone
         undefined,
         undefined
     ),
+    ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareArgumentData */
 
@@ -329,7 +332,7 @@ export const _root_component_type_list_1_spec_for_CompareArgumentData: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CompareArgumentData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonArguments,
+    ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareArgumentData */
 
@@ -342,7 +345,9 @@ export const _root_component_type_list_2_spec_for_CompareArgumentData: $.Compone
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_CompareArgumentData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_CompareArgumentData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonArguments,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareArgumentData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareArgumentData */

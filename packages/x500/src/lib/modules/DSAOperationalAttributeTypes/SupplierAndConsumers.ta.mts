@@ -45,6 +45,11 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_AccessPoint,
+    _root_component_type_list_2_spec_for_AccessPoint,
+    _extension_additions_list_spec_for_AccessPoint,
+} from "../DistributedOperations/AccessPoint.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SupplierAndConsumers */
 /**
@@ -134,27 +139,7 @@ export class SupplierAndConsumers {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "ae-title",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "address",
-        false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "protocolInformation",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AccessPoint,
     new $.ComponentSpec(
         "consumers",
         false,
@@ -174,7 +159,9 @@ export const _root_component_type_list_1_spec_for_SupplierAndConsumers: $.Compon
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_AccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierAndConsumers */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierAndConsumers */
@@ -186,7 +173,9 @@ export const _root_component_type_list_2_spec_for_SupplierAndConsumers: $.Compon
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_SupplierAndConsumers: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_AccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierAndConsumers */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierAndConsumers */

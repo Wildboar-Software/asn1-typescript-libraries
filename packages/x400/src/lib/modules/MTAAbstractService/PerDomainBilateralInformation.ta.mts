@@ -111,6 +111,9 @@ export {
 import {
     BilateralDomain_domain_private_domain,
 } from '../MTAAbstractService/BilateralDomain-domain-private-domain.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_BilateralDomain,
+} from '../MTAAbstractService/BilateralDomain.ta.mjs';
 
 // Manually edited.
 
@@ -195,14 +198,7 @@ export class PerDomainBilateralInformation {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_PerDomainBilateralInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'country-name',
-        false,
-        $.hasTag(_TagClass.application, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec('domain', false, $.hasAnyTag, undefined, undefined),
+    ..._root_component_type_list_1_spec_for_BilateralDomain,
     new $.ComponentSpec(
         'bilateral-information',
         false,

@@ -31,7 +31,11 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CommonResults,
+    _root_component_type_list_2_spec_for_CommonResults,
+    _extension_additions_list_spec_for_CommonResults,
+} from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION NameErrorData */
 /**
@@ -159,6 +163,7 @@ export const _root_component_type_list_1_spec_for_NameErrorData: $.ComponentSpec
         undefined,
         undefined
     ),
+    ..._root_component_type_list_1_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_NameErrorData */
 
@@ -172,7 +177,7 @@ export const _root_component_type_list_1_spec_for_NameErrorData: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_NameErrorData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_2_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_NameErrorData */
 
@@ -185,7 +190,9 @@ export const _root_component_type_list_2_spec_for_NameErrorData: $.ComponentSpec
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_NameErrorData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_NameErrorData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonResults,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_NameErrorData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_NameErrorData */

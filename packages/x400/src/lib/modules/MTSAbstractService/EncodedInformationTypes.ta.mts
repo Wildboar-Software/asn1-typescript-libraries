@@ -244,6 +244,11 @@ export {
     _decode_TeletexNonBasicParameters,
     _encode_TeletexNonBasicParameters,
 } from '../MTSAbstractService/TeletexNonBasicParameters.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_NonBasicParameters,
+    _root_component_type_list_2_spec_for_NonBasicParameters,
+    _extension_additions_list_spec_for_NonBasicParameters,
+} from '../MTSAbstractService/NonBasicParameters.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION EncodedInformationTypes */
 /**
@@ -360,20 +365,7 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypes: $.Com
         undefined,
         undefined
     ),
-    new $.ComponentSpec(
-        'g3-facsimile',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'teletex',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_NonBasicParameters,
     new $.ComponentSpec(
         'extended-encoded-information-types',
         true,
@@ -393,7 +385,9 @@ export const _root_component_type_list_1_spec_for_EncodedInformationTypes: $.Com
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_NonBasicParameters,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EncodedInformationTypes */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypes */
@@ -405,7 +399,9 @@ export const _root_component_type_list_2_spec_for_EncodedInformationTypes: $.Com
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_EncodedInformationTypes: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_NonBasicParameters,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_EncodedInformationTypes */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_EncodedInformationTypes */

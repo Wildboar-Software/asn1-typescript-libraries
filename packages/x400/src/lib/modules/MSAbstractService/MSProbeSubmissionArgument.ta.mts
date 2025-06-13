@@ -166,6 +166,11 @@ export {
     _decode_PerRecipientProbeSubmissionFields,
     _encode_PerRecipientProbeSubmissionFields,
 } from '../MTSAbstractService/PerRecipientProbeSubmissionFields.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_ProbeSubmissionEnvelope,
+    _root_component_type_list_2_spec_for_ProbeSubmissionEnvelope,
+    _extension_additions_list_spec_for_ProbeSubmissionEnvelope,
+} from '../MTSAbstractService/ProbeSubmissionEnvelope.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION MSProbeSubmissionArgument */
 /**
@@ -306,62 +311,7 @@ export class MSProbeSubmissionArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MSProbeSubmissionArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'originator-name',
-        false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'original-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-type',
-        false,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-length',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-message-indicators',
-        true,
-        $.hasTag(_TagClass.application, 8),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-recipient-fields',
-        false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_ProbeSubmissionEnvelope,
     new $.ComponentSpec(
         'submission-options',
         true,
@@ -381,7 +331,9 @@ export const _root_component_type_list_1_spec_for_MSProbeSubmissionArgument: $.C
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_MSProbeSubmissionArgument: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_MSProbeSubmissionArgument: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_ProbeSubmissionEnvelope,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_MSProbeSubmissionArgument */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionArgument */
@@ -393,7 +345,9 @@ export const _root_component_type_list_2_spec_for_MSProbeSubmissionArgument: $.C
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_MSProbeSubmissionArgument: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_MSProbeSubmissionArgument: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_ProbeSubmissionEnvelope,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_MSProbeSubmissionArgument */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_MSProbeSubmissionArgument */

@@ -116,6 +116,11 @@ export {
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from '../MTSAbstractService/ExtensionAttributes.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_ORAddress,
+    _root_component_type_list_2_spec_for_ORAddress,
+    _extension_additions_list_spec_for_ORAddress,
+} from '../MTSAbstractService/ORAddress.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ORName */
 /**
@@ -196,27 +201,7 @@ export class ORName {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ORName: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'built-in-standard-attributes',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'built-in-domain-defined-attributes',
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extension-attributes',
-        true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_ORAddress,
     new $.ComponentSpec(
         'directory-name',
         true,

@@ -106,6 +106,9 @@ export {
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_MessageSubmissionArgument,
+} from '../MTSAbstractService/MessageSubmissionArgument.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION MSMessageSubmissionArgument */
 /**
@@ -183,20 +186,7 @@ export class MSMessageSubmissionArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MSMessageSubmissionArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'envelope',
-        false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content',
-        false,
-        $.hasTag(_TagClass.universal, 4),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_MessageSubmissionArgument,
     new $.ComponentSpec(
         'submission-options',
         true,

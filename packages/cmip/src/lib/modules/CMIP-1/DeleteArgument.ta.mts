@@ -141,6 +141,9 @@ export {
 import {
     Scope_namedNumbers_baseObject,
 } from '../CMIP-1/Scope-namedNumbers.ta.mjs';
+import {
+  _root_component_type_list_1_spec_for_BaseManagedObjectId,
+} from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION DeleteArgument */
 /**
@@ -281,20 +284,7 @@ export class DeleteArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DeleteArgument: $.ComponentSpec[] = [
-  new $.ComponentSpec(
-    'baseManagedObjectClass',
-    false,
-    $.hasAnyTag,
-    undefined,
-    undefined
-  ),
-  new $.ComponentSpec(
-    'baseManagedObjectInstance',
-    false,
-    $.hasAnyTag,
-    undefined,
-    undefined
-  ),
+  ..._root_component_type_list_1_spec_for_BaseManagedObjectId,
   new $.ComponentSpec(
     'accessControl',
     true,

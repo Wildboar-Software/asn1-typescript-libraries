@@ -186,6 +186,11 @@ export {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_PerProbeTransferFields,
+    _root_component_type_list_2_spec_for_PerProbeTransferFields,
+    _extension_additions_list_spec_for_PerProbeTransferFields,
+} from '../MTAAbstractService/PerProbeTransferFields.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ProbeTransferEnvelope */
 /**
@@ -339,76 +344,7 @@ export class ProbeTransferEnvelope {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'probe-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'originator-name',
-        false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'original-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-type',
-        false,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-length',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-message-indicators',
-        true,
-        $.hasTag(_TagClass.application, 8),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-domain-bilateral-information',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'trace-information',
-        false,
-        $.hasTag(_TagClass.application, 9),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_PerProbeTransferFields,
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
@@ -428,7 +364,9 @@ export const _root_component_type_list_1_spec_for_ProbeTransferEnvelope: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_PerProbeTransferFields,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ProbeTransferEnvelope */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProbeTransferEnvelope */
@@ -440,7 +378,9 @@ export const _root_component_type_list_2_spec_for_ProbeTransferEnvelope: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ProbeTransferEnvelope: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_PerProbeTransferFields,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ProbeTransferEnvelope */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ProbeTransferEnvelope */

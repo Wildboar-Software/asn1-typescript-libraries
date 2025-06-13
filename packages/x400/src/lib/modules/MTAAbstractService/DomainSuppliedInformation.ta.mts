@@ -154,6 +154,11 @@ export {
     _decode_OtherActions,
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_AdditionalActions,
+    _root_component_type_list_2_spec_for_AdditionalActions,
+    _extension_additions_list_spec_for_AdditionalActions,
+} from '../MTAAbstractService/AdditionalActions.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION DomainSuppliedInformation */
 /**
@@ -290,27 +295,7 @@ export const _root_component_type_list_1_spec_for_DomainSuppliedInformation: $.C
         undefined,
         undefined
     ),
-    new $.ComponentSpec(
-        'deferred-time',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'converted-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'other-actions',
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AdditionalActions,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_DomainSuppliedInformation */
 
@@ -323,7 +308,9 @@ export const _root_component_type_list_1_spec_for_DomainSuppliedInformation: $.C
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_AdditionalActions,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DomainSuppliedInformation */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainSuppliedInformation */
@@ -335,7 +322,9 @@ export const _root_component_type_list_2_spec_for_DomainSuppliedInformation: $.C
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_DomainSuppliedInformation: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_AdditionalActions,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DomainSuppliedInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DomainSuppliedInformation */

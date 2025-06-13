@@ -148,6 +148,9 @@ export {
 import {
     SearchRule,
 } from "../ServiceAdministration/SearchRule.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_SearchRule,
+} from "../ServiceAdministration/SearchRule.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SearchRuleDescription */
 /**
@@ -398,125 +401,7 @@ export class SearchRuleDescription extends SearchRule {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SearchRuleDescription: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "id",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "dmdId",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "serviceType",
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "userClass",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "inputAttributeTypes",
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "attributeCombination",
-        true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "outputAttributeTypes",
-        true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "defaultControls",
-        true,
-        $.hasTag(_TagClass.context, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "mandatoryControls",
-        true,
-        $.hasTag(_TagClass.context, 7),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "searchRuleControls",
-        true,
-        $.hasTag(_TagClass.context, 8),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "familyGrouping",
-        true,
-        $.hasTag(_TagClass.context, 9),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "familyReturn",
-        true,
-        $.hasTag(_TagClass.context, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "relaxation",
-        true,
-        $.hasTag(_TagClass.context, 11),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "additionalControl",
-        true,
-        $.hasTag(_TagClass.context, 12),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "allowedSubset",
-        true,
-        $.hasTag(_TagClass.context, 13),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "imposedSubset",
-        true,
-        $.hasTag(_TagClass.context, 14),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "entryLimit",
-        true,
-        $.hasTag(_TagClass.context, 15),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_SearchRule,
     new $.ComponentSpec(
         "name",
         true,

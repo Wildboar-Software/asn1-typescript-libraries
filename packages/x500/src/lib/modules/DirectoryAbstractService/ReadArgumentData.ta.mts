@@ -64,6 +64,8 @@ import {
 import {
     CommonArguments,
     _root_component_type_list_1_spec_for_CommonArguments,
+    _root_component_type_list_2_spec_for_CommonArguments,
+    _extension_additions_list_spec_for_CommonArguments,
 } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ReadArgumentData */
@@ -349,6 +351,7 @@ export const _root_component_type_list_1_spec_for_ReadArgumentData: $.ComponentS
         undefined,
         undefined
     ),
+    ..._root_component_type_list_1_spec_for_CommonArguments,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReadArgumentData */
 
@@ -362,7 +365,7 @@ export const _root_component_type_list_1_spec_for_ReadArgumentData: $.ComponentS
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ReadArgumentData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonArguments,
+    ..._root_component_type_list_2_spec_for_CommonArguments,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReadArgumentData */
 
@@ -375,7 +378,9 @@ export const _root_component_type_list_2_spec_for_ReadArgumentData: $.ComponentS
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ReadArgumentData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ReadArgumentData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonArguments,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReadArgumentData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReadArgumentData */

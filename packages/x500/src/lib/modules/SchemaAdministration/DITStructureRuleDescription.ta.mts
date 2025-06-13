@@ -33,6 +33,9 @@ export {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_DITStructureRule,
+} from "../InformationFramework/DITStructureRule.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION DITStructureRuleDescription */
 /**
@@ -152,27 +155,7 @@ export class DITStructureRuleDescription {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DITStructureRuleDescription: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "ruleIdentifier",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "nameForm",
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "superiorStructureRules",
-        true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_DITStructureRule,
     new $.ComponentSpec(
         "name",
         true,

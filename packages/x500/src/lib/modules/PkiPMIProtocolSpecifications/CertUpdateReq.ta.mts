@@ -49,6 +49,9 @@ export {
     _decode_CertUpdateReq_certs_Item,
     _encode_CertUpdateReq_certs_Item,
 } from "../PkiPMIProtocolSpecifications/CertUpdateReq-certs-Item.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CASPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CertUpdateReq */
 /**
@@ -150,20 +153,7 @@ export class CertUpdateReq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertUpdateReq: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CASPcommonComponents,
     new $.ComponentSpec(
         "certs",
         false,

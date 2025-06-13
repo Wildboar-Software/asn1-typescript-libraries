@@ -96,6 +96,9 @@ export {
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_CommonReqComp,
+} from '../Pbact-access/CommonReqComp.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION DeleteRequest */
 /**
@@ -183,27 +186,7 @@ export class DeleteRequest {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DeleteRequest: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'attrCerts',
-        true,
-        $.hasTag(_TagClass.context, 31),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'serviceId',
-        false,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'invokId',
-        false,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonReqComp,
     new $.ComponentSpec(
         'object',
         false,

@@ -49,10 +49,10 @@ done
 ## To Do
 
 - [ ] Export via `index.mts` in some packages
-- [x] Usages of `Math.max()` to create `BIT STRING` values have an off-by-one issue
 - [ ] Documentation
 - [ ] Single-module exports
-- [ ] Deduplicate `COMPONENTS OF` spec arrays
+- [x] Deduplicate `COMPONENTS OF` spec arrays
+- [ ] Implement interfaces / subclasses where `COMPONENTS OF` is used
 - [ ] SNMPv3 (No formal module.)
 - [ ] F515 (No artifact for this...)
 - [ ] CAP (I already have code out there for this.)

@@ -166,6 +166,11 @@ export {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_PerReportTransferFields,
+    _root_component_type_list_2_spec_for_PerReportTransferFields,
+    _extension_additions_list_spec_for_PerReportTransferFields,
+} from '../MTAAbstractService/PerReportTransferFields.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ReportTransferContent */
 /**
@@ -294,62 +299,7 @@ export class ReportTransferContent {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ReportTransferContent: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'subject-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'subject-intermediate-trace-information',
-        true,
-        $.hasTag(_TagClass.application, 9),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'original-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-type',
-        true,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'returned-content',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'additional-information',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_PerReportTransferFields,
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
@@ -369,7 +319,9 @@ export const _root_component_type_list_1_spec_for_ReportTransferContent: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ReportTransferContent: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ReportTransferContent: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_PerReportTransferFields,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportTransferContent */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportTransferContent */
@@ -381,7 +333,9 @@ export const _root_component_type_list_2_spec_for_ReportTransferContent: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ReportTransferContent: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ReportTransferContent: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_PerReportTransferFields,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportTransferContent */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportTransferContent */

@@ -27,7 +27,11 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CommonResults,
+    _root_component_type_list_2_spec_for_CommonResults,
+    _extension_additions_list_spec_for_CommonResults,
+} from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION AbandonedData */
 /**
@@ -140,6 +144,7 @@ export class AbandonedData {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AbandonedData: $.ComponentSpec[] = [
+    ..._root_component_type_list_1_spec_for_CommonResults,
     new $.ComponentSpec(
         "problem",
         true,
@@ -160,7 +165,7 @@ export const _root_component_type_list_1_spec_for_AbandonedData: $.ComponentSpec
  * @constant
  */
 export const _root_component_type_list_2_spec_for_AbandonedData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_2_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AbandonedData */
 
@@ -173,7 +178,9 @@ export const _root_component_type_list_2_spec_for_AbandonedData: $.ComponentSpec
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AbandonedData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AbandonedData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonResults,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AbandonedData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AbandonedData */

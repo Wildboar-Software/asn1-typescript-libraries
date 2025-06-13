@@ -15,6 +15,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
+import { _root_component_type_list_1_spec_for_TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
 export {
     SDSEContent,
     _decode_SDSEContent,
@@ -117,20 +118,7 @@ export const _root_component_type_list_1_spec_for_Subtree: $.ComponentSpec[] = [
         undefined,
         undefined
     ),
-    new $.ComponentSpec(
-        "sDSE",
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "subtree",
-        true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_TotalRefresh,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_Subtree */
 

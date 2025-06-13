@@ -151,6 +151,9 @@ export {
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
+import {
+  _root_component_type_list_1_spec_for_BaseManagedObjectId,
+} from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION SetArgument */
 /**
@@ -309,20 +312,7 @@ export class SetArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SetArgument: $.ComponentSpec[] = [
-  new $.ComponentSpec(
-    'baseManagedObjectClass',
-    false,
-    $.hasAnyTag,
-    undefined,
-    undefined
-  ),
-  new $.ComponentSpec(
-    'baseManagedObjectInstance',
-    false,
-    $.hasAnyTag,
-    undefined,
-    undefined
-  ),
+  ..._root_component_type_list_1_spec_for_BaseManagedObjectId,
   new $.ComponentSpec(
     'accessControl',
     true,

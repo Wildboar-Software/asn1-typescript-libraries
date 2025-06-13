@@ -135,6 +135,9 @@ export {
     _decode_ResultAttribute,
     _encode_ResultAttribute,
 } from "../ServiceAdministration/ResultAttribute.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_SearchRuleId,
+} from "../ServiceAdministration/SearchRuleId.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SearchRule */
 /**
@@ -360,20 +363,7 @@ export class SearchRule {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SearchRule: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "id",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "dmdId",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_SearchRuleId,
     new $.ComponentSpec(
         "serviceType",
         true,

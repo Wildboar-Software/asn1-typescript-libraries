@@ -50,6 +50,9 @@ export {
     _decode_ReplaceAvlRsp_result,
     _encode_ReplaceAvlRsp_result,
 } from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp-result.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_AVMPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp */
 /**
@@ -157,27 +160,7 @@ export class ReplaceAvlRsp {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ReplaceAvlRsp: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "timeStamp",
-        false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_ReplaceAvlRsp */

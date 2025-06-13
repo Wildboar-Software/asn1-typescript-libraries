@@ -23,6 +23,9 @@ import {
     _encode_AVMPversion,
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_AVMPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 export {
     CertAVL,
     _decode_CertAVL,
@@ -154,27 +157,7 @@ export class AddAvlReq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AddAvlReq: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "timeStamp",
-        false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AVMPcommonComponents,
     new $.ComponentSpec(
         "certlist",
         false,

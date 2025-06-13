@@ -126,6 +126,11 @@ export {
     _decode_PerRecipientReportDeliveryFields,
     _encode_PerRecipientReportDeliveryFields,
 } from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_PerReportDeliveryFields,
+    _root_component_type_list_2_spec_for_PerReportDeliveryFields,
+    _extension_additions_list_spec_for_PerReportDeliveryFields,
+} from '../MTSAbstractService/PerReportDeliveryFields.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ReportDeliveryEnvelope */
 /**
@@ -233,41 +238,7 @@ export class ReportDeliveryEnvelope {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'subject-submission-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-type',
-        true,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'original-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_PerReportDeliveryFields,
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
@@ -287,7 +258,9 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryEnvelope: $.Comp
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_PerReportDeliveryFields,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryEnvelope */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryEnvelope */
@@ -299,7 +272,9 @@ export const _root_component_type_list_2_spec_for_ReportDeliveryEnvelope: $.Comp
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ReportDeliveryEnvelope: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_PerReportDeliveryFields,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryEnvelope */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryEnvelope */

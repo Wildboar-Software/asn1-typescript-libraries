@@ -36,7 +36,11 @@ import {
     _decode_SPKM_ERROR,
     _encode_SPKM_ERROR,
 } from "../SpkmGssTokens/SPKM-ERROR.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CommonResults,
+    _root_component_type_list_2_spec_for_CommonResults,
+    _extension_additions_list_spec_for_CommonResults,
+} from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SecurityErrorData */
 /**
@@ -179,6 +183,7 @@ export const _root_component_type_list_1_spec_for_SecurityErrorData: $.Component
         undefined,
         undefined
     ),
+    ..._root_component_type_list_1_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_SecurityErrorData */
 
@@ -192,7 +197,7 @@ export const _root_component_type_list_1_spec_for_SecurityErrorData: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_SecurityErrorData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_2_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SecurityErrorData */
 
@@ -205,7 +210,9 @@ export const _root_component_type_list_2_spec_for_SecurityErrorData: $.Component
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_SecurityErrorData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_SecurityErrorData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonResults,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SecurityErrorData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SecurityErrorData */

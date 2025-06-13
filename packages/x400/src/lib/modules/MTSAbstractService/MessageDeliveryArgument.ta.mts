@@ -116,6 +116,11 @@ export {
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
 } from '../MTSAbstractService/OtherMessageDeliveryFields.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_MessageDeliveryEnvelope,
+    _root_component_type_list_2_spec_for_MessageDeliveryEnvelope,
+    _extension_additions_list_spec_for_MessageDeliveryEnvelope,
+} from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION MessageDeliveryArgument */
 /**
@@ -198,27 +203,7 @@ export class MessageDeliveryArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_MessageDeliveryArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'message-delivery-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'message-delivery-time',
-        false,
-        $.hasTag(_TagClass.universal, 23),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'other-fields',
-        false,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_MessageDeliveryEnvelope,
     new $.ComponentSpec(
         'content',
         false,

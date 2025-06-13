@@ -49,6 +49,9 @@ export {
     _decode_CertReplaceRsp_result,
     _encode_CertReplaceRsp_result,
 } from "../PkiPMIProtocolSpecifications/CertReplaceRsp-result.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CASPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CertReplaceRsp */
 /**
@@ -149,20 +152,7 @@ export class CertReplaceRsp {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertReplaceRsp: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CASPcommonComponents,
     new $.ComponentSpec("result", false, $.hasAnyTag, undefined, undefined),
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CertReplaceRsp */

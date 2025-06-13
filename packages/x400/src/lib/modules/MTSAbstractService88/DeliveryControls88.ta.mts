@@ -154,6 +154,11 @@ export {
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_Controls,
+    _root_component_type_list_2_spec_for_Controls,
+    _extension_additions_list_spec_for_Controls,
+} from '../MTSAbstractService/Controls.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION DeliveryControls88 */
 /**
@@ -277,55 +282,7 @@ export class DeliveryControls88 {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DeliveryControls88: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'restrict',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-operations',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-maximum-content-length',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-lowest-priority',
-        true,
-        $.hasTag(_TagClass.application, 7),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-content-types',
-        true,
-        $.hasTag(_TagClass.context, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'permissible-security-context',
-        true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_Controls,
     new $.ComponentSpec(
         'permissible-encoded-information-types-88',
         true,
@@ -345,7 +302,9 @@ export const _root_component_type_list_1_spec_for_DeliveryControls88: $.Componen
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_DeliveryControls88: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_DeliveryControls88: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_Controls,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControls88 */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControls88 */
@@ -357,7 +316,9 @@ export const _root_component_type_list_2_spec_for_DeliveryControls88: $.Componen
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_DeliveryControls88: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_DeliveryControls88: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_Controls,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControls88 */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControls88 */

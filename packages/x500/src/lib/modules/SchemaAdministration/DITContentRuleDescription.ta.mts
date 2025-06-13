@@ -24,7 +24,10 @@ export {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { DITContentRule } from "../InformationFramework/DITContentRule.ta.mjs";
+import {
+    DITContentRule,
+    _root_component_type_list_1_spec_for_DITContentRule,
+} from "../InformationFramework/DITContentRule.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION DITContentRuleDescription */
 /**
@@ -172,41 +175,7 @@ export class DITContentRuleDescription extends DITContentRule {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DITContentRuleDescription: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "structuralObjectClass",
-        false,
-        $.hasTag(_TagClass.universal, 6),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "auxiliaries",
-        true,
-        $.hasTag(_TagClass.universal, 17),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "mandatory",
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "optional",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "precluded",
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_DITContentRule,
     new $.ComponentSpec(
         "name",
         true,

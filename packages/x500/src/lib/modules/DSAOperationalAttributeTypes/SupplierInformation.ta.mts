@@ -61,6 +61,11 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_SupplierOrConsumer,
+    _root_component_type_list_2_spec_for_SupplierOrConsumer,
+    _extension_additions_list_spec_for_SupplierOrConsumer,
+} from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SupplierInformation */
 /**
@@ -175,34 +180,7 @@ export class SupplierInformation {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SupplierInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "ae-title",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "address",
-        false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "protocolInformation",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "agreementID",
-        false,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_SupplierOrConsumer,
     new $.ComponentSpec(
         "supplier-is-master",
         true,
@@ -229,7 +207,9 @@ export const _root_component_type_list_1_spec_for_SupplierInformation: $.Compone
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_SupplierInformation: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_SupplierInformation: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_SupplierOrConsumer,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierInformation */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierInformation */
@@ -241,7 +221,9 @@ export const _root_component_type_list_2_spec_for_SupplierInformation: $.Compone
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_SupplierInformation: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_SupplierInformation: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_SupplierOrConsumer,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierInformation */

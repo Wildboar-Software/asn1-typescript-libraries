@@ -74,6 +74,9 @@ export {
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
 } from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CommonResults,
+} from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingResultData */
 /**
@@ -249,34 +252,7 @@ export const _root_component_type_list_1_spec_for_EstablishOperationalBindingRes
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EstablishOperationalBindingResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EstablishOperationalBindingResultData */
 

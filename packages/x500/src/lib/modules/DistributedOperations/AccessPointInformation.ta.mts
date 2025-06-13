@@ -70,7 +70,12 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-import { MasterOrShadowAccessPoint } from "./MasterOrShadowAccessPoint.ta.mjs";
+import {
+    MasterOrShadowAccessPoint,
+    _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint,
+    _root_component_type_list_2_spec_for_MasterOrShadowAccessPoint,
+    _extension_additions_list_spec_for_MasterOrShadowAccessPoint,
+} from "./MasterOrShadowAccessPoint.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION AccessPointInformation */
 /**
@@ -208,41 +213,7 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AccessPointInformation: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "ae-title",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "address",
-        false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "protocolInformation",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "category",
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "chainingRequired",
-        true,
-        $.hasTag(_TagClass.context, 5),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_MasterOrShadowAccessPoint,
     new $.ComponentSpec(
         "additionalPoints",
         true,
@@ -262,7 +233,9 @@ export const _root_component_type_list_1_spec_for_AccessPointInformation: $.Comp
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AccessPointInformation: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AccessPointInformation: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_MasterOrShadowAccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AccessPointInformation */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessPointInformation */
@@ -274,7 +247,9 @@ export const _root_component_type_list_2_spec_for_AccessPointInformation: $.Comp
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AccessPointInformation: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AccessPointInformation: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_MasterOrShadowAccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AccessPointInformation */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AccessPointInformation */

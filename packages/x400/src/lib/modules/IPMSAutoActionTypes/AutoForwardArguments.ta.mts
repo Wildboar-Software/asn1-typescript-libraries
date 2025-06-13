@@ -146,6 +146,11 @@ export {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_PerMessageAutoForwardFields,
+    _root_component_type_list_2_spec_for_PerMessageAutoForwardFields,
+    _extension_additions_list_spec_for_PerMessageAutoForwardFields,
+} from '../IPMSAutoActionTypes/PerMessageAutoForwardFields.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION AutoForwardArguments */
 /**
@@ -261,48 +266,7 @@ export class AutoForwardArguments {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AutoForwardArguments: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'originator-name',
-        false,
-        $.hasTag(_TagClass.application, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'priority',
-        true,
-        $.hasTag(_TagClass.application, 7),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-message-indicators',
-        true,
-        $.hasTag(_TagClass.application, 8),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'deferred-delivery-time',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_PerMessageAutoForwardFields,
     new $.ComponentSpec(
         'per-recipient-fields',
         false,
@@ -322,7 +286,9 @@ export const _root_component_type_list_1_spec_for_AutoForwardArguments: $.Compon
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_AutoForwardArguments: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_AutoForwardArguments: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_PerMessageAutoForwardFields,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_AutoForwardArguments */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoForwardArguments */
@@ -334,7 +300,9 @@ export const _root_component_type_list_2_spec_for_AutoForwardArguments: $.Compon
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_AutoForwardArguments: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_AutoForwardArguments: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_PerMessageAutoForwardFields,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AutoForwardArguments */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AutoForwardArguments */

@@ -146,6 +146,11 @@ export {
     _decode_PerRecipientReportDeliveryFields,
     _encode_PerRecipientReportDeliveryFields,
 } from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_ReportDeliveryEnvelope,
+    _root_component_type_list_2_spec_for_ReportDeliveryEnvelope,
+    _extension_additions_list_spec_for_ReportDeliveryEnvelope,
+} from '../MTSAbstractService/ReportDeliveryEnvelope.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ReportDeliveryArgument */
 /**
@@ -259,48 +264,7 @@ export class ReportDeliveryArgument {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'subject-submission-identifier',
-        false,
-        $.hasTag(_TagClass.application, 4),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-identifier',
-        true,
-        $.hasTag(_TagClass.application, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'content-type',
-        true,
-        $.hasAnyTag,
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'original-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'extensions',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'per-recipient-fields',
-        false,
-        $.hasTag(_TagClass.universal, 16),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_ReportDeliveryEnvelope,
     new $.ComponentSpec(
         'returned-content',
         true,
@@ -320,7 +284,9 @@ export const _root_component_type_list_1_spec_for_ReportDeliveryArgument: $.Comp
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_ReportDeliveryEnvelope,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ReportDeliveryArgument */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryArgument */
@@ -332,7 +298,9 @@ export const _root_component_type_list_2_spec_for_ReportDeliveryArgument: $.Comp
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_ReportDeliveryArgument: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_ReportDeliveryEnvelope,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_ReportDeliveryArgument */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_ReportDeliveryArgument */

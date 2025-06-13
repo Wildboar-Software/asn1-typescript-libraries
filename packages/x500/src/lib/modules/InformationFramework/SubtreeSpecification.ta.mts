@@ -25,6 +25,9 @@ import {
     _decode_Refinement,
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_ChopSpecification,
+} from "../InformationFramework/ChopSpecification.ta.mjs";
 export {
     BaseDistance,
     _decode_BaseDistance,
@@ -173,27 +176,7 @@ export const _root_component_type_list_1_spec_for_SubtreeSpecification: $.Compon
         undefined,
         undefined
     ),
-    new $.ComponentSpec(
-        "specificExclusions",
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "minimum",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "maximum",
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_ChopSpecification,
     new $.ComponentSpec(
         "specificationFilter",
         true,

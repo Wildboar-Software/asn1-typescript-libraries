@@ -52,6 +52,9 @@ export {
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_AadClient,
+} from "../Wrapper/AadClient.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION AadClientAE */
 /**
@@ -153,41 +156,7 @@ export class AadClientAE {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_AadClientAE: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "invokeID",
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "assoID",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "time",
-        false,
-        $.hasTag(_TagClass.universal, 24),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "seq",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "keyEst",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AadClient,
     new $.ComponentSpec(
         "encInvoke",
         true,

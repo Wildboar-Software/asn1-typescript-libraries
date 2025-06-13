@@ -146,6 +146,11 @@ export {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_Waiting,
+    _root_component_type_list_2_spec_for_Waiting,
+    _extension_additions_list_spec_for_Waiting,
+} from '../MTSAbstractService/Waiting.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION DeliveryControlResult */
 /**
@@ -273,34 +278,7 @@ export class DeliveryControlResult {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_DeliveryControlResult: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'waiting-operations',
-        true,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'waiting-messages',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'waiting-content-types',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'waiting-encoded-information-types',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_Waiting,
     new $.ComponentSpec(
         'extensions',
         true,
@@ -320,7 +298,9 @@ export const _root_component_type_list_1_spec_for_DeliveryControlResult: $.Compo
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_DeliveryControlResult: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_DeliveryControlResult: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_Waiting,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_DeliveryControlResult */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlResult */
@@ -332,7 +312,9 @@ export const _root_component_type_list_2_spec_for_DeliveryControlResult: $.Compo
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_DeliveryControlResult: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_DeliveryControlResult: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_Waiting,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_DeliveryControlResult */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_DeliveryControlResult */

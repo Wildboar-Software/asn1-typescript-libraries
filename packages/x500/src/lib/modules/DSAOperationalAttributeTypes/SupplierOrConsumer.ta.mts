@@ -50,6 +50,11 @@ export {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_AccessPoint,
+    _root_component_type_list_2_spec_for_AccessPoint,
+    _extension_additions_list_spec_for_AccessPoint,
+} from "../DistributedOperations/AccessPoint.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SupplierOrConsumer */
 /**
@@ -139,27 +144,7 @@ export class SupplierOrConsumer {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_SupplierOrConsumer: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "ae-title",
-        false,
-        $.hasTag(_TagClass.context, 0),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "address",
-        false,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "protocolInformation",
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_AccessPoint,
     new $.ComponentSpec(
         "agreementID",
         false,
@@ -179,7 +164,9 @@ export const _root_component_type_list_1_spec_for_SupplierOrConsumer: $.Componen
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_SupplierOrConsumer: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_SupplierOrConsumer: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_AccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_SupplierOrConsumer */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierOrConsumer */
@@ -191,7 +178,9 @@ export const _root_component_type_list_2_spec_for_SupplierOrConsumer: $.Componen
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_SupplierOrConsumer: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_SupplierOrConsumer: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_AccessPoint,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_SupplierOrConsumer */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_SupplierOrConsumer */

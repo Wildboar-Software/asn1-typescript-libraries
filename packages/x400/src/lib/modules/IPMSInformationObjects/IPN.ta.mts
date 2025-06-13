@@ -136,6 +136,11 @@ export {
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
+import {
+    _root_component_type_list_1_spec_for_CommonFields,
+    _root_component_type_list_2_spec_for_CommonFields,
+    _extension_additions_list_spec_for_CommonFields,
+} from '../IPMSInformationObjects/CommonFields.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION IPN */
 /**
@@ -232,41 +237,7 @@ export class IPN {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_IPN: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        'subject-ipm',
-        false,
-        $.hasTag(_TagClass.application, 11),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'ipn-originator',
-        true,
-        $.hasTag(_TagClass.context, 1),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'ipm-intended-recipient',
-        true,
-        $.hasTag(_TagClass.context, 2),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'conversion-eits',
-        true,
-        $.hasTag(_TagClass.application, 5),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        'notification-extensions',
-        true,
-        $.hasTag(_TagClass.context, 3),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CommonFields,
     new $.ComponentSpec(
         'choice',
         false,
@@ -286,7 +257,9 @@ export const _root_component_type_list_1_spec_for_IPN: $.ComponentSpec[] = [
  *
  * @constant
  */
-export const _root_component_type_list_2_spec_for_IPN: $.ComponentSpec[] = [];
+export const _root_component_type_list_2_spec_for_IPN: $.ComponentSpec[] = [
+    ..._root_component_type_list_2_spec_for_CommonFields,
+];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_IPN */
 
 /* START_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPN */
@@ -298,7 +271,9 @@ export const _root_component_type_list_2_spec_for_IPN: $.ComponentSpec[] = [];
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_IPN: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_IPN: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonFields,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_IPN */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_IPN */

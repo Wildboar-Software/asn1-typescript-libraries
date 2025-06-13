@@ -49,6 +49,9 @@ export {
     _decode_CertUnsubscribeReq_certs_Item,
     _encode_CertUnsubscribeReq_certs_Item,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq-certs-Item.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CASPcommonComponents,
+} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeReq */
 /**
@@ -149,20 +152,7 @@ export class CertUnsubscribeReq {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_CertUnsubscribeReq: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "version",
-        true,
-        $.hasTag(_TagClass.universal, 10),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "sequence",
-        false,
-        $.hasTag(_TagClass.universal, 2),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_1_spec_for_CASPcommonComponents,
     new $.ComponentSpec(
         "certs",
         false,

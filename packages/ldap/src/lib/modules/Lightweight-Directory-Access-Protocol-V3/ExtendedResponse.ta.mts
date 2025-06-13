@@ -284,6 +284,9 @@ export {
   _decode_Referral,
   _encode_Referral,
 } from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.mjs';
+import {
+  _root_component_type_list_1_spec_for_LDAPResult,
+} from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION ExtendedResponse */
 /**
@@ -394,34 +397,7 @@ export class ExtendedResponse {
  * @constant
  */
 export const _root_component_type_list_1_spec_for_ExtendedResponse: $.ComponentSpec[] = [
-  new $.ComponentSpec(
-    'resultCode',
-    false,
-    $.hasTag(_TagClass.universal, 10),
-    undefined,
-    undefined
-  ),
-  new $.ComponentSpec(
-    'matchedDN',
-    false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
-  ),
-  new $.ComponentSpec(
-    'diagnosticMessage',
-    false,
-    $.hasTag(_TagClass.universal, 4),
-    undefined,
-    undefined
-  ),
-  new $.ComponentSpec(
-    'referral',
-    true,
-    $.hasTag(_TagClass.context, 3),
-    undefined,
-    undefined
-  ),
+  ..._root_component_type_list_1_spec_for_LDAPResult,
   new $.ComponentSpec(
     'responseName',
     true,

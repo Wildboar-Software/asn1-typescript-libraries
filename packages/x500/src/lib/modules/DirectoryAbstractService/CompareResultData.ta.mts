@@ -61,6 +61,11 @@ export {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
+import {
+    _root_component_type_list_1_spec_for_CommonResults,
+    _root_component_type_list_2_spec_for_CommonResults,
+    _extension_additions_list_spec_for_CommonResults,
+} from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CompareResultData */
 /**
@@ -227,6 +232,7 @@ export const _root_component_type_list_1_spec_for_CompareResultData: $.Component
         undefined,
         undefined
     ),
+    ..._root_component_type_list_1_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_1_spec_for_CompareResultData */
 
@@ -240,34 +246,7 @@ export const _root_component_type_list_1_spec_for_CompareResultData: $.Component
  * @constant
  */
 export const _root_component_type_list_2_spec_for_CompareResultData: $.ComponentSpec[] = [
-    new $.ComponentSpec(
-        "securityParameters",
-        true,
-        $.hasTag(_TagClass.context, 30),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "performer",
-        true,
-        $.hasTag(_TagClass.context, 29),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "aliasDereferenced",
-        true,
-        $.hasTag(_TagClass.context, 28),
-        undefined,
-        undefined
-    ),
-    new $.ComponentSpec(
-        "notification",
-        true,
-        $.hasTag(_TagClass.context, 27),
-        undefined,
-        undefined
-    ),
+    ..._root_component_type_list_2_spec_for_CommonResults,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_CompareResultData */
 
@@ -280,7 +259,9 @@ export const _root_component_type_list_2_spec_for_CompareResultData: $.Component
  *
  * @constant
  */
-export const _extension_additions_list_spec_for_CompareResultData: $.ComponentSpec[] = [];
+export const _extension_additions_list_spec_for_CompareResultData: $.ComponentSpec[] = [
+    ..._extension_additions_list_spec_for_CommonResults,
+];
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_CompareResultData */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_CompareResultData */
