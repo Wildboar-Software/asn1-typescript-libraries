@@ -13,6 +13,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## Note
 
+These modules were recently converted to being ESM only. It is time to make the
+leap. I will not maintain the CommonJS versions any more.
+
 Due to both Jest not supporting ESM (yet), the tests are broken and will stay
 broken for as long as it takes. I hate the entire Javashit ecosystem.
 
