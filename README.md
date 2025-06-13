@@ -49,7 +49,7 @@ done
 ## To Do
 
 - [ ] Export via `index.mts` in some packages
-- [ ] Usages of `Math.max()` to create `BIT STRING` values have an off-by-one issue
+- [x] Usages of `Math.max()` to create `BIT STRING` values have an off-by-one issue
 - [ ] Documentation
 - [ ] Single-module exports
 - [ ] Deduplicate `COMPONENTS OF` spec arrays

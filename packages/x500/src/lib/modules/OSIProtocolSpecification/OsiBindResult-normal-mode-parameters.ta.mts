@@ -124,7 +124,7 @@ export class OsiBindResult_normal_mode_parameters {
      */
     public static get _default_value_for_protocol_version() {
         return (() => {
-            const _ret = new Uint8ClampedArray(Math.max(0));
+            const _ret = new Uint8ClampedArray(1);
             _ret[
                 OsiBindResult_normal_mode_parameters_protocol_version_version_1
             ] = TRUE_BIT;

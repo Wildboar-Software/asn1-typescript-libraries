@@ -192,7 +192,7 @@ export class CMIPUserInfo {
    */
   public static get _default_value_for_protocolVersion() {
     return (() => {
-      const _ret = new Uint8ClampedArray(Math.max(0, 1));
+      const _ret = new Uint8ClampedArray(2);
       _ret[ProtocolVersion_version1] = TRUE_BIT;
       return _ret;
     })();

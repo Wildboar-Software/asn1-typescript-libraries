@@ -173,7 +173,7 @@ export const physical_delivery_modes: EXTENSION<PhysicalDeliveryModes> = {
     },
     '&absent': undefined,
     '&recommended': (() => {
-        const _ret = new Uint8ClampedArray(Math.max(0, 1, 2));
+        const _ret = new Uint8ClampedArray(3);
         _ret[Criticality_for_delivery] = TRUE_BIT;
         return _ret;
     })() /* OBJECT_FIELD_SETTING */,

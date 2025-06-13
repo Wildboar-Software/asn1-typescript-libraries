@@ -117,7 +117,7 @@ export class Clearance {
      */
     public static get _default_value_for_classList() {
         return (() => {
-            const _ret = new Uint8ClampedArray(Math.max(0, 1, 2, 3, 4, 5));
+            const _ret = new Uint8ClampedArray(6);
             _ret[ClassList_unclassified] = TRUE_BIT;
             return _ret;
         })();

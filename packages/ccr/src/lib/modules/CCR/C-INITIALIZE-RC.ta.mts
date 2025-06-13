@@ -213,7 +213,7 @@ export class C_INITIALIZE_RC {
    */
   public static get _default_value_for_version_number() {
     return (() => {
-      const _ret = new Uint8ClampedArray(Math.max(0, 1));
+      const _ret = new Uint8ClampedArray(2);
       _ret[C_INITIALIZE_RC_version_number_version2] = TRUE_BIT;
       return _ret;
     })();
@@ -226,7 +226,7 @@ export class C_INITIALIZE_RC {
    */
   public static get _default_value_for_ccr_requirements() {
     return (() => {
-      const _ret = new Uint8ClampedArray(Math.max(0, 1, 2, 3, 4));
+      const _ret = new Uint8ClampedArray(5);
       _ret[Ccr_requirements_static_commitment] = TRUE_BIT;
       return _ret;
     })();

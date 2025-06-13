@@ -151,7 +151,7 @@ export const proof_of_submission_request: EXTENSION<ProofOfSubmissionRequest> = 
     },
     '&absent': proof_of_submission_not_requested /* OBJECT_FIELD_SETTING */,
     '&recommended': (() => {
-        const _ret = new Uint8ClampedArray(Math.max(0, 1, 2));
+        const _ret = new Uint8ClampedArray(3);
         _ret[Criticality_for_submission] = TRUE_BIT;
         return _ret;
     })() /* OBJECT_FIELD_SETTING */,

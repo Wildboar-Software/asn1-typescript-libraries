@@ -151,7 +151,7 @@ export const physical_forwarding_address_request: EXTENSION<PhysicalForwardingAd
     },
     '&absent': physical_forwarding_address_not_requested /* OBJECT_FIELD_SETTING */,
     '&recommended': (() => {
-        const _ret = new Uint8ClampedArray(Math.max(0, 1, 2));
+        const _ret = new Uint8ClampedArray(3);
         _ret[Criticality_for_delivery] = TRUE_BIT;
         return _ret;
     })() /* OBJECT_FIELD_SETTING */,

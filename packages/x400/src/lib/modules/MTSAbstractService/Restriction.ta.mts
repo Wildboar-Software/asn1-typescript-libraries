@@ -145,7 +145,7 @@ class Restriction {
      */
     public static get _default_value_for_source_type () {
         return (() => {
-            const _ret = new Uint8ClampedArray(Math.max(0, 1, 2));
+            const _ret = new Uint8ClampedArray(3);
             _ret[Restriction_source_type_originated_by] = TRUE_BIT;
             _ret[Restriction_source_type_redirected_by] = TRUE_BIT;
             _ret[Restriction_source_type_dl_expanded_by] = TRUE_BIT;

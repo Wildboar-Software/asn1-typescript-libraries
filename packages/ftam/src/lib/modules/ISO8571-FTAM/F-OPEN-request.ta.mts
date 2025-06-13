@@ -321,7 +321,7 @@ export class F_OPEN_request {
    */
   public static get _default_value_for_processing_mode() {
     return (() => {
-      const _ret = new Uint8ClampedArray(Math.max(0, 1, 2, 3, 4));
+      const _ret = new Uint8ClampedArray(5);
       _ret[F_OPEN_request_processing_mode_f_read] = TRUE_BIT;
       return _ret;
     })();

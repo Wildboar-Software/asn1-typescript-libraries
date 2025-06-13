@@ -195,7 +195,7 @@ export class AARE_apdu {
      */
     public static get _default_value_for_protocol_version() {
         return (() => {
-            const _ret = new Uint8ClampedArray(Math.max(0));
+            const _ret = new Uint8ClampedArray(1);
             _ret[AARE_apdu_protocol_version_version1] = TRUE_BIT;
             return _ret;
         })();

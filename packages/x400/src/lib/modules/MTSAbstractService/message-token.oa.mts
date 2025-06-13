@@ -139,7 +139,7 @@ export const message_token: EXTENSION<MessageToken> = {
         '&Type': _encode_MessageToken,
     },
     '&recommended': (() => {
-        const _ret = new Uint8ClampedArray(Math.max(0, 1, 2));
+        const _ret = new Uint8ClampedArray(3);
         _ret[Criticality_for_delivery] = TRUE_BIT;
         return _ret;
     })() /* OBJECT_FIELD_SETTING */,

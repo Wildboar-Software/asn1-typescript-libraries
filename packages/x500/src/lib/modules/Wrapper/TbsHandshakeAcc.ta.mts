@@ -225,7 +225,7 @@ export class TbsHandshakeAcc {
      */
     public static get _default_value_for_version() {
         return (() => {
-            const _ret = new Uint8ClampedArray(Math.max(0));
+            const _ret = new Uint8ClampedArray(1);
             _ret[Version_v1] = TRUE_BIT;
             return _ret;
         })();
