@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { FALSE } from "asn1-ts";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import {
     AttributeOptionList,
@@ -46,7 +47,7 @@ export const ldapAttributeOptionContext: CONTEXT<
         "&Type": _encode_AttributeOptionList,
         "&Assertion": _encode_AttributeOptionList,
     },
-    "&absentMatch": false /* OBJECT_FIELD_SETTING */,
+    "&absentMatch": FALSE /* OBJECT_FIELD_SETTING */,
     "&id": id_avc_ldapAttributeOption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

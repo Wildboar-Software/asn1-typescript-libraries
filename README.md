@@ -48,8 +48,8 @@ done
 
 ## To Do
 
-- [ ] Fix `TRUE` bug where `BOOLEAN` values should have been `TRUE`.
-  - [ ] (Search for occurences of `TRUE` in ASN.1 files and find the corresponding incorrect `FALSE` and change it.)
+- [ ] Export via `index.mts` in some packages
+- [ ] Usages of `Math.max()` to create `BIT STRING` values have an off-by-one issue
 - [ ] Documentation
 - [ ] Single-module exports
 - [ ] Deduplicate `COMPONENTS OF` spec arrays
@@ -86,14 +86,6 @@ import {
     Certificate,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta";
 ```
-
-## Libraries that must not be published publicly
-
-This is due to copyright concerns.
-
-- CBEFF
-- FTAM
-- ISIS
 
 ## Notes
 

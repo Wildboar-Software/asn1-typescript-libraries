@@ -84,8 +84,8 @@ export class AuthKeyAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_derivedKey() {
-        return false;
+    public static get _default_value_for_derivedKey(): boolean {
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION AuthKeyAttributes */

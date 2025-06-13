@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { TRUE } from "asn1-ts";
 import {
     AttributeValueIntegrityInfo,
     _decode_AttributeValueIntegrityInfo,
@@ -44,7 +45,7 @@ export const attributeValueIntegrityInfoContext: CONTEXT<AttributeValueIntegrity
     "&id": id_avc_attributeValueIntegrityInfoContext /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&absentMatch": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION attributeValueIntegrityInfoContext */
 

@@ -136,7 +136,7 @@ class Restriction {
      * @static
      * @method
      */
-    public static get _default_value_for_permitted () { return false; }
+    public static get _default_value_for_permitted (): BOOLEAN { return TRUE; }
     /**
      * @summary Getter that returns the default value for `source_type`.
      * @public

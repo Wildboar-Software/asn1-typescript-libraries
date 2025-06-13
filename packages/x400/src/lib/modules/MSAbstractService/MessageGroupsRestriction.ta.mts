@@ -146,8 +146,8 @@ export class MessageGroupsRestriction {
      * @static
      * @method
      */
-    public static get _default_value_for_immediate_descendants_only() {
-        return false;
+    public static get _default_value_for_immediate_descendants_only(): BOOLEAN {
+        return TRUE;
     }
     /**
      * @summary Getter that returns the default value for `omit_descriptors`.
@@ -155,8 +155,8 @@ export class MessageGroupsRestriction {
      * @static
      * @method
      */
-    public static get _default_value_for_omit_descriptors() {
-        return false;
+    public static get _default_value_for_omit_descriptors(): BOOLEAN {
+        return TRUE;
     }
 }
 /* END_OF_SYMBOL_DEFINITION MessageGroupsRestriction */

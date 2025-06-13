@@ -176,8 +176,8 @@ export class AutoAlertRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_suppress_alert_destinations() {
-        return false;
+    public static get _default_value_for_suppress_alert_destinations(): BOOLEAN {
+        return TRUE;
     }
 }
 /* END_OF_SYMBOL_DEFINITION AutoAlertRegistrationParameter */

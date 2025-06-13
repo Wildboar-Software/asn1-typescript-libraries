@@ -193,8 +193,8 @@ export class ActivityDuration_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_billable() {
-        return false;
+    public static get _default_value_for_billable(): boolean {
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION ActivityDuration_Item */

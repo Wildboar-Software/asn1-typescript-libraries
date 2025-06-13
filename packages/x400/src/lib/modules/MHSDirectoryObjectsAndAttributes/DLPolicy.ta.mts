@@ -507,7 +507,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_report_propagation() {
+    public static get _default_value_for_report_propagation(): DLPolicy_report_propagation {
         return previous_dl_or_originator;
     }
     /**
@@ -516,7 +516,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_report_from_dl() {
+    public static get _default_value_for_report_from_dl(): DLPolicy_report_from_dl {
         return whenever_requested;
     }
     /**
@@ -525,7 +525,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_originating_MTA_report() {
+    public static get _default_value_for_originating_MTA_report(): DLPolicy_originating_MTA_report {
         return 0;
     }
     /**
@@ -534,7 +534,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_originator_report() {
+    public static get _default_value_for_originator_report(): DLPolicy_originator_report {
         return 0;
     }
     /**
@@ -543,7 +543,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_return_of_content() {
+    public static get _default_value_for_return_of_content(): DLPolicy_return_of_content {
         return DLPolicy_return_of_content_unchanged;
     }
     /**
@@ -552,7 +552,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_priority() {
+    public static get _default_value_for_priority(): DLPolicy_priority {
         return 0;
     }
     /**
@@ -561,7 +561,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_disclosure_of_other_recipients() {
+    public static get _default_value_for_disclosure_of_other_recipients(): DLPolicy_disclosure_of_other_recipients {
         return DLPolicy_disclosure_of_other_recipients_unchanged;
     }
     /**
@@ -570,7 +570,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_implicit_conversion_prohibited() {
+    public static get _default_value_for_implicit_conversion_prohibited(): DLPolicy_implicit_conversion_prohibited {
         return DLPolicy_implicit_conversion_prohibited_unchanged;
     }
     /**
@@ -579,7 +579,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_conversion_with_loss_prohibited() {
+    public static get _default_value_for_conversion_with_loss_prohibited(): DLPolicy_conversion_with_loss_prohibited {
         return DLPolicy_conversion_with_loss_prohibited_unchanged;
     }
     /**
@@ -588,8 +588,8 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_further_dl_expansion_allowed() {
-        return false;
+    public static get _default_value_for_further_dl_expansion_allowed(): BOOLEAN {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `originator_requested_alternate_recipient_removed`.
@@ -597,8 +597,8 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_originator_requested_alternate_recipient_removed() {
-        return false;
+    public static get _default_value_for_originator_requested_alternate_recipient_removed(): BOOLEAN {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `proof_of_delivery`.
@@ -606,7 +606,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_proof_of_delivery() {
+    public static get _default_value_for_proof_of_delivery(): DLPolicy_proof_of_delivery {
         return dl_members;
     }
     /**

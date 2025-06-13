@@ -236,8 +236,8 @@ export class Controls {
      * @static
      * @method
      */
-    public static get _default_value_for_restrict() {
-        return false;
+    public static get _default_value_for_restrict(): BOOLEAN {
+        return TRUE;
     }
 }
 /* END_OF_SYMBOL_DEFINITION Controls */

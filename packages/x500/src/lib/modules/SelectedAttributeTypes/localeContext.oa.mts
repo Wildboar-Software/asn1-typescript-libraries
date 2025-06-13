@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { TRUE } from "asn1-ts";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.mjs";
 import {
@@ -44,7 +45,7 @@ export const localeContext: CONTEXT<LocaleContextSyntax> = {
     "&id": id_avc_locale /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&absentMatch": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&absentMatch": TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION localeContext */
 

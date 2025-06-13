@@ -168,7 +168,7 @@ export class AttributeTypeInformation {
      * @method
      */
     public static get _default_value_for_multi_valued() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `collective`.
@@ -186,7 +186,7 @@ export class AttributeTypeInformation {
      * @method
      */
     public static get _default_value_for_userModifiable() {
-        return false;
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `application`.

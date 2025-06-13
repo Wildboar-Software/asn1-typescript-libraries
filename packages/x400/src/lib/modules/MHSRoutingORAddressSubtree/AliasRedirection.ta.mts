@@ -133,8 +133,8 @@ export class AliasRedirection {
      * @static
      * @method
      */
-    public static get _default_value_for_edit() {
-        return false;
+    public static get _default_value_for_edit(): BOOLEAN {
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION AliasRedirection */

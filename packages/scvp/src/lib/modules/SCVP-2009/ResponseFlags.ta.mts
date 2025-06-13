@@ -143,7 +143,7 @@ export class ResponseFlags {
    * @static
    * @method
    */
-  public static get _default_value_for_fullRequestInResponse() {
+  public static get _default_value_for_fullRequestInResponse(): boolean {
     return false;
   }
   /**
@@ -152,8 +152,8 @@ export class ResponseFlags {
    * @static
    * @method
    */
-  public static get _default_value_for_responseValidationPolByRef() {
-    return false;
+  public static get _default_value_for_responseValidationPolByRef(): boolean {
+    return true;
   }
   /**
    * @summary Getter that returns the default value for `protectResponse`.
@@ -161,8 +161,8 @@ export class ResponseFlags {
    * @static
    * @method
    */
-  public static get _default_value_for_protectResponse() {
-    return false;
+  public static get _default_value_for_protectResponse(): boolean {
+    return true;
   }
   /**
    * @summary Getter that returns the default value for `cachedResponse`.
@@ -170,8 +170,8 @@ export class ResponseFlags {
    * @static
    * @method
    */
-  public static get _default_value_for_cachedResponse() {
-    return false;
+  public static get _default_value_for_cachedResponse(): boolean {
+    return true;
   }
 }
 /* END_OF_SYMBOL_DEFINITION ResponseFlags */

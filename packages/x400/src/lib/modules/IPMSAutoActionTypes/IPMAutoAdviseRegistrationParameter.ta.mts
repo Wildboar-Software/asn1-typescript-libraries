@@ -191,8 +191,8 @@ export class IPMAutoAdviseRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_enabled() {
-        return false;
+    public static get _default_value_for_enabled(): boolean {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `suppress_subsequent_notifications`.
@@ -200,8 +200,8 @@ export class IPMAutoAdviseRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_suppress_subsequent_notifications() {
-        return false;
+    public static get _default_value_for_suppress_subsequent_notifications(): boolean {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `use_ipm_if_an_not_supported`.
@@ -209,7 +209,7 @@ export class IPMAutoAdviseRegistrationParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_use_ipm_if_an_not_supported() {
+    public static get _default_value_for_use_ipm_if_an_not_supported(): boolean {
         return false;
     }
 }

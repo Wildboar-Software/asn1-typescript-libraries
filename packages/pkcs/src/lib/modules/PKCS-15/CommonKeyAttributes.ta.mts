@@ -185,8 +185,8 @@ export class CommonKeyAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_native() {
-        return false;
+    public static get _default_value_for_native(): boolean {
+        return true;
     }
 }
 /* END_OF_SYMBOL_DEFINITION CommonKeyAttributes */

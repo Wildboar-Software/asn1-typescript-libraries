@@ -182,7 +182,7 @@ export class ConnectionInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_application_context() {
+    public static get _default_value_for_application_context(): OBJECT_IDENTIFIER {
         return id_ac_mts_transfer;
     }
     /**
@@ -191,8 +191,8 @@ export class ConnectionInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_dn_used_in_a_associate() {
-        return false;
+    public static get _default_value_for_dn_used_in_a_associate(): BOOLEAN {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `network_address_reliable`.
@@ -200,8 +200,8 @@ export class ConnectionInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_network_address_reliable() {
-        return false;
+    public static get _default_value_for_network_address_reliable(): BOOLEAN {
+        return true;
     }
     /**
      * @summary Getter that returns the default value for `authentication_method`.
@@ -209,7 +209,7 @@ export class ConnectionInformation {
      * @static
      * @method
      */
-    public static get _default_value_for_authentication_method() {
+    public static get _default_value_for_authentication_method(): AuthenticationMethod {
         return simple_password;
     }
 }

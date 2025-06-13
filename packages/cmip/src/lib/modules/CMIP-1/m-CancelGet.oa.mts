@@ -137,7 +137,7 @@ export const m_CancelGet: OPERATION<InvokeIDType> = {
     '&ArgumentType': _encode_InvokeIDType,
     '&ResultType': undefined,
   },
-  '&returnResult': false /* OBJECT_FIELD_SETTING */,
+  '&returnResult': true /* OBJECT_FIELD_SETTING */,
   '&Errors': [
     mistypedOperation,
     noSuchInvokeId,
@@ -152,7 +152,7 @@ export const m_CancelGet: OPERATION<InvokeIDType> = {
   '&ResultPriority': 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
   '&synchronous': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
   '&idempotent': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
-  '&alwaysReturns': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+  '&alwaysReturns': true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION m_CancelGet */
 

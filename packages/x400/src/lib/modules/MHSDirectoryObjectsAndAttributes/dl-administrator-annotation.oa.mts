@@ -114,7 +114,7 @@ export const dl_administrator_annotation: CONTEXT<dl_administrator_annotation_Ty
     '&id': id_con_dl_administrator_annotation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     '&Assertion': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    '&absentMatch': false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    '&absentMatch': TRUE /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 /* END_OF_SYMBOL_DEFINITION dl_administrator_annotation */
 

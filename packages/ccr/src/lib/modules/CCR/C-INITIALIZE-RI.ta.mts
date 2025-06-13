@@ -237,8 +237,8 @@ export class C_INITIALIZE_RI {
    * @static
    * @method
    */
-  public static get _default_value_for_ready_collision_reservation() {
-    return false;
+  public static get _default_value_for_ready_collision_reservation(): boolean {
+    return true;
   }
 }
 /* END_OF_SYMBOL_DEFINITION C_INITIALIZE_RI */
