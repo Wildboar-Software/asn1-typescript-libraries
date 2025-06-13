@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "asn1-ts": "9.x.x",
-    "date-fns": "^2.22.1"
+    "date-fns": "4.x.x"
   },
   "devDependencies": {
     "@nx/jest": "^21.1.3",
