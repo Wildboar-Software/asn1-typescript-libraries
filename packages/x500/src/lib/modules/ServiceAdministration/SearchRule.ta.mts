@@ -321,7 +321,7 @@ export class SearchRule {
      * @static
      * @method
      */
-    public static get _default_value_for_attributeCombination() {
+    public static get _default_value_for_attributeCombination(): AttributeCombination {
         return { and: [] };
     }
     /**
@@ -330,7 +330,7 @@ export class SearchRule {
      * @static
      * @method
      */
-    public static get _default_value_for_allowedSubset() {
+    public static get _default_value_for_allowedSubset(): AllowedSubset {
         return new Uint8ClampedArray([1, 1, 1]);
     }
     /**

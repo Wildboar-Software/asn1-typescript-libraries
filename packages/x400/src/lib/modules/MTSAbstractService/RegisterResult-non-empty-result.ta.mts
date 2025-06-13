@@ -145,7 +145,7 @@ export class RegisterResult_non_empty_result {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
 }

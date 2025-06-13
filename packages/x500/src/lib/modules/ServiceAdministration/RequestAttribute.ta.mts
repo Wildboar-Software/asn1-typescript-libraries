@@ -161,7 +161,7 @@ export class RequestAttribute {
      * @static
      * @method
      */
-    public static get _default_value_for_includeSubtypes() {
+    public static get _default_value_for_includeSubtypes(): BOOLEAN {
         return false;
     }
     /**
@@ -170,7 +170,7 @@ export class RequestAttribute {
      * @static
      * @method
      */
-    public static get _default_value_for_contextCombination() {
+    public static get _default_value_for_contextCombination(): ContextCombination {
         return { and: [] };
     }
 }

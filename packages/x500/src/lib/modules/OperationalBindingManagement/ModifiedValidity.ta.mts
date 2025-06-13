@@ -99,7 +99,7 @@ export class ModifiedValidity {
      * @static
      * @method
      */
-    public static get _default_value_for_validFrom() {
+    public static get _default_value_for_validFrom(): ModifiedValidity_validFrom {
         return { now: null };
     }
     /**
@@ -108,7 +108,7 @@ export class ModifiedValidity {
      * @static
      * @method
      */
-    public static get _default_value_for_validUntil() {
+    public static get _default_value_for_validUntil(): ModifiedValidity_validUntil {
         return { unchanged: null };
     }
 }

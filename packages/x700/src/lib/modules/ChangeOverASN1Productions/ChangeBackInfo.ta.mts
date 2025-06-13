@@ -172,7 +172,7 @@ export class ChangeBackInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_backUpObject() {
+    public static get _default_value_for_backUpObject(): OptionalObject {
         return { noObject: null };
     }
 }

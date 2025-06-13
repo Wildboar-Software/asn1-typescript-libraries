@@ -398,7 +398,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_filter() {
+    public static get _default_value_for_filter(): Filter {
         return { and: [] };
     }
     /**
@@ -407,7 +407,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_searchAliases() {
+    public static get _default_value_for_searchAliases(): BOOLEAN {
         return true;
     }
     /**
@@ -416,7 +416,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_selection() {
+    public static get _default_value_for_selection(): EntryInformationSelection {
         return EntryInformationSelection._from_object({});
     }
     /**
@@ -425,7 +425,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_matchedValuesOnly() {
+    public static get _default_value_for_matchedValuesOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -434,7 +434,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_checkOverspecified() {
+    public static get _default_value_for_checkOverspecified(): BOOLEAN {
         return false;
     }
     /**
@@ -443,7 +443,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_hierarchySelections() {
+    public static get _default_value_for_hierarchySelections(): HierarchySelections {
         return (() => {
             const _ret = new Uint8ClampedArray(
                 Math.max(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -458,7 +458,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_searchControlOptions() {
+    public static get _default_value_for_searchControlOptions(): SearchControlOptions {
         return (() => {
             const _ret = new Uint8ClampedArray(
                 Math.max(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
@@ -473,7 +473,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_joinType() {
+    public static get _default_value_for_joinType(): SearchArgumentData_joinType {
         return SearchArgumentData_joinType_leftOuterJoin;
     }
     /**
@@ -482,7 +482,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static override get _default_value_for_serviceControls() {
+    public static override get _default_value_for_serviceControls(): ServiceControls {
         return ServiceControls._from_object({});
     }
     /**
@@ -491,7 +491,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static override get _default_value_for_operationProgress() {
+    public static override get _default_value_for_operationProgress(): OperationProgress {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -503,7 +503,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static override get _default_value_for_entryOnly() {
+    public static override get _default_value_for_entryOnly(): BOOLEAN {
         return false;
     }
     /**
@@ -512,7 +512,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static override get _default_value_for_nameResolveOnMaster() {
+    public static override get _default_value_for_nameResolveOnMaster(): BOOLEAN {
         return false;
     }
     /**
@@ -521,7 +521,7 @@ export class SearchArgumentData extends CommonArguments {
      * @static
      * @method
      */
-    public static override get _default_value_for_familyGrouping() {
+    public static override get _default_value_for_familyGrouping(): FamilyGrouping {
         return FamilyGrouping_entryOnly;
     }
     /**

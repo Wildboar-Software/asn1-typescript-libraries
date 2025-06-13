@@ -172,7 +172,7 @@ export class ChangeOverInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_secondary() {
+    public static get _default_value_for_secondary(): OptionalObject {
         return { noObject: null };
     }
 }

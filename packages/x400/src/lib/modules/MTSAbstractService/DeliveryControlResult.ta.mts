@@ -248,7 +248,7 @@ export class DeliveryControlResult {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_content_types() {
+    public static get _default_value_for_waiting_content_types(): ContentType[] {
         return [];
     }
     /**
@@ -257,7 +257,7 @@ export class DeliveryControlResult {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
 }

@@ -212,7 +212,7 @@ export class Waiting {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_messages() {
+    public static get _default_value_for_waiting_messages(): WaitingMessages {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -221,7 +221,7 @@ export class Waiting {
      * @static
      * @method
      */
-    public static get _default_value_for_waiting_content_types() {
+    public static get _default_value_for_waiting_content_types(): ContentType[] {
         return [];
     }
 }

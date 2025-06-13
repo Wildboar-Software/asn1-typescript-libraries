@@ -245,7 +245,7 @@ export class AutoForwardArguments {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
 }

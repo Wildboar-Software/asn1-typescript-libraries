@@ -142,7 +142,7 @@ export class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality() {
+    public static get _default_value_for_criticality(): Criticality {
         return false;
     }
     /**
@@ -151,7 +151,7 @@ export class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_value() {
+    public static get _default_value_for_value(): _Element {
         return null;
     }
 }

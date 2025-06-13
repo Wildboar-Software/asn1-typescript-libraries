@@ -141,7 +141,7 @@ export class SubtreeSpecification {
      * @static
      * @method
      */
-    public static get _default_value_for_base() {
+    public static get _default_value_for_base(): LocalName {
         return [];
     }
     /**
@@ -150,7 +150,7 @@ export class SubtreeSpecification {
      * @static
      * @method
      */
-    public static get _default_value_for_minimum() {
+    public static get _default_value_for_minimum(): BaseDistance {
         return 0;
     }
 }

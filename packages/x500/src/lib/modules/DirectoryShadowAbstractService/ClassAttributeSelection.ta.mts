@@ -76,7 +76,7 @@ export class ClassAttributeSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_classAttributes() {
+    public static get _default_value_for_classAttributes(): ClassAttributes {
         return { allAttributes: null };
     }
 }

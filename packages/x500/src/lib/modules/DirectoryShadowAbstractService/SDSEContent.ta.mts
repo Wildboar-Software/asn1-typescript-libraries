@@ -127,7 +127,7 @@ export class SDSEContent {
      * @static
      * @method
      */
-    public static get _default_value_for_subComplete() {
+    public static get _default_value_for_subComplete(): BOOLEAN {
         return false;
     }
     /**
@@ -136,7 +136,7 @@ export class SDSEContent {
      * @static
      * @method
      */
-    public static get _default_value_for_attValIncomplete() {
+    public static get _default_value_for_attValIncomplete(): AttributeType[] {
         return [];
     }
 }

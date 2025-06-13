@@ -615,7 +615,7 @@ export class DLPolicy {
      * @static
      * @method
      */
-    public static get _default_value_for_requested_delivery_method() {
+    public static get _default_value_for_requested_delivery_method(): DLPolicy_requested_delivery_method {
         return { unchanged: null };
     }
     /**

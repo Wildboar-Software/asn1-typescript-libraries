@@ -276,7 +276,7 @@ export class ActionArgument {
    * @static
    * @method
    */
-  public static get _default_value_for_filter() {
+  public static get _default_value_for_filter(): CMISFilter {
     return { and: [] };
   }
   /**

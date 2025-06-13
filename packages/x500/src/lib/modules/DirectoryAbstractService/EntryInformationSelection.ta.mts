@@ -164,7 +164,7 @@ export class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_attributes() {
+    public static get _default_value_for_attributes(): EntryInformationSelection_attributes {
         return { allUserAttributes: null };
     }
     /**
@@ -173,7 +173,7 @@ export class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_infoTypes() {
+    public static get _default_value_for_infoTypes(): EntryInformationSelection_infoTypes {
         return attributeTypesAndValues;
     }
     /**
@@ -182,7 +182,7 @@ export class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_returnContexts() {
+    public static get _default_value_for_returnContexts(): BOOLEAN {
         return false;
     }
     /**
@@ -191,7 +191,7 @@ export class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_familyReturn() {
+    public static get _default_value_for_familyReturn(): FamilyReturn {
         return FamilyReturn._from_object({
             memberSelect:
                 FamilyReturn._enum_for_memberSelect.contributingEntriesOnly,

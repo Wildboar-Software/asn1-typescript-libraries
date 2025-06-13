@@ -52,7 +52,7 @@ type ExtensionInfo = {
 
 const CRITICAL: boolean = true;
 const NON_CRITICAL: boolean = false;
-const ALL_OPERATIONS = undefined;
+const ALL_OPERATIONS: Partial<Operations> = undefined;
 const SEARCH = {
     search: true,
 };

@@ -208,7 +208,7 @@ export class MSMessageSubmissionResult_mts_result {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
 }

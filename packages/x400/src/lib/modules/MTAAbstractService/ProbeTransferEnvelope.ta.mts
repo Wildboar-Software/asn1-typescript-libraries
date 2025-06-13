@@ -314,7 +314,7 @@ export class ProbeTransferEnvelope {
      * @static
      * @method
      */
-    public static get _default_value_for_per_message_indicators() {
+    public static get _default_value_for_per_message_indicators(): PerMessageIndicators {
         return new Uint8ClampedArray([]);
     }
     /**
@@ -323,7 +323,7 @@ export class ProbeTransferEnvelope {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionField[] {
         return [];
     }
 }

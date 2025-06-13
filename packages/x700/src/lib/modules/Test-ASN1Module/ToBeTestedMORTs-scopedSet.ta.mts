@@ -163,7 +163,7 @@ export class ToBeTestedMORTs_scopedSet {
      * @static
      * @method
      */
-    public static get _default_value_for_mORTsFilter() {
+    public static get _default_value_for_mORTsFilter(): CMISFilter {
         return { and: [] };
     }
 }

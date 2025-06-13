@@ -98,7 +98,7 @@ export class Validity {
      * @static
      * @method
      */
-    public static get _default_value_for_validFrom() {
+    public static get _default_value_for_validFrom(): Validity_validFrom {
         return { now: null };
     }
     /**
@@ -107,7 +107,7 @@ export class Validity {
      * @static
      * @method
      */
-    public static get _default_value_for_validUntil() {
+    public static get _default_value_for_validUntil(): Validity_validUntil {
         return { explicitTermination: null };
     }
 }

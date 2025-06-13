@@ -152,7 +152,7 @@ export class BackUpInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_backedUpObjectSpecified() {
+    public static get _default_value_for_backedUpObjectSpecified(): OptionalObject {
         return { noObject: null };
     }
     /**
@@ -161,7 +161,7 @@ export class BackUpInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_backUpObjectSpecified() {
+    public static get _default_value_for_backUpObjectSpecified(): OptionalObject {
         return { noObject: null };
     }
     /**
@@ -170,7 +170,7 @@ export class BackUpInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_backedUpObjectExisting() {
+    public static get _default_value_for_backedUpObjectExisting(): OptionalObject {
         return { noObject: null };
     }
     /**
@@ -179,7 +179,7 @@ export class BackUpInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_backUpObjectExisting() {
+    public static get _default_value_for_backUpObjectExisting(): OptionalObject {
         return { noObject: null };
     }
 }

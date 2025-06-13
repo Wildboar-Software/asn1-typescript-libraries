@@ -208,6 +208,11 @@ import {
     _decode_ImportanceField,
     _encode_ImportanceField,
 } from '../IPMSInformationObjects/ImportanceField.ta.mjs';
+import {
+    ExtensionField,
+    _decode_ExtensionField,
+    _encode_ExtensionField,
+} from '../MTSAbstractService/ExtensionField.ta.mjs';
 export {
     ImportanceField,
     _enum_for_ImportanceField,
@@ -442,7 +447,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_primary_recipients() {
+    public static get _default_value_for_primary_recipients(): PrimaryRecipientsField {
         return [];
     }
     /**
@@ -451,7 +456,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_copy_recipients() {
+    public static get _default_value_for_copy_recipients(): CopyRecipientsField {
         return [];
     }
     /**
@@ -460,7 +465,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_obsoleted_IPMs() {
+    public static get _default_value_for_obsoleted_IPMs(): ObsoletedIPMsField {
         return [];
     }
     /**
@@ -469,7 +474,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_related_IPMs() {
+    public static get _default_value_for_related_IPMs(): RelatedIPMsField {
         return [];
     }
     /**
@@ -478,7 +483,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_importance() {
+    public static get _default_value_for_importance(): ImportanceField {
         return ImportanceField_normal;
     }
     /**
@@ -487,7 +492,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_auto_forwarded() {
+    public static get _default_value_for_auto_forwarded(): AutoForwardedField {
         return false;
     }
     /**
@@ -496,7 +501,7 @@ export class Heading {
      * @static
      * @method
      */
-    public static get _default_value_for_extensions() {
+    public static get _default_value_for_extensions(): ExtensionsField {
         return [];
     }
     /**
