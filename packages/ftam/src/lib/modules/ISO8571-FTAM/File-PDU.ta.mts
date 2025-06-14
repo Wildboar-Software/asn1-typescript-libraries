@@ -361,7 +361,7 @@ let _cached_encoder_for_File_PDU: $.ASN1Encoder<File_PDU> | null = null;
 /**
  * @summary Encodes a(n) File_PDU into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The File_PDU, encoded as an ASN.1 Element.
  */

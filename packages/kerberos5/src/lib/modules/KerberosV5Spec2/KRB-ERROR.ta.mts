@@ -444,7 +444,7 @@ let _cached_encoder_for_KRB_ERROR: $.ASN1Encoder<KRB_ERROR> | null = null;
 /**
  * @summary Encodes a(n) KRB_ERROR into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KRB_ERROR, encoded as an ASN.1 Element.
  */

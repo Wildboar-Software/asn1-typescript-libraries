@@ -70,7 +70,7 @@ let _cached_encoder_for_AttributeCertificateAssertion_holder: $.ASN1Encoder<Attr
 /**
  * @summary Encodes a(n) AttributeCertificateAssertion_holder into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeCertificateAssertion_holder, encoded as an ASN.1 Element.
  */

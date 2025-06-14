@@ -272,7 +272,7 @@ let _cached_encoder_for_TestRequestUncontrolledResult: $.ASN1Encoder<TestRequest
 /**
  * @summary Encodes a(n) TestRequestUncontrolledResult into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TestRequestUncontrolledResult, encoded as an ASN.1 Element.
  */

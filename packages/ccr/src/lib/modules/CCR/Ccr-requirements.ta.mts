@@ -135,7 +135,7 @@ let _cached_encoder_for_Ccr_requirements: $.ASN1Encoder<Ccr_requirements> | null
 /**
  * @summary Encodes a(n) Ccr_requirements into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ccr_requirements, encoded as an ASN.1 Element.
  */

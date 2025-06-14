@@ -517,7 +517,7 @@ let _cached_encoder_for_CommonArguments: $.ASN1Encoder<CommonArguments> | null =
 /**
  * @summary Encodes a(n) CommonArguments into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CommonArguments, encoded as an ASN.1 Element.
  */

@@ -512,7 +512,7 @@ let _cached_encoder_for_BIPResponse_params: $.ASN1Encoder<BIPResponse_params> | 
 /**
  * @summary Encodes a(n) BIPResponse_params into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BIPResponse_params, encoded as an ASN.1 Element.
  */

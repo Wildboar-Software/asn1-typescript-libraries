@@ -48,7 +48,7 @@ let _cached_encoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Encoder<Diges
 /**
  * @summary Encodes a(n) DigestEncryptionAlgorithmIdentifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DigestEncryptionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */

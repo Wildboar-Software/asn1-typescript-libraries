@@ -53,7 +53,7 @@ let _cached_encoder_for_SubprocessIndex: $.ASN1Encoder<SubprocessIndex> | null =
 /**
  * @summary Encodes a(n) SubprocessIndex into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubprocessIndex, encoded as an ASN.1 Element.
  */

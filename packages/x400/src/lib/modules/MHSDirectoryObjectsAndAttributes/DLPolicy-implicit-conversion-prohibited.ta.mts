@@ -145,7 +145,7 @@ let _cached_encoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Encoder<D
 /**
  * @summary Encodes a(n) DLPolicy_implicit_conversion_prohibited into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DLPolicy_implicit_conversion_prohibited, encoded as an ASN.1 Element.
  */

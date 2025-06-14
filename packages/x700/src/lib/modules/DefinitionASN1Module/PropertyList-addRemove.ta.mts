@@ -144,7 +144,7 @@ let _cached_encoder_for_PropertyList_addRemove: $.ASN1Encoder<PropertyList_addRe
 /**
  * @summary Encodes a(n) PropertyList_addRemove into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PropertyList_addRemove, encoded as an ASN.1 Element.
  */

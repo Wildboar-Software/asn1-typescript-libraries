@@ -182,7 +182,7 @@ let _cached_encoder_for_PwdResponseValue: $.ASN1Encoder<PwdResponseValue> | null
 /**
  * @summary Encodes a(n) PwdResponseValue into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PwdResponseValue, encoded as an ASN.1 Element.
  */

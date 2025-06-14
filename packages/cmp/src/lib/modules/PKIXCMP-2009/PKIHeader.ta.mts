@@ -432,7 +432,7 @@ let _cached_encoder_for_PKIHeader: $.ASN1Encoder<PKIHeader> | null = null;
 /**
  * @summary Encodes a(n) PKIHeader into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PKIHeader, encoded as an ASN.1 Element.
  */

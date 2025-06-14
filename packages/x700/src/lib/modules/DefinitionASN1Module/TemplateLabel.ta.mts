@@ -176,7 +176,7 @@ let _cached_encoder_for_TemplateLabel: $.ASN1Encoder<TemplateLabel> | null = nul
 /**
  * @summary Encodes a(n) TemplateLabel into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TemplateLabel, encoded as an ASN.1 Element.
  */

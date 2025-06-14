@@ -169,7 +169,7 @@ let _cached_encoder_for_InvalidArgumentValue_eventValue: $.ASN1Encoder<InvalidAr
 /**
  * @summary Encodes a(n) InvalidArgumentValue_eventValue into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InvalidArgumentValue_eventValue, encoded as an ASN.1 Element.
  */

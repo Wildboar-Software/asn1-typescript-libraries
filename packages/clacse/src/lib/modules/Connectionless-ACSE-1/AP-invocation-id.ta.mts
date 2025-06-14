@@ -53,7 +53,7 @@ let _cached_encoder_for_AP_invocation_id: $.ASN1Encoder<AP_invocation_id> | null
 /**
  * @summary Encodes a(n) AP_invocation_id into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AP_invocation_id, encoded as an ASN.1 Element.
  */

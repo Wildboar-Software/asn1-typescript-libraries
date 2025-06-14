@@ -235,7 +235,7 @@ let _cached_encoder_for_Period_months_bitMonth: $.ASN1Encoder<Period_months_bitM
 /**
  * @summary Encodes a(n) Period_months_bitMonth into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Period_months_bitMonth, encoded as an ASN.1 Element.
  */

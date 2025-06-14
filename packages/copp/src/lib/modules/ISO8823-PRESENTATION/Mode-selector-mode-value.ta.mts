@@ -89,7 +89,7 @@ let _cached_encoder_for_Mode_selector_mode_value: $.ASN1Encoder<Mode_selector_mo
 /**
  * @summary Encodes a(n) Mode_selector_mode_value into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Mode_selector_mode_value, encoded as an ASN.1 Element.
  */

@@ -306,7 +306,7 @@ let _cached_encoder_for_KDC_REP: $.ASN1Encoder<KDC_REP> | null = null;
 /**
  * @summary Encodes a(n) KDC_REP into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KDC_REP, encoded as an ASN.1 Element.
  */

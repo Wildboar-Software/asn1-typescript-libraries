@@ -129,7 +129,7 @@ let _cached_encoder_for_FTAM_Quality_of_Service: $.ASN1Encoder<FTAM_Quality_of_S
 /**
  * @summary Encodes a(n) FTAM_Quality_of_Service into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FTAM_Quality_of_Service, encoded as an ASN.1 Element.
  */

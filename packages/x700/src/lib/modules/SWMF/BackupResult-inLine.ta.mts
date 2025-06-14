@@ -74,7 +74,7 @@ let _cached_encoder_for_BackupResult_inLine: $.ASN1Encoder<BackupResult_inLine> 
 /**
  * @summary Encodes a(n) BackupResult_inLine into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BackupResult_inLine, encoded as an ASN.1 Element.
  */

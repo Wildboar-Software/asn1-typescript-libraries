@@ -200,7 +200,7 @@ let _cached_encoder_for_SignalRateAndMappingList_Item: $.ASN1Encoder<SignalRateA
 /**
  * @summary Encodes a(n) SignalRateAndMappingList_Item into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignalRateAndMappingList_Item, encoded as an ASN.1 Element.
  */

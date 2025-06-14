@@ -255,7 +255,7 @@ let _cached_encoder_for_ProtectionStatus_Item_autoSwitch: $.ASN1Encoder<Protecti
 /**
  * @summary Encodes a(n) ProtectionStatus_Item_autoSwitch into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtectionStatus_Item_autoSwitch, encoded as an ASN.1 Element.
  */

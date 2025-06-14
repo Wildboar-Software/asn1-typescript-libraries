@@ -58,7 +58,7 @@ let _cached_encoder_for_AuthorizingUsersField: $.ASN1Encoder<AuthorizingUsersFie
 /**
  * @summary Encodes a(n) AuthorizingUsersField into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthorizingUsersField, encoded as an ASN.1 Element.
  */

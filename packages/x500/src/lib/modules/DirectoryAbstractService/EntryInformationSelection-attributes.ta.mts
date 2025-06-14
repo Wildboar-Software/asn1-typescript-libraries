@@ -68,7 +68,7 @@ let _cached_encoder_for_EntryInformationSelection_attributes: $.ASN1Encoder<Entr
 /**
  * @summary Encodes a(n) EntryInformationSelection_attributes into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EntryInformationSelection_attributes, encoded as an ASN.1 Element.
  */

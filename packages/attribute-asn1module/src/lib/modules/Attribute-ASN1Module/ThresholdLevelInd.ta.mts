@@ -63,7 +63,7 @@ let _cached_encoder_for_ThresholdLevelInd: $.ASN1Encoder<ThresholdLevelInd> | nu
 /**
  * @summary Encodes a(n) ThresholdLevelInd into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ThresholdLevelInd, encoded as an ASN.1 Element.
  */

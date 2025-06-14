@@ -180,7 +180,7 @@ let _cached_encoder_for_WeekDayTranslationList_Item: $.ASN1Encoder<WeekDayTransl
 /**
  * @summary Encodes a(n) WeekDayTranslationList_Item into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The WeekDayTranslationList_Item, encoded as an ASN.1 Element.
  */

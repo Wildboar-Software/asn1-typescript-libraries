@@ -58,7 +58,7 @@ let _cached_encoder_for_Supports: $.ASN1Encoder<Supports> | null = null;
 /**
  * @summary Encodes a(n) Supports into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Supports, encoded as an ASN.1 Element.
  */

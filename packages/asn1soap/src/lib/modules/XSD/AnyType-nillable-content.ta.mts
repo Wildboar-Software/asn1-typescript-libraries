@@ -142,7 +142,7 @@ let _cached_encoder_for_AnyType_nillable_content: $.ASN1Encoder<AnyType_nillable
 /**
  * @summary Encodes a(n) AnyType_nillable_content into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AnyType_nillable_content, encoded as an ASN.1 Element.
  */

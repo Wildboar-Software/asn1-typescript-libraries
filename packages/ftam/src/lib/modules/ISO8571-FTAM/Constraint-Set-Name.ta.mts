@@ -55,7 +55,7 @@ let _cached_encoder_for_Constraint_Set_Name: $.ASN1Encoder<Constraint_Set_Name> 
 /**
  * @summary Encodes a(n) Constraint_Set_Name into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Constraint_Set_Name, encoded as an ASN.1 Element.
  */

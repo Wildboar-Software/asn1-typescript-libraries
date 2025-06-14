@@ -54,7 +54,7 @@ let _cached_encoder_for_Extension_Attribute_identifier: $.ASN1Encoder<Extension_
 /**
  * @summary Encodes a(n) Extension_Attribute_identifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Extension_Attribute_identifier, encoded as an ASN.1 Element.
  */

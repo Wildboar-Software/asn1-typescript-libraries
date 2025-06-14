@@ -53,7 +53,7 @@ let _cached_encoder_for_Non_numericUnicodeLabel: $.ASN1Encoder<Non_numericUnicod
 /**
  * @summary Encodes a(n) Non_numericUnicodeLabel into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Non_numericUnicodeLabel, encoded as an ASN.1 Element.
  */

@@ -163,7 +163,7 @@ let _cached_encoder_for_TerminalType: $.ASN1Encoder<TerminalType> | null = null;
 /**
  * @summary Encodes a(n) TerminalType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminalType, encoded as an ASN.1 Element.
  */

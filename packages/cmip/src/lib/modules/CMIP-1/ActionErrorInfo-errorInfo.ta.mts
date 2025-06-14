@@ -84,7 +84,7 @@ let _cached_encoder_for_ActionErrorInfo_errorInfo: $.ASN1Encoder<ActionErrorInfo
 /**
  * @summary Encodes a(n) ActionErrorInfo_errorInfo into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ActionErrorInfo_errorInfo, encoded as an ASN.1 Element.
  */

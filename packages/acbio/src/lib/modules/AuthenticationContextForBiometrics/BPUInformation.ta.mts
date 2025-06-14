@@ -184,7 +184,7 @@ let _cached_encoder_for_BPUInformation: $.ASN1Encoder<BPUInformation> | null = n
 /**
  * @summary Encodes a(n) BPUInformation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BPUInformation, encoded as an ASN.1 Element.
  */

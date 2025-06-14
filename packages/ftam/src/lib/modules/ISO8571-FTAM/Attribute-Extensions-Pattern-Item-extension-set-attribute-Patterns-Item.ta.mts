@@ -170,7 +170,7 @@ let _cached_encoder_for_Attribute_Extensions_Pattern_Item_extension_set_attribut
 /**
  * @summary Encodes a(n) Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item, encoded as an ASN.1 Element.
  */

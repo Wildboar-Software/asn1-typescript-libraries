@@ -185,7 +185,7 @@ let _cached_encoder_for_originate_ipm_ResultType: $.ASN1Encoder<originate_ipm_Re
 /**
  * @summary Encodes a(n) originate_ipm_ResultType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The originate_ipm_ResultType, encoded as an ASN.1 Element.
  */

@@ -106,7 +106,7 @@ export function _decode_ModifyRequest_changes_change_operation(el: _Element) {
 /**
  * @summary Encodes a(n) ModifyRequest_changes_change_operation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ModifyRequest_changes_change_operation, encoded as an ASN.1 Element.
  */

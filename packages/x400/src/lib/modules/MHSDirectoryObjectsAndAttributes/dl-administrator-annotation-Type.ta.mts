@@ -61,7 +61,7 @@ let _cached_encoder_for_dl_administrator_annotation_Type: $.ASN1Encoder<dl_admin
 /**
  * @summary Encodes a(n) dl_administrator_annotation_Type into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The dl_administrator_annotation_Type, encoded as an ASN.1 Element.
  */

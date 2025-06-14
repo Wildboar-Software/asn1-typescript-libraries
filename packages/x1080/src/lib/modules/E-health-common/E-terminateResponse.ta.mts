@@ -249,7 +249,7 @@ let _cached_encoder_for_E_terminateResponse: $.ASN1Encoder<E_terminateResponse> 
 /**
  * @summary Encodes a(n) E_terminateResponse into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The E_terminateResponse, encoded as an ASN.1 Element.
  */

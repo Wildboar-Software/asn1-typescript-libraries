@@ -55,7 +55,7 @@ let _cached_encoder_for_SecurityAlarmCause: $.ASN1Encoder<SecurityAlarmCause> | 
 /**
  * @summary Encodes a(n) SecurityAlarmCause into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SecurityAlarmCause, encoded as an ASN.1 Element.
  */

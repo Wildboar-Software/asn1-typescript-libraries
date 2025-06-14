@@ -296,7 +296,7 @@ let _cached_encoder_for_UpdateErrorData: $.ASN1Encoder<UpdateErrorData> | null =
 /**
  * @summary Encodes a(n) UpdateErrorData into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UpdateErrorData, encoded as an ASN.1 Element.
  */

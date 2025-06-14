@@ -94,7 +94,7 @@ let _cached_encoder_for_OsiRej_problem: $.ASN1Encoder<OsiRej_problem> | null = n
 /**
  * @summary Encodes a(n) OsiRej_problem into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OsiRej_problem, encoded as an ASN.1 Element.
  */

@@ -58,7 +58,7 @@ let _cached_encoder_for_OR_Set: $.ASN1Encoder<OR_Set> | null = null;
 /**
  * @summary Encodes a(n) OR_Set into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OR_Set, encoded as an ASN.1 Element.
  */

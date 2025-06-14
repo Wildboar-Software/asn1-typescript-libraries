@@ -129,7 +129,7 @@ let _cached_encoder_for_AttributeUsage: $.ASN1Encoder<AttributeUsage> | null = n
 /**
  * @summary Encodes a(n) AttributeUsage into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeUsage, encoded as an ASN.1 Element.
  */

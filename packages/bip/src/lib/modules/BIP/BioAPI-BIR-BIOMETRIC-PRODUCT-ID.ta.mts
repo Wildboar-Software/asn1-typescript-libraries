@@ -165,7 +165,7 @@ let _cached_encoder_for_BioAPI_BIR_BIOMETRIC_PRODUCT_ID: $.ASN1Encoder<BioAPI_BI
 /**
  * @summary Encodes a(n) BioAPI_BIR_BIOMETRIC_PRODUCT_ID into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_BIR_BIOMETRIC_PRODUCT_ID, encoded as an ASN.1 Element.
  */

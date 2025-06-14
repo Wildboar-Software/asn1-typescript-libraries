@@ -65,7 +65,7 @@ let _cached_encoder_for_Validity_validUntil: $.ASN1Encoder<Validity_validUntil> 
 /**
  * @summary Encodes a(n) Validity_validUntil into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Validity_validUntil, encoded as an ASN.1 Element.
  */

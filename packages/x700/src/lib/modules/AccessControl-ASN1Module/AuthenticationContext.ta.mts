@@ -172,7 +172,7 @@ let _cached_encoder_for_AuthenticationContext: $.ASN1Encoder<AuthenticationConte
 /**
  * @summary Encodes a(n) AuthenticationContext into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthenticationContext, encoded as an ASN.1 Element.
  */

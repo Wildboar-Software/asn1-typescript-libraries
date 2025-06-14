@@ -178,7 +178,7 @@ let _cached_encoder_for_NoSuchEventType: $.ASN1Encoder<NoSuchEventType> | null =
 /**
  * @summary Encodes a(n) NoSuchEventType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NoSuchEventType, encoded as an ASN.1 Element.
  */

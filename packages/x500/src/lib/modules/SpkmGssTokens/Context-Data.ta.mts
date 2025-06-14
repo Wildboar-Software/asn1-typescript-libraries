@@ -267,7 +267,7 @@ let _cached_encoder_for_Context_Data: $.ASN1Encoder<Context_Data> | null = null;
 /**
  * @summary Encodes a(n) Context_Data into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Context_Data, encoded as an ASN.1 Element.
  */

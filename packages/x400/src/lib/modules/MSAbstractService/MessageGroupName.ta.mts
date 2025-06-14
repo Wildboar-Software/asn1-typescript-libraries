@@ -58,7 +58,7 @@ let _cached_encoder_for_MessageGroupName: $.ASN1Encoder<MessageGroupName> | null
 /**
  * @summary Encodes a(n) MessageGroupName into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageGroupName, encoded as an ASN.1 Element.
  */

@@ -167,7 +167,7 @@ let _cached_encoder_for_ConnectivityThreshold_time: $.ASN1Encoder<ConnectivityTh
 /**
  * @summary Encodes a(n) ConnectivityThreshold_time into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ConnectivityThreshold_time, encoded as an ASN.1 Element.
  */

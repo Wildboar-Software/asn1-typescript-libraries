@@ -47,7 +47,7 @@ let _cached_encoder_for_X520OrganizationName: $.ASN1Encoder<X520OrganizationName
 /**
  * @summary Encodes a(n) X520OrganizationName into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X520OrganizationName, encoded as an ASN.1 Element.
  */

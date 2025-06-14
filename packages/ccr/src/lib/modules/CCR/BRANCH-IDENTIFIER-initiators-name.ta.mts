@@ -78,7 +78,7 @@ let _cached_encoder_for_BRANCH_IDENTIFIER_initiators_name: $.ASN1Encoder<BRANCH_
 /**
  * @summary Encodes a(n) BRANCH_IDENTIFIER_initiators_name into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BRANCH_IDENTIFIER_initiators_name, encoded as an ASN.1 Element.
  */

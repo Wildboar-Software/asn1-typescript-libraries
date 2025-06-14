@@ -80,7 +80,7 @@ let _cached_encoder_for_CertReplaceErr_code: $.ASN1Encoder<CertReplaceErr_code> 
 /**
  * @summary Encodes a(n) CertReplaceErr_code into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertReplaceErr_code, encoded as an ASN.1 Element.
  */

@@ -56,7 +56,7 @@ let _cached_encoder_for_ExtensionORAddressComponents: $.ASN1Encoder<ExtensionORA
 /**
  * @summary Encodes a(n) ExtensionORAddressComponents into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtensionORAddressComponents, encoded as an ASN.1 Element.
  */

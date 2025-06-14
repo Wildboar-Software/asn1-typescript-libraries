@@ -326,7 +326,7 @@ let _cached_encoder_for_JoinArgument: $.ASN1Encoder<JoinArgument> | null = null;
 /**
  * @summary Encodes a(n) JoinArgument into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The JoinArgument, encoded as an ASN.1 Element.
  */

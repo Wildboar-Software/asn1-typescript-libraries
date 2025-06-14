@@ -154,7 +154,7 @@ let _cached_encoder_for_InfoTypeAndValue: $.ASN1Encoder<InfoTypeAndValue> | null
 /**
  * @summary Encodes a(n) InfoTypeAndValue into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InfoTypeAndValue, encoded as an ASN.1 Element.
  */

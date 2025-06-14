@@ -173,7 +173,7 @@ let _cached_encoder_for_Bulk_Data_PDU: $.ASN1Encoder<Bulk_Data_PDU> | null = nul
 /**
  * @summary Encodes a(n) Bulk_Data_PDU into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Bulk_Data_PDU, encoded as an ASN.1 Element.
  */

@@ -322,7 +322,7 @@ let _cached_encoder_for_EDIProcessableDocument: $.ASN1Encoder<EDIProcessableDocu
 /**
  * @summary Encodes a(n) EDIProcessableDocument into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIProcessableDocument, encoded as an ASN.1 Element.
  */

@@ -188,7 +188,7 @@ let _cached_encoder_for_NameAndOptionalUID: $.ASN1Encoder<NameAndOptionalUID> | 
 /**
  * @summary Encodes a(n) NameAndOptionalUID into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NameAndOptionalUID, encoded as an ASN.1 Element.
  */

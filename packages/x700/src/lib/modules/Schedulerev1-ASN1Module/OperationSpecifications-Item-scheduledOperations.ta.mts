@@ -90,7 +90,7 @@ let _cached_encoder_for_OperationSpecifications_Item_scheduledOperations: $.ASN1
 /**
  * @summary Encodes a(n) OperationSpecifications_Item_scheduledOperations into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OperationSpecifications_Item_scheduledOperations, encoded as an ASN.1 Element.
  */

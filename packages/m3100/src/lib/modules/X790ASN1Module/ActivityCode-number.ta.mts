@@ -287,7 +287,7 @@ let _cached_encoder_for_ActivityCode_number: $.ASN1Encoder<ActivityCode_number> 
 /**
  * @summary Encodes a(n) ActivityCode_number into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ActivityCode_number, encoded as an ASN.1 Element.
  */

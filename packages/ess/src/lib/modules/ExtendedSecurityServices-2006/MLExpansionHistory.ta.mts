@@ -49,7 +49,7 @@ let _cached_encoder_for_MLExpansionHistory: $.ASN1Encoder<MLExpansionHistory> | 
 /**
  * @summary Encodes a(n) MLExpansionHistory into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MLExpansionHistory, encoded as an ASN.1 Element.
  */

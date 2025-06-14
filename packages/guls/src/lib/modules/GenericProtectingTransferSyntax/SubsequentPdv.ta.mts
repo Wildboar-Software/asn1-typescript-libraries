@@ -171,7 +171,7 @@ let _cached_encoder_for_SubsequentPdv: $.ASN1Encoder<SubsequentPdv> | null = nul
 /**
  * @summary Encodes a(n) SubsequentPdv into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubsequentPdv, encoded as an ASN.1 Element.
  */

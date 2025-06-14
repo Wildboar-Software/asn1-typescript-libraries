@@ -144,7 +144,7 @@ let _cached_encoder_for_DTEAddress_numberingPlanId: $.ASN1Encoder<DTEAddress_num
 /**
  * @summary Encodes a(n) DTEAddress_numberingPlanId into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DTEAddress_numberingPlanId, encoded as an ASN.1 Element.
  */

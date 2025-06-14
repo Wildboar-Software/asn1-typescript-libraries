@@ -78,7 +78,7 @@ let _cached_encoder_for_ModifyArgument_entries: $.ASN1Encoder<ModifyArgument_ent
 /**
  * @summary Encodes a(n) ModifyArgument_entries into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ModifyArgument_entries, encoded as an ASN.1 Element.
  */

@@ -162,7 +162,7 @@ let _cached_encoder_for_OsiReq: $.ASN1Encoder<OsiReq> | null = null;
 /**
  * @summary Encodes a(n) OsiReq into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OsiReq, encoded as an ASN.1 Element.
  */

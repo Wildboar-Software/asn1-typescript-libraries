@@ -135,7 +135,7 @@ let _cached_encoder_for_UiiFormat_subset: $.ASN1Encoder<UiiFormat_subset> | null
 /**
  * @summary Encodes a(n) UiiFormat_subset into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UiiFormat_subset, encoded as an ASN.1 Element.
  */

@@ -53,7 +53,7 @@ let _cached_encoder_for_ConnectionId: $.ASN1Encoder<ConnectionId> | null = null;
 /**
  * @summary Encodes a(n) ConnectionId into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ConnectionId, encoded as an ASN.1 Element.
  */

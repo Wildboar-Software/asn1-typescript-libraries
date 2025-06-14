@@ -144,7 +144,7 @@ let _cached_encoder_for_DLPolicy_return_of_content: $.ASN1Encoder<DLPolicy_retur
 /**
  * @summary Encodes a(n) DLPolicy_return_of_content into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DLPolicy_return_of_content, encoded as an ASN.1 Element.
  */

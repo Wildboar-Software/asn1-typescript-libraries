@@ -49,7 +49,7 @@ let _cached_encoder_for_CRLScopeSyntax: $.ASN1Encoder<CRLScopeSyntax> | null = n
 /**
  * @summary Encodes a(n) CRLScopeSyntax into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CRLScopeSyntax, encoded as an ASN.1 Element.
  */

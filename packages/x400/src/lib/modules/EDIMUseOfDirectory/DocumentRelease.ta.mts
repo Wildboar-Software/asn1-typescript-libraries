@@ -53,7 +53,7 @@ let _cached_encoder_for_DocumentRelease: $.ASN1Encoder<DocumentRelease> | null =
 /**
  * @summary Encodes a(n) DocumentRelease into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DocumentRelease, encoded as an ASN.1 Element.
  */

@@ -202,7 +202,7 @@ let _cached_encoder_for_AltNameType_builtinNameForm: $.ASN1Encoder<AltNameType_b
 /**
  * @summary Encodes a(n) AltNameType_builtinNameForm into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AltNameType_builtinNameForm, encoded as an ASN.1 Element.
  */

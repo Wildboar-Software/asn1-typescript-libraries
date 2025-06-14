@@ -74,7 +74,7 @@ let _cached_encoder_for_PDV_list_presentation_data_values: $.ASN1Encoder<PDV_lis
 /**
  * @summary Encodes a(n) PDV_list_presentation_data_values into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDV_list_presentation_data_values, encoded as an ASN.1 Element.
  */

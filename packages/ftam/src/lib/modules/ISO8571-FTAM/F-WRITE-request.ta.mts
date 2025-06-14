@@ -235,7 +235,7 @@ let _cached_encoder_for_F_WRITE_request: $.ASN1Encoder<F_WRITE_request> | null =
 /**
  * @summary Encodes a(n) F_WRITE_request into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The F_WRITE_request, encoded as an ASN.1 Element.
  */

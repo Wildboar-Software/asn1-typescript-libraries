@@ -55,7 +55,7 @@ let _cached_encoder_for_MimeType: $.ASN1Encoder<MimeType> | null = null;
 /**
  * @summary Encodes a(n) MimeType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MimeType, encoded as an ASN.1 Element.
  */

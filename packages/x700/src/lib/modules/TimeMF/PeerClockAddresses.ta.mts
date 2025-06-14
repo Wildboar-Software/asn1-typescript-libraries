@@ -58,7 +58,7 @@ let _cached_encoder_for_PeerClockAddresses: $.ASN1Encoder<PeerClockAddresses> | 
 /**
  * @summary Encodes a(n) PeerClockAddresses into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PeerClockAddresses, encoded as an ASN.1 Element.
  */

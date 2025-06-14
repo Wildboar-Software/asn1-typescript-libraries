@@ -225,7 +225,7 @@ let _cached_encoder_for_ProtectionStatusParameter: $.ASN1Encoder<ProtectionStatu
 /**
  * @summary Encodes a(n) ProtectionStatusParameter into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtectionStatusParameter, encoded as an ASN.1 Element.
  */

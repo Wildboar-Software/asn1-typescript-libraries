@@ -156,7 +156,7 @@ export function _decode_Attribute_valuesWithContext_Item(el: _Element) {
 /**
  * @summary Encodes a(n) Attribute_valuesWithContext_Item into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attribute_valuesWithContext_Item, encoded as an ASN.1 Element.
  */

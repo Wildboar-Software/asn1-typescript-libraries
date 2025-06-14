@@ -68,7 +68,7 @@ let _cached_encoder_for_C_BEGIN_RI_branch_suffix: $.ASN1Encoder<C_BEGIN_RI_branc
 /**
  * @summary Encodes a(n) C_BEGIN_RI_branch_suffix into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The C_BEGIN_RI_branch_suffix, encoded as an ASN.1 Element.
  */

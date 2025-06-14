@@ -53,7 +53,7 @@ let _cached_encoder_for_Date_Time: $.ASN1Encoder<Date_Time> | null = null;
 /**
  * @summary Encodes a(n) Date_Time into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Date_Time, encoded as an ASN.1 Element.
  */

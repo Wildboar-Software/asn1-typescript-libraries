@@ -184,7 +184,7 @@ let _cached_encoder_for_BPUSubprocessInformation: $.ASN1Encoder<BPUSubprocessInf
 /**
  * @summary Encodes a(n) BPUSubprocessInformation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BPUSubprocessInformation, encoded as an ASN.1 Element.
  */

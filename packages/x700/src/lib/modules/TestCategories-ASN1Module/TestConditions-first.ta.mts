@@ -107,7 +107,7 @@ let _cached_encoder_for_TestConditions_first: $.ASN1Encoder<TestConditions_first
 /**
  * @summary Encodes a(n) TestConditions_first into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TestConditions_first, encoded as an ASN.1 Element.
  */

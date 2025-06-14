@@ -160,7 +160,7 @@ let _cached_encoder_for_CapabilityIdentitiesList_Item_unknownForm: $.ASN1Encoder
 /**
  * @summary Encodes a(n) CapabilityIdentitiesList_Item_unknownForm into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CapabilityIdentitiesList_Item_unknownForm, encoded as an ASN.1 Element.
  */

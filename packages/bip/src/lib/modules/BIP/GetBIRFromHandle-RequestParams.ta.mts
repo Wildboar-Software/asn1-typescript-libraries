@@ -173,7 +173,7 @@ let _cached_encoder_for_GetBIRFromHandle_RequestParams: $.ASN1Encoder<GetBIRFrom
 /**
  * @summary Encodes a(n) GetBIRFromHandle_RequestParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetBIRFromHandle_RequestParams, encoded as an ASN.1 Element.
  */

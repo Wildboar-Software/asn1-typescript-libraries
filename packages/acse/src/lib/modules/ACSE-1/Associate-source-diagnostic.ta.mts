@@ -105,7 +105,7 @@ let _cached_encoder_for_Associate_source_diagnostic: $.ASN1Encoder<Associate_sou
 /**
  * @summary Encodes a(n) Associate_source_diagnostic into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Associate_source_diagnostic, encoded as an ASN.1 Element.
  */

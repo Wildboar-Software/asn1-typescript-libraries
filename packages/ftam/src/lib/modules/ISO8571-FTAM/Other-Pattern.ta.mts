@@ -56,7 +56,7 @@ let _cached_encoder_for_Other_Pattern: $.ASN1Encoder<Other_Pattern> | null = nul
 /**
  * @summary Encodes a(n) Other_Pattern into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Other_Pattern, encoded as an ASN.1 Element.
  */

@@ -56,7 +56,7 @@ let _cached_encoder_for_XMLStringWithNoCRLFHT: $.ASN1Encoder<XMLStringWithNoCRLF
 /**
  * @summary Encodes a(n) XMLStringWithNoCRLFHT into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The XMLStringWithNoCRLFHT, encoded as an ASN.1 Element.
  */

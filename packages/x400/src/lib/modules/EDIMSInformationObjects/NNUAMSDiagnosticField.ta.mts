@@ -749,7 +749,7 @@ let _cached_encoder_for_NNUAMSDiagnosticField: $.ASN1Encoder<NNUAMSDiagnosticFie
 /**
  * @summary Encodes a(n) NNUAMSDiagnosticField into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NNUAMSDiagnosticField, encoded as an ASN.1 Element.
  */

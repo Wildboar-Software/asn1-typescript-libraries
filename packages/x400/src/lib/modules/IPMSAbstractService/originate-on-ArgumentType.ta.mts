@@ -176,7 +176,7 @@ let _cached_encoder_for_originate_on_ArgumentType: $.ASN1Encoder<originate_on_Ar
 /**
  * @summary Encodes a(n) originate_on_ArgumentType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The originate_on_ArgumentType, encoded as an ASN.1 Element.
  */

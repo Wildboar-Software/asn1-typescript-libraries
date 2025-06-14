@@ -156,7 +156,7 @@ let _cached_encoder_for_URL_urlWithDigest: $.ASN1Encoder<URL_urlWithDigest> | nu
 /**
  * @summary Encodes a(n) URL_urlWithDigest into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URL_urlWithDigest, encoded as an ASN.1 Element.
  */

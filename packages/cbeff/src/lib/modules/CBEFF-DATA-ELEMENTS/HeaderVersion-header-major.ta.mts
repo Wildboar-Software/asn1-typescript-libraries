@@ -71,7 +71,7 @@ let _cached_encoder_for_HeaderVersion_header_major: $.ASN1Encoder<HeaderVersion_
 /**
  * @summary Encodes a(n) HeaderVersion_header_major into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HeaderVersion_header_major, encoded as an ASN.1 Element.
  */

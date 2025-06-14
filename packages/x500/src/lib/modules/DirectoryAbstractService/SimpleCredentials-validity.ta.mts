@@ -225,7 +225,7 @@ let _cached_encoder_for_SimpleCredentials_validity: $.ASN1Encoder<SimpleCredenti
 /**
  * @summary Encodes a(n) SimpleCredentials_validity into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SimpleCredentials_validity, encoded as an ASN.1 Element.
  */

@@ -145,7 +145,7 @@ let _cached_encoder_for_BSPDetach_RequestParams: $.ASN1Encoder<BSPDetach_Request
 /**
  * @summary Encodes a(n) BSPDetach_RequestParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BSPDetach_RequestParams, encoded as an ASN.1 Element.
  */

@@ -497,7 +497,7 @@ let _cached_encoder_for_Type_of_msg_t30_indicator: $.ASN1Encoder<Type_of_msg_t30
 /**
  * @summary Encodes a(n) Type_of_msg_t30_indicator into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Type_of_msg_t30_indicator, encoded as an ASN.1 Element.
  */

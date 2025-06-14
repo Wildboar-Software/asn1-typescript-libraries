@@ -50,7 +50,7 @@ let _cached_encoder_for_PrivateKeyAlgorithmIdentifier: $.ASN1Encoder<PrivateKeyA
 /**
  * @summary Encodes a(n) PrivateKeyAlgorithmIdentifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrivateKeyAlgorithmIdentifier, encoded as an ASN.1 Element.
  */

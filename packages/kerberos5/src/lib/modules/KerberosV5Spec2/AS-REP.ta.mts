@@ -58,7 +58,7 @@ let _cached_encoder_for_AS_REP: $.ASN1Encoder<AS_REP> | null = null;
 /**
  * @summary Encodes a(n) AS_REP into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AS_REP, encoded as an ASN.1 Element.
  */

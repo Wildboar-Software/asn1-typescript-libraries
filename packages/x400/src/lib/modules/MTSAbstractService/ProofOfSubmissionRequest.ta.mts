@@ -129,7 +129,7 @@ let _cached_encoder_for_ProofOfSubmissionRequest: $.ASN1Encoder<ProofOfSubmissio
 /**
  * @summary Encodes a(n) ProofOfSubmissionRequest into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProofOfSubmissionRequest, encoded as an ASN.1 Element.
  */

@@ -221,7 +221,7 @@ let _cached_encoder_for_Identified_Simple_Message: $.ASN1Encoder<Identified_Simp
 /**
  * @summary Encodes a(n) Identified_Simple_Message into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Identified_Simple_Message, encoded as an ASN.1 Element.
  */

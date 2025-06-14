@@ -121,7 +121,7 @@ let _cached_encoder_for_Supported_formats: $.ASN1Encoder<Supported_formats> | nu
 /**
  * @summary Encodes a(n) Supported_formats into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Supported_formats, encoded as an ASN.1 Element.
  */

@@ -53,7 +53,7 @@ let _cached_encoder_for_Extension_Set_Identifier: $.ASN1Encoder<Extension_Set_Id
 /**
  * @summary Encodes a(n) Extension_Set_Identifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Extension_Set_Identifier, encoded as an ASN.1 Element.
  */

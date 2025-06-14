@@ -179,7 +179,7 @@ let _cached_encoder_for_Name_classAndInstance: $.ASN1Encoder<Name_classAndInstan
 /**
  * @summary Encodes a(n) Name_classAndInstance into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Name_classAndInstance, encoded as an ASN.1 Element.
  */

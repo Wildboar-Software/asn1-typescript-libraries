@@ -70,7 +70,7 @@ let _cached_encoder_for_CertReplaceRsp_result: $.ASN1Encoder<CertReplaceRsp_resu
 /**
  * @summary Encodes a(n) CertReplaceRsp_result into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertReplaceRsp_result, encoded as an ASN.1 Element.
  */

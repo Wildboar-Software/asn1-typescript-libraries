@@ -80,7 +80,7 @@ let _cached_encoder_for_Object_Availability_Attribute: $.ASN1Encoder<Object_Avai
 /**
  * @summary Encodes a(n) Object_Availability_Attribute into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Object_Availability_Attribute, encoded as an ASN.1 Element.
  */

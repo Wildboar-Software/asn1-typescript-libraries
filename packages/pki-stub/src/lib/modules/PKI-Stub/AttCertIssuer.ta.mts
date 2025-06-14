@@ -235,7 +235,7 @@ let _cached_encoder_for_AttCertIssuer: $.ASN1Encoder<AttCertIssuer> | null =
 /**
  * @summary Encodes a(n) AttCertIssuer into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttCertIssuer, encoded as an ASN.1 Element.
  */

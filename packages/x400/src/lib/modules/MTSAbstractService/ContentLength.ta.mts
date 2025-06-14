@@ -53,7 +53,7 @@ let _cached_encoder_for_ContentLength: $.ASN1Encoder<ContentLength> | null = nul
 /**
  * @summary Encodes a(n) ContentLength into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentLength, encoded as an ASN.1 Element.
  */

@@ -167,7 +167,7 @@ let _cached_encoder_for_CAMClientVersion: $.ASN1Encoder<CAMClientVersion> | null
 /**
  * @summary Encodes a(n) CAMClientVersion into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CAMClientVersion, encoded as an ASN.1 Element.
  */

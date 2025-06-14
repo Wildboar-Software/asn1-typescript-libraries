@@ -177,7 +177,7 @@ let _cached_encoder_for_BioAPI_UNIT_LIST_ELEMENT: $.ASN1Encoder<BioAPI_UNIT_LIST
 /**
  * @summary Encodes a(n) BioAPI_UNIT_LIST_ELEMENT into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_UNIT_LIST_ELEMENT, encoded as an ASN.1 Element.
  */

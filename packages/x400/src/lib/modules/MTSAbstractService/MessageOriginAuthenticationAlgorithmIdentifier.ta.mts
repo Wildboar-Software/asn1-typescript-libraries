@@ -60,7 +60,7 @@ let _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1En
 /**
  * @summary Encodes a(n) MessageOriginAuthenticationAlgorithmIdentifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageOriginAuthenticationAlgorithmIdentifier, encoded as an ASN.1 Element.
  */

@@ -153,7 +153,7 @@ let _cached_encoder_for_ECDSA_Full_R: $.ASN1Encoder<ECDSA_Full_R> | null = null;
 /**
  * @summary Encodes a(n) ECDSA_Full_R into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ECDSA_Full_R, encoded as an ASN.1 Element.
  */

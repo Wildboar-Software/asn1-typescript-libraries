@@ -128,7 +128,7 @@ let _cached_encoder_for_P_context_result_list_Item_provider_reason: $.ASN1Encode
 /**
  * @summary Encodes a(n) P_context_result_list_Item_provider_reason into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The P_context_result_list_Item_provider_reason, encoded as an ASN.1 Element.
  */

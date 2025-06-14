@@ -53,7 +53,7 @@ let _cached_encoder_for_ExternalTime: $.ASN1Encoder<ExternalTime> | null = null;
 /**
  * @summary Encodes a(n) ExternalTime into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExternalTime, encoded as an ASN.1 Element.
  */

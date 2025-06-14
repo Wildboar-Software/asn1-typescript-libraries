@@ -208,7 +208,7 @@ let _cached_encoder_for_JoinAttPair: $.ASN1Encoder<JoinAttPair> | null = null;
 /**
  * @summary Encodes a(n) JoinAttPair into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The JoinAttPair, encoded as an ASN.1 Element.
  */

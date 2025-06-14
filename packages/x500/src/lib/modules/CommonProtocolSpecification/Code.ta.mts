@@ -52,7 +52,7 @@ let _cached_encoder_for_Code: $.ASN1Encoder<Code> | null = null;
 /**
  * @summary Encodes a(n) Code into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Code, encoded as an ASN.1 Element.
  */

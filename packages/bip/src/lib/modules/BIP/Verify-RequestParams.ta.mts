@@ -323,7 +323,7 @@ let _cached_encoder_for_Verify_RequestParams: $.ASN1Encoder<Verify_RequestParams
 /**
  * @summary Encodes a(n) Verify_RequestParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Verify_RequestParams, encoded as an ASN.1 Element.
  */

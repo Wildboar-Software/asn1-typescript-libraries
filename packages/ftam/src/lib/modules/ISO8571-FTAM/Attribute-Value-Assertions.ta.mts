@@ -58,7 +58,7 @@ let _cached_encoder_for_Attribute_Value_Assertions: $.ASN1Encoder<Attribute_Valu
 /**
  * @summary Encodes a(n) Attribute_Value_Assertions into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attribute_Value_Assertions, encoded as an ASN.1 Element.
  */

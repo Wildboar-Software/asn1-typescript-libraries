@@ -82,7 +82,7 @@ let _cached_encoder_for_LastBackupDestination: $.ASN1Encoder<LastBackupDestinati
 /**
  * @summary Encodes a(n) LastBackupDestination into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LastBackupDestination, encoded as an ASN.1 Element.
  */

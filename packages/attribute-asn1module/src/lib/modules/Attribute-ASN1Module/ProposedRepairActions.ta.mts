@@ -52,7 +52,7 @@ let _cached_encoder_for_ProposedRepairActions: $.ASN1Encoder<ProposedRepairActio
 /**
  * @summary Encodes a(n) ProposedRepairActions into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProposedRepairActions, encoded as an ASN.1 Element.
  */

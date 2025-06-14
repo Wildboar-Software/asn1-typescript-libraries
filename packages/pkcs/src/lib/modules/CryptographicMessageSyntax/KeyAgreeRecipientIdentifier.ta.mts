@@ -70,7 +70,7 @@ let _cached_encoder_for_KeyAgreeRecipientIdentifier: $.ASN1Encoder<KeyAgreeRecip
 /**
  * @summary Encodes a(n) KeyAgreeRecipientIdentifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyAgreeRecipientIdentifier, encoded as an ASN.1 Element.
  */

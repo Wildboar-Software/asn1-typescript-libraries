@@ -264,7 +264,7 @@ let _cached_encoder_for_DeliveredRecipientField: $.ASN1Encoder<DeliveredRecipien
 /**
  * @summary Encodes a(n) DeliveredRecipientField into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeliveredRecipientField, encoded as an ASN.1 Element.
  */

@@ -165,7 +165,7 @@ let _cached_encoder_for_UDPTLPacket_error_recovery_fec_info: $.ASN1Encoder<UDPTL
 /**
  * @summary Encodes a(n) UDPTLPacket_error_recovery_fec_info into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UDPTLPacket_error_recovery_fec_info, encoded as an ASN.1 Element.
  */

@@ -276,7 +276,7 @@ let _cached_encoder_for_TBSPDU_wrapper: $.ASN1Encoder<TBSPDU_wrapper> | null = n
 /**
  * @summary Encodes a(n) TBSPDU_wrapper into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSPDU_wrapper, encoded as an ASN.1 Element.
  */

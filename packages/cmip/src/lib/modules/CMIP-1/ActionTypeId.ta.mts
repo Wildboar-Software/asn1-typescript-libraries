@@ -72,7 +72,7 @@ let _cached_encoder_for_ActionTypeId: $.ASN1Encoder<ActionTypeId> | null = null;
 /**
  * @summary Encodes a(n) ActionTypeId into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ActionTypeId, encoded as an ASN.1 Element.
  */

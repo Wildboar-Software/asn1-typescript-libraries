@@ -123,7 +123,7 @@ let _cached_encoder_for_Period_weeks_bitWeek: $.ASN1Encoder<Period_weeks_bitWeek
 /**
  * @summary Encodes a(n) Period_weeks_bitWeek into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Period_weeks_bitWeek, encoded as an ASN.1 Element.
  */

@@ -55,7 +55,7 @@ let _cached_encoder_for_Abstract_Syntax_Name: $.ASN1Encoder<Abstract_Syntax_Name
 /**
  * @summary Encodes a(n) Abstract_Syntax_Name into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Abstract_Syntax_Name, encoded as an ASN.1 Element.
  */

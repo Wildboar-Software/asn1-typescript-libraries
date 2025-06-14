@@ -182,7 +182,7 @@ let _cached_encoder_for_PA_ENC_TS_ENC: $.ASN1Encoder<PA_ENC_TS_ENC> | null = nul
 /**
  * @summary Encodes a(n) PA_ENC_TS_ENC into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PA_ENC_TS_ENC, encoded as an ASN.1 Element.
  */

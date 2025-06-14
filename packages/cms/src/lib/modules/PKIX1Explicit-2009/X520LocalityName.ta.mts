@@ -47,7 +47,7 @@ let _cached_encoder_for_X520LocalityName: $.ASN1Encoder<X520LocalityName> | null
 /**
  * @summary Encodes a(n) X520LocalityName into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X520LocalityName, encoded as an ASN.1 Element.
  */

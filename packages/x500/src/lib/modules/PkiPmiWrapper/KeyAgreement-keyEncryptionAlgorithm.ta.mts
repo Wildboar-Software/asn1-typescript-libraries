@@ -163,7 +163,7 @@ let _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm: $.ASN1Encoder<KeyAg
 /**
  * @summary Encodes a(n) KeyAgreement_keyEncryptionAlgorithm into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyAgreement_keyEncryptionAlgorithm, encoded as an ASN.1 Element.
  */

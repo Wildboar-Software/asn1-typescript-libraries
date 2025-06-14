@@ -395,7 +395,7 @@ let _cached_encoder_for_BioAPI_OPTIONS_MASK: $.ASN1Encoder<BioAPI_OPTIONS_MASK> 
 /**
  * @summary Encodes a(n) BioAPI_OPTIONS_MASK into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_OPTIONS_MASK, encoded as an ASN.1 Element.
  */

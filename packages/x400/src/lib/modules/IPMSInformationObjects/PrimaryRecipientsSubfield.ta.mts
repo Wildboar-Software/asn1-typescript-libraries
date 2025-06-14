@@ -56,7 +56,7 @@ let _cached_encoder_for_PrimaryRecipientsSubfield: $.ASN1Encoder<PrimaryRecipien
 /**
  * @summary Encodes a(n) PrimaryRecipientsSubfield into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrimaryRecipientsSubfield, encoded as an ASN.1 Element.
  */

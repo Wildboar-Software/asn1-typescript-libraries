@@ -171,7 +171,7 @@ let _cached_encoder_for_DenialResponse: $.ASN1Encoder<DenialResponse> | null = n
 /**
  * @summary Encodes a(n) DenialResponse into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DenialResponse, encoded as an ASN.1 Element.
  */

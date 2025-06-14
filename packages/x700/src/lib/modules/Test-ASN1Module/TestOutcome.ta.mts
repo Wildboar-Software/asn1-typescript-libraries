@@ -145,7 +145,7 @@ let _cached_encoder_for_TestOutcome: $.ASN1Encoder<TestOutcome> | null = null;
 /**
  * @summary Encodes a(n) TestOutcome into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TestOutcome, encoded as an ASN.1 Element.
  */

@@ -58,7 +58,7 @@ let _cached_encoder_for_ReplyRecipientsField: $.ASN1Encoder<ReplyRecipientsField
 /**
  * @summary Encodes a(n) ReplyRecipientsField into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReplyRecipientsField, encoded as an ASN.1 Element.
  */

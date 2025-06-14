@@ -63,7 +63,7 @@ let _cached_encoder_for_SignedDataACBio: $.ASN1Encoder<SignedDataACBio> | null =
 /**
  * @summary Encodes a(n) SignedDataACBio into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignedDataACBio, encoded as an ASN.1 Element.
  */

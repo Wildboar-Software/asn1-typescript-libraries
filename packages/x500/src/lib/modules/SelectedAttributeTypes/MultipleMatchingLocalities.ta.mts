@@ -190,7 +190,7 @@ let _cached_encoder_for_MultipleMatchingLocalities: $.ASN1Encoder<MultipleMatchi
 /**
  * @summary Encodes a(n) MultipleMatchingLocalities into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MultipleMatchingLocalities, encoded as an ASN.1 Element.
  */

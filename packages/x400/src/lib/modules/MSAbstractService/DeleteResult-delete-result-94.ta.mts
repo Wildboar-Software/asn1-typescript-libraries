@@ -188,7 +188,7 @@ let _cached_encoder_for_DeleteResult_delete_result_94: $.ASN1Encoder<DeleteResul
 /**
  * @summary Encodes a(n) DeleteResult_delete_result_94 into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteResult_delete_result_94, encoded as an ASN.1 Element.
  */

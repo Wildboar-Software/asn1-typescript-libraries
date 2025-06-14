@@ -62,7 +62,7 @@ let _cached_encoder_for_MessageGroupRegistrations: $.ASN1Encoder<MessageGroupReg
 /**
  * @summary Encodes a(n) MessageGroupRegistrations into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageGroupRegistrations, encoded as an ASN.1 Element.
  */

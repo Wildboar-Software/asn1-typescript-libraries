@@ -71,7 +71,7 @@ let _cached_encoder_for_Conf_Algs: $.ASN1Encoder<Conf_Algs> | null = null;
 /**
  * @summary Encodes a(n) Conf_Algs into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Conf_Algs, encoded as an ASN.1 Element.
  */

@@ -148,7 +148,7 @@ let _cached_encoder_for_X9_68CertificateAttributes: $.ASN1Encoder<X9_68Certifica
 /**
  * @summary Encodes a(n) X9_68CertificateAttributes into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X9_68CertificateAttributes, encoded as an ASN.1 Element.
  */

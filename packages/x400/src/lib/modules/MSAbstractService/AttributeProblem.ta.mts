@@ -185,7 +185,7 @@ let _cached_encoder_for_AttributeProblem: $.ASN1Encoder<AttributeProblem> | null
 /**
  * @summary Encodes a(n) AttributeProblem into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeProblem, encoded as an ASN.1 Element.
  */

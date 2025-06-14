@@ -213,7 +213,7 @@ let _cached_encoder_for_ReplaceAvlReq: $.ASN1Encoder<ReplaceAvlReq> | null = nul
 /**
  * @summary Encodes a(n) ReplaceAvlReq into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReplaceAvlReq, encoded as an ASN.1 Element.
  */

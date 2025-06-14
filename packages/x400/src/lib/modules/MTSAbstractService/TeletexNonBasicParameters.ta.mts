@@ -252,7 +252,7 @@ let _cached_encoder_for_TeletexNonBasicParameters: $.ASN1Encoder<TeletexNonBasic
 /**
  * @summary Encodes a(n) TeletexNonBasicParameters into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TeletexNonBasicParameters, encoded as an ASN.1 Element.
  */

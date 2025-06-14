@@ -168,7 +168,7 @@ let _cached_encoder_for_C_ROLLBACK_RI: $.ASN1Encoder<C_ROLLBACK_RI> | null = nul
 /**
  * @summary Encodes a(n) C_ROLLBACK_RI into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The C_ROLLBACK_RI, encoded as an ASN.1 Element.
  */

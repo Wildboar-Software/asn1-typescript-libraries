@@ -61,7 +61,7 @@ let _cached_encoder_for_RC5_CBC_Parameters_version: $.ASN1Encoder<RC5_CBC_Parame
 /**
  * @summary Encodes a(n) RC5_CBC_Parameters_version into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RC5_CBC_Parameters_version, encoded as an ASN.1 Element.
  */

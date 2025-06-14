@@ -92,7 +92,7 @@ let _cached_encoder_for_Contents_Type_Pattern: $.ASN1Encoder<Contents_Type_Patte
 /**
  * @summary Encodes a(n) Contents_Type_Pattern into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Contents_Type_Pattern, encoded as an ASN.1 Element.
  */

@@ -309,7 +309,7 @@ let _cached_encoder_for_TbsHandshakeSecAbort: $.ASN1Encoder<TbsHandshakeSecAbort
 /**
  * @summary Encodes a(n) TbsHandshakeSecAbort into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TbsHandshakeSecAbort, encoded as an ASN.1 Element.
  */

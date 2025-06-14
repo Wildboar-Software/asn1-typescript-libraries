@@ -54,7 +54,7 @@ let _cached_encoder_for_SecurityPolicyIdentifier: $.ASN1Encoder<SecurityPolicyId
 /**
  * @summary Encodes a(n) SecurityPolicyIdentifier into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SecurityPolicyIdentifier, encoded as an ASN.1 Element.
  */

@@ -54,7 +54,7 @@ let _cached_encoder_for_RecipientNumberForAdvice: $.ASN1Encoder<RecipientNumberF
 /**
  * @summary Encodes a(n) RecipientNumberForAdvice into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientNumberForAdvice, encoded as an ASN.1 Element.
  */

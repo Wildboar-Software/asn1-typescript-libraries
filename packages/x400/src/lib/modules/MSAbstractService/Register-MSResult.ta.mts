@@ -89,7 +89,7 @@ let _cached_encoder_for_Register_MSResult: $.ASN1Encoder<Register_MSResult> | nu
 /**
  * @summary Encodes a(n) Register_MSResult into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Register_MSResult, encoded as an ASN.1 Element.
  */

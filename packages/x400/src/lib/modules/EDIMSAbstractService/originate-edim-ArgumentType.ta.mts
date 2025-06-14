@@ -180,7 +180,7 @@ let _cached_encoder_for_originate_edim_ArgumentType: $.ASN1Encoder<originate_edi
 /**
  * @summary Encodes a(n) originate_edim_ArgumentType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The originate_edim_ArgumentType, encoded as an ASN.1 Element.
  */

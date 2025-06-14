@@ -57,7 +57,7 @@ let _cached_encoder_for_UiiFormat_next: $.ASN1Encoder<UiiFormat_next> | null = n
 /**
  * @summary Encodes a(n) UiiFormat_next into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UiiFormat_next, encoded as an ASN.1 Element.
  */

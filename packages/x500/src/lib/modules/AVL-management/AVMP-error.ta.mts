@@ -289,7 +289,7 @@ let _cached_encoder_for_AVMP_error: $.ASN1Encoder<AVMP_error> | null = null;
 /**
  * @summary Encodes a(n) AVMP_error into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AVMP_error, encoded as an ASN.1 Element.
  */

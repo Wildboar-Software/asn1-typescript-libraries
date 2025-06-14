@@ -134,7 +134,7 @@ let _cached_encoder_for_E_health_SetUp_Message_Response_interactive: $.ASN1Encod
 /**
  * @summary Encodes a(n) E_health_SetUp_Message_Response_interactive into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The E_health_SetUp_Message_Response_interactive, encoded as an ASN.1 Element.
  */

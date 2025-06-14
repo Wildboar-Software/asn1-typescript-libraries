@@ -168,7 +168,7 @@ let _cached_encoder_for_DbOpen_ResponseParams: $.ASN1Encoder<DbOpen_ResponsePara
 /**
  * @summary Encodes a(n) DbOpen_ResponseParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DbOpen_ResponseParams, encoded as an ASN.1 Element.
  */

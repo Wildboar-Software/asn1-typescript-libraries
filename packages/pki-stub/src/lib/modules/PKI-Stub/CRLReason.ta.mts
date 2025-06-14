@@ -279,7 +279,7 @@ export function _decode_CRLReason(el: _Element) {
 /**
  * @summary Encodes a(n) CRLReason into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CRLReason, encoded as an ASN.1 Element.
  */

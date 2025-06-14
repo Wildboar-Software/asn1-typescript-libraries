@@ -185,7 +185,7 @@ let _cached_encoder_for_TimeSpecification_time_absolute: $.ASN1Encoder<TimeSpeci
 /**
  * @summary Encodes a(n) TimeSpecification_time_absolute into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeSpecification_time_absolute, encoded as an ASN.1 Element.
  */

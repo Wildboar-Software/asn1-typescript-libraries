@@ -51,7 +51,7 @@ let _cached_encoder_for_ExternalIDO: $.ASN1Encoder<ExternalIDO> | null = null;
 /**
  * @summary Encodes a(n) ExternalIDO into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExternalIDO, encoded as an ASN.1 Element.
  */

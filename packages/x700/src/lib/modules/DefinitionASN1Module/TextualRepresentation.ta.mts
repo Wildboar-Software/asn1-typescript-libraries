@@ -58,7 +58,7 @@ let _cached_encoder_for_TextualRepresentation: $.ASN1Encoder<TextualRepresentati
 /**
  * @summary Encodes a(n) TextualRepresentation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TextualRepresentation, encoded as an ASN.1 Element.
  */

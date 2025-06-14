@@ -96,7 +96,7 @@ let _cached_encoder_for_EntryModification_modification: $.ASN1Encoder<EntryModif
 /**
  * @summary Encodes a(n) EntryModification_modification into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EntryModification_modification, encoded as an ASN.1 Element.
  */

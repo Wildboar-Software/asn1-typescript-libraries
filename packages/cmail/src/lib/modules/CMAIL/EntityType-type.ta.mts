@@ -165,7 +165,7 @@ let _cached_encoder_for_EntityType_type: $.ASN1Encoder<EntityType_type> | null =
 /**
  * @summary Encodes a(n) EntityType_type into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EntityType_type, encoded as an ASN.1 Element.
  */

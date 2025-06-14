@@ -167,7 +167,7 @@ let _cached_encoder_for_Vein_only: $.ASN1Encoder<Vein_only> | null = null;
 /**
  * @summary Encodes a(n) Vein_only into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Vein_only, encoded as an ASN.1 Element.
  */

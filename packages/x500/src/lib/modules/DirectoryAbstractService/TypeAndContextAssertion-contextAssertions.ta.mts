@@ -67,7 +67,7 @@ let _cached_encoder_for_TypeAndContextAssertion_contextAssertions: $.ASN1Encoder
 /**
  * @summary Encodes a(n) TypeAndContextAssertion_contextAssertions into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeAndContextAssertion_contextAssertions, encoded as an ASN.1 Element.
  */

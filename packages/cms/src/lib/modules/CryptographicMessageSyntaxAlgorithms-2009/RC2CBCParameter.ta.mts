@@ -155,7 +155,7 @@ let _cached_encoder_for_RC2CBCParameter: $.ASN1Encoder<RC2CBCParameter> | null =
 /**
  * @summary Encodes a(n) RC2CBCParameter into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RC2CBCParameter, encoded as an ASN.1 Element.
  */

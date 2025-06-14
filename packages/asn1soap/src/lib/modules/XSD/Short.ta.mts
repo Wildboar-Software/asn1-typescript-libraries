@@ -53,7 +53,7 @@ let _cached_encoder_for_Short: $.ASN1Encoder<Short> | null = null;
 /**
  * @summary Encodes a(n) Short into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Short, encoded as an ASN.1 Element.
  */

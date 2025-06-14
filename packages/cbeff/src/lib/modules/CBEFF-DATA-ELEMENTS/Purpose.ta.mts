@@ -233,7 +233,7 @@ let _cached_encoder_for_Purpose: $.ASN1Encoder<Purpose> | null = null;
 /**
  * @summary Encodes a(n) Purpose into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Purpose, encoded as an ASN.1 Element.
  */

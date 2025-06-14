@@ -172,7 +172,7 @@ let _cached_encoder_for_Summary_present_Item: $.ASN1Encoder<Summary_present_Item
 /**
  * @summary Encodes a(n) Summary_present_Item into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Summary_present_Item, encoded as an ASN.1 Element.
  */

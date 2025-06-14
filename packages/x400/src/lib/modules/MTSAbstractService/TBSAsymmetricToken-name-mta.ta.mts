@@ -186,7 +186,7 @@ let _cached_encoder_for_TBSAsymmetricToken_name_mta: $.ASN1Encoder<TBSAsymmetric
 /**
  * @summary Encodes a(n) TBSAsymmetricToken_name_mta into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBSAsymmetricToken_name_mta, encoded as an ASN.1 Element.
  */

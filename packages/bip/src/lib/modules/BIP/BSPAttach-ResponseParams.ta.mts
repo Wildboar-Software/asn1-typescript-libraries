@@ -145,7 +145,7 @@ let _cached_encoder_for_BSPAttach_ResponseParams: $.ASN1Encoder<BSPAttach_Respon
 /**
  * @summary Encodes a(n) BSPAttach_ResponseParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BSPAttach_ResponseParams, encoded as an ASN.1 Element.
  */

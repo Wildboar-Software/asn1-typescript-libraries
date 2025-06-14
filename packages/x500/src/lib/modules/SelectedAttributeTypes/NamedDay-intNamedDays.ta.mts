@@ -219,7 +219,7 @@ let _cached_encoder_for_NamedDay_intNamedDays: $.ASN1Encoder<NamedDay_intNamedDa
 /**
  * @summary Encodes a(n) NamedDay_intNamedDays into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NamedDay_intNamedDays, encoded as an ASN.1 Element.
  */

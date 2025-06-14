@@ -178,7 +178,7 @@ let _cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead: $.ASN1Encoder<TbsHan
 /**
  * @summary Encodes a(n) TbsHandshakeReq_encr_mode_non_aead into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TbsHandshakeReq_encr_mode_non_aead, encoded as an ASN.1 Element.
  */

@@ -108,7 +108,7 @@ let _cached_encoder_for_AuthenticationLevel_basicLevels_level: $.ASN1Encoder<Aut
 /**
  * @summary Encodes a(n) AuthenticationLevel_basicLevels_level into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthenticationLevel_basicLevels_level, encoded as an ASN.1 Element.
  */

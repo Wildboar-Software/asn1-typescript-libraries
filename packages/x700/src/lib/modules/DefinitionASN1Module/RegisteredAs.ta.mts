@@ -53,7 +53,7 @@ let _cached_encoder_for_RegisteredAs: $.ASN1Encoder<RegisteredAs> | null = null;
 /**
  * @summary Encodes a(n) RegisteredAs into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RegisteredAs, encoded as an ASN.1 Element.
  */

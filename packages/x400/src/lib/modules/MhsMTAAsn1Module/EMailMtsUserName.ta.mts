@@ -77,7 +77,7 @@ let _cached_encoder_for_EMailMtsUserName: $.ASN1Encoder<EMailMtsUserName> | null
 /**
  * @summary Encodes a(n) EMailMtsUserName into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMailMtsUserName, encoded as an ASN.1 Element.
  */

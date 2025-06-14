@@ -70,7 +70,7 @@ let _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix: $.ASN1Enc
 /**
  * @summary Encodes a(n) ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix, encoded as an ASN.1 Element.
  */

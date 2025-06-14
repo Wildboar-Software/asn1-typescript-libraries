@@ -77,7 +77,7 @@ let _cached_encoder_for_ExtendedNetworkAddress: $.ASN1Encoder<ExtendedNetworkAdd
 /**
  * @summary Encodes a(n) ExtendedNetworkAddress into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtendedNetworkAddress, encoded as an ASN.1 Element.
  */

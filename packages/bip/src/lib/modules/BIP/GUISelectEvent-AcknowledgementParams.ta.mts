@@ -185,7 +185,7 @@ let _cached_encoder_for_GUISelectEvent_AcknowledgementParams: $.ASN1Encoder<GUIS
 /**
  * @summary Encodes a(n) GUISelectEvent_AcknowledgementParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GUISelectEvent_AcknowledgementParams, encoded as an ASN.1 Element.
  */

@@ -53,7 +53,7 @@ let _cached_encoder_for_Identity: $.ASN1Encoder<Identity> | null = null;
 /**
  * @summary Encodes a(n) Identity into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Identity, encoded as an ASN.1 Element.
  */

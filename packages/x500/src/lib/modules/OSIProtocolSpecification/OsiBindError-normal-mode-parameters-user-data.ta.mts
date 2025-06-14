@@ -67,7 +67,7 @@ let _cached_encoder_for_OsiBindError_normal_mode_parameters_user_data: $.ASN1Enc
 /**
  * @summary Encodes a(n) OsiBindError_normal_mode_parameters_user_data into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OsiBindError_normal_mode_parameters_user_data, encoded as an ASN.1 Element.
  */

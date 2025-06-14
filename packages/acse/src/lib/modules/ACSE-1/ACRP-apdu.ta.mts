@@ -283,7 +283,7 @@ let _cached_encoder_for_ACRP_apdu: $.ASN1Encoder<ACRP_apdu> | null = null;
 /**
  * @summary Encodes a(n) ACRP_apdu into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ACRP_apdu, encoded as an ASN.1 Element.
  */

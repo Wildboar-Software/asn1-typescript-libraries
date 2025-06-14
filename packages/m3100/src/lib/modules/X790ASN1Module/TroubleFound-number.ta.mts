@@ -1151,7 +1151,7 @@ let _cached_encoder_for_TroubleFound_number: $.ASN1Encoder<TroubleFound_number> 
 /**
  * @summary Encodes a(n) TroubleFound_number into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TroubleFound_number, encoded as an ASN.1 Element.
  */

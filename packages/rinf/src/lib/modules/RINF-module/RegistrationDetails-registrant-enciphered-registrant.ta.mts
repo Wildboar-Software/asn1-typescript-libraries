@@ -176,7 +176,7 @@ let _cached_encoder_for_RegistrationDetails_registrant_enciphered_registrant: $.
 /**
  * @summary Encodes a(n) RegistrationDetails_registrant_enciphered_registrant into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RegistrationDetails_registrant_enciphered_registrant, encoded as an ASN.1 Element.
  */

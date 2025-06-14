@@ -58,7 +58,7 @@ let _cached_encoder_for_MS_EITs: $.ASN1Encoder<MS_EITs> | null = null;
 /**
  * @summary Encodes a(n) MS_EITs into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MS_EITs, encoded as an ASN.1 Element.
  */

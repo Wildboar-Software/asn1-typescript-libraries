@@ -214,7 +214,7 @@ let _cached_encoder_for_NormalValue_value_range: $.ASN1Encoder<NormalValue_value
 /**
  * @summary Encodes a(n) NormalValue_value_range into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NormalValue_value_range, encoded as an ASN.1 Element.
  */

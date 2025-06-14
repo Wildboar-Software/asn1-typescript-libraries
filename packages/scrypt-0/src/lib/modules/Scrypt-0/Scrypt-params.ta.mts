@@ -186,7 +186,7 @@ let _cached_encoder_for_Scrypt_params: $.ASN1Encoder<Scrypt_params> | null = nul
 /**
  * @summary Encodes a(n) Scrypt_params into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Scrypt_params, encoded as an ASN.1 Element.
  */

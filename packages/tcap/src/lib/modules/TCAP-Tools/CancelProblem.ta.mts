@@ -147,7 +147,7 @@ let _cached_encoder_for_CancelProblem: $.ASN1Encoder<CancelProblem> | null = nul
 /**
  * @summary Encodes a(n) CancelProblem into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CancelProblem, encoded as an ASN.1 Element.
  */

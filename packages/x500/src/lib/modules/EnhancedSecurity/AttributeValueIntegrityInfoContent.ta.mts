@@ -186,7 +186,7 @@ let _cached_encoder_for_AttributeValueIntegrityInfoContent: $.ASN1Encoder<Attrib
 /**
  * @summary Encodes a(n) AttributeValueIntegrityInfoContent into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeValueIntegrityInfoContent, encoded as an ASN.1 Element.
  */

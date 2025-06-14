@@ -175,7 +175,7 @@ let _cached_encoder_for_FamilyEntries: $.ASN1Encoder<FamilyEntries> | null = nul
 /**
  * @summary Encodes a(n) FamilyEntries into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FamilyEntries, encoded as an ASN.1 Element.
  */

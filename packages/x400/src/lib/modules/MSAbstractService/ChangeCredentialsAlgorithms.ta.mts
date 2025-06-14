@@ -55,7 +55,7 @@ let _cached_encoder_for_ChangeCredentialsAlgorithms: $.ASN1Encoder<ChangeCredent
 /**
  * @summary Encodes a(n) ChangeCredentialsAlgorithms into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ChangeCredentialsAlgorithms, encoded as an ASN.1 Element.
  */

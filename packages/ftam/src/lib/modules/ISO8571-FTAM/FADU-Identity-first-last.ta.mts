@@ -89,7 +89,7 @@ let _cached_encoder_for_FADU_Identity_first_last: $.ASN1Encoder<FADU_Identity_fi
 /**
  * @summary Encodes a(n) FADU_Identity_first_last into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FADU_Identity_first_last, encoded as an ASN.1 Element.
  */

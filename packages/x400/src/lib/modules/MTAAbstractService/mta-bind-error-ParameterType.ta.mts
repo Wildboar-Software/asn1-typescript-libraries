@@ -143,7 +143,7 @@ let _cached_encoder_for_mta_bind_error_ParameterType: $.ASN1Encoder<mta_bind_err
 /**
  * @summary Encodes a(n) mta_bind_error_ParameterType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The mta_bind_error_ParameterType, encoded as an ASN.1 Element.
  */

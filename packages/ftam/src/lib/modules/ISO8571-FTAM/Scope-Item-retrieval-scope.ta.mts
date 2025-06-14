@@ -89,7 +89,7 @@ let _cached_encoder_for_Scope_Item_retrieval_scope: $.ASN1Encoder<Scope_Item_ret
 /**
  * @summary Encodes a(n) Scope_Item_retrieval_scope into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Scope_Item_retrieval_scope, encoded as an ASN.1 Element.
  */

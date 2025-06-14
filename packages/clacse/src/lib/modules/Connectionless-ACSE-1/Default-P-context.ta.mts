@@ -184,7 +184,7 @@ let _cached_encoder_for_Default_P_context: $.ASN1Encoder<Default_P_context> | nu
 /**
  * @summary Encodes a(n) Default_P_context into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Default_P_context, encoded as an ASN.1 Element.
  */

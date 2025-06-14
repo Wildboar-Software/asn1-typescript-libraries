@@ -53,7 +53,7 @@ let _cached_encoder_for_AP_title_form3: $.ASN1Encoder<AP_title_form3> | null = n
 /**
  * @summary Encodes a(n) AP_title_form3 into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AP_title_form3, encoded as an ASN.1 Element.
  */

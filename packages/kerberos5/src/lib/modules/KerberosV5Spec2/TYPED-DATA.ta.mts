@@ -61,7 +61,7 @@ let _cached_encoder_for_TYPED_DATA: $.ASN1Encoder<TYPED_DATA> | null = null;
 /**
  * @summary Encodes a(n) TYPED_DATA into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TYPED_DATA, encoded as an ASN.1 Element.
  */

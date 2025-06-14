@@ -171,7 +171,7 @@ let _cached_encoder_for_ScannerActionError: $.ASN1Encoder<ScannerActionError> | 
 /**
  * @summary Encodes a(n) ScannerActionError into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScannerActionError, encoded as an ASN.1 Element.
  */

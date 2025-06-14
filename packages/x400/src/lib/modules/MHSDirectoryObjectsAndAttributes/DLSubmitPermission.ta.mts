@@ -96,7 +96,7 @@ let _cached_encoder_for_DLSubmitPermission: $.ASN1Encoder<DLSubmitPermission> | 
 /**
  * @summary Encodes a(n) DLSubmitPermission into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DLSubmitPermission, encoded as an ASN.1 Element.
  */

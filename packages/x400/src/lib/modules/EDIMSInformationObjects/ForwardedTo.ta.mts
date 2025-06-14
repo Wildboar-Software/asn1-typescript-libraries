@@ -56,7 +56,7 @@ let _cached_encoder_for_ForwardedTo: $.ASN1Encoder<ForwardedTo> | null = null;
 /**
  * @summary Encodes a(n) ForwardedTo into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ForwardedTo, encoded as an ASN.1 Element.
  */

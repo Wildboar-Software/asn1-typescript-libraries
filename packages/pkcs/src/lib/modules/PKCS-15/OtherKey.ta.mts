@@ -164,7 +164,7 @@ let _cached_encoder_for_OtherKey: $.ASN1Encoder<OtherKey> | null = null;
 /**
  * @summary Encodes a(n) OtherKey into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OtherKey, encoded as an ASN.1 Element.
  */

@@ -154,7 +154,7 @@ let _cached_encoder_for_InformationSelection_infoTypes: $.ASN1Encoder<Informatio
 /**
  * @summary Encodes a(n) InformationSelection_infoTypes into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InformationSelection_infoTypes, encoded as an ASN.1 Element.
  */

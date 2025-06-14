@@ -88,7 +88,7 @@ let _cached_encoder_for_Protocol_Version: $.ASN1Encoder<Protocol_Version> | null
 /**
  * @summary Encodes a(n) Protocol_Version into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Protocol_Version, encoded as an ASN.1 Element.
  */

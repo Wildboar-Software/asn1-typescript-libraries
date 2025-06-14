@@ -63,7 +63,7 @@ let _cached_encoder_for_ContentCorrelator: $.ASN1Encoder<ContentCorrelator> | nu
 /**
  * @summary Encodes a(n) ContentCorrelator into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentCorrelator, encoded as an ASN.1 Element.
  */

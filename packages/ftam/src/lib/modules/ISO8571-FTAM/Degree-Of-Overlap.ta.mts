@@ -110,7 +110,7 @@ let _cached_encoder_for_Degree_Of_Overlap: $.ASN1Encoder<Degree_Of_Overlap> | nu
 /**
  * @summary Encodes a(n) Degree_Of_Overlap into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Degree_Of_Overlap, encoded as an ASN.1 Element.
  */

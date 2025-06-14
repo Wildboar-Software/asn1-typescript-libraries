@@ -123,7 +123,7 @@ let _cached_encoder_for_Direction: $.ASN1Encoder<Direction> | null = null;
 /**
  * @summary Encodes a(n) Direction into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Direction, encoded as an ASN.1 Element.
  */

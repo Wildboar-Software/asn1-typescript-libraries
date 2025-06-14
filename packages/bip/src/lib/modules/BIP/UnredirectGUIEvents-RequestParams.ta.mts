@@ -258,7 +258,7 @@ let _cached_encoder_for_UnredirectGUIEvents_RequestParams: $.ASN1Encoder<Unredir
 /**
  * @summary Encodes a(n) UnredirectGUIEvents_RequestParams into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnredirectGUIEvents_RequestParams, encoded as an ASN.1 Element.
  */

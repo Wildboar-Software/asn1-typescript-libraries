@@ -395,7 +395,7 @@ let _cached_encoder_for_Rep_ti_contents: $.ASN1Encoder<Rep_ti_contents> | null =
 /**
  * @summary Encodes a(n) Rep_ti_contents into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Rep_ti_contents, encoded as an ASN.1 Element.
  */

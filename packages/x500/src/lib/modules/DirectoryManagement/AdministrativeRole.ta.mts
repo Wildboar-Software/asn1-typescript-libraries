@@ -42,7 +42,7 @@ let _cached_encoder_for_AdministrativeRole: $.ASN1Encoder<AdministrativeRole> | 
 /**
  * @summary Encodes a(n) AdministrativeRole into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdministrativeRole, encoded as an ASN.1 Element.
  */

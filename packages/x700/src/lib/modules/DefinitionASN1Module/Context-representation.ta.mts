@@ -186,7 +186,7 @@ let _cached_encoder_for_Context_representation: $.ASN1Encoder<Context_representa
 /**
  * @summary Encodes a(n) Context_representation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Context_representation, encoded as an ASN.1 Element.
  */

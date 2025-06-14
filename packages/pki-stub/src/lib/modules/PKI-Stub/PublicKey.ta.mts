@@ -42,7 +42,7 @@ export function _decode_PublicKey(el: _Element) {
 /**
  * @summary Encodes a(n) PublicKey into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PublicKey, encoded as an ASN.1 Element.
  */

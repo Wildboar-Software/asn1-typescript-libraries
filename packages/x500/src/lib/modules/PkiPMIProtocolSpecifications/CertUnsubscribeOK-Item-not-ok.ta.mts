@@ -161,7 +161,7 @@ let _cached_encoder_for_CertUnsubscribeOK_Item_not_ok: $.ASN1Encoder<CertUnsubsc
 /**
  * @summary Encodes a(n) CertUnsubscribeOK_Item_not_ok into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertUnsubscribeOK_Item_not_ok, encoded as an ASN.1 Element.
  */

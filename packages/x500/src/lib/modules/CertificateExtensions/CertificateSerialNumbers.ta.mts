@@ -49,7 +49,7 @@ let _cached_encoder_for_CertificateSerialNumbers: $.ASN1Encoder<CertificateSeria
 /**
  * @summary Encodes a(n) CertificateSerialNumbers into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertificateSerialNumbers, encoded as an ASN.1 Element.
  */

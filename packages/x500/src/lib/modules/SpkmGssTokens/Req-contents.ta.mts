@@ -404,7 +404,7 @@ let _cached_encoder_for_Req_contents: $.ASN1Encoder<Req_contents> | null = null;
 /**
  * @summary Encodes a(n) Req_contents into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Req_contents, encoded as an ASN.1 Element.
  */

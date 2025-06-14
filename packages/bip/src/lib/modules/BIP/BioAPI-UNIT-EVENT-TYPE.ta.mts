@@ -157,7 +157,7 @@ let _cached_encoder_for_BioAPI_UNIT_EVENT_TYPE: $.ASN1Encoder<BioAPI_UNIT_EVENT_
 /**
  * @summary Encodes a(n) BioAPI_UNIT_EVENT_TYPE into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_UNIT_EVENT_TYPE, encoded as an ASN.1 Element.
  */

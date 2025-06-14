@@ -88,7 +88,7 @@ let _cached_encoder_for_EDIAutoForwardRegistrationParameter_edi_forwarding_mode:
 /**
  * @summary Encodes a(n) EDIAutoForwardRegistrationParameter_edi_forwarding_mode into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIAutoForwardRegistrationParameter_edi_forwarding_mode, encoded as an ASN.1 Element.
  */

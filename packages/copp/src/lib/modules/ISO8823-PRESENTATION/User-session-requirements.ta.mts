@@ -265,7 +265,7 @@ let _cached_encoder_for_User_session_requirements: $.ASN1Encoder<User_session_re
 /**
  * @summary Encodes a(n) User_session_requirements into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The User_session_requirements, encoded as an ASN.1 Element.
  */

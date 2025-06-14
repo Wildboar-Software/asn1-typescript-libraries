@@ -288,7 +288,7 @@ let _cached_encoder_for_Data_Field_Item_field_type: $.ASN1Encoder<Data_Field_Ite
 /**
  * @summary Encodes a(n) Data_Field_Item_field_type into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Data_Field_Item_field_type, encoded as an ASN.1 Element.
  */

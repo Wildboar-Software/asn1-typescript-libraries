@@ -443,7 +443,7 @@ let _cached_encoder_for_KDC_REQ_BODY: $.ASN1Encoder<KDC_REQ_BODY> | null = null;
 /**
  * @summary Encodes a(n) KDC_REQ_BODY into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KDC_REQ_BODY, encoded as an ASN.1 Element.
  */

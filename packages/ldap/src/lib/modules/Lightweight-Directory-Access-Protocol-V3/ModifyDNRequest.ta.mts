@@ -238,7 +238,7 @@ let _cached_encoder_for_ModifyDNRequest: $.ASN1Encoder<ModifyDNRequest> | null =
 /**
  * @summary Encodes a(n) ModifyDNRequest into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ModifyDNRequest, encoded as an ASN.1 Element.
  */

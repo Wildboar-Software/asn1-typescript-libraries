@@ -43,7 +43,7 @@ let _cached_encoder_for_TimeStamp: $.ASN1Encoder<TimeStamp> | null = null;
 /**
  * @summary Encodes a(n) TimeStamp into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeStamp, encoded as an ASN.1 Element.
  */

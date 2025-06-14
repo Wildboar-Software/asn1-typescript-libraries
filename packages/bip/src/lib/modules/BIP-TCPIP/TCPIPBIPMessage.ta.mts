@@ -191,7 +191,7 @@ let _cached_encoder_for_TCPIPBIPMessage: $.ASN1Encoder<TCPIPBIPMessage> | null =
 /**
  * @summary Encodes a(n) TCPIPBIPMessage into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TCPIPBIPMessage, encoded as an ASN.1 Element.
  */

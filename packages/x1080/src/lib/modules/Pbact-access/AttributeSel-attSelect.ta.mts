@@ -152,7 +152,7 @@ let _cached_encoder_for_AttributeSel_attSelect: $.ASN1Encoder<AttributeSel_attSe
 /**
  * @summary Encodes a(n) AttributeSel_attSelect into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeSel_attSelect, encoded as an ASN.1 Element.
  */

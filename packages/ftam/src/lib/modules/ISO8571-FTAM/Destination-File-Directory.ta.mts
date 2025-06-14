@@ -58,7 +58,7 @@ let _cached_encoder_for_Destination_File_Directory: $.ASN1Encoder<Destination_Fi
 /**
  * @summary Encodes a(n) Destination_File_Directory into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Destination_File_Directory, encoded as an ASN.1 Element.
  */

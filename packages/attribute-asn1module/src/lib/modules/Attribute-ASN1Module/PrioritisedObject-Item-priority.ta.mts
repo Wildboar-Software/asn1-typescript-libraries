@@ -95,7 +95,7 @@ let _cached_encoder_for_PrioritisedObject_Item_priority: $.ASN1Encoder<Prioritis
 /**
  * @summary Encodes a(n) PrioritisedObject_Item_priority into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrioritisedObject_Item_priority, encoded as an ASN.1 Element.
  */

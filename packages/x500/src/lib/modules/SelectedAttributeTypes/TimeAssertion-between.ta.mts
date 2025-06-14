@@ -212,7 +212,7 @@ let _cached_encoder_for_TimeAssertion_between: $.ASN1Encoder<TimeAssertion_betwe
 /**
  * @summary Encodes a(n) TimeAssertion_between into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeAssertion_between, encoded as an ASN.1 Element.
  */

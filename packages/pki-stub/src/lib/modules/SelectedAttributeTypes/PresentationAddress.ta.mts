@@ -219,7 +219,7 @@ export function _decode_PresentationAddress(el: _Element) {
 /**
  * @summary Encodes a(n) PresentationAddress into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PresentationAddress, encoded as an ASN.1 Element.
  */

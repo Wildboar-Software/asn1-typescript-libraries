@@ -177,7 +177,7 @@ let _cached_encoder_for_ABRT_diagnostic: $.ASN1Encoder<ABRT_diagnostic> | null =
 /**
  * @summary Encodes a(n) ABRT_diagnostic into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ABRT_diagnostic, encoded as an ASN.1 Element.
  */

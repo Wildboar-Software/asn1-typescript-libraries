@@ -213,7 +213,7 @@ let _cached_encoder_for_ESSCertIDv2: $.ASN1Encoder<ESSCertIDv2> | null = null;
 /**
  * @summary Encodes a(n) ESSCertIDv2 into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ESSCertIDv2, encoded as an ASN.1 Element.
  */

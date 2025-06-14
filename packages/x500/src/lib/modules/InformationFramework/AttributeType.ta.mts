@@ -29,7 +29,7 @@ export const _decode_AttributeType = $._decodeObjectIdentifier;
 /**
  * @summary Encodes a(n) AttributeType into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeType, encoded as an ASN.1 Element.
  */

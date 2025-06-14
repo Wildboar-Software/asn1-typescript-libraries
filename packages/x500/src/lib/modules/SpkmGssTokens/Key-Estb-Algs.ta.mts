@@ -49,7 +49,7 @@ let _cached_encoder_for_Key_Estb_Algs: $.ASN1Encoder<Key_Estb_Algs> | null = nul
 /**
  * @summary Encodes a(n) Key_Estb_Algs into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Key_Estb_Algs, encoded as an ASN.1 Element.
  */

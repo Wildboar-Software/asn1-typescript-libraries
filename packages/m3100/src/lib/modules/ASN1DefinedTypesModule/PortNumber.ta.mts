@@ -53,7 +53,7 @@ let _cached_encoder_for_PortNumber: $.ASN1Encoder<PortNumber> | null = null;
 /**
  * @summary Encodes a(n) PortNumber into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PortNumber, encoded as an ASN.1 Element.
  */

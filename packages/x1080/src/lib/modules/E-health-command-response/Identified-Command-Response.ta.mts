@@ -157,7 +157,7 @@ let _cached_encoder_for_Identified_Command_Response: $.ASN1Encoder<Identified_Co
 /**
  * @summary Encodes a(n) Identified_Command_Response into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Identified_Command_Response, encoded as an ASN.1 Element.
  */

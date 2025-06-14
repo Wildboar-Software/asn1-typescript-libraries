@@ -58,7 +58,7 @@ let _cached_encoder_for_ExternalSchedulerName: $.ASN1Encoder<ExternalSchedulerNa
 /**
  * @summary Encodes a(n) ExternalSchedulerName into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExternalSchedulerName, encoded as an ASN.1 Element.
  */

@@ -59,7 +59,7 @@ let _cached_encoder_for_UserPwd: $.ASN1Encoder<UserPwd> | null = null;
 /**
  * @summary Encodes a(n) UserPwd into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param value The element being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UserPwd, encoded as an ASN.1 Element.
  */
