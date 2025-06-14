@@ -14,14 +14,12 @@ assignments, object class assignments, object assignments, and object set
 assignments--in other words, the entirety of an ASN.1 file can be compiled into
 directly useful TypeScript.
 
-For each of the published TypeScript ASN.1 libraries, such as `@wildboar/x500`,
+For _some_ of the published TypeScript ASN.1 libraries, such as `@wildboar/x500`,
 the symbols produced from compilation are not exported from the index. They must
 be "deep imported"
 (e.g. `module-name/src/lib/modules/AuthenticationFramework/TBSCertificate.ta`).
-If any, few are exceptions to this. For each of these libraries, the symbols
-produced from ASN.1 module compilation will be exported under the `modules`
-folder in the `src` directory. The exports are namespaced to the `modules`
-folder, then further namespaced by the module name. There may be other things
+For each of these libraries, the symbols
+produced from ASN.1 module compilation will be exported under `src/lib/modules`, then further namespaced by the module name. There may be other things
 exported from a library other than just the compiled ASN.1 modules; for
 instance, in `@wildboar/x500` there are functions available that implement
 X.500 matching rules.
