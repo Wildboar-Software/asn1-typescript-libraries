@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_AARQ_apdu,
   _encode_AARQ_apdu,
 } from '../ACSE-1/AARQ-apdu.ta.mjs';
-export {
-  AARQ_apdu,
-  _decode_AARQ_apdu,
-  _encode_AARQ_apdu,
-} from '../ACSE-1/AARQ-apdu.ta.mjs';
 import {
-  AARE_apdu,
-  _decode_AARE_apdu,
-  _encode_AARE_apdu,
-} from '../ACSE-1/AARE-apdu.ta.mjs';
-export {
   AARE_apdu,
   _decode_AARE_apdu,
   _encode_AARE_apdu,
@@ -91,17 +25,7 @@ import {
   _decode_RLRQ_apdu,
   _encode_RLRQ_apdu,
 } from '../ACSE-1/RLRQ-apdu.ta.mjs';
-export {
-  RLRQ_apdu,
-  _decode_RLRQ_apdu,
-  _encode_RLRQ_apdu,
-} from '../ACSE-1/RLRQ-apdu.ta.mjs';
 import {
-  RLRE_apdu,
-  _decode_RLRE_apdu,
-  _encode_RLRE_apdu,
-} from '../ACSE-1/RLRE-apdu.ta.mjs';
-export {
   RLRE_apdu,
   _decode_RLRE_apdu,
   _encode_RLRE_apdu,
@@ -111,17 +35,7 @@ import {
   _decode_ABRT_apdu,
   _encode_ABRT_apdu,
 } from '../ACSE-1/ABRT-apdu.ta.mjs';
-export {
-  ABRT_apdu,
-  _decode_ABRT_apdu,
-  _encode_ABRT_apdu,
-} from '../ACSE-1/ABRT-apdu.ta.mjs';
 import {
-  A_DT_apdu,
-  _decode_A_DT_apdu,
-  _encode_A_DT_apdu,
-} from '../ACSE-1/A-DT-apdu.ta.mjs';
-export {
   A_DT_apdu,
   _decode_A_DT_apdu,
   _encode_A_DT_apdu,
@@ -131,22 +45,11 @@ import {
   _decode_ACRQ_apdu,
   _encode_ACRQ_apdu,
 } from '../ACSE-1/ACRQ-apdu.ta.mjs';
-export {
-  ACRQ_apdu,
-  _decode_ACRQ_apdu,
-  _encode_ACRQ_apdu,
-} from '../ACSE-1/ACRQ-apdu.ta.mjs';
 import {
   ACRP_apdu,
   _decode_ACRP_apdu,
   _encode_ACRP_apdu,
 } from '../ACSE-1/ACRP-apdu.ta.mjs';
-export {
-  ACRP_apdu,
-  _decode_ACRP_apdu,
-  _encode_ACRP_apdu,
-} from '../ACSE-1/ACRP-apdu.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ACSE_apdu */
 /**
  * @summary ACSE_apdu

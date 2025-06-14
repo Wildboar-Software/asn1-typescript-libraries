@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_User_information,
   _encode_User_information,
 } from '../ACSE-1/User-information.ta.mjs';
-export {
-  User_information,
-  _decode_User_information,
-  _encode_User_information,
-} from '../ACSE-1/User-information.ta.mjs';
 import {
-  Simply_encoded_data,
-  _decode_Simply_encoded_data,
-  _encode_Simply_encoded_data,
-} from '../ACSE-1/Simply-encoded-data.ta.mjs';
-export {
   Simply_encoded_data,
   _decode_Simply_encoded_data,
   _encode_Simply_encoded_data,
@@ -91,12 +25,6 @@ import {
   _decode_PDV_list,
   _encode_PDV_list,
 } from '../ACSE-1/PDV-list.ta.mjs';
-export {
-  PDV_list,
-  _decode_PDV_list,
-  _encode_PDV_list,
-} from '../ACSE-1/PDV-list.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION User_Data */
 /**
  * @summary User_Data

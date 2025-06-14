@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
 } from '../ACSE-1/ASO-qualifier.ta.mjs';
-export {
-  ASO_qualifier,
-  _decode_ASO_qualifier,
-  _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta.mjs';
 import {
-  ASOI_identifier,
-  _decode_ASOI_identifier,
-  _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta.mjs';
-export {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
@@ -91,17 +26,7 @@ import {
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';
-export {
-  ASO_context_name,
-  _decode_ASO_context_name,
-  _encode_ASO_context_name,
-} from '../ACSE-1/ASO-context-name.ta.mjs';
 import {
-  ASO_context_name_list,
-  _decode_ASO_context_name_list,
-  _encode_ASO_context_name_list,
-} from '../ACSE-1/ASO-context-name-list.ta.mjs';
-export {
   ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
@@ -111,22 +36,11 @@ import {
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
 } from '../ACSE-1/Syntactic-context-list.ta.mjs';
-export {
-  Syntactic_context_list,
-  _decode_Syntactic_context_list,
-  _encode_Syntactic_context_list,
-} from '../ACSE-1/Syntactic-context-list.ta.mjs';
 import {
   User_information,
   _decode_User_information,
   _encode_User_information,
 } from '../ACSE-1/User-information.ta.mjs';
-export {
-  User_information,
-  _decode_User_information,
-  _encode_User_information,
-} from '../ACSE-1/User-information.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ACRQ_apdu */
 /**
  * @summary ACRQ_apdu
@@ -410,9 +324,7 @@ export function _encode_ACRQ_apdu(
       6,
       () =>
         function (
-          value: ACRQ_apdu,
-          elGetter: $.ASN1Encoder<ACRQ_apdu>
-        ): _Element {
+          value: ACRQ_apdu        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat(

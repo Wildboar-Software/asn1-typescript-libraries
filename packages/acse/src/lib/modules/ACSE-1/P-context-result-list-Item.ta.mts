@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,23 +13,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Result,
-  Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
-  acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Result_user_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-  user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Result_provider_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-  provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Result,
-  _encode_Result,
-} from '../ACSE-1/Result.ta.mjs';
-export {
-  Result,
-  Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
-  acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Result_user_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-  user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Result_provider_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-  provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Result,
   _encode_Result,
 } from '../ACSE-1/Result.ta.mjs';
@@ -93,38 +21,11 @@ import {
   _decode_Concrete_syntax_name,
   _encode_Concrete_syntax_name,
 } from '../ACSE-1/Concrete-syntax-name.ta.mjs';
-export {
-  Concrete_syntax_name,
-  _decode_Concrete_syntax_name,
-  _encode_Concrete_syntax_name,
-} from '../ACSE-1/Concrete-syntax-name.ta.mjs';
 import {
   P_context_result_list_Item_provider_reason,
-  P_context_result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-  reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_abstract_syntax_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-  abstract_syntax_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-  proposed_transfer_syntaxes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-  local_limit_on_DCS_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_P_context_result_list_Item_provider_reason,
   _encode_P_context_result_list_Item_provider_reason,
 } from '../ACSE-1/P-context-result-list-Item-provider-reason.ta.mjs';
-export {
-  P_context_result_list_Item_provider_reason,
-  P_context_result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-  reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_abstract_syntax_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-  abstract_syntax_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-  proposed_transfer_syntaxes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-  P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-  local_limit_on_DCS_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_P_context_result_list_Item_provider_reason,
-  _encode_P_context_result_list_Item_provider_reason,
-} from '../ACSE-1/P-context-result-list-Item-provider-reason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION P_context_result_list_Item */
 /**
  * @summary P_context_result_list_Item
@@ -319,9 +220,7 @@ export function _encode_P_context_result_list_Item(
 ) {
   if (!_cached_encoder_for_P_context_result_list_Item) {
     _cached_encoder_for_P_context_result_list_Item = function (
-      value: P_context_result_list_Item,
-      elGetter: $.ASN1Encoder<P_context_result_list_Item>
-    ): _Element {
+      value: P_context_result_list_Item    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

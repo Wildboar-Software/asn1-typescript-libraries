@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,64 +13,16 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ABRT_source,
-  ABRT_source_acse_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  acse_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-  ABRT_source_acse_service_provider /* IMPORTED_LONG_NAMED_INTEGER */,
-  acse_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_ABRT_source,
-  _encode_ABRT_source,
-} from '../ACSE-1/ABRT-source.ta.mjs';
-export {
-  ABRT_source,
-  ABRT_source_acse_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  acse_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-  ABRT_source_acse_service_provider /* IMPORTED_LONG_NAMED_INTEGER */,
-  acse_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ABRT_source,
   _encode_ABRT_source,
 } from '../ACSE-1/ABRT-source.ta.mjs';
 import {
   ABRT_diagnostic,
   _enum_for_ABRT_diagnostic,
-  ABRT_diagnostic_no_reason_given /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  no_reason_given /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_protocol_error /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  protocol_error /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_mechanism_name_not_recognized /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_mechanism_name_not_recognized /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_mechanism_name_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_mechanism_name_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_failure /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_ABRT_diagnostic,
-  _encode_ABRT_diagnostic,
-} from '../ACSE-1/ABRT-diagnostic.ta.mjs';
-export {
-  ABRT_diagnostic,
-  _enum_for_ABRT_diagnostic,
-  ABRT_diagnostic_no_reason_given /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  no_reason_given /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_protocol_error /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  protocol_error /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_mechanism_name_not_recognized /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_mechanism_name_not_recognized /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_mechanism_name_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_mechanism_name_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_failure /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ABRT_diagnostic_authentication_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  authentication_required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ABRT_diagnostic,
   _encode_ABRT_diagnostic,
 } from '../ACSE-1/ABRT-diagnostic.ta.mjs';
 import {
-  Association_data,
-  _decode_Association_data,
-  _encode_Association_data,
-} from '../ACSE-1/Association-data.ta.mjs';
-export {
   Association_data,
   _decode_Association_data,
   _encode_Association_data,
@@ -135,22 +32,11 @@ import {
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
 } from '../ACSE-1/ASO-qualifier.ta.mjs';
-export {
-  ASO_qualifier,
-  _decode_ASO_qualifier,
-  _encode_ASO_qualifier,
-} from '../ACSE-1/ASO-qualifier.ta.mjs';
 import {
   ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
 } from '../ACSE-1/ASOI-identifier.ta.mjs';
-export {
-  ASOI_identifier,
-  _decode_ASOI_identifier,
-  _encode_ASOI_identifier,
-} from '../ACSE-1/ASOI-identifier.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ABRT_apdu */
 /**
  * @summary ABRT_apdu
@@ -424,9 +310,7 @@ export function _encode_ABRT_apdu(
       4,
       () =>
         function (
-          value: ABRT_apdu,
-          elGetter: $.ASN1Encoder<ABRT_apdu>
-        ): _Element {
+          value: ABRT_apdu        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat(
