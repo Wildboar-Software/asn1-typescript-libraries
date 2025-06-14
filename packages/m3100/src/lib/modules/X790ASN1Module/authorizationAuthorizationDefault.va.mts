@@ -166,6 +166,7 @@ export {
     _decode_PersonReach,
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
+import { AuthorizationList_Item } from '../X790ASN1Module/AuthorizationList-Item.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION authorizationAuthorizationDefault */
 /**
@@ -181,7 +182,12 @@ export {
  * @constant
  */
 export const authorizationAuthorizationDefault: AuthorizationList = [
-    /* COULD_NOT_COMPILE_SEQUENCE_OR_SET_OF_VALUE 0 */
+    new AuthorizationList_Item(
+        RequestState_provided,
+        new Uint8ClampedArray([0, 0, 0, 0, 0, 0, 0, 0, 0]),
+        undefined,
+        undefined,
+    ),
 ];
 /* END_OF_SYMBOL_DEFINITION authorizationAuthorizationDefault */
 

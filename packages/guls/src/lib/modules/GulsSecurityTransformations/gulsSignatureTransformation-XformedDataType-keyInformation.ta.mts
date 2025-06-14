@@ -66,7 +66,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-import { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
 export { KEY_INFORMATION } from '../GulsSecurityTransformations/KEY-INFORMATION.oca.mjs';
 
 /* START_OF_SYMBOL_DEFINITION gulsSignatureTransformation_XformedDataType_keyInformation */
@@ -249,8 +248,10 @@ export function _encode_gulsSignatureTransformation_XformedDataType_keyInformati
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            ,
-            /* FIXME: kiClass COULD_NOT_COMPILE_TYPE_ENCODER */ /* REQUIRED   */ $._encodeAny(
+            ("local" in value.kiClass)
+              ? $._encodeInteger(value.kiClass.local, $.DER)
+              : $._encodeObjectIdentifier(value.kiClass.global, $.DER),
+            $._encodeAny(
               value.keyInfo,
               $.BER
             ),

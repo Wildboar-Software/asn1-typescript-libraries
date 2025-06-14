@@ -114,6 +114,7 @@ export {
     _decode_WeekMask_intervalsOfDay_Item,
     _encode_WeekMask_intervalsOfDay_Item,
 } from '../X790ASN1Module/WeekMask-intervalsOfDay-Item.ta.mjs';
+import { Time24 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/Time24.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION WeekMask */
 /**
@@ -199,9 +200,12 @@ export class WeekMask {
      * @static
      * @method
      */
-    public static get _default_value_for_intervalsOfDay() {
+    public static get _default_value_for_intervalsOfDay(): WeekMask_intervalsOfDay_Item[] {
         return [
-            /* COULD_NOT_COMPILE_SEQUENCE_OR_SET_OF_VALUE 0 */
+            new WeekMask_intervalsOfDay_Item(
+                new Time24(0, 0),
+                new Time24(23, 59),
+            ),
         ];
     }
 }

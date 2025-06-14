@@ -114,6 +114,11 @@ import {
 import {
     _root_component_type_list_1_spec_for_BilateralDomain,
 } from '../MTAAbstractService/BilateralDomain.ta.mjs';
+import {
+    BilateralDomain_domain,
+    _decode_BilateralDomain_domain,
+    _encode_BilateralDomain_domain,
+} from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';
 
 // Manually edited.
 
@@ -146,14 +151,7 @@ export class PerDomainBilateralInformation {
          * @public
          * @readonly
          */
-        readonly domain:
-            | { administration_domain_name: AdministrationDomainName }
-            | {
-                  private_domain: {
-                      administration_domain_name: OPTIONAL<AdministrationDomainName>;
-                      private_domain_identifier: OPTIONAL<PrivateDomainIdentifier>;
-                  };
-              } /* REPLICATED_COMPONENT */,
+        readonly domain: BilateralDomain_domain /* REPLICATED_COMPONENT */,
         /**
          * @summary `bilateral_information`.
          * @public
@@ -251,14 +249,7 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
         ): PerDomainBilateralInformation {
             /* START_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             let country_name!: CountryName;
-            let domain!:
-                | { administration_domain_name: AdministrationDomainName }
-                | {
-                      private_domain: {
-                          administration_domain_name: OPTIONAL<AdministrationDomainName>;
-                          private_domain_identifier: OPTIONAL<PrivateDomainIdentifier>;
-                      };
-                  };
+            let domain!: BilateralDomain_domain
             let bilateral_information!: _Element;
             /* END_OF_SEQUENCE_COMPONENT_DECLARATIONS */
             /* START_OF_CALLBACKS_MAP */
@@ -267,39 +258,7 @@ export function _decode_PerDomainBilateralInformation(el: _Element) {
                     country_name = _decode_CountryName(_el);
                 },
                 domain: (_el: _Element): void => {
-                    domain = $._decode_inextensible_choice<PerDomainBilateralInformation["domain"]>({
-                        'APPLICATION 2': [
-                            'administration_domain_name',
-                            _decode_AdministrationDomainName,
-                        ],
-                        'UNIVERSAL 16': [
-                            'private_domain',
-                            function (el: _Element): BilateralDomain_domain_private_domain {
-                                const sequence: _Element[] = el.sequence;
-                                if (sequence.length < 2) {
-                                    throw new _ConstructionError(
-                                        'private-domain contained only ' +
-                                            sequence.length.toString() +
-                                            ' elements.'
-                                    );
-                                }
-                                sequence[0].name = 'administration-domain-name';
-                                sequence[1].name = 'private-domain-identifier';
-                                let administration_domain_name!: AdministrationDomainName;
-                                let private_domain_identifier!: PrivateDomainIdentifier;
-                                administration_domain_name = $._decode_implicit<AdministrationDomainName>(
-                                    () => _decode_AdministrationDomainName
-                                )(sequence[0]);
-                                private_domain_identifier = $._decode_explicit<PrivateDomainIdentifier>(
-                                    () => _decode_PrivateDomainIdentifier
-                                )(sequence[1]);
-                                return new BilateralDomain_domain_private_domain(
-                                    administration_domain_name,
-                                    private_domain_identifier
-                                );
-                            },
-                        ],
-                    })(_el);
+                    domain = _decode_BilateralDomain_domain(_el);
                 },
                 'bilateral-information': (_el: _Element): void => {
                     bilateral_information = $._decodeAny(_el);
@@ -333,7 +292,7 @@ let _cached_encoder_for_PerDomainBilateralInformation: $.ASN1Encoder<PerDomainBi
 /**
  * @summary Encodes a(n) PerDomainBilateralInformation into an ASN.1 Element.
  * @function
- * @param {value} el The element being decoded.
+ * @param {PerDomainBilateralInformation} value The value being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PerDomainBilateralInformation, encoded as an ASN.1 Element.
  */
@@ -347,20 +306,20 @@ export function _encode_PerDomainBilateralInformation(
             elGetter: $.ASN1Encoder<PerDomainBilateralInformation>
         ): _Element {
             return $._encodeSequence(
-                ([] as (_Element | undefined)[])
-                    .concat([
-                        /* REQUIRED   */ _encode_CountryName(
-                            value.country_name,
-                            $.BER
-                        ),
-                        ,
-                        /* FIXME: domain COULD_NOT_COMPILE_TYPE_ENCODER */ /* REQUIRED   */ $._encodeAny(
-                            value.bilateral_information,
-                            $.BER
-                        ),
-                    ])
-                    .filter((c: _Element | undefined): c is _Element => !!c),
-                $.BER
+                [
+                    /* REQUIRED   */ _encode_CountryName(
+                        value.country_name,
+                        $.BER
+                    ),
+                    /* REQUIRED   */ _encode_BilateralDomain_domain(
+                        value.domain,
+                        $.BER
+                    ),
+                    /* REQUIRED   */ $._encodeAny(
+                        value.bilateral_information,
+                        $.BER
+                    ),
+                ], $.BER
             );
         };
     }

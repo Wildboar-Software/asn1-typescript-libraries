@@ -90,6 +90,7 @@ export {
     _decode_MonthMask,
     _encode_MonthMask,
 } from '../Schedulerev1-ASN1Module/MonthMask.ta.mjs';
+import { MonthMask_Item } from '../Schedulerev1-ASN1Module/MonthMask-Item.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION defaultSequenceOfMonths */
 /**
@@ -99,15 +100,26 @@ export {
  * ### ASN.1 Definition:
  *
  * ```asn1
- * defaultSequenceOfMonths SequenceOfMonths ::= {{{daysOfMonth defaultDaysOfMonth, timesOfDayWps
- *      intervalsOfDayWps:defaultIntervalsOfDayWps}}}
+ * defaultSequenceOfMonths SequenceOfMonths ::= {
+ *    {
+ *       {
+ *           daysOfMonth    defaultDaysOfMonth,
+ *           timesOfDayWps  intervalsOfDayWps:defaultIntervalsOfDayWps
+ *       }
+ *    }
+ * }
  * ```
  *
  * @constant
  */
 export const defaultSequenceOfMonths: SequenceOfMonths = [
     [
-        /* COULD_NOT_COMPILE_SEQUENCE_OR_SET_OF_VALUE 0 */
+        new MonthMask_Item(
+            defaultDaysOfMonth,
+            {
+                intervalsOfDayWps: defaultIntervalsOfDayWps,
+            },
+        ),
     ],
 ];
 /* END_OF_SYMBOL_DEFINITION defaultSequenceOfMonths */

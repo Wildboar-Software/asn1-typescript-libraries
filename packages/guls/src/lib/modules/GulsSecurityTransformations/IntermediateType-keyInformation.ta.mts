@@ -235,8 +235,10 @@ export function _encode_IntermediateType_keyInformation(
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([
-            ,
-            /* FIXME: kiClass COULD_NOT_COMPILE_TYPE_ENCODER */ /* REQUIRED   */ $._encodeAny(
+            ("local" in value.kiClass)
+              ? $._encodeInteger(value.kiClass.local, $.DER)
+              : $._encodeObjectIdentifier(value.kiClass.global, $.DER),
+            $._encodeAny(
               value.keyInfo,
               $.BER
             ),

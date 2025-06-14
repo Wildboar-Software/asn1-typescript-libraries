@@ -178,7 +178,7 @@ export class ArcControlRequest {
      * @static
      * @method
      */
-    public static get _default_value_for_time() {
+    public static get _default_value_for_time(): ArcTime {
         return { noAdjustment: null };
     }
     /**

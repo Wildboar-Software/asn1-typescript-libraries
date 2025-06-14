@@ -86,6 +86,7 @@ export {
     _decode_Time24Wps,
     _encode_Time24Wps,
 } from '../Schedulerev1-ASN1Module/Time24Wps.ta.mjs';
+import { IntervalsOfDayWps_Item } from '../Schedulerev1-ASN1Module/IntervalsOfDayWps-Item.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION defaultIntervalsOfDayWps */
 /**
@@ -104,7 +105,10 @@ export {
  * @constant
  */
 export const defaultIntervalsOfDayWps: IntervalsOfDayWps = [
-    /* COULD_NOT_COMPILE_SEQUENCE_OR_SET_OF_VALUE 0 */
+    new IntervalsOfDayWps_Item(
+        new Time24Wps(0, 0, 0, undefined, undefined, undefined, undefined),
+        new Time24Wps(0, 0, 0, undefined, undefined, undefined, undefined),
+    ),
 ];
 /* END_OF_SYMBOL_DEFINITION defaultIntervalsOfDayWps */
 

@@ -70,7 +70,7 @@ import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "
 export { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
 import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/Time24.ta.mjs";
 export { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/Time24.ta.mjs";
-
+import { IntervalsOfDay_Item } from "../Attribute-ASN1Module/IntervalsOfDay-Item.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION defaultIntervalsOfDay */
 /**
@@ -89,7 +89,12 @@ export { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/
  * @constant
  */
 export
-const defaultIntervalsOfDay: IntervalsOfDay = [ /* COULD_NOT_COMPILE_SEQUENCE_OR_SET_OF_VALUE 0 */ ];
+const defaultIntervalsOfDay: IntervalsOfDay = [
+    new IntervalsOfDay_Item(
+        new Time24(0, 0),
+        new Time24(23, 59),
+    ), 
+];
 /* END_OF_SYMBOL_DEFINITION defaultIntervalsOfDay */
 
 /* eslint-enable */
