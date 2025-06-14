@@ -192,7 +192,7 @@ let _cached_encoder_for_Scrypt_params: $.ASN1Encoder<Scrypt_params> | null = nul
  */
 export
 function _encode_Scrypt_params (value: Scrypt_params, elGetter: $.ASN1Encoder<Scrypt_params>) {
-    if (!_cached_encoder_for_Scrypt_params) { _cached_encoder_for_Scrypt_params = function (value: Scrypt_params, elGetter: $.ASN1Encoder<Scrypt_params>): _Element {
+    if (!_cached_encoder_for_Scrypt_params) { _cached_encoder_for_Scrypt_params = function (value: Scrypt_params): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.salt, $.BER),

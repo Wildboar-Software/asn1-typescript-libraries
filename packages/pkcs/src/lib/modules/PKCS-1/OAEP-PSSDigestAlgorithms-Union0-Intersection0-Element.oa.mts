@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { id_sha1 } from "../PKCS-1/id-sha1.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_sha1 } from "../PKCS-1/id-sha1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OAEP_PSSDigestAlgorithms_Union0_Intersection0_Element */
 /**
  * @summary OAEP_PSSDigestAlgorithms_Union0_Intersection0_Element

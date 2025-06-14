@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,13 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { CMIP_ATTRIBUTE } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.mjs";
-export { CMIP_ATTRIBUTE } from "@wildboar/cmip/src/lib/modules/CMIP-1/CMIP-ATTRIBUTE.oca.mjs";
-import { AttributeSet } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.mjs";
 import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs";
-export { AttributeSet } from "@wildboar/cmip/src/lib/modules/CMIP-1/AttributeSet.osa.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION AttributeValueChangeDefinition_Item */
 /**
  * @summary AttributeValueChangeDefinition_Item
@@ -232,7 +171,7 @@ let _cached_encoder_for_AttributeValueChangeDefinition_Item: $.ASN1Encoder<Attri
  */
 export
 function _encode_AttributeValueChangeDefinition_Item (value: AttributeValueChangeDefinition_Item, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition_Item>) {
-    if (!_cached_encoder_for_AttributeValueChangeDefinition_Item) { _cached_encoder_for_AttributeValueChangeDefinition_Item = function (value: AttributeValueChangeDefinition_Item, elGetter: $.ASN1Encoder<AttributeValueChangeDefinition_Item>): _Element {
+    if (!_cached_encoder_for_AttributeValueChangeDefinition_Item) { _cached_encoder_for_AttributeValueChangeDefinition_Item = function (value: AttributeValueChangeDefinition_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AttributeId(value.attributeId, $.BER),

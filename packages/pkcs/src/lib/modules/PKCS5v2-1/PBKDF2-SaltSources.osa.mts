@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_SaltSources */
 /**
  * @summary PBKDF2_SaltSources

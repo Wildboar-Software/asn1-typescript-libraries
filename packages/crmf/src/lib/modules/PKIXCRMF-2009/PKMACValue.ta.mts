@@ -168,9 +168,7 @@ export function _encode_PKMACValue(
 ) {
     if (!_cached_encoder_for_PKMACValue) {
         _cached_encoder_for_PKMACValue = function (
-            value: PKMACValue,
-            elGetter: $.ASN1Encoder<PKMACValue>
-        ): _Element {
+            value: PKMACValue        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

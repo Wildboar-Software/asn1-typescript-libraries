@@ -6,14 +6,6 @@ import {
     _encode_SigncryptedData,
 } from "../CMSSigncryption/SigncryptedData.ta.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { id_signcryptedData } from "../CMSSigncryption/id-signcryptedData.va.mjs";
-export {
-    SigncryptedData,
-    _decode_SigncryptedData,
-    _encode_SigncryptedData,
-} from "../CMSSigncryption/SigncryptedData.ta.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_SigncryptedData */
 /**
  * @summary ct_SigncryptedData

@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,19 +14,11 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfile/ComponentClass.ta.mjs";
-export { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfile/ComponentClass.ta.mjs";
 import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfile/PrivateEnterpriseNumber.ta.mjs";
-export { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfile/PrivateEnterpriseNumber.ta.mjs";
 import { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfile/ComponentAddress.ta.mjs";
-export { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfile/ComponentAddress.ta.mjs";
 import { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfile/CertificateIdentifier.ta.mjs";
-export { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfile/CertificateIdentifier.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
-export { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
-import { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-export { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-
-
+import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
 /* START_OF_SYMBOL_DEFINITION ComponentIdentifier */
 /**
  * @summary ComponentIdentifier
@@ -336,7 +275,7 @@ let _cached_encoder_for_ComponentIdentifier: $.ASN1Encoder<ComponentIdentifier> 
  */
 export
 function _encode_ComponentIdentifier (value: ComponentIdentifier, elGetter: $.ASN1Encoder<ComponentIdentifier>) {
-    if (!_cached_encoder_for_ComponentIdentifier) { _cached_encoder_for_ComponentIdentifier = function (value: ComponentIdentifier, elGetter: $.ASN1Encoder<ComponentIdentifier>): _Element {
+    if (!_cached_encoder_for_ComponentIdentifier) { _cached_encoder_for_ComponentIdentifier = function (value: ComponentIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ComponentClass(value.componentClass, $.BER),

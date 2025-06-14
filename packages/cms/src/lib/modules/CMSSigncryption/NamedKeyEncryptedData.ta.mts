@@ -21,24 +21,6 @@ import {
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NamedKeyEncryptedData */
 /**
  * @summary NamedKeyEncryptedData
@@ -256,9 +238,7 @@ export function _encode_NamedKeyEncryptedData(
 ) {
     if (!_cached_encoder_for_NamedKeyEncryptedData) {
         _cached_encoder_for_NamedKeyEncryptedData = function (
-            value: NamedKeyEncryptedData,
-            elGetter: $.ASN1Encoder<NamedKeyEncryptedData>
-        ): _Element {
+            value: NamedKeyEncryptedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

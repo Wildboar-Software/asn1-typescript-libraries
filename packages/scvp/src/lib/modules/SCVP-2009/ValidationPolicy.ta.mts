@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
   OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,51 +18,18 @@ import {
   _decode_ValidationPolRef,
   _encode_ValidationPolRef,
 } from '../SCVP-2009/ValidationPolRef.ta.mjs';
-export {
-  ValidationPolRef,
-  _decode_ValidationPolRef,
-  _encode_ValidationPolRef,
-} from '../SCVP-2009/ValidationPolRef.ta.mjs';
 import {
   ValidationAlg,
   _decode_ValidationAlg,
   _encode_ValidationAlg,
 } from '../SCVP-2009/ValidationAlg.ta.mjs';
-export {
-  ValidationAlg,
-  _decode_ValidationAlg,
-  _encode_ValidationAlg,
-} from '../SCVP-2009/ValidationAlg.ta.mjs';
 import {
-  TrustAnchors,
-  _decode_TrustAnchors,
-  _encode_TrustAnchors,
-} from '../SCVP-2009/TrustAnchors.ta.mjs';
-export {
   TrustAnchors,
   _decode_TrustAnchors,
   _encode_TrustAnchors,
 } from '../SCVP-2009/TrustAnchors.ta.mjs';
 import {
   KeyUsage,
-  KeyUsage_digitalSignature /* IMPORTED_LONG_NAMED_BIT */,
-  digitalSignature /* IMPORTED_SHORT_NAMED_BIT */,
-//   KeyUsage_nonRepudiation /* IMPORTED_LONG_NAMED_BIT */,
-//   nonRepudiation /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_keyEncipherment /* IMPORTED_LONG_NAMED_BIT */,
-  keyEncipherment /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_dataEncipherment /* IMPORTED_LONG_NAMED_BIT */,
-  dataEncipherment /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_keyAgreement /* IMPORTED_LONG_NAMED_BIT */,
-  keyAgreement /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_keyCertSign /* IMPORTED_LONG_NAMED_BIT */,
-  keyCertSign /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_cRLSign /* IMPORTED_LONG_NAMED_BIT */,
-  cRLSign /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_encipherOnly /* IMPORTED_LONG_NAMED_BIT */,
-  encipherOnly /* IMPORTED_SHORT_NAMED_BIT */,
-  KeyUsage_decipherOnly /* IMPORTED_LONG_NAMED_BIT */,
-  decipherOnly /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_KeyUsage,
   _encode_KeyUsage,
 } from '@wildboar/x500/src/lib/modules/CertificateExtensions/KeyUsage.ta.mjs';
@@ -478,9 +392,7 @@ export function _encode_ValidationPolicy(
 ) {
   if (!_cached_encoder_for_ValidationPolicy) {
     _cached_encoder_for_ValidationPolicy = function (
-      value: ValidationPolicy,
-      elGetter: $.ASN1Encoder<ValidationPolicy>
-    ): _Element {
+      value: ValidationPolicy    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

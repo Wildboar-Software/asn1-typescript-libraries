@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,23 +15,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
-    version_1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Protocol_version,
-    _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
-export {
-    Protocol_version,
-    Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
-    version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
 } from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
 import {
-    Responding_presentation_selector,
-    _decode_Responding_presentation_selector,
-    _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.mjs';
-export {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
@@ -95,119 +28,22 @@ import {
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
-export {
-    Presentation_context_definition_result_list,
-    _decode_Presentation_context_definition_result_list,
-    _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
 import {
     Presentation_requirements,
-    Presentation_requirements_context_management /* IMPORTED_LONG_NAMED_BIT */,
-    context_management /* IMPORTED_SHORT_NAMED_BIT */,
-    Presentation_requirements_restoration /* IMPORTED_LONG_NAMED_BIT */,
-    restoration /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Presentation_requirements,
-    _encode_Presentation_requirements,
-} from '../ISO8823-PRESENTATION/Presentation-requirements.ta.mjs';
-export {
-    Presentation_requirements,
-    Presentation_requirements_context_management /* IMPORTED_LONG_NAMED_BIT */,
-    context_management /* IMPORTED_SHORT_NAMED_BIT */,
-    Presentation_requirements_restoration /* IMPORTED_LONG_NAMED_BIT */,
-    restoration /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Presentation_requirements,
     _encode_Presentation_requirements,
 } from '../ISO8823-PRESENTATION/Presentation-requirements.ta.mjs';
 import {
     User_session_requirements,
-    User_session_requirements_half_duplex /* IMPORTED_LONG_NAMED_BIT */,
-    half_duplex /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_duplex /* IMPORTED_LONG_NAMED_BIT */,
-    duplex /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_expedited_data /* IMPORTED_LONG_NAMED_BIT */,
-    expedited_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_minor_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    minor_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_major_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    major_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_resynchronize /* IMPORTED_LONG_NAMED_BIT */,
-    resynchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_activity_management /* IMPORTED_LONG_NAMED_BIT */,
-    activity_management /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_negotiated_release /* IMPORTED_LONG_NAMED_BIT */,
-    negotiated_release /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_capability_data /* IMPORTED_LONG_NAMED_BIT */,
-    capability_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_exceptions /* IMPORTED_LONG_NAMED_BIT */,
-    exceptions /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_typed_data /* IMPORTED_LONG_NAMED_BIT */,
-    typed_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_symmetric_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    symmetric_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_data_separation /* IMPORTED_LONG_NAMED_BIT */,
-    data_separation /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_User_session_requirements,
-    _encode_User_session_requirements,
-} from '../ISO8823-PRESENTATION/User-session-requirements.ta.mjs';
-export {
-    User_session_requirements,
-    User_session_requirements_half_duplex /* IMPORTED_LONG_NAMED_BIT */,
-    half_duplex /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_duplex /* IMPORTED_LONG_NAMED_BIT */,
-    duplex /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_expedited_data /* IMPORTED_LONG_NAMED_BIT */,
-    expedited_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_minor_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    minor_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_major_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    major_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_resynchronize /* IMPORTED_LONG_NAMED_BIT */,
-    resynchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_activity_management /* IMPORTED_LONG_NAMED_BIT */,
-    activity_management /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_negotiated_release /* IMPORTED_LONG_NAMED_BIT */,
-    negotiated_release /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_capability_data /* IMPORTED_LONG_NAMED_BIT */,
-    capability_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_exceptions /* IMPORTED_LONG_NAMED_BIT */,
-    exceptions /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_typed_data /* IMPORTED_LONG_NAMED_BIT */,
-    typed_data /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_symmetric_synchronize /* IMPORTED_LONG_NAMED_BIT */,
-    symmetric_synchronize /* IMPORTED_SHORT_NAMED_BIT */,
-    User_session_requirements_data_separation /* IMPORTED_LONG_NAMED_BIT */,
-    data_separation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_User_session_requirements,
     _encode_User_session_requirements,
 } from '../ISO8823-PRESENTATION/User-session-requirements.ta.mjs';
 import {
     Protocol_options,
-    Protocol_options_nominated_context /* IMPORTED_LONG_NAMED_BIT */,
-    nominated_context /* IMPORTED_SHORT_NAMED_BIT */,
-    Protocol_options_short_encoding /* IMPORTED_LONG_NAMED_BIT */,
-    short_encoding /* IMPORTED_SHORT_NAMED_BIT */,
-    Protocol_options_packed_encoding_rules /* IMPORTED_LONG_NAMED_BIT */,
-    packed_encoding_rules /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Protocol_options,
-    _encode_Protocol_options,
-} from '../ISO8823-PRESENTATION/Protocol-options.ta.mjs';
-export {
-    Protocol_options,
-    Protocol_options_nominated_context /* IMPORTED_LONG_NAMED_BIT */,
-    nominated_context /* IMPORTED_SHORT_NAMED_BIT */,
-    Protocol_options_short_encoding /* IMPORTED_LONG_NAMED_BIT */,
-    short_encoding /* IMPORTED_SHORT_NAMED_BIT */,
-    Protocol_options_packed_encoding_rules /* IMPORTED_LONG_NAMED_BIT */,
-    packed_encoding_rules /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_options,
     _encode_Protocol_options,
 } from '../ISO8823-PRESENTATION/Protocol-options.ta.mjs';
 import {
-    Presentation_context_identifier,
-    _decode_Presentation_context_identifier,
-    _encode_Presentation_context_identifier,
-} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.mjs';
-export {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
@@ -217,12 +53,6 @@ import {
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-export {
-    User_data,
-    _decode_User_data,
-    _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CPA_PPDU_normal_mode_parameters */
 /**
  * @summary CPA_PPDU_normal_mode_parameters
@@ -544,9 +374,7 @@ export function _encode_CPA_PPDU_normal_mode_parameters(
 ) {
     if (!_cached_encoder_for_CPA_PPDU_normal_mode_parameters) {
         _cached_encoder_for_CPA_PPDU_normal_mode_parameters = function (
-            value: CPA_PPDU_normal_mode_parameters,
-            elGetter: $.ASN1Encoder<CPA_PPDU_normal_mode_parameters>
-        ): _Element {
+            value: CPA_PPDU_normal_mode_parameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

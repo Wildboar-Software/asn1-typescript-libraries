@@ -215,7 +215,7 @@ let _cached_encoder_for_TargetCert: $.ASN1Encoder<TargetCert> | null = null;
  */
 export function _encode_TargetCert(
     value: TargetCert,
-    elGetter: $.ASN1Encoder<TargetCert>
+    _elGetter: $.ASN1Encoder<TargetCert>
 ) {
     if (!_cached_encoder_for_TargetCert) {
         _cached_encoder_for_TargetCert = function (
@@ -244,7 +244,7 @@ export function _encode_TargetCert(
             );
         };
     }
-    return _cached_encoder_for_TargetCert(value, elGetter);
+    return _cached_encoder_for_TargetCert(value, _elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_TargetCert */

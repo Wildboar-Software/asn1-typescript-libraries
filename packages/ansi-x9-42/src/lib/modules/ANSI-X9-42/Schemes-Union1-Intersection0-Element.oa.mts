@@ -6,14 +6,6 @@ import {
     _decode_SchemeParameters,
     _encode_SchemeParameters,
 } from "../ANSI-X9-42/SchemeParameters.ta.mjs";
-export { dhEphem } from "../ANSI-X9-42/dhEphem.va.mjs";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
-export {
-    SchemeParameters,
-    _decode_SchemeParameters,
-    _encode_SchemeParameters,
-} from "../ANSI-X9-42/SchemeParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Schemes_Union1_Intersection0_Element */
 /**
  * @summary Schemes_Union1_Intersection0_Element

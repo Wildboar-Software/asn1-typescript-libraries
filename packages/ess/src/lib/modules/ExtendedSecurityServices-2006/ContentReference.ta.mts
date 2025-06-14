@@ -16,17 +16,6 @@ import {
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
-export {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentReference */
 /**
  * @summary ContentReference
@@ -210,9 +199,7 @@ export function _encode_ContentReference(
 ) {
     if (!_cached_encoder_for_ContentReference) {
         _cached_encoder_for_ContentReference = function (
-            value: ContentReference,
-            elGetter: $.ASN1Encoder<ContentReference>
-        ): _Element {
+            value: ContentReference        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

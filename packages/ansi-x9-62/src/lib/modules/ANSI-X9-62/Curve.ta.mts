@@ -11,12 +11,6 @@ import {
     _decode_FieldElement,
     _encode_FieldElement,
 } from "../ANSI-X9-62/FieldElement.ta.mjs";
-export {
-    FieldElement,
-    _decode_FieldElement,
-    _encode_FieldElement,
-} from "../ANSI-X9-62/FieldElement.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Curve */
 /**
  * @summary Curve
@@ -196,9 +190,7 @@ let _cached_encoder_for_Curve: $.ASN1Encoder<Curve> | null = null;
 export function _encode_Curve(value: Curve, elGetter: $.ASN1Encoder<Curve>) {
     if (!_cached_encoder_for_Curve) {
         _cached_encoder_for_Curve = function (
-            value: Curve,
-            elGetter: $.ASN1Encoder<Curve>
-        ): _Element {
+            value: Curve        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

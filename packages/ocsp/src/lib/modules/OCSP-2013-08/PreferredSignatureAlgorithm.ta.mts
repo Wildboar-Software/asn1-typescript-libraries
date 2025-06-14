@@ -185,9 +185,7 @@ export function _encode_PreferredSignatureAlgorithm(
 ) {
     if (!_cached_encoder_for_PreferredSignatureAlgorithm) {
         _cached_encoder_for_PreferredSignatureAlgorithm = function (
-            value: PreferredSignatureAlgorithm,
-            elGetter: $.ASN1Encoder<PreferredSignatureAlgorithm>
-        ): _Element {
+            value: PreferredSignatureAlgorithm        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

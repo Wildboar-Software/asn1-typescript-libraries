@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignatureAlgs */
 /**
  * @summary SignatureAlgs

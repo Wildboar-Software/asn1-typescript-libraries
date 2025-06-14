@@ -7,14 +7,6 @@ import {
     _decode_SecretBag,
     _encode_SecretBag,
 } from "../PKCS-12/SecretBag.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export {
-    SecretBag,
-    _decode_SecretBag,
-    _encode_SecretBag,
-} from "../PKCS-12/SecretBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION secretBag */
 /**
  * @summary secretBag

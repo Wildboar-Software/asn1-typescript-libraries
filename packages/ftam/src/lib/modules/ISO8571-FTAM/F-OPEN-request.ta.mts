@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
   TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,39 +17,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   F_OPEN_request_processing_mode,
   F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,
-  f_read /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_insert /* IMPORTED_LONG_NAMED_BIT */,
-  f_insert /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_replace /* IMPORTED_LONG_NAMED_BIT */,
-  f_replace /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_extend /* IMPORTED_LONG_NAMED_BIT */,
-  f_extend /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_erase /* IMPORTED_LONG_NAMED_BIT */,
-  f_erase /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_F_OPEN_request_processing_mode,
-  _encode_F_OPEN_request_processing_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta.mjs';
-export {
-  F_OPEN_request_processing_mode,
-  F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,
-  f_read /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_insert /* IMPORTED_LONG_NAMED_BIT */,
-  f_insert /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_replace /* IMPORTED_LONG_NAMED_BIT */,
-  f_replace /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_extend /* IMPORTED_LONG_NAMED_BIT */,
-  f_extend /* IMPORTED_SHORT_NAMED_BIT */,
-  F_OPEN_request_processing_mode_f_erase /* IMPORTED_LONG_NAMED_BIT */,
-  f_erase /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_F_OPEN_request_processing_mode,
   _encode_F_OPEN_request_processing_mode,
 } from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta.mjs';
 import {
-  F_OPEN_request_contents_type,
-  _decode_F_OPEN_request_contents_type,
-  _encode_F_OPEN_request_contents_type,
-} from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta.mjs';
-export {
   F_OPEN_request_contents_type,
   _decode_F_OPEN_request_contents_type,
   _encode_F_OPEN_request_contents_type,
@@ -111,17 +30,7 @@ import {
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
-export {
-  Concurrency_Control,
-  _decode_Concurrency_Control,
-  _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
-  _decode_Shared_ASE_Information,
-  _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
@@ -131,39 +40,13 @@ import {
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
 } from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
-export {
-  Activity_Identifier,
-  _decode_Activity_Identifier,
-  _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
 import {
   F_OPEN_request_recovery_mode,
-  F_OPEN_request_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
   none /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_request_recovery_mode_at_start_of_file /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_start_of_file /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_request_recovery_mode_at_any_active_Checkpoint /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_F_OPEN_request_recovery_mode,
-  _encode_F_OPEN_request_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.mjs';
-export {
-  F_OPEN_request_recovery_mode,
-  F_OPEN_request_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
-  none /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_request_recovery_mode_at_start_of_file /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_start_of_file /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_request_recovery_mode_at_any_active_Checkpoint /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_request_recovery_mode,
   _encode_F_OPEN_request_recovery_mode,
 } from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.mjs';
 import {
-  Abstract_Syntax_Name,
-  _decode_Abstract_Syntax_Name,
-  _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
-export {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
@@ -173,12 +56,6 @@ import {
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
 } from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
-export {
-  Degree_Of_Overlap,
-  _decode_Degree_Of_Overlap,
-  _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_OPEN_request */
 /**
  * @summary F_OPEN_request
@@ -593,9 +470,7 @@ export function _encode_F_OPEN_request(
 ) {
   if (!_cached_encoder_for_F_OPEN_request) {
     _cached_encoder_for_F_OPEN_request = function (
-      value: F_OPEN_request,
-      elGetter: $.ASN1Encoder<F_OPEN_request>
-    ): _Element {
+      value: F_OPEN_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

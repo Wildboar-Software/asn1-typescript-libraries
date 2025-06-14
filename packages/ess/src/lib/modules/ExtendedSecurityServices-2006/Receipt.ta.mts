@@ -21,24 +21,6 @@ import {
     _decode_ESSVersion,
     _encode_ESSVersion,
 } from "../ExtendedSecurityServices-2006/ESSVersion.ta.mjs";
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
-export {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
-export {
-    ESSVersion,
-    ESSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ESSVersion,
-    _encode_ESSVersion,
-} from "../ExtendedSecurityServices-2006/ESSVersion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Receipt */
 /**
  * @summary Receipt
@@ -239,9 +221,7 @@ export function _encode_Receipt(
 ) {
     if (!_cached_encoder_for_Receipt) {
         _cached_encoder_for_Receipt = function (
-            value: Receipt,
-            elGetter: $.ASN1Encoder<Receipt>
-        ): _Element {
+            value: Receipt        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

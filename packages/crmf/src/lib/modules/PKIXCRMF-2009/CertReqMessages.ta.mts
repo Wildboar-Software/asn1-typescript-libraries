@@ -6,12 +6,6 @@ import {
     _decode_CertReqMsg,
     _encode_CertReqMsg,
 } from "../PKIXCRMF-2009/CertReqMsg.ta.mjs";
-export {
-    CertReqMsg,
-    _decode_CertReqMsg,
-    _encode_CertReqMsg,
-} from "../PKIXCRMF-2009/CertReqMsg.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReqMessages */
 /**
  * @summary CertReqMessages

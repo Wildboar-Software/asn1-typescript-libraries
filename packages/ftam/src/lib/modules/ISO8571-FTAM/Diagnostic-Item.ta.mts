@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
   GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,61 +15,14 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Diagnostic_Item_diagnostic_type,
-  Diagnostic_Item_diagnostic_type_informative /* IMPORTED_LONG_NAMED_INTEGER */,
-  informative /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Diagnostic_Item_diagnostic_type_transient /* IMPORTED_LONG_NAMED_INTEGER */,
-  transient /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Diagnostic_Item_diagnostic_type_permanent /* IMPORTED_LONG_NAMED_INTEGER */,
-  permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Diagnostic_Item_diagnostic_type,
-  _encode_Diagnostic_Item_diagnostic_type,
-} from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.mjs';
-export {
-  Diagnostic_Item_diagnostic_type,
-  Diagnostic_Item_diagnostic_type_informative /* IMPORTED_LONG_NAMED_INTEGER */,
-  informative /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Diagnostic_Item_diagnostic_type_transient /* IMPORTED_LONG_NAMED_INTEGER */,
-  transient /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Diagnostic_Item_diagnostic_type_permanent /* IMPORTED_LONG_NAMED_INTEGER */,
-  permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Diagnostic_Item_diagnostic_type,
   _encode_Diagnostic_Item_diagnostic_type,
 } from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.mjs';
 import {
   Entity_Reference,
-  Entity_Reference_no_categorization_possible /* IMPORTED_LONG_NAMED_INTEGER */,
-  no_categorization_possible /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_initiating_file_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  initiating_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_initiating_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  initiating_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_service_supporting_the_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  service_supporting_the_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_responding_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  responding_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_responding_file_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  responding_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Entity_Reference,
   _encode_Entity_Reference,
 } from '../ISO8571-FTAM/Entity-Reference.ta.mjs';
-export {
-  Entity_Reference,
-  Entity_Reference_no_categorization_possible /* IMPORTED_LONG_NAMED_INTEGER */,
-  no_categorization_possible /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_initiating_file_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  initiating_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_initiating_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  initiating_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_service_supporting_the_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  service_supporting_the_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_responding_file_protocol_machine /* IMPORTED_LONG_NAMED_INTEGER */,
-  responding_file_protocol_machine /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Entity_Reference_responding_file_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-  responding_file_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Entity_Reference,
-  _encode_Entity_Reference,
-} from '../ISO8571-FTAM/Entity-Reference.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Diagnostic_Item */
 /**
  * @summary Diagnostic_Item
@@ -380,9 +280,7 @@ export function _encode_Diagnostic_Item(
 ) {
   if (!_cached_encoder_for_Diagnostic_Item) {
     _cached_encoder_for_Diagnostic_Item = function (
-      value: Diagnostic_Item,
-      elGetter: $.ASN1Encoder<Diagnostic_Item>
-    ): _Element {
+      value: Diagnostic_Item    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

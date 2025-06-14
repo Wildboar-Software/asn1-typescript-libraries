@@ -9,33 +9,6 @@ import {
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta.mjs";
-export { KEY_DERIVATION } from "../AlgorithmInformation-2009/KEY-DERIVATION.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { id_PBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/id-PBKDF2.va.mjs";
-export {
-    PBKDF2_params,
-    _decode_PBKDF2_params,
-    _encode_PBKDF2_params,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION kda_PBKDF2 */
 /**
  * @summary kda_PBKDF2

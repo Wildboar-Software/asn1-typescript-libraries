@@ -15,17 +15,6 @@ import {
     _decode_KeyAgreeRecipientIdentifier,
     _encode_KeyAgreeRecipientIdentifier,
 } from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientIdentifier.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
-export {
-    KeyAgreeRecipientIdentifier,
-    _decode_KeyAgreeRecipientIdentifier,
-    _encode_KeyAgreeRecipientIdentifier,
-} from "../CryptographicMessageSyntax-2010/KeyAgreeRecipientIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientEncryptedKey */
 /**
  * @summary RecipientEncryptedKey
@@ -177,9 +166,7 @@ export function _encode_RecipientEncryptedKey(
 ) {
     if (!_cached_encoder_for_RecipientEncryptedKey) {
         _cached_encoder_for_RecipientEncryptedKey = function (
-            value: RecipientEncryptedKey,
-            elGetter: $.ASN1Encoder<RecipientEncryptedKey>
-        ): _Element {
+            value: RecipientEncryptedKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

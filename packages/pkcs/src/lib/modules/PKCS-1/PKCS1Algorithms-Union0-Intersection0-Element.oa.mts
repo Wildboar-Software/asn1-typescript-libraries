@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { rsaEncryption } from "../PKCS-1/rsaEncryption.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { rsaEncryption } from "../PKCS-1/rsaEncryption.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union0_Intersection0_Element */
 /**
  * @summary PKCS1Algorithms_Union0_Intersection0_Element

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,9 +12,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateIdentifier */
 /**
  * @summary AttributeCertificateIdentifier
@@ -216,7 +158,7 @@ let _cached_encoder_for_AttributeCertificateIdentifier: $.ASN1Encoder<AttributeC
  */
 export
 function _encode_AttributeCertificateIdentifier (value: AttributeCertificateIdentifier, elGetter: $.ASN1Encoder<AttributeCertificateIdentifier>) {
-    if (!_cached_encoder_for_AttributeCertificateIdentifier) { _cached_encoder_for_AttributeCertificateIdentifier = function (value: AttributeCertificateIdentifier, elGetter: $.ASN1Encoder<AttributeCertificateIdentifier>): _Element {
+    if (!_cached_encoder_for_AttributeCertificateIdentifier) { _cached_encoder_for_AttributeCertificateIdentifier = function (value: AttributeCertificateIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.BER),

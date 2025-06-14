@@ -181,9 +181,7 @@ export function _decode_EDIPartyName(el: _Element) {
  * @returns {_Element} The EDIPartyName, encoded as an ASN.1 Element.
  */
 export function _encode_EDIPartyName(
-    value: EDIPartyName,
-    elGetter: $.ASN1Encoder<EDIPartyName>
-) {
+    value: EDIPartyName) {
     const components: _Element[] = [
         /* IF_ABSENT  */ value.nameAssigner === undefined
             ? undefined

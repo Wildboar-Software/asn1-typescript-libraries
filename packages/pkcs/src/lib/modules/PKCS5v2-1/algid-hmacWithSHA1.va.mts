@@ -2,14 +2,6 @@
 import * as asn1 from "asn1-ts";
 import { AlgorithmIdentifier } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
 import { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-export { id_hmacWithSHA1 } from "../PKCS5v2-1/id-hmacWithSHA1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION algid_hmacWithSHA1 */
 /**
  * @summary algid_hmacWithSHA1

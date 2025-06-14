@@ -291,9 +291,7 @@ export function _encode_RecordInfo(
 ) {
     if (!_cached_encoder_for_RecordInfo) {
         _cached_encoder_for_RecordInfo = function (
-            value: RecordInfo,
-            elGetter: $.ASN1Encoder<RecordInfo>
-        ): _Element {
+            value: RecordInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

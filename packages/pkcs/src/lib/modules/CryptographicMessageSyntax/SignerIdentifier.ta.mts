@@ -11,17 +11,6 @@ import {
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";
-export {
-    IssuerAndSerialNumber,
-    _decode_IssuerAndSerialNumber,
-    _encode_IssuerAndSerialNumber,
-} from "../CryptographicMessageSyntax/IssuerAndSerialNumber.ta.mjs";
-export {
-    SubjectKeyIdentifier,
-    _decode_SubjectKeyIdentifier,
-    _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignerIdentifier */
 /**
  * @summary SignerIdentifier

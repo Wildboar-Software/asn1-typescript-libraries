@@ -6,12 +6,6 @@ import {
     _decode_RC2ParameterVersion,
     _encode_RC2ParameterVersion,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/RC2ParameterVersion.ta.mjs";
-export {
-    RC2ParameterVersion,
-    _decode_RC2ParameterVersion,
-    _encode_RC2ParameterVersion,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/RC2ParameterVersion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RC2wrapParameter */
 /**
  * @summary RC2wrapParameter

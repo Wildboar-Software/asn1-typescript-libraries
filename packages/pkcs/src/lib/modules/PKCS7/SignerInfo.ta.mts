@@ -31,33 +31,6 @@ import {
     _encode_SignerIdentifier,
 } from "../PKCS7/SignerIdentifier.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../PKCS7/Attributes.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    DigestEncryptionAlgorithmIdentifier,
-    _decode_DigestEncryptionAlgorithmIdentifier,
-    _encode_DigestEncryptionAlgorithmIdentifier,
-} from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    EncryptedDigest,
-    _decode_EncryptedDigest,
-    _encode_EncryptedDigest,
-} from "../PKCS7/EncryptedDigest.ta.mjs";
-export {
-    SignerIdentifier,
-    _decode_SignerIdentifier,
-    _encode_SignerIdentifier,
-} from "../PKCS7/SignerIdentifier.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignerInfo */
 /**
  * @summary SignerInfo
@@ -334,9 +307,7 @@ export function _encode_SignerInfo(
 ) {
     if (!_cached_encoder_for_SignerInfo) {
         _cached_encoder_for_SignerInfo = function (
-            value: SignerInfo,
-            elGetter: $.ASN1Encoder<SignerInfo>
-        ): _Element {
+            value: SignerInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

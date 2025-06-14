@@ -210,9 +210,7 @@ export function _encode_OOBCertHash(
 ) {
     if (!_cached_encoder_for_OOBCertHash) {
         _cached_encoder_for_OOBCertHash = function (
-            value: OOBCertHash,
-            elGetter: $.ASN1Encoder<OOBCertHash>
-        ): _Element {
+            value: OOBCertHash        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

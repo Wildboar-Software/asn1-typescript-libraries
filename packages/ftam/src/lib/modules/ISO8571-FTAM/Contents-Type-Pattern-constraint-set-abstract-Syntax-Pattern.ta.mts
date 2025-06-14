@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,12 +16,6 @@ import {
   _decode_Object_Identifier_Pattern,
   _encode_Object_Identifier_Pattern,
 } from '../ISO8571-FTAM/Object-Identifier-Pattern.ta.mjs';
-export {
-  Object_Identifier_Pattern,
-  _decode_Object_Identifier_Pattern,
-  _encode_Object_Identifier_Pattern,
-} from '../ISO8571-FTAM/Object-Identifier-Pattern.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern */
 /**
  * @summary Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
@@ -260,9 +199,7 @@ export function _encode_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pat
     !_cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern
   ) {
     _cached_encoder_for_Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern = function (
-      value: Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern,
-      elGetter: $.ASN1Encoder<Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern>
-    ): _Element {
+      value: Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

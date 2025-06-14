@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_F_READ_request,
   _encode_F_READ_request,
 } from '../ISO8571-FTAM/F-READ-request.ta.mjs';
-export {
-  F_READ_request,
-  _decode_F_READ_request,
-  _encode_F_READ_request,
-} from '../ISO8571-FTAM/F-READ-request.ta.mjs';
 import {
-  F_WRITE_request,
-  _decode_F_WRITE_request,
-  _encode_F_WRITE_request,
-} from '../ISO8571-FTAM/F-WRITE-request.ta.mjs';
-export {
   F_WRITE_request,
   _decode_F_WRITE_request,
   _encode_F_WRITE_request,
@@ -91,17 +25,7 @@ import {
   _decode_F_DATA_END_request,
   _encode_F_DATA_END_request,
 } from '../ISO8571-FTAM/F-DATA-END-request.ta.mjs';
-export {
-  F_DATA_END_request,
-  _decode_F_DATA_END_request,
-  _encode_F_DATA_END_request,
-} from '../ISO8571-FTAM/F-DATA-END-request.ta.mjs';
 import {
-  F_TRANSFER_END_request,
-  _decode_F_TRANSFER_END_request,
-  _encode_F_TRANSFER_END_request,
-} from '../ISO8571-FTAM/F-TRANSFER-END-request.ta.mjs';
-export {
   F_TRANSFER_END_request,
   _decode_F_TRANSFER_END_request,
   _encode_F_TRANSFER_END_request,
@@ -111,17 +35,7 @@ import {
   _decode_F_TRANSFER_END_response,
   _encode_F_TRANSFER_END_response,
 } from '../ISO8571-FTAM/F-TRANSFER-END-response.ta.mjs';
-export {
-  F_TRANSFER_END_response,
-  _decode_F_TRANSFER_END_response,
-  _encode_F_TRANSFER_END_response,
-} from '../ISO8571-FTAM/F-TRANSFER-END-response.ta.mjs';
 import {
-  F_CANCEL_request,
-  _decode_F_CANCEL_request,
-  _encode_F_CANCEL_request,
-} from '../ISO8571-FTAM/F-CANCEL-request.ta.mjs';
-export {
   F_CANCEL_request,
   _decode_F_CANCEL_request,
   _encode_F_CANCEL_request,
@@ -131,17 +45,7 @@ import {
   _decode_F_CANCEL_response,
   _encode_F_CANCEL_response,
 } from '../ISO8571-FTAM/F-CANCEL-response.ta.mjs';
-export {
-  F_CANCEL_response,
-  _decode_F_CANCEL_response,
-  _encode_F_CANCEL_response,
-} from '../ISO8571-FTAM/F-CANCEL-response.ta.mjs';
 import {
-  F_RESTART_request,
-  _decode_F_RESTART_request,
-  _encode_F_RESTART_request,
-} from '../ISO8571-FTAM/F-RESTART-request.ta.mjs';
-export {
   F_RESTART_request,
   _decode_F_RESTART_request,
   _encode_F_RESTART_request,
@@ -151,12 +55,6 @@ import {
   _decode_F_RESTART_response,
   _encode_F_RESTART_response,
 } from '../ISO8571-FTAM/F-RESTART-response.ta.mjs';
-export {
-  F_RESTART_response,
-  _decode_F_RESTART_response,
-  _encode_F_RESTART_response,
-} from '../ISO8571-FTAM/F-RESTART-response.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Bulk_Data_PDU */
 /**
  * @summary Bulk_Data_PDU

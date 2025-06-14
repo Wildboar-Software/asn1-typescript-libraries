@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_F_INITIALIZE_request,
   _encode_F_INITIALIZE_request,
 } from '../ISO8571-FTAM/F-INITIALIZE-request.ta.mjs';
-export {
-  F_INITIALIZE_request,
-  _decode_F_INITIALIZE_request,
-  _encode_F_INITIALIZE_request,
-} from '../ISO8571-FTAM/F-INITIALIZE-request.ta.mjs';
 import {
-  F_INITIALIZE_response,
-  _decode_F_INITIALIZE_response,
-  _encode_F_INITIALIZE_response,
-} from '../ISO8571-FTAM/F-INITIALIZE-response.ta.mjs';
-export {
   F_INITIALIZE_response,
   _decode_F_INITIALIZE_response,
   _encode_F_INITIALIZE_response,
@@ -91,17 +25,7 @@ import {
   _decode_F_TERMINATE_request,
   _encode_F_TERMINATE_request,
 } from '../ISO8571-FTAM/F-TERMINATE-request.ta.mjs';
-export {
-  F_TERMINATE_request,
-  _decode_F_TERMINATE_request,
-  _encode_F_TERMINATE_request,
-} from '../ISO8571-FTAM/F-TERMINATE-request.ta.mjs';
 import {
-  F_TERMINATE_response,
-  _decode_F_TERMINATE_response,
-  _encode_F_TERMINATE_response,
-} from '../ISO8571-FTAM/F-TERMINATE-response.ta.mjs';
-export {
   F_TERMINATE_response,
   _decode_F_TERMINATE_response,
   _encode_F_TERMINATE_response,
@@ -111,22 +35,11 @@ import {
   _decode_F_U_ABORT_request,
   _encode_F_U_ABORT_request,
 } from '../ISO8571-FTAM/F-U-ABORT-request.ta.mjs';
-export {
-  F_U_ABORT_request,
-  _decode_F_U_ABORT_request,
-  _encode_F_U_ABORT_request,
-} from '../ISO8571-FTAM/F-U-ABORT-request.ta.mjs';
 import {
   F_P_ABORT_request,
   _decode_F_P_ABORT_request,
   _encode_F_P_ABORT_request,
 } from '../ISO8571-FTAM/F-P-ABORT-request.ta.mjs';
-export {
-  F_P_ABORT_request,
-  _decode_F_P_ABORT_request,
-  _encode_F_P_ABORT_request,
-} from '../ISO8571-FTAM/F-P-ABORT-request.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FTAM_Regime_PDU */
 /**
  * @summary FTAM_Regime_PDU

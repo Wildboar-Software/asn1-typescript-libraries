@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +16,11 @@ import {
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
 } from '../Connectionless-ACSE-1/Abstract-syntax-name.ta.mjs';
-export {
-    Abstract_syntax_name,
-    _decode_Abstract_syntax_name,
-    _encode_Abstract_syntax_name,
-} from '../Connectionless-ACSE-1/Abstract-syntax-name.ta.mjs';
 import {
     Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../Connectionless-ACSE-1/Transfer-syntax-name.ta.mjs';
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from '../Connectionless-ACSE-1/Transfer-syntax-name.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Default_P_context */
 /**
  * @summary Default_P_context
@@ -260,9 +194,7 @@ export function _encode_Default_P_context(
 ) {
     if (!_cached_encoder_for_Default_P_context) {
         _cached_encoder_for_Default_P_context = function (
-            value: Default_P_context,
-            elGetter: $.ASN1Encoder<Default_P_context>
-        ): _Element {
+            value: Default_P_context        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

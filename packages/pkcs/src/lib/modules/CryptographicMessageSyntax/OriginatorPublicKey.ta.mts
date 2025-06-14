@@ -170,9 +170,7 @@ export function _encode_OriginatorPublicKey(
 ) {
     if (!_cached_encoder_for_OriginatorPublicKey) {
         _cached_encoder_for_OriginatorPublicKey = function (
-            value: OriginatorPublicKey,
-            elGetter: $.ASN1Encoder<OriginatorPublicKey>
-        ): _Element {
+            value: OriginatorPublicKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,12 +1,6 @@
 /* eslint-disable */
 import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.mjs";
 import { PBKDF2_PRFsAlgorithmIdentifier } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";
-export { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.mjs";
-export {
-    PBKDF2_PRFsAlgorithmIdentifier,
-    _decode_PBKDF2_PRFsAlgorithmIdentifier,
-    _encode_PBKDF2_PRFsAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";
 import {
     AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";

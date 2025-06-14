@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_ATOMIC_ACTION_IDENTIFIER,
   _encode_ATOMIC_ACTION_IDENTIFIER,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.mjs';
-export {
-  ATOMIC_ACTION_IDENTIFIER,
-  _decode_ATOMIC_ACTION_IDENTIFIER,
-  _encode_ATOMIC_ACTION_IDENTIFIER,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.mjs';
 import {
-  BRANCH_IDENTIFIER,
-  _decode_BRANCH_IDENTIFIER,
-  _encode_BRANCH_IDENTIFIER,
-} from '../CCR/BRANCH-IDENTIFIER.ta.mjs';
-export {
   BRANCH_IDENTIFIER,
   _decode_BRANCH_IDENTIFIER,
   _encode_BRANCH_IDENTIFIER,
@@ -89,32 +25,6 @@ export {
 import {
   C_RECOVER_RI_recovery_state,
   _enum_for_C_RECOVER_RI_recovery_state,
-  C_RECOVER_RI_recovery_state_commit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  commit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_ready /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  ready /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_done /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  done /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_retry_later /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  retry_later /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_C_RECOVER_RI_recovery_state,
-  _encode_C_RECOVER_RI_recovery_state,
-} from '../CCR/C-RECOVER-RI-recovery-state.ta.mjs';
-export {
-  C_RECOVER_RI_recovery_state,
-  _enum_for_C_RECOVER_RI_recovery_state,
-  C_RECOVER_RI_recovery_state_commit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  commit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_ready /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  ready /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_done /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  done /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_RECOVER_RI_recovery_state_retry_later /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  retry_later /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_RECOVER_RI_recovery_state,
   _encode_C_RECOVER_RI_recovery_state,
 } from '../CCR/C-RECOVER-RI-recovery-state.ta.mjs';
@@ -123,12 +33,6 @@ import {
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
-export {
-  User_data,
-  _decode_User_data,
-  _encode_User_data,
-} from '../CCR/User-data.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION C_RECOVER_RI */
 /**
  * @summary C_RECOVER_RI
@@ -410,9 +314,7 @@ export function _encode_C_RECOVER_RI(
       9,
       () =>
         function (
-          value: C_RECOVER_RI,
-          elGetter: $.ASN1Encoder<C_RECOVER_RI>
-        ): _Element {
+          value: C_RECOVER_RI        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat(

@@ -16,19 +16,6 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";
-export {
-    ContentEncryptionAlgorithmIdentifier,
-    _decode_ContentEncryptionAlgorithmIdentifier,
-    _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    ENCRYPTED,
-    _get_decoder_for_ENCRYPTED,
-    _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta.mjs";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**
  * @summary EncryptedContentInfo
@@ -227,9 +214,7 @@ export function _encode_EncryptedContentInfo(
 ) {
     if (!_cached_encoder_for_EncryptedContentInfo) {
         _cached_encoder_for_EncryptedContentInfo = function (
-            value: EncryptedContentInfo,
-            elGetter: $.ASN1Encoder<EncryptedContentInfo>
-        ): _Element {
+            value: EncryptedContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,7 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
-export { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
 import {
     CertificateSerialNumber,
     _decode_CertificateSerialNumber,
@@ -167,9 +166,7 @@ export function _decode_IssuerSerialNumber(el: _Element) {
  * @returns {_Element} The IssuerSerialNumber, encoded as an ASN.1 Element.
  */
 export function _encode_IssuerSerialNumber(
-    value: IssuerSerialNumber,
-    elGetter: $.ASN1Encoder<IssuerSerialNumber>
-) {
+    value: IssuerSerialNumber) {
     const components: _Element[] = [
         _encode_Name(value.issuer, $.BER),
         _encode_CertificateSerialNumber(value.serialNumber, $.BER),

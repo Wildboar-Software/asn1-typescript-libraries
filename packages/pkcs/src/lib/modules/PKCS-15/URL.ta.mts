@@ -10,12 +10,6 @@ import {
     _decode_URL_urlWithDigest,
     _encode_URL_urlWithDigest,
 } from "../PKCS-15/URL-urlWithDigest.ta.mjs";
-export {
-    URL_urlWithDigest,
-    _decode_URL_urlWithDigest,
-    _encode_URL_urlWithDigest,
-} from "../PKCS-15/URL-urlWithDigest.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION URL */
 /**
  * @summary URL

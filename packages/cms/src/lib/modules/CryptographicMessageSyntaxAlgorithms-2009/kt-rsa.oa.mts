@@ -7,30 +7,6 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
 import { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.mjs";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-export { rsaEncryption } from "../PKIXAlgs-2009/rsaEncryption.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION kt_rsa */
 /**
  * @summary kt_rsa

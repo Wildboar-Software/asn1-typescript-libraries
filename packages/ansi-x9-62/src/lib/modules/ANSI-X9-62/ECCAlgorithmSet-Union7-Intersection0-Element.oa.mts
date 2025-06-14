@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union7_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union7_Intersection0_Element

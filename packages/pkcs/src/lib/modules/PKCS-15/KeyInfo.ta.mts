@@ -11,17 +11,6 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-export {
-    KeyInfo_paramsAndOps,
-    _get_decoder_for_KeyInfo_paramsAndOps,
-    _get_encoder_for_KeyInfo_paramsAndOps,
-} from "../PKCS-15/KeyInfo-paramsAndOps.ta.mjs";
-export {
-    Reference,
-    _decode_Reference,
-    _encode_Reference,
-} from "../PKCS-15/Reference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyInfo */
 /**
  * @summary KeyInfo

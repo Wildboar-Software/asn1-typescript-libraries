@@ -366,9 +366,7 @@ export function _decode_TBSAttributeCertificate(el: _Element) {
  * @returns {_Element} The TBSAttributeCertificate, encoded as an ASN.1 Element.
  */
 export function _encode_TBSAttributeCertificate(
-    value: TBSAttributeCertificate,
-    elGetter: $.ASN1Encoder<TBSAttributeCertificate>
-) {
+    value: TBSAttributeCertificate) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_AttCertVersion(
             value.version,

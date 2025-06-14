@@ -211,9 +211,7 @@ export function _encode_POPOSigningKey(
 ) {
     if (!_cached_encoder_for_POPOSigningKey) {
         _cached_encoder_for_POPOSigningKey = function (
-            value: POPOSigningKey,
-            elGetter: $.ASN1Encoder<POPOSigningKey>
-        ): _Element {
+            value: POPOSigningKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

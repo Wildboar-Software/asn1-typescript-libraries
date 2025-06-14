@@ -7,8 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OriginatorPublicKey */
 /**
  * @summary OriginatorPublicKey
@@ -166,9 +164,7 @@ export function _encode_OriginatorPublicKey(
 ) {
     if (!_cached_encoder_for_OriginatorPublicKey) {
         _cached_encoder_for_OriginatorPublicKey = function (
-            value: OriginatorPublicKey,
-            elGetter: $.ASN1Encoder<OriginatorPublicKey>
-        ): _Element {
+            value: OriginatorPublicKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

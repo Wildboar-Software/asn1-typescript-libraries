@@ -15,17 +15,6 @@ import {
     _decode_POPOSigningKey,
     _encode_POPOSigningKey,
 } from "../PKIXCRMF-2009/POPOSigningKey.ta.mjs";
-export {
-    POPOPrivKey,
-    _decode_POPOPrivKey,
-    _encode_POPOPrivKey,
-} from "../PKIXCRMF-2009/POPOPrivKey.ta.mjs";
-export {
-    POPOSigningKey,
-    _decode_POPOSigningKey,
-    _encode_POPOSigningKey,
-} from "../PKIXCRMF-2009/POPOSigningKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ProofOfPossession */
 /**
  * @summary ProofOfPossession

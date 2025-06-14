@@ -16,18 +16,6 @@ import {
     _encode_EncryptedContentInfo,
 } from "../PKCS7/EncryptedContentInfo.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../PKCS7/Attributes.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**
  * @summary EncryptedData
@@ -222,9 +210,7 @@ export function _encode_EncryptedData(
 ) {
     if (!_cached_encoder_for_EncryptedData) {
         _cached_encoder_for_EncryptedData = function (
-            value: EncryptedData,
-            elGetter: $.ASN1Encoder<EncryptedData>
-        ): _Element {
+            value: EncryptedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

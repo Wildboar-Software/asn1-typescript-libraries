@@ -11,17 +11,6 @@ import {
     _decode_KeyConstructionLabels,
     _encode_KeyConstructionLabels,
 } from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.mjs";
-export {
-    EncryptedRecipientID,
-    _decode_EncryptedRecipientID,
-    _encode_EncryptedRecipientID,
-} from "../CMSCKMKeyManagement/EncryptedRecipientID.ta.mjs";
-export {
-    KeyConstructionLabels,
-    _decode_KeyConstructionLabels,
-    _encode_KeyConstructionLabels,
-} from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyConstructionRecipient */
 /**
  * @summary KeyConstructionRecipient

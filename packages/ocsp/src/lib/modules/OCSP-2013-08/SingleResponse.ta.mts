@@ -254,9 +254,7 @@ export function _encode_SingleResponse(
 ) {
     if (!_cached_encoder_for_SingleResponse) {
         _cached_encoder_for_SingleResponse = function (
-            value: SingleResponse,
-            elGetter: $.ASN1Encoder<SingleResponse>
-        ): _Element {
+            value: SingleResponse        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -180,9 +180,7 @@ export function _encode_DSA_Params(
 ) {
     if (!_cached_encoder_for_DSA_Params) {
         _cached_encoder_for_DSA_Params = function (
-            value: DSA_Params,
-            elGetter: $.ASN1Encoder<DSA_Params>
-        ): _Element {
+            value: DSA_Params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va.mjs";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-export { dbEKM } from "../CMSObjectIdentifiers/dbEKM.va.mjs";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_UniqueIdentifier */
 /**
  * @summary id_UniqueIdentifier

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -70,23 +14,12 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.mjs';
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/RelativeDistinguishedName.ta.mjs';
+} from '@wildboar/pki-stub/src/lib/modules/PKI-Stub/RelativeDistinguishedName.ta.mjs';
 import {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ProtectionSwitchReportingInfo */
 /**
  * @summary ProtectionSwitchReportingInfo
@@ -253,9 +186,7 @@ export function _encode_ProtectionSwitchReportingInfo(
 ) {
     if (!_cached_encoder_for_ProtectionSwitchReportingInfo) {
         _cached_encoder_for_ProtectionSwitchReportingInfo = function (
-            value: ProtectionSwitchReportingInfo,
-            elGetter: $.ASN1Encoder<ProtectionSwitchReportingInfo>
-        ): _Element {
+            value: ProtectionSwitchReportingInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

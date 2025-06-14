@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../ANSI-X9-42/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../ANSI-X9-42/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherInfo */
 /**
  * @summary OtherInfo
@@ -255,9 +249,7 @@ export function _encode_OtherInfo(
 ) {
     if (!_cached_encoder_for_OtherInfo) {
         _cached_encoder_for_OtherInfo = function (
-            value: OtherInfo,
-            elGetter: $.ASN1Encoder<OtherInfo>
-        ): _Element {
+            value: OtherInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

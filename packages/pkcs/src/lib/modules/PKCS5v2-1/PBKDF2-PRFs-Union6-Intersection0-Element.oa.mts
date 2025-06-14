@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { id_hmacWithSHA512_256 } from "../PKCS5v2-1/id-hmacWithSHA512-256.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_hmacWithSHA512_256 } from "../PKCS5v2-1/id-hmacWithSHA512-256.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs_Union6_Intersection0_Element */
 /**
  * @summary PBKDF2_PRFs_Union6_Intersection0_Element

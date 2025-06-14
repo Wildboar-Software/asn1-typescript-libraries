@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
   UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
-export {
-  EndpointIRI,
-  _decode_EndpointIRI,
-  _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_UUID,
-  _decode_BioAPI_UUID,
-  _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta.mjs';
-export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
@@ -91,125 +27,31 @@ import {
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
-export {
-  BioAPI_UNIT_ID,
-  _decode_BioAPI_UNIT_ID,
-  _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
   BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
-  BioAPI_GUI_OPERATION_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_process /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_createtemplate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_verifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  _decode_BioAPI_GUI_OPERATION,
-  _encode_BioAPI_GUI_OPERATION,
-} from '../BIP/BioAPI-GUI-OPERATION.ta.mjs';
-export {
-  BioAPI_GUI_OPERATION,
-  _enum_for_BioAPI_GUI_OPERATION,
-  BioAPI_GUI_OPERATION_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_process /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_createtemplate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_verifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_OPERATION_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
 } from '../BIP/BioAPI-GUI-OPERATION.ta.mjs';
 import {
   BioAPI_GUI_SUBOPERATION,
   _enum_for_BioAPI_GUI_SUBOPERATION,
-  BioAPI_GUI_SUBOPERATION_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_process /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_createtemplate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_verifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  _decode_BioAPI_GUI_SUBOPERATION,
-  _encode_BioAPI_GUI_SUBOPERATION,
-} from '../BIP/BioAPI-GUI-SUBOPERATION.ta.mjs';
-export {
-  BioAPI_GUI_SUBOPERATION,
-  _enum_for_BioAPI_GUI_SUBOPERATION,
-  BioAPI_GUI_SUBOPERATION_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_process /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_createtemplate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_verifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_GUI_SUBOPERATION_identifymatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_SUBOPERATION,
   _encode_BioAPI_GUI_SUBOPERATION,
 } from '../BIP/BioAPI-GUI-SUBOPERATION.ta.mjs';
 import {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
-  BioAPI_BIR_PURPOSE_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollVerify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollVerify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollIdentify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollIdentify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_audit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  audit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_any_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_BIR_PURPOSE,
-  _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
-export {
-  BioAPI_BIR_PURPOSE,
-  _enum_for_BioAPI_BIR_PURPOSE,
-  BioAPI_BIR_PURPOSE_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollVerify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollVerify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollIdentify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollIdentify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_audit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  audit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_any_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
 } from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
 import {
   BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
-  BioAPI_GUI_MOMENT_beforeStart /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  beforeStart /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_GUI_MOMENT_during /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  during /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_GUI_MOMENT_afterEnd /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_GUI_MOMENT,
-  _encode_BioAPI_GUI_MOMENT,
-} from '../BIP/BioAPI-GUI-MOMENT.ta.mjs';
-export {
-  BioAPI_GUI_MOMENT,
-  _enum_for_BioAPI_GUI_MOMENT,
-  BioAPI_GUI_MOMENT_beforeStart /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  beforeStart /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_GUI_MOMENT_during /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  during /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_GUI_MOMENT_afterEnd /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  afterEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
 } from '../BIP/BioAPI-GUI-MOMENT.ta.mjs';
 import {
-  BioAPI_RETURN,
-  _decode_BioAPI_RETURN,
-  _encode_BioAPI_RETURN,
-} from '../BIP/BioAPI-RETURN.ta.mjs';
-export {
   BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
@@ -219,22 +61,11 @@ import {
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
-export {
-  SignedInt,
-  _decode_SignedInt,
-  _encode_SignedInt,
-} from '../BIP/SignedInt.ta.mjs';
 import {
   BioAPI_GUI_BITMAP_ARRAY,
   _decode_BioAPI_GUI_BITMAP_ARRAY,
   _encode_BioAPI_GUI_BITMAP_ARRAY,
 } from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.mjs';
-export {
-  BioAPI_GUI_BITMAP_ARRAY,
-  _decode_BioAPI_GUI_BITMAP_ARRAY,
-  _encode_BioAPI_GUI_BITMAP_ARRAY,
-} from '../BIP/BioAPI-GUI-BITMAP-ARRAY.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION NotifyGUIStateEvent_RequestParams */
 /**
  * @summary NotifyGUIStateEvent_RequestParams
@@ -638,9 +469,7 @@ export function _encode_NotifyGUIStateEvent_RequestParams(
 ) {
   if (!_cached_encoder_for_NotifyGUIStateEvent_RequestParams) {
     _cached_encoder_for_NotifyGUIStateEvent_RequestParams = function (
-      value: NotifyGUIStateEvent_RequestParams,
-      elGetter: $.ASN1Encoder<NotifyGUIStateEvent_RequestParams>
-    ): _Element {
+      value: NotifyGUIStateEvent_RequestParams    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -7,9 +7,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { BasisTypes } from "../ANSI-X9-62/BasisTypes.osa.mjs";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Characteristic_two */
 /**
  * @summary Characteristic_two
@@ -179,9 +176,7 @@ export function _encode_Characteristic_two(
 ) {
     if (!_cached_encoder_for_Characteristic_two) {
         _cached_encoder_for_Characteristic_two = function (
-            value: Characteristic_two,
-            elGetter: $.ASN1Encoder<Characteristic_two>
-        ): _Element {
+            value: Characteristic_two        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

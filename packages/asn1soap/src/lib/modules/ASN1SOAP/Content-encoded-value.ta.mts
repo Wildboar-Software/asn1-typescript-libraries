@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
   OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,12 +17,6 @@ import {
   _decode_Identifier,
   _encode_Identifier,
 } from '../ASN1SOAP/Identifier.ta.mjs';
-export {
-  Identifier,
-  _decode_Identifier,
-  _encode_Identifier,
-} from '../ASN1SOAP/Identifier.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Content_encoded_value */
 /**
  * @summary Content_encoded_value
@@ -261,9 +201,7 @@ export function _encode_Content_encoded_value(
 ) {
   if (!_cached_encoder_for_Content_encoded_value) {
     _cached_encoder_for_Content_encoded_value = function (
-      value: Content_encoded_value,
-      elGetter: $.ASN1Encoder<Content_encoded_value>
-    ): _Element {
+      value: Content_encoded_value    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

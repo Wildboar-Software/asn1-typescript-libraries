@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,11 +14,8 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta.mjs";
-export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../PlatformCertificateProfile/CommonCriteriaMeasures.ta.mjs";
 import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.mjs";
-export { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.mjs";
-import { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.mjs";
-export { MeasurementRootType, _enum_for_MeasurementRootType, MeasurementRootType_static_ /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_nonHost /* IMPORTED_LONG_ENUMERATION_ITEM */, nonHost /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_hybrid /* IMPORTED_LONG_ENUMERATION_ITEM */, hybrid /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, MeasurementRootType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.mjs";
+import { MeasurementRootType, _enum_for_MeasurementRootType, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.mjs";
 import {
     Version,
     _decode_Version,
@@ -294,7 +238,7 @@ let _cached_encoder_for_TBBSecurityAssertions: $.ASN1Encoder<TBBSecurityAssertio
  */
 export
 function _encode_TBBSecurityAssertions (value: TBBSecurityAssertions, elGetter: $.ASN1Encoder<TBBSecurityAssertions>) {
-    if (!_cached_encoder_for_TBBSecurityAssertions) { _cached_encoder_for_TBBSecurityAssertions = function (value: TBBSecurityAssertions, elGetter: $.ASN1Encoder<TBBSecurityAssertions>): _Element {
+    if (!_cached_encoder_for_TBBSecurityAssertions) { _cached_encoder_for_TBBSecurityAssertions = function (value: TBBSecurityAssertions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TBBSecurityAssertions._default_value_for_version) ? undefined : _encode_Version(value.version, $.BER)),

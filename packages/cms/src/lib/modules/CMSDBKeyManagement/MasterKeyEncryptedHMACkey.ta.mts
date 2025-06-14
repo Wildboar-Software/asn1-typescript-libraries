@@ -16,17 +16,6 @@ import {
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
 } from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";
-export {
-    MasterKeyAlgorithmIdentifier,
-    _decode_MasterKeyAlgorithmIdentifier,
-    _encode_MasterKeyAlgorithmIdentifier,
-} from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta.mjs";
-export {
-    MessageAuthenticationCodeAlgorithm,
-    _decode_MessageAuthenticationCodeAlgorithm,
-    _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MasterKeyEncryptedHMACkey */
 /**
  * @summary MasterKeyEncryptedHMACkey
@@ -223,9 +212,7 @@ export function _encode_MasterKeyEncryptedHMACkey(
 ) {
     if (!_cached_encoder_for_MasterKeyEncryptedHMACkey) {
         _cached_encoder_for_MasterKeyEncryptedHMACkey = function (
-            value: MasterKeyEncryptedHMACkey,
-            elGetter: $.ASN1Encoder<MasterKeyEncryptedHMACkey>
-        ): _Element {
+            value: MasterKeyEncryptedHMACkey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

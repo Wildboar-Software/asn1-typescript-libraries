@@ -6,13 +6,6 @@ import {
     _decode_SMIMEEncryptionKeyPreference,
     _encode_SMIMEEncryptionKeyPreference,
 } from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.mjs";
-export { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va.mjs";
-export {
-    SMIMEEncryptionKeyPreference,
-    _decode_SMIMEEncryptionKeyPreference,
-    _encode_SMIMEEncryptionKeyPreference,
-} from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aa_encrypKeyPref */
 /**
  * @summary aa_encrypKeyPref

@@ -183,9 +183,7 @@ export function _encode_SinglePubInfo(
 ) {
     if (!_cached_encoder_for_SinglePubInfo) {
         _cached_encoder_for_SinglePubInfo = function (
-            value: SinglePubInfo,
-            elGetter: $.ASN1Encoder<SinglePubInfo>
-        ): _Element {
+            value: SinglePubInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

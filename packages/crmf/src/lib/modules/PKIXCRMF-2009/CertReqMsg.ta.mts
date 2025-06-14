@@ -20,22 +20,6 @@ import {
     _decode_ProofOfPossession,
     _encode_ProofOfPossession,
 } from "../PKIXCRMF-2009/ProofOfPossession.ta.mjs";
-export {
-    SingleAttribute,
-    _decode_SingleAttribute,
-    _encode_SingleAttribute,
-} from "../PKIX-CommonTypes-2009/SingleAttribute.ta.mjs";
-export {
-    CertRequest,
-    _decode_CertRequest,
-    _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta.mjs";
-export {
-    ProofOfPossession,
-    _decode_ProofOfPossession,
-    _encode_ProofOfPossession,
-} from "../PKIXCRMF-2009/ProofOfPossession.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReqMsg */
 /**
  * @summary CertReqMsg
@@ -219,9 +203,7 @@ export function _encode_CertReqMsg(
 ) {
     if (!_cached_encoder_for_CertReqMsg) {
         _cached_encoder_for_CertReqMsg = function (
-            value: CertReqMsg,
-            elGetter: $.ASN1Encoder<CertReqMsg>
-        ): _Element {
+            value: CertReqMsg        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

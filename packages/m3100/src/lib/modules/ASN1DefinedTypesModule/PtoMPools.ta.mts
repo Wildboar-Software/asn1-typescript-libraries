@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_ExplicitTP,
     _encode_ExplicitTP,
 } from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';
-export {
-    ExplicitTP,
-    _decode_ExplicitTP,
-    _encode_ExplicitTP,
-} from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';
 import {
     ToTPPools,
     _decode_ToTPPools,
     _encode_ToTPPools,
 } from '../ASN1DefinedTypesModule/ToTPPools.ta.mjs';
-export {
-    ToTPPools,
-    _decode_ToTPPools,
-    _encode_ToTPPools,
-} from '../ASN1DefinedTypesModule/ToTPPools.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PtoMPools */
 /**
  * @summary PtoMPools
@@ -236,9 +169,7 @@ export function _encode_PtoMPools(
 ) {
     if (!_cached_encoder_for_PtoMPools) {
         _cached_encoder_for_PtoMPools = function (
-            value: PtoMPools,
-            elGetter: $.ASN1Encoder<PtoMPools>
-        ): _Element {
+            value: PtoMPools        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

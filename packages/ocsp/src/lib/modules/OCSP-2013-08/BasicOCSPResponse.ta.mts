@@ -239,9 +239,7 @@ export function _encode_BasicOCSPResponse(
 ) {
     if (!_cached_encoder_for_BasicOCSPResponse) {
         _cached_encoder_for_BasicOCSPResponse = function (
-            value: BasicOCSPResponse,
-            elGetter: $.ASN1Encoder<BasicOCSPResponse>
-        ): _Element {
+            value: BasicOCSPResponse        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

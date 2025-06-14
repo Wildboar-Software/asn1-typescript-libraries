@@ -6,12 +6,6 @@ import {
     _decode_IV,
     _encode_IV,
 } from "../CryptographicMessageSyntax/IV.ta.mjs";
-export {
-    IV,
-    _decode_IV,
-    _encode_IV,
-} from "../CryptographicMessageSyntax/IV.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CBCParameter */
 /**
  * @summary CBCParameter

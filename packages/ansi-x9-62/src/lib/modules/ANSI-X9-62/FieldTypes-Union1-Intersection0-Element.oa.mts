@@ -6,14 +6,6 @@ import {
     _encode_Characteristic_two,
 } from "../ANSI-X9-62/Characteristic-two.ta.mjs";
 import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
-export { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.mjs";
-export {
-    Characteristic_two,
-    _decode_Characteristic_two,
-    _encode_Characteristic_two,
-} from "../ANSI-X9-62/Characteristic-two.ta.mjs";
-export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union1_Intersection0_Element */
 /**
  * @summary FieldTypes_Union1_Intersection0_Element

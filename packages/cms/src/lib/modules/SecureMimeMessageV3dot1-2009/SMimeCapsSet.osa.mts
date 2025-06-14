@@ -2,9 +2,6 @@
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 import { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa.mjs";
 import { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/cap-preferBinaryInside.oa.mjs";
-export { cap_RC2CBC } from "../SecureMimeMessageV3dot1-2009/cap-RC2CBC.oa.mjs";
 import { SMimeCaps as PKIXAlgs_SMimeCaps } from "../PKIXAlgs-2009/SMimeCaps.osa.mjs";
 import { SMimeCaps as CryptographicMessageSyntaxAlgorithms_SMimeCaps } from "../CryptographicMessageSyntaxAlgorithms-2009/SMimeCaps.osa.mjs";
 import { SMimeCaps as PKIX1_PSS_OAEP_Algorithms_SMimeCaps } from "../PKIX1-PSS-OAEP-Algorithms-2009/SMimeCaps.osa.mjs";

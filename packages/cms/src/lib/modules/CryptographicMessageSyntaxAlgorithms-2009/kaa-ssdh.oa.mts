@@ -11,35 +11,6 @@ import {
     _encode_KeyWrapAlgorithm,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.mjs";
 import { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { id_alg_SSDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-SSDH.va.mjs";
-export {
-    KeyWrapAlgorithm,
-    _decode_KeyWrapAlgorithm,
-    _encode_KeyWrapAlgorithm,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.mjs";
-export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION kaa_ssdh */
 /**
  * @summary kaa_ssdh

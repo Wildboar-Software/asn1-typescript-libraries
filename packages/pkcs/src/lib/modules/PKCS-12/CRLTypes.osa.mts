@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { x509CRL } from "../PKCS-12/x509CRL.oa.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { x509CRL } from "../PKCS-12/x509CRL.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CRLTypes */
 /**
  * @summary CRLTypes

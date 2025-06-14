@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-export { ct_asymmetric_key_package } from "../AsymmetricKeyPackageModuleV1/ct-asymmetric-key-package.oa.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentSet */
 /**
  * @summary ContentSet

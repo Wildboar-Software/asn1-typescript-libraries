@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,9 +12,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
-export { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
 import { TrustedAuth, _decode_TrustedAuth, _encode_TrustedAuth } from "../SASL-9798-3-1997/TrustedAuth.ta.mjs";
-export { TrustedAuth, _decode_TrustedAuth, _encode_TrustedAuth } from "../SASL-9798-3-1997/TrustedAuth.ta.mjs";
 import {
     GeneralNames,
     _decode_GeneralNames,
@@ -239,7 +182,7 @@ let _cached_encoder_for_TokenBA1: $.ASN1Encoder<TokenBA1> | null = null;
  */
 export
 function _encode_TokenBA1 (value: TokenBA1, elGetter: $.ASN1Encoder<TokenBA1>) {
-    if (!_cached_encoder_for_TokenBA1) { _cached_encoder_for_TokenBA1 = function (value: TokenBA1, elGetter: $.ASN1Encoder<TokenBA1>): _Element {
+    if (!_cached_encoder_for_TokenBA1) { _cached_encoder_for_TokenBA1 = function (value: TokenBA1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RandomNumber(value.randomB, $.BER),

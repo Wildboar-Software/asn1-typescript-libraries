@@ -7,14 +7,6 @@ import {
     _decode_SafeContents,
     _encode_SafeContents,
 } from "../PKCS-12/SafeContents.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export {
-    SafeContents,
-    _decode_SafeContents,
-    _encode_SafeContents,
-} from "../PKCS-12/SafeContents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION safeContentsBag */
 /**
  * @summary safeContentsBag

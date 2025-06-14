@@ -204,7 +204,7 @@ export function _decode_AlgorithmWithInvoke(el: _Element) {
  */
 export function _encode_AlgorithmWithInvoke(
     value: AlgorithmWithInvoke,
-    elGetter: $.ASN1Encoder<AlgorithmWithInvoke>
+    _elGetter: $.ASN1Encoder<AlgorithmWithInvoke>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(

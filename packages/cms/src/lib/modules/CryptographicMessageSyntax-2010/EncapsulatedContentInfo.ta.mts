@@ -7,9 +7,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { ContentSet } from "../CryptographicMessageSyntax-2010/ContentSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
 /**
  * @summary EncapsulatedContentInfo
@@ -183,9 +180,7 @@ export function _encode_EncapsulatedContentInfo(
 ) {
     if (!_cached_encoder_for_EncapsulatedContentInfo) {
         _cached_encoder_for_EncapsulatedContentInfo = function (
-            value: EncapsulatedContentInfo,
-            elGetter: $.ASN1Encoder<EncapsulatedContentInfo>
-        ): _Element {
+            value: EncapsulatedContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

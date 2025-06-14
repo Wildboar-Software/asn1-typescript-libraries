@@ -38,48 +38,6 @@ import {
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
 } from "../PKCS-15/TokenInfo-version.ta.mjs";
-export {
-    AlgorithmInfo,
-    _decode_AlgorithmInfo,
-    _encode_AlgorithmInfo,
-} from "../PKCS-15/AlgorithmInfo.ta.mjs";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-export {
-    LastUpdate,
-    _decode_LastUpdate,
-    _encode_LastUpdate,
-} from "../PKCS-15/LastUpdate.ta.mjs";
-export {
-    RecordInfo,
-    _decode_RecordInfo,
-    _encode_RecordInfo,
-} from "../PKCS-15/RecordInfo.ta.mjs";
-export {
-    SecurityEnvironmentInfo,
-    _decode_SecurityEnvironmentInfo,
-    _encode_SecurityEnvironmentInfo,
-} from "../PKCS-15/SecurityEnvironmentInfo.ta.mjs";
-export {
-    eidCompliant /* IMPORTED_SHORT_NAMED_BIT */,
-    loginRequired /* IMPORTED_SHORT_NAMED_BIT */,
-    prnGeneration /* IMPORTED_SHORT_NAMED_BIT */,
-    readonly /* IMPORTED_SHORT_NAMED_BIT */,
-    TokenFlags,
-    TokenFlags_eidCompliant /* IMPORTED_LONG_NAMED_BIT */,
-    TokenFlags_loginRequired /* IMPORTED_LONG_NAMED_BIT */,
-    TokenFlags_prnGeneration /* IMPORTED_LONG_NAMED_BIT */,
-    TokenFlags_readonly /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_TokenFlags,
-    _encode_TokenFlags,
-} from "../PKCS-15/TokenFlags.ta.mjs";
-export {
-    TokenInfo_version,
-    TokenInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TokenInfo_version,
-    _encode_TokenInfo_version,
-} from "../PKCS-15/TokenInfo-version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TokenInfo */
 /**
  * @summary TokenInfo
@@ -478,9 +436,7 @@ export function _encode_TokenInfo(
 ) {
     if (!_cached_encoder_for_TokenInfo) {
         _cached_encoder_for_TokenInfo = function (
-            value: TokenInfo,
-            elGetter: $.ASN1Encoder<TokenInfo>
-        ): _Element {
+            value: TokenInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

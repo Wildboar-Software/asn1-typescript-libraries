@@ -2,8 +2,6 @@
 import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION issuerKeyHash */
 /**
  * @summary issuerKeyHash

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
 import { id_sha1 } from "../ANSI-X9-42/id-sha1.va.mjs";
 import {
     _decodeNull,

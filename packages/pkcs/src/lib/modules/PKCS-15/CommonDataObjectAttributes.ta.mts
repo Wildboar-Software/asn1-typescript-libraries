@@ -7,8 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CommonDataObjectAttributes */
 /**
  * @summary CommonDataObjectAttributes
@@ -195,9 +193,7 @@ export function _encode_CommonDataObjectAttributes(
 ) {
     if (!_cached_encoder_for_CommonDataObjectAttributes) {
         _cached_encoder_for_CommonDataObjectAttributes = function (
-            value: CommonDataObjectAttributes,
-            elGetter: $.ASN1Encoder<CommonDataObjectAttributes>
-        ): _Element {
+            value: CommonDataObjectAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

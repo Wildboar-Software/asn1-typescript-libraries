@@ -6,9 +6,6 @@ import {
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "./ECDomainParameters.ta.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { id_ecPublicKey } from "../ANSI-X9-62/id-ecPublicKey.va.mjs";
-
 // ECDomainParameters used to be DomainParameters. I think this is a mistake.
 
 /* START_OF_SYMBOL_DEFINITION ecPublicKeyType */

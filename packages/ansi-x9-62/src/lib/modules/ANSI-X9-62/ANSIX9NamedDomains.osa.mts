@@ -18,26 +18,6 @@ import { ANSIX9NamedDomains_Union6_Intersection0_Element } from "./ANSIX9NamedDo
 import { ANSIX9NamedDomains_Union7_Intersection0_Element } from "./ANSIX9NamedDomains-Union7-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union8_Intersection0_Element } from "./ANSIX9NamedDomains-Union8-Intersection0-Element.oa.mjs";
 import { ANSIX9NamedDomains_Union9_Intersection0_Element } from "./ANSIX9NamedDomains-Union9-Intersection0-Element.oa.mjs";
-export { ansix9p192k1 } from "../ANSI-X9-62/ansix9p192k1.va.mjs";
-export { ansix9p192r1 } from "../ANSI-X9-62/ansix9p192r1.va.mjs";
-export { ansix9p224k1 } from "../ANSI-X9-62/ansix9p224k1.va.mjs";
-export { ansix9p224r1 } from "../ANSI-X9-62/ansix9p224r1.va.mjs";
-export { ansix9p256k1 } from "../ANSI-X9-62/ansix9p256k1.va.mjs";
-export { ansix9p256r1 } from "../ANSI-X9-62/ansix9p256r1.va.mjs";
-export { ansix9p384r1 } from "../ANSI-X9-62/ansix9p384r1.va.mjs";
-export { ansix9p521r1 } from "../ANSI-X9-62/ansix9p521r1.va.mjs";
-export { ansix9t163k1 } from "../ANSI-X9-62/ansix9t163k1.va.mjs";
-export { ansix9t163r2 } from "../ANSI-X9-62/ansix9t163r2.va.mjs";
-export { ansix9t233k1 } from "../ANSI-X9-62/ansix9t233k1.va.mjs";
-export { ansix9t233r1 } from "../ANSI-X9-62/ansix9t233r1.va.mjs";
-export { ansix9t283k1 } from "../ANSI-X9-62/ansix9t283k1.va.mjs";
-export { ansix9t283r1 } from "../ANSI-X9-62/ansix9t283r1.va.mjs";
-export { ansix9t409k1 } from "../ANSI-X9-62/ansix9t409k1.va.mjs";
-export { ansix9t409r1 } from "../ANSI-X9-62/ansix9t409r1.va.mjs";
-export { ansix9t571k1 } from "../ANSI-X9-62/ansix9t571k1.va.mjs";
-export { ansix9t571r1 } from "../ANSI-X9-62/ansix9t571r1.va.mjs";
-export { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ANSIX9NamedDomains */
 /**
  * @summary ANSIX9NamedDomains

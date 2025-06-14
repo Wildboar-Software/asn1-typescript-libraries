@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_PKIHeader,
   _encode_PKIHeader,
 } from '../PKIXCMP-2009/PKIHeader.ta.mjs';
-export {
-  PKIHeader,
-  _decode_PKIHeader,
-  _encode_PKIHeader,
-} from '../PKIXCMP-2009/PKIHeader.ta.mjs';
 import {
-  PKIBody,
-  _decode_PKIBody,
-  _encode_PKIBody,
-} from '../PKIXCMP-2009/PKIBody.ta.mjs';
-export {
   PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
@@ -91,22 +26,11 @@ import {
   _decode_PKIProtection,
   _encode_PKIProtection,
 } from '../PKIXCMP-2009/PKIProtection.ta.mjs';
-export {
-  PKIProtection,
-  _decode_PKIProtection,
-  _encode_PKIProtection,
-} from '../PKIXCMP-2009/PKIProtection.ta.mjs';
 import {
   CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
-export {
-  CMPCertificate,
-  _decode_CMPCertificate,
-  _encode_CMPCertificate,
-} from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PKIMessage */
 /**
  * @summary PKIMessage
@@ -310,9 +234,7 @@ export function _encode_PKIMessage(
 ) {
   if (!_cached_encoder_for_PKIMessage) {
     _cached_encoder_for_PKIMessage = function (
-      value: PKIMessage,
-      elGetter: $.ASN1Encoder<PKIMessage>
-    ): _Element {
+      value: PKIMessage    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

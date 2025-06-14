@@ -159,9 +159,7 @@ export function _encode_SingleAttribute(
 ) {
     if (!_cached_encoder_for_SingleAttribute) {
         _cached_encoder_for_SingleAttribute = function (
-            value: SingleAttribute,
-            elGetter: $.ASN1Encoder<SingleAttribute>
-        ): _Element {
+            value: SingleAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

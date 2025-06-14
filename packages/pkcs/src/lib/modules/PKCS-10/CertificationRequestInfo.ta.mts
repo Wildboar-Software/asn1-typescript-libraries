@@ -226,9 +226,7 @@ export function _encode_CertificationRequestInfo(
 ) {
     if (!_cached_encoder_for_CertificationRequestInfo) {
         _cached_encoder_for_CertificationRequestInfo = function (
-            value: CertificationRequestInfo,
-            elGetter: $.ASN1Encoder<CertificationRequestInfo>
-        ): _Element {
+            value: CertificationRequestInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

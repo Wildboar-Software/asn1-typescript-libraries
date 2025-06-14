@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 import { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { id_cap_preferBinaryInside } from "../SecureMimeMessageV3dot1-2009/id-cap-preferBinaryInside.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION cap_preferBinaryInside */
 /**
  * @summary cap_preferBinaryInside

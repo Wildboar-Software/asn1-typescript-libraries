@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { id_SHA512 } from "../ANSI-X9-62/id-SHA512.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union8_Intersection0_Element */
 /**
  * @summary ANSIX9HashFunctions_Union8_Intersection0_Element

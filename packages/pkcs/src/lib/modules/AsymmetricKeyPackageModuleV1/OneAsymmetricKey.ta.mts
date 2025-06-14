@@ -283,9 +283,7 @@ export function _encode_OneAsymmetricKey(
 ) {
     if (!_cached_encoder_for_OneAsymmetricKey) {
         _cached_encoder_for_OneAsymmetricKey = function (
-            value: OneAsymmetricKey,
-            elGetter: $.ASN1Encoder<OneAsymmetricKey>
-        ): _Element {
+            value: OneAsymmetricKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

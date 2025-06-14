@@ -191,9 +191,7 @@ let _cached_encoder_for_Path: $.ASN1Encoder<Path> | null = null;
 export function _encode_Path(value: Path, elGetter: $.ASN1Encoder<Path>) {
     if (!_cached_encoder_for_Path) {
         _cached_encoder_for_Path = function (
-            value: Path,
-            elGetter: $.ASN1Encoder<Path>
-        ): _Element {
+            value: Path        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

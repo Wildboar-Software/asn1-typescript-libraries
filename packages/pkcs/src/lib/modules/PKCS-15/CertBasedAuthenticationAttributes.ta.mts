@@ -163,9 +163,7 @@ export function _encode_CertBasedAuthenticationAttributes(
 ) {
     if (!_cached_encoder_for_CertBasedAuthenticationAttributes) {
         _cached_encoder_for_CertBasedAuthenticationAttributes = function (
-            value: CertBasedAuthenticationAttributes,
-            elGetter: $.ASN1Encoder<CertBasedAuthenticationAttributes>
-        ): _Element {
+            value: CertBasedAuthenticationAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,17 +11,6 @@ import {
     _decode_IrisScan,
     _encode_IrisScan,
 } from "../PKCS-15/IrisScan.ta.mjs";
-export {
-    FingerPrint,
-    _decode_FingerPrint,
-    _encode_FingerPrint,
-} from "../PKCS-15/FingerPrint.ta.mjs";
-export {
-    IrisScan,
-    _decode_IrisScan,
-    _encode_IrisScan,
-} from "../PKCS-15/IrisScan.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BiometricType */
 /**
  * @summary BiometricType

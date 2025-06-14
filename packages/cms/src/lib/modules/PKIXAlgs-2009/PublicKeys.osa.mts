@@ -7,15 +7,6 @@ import { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa.mjs";
 import { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa.mjs";
 import { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa.mjs";
 import { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-export { pk_dh } from "../PKIXAlgs-2009/pk-dh.oa.mjs";
-export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.mjs";
-export { pk_ec } from "../PKIXAlgs-2009/pk-ec.oa.mjs";
-export { pk_ecDH } from "../PKIXAlgs-2009/pk-ecDH.oa.mjs";
-export { pk_ecMQV } from "../PKIXAlgs-2009/pk-ecMQV.oa.mjs";
-export { pk_kea } from "../PKIXAlgs-2009/pk-kea.oa.mjs";
-export { pk_rsa } from "../PKIXAlgs-2009/pk-rsa.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PublicKeys */
 /**
  * @summary PublicKeys

@@ -30,42 +30,6 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax/UserKeyingMaterial.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
-export {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    OriginatorIdentifierOrKey,
-    _decode_OriginatorIdentifierOrKey,
-    _encode_OriginatorIdentifierOrKey,
-} from "../CryptographicMessageSyntax/OriginatorIdentifierOrKey.ta.mjs";
-export {
-    RecipientEncryptedKeys,
-    _decode_RecipientEncryptedKeys,
-    _encode_RecipientEncryptedKeys,
-} from "../CryptographicMessageSyntax/RecipientEncryptedKeys.ta.mjs";
-export {
-    UserKeyingMaterial,
-    _decode_UserKeyingMaterial,
-    _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax/UserKeyingMaterial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientInfo */
 /**
  * @summary KeyAgreeRecipientInfo
@@ -306,9 +270,7 @@ export function _encode_KeyAgreeRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyAgreeRecipientInfo) {
         _cached_encoder_for_KeyAgreeRecipientInfo = function (
-            value: KeyAgreeRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyAgreeRecipientInfo>
-        ): _Element {
+            value: KeyAgreeRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

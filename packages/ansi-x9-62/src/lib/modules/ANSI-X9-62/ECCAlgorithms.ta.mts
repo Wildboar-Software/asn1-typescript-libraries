@@ -6,12 +6,6 @@ import {
     _decode_ECCAlgorithm,
     _encode_ECCAlgorithm,
 } from "../ANSI-X9-62/ECCAlgorithm.ta.mjs";
-export {
-    ECCAlgorithm,
-    _decode_ECCAlgorithm,
-    _encode_ECCAlgorithm,
-} from "../ANSI-X9-62/ECCAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithms */
 /**
  * @summary ECCAlgorithms

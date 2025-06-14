@@ -194,9 +194,7 @@ export function _encode_DHParameter(
 ) {
     if (!_cached_encoder_for_DHParameter) {
         _cached_encoder_for_DHParameter = function (
-            value: DHParameter,
-            elGetter: $.ASN1Encoder<DHParameter>
-        ): _Element {
+            value: DHParameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

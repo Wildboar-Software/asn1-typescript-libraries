@@ -6,12 +6,6 @@ import {
     _decode_SecurityCategory,
     _encode_SecurityCategory,
 } from "../SIOsAccessControl-MODULE/SecurityCategory.ta.mjs";
-export {
-    SecurityCategory,
-    _decode_SecurityCategory,
-    _encode_SecurityCategory,
-} from "../SIOsAccessControl-MODULE/SecurityCategory.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPIF_SecurityCategories */
 /**
  * @summary SPIF_SecurityCategories

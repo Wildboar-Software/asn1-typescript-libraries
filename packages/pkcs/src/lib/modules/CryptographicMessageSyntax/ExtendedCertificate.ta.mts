@@ -20,22 +20,6 @@ import {
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
-export {
-    ExtendedCertificateInfo,
-    _decode_ExtendedCertificateInfo,
-    _encode_ExtendedCertificateInfo,
-} from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta.mjs";
-export {
-    Signature,
-    _decode_Signature,
-    _encode_Signature,
-} from "../CryptographicMessageSyntax/Signature.ta.mjs";
-export {
-    SignatureAlgorithmIdentifier,
-    _decode_SignatureAlgorithmIdentifier,
-    _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificate */
 /**
  * @summary ExtendedCertificate
@@ -223,9 +207,7 @@ export function _encode_ExtendedCertificate(
 ) {
     if (!_cached_encoder_for_ExtendedCertificate) {
         _cached_encoder_for_ExtendedCertificate = function (
-            value: ExtendedCertificate,
-            elGetter: $.ASN1Encoder<ExtendedCertificate>
-        ): _Element {
+            value: ExtendedCertificate        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

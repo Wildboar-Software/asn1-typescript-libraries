@@ -6,12 +6,6 @@ import {
     _decode_CertificateChoice,
     _encode_CertificateChoice,
 } from "../PKCS7/CertificateChoice.ta.mjs";
-export {
-    CertificateChoice,
-    _decode_CertificateChoice,
-    _encode_CertificateChoice,
-} from "../PKCS7/CertificateChoice.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateSet */
 /**
  * @summary CertificateSet

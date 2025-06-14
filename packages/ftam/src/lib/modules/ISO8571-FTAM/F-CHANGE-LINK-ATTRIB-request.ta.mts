@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,12 +15,6 @@ import {
   _decode_Change_Attributes,
   _encode_Change_Attributes,
 } from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
-export {
-  Change_Attributes,
-  _decode_Change_Attributes,
-  _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_CHANGE_LINK_ATTRIB_request */
 /**
  * @summary F_CHANGE_LINK_ATTRIB_request
@@ -219,9 +157,7 @@ export function _encode_F_CHANGE_LINK_ATTRIB_request(
 ) {
   if (!_cached_encoder_for_F_CHANGE_LINK_ATTRIB_request) {
     _cached_encoder_for_F_CHANGE_LINK_ATTRIB_request = function (
-      value: F_CHANGE_LINK_ATTRIB_request,
-      elGetter: $.ASN1Encoder<F_CHANGE_LINK_ATTRIB_request>
-    ): _Element {
+      value: F_CHANGE_LINK_ATTRIB_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

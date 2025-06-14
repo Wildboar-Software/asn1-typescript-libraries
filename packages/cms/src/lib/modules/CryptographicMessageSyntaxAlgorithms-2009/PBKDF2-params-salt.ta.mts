@@ -6,12 +6,6 @@ import {
     _decode_PBKDF2_SaltSourcesAlgorithmIdentifier,
     _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta.mjs";
-export {
-    PBKDF2_SaltSourcesAlgorithmIdentifier,
-    _decode_PBKDF2_SaltSourcesAlgorithmIdentifier,
-    _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params_salt */
 /**
  * @summary PBKDF2_params_salt

@@ -342,9 +342,7 @@ export function _encode_CommonCertificateAttributes(
 ) {
     if (!_cached_encoder_for_CommonCertificateAttributes) {
         _cached_encoder_for_CommonCertificateAttributes = function (
-            value: CommonCertificateAttributes,
-            elGetter: $.ASN1Encoder<CommonCertificateAttributes>
-        ): _Element {
+            value: CommonCertificateAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

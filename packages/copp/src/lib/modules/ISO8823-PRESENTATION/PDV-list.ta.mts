@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../ISO8823-PRESENTATION/Transfer-syntax-name.ta.mjs';
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from '../ISO8823-PRESENTATION/Transfer-syntax-name.ta.mjs';
 import {
-    Presentation_context_identifier,
-    _decode_Presentation_context_identifier,
-    _encode_Presentation_context_identifier,
-} from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.mjs';
-export {
     Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
@@ -91,12 +26,6 @@ import {
     _decode_PDV_list_presentation_data_values,
     _encode_PDV_list_presentation_data_values,
 } from '../ISO8823-PRESENTATION/PDV-list-presentation-data-values.ta.mjs';
-export {
-    PDV_list_presentation_data_values,
-    _decode_PDV_list_presentation_data_values,
-    _encode_PDV_list_presentation_data_values,
-} from '../ISO8823-PRESENTATION/PDV-list-presentation-data-values.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PDV_list */
 /**
  * @summary PDV_list
@@ -301,9 +230,7 @@ export function _encode_PDV_list(
 ) {
     if (!_cached_encoder_for_PDV_list) {
         _cached_encoder_for_PDV_list = function (
-            value: PDV_list,
-            elGetter: $.ASN1Encoder<PDV_list>
-        ): _Element {
+            value: PDV_list        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

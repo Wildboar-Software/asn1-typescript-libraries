@@ -6,13 +6,6 @@ import {
     _encode_MessageDigest,
 } from "../CryptographicMessageSyntax-2010/MessageDigest.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va.mjs";
-export {
-    MessageDigest,
-    _decode_MessageDigest,
-    _encode_MessageDigest,
-} from "../CryptographicMessageSyntax-2010/MessageDigest.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aa_messageDigest */
 /**
  * @summary aa_messageDigest

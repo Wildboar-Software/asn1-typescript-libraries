@@ -6,14 +6,6 @@ import {
 } from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.mjs";
 import { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-export {
-    AsymmetricKeyPackage,
-    _decode_AsymmetricKeyPackage,
-    _encode_AsymmetricKeyPackage,
-} from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.mjs";
-export { id_ct_KP_aKeyPackage } from "../AsymmetricKeyPackageModuleV1/id-ct-KP-aKeyPackage.va.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_asymmetric_key_package */
 /**
  * @summary ct_asymmetric_key_package

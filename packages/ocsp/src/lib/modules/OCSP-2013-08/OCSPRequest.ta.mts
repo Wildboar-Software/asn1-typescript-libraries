@@ -15,17 +15,6 @@ import {
     _decode_TBSRequest,
     _encode_TBSRequest,
 } from "../OCSP-2013-08/TBSRequest.ta.mjs";
-export {
-    Signature,
-    _decode_Signature,
-    _encode_Signature,
-} from "../OCSP-2013-08/Signature.ta.mjs";
-export {
-    TBSRequest,
-    _decode_TBSRequest,
-    _encode_TBSRequest,
-} from "../OCSP-2013-08/TBSRequest.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OCSPRequest */
 /**
  * @summary OCSPRequest
@@ -194,9 +183,7 @@ export function _encode_OCSPRequest(
 ) {
     if (!_cached_encoder_for_OCSPRequest) {
         _cached_encoder_for_OCSPRequest = function (
-            value: OCSPRequest,
-            elGetter: $.ASN1Encoder<OCSPRequest>
-        ): _Element {
+            value: OCSPRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

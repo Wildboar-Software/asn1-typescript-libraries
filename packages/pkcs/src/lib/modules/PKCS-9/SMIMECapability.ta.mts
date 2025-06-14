@@ -159,9 +159,7 @@ export function _encode_SMIMECapability(
 ) {
     if (!_cached_encoder_for_SMIMECapability) {
         _cached_encoder_for_SMIMECapability = function (
-            value: SMIMECapability,
-            elGetter: $.ASN1Encoder<SMIMECapability>
-        ): _Element {
+            value: SMIMECapability        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

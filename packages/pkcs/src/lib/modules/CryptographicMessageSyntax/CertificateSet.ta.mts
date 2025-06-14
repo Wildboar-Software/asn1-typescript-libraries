@@ -6,12 +6,6 @@ import {
     _decode_CertificateChoices,
     _encode_CertificateChoices,
 } from "../CryptographicMessageSyntax/CertificateChoices.ta.mjs";
-export {
-    CertificateChoices,
-    _decode_CertificateChoices,
-    _encode_CertificateChoices,
-} from "../CryptographicMessageSyntax/CertificateChoices.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateSet */
 /**
  * @summary CertificateSet

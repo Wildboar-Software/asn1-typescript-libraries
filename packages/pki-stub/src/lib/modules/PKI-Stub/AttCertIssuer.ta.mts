@@ -249,9 +249,7 @@ export function _encode_AttCertIssuer(
             0,
             () =>
                 function (
-                    value: AttCertIssuer,
-                    elGetter: $.ASN1Encoder<AttCertIssuer>
-                ): _Element {
+                    value: AttCertIssuer                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

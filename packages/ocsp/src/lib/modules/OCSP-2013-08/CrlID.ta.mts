@@ -195,9 +195,7 @@ let _cached_encoder_for_CrlID: $.ASN1Encoder<CrlID> | null = null;
 export function _encode_CrlID(value: CrlID, elGetter: $.ASN1Encoder<CrlID>) {
     if (!_cached_encoder_for_CrlID) {
         _cached_encoder_for_CrlID = function (
-            value: CrlID,
-            elGetter: $.ASN1Encoder<CrlID>
-        ): _Element {
+            value: CrlID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

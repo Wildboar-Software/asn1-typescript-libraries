@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
-export { pkcs_1 } from "../PKCS-1/pkcs-1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION md5WithRSAEncryption */
 /**
  * @summary md5WithRSAEncryption

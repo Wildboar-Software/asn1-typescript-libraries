@@ -6,14 +6,6 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
-export { dhPublicNumber } from "../ANSI-X9-42/dhPublicNumber.va.mjs";
-export {
-    DomainParameters,
-    _decode_DomainParameters,
-    _encode_DomainParameters,
-} from "../ANSI-X9-42/DomainParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DHPublicNumbers_Union0_Intersection0_Element */
 /**
  * @summary DHPublicNumbers_Union0_Intersection0_Element

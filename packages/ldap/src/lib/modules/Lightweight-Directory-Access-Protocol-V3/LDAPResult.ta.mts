@@ -275,9 +275,7 @@ export function _decode_LDAPResult(el: _Element) {
  * @returns {_Element} The LDAPResult, encoded as an ASN.1 Element.
  */
 export function _encode_LDAPResult(
-  value: LDAPResult,
-  elGetter: $.ASN1Encoder<LDAPResult>
-) {
+  value: LDAPResult) {
     const components: _Element[] = [
         _encode_LDAPResult_resultCode(value.resultCode, $.BER),
         _encode_LDAPDN(value.matchedDN, $.BER),

@@ -207,9 +207,7 @@ export function _encode_PrivateECKeyAttributes(
 ) {
     if (!_cached_encoder_for_PrivateECKeyAttributes) {
         _cached_encoder_for_PrivateECKeyAttributes = function (
-            value: PrivateECKeyAttributes,
-            elGetter: $.ASN1Encoder<PrivateECKeyAttributes>
-        ): _Element {
+            value: PrivateECKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

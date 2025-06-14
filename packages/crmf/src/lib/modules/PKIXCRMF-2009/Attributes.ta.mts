@@ -6,12 +6,6 @@ import {
     _decode_AttributeSet,
     _encode_AttributeSet,
 } from "../PKIX-CommonTypes-2009/AttributeSet.ta.mjs";
-export {
-    AttributeSet,
-    _decode_AttributeSet,
-    _encode_AttributeSet,
-} from "../PKIX-CommonTypes-2009/AttributeSet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Attributes */
 /**
  * @summary Attributes

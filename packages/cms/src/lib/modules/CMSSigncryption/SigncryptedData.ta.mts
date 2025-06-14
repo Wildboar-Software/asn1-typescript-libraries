@@ -26,30 +26,6 @@ import {
     _decode_Signcrypters,
     _encode_Signcrypters,
 } from "../CMSSigncryption/Signcrypters.ta.mjs";
-export {
-    Certificates,
-    _decode_Certificates,
-    _encode_Certificates,
-} from "../CMSSigncryption/Certificates.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta.mjs";
-export {
-    ContentInformation,
-    _decode_ContentInformation,
-    _encode_ContentInformation,
-} from "../CMSSigncryption/ContentInformation.ta.mjs";
-export { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta.mjs";
-export {
-    Signcrypters,
-    _decode_Signcrypters,
-    _encode_Signcrypters,
-} from "../CMSSigncryption/Signcrypters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SigncryptedData */
 /**
  * @summary SigncryptedData
@@ -282,9 +258,7 @@ export function _encode_SigncryptedData(
 ) {
     if (!_cached_encoder_for_SigncryptedData) {
         _cached_encoder_for_SigncryptedData = function (
-            value: SigncryptedData,
-            elGetter: $.ASN1Encoder<SigncryptedData>
-        ): _Element {
+            value: SigncryptedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

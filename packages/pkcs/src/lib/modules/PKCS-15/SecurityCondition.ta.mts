@@ -6,12 +6,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityCondition */
 /**
  * @summary SecurityCondition

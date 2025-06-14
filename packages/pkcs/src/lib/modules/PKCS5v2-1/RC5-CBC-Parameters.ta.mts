@@ -12,14 +12,6 @@ import {
     _decode_RC5_CBC_Parameters_version,
     _encode_RC5_CBC_Parameters_version,
 } from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta.mjs";
-export {
-    RC5_CBC_Parameters_version,
-    RC5_CBC_Parameters_version_v1_0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1_0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_RC5_CBC_Parameters_version,
-    _encode_RC5_CBC_Parameters_version,
-} from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RC5_CBC_Parameters */
 /**
  * @summary RC5_CBC_Parameters
@@ -232,9 +224,7 @@ export function _encode_RC5_CBC_Parameters(
 ) {
     if (!_cached_encoder_for_RC5_CBC_Parameters) {
         _cached_encoder_for_RC5_CBC_Parameters = function (
-            value: RC5_CBC_Parameters,
-            elGetter: $.ASN1Encoder<RC5_CBC_Parameters>
-        ): _Element {
+            value: RC5_CBC_Parameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

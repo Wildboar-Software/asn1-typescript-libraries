@@ -6,33 +6,6 @@ import {
     _encode_HashAlgorithm,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
 import { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va.mjs";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
-export { id_mgf1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-mgf1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms_Union0_Intersection0_Element */
 /**
  * @summary PKCS1MGFAlgorithms_Union0_Intersection0_Element

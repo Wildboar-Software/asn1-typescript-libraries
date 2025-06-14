@@ -6,12 +6,6 @@ import {
     _decode_RecipientInfo,
     _encode_RecipientInfo,
 } from "../CryptographicMessageSyntax/RecipientInfo.ta.mjs";
-export {
-    RecipientInfo,
-    _decode_RecipientInfo,
-    _encode_RecipientInfo,
-} from "../CryptographicMessageSyntax/RecipientInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientInfos */
 /**
  * @summary RecipientInfos

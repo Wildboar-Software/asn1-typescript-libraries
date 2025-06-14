@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,53 +14,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestSource,
     _enum_for_RequestSource,
-    RequestSource_local /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    local /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestSource_remote /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    remote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_RequestSource,
-    _encode_RequestSource,
-} from '../SDHProtASN1/RequestSource.ta.mjs';
-export {
-    RequestSource,
-    _enum_for_RequestSource,
-    RequestSource_local /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    local /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestSource_remote /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    remote /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestSource,
     _encode_RequestSource,
 } from '../SDHProtASN1/RequestSource.ta.mjs';
 import {
     SwitchStatus,
     _enum_for_SwitchStatus,
-    SwitchStatus_pending /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    pending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SwitchStatus_completed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    completed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SwitchStatus_operateFailed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SwitchStatus,
-    _encode_SwitchStatus,
-} from '../SDHProtASN1/SwitchStatus.ta.mjs';
-export {
-    SwitchStatus,
-    _enum_for_SwitchStatus,
-    SwitchStatus_pending /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    pending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SwitchStatus_completed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    completed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SwitchStatus_operateFailed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    operateFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SwitchStatus,
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
 import {
-    FromAndToProtectionUnit,
-    _decode_FromAndToProtectionUnit,
-    _encode_FromAndToProtectionUnit,
-} from '../SDHProtASN1/FromAndToProtectionUnit.ta.mjs';
-export {
     FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
@@ -125,12 +33,6 @@ import {
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
 } from '../SDHProtASN1/AutoSwitchReason.ta.mjs';
-export {
-    AutoSwitchReason,
-    _decode_AutoSwitchReason,
-    _encode_AutoSwitchReason,
-} from '../SDHProtASN1/AutoSwitchReason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ProtectionStatus_Item_autoSwitch */
 /**
  * @summary ProtectionStatus_Item_autoSwitch
@@ -363,9 +265,7 @@ export function _encode_ProtectionStatus_Item_autoSwitch(
 ) {
     if (!_cached_encoder_for_ProtectionStatus_Item_autoSwitch) {
         _cached_encoder_for_ProtectionStatus_Item_autoSwitch = function (
-            value: ProtectionStatus_Item_autoSwitch,
-            elGetter: $.ASN1Encoder<ProtectionStatus_Item_autoSwitch>
-        ): _Element {
+            value: ProtectionStatus_Item_autoSwitch        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

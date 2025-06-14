@@ -11,12 +11,6 @@ import {
     _decode_DigestInfoWithDefault,
     _encode_DigestInfoWithDefault,
 } from "../PKCS-15/DigestInfoWithDefault.ta.mjs";
-export {
-    DigestInfoWithDefault,
-    _decode_DigestInfoWithDefault,
-    _encode_DigestInfoWithDefault,
-} from "../PKCS-15/DigestInfoWithDefault.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION URL_urlWithDigest */
 /**
  * @summary URL_urlWithDigest
@@ -172,9 +166,7 @@ export function _encode_URL_urlWithDigest(
 ) {
     if (!_cached_encoder_for_URL_urlWithDigest) {
         _cached_encoder_for_URL_urlWithDigest = function (
-            value: URL_urlWithDigest,
-            elGetter: $.ASN1Encoder<URL_urlWithDigest>
-        ): _Element {
+            value: URL_urlWithDigest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

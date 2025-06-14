@@ -26,17 +26,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
-export {
-    ExtendedCertificate,
-    _decode_ExtendedCertificate,
-    _encode_ExtendedCertificate,
-} from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta.mjs";
-export {
-    OtherCertificateFormat,
-    _decode_OtherCertificateFormat,
-    _encode_OtherCertificateFormat,
-} from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateChoices */
 /**
  * @summary CertificateChoices

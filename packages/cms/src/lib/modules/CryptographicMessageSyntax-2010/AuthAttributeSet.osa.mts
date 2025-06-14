@@ -3,10 +3,6 @@ import { aa_contentType } from "../CryptographicMessageSyntax-2010/aa-contentTyp
 import { aa_messageDigest } from "../CryptographicMessageSyntax-2010/aa-messageDigest.oa.mjs";
 import { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTime.oa.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export { aa_contentType } from "../CryptographicMessageSyntax-2010/aa-contentType.oa.mjs";
-export { aa_messageDigest } from "../CryptographicMessageSyntax-2010/aa-messageDigest.oa.mjs";
-export { aa_signingTime } from "../CryptographicMessageSyntax-2010/aa-signingTime.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthAttributeSet */
 /**
  * @summary AuthAttributeSet

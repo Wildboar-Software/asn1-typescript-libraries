@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OTHER_REVOK_INFO } from "../CryptographicMessageSyntax-2010/OTHER-REVOK-INFO.oca.mjs";
-export { SupportedOtherRevokInfo } from "../CryptographicMessageSyntax-2010/SupportedOtherRevokInfo.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherRevocationInfoFormat */
 /**
  * @summary OtherRevocationInfoFormat
@@ -175,9 +172,7 @@ export function _encode_OtherRevocationInfoFormat(
 ) {
     if (!_cached_encoder_for_OtherRevocationInfoFormat) {
         _cached_encoder_for_OtherRevocationInfoFormat = function (
-            value: OtherRevocationInfoFormat,
-            elGetter: $.ASN1Encoder<OtherRevocationInfoFormat>
-        ): _Element {
+            value: OtherRevocationInfoFormat        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

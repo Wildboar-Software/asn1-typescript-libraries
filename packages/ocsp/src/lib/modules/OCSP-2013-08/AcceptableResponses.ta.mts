@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
-export { ResponseSet } from "../OCSP-2013-08/ResponseSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AcceptableResponses */
 /**
  * @summary AcceptableResponses

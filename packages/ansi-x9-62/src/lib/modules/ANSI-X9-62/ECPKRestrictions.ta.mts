@@ -15,17 +15,6 @@ import {
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "../ANSI-X9-62/ECDomainParameters.ta.mjs";
-export {
-    ECCAlgorithms,
-    _decode_ECCAlgorithms,
-    _encode_ECCAlgorithms,
-} from "../ANSI-X9-62/ECCAlgorithms.ta.mjs";
-export {
-    ECDomainParameters,
-    _decode_ECDomainParameters,
-    _encode_ECDomainParameters,
-} from "../ANSI-X9-62/ECDomainParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECPKRestrictions */
 /**
  * @summary ECPKRestrictions
@@ -180,9 +169,7 @@ export function _encode_ECPKRestrictions(
 ) {
     if (!_cached_encoder_for_ECPKRestrictions) {
         _cached_encoder_for_ECPKRestrictions = function (
-            value: ECPKRestrictions,
-            elGetter: $.ASN1Encoder<ECPKRestrictions>
-        ): _Element {
+            value: ECPKRestrictions        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

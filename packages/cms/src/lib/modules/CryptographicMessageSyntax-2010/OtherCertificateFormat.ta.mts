@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CERT-FMT.oca.mjs";
-export { SupportedCertFormats } from "../CryptographicMessageSyntax-2010/SupportedCertFormats.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherCertificateFormat */
 /**
  * @summary OtherCertificateFormat
@@ -161,9 +158,7 @@ export function _encode_OtherCertificateFormat(
 ) {
     if (!_cached_encoder_for_OtherCertificateFormat) {
         _cached_encoder_for_OtherCertificateFormat = function (
-            value: OtherCertificateFormat,
-            elGetter: $.ASN1Encoder<OtherCertificateFormat>
-        ): _Element {
+            value: OtherCertificateFormat        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

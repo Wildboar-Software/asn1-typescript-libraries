@@ -6,12 +6,6 @@ import {
     _decode_SafeBag,
     _encode_SafeBag,
 } from "../PKCS-12/SafeBag.ta.mjs";
-export {
-    SafeBag,
-    _decode_SafeBag,
-    _encode_SafeBag,
-} from "../PKCS-12/SafeBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SafeContents */
 /**
  * @summary SafeContents

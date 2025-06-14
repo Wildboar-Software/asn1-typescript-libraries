@@ -20,50 +20,6 @@ import {
     _decode_PKIStatus,
     _encode_PKIStatus,
 } from "../PKIXTSP/PKIStatus.ta.mjs";
-export {
-    PKIFreeText,
-    _decode_PKIFreeText,
-    _encode_PKIFreeText,
-} from "../PKIXCMP/PKIFreeText.ta.mjs";
-export {
-    addInfoNotAvailable /* IMPORTED_SHORT_NAMED_BIT */,
-    badAlg /* IMPORTED_SHORT_NAMED_BIT */,
-    badDataFormat /* IMPORTED_SHORT_NAMED_BIT */,
-    badRequest /* IMPORTED_SHORT_NAMED_BIT */,
-    PKIFailureInfo,
-    PKIFailureInfo_addInfoNotAvailable /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_badAlg /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_badDataFormat /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_badRequest /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_systemFailure /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_timeNotAvailable /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_unacceptedExtension /* IMPORTED_LONG_NAMED_BIT */,
-    PKIFailureInfo_unacceptedPolicy /* IMPORTED_LONG_NAMED_BIT */,
-    systemFailure /* IMPORTED_SHORT_NAMED_BIT */,
-    timeNotAvailable /* IMPORTED_SHORT_NAMED_BIT */,
-    unacceptedExtension /* IMPORTED_SHORT_NAMED_BIT */,
-    unacceptedPolicy /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_PKIFailureInfo,
-    _encode_PKIFailureInfo,
-} from "../PKIXTSP/PKIFailureInfo.ta.mjs";
-export {
-    granted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    grantedWithMods /* IMPORTED_SHORT_NAMED_INTEGER */,
-    PKIStatus,
-    PKIStatus_granted /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIStatus_grantedWithMods /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIStatus_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIStatus_revocationNotification /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIStatus_revocationWarning /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIStatus_waiting /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    revocationNotification /* IMPORTED_SHORT_NAMED_INTEGER */,
-    revocationWarning /* IMPORTED_SHORT_NAMED_INTEGER */,
-    waiting /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_PKIStatus,
-    _encode_PKIStatus,
-} from "../PKIXTSP/PKIStatus.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKIStatusInfo */
 /**
  * @summary PKIStatusInfo
@@ -251,9 +207,7 @@ export function _encode_PKIStatusInfo(
 ) {
     if (!_cached_encoder_for_PKIStatusInfo) {
         _cached_encoder_for_PKIStatusInfo = function (
-            value: PKIStatusInfo,
-            elGetter: $.ASN1Encoder<PKIStatusInfo>
-        ): _Element {
+            value: PKIStatusInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

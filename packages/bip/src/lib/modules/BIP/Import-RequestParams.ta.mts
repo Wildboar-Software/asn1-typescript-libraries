@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-export {
-  BioAPI_HANDLE,
-  _decode_BioAPI_HANDLE,
-  _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_DATA,
-  _decode_BioAPI_DATA,
-  _encode_BioAPI_DATA,
-} from '../BIP/BioAPI-DATA.ta.mjs';
-export {
   BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
@@ -91,52 +26,12 @@ import {
   _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
-export {
-  BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-  _decode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-  _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
-} from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
   BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
-  BioAPI_BIR_PURPOSE_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  verify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  identify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enroll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollVerify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollVerify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollIdentify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollIdentify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_audit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  audit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_any_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
 } from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
-export {
-  BioAPI_BIR_PURPOSE,
-  _enum_for_BioAPI_BIR_PURPOSE,
-  BioAPI_BIR_PURPOSE_verify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  verify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_identify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  identify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enroll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enroll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollVerify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollVerify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_enrollIdentify /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  enrollIdentify /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_audit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  audit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_BIR_PURPOSE_any_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_BIR_PURPOSE,
-  _encode_BioAPI_BIR_PURPOSE,
-} from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Import_RequestParams */
 /**
  * @summary Import_RequestParams
@@ -377,9 +272,7 @@ export function _encode_Import_RequestParams(
 ) {
   if (!_cached_encoder_for_Import_RequestParams) {
     _cached_encoder_for_Import_RequestParams = function (
-      value: Import_RequestParams,
-      elGetter: $.ASN1Encoder<Import_RequestParams>
-    ): _Element {
+      value: Import_RequestParams    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

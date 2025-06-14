@@ -6,14 +6,6 @@ import {
     _decode_RSASSA_PSS_params,
     _encode_RSASSA_PSS_params,
 } from "../PKCS-1/RSASSA-PSS-params.ta.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_RSASSA_PSS } from "../PKCS-1/id-RSASSA-PSS.va.mjs";
-export {
-    RSASSA_PSS_params,
-    _decode_RSASSA_PSS_params,
-    _encode_RSASSA_PSS_params,
-} from "../PKCS-1/RSASSA-PSS-params.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union12_Intersection0_Element */
 /**
  * @summary PKCS1Algorithms_Union12_Intersection0_Element

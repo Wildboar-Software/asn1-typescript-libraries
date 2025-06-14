@@ -6,28 +6,6 @@ import {
     required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMS3DESwrap.va.mjs";
-export { KEY_WRAP } from "../AlgorithmInformation-2009/KEY-WRAP.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export { id_alg_CMS3DESwrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMS3DESwrap.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION kwa_3DESWrap */
 /**
  * @summary kwa_3DESWrap

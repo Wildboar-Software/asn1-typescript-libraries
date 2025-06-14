@@ -6,12 +6,6 @@ import {
     _decode_MLData,
     _encode_MLData,
 } from "../ExtendedSecurityServices-2006/MLData.ta.mjs";
-export {
-    MLData,
-    _decode_MLData,
-    _encode_MLData,
-} from "../ExtendedSecurityServices-2006/MLData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MLExpansionHistory */
 /**
  * @summary MLExpansionHistory

@@ -16,30 +16,6 @@ import {
     _decode_ResponseBytes,
     _encode_ResponseBytes,
 } from "../OCSP-2013-08/ResponseBytes.ta.mjs";
-export {
-    internalError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    malformedRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    OCSPResponseStatus,
-    OCSPResponseStatus_internalError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OCSPResponseStatus_malformedRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OCSPResponseStatus_sigRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OCSPResponseStatus_successful /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OCSPResponseStatus_tryLater /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OCSPResponseStatus_unauthorized /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sigRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    successful /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    tryLater /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unauthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_OCSPResponseStatus,
-    _encode_OCSPResponseStatus,
-    _enum_for_OCSPResponseStatus,
-} from "../OCSP-2013-08/OCSPResponseStatus.ta.mjs";
-export {
-    ResponseBytes,
-    _decode_ResponseBytes,
-    _encode_ResponseBytes,
-} from "../OCSP-2013-08/ResponseBytes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OCSPResponse */
 /**
  * @summary OCSPResponse
@@ -218,9 +194,7 @@ export function _encode_OCSPResponse(
 ) {
     if (!_cached_encoder_for_OCSPResponse) {
         _cached_encoder_for_OCSPResponse = function (
-            value: OCSPResponse,
-            elGetter: $.ASN1Encoder<OCSPResponse>
-        ): _Element {
+            value: OCSPResponse        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -213,9 +213,7 @@ export function _encode_PrivateKEAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PrivateKEAKeyAttributes) {
         _cached_encoder_for_PrivateKEAKeyAttributes = function (
-            value: PrivateKEAKeyAttributes,
-            elGetter: $.ASN1Encoder<PrivateKEAKeyAttributes>
-        ): _Element {
+            value: PrivateKEAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

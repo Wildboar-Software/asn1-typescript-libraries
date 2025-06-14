@@ -6,12 +6,6 @@ import {
     _decode_SMIMECapability,
     _encode_SMIMECapability,
 } from "../AlgorithmInformation-2009/SMIMECapability.ta.mjs";
-export {
-    SMIMECapability,
-    _decode_SMIMECapability,
-    _encode_SMIMECapability,
-} from "../AlgorithmInformation-2009/SMIMECapability.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SMIMECapabilities */
 /**
  * @summary SMIMECapabilities

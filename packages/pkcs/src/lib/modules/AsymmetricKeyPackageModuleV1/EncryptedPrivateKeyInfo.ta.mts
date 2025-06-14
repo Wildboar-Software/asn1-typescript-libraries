@@ -15,17 +15,6 @@ import {
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    EncryptedData,
-    _decode_EncryptedData,
-    _encode_EncryptedData,
-} from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta.mjs";
-export {
-    EncryptionAlgorithmIdentifier,
-    _decode_EncryptionAlgorithmIdentifier,
-    _encode_EncryptionAlgorithmIdentifier,
-} from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedPrivateKeyInfo */
 /**
  * @summary EncryptedPrivateKeyInfo
@@ -193,9 +182,7 @@ export function _encode_EncryptedPrivateKeyInfo(
 ) {
     if (!_cached_encoder_for_EncryptedPrivateKeyInfo) {
         _cached_encoder_for_EncryptedPrivateKeyInfo = function (
-            value: EncryptedPrivateKeyInfo,
-            elGetter: $.ASN1Encoder<EncryptedPrivateKeyInfo>
-        ): _Element {
+            value: EncryptedPrivateKeyInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

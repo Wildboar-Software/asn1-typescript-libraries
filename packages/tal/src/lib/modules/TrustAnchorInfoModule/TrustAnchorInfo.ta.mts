@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { TrustAnchorInfoVersion, TrustAnchorInfoVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.mjs";
+import { TrustAnchorInfoVersion, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/src/lib/modules/CertificateExtensions/KeyIdentifier.ta.mjs";
 import { TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta.mjs";
@@ -232,7 +232,7 @@ let _cached_encoder_for_TrustAnchorInfo: $.ASN1Encoder<TrustAnchorInfo> | null =
  */
 export
 function _encode_TrustAnchorInfo (value: TrustAnchorInfo, elGetter: $.ASN1Encoder<TrustAnchorInfo>) {
-    if (!_cached_encoder_for_TrustAnchorInfo) { _cached_encoder_for_TrustAnchorInfo = function (value: TrustAnchorInfo, elGetter: $.ASN1Encoder<TrustAnchorInfo>): _Element {
+    if (!_cached_encoder_for_TrustAnchorInfo) { _cached_encoder_for_TrustAnchorInfo = function (value: TrustAnchorInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TrustAnchorInfo._default_value_for_version) ? undefined : _encode_TrustAnchorInfoVersion(value.version, $.BER)),

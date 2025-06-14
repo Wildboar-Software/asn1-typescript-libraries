@@ -6,8 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FieldID */
 /**
  * @summary FieldID
@@ -158,9 +156,7 @@ export function _encode_FieldID(
 ) {
     if (!_cached_encoder_for_FieldID) {
         _cached_encoder_for_FieldID = function (
-            value: FieldID,
-            elGetter: $.ASN1Encoder<FieldID>
-        ): _Element {
+            value: FieldID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

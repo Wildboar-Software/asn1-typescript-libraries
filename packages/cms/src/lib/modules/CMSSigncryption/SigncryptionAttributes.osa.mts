@@ -2,9 +2,6 @@
 import { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa.mjs";
 import { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export { signcryptedEnvelope } from "../CMSSigncryption/signcryptedEnvelope.oa.mjs";
-export { SignedAttributesSet } from "../CryptographicMessageSyntax-2010/SignedAttributesSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SigncryptionAttributes */
 /**
  * @summary SigncryptionAttributes

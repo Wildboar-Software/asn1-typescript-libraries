@@ -6,12 +6,6 @@ import {
     _decode_MarkingData,
     _encode_MarkingData,
 } from "../SIOsAccessControl-MODULE/MarkingData.ta.mjs";
-export {
-    MarkingData,
-    _decode_MarkingData,
-    _encode_MarkingData,
-} from "../SIOsAccessControl-MODULE/MarkingData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MarkingDataInfo */
 /**
  * @summary MarkingDataInfo

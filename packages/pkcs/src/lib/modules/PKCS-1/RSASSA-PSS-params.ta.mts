@@ -24,26 +24,6 @@ import {
     _decode_TrailerField,
     _encode_TrailerField,
 } from "../PKCS-1/TrailerField.ta.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta.mjs";
-export {
-    MaskGenAlgorithm,
-    _decode_MaskGenAlgorithm,
-    _encode_MaskGenAlgorithm,
-} from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
-export { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.mjs";
-export { sha1 } from "../PKCS-1/sha1.va.mjs";
-export {
-    TrailerField,
-    trailerFieldBC /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TrailerField_trailerFieldBC /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_TrailerField,
-    _encode_TrailerField,
-} from "../PKCS-1/TrailerField.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
 /**
  * @summary RSASSA_PSS_params
@@ -305,9 +285,7 @@ export function _encode_RSASSA_PSS_params(
 ) {
     if (!_cached_encoder_for_RSASSA_PSS_params) {
         _cached_encoder_for_RSASSA_PSS_params = function (
-            value: RSASSA_PSS_params,
-            elGetter: $.ASN1Encoder<RSASSA_PSS_params>
-        ): _Element {
+            value: RSASSA_PSS_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

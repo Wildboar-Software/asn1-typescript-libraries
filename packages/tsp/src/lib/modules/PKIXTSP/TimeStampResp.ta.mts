@@ -15,17 +15,6 @@ import {
     _decode_TimeStampToken,
     _encode_TimeStampToken,
 } from "../PKIXTSP/TimeStampToken.ta.mjs";
-export {
-    PKIStatusInfo,
-    _decode_PKIStatusInfo,
-    _encode_PKIStatusInfo,
-} from "../PKIXTSP/PKIStatusInfo.ta.mjs";
-export {
-    TimeStampToken,
-    _decode_TimeStampToken,
-    _encode_TimeStampToken,
-} from "../PKIXTSP/TimeStampToken.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TimeStampResp */
 /**
  * @summary TimeStampResp
@@ -194,9 +183,7 @@ export function _encode_TimeStampResp(
 ) {
     if (!_cached_encoder_for_TimeStampResp) {
         _cached_encoder_for_TimeStampResp = function (
-            value: TimeStampResp,
-            elGetter: $.ASN1Encoder<TimeStampResp>
-        ): _Element {
+            value: TimeStampResp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

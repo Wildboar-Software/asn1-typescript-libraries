@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_Attribute,
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
-export {
-  Attribute,
-  _decode_Attribute,
-  _encode_Attribute,
-} from '../CMIP-1/Attribute.ta.mjs';
 import {
-  FilterItem_substrings_Item,
-  _decode_FilterItem_substrings_Item,
-  _encode_FilterItem_substrings_Item,
-} from '../CMIP-1/FilterItem-substrings-Item.ta.mjs';
-export {
   FilterItem_substrings_Item,
   _decode_FilterItem_substrings_Item,
   _encode_FilterItem_substrings_Item,
@@ -91,12 +25,6 @@ import {
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
-export {
-  AttributeId,
-  _decode_AttributeId,
-  _encode_AttributeId,
-} from '../CMIP-1/AttributeId.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FilterItem */
 /**
  * @summary FilterItem

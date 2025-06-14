@@ -6,13 +6,6 @@ import {
     _encode_SigncryptedKey,
 } from "../CMSSigncryption/SigncryptedKey.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.mjs";
-export {
-    SigncryptedKey,
-    _decode_SigncryptedKey,
-    _encode_SigncryptedKey,
-} from "../CMSSigncryption/SigncryptedKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION signcryptedEnvelope */
 /**
  * @summary signcryptedEnvelope

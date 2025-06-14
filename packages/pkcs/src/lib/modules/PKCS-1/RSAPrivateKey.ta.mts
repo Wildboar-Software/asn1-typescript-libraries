@@ -16,21 +16,6 @@ import {
     _decode_Version,
     _encode_Version,
 } from "../PKCS-1/Version.ta.mjs";
-export {
-    OtherPrimeInfos,
-    _decode_OtherPrimeInfos,
-    _encode_OtherPrimeInfos,
-} from "../PKCS-1/OtherPrimeInfos.ta.mjs";
-export {
-    multi /* IMPORTED_SHORT_NAMED_INTEGER */,
-    two_prime /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
-    Version_multi /* IMPORTED_LONG_NAMED_INTEGER */,
-    Version_two_prime /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Version,
-    _encode_Version,
-} from "../PKCS-1/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RSAPrivateKey */
 /**
  * @summary RSAPrivateKey
@@ -363,9 +348,7 @@ export function _encode_RSAPrivateKey(
 ) {
     if (!_cached_encoder_for_RSAPrivateKey) {
         _cached_encoder_for_RSAPrivateKey = function (
-            value: RSAPrivateKey,
-            elGetter: $.ASN1Encoder<RSAPrivateKey>
-        ): _Element {
+            value: RSAPrivateKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

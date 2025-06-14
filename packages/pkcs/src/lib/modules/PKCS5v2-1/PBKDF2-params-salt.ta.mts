@@ -6,12 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params_salt */
 /**
  * @summary PBKDF2_params_salt

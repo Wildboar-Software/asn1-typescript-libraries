@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
 import { dhPublicNumber } from "../ANSI-X9-42/dhPublicNumber.va.mjs";
 import {
     _decode_DomainParameters,

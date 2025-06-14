@@ -6,14 +6,6 @@ import {
     _decode_RSAES_OAEP_params,
     _encode_RSAES_OAEP_params,
 } from "../PKCS-1/RSAES-OAEP-params.ta.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_RSAES_OAEP } from "../PKCS-1/id-RSAES-OAEP.va.mjs";
-export {
-    RSAES_OAEP_params,
-    _decode_RSAES_OAEP_params,
-    _encode_RSAES_OAEP_params,
-} from "../PKCS-1/RSAES-OAEP-params.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1Algorithms_Union10_Intersection0_Element */
 /**
  * @summary PKCS1Algorithms_Union10_Intersection0_Element

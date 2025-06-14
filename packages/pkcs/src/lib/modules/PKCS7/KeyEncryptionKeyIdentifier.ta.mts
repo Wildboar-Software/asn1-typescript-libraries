@@ -12,12 +12,6 @@ import {
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
 } from "../PKCS7/OtherKeyAttribute.ta.mjs";
-export {
-    OtherKeyAttribute,
-    _decode_OtherKeyAttribute,
-    _encode_OtherKeyAttribute,
-} from "../PKCS7/OtherKeyAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyEncryptionKeyIdentifier */
 /**
  * @summary KeyEncryptionKeyIdentifier
@@ -212,9 +206,7 @@ export function _encode_KeyEncryptionKeyIdentifier(
 ) {
     if (!_cached_encoder_for_KeyEncryptionKeyIdentifier) {
         _cached_encoder_for_KeyEncryptionKeyIdentifier = function (
-            value: KeyEncryptionKeyIdentifier,
-            elGetter: $.ASN1Encoder<KeyEncryptionKeyIdentifier>
-        ): _Element {
+            value: KeyEncryptionKeyIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

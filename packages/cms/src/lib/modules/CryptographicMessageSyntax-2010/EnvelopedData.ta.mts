@@ -30,39 +30,6 @@ import {
     _encode_Attributes,
     _decode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
-export {
-    OriginatorInfo,
-    _decode_OriginatorInfo,
-    _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs";
-export {
-    RecipientInfos,
-    _decode_RecipientInfos,
-    _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**
  * @summary EnvelopedData
@@ -312,9 +279,7 @@ export function _encode_EnvelopedData(
 ) {
     if (!_cached_encoder_for_EnvelopedData) {
         _cached_encoder_for_EnvelopedData = function (
-            value: EnvelopedData,
-            elGetter: $.ASN1Encoder<EnvelopedData>
-        ): _Element {
+            value: EnvelopedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

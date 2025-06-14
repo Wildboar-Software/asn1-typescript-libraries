@@ -11,14 +11,6 @@ import {
     _decode_PKCS12Attribute,
     _encode_PKCS12Attribute,
 } from "../PKCS-12/PKCS12Attribute.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export {
-    PKCS12Attribute,
-    _decode_PKCS12Attribute,
-    _encode_PKCS12Attribute,
-} from "../PKCS-12/PKCS12Attribute.ta.mjs";
-export { PKCS12BagSet } from "../PKCS-12/PKCS12BagSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SafeBag */
 /**
  * @summary SafeBag
@@ -209,9 +201,7 @@ export function _encode_SafeBag(
 ) {
     if (!_cached_encoder_for_SafeBag) {
         _cached_encoder_for_SafeBag = function (
-            value: SafeBag,
-            elGetter: $.ASN1Encoder<SafeBag>
-        ): _Element {
+            value: SafeBag        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

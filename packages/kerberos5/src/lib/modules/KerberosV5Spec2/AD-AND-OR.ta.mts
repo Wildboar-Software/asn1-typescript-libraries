@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
-export {
-  Int32,
-  _decode_Int32,
-  _encode_Int32,
-} from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-export {
-  AuthorizationData,
-  _decode_AuthorizationData,
-  _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AD_AND_OR */
 /**
  * @summary AD_AND_OR
@@ -247,9 +180,7 @@ export function _encode_AD_AND_OR(
 ) {
   if (!_cached_encoder_for_AD_AND_OR) {
     _cached_encoder_for_AD_AND_OR = function (
-      value: AD_AND_OR,
-      elGetter: $.ASN1Encoder<AD_AND_OR>
-    ): _Element {
+      value: AD_AND_OR    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

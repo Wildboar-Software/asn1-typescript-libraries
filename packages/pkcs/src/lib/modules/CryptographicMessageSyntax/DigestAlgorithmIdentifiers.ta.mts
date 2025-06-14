@@ -6,12 +6,6 @@ import {
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DigestAlgorithmIdentifiers */
 /**
  * @summary DigestAlgorithmIdentifiers

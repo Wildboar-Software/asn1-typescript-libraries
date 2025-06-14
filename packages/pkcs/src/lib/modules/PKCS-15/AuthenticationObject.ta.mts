@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-export {
-    CommonAuthenticationObjectAttributes,
-    _decode_CommonAuthenticationObjectAttributes,
-    _encode_CommonAuthenticationObjectAttributes,
-} from "../PKCS-15/CommonAuthenticationObjectAttributes.ta.mjs";
-export {
-    PKCS15Object,
-    _get_decoder_for_PKCS15Object,
-    _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticationObject */
 /**
  * @summary AuthenticationObject

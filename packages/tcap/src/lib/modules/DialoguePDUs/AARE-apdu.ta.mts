@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
     EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,32 +17,11 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_AARE_apdu_protocol_version,
-    _encode_AARE_apdu_protocol_version,
-} from '../DialoguePDUs/AARE-apdu-protocol-version.ta.mjs';
-export {
-    AARE_apdu_protocol_version,
-    AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
 } from '../DialoguePDUs/AARE-apdu-protocol-version.ta.mjs';
 import {
     Associate_result,
-    Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
-    accepted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Associate_result_reject_permanent /* IMPORTED_LONG_NAMED_INTEGER */,
-    reject_permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Associate_result,
-    _encode_Associate_result,
-} from '../DialoguePDUs/Associate-result.ta.mjs';
-export {
-    Associate_result,
-    Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
-    accepted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Associate_result_reject_permanent /* IMPORTED_LONG_NAMED_INTEGER */,
-    reject_permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Associate_result,
     _encode_Associate_result,
 } from '../DialoguePDUs/Associate-result.ta.mjs';
@@ -103,12 +30,6 @@ import {
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
 } from '../DialoguePDUs/Associate-source-diagnostic.ta.mjs';
-export {
-    Associate_source_diagnostic,
-    _decode_Associate_source_diagnostic,
-    _encode_Associate_source_diagnostic,
-} from '../DialoguePDUs/Associate-source-diagnostic.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AARE_apdu */
 /**
  * @summary AARE_apdu
@@ -375,9 +296,7 @@ export function _encode_AARE_apdu(
             1,
             () =>
                 function (
-                    value: AARE_apdu,
-                    elGetter: $.ASN1Encoder<AARE_apdu>
-                ): _Element {
+                    value: AARE_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

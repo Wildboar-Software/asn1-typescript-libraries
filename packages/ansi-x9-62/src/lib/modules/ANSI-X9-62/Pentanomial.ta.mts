@@ -180,9 +180,7 @@ export function _encode_Pentanomial(
 ) {
     if (!_cached_encoder_for_Pentanomial) {
         _cached_encoder_for_Pentanomial = function (
-            value: Pentanomial,
-            elGetter: $.ASN1Encoder<Pentanomial>
-        ): _Element {
+            value: Pentanomial        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

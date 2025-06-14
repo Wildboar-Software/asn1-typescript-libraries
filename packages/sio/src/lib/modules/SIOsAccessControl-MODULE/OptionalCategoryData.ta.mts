@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CatData } from "../SIOsAccessControl-MODULE/CatData.osa.mjs";
-export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OptionalCategoryData */
 /**
  * @summary OptionalCategoryData
@@ -167,9 +164,7 @@ export function _encode_OptionalCategoryData(
 ) {
     if (!_cached_encoder_for_OptionalCategoryData) {
         _cached_encoder_for_OptionalCategoryData = function (
-            value: OptionalCategoryData,
-            elGetter: $.ASN1Encoder<OptionalCategoryData>
-        ): _Element {
+            value: OptionalCategoryData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

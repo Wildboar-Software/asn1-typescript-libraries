@@ -3,10 +3,6 @@ import { ObjectIdentifier as _OID } from "asn1-ts";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
 import { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION keyBag */
 /**
  * @summary keyBag

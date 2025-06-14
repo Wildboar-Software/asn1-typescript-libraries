@@ -16,23 +16,6 @@ import {
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
 } from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
-export {
-    Applied,
-    Applied_both /* IMPORTED_LONG_NAMED_INTEGER */,
-    Applied_decrypt /* IMPORTED_LONG_NAMED_INTEGER */,
-    Applied_encrypt /* IMPORTED_LONG_NAMED_INTEGER */,
-    both /* IMPORTED_SHORT_NAMED_INTEGER */,
-    decrypt /* IMPORTED_SHORT_NAMED_INTEGER */,
-    encrypt /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Applied,
-    _encode_Applied,
-} from "../SIOsAccessControl-MODULE/Applied.ta.mjs";
-export {
-    LabelAndCertValue,
-    _decode_LabelAndCertValue,
-    _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EquivalentClassification */
 /**
  * @summary EquivalentClassification
@@ -218,9 +201,7 @@ export function _encode_EquivalentClassification(
 ) {
     if (!_cached_encoder_for_EquivalentClassification) {
         _cached_encoder_for_EquivalentClassification = function (
-            value: EquivalentClassification,
-            elGetter: $.ASN1Encoder<EquivalentClassification>
-        ): _Element {
+            value: EquivalentClassification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,12 +11,6 @@ import {
     _decode_DigestAlgorithm,
     _encode_DigestAlgorithm,
 } from "../PKCS-1/DigestAlgorithm.ta.mjs";
-export {
-    DigestAlgorithm,
-    _decode_DigestAlgorithm,
-    _encode_DigestAlgorithm,
-} from "../PKCS-1/DigestAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DigestInfo */
 /**
  * @summary DigestInfo
@@ -173,9 +167,7 @@ export function _encode_DigestInfo(
 ) {
     if (!_cached_encoder_for_DigestInfo) {
         _cached_encoder_for_DigestInfo = function (
-            value: DigestInfo,
-            elGetter: $.ASN1Encoder<DigestInfo>
-        ): _Element {
+            value: DigestInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

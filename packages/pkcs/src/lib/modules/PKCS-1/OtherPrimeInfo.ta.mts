@@ -182,9 +182,7 @@ export function _encode_OtherPrimeInfo(
 ) {
     if (!_cached_encoder_for_OtherPrimeInfo) {
         _cached_encoder_for_OtherPrimeInfo = function (
-            value: OtherPrimeInfo,
-            elGetter: $.ASN1Encoder<OtherPrimeInfo>
-        ): _Element {
+            value: OtherPrimeInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -6,14 +6,6 @@ import {
     _decode_SignedData,
     _encode_SignedData,
 } from "../CryptographicMessageSyntax-2010/SignedData.ta.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { id_signedData } from "../CryptographicMessageSyntax-2010/id-signedData.va.mjs";
-export {
-    SignedData,
-    _decode_SignedData,
-    _encode_SignedData,
-} from "../CryptographicMessageSyntax-2010/SignedData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_SignedData */
 /**
  * @summary ct_SignedData

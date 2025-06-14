@@ -6,12 +6,6 @@ import {
     _decode_Pointer,
     _encode_Pointer,
 } from "../CMSProfileAttributes/Pointer.ta.mjs";
-export {
-    Pointer,
-    _decode_Pointer,
-    _encode_Pointer,
-} from "../CMSProfileAttributes/Pointer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Pointers */
 /**
  * @summary Pointers

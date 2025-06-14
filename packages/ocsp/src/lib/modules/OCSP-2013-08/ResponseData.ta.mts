@@ -278,9 +278,7 @@ export function _encode_ResponseData(
 ) {
     if (!_cached_encoder_for_ResponseData) {
         _cached_encoder_for_ResponseData = function (
-            value: ResponseData,
-            elGetter: $.ASN1Encoder<ResponseData>
-        ): _Element {
+            value: ResponseData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

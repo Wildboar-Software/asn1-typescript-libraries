@@ -6,14 +6,6 @@ import {
     _encode_Pentanomial,
 } from "../ANSI-X9-62/Pentanomial.ta.mjs";
 import { ppBasis } from "../ANSI-X9-62/ppBasis.va.mjs";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
-export {
-    Pentanomial,
-    _decode_Pentanomial,
-    _encode_Pentanomial,
-} from "../ANSI-X9-62/Pentanomial.ta.mjs";
-export { ppBasis } from "../ANSI-X9-62/ppBasis.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union2_Intersection0_Element */
 /**
  * @summary BasisTypes_Union2_Intersection0_Element

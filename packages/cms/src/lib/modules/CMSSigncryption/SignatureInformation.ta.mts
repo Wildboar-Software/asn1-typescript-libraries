@@ -25,27 +25,6 @@ import {
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
-export {
-    ToBeSigned,
-    _decode_ToBeSigned,
-    _encode_ToBeSigned,
-} from "../CMSSigncryption/ToBeSigned.ta.mjs";
-export {
-    SignatureAlgorithmIdentifier,
-    _decode_SignatureAlgorithmIdentifier,
-    _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.mjs";
-export {
-    SignatureValue,
-    _decode_SignatureValue,
-    _encode_SignatureValue,
-} from "../CryptographicMessageSyntax-2010/SignatureValue.ta.mjs";
-export {
-    SignerIdentifier,
-    _decode_SignerIdentifier,
-    _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignatureInformation */
 /**
  * @summary SignatureInformation
@@ -260,9 +239,7 @@ export function _encode_SignatureInformation(
 ) {
     if (!_cached_encoder_for_SignatureInformation) {
         _cached_encoder_for_SignatureInformation = function (
-            value: SignatureInformation,
-            elGetter: $.ASN1Encoder<SignatureInformation>
-        ): _Element {
+            value: SignatureInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
   _decode_AP_title,
   _encode_AP_title,
 } from '../ISO8571-FTAM/AP-title.ta.mjs';
-export {
-  AP_title,
-  _decode_AP_title,
-  _encode_AP_title,
-} from '../ISO8571-FTAM/AP-title.ta.mjs';
 import {
   AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
 } from '../ISO8571-FTAM/AE-qualifier.ta.mjs';
-export {
-  AE_qualifier,
-  _decode_AE_qualifier,
-  _encode_AE_qualifier,
-} from '../ISO8571-FTAM/AE-qualifier.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AE_title */
 /**
  * @summary AE_title
@@ -228,9 +161,7 @@ export function _encode_AE_title(
 ) {
   if (!_cached_encoder_for_AE_title) {
     _cached_encoder_for_AE_title = function (
-      value: AE_title,
-      elGetter: $.ASN1Encoder<AE_title>
-    ): _Element {
+      value: AE_title    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

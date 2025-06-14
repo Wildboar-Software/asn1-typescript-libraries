@@ -11,12 +11,6 @@ import {
     _decode_SecurityPolicyName,
     _encode_SecurityPolicyName,
 } from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.mjs";
-export {
-    SecurityPolicyName,
-    _decode_SecurityPolicyName,
-    _encode_SecurityPolicyName,
-} from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EquivalentPolicy */
 /**
  * @summary EquivalentPolicy
@@ -186,9 +180,7 @@ export function _encode_EquivalentPolicy(
 ) {
     if (!_cached_encoder_for_EquivalentPolicy) {
         _cached_encoder_for_EquivalentPolicy = function (
-            value: EquivalentPolicy,
-            elGetter: $.ASN1Encoder<EquivalentPolicy>
-        ): _Element {
+            value: EquivalentPolicy        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

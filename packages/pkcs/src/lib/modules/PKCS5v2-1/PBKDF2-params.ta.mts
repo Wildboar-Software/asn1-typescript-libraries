@@ -17,18 +17,6 @@ import {
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
 } from "../PKCS5v2-1/PBKDF2-params-salt.ta.mjs";
-export { algid_hmacWithSHA1 } from "../PKCS5v2-1/algid-hmacWithSHA1.va.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-export {
-    PBKDF2_params_salt,
-    _decode_PBKDF2_params_salt,
-    _encode_PBKDF2_params_salt,
-} from "../PKCS5v2-1/PBKDF2-params-salt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params */
 /**
  * @summary PBKDF2_params
@@ -250,9 +238,7 @@ export function _encode_PBKDF2_params(
 ) {
     if (!_cached_encoder_for_PBKDF2_params) {
         _cached_encoder_for_PBKDF2_params = function (
-            value: PBKDF2_params,
-            elGetter: $.ASN1Encoder<PBKDF2_params>
-        ): _Element {
+            value: PBKDF2_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

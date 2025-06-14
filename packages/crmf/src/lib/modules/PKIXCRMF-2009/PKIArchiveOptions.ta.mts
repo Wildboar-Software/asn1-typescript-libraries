@@ -15,17 +15,6 @@ import {
     _decode_KeyGenParameters,
     _encode_KeyGenParameters,
 } from "../PKIXCRMF-2009/KeyGenParameters.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../PKIXCRMF-2009/EncryptedKey.ta.mjs";
-export {
-    KeyGenParameters,
-    _decode_KeyGenParameters,
-    _encode_KeyGenParameters,
-} from "../PKIXCRMF-2009/KeyGenParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKIArchiveOptions */
 /**
  * @summary PKIArchiveOptions

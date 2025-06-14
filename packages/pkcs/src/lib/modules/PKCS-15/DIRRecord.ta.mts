@@ -8,8 +8,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.mjs";
-export { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DIRRecord */
 /**
  * @summary DIRRecord
@@ -230,9 +228,7 @@ export function _encode_DIRRecord(
             1,
             () =>
                 function (
-                    value: DIRRecord,
-                    elGetter: $.ASN1Encoder<DIRRecord>
-                ): _Element {
+                    value: DIRRecord                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

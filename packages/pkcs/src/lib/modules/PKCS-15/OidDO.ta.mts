@@ -11,13 +11,6 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OidDO */
 /**
  * @summary OidDO
@@ -165,9 +158,7 @@ let _cached_encoder_for_OidDO: $.ASN1Encoder<OidDO> | null = null;
 export function _encode_OidDO(value: OidDO, elGetter: $.ASN1Encoder<OidDO>) {
     if (!_cached_encoder_for_OidDO) {
         _cached_encoder_for_OidDO = function (
-            value: OidDO,
-            elGetter: $.ASN1Encoder<OidDO>
-        ): _Element {
+            value: OidDO        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

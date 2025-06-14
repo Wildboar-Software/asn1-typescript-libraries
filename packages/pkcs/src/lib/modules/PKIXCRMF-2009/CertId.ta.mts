@@ -30,9 +30,7 @@ export const _root_component_type_list_1_spec_for_CertId: $.ComponentSpec[] = [
     ),
 ];
 export const _encode_CertId = function (
-    value: CertId,
-    elGetter: $.ASN1Encoder<CertId>
-): asn1.ASN1Element {
+    value: CertId): asn1.ASN1Element {
     return $._encodeSequence(
         ([] as (asn1.ASN1Element | undefined)[])
             .concat([

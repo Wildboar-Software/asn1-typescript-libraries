@@ -15,17 +15,6 @@ import {
     _decode_IssuerSerial,
     _encode_IssuerSerial,
 } from "../ExtendedSecurityServices-2006/IssuerSerial.ta.mjs";
-export {
-    Hash,
-    _decode_Hash,
-    _encode_Hash,
-} from "../ExtendedSecurityServices-2006/Hash.ta.mjs";
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from "../ExtendedSecurityServices-2006/IssuerSerial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ESSCertID */
 /**
  * @summary ESSCertID
@@ -193,9 +182,7 @@ export function _encode_ESSCertID(
 ) {
     if (!_cached_encoder_for_ESSCertID) {
         _cached_encoder_for_ESSCertID = function (
-            value: ESSCertID,
-            elGetter: $.ASN1Encoder<ESSCertID>
-        ): _Element {
+            value: ESSCertID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

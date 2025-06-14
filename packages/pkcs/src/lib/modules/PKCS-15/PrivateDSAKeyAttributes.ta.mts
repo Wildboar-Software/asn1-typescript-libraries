@@ -213,9 +213,7 @@ export function _encode_PrivateDSAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PrivateDSAKeyAttributes) {
         _cached_encoder_for_PrivateDSAKeyAttributes = function (
-            value: PrivateDSAKeyAttributes,
-            elGetter: $.ASN1Encoder<PrivateDSAKeyAttributes>
-        ): _Element {
+            value: PrivateDSAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

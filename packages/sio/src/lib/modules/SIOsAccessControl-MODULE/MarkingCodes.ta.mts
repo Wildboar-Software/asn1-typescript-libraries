@@ -6,30 +6,6 @@ import {
     _decode_MarkingCode,
     _encode_MarkingCode,
 } from "../SIOsAccessControl-MODULE/MarkingCode.ta.mjs";
-export {
-    documentEnd /* IMPORTED_SHORT_NAMED_INTEGER */,
-    documentStart /* IMPORTED_SHORT_NAMED_INTEGER */,
-    MarkingCode,
-    MarkingCode_documentEnd /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_documentStart /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_noMarkingDisplay /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_noNameDisplay /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_pageBottom /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_pageTop /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_pageTopBottom /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_suppressClassName /* IMPORTED_LONG_NAMED_INTEGER */,
-    MarkingCode_unused /* IMPORTED_LONG_NAMED_INTEGER */,
-    noMarkingDisplay /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noNameDisplay /* IMPORTED_SHORT_NAMED_INTEGER */,
-    pageBottom /* IMPORTED_SHORT_NAMED_INTEGER */,
-    pageTop /* IMPORTED_SHORT_NAMED_INTEGER */,
-    pageTopBottom /* IMPORTED_SHORT_NAMED_INTEGER */,
-    suppressClassName /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unused /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_MarkingCode,
-    _encode_MarkingCode,
-} from "../SIOsAccessControl-MODULE/MarkingCode.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MarkingCodes */
 /**
  * @summary MarkingCodes

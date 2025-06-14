@@ -202,9 +202,7 @@ let _cached_encoder_for_PFX: $.ASN1Encoder<PFX> | null = null;
 export function _encode_PFX(value: PFX, elGetter: $.ASN1Encoder<PFX>) {
     if (!_cached_encoder_for_PFX) {
         _cached_encoder_for_PFX = function (
-            value: PFX,
-            elGetter: $.ASN1Encoder<PFX>
-        ): _Element {
+            value: PFX        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

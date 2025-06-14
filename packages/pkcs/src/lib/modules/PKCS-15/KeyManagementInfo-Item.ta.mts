@@ -15,17 +15,6 @@ import {
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
 } from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-export {
-    KeyManagementInfo_Item_keyInfo,
-    _decode_KeyManagementInfo_Item_keyInfo,
-    _encode_KeyManagementInfo_Item_keyInfo,
-} from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item */
 /**
  * @summary KeyManagementInfo_Item
@@ -175,9 +164,7 @@ export function _encode_KeyManagementInfo_Item(
 ) {
     if (!_cached_encoder_for_KeyManagementInfo_Item) {
         _cached_encoder_for_KeyManagementInfo_Item = function (
-            value: KeyManagementInfo_Item,
-            elGetter: $.ASN1Encoder<KeyManagementInfo_Item>
-        ): _Element {
+            value: KeyManagementInfo_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

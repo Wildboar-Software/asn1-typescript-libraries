@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.mjs";
 import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-export { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.mjs";
-export { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION signcryptedEnveloped */
 /**
  * @summary signcryptedEnveloped

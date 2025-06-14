@@ -11,12 +11,6 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentHints */
 /**
  * @summary ContentHints
@@ -186,9 +180,7 @@ export function _encode_ContentHints(
 ) {
     if (!_cached_encoder_for_ContentHints) {
         _cached_encoder_for_ContentHints = function (
-            value: ContentHints,
-            elGetter: $.ASN1Encoder<ContentHints>
-        ): _Element {
+            value: ContentHints        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

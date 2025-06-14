@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SMIMECapability */
 /**
  * @summary SMIMECapability
@@ -172,9 +170,7 @@ export function _encode_SMIMECapability(
 ) {
     if (!_cached_encoder_for_SMIMECapability) {
         _cached_encoder_for_SMIMECapability = function (
-            value: SMIMECapability,
-            elGetter: $.ASN1Encoder<SMIMECapability>
-        ): _Element {
+            value: SMIMECapability        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

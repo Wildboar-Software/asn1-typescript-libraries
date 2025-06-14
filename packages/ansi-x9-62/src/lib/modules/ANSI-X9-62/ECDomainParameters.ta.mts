@@ -6,14 +6,6 @@ import {
     _decode_SpecifiedECDomain,
     _encode_SpecifiedECDomain,
 } from "../ANSI-X9-62/SpecifiedECDomain.ta.mjs";
-export { ANSIX9NamedDomains } from "../ANSI-X9-62/ANSIX9NamedDomains.osa.mjs";
-export { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
-export {
-    SpecifiedECDomain,
-    _decode_SpecifiedECDomain,
-    _encode_SpecifiedECDomain,
-} from "../ANSI-X9-62/SpecifiedECDomain.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECDomainParameters */
 /**
  * @summary ECDomainParameters

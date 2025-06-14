@@ -160,9 +160,7 @@ export function _decode_ExtensionAttribute(el: _Element) {
  * @returns {_Element} The ExtensionAttribute, encoded as an ASN.1 Element.
  */
 export function _encode_ExtensionAttribute(
-    value: ExtensionAttribute,
-    elGetter: $.ASN1Encoder<ExtensionAttribute>
-) {
+    value: ExtensionAttribute) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encode_explicit(
             _TagClass.context,

@@ -6,12 +6,6 @@ import {
     _decode_ESSSecurityLabel,
     _encode_ESSSecurityLabel,
 } from "../ExtendedSecurityServices-2006/ESSSecurityLabel.ta.mjs";
-export {
-    ESSSecurityLabel,
-    _decode_ESSSecurityLabel,
-    _encode_ESSSecurityLabel,
-} from "../ExtendedSecurityServices-2006/ESSSecurityLabel.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EquivalentLabels */
 /**
  * @summary EquivalentLabels

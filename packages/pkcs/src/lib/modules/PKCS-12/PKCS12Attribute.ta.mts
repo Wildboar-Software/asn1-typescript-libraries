@@ -167,9 +167,7 @@ export function _encode_PKCS12Attribute(
 ) {
     if (!_cached_encoder_for_PKCS12Attribute) {
         _cached_encoder_for_PKCS12Attribute = function (
-            value: PKCS12Attribute,
-            elGetter: $.ASN1Encoder<PKCS12Attribute>
-        ): _Element {
+            value: PKCS12Attribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

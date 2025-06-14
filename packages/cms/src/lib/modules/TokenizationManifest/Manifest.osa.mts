@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
 import { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.mjs";
-export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
-export { xPathTokensManifest } from "../TokenizationManifest/xPathTokensManifest.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Manifest */
 /**
  * @summary Manifest

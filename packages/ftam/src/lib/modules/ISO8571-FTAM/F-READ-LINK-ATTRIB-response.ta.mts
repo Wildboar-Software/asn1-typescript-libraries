@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -72,17 +17,7 @@ import {
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
-export {
-  Action_Result,
-  _decode_Action_Result,
-  _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Read_Attributes,
-  _decode_Read_Attributes,
-  _encode_Read_Attributes,
-} from '../ISO8571-FTAM/Read-Attributes.ta.mjs';
-export {
   Read_Attributes,
   _decode_Read_Attributes,
   _encode_Read_Attributes,
@@ -92,12 +27,6 @@ import {
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
-export {
-  Diagnostic,
-  _decode_Diagnostic,
-  _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_READ_LINK_ATTRIB_response */
 /**
  * @summary F_READ_LINK_ATTRIB_response
@@ -303,9 +232,7 @@ export function _encode_F_READ_LINK_ATTRIB_response(
 ) {
   if (!_cached_encoder_for_F_READ_LINK_ATTRIB_response) {
     _cached_encoder_for_F_READ_LINK_ATTRIB_response = function (
-      value: F_READ_LINK_ATTRIB_response,
-      elGetter: $.ASN1Encoder<F_READ_LINK_ATTRIB_response>
-    ): _Element {
+      value: F_READ_LINK_ATTRIB_response    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

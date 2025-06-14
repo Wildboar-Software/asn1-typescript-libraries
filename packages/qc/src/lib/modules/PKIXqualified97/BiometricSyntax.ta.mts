@@ -6,12 +6,6 @@ import {
     _decode_BiometricData,
     _encode_BiometricData,
 } from "../PKIXqualified97/BiometricData.ta.mjs";
-export {
-    BiometricData,
-    _decode_BiometricData,
-    _encode_BiometricData,
-} from "../PKIXqualified97/BiometricData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BiometricSyntax */
 /**
  * @summary BiometricSyntax

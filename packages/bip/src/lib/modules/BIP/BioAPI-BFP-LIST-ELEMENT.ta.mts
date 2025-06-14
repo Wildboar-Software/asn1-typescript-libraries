@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,28 +13,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
-  BioAPI_CATEGORY_archive /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  archive /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_comparisonAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  comparisonAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_processingAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  processingAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_sensor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_CATEGORY,
-  _encode_BioAPI_CATEGORY,
-} from '../BIP/BioAPI-CATEGORY.ta.mjs';
-export {
-  BioAPI_CATEGORY,
-  _enum_for_BioAPI_CATEGORY,
-  BioAPI_CATEGORY_archive /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  archive /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_comparisonAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  comparisonAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_processingAlgorithm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  processingAlgorithm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_CATEGORY_sensor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sensor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
 } from '../BIP/BioAPI-CATEGORY.ta.mjs';
@@ -99,12 +21,6 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-export {
-  BioAPI_UUID,
-  _decode_BioAPI_UUID,
-  _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BioAPI_BFP_LIST_ELEMENT */
 /**
  * @summary BioAPI_BFP_LIST_ELEMENT
@@ -271,9 +187,7 @@ export function _encode_BioAPI_BFP_LIST_ELEMENT(
 ) {
   if (!_cached_encoder_for_BioAPI_BFP_LIST_ELEMENT) {
     _cached_encoder_for_BioAPI_BFP_LIST_ELEMENT = function (
-      value: BioAPI_BFP_LIST_ELEMENT,
-      elGetter: $.ASN1Encoder<BioAPI_BFP_LIST_ELEMENT>
-    ): _Element {
+      value: BioAPI_BFP_LIST_ELEMENT    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

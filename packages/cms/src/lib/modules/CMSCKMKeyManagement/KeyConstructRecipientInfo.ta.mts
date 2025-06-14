@@ -35,37 +35,6 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.mjs";
-export {
-    KeyConstructionAlgorithmIdentifier,
-    _decode_KeyConstructionAlgorithmIdentifier,
-    _encode_KeyConstructionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta.mjs";
-export {
-    KeyConstructionDomain,
-    _decode_KeyConstructionDomain,
-    _encode_KeyConstructionDomain,
-} from "../CMSCKMKeyManagement/KeyConstructionDomain.ta.mjs";
-export {
-    KeyConstructionRecipient,
-    _decode_KeyConstructionRecipient,
-    _encode_KeyConstructionRecipient,
-} from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta.mjs";
-export {
-    Version,
-    _decode_Version,
-    _encode_Version,
-} from "../CMSCKMKeyManagement/Version.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
-export {
-    UserKeyingMaterial,
-    _decode_UserKeyingMaterial,
-    _encode_UserKeyingMaterial,
-} from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyConstructRecipientInfo */
 /**
  * @summary KeyConstructRecipientInfo
@@ -324,9 +293,7 @@ export function _encode_KeyConstructRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyConstructRecipientInfo) {
         _cached_encoder_for_KeyConstructRecipientInfo = function (
-            value: KeyConstructRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyConstructRecipientInfo>
-        ): _Element {
+            value: KeyConstructRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

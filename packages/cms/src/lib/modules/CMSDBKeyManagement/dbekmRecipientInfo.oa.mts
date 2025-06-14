@@ -5,14 +5,6 @@ import {
 } from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.mjs";
 import { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
 import { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.mjs";
-export {
-    DBEKMRecipientInfo,
-    _decode_DBEKMRecipientInfo,
-    _encode_DBEKMRecipientInfo,
-} from "../CMSDBKeyManagement/DBEKMRecipientInfo.ta.mjs";
-export { KEY_MANAGEMENT } from "../CMSDBKeyManagement/KEY-MANAGEMENT.oca.mjs";
-export { id_dbekm_recip_info } from "../CMSObjectIdentifiers/id-dbekm-recip-info.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dbekmRecipientInfo */
 /**
  * @summary dbekmRecipientInfo

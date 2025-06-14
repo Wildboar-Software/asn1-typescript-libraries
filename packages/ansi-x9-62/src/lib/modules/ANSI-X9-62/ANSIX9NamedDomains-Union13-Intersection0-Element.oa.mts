@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ansix9p224r1 } from "../ANSI-X9-62/ansix9p224r1.va.mjs";
 import { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
-export { ansix9p224r1 } from "../ANSI-X9-62/ansix9p224r1.va.mjs";
-export { ECDOMAIN } from "../ANSI-X9-62/ECDOMAIN.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ANSIX9NamedDomains_Union13_Intersection0_Element */
 /**
  * @summary ANSIX9NamedDomains_Union13_Intersection0_Element

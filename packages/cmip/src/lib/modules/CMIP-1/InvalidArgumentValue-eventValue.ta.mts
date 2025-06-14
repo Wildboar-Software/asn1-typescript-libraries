@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -66,10 +11,6 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
-import { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
-export { CMIP_EVENT } from '../CMIP-1/CMIP-EVENT.oca.mjs';
-import { EventSet } from '../CMIP-1/EventSet.osa.mjs';
-export { EventSet } from '../CMIP-1/EventSet.osa.mjs';
 import {
     EventTypeId,
     _decode_EventTypeId,
@@ -238,9 +179,7 @@ export function _encode_InvalidArgumentValue_eventValue(
 ) {
   if (!_cached_encoder_for_InvalidArgumentValue_eventValue) {
     _cached_encoder_for_InvalidArgumentValue_eventValue = function (
-      value: InvalidArgumentValue_eventValue,
-      elGetter: $.ASN1Encoder<InvalidArgumentValue_eventValue>
-    ): _Element {
+      value: InvalidArgumentValue_eventValue    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -6,12 +6,6 @@ import {
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from "../SIOsAccessControl-MODULE/SecurityClassification.ta.mjs";
-export {
-    SecurityClassification,
-    _decode_SecurityClassification,
-    _encode_SecurityClassification,
-} from "../SIOsAccessControl-MODULE/SecurityClassification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityClassifications */
 /**
  * @summary SecurityClassifications

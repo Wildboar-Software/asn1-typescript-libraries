@@ -5,14 +5,6 @@ import {
     _encode_KeyConstructRecipientInfo,
 } from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta.mjs";
 import { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.mjs";
-export { EXTENDED_KEY_MGMT_INFO } from "../CMSCKMKeyManagement/EXTENDED-KEY-MGMT-INFO.oca.mjs";
-export {
-    KeyConstructRecipientInfo,
-    _decode_KeyConstructRecipientInfo,
-    _encode_KeyConstructRecipientInfo,
-} from "../CMSCKMKeyManagement/KeyConstructRecipientInfo.ta.mjs";
-export { id_ckm_recip_info } from "../CMSObjectIdentifiers/id-ckm-recip-info.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ckmRecipientInfo */
 /**
  * @summary ckmRecipientInfo

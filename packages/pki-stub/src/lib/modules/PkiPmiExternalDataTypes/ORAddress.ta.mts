@@ -199,7 +199,7 @@ export function _decode_ORAddress(el: _Element) {
  */
 export function _encode_ORAddress(
     value: ORAddress,
-    elGetter: $.ASN1Encoder<ORAddress>
+    _elGetter: $.ASN1Encoder<ORAddress>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_BuiltInStandardAttributes(

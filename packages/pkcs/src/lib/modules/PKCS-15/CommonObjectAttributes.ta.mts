@@ -271,9 +271,7 @@ export function _encode_CommonObjectAttributes(
 ) {
     if (!_cached_encoder_for_CommonObjectAttributes) {
         _cached_encoder_for_CommonObjectAttributes = function (
-            value: CommonObjectAttributes,
-            elGetter: $.ASN1Encoder<CommonObjectAttributes>
-        ): _Element {
+            value: CommonObjectAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

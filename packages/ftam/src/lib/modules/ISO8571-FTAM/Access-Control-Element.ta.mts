@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
-export {
-  Access_Request,
-  _decode_Access_Request,
-  _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta.mjs';
 import {
-  Concurrency_Access,
-  _decode_Concurrency_Access,
-  _encode_Concurrency_Access,
-} from '../ISO8571-FTAM/Concurrency-Access.ta.mjs';
-export {
   Concurrency_Access,
   _decode_Concurrency_Access,
   _encode_Concurrency_Access,
@@ -91,17 +26,7 @@ import {
   _decode_User_Identity,
   _encode_User_Identity,
 } from '../ISO8571-FTAM/User-Identity.ta.mjs';
-export {
-  User_Identity,
-  _decode_User_Identity,
-  _encode_User_Identity,
-} from '../ISO8571-FTAM/User-Identity.ta.mjs';
 import {
-  Access_Passwords,
-  _decode_Access_Passwords,
-  _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
-export {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
@@ -111,12 +36,6 @@ import {
   _decode_Application_Entity_Title,
   _encode_Application_Entity_Title,
 } from '../ISO8571-FTAM/Application-Entity-Title.ta.mjs';
-export {
-  Application_Entity_Title,
-  _decode_Application_Entity_Title,
-  _encode_Application_Entity_Title,
-} from '../ISO8571-FTAM/Application-Entity-Title.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Access_Control_Element */
 /**
  * @summary Access_Control_Element
@@ -359,9 +278,7 @@ export function _encode_Access_Control_Element(
 ) {
   if (!_cached_encoder_for_Access_Control_Element) {
     _cached_encoder_for_Access_Control_Element = function (
-      value: Access_Control_Element,
-      elGetter: $.ASN1Encoder<Access_Control_Element>
-    ): _Element {
+      value: Access_Control_Element    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

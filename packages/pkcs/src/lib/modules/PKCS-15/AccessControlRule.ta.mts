@@ -15,23 +15,6 @@ import {
     _decode_SecurityCondition,
     _encode_SecurityCondition,
 } from "../PKCS-15/SecurityCondition.ta.mjs";
-export {
-    AccessMode,
-    AccessMode_execute /* IMPORTED_LONG_NAMED_BIT */,
-    AccessMode_read /* IMPORTED_LONG_NAMED_BIT */,
-    AccessMode_update /* IMPORTED_LONG_NAMED_BIT */,
-    execute /* IMPORTED_SHORT_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    update /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_AccessMode,
-    _encode_AccessMode,
-} from "../PKCS-15/AccessMode.ta.mjs";
-export {
-    SecurityCondition,
-    _decode_SecurityCondition,
-    _encode_SecurityCondition,
-} from "../PKCS-15/SecurityCondition.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AccessControlRule */
 /**
  * @summary AccessControlRule
@@ -205,9 +188,7 @@ export function _encode_AccessControlRule(
 ) {
     if (!_cached_encoder_for_AccessControlRule) {
         _cached_encoder_for_AccessControlRule = function (
-            value: AccessControlRule,
-            elGetter: $.ASN1Encoder<AccessControlRule>
-        ): _Element {
+            value: AccessControlRule        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

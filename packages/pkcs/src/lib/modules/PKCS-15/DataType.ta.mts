@@ -13,19 +13,6 @@ import {
 } from "../PKCS-15/ExternalIDO.ta.mjs";
 import { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.mjs";
 import { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.mjs";
-export {
-    DataObject,
-    _get_decoder_for_DataObject,
-    _get_encoder_for_DataObject,
-} from "../PKCS-15/DataObject.ta.mjs";
-export {
-    ExternalIDO,
-    _decode_ExternalIDO,
-    _encode_ExternalIDO,
-} from "../PKCS-15/ExternalIDO.ta.mjs";
-export { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.mjs";
-export { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataType */
 /**
  * @summary DataType

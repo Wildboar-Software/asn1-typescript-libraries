@@ -3,9 +3,6 @@ import { ObjectIdentifier as _OID, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { certTypes } from "../PKCS-9/certTypes.va.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { certTypes } from "../PKCS-9/certTypes.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x509Certificate */
 /**
  * @summary x509Certificate

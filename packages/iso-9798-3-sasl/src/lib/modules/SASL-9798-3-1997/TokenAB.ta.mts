@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,13 +12,9 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
-export { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
 import { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta.mjs";
-export { CertData, _decode_CertData, _encode_CertData } from "../SASL-9798-3-1997/CertData.ta.mjs";
 import { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta.mjs";
-export { SIGNATURE, _decode_SIGNATURE, _encode_SIGNATURE } from "../SASL-9798-3-1997/SIGNATURE.ta.mjs";
-import { TBSDataAB, _decode_TBSDataAB, _encode_TBSDataAB } from "../SASL-9798-3-1997/TBSDataAB.ta.mjs";
-export { TBSDataAB, _decode_TBSDataAB, _encode_TBSDataAB } from "../SASL-9798-3-1997/TBSDataAB.ta.mjs";
+import { _decode_TBSDataAB, _encode_TBSDataAB } from "../SASL-9798-3-1997/TBSDataAB.ta.mjs";
 import {
     GeneralNames,
     _decode_GeneralNames,
@@ -268,7 +209,7 @@ let _cached_encoder_for_TokenAB: $.ASN1Encoder<TokenAB> | null = null;
  */
 export
 function _encode_TokenAB (value: TokenAB, elGetter: $.ASN1Encoder<TokenAB>) {
-    if (!_cached_encoder_for_TokenAB) { _cached_encoder_for_TokenAB = function (value: TokenAB, elGetter: $.ASN1Encoder<TokenAB>): _Element {
+    if (!_cached_encoder_for_TokenAB) { _cached_encoder_for_TokenAB = function (value: TokenAB): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RandomNumber(value.randomA, $.BER),

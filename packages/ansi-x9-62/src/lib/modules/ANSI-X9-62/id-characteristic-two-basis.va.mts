@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.mjs";
-export { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_characteristic_two_basis */
 /**
  * @summary id_characteristic_two_basis

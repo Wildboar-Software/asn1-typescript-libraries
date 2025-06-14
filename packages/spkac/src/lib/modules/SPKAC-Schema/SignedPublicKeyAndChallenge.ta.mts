@@ -204,9 +204,7 @@ export function _encode_SignedPublicKeyAndChallenge(
 ) {
     if (!_cached_encoder_for_SignedPublicKeyAndChallenge) {
         _cached_encoder_for_SignedPublicKeyAndChallenge = function (
-            value: SignedPublicKeyAndChallenge,
-            elGetter: $.ASN1Encoder<SignedPublicKeyAndChallenge>
-        ): _Element {
+            value: SignedPublicKeyAndChallenge        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

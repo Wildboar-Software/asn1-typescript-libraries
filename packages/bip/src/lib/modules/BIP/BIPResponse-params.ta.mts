@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_AddMaster_ResponseParams,
   _encode_AddMaster_ResponseParams,
 } from '../BIP/AddMaster-ResponseParams.ta.mjs';
-export {
-  AddMaster_ResponseParams,
-  _decode_AddMaster_ResponseParams,
-  _encode_AddMaster_ResponseParams,
-} from '../BIP/AddMaster-ResponseParams.ta.mjs';
 import {
-  DeleteMaster_ResponseParams,
-  _decode_DeleteMaster_ResponseParams,
-  _encode_DeleteMaster_ResponseParams,
-} from '../BIP/DeleteMaster-ResponseParams.ta.mjs';
-export {
   DeleteMaster_ResponseParams,
   _decode_DeleteMaster_ResponseParams,
   _encode_DeleteMaster_ResponseParams,
@@ -91,17 +25,7 @@ import {
   _decode_BSPLoad_ResponseParams,
   _encode_BSPLoad_ResponseParams,
 } from '../BIP/BSPLoad-ResponseParams.ta.mjs';
-export {
-  BSPLoad_ResponseParams,
-  _decode_BSPLoad_ResponseParams,
-  _encode_BSPLoad_ResponseParams,
-} from '../BIP/BSPLoad-ResponseParams.ta.mjs';
 import {
-  BSPUnload_ResponseParams,
-  _decode_BSPUnload_ResponseParams,
-  _encode_BSPUnload_ResponseParams,
-} from '../BIP/BSPUnload-ResponseParams.ta.mjs';
-export {
   BSPUnload_ResponseParams,
   _decode_BSPUnload_ResponseParams,
   _encode_BSPUnload_ResponseParams,
@@ -111,17 +35,7 @@ import {
   _decode_QueryUnits_ResponseParams,
   _encode_QueryUnits_ResponseParams,
 } from '../BIP/QueryUnits-ResponseParams.ta.mjs';
-export {
-  QueryUnits_ResponseParams,
-  _decode_QueryUnits_ResponseParams,
-  _encode_QueryUnits_ResponseParams,
-} from '../BIP/QueryUnits-ResponseParams.ta.mjs';
 import {
-  QueryBFPs_ResponseParams,
-  _decode_QueryBFPs_ResponseParams,
-  _encode_QueryBFPs_ResponseParams,
-} from '../BIP/QueryBFPs-ResponseParams.ta.mjs';
-export {
   QueryBFPs_ResponseParams,
   _decode_QueryBFPs_ResponseParams,
   _encode_QueryBFPs_ResponseParams,
@@ -131,17 +45,7 @@ import {
   _decode_BSPAttach_ResponseParams,
   _encode_BSPAttach_ResponseParams,
 } from '../BIP/BSPAttach-ResponseParams.ta.mjs';
-export {
-  BSPAttach_ResponseParams,
-  _decode_BSPAttach_ResponseParams,
-  _encode_BSPAttach_ResponseParams,
-} from '../BIP/BSPAttach-ResponseParams.ta.mjs';
 import {
-  BSPDetach_ResponseParams,
-  _decode_BSPDetach_ResponseParams,
-  _encode_BSPDetach_ResponseParams,
-} from '../BIP/BSPDetach-ResponseParams.ta.mjs';
-export {
   BSPDetach_ResponseParams,
   _decode_BSPDetach_ResponseParams,
   _encode_BSPDetach_ResponseParams,
@@ -151,17 +55,7 @@ import {
   _decode_EnableUnitEvents_ResponseParams,
   _encode_EnableUnitEvents_ResponseParams,
 } from '../BIP/EnableUnitEvents-ResponseParams.ta.mjs';
-export {
-  EnableUnitEvents_ResponseParams,
-  _decode_EnableUnitEvents_ResponseParams,
-  _encode_EnableUnitEvents_ResponseParams,
-} from '../BIP/EnableUnitEvents-ResponseParams.ta.mjs';
 import {
-  EnableEventNotifications_ResponseParams,
-  _decode_EnableEventNotifications_ResponseParams,
-  _encode_EnableEventNotifications_ResponseParams,
-} from '../BIP/EnableEventNotifications-ResponseParams.ta.mjs';
-export {
   EnableEventNotifications_ResponseParams,
   _decode_EnableEventNotifications_ResponseParams,
   _encode_EnableEventNotifications_ResponseParams,
@@ -171,17 +65,7 @@ import {
   _decode_ControlUnit_ResponseParams,
   _encode_ControlUnit_ResponseParams,
 } from '../BIP/ControlUnit-ResponseParams.ta.mjs';
-export {
-  ControlUnit_ResponseParams,
-  _decode_ControlUnit_ResponseParams,
-  _encode_ControlUnit_ResponseParams,
-} from '../BIP/ControlUnit-ResponseParams.ta.mjs';
 import {
-  Control_ResponseParams,
-  _decode_Control_ResponseParams,
-  _encode_Control_ResponseParams,
-} from '../BIP/Control-ResponseParams.ta.mjs';
-export {
   Control_ResponseParams,
   _decode_Control_ResponseParams,
   _encode_Control_ResponseParams,
@@ -191,17 +75,7 @@ import {
   _decode_FreeBIRHandle_ResponseParams,
   _encode_FreeBIRHandle_ResponseParams,
 } from '../BIP/FreeBIRHandle-ResponseParams.ta.mjs';
-export {
-  FreeBIRHandle_ResponseParams,
-  _decode_FreeBIRHandle_ResponseParams,
-  _encode_FreeBIRHandle_ResponseParams,
-} from '../BIP/FreeBIRHandle-ResponseParams.ta.mjs';
 import {
-  GetBIRFromHandle_ResponseParams,
-  _decode_GetBIRFromHandle_ResponseParams,
-  _encode_GetBIRFromHandle_ResponseParams,
-} from '../BIP/GetBIRFromHandle-ResponseParams.ta.mjs';
-export {
   GetBIRFromHandle_ResponseParams,
   _decode_GetBIRFromHandle_ResponseParams,
   _encode_GetBIRFromHandle_ResponseParams,
@@ -211,17 +85,7 @@ import {
   _decode_GetHeaderFromHandle_ResponseParams,
   _encode_GetHeaderFromHandle_ResponseParams,
 } from '../BIP/GetHeaderFromHandle-ResponseParams.ta.mjs';
-export {
-  GetHeaderFromHandle_ResponseParams,
-  _decode_GetHeaderFromHandle_ResponseParams,
-  _encode_GetHeaderFromHandle_ResponseParams,
-} from '../BIP/GetHeaderFromHandle-ResponseParams.ta.mjs';
 import {
-  SubscribeToGUIEvents_ResponseParams,
-  _decode_SubscribeToGUIEvents_ResponseParams,
-  _encode_SubscribeToGUIEvents_ResponseParams,
-} from '../BIP/SubscribeToGUIEvents-ResponseParams.ta.mjs';
-export {
   SubscribeToGUIEvents_ResponseParams,
   _decode_SubscribeToGUIEvents_ResponseParams,
   _encode_SubscribeToGUIEvents_ResponseParams,
@@ -231,17 +95,7 @@ import {
   _decode_UnsubscribeFromGUIEvents_ResponseParams,
   _encode_UnsubscribeFromGUIEvents_ResponseParams,
 } from '../BIP/UnsubscribeFromGUIEvents-ResponseParams.ta.mjs';
-export {
-  UnsubscribeFromGUIEvents_ResponseParams,
-  _decode_UnsubscribeFromGUIEvents_ResponseParams,
-  _encode_UnsubscribeFromGUIEvents_ResponseParams,
-} from '../BIP/UnsubscribeFromGUIEvents-ResponseParams.ta.mjs';
 import {
-  RedirectGUIEvents_ResponseParams,
-  _decode_RedirectGUIEvents_ResponseParams,
-  _encode_RedirectGUIEvents_ResponseParams,
-} from '../BIP/RedirectGUIEvents-ResponseParams.ta.mjs';
-export {
   RedirectGUIEvents_ResponseParams,
   _decode_RedirectGUIEvents_ResponseParams,
   _encode_RedirectGUIEvents_ResponseParams,
@@ -251,17 +105,7 @@ import {
   _decode_UnredirectGUIEvents_ResponseParams,
   _encode_UnredirectGUIEvents_ResponseParams,
 } from '../BIP/UnredirectGUIEvents-ResponseParams.ta.mjs';
-export {
-  UnredirectGUIEvents_ResponseParams,
-  _decode_UnredirectGUIEvents_ResponseParams,
-  _encode_UnredirectGUIEvents_ResponseParams,
-} from '../BIP/UnredirectGUIEvents-ResponseParams.ta.mjs';
 import {
-  QueryGUIEventSubscriptions_ResponseParams,
-  _decode_QueryGUIEventSubscriptions_ResponseParams,
-  _encode_QueryGUIEventSubscriptions_ResponseParams,
-} from '../BIP/QueryGUIEventSubscriptions-ResponseParams.ta.mjs';
-export {
   QueryGUIEventSubscriptions_ResponseParams,
   _decode_QueryGUIEventSubscriptions_ResponseParams,
   _encode_QueryGUIEventSubscriptions_ResponseParams,
@@ -271,17 +115,7 @@ import {
   _decode_NotifyGUISelectEvent_ResponseParams,
   _encode_NotifyGUISelectEvent_ResponseParams,
 } from '../BIP/NotifyGUISelectEvent-ResponseParams.ta.mjs';
-export {
-  NotifyGUISelectEvent_ResponseParams,
-  _decode_NotifyGUISelectEvent_ResponseParams,
-  _encode_NotifyGUISelectEvent_ResponseParams,
-} from '../BIP/NotifyGUISelectEvent-ResponseParams.ta.mjs';
 import {
-  NotifyGUIStateEvent_ResponseParams,
-  _decode_NotifyGUIStateEvent_ResponseParams,
-  _encode_NotifyGUIStateEvent_ResponseParams,
-} from '../BIP/NotifyGUIStateEvent-ResponseParams.ta.mjs';
-export {
   NotifyGUIStateEvent_ResponseParams,
   _decode_NotifyGUIStateEvent_ResponseParams,
   _encode_NotifyGUIStateEvent_ResponseParams,
@@ -291,17 +125,7 @@ import {
   _decode_NotifyGUIProgressEvent_ResponseParams,
   _encode_NotifyGUIProgressEvent_ResponseParams,
 } from '../BIP/NotifyGUIProgressEvent-ResponseParams.ta.mjs';
-export {
-  NotifyGUIProgressEvent_ResponseParams,
-  _decode_NotifyGUIProgressEvent_ResponseParams,
-  _encode_NotifyGUIProgressEvent_ResponseParams,
-} from '../BIP/NotifyGUIProgressEvent-ResponseParams.ta.mjs';
 import {
-  Capture_ResponseParams,
-  _decode_Capture_ResponseParams,
-  _encode_Capture_ResponseParams,
-} from '../BIP/Capture-ResponseParams.ta.mjs';
-export {
   Capture_ResponseParams,
   _decode_Capture_ResponseParams,
   _encode_Capture_ResponseParams,
@@ -311,17 +135,7 @@ import {
   _decode_CreateTemplate_ResponseParams,
   _encode_CreateTemplate_ResponseParams,
 } from '../BIP/CreateTemplate-ResponseParams.ta.mjs';
-export {
-  CreateTemplate_ResponseParams,
-  _decode_CreateTemplate_ResponseParams,
-  _encode_CreateTemplate_ResponseParams,
-} from '../BIP/CreateTemplate-ResponseParams.ta.mjs';
 import {
-  Process_ResponseParams,
-  _decode_Process_ResponseParams,
-  _encode_Process_ResponseParams,
-} from '../BIP/Process-ResponseParams.ta.mjs';
-export {
   Process_ResponseParams,
   _decode_Process_ResponseParams,
   _encode_Process_ResponseParams,
@@ -331,17 +145,7 @@ import {
   _decode_ProcessWithAuxBIR_ResponseParams,
   _encode_ProcessWithAuxBIR_ResponseParams,
 } from '../BIP/ProcessWithAuxBIR-ResponseParams.ta.mjs';
-export {
-  ProcessWithAuxBIR_ResponseParams,
-  _decode_ProcessWithAuxBIR_ResponseParams,
-  _encode_ProcessWithAuxBIR_ResponseParams,
-} from '../BIP/ProcessWithAuxBIR-ResponseParams.ta.mjs';
 import {
-  VerifyMatch_ResponseParams,
-  _decode_VerifyMatch_ResponseParams,
-  _encode_VerifyMatch_ResponseParams,
-} from '../BIP/VerifyMatch-ResponseParams.ta.mjs';
-export {
   VerifyMatch_ResponseParams,
   _decode_VerifyMatch_ResponseParams,
   _encode_VerifyMatch_ResponseParams,
@@ -351,17 +155,7 @@ import {
   _decode_IdentifyMatch_ResponseParams,
   _encode_IdentifyMatch_ResponseParams,
 } from '../BIP/IdentifyMatch-ResponseParams.ta.mjs';
-export {
-  IdentifyMatch_ResponseParams,
-  _decode_IdentifyMatch_ResponseParams,
-  _encode_IdentifyMatch_ResponseParams,
-} from '../BIP/IdentifyMatch-ResponseParams.ta.mjs';
 import {
-  Enroll_ResponseParams,
-  _decode_Enroll_ResponseParams,
-  _encode_Enroll_ResponseParams,
-} from '../BIP/Enroll-ResponseParams.ta.mjs';
-export {
   Enroll_ResponseParams,
   _decode_Enroll_ResponseParams,
   _encode_Enroll_ResponseParams,
@@ -371,17 +165,7 @@ import {
   _decode_Verify_ResponseParams,
   _encode_Verify_ResponseParams,
 } from '../BIP/Verify-ResponseParams.ta.mjs';
-export {
-  Verify_ResponseParams,
-  _decode_Verify_ResponseParams,
-  _encode_Verify_ResponseParams,
-} from '../BIP/Verify-ResponseParams.ta.mjs';
 import {
-  Identify_ResponseParams,
-  _decode_Identify_ResponseParams,
-  _encode_Identify_ResponseParams,
-} from '../BIP/Identify-ResponseParams.ta.mjs';
-export {
   Identify_ResponseParams,
   _decode_Identify_ResponseParams,
   _encode_Identify_ResponseParams,
@@ -391,17 +175,7 @@ import {
   _decode_Import_ResponseParams,
   _encode_Import_ResponseParams,
 } from '../BIP/Import-ResponseParams.ta.mjs';
-export {
-  Import_ResponseParams,
-  _decode_Import_ResponseParams,
-  _encode_Import_ResponseParams,
-} from '../BIP/Import-ResponseParams.ta.mjs';
 import {
-  PresetIdentifyPopulation_ResponseParams,
-  _decode_PresetIdentifyPopulation_ResponseParams,
-  _encode_PresetIdentifyPopulation_ResponseParams,
-} from '../BIP/PresetIdentifyPopulation-ResponseParams.ta.mjs';
-export {
   PresetIdentifyPopulation_ResponseParams,
   _decode_PresetIdentifyPopulation_ResponseParams,
   _encode_PresetIdentifyPopulation_ResponseParams,
@@ -411,17 +185,7 @@ import {
   _decode_Transform_ResponseParams,
   _encode_Transform_ResponseParams,
 } from '../BIP/Transform-ResponseParams.ta.mjs';
-export {
-  Transform_ResponseParams,
-  _decode_Transform_ResponseParams,
-  _encode_Transform_ResponseParams,
-} from '../BIP/Transform-ResponseParams.ta.mjs';
 import {
-  DbOpen_ResponseParams,
-  _decode_DbOpen_ResponseParams,
-  _encode_DbOpen_ResponseParams,
-} from '../BIP/DbOpen-ResponseParams.ta.mjs';
-export {
   DbOpen_ResponseParams,
   _decode_DbOpen_ResponseParams,
   _encode_DbOpen_ResponseParams,
@@ -431,17 +195,7 @@ import {
   _decode_DbClose_ResponseParams,
   _encode_DbClose_ResponseParams,
 } from '../BIP/DbClose-ResponseParams.ta.mjs';
-export {
-  DbClose_ResponseParams,
-  _decode_DbClose_ResponseParams,
-  _encode_DbClose_ResponseParams,
-} from '../BIP/DbClose-ResponseParams.ta.mjs';
 import {
-  DbCreate_ResponseParams,
-  _decode_DbCreate_ResponseParams,
-  _encode_DbCreate_ResponseParams,
-} from '../BIP/DbCreate-ResponseParams.ta.mjs';
-export {
   DbCreate_ResponseParams,
   _decode_DbCreate_ResponseParams,
   _encode_DbCreate_ResponseParams,
@@ -451,17 +205,7 @@ import {
   _decode_DbDelete_ResponseParams,
   _encode_DbDelete_ResponseParams,
 } from '../BIP/DbDelete-ResponseParams.ta.mjs';
-export {
-  DbDelete_ResponseParams,
-  _decode_DbDelete_ResponseParams,
-  _encode_DbDelete_ResponseParams,
-} from '../BIP/DbDelete-ResponseParams.ta.mjs';
 import {
-  DbSetMarker_ResponseParams,
-  _decode_DbSetMarker_ResponseParams,
-  _encode_DbSetMarker_ResponseParams,
-} from '../BIP/DbSetMarker-ResponseParams.ta.mjs';
-export {
   DbSetMarker_ResponseParams,
   _decode_DbSetMarker_ResponseParams,
   _encode_DbSetMarker_ResponseParams,
@@ -471,17 +215,7 @@ import {
   _decode_DbFreeMarker_ResponseParams,
   _encode_DbFreeMarker_ResponseParams,
 } from '../BIP/DbFreeMarker-ResponseParams.ta.mjs';
-export {
-  DbFreeMarker_ResponseParams,
-  _decode_DbFreeMarker_ResponseParams,
-  _encode_DbFreeMarker_ResponseParams,
-} from '../BIP/DbFreeMarker-ResponseParams.ta.mjs';
 import {
-  DbStoreBIR_ResponseParams,
-  _decode_DbStoreBIR_ResponseParams,
-  _encode_DbStoreBIR_ResponseParams,
-} from '../BIP/DbStoreBIR-ResponseParams.ta.mjs';
-export {
   DbStoreBIR_ResponseParams,
   _decode_DbStoreBIR_ResponseParams,
   _encode_DbStoreBIR_ResponseParams,
@@ -491,17 +225,7 @@ import {
   _decode_DbGetBIR_ResponseParams,
   _encode_DbGetBIR_ResponseParams,
 } from '../BIP/DbGetBIR-ResponseParams.ta.mjs';
-export {
-  DbGetBIR_ResponseParams,
-  _decode_DbGetBIR_ResponseParams,
-  _encode_DbGetBIR_ResponseParams,
-} from '../BIP/DbGetBIR-ResponseParams.ta.mjs';
 import {
-  DbGetNextBIR_ResponseParams,
-  _decode_DbGetNextBIR_ResponseParams,
-  _encode_DbGetNextBIR_ResponseParams,
-} from '../BIP/DbGetNextBIR-ResponseParams.ta.mjs';
-export {
   DbGetNextBIR_ResponseParams,
   _decode_DbGetNextBIR_ResponseParams,
   _encode_DbGetNextBIR_ResponseParams,
@@ -511,17 +235,7 @@ import {
   _decode_DbDeleteBIR_ResponseParams,
   _encode_DbDeleteBIR_ResponseParams,
 } from '../BIP/DbDeleteBIR-ResponseParams.ta.mjs';
-export {
-  DbDeleteBIR_ResponseParams,
-  _decode_DbDeleteBIR_ResponseParams,
-  _encode_DbDeleteBIR_ResponseParams,
-} from '../BIP/DbDeleteBIR-ResponseParams.ta.mjs';
 import {
-  CalibrateSensor_ResponseParams,
-  _decode_CalibrateSensor_ResponseParams,
-  _encode_CalibrateSensor_ResponseParams,
-} from '../BIP/CalibrateSensor-ResponseParams.ta.mjs';
-export {
   CalibrateSensor_ResponseParams,
   _decode_CalibrateSensor_ResponseParams,
   _encode_CalibrateSensor_ResponseParams,
@@ -531,17 +245,7 @@ import {
   _decode_SetPowerMode_ResponseParams,
   _encode_SetPowerMode_ResponseParams,
 } from '../BIP/SetPowerMode-ResponseParams.ta.mjs';
-export {
-  SetPowerMode_ResponseParams,
-  _decode_SetPowerMode_ResponseParams,
-  _encode_SetPowerMode_ResponseParams,
-} from '../BIP/SetPowerMode-ResponseParams.ta.mjs';
 import {
-  SetIndicatorStatus_ResponseParams,
-  _decode_SetIndicatorStatus_ResponseParams,
-  _encode_SetIndicatorStatus_ResponseParams,
-} from '../BIP/SetIndicatorStatus-ResponseParams.ta.mjs';
-export {
   SetIndicatorStatus_ResponseParams,
   _decode_SetIndicatorStatus_ResponseParams,
   _encode_SetIndicatorStatus_ResponseParams,
@@ -551,17 +255,7 @@ import {
   _decode_GetIndicatorStatus_ResponseParams,
   _encode_GetIndicatorStatus_ResponseParams,
 } from '../BIP/GetIndicatorStatus-ResponseParams.ta.mjs';
-export {
-  GetIndicatorStatus_ResponseParams,
-  _decode_GetIndicatorStatus_ResponseParams,
-  _encode_GetIndicatorStatus_ResponseParams,
-} from '../BIP/GetIndicatorStatus-ResponseParams.ta.mjs';
 import {
-  Cancel_ResponseParams,
-  _decode_Cancel_ResponseParams,
-  _encode_Cancel_ResponseParams,
-} from '../BIP/Cancel-ResponseParams.ta.mjs';
-export {
   Cancel_ResponseParams,
   _decode_Cancel_ResponseParams,
   _encode_Cancel_ResponseParams,
@@ -571,17 +265,7 @@ import {
   _decode_RegisterBSP_ResponseParams,
   _encode_RegisterBSP_ResponseParams,
 } from '../BIP/RegisterBSP-ResponseParams.ta.mjs';
-export {
-  RegisterBSP_ResponseParams,
-  _decode_RegisterBSP_ResponseParams,
-  _encode_RegisterBSP_ResponseParams,
-} from '../BIP/RegisterBSP-ResponseParams.ta.mjs';
 import {
-  UnregisterBSP_ResponseParams,
-  _decode_UnregisterBSP_ResponseParams,
-  _encode_UnregisterBSP_ResponseParams,
-} from '../BIP/UnregisterBSP-ResponseParams.ta.mjs';
-export {
   UnregisterBSP_ResponseParams,
   _decode_UnregisterBSP_ResponseParams,
   _encode_UnregisterBSP_ResponseParams,
@@ -591,22 +275,11 @@ import {
   _decode_RegisterBFP_ResponseParams,
   _encode_RegisterBFP_ResponseParams,
 } from '../BIP/RegisterBFP-ResponseParams.ta.mjs';
-export {
-  RegisterBFP_ResponseParams,
-  _decode_RegisterBFP_ResponseParams,
-  _encode_RegisterBFP_ResponseParams,
-} from '../BIP/RegisterBFP-ResponseParams.ta.mjs';
 import {
   UnregisterBFP_ResponseParams,
   _decode_UnregisterBFP_ResponseParams,
   _encode_UnregisterBFP_ResponseParams,
 } from '../BIP/UnregisterBFP-ResponseParams.ta.mjs';
-export {
-  UnregisterBFP_ResponseParams,
-  _decode_UnregisterBFP_ResponseParams,
-  _encode_UnregisterBFP_ResponseParams,
-} from '../BIP/UnregisterBFP-ResponseParams.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BIPResponse_params */
 /**
  * @summary BIPResponse_params

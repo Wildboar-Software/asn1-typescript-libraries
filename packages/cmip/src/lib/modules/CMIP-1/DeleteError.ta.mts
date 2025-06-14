@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
   GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
-export {
-  ObjectClass,
-  _decode_ObjectClass,
-  _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
-  _decode_ObjectInstance,
-  _encode_ObjectInstance,
-} from '../CMIP-1/ObjectInstance.ta.mjs';
-export {
   ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
@@ -89,20 +25,9 @@ export {
 import {
   DeleteError_deleteErrorInfo,
   _enum_for_DeleteError_deleteErrorInfo,
-  DeleteError_deleteErrorInfo_accessDenied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accessDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_DeleteError_deleteErrorInfo,
   _encode_DeleteError_deleteErrorInfo,
 } from '../CMIP-1/DeleteError-deleteErrorInfo.ta.mjs';
-export {
-  DeleteError_deleteErrorInfo,
-  _enum_for_DeleteError_deleteErrorInfo,
-  DeleteError_deleteErrorInfo_accessDenied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accessDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_DeleteError_deleteErrorInfo,
-  _encode_DeleteError_deleteErrorInfo,
-} from '../CMIP-1/DeleteError-deleteErrorInfo.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DeleteError */
 /**
  * @summary DeleteError
@@ -338,9 +263,7 @@ export function _encode_DeleteError(
 ) {
   if (!_cached_encoder_for_DeleteError) {
     _cached_encoder_for_DeleteError = function (
-      value: DeleteError,
-      elGetter: $.ASN1Encoder<DeleteError>
-    ): _Element {
+      value: DeleteError    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat(

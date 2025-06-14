@@ -41,43 +41,6 @@ import {
     _encode_RecipientInfos,
 } from "../PKCS7/RecipientInfos.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../PKCS7/Attributes.ta.mjs";
-export {
-    ContentInfo,
-    _decode_ContentInfo,
-    _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    MessageAuthenticationCode,
-    _decode_MessageAuthenticationCode,
-    _encode_MessageAuthenticationCode,
-} from "../PKCS7/MessageAuthenticationCode.ta.mjs";
-export {
-    MessageAuthenticationCodeAlgorithmIdentifier,
-    _decode_MessageAuthenticationCodeAlgorithmIdentifier,
-    _encode_MessageAuthenticationCodeAlgorithmIdentifier,
-} from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta.mjs";
-export {
-    OriginatorInfo,
-    _decode_OriginatorInfo,
-    _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta.mjs";
-export {
-    RecipientInfos,
-    _decode_RecipientInfos,
-    _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticatedData */
 /**
  * @summary AuthenticatedData
@@ -402,9 +365,7 @@ export function _encode_AuthenticatedData(
 ) {
     if (!_cached_encoder_for_AuthenticatedData) {
         _cached_encoder_for_AuthenticatedData = function (
-            value: AuthenticatedData,
-            elGetter: $.ASN1Encoder<AuthenticatedData>
-        ): _Element {
+            value: AuthenticatedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

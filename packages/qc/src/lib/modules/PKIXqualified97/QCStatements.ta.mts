@@ -6,12 +6,6 @@ import {
     _decode_QCStatement,
     _encode_QCStatement,
 } from "../PKIXqualified97/QCStatement.ta.mjs";
-export {
-    QCStatement,
-    _decode_QCStatement,
-    _encode_QCStatement,
-} from "../PKIXqualified97/QCStatement.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION QCStatements */
 /**
  * @summary QCStatements

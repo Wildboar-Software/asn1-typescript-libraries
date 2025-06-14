@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
-export { OC_DATA } from "../SIOsAccessControl-MODULE/OC-DATA.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CatData */
 /**
  * @summary CatData

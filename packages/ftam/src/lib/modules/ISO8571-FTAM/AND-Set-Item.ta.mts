@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_Pathname_Pattern,
   _encode_Pathname_Pattern,
 } from '../ISO8571-FTAM/Pathname-Pattern.ta.mjs';
-export {
-  Pathname_Pattern,
-  _decode_Pathname_Pattern,
-  _encode_Pathname_Pattern,
-} from '../ISO8571-FTAM/Pathname-Pattern.ta.mjs';
 import {
-  Integer_Pattern,
-  _decode_Integer_Pattern,
-  _encode_Integer_Pattern,
-} from '../ISO8571-FTAM/Integer-Pattern.ta.mjs';
-export {
   Integer_Pattern,
   _decode_Integer_Pattern,
   _encode_Integer_Pattern,
@@ -91,17 +25,7 @@ import {
   _decode_Bitstring_Pattern,
   _encode_Bitstring_Pattern,
 } from '../ISO8571-FTAM/Bitstring-Pattern.ta.mjs';
-export {
-  Bitstring_Pattern,
-  _decode_Bitstring_Pattern,
-  _encode_Bitstring_Pattern,
-} from '../ISO8571-FTAM/Bitstring-Pattern.ta.mjs';
 import {
-  Contents_Type_Pattern,
-  _decode_Contents_Type_Pattern,
-  _encode_Contents_Type_Pattern,
-} from '../ISO8571-FTAM/Contents-Type-Pattern.ta.mjs';
-export {
   Contents_Type_Pattern,
   _decode_Contents_Type_Pattern,
   _encode_Contents_Type_Pattern,
@@ -111,17 +35,7 @@ import {
   _decode_String_Pattern,
   _encode_String_Pattern,
 } from '../ISO8571-FTAM/String-Pattern.ta.mjs';
-export {
-  String_Pattern,
-  _decode_String_Pattern,
-  _encode_String_Pattern,
-} from '../ISO8571-FTAM/String-Pattern.ta.mjs';
 import {
-  Date_and_Time_Pattern,
-  _decode_Date_and_Time_Pattern,
-  _encode_Date_and_Time_Pattern,
-} from '../ISO8571-FTAM/Date-and-Time-Pattern.ta.mjs';
-export {
   Date_and_Time_Pattern,
   _decode_Date_and_Time_Pattern,
   _encode_Date_and_Time_Pattern,
@@ -131,17 +45,7 @@ import {
   _decode_User_Identity_Pattern,
   _encode_User_Identity_Pattern,
 } from '../ISO8571-FTAM/User-Identity-Pattern.ta.mjs';
-export {
-  User_Identity_Pattern,
-  _decode_User_Identity_Pattern,
-  _encode_User_Identity_Pattern,
-} from '../ISO8571-FTAM/User-Identity-Pattern.ta.mjs';
 import {
-  Boolean_Pattern,
-  _decode_Boolean_Pattern,
-  _encode_Boolean_Pattern,
-} from '../ISO8571-FTAM/Boolean-Pattern.ta.mjs';
-export {
   Boolean_Pattern,
   _decode_Boolean_Pattern,
   _encode_Boolean_Pattern,
@@ -151,12 +55,6 @@ import {
   _decode_Attribute_Extensions_Pattern,
   _encode_Attribute_Extensions_Pattern,
 } from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.mjs';
-export {
-  Attribute_Extensions_Pattern,
-  _decode_Attribute_Extensions_Pattern,
-  _encode_Attribute_Extensions_Pattern,
-} from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AND_Set_Item */
 /**
  * @summary AND_Set_Item

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,23 +15,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
-    version_1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Protocol_version,
-    _encode_Protocol_version,
-} from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
-export {
-    Protocol_version,
-    Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
-    version_1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
 } from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
 import {
-    Responding_presentation_selector,
-    _decode_Responding_presentation_selector,
-    _encode_Responding_presentation_selector,
-} from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.mjs';
-export {
     Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
@@ -95,60 +28,13 @@ import {
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
-export {
-    Presentation_context_definition_result_list,
-    _decode_Presentation_context_definition_result_list,
-    _encode_Presentation_context_definition_result_list,
-} from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
 import {
-    Default_context_result,
-    _decode_Default_context_result,
-    _encode_Default_context_result,
-} from '../ISO8823-PRESENTATION/Default-context-result.ta.mjs';
-export {
     Default_context_result,
     _decode_Default_context_result,
     _encode_Default_context_result,
 } from '../ISO8823-PRESENTATION/Default-context-result.ta.mjs';
 import {
     Provider_reason,
-    Provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-    reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_temporary_congestion /* IMPORTED_LONG_NAMED_INTEGER */,
-    temporary_congestion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_local_limit_exceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-    local_limit_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_called_presentation_address_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    called_presentation_address_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_protocol_version_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    protocol_version_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_default_context_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    default_context_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_user_data_not_readable /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_data_not_readable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_no_PSAP_available /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_PSAP_available /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Provider_reason,
-    _encode_Provider_reason,
-} from '../ISO8823-PRESENTATION/Provider-reason.ta.mjs';
-export {
-    Provider_reason,
-    Provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-    reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_temporary_congestion /* IMPORTED_LONG_NAMED_INTEGER */,
-    temporary_congestion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_local_limit_exceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-    local_limit_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_called_presentation_address_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    called_presentation_address_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_protocol_version_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    protocol_version_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_default_context_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    default_context_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_user_data_not_readable /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_data_not_readable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason_no_PSAP_available /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_PSAP_available /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Provider_reason,
     _encode_Provider_reason,
 } from '../ISO8823-PRESENTATION/Provider-reason.ta.mjs';
@@ -157,12 +43,6 @@ import {
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-export {
-    User_data,
-    _decode_User_data,
-    _encode_User_data,
-} from '../ISO8823-PRESENTATION/User-data.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CPR_PPDU_normal_mode_parameters */
 /**
  * @summary CPR_PPDU_normal_mode_parameters
@@ -432,9 +312,7 @@ export function _encode_CPR_PPDU_normal_mode_parameters(
 ) {
     if (!_cached_encoder_for_CPR_PPDU_normal_mode_parameters) {
         _cached_encoder_for_CPR_PPDU_normal_mode_parameters = function (
-            value: CPR_PPDU_normal_mode_parameters,
-            elGetter: $.ASN1Encoder<CPR_PPDU_normal_mode_parameters>
-        ): _Element {
+            value: CPR_PPDU_normal_mode_parameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

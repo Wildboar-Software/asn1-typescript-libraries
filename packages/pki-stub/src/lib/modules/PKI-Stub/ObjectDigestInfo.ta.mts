@@ -16,24 +16,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import {
     ObjectDigestInfo_digestedObjectType,
     _enum_for_ObjectDigestInfo_digestedObjectType,
-    ObjectDigestInfo_digestedObjectType_publicKey /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    publicKey /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectDigestInfo_digestedObjectType_publicKeyCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    publicKeyCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectDigestInfo_digestedObjectType_otherObjectTypes /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    otherObjectTypes /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectDigestInfo_digestedObjectType,
-    _encode_ObjectDigestInfo_digestedObjectType,
-} from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta.mjs";
-export {
-    ObjectDigestInfo_digestedObjectType,
-    _enum_for_ObjectDigestInfo_digestedObjectType,
-    ObjectDigestInfo_digestedObjectType_publicKey /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    publicKey /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectDigestInfo_digestedObjectType_publicKeyCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    publicKeyCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectDigestInfo_digestedObjectType_otherObjectTypes /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    otherObjectTypes /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ObjectDigestInfo_digestedObjectType,
     _encode_ObjectDigestInfo_digestedObjectType,
 } from "../PKI-Stub/ObjectDigestInfo-digestedObjectType.ta.mjs";
@@ -263,7 +245,7 @@ export function _decode_ObjectDigestInfo(el: _Element) {
  */
 export function _encode_ObjectDigestInfo(
     value: ObjectDigestInfo,
-    elGetter: $.ASN1Encoder<ObjectDigestInfo>
+    _elGetter: $.ASN1Encoder<ObjectDigestInfo>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_ObjectDigestInfo_digestedObjectType(

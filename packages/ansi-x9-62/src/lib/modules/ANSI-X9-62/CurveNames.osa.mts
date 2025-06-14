@@ -27,35 +27,6 @@ import { CurveNames_Union7_Intersection0_Element } from "../ANSI-X9-62/CurveName
 import { CurveNames_Union8_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union8-Intersection0-Element.oa.mjs";
 import { CurveNames_Union9_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union9-Intersection0-Element.oa.mjs";
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-export { CurveNames_Union0_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union0-Intersection0-Element.oa.mjs";
-export { CurveNames_Union1_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union1-Intersection0-Element.oa.mjs";
-export { CurveNames_Union10_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union10-Intersection0-Element.oa.mjs";
-export { CurveNames_Union11_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union11-Intersection0-Element.oa.mjs";
-export { CurveNames_Union12_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union12-Intersection0-Element.oa.mjs";
-export { CurveNames_Union13_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union13-Intersection0-Element.oa.mjs";
-export { CurveNames_Union14_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union14-Intersection0-Element.oa.mjs";
-export { CurveNames_Union15_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union15-Intersection0-Element.oa.mjs";
-export { CurveNames_Union16_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union16-Intersection0-Element.oa.mjs";
-export { CurveNames_Union17_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union17-Intersection0-Element.oa.mjs";
-export { CurveNames_Union18_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union18-Intersection0-Element.oa.mjs";
-export { CurveNames_Union19_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union19-Intersection0-Element.oa.mjs";
-export { CurveNames_Union2_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union2-Intersection0-Element.oa.mjs";
-export { CurveNames_Union20_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union20-Intersection0-Element.oa.mjs";
-export { CurveNames_Union21_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union21-Intersection0-Element.oa.mjs";
-export { CurveNames_Union22_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union22-Intersection0-Element.oa.mjs";
-export { CurveNames_Union23_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union23-Intersection0-Element.oa.mjs";
-export { CurveNames_Union24_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union24-Intersection0-Element.oa.mjs";
-export { CurveNames_Union25_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union25-Intersection0-Element.oa.mjs";
-export { CurveNames_Union26_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union26-Intersection0-Element.oa.mjs";
-export { CurveNames_Union3_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union3-Intersection0-Element.oa.mjs";
-export { CurveNames_Union4_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union4-Intersection0-Element.oa.mjs";
-export { CurveNames_Union5_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union5-Intersection0-Element.oa.mjs";
-export { CurveNames_Union6_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union6-Intersection0-Element.oa.mjs";
-export { CurveNames_Union7_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union7-Intersection0-Element.oa.mjs";
-export { CurveNames_Union8_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union8-Intersection0-Element.oa.mjs";
-export { CurveNames_Union9_Intersection0_Element } from "../ANSI-X9-62/CurveNames-Union9-Intersection0-Element.oa.mjs";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CurveNames */
 /**
  * @summary CurveNames

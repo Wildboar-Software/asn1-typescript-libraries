@@ -27,34 +27,6 @@ import {
     _decode_SpecifiedECDomainVersion,
     _encode_SpecifiedECDomainVersion,
 } from "../ANSI-X9-62/SpecifiedECDomainVersion.ta.mjs";
-export { Curve, _decode_Curve, _encode_Curve } from "../ANSI-X9-62/Curve.ta.mjs";
-export {
-    ECPoint,
-    _decode_ECPoint,
-    _encode_ECPoint,
-} from "../ANSI-X9-62/ECPoint.ta.mjs";
-export {
-    FieldID,
-    _decode_FieldID,
-    _encode_FieldID,
-} from "../ANSI-X9-62/FieldID.ta.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
-export {
-    ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    SpecifiedECDomainVersion,
-    SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_SpecifiedECDomainVersion,
-    _encode_SpecifiedECDomainVersion,
-} from "../ANSI-X9-62/SpecifiedECDomainVersion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SpecifiedECDomain */
 /**
  * @summary SpecifiedECDomain
@@ -339,9 +311,7 @@ export function _encode_SpecifiedECDomain(
 ) {
     if (!_cached_encoder_for_SpecifiedECDomain) {
         _cached_encoder_for_SpecifiedECDomain = function (
-            value: SpecifiedECDomain,
-            elGetter: $.ASN1Encoder<SpecifiedECDomain>
-        ): _Element {
+            value: SpecifiedECDomain        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

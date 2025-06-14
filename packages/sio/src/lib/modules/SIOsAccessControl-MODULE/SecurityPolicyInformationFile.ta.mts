@@ -11,17 +11,6 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../SIOsAccessControl-MODULE/SIGNED.ta.mjs";
-export {
-    EncodedSPIF,
-    _decode_EncodedSPIF,
-    _encode_EncodedSPIF,
-} from "../SIOsAccessControl-MODULE/EncodedSPIF.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../SIOsAccessControl-MODULE/SIGNED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityPolicyInformationFile */
 /**
  * @summary SecurityPolicyInformationFile

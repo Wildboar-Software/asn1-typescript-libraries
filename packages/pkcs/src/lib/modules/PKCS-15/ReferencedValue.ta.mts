@@ -3,9 +3,6 @@ import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.mjs";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-export { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReferencedValue */
 /**
  * @summary ReferencedValue
@@ -20,7 +17,7 @@ export { URL, _decode_URL, _encode_URL } from "../PKCS-15/URL.ta.mjs";
  * } (CONSTRAINED BY {-- 'path' or 'url' shall point to an object of type -- Type})
  * ```
  */
-export type ReferencedValue<Type> =
+export type ReferencedValue<_Type> =
     | { path: Path } /* CHOICE_ALT_ROOT */
     | { url: URL } /* CHOICE_ALT_ROOT */;
 /* END_OF_SYMBOL_DEFINITION ReferencedValue */

@@ -35,39 +35,6 @@ import {
     _decode_UnSigncryptedAttributes,
     _encode_UnSigncryptedAttributes,
 } from "../CMSSigncryption/UnSigncryptedAttributes.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CMSSigncryption/CMSVersion.ta.mjs";
-export {
-    SignatureInformation,
-    _decode_SignatureInformation,
-    _encode_SignatureInformation,
-} from "../CMSSigncryption/SignatureInformation.ta.mjs";
-export {
-    SigncryptedDataAlgorithmIdentifier,
-    _decode_SigncryptedDataAlgorithmIdentifier,
-    _encode_SigncryptedDataAlgorithmIdentifier,
-} from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta.mjs";
-export {
-    SigncrypterIDs,
-    _decode_SigncrypterIDs,
-    _encode_SigncrypterIDs,
-} from "../CMSSigncryption/SigncrypterIDs.ta.mjs";
-export {
-    SigncryptionValue,
-    _decode_SigncryptionValue,
-    _encode_SigncryptionValue,
-} from "../CMSSigncryption/SigncryptionValue.ta.mjs";
-export {
-    UnSigncryptedAttributes,
-    _decode_UnSigncryptedAttributes,
-    _encode_UnSigncryptedAttributes,
-} from "../CMSSigncryption/UnSigncryptedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Signcrypter */
 /**
  * @summary Signcrypter
@@ -322,9 +289,7 @@ export function _encode_Signcrypter(
 ) {
     if (!_cached_encoder_for_Signcrypter) {
         _cached_encoder_for_Signcrypter = function (
-            value: Signcrypter,
-            elGetter: $.ASN1Encoder<Signcrypter>
-        ): _Element {
+            value: Signcrypter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -169,9 +169,7 @@ export function _encode_MessageImprint(
 ) {
     if (!_cached_encoder_for_MessageImprint) {
         _cached_encoder_for_MessageImprint = function (
-            value: MessageImprint,
-            elGetter: $.ASN1Encoder<MessageImprint>
-        ): _Element {
+            value: MessageImprint        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

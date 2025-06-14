@@ -12,12 +12,6 @@ import {
     _decode_OtherKeyAttribute,
     _encode_OtherKeyAttribute,
 } from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.mjs";
-export {
-    OtherKeyAttribute,
-    _decode_OtherKeyAttribute,
-    _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KEKIdentifier */
 /**
  * @summary KEKIdentifier
@@ -206,9 +200,7 @@ export function _encode_KEKIdentifier(
 ) {
     if (!_cached_encoder_for_KEKIdentifier) {
         _cached_encoder_for_KEKIdentifier = function (
-            value: KEKIdentifier,
-            elGetter: $.ASN1Encoder<KEKIdentifier>
-        ): _Element {
+            value: KEKIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

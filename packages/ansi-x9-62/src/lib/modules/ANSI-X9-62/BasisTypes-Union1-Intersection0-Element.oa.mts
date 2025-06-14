@@ -6,14 +6,6 @@ import {
     _decode_Trinomial,
     _encode_Trinomial,
 } from "../ANSI-X9-62/Trinomial.ta.mjs";
-export { CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
-export { tpBasis } from "../ANSI-X9-62/tpBasis.va.mjs";
-export {
-    Trinomial,
-    _decode_Trinomial,
-    _encode_Trinomial,
-} from "../ANSI-X9-62/Trinomial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BasisTypes_Union1_Intersection0_Element */
 /**
  * @summary BasisTypes_Union1_Intersection0_Element

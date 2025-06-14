@@ -11,17 +11,6 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";
-export {
-    DigestInfo,
-    _decode_DigestInfo,
-    _encode_DigestInfo,
-} from "../PKCS7/DigestInfo.ta.mjs";
-export {
-    ENCRYPTED,
-    _get_decoder_for_ENCRYPTED,
-    _get_encoder_for_ENCRYPTED,
-} from "../PKCS7/ENCRYPTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedDigest */
 /**
  * @summary EncryptedDigest

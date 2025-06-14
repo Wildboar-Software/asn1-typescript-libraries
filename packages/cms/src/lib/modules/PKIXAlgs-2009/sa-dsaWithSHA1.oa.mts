@@ -13,37 +13,6 @@ import {
 import { dsa_with_sha1 } from "../PKIXAlgs-2009/dsa-with-sha1.va.mjs";
 import { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
 import { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.mjs";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export {
-    DSA_Sig_Value,
-    _decode_DSA_Sig_Value,
-    _encode_DSA_Sig_Value,
-} from "../PKIXAlgs-2009/DSA-Sig-Value.ta.mjs";
-export { dsa_with_sha1 } from "../PKIXAlgs-2009/dsa-with-sha1.va.mjs";
-export { mda_sha1 } from "../PKIXAlgs-2009/mda-sha1.oa.mjs";
-export { pk_dsa } from "../PKIXAlgs-2009/pk-dsa.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sa_dsaWithSHA1 */
 /**
  * @summary sa_dsaWithSHA1

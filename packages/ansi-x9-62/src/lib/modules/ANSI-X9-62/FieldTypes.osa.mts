@@ -2,20 +2,6 @@
 import { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
 import { FieldTypes_Union0_Intersection0_Element } from "./FieldTypes-Union0-Intersection0-Element.oa.mjs";
 import { FieldTypes_Union1_Intersection0_Element } from "./FieldTypes-Union1-Intersection0-Element.oa.mjs";
-export { characteristic_two_field } from "../ANSI-X9-62/characteristic-two-field.va.mjs";
-export {
-    Characteristic_two,
-    _decode_Characteristic_two,
-    _encode_Characteristic_two,
-} from "../ANSI-X9-62/Characteristic-two.ta.mjs";
-export { FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
-export { prime_field } from "../ANSI-X9-62/prime-field.va.mjs";
-export {
-    Prime_p,
-    _decode_Prime_p,
-    _encode_Prime_p,
-} from "../ANSI-X9-62/Prime-p.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FieldTypes */
 /**
  * @summary FieldTypes

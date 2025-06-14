@@ -3,9 +3,6 @@ import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union2_Intersection0_Element */
 /**
  * @summary SupportingAlgorithms_Union2_Intersection0_Element

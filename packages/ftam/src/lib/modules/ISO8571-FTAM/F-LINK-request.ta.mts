@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_Create_Attributes,
   _encode_Create_Attributes,
 } from '../ISO8571-FTAM/Create-Attributes.ta.mjs';
-export {
-  Create_Attributes,
-  _decode_Create_Attributes,
-  _encode_Create_Attributes,
-} from '../ISO8571-FTAM/Create-Attributes.ta.mjs';
 import {
-  Pathname_Attribute,
-  _decode_Pathname_Attribute,
-  _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
-export {
   Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
@@ -91,17 +26,7 @@ import {
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
-export {
-  Password,
-  _decode_Password,
-  _encode_Password,
-} from '../ISO8571-FTAM/Password.ta.mjs';
 import {
-  Access_Request,
-  _decode_Access_Request,
-  _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta.mjs';
-export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
@@ -111,17 +36,7 @@ import {
   _decode_Access_Passwords,
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
-export {
-  Access_Passwords,
-  _decode_Access_Passwords,
-  _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
-  _decode_Path_Access_Passwords,
-  _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
-export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
@@ -131,17 +46,7 @@ import {
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
-export {
-  Concurrency_Control,
-  _decode_Concurrency_Control,
-  _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
-  _decode_Shared_ASE_Information,
-  _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
@@ -151,12 +56,6 @@ import {
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';
-export {
-  Account,
-  _decode_Account,
-  _encode_Account,
-} from '../ISO8571-FTAM/Account.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_LINK_request */
 /**
  * @summary F_LINK_request
@@ -469,9 +368,7 @@ export function _encode_F_LINK_request(
 ) {
   if (!_cached_encoder_for_F_LINK_request) {
     _cached_encoder_for_F_LINK_request = function (
-      value: F_LINK_request,
-      elGetter: $.ASN1Encoder<F_LINK_request>
-    ): _Element {
+      value: F_LINK_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

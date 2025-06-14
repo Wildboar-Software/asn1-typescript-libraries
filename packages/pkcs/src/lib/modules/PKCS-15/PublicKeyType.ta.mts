@@ -31,37 +31,6 @@ import {
     _decode_PublicRSAKeyAttributes,
     _encode_PublicRSAKeyAttributes,
 } from "../PKCS-15/PublicRSAKeyAttributes.ta.mjs";
-export {
-    PublicDHKeyAttributes,
-    _decode_PublicDHKeyAttributes,
-    _encode_PublicDHKeyAttributes,
-} from "../PKCS-15/PublicDHKeyAttributes.ta.mjs";
-export {
-    PublicDSAKeyAttributes,
-    _decode_PublicDSAKeyAttributes,
-    _encode_PublicDSAKeyAttributes,
-} from "../PKCS-15/PublicDSAKeyAttributes.ta.mjs";
-export {
-    PublicECKeyAttributes,
-    _decode_PublicECKeyAttributes,
-    _encode_PublicECKeyAttributes,
-} from "../PKCS-15/PublicECKeyAttributes.ta.mjs";
-export {
-    PublicKEAKeyAttributes,
-    _decode_PublicKEAKeyAttributes,
-    _encode_PublicKEAKeyAttributes,
-} from "../PKCS-15/PublicKEAKeyAttributes.ta.mjs";
-export {
-    PublicKeyObject,
-    _get_decoder_for_PublicKeyObject,
-    _get_encoder_for_PublicKeyObject,
-} from "../PKCS-15/PublicKeyObject.ta.mjs";
-export {
-    PublicRSAKeyAttributes,
-    _decode_PublicRSAKeyAttributes,
-    _encode_PublicRSAKeyAttributes,
-} from "../PKCS-15/PublicRSAKeyAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PublicKeyType */
 /**
  * @summary PublicKeyType

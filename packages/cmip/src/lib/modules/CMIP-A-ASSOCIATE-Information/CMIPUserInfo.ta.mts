@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
   EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
   TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,52 +16,14 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ProtocolVersion,
   ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
-  version1 /* IMPORTED_SHORT_NAMED_BIT */,
-  ProtocolVersion_version2 /* IMPORTED_LONG_NAMED_BIT */,
-  version2 /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_ProtocolVersion,
-  _encode_ProtocolVersion,
-} from '../CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
-export {
-  ProtocolVersion,
-  ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
-  version1 /* IMPORTED_SHORT_NAMED_BIT */,
-  ProtocolVersion_version2 /* IMPORTED_LONG_NAMED_BIT */,
-  version2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_ProtocolVersion,
   _encode_ProtocolVersion,
 } from '../CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
 import {
   FunctionalUnits,
-  FunctionalUnits_multipleObjectSelection /* IMPORTED_LONG_NAMED_BIT */,
-  multipleObjectSelection /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_filter /* IMPORTED_LONG_NAMED_BIT */,
-  filter /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_multipleReply /* IMPORTED_LONG_NAMED_BIT */,
-  multipleReply /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_extendedService /* IMPORTED_LONG_NAMED_BIT */,
-  extendedService /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_cancelGet /* IMPORTED_LONG_NAMED_BIT */,
-  cancelGet /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_FunctionalUnits,
   _encode_FunctionalUnits,
 } from '../CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
-export {
-  FunctionalUnits,
-  FunctionalUnits_multipleObjectSelection /* IMPORTED_LONG_NAMED_BIT */,
-  multipleObjectSelection /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_filter /* IMPORTED_LONG_NAMED_BIT */,
-  filter /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_multipleReply /* IMPORTED_LONG_NAMED_BIT */,
-  multipleReply /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_extendedService /* IMPORTED_LONG_NAMED_BIT */,
-  extendedService /* IMPORTED_SHORT_NAMED_BIT */,
-  FunctionalUnits_cancelGet /* IMPORTED_LONG_NAMED_BIT */,
-  cancelGet /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_FunctionalUnits,
-  _encode_FunctionalUnits,
-} from '../CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CMIPUserInfo */
 /**
  * @summary CMIPUserInfo
@@ -356,9 +265,7 @@ export function _encode_CMIPUserInfo(
 ) {
   if (!_cached_encoder_for_CMIPUserInfo) {
     _cached_encoder_for_CMIPUserInfo = function (
-      value: CMIPUserInfo,
-      elGetter: $.ASN1Encoder<CMIPUserInfo>
-    ): _Element {
+      value: CMIPUserInfo    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { secgCurve } from "../ANSI-X9-62/secgCurve.va.mjs";
-export { secgCurve } from "../ANSI-X9-62/secgCurve.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ansix9t193r2 */
 /**
  * @summary ansix9t193r2

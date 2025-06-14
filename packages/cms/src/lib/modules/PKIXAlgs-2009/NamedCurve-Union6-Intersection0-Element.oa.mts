@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
 import { secp256r1 } from "../PKIXAlgs-2009/secp256r1.va.mjs";
-export { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
-export { secp256r1 } from "../PKIXAlgs-2009/secp256r1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NamedCurve_Union6_Intersection0_Element */
 /**
  * @summary NamedCurve_Union6_Intersection0_Element

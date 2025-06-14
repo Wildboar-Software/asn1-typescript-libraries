@@ -183,9 +183,7 @@ export function _encode_OptionalValidity(
 ) {
     if (!_cached_encoder_for_OptionalValidity) {
         _cached_encoder_for_OptionalValidity = function (
-            value: OptionalValidity,
-            elGetter: $.ASN1Encoder<OptionalValidity>
-        ): _Element {
+            value: OptionalValidity        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

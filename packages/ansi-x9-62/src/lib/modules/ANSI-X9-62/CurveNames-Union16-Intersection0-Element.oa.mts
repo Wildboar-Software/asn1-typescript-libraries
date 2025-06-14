@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { c2pnb304w1 } from "../ANSI-X9-62/c2pnb304w1.va.mjs";
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-export { c2pnb304w1 } from "../ANSI-X9-62/c2pnb304w1.va.mjs";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union16_Intersection0_Element */
 /**
  * @summary CurveNames_Union16_Intersection0_Element

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
     EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,27 +14,9 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Release_response_reason,
-    Release_response_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
-    normal /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Release_response_reason_not_finished /* IMPORTED_LONG_NAMED_INTEGER */,
-    not_finished /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Release_response_reason_user_defined /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
 } from '../DialoguePDUs/Release-response-reason.ta.mjs';
-export {
-    Release_response_reason,
-    Release_response_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
-    normal /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Release_response_reason_not_finished /* IMPORTED_LONG_NAMED_INTEGER */,
-    not_finished /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Release_response_reason_user_defined /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_defined /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Release_response_reason,
-    _encode_Release_response_reason,
-} from '../DialoguePDUs/Release-response-reason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RLRE_apdu */
 /**
  * @summary RLRE_apdu
@@ -270,9 +198,7 @@ export function _encode_RLRE_apdu(
             3,
             () =>
                 function (
-                    value: RLRE_apdu,
-                    elGetter: $.ASN1Encoder<RLRE_apdu>
-                ): _Element {
+                    value: RLRE_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

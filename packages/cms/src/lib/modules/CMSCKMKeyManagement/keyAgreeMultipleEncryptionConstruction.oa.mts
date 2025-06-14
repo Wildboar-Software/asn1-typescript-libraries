@@ -6,33 +6,6 @@ import {
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import { id_ckm_key_agree_multiple_encrypt } from "../CMSObjectIdentifiers/id-ckm-key-agree-multiple-encrypt.va.mjs";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
-export {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-export { id_ckm_key_agree_multiple_encrypt } from "../CMSObjectIdentifiers/id-ckm-key-agree-multiple-encrypt.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION keyAgreeMultipleEncryptionConstruction */
 /**
  * @summary keyAgreeMultipleEncryptionConstruction

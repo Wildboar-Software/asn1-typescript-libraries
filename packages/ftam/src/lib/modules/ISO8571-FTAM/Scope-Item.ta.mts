@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,30 +16,11 @@ import {
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
-export {
-  Pathname_Attribute,
-  _decode_Pathname_Attribute,
-  _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
   Scope_Item_retrieval_scope,
-  Scope_Item_retrieval_scope_child /* IMPORTED_LONG_NAMED_INTEGER */,
-  child /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Scope_Item_retrieval_scope_all /* IMPORTED_LONG_NAMED_INTEGER */,
-  all /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Scope_Item_retrieval_scope,
   _encode_Scope_Item_retrieval_scope,
 } from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta.mjs';
-export {
-  Scope_Item_retrieval_scope,
-  Scope_Item_retrieval_scope_child /* IMPORTED_LONG_NAMED_INTEGER */,
-  child /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Scope_Item_retrieval_scope_all /* IMPORTED_LONG_NAMED_INTEGER */,
-  all /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Scope_Item_retrieval_scope,
-  _encode_Scope_Item_retrieval_scope,
-} from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Scope_Item */
 /**
  * @summary Scope_Item
@@ -263,9 +189,7 @@ export function _encode_Scope_Item(
 ) {
   if (!_cached_encoder_for_Scope_Item) {
     _cached_encoder_for_Scope_Item = function (
-      value: Scope_Item,
-      elGetter: $.ASN1Encoder<Scope_Item>
-    ): _Element {
+      value: Scope_Item    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

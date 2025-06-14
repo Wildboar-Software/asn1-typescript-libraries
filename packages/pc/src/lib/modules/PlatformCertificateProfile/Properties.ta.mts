@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,10 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-export { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
-
-
+import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfile/AttributeStatus.ta.mjs";
 /* START_OF_SYMBOL_DEFINITION Properties */
 /**
  * @summary Properties
@@ -238,7 +181,7 @@ let _cached_encoder_for_Properties: $.ASN1Encoder<Properties> | null = null;
  */
 export
 function _encode_Properties (value: Properties, elGetter: $.ASN1Encoder<Properties>) {
-    if (!_cached_encoder_for_Properties) { _cached_encoder_for_Properties = function (value: Properties, elGetter: $.ASN1Encoder<Properties>): _Element {
+    if (!_cached_encoder_for_Properties) { _cached_encoder_for_Properties = function (value: Properties): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeUTF8String(value.propertyName, $.BER),

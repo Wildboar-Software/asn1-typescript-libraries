@@ -27,27 +27,6 @@ import {
     _decode_RSAPrivateKeyObject,
     _encode_RSAPrivateKeyObject,
 } from "../PKCS-15/RSAPrivateKeyObject.ta.mjs";
-export {
-    KeyInfo,
-    _get_decoder_for_KeyInfo,
-    _get_encoder_for_KeyInfo,
-} from "../PKCS-15/KeyInfo.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    PublicKeyOperations,
-    _decode_PublicKeyOperations,
-    _encode_PublicKeyOperations,
-} from "../PKCS-15/PublicKeyOperations.ta.mjs";
-export {
-    RSAPrivateKeyObject,
-    _decode_RSAPrivateKeyObject,
-    _encode_RSAPrivateKeyObject,
-} from "../PKCS-15/RSAPrivateKeyObject.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PrivateRSAKeyAttributes */
 /**
  * @summary PrivateRSAKeyAttributes
@@ -250,9 +229,7 @@ export function _encode_PrivateRSAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PrivateRSAKeyAttributes) {
         _cached_encoder_for_PrivateRSAKeyAttributes = function (
-            value: PrivateRSAKeyAttributes,
-            elGetter: $.ASN1Encoder<PrivateRSAKeyAttributes>
-        ): _Element {
+            value: PrivateRSAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

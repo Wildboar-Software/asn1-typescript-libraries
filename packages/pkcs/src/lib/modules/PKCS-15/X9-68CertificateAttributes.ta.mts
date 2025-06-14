@@ -9,13 +9,6 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION X9_68CertificateAttributes */
 /**
  * @summary X9_68CertificateAttributes
@@ -165,9 +158,7 @@ export function _encode_X9_68CertificateAttributes(
 ) {
     if (!_cached_encoder_for_X9_68CertificateAttributes) {
         _cached_encoder_for_X9_68CertificateAttributes = function (
-            value: X9_68CertificateAttributes,
-            elGetter: $.ASN1Encoder<X9_68CertificateAttributes>
-        ): _Element {
+            value: X9_68CertificateAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

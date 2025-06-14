@@ -15,17 +15,6 @@ import {
     _decode_UnknownInfo,
     _encode_UnknownInfo,
 } from "../OCSP-2013-08/UnknownInfo.ta.mjs";
-export {
-    RevokedInfo,
-    _decode_RevokedInfo,
-    _encode_RevokedInfo,
-} from "../OCSP-2013-08/RevokedInfo.ta.mjs";
-export {
-    UnknownInfo,
-    _decode_UnknownInfo,
-    _encode_UnknownInfo,
-} from "../OCSP-2013-08/UnknownInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertStatus */
 /**
  * @summary CertStatus

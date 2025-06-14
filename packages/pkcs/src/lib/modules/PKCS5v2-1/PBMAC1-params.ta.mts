@@ -10,12 +10,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBMAC1_params */
 /**
  * @summary PBMAC1_params
@@ -174,9 +168,7 @@ export function _encode_PBMAC1_params(
 ) {
     if (!_cached_encoder_for_PBMAC1_params) {
         _cached_encoder_for_PBMAC1_params = function (
-            value: PBMAC1_params,
-            elGetter: $.ASN1Encoder<PBMAC1_params>
-        ): _Element {
+            value: PBMAC1_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

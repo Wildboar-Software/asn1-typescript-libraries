@@ -372,7 +372,7 @@ export function _decode_BuiltInStandardAttributes(el: _Element) {
  */
 export function _encode_BuiltInStandardAttributes(
     value: BuiltInStandardAttributes,
-    elGetter: $.ASN1Encoder<BuiltInStandardAttributes>
+    _elGetter: $.ASN1Encoder<BuiltInStandardAttributes>
 ) {
     const components: _Element[] = [];
     if (value.country_name) {

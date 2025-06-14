@@ -389,9 +389,7 @@ export function _encode_TSTInfo(
 ) {
     if (!_cached_encoder_for_TSTInfo) {
         _cached_encoder_for_TSTInfo = function (
-            value: TSTInfo,
-            elGetter: $.ASN1Encoder<TSTInfo>
-        ): _Element {
+            value: TSTInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

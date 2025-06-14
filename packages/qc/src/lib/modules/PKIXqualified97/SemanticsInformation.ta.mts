@@ -11,12 +11,6 @@ import {
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
 } from "../PKIXqualified97/NameRegistrationAuthorities.ta.mjs";
-export {
-    NameRegistrationAuthorities,
-    _decode_NameRegistrationAuthorities,
-    _encode_NameRegistrationAuthorities,
-} from "../PKIXqualified97/NameRegistrationAuthorities.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SemanticsInformation */
 /**
  * @summary SemanticsInformation
@@ -192,9 +186,7 @@ export function _encode_SemanticsInformation(
 ) {
     if (!_cached_encoder_for_SemanticsInformation) {
         _cached_encoder_for_SemanticsInformation = function (
-            value: SemanticsInformation,
-            elGetter: $.ASN1Encoder<SemanticsInformation>
-        ): _Element {
+            value: SemanticsInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

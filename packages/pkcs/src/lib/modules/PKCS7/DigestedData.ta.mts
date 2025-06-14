@@ -224,9 +224,7 @@ export function _encode_DigestedData(
 ) {
     if (!_cached_encoder_for_DigestedData) {
         _cached_encoder_for_DigestedData = function (
-            value: DigestedData,
-            elGetter: $.ASN1Encoder<DigestedData>
-        ): _Element {
+            value: DigestedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

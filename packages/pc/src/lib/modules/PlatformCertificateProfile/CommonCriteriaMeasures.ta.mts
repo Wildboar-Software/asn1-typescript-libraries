@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
     IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,12 +14,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, EvaluationAssuranceLevel_levell /* IMPORTED_LONG_ENUMERATION_ITEM */, levell /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level5 /* IMPORTED_LONG_ENUMERATION_ITEM */, level5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level6 /* IMPORTED_LONG_ENUMERATION_ITEM */, level6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level7 /* IMPORTED_LONG_ENUMERATION_ITEM */, level7 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../PlatformCertificateProfile/EvaluationAssuranceLevel.ta.mjs";
-export { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, EvaluationAssuranceLevel_levell /* IMPORTED_LONG_ENUMERATION_ITEM */, levell /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level5 /* IMPORTED_LONG_ENUMERATION_ITEM */, level5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level6 /* IMPORTED_LONG_ENUMERATION_ITEM */, level6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level7 /* IMPORTED_LONG_ENUMERATION_ITEM */, level7 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../PlatformCertificateProfile/EvaluationAssuranceLevel.ta.mjs";
-import { StrengthOfFunction, _enum_for_StrengthOfFunction, StrengthOfFunction_basic /* IMPORTED_LONG_ENUMERATION_ITEM */, basic /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StrengthOfFunction, _encode_StrengthOfFunction } from "../PlatformCertificateProfile/StrengthOfFunction.ta.mjs";
-export { StrengthOfFunction, _enum_for_StrengthOfFunction, StrengthOfFunction_basic /* IMPORTED_LONG_ENUMERATION_ITEM */, basic /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StrengthOfFunction, _encode_StrengthOfFunction } from "../PlatformCertificateProfile/StrengthOfFunction.ta.mjs";
+import { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../PlatformCertificateProfile/EvaluationAssuranceLevel.ta.mjs";
+import { StrengthOfFunction, _enum_for_StrengthOfFunction, _decode_StrengthOfFunction, _encode_StrengthOfFunction } from "../PlatformCertificateProfile/StrengthOfFunction.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
-export { URIReference, _decode_URIReference, _encode_URIReference } from "../PlatformCertificateProfile/URIReference.ta.mjs";
 import {
     EvaluationStatus,
     _decode_EvaluationStatus,
@@ -325,7 +270,7 @@ let _cached_encoder_for_CommonCriteriaMeasures: $.ASN1Encoder<CommonCriteriaMeas
  */
 export
 function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<CommonCriteriaMeasures>) {
-    if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<CommonCriteriaMeasures>): _Element {
+    if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeIA5String(value.version, $.BER),

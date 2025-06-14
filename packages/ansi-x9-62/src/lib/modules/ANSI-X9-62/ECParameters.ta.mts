@@ -22,25 +22,6 @@ import {
     _decode_FieldID,
     _encode_FieldID,
 } from "../ANSI-X9-62/FieldID.ta.mjs";
-export { Curve, _decode_Curve, _encode_Curve } from "../ANSI-X9-62/Curve.ta.mjs";
-export {
-    ECParameters_version,
-    ECParameters_version_ecpVerl /* IMPORTED_LONG_NAMED_INTEGER */,
-    ecpVerl /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ECParameters_version,
-    _encode_ECParameters_version,
-} from "../ANSI-X9-62/ECParameters-version.ta.mjs";
-export {
-    ECPoint,
-    _decode_ECPoint,
-    _encode_ECPoint,
-} from "../ANSI-X9-62/ECPoint.ta.mjs";
-export {
-    FieldID,
-    _decode_FieldID,
-    _encode_FieldID,
-} from "../ANSI-X9-62/FieldID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECParameters */
 /**
  * @summary ECParameters
@@ -305,9 +286,7 @@ export function _encode_ECParameters(
 ) {
     if (!_cached_encoder_for_ECParameters) {
         _cached_encoder_for_ECParameters = function (
-            value: ECParameters,
-            elGetter: $.ASN1Encoder<ECParameters>
-        ): _Element {
+            value: ECParameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

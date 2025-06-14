@@ -15,17 +15,6 @@ import {
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    CombinerAlgorithmIdentifier,
-    _decode_CombinerAlgorithmIdentifier,
-    _encode_CombinerAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/CombinerAlgorithmIdentifier.ta.mjs";
-export {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ConstructionAlgorithms */
 /**
  * @summary ConstructionAlgorithms
@@ -189,9 +178,7 @@ export function _encode_ConstructionAlgorithms(
 ) {
     if (!_cached_encoder_for_ConstructionAlgorithms) {
         _cached_encoder_for_ConstructionAlgorithms = function (
-            value: ConstructionAlgorithms,
-            elGetter: $.ASN1Encoder<ConstructionAlgorithms>
-        ): _Element {
+            value: ConstructionAlgorithms        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

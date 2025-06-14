@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,13 +12,8 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.mjs";
-export { CRLListID, _decode_CRLListID, _encode_CRLListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CRLListID.ta.mjs";
 import { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.mjs";
-export { OcspListID, _decode_OcspListID, _encode_OcspListID } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspListID.ta.mjs";
 import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta.mjs";
-export { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherRevRefs.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION CrlOcspRef */
 /**
  * @summary CrlOcspRef
@@ -236,7 +176,7 @@ let _cached_encoder_for_CrlOcspRef: $.ASN1Encoder<CrlOcspRef> | null = null;
  */
 export
 function _encode_CrlOcspRef (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspRef>) {
-    if (!_cached_encoder_for_CrlOcspRef) { _cached_encoder_for_CrlOcspRef = function (value: CrlOcspRef, elGetter: $.ASN1Encoder<CrlOcspRef>): _Element {
+    if (!_cached_encoder_for_CrlOcspRef) { _cached_encoder_for_CrlOcspRef = function (value: CrlOcspRef): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.crlids === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_CRLListID, $.BER)(value.crlids, $.BER)),

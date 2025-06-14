@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_3 } from "../PKCS-3/pkcs-3.va.mjs";
-export { pkcs_3 } from "../PKCS-3/pkcs-3.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dhKeyAgreement */
 /**
  * @summary dhKeyAgreement

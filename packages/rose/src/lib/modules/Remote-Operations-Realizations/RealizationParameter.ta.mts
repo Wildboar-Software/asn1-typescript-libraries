@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,24 +15,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   RealizationParameter_realization_type,
   _enum_for_RealizationParameter_realization_type,
-  RealizationParameter_realization_type_association_service /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  association_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  RealizationParameter_realization_type_transfer_service /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  transfer_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_RealizationParameter_realization_type,
   _encode_RealizationParameter_realization_type,
 } from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta.mjs';
-export {
-  RealizationParameter_realization_type,
-  _enum_for_RealizationParameter_realization_type,
-  RealizationParameter_realization_type_association_service /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  association_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  RealizationParameter_realization_type_transfer_service /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  transfer_service /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_RealizationParameter_realization_type,
-  _encode_RealizationParameter_realization_type,
-} from '../Remote-Operations-Realizations/RealizationParameter-realization-type.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RealizationParameter */
 /**
  * @summary RealizationParameter
@@ -274,9 +205,7 @@ export function _encode_RealizationParameter(
 ) {
   if (!_cached_encoder_for_RealizationParameter) {
     _cached_encoder_for_RealizationParameter = function (
-      value: RealizationParameter,
-      elGetter: $.ASN1Encoder<RealizationParameter>
-    ): _Element {
+      value: RealizationParameter    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

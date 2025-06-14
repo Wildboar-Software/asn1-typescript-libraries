@@ -202,9 +202,7 @@ export function _encode_ExtendedCertificateInfo(
 ) {
     if (!_cached_encoder_for_ExtendedCertificateInfo) {
         _cached_encoder_for_ExtendedCertificateInfo = function (
-            value: ExtendedCertificateInfo,
-            elGetter: $.ASN1Encoder<ExtendedCertificateInfo>
-        ): _Element {
+            value: ExtendedCertificateInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

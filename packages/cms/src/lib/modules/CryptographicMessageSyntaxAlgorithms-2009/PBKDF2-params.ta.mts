@@ -17,18 +17,6 @@ import {
     _decode_PBKDF2_PRFsAlgorithmIdentifier,
     _encode_PBKDF2_PRFsAlgorithmIdentifier,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";
-export { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va.mjs";
-export {
-    PBKDF2_params_salt,
-    _decode_PBKDF2_params_salt,
-    _encode_PBKDF2_params_salt,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta.mjs";
-export {
-    PBKDF2_PRFsAlgorithmIdentifier,
-    _decode_PBKDF2_PRFsAlgorithmIdentifier,
-    _encode_PBKDF2_PRFsAlgorithmIdentifier,
-} from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_params */
 /**
  * @summary PBKDF2_params
@@ -247,9 +235,7 @@ export function _encode_PBKDF2_params(
 ) {
     if (!_cached_encoder_for_PBKDF2_params) {
         _cached_encoder_for_PBKDF2_params = function (
-            value: PBKDF2_params,
-            elGetter: $.ASN1Encoder<PBKDF2_params>
-        ): _Element {
+            value: PBKDF2_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

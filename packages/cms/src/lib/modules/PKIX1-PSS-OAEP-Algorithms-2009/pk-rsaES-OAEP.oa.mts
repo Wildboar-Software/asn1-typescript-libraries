@@ -14,37 +14,6 @@ import {
     _decode_RSAPublicKey,
     _encode_RSAPublicKey,
 } from "../PKIXAlgs-2009/RSAPublicKey.ta.mjs";
-export {
-    absent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    inheritable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    optional /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ParamOptions,
-    ParamOptions_absent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_inheritable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_optional /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredAbsent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_preferredPresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ParamOptions_required /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    preferredAbsent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    preferredPresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    required /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ParamOptions,
-    _encode_ParamOptions,
-    _enum_for_ParamOptions,
-} from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-export { PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
-export { id_RSAES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-RSAES-OAEP.va.mjs";
-export {
-    RSAES_OAEP_params,
-    _decode_RSAES_OAEP_params,
-    _encode_RSAES_OAEP_params,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/RSAES-OAEP-params.ta.mjs";
-export {
-    RSAPublicKey,
-    _decode_RSAPublicKey,
-    _encode_RSAPublicKey,
-} from "../PKIXAlgs-2009/RSAPublicKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pk_rsaES_OAEP */
 /**
  * @summary pk_rsaES_OAEP

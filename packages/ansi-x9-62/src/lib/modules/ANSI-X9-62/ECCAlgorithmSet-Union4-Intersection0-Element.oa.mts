@@ -6,14 +6,6 @@ import {
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union4_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union4_Intersection0_Element

@@ -207,9 +207,7 @@ export function _encode_Signature(
 ) {
     if (!_cached_encoder_for_Signature) {
         _cached_encoder_for_Signature = function (
-            value: Signature,
-            elGetter: $.ASN1Encoder<Signature>
-        ): _Element {
+            value: Signature        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

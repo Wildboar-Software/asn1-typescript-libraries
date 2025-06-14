@@ -11,21 +11,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    AllOrFirstTier,
-    AllOrFirstTier_allReceipts /* IMPORTED_LONG_NAMED_INTEGER */,
-    AllOrFirstTier_firstTierRecipients /* IMPORTED_LONG_NAMED_INTEGER */,
-    allReceipts /* IMPORTED_SHORT_NAMED_INTEGER */,
-    firstTierRecipients /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_AllOrFirstTier,
-    _encode_AllOrFirstTier,
-} from "../ExtendedSecurityServices-2006/AllOrFirstTier.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReceiptsFrom */
 /**
  * @summary ReceiptsFrom

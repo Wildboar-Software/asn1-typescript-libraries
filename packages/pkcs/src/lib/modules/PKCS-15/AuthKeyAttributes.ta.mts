@@ -11,12 +11,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthKeyAttributes */
 /**
  * @summary AuthKeyAttributes
@@ -212,9 +206,7 @@ export function _encode_AuthKeyAttributes(
 ) {
     if (!_cached_encoder_for_AuthKeyAttributes) {
         _cached_encoder_for_AuthKeyAttributes = function (
-            value: AuthKeyAttributes,
-            elGetter: $.ASN1Encoder<AuthKeyAttributes>
-        ): _Element {
+            value: AuthKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

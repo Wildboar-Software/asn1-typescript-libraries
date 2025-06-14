@@ -15,17 +15,6 @@ import {
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../PKCS7/CertificateSet.ta.mjs";
-export {
-    CertificateRevocationLists,
-    _decode_CertificateRevocationLists,
-    _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta.mjs";
-export {
-    CertificateSet,
-    _decode_CertificateSet,
-    _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OriginatorInfo */
 /**
  * @summary OriginatorInfo
@@ -199,9 +188,7 @@ export function _encode_OriginatorInfo(
 ) {
     if (!_cached_encoder_for_OriginatorInfo) {
         _cached_encoder_for_OriginatorInfo = function (
-            value: OriginatorInfo,
-            elGetter: $.ASN1Encoder<OriginatorInfo>
-        ): _Element {
+            value: OriginatorInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

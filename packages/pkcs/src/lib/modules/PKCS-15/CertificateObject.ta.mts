@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-export {
-    CommonCertificateAttributes,
-    _decode_CommonCertificateAttributes,
-    _encode_CommonCertificateAttributes,
-} from "../PKCS-15/CommonCertificateAttributes.ta.mjs";
-export {
-    PKCS15Object,
-    _get_decoder_for_PKCS15Object,
-    _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateObject */
 /**
  * @summary CertificateObject

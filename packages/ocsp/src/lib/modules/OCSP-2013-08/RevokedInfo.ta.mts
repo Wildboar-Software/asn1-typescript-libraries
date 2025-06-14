@@ -180,9 +180,7 @@ export function _encode_RevokedInfo(
 ) {
     if (!_cached_encoder_for_RevokedInfo) {
         _cached_encoder_for_RevokedInfo = function (
-            value: RevokedInfo,
-            elGetter: $.ASN1Encoder<RevokedInfo>
-        ): _Element {
+            value: RevokedInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -9,13 +9,6 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKICertificateAttributes */
 /**
  * @summary SPKICertificateAttributes
@@ -165,9 +158,7 @@ export function _encode_SPKICertificateAttributes(
 ) {
     if (!_cached_encoder_for_SPKICertificateAttributes) {
         _cached_encoder_for_SPKICertificateAttributes = function (
-            value: SPKICertificateAttributes,
-            elGetter: $.ASN1Encoder<SPKICertificateAttributes>
-        ): _Element {
+            value: SPKICertificateAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

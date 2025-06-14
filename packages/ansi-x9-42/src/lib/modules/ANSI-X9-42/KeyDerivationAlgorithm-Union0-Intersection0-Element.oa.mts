@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
 import { id_sha1 } from "../ANSI-X9-42/id-sha1.va.mjs";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
-export { id_sha1 } from "../ANSI-X9-42/id-sha1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyDerivationAlgorithm_Union0_Intersection0_Element */
 /**
  * @summary KeyDerivationAlgorithm_Union0_Intersection0_Element

@@ -7,14 +7,6 @@ import {
     _decode_PKCS8ShroudedKeyBag,
     _encode_PKCS8ShroudedKeyBag,
 } from "../PKCS-12/PKCS8ShroudedKeyBag.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export {
-    PKCS8ShroudedKeyBag,
-    _decode_PKCS8ShroudedKeyBag,
-    _encode_PKCS8ShroudedKeyBag,
-} from "../PKCS-12/PKCS8ShroudedKeyBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pkcs8ShroudedKeyBag */
 /**
  * @summary pkcs8ShroudedKeyBag

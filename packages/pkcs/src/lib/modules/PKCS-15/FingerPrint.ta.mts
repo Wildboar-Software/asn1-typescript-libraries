@@ -17,33 +17,6 @@ import {
     _encode_FingerPrint_hand,
     _enum_for_FingerPrint_hand,
 } from "../PKCS-15/FingerPrint-hand.ta.mjs";
-export {
-    FingerPrint_finger,
-    FingerPrint_finger_littleFinger /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FingerPrint_finger_middleFinger /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FingerPrint_finger_pointerFinger /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FingerPrint_finger_ringFinger /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FingerPrint_finger_thumb /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    littleFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    middleFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    pointerFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ringFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    thumb /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FingerPrint_finger,
-    _encode_FingerPrint_finger,
-    _enum_for_FingerPrint_finger,
-} from "../PKCS-15/FingerPrint-finger.ta.mjs";
-export {
-    FingerPrint_hand,
-    FingerPrint_hand_left /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FingerPrint_hand_right /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    left /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    right /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FingerPrint_hand,
-    _encode_FingerPrint_hand,
-    _enum_for_FingerPrint_hand,
-} from "../PKCS-15/FingerPrint-hand.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FingerPrint */
 /**
  * @summary FingerPrint
@@ -226,9 +199,7 @@ export function _encode_FingerPrint(
 ) {
     if (!_cached_encoder_for_FingerPrint) {
         _cached_encoder_for_FingerPrint = function (
-            value: FingerPrint,
-            elGetter: $.ASN1Encoder<FingerPrint>
-        ): _Element {
+            value: FingerPrint        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

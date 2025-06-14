@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,22 +16,11 @@ import {
   _decode_DestTransactionID,
   _encode_DestTransactionID,
 } from '../TCAPMessages/DestTransactionID.ta.mjs';
-export {
-  DestTransactionID,
-  _decode_DestTransactionID,
-  _encode_DestTransactionID,
-} from '../TCAPMessages/DestTransactionID.ta.mjs';
 import {
   Abort_reason,
   _decode_Abort_reason,
   _encode_Abort_reason,
 } from '../TCAPMessages/Abort-reason.ta.mjs';
-export {
-  Abort_reason,
-  _decode_Abort_reason,
-  _encode_Abort_reason,
-} from '../TCAPMessages/Abort-reason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Abort */
 /**
  * @summary Abort
@@ -241,9 +175,7 @@ let _cached_encoder_for_Abort: $.ASN1Encoder<Abort> | null = null;
 export function _encode_Abort(value: Abort, elGetter: $.ASN1Encoder<Abort>) {
   if (!_cached_encoder_for_Abort) {
     _cached_encoder_for_Abort = function (
-      value: Abort,
-      elGetter: $.ASN1Encoder<Abort>
-    ): _Element {
+      value: Abort    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

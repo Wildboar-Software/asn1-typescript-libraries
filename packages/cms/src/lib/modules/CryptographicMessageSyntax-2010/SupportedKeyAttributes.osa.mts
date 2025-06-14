@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
-export { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedKeyAttributes */
 /**
  * @summary SupportedKeyAttributes

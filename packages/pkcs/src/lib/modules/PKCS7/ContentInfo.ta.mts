@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-export { PKCS7ContentTable } from "../PKCS7/PKCS7ContentTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentInfo */
 /**
  * @summary ContentInfo
@@ -183,9 +180,7 @@ export function _encode_ContentInfo(
 ) {
     if (!_cached_encoder_for_ContentInfo) {
         _cached_encoder_for_ContentInfo = function (
-            value: ContentInfo,
-            elGetter: $.ASN1Encoder<ContentInfo>
-        ): _Element {
+            value: ContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

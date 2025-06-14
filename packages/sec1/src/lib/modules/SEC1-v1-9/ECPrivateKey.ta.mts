@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
     BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,12 +13,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
-export { ECPrivateKey_version, ECPrivateKey_version_ecPrivkeyVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecPrivkeyVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
+import { ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
 import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
-export { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION ECPrivateKey */
 /**
  * @summary ECPrivateKey
@@ -246,7 +189,7 @@ let _cached_encoder_for_ECPrivateKey: $.ASN1Encoder<ECPrivateKey> | null = null;
  */
 export
 function _encode_ECPrivateKey (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPrivateKey>) {
-    if (!_cached_encoder_for_ECPrivateKey) { _cached_encoder_for_ECPrivateKey = function (value: ECPrivateKey, elGetter: $.ASN1Encoder<ECPrivateKey>): _Element {
+    if (!_cached_encoder_for_ECPrivateKey) { _cached_encoder_for_ECPrivateKey = function (value: ECPrivateKey): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ECPrivateKey_version(value.version, $.BER),

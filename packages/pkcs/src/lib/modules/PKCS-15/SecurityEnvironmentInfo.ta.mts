@@ -179,9 +179,7 @@ export function _encode_SecurityEnvironmentInfo(
 ) {
     if (!_cached_encoder_for_SecurityEnvironmentInfo) {
         _cached_encoder_for_SecurityEnvironmentInfo = function (
-            value: SecurityEnvironmentInfo,
-            elGetter: $.ASN1Encoder<SecurityEnvironmentInfo>
-        ): _Element {
+            value: SecurityEnvironmentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -16,17 +16,6 @@ import {
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";
-export {
-    OtherKeyAttribute,
-    _decode_OtherKeyAttribute,
-    _encode_OtherKeyAttribute,
-} from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.mjs";
-export {
-    SubjectKeyIdentifier,
-    _decode_SubjectKeyIdentifier,
-    _encode_SubjectKeyIdentifier,
-} from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientKeyIdentifier */
 /**
  * @summary RecipientKeyIdentifier
@@ -219,9 +208,7 @@ export function _encode_RecipientKeyIdentifier(
 ) {
     if (!_cached_encoder_for_RecipientKeyIdentifier) {
         _cached_encoder_for_RecipientKeyIdentifier = function (
-            value: RecipientKeyIdentifier,
-            elGetter: $.ASN1Encoder<RecipientKeyIdentifier>
-        ): _Element {
+            value: RecipientKeyIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

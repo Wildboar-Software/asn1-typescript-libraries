@@ -6,13 +6,6 @@ import {
 } from "../CryptographicMessageSyntax-2010/Countersignature.ta.mjs";
 import { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    Countersignature,
-    _decode_Countersignature,
-    _encode_Countersignature,
-} from "../CryptographicMessageSyntax-2010/Countersignature.ta.mjs";
-export { id_countersignature } from "../CryptographicMessageSyntax-2010/id-countersignature.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aa_countersignature */
 /**
  * @summary aa_countersignature

@@ -11,17 +11,6 @@ import {
     _decode_PrivateKeyType,
     _encode_PrivateKeyType,
 } from "../PKCS-15/PrivateKeyType.ta.mjs";
-export {
-    PathOrObjects,
-    _get_decoder_for_PathOrObjects,
-    _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta.mjs";
-export {
-    PrivateKeyType,
-    _decode_PrivateKeyType,
-    _encode_PrivateKeyType,
-} from "../PKCS-15/PrivateKeyType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PrivateKeys */
 /**
  * @summary PrivateKeys

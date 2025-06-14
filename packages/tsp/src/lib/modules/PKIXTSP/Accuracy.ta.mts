@@ -196,9 +196,7 @@ export function _encode_Accuracy(
 ) {
     if (!_cached_encoder_for_Accuracy) {
         _cached_encoder_for_Accuracy = function (
-            value: Accuracy,
-            elGetter: $.ASN1Encoder<Accuracy>
-        ): _Element {
+            value: Accuracy        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

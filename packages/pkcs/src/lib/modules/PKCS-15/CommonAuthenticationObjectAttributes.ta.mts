@@ -10,12 +10,6 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CommonAuthenticationObjectAttributes */
 /**
  * @summary CommonAuthenticationObjectAttributes
@@ -172,9 +166,7 @@ export function _encode_CommonAuthenticationObjectAttributes(
 ) {
     if (!_cached_encoder_for_CommonAuthenticationObjectAttributes) {
         _cached_encoder_for_CommonAuthenticationObjectAttributes = function (
-            value: CommonAuthenticationObjectAttributes,
-            elGetter: $.ASN1Encoder<CommonAuthenticationObjectAttributes>
-        ): _Element {
+            value: CommonAuthenticationObjectAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

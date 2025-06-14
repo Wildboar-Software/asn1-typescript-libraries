@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_Document_additional_data_additional_datum,
   _encode_Document_additional_data_additional_datum,
 } from '../FastInfoset/Document-additional-data-additional-datum.ta.mjs';
-export {
-  Document_additional_data_additional_datum,
-  _decode_Document_additional_data_additional_datum,
-  _encode_Document_additional_data_additional_datum,
-} from '../FastInfoset/Document-additional-data-additional-datum.ta.mjs';
 import {
-  Document_initial_vocabulary,
-  _decode_Document_initial_vocabulary,
-  _encode_Document_initial_vocabulary,
-} from '../FastInfoset/Document-initial-vocabulary.ta.mjs';
-export {
   Document_initial_vocabulary,
   _decode_Document_initial_vocabulary,
   _encode_Document_initial_vocabulary,
@@ -91,17 +27,7 @@ import {
   _decode_Notation,
   _encode_Notation,
 } from '../FastInfoset/Notation.ta.mjs';
-export {
-  Notation,
-  _decode_Notation,
-  _encode_Notation,
-} from '../FastInfoset/Notation.ta.mjs';
 import {
-  UnparsedEntity,
-  _decode_UnparsedEntity,
-  _encode_UnparsedEntity,
-} from '../FastInfoset/UnparsedEntity.ta.mjs';
-export {
   UnparsedEntity,
   _decode_UnparsedEntity,
   _encode_UnparsedEntity,
@@ -111,17 +37,7 @@ import {
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
-export {
-  NonEmptyOctetString,
-  _decode_NonEmptyOctetString,
-  _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
-  _decode_NonIdentifyingStringOrIndex,
-  _encode_NonIdentifyingStringOrIndex,
-} from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
-export {
   NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
@@ -131,12 +47,6 @@ import {
   _decode_Document_children_Item,
   _encode_Document_children_Item,
 } from '../FastInfoset/Document-children-Item.ta.mjs';
-export {
-  Document_children_Item,
-  _decode_Document_children_Item,
-  _encode_Document_children_Item,
-} from '../FastInfoset/Document-children-Item.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Document */
 /**
  * @summary Document
@@ -477,9 +387,7 @@ export function _encode_Document(
 ) {
   if (!_cached_encoder_for_Document) {
     _cached_encoder_for_Document = function (
-      value: Document,
-      elGetter: $.ASN1Encoder<Document>
-    ): _Element {
+      value: Document    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

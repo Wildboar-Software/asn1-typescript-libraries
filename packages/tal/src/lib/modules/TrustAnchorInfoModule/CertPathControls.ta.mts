@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { Name, _decode_Name, _encode_Name } from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
 import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
 import { CertificatePoliciesSyntax, _decode_CertificatePoliciesSyntax, _encode_CertificatePoliciesSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
-import { CertPolicyFlags, CertPolicyFlags_inhibitPolicyMapping /* IMPORTED_LONG_NAMED_BIT */, inhibitPolicyMapping /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_requireExplicitPolicy /* IMPORTED_LONG_NAMED_BIT */, requireExplicitPolicy /* IMPORTED_SHORT_NAMED_BIT */, CertPolicyFlags_inhibitAnyPolicy /* IMPORTED_LONG_NAMED_BIT */, inhibitAnyPolicy /* IMPORTED_SHORT_NAMED_BIT */, _decode_CertPolicyFlags, _encode_CertPolicyFlags } from "../TrustAnchorInfoModule/CertPolicyFlags.ta.mjs";
+import { CertPolicyFlags, _decode_CertPolicyFlags, _encode_CertPolicyFlags } from "../TrustAnchorInfoModule/CertPolicyFlags.ta.mjs";
 import { NameConstraintsSyntax, _decode_NameConstraintsSyntax, _encode_NameConstraintsSyntax } from "@wildboar/x500/src/lib/modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 
 
@@ -214,7 +214,7 @@ let _cached_encoder_for_CertPathControls: $.ASN1Encoder<CertPathControls> | null
  */
 export
 function _encode_CertPathControls (value: CertPathControls, elGetter: $.ASN1Encoder<CertPathControls>) {
-    if (!_cached_encoder_for_CertPathControls) { _cached_encoder_for_CertPathControls = function (value: CertPathControls, elGetter: $.ASN1Encoder<CertPathControls>): _Element {
+    if (!_cached_encoder_for_CertPathControls) { _cached_encoder_for_CertPathControls = function (value: CertPathControls): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Name(value.taName, $.BER),

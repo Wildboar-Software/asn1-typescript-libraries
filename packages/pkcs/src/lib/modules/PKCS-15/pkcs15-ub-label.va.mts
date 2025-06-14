@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { INTEGER } from "asn1-ts";
 import { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va.mjs";
-export { pkcs15_ub_identifier } from "../PKCS-15/pkcs15-ub-identifier.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pkcs15_ub_label */
 /**
  * @summary pkcs15_ub_label

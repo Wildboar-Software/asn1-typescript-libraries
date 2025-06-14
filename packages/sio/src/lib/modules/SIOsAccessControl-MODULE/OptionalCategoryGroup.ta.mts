@@ -15,23 +15,6 @@ import {
     _decode_Operation,
     _encode_Operation,
 } from "../SIOsAccessControl-MODULE/Operation.ta.mjs";
-export {
-    CategoryGroup,
-    _decode_CategoryGroup,
-    _encode_CategoryGroup,
-} from "../SIOsAccessControl-MODULE/CategoryGroup.ta.mjs";
-export {
-    all /* IMPORTED_SHORT_NAMED_INTEGER */,
-    oneOrMore /* IMPORTED_SHORT_NAMED_INTEGER */,
-    onlyOne /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Operation,
-    Operation_all /* IMPORTED_LONG_NAMED_INTEGER */,
-    Operation_oneOrMore /* IMPORTED_LONG_NAMED_INTEGER */,
-    Operation_onlyOne /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Operation,
-    _encode_Operation,
-} from "../SIOsAccessControl-MODULE/Operation.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OptionalCategoryGroup */
 /**
  * @summary OptionalCategoryGroup
@@ -190,9 +173,7 @@ export function _encode_OptionalCategoryGroup(
 ) {
     if (!_cached_encoder_for_OptionalCategoryGroup) {
         _cached_encoder_for_OptionalCategoryGroup = function (
-            value: OptionalCategoryGroup,
-            elGetter: $.ASN1Encoder<OptionalCategoryGroup>
-        ): _Element {
+            value: OptionalCategoryGroup        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

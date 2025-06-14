@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_BaseManagedObjectId,
   _encode_BaseManagedObjectId,
 } from '../CMIP-1/BaseManagedObjectId.ta.mjs';
-export {
-  BaseManagedObjectId,
-  _decode_BaseManagedObjectId,
-  _encode_BaseManagedObjectId,
-} from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 import {
-  AccessControl,
-  _decode_AccessControl,
-  _encode_AccessControl,
-} from '../CMIP-1/AccessControl.ta.mjs';
-export {
   AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
@@ -90,30 +25,11 @@ import {
   CMISSync,
   _enum_for_CMISSync,
   CMISSync_bestEffort /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  bestEffort /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  CMISSync_atomic /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_CMISSync,
-  _encode_CMISSync,
-} from '../CMIP-1/CMISSync.ta.mjs';
-export {
-  CMISSync,
-  _enum_for_CMISSync,
-  CMISSync_bestEffort /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  bestEffort /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  CMISSync_atomic /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  atomic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_CMISSync,
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
 import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
-export { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 import {
-  CMISFilter,
-  _decode_CMISFilter,
-  _encode_CMISFilter,
-} from '../CMIP-1/CMISFilter.ta.mjs';
-export {
   CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
@@ -123,17 +39,7 @@ import {
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
-export {
-  ObjectClass,
-  _decode_ObjectClass,
-  _encode_ObjectClass,
-} from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
-  _decode_ObjectInstance,
-  _encode_ObjectInstance,
-} from '../CMIP-1/ObjectInstance.ta.mjs';
-export {
   ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
@@ -430,9 +336,7 @@ export function _encode_DeleteArgument(
 ) {
   if (!_cached_encoder_for_DeleteArgument) {
     _cached_encoder_for_DeleteArgument = function (
-      value: DeleteArgument,
-      elGetter: $.ASN1Encoder<DeleteArgument>
-    ): _Element {
+      value: DeleteArgument    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat(

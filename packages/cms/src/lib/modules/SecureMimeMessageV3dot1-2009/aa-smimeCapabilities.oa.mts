@@ -6,13 +6,6 @@ import {
 } from "../AlgorithmInformation-2009/SMIMECapabilities.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
 import { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.mjs";
-export {
-    SMIMECapabilities,
-    _decode_SMIMECapabilities,
-    _encode_SMIMECapabilities,
-} from "../AlgorithmInformation-2009/SMIMECapabilities.ta.mjs";
-export { smimeCapabilities } from "../SecureMimeMessageV3dot1-2009/smimeCapabilities.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aa_smimeCapabilities */
 /**
  * @summary aa_smimeCapabilities

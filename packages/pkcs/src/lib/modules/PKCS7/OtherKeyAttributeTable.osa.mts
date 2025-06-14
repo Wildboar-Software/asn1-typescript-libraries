@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { OTHER_KEY_ATTRIBUTE } from "../PKCS7/OTHER-KEY-ATTRIBUTE.oca.mjs";
-export { OTHER_KEY_ATTRIBUTE } from "../PKCS7/OTHER-KEY-ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttributeTable */
 /**
  * @summary OtherKeyAttributeTable

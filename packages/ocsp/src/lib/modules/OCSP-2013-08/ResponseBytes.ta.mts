@@ -7,9 +7,6 @@ import {
     OCTET_STRING,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { RESPONSE } from "../OCSP-2013-08/RESPONSE.oca.mjs";
-export { ResponseSet } from "../OCSP-2013-08/ResponseSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ResponseBytes */
 /**
  * @summary ResponseBytes
@@ -169,9 +166,7 @@ export function _encode_ResponseBytes(
 ) {
     if (!_cached_encoder_for_ResponseBytes) {
         _cached_encoder_for_ResponseBytes = function (
-            value: ResponseBytes,
-            elGetter: $.ASN1Encoder<ResponseBytes>
-        ): _Element {
+            value: ResponseBytes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -166,9 +166,7 @@ export function _encode_AttributeSet(
 ) {
     if (!_cached_encoder_for_AttributeSet) {
         _cached_encoder_for_AttributeSet = function (
-            value: AttributeSet,
-            elGetter: $.ASN1Encoder<AttributeSet>
-        ): _Element {
+            value: AttributeSet        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_FTAM_Regime_PDU,
   _encode_FTAM_Regime_PDU,
 } from '../ISO8571-FTAM/FTAM-Regime-PDU.ta.mjs';
-export {
-  FTAM_Regime_PDU,
-  _decode_FTAM_Regime_PDU,
-  _encode_FTAM_Regime_PDU,
-} from '../ISO8571-FTAM/FTAM-Regime-PDU.ta.mjs';
 import {
-  File_PDU,
-  _decode_File_PDU,
-  _encode_File_PDU,
-} from '../ISO8571-FTAM/File-PDU.ta.mjs';
-export {
   File_PDU,
   _decode_File_PDU,
   _encode_File_PDU,
@@ -91,22 +25,11 @@ import {
   _decode_Bulk_Data_PDU,
   _encode_Bulk_Data_PDU,
 } from '../ISO8571-FTAM/Bulk-Data-PDU.ta.mjs';
-export {
-  Bulk_Data_PDU,
-  _decode_Bulk_Data_PDU,
-  _encode_Bulk_Data_PDU,
-} from '../ISO8571-FTAM/Bulk-Data-PDU.ta.mjs';
 import {
   FSM_PDU,
   _decode_FSM_PDU,
   _encode_FSM_PDU,
 } from '../ISO8571-FTAM/FSM-PDU.ta.mjs';
-export {
-  FSM_PDU,
-  _decode_FSM_PDU,
-  _encode_FSM_PDU,
-} from '../ISO8571-FTAM/FSM-PDU.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PDU */
 /**
  * @summary PDU

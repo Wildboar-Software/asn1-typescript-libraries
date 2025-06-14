@@ -15,17 +15,6 @@ import {
     _decode_PrivateKeyInfo,
     _encode_PrivateKeyInfo,
 } from "../PKIXCRMF-2009/PrivateKeyInfo.ta.mjs";
-export {
-    EncKeyWithID_identifier,
-    _decode_EncKeyWithID_identifier,
-    _encode_EncKeyWithID_identifier,
-} from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta.mjs";
-export {
-    PrivateKeyInfo,
-    _decode_PrivateKeyInfo,
-    _encode_PrivateKeyInfo,
-} from "../PKIXCRMF-2009/PrivateKeyInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncKeyWithID */
 /**
  * @summary EncKeyWithID
@@ -192,9 +181,7 @@ export function _encode_EncKeyWithID(
 ) {
     if (!_cached_encoder_for_EncKeyWithID) {
         _cached_encoder_for_EncKeyWithID = function (
-            value: EncKeyWithID,
-            elGetter: $.ASN1Encoder<EncKeyWithID>
-        ): _Element {
+            value: EncKeyWithID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

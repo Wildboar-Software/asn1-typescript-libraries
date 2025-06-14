@@ -2,18 +2,6 @@
 import { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.mjs";
 import { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va.mjs";
 import { PSourceAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.mjs";
-export {
-    EncodingParameters,
-    _decode_EncodingParameters,
-    _encode_EncodingParameters,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";
-export { id_pSpecified } from "../PKIX1-PSS-OAEP-Algorithms-2009/id-pSpecified.va.mjs";
-export { nullOctetString } from "../PKIX1-PSS-OAEP-Algorithms-2009/nullOctetString.va.mjs";
-export {
-    PSourceAlgorithm,
-    _decode_PSourceAlgorithm,
-    _encode_PSourceAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.mjs";
 import {
     AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";

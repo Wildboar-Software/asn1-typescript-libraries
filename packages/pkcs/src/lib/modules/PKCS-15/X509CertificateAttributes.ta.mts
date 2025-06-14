@@ -242,9 +242,7 @@ export function _encode_X509CertificateAttributes(
 ) {
     if (!_cached_encoder_for_X509CertificateAttributes) {
         _cached_encoder_for_X509CertificateAttributes = function (
-            value: X509CertificateAttributes,
-            elGetter: $.ASN1Encoder<X509CertificateAttributes>
-        ): _Element {
+            value: X509CertificateAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

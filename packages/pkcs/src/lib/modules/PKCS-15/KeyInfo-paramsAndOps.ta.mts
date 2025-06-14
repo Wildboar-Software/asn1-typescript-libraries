@@ -162,11 +162,7 @@ export function _get_encoder_for_KeyInfo_paramsAndOps<
     _encode_OperationsType: $.ASN1Encoder<OperationsType>
 ) {
     return function (
-        value: KeyInfo_paramsAndOps<ParameterType, OperationsType>,
-        elGetter: $.ASN1Encoder<
-            KeyInfo_paramsAndOps<ParameterType, OperationsType>
-        >
-    ): _Element {
+        value: KeyInfo_paramsAndOps<ParameterType, OperationsType>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat([

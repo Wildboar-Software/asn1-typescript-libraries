@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
 import { kta_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/kta-rsaES-OAEP.oa.mjs";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
-export { kta_rsaES_OAEP } from "../PKIX1-PSS-OAEP-Algorithms-2009/kta-rsaES-OAEP.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyTransportAlgs */
 /**
  * @summary KeyTransportAlgs

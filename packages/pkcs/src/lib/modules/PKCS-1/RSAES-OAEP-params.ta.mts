@@ -23,25 +23,6 @@ import {
 } from "../PKCS-1/PSourceAlgorithm.ta.mjs";
 import { pSpecifiedEmpty } from "../PKCS-1/pSpecifiedEmpty.va.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta.mjs";
-export {
-    MaskGenAlgorithm,
-    _decode_MaskGenAlgorithm,
-    _encode_MaskGenAlgorithm,
-} from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
-export { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.mjs";
-export {
-    PSourceAlgorithm,
-    _decode_PSourceAlgorithm,
-    _encode_PSourceAlgorithm,
-} from "../PKCS-1/PSourceAlgorithm.ta.mjs";
-export { pSpecifiedEmpty } from "../PKCS-1/pSpecifiedEmpty.va.mjs";
-export { sha1 } from "../PKCS-1/sha1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RSAES_OAEP_params */
 /**
  * @summary RSAES_OAEP_params
@@ -271,9 +252,7 @@ export function _encode_RSAES_OAEP_params(
 ) {
     if (!_cached_encoder_for_RSAES_OAEP_params) {
         _cached_encoder_for_RSAES_OAEP_params = function (
-            value: RSAES_OAEP_params,
-            elGetter: $.ASN1Encoder<RSAES_OAEP_params>
-        ): _Element {
+            value: RSAES_OAEP_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

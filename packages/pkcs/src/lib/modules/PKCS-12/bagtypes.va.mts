@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { pkcs_12 } from "../PKCS-12/pkcs-12.va.mjs";
-export { pkcs_12 } from "../PKCS-12/pkcs-12.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION bagtypes */
 /**
  * @summary bagtypes

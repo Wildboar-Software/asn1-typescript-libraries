@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-export {
-    DataType,
-    _decode_DataType,
-    _encode_DataType,
-} from "../PKCS-15/DataType.ta.mjs";
-export {
-    PathOrObjects,
-    _get_decoder_for_PathOrObjects,
-    _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataObjects */
 /**
  * @summary DataObjects

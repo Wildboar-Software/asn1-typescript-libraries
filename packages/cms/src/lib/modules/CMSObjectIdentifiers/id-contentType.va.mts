@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-export { pkcs9 } from "../CMSObjectIdentifiers/pkcs9.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_contentType */
 /**
  * @summary id_contentType

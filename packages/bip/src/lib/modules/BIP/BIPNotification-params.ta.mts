@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_MasterDeletionEvent_NotificationParams,
   _encode_MasterDeletionEvent_NotificationParams,
 } from '../BIP/MasterDeletionEvent-NotificationParams.ta.mjs';
-export {
-  MasterDeletionEvent_NotificationParams,
-  _decode_MasterDeletionEvent_NotificationParams,
-  _encode_MasterDeletionEvent_NotificationParams,
-} from '../BIP/MasterDeletionEvent-NotificationParams.ta.mjs';
 import {
-  UnitEvent_NotificationParams,
-  _decode_UnitEvent_NotificationParams,
-  _encode_UnitEvent_NotificationParams,
-} from '../BIP/UnitEvent-NotificationParams.ta.mjs';
-export {
   UnitEvent_NotificationParams,
   _decode_UnitEvent_NotificationParams,
   _encode_UnitEvent_NotificationParams,
@@ -91,17 +25,7 @@ import {
   _decode_GUISelectEvent_NotificationParams,
   _encode_GUISelectEvent_NotificationParams,
 } from '../BIP/GUISelectEvent-NotificationParams.ta.mjs';
-export {
-  GUISelectEvent_NotificationParams,
-  _decode_GUISelectEvent_NotificationParams,
-  _encode_GUISelectEvent_NotificationParams,
-} from '../BIP/GUISelectEvent-NotificationParams.ta.mjs';
 import {
-  GUIStateEvent_NotificationParams,
-  _decode_GUIStateEvent_NotificationParams,
-  _encode_GUIStateEvent_NotificationParams,
-} from '../BIP/GUIStateEvent-NotificationParams.ta.mjs';
-export {
   GUIStateEvent_NotificationParams,
   _decode_GUIStateEvent_NotificationParams,
   _encode_GUIStateEvent_NotificationParams,
@@ -111,17 +35,7 @@ import {
   _decode_GUIProgressEvent_NotificationParams,
   _encode_GUIProgressEvent_NotificationParams,
 } from '../BIP/GUIProgressEvent-NotificationParams.ta.mjs';
-export {
-  GUIProgressEvent_NotificationParams,
-  _decode_GUIProgressEvent_NotificationParams,
-  _encode_GUIProgressEvent_NotificationParams,
-} from '../BIP/GUIProgressEvent-NotificationParams.ta.mjs';
 import {
-  BSPRegistrationEvent_NotificationParams,
-  _decode_BSPRegistrationEvent_NotificationParams,
-  _encode_BSPRegistrationEvent_NotificationParams,
-} from '../BIP/BSPRegistrationEvent-NotificationParams.ta.mjs';
-export {
   BSPRegistrationEvent_NotificationParams,
   _decode_BSPRegistrationEvent_NotificationParams,
   _encode_BSPRegistrationEvent_NotificationParams,
@@ -131,17 +45,7 @@ import {
   _decode_BSPUnregistrationEvent_NotificationParams,
   _encode_BSPUnregistrationEvent_NotificationParams,
 } from '../BIP/BSPUnregistrationEvent-NotificationParams.ta.mjs';
-export {
-  BSPUnregistrationEvent_NotificationParams,
-  _decode_BSPUnregistrationEvent_NotificationParams,
-  _encode_BSPUnregistrationEvent_NotificationParams,
-} from '../BIP/BSPUnregistrationEvent-NotificationParams.ta.mjs';
 import {
-  BFPRegistrationEvent_NotificationParams,
-  _decode_BFPRegistrationEvent_NotificationParams,
-  _encode_BFPRegistrationEvent_NotificationParams,
-} from '../BIP/BFPRegistrationEvent-NotificationParams.ta.mjs';
-export {
   BFPRegistrationEvent_NotificationParams,
   _decode_BFPRegistrationEvent_NotificationParams,
   _encode_BFPRegistrationEvent_NotificationParams,
@@ -151,12 +55,6 @@ import {
   _decode_BFPUnregistrationEvent_NotificationParams,
   _encode_BFPUnregistrationEvent_NotificationParams,
 } from '../BIP/BFPUnregistrationEvent-NotificationParams.ta.mjs';
-export {
-  BFPUnregistrationEvent_NotificationParams,
-  _decode_BFPUnregistrationEvent_NotificationParams,
-  _encode_BFPUnregistrationEvent_NotificationParams,
-} from '../BIP/BFPUnregistrationEvent-NotificationParams.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BIPNotification_params */
 /**
  * @summary BIPNotification_params

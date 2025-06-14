@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,31 +12,9 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Lock,
-  Lock_not_required /* IMPORTED_LONG_NAMED_INTEGER */,
-  not_required /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_shared /* IMPORTED_LONG_NAMED_INTEGER */,
-  shared /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_exclusive /* IMPORTED_LONG_NAMED_INTEGER */,
-  exclusive /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_no_access /* IMPORTED_LONG_NAMED_INTEGER */,
-  no_access /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Lock,
   _encode_Lock,
 } from '../ISO8571-FTAM/Lock.ta.mjs';
-export {
-  Lock,
-  Lock_not_required /* IMPORTED_LONG_NAMED_INTEGER */,
-  not_required /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_shared /* IMPORTED_LONG_NAMED_INTEGER */,
-  shared /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_exclusive /* IMPORTED_LONG_NAMED_INTEGER */,
-  exclusive /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Lock_no_access /* IMPORTED_LONG_NAMED_INTEGER */,
-  no_access /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Lock,
-  _encode_Lock,
-} from '../ISO8571-FTAM/Lock.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Concurrency_Control */
 /**
  * @summary Concurrency_Control
@@ -382,9 +304,7 @@ export function _encode_Concurrency_Control(
       10,
       () =>
         function (
-          value: Concurrency_Control,
-          elGetter: $.ASN1Encoder<Concurrency_Control>
-        ): _Element {
+          value: Concurrency_Control        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat([

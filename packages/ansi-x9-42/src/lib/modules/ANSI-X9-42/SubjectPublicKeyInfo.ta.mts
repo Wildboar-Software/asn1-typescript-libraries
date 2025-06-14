@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../ANSI-X9-42/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../ANSI-X9-42/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubjectPublicKeyInfo */
 /**
  * @summary SubjectPublicKeyInfo
@@ -175,9 +169,7 @@ export function _encode_SubjectPublicKeyInfo(
 ) {
     if (!_cached_encoder_for_SubjectPublicKeyInfo) {
         _cached_encoder_for_SubjectPublicKeyInfo = function (
-            value: SubjectPublicKeyInfo,
-            elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>
-        ): _Element {
+            value: SubjectPublicKeyInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

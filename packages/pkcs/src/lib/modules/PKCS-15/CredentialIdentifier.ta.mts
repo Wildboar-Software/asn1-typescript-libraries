@@ -6,8 +6,6 @@ import {
     INTEGER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CredentialIdentifier */
 /**
  * @summary CredentialIdentifier
@@ -160,9 +158,7 @@ export function _encode_CredentialIdentifier(
 ) {
     if (!_cached_encoder_for_CredentialIdentifier) {
         _cached_encoder_for_CredentialIdentifier = function (
-            value: CredentialIdentifier,
-            elGetter: $.ASN1Encoder<CredentialIdentifier>
-        ): _Element {
+            value: CredentialIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

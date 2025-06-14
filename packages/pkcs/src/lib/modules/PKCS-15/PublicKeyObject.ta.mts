@@ -16,22 +16,6 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-export {
-    CommonKeyAttributes,
-    _decode_CommonKeyAttributes,
-    _encode_CommonKeyAttributes,
-} from "../PKCS-15/CommonKeyAttributes.ta.mjs";
-export {
-    CommonPublicKeyAttributes,
-    _decode_CommonPublicKeyAttributes,
-    _encode_CommonPublicKeyAttributes,
-} from "../PKCS-15/CommonPublicKeyAttributes.ta.mjs";
-export {
-    PKCS15Object,
-    _get_decoder_for_PKCS15Object,
-    _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PublicKeyObject */
 /**
  * @summary PublicKeyObject

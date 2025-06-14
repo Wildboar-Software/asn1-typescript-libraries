@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { primeCurve } from "../ANSI-X9-62/primeCurve.va.mjs";
-export { primeCurve } from "../ANSI-X9-62/primeCurve.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION prime192v2 */
 /**
  * @summary prime192v2

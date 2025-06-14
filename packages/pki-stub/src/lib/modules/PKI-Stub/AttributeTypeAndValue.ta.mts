@@ -152,9 +152,7 @@ export function _decode_AttributeTypeAndValue(el: _Element) {
  * @returns {_Element} The AttributeTypeAndValue, encoded as an ASN.1 Element.
  */
 export function _encode_AttributeTypeAndValue(
-    value: AttributeTypeAndValue,
-    elGetter: $.ASN1Encoder<AttributeTypeAndValue>
-) {
+    value: AttributeTypeAndValue) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.type_,

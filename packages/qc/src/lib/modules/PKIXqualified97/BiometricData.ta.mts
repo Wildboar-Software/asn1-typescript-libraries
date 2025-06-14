@@ -241,9 +241,7 @@ export function _encode_BiometricData(
 ) {
     if (!_cached_encoder_for_BiometricData) {
         _cached_encoder_for_BiometricData = function (
-            value: BiometricData,
-            elGetter: $.ASN1Encoder<BiometricData>
-        ): _Element {
+            value: BiometricData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

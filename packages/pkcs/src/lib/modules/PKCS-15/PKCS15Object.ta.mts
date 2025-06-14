@@ -10,12 +10,6 @@ import {
     _decode_CommonObjectAttributes,
     _encode_CommonObjectAttributes,
 } from "../PKCS-15/CommonObjectAttributes.ta.mjs";
-export {
-    CommonObjectAttributes,
-    _decode_CommonObjectAttributes,
-    _encode_CommonObjectAttributes,
-} from "../PKCS-15/CommonObjectAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS15Object */
 /**
  * @summary PKCS15Object
@@ -242,7 +236,7 @@ export function _get_encoder_for_PKCS15Object<
             SubClassAttributes,
             TypeAttributes
         >,
-        elGetter: $.ASN1Encoder<
+        _elGetter: $.ASN1Encoder<
             PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes>
         >
     ): _Element {

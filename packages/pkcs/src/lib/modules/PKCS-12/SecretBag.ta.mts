@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { SecretTypes } from "../PKCS-12/SecretTypes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecretBag */
 /**
  * @summary SecretBag
@@ -168,9 +165,7 @@ export function _encode_SecretBag(
 ) {
     if (!_cached_encoder_for_SecretBag) {
         _cached_encoder_for_SecretBag = function (
-            value: SecretBag,
-            elGetter: $.ASN1Encoder<SecretBag>
-        ): _Element {
+            value: SecretBag        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

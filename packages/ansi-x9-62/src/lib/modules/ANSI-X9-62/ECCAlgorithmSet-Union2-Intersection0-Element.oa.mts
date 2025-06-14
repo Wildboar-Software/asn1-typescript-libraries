@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union2_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union2_Intersection0_Element

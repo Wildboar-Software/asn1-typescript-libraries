@@ -10,12 +10,6 @@ import {
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION GenericSecretKeyAttributes */
 /**
  * @summary GenericSecretKeyAttributes
@@ -165,9 +159,7 @@ export function _encode_GenericSecretKeyAttributes(
 ) {
     if (!_cached_encoder_for_GenericSecretKeyAttributes) {
         _cached_encoder_for_GenericSecretKeyAttributes = function (
-            value: GenericSecretKeyAttributes,
-            elGetter: $.ASN1Encoder<GenericSecretKeyAttributes>
-        ): _Element {
+            value: GenericSecretKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

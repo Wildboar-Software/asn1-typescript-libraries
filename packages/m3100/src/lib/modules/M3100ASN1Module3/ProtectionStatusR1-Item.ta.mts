@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ProtectionStatusR1_Item_manualSwitch,
     _encode_ProtectionStatusR1_Item_manualSwitch,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta.mjs';
-export {
-    ProtectionStatusR1_Item_manualSwitch,
-    _decode_ProtectionStatusR1_Item_manualSwitch,
-    _encode_ProtectionStatusR1_Item_manualSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-manualSwitch.ta.mjs';
 import {
-    ProtectionStatusR1_Item_autoSwitch,
-    _decode_ProtectionStatusR1_Item_autoSwitch,
-    _encode_ProtectionStatusR1_Item_autoSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-autoSwitch.ta.mjs';
-export {
     ProtectionStatusR1_Item_autoSwitch,
     _decode_ProtectionStatusR1_Item_autoSwitch,
     _encode_ProtectionStatusR1_Item_autoSwitch,
@@ -91,22 +26,11 @@ import {
     _decode_ProtectionStatusR1_Item_forcedSwitch,
     _encode_ProtectionStatusR1_Item_forcedSwitch,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta.mjs';
-export {
-    ProtectionStatusR1_Item_forcedSwitch,
-    _decode_ProtectionStatusR1_Item_forcedSwitch,
-    _encode_ProtectionStatusR1_Item_forcedSwitch,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta.mjs';
 import {
     ProtectionStatusR1_Item_lockout,
     _decode_ProtectionStatusR1_Item_lockout,
     _encode_ProtectionStatusR1_Item_lockout,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta.mjs';
-export {
-    ProtectionStatusR1_Item_lockout,
-    _decode_ProtectionStatusR1_Item_lockout,
-    _encode_ProtectionStatusR1_Item_lockout,
-} from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ProtectionStatusR1_Item */
 /**
  * @summary ProtectionStatusR1_Item

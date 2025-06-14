@@ -233,9 +233,7 @@ export function _encode_PrivateKeyInfo(
 ) {
     if (!_cached_encoder_for_PrivateKeyInfo) {
         _cached_encoder_for_PrivateKeyInfo = function (
-            value: PrivateKeyInfo,
-            elGetter: $.ASN1Encoder<PrivateKeyInfo>
-        ): _Element {
+            value: PrivateKeyInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

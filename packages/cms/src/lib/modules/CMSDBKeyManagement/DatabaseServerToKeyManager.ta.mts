@@ -15,17 +15,6 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
-export {
-    MasterKeyEncryptedHMACkey,
-    _decode_MasterKeyEncryptedHMACkey,
-    _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DatabaseServerToKeyManager */
 /**
  * @summary DatabaseServerToKeyManager
@@ -198,9 +187,7 @@ export function _encode_DatabaseServerToKeyManager(
 ) {
     if (!_cached_encoder_for_DatabaseServerToKeyManager) {
         _cached_encoder_for_DatabaseServerToKeyManager = function (
-            value: DatabaseServerToKeyManager,
-            elGetter: $.ASN1Encoder<DatabaseServerToKeyManager>
-        ): _Element {
+            value: DatabaseServerToKeyManager        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

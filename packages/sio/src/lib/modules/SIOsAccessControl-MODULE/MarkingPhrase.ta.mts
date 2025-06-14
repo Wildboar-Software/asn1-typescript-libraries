@@ -6,13 +6,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-export {
-    DirectoryString,
-    _decode_DirectoryString,
-    _encode_DirectoryString,
-} from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-export { ubMarkingPhraseLength } from "../SIOsAccessControl-MODULE/ubMarkingPhraseLength.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MarkingPhrase */
 /**
  * @summary MarkingPhrase

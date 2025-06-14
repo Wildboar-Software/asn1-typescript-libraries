@@ -7,8 +7,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DDO */
 /**
  * @summary DDO
@@ -230,9 +228,7 @@ let _cached_encoder_for_DDO: $.ASN1Encoder<DDO> | null = null;
 export function _encode_DDO(value: DDO, elGetter: $.ASN1Encoder<DDO>) {
     if (!_cached_encoder_for_DDO) {
         _cached_encoder_for_DDO = function (
-            value: DDO,
-            elGetter: $.ASN1Encoder<DDO>
-        ): _Element {
+            value: DDO        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

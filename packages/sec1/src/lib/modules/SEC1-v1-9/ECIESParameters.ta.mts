@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,13 +12,8 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
-export { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
 import { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.mjs";
-export { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.mjs";
 import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.mjs";
-export { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION ECIESParameters */
 /**
  * @summary ECIESParameters
@@ -237,7 +177,7 @@ let _cached_encoder_for_ECIESParameters: $.ASN1Encoder<ECIESParameters> | null =
  */
 export
 function _encode_ECIESParameters (value: ECIESParameters, elGetter: $.ASN1Encoder<ECIESParameters>) {
-    if (!_cached_encoder_for_ECIESParameters) { _cached_encoder_for_ECIESParameters = function (value: ECIESParameters, elGetter: $.ASN1Encoder<ECIESParameters>): _Element {
+    if (!_cached_encoder_for_ECIESParameters) { _cached_encoder_for_ECIESParameters = function (value: ECIESParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.kdf === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_KeyDerivationFunction, $.BER)(value.kdf, $.BER)),

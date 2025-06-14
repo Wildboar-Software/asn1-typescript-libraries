@@ -15,17 +15,6 @@ import {
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.mjs";
-export {
-    SigncryptedPartsManifest,
-    _decode_SigncryptedPartsManifest,
-    _encode_SigncryptedPartsManifest,
-} from "../CMSSigncryption/SigncryptedPartsManifest.ta.mjs";
-export {
-    SignedAttributes,
-    _decode_SignedAttributes,
-    _encode_SignedAttributes,
-} from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ToBeSigned */
 /**
  * @summary ToBeSigned
@@ -184,9 +173,7 @@ export function _encode_ToBeSigned(
 ) {
     if (!_cached_encoder_for_ToBeSigned) {
         _cached_encoder_for_ToBeSigned = function (
-            value: ToBeSigned,
-            elGetter: $.ASN1Encoder<ToBeSigned>
-        ): _Element {
+            value: ToBeSigned        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

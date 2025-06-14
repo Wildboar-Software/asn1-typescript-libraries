@@ -6,14 +6,6 @@ import {
     _encode_PBEParameter,
 } from "../PKCS5v2-1/PBEParameter.ta.mjs";
 import { pbeWithMD2AndRC2_CBC } from "../PKCS5v2-1/pbeWithMD2AndRC2-CBC.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export {
-    PBEParameter,
-    _decode_PBEParameter,
-    _encode_PBEParameter,
-} from "../PKCS5v2-1/PBEParameter.ta.mjs";
-export { pbeWithMD2AndRC2_CBC } from "../PKCS5v2-1/pbeWithMD2AndRC2-CBC.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBES1Algorithms_Union1_Intersection0_Element */
 /**
  * @summary PBES1Algorithms_Union1_Intersection0_Element

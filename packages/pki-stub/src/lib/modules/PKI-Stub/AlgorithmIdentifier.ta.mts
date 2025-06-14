@@ -180,7 +180,7 @@ export function _decode_AlgorithmIdentifier(el: _Element) {
  */
 export function _encode_AlgorithmIdentifier(
     value: AlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<AlgorithmIdentifier>
+    _elGetter: $.ASN1Encoder<AlgorithmIdentifier>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(

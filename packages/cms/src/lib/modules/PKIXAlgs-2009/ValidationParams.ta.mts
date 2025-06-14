@@ -166,9 +166,7 @@ export function _encode_ValidationParams(
 ) {
     if (!_cached_encoder_for_ValidationParams) {
         _cached_encoder_for_ValidationParams = function (
-            value: ValidationParams,
-            elGetter: $.ASN1Encoder<ValidationParams>
-        ): _Element {
+            value: ValidationParams        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

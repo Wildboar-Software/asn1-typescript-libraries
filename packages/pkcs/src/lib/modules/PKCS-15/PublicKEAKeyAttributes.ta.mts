@@ -211,9 +211,7 @@ export function _encode_PublicKEAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PublicKEAKeyAttributes) {
         _cached_encoder_for_PublicKEAKeyAttributes = function (
-            value: PublicKEAKeyAttributes,
-            elGetter: $.ASN1Encoder<PublicKEAKeyAttributes>
-        ): _Element {
+            value: PublicKEAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

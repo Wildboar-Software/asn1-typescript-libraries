@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ALGORITHM } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/ALGORITHM.oca.mjs";
 import { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.mjs";
-export { ALGORITHM } from "../AlgorithmInformation-2009/ALGORITHM.oca.mjs";
-export { alg_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/alg-hMAC-SHA1.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2_PRFs */
 /**
  * @summary PBKDF2_PRFs

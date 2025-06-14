@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
 import { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa.mjs";
-export { KEY_AGREE } from "../AlgorithmInformation-2009/KEY-AGREE.oca.mjs";
-export { KeyAgreementAlgs } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyAgreementAlgs.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreementAlgorithmSet */
 /**
  * @summary KeyAgreementAlgorithmSet

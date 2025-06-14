@@ -6,12 +6,6 @@ import {
     _decode_OptionalCategoryData,
     _encode_OptionalCategoryData,
 } from "../SIOsAccessControl-MODULE/OptionalCategoryData.ta.mjs";
-export {
-    OptionalCategoryData,
-    _decode_OptionalCategoryData,
-    _encode_OptionalCategoryData,
-} from "../SIOsAccessControl-MODULE/OptionalCategoryData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CategoryGroup */
 /**
  * @summary CategoryGroup

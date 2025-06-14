@@ -6,12 +6,6 @@ import {
     _decode_XPath,
     _encode_XPath,
 } from "../CMSSigncryption/XPath.ta.mjs";
-export {
-    XPath,
-    _decode_XPath,
-    _encode_XPath,
-} from "../CMSSigncryption/XPath.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION XPathSet */
 /**
  * @summary XPathSet

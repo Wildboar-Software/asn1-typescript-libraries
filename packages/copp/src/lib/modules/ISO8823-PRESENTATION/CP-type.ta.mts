@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_Mode_selector,
     _encode_Mode_selector,
 } from '../ISO8823-PRESENTATION/Mode-selector.ta.mjs';
-export {
-    Mode_selector,
-    _decode_Mode_selector,
-    _encode_Mode_selector,
-} from '../ISO8823-PRESENTATION/Mode-selector.ta.mjs';
 import {
-    CP_type_x410_mode_parameters,
-    _decode_CP_type_x410_mode_parameters,
-    _encode_CP_type_x410_mode_parameters,
-} from '../ISO8823-PRESENTATION/CP-type-x410-mode-parameters.ta.mjs';
-export {
     CP_type_x410_mode_parameters,
     _decode_CP_type_x410_mode_parameters,
     _encode_CP_type_x410_mode_parameters,
@@ -91,12 +26,6 @@ import {
     _decode_CP_type_normal_mode_parameters,
     _encode_CP_type_normal_mode_parameters,
 } from '../ISO8823-PRESENTATION/CP-type-normal-mode-parameters.ta.mjs';
-export {
-    CP_type_normal_mode_parameters,
-    _decode_CP_type_normal_mode_parameters,
-    _encode_CP_type_normal_mode_parameters,
-} from '../ISO8823-PRESENTATION/CP-type-normal-mode-parameters.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CP_type */
 /**
  * @summary CP_type
@@ -329,9 +258,7 @@ export function _encode_CP_type(
 ) {
     if (!_cached_encoder_for_CP_type) {
         _cached_encoder_for_CP_type = function (
-            value: CP_type,
-            elGetter: $.ASN1Encoder<CP_type>
-        ): _Element {
+            value: CP_type        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

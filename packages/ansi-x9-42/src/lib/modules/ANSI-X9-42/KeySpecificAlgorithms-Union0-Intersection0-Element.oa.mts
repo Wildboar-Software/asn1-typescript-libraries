@@ -6,14 +6,6 @@ import {
     _encode_Counter,
 } from "../ANSI-X9-42/Counter.ta.mjs";
 import { tripleDES } from "../ANSI-X9-42/tripleDES.va.mjs";
-export { ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
-export {
-    Counter,
-    _decode_Counter,
-    _encode_Counter,
-} from "../ANSI-X9-42/Counter.ta.mjs";
-export { tripleDES } from "../ANSI-X9-42/tripleDES.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeySpecificAlgorithms_Union0_Intersection0_Element */
 /**
  * @summary KeySpecificAlgorithms_Union0_Intersection0_Element

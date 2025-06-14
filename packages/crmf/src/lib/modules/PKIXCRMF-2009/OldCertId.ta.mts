@@ -6,12 +6,6 @@ import {
     _decode_CertId,
     _encode_CertId,
 } from "../PKIXCRMF-2009/CertId.ta.mjs";
-export {
-    CertId,
-    _decode_CertId,
-    _encode_CertId,
-} from "../PKIXCRMF-2009/CertId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OldCertId */
 /**
  * @summary OldCertId

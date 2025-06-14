@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_FirstPdvExplicit,
   _encode_FirstPdvExplicit,
 } from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta.mjs';
-export {
-  FirstPdvExplicit,
-  _decode_FirstPdvExplicit,
-  _encode_FirstPdvExplicit,
-} from '../GenericProtectingTransferSyntax/FirstPdvExplicit.ta.mjs';
 import {
-  FirstPdvExternal,
-  _decode_FirstPdvExternal,
-  _encode_FirstPdvExternal,
-} from '../GenericProtectingTransferSyntax/FirstPdvExternal.ta.mjs';
-export {
   FirstPdvExternal,
   _decode_FirstPdvExternal,
   _encode_FirstPdvExternal,
@@ -91,12 +25,6 @@ import {
   _decode_SubsequentPdv,
   _encode_SubsequentPdv,
 } from '../GenericProtectingTransferSyntax/SubsequentPdv.ta.mjs';
-export {
-  SubsequentPdv,
-  _decode_SubsequentPdv,
-  _encode_SubsequentPdv,
-} from '../GenericProtectingTransferSyntax/SubsequentPdv.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION SyntaxStructure */
 /**
  * @summary SyntaxStructure

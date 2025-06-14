@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.mjs";
-export { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.mjs";
 import { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.mjs";
-export { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.mjs";
 import { WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION defaultWeekMask */

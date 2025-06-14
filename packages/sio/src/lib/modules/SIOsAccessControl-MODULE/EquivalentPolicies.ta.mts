@@ -6,12 +6,6 @@ import {
     _decode_EquivalentPolicy,
     _encode_EquivalentPolicy,
 } from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta.mjs";
-export {
-    EquivalentPolicy,
-    _decode_EquivalentPolicy,
-    _encode_EquivalentPolicy,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicy.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EquivalentPolicies */
 /**
  * @summary EquivalentPolicies

@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-export {
-    CertificateType,
-    _decode_CertificateType,
-    _encode_CertificateType,
-} from "../PKCS-15/CertificateType.ta.mjs";
-export {
-    PathOrObjects,
-    _get_decoder_for_PathOrObjects,
-    _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Certificates */
 /**
  * @summary Certificates

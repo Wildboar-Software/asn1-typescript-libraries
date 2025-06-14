@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_BindRequest,
   _encode_BindRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta.mjs';
-export {
-  BindRequest,
-  _decode_BindRequest,
-  _encode_BindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindRequest.ta.mjs';
 import {
-  BindResponse,
-  _decode_BindResponse,
-  _encode_BindResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta.mjs';
-export {
   BindResponse,
   _decode_BindResponse,
   _encode_BindResponse,
@@ -91,17 +25,7 @@ import {
   _decode_UnbindRequest,
   _encode_UnbindRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta.mjs';
-export {
-  UnbindRequest,
-  _decode_UnbindRequest,
-  _encode_UnbindRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta.mjs';
 import {
-  SearchRequest,
-  _decode_SearchRequest,
-  _encode_SearchRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest.ta.mjs';
-export {
   SearchRequest,
   _decode_SearchRequest,
   _encode_SearchRequest,
@@ -111,17 +35,7 @@ import {
   _decode_SearchResultEntry,
   _encode_SearchResultEntry,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.mjs';
-export {
-  SearchResultEntry,
-  _decode_SearchResultEntry,
-  _encode_SearchResultEntry,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.mjs';
 import {
-  SearchResultDone,
-  _decode_SearchResultDone,
-  _encode_SearchResultDone,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta.mjs';
-export {
   SearchResultDone,
   _decode_SearchResultDone,
   _encode_SearchResultDone,
@@ -131,17 +45,7 @@ import {
   _decode_SearchResultReference,
   _encode_SearchResultReference,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta.mjs';
-export {
-  SearchResultReference,
-  _decode_SearchResultReference,
-  _encode_SearchResultReference,
-} from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta.mjs';
 import {
-  ModifyRequest,
-  _decode_ModifyRequest,
-  _encode_ModifyRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta.mjs';
-export {
   ModifyRequest,
   _decode_ModifyRequest,
   _encode_ModifyRequest,
@@ -151,17 +55,7 @@ import {
   _decode_ModifyResponse,
   _encode_ModifyResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta.mjs';
-export {
-  ModifyResponse,
-  _decode_ModifyResponse,
-  _encode_ModifyResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta.mjs';
 import {
-  AddRequest,
-  _decode_AddRequest,
-  _encode_AddRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta.mjs';
-export {
   AddRequest,
   _decode_AddRequest,
   _encode_AddRequest,
@@ -171,17 +65,7 @@ import {
   _decode_AddResponse,
   _encode_AddResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta.mjs';
-export {
-  AddResponse,
-  _decode_AddResponse,
-  _encode_AddResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta.mjs';
 import {
-  DelRequest,
-  _decode_DelRequest,
-  _encode_DelRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta.mjs';
-export {
   DelRequest,
   _decode_DelRequest,
   _encode_DelRequest,
@@ -191,17 +75,7 @@ import {
   _decode_DelResponse,
   _encode_DelResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta.mjs';
-export {
-  DelResponse,
-  _decode_DelResponse,
-  _encode_DelResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta.mjs';
 import {
-  ModifyDNRequest,
-  _decode_ModifyDNRequest,
-  _encode_ModifyDNRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta.mjs';
-export {
   ModifyDNRequest,
   _decode_ModifyDNRequest,
   _encode_ModifyDNRequest,
@@ -211,17 +85,7 @@ import {
   _decode_ModifyDNResponse,
   _encode_ModifyDNResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta.mjs';
-export {
-  ModifyDNResponse,
-  _decode_ModifyDNResponse,
-  _encode_ModifyDNResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta.mjs';
 import {
-  CompareRequest,
-  _decode_CompareRequest,
-  _encode_CompareRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta.mjs';
-export {
   CompareRequest,
   _decode_CompareRequest,
   _encode_CompareRequest,
@@ -231,17 +95,7 @@ import {
   _decode_CompareResponse,
   _encode_CompareResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta.mjs';
-export {
-  CompareResponse,
-  _decode_CompareResponse,
-  _encode_CompareResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta.mjs';
 import {
-  AbandonRequest,
-  _decode_AbandonRequest,
-  _encode_AbandonRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta.mjs';
-export {
   AbandonRequest,
   _decode_AbandonRequest,
   _encode_AbandonRequest,
@@ -251,17 +105,7 @@ import {
   _decode_ExtendedRequest,
   _encode_ExtendedRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta.mjs';
-export {
-  ExtendedRequest,
-  _decode_ExtendedRequest,
-  _encode_ExtendedRequest,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedRequest.ta.mjs';
 import {
-  ExtendedResponse,
-  _decode_ExtendedResponse,
-  _encode_ExtendedResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/ExtendedResponse.ta.mjs';
-export {
   ExtendedResponse,
   _decode_ExtendedResponse,
   _encode_ExtendedResponse,
@@ -271,12 +115,6 @@ import {
   _decode_IntermediateResponse,
   _encode_IntermediateResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta.mjs';
-export {
-  IntermediateResponse,
-  _decode_IntermediateResponse,
-  _encode_IntermediateResponse,
-} from '../Lightweight-Directory-Access-Protocol-V3/IntermediateResponse.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION LDAPMessage_protocolOp */
 /**
  * @summary LDAPMessage_protocolOp

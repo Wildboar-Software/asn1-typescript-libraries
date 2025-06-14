@@ -6,12 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../PKCS-10/Attribute.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../PKCS-10/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Attributes */
 /**
  * @summary Attributes

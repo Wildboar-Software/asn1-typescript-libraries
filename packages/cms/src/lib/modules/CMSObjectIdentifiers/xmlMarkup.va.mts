@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va.mjs";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-export { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va.mjs";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION xmlMarkup */
 /**
  * @summary xmlMarkup

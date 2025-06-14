@@ -6,14 +6,6 @@ import {
     _decode_PBMAC1_params,
     _encode_PBMAC1_params,
 } from "../PKCS5v2-1/PBMAC1-params.ta.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_PBMAC1 } from "../PKCS5v2-1/id-PBMAC1.va.mjs";
-export {
-    PBMAC1_params,
-    _decode_PBMAC1_params,
-    _encode_PBMAC1_params,
-} from "../PKCS5v2-1/PBMAC1-params.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBMAC1Algorithms_Union0_Intersection0_Element */
 /**
  * @summary PBMAC1Algorithms_Union0_Intersection0_Element

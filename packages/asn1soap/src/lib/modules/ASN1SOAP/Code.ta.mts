@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,38 +13,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   Value,
   _enum_for_Value,
-  Value_versionMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  versionMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_mustUnderstand /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  mustUnderstand /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_dataEncodingUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  dataEncodingUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_sender /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sender /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_receiver /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_Value,
-  _encode_Value,
-} from '../ASN1SOAP/Value.ta.mjs';
-export {
-  Value,
-  _enum_for_Value,
-  Value_versionMismatch /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  versionMismatch /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_mustUnderstand /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  mustUnderstand /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_dataEncodingUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  dataEncodingUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_sender /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sender /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  Value_receiver /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  receiver /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_Value,
   _encode_Value,
 } from '../ASN1SOAP/Value.ta.mjs';
 import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
-export { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Code */
 /**
  * @summary Code
@@ -259,9 +175,7 @@ let _cached_encoder_for_Code: $.ASN1Encoder<Code> | null = null;
 export function _encode_Code(value: Code, elGetter: $.ASN1Encoder<Code>) {
   if (!_cached_encoder_for_Code) {
     _cached_encoder_for_Code = function (
-      value: Code,
-      elGetter: $.ASN1Encoder<Code>
-    ): _Element {
+      value: Code    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

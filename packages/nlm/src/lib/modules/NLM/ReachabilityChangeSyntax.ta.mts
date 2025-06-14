@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,29 +14,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ReachabilityChangeSyntax_newState,
     _enum_for_ReachabilityChangeSyntax_newState,
-    ReachabilityChangeSyntax_newState_down /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    down /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReachabilityChangeSyntax_newState_up /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    up /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReachabilityChangeSyntax_newState,
-    _encode_ReachabilityChangeSyntax_newState,
-} from '../NLM/ReachabilityChangeSyntax-newState.ta.mjs';
-export {
-    ReachabilityChangeSyntax_newState,
-    _enum_for_ReachabilityChangeSyntax_newState,
-    ReachabilityChangeSyntax_newState_down /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    down /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReachabilityChangeSyntax_newState_up /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    up /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_newState,
     _encode_ReachabilityChangeSyntax_newState,
 } from '../NLM/ReachabilityChangeSyntax-newState.ta.mjs';
 import {
-    NAddress,
-    _decode_NAddress,
-    _encode_NAddress,
-} from '../NLM/NAddress.ta.mjs';
-export {
     NAddress,
     _decode_NAddress,
     _encode_NAddress,
@@ -101,32 +27,12 @@ import {
     _decode_SNPAAddress,
     _encode_SNPAAddress,
 } from '../NLM/SNPAAddress.ta.mjs';
-export {
-    SNPAAddress,
-    _decode_SNPAAddress,
-    _encode_SNPAAddress,
-} from '../NLM/SNPAAddress.ta.mjs';
 import {
     ReachabilityChangeSyntax_reason,
     _enum_for_ReachabilityChangeSyntax_reason,
-    ReachabilityChangeSyntax_reason_holdingTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    holdingTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReachabilityChangeSyntax_reason_circuitDisabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    circuitDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ReachabilityChangeSyntax_reason,
     _encode_ReachabilityChangeSyntax_reason,
 } from '../NLM/ReachabilityChangeSyntax-reason.ta.mjs';
-export {
-    ReachabilityChangeSyntax_reason,
-    _enum_for_ReachabilityChangeSyntax_reason,
-    ReachabilityChangeSyntax_reason_holdingTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    holdingTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReachabilityChangeSyntax_reason_circuitDisabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    circuitDisabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReachabilityChangeSyntax_reason,
-    _encode_ReachabilityChangeSyntax_reason,
-} from '../NLM/ReachabilityChangeSyntax-reason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ReachabilityChangeSyntax */
 /**
  * @summary ReachabilityChangeSyntax
@@ -365,9 +271,7 @@ export function _encode_ReachabilityChangeSyntax(
 ) {
     if (!_cached_encoder_for_ReachabilityChangeSyntax) {
         _cached_encoder_for_ReachabilityChangeSyntax = function (
-            value: ReachabilityChangeSyntax,
-            elGetter: $.ASN1Encoder<ReachabilityChangeSyntax>
-        ): _Element {
+            value: ReachabilityChangeSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

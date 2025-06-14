@@ -168,9 +168,7 @@ export function _encode_IssuerAndSerialNumber(
 ) {
     if (!_cached_encoder_for_IssuerAndSerialNumber) {
         _cached_encoder_for_IssuerAndSerialNumber = function (
-            value: IssuerAndSerialNumber,
-            elGetter: $.ASN1Encoder<IssuerAndSerialNumber>
-        ): _Element {
+            value: IssuerAndSerialNumber        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

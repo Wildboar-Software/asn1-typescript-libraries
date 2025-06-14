@@ -2,9 +2,6 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-export { KEY_IDENTIFIER } from "../PKCS-15/KEY-IDENTIFIER.oca.mjs";
-export { PKCS15_OPAQUE } from "../PKCS-15/PKCS15-OPAQUE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION issuerAndSerialNumber */
 /**
  * @summary issuerAndSerialNumber

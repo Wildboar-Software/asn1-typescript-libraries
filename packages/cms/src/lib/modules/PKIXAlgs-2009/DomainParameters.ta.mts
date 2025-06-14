@@ -11,12 +11,6 @@ import {
     _decode_ValidationParams,
     _encode_ValidationParams,
 } from "../PKIXAlgs-2009/ValidationParams.ta.mjs";
-export {
-    ValidationParams,
-    _decode_ValidationParams,
-    _encode_ValidationParams,
-} from "../PKIXAlgs-2009/ValidationParams.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DomainParameters */
 /**
  * @summary DomainParameters
@@ -249,9 +243,7 @@ export function _encode_DomainParameters(
 ) {
     if (!_cached_encoder_for_DomainParameters) {
         _cached_encoder_for_DomainParameters = function (
-            value: DomainParameters,
-            elGetter: $.ASN1Encoder<DomainParameters>
-        ): _Element {
+            value: DomainParameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

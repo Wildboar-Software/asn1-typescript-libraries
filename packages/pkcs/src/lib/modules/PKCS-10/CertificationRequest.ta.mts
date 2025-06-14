@@ -16,17 +16,6 @@ import {
     _decode_CertificationRequestInfo,
     _encode_CertificationRequestInfo,
 } from "../PKCS-10/CertificationRequestInfo.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS-10/AlgorithmIdentifier.ta.mjs";
-export {
-    CertificationRequestInfo,
-    _decode_CertificationRequestInfo,
-    _encode_CertificationRequestInfo,
-} from "../PKCS-10/CertificationRequestInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificationRequest */
 /**
  * @summary CertificationRequest
@@ -212,9 +201,7 @@ export function _encode_CertificationRequest(
 ) {
     if (!_cached_encoder_for_CertificationRequest) {
         _cached_encoder_for_CertificationRequest = function (
-            value: CertificationRequest,
-            elGetter: $.ASN1Encoder<CertificationRequest>
-        ): _Element {
+            value: CertificationRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

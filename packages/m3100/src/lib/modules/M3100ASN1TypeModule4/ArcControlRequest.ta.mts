@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,36 +16,9 @@ import {
     _decode_ArcTime,
     _encode_ArcTime,
 } from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';
-export {
-    ArcTime,
-    _decode_ArcTime,
-    _encode_ArcTime,
-} from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';
 import {
     ArcState,
     _enum_for_ArcState,
-    ArcState_alm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    alm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalmQualifiedInhibit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalmQualifiedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalmTimedInhibit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalmTimedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ArcState,
-    _encode_ArcState,
-} from '../M3100ASN1TypeModule4/ArcState.ta.mjs';
-export {
-    ArcState,
-    _enum_for_ArcState,
-    ArcState_alm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    alm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalm /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalm /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalmQualifiedInhibit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalmQualifiedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ArcState_nalmTimedInhibit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    nalmTimedInhibit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ArcState,
     _encode_ArcState,
 } from '../M3100ASN1TypeModule4/ArcState.ta.mjs';
@@ -109,12 +27,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ArcControlRequest */
 /**
  * @summary ArcControlRequest
@@ -315,9 +227,7 @@ export function _encode_ArcControlRequest(
 ) {
     if (!_cached_encoder_for_ArcControlRequest) {
         _cached_encoder_for_ArcControlRequest = function (
-            value: ArcControlRequest,
-            elGetter: $.ASN1Encoder<ArcControlRequest>
-        ): _Element {
+            value: ArcControlRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

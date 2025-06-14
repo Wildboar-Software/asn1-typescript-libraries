@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
-export { NamedCurve } from "../PKIXAlgs-2009/NamedCurve.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECParameters */
 /**
  * @summary ECParameters

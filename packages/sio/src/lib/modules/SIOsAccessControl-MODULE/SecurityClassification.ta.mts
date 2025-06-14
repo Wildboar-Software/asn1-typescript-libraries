@@ -32,32 +32,6 @@ import {
     _decode_OptionalCategoryGroups,
     _encode_OptionalCategoryGroups,
 } from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta.mjs";
-export {
-    ClassificationName,
-    _decode_ClassificationName,
-    _encode_ClassificationName,
-} from "../SIOsAccessControl-MODULE/ClassificationName.ta.mjs";
-export {
-    EquivalentClassifications,
-    _decode_EquivalentClassifications,
-    _encode_EquivalentClassifications,
-} from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta.mjs";
-export {
-    LabelAndCertValue,
-    _decode_LabelAndCertValue,
-    _encode_LabelAndCertValue,
-} from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
-export {
-    MarkingDataInfo,
-    _decode_MarkingDataInfo,
-    _encode_MarkingDataInfo,
-} from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta.mjs";
-export {
-    OptionalCategoryGroups,
-    _decode_OptionalCategoryGroups,
-    _encode_OptionalCategoryGroups,
-} from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityClassification */
 /**
  * @summary SecurityClassification
@@ -347,9 +321,7 @@ export function _encode_SecurityClassification(
 ) {
     if (!_cached_encoder_for_SecurityClassification) {
         _cached_encoder_for_SecurityClassification = function (
-            value: SecurityClassification,
-            elGetter: $.ASN1Encoder<SecurityClassification>
-        ): _Element {
+            value: SecurityClassification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

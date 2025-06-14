@@ -6,14 +6,6 @@ import {
     _decode_PBKDF2_params,
     _encode_PBKDF2_params,
 } from "../PKCS5v2-1/PBKDF2-params.ta.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { id_PBKDF2 } from "../PKCS5v2-1/id-PBKDF2.va.mjs";
-export {
-    PBKDF2_params,
-    _decode_PBKDF2_params,
-    _encode_PBKDF2_params,
-} from "../PKCS5v2-1/PBKDF2-params.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PBKDF2Algorithms_Union0_Intersection0_Element */
 /**
  * @summary PBKDF2Algorithms_Union0_Intersection0_Element

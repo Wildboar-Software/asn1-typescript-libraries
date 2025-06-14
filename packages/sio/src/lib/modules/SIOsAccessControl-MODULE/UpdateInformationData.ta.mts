@@ -17,17 +17,6 @@ import {
     _decode_SPIFVersionNumber,
     _encode_SPIFVersionNumber,
 } from "../SIOsAccessControl-MODULE/SPIFVersionNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "@wildboar/x500/src/lib/modules/InformationFramework/Name.ta.mjs";
-export {
-    SPIFVersionNumber,
-    _decode_SPIFVersionNumber,
-    _encode_SPIFVersionNumber,
-} from "../SIOsAccessControl-MODULE/SPIFVersionNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UpdateInformationData */
 /**
  * @summary UpdateInformationData
@@ -240,9 +229,7 @@ export function _encode_UpdateInformationData(
 ) {
     if (!_cached_encoder_for_UpdateInformationData) {
         _cached_encoder_for_UpdateInformationData = function (
-            value: UpdateInformationData,
-            elGetter: $.ASN1Encoder<UpdateInformationData>
-        ): _Element {
+            value: UpdateInformationData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

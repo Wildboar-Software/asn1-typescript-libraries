@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca.mjs";
-export { CMSContentTable } from "../CryptographicMessageSyntax/CMSContentTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentInfo */
 /**
  * @summary ContentInfo
@@ -167,9 +164,7 @@ export function _encode_ContentInfo(
 ) {
     if (!_cached_encoder_for_ContentInfo) {
         _cached_encoder_for_ContentInfo = function (
-            value: ContentInfo,
-            elGetter: $.ASN1Encoder<ContentInfo>
-        ): _Element {
+            value: ContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

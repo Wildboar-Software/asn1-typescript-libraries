@@ -6,12 +6,6 @@ import {
     _decode_OtherPrimeInfo,
     _encode_OtherPrimeInfo,
 } from "../PKCS-1/OtherPrimeInfo.ta.mjs";
-export {
-    OtherPrimeInfo,
-    _decode_OtherPrimeInfo,
-    _encode_OtherPrimeInfo,
-} from "../PKCS-1/OtherPrimeInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherPrimeInfos */
 /**
  * @summary OtherPrimeInfos

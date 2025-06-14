@@ -11,12 +11,6 @@ import {
     _decode_ObjectIdName,
     _encode_ObjectIdName,
 } from "../SIOsAccessControl-MODULE/ObjectIdName.ta.mjs";
-export {
-    ObjectIdName,
-    _decode_ObjectIdName,
-    _encode_ObjectIdName,
-} from "../SIOsAccessControl-MODULE/ObjectIdName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ObjectIdData */
 /**
  * @summary ObjectIdData
@@ -175,9 +169,7 @@ export function _encode_ObjectIdData(
 ) {
     if (!_cached_encoder_for_ObjectIdData) {
         _cached_encoder_for_ObjectIdData = function (
-            value: ObjectIdData,
-            elGetter: $.ASN1Encoder<ObjectIdData>
-        ): _Element {
+            value: ObjectIdData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

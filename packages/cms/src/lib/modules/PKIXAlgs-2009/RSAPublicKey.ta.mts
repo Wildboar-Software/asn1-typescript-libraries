@@ -165,9 +165,7 @@ export function _encode_RSAPublicKey(
 ) {
     if (!_cached_encoder_for_RSAPublicKey) {
         _cached_encoder_for_RSAPublicKey = function (
-            value: RSAPublicKey,
-            elGetter: $.ASN1Encoder<RSAPublicKey>
-        ): _Element {
+            value: RSAPublicKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

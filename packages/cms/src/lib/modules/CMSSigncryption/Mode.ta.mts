@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-export { ProcessingModes } from "../CMSSigncryption/ProcessingModes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Mode */
 /**
  * @summary Mode

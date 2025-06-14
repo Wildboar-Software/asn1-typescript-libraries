@@ -1,7 +1,7 @@
 import { Project, SyntaxKind } from "ts-morph";
 
 const project = new Project();
-project.addSourceFilesAtPaths(process.argv[2]);
+project.addSourceFilesAtPaths(process.argv[2] + "/**/*.mts");
 
 for (const sourceFile of project.getSourceFiles()) {
   const exports = sourceFile.getStatements().filter(stmt =>

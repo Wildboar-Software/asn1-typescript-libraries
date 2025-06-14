@@ -6,12 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKCS-1/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../PKCS-1/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RSAES_AlgorithmIdentifier */
 /**
  * @summary RSAES_AlgorithmIdentifier

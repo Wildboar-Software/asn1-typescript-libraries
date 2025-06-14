@@ -15,17 +15,6 @@ import {
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../TokenizationManifest/XPathSet.ta.mjs";
-export {
-    TokenServiceProvider,
-    _decode_TokenServiceProvider,
-    _encode_TokenServiceProvider,
-} from "../TokenizationManifest/TokenServiceProvider.ta.mjs";
-export {
-    XPathSet,
-    _decode_XPathSet,
-    _encode_XPathSet,
-} from "../TokenizationManifest/XPathSet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION XPathTokensSet */
 /**
  * @summary XPathTokensSet
@@ -195,9 +184,7 @@ export function _encode_XPathTokensSet(
 ) {
     if (!_cached_encoder_for_XPathTokensSet) {
         _cached_encoder_for_XPathTokensSet = function (
-            value: XPathTokensSet,
-            elGetter: $.ASN1Encoder<XPathTokensSet>
-        ): _Element {
+            value: XPathTokensSet        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

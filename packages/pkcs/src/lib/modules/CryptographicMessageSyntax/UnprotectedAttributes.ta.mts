@@ -6,12 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../CryptographicMessageSyntax/Attribute.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../CryptographicMessageSyntax/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UnprotectedAttributes */
 /**
  * @summary UnprotectedAttributes

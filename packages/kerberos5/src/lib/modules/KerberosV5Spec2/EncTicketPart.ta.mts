@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_TicketFlags,
   _encode_TicketFlags,
 } from '../KerberosV5Spec2/TicketFlags.ta.mjs';
-export {
-  TicketFlags,
-  _decode_TicketFlags,
-  _encode_TicketFlags,
-} from '../KerberosV5Spec2/TicketFlags.ta.mjs';
 import {
-  EncryptionKey,
-  _decode_EncryptionKey,
-  _encode_EncryptionKey,
-} from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
-export {
   EncryptionKey,
   _decode_EncryptionKey,
   _encode_EncryptionKey,
@@ -91,17 +26,7 @@ import {
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
-export {
-  Realm,
-  _decode_Realm,
-  _encode_Realm,
-} from '../KerberosV5Spec2/Realm.ta.mjs';
 import {
-  PrincipalName,
-  _decode_PrincipalName,
-  _encode_PrincipalName,
-} from '../KerberosV5Spec2/PrincipalName.ta.mjs';
-export {
   PrincipalName,
   _decode_PrincipalName,
   _encode_PrincipalName,
@@ -111,17 +36,7 @@ import {
   _decode_TransitedEncoding,
   _encode_TransitedEncoding,
 } from '../KerberosV5Spec2/TransitedEncoding.ta.mjs';
-export {
-  TransitedEncoding,
-  _decode_TransitedEncoding,
-  _encode_TransitedEncoding,
-} from '../KerberosV5Spec2/TransitedEncoding.ta.mjs';
 import {
-  KerberosTime,
-  _decode_KerberosTime,
-  _encode_KerberosTime,
-} from '../KerberosV5Spec2/KerberosTime.ta.mjs';
-export {
   KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
@@ -131,22 +46,11 @@ import {
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';
-export {
-  HostAddresses,
-  _decode_HostAddresses,
-  _encode_HostAddresses,
-} from '../KerberosV5Spec2/HostAddresses.ta.mjs';
 import {
   AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-export {
-  AuthorizationData,
-  _decode_AuthorizationData,
-  _encode_AuthorizationData,
-} from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION EncTicketPart */
 /**
  * @summary EncTicketPart
@@ -526,9 +430,7 @@ export function _encode_EncTicketPart(
       3,
       () =>
         function (
-          value: EncTicketPart,
-          elGetter: $.ASN1Encoder<EncTicketPart>
-        ): _Element {
+          value: EncTicketPart        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat([

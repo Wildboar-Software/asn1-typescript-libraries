@@ -18,24 +18,6 @@ import {
     _encode_RFID,
 } from "../CMSProfileAttributes/RFID.ta.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-export {
-    Address,
-    _decode_Address,
-    _encode_Address,
-} from "../CMSProfileAttributes/Address.ta.mjs";
-export {
-    DBRecord,
-    _decode_DBRecord,
-    _encode_DBRecord,
-} from "../CMSProfileAttributes/DBRecord.ta.mjs";
-export { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta.mjs";
-export {
-    RFID,
-    _decode_RFID,
-    _encode_RFID,
-} from "../CMSProfileAttributes/RFID.ta.mjs";
-export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Pointer */
 /**
  * @summary Pointer

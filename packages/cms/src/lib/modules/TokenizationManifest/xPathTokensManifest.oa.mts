@@ -6,14 +6,6 @@ import {
     _decode_XPathTokensSet,
     _encode_XPathTokensSet,
 } from "../TokenizationManifest/XPathTokensSet.ta.mjs";
-export { id_XPathTokensSet } from "../CMSObjectIdentifiers/id-XPathTokensSet.va.mjs";
-export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
-export {
-    XPathTokensSet,
-    _decode_XPathTokensSet,
-    _encode_XPathTokensSet,
-} from "../TokenizationManifest/XPathTokensSet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION xPathTokensManifest */
 /**
  * @summary xPathTokensManifest

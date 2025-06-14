@@ -6,14 +6,6 @@ import {
     _encode_RC2_CBC_Parameter,
 } from "../PKCS5v2-1/RC2-CBC-Parameter.ta.mjs";
 import { rc2CBC } from "../PKCS5v2-1/rc2CBC.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export {
-    RC2_CBC_Parameter,
-    _decode_RC2_CBC_Parameter,
-    _encode_RC2_CBC_Parameter,
-} from "../PKCS5v2-1/RC2-CBC-Parameter.ta.mjs";
-export { rc2CBC } from "../PKCS5v2-1/rc2CBC.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union3_Intersection0_Element */
 /**
  * @summary SupportingAlgorithms_Union3_Intersection0_Element

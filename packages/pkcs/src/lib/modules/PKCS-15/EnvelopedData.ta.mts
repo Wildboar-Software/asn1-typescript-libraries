@@ -256,9 +256,7 @@ export function _get_encoder_for_EnvelopedData<Type>(
     _encode_Type: $.ASN1Encoder<Type>
 ) {
     return function (
-        value: EnvelopedData<Type>,
-        elGetter: $.ASN1Encoder<EnvelopedData<Type>>
-    ): _Element {
+        value: EnvelopedData<Type>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat([

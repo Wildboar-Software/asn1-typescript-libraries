@@ -6,14 +6,6 @@ import {
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../PKCS-1/HashAlgorithm.ta.mjs";
-export { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1MGFAlgorithms_Union0_Intersection0_Element */
 /**
  * @summary PKCS1MGFAlgorithms_Union0_Intersection0_Element

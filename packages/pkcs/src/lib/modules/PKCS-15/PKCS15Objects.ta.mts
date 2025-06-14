@@ -31,37 +31,6 @@ import {
     _decode_SecretKeys,
     _encode_SecretKeys,
 } from "../PKCS-15/SecretKeys.ta.mjs";
-export {
-    AuthObjects,
-    _decode_AuthObjects,
-    _encode_AuthObjects,
-} from "../PKCS-15/AuthObjects.ta.mjs";
-export {
-    Certificates,
-    _decode_Certificates,
-    _encode_Certificates,
-} from "../PKCS-15/Certificates.ta.mjs";
-export {
-    DataObjects,
-    _decode_DataObjects,
-    _encode_DataObjects,
-} from "../PKCS-15/DataObjects.ta.mjs";
-export {
-    PrivateKeys,
-    _decode_PrivateKeys,
-    _encode_PrivateKeys,
-} from "../PKCS-15/PrivateKeys.ta.mjs";
-export {
-    PublicKeys,
-    _decode_PublicKeys,
-    _encode_PublicKeys,
-} from "../PKCS-15/PublicKeys.ta.mjs";
-export {
-    SecretKeys,
-    _decode_SecretKeys,
-    _encode_SecretKeys,
-} from "../PKCS-15/SecretKeys.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS15Objects */
 /**
  * @summary PKCS15Objects

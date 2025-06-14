@@ -6,12 +6,6 @@ import {
     _decode_Attributes,
     _encode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignedAttributes */
 /**
  * @summary SignedAttributes

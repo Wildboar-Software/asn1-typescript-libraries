@@ -167,9 +167,7 @@ export function _encode_ServiceLocator(
 ) {
     if (!_cached_encoder_for_ServiceLocator) {
         _cached_encoder_for_ServiceLocator = function (
-            value: ServiceLocator,
-            elGetter: $.ASN1Encoder<ServiceLocator>
-        ): _Element {
+            value: ServiceLocator        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -6,16 +6,6 @@ import {
     _decode_PredefinedBiometricType,
     _encode_PredefinedBiometricType,
 } from "../PKIXqualified97/PredefinedBiometricType.ta.mjs";
-export {
-    handwritten_signature /* IMPORTED_SHORT_NAMED_INTEGER */,
-    picture /* IMPORTED_SHORT_NAMED_INTEGER */,
-    PredefinedBiometricType,
-    PredefinedBiometricType_handwritten_signature /* IMPORTED_LONG_NAMED_INTEGER */,
-    PredefinedBiometricType_picture /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_PredefinedBiometricType,
-    _encode_PredefinedBiometricType,
-} from "../PKIXqualified97/PredefinedBiometricType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TypeOfBiometricData */
 /**
  * @summary TypeOfBiometricData

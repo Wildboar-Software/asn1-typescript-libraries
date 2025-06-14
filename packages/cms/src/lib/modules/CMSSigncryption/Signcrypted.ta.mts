@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Signcrypted */
 /**
  * @summary Signcrypted
@@ -172,9 +170,7 @@ export function _encode_Signcrypted(
 ) {
     if (!_cached_encoder_for_Signcrypted) {
         _cached_encoder_for_Signcrypted = function (
-            value: Signcrypted,
-            elGetter: $.ASN1Encoder<Signcrypted>
-        ): _Element {
+            value: Signcrypted        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

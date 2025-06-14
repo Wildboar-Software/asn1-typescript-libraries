@@ -6,14 +6,6 @@ import {
 } from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta.mjs";
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 import { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va.mjs";
-export {
-    AuthenticatedData,
-    _decode_AuthenticatedData,
-    _encode_AuthenticatedData,
-} from "../CryptographicMessageSyntax-2010/AuthenticatedData.ta.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { id_ct_authData } from "../CryptographicMessageSyntax-2010/id-ct-authData.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_AuthenticatedData */
 /**
  * @summary ct_AuthenticatedData

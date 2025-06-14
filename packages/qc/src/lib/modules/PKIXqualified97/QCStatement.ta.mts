@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
-export { SupportedStatements } from "../PKIXqualified97/SupportedStatements.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION QCStatement */
 /**
  * @summary QCStatement
@@ -176,9 +173,7 @@ export function _encode_QCStatement(
 ) {
     if (!_cached_encoder_for_QCStatement) {
         _cached_encoder_for_QCStatement = function (
-            value: QCStatement,
-            elGetter: $.ASN1Encoder<QCStatement>
-        ): _Element {
+            value: QCStatement        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

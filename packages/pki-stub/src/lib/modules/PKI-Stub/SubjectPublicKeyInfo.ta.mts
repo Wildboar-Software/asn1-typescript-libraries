@@ -177,7 +177,7 @@ export function _decode_SubjectPublicKeyInfo(el: _Element) {
  */
 export function _encode_SubjectPublicKeyInfo(
     value: SubjectPublicKeyInfo,
-    elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>
+    _elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_AlgorithmIdentifier(

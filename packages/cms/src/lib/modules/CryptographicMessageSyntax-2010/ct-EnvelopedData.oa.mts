@@ -6,14 +6,6 @@ import {
     _encode_EnvelopedData,
 } from "../CryptographicMessageSyntax-2010/EnvelopedData.ta.mjs";
 import { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export {
-    EnvelopedData,
-    _decode_EnvelopedData,
-    _encode_EnvelopedData,
-} from "../CryptographicMessageSyntax-2010/EnvelopedData.ta.mjs";
-export { id_envelopedData } from "../CryptographicMessageSyntax-2010/id-envelopedData.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_EnvelopedData */
 /**
  * @summary ct_EnvelopedData

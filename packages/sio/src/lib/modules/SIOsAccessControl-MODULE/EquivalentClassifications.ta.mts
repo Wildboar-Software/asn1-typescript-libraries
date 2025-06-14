@@ -6,12 +6,6 @@ import {
     _decode_EquivalentClassification,
     _encode_EquivalentClassification,
 } from "../SIOsAccessControl-MODULE/EquivalentClassification.ta.mjs";
-export {
-    EquivalentClassification,
-    _decode_EquivalentClassification,
-    _encode_EquivalentClassification,
-} from "../SIOsAccessControl-MODULE/EquivalentClassification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EquivalentClassifications */
 /**
  * @summary EquivalentClassifications

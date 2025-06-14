@@ -224,9 +224,7 @@ export function _encode_EncryptedData(
 ) {
     if (!_cached_encoder_for_EncryptedData) {
         _cached_encoder_for_EncryptedData = function (
-            value: EncryptedData,
-            elGetter: $.ASN1Encoder<EncryptedData>
-        ): _Element {
+            value: EncryptedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

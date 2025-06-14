@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
 import { sect163r2 } from "../PKIXAlgs-2009/sect163r2.va.mjs";
-export { CURVE } from "../PKIXAlgs-2009/CURVE.oca.mjs";
-export { sect163r2 } from "../PKIXAlgs-2009/sect163r2.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NamedCurve_Union2_Intersection0_Element */
 /**
  * @summary NamedCurve_Union2_Intersection0_Element

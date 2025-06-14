@@ -32,7 +32,7 @@ import {
  *
  * @class
  */
-export class EncryptedContentInfo<Type> {
+export class EncryptedContentInfo<_Type> {
     constructor(
         /**
          * @summary `contentType`.
@@ -197,7 +197,7 @@ export function _get_encoder_for_EncryptedContentInfo<Type>(
 ) {
     return function (
         value: EncryptedContentInfo<Type>,
-        elGetter: $.ASN1Encoder<EncryptedContentInfo<Type>>
+        _elGetter: $.ASN1Encoder<EncryptedContentInfo<Type>>
     ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])

@@ -6,14 +6,6 @@ import { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedD
 import { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa.mjs";
 import { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa.mjs";
 import { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { ct_AuthenticatedData } from "../CryptographicMessageSyntax-2010/ct-AuthenticatedData.oa.mjs";
-export { ct_Data } from "../CryptographicMessageSyntax-2010/ct-Data.oa.mjs";
-export { ct_DigestedData } from "../CryptographicMessageSyntax-2010/ct-DigestedData.oa.mjs";
-export { ct_EncryptedData } from "../CryptographicMessageSyntax-2010/ct-EncryptedData.oa.mjs";
-export { ct_EnvelopedData } from "../CryptographicMessageSyntax-2010/ct-EnvelopedData.oa.mjs";
-export { ct_SignedData } from "../CryptographicMessageSyntax-2010/ct-SignedData.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentSet */
 /**
  * @summary ContentSet

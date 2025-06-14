@@ -6,12 +6,6 @@ import {
     _decode_KeyConstructionLabel,
     _encode_KeyConstructionLabel,
 } from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.mjs";
-export {
-    KeyConstructionLabel,
-    _decode_KeyConstructionLabel,
-    _encode_KeyConstructionLabel,
-} from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyConstructionLabels */
 /**
  * @summary KeyConstructionLabels

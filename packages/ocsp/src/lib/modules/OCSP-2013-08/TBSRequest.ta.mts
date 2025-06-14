@@ -257,9 +257,7 @@ export function _encode_TBSRequest(
 ) {
     if (!_cached_encoder_for_TBSRequest) {
         _cached_encoder_for_TBSRequest = function (
-            value: TBSRequest,
-            elGetter: $.ASN1Encoder<TBSRequest>
-        ): _Element {
+            value: TBSRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { CRLTypes } from "../PKCS-12/CRLTypes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CRLBag */
 /**
  * @summary CRLBag
@@ -164,9 +161,7 @@ let _cached_encoder_for_CRLBag: $.ASN1Encoder<CRLBag> | null = null;
 export function _encode_CRLBag(value: CRLBag, elGetter: $.ASN1Encoder<CRLBag>) {
     if (!_cached_encoder_for_CRLBag) {
         _cached_encoder_for_CRLBag = function (
-            value: CRLBag,
-            elGetter: $.ASN1Encoder<CRLBag>
-        ): _Element {
+            value: CRLBag        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

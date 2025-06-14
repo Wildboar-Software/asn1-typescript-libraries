@@ -212,9 +212,7 @@ export function _encode_MacData(
 ) {
     if (!_cached_encoder_for_MacData) {
         _cached_encoder_for_MacData = function (
-            value: MacData,
-            elGetter: $.ASN1Encoder<MacData>
-        ): _Element {
+            value: MacData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

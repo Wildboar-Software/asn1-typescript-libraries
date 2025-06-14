@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,33 +14,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RequestState,
     _enum_for_RequestState,
-    RequestState_requested /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestState_provided /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    provided /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestState_denied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_RequestState,
-    _encode_RequestState,
-} from '../X790ASN1Module/RequestState.ta.mjs';
-export {
-    RequestState,
-    _enum_for_RequestState,
-    RequestState_requested /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    requested /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestState_provided /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    provided /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RequestState_denied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    denied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RequestState,
     _encode_RequestState,
 } from '../X790ASN1Module/RequestState.ta.mjs';
 import {
-    EscalationTime,
-    _decode_EscalationTime,
-    _encode_EscalationTime,
-} from '../X790ASN1Module/EscalationTime.ta.mjs';
-export {
     EscalationTime,
     _decode_EscalationTime,
     _encode_EscalationTime,
@@ -105,50 +27,11 @@ import {
     _decode_PersonReach,
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
-export {
-    PersonReach,
-    _decode_PersonReach,
-    _encode_PersonReach,
-} from '../X790ASN1Module/PersonReach.ta.mjs';
 import {
     OrgLevel,
-    OrgLevel_no_escalation /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_escalation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_first_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    first_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_second_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    second_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_third_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    third_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_fourth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    fourth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_fifth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    fifth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_sixth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    sixth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_OrgLevel,
     _encode_OrgLevel,
 } from '../X790ASN1Module/OrgLevel.ta.mjs';
-export {
-    OrgLevel,
-    OrgLevel_no_escalation /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_escalation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_first_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    first_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_second_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    second_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_third_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    third_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_fourth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    fourth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_fifth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    fifth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    OrgLevel_sixth_level /* IMPORTED_LONG_NAMED_INTEGER */,
-    sixth_level /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_OrgLevel,
-    _encode_OrgLevel,
-} from '../X790ASN1Module/OrgLevel.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION EscalationList_Item */
 /**
  * @summary EscalationList_Item
@@ -400,9 +283,7 @@ export function _encode_EscalationList_Item(
 ) {
     if (!_cached_encoder_for_EscalationList_Item) {
         _cached_encoder_for_EscalationList_Item = function (
-            value: EscalationList_Item,
-            elGetter: $.ASN1Encoder<EscalationList_Item>
-        ): _Element {
+            value: EscalationList_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

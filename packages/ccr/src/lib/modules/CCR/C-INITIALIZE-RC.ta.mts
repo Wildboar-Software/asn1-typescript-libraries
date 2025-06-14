@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
   TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,19 +15,7 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   C_INITIALIZE_RC_version_number,
-  C_INITIALIZE_RC_version_number_version1 /* IMPORTED_LONG_NAMED_BIT */,
-  version1 /* IMPORTED_SHORT_NAMED_BIT */,
   C_INITIALIZE_RC_version_number_version2 /* IMPORTED_LONG_NAMED_BIT */,
-  version2 /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_C_INITIALIZE_RC_version_number,
-  _encode_C_INITIALIZE_RC_version_number,
-} from '../CCR/C-INITIALIZE-RC-version-number.ta.mjs';
-export {
-  C_INITIALIZE_RC_version_number,
-  C_INITIALIZE_RC_version_number_version1 /* IMPORTED_LONG_NAMED_BIT */,
-  version1 /* IMPORTED_SHORT_NAMED_BIT */,
-  C_INITIALIZE_RC_version_number_version2 /* IMPORTED_LONG_NAMED_BIT */,
-  version2 /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_C_INITIALIZE_RC_version_number,
   _encode_C_INITIALIZE_RC_version_number,
 } from '../CCR/C-INITIALIZE-RC-version-number.ta.mjs';
@@ -89,42 +24,12 @@ import {
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
-export {
-  User_data,
-  _decode_User_data,
-  _encode_User_data,
-} from '../CCR/User-data.ta.mjs';
 import {
   Ccr_requirements,
   Ccr_requirements_static_commitment /* IMPORTED_LONG_NAMED_BIT */,
-  static_commitment /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_dynamic_commitment /* IMPORTED_LONG_NAMED_BIT */,
-  dynamic_commitment /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_nochange_completion /* IMPORTED_LONG_NAMED_BIT */,
-  nochange_completion /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_cancel /* IMPORTED_LONG_NAMED_BIT */,
-  cancel /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_overlapped_recovery /* IMPORTED_LONG_NAMED_BIT */,
-  overlapped_recovery /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_Ccr_requirements,
   _encode_Ccr_requirements,
 } from '../CCR/Ccr-requirements.ta.mjs';
-export {
-  Ccr_requirements,
-  Ccr_requirements_static_commitment /* IMPORTED_LONG_NAMED_BIT */,
-  static_commitment /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_dynamic_commitment /* IMPORTED_LONG_NAMED_BIT */,
-  dynamic_commitment /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_nochange_completion /* IMPORTED_LONG_NAMED_BIT */,
-  nochange_completion /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_cancel /* IMPORTED_LONG_NAMED_BIT */,
-  cancel /* IMPORTED_SHORT_NAMED_BIT */,
-  Ccr_requirements_overlapped_recovery /* IMPORTED_LONG_NAMED_BIT */,
-  overlapped_recovery /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_Ccr_requirements,
-  _encode_Ccr_requirements,
-} from '../CCR/Ccr-requirements.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION C_INITIALIZE_RC */
 /**
  * @summary C_INITIALIZE_RC
@@ -404,9 +309,7 @@ export function _encode_C_INITIALIZE_RC(
       12,
       () =>
         function (
-          value: C_INITIALIZE_RC,
-          elGetter: $.ASN1Encoder<C_INITIALIZE_RC>
-        ): _Element {
+          value: C_INITIALIZE_RC        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat(

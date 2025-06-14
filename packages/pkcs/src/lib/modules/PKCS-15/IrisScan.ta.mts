@@ -11,17 +11,6 @@ import {
     _encode_IrisScan_eye,
     _enum_for_IrisScan_eye,
 } from "../PKCS-15/IrisScan-eye.ta.mjs";
-export {
-    IrisScan_eye,
-    IrisScan_eye_left /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IrisScan_eye_right /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    left /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    right /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_IrisScan_eye,
-    _encode_IrisScan_eye,
-    _enum_for_IrisScan_eye,
-} from "../PKCS-15/IrisScan-eye.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IrisScan */
 /**
  * @summary IrisScan
@@ -176,9 +165,7 @@ export function _encode_IrisScan(
 ) {
     if (!_cached_encoder_for_IrisScan) {
         _cached_encoder_for_IrisScan = function (
-            value: IrisScan,
-            elGetter: $.ASN1Encoder<IrisScan>
-        ): _Element {
+            value: IrisScan        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
 import { id_data } from "../CryptographicMessageSyntax-2010/id-data.va.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { id_data } from "../CryptographicMessageSyntax-2010/id-data.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_Data */
 /**
  * @summary ct_Data

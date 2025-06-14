@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,11 +12,7 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.mjs";
-export { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.mjs";
 import { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.mjs";
-export { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION CommunicationsInformation */
 /**
  * @summary CommunicationsInformation
@@ -224,7 +165,7 @@ let _cached_encoder_for_CommunicationsInformation: $.ASN1Encoder<CommunicationsI
  */
 export
 function _encode_CommunicationsInformation (value: CommunicationsInformation, elGetter: $.ASN1Encoder<CommunicationsInformation>) {
-    if (!_cached_encoder_for_CommunicationsInformation) { _cached_encoder_for_CommunicationsInformation = function (value: CommunicationsInformation, elGetter: $.ASN1Encoder<CommunicationsInformation>): _Element {
+    if (!_cached_encoder_for_CommunicationsInformation) { _cached_encoder_for_CommunicationsInformation = function (value: CommunicationsInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_InformationType(value.informationType, $.BER),

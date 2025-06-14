@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,28 +13,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ActionErrorInfo_errorStatus,
   _enum_for_ActionErrorInfo_errorStatus,
-  ActionErrorInfo_errorStatus_accessDenied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accessDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_noSuchAction /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  noSuchAction /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_noSuchArgument /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  noSuchArgument /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_invalidArgumentValue /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  invalidArgumentValue /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_ActionErrorInfo_errorStatus,
-  _encode_ActionErrorInfo_errorStatus,
-} from '../CMIP-1/ActionErrorInfo-errorStatus.ta.mjs';
-export {
-  ActionErrorInfo_errorStatus,
-  _enum_for_ActionErrorInfo_errorStatus,
-  ActionErrorInfo_errorStatus_accessDenied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accessDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_noSuchAction /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  noSuchAction /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_noSuchArgument /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  noSuchArgument /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ActionErrorInfo_errorStatus_invalidArgumentValue /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  invalidArgumentValue /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ActionErrorInfo_errorStatus,
   _encode_ActionErrorInfo_errorStatus,
 } from '../CMIP-1/ActionErrorInfo-errorStatus.ta.mjs';
@@ -99,12 +21,6 @@ import {
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
 } from '../CMIP-1/ActionErrorInfo-errorInfo.ta.mjs';
-export {
-  ActionErrorInfo_errorInfo,
-  _decode_ActionErrorInfo_errorInfo,
-  _encode_ActionErrorInfo_errorInfo,
-} from '../CMIP-1/ActionErrorInfo-errorInfo.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ActionErrorInfo */
 /**
  * @summary ActionErrorInfo
@@ -282,9 +198,7 @@ export function _encode_ActionErrorInfo(
 ) {
   if (!_cached_encoder_for_ActionErrorInfo) {
     _cached_encoder_for_ActionErrorInfo = function (
-      value: ActionErrorInfo,
-      elGetter: $.ASN1Encoder<ActionErrorInfo>
-    ): _Element {
+      value: ActionErrorInfo    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat(

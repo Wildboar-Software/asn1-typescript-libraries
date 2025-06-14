@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -70,27 +15,6 @@ import {
   C_NOCHANGE_RC_outcome,
   _enum_for_C_NOCHANGE_RC_outcome,
   C_NOCHANGE_RC_outcome_not_determined /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  not_determined /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_committed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  committed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_rolled_back /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  rolled_back /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_no_change /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  no_change /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_C_NOCHANGE_RC_outcome,
-  _encode_C_NOCHANGE_RC_outcome,
-} from '../CCR/C-NOCHANGE-RC-outcome.ta.mjs';
-export {
-  C_NOCHANGE_RC_outcome,
-  _enum_for_C_NOCHANGE_RC_outcome,
-  C_NOCHANGE_RC_outcome_not_determined /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  not_determined /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_committed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  committed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_rolled_back /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  rolled_back /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  C_NOCHANGE_RC_outcome_no_change /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  no_change /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_C_NOCHANGE_RC_outcome,
   _encode_C_NOCHANGE_RC_outcome,
 } from '../CCR/C-NOCHANGE-RC-outcome.ta.mjs';
@@ -99,12 +23,6 @@ import {
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
-export {
-  User_data,
-  _decode_User_data,
-  _encode_User_data,
-} from '../CCR/User-data.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION C_NOCHANGE_RC */
 /**
  * @summary C_NOCHANGE_RC
@@ -319,9 +237,7 @@ export function _encode_C_NOCHANGE_RC(
       14,
       () =>
         function (
-          value: C_NOCHANGE_RC,
-          elGetter: $.ASN1Encoder<C_NOCHANGE_RC>
-        ): _Element {
+          value: C_NOCHANGE_RC        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat(

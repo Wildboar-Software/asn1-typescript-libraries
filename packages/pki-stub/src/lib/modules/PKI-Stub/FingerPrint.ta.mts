@@ -33,7 +33,7 @@ import {
  *
  * @class
  */
-export class FingerPrint<ToBeFingerprinted> {
+export class FingerPrint<_ToBeFingerprinted> {
     constructor(
         /**
          * @summary `algorithmIdentifier`.
@@ -180,7 +180,7 @@ export function _get_encoder_for_FingerPrint<ToBeFingerprinted>(
 ) {
     return function (
         value: FingerPrint<ToBeFingerprinted>,
-        elGetter: $.ASN1Encoder<FingerPrint<ToBeFingerprinted>>
+        _elGetter: $.ASN1Encoder<FingerPrint<ToBeFingerprinted>>
     ): _Element {
         const components: _Element[] = [
             /* REQUIRED   */ _encode_AlgorithmIdentifier(

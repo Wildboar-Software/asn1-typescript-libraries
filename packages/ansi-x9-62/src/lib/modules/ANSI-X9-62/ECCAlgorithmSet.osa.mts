@@ -9,20 +9,6 @@ import { ECCAlgorithmSet_Union5_Intersection0_Element } from "./ECCAlgorithmSet-
 import { ECCAlgorithmSet_Union6_Intersection0_Element } from "./ECCAlgorithmSet-Union6-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union7_Intersection0_Element } from "./ECCAlgorithmSet-Union7-Intersection0-Element.oa.mjs";
 import { ECCAlgorithmSet_Union8_Intersection0_Element } from "./ECCAlgorithmSet-Union8-Intersection0-Element.oa.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { ecdsa_with_Recommended } from "../ANSI-X9-62/ecdsa-with-Recommended.va.mjs";
-export { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.mjs";
-export { ecdsa_with_Sha224 } from "../ANSI-X9-62/ecdsa-with-Sha224.va.mjs";
-export { ecdsa_with_Sha256 } from "../ANSI-X9-62/ecdsa-with-Sha256.va.mjs";
-export { ecdsa_with_Sha384 } from "../ANSI-X9-62/ecdsa-with-Sha384.va.mjs";
-export { ecdsa_with_Sha512 } from "../ANSI-X9-62/ecdsa-with-Sha512.va.mjs";
-export { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet */
 /**
  * @summary ECCAlgorithmSet

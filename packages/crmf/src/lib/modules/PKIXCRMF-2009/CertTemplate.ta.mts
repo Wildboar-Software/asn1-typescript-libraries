@@ -390,9 +390,7 @@ export function _encode_CertTemplate(
 ) {
     if (!_cached_encoder_for_CertTemplate) {
         _cached_encoder_for_CertTemplate = function (
-            value: CertTemplate,
-            elGetter: $.ASN1Encoder<CertTemplate>
-        ): _Element {
+            value: CertTemplate        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

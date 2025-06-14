@@ -20,32 +20,6 @@ import {
     _decode_UnprotectedAttributes,
     _encode_UnprotectedAttributes,
 } from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../CryptographicMessageSyntax/EncryptedContentInfo.ta.mjs";
-export {
-    UnprotectedAttributes,
-    _decode_UnprotectedAttributes,
-    _encode_UnprotectedAttributes,
-} from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedData */
 /**
  * @summary EncryptedData
@@ -240,9 +214,7 @@ export function _encode_EncryptedData(
 ) {
     if (!_cached_encoder_for_EncryptedData) {
         _cached_encoder_for_EncryptedData = function (
-            value: EncryptedData,
-            elGetter: $.ASN1Encoder<EncryptedData>
-        ): _Element {
+            value: EncryptedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

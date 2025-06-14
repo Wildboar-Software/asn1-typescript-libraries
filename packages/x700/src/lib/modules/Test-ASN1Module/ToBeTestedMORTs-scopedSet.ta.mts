@@ -76,7 +76,8 @@ export {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-import { Scope, Scope_namedNumbers_baseObject, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope.ta.mjs';
+import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope.ta.mjs';
+import { Scope_namedNumbers_baseObject } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope-namedNumbers.ta.mjs';
 export { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip/src/lib/modules/CMIP-1/Scope.ta.mjs';
 import {
     CMISFilter,

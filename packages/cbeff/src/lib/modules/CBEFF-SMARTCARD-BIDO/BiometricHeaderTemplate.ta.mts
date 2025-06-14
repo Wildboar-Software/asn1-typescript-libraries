@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,27 +13,15 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
-export { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
 import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
-export { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
 import { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
-export { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
 import { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
-export { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
 import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
-export { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
 import { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
-export { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
 import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
-export { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
 import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
-export { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
 import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
-export { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
 import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
-export { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION BiometricHeaderTemplate */
 /**
  * @summary BiometricHeaderTemplate
@@ -349,7 +283,7 @@ let _cached_encoder_for_BiometricHeaderTemplate: $.ASN1Encoder<BiometricHeaderTe
  */
 export
 function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>) {
-    if (!_cached_encoder_for_BiometricHeaderTemplate) { _cached_encoder_for_BiometricHeaderTemplate = function (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>): _Element {
+    if (!_cached_encoder_for_BiometricHeaderTemplate) { _cached_encoder_for_BiometricHeaderTemplate = function (value: BiometricHeaderTemplate): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.patronHeaderVersion === undefined || $.deepEq(value.patronHeaderVersion, BiometricHeaderTemplate._default_value_for_patronHeaderVersion) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_PatronHeaderVersion, $.BER)(value.patronHeaderVersion, $.BER)),

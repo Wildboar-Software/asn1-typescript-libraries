@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,32 +16,9 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     BridgeRollArg_Item_bridgeRollOperation,
     _enum_for_BridgeRollArg_Item_bridgeRollOperation,
-    BridgeRollArg_Item_bridgeRollOperation_bridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    bridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    BridgeRollArg_Item_bridgeRollOperation_roll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    roll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    BridgeRollArg_Item_bridgeRollOperation_releaseBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    releaseBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_BridgeRollArg_Item_bridgeRollOperation,
-    _encode_BridgeRollArg_Item_bridgeRollOperation,
-} from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta.mjs';
-export {
-    BridgeRollArg_Item_bridgeRollOperation,
-    _enum_for_BridgeRollArg_Item_bridgeRollOperation,
-    BridgeRollArg_Item_bridgeRollOperation_bridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    bridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    BridgeRollArg_Item_bridgeRollOperation_roll /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    roll /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    BridgeRollArg_Item_bridgeRollOperation_releaseBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    releaseBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_BridgeRollArg_Item_bridgeRollOperation,
     _encode_BridgeRollArg_Item_bridgeRollOperation,
 } from '../M3100ASN1TypeModule5/BridgeRollArg-Item-bridgeRollOperation.ta.mjs';
@@ -105,12 +27,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-export {
-    ManagementExtension,
-    _decode_ManagementExtension,
-    _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BridgeRollArg_Item */
 /**
  * @summary BridgeRollArg_Item
@@ -343,9 +259,7 @@ export function _encode_BridgeRollArg_Item(
 ) {
     if (!_cached_encoder_for_BridgeRollArg_Item) {
         _cached_encoder_for_BridgeRollArg_Item = function (
-            value: BridgeRollArg_Item,
-            elGetter: $.ASN1Encoder<BridgeRollArg_Item>
-        ): _Element {
+            value: BridgeRollArg_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

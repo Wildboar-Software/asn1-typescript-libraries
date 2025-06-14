@@ -3,10 +3,6 @@ import { ObjectIdentifier as _OID } from "asn1-ts";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
 import { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export { CRLBag, _decode_CRLBag, _encode_CRLBag } from "../PKCS-12/CRLBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION crlBag */
 /**
  * @summary crlBag

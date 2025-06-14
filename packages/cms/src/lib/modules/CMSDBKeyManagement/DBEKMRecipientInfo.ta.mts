@@ -11,17 +11,6 @@ import {
     _decode_MasterKeyEncryptedHMACkey,
     _encode_MasterKeyEncryptedHMACkey,
 } from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
-export {
-    DatabaseServerToKeyManager,
-    _decode_DatabaseServerToKeyManager,
-    _encode_DatabaseServerToKeyManager,
-} from "../CMSDBKeyManagement/DatabaseServerToKeyManager.ta.mjs";
-export {
-    MasterKeyEncryptedHMACkey,
-    _decode_MasterKeyEncryptedHMACkey,
-    _encode_MasterKeyEncryptedHMACkey,
-} from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DBEKMRecipientInfo */
 /**
  * @summary DBEKMRecipientInfo

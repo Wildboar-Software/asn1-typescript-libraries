@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
-export { DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MessageDigestAlgs */
 /**
  * @summary MessageDigestAlgs

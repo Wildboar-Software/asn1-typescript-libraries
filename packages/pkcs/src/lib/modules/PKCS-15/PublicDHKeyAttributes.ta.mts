@@ -211,9 +211,7 @@ export function _encode_PublicDHKeyAttributes(
 ) {
     if (!_cached_encoder_for_PublicDHKeyAttributes) {
         _cached_encoder_for_PublicDHKeyAttributes = function (
-            value: PublicDHKeyAttributes,
-            elGetter: $.ASN1Encoder<PublicDHKeyAttributes>
-        ): _Element {
+            value: PublicDHKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

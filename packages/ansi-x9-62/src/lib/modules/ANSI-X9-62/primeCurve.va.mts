@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
-export { ellipticCurve } from "../ANSI-X9-62/ellipticCurve.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION primeCurve */
 /**
  * @summary primeCurve

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-export {
-  BioAPI_HANDLE,
-  _decode_BioAPI_HANDLE,
-  _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
-  _decode_BioAPI_UNIT_ID,
-  _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta.mjs';
-export {
   BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
@@ -89,36 +23,9 @@ export {
 import {
   BioAPI_INDICATOR_STATUS,
   _enum_for_BioAPI_INDICATOR_STATUS,
-  BioAPI_INDICATOR_STATUS_accept /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accept /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_reject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  reject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_ready /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  ready /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_busy /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  busy /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_failure /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
 } from '../BIP/BioAPI-INDICATOR-STATUS.ta.mjs';
-export {
-  BioAPI_INDICATOR_STATUS,
-  _enum_for_BioAPI_INDICATOR_STATUS,
-  BioAPI_INDICATOR_STATUS_accept /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  accept /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_reject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  reject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_ready /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  ready /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_busy /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  busy /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_INDICATOR_STATUS_failure /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  failure /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_INDICATOR_STATUS,
-  _encode_BioAPI_INDICATOR_STATUS,
-} from '../BIP/BioAPI-INDICATOR-STATUS.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION SetIndicatorStatus_RequestParams */
 /**
  * @summary SetIndicatorStatus_RequestParams
@@ -312,9 +219,7 @@ export function _encode_SetIndicatorStatus_RequestParams(
 ) {
   if (!_cached_encoder_for_SetIndicatorStatus_RequestParams) {
     _cached_encoder_for_SetIndicatorStatus_RequestParams = function (
-      value: SetIndicatorStatus_RequestParams,
-      elGetter: $.ASN1Encoder<SetIndicatorStatus_RequestParams>
-    ): _Element {
+      value: SetIndicatorStatus_RequestParams    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

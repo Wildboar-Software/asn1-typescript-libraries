@@ -11,17 +11,6 @@ import {
     _get_decoder_for_EncryptedContentInfoType,
     _get_encoder_for_EncryptedContentInfoType,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta.mjs";
-export {
-    ContentEncryptionAlgorithmIdentifier,
-    _decode_ContentEncryptionAlgorithmIdentifier,
-    _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    EncryptedContentInfoType,
-    _get_decoder_for_EncryptedContentInfoType,
-    _get_encoder_for_EncryptedContentInfoType,
-} from "../CryptographicMessageSyntax-2010/EncryptedContentInfoType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**
  * @summary EncryptedContentInfo

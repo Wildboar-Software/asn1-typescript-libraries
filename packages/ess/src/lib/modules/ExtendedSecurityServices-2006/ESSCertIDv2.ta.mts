@@ -223,9 +223,7 @@ export function _encode_ESSCertIDv2(
 ) {
     if (!_cached_encoder_for_ESSCertIDv2) {
         _cached_encoder_for_ESSCertIDv2 = function (
-            value: ESSCertIDv2,
-            elGetter: $.ASN1Encoder<ESSCertIDv2>
-        ): _Element {
+            value: ESSCertIDv2        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

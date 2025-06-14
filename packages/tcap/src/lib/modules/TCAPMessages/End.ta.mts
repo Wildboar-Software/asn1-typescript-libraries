@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_DestTransactionID,
   _encode_DestTransactionID,
 } from '../TCAPMessages/DestTransactionID.ta.mjs';
-export {
-  DestTransactionID,
-  _decode_DestTransactionID,
-  _encode_DestTransactionID,
-} from '../TCAPMessages/DestTransactionID.ta.mjs';
 import {
-  DialoguePortion,
-  _decode_DialoguePortion,
-  _encode_DialoguePortion,
-} from '../TCAPMessages/DialoguePortion.ta.mjs';
-export {
   DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
@@ -91,12 +26,6 @@ import {
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
-export {
-  ComponentPortion,
-  _decode_ComponentPortion,
-  _encode_ComponentPortion,
-} from '../TCAPMessages/ComponentPortion.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION End */
 /**
  * @summary End
@@ -278,9 +207,7 @@ let _cached_encoder_for_End: $.ASN1Encoder<End> | null = null;
 export function _encode_End(value: End, elGetter: $.ASN1Encoder<End>) {
   if (!_cached_encoder_for_End) {
     _cached_encoder_for_End = function (
-      value: End,
-      elGetter: $.ASN1Encoder<End>
-    ): _Element {
+      value: End    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

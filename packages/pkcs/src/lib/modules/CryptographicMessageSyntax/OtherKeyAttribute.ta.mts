@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OTHER_KEY_ATTRIBUTE } from "../CryptographicMessageSyntax/OTHER-KEY-ATTRIBUTE.oca.mjs";
-export { OtherKeyAttributeTable } from "../CryptographicMessageSyntax/OtherKeyAttributeTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttribute */
 /**
  * @summary OtherKeyAttribute
@@ -183,9 +180,7 @@ export function _encode_OtherKeyAttribute(
 ) {
     if (!_cached_encoder_for_OtherKeyAttribute) {
         _cached_encoder_for_OtherKeyAttribute = function (
-            value: OtherKeyAttribute,
-            elGetter: $.ASN1Encoder<OtherKeyAttribute>
-        ): _Element {
+            value: OtherKeyAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

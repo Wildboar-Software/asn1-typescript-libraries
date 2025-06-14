@@ -16,22 +16,6 @@ import {
     _decode_KeyTransRecipientInfo,
     _encode_KeyTransRecipientInfo,
 } from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta.mjs";
-export {
-    KEKRecipientInfo,
-    _decode_KEKRecipientInfo,
-    _encode_KEKRecipientInfo,
-} from "../CryptographicMessageSyntax/KEKRecipientInfo.ta.mjs";
-export {
-    KeyAgreeRecipientInfo,
-    _decode_KeyAgreeRecipientInfo,
-    _encode_KeyAgreeRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyAgreeRecipientInfo.ta.mjs";
-export {
-    KeyTransRecipientInfo,
-    _decode_KeyTransRecipientInfo,
-    _encode_KeyTransRecipientInfo,
-} from "../CryptographicMessageSyntax/KeyTransRecipientInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**
  * @summary RecipientInfo

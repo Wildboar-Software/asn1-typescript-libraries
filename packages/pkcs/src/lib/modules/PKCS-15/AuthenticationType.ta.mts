@@ -26,32 +26,6 @@ import {
     _decode_PinAttributes,
     _encode_PinAttributes,
 } from "../PKCS-15/PinAttributes.ta.mjs";
-export {
-    AuthenticationObject,
-    _get_decoder_for_AuthenticationObject,
-    _get_encoder_for_AuthenticationObject,
-} from "../PKCS-15/AuthenticationObject.ta.mjs";
-export {
-    AuthKeyAttributes,
-    _decode_AuthKeyAttributes,
-    _encode_AuthKeyAttributes,
-} from "../PKCS-15/AuthKeyAttributes.ta.mjs";
-export {
-    BiometricAttributes,
-    _decode_BiometricAttributes,
-    _encode_BiometricAttributes,
-} from "../PKCS-15/BiometricAttributes.ta.mjs";
-export {
-    ExternalAuthObjectAttributes,
-    _decode_ExternalAuthObjectAttributes,
-    _encode_ExternalAuthObjectAttributes,
-} from "../PKCS-15/ExternalAuthObjectAttributes.ta.mjs";
-export {
-    PinAttributes,
-    _decode_PinAttributes,
-    _encode_PinAttributes,
-} from "../PKCS-15/PinAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticationType */
 /**
  * @summary AuthenticationType

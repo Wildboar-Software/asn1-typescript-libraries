@@ -15,21 +15,6 @@ import {
     _decode_SinglePubInfo,
     _encode_SinglePubInfo,
 } from "../PKIXCRMF-2009/SinglePubInfo.ta.mjs";
-export {
-    dontPublish /* IMPORTED_SHORT_NAMED_INTEGER */,
-    PKIPublicationInfo_action,
-    PKIPublicationInfo_action_dontPublish /* IMPORTED_LONG_NAMED_INTEGER */,
-    PKIPublicationInfo_action_pleasePublish /* IMPORTED_LONG_NAMED_INTEGER */,
-    pleasePublish /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_PKIPublicationInfo_action,
-    _encode_PKIPublicationInfo_action,
-} from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta.mjs";
-export {
-    SinglePubInfo,
-    _decode_SinglePubInfo,
-    _encode_SinglePubInfo,
-} from "../PKIXCRMF-2009/SinglePubInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKIPublicationInfo */
 /**
  * @summary PKIPublicationInfo
@@ -202,9 +187,7 @@ export function _encode_PKIPublicationInfo(
 ) {
     if (!_cached_encoder_for_PKIPublicationInfo) {
         _cached_encoder_for_PKIPublicationInfo = function (
-            value: PKIPublicationInfo,
-            elGetter: $.ASN1Encoder<PKIPublicationInfo>
-        ): _Element {
+            value: PKIPublicationInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

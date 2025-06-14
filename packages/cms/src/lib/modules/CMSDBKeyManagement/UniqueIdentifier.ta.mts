@@ -6,12 +6,6 @@ import {
     _decode_UniqueID,
     _encode_UniqueID,
 } from "../CMSDBKeyManagement/UniqueID.ta.mjs";
-export {
-    UniqueID,
-    _decode_UniqueID,
-    _encode_UniqueID,
-} from "../CMSDBKeyManagement/UniqueID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniqueIdentifier */
 /**
  * @summary UniqueIdentifier

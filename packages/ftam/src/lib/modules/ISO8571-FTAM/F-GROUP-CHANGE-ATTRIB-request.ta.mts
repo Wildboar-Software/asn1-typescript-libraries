@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,35 +16,12 @@ import {
   _decode_Change_Attributes,
   _encode_Change_Attributes,
 } from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
-export {
-  Change_Attributes,
-  _decode_Change_Attributes,
-  _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
 import {
   Error_Action,
-  Error_Action_terminate /* IMPORTED_LONG_NAMED_INTEGER */,
-  terminate /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Error_Action_continue_ /* IMPORTED_LONG_NAMED_INTEGER */,
-  continue_ /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Error_Action,
-  _encode_Error_Action,
-} from '../ISO8571-FTAM/Error-Action.ta.mjs';
-export {
-  Error_Action,
-  Error_Action_terminate /* IMPORTED_LONG_NAMED_INTEGER */,
-  terminate /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Error_Action_continue_ /* IMPORTED_LONG_NAMED_INTEGER */,
-  continue_ /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Error_Action,
   _encode_Error_Action,
 } from '../ISO8571-FTAM/Error-Action.ta.mjs';
 import {
-  Request_Operation_Result,
-  _decode_Request_Operation_Result,
-  _encode_Request_Operation_Result,
-} from '../ISO8571-FTAM/Request-Operation-Result.ta.mjs';
-export {
   Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
@@ -109,12 +31,6 @@ import {
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-export {
-  Shared_ASE_Information,
-  _decode_Shared_ASE_Information,
-  _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_GROUP_CHANGE_ATTRIB_request */
 /**
  * @summary F_GROUP_CHANGE_ATTRIB_request
@@ -331,9 +247,7 @@ export function _encode_F_GROUP_CHANGE_ATTRIB_request(
 ) {
   if (!_cached_encoder_for_F_GROUP_CHANGE_ATTRIB_request) {
     _cached_encoder_for_F_GROUP_CHANGE_ATTRIB_request = function (
-      value: F_GROUP_CHANGE_ATTRIB_request,
-      elGetter: $.ASN1Encoder<F_GROUP_CHANGE_ATTRIB_request>
-    ): _Element {
+      value: F_GROUP_CHANGE_ATTRIB_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

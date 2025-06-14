@@ -1,61 +1,10 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
   INTEGER,
-  BIT_STRING,
   OCTET_STRING,
-  NULL,
   OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
   GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +20,7 @@ import {
   _decode_CertChecks,
   _encode_CertChecks,
 } from '../SCVP-2009/CertChecks.ta.mjs';
-export {
-  CertChecks,
-  _decode_CertChecks,
-  _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta.mjs';
 import {
-  WantBack,
-  _decode_WantBack,
-  _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta.mjs';
-export {
   WantBack,
   _decode_WantBack,
   _encode_WantBack,
@@ -91,32 +30,9 @@ import {
   _decode_AuthPolicy,
   _encode_AuthPolicy,
 } from '../SCVP-2009/AuthPolicy.ta.mjs';
-export {
-  AuthPolicy,
-  _decode_AuthPolicy,
-  _encode_AuthPolicy,
-} from '../SCVP-2009/AuthPolicy.ta.mjs';
 import {
   ResponseTypes,
   _enum_for_ResponseTypes,
-  ResponseTypes_cached_only /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cached_only /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ResponseTypes_non_cached_only /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  non_cached_only /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ResponseTypes_cached_and_non_cached /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cached_and_non_cached /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_ResponseTypes,
-  _encode_ResponseTypes,
-} from '../SCVP-2009/ResponseTypes.ta.mjs';
-export {
-  ResponseTypes,
-  _enum_for_ResponseTypes,
-  ResponseTypes_cached_only /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cached_only /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ResponseTypes_non_cached_only /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  non_cached_only /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ResponseTypes_cached_and_non_cached /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cached_and_non_cached /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ResponseTypes,
   _encode_ResponseTypes,
 } from '../SCVP-2009/ResponseTypes.ta.mjs';
@@ -125,34 +41,8 @@ import {
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
 } from '../SCVP-2009/RespValidationPolicy.ta.mjs';
-export {
-  RespValidationPolicy,
-  _decode_RespValidationPolicy,
-  _encode_RespValidationPolicy,
-} from '../SCVP-2009/RespValidationPolicy.ta.mjs';
 import {
   RevocationInfoTypes,
-  RevocationInfoTypes_fullCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  fullCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_deltaCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  deltaCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_indirectCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  indirectCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_oCSPResponses /* IMPORTED_LONG_NAMED_BIT */,
-  oCSPResponses /* IMPORTED_SHORT_NAMED_BIT */,
-  _decode_RevocationInfoTypes,
-  _encode_RevocationInfoTypes,
-} from '../SCVP-2009/RevocationInfoTypes.ta.mjs';
-export {
-  RevocationInfoTypes,
-  RevocationInfoTypes_fullCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  fullCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_deltaCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  deltaCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_indirectCRLs /* IMPORTED_LONG_NAMED_BIT */,
-  indirectCRLs /* IMPORTED_SHORT_NAMED_BIT */,
-  RevocationInfoTypes_oCSPResponses /* IMPORTED_LONG_NAMED_BIT */,
-  oCSPResponses /* IMPORTED_SHORT_NAMED_BIT */,
   _decode_RevocationInfoTypes,
   _encode_RevocationInfoTypes,
 } from '../SCVP-2009/RevocationInfoTypes.ta.mjs';
@@ -737,9 +627,7 @@ export function _encode_ValPolResponse(
 ) {
   if (!_cached_encoder_for_ValPolResponse) {
     _cached_encoder_for_ValPolResponse = function (
-      value: ValPolResponse,
-      elGetter: $.ASN1Encoder<ValPolResponse>
-    ): _Element {
+      value: ValPolResponse    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -154,8 +154,6 @@ export const _extension_additions_list_spec_for_PresentationAddress: $.Component
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
-let _cached_decoder_for_PresentationAddress: $.ASN1Decoder<PresentationAddress> | null =
-    null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_PresentationAddress */
 
 /* START_OF_SYMBOL_DEFINITION _decode_PresentationAddress */
@@ -226,9 +224,7 @@ export function _decode_PresentationAddress(el: _Element) {
  * @returns {_Element} The PresentationAddress, encoded as an ASN.1 Element.
  */
 export function _encode_PresentationAddress(
-    value: PresentationAddress,
-    elGetter: $.ASN1Encoder<PresentationAddress>
-) {
+    value: PresentationAddress) {
     const components: _Element[] = [];
     if (value.pSelector) {
         const c = $._encode_explicit(

@@ -11,12 +11,6 @@ import {
     _decode_ValidationParms,
     _encode_ValidationParms,
 } from "../ANSI-X9-42/ValidationParms.ta.mjs";
-export {
-    ValidationParms,
-    _decode_ValidationParms,
-    _encode_ValidationParms,
-} from "../ANSI-X9-42/ValidationParms.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DomainParameters */
 /**
  * @summary DomainParameters
@@ -243,9 +237,7 @@ export function _encode_DomainParameters(
 ) {
     if (!_cached_encoder_for_DomainParameters) {
         _cached_encoder_for_DomainParameters = function (
-            value: DomainParameters,
-            elGetter: $.ASN1Encoder<DomainParameters>
-        ): _Element {
+            value: DomainParameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

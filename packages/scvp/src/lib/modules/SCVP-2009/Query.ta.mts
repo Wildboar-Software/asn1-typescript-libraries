@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
   OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
   GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +18,7 @@ import {
   _decode_CertReferences,
   _encode_CertReferences,
 } from '../SCVP-2009/CertReferences.ta.mjs';
-export {
-  CertReferences,
-  _decode_CertReferences,
-  _encode_CertReferences,
-} from '../SCVP-2009/CertReferences.ta.mjs';
 import {
-  CertChecks,
-  _decode_CertChecks,
-  _encode_CertChecks,
-} from '../SCVP-2009/CertChecks.ta.mjs';
-export {
   CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
@@ -91,17 +28,7 @@ import {
   _decode_WantBack,
   _encode_WantBack,
 } from '../SCVP-2009/WantBack.ta.mjs';
-export {
-  WantBack,
-  _decode_WantBack,
-  _encode_WantBack,
-} from '../SCVP-2009/WantBack.ta.mjs';
 import {
-  ValidationPolicy,
-  _decode_ValidationPolicy,
-  _encode_ValidationPolicy,
-} from '../SCVP-2009/ValidationPolicy.ta.mjs';
-export {
   ValidationPolicy,
   _decode_ValidationPolicy,
   _encode_ValidationPolicy,
@@ -111,17 +38,7 @@ import {
   _decode_ResponseFlags,
   _encode_ResponseFlags,
 } from '../SCVP-2009/ResponseFlags.ta.mjs';
-export {
-  ResponseFlags,
-  _decode_ResponseFlags,
-  _encode_ResponseFlags,
-} from '../SCVP-2009/ResponseFlags.ta.mjs';
 import {
-  CertBundle,
-  _decode_CertBundle,
-  _encode_CertBundle,
-} from '../SCVP-2009/CertBundle.ta.mjs';
-export {
   CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
@@ -131,22 +48,11 @@ import {
   _decode_RevocationInfos,
   _encode_RevocationInfos,
 } from '../SCVP-2009/RevocationInfos.ta.mjs';
-export {
-  RevocationInfos,
-  _decode_RevocationInfos,
-  _encode_RevocationInfos,
-} from '../SCVP-2009/RevocationInfos.ta.mjs';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-export {
-  Extensions,
-  _decode_Extensions,
-  _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Query */
 /**
  * @summary Query
@@ -498,9 +404,7 @@ let _cached_encoder_for_Query: $.ASN1Encoder<Query> | null = null;
 export function _encode_Query(value: Query, elGetter: $.ASN1Encoder<Query>) {
   if (!_cached_encoder_for_Query) {
     _cached_encoder_for_Query = function (
-      value: Query,
-      elGetter: $.ASN1Encoder<Query>
-    ): _Element {
+      value: Query    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

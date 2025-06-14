@@ -166,9 +166,7 @@ export function _encode_PBEParameter(
 ) {
     if (!_cached_encoder_for_PBEParameter) {
         _cached_encoder_for_PBEParameter = function (
-            value: PBEParameter,
-            elGetter: $.ASN1Encoder<PBEParameter>
-        ): _Element {
+            value: PBEParameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

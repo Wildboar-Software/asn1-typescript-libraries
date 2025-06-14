@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,43 +16,13 @@ import {
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
 } from '../ISO8571-FTAM/Destination-File-Directory.ta.mjs';
-export {
-  Destination_File_Directory,
-  _decode_Destination_File_Directory,
-  _encode_Destination_File_Directory,
-} from '../ISO8571-FTAM/Destination-File-Directory.ta.mjs';
 import {
   Override,
-  Override_create_failure /* IMPORTED_LONG_NAMED_INTEGER */,
   create_failure /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_select_old_Object /* IMPORTED_LONG_NAMED_INTEGER */,
-  select_old_Object /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_delete_and_create_with_old_attributes /* IMPORTED_LONG_NAMED_INTEGER */,
-  delete_and_create_with_old_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_delete_and_create_with_new_attributes /* IMPORTED_LONG_NAMED_INTEGER */,
-  delete_and_create_with_new_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_Override,
-  _encode_Override,
-} from '../ISO8571-FTAM/Override.ta.mjs';
-export {
-  Override,
-  Override_create_failure /* IMPORTED_LONG_NAMED_INTEGER */,
-  create_failure /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_select_old_Object /* IMPORTED_LONG_NAMED_INTEGER */,
-  select_old_Object /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_delete_and_create_with_old_attributes /* IMPORTED_LONG_NAMED_INTEGER */,
-  delete_and_create_with_old_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
-  Override_delete_and_create_with_new_attributes /* IMPORTED_LONG_NAMED_INTEGER */,
-  delete_and_create_with_new_attributes /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Override,
   _encode_Override,
 } from '../ISO8571-FTAM/Override.ta.mjs';
 import {
-  Password,
-  _decode_Password,
-  _encode_Password,
-} from '../ISO8571-FTAM/Password.ta.mjs';
-export {
   Password,
   _decode_Password,
   _encode_Password,
@@ -117,17 +32,7 @@ import {
   _decode_Access_Passwords,
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
-export {
-  Access_Passwords,
-  _decode_Access_Passwords,
-  _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
-  _decode_Path_Access_Passwords,
-  _encode_Path_Access_Passwords,
-} from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
-export {
   Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
@@ -137,12 +42,6 @@ import {
   _decode_Change_Attributes,
   _encode_Change_Attributes,
 } from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
-export {
-  Change_Attributes,
-  _decode_Change_Attributes,
-  _encode_Change_Attributes,
-} from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_MOVE_request */
 /**
  * @summary F_MOVE_request
@@ -408,9 +307,7 @@ export function _encode_F_MOVE_request(
 ) {
   if (!_cached_encoder_for_F_MOVE_request) {
     _cached_encoder_for_F_MOVE_request = function (
-      value: F_MOVE_request,
-      elGetter: $.ASN1Encoder<F_MOVE_request>
-    ): _Element {
+      value: F_MOVE_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

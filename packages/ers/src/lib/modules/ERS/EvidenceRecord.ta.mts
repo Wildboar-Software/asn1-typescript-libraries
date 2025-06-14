@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,21 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { EvidenceRecord_version, EvidenceRecord_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
-export { EvidenceRecord_version, EvidenceRecord_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
+import { EvidenceRecord_version, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
 import { CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
-export { CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../ERS/EncryptionInfo.ta.mjs";
-export { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../ERS/EncryptionInfo.ta.mjs";
 import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
-export { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION EvidenceRecord */
 /**
  * @summary EvidenceRecord
@@ -265,7 +204,7 @@ let _cached_encoder_for_EvidenceRecord: $.ASN1Encoder<EvidenceRecord> | null = n
  */
 export
 function _encode_EvidenceRecord (value: EvidenceRecord, elGetter: $.ASN1Encoder<EvidenceRecord>) {
-    if (!_cached_encoder_for_EvidenceRecord) { _cached_encoder_for_EvidenceRecord = function (value: EvidenceRecord, elGetter: $.ASN1Encoder<EvidenceRecord>): _Element {
+    if (!_cached_encoder_for_EvidenceRecord) { _cached_encoder_for_EvidenceRecord = function (value: EvidenceRecord): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EvidenceRecord_version(value.version, $.BER),

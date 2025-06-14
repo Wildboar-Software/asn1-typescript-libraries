@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
 import { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.mjs";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
-export { kt_rsa } from "../CryptographicMessageSyntaxAlgorithms-2009/kt-rsa.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyTransportAlgs */
 /**
  * @summary KeyTransportAlgs

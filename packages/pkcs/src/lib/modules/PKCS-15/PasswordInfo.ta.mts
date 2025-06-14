@@ -11,8 +11,6 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-export { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PasswordInfo */
 /**
  * @summary PasswordInfo
@@ -197,9 +195,7 @@ export function _encode_PasswordInfo(
 ) {
     if (!_cached_encoder_for_PasswordInfo) {
         _cached_encoder_for_PasswordInfo = function (
-            value: PasswordInfo,
-            elGetter: $.ASN1Encoder<PasswordInfo>
-        ): _Element {
+            value: PasswordInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

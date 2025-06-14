@@ -11,17 +11,6 @@ import {
     _decode_CertBasedAuthenticationAttributes,
     _encode_CertBasedAuthenticationAttributes,
 } from "../PKCS-15/CertBasedAuthenticationAttributes.ta.mjs";
-export {
-    AuthKeyAttributes,
-    _decode_AuthKeyAttributes,
-    _encode_AuthKeyAttributes,
-} from "../PKCS-15/AuthKeyAttributes.ta.mjs";
-export {
-    CertBasedAuthenticationAttributes,
-    _decode_CertBasedAuthenticationAttributes,
-    _encode_CertBasedAuthenticationAttributes,
-} from "../PKCS-15/CertBasedAuthenticationAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExternalAuthObjectAttributes */
 /**
  * @summary ExternalAuthObjectAttributes

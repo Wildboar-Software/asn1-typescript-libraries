@@ -48,6 +48,8 @@ done
 
 ## To Do
 
+- [ ] Use `$.DER` where appropriate
+- [ ] Refactor `XSD` into a separate module
 - [ ] Export via `index.mts` in some packages
 - [ ] Documentation
 - [ ] Single-module exports

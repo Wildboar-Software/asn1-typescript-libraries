@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -68,33 +12,14 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   CBEFFVersion_cbeff_major,
-  CBEFFVersion_cbeff_major_version2 /* IMPORTED_LONG_NAMED_INTEGER */,
-  version2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_CBEFFVersion_cbeff_major,
-  _encode_CBEFFVersion_cbeff_major,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.mjs';
-export {
-  CBEFFVersion_cbeff_major,
-  CBEFFVersion_cbeff_major_version2 /* IMPORTED_LONG_NAMED_INTEGER */,
-  version2 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_major,
   _encode_CBEFFVersion_cbeff_major,
 } from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.mjs';
 import {
   CBEFFVersion_cbeff_minor,
-  CBEFFVersion_cbeff_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
-  version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_CBEFFVersion_cbeff_minor,
   _encode_CBEFFVersion_cbeff_minor,
 } from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.mjs';
-export {
-  CBEFFVersion_cbeff_minor,
-  CBEFFVersion_cbeff_minor_version0 /* IMPORTED_LONG_NAMED_INTEGER */,
-  version0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_CBEFFVersion_cbeff_minor,
-  _encode_CBEFFVersion_cbeff_minor,
-} from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CBEFFVersion */
 /**
  * @summary CBEFFVersion
@@ -251,9 +176,7 @@ export function _encode_CBEFFVersion(
 ) {
   if (!_cached_encoder_for_CBEFFVersion) {
     _cached_encoder_for_CBEFFVersion = function (
-      value: CBEFFVersion,
-      elGetter: $.ASN1Encoder<CBEFFVersion>
-    ): _Element {
+      value: CBEFFVersion    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

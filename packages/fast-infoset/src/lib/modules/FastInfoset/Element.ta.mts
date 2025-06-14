@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_NamespaceAttribute,
   _encode_NamespaceAttribute,
 } from '../FastInfoset/NamespaceAttribute.ta.mjs';
-export {
-  NamespaceAttribute,
-  _decode_NamespaceAttribute,
-  _encode_NamespaceAttribute,
-} from '../FastInfoset/NamespaceAttribute.ta.mjs';
 import {
-  QualifiedNameOrIndex,
-  _decode_QualifiedNameOrIndex,
-  _encode_QualifiedNameOrIndex,
-} from '../FastInfoset/QualifiedNameOrIndex.ta.mjs';
-export {
   QualifiedNameOrIndex,
   _decode_QualifiedNameOrIndex,
   _encode_QualifiedNameOrIndex,
@@ -91,22 +26,11 @@ import {
   _decode_Attribute,
   _encode_Attribute,
 } from '../FastInfoset/Attribute.ta.mjs';
-export {
-  Attribute,
-  _decode_Attribute,
-  _encode_Attribute,
-} from '../FastInfoset/Attribute.ta.mjs';
 import {
   Element_children_Item,
   _decode_Element_children_Item,
   _encode_Element_children_Item,
 } from '../FastInfoset/Element-children-Item.ta.mjs';
-export {
-  Element_children_Item,
-  _decode_Element_children_Item,
-  _encode_Element_children_Item,
-} from '../FastInfoset/Element-children-Item.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Element */
 /**
  * @summary Element
@@ -329,9 +253,7 @@ export function _encode_Element(
 ) {
   if (!_cached_encoder_for_Element) {
     _cached_encoder_for_Element = function (
-      value: Element,
-      elGetter: $.ASN1Encoder<Element>
-    ): _Element {
+      value: Element    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

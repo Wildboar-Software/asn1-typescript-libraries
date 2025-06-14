@@ -11,17 +11,6 @@ import {
     _decode_RecipientKeyIdentifier,
     _encode_RecipientKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/RecipientKeyIdentifier.ta.mjs";
-export {
-    IssuerAndSerialNumber,
-    _decode_IssuerAndSerialNumber,
-    _encode_IssuerAndSerialNumber,
-} from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta.mjs";
-export {
-    RecipientKeyIdentifier,
-    _decode_RecipientKeyIdentifier,
-    _encode_RecipientKeyIdentifier,
-} from "../CryptographicMessageSyntax-2010/RecipientKeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreeRecipientIdentifier */
 /**
  * @summary KeyAgreeRecipientIdentifier

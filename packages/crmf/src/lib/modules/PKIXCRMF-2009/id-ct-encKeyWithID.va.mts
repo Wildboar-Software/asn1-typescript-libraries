@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ct } from "../PKIXCRMF-2009/id-ct.va.mjs";
-export { id_ct } from "../PKIXCRMF-2009/id-ct.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ct_encKeyWithID */
 /**
  * @summary id_ct_encKeyWithID

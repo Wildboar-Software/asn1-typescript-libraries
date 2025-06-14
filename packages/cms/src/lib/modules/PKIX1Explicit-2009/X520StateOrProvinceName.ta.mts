@@ -6,8 +6,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-export { ub_state_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-state-name.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION X520StateOrProvinceName */
 /**
  * @summary X520StateOrProvinceName

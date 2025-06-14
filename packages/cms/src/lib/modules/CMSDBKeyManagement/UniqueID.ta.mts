@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniqueID */
 /**
  * @summary UniqueID
@@ -172,9 +170,7 @@ export function _encode_UniqueID(
 ) {
     if (!_cached_encoder_for_UniqueID) {
         _cached_encoder_for_UniqueID = function (
-            value: UniqueID,
-            elGetter: $.ASN1Encoder<UniqueID>
-        ): _Element {
+            value: UniqueID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

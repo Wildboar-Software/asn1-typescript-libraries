@@ -6,12 +6,6 @@ import {
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";
-export {
-    ReferencedValue,
-    _get_decoder_for_ReferencedValue,
-    _get_encoder_for_ReferencedValue,
-} from "../PKCS-15/ReferencedValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION LastUpdate */
 /**
  * @summary LastUpdate

@@ -11,12 +11,6 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax/ContentType.ta.mjs";
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncapsulatedContentInfo */
 /**
  * @summary EncapsulatedContentInfo
@@ -190,9 +184,7 @@ export function _encode_EncapsulatedContentInfo(
 ) {
     if (!_cached_encoder_for_EncapsulatedContentInfo) {
         _cached_encoder_for_EncapsulatedContentInfo = function (
-            value: EncapsulatedContentInfo,
-            elGetter: $.ASN1Encoder<EncapsulatedContentInfo>
-        ): _Element {
+            value: EncapsulatedContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

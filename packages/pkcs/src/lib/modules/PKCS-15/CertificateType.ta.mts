@@ -41,47 +41,6 @@ import {
     _decode_X9_68CertificateAttributes,
     _encode_X9_68CertificateAttributes,
 } from "../PKCS-15/X9-68CertificateAttributes.ta.mjs";
-export {
-    CertificateObject,
-    _get_decoder_for_CertificateObject,
-    _get_encoder_for_CertificateObject,
-} from "../PKCS-15/CertificateObject.ta.mjs";
-export {
-    CVCertificateAttributes,
-    _decode_CVCertificateAttributes,
-    _encode_CVCertificateAttributes,
-} from "../PKCS-15/CVCertificateAttributes.ta.mjs";
-export {
-    PGPCertificateAttributes,
-    _decode_PGPCertificateAttributes,
-    _encode_PGPCertificateAttributes,
-} from "../PKCS-15/PGPCertificateAttributes.ta.mjs";
-export {
-    SPKICertificateAttributes,
-    _decode_SPKICertificateAttributes,
-    _encode_SPKICertificateAttributes,
-} from "../PKCS-15/SPKICertificateAttributes.ta.mjs";
-export {
-    WTLSCertificateAttributes,
-    _decode_WTLSCertificateAttributes,
-    _encode_WTLSCertificateAttributes,
-} from "../PKCS-15/WTLSCertificateAttributes.ta.mjs";
-export {
-    X509AttributeCertificateAttributes,
-    _decode_X509AttributeCertificateAttributes,
-    _encode_X509AttributeCertificateAttributes,
-} from "../PKCS-15/X509AttributeCertificateAttributes.ta.mjs";
-export {
-    X509CertificateAttributes,
-    _decode_X509CertificateAttributes,
-    _encode_X509CertificateAttributes,
-} from "../PKCS-15/X509CertificateAttributes.ta.mjs";
-export {
-    X9_68CertificateAttributes,
-    _decode_X9_68CertificateAttributes,
-    _encode_X9_68CertificateAttributes,
-} from "../PKCS-15/X9-68CertificateAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateType */
 /**
  * @summary CertificateType

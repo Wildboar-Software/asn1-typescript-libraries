@@ -177,9 +177,7 @@ export function _encode_RC2_CBC_Parameter(
 ) {
     if (!_cached_encoder_for_RC2_CBC_Parameter) {
         _cached_encoder_for_RC2_CBC_Parameter = function (
-            value: RC2_CBC_Parameter,
-            elGetter: $.ASN1Encoder<RC2_CBC_Parameter>
-        ): _Element {
+            value: RC2_CBC_Parameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

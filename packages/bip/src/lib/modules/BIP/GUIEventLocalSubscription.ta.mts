@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
-export {
-  BioAPI_UUID,
-  _decode_BioAPI_UUID,
-  _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  EndpointIRI,
-  _decode_EndpointIRI,
-  _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta.mjs';
-export {
   EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
@@ -91,22 +27,11 @@ import {
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
-export {
-  BioAPI_HANDLE,
-  _decode_BioAPI_HANDLE,
-  _encode_BioAPI_HANDLE,
-} from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
   MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
-export {
-  MemoryAddress,
-  _decode_MemoryAddress,
-  _encode_MemoryAddress,
-} from '../BIP/MemoryAddress.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION GUIEventLocalSubscription */
 /**
  * @summary GUIEventLocalSubscription
@@ -461,9 +386,7 @@ export function _encode_GUIEventLocalSubscription(
 ) {
   if (!_cached_encoder_for_GUIEventLocalSubscription) {
     _cached_encoder_for_GUIEventLocalSubscription = function (
-      value: GUIEventLocalSubscription,
-      elGetter: $.ASN1Encoder<GUIEventLocalSubscription>
-    ): _Element {
+      value: GUIEventLocalSubscription    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

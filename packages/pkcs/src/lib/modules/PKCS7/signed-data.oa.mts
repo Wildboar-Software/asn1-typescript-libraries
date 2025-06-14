@@ -6,14 +6,6 @@ import {
     _decode_SignedData,
     _encode_SignedData,
 } from "../PKCS7/SignedData.ta.mjs";
-export { id_signed_data } from "../PKCS7/id-signed-data.va.mjs";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-export {
-    SignedData,
-    _decode_SignedData,
-    _encode_SignedData,
-} from "../PKCS7/SignedData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION signed_data */
 /**
  * @summary signed_data

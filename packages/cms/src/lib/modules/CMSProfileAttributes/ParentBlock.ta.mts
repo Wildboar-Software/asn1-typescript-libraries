@@ -6,12 +6,6 @@ import {
     _decode_HashPointer,
     _encode_HashPointer,
 } from "../CMSProfileAttributes/HashPointer.ta.mjs";
-export {
-    HashPointer,
-    _decode_HashPointer,
-    _encode_HashPointer,
-} from "../CMSProfileAttributes/HashPointer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ParentBlock */
 /**
  * @summary ParentBlock

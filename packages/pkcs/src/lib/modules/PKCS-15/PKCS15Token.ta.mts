@@ -20,24 +20,6 @@ import {
     _decode_PKCS15Token_version,
     _encode_PKCS15Token_version,
 } from "../PKCS-15/PKCS15Token-version.ta.mjs";
-export {
-    KeyManagementInfo,
-    _decode_KeyManagementInfo,
-    _encode_KeyManagementInfo,
-} from "../PKCS-15/KeyManagementInfo.ta.mjs";
-export {
-    PKCS15Objects,
-    _decode_PKCS15Objects,
-    _encode_PKCS15Objects,
-} from "../PKCS-15/PKCS15Objects.ta.mjs";
-export {
-    PKCS15Token_version,
-    PKCS15Token_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_PKCS15Token_version,
-    _encode_PKCS15Token_version,
-} from "../PKCS-15/PKCS15Token-version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS15Token */
 /**
  * @summary PKCS15Token
@@ -232,9 +214,7 @@ export function _encode_PKCS15Token(
 ) {
     if (!_cached_encoder_for_PKCS15Token) {
         _cached_encoder_for_PKCS15Token = function (
-            value: PKCS15Token,
-            elGetter: $.ASN1Encoder<PKCS15Token>
-        ): _Element {
+            value: PKCS15Token        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

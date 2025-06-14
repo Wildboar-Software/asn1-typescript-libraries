@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { signcrypted_components } from "../CMSObjectIdentifiers/signcrypted-components.va.mjs";
 import { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-export { signcrypted_components } from "../CMSObjectIdentifiers/signcrypted-components.va.mjs";
-export { MODE } from "../CMSSigncryption/MODE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION signcryptedComponents */
 /**
  * @summary signcryptedComponents

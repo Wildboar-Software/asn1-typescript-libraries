@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,18 +12,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-import { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.mjs";
-export { SpecifiedECDomainVersion, SpecifiedECDomainVersion_ecdpVer1 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer1 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer2 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer2 /* IMPORTED_SHORT_NAMED_INTEGER */, SpecifiedECDomainVersion_ecdpVer3 /* IMPORTED_LONG_NAMED_INTEGER */, ecdpVer3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.mjs";
+import { SpecifiedECDomainVersion, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.mjs";
 import { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta.mjs";
-export { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta.mjs";
 import { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.mjs";
-export { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.mjs";
 import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
-export { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
-export { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION SpecifiedECDomain */
 /**
  * @summary SpecifiedECDomain
@@ -294,7 +233,7 @@ let _cached_encoder_for_SpecifiedECDomain: $.ASN1Encoder<SpecifiedECDomain> | nu
  */
 export
 function _encode_SpecifiedECDomain (value: SpecifiedECDomain, elGetter: $.ASN1Encoder<SpecifiedECDomain>) {
-    if (!_cached_encoder_for_SpecifiedECDomain) { _cached_encoder_for_SpecifiedECDomain = function (value: SpecifiedECDomain, elGetter: $.ASN1Encoder<SpecifiedECDomain>): _Element {
+    if (!_cached_encoder_for_SpecifiedECDomain) { _cached_encoder_for_SpecifiedECDomain = function (value: SpecifiedECDomain): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_SpecifiedECDomainVersion(value.version, $.BER),

@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { aes } from "../PKCS5v2-1/aes.va.mjs";
-export { aes } from "../PKCS5v2-1/aes.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aes192_CBC_PAD */
 /**
  * @summary aes192_CBC_PAD

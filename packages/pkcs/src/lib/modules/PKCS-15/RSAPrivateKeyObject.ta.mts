@@ -316,9 +316,7 @@ export function _encode_RSAPrivateKeyObject(
 ) {
     if (!_cached_encoder_for_RSAPrivateKeyObject) {
         _cached_encoder_for_RSAPrivateKeyObject = function (
-            value: RSAPrivateKeyObject,
-            elGetter: $.ASN1Encoder<RSAPrivateKeyObject>
-        ): _Element {
+            value: RSAPrivateKeyObject        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

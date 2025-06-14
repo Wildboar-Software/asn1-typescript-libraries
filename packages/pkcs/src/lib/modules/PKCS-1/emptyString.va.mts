@@ -1,11 +1,5 @@
 /* eslint-disable */
 import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta.mjs";
-export {
-    EncodingParameters,
-    _decode_EncodingParameters,
-    _encode_EncodingParameters,
-} from "../PKCS-1/EncodingParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION emptyString */
 /**
  * @summary emptyString

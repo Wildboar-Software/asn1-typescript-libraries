@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_GUISelectEvent_AcknowledgementParams,
   _encode_GUISelectEvent_AcknowledgementParams,
 } from '../BIP/GUISelectEvent-AcknowledgementParams.ta.mjs';
-export {
-  GUISelectEvent_AcknowledgementParams,
-  _decode_GUISelectEvent_AcknowledgementParams,
-  _encode_GUISelectEvent_AcknowledgementParams,
-} from '../BIP/GUISelectEvent-AcknowledgementParams.ta.mjs';
 import {
-  GUIStateEvent_AcknowledgementParams,
-  _decode_GUIStateEvent_AcknowledgementParams,
-  _encode_GUIStateEvent_AcknowledgementParams,
-} from '../BIP/GUIStateEvent-AcknowledgementParams.ta.mjs';
-export {
   GUIStateEvent_AcknowledgementParams,
   _decode_GUIStateEvent_AcknowledgementParams,
   _encode_GUIStateEvent_AcknowledgementParams,
@@ -91,12 +25,6 @@ import {
   _decode_GUIProgressEvent_AcknowledgementParams,
   _encode_GUIProgressEvent_AcknowledgementParams,
 } from '../BIP/GUIProgressEvent-AcknowledgementParams.ta.mjs';
-export {
-  GUIProgressEvent_AcknowledgementParams,
-  _decode_GUIProgressEvent_AcknowledgementParams,
-  _encode_GUIProgressEvent_AcknowledgementParams,
-} from '../BIP/GUIProgressEvent-AcknowledgementParams.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BIPAcknowledgement_params */
 /**
  * @summary BIPAcknowledgement_params

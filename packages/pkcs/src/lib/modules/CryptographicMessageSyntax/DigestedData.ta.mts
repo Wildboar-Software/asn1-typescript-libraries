@@ -25,37 +25,6 @@ import {
     _decode_EncapsulatedContentInfo,
     _encode_EncapsulatedContentInfo,
 } from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
-export {
-    Digest,
-    _decode_Digest,
-    _encode_Digest,
-} from "../CryptographicMessageSyntax/Digest.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    EncapsulatedContentInfo,
-    _decode_EncapsulatedContentInfo,
-    _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DigestedData */
 /**
  * @summary DigestedData
@@ -258,9 +227,7 @@ export function _encode_DigestedData(
 ) {
     if (!_cached_encoder_for_DigestedData) {
         _cached_encoder_for_DigestedData = function (
-            value: DigestedData,
-            elGetter: $.ASN1Encoder<DigestedData>
-        ): _Element {
+            value: DigestedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

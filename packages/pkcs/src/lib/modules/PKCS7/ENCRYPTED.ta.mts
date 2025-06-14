@@ -17,7 +17,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *         -- of a definite-length BER-encoding of a value of --ToBeEnciphered})
  * ```
  */
-export type ENCRYPTED<ToBeEnciphered> = OCTET_STRING; // OctetStringType
+export type ENCRYPTED<_ToBeEnciphered> = OCTET_STRING; // OctetStringType
 /* END_OF_SYMBOL_DEFINITION ENCRYPTED */
 
 /* START_OF_SYMBOL_DEFINITION _get_decoder_for_ENCRYPTED */

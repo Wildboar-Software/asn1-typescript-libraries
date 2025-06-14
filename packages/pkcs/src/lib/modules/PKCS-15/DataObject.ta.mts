@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PKCS15Object,
     _get_encoder_for_PKCS15Object,
 } from "../PKCS-15/PKCS15Object.ta.mjs";
-export {
-    CommonDataObjectAttributes,
-    _decode_CommonDataObjectAttributes,
-    _encode_CommonDataObjectAttributes,
-} from "../PKCS-15/CommonDataObjectAttributes.ta.mjs";
-export {
-    PKCS15Object,
-    _get_decoder_for_PKCS15Object,
-    _get_encoder_for_PKCS15Object,
-} from "../PKCS-15/PKCS15Object.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataObject */
 /**
  * @summary DataObject

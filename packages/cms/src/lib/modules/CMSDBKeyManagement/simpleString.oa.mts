@@ -6,14 +6,6 @@ import {
     _encode_SimpleString,
 } from "../CMSDBKeyManagement/SimpleString.ta.mjs";
 import { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.mjs";
-export { DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.mjs";
-export {
-    SimpleString,
-    _decode_SimpleString,
-    _encode_SimpleString,
-} from "../CMSDBKeyManagement/SimpleString.ta.mjs";
-export { id_SimpleString } from "../CMSObjectIdentifiers/id-SimpleString.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION simpleString */
 /**
  * @summary simpleString

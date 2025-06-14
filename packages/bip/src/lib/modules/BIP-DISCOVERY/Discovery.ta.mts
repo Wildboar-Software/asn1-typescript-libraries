@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,24 +16,12 @@ import {
   _decode_ProtocolVersion,
   _encode_ProtocolVersion,
 } from '../BIP-DISCOVERY/ProtocolVersion.ta.mjs';
-export {
-  ProtocolVersion,
-  _decode_ProtocolVersion,
-  _encode_ProtocolVersion,
-} from '../BIP-DISCOVERY/ProtocolVersion.ta.mjs';
 import {
   IPAddress,
   _decode_IPAddress,
   _encode_IPAddress,
 } from '../BIP-DISCOVERY/IPAddress.ta.mjs';
-export {
-  IPAddress,
-  _decode_IPAddress,
-  _encode_IPAddress,
-} from '../BIP-DISCOVERY/IPAddress.ta.mjs';
 import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
-export { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Discovery */
 /**
  * @summary Discovery
@@ -302,9 +235,7 @@ export function _encode_Discovery(
 ) {
   if (!_cached_encoder_for_Discovery) {
     _cached_encoder_for_Discovery = function (
-      value: Discovery,
-      elGetter: $.ASN1Encoder<Discovery>
-    ): _Element {
+      value: Discovery    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat(

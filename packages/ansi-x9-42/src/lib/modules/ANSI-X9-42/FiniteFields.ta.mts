@@ -6,12 +6,6 @@ import {
     _decode_FieldID,
     _encode_FieldID,
 } from "../ANSI-X9-42/FieldID.ta.mjs";
-export {
-    FieldID,
-    _decode_FieldID,
-    _encode_FieldID,
-} from "../ANSI-X9-42/FieldID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FiniteFields */
 /**
  * @summary FiniteFields

@@ -6,14 +6,6 @@ import {
     _decode_SemanticsInformation,
     _encode_SemanticsInformation,
 } from "../PKIXqualified97/SemanticsInformation.ta.mjs";
-export { id_qcs_pkixQCSyntax_v1 } from "../PKIXqualified97/id-qcs-pkixQCSyntax-v1.va.mjs";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
-export {
-    SemanticsInformation,
-    _decode_SemanticsInformation,
-    _encode_SemanticsInformation,
-} from "../PKIXqualified97/SemanticsInformation.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION qcStatement_1 */
 /**
  * @summary qcStatement_1

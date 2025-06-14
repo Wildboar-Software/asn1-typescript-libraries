@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 import { c2tnb191v3 } from "./c2tnb191v3.va.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union6_Intersection0_Element */

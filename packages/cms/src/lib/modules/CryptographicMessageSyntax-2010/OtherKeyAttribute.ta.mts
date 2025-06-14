@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { KEY_ATTRIBUTE } from "../CryptographicMessageSyntax-2010/KEY-ATTRIBUTE.oca.mjs";
-export { SupportedKeyAttributes } from "../CryptographicMessageSyntax-2010/SupportedKeyAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherKeyAttribute */
 /**
  * @summary OtherKeyAttribute
@@ -160,9 +157,7 @@ export function _encode_OtherKeyAttribute(
 ) {
     if (!_cached_encoder_for_OtherKeyAttribute) {
         _cached_encoder_for_OtherKeyAttribute = function (
-            value: OtherKeyAttribute,
-            elGetter: $.ASN1Encoder<OtherKeyAttribute>
-        ): _Element {
+            value: OtherKeyAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

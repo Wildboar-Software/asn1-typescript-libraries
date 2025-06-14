@@ -6,12 +6,6 @@ import {
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
-export {
-    SignerIdentifier,
-    _decode_SignerIdentifier,
-    _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyPairIdentifier */
 /**
  * @summary KeyPairIdentifier

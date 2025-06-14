@@ -6,12 +6,6 @@ import {
     _decode_SignerInfo,
     _encode_SignerInfo,
 } from "../PKCS7/SignerInfo.ta.mjs";
-export {
-    SignerInfo,
-    _decode_SignerInfo,
-    _encode_SignerInfo,
-} from "../PKCS7/SignerInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignerInfos */
 /**
  * @summary SignerInfos

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_Element,
   _encode_Element,
 } from '../FastInfoset/Element.ta.mjs';
-export {
-  Element,
-  _decode_Element,
-  _encode_Element,
-} from '../FastInfoset/Element.ta.mjs';
 import {
-  ProcessingInstruction,
-  _decode_ProcessingInstruction,
-  _encode_ProcessingInstruction,
-} from '../FastInfoset/ProcessingInstruction.ta.mjs';
-export {
   ProcessingInstruction,
   _decode_ProcessingInstruction,
   _encode_ProcessingInstruction,
@@ -91,17 +25,7 @@ import {
   _decode_UnexpandedEntityReference,
   _encode_UnexpandedEntityReference,
 } from '../FastInfoset/UnexpandedEntityReference.ta.mjs';
-export {
-  UnexpandedEntityReference,
-  _decode_UnexpandedEntityReference,
-  _encode_UnexpandedEntityReference,
-} from '../FastInfoset/UnexpandedEntityReference.ta.mjs';
 import {
-  CharacterChunk,
-  _decode_CharacterChunk,
-  _encode_CharacterChunk,
-} from '../FastInfoset/CharacterChunk.ta.mjs';
-export {
   CharacterChunk,
   _decode_CharacterChunk,
   _encode_CharacterChunk,
@@ -111,12 +35,6 @@ import {
   _decode_Comment,
   _encode_Comment,
 } from '../FastInfoset/Comment.ta.mjs';
-export {
-  Comment,
-  _decode_Comment,
-  _encode_Comment,
-} from '../FastInfoset/Comment.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Element_children_Item */
 /**
  * @summary Element_children_Item

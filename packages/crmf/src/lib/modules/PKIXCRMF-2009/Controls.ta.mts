@@ -6,12 +6,6 @@ import {
     _decode_SingleAttribute,
     _encode_SingleAttribute,
 } from "../PKIX-CommonTypes-2009/SingleAttribute.ta.mjs";
-export {
-    SingleAttribute,
-    _decode_SingleAttribute,
-    _encode_SingleAttribute,
-} from "../PKIX-CommonTypes-2009/SingleAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Controls */
 /**
  * @summary Controls

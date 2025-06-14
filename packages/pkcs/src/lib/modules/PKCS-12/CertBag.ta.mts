@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { CertTypes } from "../PKCS-12/CertTypes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertBag */
 /**
  * @summary CertBag
@@ -167,9 +164,7 @@ export function _encode_CertBag(
 ) {
     if (!_cached_encoder_for_CertBag) {
         _cached_encoder_for_CertBag = function (
-            value: CertBag,
-            elGetter: $.ASN1Encoder<CertBag>
-        ): _Element {
+            value: CertBag        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

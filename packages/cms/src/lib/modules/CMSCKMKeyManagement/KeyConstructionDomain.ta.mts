@@ -20,22 +20,6 @@ import {
     _decode_DomainParams,
     _encode_DomainParams,
 } from "../CMSCKMKeyManagement/DomainParams.ta.mjs";
-export {
-    DomainMaintenanceLevel,
-    _decode_DomainMaintenanceLevel,
-    _encode_DomainMaintenanceLevel,
-} from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta.mjs";
-export {
-    DomainName,
-    _decode_DomainName,
-    _encode_DomainName,
-} from "../CMSCKMKeyManagement/DomainName.ta.mjs";
-export {
-    DomainParams,
-    _decode_DomainParams,
-    _encode_DomainParams,
-} from "../CMSCKMKeyManagement/DomainParams.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyConstructionDomain */
 /**
  * @summary KeyConstructionDomain
@@ -231,9 +215,7 @@ export function _encode_KeyConstructionDomain(
 ) {
     if (!_cached_encoder_for_KeyConstructionDomain) {
         _cached_encoder_for_KeyConstructionDomain = function (
-            value: KeyConstructionDomain,
-            elGetter: $.ASN1Encoder<KeyConstructionDomain>
-        ): _Element {
+            value: KeyConstructionDomain        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

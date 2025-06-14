@@ -11,17 +11,6 @@ import {
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";
-export {
-    AuthenticationType,
-    _decode_AuthenticationType,
-    _encode_AuthenticationType,
-} from "../PKCS-15/AuthenticationType.ta.mjs";
-export {
-    PathOrObjects,
-    _get_decoder_for_PathOrObjects,
-    _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthObjects */
 /**
  * @summary AuthObjects

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
-export {
-  Pathname_Attribute,
-  _decode_Pathname_Attribute,
-  _encode_Pathname_Attribute,
-} from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
-  Account_Attribute,
-  _decode_Account_Attribute,
-  _encode_Account_Attribute,
-} from '../ISO8571-FTAM/Account-Attribute.ta.mjs';
-export {
   Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
@@ -91,17 +26,7 @@ import {
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
 } from '../ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
-export {
-  Object_Availability_Attribute,
-  _decode_Object_Availability_Attribute,
-  _encode_Object_Availability_Attribute,
-} from '../ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
 import {
-  Object_Size_Attribute,
-  _decode_Object_Size_Attribute,
-  _encode_Object_Size_Attribute,
-} from '../ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
-export {
   Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
@@ -111,17 +36,7 @@ import {
   _decode_Access_Control_Change_Attribute,
   _encode_Access_Control_Change_Attribute,
 } from '../ISO8571-FTAM/Access-Control-Change-Attribute.ta.mjs';
-export {
-  Access_Control_Change_Attribute,
-  _decode_Access_Control_Change_Attribute,
-  _encode_Access_Control_Change_Attribute,
-} from '../ISO8571-FTAM/Access-Control-Change-Attribute.ta.mjs';
 import {
-  Legal_Qualification_Attribute,
-  _decode_Legal_Qualification_Attribute,
-  _encode_Legal_Qualification_Attribute,
-} from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
-export {
   Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
@@ -131,22 +46,11 @@ import {
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
 } from '../ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
-export {
-  Private_Use_Attribute,
-  _decode_Private_Use_Attribute,
-  _encode_Private_Use_Attribute,
-} from '../ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
 import {
   Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
 } from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-export {
-  Attribute_Extensions,
-  _decode_Attribute_Extensions,
-  _encode_Attribute_Extensions,
-} from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Change_Attributes */
 /**
  * @summary Change_Attributes
@@ -481,9 +385,7 @@ export function _encode_Change_Attributes(
       8,
       () =>
         function (
-          value: Change_Attributes,
-          elGetter: $.ASN1Encoder<Change_Attributes>
-        ): _Element {
+          value: Change_Attributes        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat([

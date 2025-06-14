@@ -6,13 +6,6 @@ import {
     _encode_SigningTime,
 } from "../CryptographicMessageSyntax-2010/SigningTime.ta.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va.mjs";
-export {
-    SigningTime,
-    _decode_SigningTime,
-    _encode_SigningTime,
-} from "../CryptographicMessageSyntax-2010/SigningTime.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aa_signingTime */
 /**
  * @summary aa_signingTime

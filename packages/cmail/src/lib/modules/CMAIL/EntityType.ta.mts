@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_SecretQuestionType,
   _encode_SecretQuestionType,
 } from '../CMAIL/SecretQuestionType.ta.mjs';
-export {
-  SecretQuestionType,
-  _decode_SecretQuestionType,
-  _encode_SecretQuestionType,
-} from '../CMAIL/SecretQuestionType.ta.mjs';
 import {
-  CipheredEnvelopeKeyType,
-  _decode_CipheredEnvelopeKeyType,
-  _encode_CipheredEnvelopeKeyType,
-} from '../CMAIL/CipheredEnvelopeKeyType.ta.mjs';
-export {
   CipheredEnvelopeKeyType,
   _decode_CipheredEnvelopeKeyType,
   _encode_CipheredEnvelopeKeyType,
@@ -91,36 +25,9 @@ import {
   _decode_CertificateType,
   _encode_CertificateType,
 } from '../CMAIL/CertificateType.ta.mjs';
-export {
-  CertificateType,
-  _decode_CertificateType,
-  _encode_CertificateType,
-} from '../CMAIL/CertificateType.ta.mjs';
 import {
   EntityType_type,
   _enum_for_EntityType_type,
-  EntityType_type_from_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  from_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_to /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  to /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_cc /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cc /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_transit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  transit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_EntityType_type,
-  _encode_EntityType_type,
-} from '../CMAIL/EntityType-type.ta.mjs';
-export {
-  EntityType_type,
-  _enum_for_EntityType_type,
-  EntityType_type_from_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  from_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_to /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  to /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_cc /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  cc /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  EntityType_type_transit /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  transit /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_EntityType_type,
   _encode_EntityType_type,
 } from '../CMAIL/EntityType-type.ta.mjs';
@@ -358,9 +265,7 @@ export function _encode_EntityType(
 ) {
   if (!_cached_encoder_for_EntityType) {
     _cached_encoder_for_EntityType = function (
-      value: EntityType,
-      elGetter: $.ASN1Encoder<EntityType>
-    ): _Element {
+      value: EntityType    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

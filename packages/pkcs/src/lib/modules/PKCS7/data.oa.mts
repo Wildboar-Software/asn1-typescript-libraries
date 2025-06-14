@@ -2,10 +2,6 @@
 import { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta.mjs";
 import { id_data } from "../PKCS7/id-data.va.mjs";
 import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-export { Data, _decode_Data, _encode_Data } from "../PKCS7/Data.ta.mjs";
-export { id_data } from "../PKCS7/id-data.va.mjs";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION data */
 /**
  * @summary data

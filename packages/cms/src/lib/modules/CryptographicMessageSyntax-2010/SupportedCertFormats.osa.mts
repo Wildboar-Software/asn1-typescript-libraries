@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CERT-FMT.oca.mjs";
-export { OTHER_CERT_FMT } from "../CryptographicMessageSyntax-2010/OTHER-CERT-FMT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedCertFormats */
 /**
  * @summary SupportedCertFormats

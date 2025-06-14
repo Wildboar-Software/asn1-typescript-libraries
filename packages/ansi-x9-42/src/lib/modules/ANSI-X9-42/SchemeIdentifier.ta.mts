@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
-export { Schemes } from "../ANSI-X9-42/Schemes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SchemeIdentifier */
 /**
  * @summary SchemeIdentifier
@@ -172,9 +169,7 @@ export function _encode_SchemeIdentifier(
 ) {
     if (!_cached_encoder_for_SchemeIdentifier) {
         _cached_encoder_for_SchemeIdentifier = function (
-            value: SchemeIdentifier,
-            elGetter: $.ASN1Encoder<SchemeIdentifier>
-        ): _Element {
+            value: SchemeIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

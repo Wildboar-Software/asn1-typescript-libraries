@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -67,13 +12,7 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
-export { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
 import {
-  NonEmptyOctetString,
-  _decode_NonEmptyOctetString,
-  _encode_NonEmptyOctetString,
-} from '../FastInfoset/NonEmptyOctetString.ta.mjs';
-export {
   NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
@@ -83,22 +22,11 @@ import {
   _decode_EncodedCharacterString,
   _encode_EncodedCharacterString,
 } from '../FastInfoset/EncodedCharacterString.ta.mjs';
-export {
-  EncodedCharacterString,
-  _decode_EncodedCharacterString,
-  _encode_EncodedCharacterString,
-} from '../FastInfoset/EncodedCharacterString.ta.mjs';
 import {
   NameSurrogate,
   _decode_NameSurrogate,
   _encode_NameSurrogate,
 } from '../FastInfoset/NameSurrogate.ta.mjs';
-export {
-  NameSurrogate,
-  _decode_NameSurrogate,
-  _encode_NameSurrogate,
-} from '../FastInfoset/NameSurrogate.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Document_initial_vocabulary */
 /**
  * @summary Document_initial_vocabulary
@@ -503,9 +431,7 @@ export function _encode_Document_initial_vocabulary(
 ) {
   if (!_cached_encoder_for_Document_initial_vocabulary) {
     _cached_encoder_for_Document_initial_vocabulary = function (
-      value: Document_initial_vocabulary,
-      elGetter: $.ASN1Encoder<Document_initial_vocabulary>
-    ): _Element {
+      value: Document_initial_vocabulary    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

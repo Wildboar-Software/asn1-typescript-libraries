@@ -21,23 +21,6 @@ import {
     _encode_RecipientIdentifier,
 } from "../PKCS7/RecipientIdentifier.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../PKCS7/EncryptedKey.ta.mjs";
-export {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    RecipientIdentifier,
-    _decode_RecipientIdentifier,
-    _encode_RecipientIdentifier,
-} from "../PKCS7/RecipientIdentifier.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyTransportRecipientInfo */
 /**
  * @summary KeyTransportRecipientInfo
@@ -244,9 +227,7 @@ export function _encode_KeyTransportRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyTransportRecipientInfo) {
         _cached_encoder_for_KeyTransportRecipientInfo = function (
-            value: KeyTransportRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyTransportRecipientInfo>
-        ): _Element {
+            value: KeyTransportRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

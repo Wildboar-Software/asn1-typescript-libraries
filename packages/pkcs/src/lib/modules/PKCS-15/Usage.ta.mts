@@ -176,9 +176,7 @@ let _cached_encoder_for_Usage: $.ASN1Encoder<Usage> | null = null;
 export function _encode_Usage(value: Usage, elGetter: $.ASN1Encoder<Usage>) {
     if (!_cached_encoder_for_Usage) {
         _cached_encoder_for_Usage = function (
-            value: Usage,
-            elGetter: $.ASN1Encoder<Usage>
-        ): _Element {
+            value: Usage        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

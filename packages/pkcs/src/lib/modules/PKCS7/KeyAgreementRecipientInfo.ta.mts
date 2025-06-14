@@ -22,23 +22,6 @@ import {
     _encode_RecipientEncryptedKeys,
 } from "../PKCS7/RecipientEncryptedKeys.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    KeyEncryptionAlgorithmIdentifier,
-    _decode_KeyEncryptionAlgorithmIdentifier,
-    _encode_KeyEncryptionAlgorithmIdentifier,
-} from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    OriginatorIdentifierOrKey,
-    _decode_OriginatorIdentifierOrKey,
-    _encode_OriginatorIdentifierOrKey,
-} from "../PKCS7/OriginatorIdentifierOrKey.ta.mjs";
-export {
-    RecipientEncryptedKeys,
-    _decode_RecipientEncryptedKeys,
-    _encode_RecipientEncryptedKeys,
-} from "../PKCS7/RecipientEncryptedKeys.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreementRecipientInfo */
 /**
  * @summary KeyAgreementRecipientInfo
@@ -281,9 +264,7 @@ export function _encode_KeyAgreementRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyAgreementRecipientInfo) {
         _cached_encoder_for_KeyAgreementRecipientInfo = function (
-            value: KeyAgreementRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyAgreementRecipientInfo>
-        ): _Element {
+            value: KeyAgreementRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -3,9 +3,6 @@ import { ObjectIdentifier as _OID, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { crlTypes } from "../PKCS-9/crlTypes.va.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { crlTypes } from "../PKCS-9/crlTypes.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x509CRL */
 /**
  * @summary x509CRL

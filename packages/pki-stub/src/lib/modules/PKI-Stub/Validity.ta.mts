@@ -164,7 +164,7 @@ export function _decode_Validity(el: _Element) {
  */
 export function _encode_Validity(
     value: Validity,
-    elGetter: $.ASN1Encoder<Validity>
+    _elGetter: $.ASN1Encoder<Validity>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_Time(

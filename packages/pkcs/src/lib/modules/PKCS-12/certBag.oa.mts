@@ -7,14 +7,6 @@ import {
     _decode_CertBag,
     _encode_CertBag,
 } from "../PKCS-12/CertBag.ta.mjs";
-export { BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
-export { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-export {
-    CertBag,
-    _decode_CertBag,
-    _encode_CertBag,
-} from "../PKCS-12/CertBag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certBag */
 /**
  * @summary certBag

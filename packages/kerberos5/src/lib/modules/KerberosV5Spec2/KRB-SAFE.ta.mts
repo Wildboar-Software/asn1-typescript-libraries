@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,22 +16,11 @@ import {
   _decode_KRB_SAFE_BODY,
   _encode_KRB_SAFE_BODY,
 } from '../KerberosV5Spec2/KRB-SAFE-BODY.ta.mjs';
-export {
-  KRB_SAFE_BODY,
-  _decode_KRB_SAFE_BODY,
-  _encode_KRB_SAFE_BODY,
-} from '../KerberosV5Spec2/KRB-SAFE-BODY.ta.mjs';
 import {
   Checksum,
   _decode_Checksum,
   _encode_Checksum,
 } from '../KerberosV5Spec2/Checksum.ta.mjs';
-export {
-  Checksum,
-  _decode_Checksum,
-  _encode_Checksum,
-} from '../KerberosV5Spec2/Checksum.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION KRB_SAFE */
 /**
  * @summary KRB_SAFE
@@ -292,9 +226,7 @@ export function _encode_KRB_SAFE(
       20,
       () =>
         function (
-          value: KRB_SAFE,
-          elGetter: $.ASN1Encoder<KRB_SAFE>
-        ): _Element {
+          value: KRB_SAFE        ): _Element {
           return $._encodeSequence(
             ([] as (_Element | undefined)[])
               .concat([

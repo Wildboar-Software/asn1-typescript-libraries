@@ -6,12 +6,6 @@ import {
     _decode_Signcrypter,
     _encode_Signcrypter,
 } from "../CMSSigncryption/Signcrypter.ta.mjs";
-export {
-    Signcrypter,
-    _decode_Signcrypter,
-    _encode_Signcrypter,
-} from "../CMSSigncryption/Signcrypter.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Signcrypters */
 /**
  * @summary Signcrypters

@@ -15,17 +15,6 @@ import {
     _decode_PolicyInformation,
     _encode_PolicyInformation,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.mjs";
-export {
-    ESSCertID,
-    _decode_ESSCertID,
-    _encode_ESSCertID,
-} from "../ExtendedSecurityServices-2006/ESSCertID.ta.mjs";
-export {
-    PolicyInformation,
-    _decode_PolicyInformation,
-    _encode_PolicyInformation,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/PolicyInformation.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SigningCertificate */
 /**
  * @summary SigningCertificate
@@ -199,9 +188,7 @@ export function _encode_SigningCertificate(
 ) {
     if (!_cached_encoder_for_SigningCertificate) {
         _cached_encoder_for_SigningCertificate = function (
-            value: SigningCertificate,
-            elGetter: $.ASN1Encoder<SigningCertificate>
-        ): _Element {
+            value: SigningCertificate        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

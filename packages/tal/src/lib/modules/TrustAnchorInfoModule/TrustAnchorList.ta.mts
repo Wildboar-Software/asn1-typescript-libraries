@@ -11,9 +11,6 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta.mjs";
-export { TrustAnchorChoice, _decode_TrustAnchorChoice, _encode_TrustAnchorChoice } from "../TrustAnchorInfoModule/TrustAnchorChoice.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION TrustAnchorList */
 /**
  * @summary TrustAnchorList

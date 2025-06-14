@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -67,17 +11,10 @@ import {
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.mjs";
-export { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.mjs";
-export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.mjs";
 import { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.mjs";
-export { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.mjs";
 import { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.mjs";
-export { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.mjs";
 import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.mjs";
-export { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.mjs";
-
-
 /* START_OF_SYMBOL_DEFINITION SEC1_PDU */
 /**
  * @summary SEC1_PDU

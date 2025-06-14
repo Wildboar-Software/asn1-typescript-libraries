@@ -20,22 +20,6 @@ import {
     _decode_EncryptedContent,
     _encode_EncryptedContent,
 } from "../CryptographicMessageSyntax/EncryptedContent.ta.mjs";
-export {
-    ContentEncryptionAlgorithmIdentifier,
-    _decode_ContentEncryptionAlgorithmIdentifier,
-    _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from "../CryptographicMessageSyntax/ContentType.ta.mjs";
-export {
-    EncryptedContent,
-    _decode_EncryptedContent,
-    _encode_EncryptedContent,
-} from "../CryptographicMessageSyntax/EncryptedContent.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfo */
 /**
  * @summary EncryptedContentInfo
@@ -232,9 +216,7 @@ export function _encode_EncryptedContentInfo(
 ) {
     if (!_cached_encoder_for_EncryptedContentInfo) {
         _cached_encoder_for_EncryptedContentInfo = function (
-            value: EncryptedContentInfo,
-            elGetter: $.ASN1Encoder<EncryptedContentInfo>
-        ): _Element {
+            value: EncryptedContentInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

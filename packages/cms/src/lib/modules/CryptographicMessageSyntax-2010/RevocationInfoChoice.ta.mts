@@ -11,17 +11,6 @@ import {
     _decode_CertificateList,
     _encode_CertificateList,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs";
-export {
-    OtherRevocationInfoFormat,
-    _decode_OtherRevocationInfoFormat,
-    _encode_OtherRevocationInfoFormat,
-} from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta.mjs";
-export {
-    CertificateList,
-    _decode_CertificateList,
-    _encode_CertificateList,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/CertificateList.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RevocationInfoChoice */
 /**
  * @summary RevocationInfoChoice

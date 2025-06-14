@@ -6,14 +6,6 @@ import {
     _encode_DigestedData,
 } from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
 import { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export {
-    DigestedData,
-    _decode_DigestedData,
-    _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
-export { id_digestedData } from "../CryptographicMessageSyntax-2010/id-digestedData.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_DigestedData */
 /**
  * @summary ct_DigestedData

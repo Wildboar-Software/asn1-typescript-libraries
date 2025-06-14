@@ -6,14 +6,6 @@ import {
     _decode_ECParameters,
     _encode_ECParameters,
 } from "../ANSI-X9-62/ECParameters.ta.mjs";
-export { CurveNames } from "../ANSI-X9-62/CurveNames.osa.mjs";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-export {
-    ECParameters,
-    _decode_ECParameters,
-    _encode_ECParameters,
-} from "../ANSI-X9-62/ECParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Parameters */
 /**
  * @summary Parameters

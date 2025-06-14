@@ -6,8 +6,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-export { ub_common_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-common-name.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION X520CommonName */
 /**
  * @summary X520CommonName

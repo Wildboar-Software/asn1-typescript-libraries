@@ -6,14 +6,6 @@ import {
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../CMSSigncryption/XPathSet.ta.mjs";
-export { xPath } from "../CMSObjectIdentifiers/xPath.va.mjs";
-export { SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
-export {
-    XPathSet,
-    _decode_XPathSet,
-    _encode_XPathSet,
-} from "../CMSSigncryption/XPathSet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION xPathManifest */
 /**
  * @summary xPathManifest

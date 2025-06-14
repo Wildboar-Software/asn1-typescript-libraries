@@ -221,9 +221,7 @@ export function _decode_Extension(el: _Element) {
  * @returns {_Element} The Extension, encoded as an ASN.1 Element.
  */
 export function _encode_Extension(
-    value: Extension,
-    elGetter: $.ASN1Encoder<Extension>
-) {
+    value: Extension) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.extnId,

@@ -16,17 +16,6 @@ import {
     _decode_Controls,
     _encode_Controls,
 } from "../PKIXCRMF-2009/Controls.ta.mjs";
-export {
-    CertTemplate,
-    _decode_CertTemplate,
-    _encode_CertTemplate,
-} from "../PKIXCRMF-2009/CertTemplate.ta.mjs";
-export {
-    Controls,
-    _decode_Controls,
-    _encode_Controls,
-} from "../PKIXCRMF-2009/Controls.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertRequest */
 /**
  * @summary CertRequest
@@ -214,9 +203,7 @@ export function _encode_CertRequest(
 ) {
     if (!_cached_encoder_for_CertRequest) {
         _cached_encoder_for_CertRequest = function (
-            value: CertRequest,
-            elGetter: $.ASN1Encoder<CertRequest>
-        ): _Element {
+            value: CertRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

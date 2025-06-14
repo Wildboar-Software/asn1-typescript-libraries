@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
     EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
     GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,23 +17,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AUDT_apdu_protocol_version,
     AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_AUDT_apdu_protocol_version,
-    _encode_AUDT_apdu_protocol_version,
-} from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta.mjs';
-export {
-    AUDT_apdu_protocol_version,
-    AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_AUDT_apdu_protocol_version,
     _encode_AUDT_apdu_protocol_version,
 } from '../Connectionless-ACSE-1/AUDT-apdu-protocol-version.ta.mjs';
 import {
-    ASO_context_name,
-    _decode_ASO_context_name,
-    _encode_ASO_context_name,
-} from '../Connectionless-ACSE-1/ASO-context-name.ta.mjs';
-export {
     ASO_context_name,
     _decode_ASO_context_name,
     _encode_ASO_context_name,
@@ -95,17 +30,7 @@ import {
     _decode_AP_title,
     _encode_AP_title,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.mjs';
-export {
-    AP_title,
-    _decode_AP_title,
-    _encode_AP_title,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AP-title.ta.mjs';
 import {
-    AE_qualifier,
-    _decode_AE_qualifier,
-    _encode_AE_qualifier,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/AE-qualifier.ta.mjs';
-export {
     AE_qualifier,
     _decode_AE_qualifier,
     _encode_AE_qualifier,
@@ -115,17 +40,7 @@ import {
     _decode_AP_invocation_id,
     _encode_AP_invocation_id,
 } from '../Connectionless-ACSE-1/AP-invocation-id.ta.mjs';
-export {
-    AP_invocation_id,
-    _decode_AP_invocation_id,
-    _encode_AP_invocation_id,
-} from '../Connectionless-ACSE-1/AP-invocation-id.ta.mjs';
 import {
-    AE_invocation_id,
-    _decode_AE_invocation_id,
-    _encode_AE_invocation_id,
-} from '../Connectionless-ACSE-1/AE-invocation-id.ta.mjs';
-export {
     AE_invocation_id,
     _decode_AE_invocation_id,
     _encode_AE_invocation_id,
@@ -135,17 +50,7 @@ import {
     _decode_Mechanism_name,
     _encode_Mechanism_name,
 } from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta.mjs';
-export {
-    Mechanism_name,
-    _decode_Mechanism_name,
-    _encode_Mechanism_name,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Mechanism-name.ta.mjs';
 import {
-    Authentication_value,
-    _decode_Authentication_value,
-    _encode_Authentication_value,
-} from '@wildboar/acse/src/lib/modules/ACSE-1/Authentication-value.ta.mjs';
-export {
     Authentication_value,
     _decode_Authentication_value,
     _encode_Authentication_value,
@@ -155,12 +60,6 @@ import {
     _decode_Default_P_context,
     _encode_Default_P_context,
 } from '../Connectionless-ACSE-1/Default-P-context.ta.mjs';
-export {
-    Default_P_context,
-    _decode_Default_P_context,
-    _encode_Default_P_context,
-} from '../Connectionless-ACSE-1/Default-P-context.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AUDT_apdu */
 /**
  * @summary AUDT_apdu
@@ -666,9 +565,7 @@ export function _encode_AUDT_apdu(
             0,
             () =>
                 function (
-                    value: AUDT_apdu,
-                    elGetter: $.ASN1Encoder<AUDT_apdu>
-                ): _Element {
+                    value: AUDT_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

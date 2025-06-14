@@ -31,33 +31,6 @@ import {
     _encode_SignerInfos,
 } from "../PKCS7/SignerInfos.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    CertificateRevocationLists,
-    _decode_CertificateRevocationLists,
-    _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta.mjs";
-export {
-    CertificateSet,
-    _decode_CertificateSet,
-    _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta.mjs";
-export {
-    ContentInfo,
-    _decode_ContentInfo,
-    _encode_ContentInfo,
-} from "../PKCS7/ContentInfo.ta.mjs";
-export {
-    DigestAlgorithmIdentifiers,
-    _decode_DigestAlgorithmIdentifiers,
-    _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta.mjs";
-export {
-    SignerInfos,
-    _decode_SignerInfos,
-    _encode_SignerInfos,
-} from "../PKCS7/SignerInfos.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignedData */
 /**
  * @summary SignedData
@@ -312,9 +285,7 @@ export function _encode_SignedData(
 ) {
     if (!_cached_encoder_for_SignedData) {
         _cached_encoder_for_SignedData = function (
-            value: SignedData,
-            elGetter: $.ASN1Encoder<SignedData>
-        ): _Element {
+            value: SignedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

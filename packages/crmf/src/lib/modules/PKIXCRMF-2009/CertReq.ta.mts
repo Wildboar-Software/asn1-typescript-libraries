@@ -6,12 +6,6 @@ import {
     _decode_CertRequest,
     _encode_CertRequest,
 } from "../PKIXCRMF-2009/CertRequest.ta.mjs";
-export {
-    CertRequest,
-    _decode_CertRequest,
-    _encode_CertRequest,
-} from "../PKIXCRMF-2009/CertRequest.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReq */
 /**
  * @summary CertReq

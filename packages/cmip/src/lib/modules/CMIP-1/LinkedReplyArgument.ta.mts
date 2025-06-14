@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_GetResult,
   _encode_GetResult,
 } from '../CMIP-1/GetResult.ta.mjs';
-export {
-  GetResult,
-  _decode_GetResult,
-  _encode_GetResult,
-} from '../CMIP-1/GetResult.ta.mjs';
 import {
-  GetListError,
-  _decode_GetListError,
-  _encode_GetListError,
-} from '../CMIP-1/GetListError.ta.mjs';
-export {
   GetListError,
   _decode_GetListError,
   _encode_GetListError,
@@ -91,17 +25,7 @@ import {
   _decode_SetResult,
   _encode_SetResult,
 } from '../CMIP-1/SetResult.ta.mjs';
-export {
-  SetResult,
-  _decode_SetResult,
-  _encode_SetResult,
-} from '../CMIP-1/SetResult.ta.mjs';
 import {
-  SetListError,
-  _decode_SetListError,
-  _encode_SetListError,
-} from '../CMIP-1/SetListError.ta.mjs';
-export {
   SetListError,
   _decode_SetListError,
   _encode_SetListError,
@@ -111,17 +35,7 @@ import {
   _decode_ActionResult,
   _encode_ActionResult,
 } from '../CMIP-1/ActionResult.ta.mjs';
-export {
-  ActionResult,
-  _decode_ActionResult,
-  _encode_ActionResult,
-} from '../CMIP-1/ActionResult.ta.mjs';
 import {
-  ProcessingFailure,
-  _decode_ProcessingFailure,
-  _encode_ProcessingFailure,
-} from '../CMIP-1/ProcessingFailure.ta.mjs';
-export {
   ProcessingFailure,
   _decode_ProcessingFailure,
   _encode_ProcessingFailure,
@@ -131,17 +45,7 @@ import {
   _decode_DeleteResult,
   _encode_DeleteResult,
 } from '../CMIP-1/DeleteResult.ta.mjs';
-export {
-  DeleteResult,
-  _decode_DeleteResult,
-  _encode_DeleteResult,
-} from '../CMIP-1/DeleteResult.ta.mjs';
 import {
-  ActionError,
-  _decode_ActionError,
-  _encode_ActionError,
-} from '../CMIP-1/ActionError.ta.mjs';
-export {
   ActionError,
   _decode_ActionError,
   _encode_ActionError,
@@ -151,12 +55,6 @@ import {
   _decode_DeleteError,
   _encode_DeleteError,
 } from '../CMIP-1/DeleteError.ta.mjs';
-export {
-  DeleteError,
-  _decode_DeleteError,
-  _encode_DeleteError,
-} from '../CMIP-1/DeleteError.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION LinkedReplyArgument */
 /**
  * @summary LinkedReplyArgument

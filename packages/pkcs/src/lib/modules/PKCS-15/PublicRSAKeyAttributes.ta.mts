@@ -27,27 +27,6 @@ import {
     _decode_RSAPublicKeyChoice,
     _encode_RSAPublicKeyChoice,
 } from "../PKCS-15/RSAPublicKeyChoice.ta.mjs";
-export {
-    KeyInfo,
-    _get_decoder_for_KeyInfo,
-    _get_encoder_for_KeyInfo,
-} from "../PKCS-15/KeyInfo.ta.mjs";
-export {
-    ObjectValue,
-    _get_decoder_for_ObjectValue,
-    _get_encoder_for_ObjectValue,
-} from "../PKCS-15/ObjectValue.ta.mjs";
-export {
-    PublicKeyOperations,
-    _decode_PublicKeyOperations,
-    _encode_PublicKeyOperations,
-} from "../PKCS-15/PublicKeyOperations.ta.mjs";
-export {
-    RSAPublicKeyChoice,
-    _decode_RSAPublicKeyChoice,
-    _encode_RSAPublicKeyChoice,
-} from "../PKCS-15/RSAPublicKeyChoice.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PublicRSAKeyAttributes */
 /**
  * @summary PublicRSAKeyAttributes
@@ -248,9 +227,7 @@ export function _encode_PublicRSAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PublicRSAKeyAttributes) {
         _cached_encoder_for_PublicRSAKeyAttributes = function (
-            value: PublicRSAKeyAttributes,
-            elGetter: $.ASN1Encoder<PublicRSAKeyAttributes>
-        ): _Element {
+            value: PublicRSAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

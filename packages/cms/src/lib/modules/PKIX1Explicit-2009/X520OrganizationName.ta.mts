@@ -6,8 +6,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/src/lib/modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
-export { ub_organization_name } from "@wildboar/x500/src/lib/modules/UpperBounds/ub-organization-name.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION X520OrganizationName */
 /**
  * @summary X520OrganizationName

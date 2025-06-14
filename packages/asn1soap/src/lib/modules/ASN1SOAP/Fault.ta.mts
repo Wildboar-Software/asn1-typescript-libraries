@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -67,22 +12,13 @@ import {
 } from 'asn1-ts';
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import { Code, _decode_Code, _encode_Code } from '../ASN1SOAP/Code.ta.mjs';
-export { Code, _decode_Code, _encode_Code } from '../ASN1SOAP/Code.ta.mjs';
 import { Text, _decode_Text, _encode_Text } from '../ASN1SOAP/Text.ta.mjs';
-export { Text, _decode_Text, _encode_Text } from '../ASN1SOAP/Text.ta.mjs';
 import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
-export { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 import {
   Content,
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
-export {
-  Content,
-  _decode_Content,
-  _encode_Content,
-} from '../ASN1SOAP/Content.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Fault */
 /**
  * @summary Fault
@@ -302,9 +238,7 @@ let _cached_encoder_for_Fault: $.ASN1Encoder<Fault> | null = null;
 export function _encode_Fault(value: Fault, elGetter: $.ASN1Encoder<Fault>) {
   if (!_cached_encoder_for_Fault) {
     _cached_encoder_for_Fault = function (
-      value: Fault,
-      elGetter: $.ASN1Encoder<Fault>
-    ): _Element {
+      value: Fault    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,52 +15,12 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-export {
-    ProbableCause,
-    _decode_ProbableCause,
-    _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
 import {
     AlarmStatus,
     _enum_for_AlarmStatus,
-    AlarmStatus_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activePending /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activePending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
 } from '../ASN1DefinedTypesModule/AlarmStatus.ta.mjs';
-export {
-    AlarmStatus,
-    _enum_for_AlarmStatus,
-    AlarmStatus_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activeReportable_Critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activeReportable_Critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AlarmStatus_activePending /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    activePending /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AlarmStatus,
-    _encode_AlarmStatus,
-} from '../ASN1DefinedTypesModule/AlarmStatus.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CurrentProblem */
 /**
  * @summary CurrentProblem
@@ -287,9 +191,7 @@ export function _encode_CurrentProblem(
 ) {
     if (!_cached_encoder_for_CurrentProblem) {
         _cached_encoder_for_CurrentProblem = function (
-            value: CurrentProblem,
-            elGetter: $.ASN1Encoder<CurrentProblem>
-        ): _Element {
+            value: CurrentProblem        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

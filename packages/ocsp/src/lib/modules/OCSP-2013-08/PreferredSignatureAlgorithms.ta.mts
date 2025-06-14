@@ -6,12 +6,6 @@ import {
     _decode_PreferredSignatureAlgorithm,
     _encode_PreferredSignatureAlgorithm,
 } from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta.mjs";
-export {
-    PreferredSignatureAlgorithm,
-    _decode_PreferredSignatureAlgorithm,
-    _encode_PreferredSignatureAlgorithm,
-} from "../OCSP-2013-08/PreferredSignatureAlgorithm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PreferredSignatureAlgorithms */
 /**
  * @summary PreferredSignatureAlgorithms

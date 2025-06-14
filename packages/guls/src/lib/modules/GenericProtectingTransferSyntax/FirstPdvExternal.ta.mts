@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,14 +16,6 @@ import {
   _decode_ExternalSAID,
   _encode_ExternalSAID,
 } from '../Notation/ExternalSAID.ta.mjs';
-export {
-  ExternalSAID,
-  _decode_ExternalSAID,
-  _encode_ExternalSAID,
-} from '../Notation/ExternalSAID.ta.mjs';
-import { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
-export { SECURITY_TRANSFORMATION } from '../Notation/SECURITY-TRANSFORMATION.oca.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FirstPdvExternal */
 /**
  * @summary FirstPdvExternal
@@ -276,9 +213,7 @@ export function _encode_FirstPdvExternal(
 ) {
   if (!_cached_encoder_for_FirstPdvExternal) {
     _cached_encoder_for_FirstPdvExternal = function (
-      value: FirstPdvExternal,
-      elGetter: $.ASN1Encoder<FirstPdvExternal>
-    ): _Element {
+      value: FirstPdvExternal    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

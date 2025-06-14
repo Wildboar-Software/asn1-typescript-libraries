@@ -6,12 +6,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../ANSI-X9-62/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../ANSI-X9-62/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECPKAlgorithm */
 /**
  * @summary ECPKAlgorithm

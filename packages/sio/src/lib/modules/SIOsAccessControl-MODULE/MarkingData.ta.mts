@@ -15,17 +15,6 @@ import {
     _decode_MarkingPhrase,
     _encode_MarkingPhrase,
 } from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.mjs";
-export {
-    MarkingCodes,
-    _decode_MarkingCodes,
-    _encode_MarkingCodes,
-} from "../SIOsAccessControl-MODULE/MarkingCodes.ta.mjs";
-export {
-    MarkingPhrase,
-    _decode_MarkingPhrase,
-    _encode_MarkingPhrase,
-} from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MarkingData */
 /**
  * @summary MarkingData
@@ -193,9 +182,7 @@ export function _encode_MarkingData(
 ) {
     if (!_cached_encoder_for_MarkingData) {
         _cached_encoder_for_MarkingData = function (
-            value: MarkingData,
-            elGetter: $.ASN1Encoder<MarkingData>
-        ): _Element {
+            value: MarkingData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

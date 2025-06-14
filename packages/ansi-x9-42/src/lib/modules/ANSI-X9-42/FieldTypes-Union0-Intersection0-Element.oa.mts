@@ -5,14 +5,6 @@ import {
 } from "../ANSI-X9-42/DomainParameters.ta.mjs";
 import { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
 import { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
-export {
-    DomainParameters,
-    _decode_DomainParameters,
-    _encode_DomainParameters,
-} from "../ANSI-X9-42/DomainParameters.ta.mjs";
-export { FIELD_ID } from "../ANSI-X9-42/FIELD-ID.oca.mjs";
-export { gfPrime } from "../ANSI-X9-42/gfPrime.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FieldTypes_Union0_Intersection0_Element */
 /**
  * @summary FieldTypes_Union0_Intersection0_Element

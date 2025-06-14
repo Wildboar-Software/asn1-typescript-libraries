@@ -11,17 +11,6 @@ import {
     _decode_PublicKeyType,
     _encode_PublicKeyType,
 } from "../PKCS-15/PublicKeyType.ta.mjs";
-export {
-    PathOrObjects,
-    _get_decoder_for_PathOrObjects,
-    _get_encoder_for_PathOrObjects,
-} from "../PKCS-15/PathOrObjects.ta.mjs";
-export {
-    PublicKeyType,
-    _decode_PublicKeyType,
-    _encode_PublicKeyType,
-} from "../PKCS-15/PublicKeyType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PublicKeys */
 /**
  * @summary PublicKeys

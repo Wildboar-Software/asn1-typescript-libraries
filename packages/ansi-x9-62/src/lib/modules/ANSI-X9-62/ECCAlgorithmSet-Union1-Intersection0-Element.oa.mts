@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { ecdsa_with_Sha1 } from "../ANSI-X9-62/ecdsa-with-Sha1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ECCAlgorithmSet_Union1_Intersection0_Element */
 /**
  * @summary ECCAlgorithmSet_Union1_Intersection0_Element

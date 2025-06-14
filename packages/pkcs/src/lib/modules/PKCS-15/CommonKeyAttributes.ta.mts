@@ -27,57 +27,6 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-export {
-    alwaysSensitive /* IMPORTED_SHORT_NAMED_BIT */,
-    extractable /* IMPORTED_SHORT_NAMED_BIT */,
-    KeyAccessFlags,
-    KeyAccessFlags_alwaysSensitive /* IMPORTED_LONG_NAMED_BIT */,
-    KeyAccessFlags_extractable /* IMPORTED_LONG_NAMED_BIT */,
-    KeyAccessFlags_local /* IMPORTED_LONG_NAMED_BIT */,
-    KeyAccessFlags_neverExtractable /* IMPORTED_LONG_NAMED_BIT */,
-    KeyAccessFlags_sensitive /* IMPORTED_LONG_NAMED_BIT */,
-    local /* IMPORTED_SHORT_NAMED_BIT */,
-    neverExtractable /* IMPORTED_SHORT_NAMED_BIT */,
-    sensitive /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_KeyAccessFlags,
-    _encode_KeyAccessFlags,
-} from "../PKCS-15/KeyAccessFlags.ta.mjs";
-export {
-    decrypt /* IMPORTED_SHORT_NAMED_BIT */,
-    derive /* IMPORTED_SHORT_NAMED_BIT */,
-    encrypt /* IMPORTED_SHORT_NAMED_BIT */,
-    KeyUsageFlags,
-    KeyUsageFlags_decrypt /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_derive /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_encrypt /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_nonRepudiation /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_sign /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_signRecover /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_unwrap /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_verify /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_verifyRecover /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsageFlags_wrap /* IMPORTED_LONG_NAMED_BIT */,
-    nonRepudiation /* IMPORTED_SHORT_NAMED_BIT */,
-    sign /* IMPORTED_SHORT_NAMED_BIT */,
-    signRecover /* IMPORTED_SHORT_NAMED_BIT */,
-    unwrap /* IMPORTED_SHORT_NAMED_BIT */,
-    verify /* IMPORTED_SHORT_NAMED_BIT */,
-    verifyRecover /* IMPORTED_SHORT_NAMED_BIT */,
-    wrap /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_KeyUsageFlags,
-    _encode_KeyUsageFlags,
-} from "../PKCS-15/KeyUsageFlags.ta.mjs";
-export {
-    Reference,
-    _decode_Reference,
-    _encode_Reference,
-} from "../PKCS-15/Reference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CommonKeyAttributes */
 /**
  * @summary CommonKeyAttributes
@@ -375,9 +324,7 @@ export function _encode_CommonKeyAttributes(
 ) {
     if (!_cached_encoder_for_CommonKeyAttributes) {
         _cached_encoder_for_CommonKeyAttributes = function (
-            value: CommonKeyAttributes,
-            elGetter: $.ASN1Encoder<CommonKeyAttributes>
-        ): _Element {
+            value: CommonKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

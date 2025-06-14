@@ -2,10 +2,6 @@
 import { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
 import { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa.mjs";
 import { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa.mjs";
-export { QC_STATEMENT } from "../PKIXqualified97/QC-STATEMENT.oca.mjs";
-export { qcStatement_1 } from "../PKIXqualified97/qcStatement-1.oa.mjs";
-export { qcStatement_2 } from "../PKIXqualified97/qcStatement-2.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedStatements */
 /**
  * @summary SupportedStatements

@@ -207,9 +207,7 @@ export function _encode_PublicECKeyAttributes(
 ) {
     if (!_cached_encoder_for_PublicECKeyAttributes) {
         _cached_encoder_for_PublicECKeyAttributes = function (
-            value: PublicECKeyAttributes,
-            elGetter: $.ASN1Encoder<PublicECKeyAttributes>
-        ): _Element {
+            value: PublicECKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

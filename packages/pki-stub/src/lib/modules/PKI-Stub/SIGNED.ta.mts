@@ -10,7 +10,6 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-    DERElement,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import {
@@ -271,9 +270,7 @@ export function _get_encoder_for_SIGNED<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
 ) {
     return function (
-        value: SIGNED<ToBeSigned>,
-        elGetter: $.ASN1Encoder<SIGNED<ToBeSigned>>
-    ): _Element {
+        value: SIGNED<ToBeSigned>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

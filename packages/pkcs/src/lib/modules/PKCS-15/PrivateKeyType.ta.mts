@@ -31,37 +31,6 @@ import {
     _decode_PrivateRSAKeyAttributes,
     _encode_PrivateRSAKeyAttributes,
 } from "../PKCS-15/PrivateRSAKeyAttributes.ta.mjs";
-export {
-    PrivateDHKeyAttributes,
-    _decode_PrivateDHKeyAttributes,
-    _encode_PrivateDHKeyAttributes,
-} from "../PKCS-15/PrivateDHKeyAttributes.ta.mjs";
-export {
-    PrivateDSAKeyAttributes,
-    _decode_PrivateDSAKeyAttributes,
-    _encode_PrivateDSAKeyAttributes,
-} from "../PKCS-15/PrivateDSAKeyAttributes.ta.mjs";
-export {
-    PrivateECKeyAttributes,
-    _decode_PrivateECKeyAttributes,
-    _encode_PrivateECKeyAttributes,
-} from "../PKCS-15/PrivateECKeyAttributes.ta.mjs";
-export {
-    PrivateKEAKeyAttributes,
-    _decode_PrivateKEAKeyAttributes,
-    _encode_PrivateKEAKeyAttributes,
-} from "../PKCS-15/PrivateKEAKeyAttributes.ta.mjs";
-export {
-    PrivateKeyObject,
-    _get_decoder_for_PrivateKeyObject,
-    _get_encoder_for_PrivateKeyObject,
-} from "../PKCS-15/PrivateKeyObject.ta.mjs";
-export {
-    PrivateRSAKeyAttributes,
-    _decode_PrivateRSAKeyAttributes,
-    _encode_PrivateRSAKeyAttributes,
-} from "../PKCS-15/PrivateRSAKeyAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PrivateKeyType */
 /**
  * @summary PrivateKeyType

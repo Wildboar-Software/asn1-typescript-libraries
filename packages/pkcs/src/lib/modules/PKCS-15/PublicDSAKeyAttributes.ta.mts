@@ -211,9 +211,7 @@ export function _encode_PublicDSAKeyAttributes(
 ) {
     if (!_cached_encoder_for_PublicDSAKeyAttributes) {
         _cached_encoder_for_PublicDSAKeyAttributes = function (
-            value: PublicDSAKeyAttributes,
-            elGetter: $.ASN1Encoder<PublicDSAKeyAttributes>
-        ): _Element {
+            value: PublicDSAKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

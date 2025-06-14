@@ -6,12 +6,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../CryptographicMessageSyntax/Time.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../CryptographicMessageSyntax/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SigningTime */
 /**
  * @summary SigningTime

@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export { sha_1 } from "../ANSI-X9-62/sha-1.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ANSIX9HashFunctions_Union1_Intersection0_Element */
 /**
  * @summary ANSIX9HashFunctions_Union1_Intersection0_Element

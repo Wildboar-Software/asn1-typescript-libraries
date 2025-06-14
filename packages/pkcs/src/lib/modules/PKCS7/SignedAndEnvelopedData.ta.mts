@@ -36,38 +36,6 @@ import {
     _encode_SignerInfo,
 } from "../PKCS7/SignerInfo.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    CertificateRevocationLists,
-    _decode_CertificateRevocationLists,
-    _encode_CertificateRevocationLists,
-} from "../PKCS7/CertificateRevocationLists.ta.mjs";
-export {
-    CertificateSet,
-    _decode_CertificateSet,
-    _encode_CertificateSet,
-} from "../PKCS7/CertificateSet.ta.mjs";
-export {
-    DigestAlgorithmIdentifiers,
-    _decode_DigestAlgorithmIdentifiers,
-    _encode_DigestAlgorithmIdentifiers,
-} from "../PKCS7/DigestAlgorithmIdentifiers.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta.mjs";
-export {
-    KeyTransportRecipientInfo,
-    _decode_KeyTransportRecipientInfo,
-    _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta.mjs";
-export {
-    SignerInfo,
-    _decode_SignerInfo,
-    _encode_SignerInfo,
-} from "../PKCS7/SignerInfo.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignedAndEnvelopedData */
 /**
  * @summary SignedAndEnvelopedData
@@ -358,9 +326,7 @@ export function _encode_SignedAndEnvelopedData(
 ) {
     if (!_cached_encoder_for_SignedAndEnvelopedData) {
         _cached_encoder_for_SignedAndEnvelopedData = function (
-            value: SignedAndEnvelopedData,
-            elGetter: $.ASN1Encoder<SignedAndEnvelopedData>
-        ): _Element {
+            value: SignedAndEnvelopedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

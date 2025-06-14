@@ -42,44 +42,6 @@ import {
     _decode_VersionInformationData,
     _encode_VersionInformationData,
 } from "../SIOsAccessControl-MODULE/VersionInformationData.ta.mjs";
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs";
-export {
-    EquivalentPolicies,
-    _decode_EquivalentPolicies,
-    _encode_EquivalentPolicies,
-} from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta.mjs";
-export {
-    ObjectIdData,
-    _decode_ObjectIdData,
-    _encode_ObjectIdData,
-} from "../SIOsAccessControl-MODULE/ObjectIdData.ta.mjs";
-export {
-    SecurityClassifications,
-    _decode_SecurityClassifications,
-    _encode_SecurityClassifications,
-} from "../SIOsAccessControl-MODULE/SecurityClassifications.ta.mjs";
-export {
-    SPIF_SecurityCategories,
-    _decode_SPIF_SecurityCategories,
-    _encode_SPIF_SecurityCategories,
-} from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta.mjs";
-export {
-    UpdateInformationData,
-    _decode_UpdateInformationData,
-    _encode_UpdateInformationData,
-} from "../SIOsAccessControl-MODULE/UpdateInformationData.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    VersionInformationData,
-    VersionInformationData_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_VersionInformationData,
-    _encode_VersionInformationData,
-} from "../SIOsAccessControl-MODULE/VersionInformationData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPIF */
 /**
  * @summary SPIF
@@ -426,9 +388,7 @@ let _cached_encoder_for_SPIF: $.ASN1Encoder<SPIF> | null = null;
 export function _encode_SPIF(value: SPIF, elGetter: $.ASN1Encoder<SPIF>) {
     if (!_cached_encoder_for_SPIF) {
         _cached_encoder_for_SPIF = function (
-            value: SPIF,
-            elGetter: $.ASN1Encoder<SPIF>
-        ): _Element {
+            value: SPIF        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

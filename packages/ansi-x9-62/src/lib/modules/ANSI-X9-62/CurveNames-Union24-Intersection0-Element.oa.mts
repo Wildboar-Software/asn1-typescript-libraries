@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
 import { prime239v2 } from "../ANSI-X9-62/prime239v2.va.mjs";
-export { CURVES } from "../ANSI-X9-62/CURVES.oca.mjs";
-export { prime239v2 } from "../ANSI-X9-62/prime239v2.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CurveNames_Union24_Intersection0_Element */
 /**
  * @summary CurveNames_Union24_Intersection0_Element

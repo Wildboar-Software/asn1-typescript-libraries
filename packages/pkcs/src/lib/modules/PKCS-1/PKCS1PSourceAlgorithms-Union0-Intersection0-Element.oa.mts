@@ -6,14 +6,6 @@ import {
     _encode_EncodingParameters,
 } from "../PKCS-1/EncodingParameters.ta.mjs";
 import { id_pSpecified } from "../PKCS-1/id-pSpecified.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export {
-    EncodingParameters,
-    _decode_EncodingParameters,
-    _encode_EncodingParameters,
-} from "../PKCS-1/EncodingParameters.ta.mjs";
-export { id_pSpecified } from "../PKCS-1/id-pSpecified.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PKCS1PSourceAlgorithms_Union0_Intersection0_Element */
 /**
  * @summary PKCS1PSourceAlgorithms_Union0_Intersection0_Element

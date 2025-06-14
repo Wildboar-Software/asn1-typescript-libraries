@@ -6,13 +6,6 @@ import {
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
 import { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.mjs";
 import type { ATTRIBUTE } from "@wildboar/x500/src/lib/modules/InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
-export { id_UniqueIdentifier } from "../CMSObjectIdentifiers/id-UniqueIdentifier.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uniqueIdentifier */
 /**
  * @summary uniqueIdentifier

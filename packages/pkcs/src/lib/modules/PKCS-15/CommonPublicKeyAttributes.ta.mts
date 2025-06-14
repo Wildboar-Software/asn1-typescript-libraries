@@ -195,9 +195,7 @@ export function _encode_CommonPublicKeyAttributes(
 ) {
     if (!_cached_encoder_for_CommonPublicKeyAttributes) {
         _cached_encoder_for_CommonPublicKeyAttributes = function (
-            value: CommonPublicKeyAttributes,
-            elGetter: $.ASN1Encoder<CommonPublicKeyAttributes>
-        ): _Element {
+            value: CommonPublicKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

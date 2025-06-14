@@ -2,8 +2,6 @@
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION URIs */
 /**
  * @summary URIs

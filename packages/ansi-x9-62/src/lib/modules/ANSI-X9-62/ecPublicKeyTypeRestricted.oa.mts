@@ -6,14 +6,6 @@ import {
     _encode_ECPKRestrictions,
 } from "../ANSI-X9-62/ECPKRestrictions.ta.mjs";
 import { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va.mjs";
-export { ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
-export {
-    ECPKRestrictions,
-    _decode_ECPKRestrictions,
-    _encode_ECPKRestrictions,
-} from "../ANSI-X9-62/ECPKRestrictions.ta.mjs";
-export { id_ecPublicKeyRestricted } from "../ANSI-X9-62/id-ecPublicKeyRestricted.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ecPublicKeyTypeRestricted */
 /**
  * @summary ecPublicKeyTypeRestricted

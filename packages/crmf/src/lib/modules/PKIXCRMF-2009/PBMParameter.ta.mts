@@ -210,9 +210,7 @@ export function _encode_PBMParameter(
 ) {
     if (!_cached_encoder_for_PBMParameter) {
         _cached_encoder_for_PBMParameter = function (
-            value: PBMParameter,
-            elGetter: $.ASN1Encoder<PBMParameter>
-        ): _Element {
+            value: PBMParameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -10,12 +10,6 @@ import {
     _decode_KeyPairIdentifier,
     _encode_KeyPairIdentifier,
 } from "../CMSSigncryption/KeyPairIdentifier.ta.mjs";
-export {
-    KeyPairIdentifier,
-    _decode_KeyPairIdentifier,
-    _encode_KeyPairIdentifier,
-} from "../CMSSigncryption/KeyPairIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SigncrypterIDs */
 /**
  * @summary SigncrypterIDs
@@ -174,9 +168,7 @@ export function _encode_SigncrypterIDs(
 ) {
     if (!_cached_encoder_for_SigncrypterIDs) {
         _cached_encoder_for_SigncrypterIDs = function (
-            value: SigncrypterIDs,
-            elGetter: $.ASN1Encoder<SigncrypterIDs>
-        ): _Element {
+            value: SigncrypterIDs        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

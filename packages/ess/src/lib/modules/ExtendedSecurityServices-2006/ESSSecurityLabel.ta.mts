@@ -242,9 +242,7 @@ export function _encode_ESSSecurityLabel(
 ) {
     if (!_cached_encoder_for_ESSSecurityLabel) {
         _cached_encoder_for_ESSSecurityLabel = function (
-            value: ESSSecurityLabel,
-            elGetter: $.ASN1Encoder<ESSSecurityLabel>
-        ): _Element {
+            value: ESSSecurityLabel        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

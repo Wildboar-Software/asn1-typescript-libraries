@@ -6,14 +6,6 @@ import {
 } from "../PKCS7/EnvelopedData.ta.mjs";
 import { id_enveloped_data } from "../PKCS7/id-enveloped-data.va.mjs";
 import { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-export {
-    EnvelopedData,
-    _decode_EnvelopedData,
-    _encode_EnvelopedData,
-} from "../PKCS7/EnvelopedData.ta.mjs";
-export { id_enveloped_data } from "../PKCS7/id-enveloped-data.va.mjs";
-export { PKCS7_CONTENT_TYPE } from "../PKCS7/PKCS7-CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION enveloped_data */
 /**
  * @summary enveloped_data

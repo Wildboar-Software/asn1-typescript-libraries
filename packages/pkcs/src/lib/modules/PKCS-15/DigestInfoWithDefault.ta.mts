@@ -193,9 +193,7 @@ export function _encode_DigestInfoWithDefault(
 ) {
     if (!_cached_encoder_for_DigestInfoWithDefault) {
         _cached_encoder_for_DigestInfoWithDefault = function (
-            value: DigestInfoWithDefault,
-            elGetter: $.ASN1Encoder<DigestInfoWithDefault>
-        ): _Element {
+            value: DigestInfoWithDefault        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

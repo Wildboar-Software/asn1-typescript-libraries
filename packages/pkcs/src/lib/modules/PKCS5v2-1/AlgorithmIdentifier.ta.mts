@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AlgorithmIdentifier */
 /**
  * @summary AlgorithmIdentifier
@@ -171,9 +169,7 @@ export function _encode_AlgorithmIdentifier(
 ) {
     if (!_cached_encoder_for_AlgorithmIdentifier) {
         _cached_encoder_for_AlgorithmIdentifier = function (
-            value: AlgorithmIdentifier,
-            elGetter: $.ASN1Encoder<AlgorithmIdentifier>
-        ): _Element {
+            value: AlgorithmIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

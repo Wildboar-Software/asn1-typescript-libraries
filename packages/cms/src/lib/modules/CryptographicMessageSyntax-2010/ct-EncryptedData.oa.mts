@@ -6,14 +6,6 @@ import {
     _encode_EncryptedData,
 } from "../CryptographicMessageSyntax-2010/EncryptedData.ta.mjs";
 import { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export {
-    EncryptedData,
-    _decode_EncryptedData,
-    _encode_EncryptedData,
-} from "../CryptographicMessageSyntax-2010/EncryptedData.ta.mjs";
-export { id_encryptedData } from "../CryptographicMessageSyntax-2010/id-encryptedData.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ct_EncryptedData */
 /**
  * @summary ct_EncryptedData

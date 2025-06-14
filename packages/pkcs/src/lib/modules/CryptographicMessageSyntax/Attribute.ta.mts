@@ -11,12 +11,6 @@ import {
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../CryptographicMessageSyntax/AttributeValue.ta.mjs";
-export {
-    AttributeValue,
-    _decode_AttributeValue,
-    _encode_AttributeValue,
-} from "../CryptographicMessageSyntax/AttributeValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Attribute */
 /**
  * @summary Attribute
@@ -175,9 +169,7 @@ export function _encode_Attribute(
 ) {
     if (!_cached_encoder_for_Attribute) {
         _cached_encoder_for_Attribute = function (
-            value: Attribute,
-            elGetter: $.ASN1Encoder<Attribute>
-        ): _Element {
+            value: Attribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

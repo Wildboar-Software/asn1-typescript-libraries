@@ -11,17 +11,6 @@ import {
     _decode_PasswordInfo,
     _encode_PasswordInfo,
 } from "../PKCS-15/PasswordInfo.ta.mjs";
-export {
-    RecipientInfo,
-    _decode_RecipientInfo,
-    _encode_RecipientInfo,
-} from "../CryptographicMessageSyntax/RecipientInfo.ta.mjs";
-export {
-    PasswordInfo,
-    _decode_PasswordInfo,
-    _encode_PasswordInfo,
-} from "../PKCS-15/PasswordInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo_Item_keyInfo */
 /**
  * @summary KeyManagementInfo_Item_keyInfo

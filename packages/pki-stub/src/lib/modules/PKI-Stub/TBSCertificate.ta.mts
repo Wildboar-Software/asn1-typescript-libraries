@@ -394,9 +394,7 @@ export function _decode_TBSCertificate(el: _Element) {
  * @returns {_Element} The TBSCertificate, encoded as an ASN.1 Element.
  */
 export function _encode_TBSCertificate(
-    value: TBSCertificate,
-    elGetter: $.ASN1Encoder<TBSCertificate>
-) {
+    value: TBSCertificate) {
     const components: _Element[] = [];
     if (value.version != TBSCertificate._default_value_for_version) {
         const c = $._encode_explicit(

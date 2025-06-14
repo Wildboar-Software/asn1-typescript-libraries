@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
   _decode_AddMaster_RequestParams,
   _encode_AddMaster_RequestParams,
 } from '../BIP/AddMaster-RequestParams.ta.mjs';
-export {
-  AddMaster_RequestParams,
-  _decode_AddMaster_RequestParams,
-  _encode_AddMaster_RequestParams,
-} from '../BIP/AddMaster-RequestParams.ta.mjs';
 import {
-  DeleteMaster_RequestParams,
-  _decode_DeleteMaster_RequestParams,
-  _encode_DeleteMaster_RequestParams,
-} from '../BIP/DeleteMaster-RequestParams.ta.mjs';
-export {
   DeleteMaster_RequestParams,
   _decode_DeleteMaster_RequestParams,
   _encode_DeleteMaster_RequestParams,
@@ -91,17 +25,7 @@ import {
   _decode_BSPLoad_RequestParams,
   _encode_BSPLoad_RequestParams,
 } from '../BIP/BSPLoad-RequestParams.ta.mjs';
-export {
-  BSPLoad_RequestParams,
-  _decode_BSPLoad_RequestParams,
-  _encode_BSPLoad_RequestParams,
-} from '../BIP/BSPLoad-RequestParams.ta.mjs';
 import {
-  BSPUnload_RequestParams,
-  _decode_BSPUnload_RequestParams,
-  _encode_BSPUnload_RequestParams,
-} from '../BIP/BSPUnload-RequestParams.ta.mjs';
-export {
   BSPUnload_RequestParams,
   _decode_BSPUnload_RequestParams,
   _encode_BSPUnload_RequestParams,
@@ -111,17 +35,7 @@ import {
   _decode_QueryUnits_RequestParams,
   _encode_QueryUnits_RequestParams,
 } from '../BIP/QueryUnits-RequestParams.ta.mjs';
-export {
-  QueryUnits_RequestParams,
-  _decode_QueryUnits_RequestParams,
-  _encode_QueryUnits_RequestParams,
-} from '../BIP/QueryUnits-RequestParams.ta.mjs';
 import {
-  QueryBFPs_RequestParams,
-  _decode_QueryBFPs_RequestParams,
-  _encode_QueryBFPs_RequestParams,
-} from '../BIP/QueryBFPs-RequestParams.ta.mjs';
-export {
   QueryBFPs_RequestParams,
   _decode_QueryBFPs_RequestParams,
   _encode_QueryBFPs_RequestParams,
@@ -131,17 +45,7 @@ import {
   _decode_BSPAttach_RequestParams,
   _encode_BSPAttach_RequestParams,
 } from '../BIP/BSPAttach-RequestParams.ta.mjs';
-export {
-  BSPAttach_RequestParams,
-  _decode_BSPAttach_RequestParams,
-  _encode_BSPAttach_RequestParams,
-} from '../BIP/BSPAttach-RequestParams.ta.mjs';
 import {
-  BSPDetach_RequestParams,
-  _decode_BSPDetach_RequestParams,
-  _encode_BSPDetach_RequestParams,
-} from '../BIP/BSPDetach-RequestParams.ta.mjs';
-export {
   BSPDetach_RequestParams,
   _decode_BSPDetach_RequestParams,
   _encode_BSPDetach_RequestParams,
@@ -151,17 +55,7 @@ import {
   _decode_EnableUnitEvents_RequestParams,
   _encode_EnableUnitEvents_RequestParams,
 } from '../BIP/EnableUnitEvents-RequestParams.ta.mjs';
-export {
-  EnableUnitEvents_RequestParams,
-  _decode_EnableUnitEvents_RequestParams,
-  _encode_EnableUnitEvents_RequestParams,
-} from '../BIP/EnableUnitEvents-RequestParams.ta.mjs';
 import {
-  EnableEventNotifications_RequestParams,
-  _decode_EnableEventNotifications_RequestParams,
-  _encode_EnableEventNotifications_RequestParams,
-} from '../BIP/EnableEventNotifications-RequestParams.ta.mjs';
-export {
   EnableEventNotifications_RequestParams,
   _decode_EnableEventNotifications_RequestParams,
   _encode_EnableEventNotifications_RequestParams,
@@ -171,17 +65,7 @@ import {
   _decode_ControlUnit_RequestParams,
   _encode_ControlUnit_RequestParams,
 } from '../BIP/ControlUnit-RequestParams.ta.mjs';
-export {
-  ControlUnit_RequestParams,
-  _decode_ControlUnit_RequestParams,
-  _encode_ControlUnit_RequestParams,
-} from '../BIP/ControlUnit-RequestParams.ta.mjs';
 import {
-  Control_RequestParams,
-  _decode_Control_RequestParams,
-  _encode_Control_RequestParams,
-} from '../BIP/Control-RequestParams.ta.mjs';
-export {
   Control_RequestParams,
   _decode_Control_RequestParams,
   _encode_Control_RequestParams,
@@ -191,17 +75,7 @@ import {
   _decode_FreeBIRHandle_RequestParams,
   _encode_FreeBIRHandle_RequestParams,
 } from '../BIP/FreeBIRHandle-RequestParams.ta.mjs';
-export {
-  FreeBIRHandle_RequestParams,
-  _decode_FreeBIRHandle_RequestParams,
-  _encode_FreeBIRHandle_RequestParams,
-} from '../BIP/FreeBIRHandle-RequestParams.ta.mjs';
 import {
-  GetBIRFromHandle_RequestParams,
-  _decode_GetBIRFromHandle_RequestParams,
-  _encode_GetBIRFromHandle_RequestParams,
-} from '../BIP/GetBIRFromHandle-RequestParams.ta.mjs';
-export {
   GetBIRFromHandle_RequestParams,
   _decode_GetBIRFromHandle_RequestParams,
   _encode_GetBIRFromHandle_RequestParams,
@@ -211,17 +85,7 @@ import {
   _decode_GetHeaderFromHandle_RequestParams,
   _encode_GetHeaderFromHandle_RequestParams,
 } from '../BIP/GetHeaderFromHandle-RequestParams.ta.mjs';
-export {
-  GetHeaderFromHandle_RequestParams,
-  _decode_GetHeaderFromHandle_RequestParams,
-  _encode_GetHeaderFromHandle_RequestParams,
-} from '../BIP/GetHeaderFromHandle-RequestParams.ta.mjs';
 import {
-  SubscribeToGUIEvents_RequestParams,
-  _decode_SubscribeToGUIEvents_RequestParams,
-  _encode_SubscribeToGUIEvents_RequestParams,
-} from '../BIP/SubscribeToGUIEvents-RequestParams.ta.mjs';
-export {
   SubscribeToGUIEvents_RequestParams,
   _decode_SubscribeToGUIEvents_RequestParams,
   _encode_SubscribeToGUIEvents_RequestParams,
@@ -231,17 +95,7 @@ import {
   _decode_UnsubscribeFromGUIEvents_RequestParams,
   _encode_UnsubscribeFromGUIEvents_RequestParams,
 } from '../BIP/UnsubscribeFromGUIEvents-RequestParams.ta.mjs';
-export {
-  UnsubscribeFromGUIEvents_RequestParams,
-  _decode_UnsubscribeFromGUIEvents_RequestParams,
-  _encode_UnsubscribeFromGUIEvents_RequestParams,
-} from '../BIP/UnsubscribeFromGUIEvents-RequestParams.ta.mjs';
 import {
-  RedirectGUIEvents_RequestParams,
-  _decode_RedirectGUIEvents_RequestParams,
-  _encode_RedirectGUIEvents_RequestParams,
-} from '../BIP/RedirectGUIEvents-RequestParams.ta.mjs';
-export {
   RedirectGUIEvents_RequestParams,
   _decode_RedirectGUIEvents_RequestParams,
   _encode_RedirectGUIEvents_RequestParams,
@@ -251,17 +105,7 @@ import {
   _decode_UnredirectGUIEvents_RequestParams,
   _encode_UnredirectGUIEvents_RequestParams,
 } from '../BIP/UnredirectGUIEvents-RequestParams.ta.mjs';
-export {
-  UnredirectGUIEvents_RequestParams,
-  _decode_UnredirectGUIEvents_RequestParams,
-  _encode_UnredirectGUIEvents_RequestParams,
-} from '../BIP/UnredirectGUIEvents-RequestParams.ta.mjs';
 import {
-  QueryGUIEventSubscriptions_RequestParams,
-  _decode_QueryGUIEventSubscriptions_RequestParams,
-  _encode_QueryGUIEventSubscriptions_RequestParams,
-} from '../BIP/QueryGUIEventSubscriptions-RequestParams.ta.mjs';
-export {
   QueryGUIEventSubscriptions_RequestParams,
   _decode_QueryGUIEventSubscriptions_RequestParams,
   _encode_QueryGUIEventSubscriptions_RequestParams,
@@ -271,17 +115,7 @@ import {
   _decode_NotifyGUISelectEvent_RequestParams,
   _encode_NotifyGUISelectEvent_RequestParams,
 } from '../BIP/NotifyGUISelectEvent-RequestParams.ta.mjs';
-export {
-  NotifyGUISelectEvent_RequestParams,
-  _decode_NotifyGUISelectEvent_RequestParams,
-  _encode_NotifyGUISelectEvent_RequestParams,
-} from '../BIP/NotifyGUISelectEvent-RequestParams.ta.mjs';
 import {
-  NotifyGUIStateEvent_RequestParams,
-  _decode_NotifyGUIStateEvent_RequestParams,
-  _encode_NotifyGUIStateEvent_RequestParams,
-} from '../BIP/NotifyGUIStateEvent-RequestParams.ta.mjs';
-export {
   NotifyGUIStateEvent_RequestParams,
   _decode_NotifyGUIStateEvent_RequestParams,
   _encode_NotifyGUIStateEvent_RequestParams,
@@ -291,17 +125,7 @@ import {
   _decode_NotifyGUIProgressEvent_RequestParams,
   _encode_NotifyGUIProgressEvent_RequestParams,
 } from '../BIP/NotifyGUIProgressEvent-RequestParams.ta.mjs';
-export {
-  NotifyGUIProgressEvent_RequestParams,
-  _decode_NotifyGUIProgressEvent_RequestParams,
-  _encode_NotifyGUIProgressEvent_RequestParams,
-} from '../BIP/NotifyGUIProgressEvent-RequestParams.ta.mjs';
 import {
-  Capture_RequestParams,
-  _decode_Capture_RequestParams,
-  _encode_Capture_RequestParams,
-} from '../BIP/Capture-RequestParams.ta.mjs';
-export {
   Capture_RequestParams,
   _decode_Capture_RequestParams,
   _encode_Capture_RequestParams,
@@ -311,17 +135,7 @@ import {
   _decode_CreateTemplate_RequestParams,
   _encode_CreateTemplate_RequestParams,
 } from '../BIP/CreateTemplate-RequestParams.ta.mjs';
-export {
-  CreateTemplate_RequestParams,
-  _decode_CreateTemplate_RequestParams,
-  _encode_CreateTemplate_RequestParams,
-} from '../BIP/CreateTemplate-RequestParams.ta.mjs';
 import {
-  Process_RequestParams,
-  _decode_Process_RequestParams,
-  _encode_Process_RequestParams,
-} from '../BIP/Process-RequestParams.ta.mjs';
-export {
   Process_RequestParams,
   _decode_Process_RequestParams,
   _encode_Process_RequestParams,
@@ -331,17 +145,7 @@ import {
   _decode_ProcessWithAuxBIR_RequestParams,
   _encode_ProcessWithAuxBIR_RequestParams,
 } from '../BIP/ProcessWithAuxBIR-RequestParams.ta.mjs';
-export {
-  ProcessWithAuxBIR_RequestParams,
-  _decode_ProcessWithAuxBIR_RequestParams,
-  _encode_ProcessWithAuxBIR_RequestParams,
-} from '../BIP/ProcessWithAuxBIR-RequestParams.ta.mjs';
 import {
-  VerifyMatch_RequestParams,
-  _decode_VerifyMatch_RequestParams,
-  _encode_VerifyMatch_RequestParams,
-} from '../BIP/VerifyMatch-RequestParams.ta.mjs';
-export {
   VerifyMatch_RequestParams,
   _decode_VerifyMatch_RequestParams,
   _encode_VerifyMatch_RequestParams,
@@ -351,17 +155,7 @@ import {
   _decode_IdentifyMatch_RequestParams,
   _encode_IdentifyMatch_RequestParams,
 } from '../BIP/IdentifyMatch-RequestParams.ta.mjs';
-export {
-  IdentifyMatch_RequestParams,
-  _decode_IdentifyMatch_RequestParams,
-  _encode_IdentifyMatch_RequestParams,
-} from '../BIP/IdentifyMatch-RequestParams.ta.mjs';
 import {
-  Enroll_RequestParams,
-  _decode_Enroll_RequestParams,
-  _encode_Enroll_RequestParams,
-} from '../BIP/Enroll-RequestParams.ta.mjs';
-export {
   Enroll_RequestParams,
   _decode_Enroll_RequestParams,
   _encode_Enroll_RequestParams,
@@ -371,17 +165,7 @@ import {
   _decode_Verify_RequestParams,
   _encode_Verify_RequestParams,
 } from '../BIP/Verify-RequestParams.ta.mjs';
-export {
-  Verify_RequestParams,
-  _decode_Verify_RequestParams,
-  _encode_Verify_RequestParams,
-} from '../BIP/Verify-RequestParams.ta.mjs';
 import {
-  Identify_RequestParams,
-  _decode_Identify_RequestParams,
-  _encode_Identify_RequestParams,
-} from '../BIP/Identify-RequestParams.ta.mjs';
-export {
   Identify_RequestParams,
   _decode_Identify_RequestParams,
   _encode_Identify_RequestParams,
@@ -391,17 +175,7 @@ import {
   _decode_Import_RequestParams,
   _encode_Import_RequestParams,
 } from '../BIP/Import-RequestParams.ta.mjs';
-export {
-  Import_RequestParams,
-  _decode_Import_RequestParams,
-  _encode_Import_RequestParams,
-} from '../BIP/Import-RequestParams.ta.mjs';
 import {
-  PresetIdentifyPopulation_RequestParams,
-  _decode_PresetIdentifyPopulation_RequestParams,
-  _encode_PresetIdentifyPopulation_RequestParams,
-} from '../BIP/PresetIdentifyPopulation-RequestParams.ta.mjs';
-export {
   PresetIdentifyPopulation_RequestParams,
   _decode_PresetIdentifyPopulation_RequestParams,
   _encode_PresetIdentifyPopulation_RequestParams,
@@ -411,17 +185,7 @@ import {
   _decode_Transform_RequestParams,
   _encode_Transform_RequestParams,
 } from '../BIP/Transform-RequestParams.ta.mjs';
-export {
-  Transform_RequestParams,
-  _decode_Transform_RequestParams,
-  _encode_Transform_RequestParams,
-} from '../BIP/Transform-RequestParams.ta.mjs';
 import {
-  DbOpen_RequestParams,
-  _decode_DbOpen_RequestParams,
-  _encode_DbOpen_RequestParams,
-} from '../BIP/DbOpen-RequestParams.ta.mjs';
-export {
   DbOpen_RequestParams,
   _decode_DbOpen_RequestParams,
   _encode_DbOpen_RequestParams,
@@ -431,17 +195,7 @@ import {
   _decode_DbClose_RequestParams,
   _encode_DbClose_RequestParams,
 } from '../BIP/DbClose-RequestParams.ta.mjs';
-export {
-  DbClose_RequestParams,
-  _decode_DbClose_RequestParams,
-  _encode_DbClose_RequestParams,
-} from '../BIP/DbClose-RequestParams.ta.mjs';
 import {
-  DbCreate_RequestParams,
-  _decode_DbCreate_RequestParams,
-  _encode_DbCreate_RequestParams,
-} from '../BIP/DbCreate-RequestParams.ta.mjs';
-export {
   DbCreate_RequestParams,
   _decode_DbCreate_RequestParams,
   _encode_DbCreate_RequestParams,
@@ -451,17 +205,7 @@ import {
   _decode_DbDelete_RequestParams,
   _encode_DbDelete_RequestParams,
 } from '../BIP/DbDelete-RequestParams.ta.mjs';
-export {
-  DbDelete_RequestParams,
-  _decode_DbDelete_RequestParams,
-  _encode_DbDelete_RequestParams,
-} from '../BIP/DbDelete-RequestParams.ta.mjs';
 import {
-  DbSetMarker_RequestParams,
-  _decode_DbSetMarker_RequestParams,
-  _encode_DbSetMarker_RequestParams,
-} from '../BIP/DbSetMarker-RequestParams.ta.mjs';
-export {
   DbSetMarker_RequestParams,
   _decode_DbSetMarker_RequestParams,
   _encode_DbSetMarker_RequestParams,
@@ -471,17 +215,7 @@ import {
   _decode_DbFreeMarker_RequestParams,
   _encode_DbFreeMarker_RequestParams,
 } from '../BIP/DbFreeMarker-RequestParams.ta.mjs';
-export {
-  DbFreeMarker_RequestParams,
-  _decode_DbFreeMarker_RequestParams,
-  _encode_DbFreeMarker_RequestParams,
-} from '../BIP/DbFreeMarker-RequestParams.ta.mjs';
 import {
-  DbStoreBIR_RequestParams,
-  _decode_DbStoreBIR_RequestParams,
-  _encode_DbStoreBIR_RequestParams,
-} from '../BIP/DbStoreBIR-RequestParams.ta.mjs';
-export {
   DbStoreBIR_RequestParams,
   _decode_DbStoreBIR_RequestParams,
   _encode_DbStoreBIR_RequestParams,
@@ -491,17 +225,7 @@ import {
   _decode_DbGetBIR_RequestParams,
   _encode_DbGetBIR_RequestParams,
 } from '../BIP/DbGetBIR-RequestParams.ta.mjs';
-export {
-  DbGetBIR_RequestParams,
-  _decode_DbGetBIR_RequestParams,
-  _encode_DbGetBIR_RequestParams,
-} from '../BIP/DbGetBIR-RequestParams.ta.mjs';
 import {
-  DbGetNextBIR_RequestParams,
-  _decode_DbGetNextBIR_RequestParams,
-  _encode_DbGetNextBIR_RequestParams,
-} from '../BIP/DbGetNextBIR-RequestParams.ta.mjs';
-export {
   DbGetNextBIR_RequestParams,
   _decode_DbGetNextBIR_RequestParams,
   _encode_DbGetNextBIR_RequestParams,
@@ -511,17 +235,7 @@ import {
   _decode_DbDeleteBIR_RequestParams,
   _encode_DbDeleteBIR_RequestParams,
 } from '../BIP/DbDeleteBIR-RequestParams.ta.mjs';
-export {
-  DbDeleteBIR_RequestParams,
-  _decode_DbDeleteBIR_RequestParams,
-  _encode_DbDeleteBIR_RequestParams,
-} from '../BIP/DbDeleteBIR-RequestParams.ta.mjs';
 import {
-  CalibrateSensor_RequestParams,
-  _decode_CalibrateSensor_RequestParams,
-  _encode_CalibrateSensor_RequestParams,
-} from '../BIP/CalibrateSensor-RequestParams.ta.mjs';
-export {
   CalibrateSensor_RequestParams,
   _decode_CalibrateSensor_RequestParams,
   _encode_CalibrateSensor_RequestParams,
@@ -531,17 +245,7 @@ import {
   _decode_SetPowerMode_RequestParams,
   _encode_SetPowerMode_RequestParams,
 } from '../BIP/SetPowerMode-RequestParams.ta.mjs';
-export {
-  SetPowerMode_RequestParams,
-  _decode_SetPowerMode_RequestParams,
-  _encode_SetPowerMode_RequestParams,
-} from '../BIP/SetPowerMode-RequestParams.ta.mjs';
 import {
-  SetIndicatorStatus_RequestParams,
-  _decode_SetIndicatorStatus_RequestParams,
-  _encode_SetIndicatorStatus_RequestParams,
-} from '../BIP/SetIndicatorStatus-RequestParams.ta.mjs';
-export {
   SetIndicatorStatus_RequestParams,
   _decode_SetIndicatorStatus_RequestParams,
   _encode_SetIndicatorStatus_RequestParams,
@@ -551,17 +255,7 @@ import {
   _decode_GetIndicatorStatus_RequestParams,
   _encode_GetIndicatorStatus_RequestParams,
 } from '../BIP/GetIndicatorStatus-RequestParams.ta.mjs';
-export {
-  GetIndicatorStatus_RequestParams,
-  _decode_GetIndicatorStatus_RequestParams,
-  _encode_GetIndicatorStatus_RequestParams,
-} from '../BIP/GetIndicatorStatus-RequestParams.ta.mjs';
 import {
-  Cancel_RequestParams,
-  _decode_Cancel_RequestParams,
-  _encode_Cancel_RequestParams,
-} from '../BIP/Cancel-RequestParams.ta.mjs';
-export {
   Cancel_RequestParams,
   _decode_Cancel_RequestParams,
   _encode_Cancel_RequestParams,
@@ -571,17 +265,7 @@ import {
   _decode_RegisterBSP_RequestParams,
   _encode_RegisterBSP_RequestParams,
 } from '../BIP/RegisterBSP-RequestParams.ta.mjs';
-export {
-  RegisterBSP_RequestParams,
-  _decode_RegisterBSP_RequestParams,
-  _encode_RegisterBSP_RequestParams,
-} from '../BIP/RegisterBSP-RequestParams.ta.mjs';
 import {
-  UnregisterBSP_RequestParams,
-  _decode_UnregisterBSP_RequestParams,
-  _encode_UnregisterBSP_RequestParams,
-} from '../BIP/UnregisterBSP-RequestParams.ta.mjs';
-export {
   UnregisterBSP_RequestParams,
   _decode_UnregisterBSP_RequestParams,
   _encode_UnregisterBSP_RequestParams,
@@ -591,22 +275,11 @@ import {
   _decode_RegisterBFP_RequestParams,
   _encode_RegisterBFP_RequestParams,
 } from '../BIP/RegisterBFP-RequestParams.ta.mjs';
-export {
-  RegisterBFP_RequestParams,
-  _decode_RegisterBFP_RequestParams,
-  _encode_RegisterBFP_RequestParams,
-} from '../BIP/RegisterBFP-RequestParams.ta.mjs';
 import {
   UnregisterBFP_RequestParams,
   _decode_UnregisterBFP_RequestParams,
   _encode_UnregisterBFP_RequestParams,
 } from '../BIP/UnregisterBFP-RequestParams.ta.mjs';
-export {
-  UnregisterBFP_RequestParams,
-  _decode_UnregisterBFP_RequestParams,
-  _encode_UnregisterBFP_RequestParams,
-} from '../BIP/UnregisterBFP-RequestParams.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BIPRequest_params */
 /**
  * @summary BIPRequest_params

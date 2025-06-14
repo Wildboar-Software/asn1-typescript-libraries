@@ -173,9 +173,7 @@ export function _encode_CommonSecretKeyAttributes(
 ) {
     if (!_cached_encoder_for_CommonSecretKeyAttributes) {
         _cached_encoder_for_CommonSecretKeyAttributes = function (
-            value: CommonSecretKeyAttributes,
-            elGetter: $.ASN1Encoder<CommonSecretKeyAttributes>
-        ): _Element {
+            value: CommonSecretKeyAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

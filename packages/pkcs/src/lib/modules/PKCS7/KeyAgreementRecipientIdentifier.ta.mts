@@ -11,17 +11,6 @@ import {
     _decode_RecipientKeyIdentifier,
     _encode_RecipientKeyIdentifier,
 } from "../PKCS7/RecipientKeyIdentifier.ta.mjs";
-export {
-    IssuerAndSerialNumber,
-    _decode_IssuerAndSerialNumber,
-    _encode_IssuerAndSerialNumber,
-} from "../PKCS7/IssuerAndSerialNumber.ta.mjs";
-export {
-    RecipientKeyIdentifier,
-    _decode_RecipientKeyIdentifier,
-    _encode_RecipientKeyIdentifier,
-} from "../PKCS7/RecipientKeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreementRecipientIdentifier */
 /**
  * @summary KeyAgreementRecipientIdentifier

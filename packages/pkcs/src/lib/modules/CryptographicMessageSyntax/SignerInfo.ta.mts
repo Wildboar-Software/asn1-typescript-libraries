@@ -40,52 +40,6 @@ import {
     _decode_UnsignedAttributes,
     _encode_UnsignedAttributes,
 } from "../CryptographicMessageSyntax/UnsignedAttributes.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    SignatureAlgorithmIdentifier,
-    _decode_SignatureAlgorithmIdentifier,
-    _encode_SignatureAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
-export {
-    SignatureValue,
-    _decode_SignatureValue,
-    _encode_SignatureValue,
-} from "../CryptographicMessageSyntax/SignatureValue.ta.mjs";
-export {
-    SignedAttributes,
-    _decode_SignedAttributes,
-    _encode_SignedAttributes,
-} from "../CryptographicMessageSyntax/SignedAttributes.ta.mjs";
-export {
-    SignerIdentifier,
-    _decode_SignerIdentifier,
-    _encode_SignerIdentifier,
-} from "../CryptographicMessageSyntax/SignerIdentifier.ta.mjs";
-export {
-    UnsignedAttributes,
-    _decode_UnsignedAttributes,
-    _encode_UnsignedAttributes,
-} from "../CryptographicMessageSyntax/UnsignedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignerInfo */
 /**
  * @summary SignerInfo
@@ -356,9 +310,7 @@ export function _encode_SignerInfo(
 ) {
     if (!_cached_encoder_for_SignerInfo) {
         _cached_encoder_for_SignerInfo = function (
-            value: SignerInfo,
-            elGetter: $.ASN1Encoder<SignerInfo>
-        ): _Element {
+            value: SignerInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

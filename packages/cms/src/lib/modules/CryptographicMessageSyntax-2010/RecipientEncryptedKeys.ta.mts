@@ -6,12 +6,6 @@ import {
     _decode_RecipientEncryptedKey,
     _encode_RecipientEncryptedKey,
 } from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta.mjs";
-export {
-    RecipientEncryptedKey,
-    _decode_RecipientEncryptedKey,
-    _encode_RecipientEncryptedKey,
-} from "../CryptographicMessageSyntax-2010/RecipientEncryptedKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientEncryptedKeys */
 /**
  * @summary RecipientEncryptedKeys

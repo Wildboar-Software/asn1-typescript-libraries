@@ -26,28 +26,6 @@ import {
     _encode_RecipientInfos,
 } from "../PKCS7/RecipientInfos.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-export {
-    Attributes,
-    _decode_Attributes,
-    _encode_Attributes,
-} from "../PKCS7/Attributes.ta.mjs";
-export {
-    EncryptedContentInfo,
-    _decode_EncryptedContentInfo,
-    _encode_EncryptedContentInfo,
-} from "../PKCS7/EncryptedContentInfo.ta.mjs";
-export {
-    OriginatorInfo,
-    _decode_OriginatorInfo,
-    _encode_OriginatorInfo,
-} from "../PKCS7/OriginatorInfo.ta.mjs";
-export {
-    RecipientInfos,
-    _decode_RecipientInfos,
-    _encode_RecipientInfos,
-} from "../PKCS7/RecipientInfos.ta.mjs";
-export { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EnvelopedData */
 /**
  * @summary EnvelopedData
@@ -284,9 +262,7 @@ export function _encode_EnvelopedData(
 ) {
     if (!_cached_encoder_for_EnvelopedData) {
         _cached_encoder_for_EnvelopedData = function (
-            value: EnvelopedData,
-            elGetter: $.ASN1Encoder<EnvelopedData>
-        ): _Element {
+            value: EnvelopedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

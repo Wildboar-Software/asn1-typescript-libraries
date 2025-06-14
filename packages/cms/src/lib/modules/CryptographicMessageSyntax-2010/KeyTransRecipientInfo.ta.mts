@@ -21,35 +21,6 @@ import {
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
 } from "../CryptographicMessageSyntax-2010/RecipientIdentifier.ta.mjs";
-export { KEY_TRANSPORT } from "../AlgorithmInformation-2009/KEY-TRANSPORT.oca.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
-export {
-    RecipientIdentifier,
-    _decode_RecipientIdentifier,
-    _encode_RecipientIdentifier,
-} from "../CryptographicMessageSyntax-2010/RecipientIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyTransRecipientInfo */
 /**
  * @summary KeyTransRecipientInfo
@@ -246,9 +217,7 @@ export function _encode_KeyTransRecipientInfo(
 ) {
     if (!_cached_encoder_for_KeyTransRecipientInfo) {
         _cached_encoder_for_KeyTransRecipientInfo = function (
-            value: KeyTransRecipientInfo,
-            elGetter: $.ASN1Encoder<KeyTransRecipientInfo>
-        ): _Element {
+            value: KeyTransRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

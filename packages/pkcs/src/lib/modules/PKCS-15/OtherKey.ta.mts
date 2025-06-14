@@ -16,17 +16,6 @@ import {
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
 } from "../PKCS-15/SecretKeyObject.ta.mjs";
-export {
-    GenericSecretKeyAttributes,
-    _decode_GenericSecretKeyAttributes,
-    _encode_GenericSecretKeyAttributes,
-} from "../PKCS-15/GenericSecretKeyAttributes.ta.mjs";
-export {
-    SecretKeyObject,
-    _get_decoder_for_SecretKeyObject,
-    _get_encoder_for_SecretKeyObject,
-} from "../PKCS-15/SecretKeyObject.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherKey */
 /**
  * @summary OtherKey
@@ -185,9 +174,7 @@ export function _encode_OtherKey(
 ) {
     if (!_cached_encoder_for_OtherKey) {
         _cached_encoder_for_OtherKey = function (
-            value: OtherKey,
-            elGetter: $.ASN1Encoder<OtherKey>
-        ): _Element {
+            value: OtherKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

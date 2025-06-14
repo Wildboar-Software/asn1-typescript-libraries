@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
   OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
   GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,65 +18,14 @@ import {
   _decode_CertReference,
   _encode_CertReference,
 } from '../SCVP-2009/CertReference.ta.mjs';
-export {
-  CertReference,
-  _decode_CertReference,
-  _encode_CertReference,
-} from '../SCVP-2009/CertReference.ta.mjs';
 import {
   ReplyStatus,
   _enum_for_ReplyStatus,
   ReplyStatus_success /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  success /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_malformedPKC /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  malformedPKC /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_malformedAC /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  malformedAC /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_unavailableValidationTime /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  unavailableValidationTime /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_referenceCertHashFail /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  referenceCertHashFail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathConstructFail /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathConstructFail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathNotValid /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathNotValid /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathNotValidNow /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathNotValidNow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_wantBackUnsatisfied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  wantBackUnsatisfied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_ReplyStatus,
-  _encode_ReplyStatus,
-} from '../SCVP-2009/ReplyStatus.ta.mjs';
-export {
-  ReplyStatus,
-  _enum_for_ReplyStatus,
-  ReplyStatus_success /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  success /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_malformedPKC /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  malformedPKC /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_malformedAC /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  malformedAC /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_unavailableValidationTime /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  unavailableValidationTime /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_referenceCertHashFail /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  referenceCertHashFail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathConstructFail /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathConstructFail /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathNotValid /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathNotValid /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_certPathNotValidNow /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  certPathNotValidNow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ReplyStatus_wantBackUnsatisfied /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  wantBackUnsatisfied /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ReplyStatus,
   _encode_ReplyStatus,
 } from '../SCVP-2009/ReplyStatus.ta.mjs';
 import {
-  ReplyChecks,
-  _decode_ReplyChecks,
-  _encode_ReplyChecks,
-} from '../SCVP-2009/ReplyChecks.ta.mjs';
-export {
   ReplyChecks,
   _decode_ReplyChecks,
   _encode_ReplyChecks,
@@ -139,22 +35,11 @@ import {
   _decode_ReplyWantBacks,
   _encode_ReplyWantBacks,
 } from '../SCVP-2009/ReplyWantBacks.ta.mjs';
-export {
-  ReplyWantBacks,
-  _decode_ReplyWantBacks,
-  _encode_ReplyWantBacks,
-} from '../SCVP-2009/ReplyWantBacks.ta.mjs';
 import {
   Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-export {
-  Extensions,
-  _decode_Extensions,
-  _encode_Extensions,
-} from '@wildboar/x500/src/lib/modules/AuthenticationFramework/Extensions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CertReply */
 /**
  * @summary CertReply
@@ -468,9 +353,7 @@ export function _encode_CertReply(
 ) {
   if (!_cached_encoder_for_CertReply) {
     _cached_encoder_for_CertReply = function (
-      value: CertReply,
-      elGetter: $.ASN1Encoder<CertReply>
-    ): _Element {
+      value: CertReply    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

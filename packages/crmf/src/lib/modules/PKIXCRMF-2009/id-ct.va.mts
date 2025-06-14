@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_smime } from "../PKIXCRMF-2009/id-smime.va.mjs";
-export { id_smime } from "../PKIXCRMF-2009/id-smime.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ct */
 /**
  * @summary id_ct

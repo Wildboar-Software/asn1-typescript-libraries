@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-manifest.va.mjs";
-export { OID, _decode_OID, _encode_OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
-export { signcryption_manifest } from "../CMSObjectIdentifiers/signcryption-manifest.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_XPathSigncryptionSet */
 /**
  * @summary id_XPathSigncryptionSet

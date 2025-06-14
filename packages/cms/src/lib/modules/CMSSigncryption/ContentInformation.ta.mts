@@ -11,13 +11,6 @@ import {
     _encode_Content,
 } from "../CMSSigncryption/Content.ta.mjs";
 import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs";
-export {
-    Content,
-    _decode_Content,
-    _encode_Content,
-} from "../CMSSigncryption/Content.ta.mjs";
-export { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentInformation */
 /**
  * @summary ContentInformation
@@ -187,9 +180,7 @@ export function _encode_ContentInformation(
 ) {
     if (!_cached_encoder_for_ContentInformation) {
         _cached_encoder_for_ContentInformation = function (
-            value: ContentInformation,
-            elGetter: $.ASN1Encoder<ContentInformation>
-        ): _Element {
+            value: ContentInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

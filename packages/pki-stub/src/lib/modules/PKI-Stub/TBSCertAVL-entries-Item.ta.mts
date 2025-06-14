@@ -203,9 +203,7 @@ export function _decode_TBSCertAVL_entries_Item(el: _Element) {
  * @returns {_Element} The TBSCertAVL_entries_Item, encoded as an ASN.1 Element.
  */
 export function _encode_TBSCertAVL_entries_Item(
-    value: TBSCertAVL_entries_Item,
-    elGetter: $.ASN1Encoder<TBSCertAVL_entries_Item>
-) {
+    value: TBSCertAVL_entries_Item) {
     const components: _Element[] = [
         _encode_TBSCertAVL_entries_Item_idType(value.idType, $.BER),
     ];

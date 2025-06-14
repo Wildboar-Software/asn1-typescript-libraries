@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
 } from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
-export {
-  Activity_Identifier,
-  _decode_Activity_Identifier,
-  _encode_Activity_Identifier,
-} from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
 import {
-  Access_Request,
-  _decode_Access_Request,
-  _encode_Access_Request,
-} from '../ISO8571-FTAM/Access-Request.ta.mjs';
-export {
   Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
@@ -91,22 +27,11 @@ import {
   _decode_Access_Passwords,
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
-export {
-  Access_Passwords,
-  _decode_Access_Passwords,
-  _encode_Access_Passwords,
-} from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
   Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
-export {
-  Abstract_Syntax_Name,
-  _decode_Abstract_Syntax_Name,
-  _encode_Abstract_Syntax_Name,
-} from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_RECOVER_request */
 /**
  * @summary F_RECOVER_request
@@ -500,9 +425,7 @@ export function _encode_F_RECOVER_request(
 ) {
   if (!_cached_encoder_for_F_RECOVER_request) {
     _cached_encoder_for_F_RECOVER_request = function (
-      value: F_RECOVER_request,
-      elGetter: $.ASN1Encoder<F_RECOVER_request>
-    ): _Element {
+      value: F_RECOVER_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

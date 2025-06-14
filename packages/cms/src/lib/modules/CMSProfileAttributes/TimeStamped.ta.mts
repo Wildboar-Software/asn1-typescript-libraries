@@ -11,13 +11,6 @@ import {
     _encode_TimeStamp,
 } from "../CMSProfileAttributes/TimeStamp.ta.mjs";
 import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../CMSProfileAttributes/TimeStamp.ta.mjs";
-export { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TimeStamped */
 /**
  * @summary TimeStamped
@@ -185,9 +178,7 @@ export function _encode_TimeStamped(
 ) {
     if (!_cached_encoder_for_TimeStamped) {
         _cached_encoder_for_TimeStamped = function (
-            value: TimeStamped,
-            elGetter: $.ASN1Encoder<TimeStamped>
-        ): _Element {
+            value: TimeStamped        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

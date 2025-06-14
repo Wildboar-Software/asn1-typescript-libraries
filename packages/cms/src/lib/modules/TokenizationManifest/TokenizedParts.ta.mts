@@ -6,12 +6,6 @@ import {
     _decode_Tokenized,
     _encode_Tokenized,
 } from "../TokenizationManifest/Tokenized.ta.mjs";
-export {
-    Tokenized,
-    _decode_Tokenized,
-    _encode_Tokenized,
-} from "../TokenizationManifest/Tokenized.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TokenizedParts */
 /**
  * @summary TokenizedParts

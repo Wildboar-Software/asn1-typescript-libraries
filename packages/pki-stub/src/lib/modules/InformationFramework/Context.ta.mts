@@ -205,9 +205,7 @@ export function _decode_Context(el: _Element) {
  * @returns {_Element} The Context, encoded as an ASN.1 Element.
  */
 export function _encode_Context(
-    value: Context,
-    elGetter: $.ASN1Encoder<Context>
-) {
+    value: Context) {
     const components: _Element[] = [
         /* REQUIRED   */ $._encodeObjectIdentifier(
             value.contextType,

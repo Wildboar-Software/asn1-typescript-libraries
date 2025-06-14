@@ -20,22 +20,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
-export {
-    ReceiptsFrom,
-    _decode_ReceiptsFrom,
-    _encode_ReceiptsFrom,
-} from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "@wildboar/x500/src/lib/modules/CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReceiptRequest */
 /**
  * @summary ReceiptRequest
@@ -221,9 +205,7 @@ export function _encode_ReceiptRequest(
 ) {
     if (!_cached_encoder_for_ReceiptRequest) {
         _cached_encoder_for_ReceiptRequest = function (
-            value: ReceiptRequest,
-            elGetter: $.ASN1Encoder<ReceiptRequest>
-        ): _Element {
+            value: ReceiptRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

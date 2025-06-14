@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca.mjs";
-export { CMS_CONTENT_TYPE } from "../CryptographicMessageSyntax/CMS-CONTENT-TYPE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CMSContentTable */
 /**
  * @summary CMSContentTable

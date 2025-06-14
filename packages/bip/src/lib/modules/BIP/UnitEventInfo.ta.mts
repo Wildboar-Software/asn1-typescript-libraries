@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
-export {
-  EndpointIRI,
-  _decode_EndpointIRI,
-  _encode_EndpointIRI,
-} from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_UUID,
-  _decode_BioAPI_UUID,
-  _encode_BioAPI_UUID,
-} from '../BIP/BioAPI-UUID.ta.mjs';
-export {
   BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
@@ -91,17 +26,7 @@ import {
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
-export {
-  BioAPI_UNIT_ID,
-  _decode_BioAPI_UNIT_ID,
-  _encode_BioAPI_UNIT_ID,
-} from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_UNIT_SCHEMA,
-  _decode_BioAPI_UNIT_SCHEMA,
-  _encode_BioAPI_UNIT_SCHEMA,
-} from '../BIP/BioAPI-UNIT-SCHEMA.ta.mjs';
-export {
   BioAPI_UNIT_SCHEMA,
   _decode_BioAPI_UNIT_SCHEMA,
   _encode_BioAPI_UNIT_SCHEMA,
@@ -109,36 +34,9 @@ export {
 import {
   BioAPI_UNIT_EVENT_TYPE,
   _enum_for_BioAPI_UNIT_EVENT_TYPE,
-  BioAPI_UNIT_EVENT_TYPE_insert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  insert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_remove /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  remove /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_fault /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  fault /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_sourcePresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sourcePresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_sourceRemoved /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sourceRemoved /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.mjs';
-export {
-  BioAPI_UNIT_EVENT_TYPE,
-  _enum_for_BioAPI_UNIT_EVENT_TYPE,
-  BioAPI_UNIT_EVENT_TYPE_insert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  insert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_remove /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  remove /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_fault /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  fault /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_sourcePresent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sourcePresent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  BioAPI_UNIT_EVENT_TYPE_sourceRemoved /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  sourceRemoved /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_BioAPI_UNIT_EVENT_TYPE,
-  _encode_BioAPI_UNIT_EVENT_TYPE,
-} from '../BIP/BioAPI-UNIT-EVENT-TYPE.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION UnitEventInfo */
 /**
  * @summary UnitEventInfo
@@ -377,9 +275,7 @@ export function _encode_UnitEventInfo(
 ) {
   if (!_cached_encoder_for_UnitEventInfo) {
     _cached_encoder_for_UnitEventInfo = function (
-      value: UnitEventInfo,
-      elGetter: $.ASN1Encoder<UnitEventInfo>
-    ): _Element {
+      value: UnitEventInfo    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

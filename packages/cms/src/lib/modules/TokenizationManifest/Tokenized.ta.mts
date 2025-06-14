@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { TOKENIZED } from "../TokenizationManifest/TOKENIZED.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Tokenized */
 /**
  * @summary Tokenized
@@ -172,9 +170,7 @@ export function _encode_Tokenized(
 ) {
     if (!_cached_encoder_for_Tokenized) {
         _cached_encoder_for_Tokenized = function (
-            value: Tokenized,
-            elGetter: $.ASN1Encoder<Tokenized>
-        ): _Element {
+            value: Tokenized        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

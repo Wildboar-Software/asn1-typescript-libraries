@@ -214,9 +214,7 @@ let _cached_encoder_for_CertID: $.ASN1Encoder<CertID> | null = null;
 export function _encode_CertID(value: CertID, elGetter: $.ASN1Encoder<CertID>) {
     if (!_cached_encoder_for_CertID) {
         _cached_encoder_for_CertID = function (
-            value: CertID,
-            elGetter: $.ASN1Encoder<CertID>
-        ): _Element {
+            value: CertID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

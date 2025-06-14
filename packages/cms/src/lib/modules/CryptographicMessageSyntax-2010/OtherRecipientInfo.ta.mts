@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OTHER_RECIPIENT } from "../CryptographicMessageSyntax-2010/OTHER-RECIPIENT.oca.mjs";
-export { SupportedOtherRecipInfo } from "../CryptographicMessageSyntax-2010/SupportedOtherRecipInfo.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OtherRecipientInfo */
 /**
  * @summary OtherRecipientInfo
@@ -160,9 +157,7 @@ export function _encode_OtherRecipientInfo(
 ) {
     if (!_cached_encoder_for_OtherRecipientInfo) {
         _cached_encoder_for_OtherRecipientInfo = function (
-            value: OtherRecipientInfo,
-            elGetter: $.ASN1Encoder<OtherRecipientInfo>
-        ): _Element {
+            value: OtherRecipientInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -204,9 +204,7 @@ export function _decode_Attribute(el: _Element) {
  * @returns {_Element} The Attribute, encoded as an ASN.1 Element.
  */
 export function _encode_Attribute(
-    value: Attribute,
-    elGetter: $.ASN1Encoder<Attribute>
-) {
+    value: Attribute) {
     const components: _Element[] = [
         /* REQUIRED */ $._encodeObjectIdentifier(
             value.type_,

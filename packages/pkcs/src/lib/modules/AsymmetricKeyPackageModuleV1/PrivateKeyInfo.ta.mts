@@ -6,12 +6,6 @@ import {
     _decode_OneAsymmetricKey,
     _encode_OneAsymmetricKey,
 } from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.mjs";
-export {
-    OneAsymmetricKey,
-    _decode_OneAsymmetricKey,
-    _encode_OneAsymmetricKey,
-} from "../AsymmetricKeyPackageModuleV1/OneAsymmetricKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PrivateKeyInfo */
 /**
  * @summary PrivateKeyInfo

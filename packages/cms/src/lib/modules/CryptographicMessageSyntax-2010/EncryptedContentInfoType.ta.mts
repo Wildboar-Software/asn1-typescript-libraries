@@ -7,9 +7,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2010/CONTENT-TYPE.oca.mjs";
-export { ContentSet } from "../CryptographicMessageSyntax-2010/ContentSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedContentInfoType */
 /**
  * @summary EncryptedContentInfoType
@@ -194,11 +191,7 @@ export function _get_encoder_for_EncryptedContentInfoType<
     AlgorithmIdentifierType
 >(_encode_AlgorithmIdentifierType: $.ASN1Encoder<AlgorithmIdentifierType>) {
     return function (
-        value: EncryptedContentInfoType<AlgorithmIdentifierType>,
-        elGetter: $.ASN1Encoder<
-            EncryptedContentInfoType<AlgorithmIdentifierType>
-        >
-    ): _Element {
+        value: EncryptedContentInfoType<AlgorithmIdentifierType>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat([

@@ -50,64 +50,6 @@ import {
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";
-export {
-    AuthAttributes,
-    _decode_AuthAttributes,
-    _encode_AuthAttributes,
-} from "../CryptographicMessageSyntax-2010/AuthAttributes.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
-export {
-    EncapsulatedContentInfo,
-    _decode_EncapsulatedContentInfo,
-    _encode_EncapsulatedContentInfo,
-} from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.mjs";
-export {
-    MessageAuthenticationCode,
-    _decode_MessageAuthenticationCode,
-    _encode_MessageAuthenticationCode,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.mjs";
-export {
-    MessageAuthenticationCodeAlgorithm,
-    _decode_MessageAuthenticationCodeAlgorithm,
-    _encode_MessageAuthenticationCodeAlgorithm,
-} from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";
-export {
-    OriginatorInfo,
-    _decode_OriginatorInfo,
-    _encode_OriginatorInfo,
-} from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs";
-export {
-    RecipientInfos,
-    _decode_RecipientInfos,
-    _encode_RecipientInfos,
-} from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs";
-export {
-    UnauthAttributes,
-    _decode_UnauthAttributes,
-    _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticatedData */
 /**
  * @summary AuthenticatedData
@@ -429,9 +371,7 @@ export function _encode_AuthenticatedData(
 ) {
     if (!_cached_encoder_for_AuthenticatedData) {
         _cached_encoder_for_AuthenticatedData = function (
-            value: AuthenticatedData,
-            elGetter: $.ASN1Encoder<AuthenticatedData>
-        ): _Element {
+            value: AuthenticatedData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

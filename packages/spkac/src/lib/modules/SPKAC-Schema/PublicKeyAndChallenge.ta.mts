@@ -171,9 +171,7 @@ export function _encode_PublicKeyAndChallenge(
 ) {
     if (!_cached_encoder_for_PublicKeyAndChallenge) {
         _cached_encoder_for_PublicKeyAndChallenge = function (
-            value: PublicKeyAndChallenge,
-            elGetter: $.ASN1Encoder<PublicKeyAndChallenge>
-        ): _Element {
+            value: PublicKeyAndChallenge        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -33,7 +33,7 @@ import {
  *
  * @class
  */
-export class HASH<ToBeHashed> {
+export class HASH<_ToBeHashed> {
     constructor(
         /**
          * @summary `algorithmIdentifier`.
@@ -175,7 +175,7 @@ export function _get_encoder_for_HASH<ToBeHashed>(
 ) {
     return function (
         value: HASH<ToBeHashed>,
-        elGetter: $.ASN1Encoder<HASH<ToBeHashed>>
+        _elGetter: $.ASN1Encoder<HASH<ToBeHashed>>
     ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])

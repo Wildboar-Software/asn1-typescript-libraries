@@ -11,12 +11,6 @@ import {
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-export {
-    ContentEncryptionAlgorithmIdentifier,
-    _decode_ContentEncryptionAlgorithmIdentifier,
-    _encode_ContentEncryptionAlgorithmIdentifier,
-} from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedRecipientID */
 /**
  * @summary EncryptedRecipientID
@@ -209,9 +203,7 @@ export function _encode_EncryptedRecipientID(
 ) {
     if (!_cached_encoder_for_EncryptedRecipientID) {
         _cached_encoder_for_EncryptedRecipientID = function (
-            value: EncryptedRecipientID,
-            elGetter: $.ASN1Encoder<EncryptedRecipientID>
-        ): _Element {
+            value: EncryptedRecipientID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

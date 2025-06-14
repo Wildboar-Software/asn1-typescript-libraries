@@ -25,58 +25,6 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-export {
-    case_sensitive /* IMPORTED_SHORT_NAMED_BIT */,
-    change_disabled /* IMPORTED_SHORT_NAMED_BIT */,
-    confidentiality_protected /* IMPORTED_SHORT_NAMED_BIT */,
-    disable_allowed /* IMPORTED_SHORT_NAMED_BIT */,
-    exchangeRefData /* IMPORTED_SHORT_NAMED_BIT */,
-    initialized /* IMPORTED_SHORT_NAMED_BIT */,
-    integrity_protected /* IMPORTED_SHORT_NAMED_BIT */,
-    local /* IMPORTED_SHORT_NAMED_BIT */,
-    needs_padding /* IMPORTED_SHORT_NAMED_BIT */,
-    PinFlags,
-    PinFlags_case_sensitive /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_change_disabled /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_confidentiality_protected /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_disable_allowed /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_exchangeRefData /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_initialized /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_integrity_protected /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_local /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_needs_padding /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_soPin /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_unblockingPin /* IMPORTED_LONG_NAMED_BIT */,
-    PinFlags_unblock_disabled /* IMPORTED_LONG_NAMED_BIT */,
-    soPin /* IMPORTED_SHORT_NAMED_BIT */,
-    unblockingPin /* IMPORTED_SHORT_NAMED_BIT */,
-    unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_PinFlags,
-    _encode_PinFlags,
-} from "../PKCS-15/PinFlags.ta.mjs";
-export {
-    ascii_numeric /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    bcd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    half_nibble_bcd /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    iso9564_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PinType,
-    PinType_ascii_numeric /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    PinType_bcd /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    PinType_half_nibble_bcd /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    PinType_iso9564_1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    PinType_utf8 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    utf8 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_PinType,
-    _encode_PinType,
-    _enum_for_PinType,
-} from "../PKCS-15/PinType.ta.mjs";
-export {
-    Reference,
-    _decode_Reference,
-    _encode_Reference,
-} from "../PKCS-15/Reference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PinAttributes */
 /**
  * @summary PinAttributes
@@ -421,9 +369,7 @@ export function _encode_PinAttributes(
 ) {
     if (!_cached_encoder_for_PinAttributes) {
         _cached_encoder_for_PinAttributes = function (
-            value: PinAttributes,
-            elGetter: $.ASN1Encoder<PinAttributes>
-        ): _Element {
+            value: PinAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

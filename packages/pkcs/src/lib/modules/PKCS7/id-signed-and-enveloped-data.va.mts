@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pkcs } from "../PKCS7/id-pkcs.va.mjs";
-export { id_pkcs } from "../PKCS7/id-pkcs.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_signed_and_enveloped_data */
 /**
  * @summary id_signed_and_enveloped_data

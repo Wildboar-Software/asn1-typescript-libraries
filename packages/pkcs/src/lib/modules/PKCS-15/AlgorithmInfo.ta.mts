@@ -12,14 +12,6 @@ import {
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
-export { AlgorithmSet } from "../PKCS-15/AlgorithmSet.osa.mjs";
-export { PKCS15_ALGORITHM } from "../PKCS-15/PKCS15-ALGORITHM.oca.mjs";
-export {
-    Reference,
-    _decode_Reference,
-    _encode_Reference,
-} from "../PKCS-15/Reference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AlgorithmInfo */
 /**
  * @summary AlgorithmInfo
@@ -266,9 +258,7 @@ export function _encode_AlgorithmInfo(
 ) {
     if (!_cached_encoder_for_AlgorithmInfo) {
         _cached_encoder_for_AlgorithmInfo = function (
-            value: AlgorithmInfo,
-            elGetter: $.ASN1Encoder<AlgorithmInfo>
-        ): _Element {
+            value: AlgorithmInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

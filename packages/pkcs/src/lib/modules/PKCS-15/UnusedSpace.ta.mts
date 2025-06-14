@@ -16,18 +16,6 @@ import {
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-export {
-    AccessControlRule,
-    _decode_AccessControlRule,
-    _encode_AccessControlRule,
-} from "../PKCS-15/AccessControlRule.ta.mjs";
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from "../PKCS-15/Identifier.ta.mjs";
-export { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UnusedSpace */
 /**
  * @summary UnusedSpace
@@ -233,9 +221,7 @@ export function _encode_UnusedSpace(
 ) {
     if (!_cached_encoder_for_UnusedSpace) {
         _cached_encoder_for_UnusedSpace = function (
-            value: UnusedSpace,
-            elGetter: $.ASN1Encoder<UnusedSpace>
-        ): _Element {
+            value: UnusedSpace        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

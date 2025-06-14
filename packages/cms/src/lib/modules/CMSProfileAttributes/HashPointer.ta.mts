@@ -15,17 +15,6 @@ import {
     _decode_DigestedData,
     _encode_DigestedData,
 } from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
-export {
-    Pointers,
-    _decode_Pointers,
-    _encode_Pointers,
-} from "../CMSProfileAttributes/Pointers.ta.mjs";
-export {
-    DigestedData,
-    _decode_DigestedData,
-    _encode_DigestedData,
-} from "../CryptographicMessageSyntax-2010/DigestedData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HashPointer */
 /**
  * @summary HashPointer
@@ -194,9 +183,7 @@ export function _encode_HashPointer(
 ) {
     if (!_cached_encoder_for_HashPointer) {
         _cached_encoder_for_HashPointer = function (
-            value: HashPointer,
-            elGetter: $.ASN1Encoder<HashPointer>
-        ): _Element {
+            value: HashPointer        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

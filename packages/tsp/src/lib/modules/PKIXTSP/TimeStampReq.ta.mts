@@ -294,9 +294,7 @@ export function _encode_TimeStampReq(
 ) {
     if (!_cached_encoder_for_TimeStampReq) {
         _cached_encoder_for_TimeStampReq = function (
-            value: TimeStampReq,
-            elGetter: $.ASN1Encoder<TimeStampReq>
-        ): _Element {
+            value: TimeStampReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

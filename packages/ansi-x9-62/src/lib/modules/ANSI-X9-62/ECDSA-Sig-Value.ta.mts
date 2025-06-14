@@ -165,9 +165,7 @@ export function _encode_ECDSA_Sig_Value(
 ) {
     if (!_cached_encoder_for_ECDSA_Sig_Value) {
         _cached_encoder_for_ECDSA_Sig_Value = function (
-            value: ECDSA_Sig_Value,
-            elGetter: $.ASN1Encoder<ECDSA_Sig_Value>
-        ): _Element {
+            value: ECDSA_Sig_Value        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

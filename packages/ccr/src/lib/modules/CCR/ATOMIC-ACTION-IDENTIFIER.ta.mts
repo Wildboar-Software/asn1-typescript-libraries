@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta.mjs';
-export {
-  ATOMIC_ACTION_IDENTIFIER_owners_name,
-  _decode_ATOMIC_ACTION_IDENTIFIER_owners_name,
-  _encode_ATOMIC_ACTION_IDENTIFIER_owners_name,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta.mjs';
 import {
   ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.mjs';
-export {
-  ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
-  _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
-  _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
-} from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ATOMIC_ACTION_IDENTIFIER */
 /**
  * @summary ATOMIC_ACTION_IDENTIFIER
@@ -251,9 +184,7 @@ export function _encode_ATOMIC_ACTION_IDENTIFIER(
 ) {
   if (!_cached_encoder_for_ATOMIC_ACTION_IDENTIFIER) {
     _cached_encoder_for_ATOMIC_ACTION_IDENTIFIER = function (
-      value: ATOMIC_ACTION_IDENTIFIER,
-      elGetter: $.ASN1Encoder<ATOMIC_ACTION_IDENTIFIER>
-    ): _Element {
+      value: ATOMIC_ACTION_IDENTIFIER    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

@@ -3,9 +3,6 @@ import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { aes128_CBC_PAD } from "../PKCS5v2-1/aes128-CBC-PAD.va.mjs";
 import { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-export { aes128_CBC_PAD } from "../PKCS5v2-1/aes128-CBC-PAD.va.mjs";
-export { ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportingAlgorithms_Union5_Intersection0_Element */
 /**
  * @summary SupportingAlgorithms_Union5_Intersection0_Element

@@ -20,29 +20,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/src/lib/modules/AuthenticationFramework/Certificate.ta.mjs";
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
-export {
-    UnauthAttributes,
-    _decode_UnauthAttributes,
-    _encode_UnauthAttributes,
-} from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtendedCertificateInfo */
 /**
  * @summary ExtendedCertificateInfo
@@ -227,9 +204,7 @@ export function _encode_ExtendedCertificateInfo(
 ) {
     if (!_cached_encoder_for_ExtendedCertificateInfo) {
         _cached_encoder_for_ExtendedCertificateInfo = function (
-            value: ExtendedCertificateInfo,
-            elGetter: $.ASN1Encoder<ExtendedCertificateInfo>
-        ): _Element {
+            value: ExtendedCertificateInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

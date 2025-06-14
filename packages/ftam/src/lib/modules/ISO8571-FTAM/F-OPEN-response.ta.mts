@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -72,28 +19,13 @@ import {
   _decode_State_Result,
   _encode_State_Result,
 } from '../ISO8571-FTAM/State-Result.ta.mjs';
-export {
-  State_Result,
-  _decode_State_Result,
-  _encode_State_Result,
-} from '../ISO8571-FTAM/State-Result.ta.mjs';
 import {
   Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
-export {
-  Action_Result,
-  _decode_Action_Result,
-  _encode_Action_Result,
-} from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Contents_Type_Attribute,
-  _decode_Contents_Type_Attribute,
-  _encode_Contents_Type_Attribute,
-} from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
-export {
   Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
@@ -103,17 +35,7 @@ import {
   _decode_Concurrency_Control,
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
-export {
-  Concurrency_Control,
-  _decode_Concurrency_Control,
-  _encode_Concurrency_Control,
-} from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
-  _decode_Shared_ASE_Information,
-  _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
@@ -123,30 +45,9 @@ import {
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
-export {
-  Diagnostic,
-  _decode_Diagnostic,
-  _encode_Diagnostic,
-} from '../ISO8571-FTAM/Diagnostic.ta.mjs';
 import {
   F_OPEN_response_recovery_mode,
-  F_OPEN_response_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
   none /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_response_recovery_mode_at_start_of_file /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_start_of_file /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_response_recovery_mode_at_any_active_Checkpoint /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
-  _decode_F_OPEN_response_recovery_mode,
-  _encode_F_OPEN_response_recovery_mode,
-} from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.mjs';
-export {
-  F_OPEN_response_recovery_mode,
-  F_OPEN_response_recovery_mode_none /* IMPORTED_LONG_NAMED_INTEGER */,
-  none /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_response_recovery_mode_at_start_of_file /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_start_of_file /* IMPORTED_SHORT_NAMED_INTEGER */,
-  F_OPEN_response_recovery_mode_at_any_active_Checkpoint /* IMPORTED_LONG_NAMED_INTEGER */,
-  at_any_active_Checkpoint /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_response_recovery_mode,
   _encode_F_OPEN_response_recovery_mode,
 } from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.mjs';
@@ -155,12 +56,6 @@ import {
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
 } from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
-export {
-  Degree_Of_Overlap,
-  _decode_Degree_Of_Overlap,
-  _encode_Degree_Of_Overlap,
-} from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_OPEN_response */
 /**
  * @summary F_OPEN_response
@@ -548,9 +443,7 @@ export function _encode_F_OPEN_response(
 ) {
   if (!_cached_encoder_for_F_OPEN_response) {
     _cached_encoder_for_F_OPEN_response = function (
-      value: F_OPEN_response,
-      elGetter: $.ASN1Encoder<F_OPEN_response>
-    ): _Element {
+      value: F_OPEN_response    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

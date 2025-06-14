@@ -214,7 +214,7 @@ export function _decode_IssuerSerial(el: _Element) {
  */
 export function _encode_IssuerSerial(
     value: IssuerSerial,
-    elGetter: $.ASN1Encoder<IssuerSerial>
+    _elGetter: $.ASN1Encoder<IssuerSerial>
 ) {
     const components: _Element[] = [
         /* REQUIRED   */ _encode_GeneralNames(

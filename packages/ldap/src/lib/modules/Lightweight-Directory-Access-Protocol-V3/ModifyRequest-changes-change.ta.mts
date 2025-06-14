@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -69,24 +13,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
   ModifyRequest_changes_change_operation,
   _enum_for_ModifyRequest_changes_change_operation,
-  ModifyRequest_changes_change_operation_add /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  add /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ModifyRequest_changes_change_operation_delete_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  delete_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ModifyRequest_changes_change_operation_replace /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  replace /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  _decode_ModifyRequest_changes_change_operation,
-  _encode_ModifyRequest_changes_change_operation,
-} from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta.mjs';
-export {
-  ModifyRequest_changes_change_operation,
-  _enum_for_ModifyRequest_changes_change_operation,
-  ModifyRequest_changes_change_operation_add /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  add /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ModifyRequest_changes_change_operation_delete_ /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  delete_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-  ModifyRequest_changes_change_operation_replace /* IMPORTED_LONG_ENUMERATION_ITEM */,
-  replace /* IMPORTED_SHORT_ENUMERATION_ITEM */,
   _decode_ModifyRequest_changes_change_operation,
   _encode_ModifyRequest_changes_change_operation,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change-operation.ta.mjs';
@@ -95,12 +21,6 @@ import {
   _decode_PartialAttribute,
   _encode_PartialAttribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
-export {
-  PartialAttribute,
-  _decode_PartialAttribute,
-  _encode_PartialAttribute,
-} from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ModifyRequest_changes_change */
 /**
  * @summary ModifyRequest_changes_change
@@ -260,9 +180,7 @@ export function _decode_ModifyRequest_changes_change(el: _Element) {
  * @returns {_Element} The ModifyRequest_changes_change, encoded as an ASN.1 Element.
  */
 export function _encode_ModifyRequest_changes_change(
-  value: ModifyRequest_changes_change,
-  elGetter: $.ASN1Encoder<ModifyRequest_changes_change>
-) {
+  value: ModifyRequest_changes_change) {
     const components: _Element[] = [
         _encode_ModifyRequest_changes_change_operation(value.operation, $.BER),
         _encode_PartialAttribute(value.modification, $.BER),

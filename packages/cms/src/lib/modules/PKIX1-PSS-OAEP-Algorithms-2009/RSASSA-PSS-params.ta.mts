@@ -18,19 +18,6 @@ import {
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.mjs";
 import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.mjs";
-export {
-    HashAlgorithm,
-    _decode_HashAlgorithm,
-    _encode_HashAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
-export {
-    MaskGenAlgorithm,
-    _decode_MaskGenAlgorithm,
-    _encode_MaskGenAlgorithm,
-} from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.mjs";
-export { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.mjs";
-export { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RSASSA_PSS_params */
 /**
  * @summary RSASSA_PSS_params
@@ -292,9 +279,7 @@ export function _encode_RSASSA_PSS_params(
 ) {
     if (!_cached_encoder_for_RSASSA_PSS_params) {
         _cached_encoder_for_RSASSA_PSS_params = function (
-            value: RSASSA_PSS_params,
-            elGetter: $.ASN1Encoder<RSASSA_PSS_params>
-        ): _Element {
+            value: RSASSA_PSS_params        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
     GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,40 +15,9 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RestrictionsOnSLC_restrictionId,
     _enum_for_RestrictionsOnSLC_restrictionId,
-    RestrictionsOnSLC_restrictionId_noRestrictions /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    noRestrictions /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_protectedSLCsOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    protectedSLCsOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    protectedDedicatedSLCsOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedSLCsOnlyWithProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedSLCsPreferredProtectedSLCsRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RestrictionsOnSLC_restrictionId,
     _encode_RestrictionsOnSLC_restrictionId,
 } from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta.mjs';
-export {
-    RestrictionsOnSLC_restrictionId,
-    _enum_for_RestrictionsOnSLC_restrictionId,
-    RestrictionsOnSLC_restrictionId_noRestrictions /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    noRestrictions /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_protectedSLCsOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    protectedSLCsOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    protectedDedicatedSLCsOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedSLCsOnlyWithProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedSLCsPreferredProtectedSLCsRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    dedicatedProtectedSLCsPreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_RestrictionsOnSLC_restrictionId,
-    _encode_RestrictionsOnSLC_restrictionId,
-} from '../M3108Part2ASN1Module/RestrictionsOnSLC-restrictionId.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RestrictionsOnSLC */
 /**
  * @summary RestrictionsOnSLC
@@ -305,9 +220,7 @@ export function _encode_RestrictionsOnSLC(
 ) {
     if (!_cached_encoder_for_RestrictionsOnSLC) {
         _cached_encoder_for_RestrictionsOnSLC = function (
-            value: RestrictionsOnSLC,
-            elGetter: $.ASN1Encoder<RestrictionsOnSLC>
-        ): _Element {
+            value: RestrictionsOnSLC        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

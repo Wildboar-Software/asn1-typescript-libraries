@@ -8,15 +8,6 @@ import { aa_sidechains } from "../CMSProfileAttributes/aa-sidechains.oa.mjs";
 import { aa_signerInfo } from "../CMSProfileAttributes/aa-signerInfo.oa.mjs";
 import { aa_signerInfos } from "../CMSProfileAttributes/aa-signerInfos.oa.mjs";
 import { aa_timeStamped } from "../CMSProfileAttributes/aa-timeStamped.oa.mjs";
-export { aa_contentLocation } from "../CMSProfileAttributes/aa-contentLocation.oa.mjs";
-export { aa_contentLocations } from "../CMSProfileAttributes/aa-contentLocations.oa.mjs";
-export { aa_parentBlock } from "../CMSProfileAttributes/aa-parentBlock.oa.mjs";
-export { aa_precedingBlock } from "../CMSProfileAttributes/aa-precedingBlock.oa.mjs";
-export { aa_sidechains } from "../CMSProfileAttributes/aa-sidechains.oa.mjs";
-export { aa_signerInfo } from "../CMSProfileAttributes/aa-signerInfo.oa.mjs";
-export { aa_signerInfos } from "../CMSProfileAttributes/aa-signerInfos.oa.mjs";
-export { aa_timeStamped } from "../CMSProfileAttributes/aa-timeStamped.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CMSProfileAttributes */
 /**
  * @summary CMSProfileAttributes

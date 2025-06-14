@@ -16,22 +16,6 @@ import {
     _decode_KeyTransportRecipientInfo,
     _encode_KeyTransportRecipientInfo,
 } from "../PKCS7/KeyTransportRecipientInfo.ta.mjs";
-export {
-    KeyAgreementRecipientInfo,
-    _decode_KeyAgreementRecipientInfo,
-    _encode_KeyAgreementRecipientInfo,
-} from "../PKCS7/KeyAgreementRecipientInfo.ta.mjs";
-export {
-    KeyEncryptionKeyRecipientInfo,
-    _decode_KeyEncryptionKeyRecipientInfo,
-    _encode_KeyEncryptionKeyRecipientInfo,
-} from "../PKCS7/KeyEncryptionKeyRecipientInfo.ta.mjs";
-export {
-    KeyTransportRecipientInfo,
-    _decode_KeyTransportRecipientInfo,
-    _encode_KeyTransportRecipientInfo,
-} from "../PKCS7/KeyTransportRecipientInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RecipientInfo */
 /**
  * @summary RecipientInfo

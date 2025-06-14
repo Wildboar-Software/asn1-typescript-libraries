@@ -6,12 +6,6 @@ import {
     _decode_RevocationInfoChoice,
     _encode_RevocationInfoChoice,
 } from "../CryptographicMessageSyntax-2010/RevocationInfoChoice.ta.mjs";
-export {
-    RevocationInfoChoice,
-    _decode_RevocationInfoChoice,
-    _encode_RevocationInfoChoice,
-} from "../CryptographicMessageSyntax-2010/RevocationInfoChoice.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RevocationInfoChoices */
 /**
  * @summary RevocationInfoChoices

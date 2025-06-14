@@ -11,17 +11,6 @@ import {
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";
-export {
-    EnvelopedData,
-    _get_decoder_for_EnvelopedData,
-    _get_encoder_for_EnvelopedData,
-} from "../PKCS-15/EnvelopedData.ta.mjs";
-export {
-    ReferencedValue,
-    _get_decoder_for_ReferencedValue,
-    _get_encoder_for_ReferencedValue,
-} from "../PKCS-15/ReferencedValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ObjectValue */
 /**
  * @summary ObjectValue

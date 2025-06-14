@@ -1,61 +1,10 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
   INTEGER,
-  BIT_STRING,
-  OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
   TRUE_BIT,
   FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,17 +20,7 @@ import {
   _decode_Protocol_Version,
   _encode_Protocol_Version,
 } from '../ISO8571-FTAM/Protocol-Version.ta.mjs';
-export {
-  Protocol_Version,
-  _decode_Protocol_Version,
-  _encode_Protocol_Version,
-} from '../ISO8571-FTAM/Protocol-Version.ta.mjs';
 import {
-  Implementation_Information,
-  _decode_Implementation_Information,
-  _encode_Implementation_Information,
-} from '../ISO8571-FTAM/Implementation-Information.ta.mjs';
-export {
   Implementation_Information,
   _decode_Implementation_Information,
   _encode_Implementation_Information,
@@ -91,17 +30,7 @@ import {
   _decode_Service_Class,
   _encode_Service_Class,
 } from '../ISO8571-FTAM/Service-Class.ta.mjs';
-export {
-  Service_Class,
-  _decode_Service_Class,
-  _encode_Service_Class,
-} from '../ISO8571-FTAM/Service-Class.ta.mjs';
 import {
-  Functional_Units,
-  _decode_Functional_Units,
-  _encode_Functional_Units,
-} from '../ISO8571-FTAM/Functional-Units.ta.mjs';
-export {
   Functional_Units,
   _decode_Functional_Units,
   _encode_Functional_Units,
@@ -111,17 +40,7 @@ import {
   _decode_Attribute_Groups,
   _encode_Attribute_Groups,
 } from '../ISO8571-FTAM/Attribute-Groups.ta.mjs';
-export {
-  Attribute_Groups,
-  _decode_Attribute_Groups,
-  _encode_Attribute_Groups,
-} from '../ISO8571-FTAM/Attribute-Groups.ta.mjs';
 import {
-  Shared_ASE_Information,
-  _decode_Shared_ASE_Information,
-  _encode_Shared_ASE_Information,
-} from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
-export {
   Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
@@ -131,17 +50,7 @@ import {
   _decode_FTAM_Quality_of_Service,
   _encode_FTAM_Quality_of_Service,
 } from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.mjs';
-export {
-  FTAM_Quality_of_Service,
-  _decode_FTAM_Quality_of_Service,
-  _encode_FTAM_Quality_of_Service,
-} from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.mjs';
 import {
-  Contents_Type_List,
-  _decode_Contents_Type_List,
-  _encode_Contents_Type_List,
-} from '../ISO8571-FTAM/Contents-Type-List.ta.mjs';
-export {
   Contents_Type_List,
   _decode_Contents_Type_List,
   _encode_Contents_Type_List,
@@ -151,17 +60,7 @@ import {
   _decode_User_Identity,
   _encode_User_Identity,
 } from '../ISO8571-FTAM/User-Identity.ta.mjs';
-export {
-  User_Identity,
-  _decode_User_Identity,
-  _encode_User_Identity,
-} from '../ISO8571-FTAM/User-Identity.ta.mjs';
 import {
-  Account,
-  _decode_Account,
-  _encode_Account,
-} from '../ISO8571-FTAM/Account.ta.mjs';
-export {
   Account,
   _decode_Account,
   _encode_Account,
@@ -171,12 +70,6 @@ import {
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
-export {
-  Password,
-  _decode_Password,
-  _encode_Password,
-} from '../ISO8571-FTAM/Password.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION F_INITIALIZE_request */
 /**
  * @summary F_INITIALIZE_request
@@ -629,9 +522,7 @@ export function _encode_F_INITIALIZE_request(
 ) {
   if (!_cached_encoder_for_F_INITIALIZE_request) {
     _cached_encoder_for_F_INITIALIZE_request = function (
-      value: F_INITIALIZE_request,
-      elGetter: $.ASN1Encoder<F_INITIALIZE_request>
-    ): _Element {
+      value: F_INITIALIZE_request    ): _Element {
       return $._encodeSequence(
         ([] as (_Element | undefined)[])
           .concat([

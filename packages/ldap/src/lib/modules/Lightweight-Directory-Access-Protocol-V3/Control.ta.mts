@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-  itu_t,
-  itu_r,
-  ccitt,
-  iso,
-  joint_iso_itu_t,
-  joint_iso_ccitt,
   OPTIONAL,
   BOOLEAN,
-  INTEGER,
-  BIT_STRING,
   OCTET_STRING,
-  NULL,
-  OBJECT_IDENTIFIER,
-  ObjectDescriptor,
-  EXTERNAL,
-  REAL,
-  INSTANCE_OF,
-  ENUMERATED,
-  EMBEDDED_PDV,
-  UTF8String,
-  RELATIVE_OID,
-  SEQUENCE,
-  SEQUENCE_OF,
-  SET,
-  SET_OF,
-  GraphicString,
-  NumericString,
-  VisibleString,
-  PrintableString,
-  ISO646String,
-  TeletexString,
-  GeneralString,
-  T61String,
-  UniversalString,
-  VideotexString,
-  BMPString,
-  IA5String,
-  CharacterString,
-  UTCTime,
-  GeneralizedTime,
-  TIME,
-  DATE,
-  TIME_OF_DAY,
-  DATE_TIME,
-  DURATION,
-  OID_IRI,
-  RELATIVE_OID_IRI,
-  TRUE,
-  FALSE,
-  TRUE_BIT,
-  FALSE_BIT,
-  PLUS_INFINITY,
-  MINUS_INFINITY,
-  NOT_A_NUMBER,
-  TYPE_IDENTIFIER,
-  ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -71,12 +18,6 @@ import {
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
-export {
-  LDAPOID,
-  _decode_LDAPOID,
-  _encode_LDAPOID,
-} from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Control */
 /**
  * @summary Control
@@ -262,7 +203,6 @@ export function _decode_Control(el: _Element) {
 /* END_OF_SYMBOL_DEFINITION _decode_Control */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_Control */
-let _cached_encoder_for_Control: $.ASN1Encoder<Control> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_Control */
 
 /* START_OF_SYMBOL_DEFINITION _encode_Control */
@@ -274,9 +214,7 @@ let _cached_encoder_for_Control: $.ASN1Encoder<Control> | null = null;
  * @returns {_Element} The Control, encoded as an ASN.1 Element.
  */
 export function _encode_Control(
-  value: Control,
-  elGetter: $.ASN1Encoder<Control>
-) {
+  value: Control) {
     const components: _Element[] = [
         _encode_LDAPOID(value.controlType, $.BER),
     ];

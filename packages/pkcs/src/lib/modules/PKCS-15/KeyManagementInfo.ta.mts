@@ -6,12 +6,6 @@ import {
     _decode_KeyManagementInfo_Item,
     _encode_KeyManagementInfo_Item,
 } from "../PKCS-15/KeyManagementInfo-Item.ta.mjs";
-export {
-    KeyManagementInfo_Item,
-    _decode_KeyManagementInfo_Item,
-    _encode_KeyManagementInfo_Item,
-} from "../PKCS-15/KeyManagementInfo-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyManagementInfo */
 /**
  * @summary KeyManagementInfo

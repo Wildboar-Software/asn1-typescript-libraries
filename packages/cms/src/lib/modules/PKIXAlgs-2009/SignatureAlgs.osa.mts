@@ -11,19 +11,6 @@ import { sa_ecdsaWithSHA512 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA512.oa.mjs";
 import { sa_rsaWithMD2 } from "../PKIXAlgs-2009/sa-rsaWithMD2.oa.mjs";
 import { sa_rsaWithMD5 } from "../PKIXAlgs-2009/sa-rsaWithMD5.oa.mjs";
 import { sa_rsaWithSHA1 } from "../PKIXAlgs-2009/sa-rsaWithSHA1.oa.mjs";
-export { SIGNATURE_ALGORITHM } from "../AlgorithmInformation-2009/SIGNATURE-ALGORITHM.oca.mjs";
-export { sa_dsaWithSHA1 } from "../PKIXAlgs-2009/sa-dsaWithSHA1.oa.mjs";
-export { sa_dsaWithSHA224 } from "../PKIXAlgs-2009/sa-dsaWithSHA224.oa.mjs";
-export { sa_dsaWithSHA256 } from "../PKIXAlgs-2009/sa-dsaWithSHA256.oa.mjs";
-export { sa_ecdsaWithSHA1 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA1.oa.mjs";
-export { sa_ecdsaWithSHA224 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA224.oa.mjs";
-export { sa_ecdsaWithSHA256 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA256.oa.mjs";
-export { sa_ecdsaWithSHA384 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA384.oa.mjs";
-export { sa_ecdsaWithSHA512 } from "../PKIXAlgs-2009/sa-ecdsaWithSHA512.oa.mjs";
-export { sa_rsaWithMD2 } from "../PKIXAlgs-2009/sa-rsaWithMD2.oa.mjs";
-export { sa_rsaWithMD5 } from "../PKIXAlgs-2009/sa-rsaWithMD5.oa.mjs";
-export { sa_rsaWithSHA1 } from "../PKIXAlgs-2009/sa-rsaWithSHA1.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignatureAlgs */
 /**
  * @summary SignatureAlgs

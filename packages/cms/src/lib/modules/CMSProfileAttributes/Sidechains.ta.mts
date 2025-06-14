@@ -6,12 +6,6 @@ import {
     _decode_Sidechain,
     _encode_Sidechain,
 } from "../CMSProfileAttributes/Sidechain.ta.mjs";
-export {
-    Sidechain,
-    _decode_Sidechain,
-    _encode_Sidechain,
-} from "../CMSProfileAttributes/Sidechain.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Sidechains */
 /**
  * @summary Sidechains
