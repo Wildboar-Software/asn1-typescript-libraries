@@ -6,14 +6,6 @@ import {
     _encode_DITContentRuleDescription,
 } from "../SchemaAdministration/DITContentRuleDescription.ta.mjs";
 import { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    DITContentRuleDescription,
-    _decode_DITContentRuleDescription,
-    _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta.mjs";
-export { id_lsx_dITContentRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITContentRuleDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dITContentRuleDescription */
 /**
  * @summary dITContentRuleDescription

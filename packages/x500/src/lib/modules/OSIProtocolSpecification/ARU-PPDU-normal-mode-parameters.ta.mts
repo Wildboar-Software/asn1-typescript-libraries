@@ -15,17 +15,6 @@ import {
     _decode_Presentation_context_identifier_list,
     _encode_Presentation_context_identifier_list,
 } from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta.mjs";
-export {
-    ARU_PPDU_normal_mode_parameters_user_data,
-    _decode_ARU_PPDU_normal_mode_parameters_user_data,
-    _encode_ARU_PPDU_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta.mjs";
-export {
-    Presentation_context_identifier_list,
-    _decode_Presentation_context_identifier_list,
-    _encode_Presentation_context_identifier_list,
-} from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU_normal_mode_parameters */
 /**
  * @summary ARU_PPDU_normal_mode_parameters
@@ -187,9 +176,7 @@ export function _encode_ARU_PPDU_normal_mode_parameters(
 ) {
     if (!_cached_encoder_for_ARU_PPDU_normal_mode_parameters) {
         _cached_encoder_for_ARU_PPDU_normal_mode_parameters = function (
-            value: ARU_PPDU_normal_mode_parameters,
-            elGetter: $.ASN1Encoder<ARU_PPDU_normal_mode_parameters>
-        ): _Element {
+            value: ARU_PPDU_normal_mode_parameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

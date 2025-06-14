@@ -6,12 +6,6 @@ import {
     _decode_IssuerSerial,
     _encode_IssuerSerial,
 } from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthAttId */
 /**
  * @summary AuthAttId

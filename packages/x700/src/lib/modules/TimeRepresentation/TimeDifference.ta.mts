@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,29 +13,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TimeDifference_sign,
     _enum_for_TimeDifference_sign,
-    TimeDifference_sign_positive /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    positive /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeDifference_sign_negative /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    negative /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TimeDifference_sign,
-    _encode_TimeDifference_sign,
-} from '../TimeRepresentation/TimeDifference-sign.ta.mjs';
-export {
-    TimeDifference_sign,
-    _enum_for_TimeDifference_sign,
-    TimeDifference_sign_positive /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    positive /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeDifference_sign_negative /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    negative /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeDifference_sign,
     _encode_TimeDifference_sign,
 } from '../TimeRepresentation/TimeDifference-sign.ta.mjs';
 import {
-    Epochs,
-    _decode_Epochs,
-    _encode_Epochs,
-} from '../TimeRepresentation/Epochs.ta.mjs';
-export {
     Epochs,
     _decode_Epochs,
     _encode_Epochs,
@@ -101,36 +26,16 @@ import {
     _decode_Seconds,
     _encode_Seconds,
 } from '../TimeRepresentation/Seconds.ta.mjs';
-export {
-    Seconds,
-    _decode_Seconds,
-    _encode_Seconds,
-} from '../TimeRepresentation/Seconds.ta.mjs';
 import {
-    Nanoseconds,
-    _decode_Nanoseconds,
-    _encode_Nanoseconds,
-} from '../TimeRepresentation/Nanoseconds.ta.mjs';
-export {
     Nanoseconds,
     _decode_Nanoseconds,
     _encode_Nanoseconds,
 } from '../TimeRepresentation/Nanoseconds.ta.mjs';
 import {
     MaximumErrorInNanoseconds,
-    MaximumErrorInNanoseconds_noEstimate /* IMPORTED_LONG_NAMED_INTEGER */,
-    noEstimate /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_MaximumErrorInNanoseconds,
     _encode_MaximumErrorInNanoseconds,
 } from '../TimeRepresentation/MaximumErrorInNanoseconds.ta.mjs';
-export {
-    MaximumErrorInNanoseconds,
-    MaximumErrorInNanoseconds_noEstimate /* IMPORTED_LONG_NAMED_INTEGER */,
-    noEstimate /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_MaximumErrorInNanoseconds,
-    _encode_MaximumErrorInNanoseconds,
-} from '../TimeRepresentation/MaximumErrorInNanoseconds.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TimeDifference */
 /**
  * @summary TimeDifference
@@ -360,9 +265,7 @@ export function _encode_TimeDifference(
 ) {
     if (!_cached_encoder_for_TimeDifference) {
         _cached_encoder_for_TimeDifference = function (
-            value: TimeDifference,
-            elGetter: $.ASN1Encoder<TimeDifference>
-        ): _Element {
+            value: TimeDifference        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

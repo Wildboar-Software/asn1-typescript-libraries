@@ -11,18 +11,6 @@ import {
     _decode_AadClientAE,
     _encode_AadClientAE,
 } from "../Wrapper/AadClientAE.ta.mjs";
-export {
-    AUTHEN_ENCRYPT,
-    _get_decoder_for_AUTHEN_ENCRYPT,
-    _get_encoder_for_AUTHEN_ENCRYPT,
-} from "../CryptoTools/AUTHEN-ENCRYPT.ta.mjs";
-export {
-    AadClientAE,
-    _decode_AadClientAE,
-    _encode_AadClientAE,
-} from "../Wrapper/AadClientAE.ta.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataTransferClientAE */
 /**
  * @summary DataTransferClientAE

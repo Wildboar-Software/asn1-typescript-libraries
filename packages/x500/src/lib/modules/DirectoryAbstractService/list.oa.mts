@@ -16,30 +16,6 @@ import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_list } from "../CommonProtocolSpecification/id-opcode-list.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
-export {
-    ListArgument,
-    _decode_ListArgument,
-    _encode_ListArgument,
-} from "../DirectoryAbstractService/ListArgument.ta.mjs";
-export {
-    ListResult,
-    _decode_ListResult,
-    _encode_ListResult,
-} from "../DirectoryAbstractService/ListResult.ta.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION list */
 /**
  * @summary list

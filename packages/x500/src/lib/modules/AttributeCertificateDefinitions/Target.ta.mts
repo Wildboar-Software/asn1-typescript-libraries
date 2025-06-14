@@ -11,17 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    TargetCert,
-    _decode_TargetCert,
-    _encode_TargetCert,
-} from "../AttributeCertificateDefinitions/TargetCert.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Target */
 /**
  * @summary Target

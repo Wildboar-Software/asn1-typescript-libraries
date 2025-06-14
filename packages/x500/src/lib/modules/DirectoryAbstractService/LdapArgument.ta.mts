@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-export {
-    LdapArgumentData,
-    _decode_LdapArgumentData,
-    _encode_LdapArgumentData,
-} from "../DirectoryAbstractService/LdapArgumentData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED_SEQ,
-    _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
-    _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION LdapArgument */
 /**
  * @summary LdapArgument

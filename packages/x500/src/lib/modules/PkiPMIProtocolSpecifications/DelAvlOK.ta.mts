@@ -152,9 +152,7 @@ export function _encode_DelAvlOK(
 ) {
     if (!_cached_encoder_for_DelAvlOK) {
         _cached_encoder_for_DelAvlOK = function (
-            value: DelAvlOK,
-            elGetter: $.ASN1Encoder<DelAvlOK>
-        ): _Element {
+            value: DelAvlOK        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

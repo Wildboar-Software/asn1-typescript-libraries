@@ -163,9 +163,7 @@ export function _encode_AuthorizationData_Item(
 ) {
     if (!_cached_encoder_for_AuthorizationData_Item) {
         _cached_encoder_for_AuthorizationData_Item = function (
-            value: AuthorizationData_Item,
-            elGetter: $.ASN1Encoder<AuthorizationData_Item>
-        ): _Element {
+            value: AuthorizationData_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

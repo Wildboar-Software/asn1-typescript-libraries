@@ -6,12 +6,6 @@ import {
     _decode_OsiBindError_normal_mode_parameters,
     _encode_OsiBindError_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters.ta.mjs";
-export {
-    OsiBindError_normal_mode_parameters,
-    _decode_OsiBindError_normal_mode_parameters,
-    _encode_OsiBindError_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBindError */
 /**
  * @summary OsiBindError

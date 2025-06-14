@@ -11,19 +11,6 @@ import {
     _encode_Payload23,
 } from "../GenAlgo/Payload23.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-export {
-    Group23,
-    _decode_Group23,
-    _encode_Group23,
-} from "../GenAlgo/Group23.ta.mjs";
-export { id_algo_dhModpGr23Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr23Hkdf256Algo.va.mjs";
-export {
-    Payload23,
-    _decode_Payload23,
-    _encode_Payload23,
-} from "../GenAlgo/Payload23.ta.mjs";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dhModpGr23Hkdf256Algo */
 /**
  * @summary dhModpGr23Hkdf256Algo

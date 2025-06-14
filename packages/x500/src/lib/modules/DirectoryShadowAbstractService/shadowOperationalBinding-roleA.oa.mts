@@ -2,8 +2,6 @@
 import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleA */
 /**
  * @summary shadowOperationalBinding_roleA

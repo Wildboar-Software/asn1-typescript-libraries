@@ -15,17 +15,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    BaseDistance,
-    _decode_BaseDistance,
-    _encode_BaseDistance,
-} from "../CertificateExtensions/BaseDistance.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION GeneralSubtree */
 /**
  * @summary GeneralSubtree
@@ -238,9 +227,7 @@ export function _encode_GeneralSubtree(
 ) {
     if (!_cached_encoder_for_GeneralSubtree) {
         _cached_encoder_for_GeneralSubtree = function (
-            value: GeneralSubtree,
-            elGetter: $.ASN1Encoder<GeneralSubtree>
-        ): _Element {
+            value: GeneralSubtree        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

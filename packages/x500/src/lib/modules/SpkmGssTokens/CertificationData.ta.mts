@@ -15,17 +15,6 @@ import {
     _decode_CertificationPath,
     _encode_CertificationPath,
 } from "../SpkmGssTokens/CertificationPath.ta.mjs";
-export {
-    CertificateList,
-    _decode_CertificateList,
-    _encode_CertificateList,
-} from "../AuthenticationFramework/CertificateList.ta.mjs";
-export {
-    CertificationPath,
-    _decode_CertificationPath,
-    _encode_CertificationPath,
-} from "../SpkmGssTokens/CertificationPath.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificationData */
 /**
  * @summary CertificationData
@@ -202,9 +191,7 @@ export function _encode_CertificationData(
 ) {
     if (!_cached_encoder_for_CertificationData) {
         _cached_encoder_for_CertificationData = function (
-            value: CertificationData,
-            elGetter: $.ASN1Encoder<CertificationData>
-        ): _Element {
+            value: CertificationData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

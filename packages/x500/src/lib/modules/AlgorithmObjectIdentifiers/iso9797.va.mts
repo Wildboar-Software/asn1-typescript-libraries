@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { iso_standard } from "../AlgorithmObjectIdentifiers/iso-standard.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION iso9797 */
 /**
  * @summary iso9797

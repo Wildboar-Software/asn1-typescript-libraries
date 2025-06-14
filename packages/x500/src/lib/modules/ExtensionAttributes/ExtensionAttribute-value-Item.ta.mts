@@ -6,8 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttribute_value_Item */
 /**
  * @summary ExtensionAttribute_value_Item
@@ -236,9 +234,7 @@ export function _encode_ExtensionAttribute_value_Item(
 ) {
     if (!_cached_encoder_for_ExtensionAttribute_value_Item) {
         _cached_encoder_for_ExtensionAttribute_value_Item = function (
-            value: ExtensionAttribute_value_Item,
-            elGetter: $.ASN1Encoder<ExtensionAttribute_value_Item>
-        ): _Element {
+            value: ExtensionAttribute_value_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

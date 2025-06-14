@@ -6,14 +6,6 @@ import {
     _encode_AttributesSyntax,
 } from "../CertificateExtensions/AttributesSyntax.ta.mjs";
 import { id_ce_subjectDirectoryAttributes } from "../CertificateExtensions/id-ce-subjectDirectoryAttributes.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AttributesSyntax,
-    _decode_AttributesSyntax,
-    _encode_AttributesSyntax,
-} from "../CertificateExtensions/AttributesSyntax.ta.mjs";
-export { id_ce_subjectDirectoryAttributes } from "../CertificateExtensions/id-ce-subjectDirectoryAttributes.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subjectDirectoryAttributes */
 /**
  * @summary subjectDirectoryAttributes

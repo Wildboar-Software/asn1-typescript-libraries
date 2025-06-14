@@ -31,66 +31,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    UpdateErrorData_attributeInfo_Item,
-    _decode_UpdateErrorData_attributeInfo_Item,
-    _encode_UpdateErrorData_attributeInfo_Item,
-} from "../DirectoryAbstractService/UpdateErrorData-attributeInfo-Item.ta.mjs";
-export {
-    affectsMultipleDSAs /* IMPORTED_SHORT_NAMED_INTEGER */,
-    entryAlreadyExists /* IMPORTED_SHORT_NAMED_INTEGER */,
-    familyRuleViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    hierarchyRuleViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    insufficientPasswordQuality /* IMPORTED_SHORT_NAMED_INTEGER */,
-    namingViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noPasswordSlot /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noSuchSuperior /* IMPORTED_SHORT_NAMED_INTEGER */,
-    notAllowedOnNonLeaf /* IMPORTED_SHORT_NAMED_INTEGER */,
-    notAllowedOnRDN /* IMPORTED_SHORT_NAMED_INTEGER */,
-    notAncestor /* IMPORTED_SHORT_NAMED_INTEGER */,
-    objectClassModificationProhibited /* IMPORTED_SHORT_NAMED_INTEGER */,
-    objectClassViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    parentNotAncestor /* IMPORTED_SHORT_NAMED_INTEGER */,
-    passwordInHistory /* IMPORTED_SHORT_NAMED_INTEGER */,
-    UpdateProblem,
-    UpdateProblem_affectsMultipleDSAs /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_entryAlreadyExists /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_familyRuleViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_hierarchyRuleViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_insufficientPasswordQuality /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_namingViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_noPasswordSlot /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_noSuchSuperior /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_notAllowedOnNonLeaf /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_notAllowedOnRDN /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_notAncestor /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_objectClassModificationProhibited /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_objectClassViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_parentNotAncestor /* IMPORTED_LONG_NAMED_INTEGER */,
-    UpdateProblem_passwordInHistory /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_UpdateProblem,
-    _encode_UpdateProblem,
-} from "../DirectoryAbstractService/UpdateProblem.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
     CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
@@ -366,9 +306,7 @@ export function _encode_UpdateErrorData(
 ) {
     if (!_cached_encoder_for_UpdateErrorData) {
         _cached_encoder_for_UpdateErrorData = function (
-            value: UpdateErrorData,
-            elGetter: $.ASN1Encoder<UpdateErrorData>
-        ): _Element {
+            value: UpdateErrorData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

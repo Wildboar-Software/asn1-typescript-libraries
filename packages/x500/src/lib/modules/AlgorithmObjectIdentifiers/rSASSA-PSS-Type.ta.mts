@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION rSASSA_PSS_Type */
 /**
  * @summary rSASSA_PSS_Type
@@ -232,9 +226,7 @@ export function _encode_rSASSA_PSS_Type(
 ) {
     if (!_cached_encoder_for_rSASSA_PSS_Type) {
         _cached_encoder_for_rSASSA_PSS_Type = function (
-            value: rSASSA_PSS_Type,
-            elGetter: $.ASN1Encoder<rSASSA_PSS_Type>
-        ): _Element {
+            value: rSASSA_PSS_Type        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

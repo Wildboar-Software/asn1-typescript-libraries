@@ -11,17 +11,6 @@ import {
     _decode_DataTransferClientNEA,
     _encode_DataTransferClientNEA,
 } from "../Wrapper/DataTransferClientNEA.ta.mjs";
-export {
-    DataTransferClientAE,
-    _decode_DataTransferClientAE,
-    _encode_DataTransferClientAE,
-} from "../Wrapper/DataTransferClientAE.ta.mjs";
-export {
-    DataTransferClientNEA,
-    _decode_DataTransferClientNEA,
-    _encode_DataTransferClientNEA,
-} from "../Wrapper/DataTransferClientNEA.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataTransferClient */
 /**
  * @summary DataTransferClient

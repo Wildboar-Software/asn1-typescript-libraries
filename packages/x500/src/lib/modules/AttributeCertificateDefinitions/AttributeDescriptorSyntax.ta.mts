@@ -26,27 +26,6 @@ import {
     _decode_PrivilegePolicyIdentifier,
     _encode_PrivilegePolicyIdentifier,
 } from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta.mjs";
-export {
-    AttributeDescription,
-    _decode_AttributeDescription,
-    _encode_AttributeDescription,
-} from "../AttributeCertificateDefinitions/AttributeDescription.ta.mjs";
-export {
-    AttributeIdentifier,
-    _decode_AttributeIdentifier,
-    _encode_AttributeIdentifier,
-} from "../AttributeCertificateDefinitions/AttributeIdentifier.ta.mjs";
-export {
-    AttributeName,
-    _decode_AttributeName,
-    _encode_AttributeName,
-} from "../AttributeCertificateDefinitions/AttributeName.ta.mjs";
-export {
-    PrivilegePolicyIdentifier,
-    _decode_PrivilegePolicyIdentifier,
-    _encode_PrivilegePolicyIdentifier,
-} from "../AttributeCertificateDefinitions/PrivilegePolicyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeDescriptorSyntax */
 /**
  * @summary AttributeDescriptorSyntax
@@ -298,9 +277,7 @@ export function _encode_AttributeDescriptorSyntax(
 ) {
     if (!_cached_encoder_for_AttributeDescriptorSyntax) {
         _cached_encoder_for_AttributeDescriptorSyntax = function (
-            value: AttributeDescriptorSyntax,
-            elGetter: $.ASN1Encoder<AttributeDescriptorSyntax>
-        ): _Element {
+            value: AttributeDescriptorSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

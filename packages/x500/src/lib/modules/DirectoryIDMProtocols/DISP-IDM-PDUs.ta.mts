@@ -6,13 +6,6 @@ import {
     _decode_IDM_PDU,
     _encode_IDM_PDU,
 } from "../IDMProtocolSpecification/IDM-PDU.ta.mjs";
-export { disp_ip } from "../DirectoryIDMProtocols/disp-ip.oa.mjs";
-export {
-    IDM_PDU,
-    _decode_IDM_PDU,
-    _encode_IDM_PDU,
-} from "../IDMProtocolSpecification/IDM-PDU.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DISP_IDM_PDUs */
 /**
  * @summary DISP_IDM_PDUs

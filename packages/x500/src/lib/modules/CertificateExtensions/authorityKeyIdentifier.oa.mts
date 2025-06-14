@@ -6,14 +6,6 @@ import {
     _encode_AuthorityKeyIdentifier,
 } from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import { id_ce_authorityKeyIdentifier } from "../CertificateExtensions/id-ce-authorityKeyIdentifier.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AuthorityKeyIdentifier,
-    _decode_AuthorityKeyIdentifier,
-    _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
-export { id_ce_authorityKeyIdentifier } from "../CertificateExtensions/id-ce-authorityKeyIdentifier.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION authorityKeyIdentifier */
 /**
  * @summary authorityKeyIdentifier

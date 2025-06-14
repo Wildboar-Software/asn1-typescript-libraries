@@ -10,12 +10,6 @@ import {
     _decode_SelectedTypes,
     _encode_SelectedTypes,
 } from "../EnhancedSecurity/SelectedTypes.ta.mjs";
-export {
-    SelectedTypes,
-    _decode_SelectedTypes,
-    _encode_SelectedTypes,
-} from "../EnhancedSecurity/SelectedTypes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Scope */
 /**
  * @summary Scope

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,72 +15,16 @@ import {
     _decode_EMailMpduIdentifier,
     _encode_EMailMpduIdentifier,
 } from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.mjs';
-export {
-    EMailMpduIdentifier,
-    _decode_EMailMpduIdentifier,
-    _encode_EMailMpduIdentifier,
-} from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.mjs';
 import {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from '../MTSAbstractService/Time.ta.mjs';
-export {
     Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
 import {
     ProcessingState,
-    ProcessingState_idle /* IMPORTED_LONG_NAMED_INTEGER */,
-    idle /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_processed /* IMPORTED_LONG_NAMED_INTEGER */,
-    processed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_rejected /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejected /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_name_resolution /* IMPORTED_LONG_NAMED_INTEGER */,
-    name_resolution /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_dl_expansion /* IMPORTED_LONG_NAMED_INTEGER */,
-    dl_expansion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_redirection /* IMPORTED_LONG_NAMED_INTEGER */,
-    redirection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_deferred_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    deferred_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_conversion /* IMPORTED_LONG_NAMED_INTEGER */,
-    conversion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_securityContextCheck /* IMPORTED_LONG_NAMED_INTEGER */,
-    securityContextCheck /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_unknownFunction /* IMPORTED_LONG_NAMED_INTEGER */,
-    unknownFunction /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ProcessingState,
     _encode_ProcessingState,
 } from '../MhsMTAAsn1Module/ProcessingState.ta.mjs';
-export {
-    ProcessingState,
-    ProcessingState_idle /* IMPORTED_LONG_NAMED_INTEGER */,
-    idle /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_processed /* IMPORTED_LONG_NAMED_INTEGER */,
-    processed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_rejected /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejected /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_name_resolution /* IMPORTED_LONG_NAMED_INTEGER */,
-    name_resolution /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_dl_expansion /* IMPORTED_LONG_NAMED_INTEGER */,
-    dl_expansion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_redirection /* IMPORTED_LONG_NAMED_INTEGER */,
-    redirection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_deferred_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    deferred_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_conversion /* IMPORTED_LONG_NAMED_INTEGER */,
-    conversion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_securityContextCheck /* IMPORTED_LONG_NAMED_INTEGER */,
-    securityContextCheck /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ProcessingState_unknownFunction /* IMPORTED_LONG_NAMED_INTEGER */,
-    unknownFunction /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ProcessingState,
-    _encode_ProcessingState,
-} from '../MhsMTAAsn1Module/ProcessingState.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION MprInfo_Item */
 /**
  * @summary MprInfo_Item
@@ -302,9 +190,7 @@ export function _encode_MprInfo_Item(
 ) {
     if (!_cached_encoder_for_MprInfo_Item) {
         _cached_encoder_for_MprInfo_Item = function (
-            value: MprInfo_Item,
-            elGetter: $.ASN1Encoder<MprInfo_Item>
-        ): _Element {
+            value: MprInfo_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    SearchResultData,
-    _decode_SearchResultData,
-    _encode_SearchResultData,
-} from "../DirectoryAbstractService/SearchResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SearchResult */
 /**
  * @summary SearchResult

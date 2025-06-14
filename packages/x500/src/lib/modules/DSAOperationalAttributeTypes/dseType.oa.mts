@@ -10,67 +10,6 @@ import {
     dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
-export {
-    admPoint /* IMPORTED_SHORT_NAMED_BIT */,
-    alias /* IMPORTED_SHORT_NAMED_BIT */,
-    cp /* IMPORTED_SHORT_NAMED_BIT */,
-    ditBridge /* IMPORTED_SHORT_NAMED_BIT */,
-    DSEType,
-    DSEType_admPoint /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_alias /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_cp /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_ditBridge /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_dsSubentry /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_entry /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_familyMember /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_glue /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_immSupr /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_nssr /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_rhob /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_root /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_sa /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_shadow /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_subentry /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_subr /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_supr /* IMPORTED_LONG_NAMED_BIT */,
-    DSEType_xr /* IMPORTED_LONG_NAMED_BIT */,
-    dsSubentry /* IMPORTED_SHORT_NAMED_BIT */,
-    entry /* IMPORTED_SHORT_NAMED_BIT */,
-    familyMember /* IMPORTED_SHORT_NAMED_BIT */,
-    glue /* IMPORTED_SHORT_NAMED_BIT */,
-    immSupr /* IMPORTED_SHORT_NAMED_BIT */,
-    nssr /* IMPORTED_SHORT_NAMED_BIT */,
-    rhob /* IMPORTED_SHORT_NAMED_BIT */,
-    root /* IMPORTED_SHORT_NAMED_BIT */,
-    sa /* IMPORTED_SHORT_NAMED_BIT */,
-    shadow /* IMPORTED_SHORT_NAMED_BIT */,
-    subentry /* IMPORTED_SHORT_NAMED_BIT */,
-    subr /* IMPORTED_SHORT_NAMED_BIT */,
-    supr /* IMPORTED_SHORT_NAMED_BIT */,
-    xr /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_DSEType,
-    _encode_DSEType,
-} from "../DSAOperationalAttributeTypes/DSEType.ta.mjs";
-export { id_doa_dseType } from "../DSAOperationalAttributeTypes/id-doa-dseType.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dseType */
 /**
  * @summary dseType

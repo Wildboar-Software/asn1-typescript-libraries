@@ -6,12 +6,6 @@ import {
     _decode_UniversalOrganizationalUnitName,
     _encode_UniversalOrganizationalUnitName,
 } from "../MTSAbstractService/UniversalOrganizationalUnitName.ta.mjs";
-export {
-    UniversalOrganizationalUnitName,
-    _decode_UniversalOrganizationalUnitName,
-    _encode_UniversalOrganizationalUnitName,
-} from "../MTSAbstractService/UniversalOrganizationalUnitName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalOrganizationalUnitNames */
 /**
  * @summary UniversalOrganizationalUnitNames

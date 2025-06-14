@@ -4,12 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-export { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uriMatch */
 /**
  * @summary uriMatch

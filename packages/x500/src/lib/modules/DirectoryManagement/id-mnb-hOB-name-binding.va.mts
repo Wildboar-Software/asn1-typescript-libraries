@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
-export { id_mnb } from "../DirectoryManagement/id-mnb.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_mnb_hOB_name_binding */
 /**
  * @summary id_mnb_hOB_name_binding

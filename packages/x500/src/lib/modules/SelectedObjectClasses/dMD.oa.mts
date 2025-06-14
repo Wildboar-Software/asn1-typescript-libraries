@@ -7,25 +7,6 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
 import { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va.mjs";
 import { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
-export { id_oc_dmd } from "../SelectedObjectClasses/id-oc-dmd.va.mjs";
-export { OrganizationalAttributeSet } from "../SelectedObjectClasses/OrganizationalAttributeSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dMD */
 /**
  * @summary dMD

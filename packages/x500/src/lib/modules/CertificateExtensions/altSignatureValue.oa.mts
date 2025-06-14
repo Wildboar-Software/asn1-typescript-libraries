@@ -6,14 +6,6 @@ import {
     _encode_AltSignatureValue,
 } from "../CertificateExtensions/AltSignatureValue.ta.mjs";
 import { id_ce_altSignatureValue } from "../CertificateExtensions/id-ce-altSignatureValue.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AltSignatureValue,
-    _decode_AltSignatureValue,
-    _encode_AltSignatureValue,
-} from "../CertificateExtensions/AltSignatureValue.ta.mjs";
-export { id_ce_altSignatureValue } from "../CertificateExtensions/id-ce-altSignatureValue.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION altSignatureValue */
 /**
  * @summary altSignatureValue

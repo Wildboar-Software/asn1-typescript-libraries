@@ -11,17 +11,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubstringAssertion_Item */
 /**
  * @summary SubstringAssertion_Item

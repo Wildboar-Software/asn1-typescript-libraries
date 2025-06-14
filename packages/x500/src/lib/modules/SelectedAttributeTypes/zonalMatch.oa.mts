@@ -2,12 +2,6 @@
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
 import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
-export { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION zonalMatch */
 /**
  * @summary zonalMatch

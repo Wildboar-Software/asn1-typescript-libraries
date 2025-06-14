@@ -182,9 +182,7 @@ export function _encode_UtmCoordinates(
 ) {
     if (!_cached_encoder_for_UtmCoordinates) {
         _cached_encoder_for_UtmCoordinates = function (
-            value: UtmCoordinates,
-            elGetter: $.ASN1Encoder<UtmCoordinates>
-        ): _Element {
+            value: UtmCoordinates        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

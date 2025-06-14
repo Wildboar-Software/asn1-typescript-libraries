@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_SubjectEDIMField,
     _encode_SubjectEDIMField,
 } from '../EDIMSInformationObjects/SubjectEDIMField.ta.mjs';
-export {
-    SubjectEDIMField,
-    _decode_SubjectEDIMField,
-    _encode_SubjectEDIMField,
-} from '../EDIMSInformationObjects/SubjectEDIMField.ta.mjs';
 import {
-    EDINOriginatorField,
-    _decode_EDINOriginatorField,
-    _encode_EDINOriginatorField,
-} from '../EDIMSInformationObjects/EDINOriginatorField.ta.mjs';
-export {
     EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
@@ -91,17 +26,7 @@ import {
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
 } from '../EDIMSInformationObjects/FirstRecipientField.ta.mjs';
-export {
-    FirstRecipientField,
-    _decode_FirstRecipientField,
-    _encode_FirstRecipientField,
-} from '../EDIMSInformationObjects/FirstRecipientField.ta.mjs';
 import {
-    NotificationTimeField,
-    _decode_NotificationTimeField,
-    _encode_NotificationTimeField,
-} from '../EDIMSInformationObjects/NotificationTimeField.ta.mjs';
-export {
     NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
@@ -111,32 +36,9 @@ import {
     _decode_SecurityElementsField,
     _encode_SecurityElementsField,
 } from '../EDIMSInformationObjects/SecurityElementsField.ta.mjs';
-export {
-    SecurityElementsField,
-    _decode_SecurityElementsField,
-    _encode_SecurityElementsField,
-} from '../EDIMSInformationObjects/SecurityElementsField.ta.mjs';
 import {
     EDINInitiatorField,
     _enum_for_EDINInitiatorField,
-    EDINInitiatorField_internal_ua /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    internal_ua /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    EDINInitiatorField_external_ua /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    external_ua /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    EDINInitiatorField_internal_ms /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    internal_ms /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_EDINInitiatorField,
-    _encode_EDINInitiatorField,
-} from '../EDIMSInformationObjects/EDINInitiatorField.ta.mjs';
-export {
-    EDINInitiatorField,
-    _enum_for_EDINInitiatorField,
-    EDINInitiatorField_internal_ua /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    internal_ua /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    EDINInitiatorField_external_ua /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    external_ua /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    EDINInitiatorField_internal_ms /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    internal_ms /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_EDINInitiatorField,
     _encode_EDINInitiatorField,
 } from '../EDIMSInformationObjects/EDINInitiatorField.ta.mjs';
@@ -145,12 +47,6 @@ import {
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../EDIMSInformationObjects/NotificationExtensionsField.ta.mjs';
-export {
-    NotificationExtensionsField,
-    _decode_NotificationExtensionsField,
-    _encode_NotificationExtensionsField,
-} from '../EDIMSInformationObjects/NotificationExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CommonFields */
 /**
  * @summary CommonFields
@@ -445,9 +341,7 @@ export function _encode_CommonFields(
 ) {
     if (!_cached_encoder_for_CommonFields) {
         _cached_encoder_for_CommonFields = function (
-            value: CommonFields,
-            elGetter: $.ASN1Encoder<CommonFields>
-        ): _Element {
+            value: CommonFields        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

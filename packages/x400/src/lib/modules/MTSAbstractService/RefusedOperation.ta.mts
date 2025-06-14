@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,34 +15,11 @@ import {
     _decode_RefusedOperation_refused_argument,
     _encode_RefusedOperation_refused_argument,
 } from '../MTSAbstractService/RefusedOperation-refused-argument.ta.mjs';
-export {
-    RefusedOperation_refused_argument,
-    _decode_RefusedOperation_refused_argument,
-    _encode_RefusedOperation_refused_argument,
-} from '../MTSAbstractService/RefusedOperation-refused-argument.ta.mjs';
 import {
     RefusalReason,
-    RefusalReason_facility_unavailable /* IMPORTED_LONG_NAMED_INTEGER */,
-    facility_unavailable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    RefusalReason_facility_not_subscribed /* IMPORTED_LONG_NAMED_INTEGER */,
-    facility_not_subscribed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    RefusalReason_parameter_unacceptable /* IMPORTED_LONG_NAMED_INTEGER */,
-    parameter_unacceptable /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RefusalReason,
     _encode_RefusalReason,
 } from '../MTSAbstractService/RefusalReason.ta.mjs';
-export {
-    RefusalReason,
-    RefusalReason_facility_unavailable /* IMPORTED_LONG_NAMED_INTEGER */,
-    facility_unavailable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    RefusalReason_facility_not_subscribed /* IMPORTED_LONG_NAMED_INTEGER */,
-    facility_not_subscribed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    RefusalReason_parameter_unacceptable /* IMPORTED_LONG_NAMED_INTEGER */,
-    parameter_unacceptable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_RefusalReason,
-    _encode_RefusalReason,
-} from '../MTSAbstractService/RefusalReason.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RefusedOperation */
 /**
  * @summary RefusedOperation
@@ -274,9 +195,7 @@ export function _encode_RefusedOperation(
 ) {
     if (!_cached_encoder_for_RefusedOperation) {
         _cached_encoder_for_RefusedOperation = function (
-            value: RefusedOperation,
-            elGetter: $.ASN1Encoder<RefusedOperation>
-        ): _Element {
+            value: RefusedOperation        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,24 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_errcode_abandoned } from "../CommonProtocolSpecification/id-errcode-abandoned.va.mjs";
-export {
-    AbandonedData,
-    _decode_AbandonedData,
-    _encode_AbandonedData,
-} from "../DirectoryAbstractService/AbandonedData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION abandoned */
 /**
  * @summary abandoned

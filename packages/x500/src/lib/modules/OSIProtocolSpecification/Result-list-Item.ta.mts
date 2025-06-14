@@ -20,34 +20,6 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-export {
-    abstract_syntax_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    proposed_transfer_syntaxes_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Result_list_Item_provider_reason,
-    Result_list_Item_provider_reason_abstract_syntax_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_list_Item_provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Result_list_Item_provider_reason,
-    _encode_Result_list_Item_provider_reason,
-} from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta.mjs";
-export {
-    acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
-    provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Result,
-    Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_provider_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_user_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Result,
-    _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta.mjs";
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Result_list_Item */
 /**
  * @summary Result_list_Item
@@ -242,9 +214,7 @@ export function _encode_Result_list_Item(
 ) {
     if (!_cached_encoder_for_Result_list_Item) {
         _cached_encoder_for_Result_list_Item = function (
-            value: Result_list_Item,
-            elGetter: $.ASN1Encoder<Result_list_Item>
-        ): _Element {
+            value: Result_list_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

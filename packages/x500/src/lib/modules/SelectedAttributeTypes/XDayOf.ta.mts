@@ -6,12 +6,6 @@ import {
     _decode_NamedDay,
     _encode_NamedDay,
 } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
-export {
-    NamedDay,
-    _decode_NamedDay,
-    _encode_NamedDay,
-} from "../SelectedAttributeTypes/NamedDay.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION XDayOf */
 /**
  * @summary XDayOf

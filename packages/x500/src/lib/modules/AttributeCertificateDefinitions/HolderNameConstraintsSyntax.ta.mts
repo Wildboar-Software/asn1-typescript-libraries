@@ -10,12 +10,6 @@ import {
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.mjs";
-export {
-    GeneralSubtrees,
-    _decode_GeneralSubtrees,
-    _encode_GeneralSubtrees,
-} from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HolderNameConstraintsSyntax */
 /**
  * @summary HolderNameConstraintsSyntax
@@ -207,9 +201,7 @@ export function _encode_HolderNameConstraintsSyntax(
 ) {
     if (!_cached_encoder_for_HolderNameConstraintsSyntax) {
         _cached_encoder_for_HolderNameConstraintsSyntax = function (
-            value: HolderNameConstraintsSyntax,
-            elGetter: $.ASN1Encoder<HolderNameConstraintsSyntax>
-        ): _Element {
+            value: HolderNameConstraintsSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

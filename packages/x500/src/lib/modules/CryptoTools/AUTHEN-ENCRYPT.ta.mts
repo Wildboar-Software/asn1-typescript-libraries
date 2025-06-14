@@ -173,9 +173,7 @@ export function _get_encoder_for_AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>(
     _encode_ToBeEnciphered: $.ASN1Encoder<ToBeEnciphered>
 ) {
     return function (
-        value: AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>,
-        elGetter: $.ASN1Encoder<AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>>
-    ): _Element {
+        value: AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

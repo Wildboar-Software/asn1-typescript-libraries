@@ -13,19 +13,6 @@ import {
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,
 } from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
-export {
-    AuthenticationLevel_basicLevels_level,
-    AuthenticationLevel_basicLevels_level_none /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AuthenticationLevel_basicLevels_level_simple /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AuthenticationLevel_basicLevels_level_strong /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    none /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    simple /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    strong /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AuthenticationLevel_basicLevels_level,
-    _encode_AuthenticationLevel_basicLevels_level,
-    _enum_for_AuthenticationLevel_basicLevels_level,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticationLevel_basicLevels */
 /**
  * @summary AuthenticationLevel_basicLevels
@@ -247,9 +234,7 @@ export function _encode_AuthenticationLevel_basicLevels(
 ) {
     if (!_cached_encoder_for_AuthenticationLevel_basicLevels) {
         _cached_encoder_for_AuthenticationLevel_basicLevels = function (
-            value: AuthenticationLevel_basicLevels,
-            elGetter: $.ASN1Encoder<AuthenticationLevel_basicLevels>
-        ): _Element {
+            value: AuthenticationLevel_basicLevels        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

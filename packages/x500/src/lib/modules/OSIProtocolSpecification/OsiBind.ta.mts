@@ -11,17 +11,6 @@ import {
     _decode_OsiBind_normal_mode_parameters,
     _encode_OsiBind_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta.mjs";
-export {
-    OsiBind_mode_selector,
-    _decode_OsiBind_mode_selector,
-    _encode_OsiBind_mode_selector,
-} from "../OSIProtocolSpecification/OsiBind-mode-selector.ta.mjs";
-export {
-    OsiBind_normal_mode_parameters,
-    _decode_OsiBind_normal_mode_parameters,
-    _encode_OsiBind_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBind */
 /**
  * @summary OsiBind
@@ -206,9 +195,7 @@ export function _encode_OsiBind(
 ) {
     if (!_cached_encoder_for_OsiBind) {
         _cached_encoder_for_OsiBind = function (
-            value: OsiBind,
-            elGetter: $.ASN1Encoder<OsiBind>
-        ): _Element {
+            value: OsiBind        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

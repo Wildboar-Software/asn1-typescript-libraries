@@ -538,9 +538,7 @@ export function _encode_ReadArgumentData(
 ) {
     if (!_cached_encoder_for_ReadArgumentData) {
         _cached_encoder_for_ReadArgumentData = function (
-            value: ReadArgumentData,
-            elGetter: $.ASN1Encoder<ReadArgumentData>
-        ): _Element {
+            value: ReadArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

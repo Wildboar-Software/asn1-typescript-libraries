@@ -15,17 +15,6 @@ import {
     _decode_TerminateOperationalBindingResultData,
     _encode_TerminateOperationalBindingResultData,
 } from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED_SEQ,
-    _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
-    _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-export {
-    TerminateOperationalBindingResultData,
-    _decode_TerminateOperationalBindingResultData,
-    _encode_TerminateOperationalBindingResultData,
-} from "../OperationalBindingManagement/TerminateOperationalBindingResultData.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingResult */
 /**
  * @summary TerminateOperationalBindingResult

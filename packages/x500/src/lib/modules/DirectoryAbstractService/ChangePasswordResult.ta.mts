@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-export {
-    ChangePasswordResultData,
-    _decode_ChangePasswordResultData,
-    _encode_ChangePasswordResultData,
-} from "../DirectoryAbstractService/ChangePasswordResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED_SEQ,
-    _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
-    _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChangePasswordResult */
 /**
  * @summary ChangePasswordResult

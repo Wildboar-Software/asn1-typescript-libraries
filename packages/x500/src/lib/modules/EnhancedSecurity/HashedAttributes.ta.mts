@@ -6,12 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HashedAttributes */
 /**
  * @summary HashedAttributes

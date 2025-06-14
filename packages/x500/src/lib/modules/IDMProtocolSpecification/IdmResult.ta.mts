@@ -11,8 +11,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IdmResult */
 /**
  * @summary IdmResult
@@ -185,9 +183,7 @@ export function _encode_IdmResult(
 ) {
     if (!_cached_encoder_for_IdmResult) {
         _cached_encoder_for_IdmResult = function (
-            value: IdmResult,
-            elGetter: $.ASN1Encoder<IdmResult>
-        ): _Element {
+            value: IdmResult        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

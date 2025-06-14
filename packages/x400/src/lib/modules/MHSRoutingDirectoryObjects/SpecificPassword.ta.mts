@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
 } from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
-export {
-    RoutingCollectiveName,
-    _decode_RoutingCollectiveName,
-    _encode_RoutingCollectiveName,
-} from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
 import {
     Password,
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
-export {
-    Password,
-    _decode_Password,
-    _encode_Password,
-} from '../MTSAbstractService/Password.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION SpecificPassword */
 /**
  * @summary SpecificPassword
@@ -285,9 +218,7 @@ export function _encode_SpecificPassword(
 ) {
     if (!_cached_encoder_for_SpecificPassword) {
         _cached_encoder_for_SpecificPassword = function (
-            value: SpecificPassword,
-            elGetter: $.ASN1Encoder<SpecificPassword>
-        ): _Element {
+            value: SpecificPassword        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

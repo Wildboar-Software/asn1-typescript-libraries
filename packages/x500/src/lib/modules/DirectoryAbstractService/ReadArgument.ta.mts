@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    ReadArgumentData,
-    _decode_ReadArgumentData,
-    _encode_ReadArgumentData,
-} from "../DirectoryAbstractService/ReadArgumentData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReadArgument */
 /**
  * @summary ReadArgument

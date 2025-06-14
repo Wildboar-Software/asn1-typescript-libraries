@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { id_sha256 } from "../AlgorithmObjectIdentifiers/id-sha256.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_sha256 } from "../AlgorithmObjectIdentifiers/id-sha256.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sha256 */
 /**
  * @summary sha256

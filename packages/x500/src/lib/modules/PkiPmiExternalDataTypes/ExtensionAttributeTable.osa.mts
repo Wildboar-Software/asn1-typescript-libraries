@@ -40,48 +40,6 @@ import { universal_poste_restante_address } from "../PkiPmiExternalDataTypes/uni
 import { universal_street_address } from "../PkiPmiExternalDataTypes/universal-street-address.oa.mjs";
 import { universal_unformatted_postal_address } from "../PkiPmiExternalDataTypes/universal-unformatted-postal-address.oa.mjs";
 import { universal_unique_postal_name } from "../PkiPmiExternalDataTypes/universal-unique-postal-name.oa.mjs";
-export { common_name } from "../PkiPmiExternalDataTypes/common-name.oa.mjs";
-export { extended_network_address } from "../PkiPmiExternalDataTypes/extended-network-address.oa.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export { extension_OR_address_components } from "../PkiPmiExternalDataTypes/extension-OR-address-components.oa.mjs";
-export { extension_physical_delivery_address_components } from "../PkiPmiExternalDataTypes/extension-physical-delivery-address-components.oa.mjs";
-export { local_postal_attributes } from "../PkiPmiExternalDataTypes/local-postal-attributes.oa.mjs";
-export { pds_name } from "../PkiPmiExternalDataTypes/pds-name.oa.mjs";
-export { physical_delivery_country_name } from "../PkiPmiExternalDataTypes/physical-delivery-country-name.oa.mjs";
-export { physical_delivery_office_name } from "../PkiPmiExternalDataTypes/physical-delivery-office-name.oa.mjs";
-export { physical_delivery_office_number } from "../PkiPmiExternalDataTypes/physical-delivery-office-number.oa.mjs";
-export { physical_delivery_organization_name } from "../PkiPmiExternalDataTypes/physical-delivery-organization-name.oa.mjs";
-export { physical_delivery_personal_name } from "../PkiPmiExternalDataTypes/physical-delivery-personal-name.oa.mjs";
-export { post_office_box_address } from "../PkiPmiExternalDataTypes/post-office-box-address.oa.mjs";
-export { postal_code } from "../PkiPmiExternalDataTypes/postal-code.oa.mjs";
-export { poste_restante_address } from "../PkiPmiExternalDataTypes/poste-restante-address.oa.mjs";
-export { street_address } from "../PkiPmiExternalDataTypes/street-address.oa.mjs";
-export { teletex_common_name } from "../PkiPmiExternalDataTypes/teletex-common-name.oa.mjs";
-export { teletex_domain_defined_attributes } from "../PkiPmiExternalDataTypes/teletex-domain-defined-attributes.oa.mjs";
-export { teletex_organization_name } from "../PkiPmiExternalDataTypes/teletex-organization-name.oa.mjs";
-export { teletex_organizational_unit_names } from "../PkiPmiExternalDataTypes/teletex-organizational-unit-names.oa.mjs";
-export { teletex_personal_name } from "../PkiPmiExternalDataTypes/teletex-personal-name.oa.mjs";
-export { terminal_type } from "../PkiPmiExternalDataTypes/terminal-type.oa.mjs";
-export { unformatted_postal_address } from "../PkiPmiExternalDataTypes/unformatted-postal-address.oa.mjs";
-export { unique_postal_name } from "../PkiPmiExternalDataTypes/unique-postal-name.oa.mjs";
-export { universal_common_name } from "../PkiPmiExternalDataTypes/universal-common-name.oa.mjs";
-export { universal_domain_defined_attributes } from "../PkiPmiExternalDataTypes/universal-domain-defined-attributes.oa.mjs";
-export { universal_extension_OR_address_components } from "../PkiPmiExternalDataTypes/universal-extension-OR-address-components.oa.mjs";
-export { universal_extension_physical_delivery_address_components } from "../PkiPmiExternalDataTypes/universal-extension-physical-delivery-address-components.oa.mjs";
-export { universal_local_postal_attributes } from "../PkiPmiExternalDataTypes/universal-local-postal-attributes.oa.mjs";
-export { universal_organization_name } from "../PkiPmiExternalDataTypes/universal-organization-name.oa.mjs";
-export { universal_organizational_unit_names } from "../PkiPmiExternalDataTypes/universal-organizational-unit-names.oa.mjs";
-export { universal_personal_name } from "../PkiPmiExternalDataTypes/universal-personal-name.oa.mjs";
-export { universal_physical_delivery_office_name } from "../PkiPmiExternalDataTypes/universal-physical-delivery-office-name.oa.mjs";
-export { universal_physical_delivery_office_number } from "../PkiPmiExternalDataTypes/universal-physical-delivery-office-number.oa.mjs";
-export { universal_physical_delivery_organization_name } from "../PkiPmiExternalDataTypes/universal-physical-delivery-organization-name.oa.mjs";
-export { universal_physical_delivery_personal_name } from "../PkiPmiExternalDataTypes/universal-physical-delivery-personal-name.oa.mjs";
-export { universal_post_office_box_address } from "../PkiPmiExternalDataTypes/universal-post-office-box-address.oa.mjs";
-export { universal_poste_restante_address } from "../PkiPmiExternalDataTypes/universal-poste-restante-address.oa.mjs";
-export { universal_street_address } from "../PkiPmiExternalDataTypes/universal-street-address.oa.mjs";
-export { universal_unformatted_postal_address } from "../PkiPmiExternalDataTypes/universal-unformatted-postal-address.oa.mjs";
-export { universal_unique_postal_name } from "../PkiPmiExternalDataTypes/universal-unique-postal-name.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 /**
  * @summary ExtensionAttributeTable

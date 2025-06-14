@@ -20,22 +20,6 @@ import {
     _decode_StrongCredentials,
     _encode_StrongCredentials,
 } from "../DirectoryAbstractService/StrongCredentials.ta.mjs";
-export {
-    SimpleCredentials,
-    _decode_SimpleCredentials,
-    _encode_SimpleCredentials,
-} from "../DirectoryAbstractService/SimpleCredentials.ta.mjs";
-export {
-    SpkmCredentials,
-    _decode_SpkmCredentials,
-    _encode_SpkmCredentials,
-} from "../DirectoryAbstractService/SpkmCredentials.ta.mjs";
-export {
-    StrongCredentials,
-    _decode_StrongCredentials,
-    _encode_StrongCredentials,
-} from "../DirectoryAbstractService/StrongCredentials.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DSACredentials */
 /**
  * @summary DSACredentials

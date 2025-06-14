@@ -4,14 +4,6 @@ import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va.mjs";
 import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { id_nf_orgPersonNameForm } from "../SelectedObjectClasses/id-nf-orgPersonNameForm.va.mjs";
-export { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION orgPersonNameForm */
 /**
  * @summary orgPersonNameForm

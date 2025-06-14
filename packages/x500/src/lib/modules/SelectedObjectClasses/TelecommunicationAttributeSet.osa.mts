@@ -8,16 +8,6 @@ import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.o
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
 import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.mjs";
-export { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
-export { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
-export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
-export { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.mjs";
-export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
-export { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
-export { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TelecommunicationAttributeSet */
 /**
  * @summary TelecommunicationAttributeSet

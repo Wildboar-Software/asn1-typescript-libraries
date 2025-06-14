@@ -22,26 +22,6 @@ import {
     _decode_Versions,
     _encode_Versions,
 } from "../DirectoryAbstractService/Versions.ta.mjs";
-export {
-    Credentials,
-    _decode_Credentials,
-    _encode_Credentials,
-} from "../DirectoryAbstractService/Credentials.ta.mjs";
-export {
-    PwdResponseValue,
-    _decode_PwdResponseValue,
-    _encode_PwdResponseValue,
-} from "../DirectoryAbstractService/PwdResponseValue.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_BIT */,
-    v2 /* IMPORTED_SHORT_NAMED_BIT */,
-    Versions,
-    Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
-    Versions_v2 /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_Versions,
-    _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DirectoryBindResult */
 /**
  * @summary DirectoryBindResult
@@ -267,9 +247,7 @@ export function _encode_DirectoryBindResult(
 ) {
     if (!_cached_encoder_for_DirectoryBindResult) {
         _cached_encoder_for_DirectoryBindResult = function (
-            value: DirectoryBindResult,
-            elGetter: $.ASN1Encoder<DirectoryBindResult>
-        ): _Element {
+            value: DirectoryBindResult        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

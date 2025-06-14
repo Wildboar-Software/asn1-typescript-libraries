@@ -11,17 +11,6 @@ import {
     _decode_SenderStaticInfo,
     _encode_SenderStaticInfo,
 } from "../PkiPmiWrapper/SenderStaticInfo.ta.mjs";
-export {
-    SenderDhPublicKey,
-    _decode_SenderDhPublicKey,
-    _encode_SenderDhPublicKey,
-} from "../PkiPmiWrapper/SenderDhPublicKey.ta.mjs";
-export {
-    SenderStaticInfo,
-    _decode_SenderStaticInfo,
-    _encode_SenderStaticInfo,
-} from "../PkiPmiWrapper/SenderStaticInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SenderDhInfo */
 /**
  * @summary SenderDhInfo

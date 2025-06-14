@@ -6,12 +6,6 @@ import {
     _decode_ExtensionAttribute,
     _encode_ExtensionAttribute,
 } from "../MTSAbstractService/ExtensionAttribute.ta.mjs";
-export {
-    ExtensionAttribute,
-    _decode_ExtensionAttribute,
-    _encode_ExtensionAttribute,
-} from "../MTSAbstractService/ExtensionAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttributes */
 /**
  * @summary ExtensionAttributes

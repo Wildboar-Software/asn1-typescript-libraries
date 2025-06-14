@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
-export {
-    AddAvlRsp_result,
-    _decode_AddAvlRsp_result,
-    _encode_AddAvlRsp_result,
-} from "../AVL-management/AddAvlRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AddAvlRsp */
 /**
  * @summary AddAvlRsp
@@ -189,9 +178,7 @@ export function _encode_AddAvlRsp(
 ) {
     if (!_cached_encoder_for_AddAvlRsp) {
         _cached_encoder_for_AddAvlRsp = function (
-            value: AddAvlRsp,
-            elGetter: $.ASN1Encoder<AddAvlRsp>
-        ): _Element {
+            value: AddAvlRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

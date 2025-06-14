@@ -16,17 +16,6 @@ import {
     _decode_TimeZone,
     _encode_TimeZone,
 } from "../SelectedAttributeTypes/TimeZone.ta.mjs";
-export {
-    TimeSpecification_time,
-    _decode_TimeSpecification_time,
-    _encode_TimeSpecification_time,
-} from "../SelectedAttributeTypes/TimeSpecification-time.ta.mjs";
-export {
-    TimeZone,
-    _decode_TimeZone,
-    _encode_TimeZone,
-} from "../SelectedAttributeTypes/TimeZone.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TimeSpecification */
 /**
  * @summary TimeSpecification
@@ -240,9 +229,7 @@ export function _encode_TimeSpecification(
 ) {
     if (!_cached_encoder_for_TimeSpecification) {
         _cached_encoder_for_TimeSpecification = function (
-            value: TimeSpecification,
-            elGetter: $.ASN1Encoder<TimeSpecification>
-        ): _Element {
+            value: TimeSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

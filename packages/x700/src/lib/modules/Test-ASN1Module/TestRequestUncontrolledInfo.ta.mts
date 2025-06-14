@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
 } from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
-export {
-    TestCategoryInformation,
-    _decode_TestCategoryInformation,
-    _encode_TestCategoryInformation,
-} from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
 import {
-    TestSessionId,
-    _decode_TestSessionId,
-    _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta.mjs';
-export {
     TestSessionId,
     _decode_TestSessionId,
     _encode_TestSessionId,
@@ -91,17 +26,7 @@ import {
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
-export {
-    TimeoutPeriod,
-    _decode_TimeoutPeriod,
-    _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    AssociatedObjects,
-    _decode_AssociatedObjects,
-    _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
-export {
     AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
@@ -111,12 +36,6 @@ import {
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
 } from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
-export {
-    ToBeTestedMORTs,
-    _decode_ToBeTestedMORTs,
-    _encode_ToBeTestedMORTs,
-} from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TestRequestUncontrolledInfo */
 /**
  * @summary TestRequestUncontrolledInfo
@@ -357,9 +276,7 @@ export function _encode_TestRequestUncontrolledInfo(
 ) {
     if (!_cached_encoder_for_TestRequestUncontrolledInfo) {
         _cached_encoder_for_TestRequestUncontrolledInfo = function (
-            value: TestRequestUncontrolledInfo,
-            elGetter: $.ASN1Encoder<TestRequestUncontrolledInfo>
-        ): _Element {
+            value: TestRequestUncontrolledInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

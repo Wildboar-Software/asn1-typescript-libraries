@@ -5,13 +5,6 @@ import {
     _decode_PhysicalDeliveryOfficeNumber,
     _encode_PhysicalDeliveryOfficeNumber,
 } from "../MTSAbstractService/PhysicalDeliveryOfficeNumber.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PhysicalDeliveryOfficeNumber,
-    _decode_PhysicalDeliveryOfficeNumber,
-    _encode_PhysicalDeliveryOfficeNumber,
-} from "../MTSAbstractService/PhysicalDeliveryOfficeNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION physical_delivery_office_number */
 /**
  * @summary physical_delivery_office_number

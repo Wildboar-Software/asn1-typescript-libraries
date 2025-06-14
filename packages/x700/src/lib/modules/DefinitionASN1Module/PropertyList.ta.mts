@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +17,7 @@ import {
     _decode_ValueSpecifier,
     _encode_ValueSpecifier,
 } from '../DefinitionASN1Module/ValueSpecifier.ta.mjs';
-export {
-    ValueSpecifier,
-    _decode_ValueSpecifier,
-    _encode_ValueSpecifier,
-} from '../DefinitionASN1Module/ValueSpecifier.ta.mjs';
 import {
-    DefinedType,
-    _decode_DefinedType,
-    _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta.mjs';
-export {
     DefinedType,
     _decode_DefinedType,
     _encode_DefinedType,
@@ -89,48 +25,12 @@ export {
 import {
     PropertyList_getReplace,
     _enum_for_PropertyList_getReplace,
-    PropertyList_getReplace_gET /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    gET /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_getReplace_rEPLACE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rEPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_getReplace_gET_REPLACE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    gET_REPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_PropertyList_getReplace,
-    _encode_PropertyList_getReplace,
-} from '../DefinitionASN1Module/PropertyList-getReplace.ta.mjs';
-export {
-    PropertyList_getReplace,
-    _enum_for_PropertyList_getReplace,
-    PropertyList_getReplace_gET /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    gET /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_getReplace_rEPLACE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rEPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_getReplace_gET_REPLACE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    gET_REPLACE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_getReplace,
     _encode_PropertyList_getReplace,
 } from '../DefinitionASN1Module/PropertyList-getReplace.ta.mjs';
 import {
     PropertyList_addRemove,
     _enum_for_PropertyList_addRemove,
-    PropertyList_addRemove_aDD /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    aDD /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_addRemove_rEMOVE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rEMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_addRemove_aDD_REMOVE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    aDD_REMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_PropertyList_addRemove,
-    _encode_PropertyList_addRemove,
-} from '../DefinitionASN1Module/PropertyList-addRemove.ta.mjs';
-export {
-    PropertyList_addRemove,
-    _enum_for_PropertyList_addRemove,
-    PropertyList_addRemove_aDD /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    aDD /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_addRemove_rEMOVE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rEMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PropertyList_addRemove_aDD_REMOVE /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    aDD_REMOVE /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PropertyList_addRemove,
     _encode_PropertyList_addRemove,
 } from '../DefinitionASN1Module/PropertyList-addRemove.ta.mjs';
@@ -139,12 +39,6 @@ import {
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
 } from '../DefinitionASN1Module/AdditionalProperties.ta.mjs';
-export {
-    AdditionalProperties,
-    _decode_AdditionalProperties,
-    _encode_AdditionalProperties,
-} from '../DefinitionASN1Module/AdditionalProperties.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PropertyList */
 /**
  * @summary PropertyList
@@ -512,9 +406,7 @@ export function _encode_PropertyList(
 ) {
     if (!_cached_encoder_for_PropertyList) {
         _cached_encoder_for_PropertyList = function (
-            value: PropertyList,
-            elGetter: $.ASN1Encoder<PropertyList>
-        ): _Element {
+            value: PropertyList        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

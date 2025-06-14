@@ -16,22 +16,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../AuthenticationFramework/Time.ta.mjs";
-export {
-    DistributionPointName,
-    _decode_DistributionPointName,
-    _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateListExactAssertion */
 /**
  * @summary CertificateListExactAssertion
@@ -215,9 +199,7 @@ export function _encode_CertificateListExactAssertion(
 ) {
     if (!_cached_encoder_for_CertificateListExactAssertion) {
         _cached_encoder_for_CertificateListExactAssertion = function (
-            value: CertificateListExactAssertion,
-            elGetter: $.ASN1Encoder<CertificateListExactAssertion>
-        ): _Element {
+            value: CertificateListExactAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

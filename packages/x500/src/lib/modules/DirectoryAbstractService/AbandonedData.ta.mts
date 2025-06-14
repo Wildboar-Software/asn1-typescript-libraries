@@ -278,9 +278,7 @@ export function _encode_AbandonedData(
 ) {
     if (!_cached_encoder_for_AbandonedData) {
         _cached_encoder_for_AbandonedData = function (
-            value: AbandonedData,
-            elGetter: $.ASN1Encoder<AbandonedData>
-        ): _Element {
+            value: AbandonedData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

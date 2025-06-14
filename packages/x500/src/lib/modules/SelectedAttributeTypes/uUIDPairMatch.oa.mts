@@ -6,16 +6,6 @@ import {
     _decode_UUIDPair,
     _encode_UUIDPair,
 } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.mjs";
-export {
-    UUIDPair,
-    _decode_UUIDPair,
-    _encode_UUIDPair,
-} from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uUIDPairMatch */
 /**
  * @summary uUIDPairMatch

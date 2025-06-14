@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_moc } from "../DirectoryManagement/id-moc.va.mjs";
-export { id_moc } from "../DirectoryManagement/id-moc.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_moc_dsa */
 /**
  * @summary id_moc_dsa

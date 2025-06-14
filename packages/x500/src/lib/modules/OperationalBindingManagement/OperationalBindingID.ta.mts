@@ -179,9 +179,7 @@ export function _encode_OperationalBindingID(
 ) {
     if (!_cached_encoder_for_OperationalBindingID) {
         _cached_encoder_for_OperationalBindingID = function (
-            value: OperationalBindingID,
-            elGetter: $.ASN1Encoder<OperationalBindingID>
-        ): _Element {
+            value: OperationalBindingID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,12 +11,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PeriodicStrategy */
 /**
  * @summary PeriodicStrategy
@@ -220,9 +214,7 @@ export function _encode_PeriodicStrategy(
 ) {
     if (!_cached_encoder_for_PeriodicStrategy) {
         _cached_encoder_for_PeriodicStrategy = function (
-            value: PeriodicStrategy,
-            elGetter: $.ASN1Encoder<PeriodicStrategy>
-        ): _Element {
+            value: PeriodicStrategy        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

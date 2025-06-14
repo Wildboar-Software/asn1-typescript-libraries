@@ -16,37 +16,6 @@ import {
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
-export {
-    DistributionPointName,
-    _decode_DistributionPointName,
-    _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta.mjs";
-export {
-    aACompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */,
-    cACompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    certificateHold /* IMPORTED_SHORT_NAMED_BIT */,
-    cessationOfOperation /* IMPORTED_SHORT_NAMED_BIT */,
-    keyCompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    privilegeWithdrawn /* IMPORTED_SHORT_NAMED_BIT */,
-    ReasonFlags,
-    ReasonFlags_aACompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_affiliationChanged /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_cACompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_certificateHold /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_cessationOfOperation /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_keyCompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_privilegeWithdrawn /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_superseded /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_unused /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_weakAlgorithmOrKey /* IMPORTED_LONG_NAMED_BIT */,
-    superseded /* IMPORTED_SHORT_NAMED_BIT */,
-    unused /* IMPORTED_SHORT_NAMED_BIT */,
-    weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ReasonFlags,
-    _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IssuingDistPointSyntax */
 /**
  * @summary IssuingDistPointSyntax
@@ -355,9 +324,7 @@ export function _encode_IssuingDistPointSyntax(
 ) {
     if (!_cached_encoder_for_IssuingDistPointSyntax) {
         _cached_encoder_for_IssuingDistPointSyntax = function (
-            value: IssuingDistPointSyntax,
-            elGetter: $.ASN1Encoder<IssuingDistPointSyntax>
-        ): _Element {
+            value: IssuingDistPointSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

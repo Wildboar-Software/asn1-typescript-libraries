@@ -6,12 +6,6 @@ import {
     _decode_CertSubscribeOK_Item,
     _encode_CertSubscribeOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item.ta.mjs";
-export {
-    CertSubscribeOK_Item,
-    _decode_CertSubscribeOK_Item,
-    _encode_CertSubscribeOK_Item,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK */
 /**
  * @summary CertSubscribeOK

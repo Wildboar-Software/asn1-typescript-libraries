@@ -11,17 +11,6 @@ import {
     _decode_ACIItem_itemOrUserFirst_userFirst,
     _encode_ACIItem_itemOrUserFirst_userFirst,
 } from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.mjs";
-export {
-    ACIItem_itemOrUserFirst_itemFirst,
-    _decode_ACIItem_itemOrUserFirst_itemFirst,
-    _encode_ACIItem_itemOrUserFirst_itemFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-itemFirst.ta.mjs";
-export {
-    ACIItem_itemOrUserFirst_userFirst,
-    _decode_ACIItem_itemOrUserFirst_userFirst,
-    _encode_ACIItem_itemOrUserFirst_userFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst */
 /**
  * @summary ACIItem_itemOrUserFirst

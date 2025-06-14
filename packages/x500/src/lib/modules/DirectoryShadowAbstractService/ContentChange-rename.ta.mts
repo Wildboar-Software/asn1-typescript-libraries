@@ -11,17 +11,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentChange_rename */
 /**
  * @summary ContentChange_rename

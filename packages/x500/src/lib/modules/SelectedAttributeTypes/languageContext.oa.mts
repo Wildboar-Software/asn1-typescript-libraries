@@ -7,14 +7,6 @@ import {
     _decode_LanguageContextSyntax,
     _encode_LanguageContextSyntax,
 } from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va.mjs";
-export {
-    LanguageContextSyntax,
-    _decode_LanguageContextSyntax,
-    _encode_LanguageContextSyntax,
-} from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION languageContext */
 /**
  * @summary languageContext

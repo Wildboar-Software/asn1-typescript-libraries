@@ -10,12 +10,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeReq_encr_mode_non_aead */
 /**
  * @summary TbsHandshakeReq_encr_mode_non_aead
@@ -194,9 +188,7 @@ export function _encode_TbsHandshakeReq_encr_mode_non_aead(
 ) {
     if (!_cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead) {
         _cached_encoder_for_TbsHandshakeReq_encr_mode_non_aead = function (
-            value: TbsHandshakeReq_encr_mode_non_aead,
-            elGetter: $.ASN1Encoder<TbsHandshakeReq_encr_mode_non_aead>
-        ): _Element {
+            value: TbsHandshakeReq_encr_mode_non_aead        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

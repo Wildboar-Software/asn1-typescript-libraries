@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,32 +15,12 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from '../MSAbstractService/AttributeValueAssertion.ta.mjs';
-export {
-    AttributeValueAssertion,
-    _decode_AttributeValueAssertion,
-    _encode_AttributeValueAssertion,
-} from '../MSAbstractService/AttributeValueAssertion.ta.mjs';
 import {
     FilterItem_substrings,
     _decode_FilterItem_substrings,
     _encode_FilterItem_substrings,
 } from '../MSAbstractService/FilterItem-substrings.ta.mjs';
-export {
-    FilterItem_substrings,
-    _decode_FilterItem_substrings,
-    _encode_FilterItem_substrings,
-} from '../MSAbstractService/FilterItem-substrings.ta.mjs';
-import { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
-export { X413ATTRIBUTE } from '../MSAbstractService/X413ATTRIBUTE.oca.mjs';
-import { single_valued, multi_valued } from "../MSAbstractService/X413ATTRIBUTE-numeration.ta.mjs";
-import { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.mjs';
-export { AttributeTable } from '../MSGeneralAttributeTypes/AttributeTable.osa.mjs';
 import {
-    MatchingRuleAssertion,
-    _decode_MatchingRuleAssertion,
-    _encode_MatchingRuleAssertion,
-} from '../MSAbstractService/MatchingRuleAssertion.ta.mjs';
-export {
     MatchingRuleAssertion,
     _decode_MatchingRuleAssertion,
     _encode_MatchingRuleAssertion,

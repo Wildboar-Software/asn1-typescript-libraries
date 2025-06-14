@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { rsadsi } from "../AlgorithmObjectIdentifiers/rsadsi.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pkcs_1 */
 /**
  * @summary pkcs_1

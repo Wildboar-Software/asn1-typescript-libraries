@@ -15,17 +15,6 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeValueAssertion,
-    _decode_AttributeValueAssertion,
-    _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModifyRights_Item_item */
 /**
  * @summary ModifyRights_Item_item

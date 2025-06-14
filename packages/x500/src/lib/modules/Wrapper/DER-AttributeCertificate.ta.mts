@@ -1,13 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export {
-    AttributeCertificate,
-    _decode_AttributeCertificate,
-    _encode_AttributeCertificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AttributeCertificate.ta.mjs";
-export { der } from "../Wrapper/der.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DER_AttributeCertificate */
 /**
  * @summary DER_AttributeCertificate

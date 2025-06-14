@@ -16,17 +16,6 @@ import {
     _decode_OidOrAttr,
     _encode_OidOrAttr,
 } from "../AuthenticationFramework/OidOrAttr.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    OidOrAttr,
-    _decode_OidOrAttr,
-    _encode_OidOrAttr,
-} from "../AuthenticationFramework/OidOrAttr.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedPublicKeyAlgorithms */
 /**
  * @summary SupportedPublicKeyAlgorithms
@@ -236,9 +225,7 @@ export function _encode_SupportedPublicKeyAlgorithms(
 ) {
     if (!_cached_encoder_for_SupportedPublicKeyAlgorithms) {
         _cached_encoder_for_SupportedPublicKeyAlgorithms = function (
-            value: SupportedPublicKeyAlgorithms,
-            elGetter: $.ASN1Encoder<SupportedPublicKeyAlgorithms>
-        ): _Element {
+            value: SupportedPublicKeyAlgorithms        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

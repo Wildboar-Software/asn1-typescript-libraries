@@ -31,37 +31,6 @@ import {
     _decode_TBresponse,
     _encode_TBresponse,
 } from "../TrustBroker/TBresponse.ta.mjs";
-export {
-    InitializationAbort,
-    _decode_InitializationAbort,
-    _encode_InitializationAbort,
-} from "../TrustBroker/InitializationAbort.ta.mjs";
-export {
-    InitializationAcc,
-    _decode_InitializationAcc,
-    _encode_InitializationAcc,
-} from "../TrustBroker/InitializationAcc.ta.mjs";
-export {
-    InitializationRej,
-    _decode_InitializationRej,
-    _encode_InitializationRej,
-} from "../TrustBroker/InitializationRej.ta.mjs";
-export {
-    InitializationReq,
-    _decode_InitializationReq,
-    _encode_InitializationReq,
-} from "../TrustBroker/InitializationReq.ta.mjs";
-export {
-    TBrequest,
-    _decode_TBrequest,
-    _encode_TBrequest,
-} from "../TrustBroker/TBrequest.ta.mjs";
-export {
-    TBresponse,
-    _decode_TBresponse,
-    _encode_TBresponse,
-} from "../TrustBroker/TBresponse.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBprot */
 /**
  * @summary TBprot

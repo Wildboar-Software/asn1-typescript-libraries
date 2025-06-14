@@ -6,14 +6,6 @@ import {
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";
-export {
-    PostalAddress,
-    _decode_PostalAddress,
-    _encode_PostalAddress,
-} from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION postalAddr */
 /**
  * @summary postalAddr

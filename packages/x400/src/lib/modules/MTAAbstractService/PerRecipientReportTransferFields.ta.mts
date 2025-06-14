@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,69 +16,17 @@ import {
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
 } from '../MTAAbstractService/ActualRecipientName.ta.mjs';
-export {
-    ActualRecipientName,
-    _decode_ActualRecipientName,
-    _encode_ActualRecipientName,
-} from '../MTAAbstractService/ActualRecipientName.ta.mjs';
 import {
-    OriginallySpecifiedRecipientNumber,
-    _decode_OriginallySpecifiedRecipientNumber,
-    _encode_OriginallySpecifiedRecipientNumber,
-} from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.mjs';
-export {
     OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
 } from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.mjs';
 import {
     PerRecipientIndicators,
-    PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
-    responsibility /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originating_MTA_report /* IMPORTED_LONG_NAMED_BIT */,
-    originating_MTA_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originating_MTA_non_delivery_report /* IMPORTED_LONG_NAMED_BIT */,
-    originating_MTA_non_delivery_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originator_report /* IMPORTED_LONG_NAMED_BIT */,
-    originator_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originator_non_delivery_report /* IMPORTED_LONG_NAMED_BIT */,
-    originator_non_delivery_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_5 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_5 /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_6 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_6 /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_7 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_PerRecipientIndicators,
-    _encode_PerRecipientIndicators,
-} from '../MTAAbstractService/PerRecipientIndicators.ta.mjs';
-export {
-    PerRecipientIndicators,
-    PerRecipientIndicators_responsibility /* IMPORTED_LONG_NAMED_BIT */,
-    responsibility /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originating_MTA_report /* IMPORTED_LONG_NAMED_BIT */,
-    originating_MTA_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originating_MTA_non_delivery_report /* IMPORTED_LONG_NAMED_BIT */,
-    originating_MTA_non_delivery_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originator_report /* IMPORTED_LONG_NAMED_BIT */,
-    originator_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_originator_non_delivery_report /* IMPORTED_LONG_NAMED_BIT */,
-    originator_non_delivery_report /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_5 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_5 /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_6 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_6 /* IMPORTED_SHORT_NAMED_BIT */,
-    PerRecipientIndicators_reserved_7 /* IMPORTED_LONG_NAMED_BIT */,
-    reserved_7 /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
 } from '../MTAAbstractService/PerRecipientIndicators.ta.mjs';
 import {
-    LastTraceInformation,
-    _decode_LastTraceInformation,
-    _encode_LastTraceInformation,
-} from '../MTAAbstractService/LastTraceInformation.ta.mjs';
-export {
     LastTraceInformation,
     _decode_LastTraceInformation,
     _encode_LastTraceInformation,
@@ -143,17 +36,7 @@ import {
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTAAbstractService/OriginallyIntendedRecipientName.ta.mjs';
-export {
-    OriginallyIntendedRecipientName,
-    _decode_OriginallyIntendedRecipientName,
-    _encode_OriginallyIntendedRecipientName,
-} from '../MTAAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    SupplementaryInformation,
-    _decode_SupplementaryInformation,
-    _encode_SupplementaryInformation,
-} from '../MTSAbstractService/SupplementaryInformation.ta.mjs';
-export {
     SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
@@ -163,12 +46,6 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PerRecipientReportTransferFields */
 /**
  * @summary PerRecipientReportTransferFields
@@ -476,9 +353,7 @@ export function _encode_PerRecipientReportTransferFields(
 ) {
     if (!_cached_encoder_for_PerRecipientReportTransferFields) {
         _cached_encoder_for_PerRecipientReportTransferFields = function (
-            value: PerRecipientReportTransferFields,
-            elGetter: $.ASN1Encoder<PerRecipientReportTransferFields>
-        ): _Element {
+            value: PerRecipientReportTransferFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

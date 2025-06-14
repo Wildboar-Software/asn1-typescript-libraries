@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { id_dsa_with_sha224 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha224.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_dsa_with_sha224 } from "../AlgorithmObjectIdentifiers/id-dsa-with-sha224.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dsa_with_sha224 */
 /**
  * @summary dsa_with_sha224

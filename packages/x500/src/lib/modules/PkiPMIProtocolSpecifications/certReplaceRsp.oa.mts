@@ -6,14 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/CertReplaceRsp.ta.mjs";
 import { id_certReplaceRsp } from "../PkiPMIProtocolSpecifications/id-certReplaceRsp.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export {
-    CertReplaceRsp,
-    _decode_CertReplaceRsp,
-    _encode_CertReplaceRsp,
-} from "../PkiPMIProtocolSpecifications/CertReplaceRsp.ta.mjs";
-export { id_certReplaceRsp } from "../PkiPMIProtocolSpecifications/id-certReplaceRsp.va.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certReplaceRsp */
 /**
  * @summary certReplaceRsp

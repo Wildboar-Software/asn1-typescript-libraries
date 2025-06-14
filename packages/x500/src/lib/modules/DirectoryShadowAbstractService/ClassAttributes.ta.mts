@@ -10,12 +10,6 @@ import {
     _decode_AttributeTypes,
     _encode_AttributeTypes,
 } from "../DirectoryShadowAbstractService/AttributeTypes.ta.mjs";
-export {
-    AttributeTypes,
-    _decode_AttributeTypes,
-    _encode_AttributeTypes,
-} from "../DirectoryShadowAbstractService/AttributeTypes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ClassAttributes */
 /**
  * @summary ClassAttributes

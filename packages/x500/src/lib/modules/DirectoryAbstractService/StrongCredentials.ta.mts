@@ -25,27 +25,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    AttributeCertificationPath,
-    _decode_AttributeCertificationPath,
-    _encode_AttributeCertificationPath,
-} from "../AttributeCertificateDefinitions/AttributeCertificationPath.ta.mjs";
-export {
-    CertificationPath,
-    _decode_CertificationPath,
-    _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta.mjs";
-export {
-    Token,
-    _decode_Token,
-    _encode_Token,
-} from "../DirectoryAbstractService/Token.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION StrongCredentials */
 /**
  * @summary StrongCredentials
@@ -277,9 +256,7 @@ export function _encode_StrongCredentials(
 ) {
     if (!_cached_encoder_for_StrongCredentials) {
         _cached_encoder_for_StrongCredentials = function (
-            value: StrongCredentials,
-            elGetter: $.ASN1Encoder<StrongCredentials>
-        ): _Element {
+            value: StrongCredentials        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

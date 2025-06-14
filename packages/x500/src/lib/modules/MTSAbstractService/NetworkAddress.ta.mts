@@ -6,12 +6,6 @@ import {
     _decode_X121Address,
     _encode_X121Address,
 } from "../MTSAbstractService/X121Address.ta.mjs";
-export {
-    X121Address,
-    _decode_X121Address,
-    _encode_X121Address,
-} from "../MTSAbstractService/X121Address.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NetworkAddress */
 /**
  * @summary NetworkAddress

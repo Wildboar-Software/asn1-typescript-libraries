@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-export {
-    CertUpdateReq_certs_Item,
-    _decode_CertUpdateReq_certs_Item,
-    _encode_CertUpdateReq_certs_Item,
-} from "../CaSubscription/CertUpdateReq-certs-Item.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateReq */
 /**
  * @summary CertUpdateReq
@@ -200,9 +189,7 @@ export function _encode_CertUpdateReq(
 ) {
     if (!_cached_encoder_for_CertUpdateReq) {
         _cached_encoder_for_CertUpdateReq = function (
-            value: CertUpdateReq,
-            elGetter: $.ASN1Encoder<CertUpdateReq>
-        ): _Element {
+            value: CertUpdateReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -58,7 +58,7 @@ import {
     AltNameType_builtinNameForm_uniformResourceIdentifier,
     AltNameType_builtinNameForm_iPAddress,
     AltNameType_builtinNameForm_registeredId,
-} from "../../modules/CertificateExtensions/AltNameType.ta.mjs";
+} from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import compareGeneralName from "../../comparators/compareGeneralName.mjs";
 import getDateFromTime from "../../utils/getDateFromTime.mjs";

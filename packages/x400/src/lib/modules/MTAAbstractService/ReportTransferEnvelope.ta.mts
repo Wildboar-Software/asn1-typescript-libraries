@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ReportIdentifier,
     _encode_ReportIdentifier,
 } from '../MTAAbstractService/ReportIdentifier.ta.mjs';
-export {
-    ReportIdentifier,
-    _decode_ReportIdentifier,
-    _encode_ReportIdentifier,
-} from '../MTAAbstractService/ReportIdentifier.ta.mjs';
 import {
-    ReportDestinationName,
-    _decode_ReportDestinationName,
-    _encode_ReportDestinationName,
-} from '../MTAAbstractService/ReportDestinationName.ta.mjs';
-export {
     ReportDestinationName,
     _decode_ReportDestinationName,
     _encode_ReportDestinationName,
@@ -91,22 +26,11 @@ import {
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';
-export {
-    TraceInformation,
-    _decode_TraceInformation,
-    _encode_TraceInformation,
-} from '../MTAAbstractService/TraceInformation.ta.mjs';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ReportTransferEnvelope */
 /**
  * @summary ReportTransferEnvelope
@@ -337,9 +261,7 @@ export function _encode_ReportTransferEnvelope(
 ) {
     if (!_cached_encoder_for_ReportTransferEnvelope) {
         _cached_encoder_for_ReportTransferEnvelope = function (
-            value: ReportTransferEnvelope,
-            elGetter: $.ASN1Encoder<ReportTransferEnvelope>
-        ): _Element {
+            value: ReportTransferEnvelope        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

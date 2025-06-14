@@ -5,13 +5,6 @@ import {
     _encode_ExtendedNetworkAddress,
 } from "../MTSAbstractService/ExtendedNetworkAddress.ta.mjs";
 import { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    ExtendedNetworkAddress,
-    _decode_ExtendedNetworkAddress,
-    _encode_ExtendedNetworkAddress,
-} from "../MTSAbstractService/ExtendedNetworkAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION extended_network_address */
 /**
  * @summary extended_network_address

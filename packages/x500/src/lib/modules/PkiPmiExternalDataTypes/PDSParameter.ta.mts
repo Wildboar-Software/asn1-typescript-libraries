@@ -176,9 +176,7 @@ export function _encode_PDSParameter(
 ) {
     if (!_cached_encoder_for_PDSParameter) {
         _cached_encoder_for_PDSParameter = function (
-            value: PDSParameter,
-            elGetter: $.ASN1Encoder<PDSParameter>
-        ): _Element {
+            value: PDSParameter        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

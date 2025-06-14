@@ -33,32 +33,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Validity,
-    _decode_Validity,
-    _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    Context_Data,
-    _decode_Context_Data,
-    _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Rep_ti_contents */
 /**
  * @summary Rep_ti_contents
@@ -431,9 +405,7 @@ export function _encode_Rep_ti_contents(
 ) {
     if (!_cached_encoder_for_Rep_ti_contents) {
         _cached_encoder_for_Rep_ti_contents = function (
-            value: Rep_ti_contents,
-            elGetter: $.ASN1Encoder<Rep_ti_contents>
-        ): _Element {
+            value: Rep_ti_contents        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

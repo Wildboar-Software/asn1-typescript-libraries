@@ -11,17 +11,6 @@ import {
     _decode_CertReplaceOK,
     _encode_CertReplaceOK,
 } from "../PkiPMIProtocolSpecifications/CertReplaceOK.ta.mjs";
-export {
-    CertReplaceErr,
-    _decode_CertReplaceErr,
-    _encode_CertReplaceErr,
-} from "../PkiPMIProtocolSpecifications/CertReplaceErr.ta.mjs";
-export {
-    CertReplaceOK,
-    _decode_CertReplaceOK,
-    _encode_CertReplaceOK,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReplaceRsp_result */
 /**
  * @summary CertReplaceRsp_result

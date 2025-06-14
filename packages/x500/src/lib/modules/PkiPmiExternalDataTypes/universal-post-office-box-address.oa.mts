@@ -5,13 +5,6 @@ import {
     _decode_UniversalPostOfficeBoxAddress,
     _encode_UniversalPostOfficeBoxAddress,
 } from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalPostOfficeBoxAddress,
-    _decode_UniversalPostOfficeBoxAddress,
-    _encode_UniversalPostOfficeBoxAddress,
-} from "../PkiPmiExternalDataTypes/UniversalPostOfficeBoxAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_post_office_box_address */
 /**
  * @summary universal_post_office_box_address

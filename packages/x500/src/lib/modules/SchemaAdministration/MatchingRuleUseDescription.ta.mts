@@ -12,14 +12,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MatchingRuleUseDescription */
 /**
  * @summary MatchingRuleUseDescription
@@ -290,9 +282,7 @@ export function _encode_MatchingRuleUseDescription(
 ) {
     if (!_cached_encoder_for_MatchingRuleUseDescription) {
         _cached_encoder_for_MatchingRuleUseDescription = function (
-            value: MatchingRuleUseDescription,
-            elGetter: $.ASN1Encoder<MatchingRuleUseDescription>
-        ): _Element {
+            value: MatchingRuleUseDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

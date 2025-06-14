@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,46 +16,12 @@ import {
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
-export {
-    MessageDeliveryTime,
-    _decode_MessageDeliveryTime,
-    _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
 import {
     TypeOfMTSUser,
     public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
-    private_ /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_ms /* IMPORTED_LONG_NAMED_INTEGER */,
-    ms /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_dl /* IMPORTED_LONG_NAMED_INTEGER */,
-    dl /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_pdau /* IMPORTED_LONG_NAMED_INTEGER */,
-    pdau /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_physical_recipient /* IMPORTED_LONG_NAMED_INTEGER */,
-    physical_recipient /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_other /* IMPORTED_LONG_NAMED_INTEGER */,
-    other /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
 } from '../MTSAbstractService/TypeOfMTSUser.ta.mjs';
-export {
-    TypeOfMTSUser,
-    public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
-    private_ /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_ms /* IMPORTED_LONG_NAMED_INTEGER */,
-    ms /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_dl /* IMPORTED_LONG_NAMED_INTEGER */,
-    dl /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_pdau /* IMPORTED_LONG_NAMED_INTEGER */,
-    pdau /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_physical_recipient /* IMPORTED_LONG_NAMED_INTEGER */,
-    physical_recipient /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TypeOfMTSUser_other /* IMPORTED_LONG_NAMED_INTEGER */,
-    other /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TypeOfMTSUser,
-    _encode_TypeOfMTSUser,
-} from '../MTSAbstractService/TypeOfMTSUser.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DeliveryReport */
 /**
  * @summary DeliveryReport
@@ -298,9 +209,7 @@ export function _encode_DeliveryReport(
 ) {
     if (!_cached_encoder_for_DeliveryReport) {
         _cached_encoder_for_DeliveryReport = function (
-            value: DeliveryReport,
-            elGetter: $.ASN1Encoder<DeliveryReport>
-        ): _Element {
+            value: DeliveryReport        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

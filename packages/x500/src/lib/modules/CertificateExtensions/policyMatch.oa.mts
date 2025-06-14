@@ -6,16 +6,6 @@ import {
 } from "../AuthenticationFramework/PolicyID.ta.mjs";
 import { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    PolicyID,
-    _decode_PolicyID,
-    _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta.mjs";
-export { id_mr_policyMatch } from "../CertificateExtensions/id-mr-policyMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION policyMatch */
 /**
  * @summary policyMatch

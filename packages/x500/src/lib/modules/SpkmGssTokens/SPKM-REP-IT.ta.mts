@@ -20,22 +20,6 @@ import {
     _decode_REP_IT_TOKEN,
     _encode_REP_IT_TOKEN,
 } from "../SpkmGssTokens/REP-IT-TOKEN.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Integrity,
-    _decode_Integrity,
-    _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta.mjs";
-export {
-    REP_IT_TOKEN,
-    _decode_REP_IT_TOKEN,
-    _encode_REP_IT_TOKEN,
-} from "../SpkmGssTokens/REP-IT-TOKEN.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_REP_IT */
 /**
  * @summary SPKM_REP_IT
@@ -209,9 +193,7 @@ export function _encode_SPKM_REP_IT(
 ) {
     if (!_cached_encoder_for_SPKM_REP_IT) {
         _cached_encoder_for_SPKM_REP_IT = function (
-            value: SPKM_REP_IT,
-            elGetter: $.ASN1Encoder<SPKM_REP_IT>
-        ): _Element {
+            value: SPKM_REP_IT        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

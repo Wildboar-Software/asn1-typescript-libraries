@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { objectClass } from "../UsefulDefinitions/objectClass.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { objectClass } from "../UsefulDefinitions/objectClass.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_oc */
 /**
  * @summary id_oc

@@ -15,17 +15,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HierarchicalAgreement */
 /**
  * @summary HierarchicalAgreement
@@ -202,9 +191,7 @@ export function _encode_HierarchicalAgreement(
 ) {
     if (!_cached_encoder_for_HierarchicalAgreement) {
         _cached_encoder_for_HierarchicalAgreement = function (
-            value: HierarchicalAgreement,
-            elGetter: $.ASN1Encoder<HierarchicalAgreement>
-        ): _Element {
+            value: HierarchicalAgreement        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

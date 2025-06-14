@@ -7,17 +7,6 @@ import {
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
-export { id_mr_intEmailMatch } from "../SelectedAttributeTypes/id-mr-intEmailMatch.va.mjs";
-export {
-    IntEmail,
-    _decode_IntEmail,
-    _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION intEmailMatch */
 /**
  * @summary intEmailMatch

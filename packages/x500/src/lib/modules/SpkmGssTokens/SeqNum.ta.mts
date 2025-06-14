@@ -160,9 +160,7 @@ let _cached_encoder_for_SeqNum: $.ASN1Encoder<SeqNum> | null = null;
 export function _encode_SeqNum(value: SeqNum, elGetter: $.ASN1Encoder<SeqNum>) {
     if (!_cached_encoder_for_SeqNum) {
         _cached_encoder_for_SeqNum = function (
-            value: SeqNum,
-            elGetter: $.ASN1Encoder<SeqNum>
-        ): _Element {
+            value: SeqNum        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

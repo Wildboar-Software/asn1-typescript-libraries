@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_oat } from "../UsefulDefinitions/id-oat.va.mjs";
-export { id_oat } from "../UsefulDefinitions/id-oat.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_oat_supportedFeatures */
 /**
  * @summary id_oat_supportedFeatures

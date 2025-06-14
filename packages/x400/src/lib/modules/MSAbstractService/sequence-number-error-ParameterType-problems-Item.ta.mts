@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,15 +12,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SequenceNumberProblem,
-    SequenceNumberProblem_no_such_entry /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_such_entry /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_SequenceNumberProblem,
-    _encode_SequenceNumberProblem,
-} from '../MSAbstractService/SequenceNumberProblem.ta.mjs';
-export {
-    SequenceNumberProblem,
-    SequenceNumberProblem_no_such_entry /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_such_entry /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SequenceNumberProblem,
     _encode_SequenceNumberProblem,
 } from '../MSAbstractService/SequenceNumberProblem.ta.mjs';
@@ -85,12 +20,6 @@ import {
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
-export {
-    SequenceNumber,
-    _decode_SequenceNumber,
-    _encode_SequenceNumber,
-} from '../MSAbstractService/SequenceNumber.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION sequence_number_error_ParameterType_problems_Item */
 /**
  * @summary sequence_number_error_ParameterType_problems_Item
@@ -274,9 +203,7 @@ export function _encode_sequence_number_error_ParameterType_problems_Item(
         !_cached_encoder_for_sequence_number_error_ParameterType_problems_Item
     ) {
         _cached_encoder_for_sequence_number_error_ParameterType_problems_Item = function (
-            value: sequence_number_error_ParameterType_problems_Item,
-            elGetter: $.ASN1Encoder<sequence_number_error_ParameterType_problems_Item>
-        ): _Element {
+            value: sequence_number_error_ParameterType_problems_Item        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -12,20 +12,6 @@ import {
     _encode_FamilyReturn_memberSelect,
     _enum_for_FamilyReturn_memberSelect,
 } from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta.mjs";
-export {
-    compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    contributingEntriesOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    FamilyReturn_memberSelect,
-    FamilyReturn_memberSelect_compoundEntry /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyReturn_memberSelect_contributingEntriesOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyReturn_memberSelect_participatingEntriesOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    participatingEntriesOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FamilyReturn_memberSelect,
-    _encode_FamilyReturn_memberSelect,
-    _enum_for_FamilyReturn_memberSelect,
-} from "../DirectoryAbstractService/FamilyReturn-memberSelect.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FamilyReturn */
 /**
  * @summary FamilyReturn
@@ -223,9 +209,7 @@ export function _encode_FamilyReturn(
 ) {
     if (!_cached_encoder_for_FamilyReturn) {
         _cached_encoder_for_FamilyReturn = function (
-            value: FamilyReturn,
-            elGetter: $.ASN1Encoder<FamilyReturn>
-        ): _Element {
+            value: FamilyReturn        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

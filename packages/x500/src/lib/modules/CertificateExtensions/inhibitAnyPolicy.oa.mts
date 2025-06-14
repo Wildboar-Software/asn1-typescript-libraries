@@ -6,14 +6,6 @@ import {
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va.mjs";
-export {
-    SkipCerts,
-    _decode_SkipCerts,
-    _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION inhibitAnyPolicy */
 /**
  * @summary inhibitAnyPolicy

@@ -11,8 +11,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Request */
 /**
  * @summary Request
@@ -185,9 +183,7 @@ export function _encode_Request(
 ) {
     if (!_cached_encoder_for_Request) {
         _cached_encoder_for_Request = function (
-            value: Request,
-            elGetter: $.ASN1Encoder<Request>
-        ): _Element {
+            value: Request        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

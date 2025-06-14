@@ -21,57 +21,6 @@ import {
     _decode_ReturnResultProblem,
     _encode_ReturnResultProblem,
 } from "../OSIProtocolSpecification/ReturnResultProblem.ta.mjs";
-export {
-    badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    GeneralProblem,
-    GeneralProblem_badlyStructuredPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    GeneralProblem_mistypedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    GeneralProblem_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    mistypedPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unrecognizedPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_GeneralProblem,
-    _encode_GeneralProblem,
-} from "../OSIProtocolSpecification/GeneralProblem.ta.mjs";
-export {
-    duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    InvokeProblem,
-    InvokeProblem_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
-    InvokeProblem_mistypedArgument /* IMPORTED_LONG_NAMED_INTEGER */,
-    InvokeProblem_releaseInProgress /* IMPORTED_LONG_NAMED_INTEGER */,
-    InvokeProblem_resourceLimitation /* IMPORTED_LONG_NAMED_INTEGER */,
-    InvokeProblem_unrecognizedOperation /* IMPORTED_LONG_NAMED_INTEGER */,
-    mistypedArgument /* IMPORTED_SHORT_NAMED_INTEGER */,
-    releaseInProgress /* IMPORTED_SHORT_NAMED_INTEGER */,
-    resourceLimitation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unrecognizedOperation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_InvokeProblem,
-    _encode_InvokeProblem,
-} from "../OSIProtocolSpecification/InvokeProblem.ta.mjs";
-export {
-    errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */,
-    mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ReturnErrorProblem,
-    ReturnErrorProblem_errorResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnErrorProblem_mistypedParameter /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnErrorProblem_unexpectedError /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnErrorProblem_unrecognizedError /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnErrorProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
-    unexpectedError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unrecognizedError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ReturnErrorProblem,
-    _encode_ReturnErrorProblem,
-} from "../OSIProtocolSpecification/ReturnErrorProblem.ta.mjs";
-export {
-    mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */,
-    resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ReturnResultProblem,
-    ReturnResultProblem_mistypedResult /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnResultProblem_resultResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */,
-    ReturnResultProblem_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_ReturnResultProblem,
-    _encode_ReturnResultProblem,
-} from "../OSIProtocolSpecification/ReturnResultProblem.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiRej_problem */
 /**
  * @summary OsiRej_problem

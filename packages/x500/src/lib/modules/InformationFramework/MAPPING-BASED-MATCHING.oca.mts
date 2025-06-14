@@ -2,9 +2,6 @@
 import { BOOLEAN, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MAPPING_BASED_MATCHING */
 /**
  * @summary MAPPING_BASED_MATCHING

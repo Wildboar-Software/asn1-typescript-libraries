@@ -247,9 +247,7 @@ export function _encode_DeleteAvlReq(
 ) {
     if (!_cached_encoder_for_DeleteAvlReq) {
         _cached_encoder_for_DeleteAvlReq = function (
-            value: DeleteAvlReq,
-            elGetter: $.ASN1Encoder<DeleteAvlReq>
-        ): _Element {
+            value: DeleteAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -21,24 +21,6 @@ import {
     _decode_EncryptedPduInfo_pduEncryptionAlgorithm,
     _encode_EncryptedPduInfo_pduEncryptionAlgorithm,
 } from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta.mjs";
-export {
-    EncryptedKey,
-    _decode_EncryptedKey,
-    _encode_EncryptedKey,
-} from "../PkiPmiWrapper/EncryptedKey.ta.mjs";
-export {
-    EncryptedPdu,
-    _decode_EncryptedPdu,
-    _encode_EncryptedPdu,
-} from "../PkiPmiWrapper/EncryptedPdu.ta.mjs";
-export {
-    EncryptedPduInfo_pduEncryptionAlgorithm,
-    _decode_EncryptedPduInfo_pduEncryptionAlgorithm,
-    _encode_EncryptedPduInfo_pduEncryptionAlgorithm,
-} from "../PkiPmiWrapper/EncryptedPduInfo-pduEncryptionAlgorithm.ta.mjs";
-export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedPduInfo */
 /**
  * @summary EncryptedPduInfo
@@ -269,9 +251,7 @@ export function _encode_EncryptedPduInfo(
 ) {
     if (!_cached_encoder_for_EncryptedPduInfo) {
         _cached_encoder_for_EncryptedPduInfo = function (
-            value: EncryptedPduInfo,
-            elGetter: $.ASN1Encoder<EncryptedPduInfo>
-        ): _Element {
+            value: EncryptedPduInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

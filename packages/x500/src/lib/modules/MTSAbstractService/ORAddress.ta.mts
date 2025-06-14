@@ -20,22 +20,6 @@ import {
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from "../MTSAbstractService/ExtensionAttributes.ta.mjs";
-export {
-    BuiltInDomainDefinedAttributes,
-    _decode_BuiltInDomainDefinedAttributes,
-    _encode_BuiltInDomainDefinedAttributes,
-} from "../MTSAbstractService/BuiltInDomainDefinedAttributes.ta.mjs";
-export {
-    BuiltInStandardAttributes,
-    _decode_BuiltInStandardAttributes,
-    _encode_BuiltInStandardAttributes,
-} from "../MTSAbstractService/BuiltInStandardAttributes.ta.mjs";
-export {
-    ExtensionAttributes,
-    _decode_ExtensionAttributes,
-    _encode_ExtensionAttributes,
-} from "../MTSAbstractService/ExtensionAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ORAddress */
 /**
  * @summary ORAddress
@@ -231,9 +215,7 @@ export function _encode_ORAddress(
 ) {
     if (!_cached_encoder_for_ORAddress) {
         _cached_encoder_for_ORAddress = function (
-            value: ORAddress,
-            elGetter: $.ASN1Encoder<ORAddress>
-        ): _Element {
+            value: ORAddress        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

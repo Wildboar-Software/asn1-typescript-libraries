@@ -10,23 +10,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export {
-    DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,
-    _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,
-    _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1,
-} from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION directoryBindError */
 /**
  * @summary directoryBindError

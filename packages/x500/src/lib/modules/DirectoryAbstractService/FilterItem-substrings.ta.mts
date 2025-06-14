@@ -11,14 +11,6 @@ import {
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
 } from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-export {
-    FilterItem_substrings_strings_Item,
-    _decode_FilterItem_substrings_strings_Item,
-    _encode_FilterItem_substrings_strings_Item,
-} from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FilterItem_substrings */
 /**
  * @summary FilterItem_substrings
@@ -186,9 +178,7 @@ export function _encode_FilterItem_substrings(
 ) {
     if (!_cached_encoder_for_FilterItem_substrings) {
         _cached_encoder_for_FilterItem_substrings = function (
-            value: FilterItem_substrings,
-            elGetter: $.ASN1Encoder<FilterItem_substrings>
-        ): _Element {
+            value: FilterItem_substrings        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

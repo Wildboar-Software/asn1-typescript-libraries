@@ -6,14 +6,6 @@ import {
     _encode_DITStructureRuleDescription,
 } from "../SchemaAdministration/DITStructureRuleDescription.ta.mjs";
 import { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    DITStructureRuleDescription,
-    _decode_DITStructureRuleDescription,
-    _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta.mjs";
-export { id_lsx_dITStructureRuleDescription } from "../SelectedAttributeTypes/id-lsx-dITStructureRuleDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dITStructureRuleDescription */
 /**
  * @summary dITStructureRuleDescription

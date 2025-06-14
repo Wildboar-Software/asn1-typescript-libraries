@@ -10,28 +10,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
-export { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
-export { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa.mjs";
-export { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa.mjs";
-export { id_oc_cRLDistributionPoint } from "../AuthenticationFramework/id-oc-cRLDistributionPoint.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION cRLDistributionPoint */
 /**
  * @summary cRLDistributionPoint

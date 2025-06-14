@@ -11,12 +11,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MaxValueCount */
 /**
  * @summary MaxValueCount
@@ -185,9 +179,7 @@ export function _encode_MaxValueCount(
 ) {
     if (!_cached_encoder_for_MaxValueCount) {
         _cached_encoder_for_MaxValueCount = function (
-            value: MaxValueCount,
-            elGetter: $.ASN1Encoder<MaxValueCount>
-        ): _Element {
+            value: MaxValueCount        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

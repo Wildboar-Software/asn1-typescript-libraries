@@ -21,22 +21,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryAbstractService/Time.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TokenContent */
 /**
  * @summary TokenContent
@@ -288,9 +272,7 @@ export function _encode_TokenContent(
 ) {
     if (!_cached_encoder_for_TokenContent) {
         _cached_encoder_for_TokenContent = function (
-            value: TokenContent,
-            elGetter: $.ASN1Encoder<TokenContent>
-        ): _Element {
+            value: TokenContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

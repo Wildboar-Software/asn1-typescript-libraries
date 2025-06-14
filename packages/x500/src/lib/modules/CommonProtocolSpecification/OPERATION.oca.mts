@@ -2,13 +2,6 @@
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
 import { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OPERATION */
 /**
  * @summary OPERATION

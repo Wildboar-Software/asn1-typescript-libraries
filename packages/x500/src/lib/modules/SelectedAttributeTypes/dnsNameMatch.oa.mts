@@ -7,17 +7,6 @@ import {
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
-export {
-    DomainName,
-    _decode_DomainName,
-    _encode_DomainName,
-} from "../SelectedAttributeTypes/DomainName.ta.mjs";
-export { id_mr_dnsNameMatch } from "../SelectedAttributeTypes/id-mr-dnsNameMatch.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dnsNameMatch */
 /**
  * @summary dnsNameMatch

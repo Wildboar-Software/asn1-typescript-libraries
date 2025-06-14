@@ -6,14 +6,6 @@ import {
 } from "../AVL-management/AvlProt.ta.mjs";
 import { id_avlprot } from "../ProtProtocols/id-avlprot.va.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export {
-    AvlProt,
-    _decode_AvlProt,
-    _encode_AvlProt,
-} from "../AVL-management/AvlProt.ta.mjs";
-export { id_avlprot } from "../ProtProtocols/id-avlprot.va.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION avlProt */
 /**
  * @summary avlProt

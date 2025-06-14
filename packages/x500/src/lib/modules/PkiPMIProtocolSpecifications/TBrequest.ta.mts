@@ -6,12 +6,6 @@ import {
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
 } from "../AuthenticationFramework/PKCertIdentifier.ta.mjs";
-export {
-    PKCertIdentifier,
-    _decode_PKCertIdentifier,
-    _encode_PKCertIdentifier,
-} from "../AuthenticationFramework/PKCertIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBrequest */
 /**
  * @summary TBrequest

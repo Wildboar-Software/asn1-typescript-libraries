@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ThisIPMField,
     _encode_ThisIPMField,
 } from '../IPMSInformationObjects/ThisIPMField.ta.mjs';
-export {
-    ThisIPMField,
-    _decode_ThisIPMField,
-    _encode_ThisIPMField,
-} from '../IPMSInformationObjects/ThisIPMField.ta.mjs';
 import {
-    OriginatorField,
-    _decode_OriginatorField,
-    _encode_OriginatorField,
-} from '../IPMSInformationObjects/OriginatorField.ta.mjs';
-export {
     OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
@@ -91,17 +26,7 @@ import {
     _decode_AuthorizingUsersField,
     _encode_AuthorizingUsersField,
 } from '../IPMSInformationObjects/AuthorizingUsersField.ta.mjs';
-export {
-    AuthorizingUsersField,
-    _decode_AuthorizingUsersField,
-    _encode_AuthorizingUsersField,
-} from '../IPMSInformationObjects/AuthorizingUsersField.ta.mjs';
 import {
-    PrimaryRecipientsField,
-    _decode_PrimaryRecipientsField,
-    _encode_PrimaryRecipientsField,
-} from '../IPMSInformationObjects/PrimaryRecipientsField.ta.mjs';
-export {
     PrimaryRecipientsField,
     _decode_PrimaryRecipientsField,
     _encode_PrimaryRecipientsField,
@@ -111,17 +36,7 @@ import {
     _decode_CopyRecipientsField,
     _encode_CopyRecipientsField,
 } from '../IPMSInformationObjects/CopyRecipientsField.ta.mjs';
-export {
-    CopyRecipientsField,
-    _decode_CopyRecipientsField,
-    _encode_CopyRecipientsField,
-} from '../IPMSInformationObjects/CopyRecipientsField.ta.mjs';
 import {
-    BlindCopyRecipientsField,
-    _decode_BlindCopyRecipientsField,
-    _encode_BlindCopyRecipientsField,
-} from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.mjs';
-export {
     BlindCopyRecipientsField,
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
@@ -131,17 +46,7 @@ import {
     _decode_RepliedToIPMField,
     _encode_RepliedToIPMField,
 } from '../IPMSInformationObjects/RepliedToIPMField.ta.mjs';
-export {
-    RepliedToIPMField,
-    _decode_RepliedToIPMField,
-    _encode_RepliedToIPMField,
-} from '../IPMSInformationObjects/RepliedToIPMField.ta.mjs';
 import {
-    ObsoletedIPMsField,
-    _decode_ObsoletedIPMsField,
-    _encode_ObsoletedIPMsField,
-} from '../IPMSInformationObjects/ObsoletedIPMsField.ta.mjs';
-export {
     ObsoletedIPMsField,
     _decode_ObsoletedIPMsField,
     _encode_ObsoletedIPMsField,
@@ -151,17 +56,7 @@ import {
     _decode_RelatedIPMsField,
     _encode_RelatedIPMsField,
 } from '../IPMSInformationObjects/RelatedIPMsField.ta.mjs';
-export {
-    RelatedIPMsField,
-    _decode_RelatedIPMsField,
-    _encode_RelatedIPMsField,
-} from '../IPMSInformationObjects/RelatedIPMsField.ta.mjs';
 import {
-    SubjectField,
-    _decode_SubjectField,
-    _encode_SubjectField,
-} from '../IPMSInformationObjects/SubjectField.ta.mjs';
-export {
     SubjectField,
     _decode_SubjectField,
     _encode_SubjectField,
@@ -171,27 +66,12 @@ import {
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
 } from '../IPMSInformationObjects/ExpiryTimeField.ta.mjs';
-export {
-    ExpiryTimeField,
-    _decode_ExpiryTimeField,
-    _encode_ExpiryTimeField,
-} from '../IPMSInformationObjects/ExpiryTimeField.ta.mjs';
 import {
     ReplyTimeField,
     _decode_ReplyTimeField,
     _encode_ReplyTimeField,
 } from '../IPMSInformationObjects/ReplyTimeField.ta.mjs';
-export {
-    ReplyTimeField,
-    _decode_ReplyTimeField,
-    _encode_ReplyTimeField,
-} from '../IPMSInformationObjects/ReplyTimeField.ta.mjs';
 import {
-    ReplyRecipientsField,
-    _decode_ReplyRecipientsField,
-    _encode_ReplyRecipientsField,
-} from '../IPMSInformationObjects/ReplyRecipientsField.ta.mjs';
-export {
     ReplyRecipientsField,
     _decode_ReplyRecipientsField,
     _encode_ReplyRecipientsField,
@@ -199,60 +79,21 @@ export {
 import {
     ImportanceField,
     _enum_for_ImportanceField,
-    ImportanceField_low /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    low /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     ImportanceField_normal /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    normal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ImportanceField_high /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    high /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ImportanceField,
     _encode_ImportanceField,
 } from '../IPMSInformationObjects/ImportanceField.ta.mjs';
 import {
-    ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ImportanceField,
-    _enum_for_ImportanceField,
-    ImportanceField_low /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    low /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ImportanceField_normal /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    normal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ImportanceField_high /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    high /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ImportanceField,
-    _encode_ImportanceField,
-} from '../IPMSInformationObjects/ImportanceField.ta.mjs';
 import {
     SensitivityField,
     _enum_for_SensitivityField,
-    SensitivityField_personal /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    personal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    private_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SensitivityField_company_confidential /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    company_confidential /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SensitivityField,
-    _encode_SensitivityField,
-} from '../IPMSInformationObjects/SensitivityField.ta.mjs';
-export {
-    SensitivityField,
-    _enum_for_SensitivityField,
-    SensitivityField_personal /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    personal /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    private_ /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SensitivityField_company_confidential /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    company_confidential /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SensitivityField,
     _encode_SensitivityField,
 } from '../IPMSInformationObjects/SensitivityField.ta.mjs';
 import {
-    AutoForwardedField,
-    _decode_AutoForwardedField,
-    _encode_AutoForwardedField,
-} from '../IPMSInformationObjects/AutoForwardedField.ta.mjs';
-export {
     AutoForwardedField,
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
@@ -262,12 +103,6 @@ import {
     _decode_ExtensionsField,
     _encode_ExtensionsField,
 } from '../IPMSInformationObjects/ExtensionsField.ta.mjs';
-export {
-    ExtensionsField,
-    _decode_ExtensionsField,
-    _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Heading */
 /**
  * @summary Heading
@@ -855,9 +690,7 @@ export function _encode_Heading(
 ) {
     if (!_cached_encoder_for_Heading) {
         _cached_encoder_for_Heading = function (
-            value: Heading,
-            elGetter: $.ASN1Encoder<Heading>
-        ): _Element {
+            value: Heading        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

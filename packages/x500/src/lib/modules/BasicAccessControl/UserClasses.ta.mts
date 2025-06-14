@@ -16,17 +16,6 @@ import {
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-export {
-    SubtreeSpecification,
-    _decode_SubtreeSpecification,
-    _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta.mjs";
-export {
-    NameAndOptionalUID,
-    _decode_NameAndOptionalUID,
-    _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UserClasses */
 /**
  * @summary UserClasses
@@ -286,9 +275,7 @@ export function _encode_UserClasses(
 ) {
     if (!_cached_encoder_for_UserClasses) {
         _cached_encoder_for_UserClasses = function (
-            value: UserClasses,
-            elGetter: $.ASN1Encoder<UserClasses>
-        ): _Element {
+            value: UserClasses        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

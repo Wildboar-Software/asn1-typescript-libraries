@@ -195,9 +195,7 @@ export function _encode_TimeSpecification_time_absolute(
 ) {
     if (!_cached_encoder_for_TimeSpecification_time_absolute) {
         _cached_encoder_for_TimeSpecification_time_absolute = function (
-            value: TimeSpecification_time_absolute,
-            elGetter: $.ASN1Encoder<TimeSpecification_time_absolute>
-        ): _Element {
+            value: TimeSpecification_time_absolute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

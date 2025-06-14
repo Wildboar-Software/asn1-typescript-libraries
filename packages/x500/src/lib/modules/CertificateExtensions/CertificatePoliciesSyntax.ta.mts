@@ -6,12 +6,6 @@ import {
     _decode_PolicyInformation,
     _encode_PolicyInformation,
 } from "../CertificateExtensions/PolicyInformation.ta.mjs";
-export {
-    PolicyInformation,
-    _decode_PolicyInformation,
-    _encode_PolicyInformation,
-} from "../CertificateExtensions/PolicyInformation.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificatePoliciesSyntax */
 /**
  * @summary CertificatePoliciesSyntax

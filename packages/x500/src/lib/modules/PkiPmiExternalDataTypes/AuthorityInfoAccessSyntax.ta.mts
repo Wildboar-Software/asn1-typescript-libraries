@@ -6,12 +6,6 @@ import {
     _decode_AccessDescription,
     _encode_AccessDescription,
 } from "../PkiPmiExternalDataTypes/AccessDescription.ta.mjs";
-export {
-    AccessDescription,
-    _decode_AccessDescription,
-    _encode_AccessDescription,
-} from "../PkiPmiExternalDataTypes/AccessDescription.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthorityInfoAccessSyntax */
 /**
  * @summary AuthorityInfoAccessSyntax

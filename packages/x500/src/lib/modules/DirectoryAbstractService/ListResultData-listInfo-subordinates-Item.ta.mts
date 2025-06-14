@@ -11,12 +11,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ListResultData_listInfo_subordinates_Item */
 /**
  * @summary ListResultData_listInfo_subordinates_Item
@@ -247,9 +241,7 @@ export function _encode_ListResultData_listInfo_subordinates_Item(
 ) {
     if (!_cached_encoder_for_ListResultData_listInfo_subordinates_Item) {
         _cached_encoder_for_ListResultData_listInfo_subordinates_Item = function (
-            value: ListResultData_listInfo_subordinates_Item,
-            elGetter: $.ASN1Encoder<ListResultData_listInfo_subordinates_Item>
-        ): _Element {
+            value: ListResultData_listInfo_subordinates_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

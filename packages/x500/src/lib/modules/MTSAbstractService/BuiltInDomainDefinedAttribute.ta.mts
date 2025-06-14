@@ -169,9 +169,7 @@ export function _encode_BuiltInDomainDefinedAttribute(
 ) {
     if (!_cached_encoder_for_BuiltInDomainDefinedAttribute) {
         _cached_encoder_for_BuiltInDomainDefinedAttribute = function (
-            value: BuiltInDomainDefinedAttribute,
-            elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttribute>
-        ): _Element {
+            value: BuiltInDomainDefinedAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

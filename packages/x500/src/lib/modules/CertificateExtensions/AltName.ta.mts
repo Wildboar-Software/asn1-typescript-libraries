@@ -11,17 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    AltNameType,
-    _decode_AltNameType,
-    _encode_AltNameType,
-} from "../CertificateExtensions/AltNameType.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AltName */
 /**
  * @summary AltName
@@ -188,9 +177,7 @@ export function _encode_AltName(
 ) {
     if (!_cached_encoder_for_AltName) {
         _cached_encoder_for_AltName = function (
-            value: AltName,
-            elGetter: $.ASN1Encoder<AltName>
-        ): _Element {
+            value: AltName        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

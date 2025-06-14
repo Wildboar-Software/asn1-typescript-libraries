@@ -12,19 +12,6 @@ import {
     _encode_OperationProgress_nameResolutionPhase,
     _enum_for_OperationProgress_nameResolutionPhase,
 } from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta.mjs";
-export {
-    completed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    notStarted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    OperationProgress_nameResolutionPhase,
-    OperationProgress_nameResolutionPhase_completed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OperationProgress_nameResolutionPhase_notStarted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OperationProgress_nameResolutionPhase_proceeding /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    proceeding /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_OperationProgress_nameResolutionPhase,
-    _encode_OperationProgress_nameResolutionPhase,
-    _enum_for_OperationProgress_nameResolutionPhase,
-} from "../DistributedOperations/OperationProgress-nameResolutionPhase.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OperationProgress */
 /**
  * @summary OperationProgress
@@ -224,9 +211,7 @@ export function _encode_OperationProgress(
 ) {
     if (!_cached_encoder_for_OperationProgress) {
         _cached_encoder_for_OperationProgress = function (
-            value: OperationProgress,
-            elGetter: $.ASN1Encoder<OperationProgress>
-        ): _Element {
+            value: OperationProgress        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

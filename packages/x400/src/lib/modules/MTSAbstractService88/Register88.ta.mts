@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_UserName,
     _encode_UserName,
 } from '../MTSAbstractService/UserName.ta.mjs';
-export {
-    UserName,
-    _decode_UserName,
-    _encode_UserName,
-} from '../MTSAbstractService/UserName.ta.mjs';
 import {
-    UserAddress,
-    _decode_UserAddress,
-    _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta.mjs';
-export {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
@@ -91,17 +26,7 @@ import {
     _decode_EncodedInformationTypes,
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
-export {
-    EncodedInformationTypes,
-    _decode_EncodedInformationTypes,
-    _encode_EncodedInformationTypes,
-} from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
 import {
-    ContentLength,
-    _decode_ContentLength,
-    _encode_ContentLength,
-} from '../MTSAbstractService/ContentLength.ta.mjs';
-export {
     ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
@@ -111,17 +36,7 @@ import {
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
 } from '../MTSAbstractService/DefaultDeliveryControls.ta.mjs';
-export {
-    DefaultDeliveryControls,
-    _decode_DefaultDeliveryControls,
-    _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta.mjs';
 import {
-    ContentTypes,
-    _decode_ContentTypes,
-    _encode_ContentTypes,
-} from '../MTSAbstractService/ContentTypes.ta.mjs';
-export {
     ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
@@ -131,12 +46,6 @@ import {
     _decode_LabelAndRedirection,
     _encode_LabelAndRedirection,
 } from '../MTSAbstractService88/LabelAndRedirection.ta.mjs';
-export {
-    LabelAndRedirection,
-    _decode_LabelAndRedirection,
-    _encode_LabelAndRedirection,
-} from '../MTSAbstractService88/LabelAndRedirection.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Register88 */
 /**
  * @summary Register88
@@ -428,9 +337,7 @@ export function _encode_Register88(
 ) {
     if (!_cached_encoder_for_Register88) {
         _cached_encoder_for_Register88 = function (
-            value: Register88,
-            elGetter: $.ASN1Encoder<Register88>
-        ): _Element {
+            value: Register88        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

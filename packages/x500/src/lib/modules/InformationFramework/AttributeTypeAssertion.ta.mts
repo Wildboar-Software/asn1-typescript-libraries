@@ -11,14 +11,6 @@ import {
     _decode_ContextAssertion,
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    ContextAssertion,
-    _decode_ContextAssertion,
-    _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeTypeAssertion */
 /**
  * @summary AttributeTypeAssertion
@@ -204,9 +196,7 @@ export function _encode_AttributeTypeAssertion(
 ) {
     if (!_cached_encoder_for_AttributeTypeAssertion) {
         _cached_encoder_for_AttributeTypeAssertion = function (
-            value: AttributeTypeAssertion,
-            elGetter: $.ASN1Encoder<AttributeTypeAssertion>
-        ): _Element {
+            value: AttributeTypeAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

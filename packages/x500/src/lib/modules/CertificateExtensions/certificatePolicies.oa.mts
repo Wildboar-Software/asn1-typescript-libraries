@@ -6,14 +6,6 @@ import {
     _encode_CertificatePoliciesSyntax,
 } from "../CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
 import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    CertificatePoliciesSyntax,
-    _decode_CertificatePoliciesSyntax,
-    _encode_CertificatePoliciesSyntax,
-} from "../CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
-export { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certificatePolicies */
 /**
  * @summary certificatePolicies

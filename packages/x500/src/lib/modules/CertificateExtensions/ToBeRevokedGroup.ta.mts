@@ -21,22 +21,6 @@ import {
     _decode_ReasonInfo,
     _encode_ReasonInfo,
 } from "../CertificateExtensions/ReasonInfo.ta.mjs";
-export {
-    CertificateGroup,
-    _decode_CertificateGroup,
-    _encode_CertificateGroup,
-} from "../CertificateExtensions/CertificateGroup.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    ReasonInfo,
-    _decode_ReasonInfo,
-    _encode_ReasonInfo,
-} from "../CertificateExtensions/ReasonInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ToBeRevokedGroup */
 /**
  * @summary ToBeRevokedGroup
@@ -264,9 +248,7 @@ export function _encode_ToBeRevokedGroup(
 ) {
     if (!_cached_encoder_for_ToBeRevokedGroup) {
         _cached_encoder_for_ToBeRevokedGroup = function (
-            value: ToBeRevokedGroup,
-            elGetter: $.ASN1Encoder<ToBeRevokedGroup>
-        ): _Element {
+            value: ToBeRevokedGroup        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -15,17 +15,6 @@ import {
     _decode_Subtree,
     _encode_Subtree,
 } from "../DirectoryShadowAbstractService/Subtree.ta.mjs";
-export {
-    SDSEContent,
-    _decode_SDSEContent,
-    _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
-export {
-    Subtree,
-    _decode_Subtree,
-    _encode_Subtree,
-} from "../DirectoryShadowAbstractService/Subtree.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TotalRefresh */
 /**
  * @summary TotalRefresh
@@ -211,9 +200,7 @@ export function _encode_TotalRefresh(
 ) {
     if (!_cached_encoder_for_TotalRefresh) {
         _cached_encoder_for_TotalRefresh = function (
-            value: TotalRefresh,
-            elGetter: $.ASN1Encoder<TotalRefresh>
-        ): _Element {
+            value: TotalRefresh        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
 } from '../SummarizationASN1Productions/ScanAttributeIdList.ta.mjs';
-export {
-    ScanAttributeIdList,
-    _decode_ScanAttributeIdList,
-    _encode_ScanAttributeIdList,
-} from '../SummarizationASN1Productions/ScanAttributeIdList.ta.mjs';
 import {
-    NumericAttributeIdArray,
-    _decode_NumericAttributeIdArray,
-    _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
-export {
     NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
@@ -91,17 +26,7 @@ import {
     _decode_DynamicSimpleScanArgument_scopeOrListChoice,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice,
 } from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.mjs';
-export {
-    DynamicSimpleScanArgument_scopeOrListChoice,
-    _decode_DynamicSimpleScanArgument_scopeOrListChoice,
-    _encode_DynamicSimpleScanArgument_scopeOrListChoice,
-} from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.mjs';
 import {
-    SuppressObjectInstance,
-    _decode_SuppressObjectInstance,
-    _encode_SuppressObjectInstance,
-} from '../SummarizationASN1Productions/SuppressObjectInstance.ta.mjs';
-export {
     SuppressObjectInstance,
     _decode_SuppressObjectInstance,
     _encode_SuppressObjectInstance,
@@ -111,36 +36,12 @@ import {
     _decode_OnceReportAttributeIdList,
     _encode_OnceReportAttributeIdList,
 } from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.mjs';
-export {
-    OnceReportAttributeIdList,
-    _decode_OnceReportAttributeIdList,
-    _encode_OnceReportAttributeIdList,
-} from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.mjs';
 import {
     TimeStampReportMode,
     _enum_for_TimeStampReportMode,
-    TimeStampReportMode_timeStampingOff /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    timeStampingOff /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeStampReportMode_globalTimeStampOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    globalTimeStampOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeStampReportMode_individualTimeStamping /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TimeStampReportMode,
     _encode_TimeStampReportMode,
 } from '../SummarizationASN1Productions/TimeStampReportMode.ta.mjs';
-export {
-    TimeStampReportMode,
-    _enum_for_TimeStampReportMode,
-    TimeStampReportMode_timeStampingOff /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    timeStampingOff /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeStampReportMode_globalTimeStampOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    globalTimeStampOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TimeStampReportMode_individualTimeStamping /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    individualTimeStamping /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TimeStampReportMode,
-    _encode_TimeStampReportMode,
-} from '../SummarizationASN1Productions/TimeStampReportMode.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DynamicSimpleScanArgument */
 /**
  * @summary DynamicSimpleScanArgument
@@ -419,9 +320,7 @@ export function _encode_DynamicSimpleScanArgument(
 ) {
     if (!_cached_encoder_for_DynamicSimpleScanArgument) {
         _cached_encoder_for_DynamicSimpleScanArgument = function (
-            value: DynamicSimpleScanArgument,
-            elGetter: $.ASN1Encoder<DynamicSimpleScanArgument>
-        ): _Element {
+            value: DynamicSimpleScanArgument        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

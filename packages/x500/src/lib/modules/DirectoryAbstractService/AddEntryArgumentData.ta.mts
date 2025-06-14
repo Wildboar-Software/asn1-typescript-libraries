@@ -523,9 +523,7 @@ export function _encode_AddEntryArgumentData(
 ) {
     if (!_cached_encoder_for_AddEntryArgumentData) {
         _cached_encoder_for_AddEntryArgumentData = function (
-            value: AddEntryArgumentData,
-            elGetter: $.ASN1Encoder<AddEntryArgumentData>
-        ): _Element {
+            value: AddEntryArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

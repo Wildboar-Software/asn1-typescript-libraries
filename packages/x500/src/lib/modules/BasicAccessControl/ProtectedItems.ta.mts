@@ -43,42 +43,6 @@ import {
     _decode_Refinement,
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";
-export {
-    MaxValueCount,
-    _decode_MaxValueCount,
-    _encode_MaxValueCount,
-} from "../BasicAccessControl/MaxValueCount.ta.mjs";
-export {
-    RestrictedValue,
-    _decode_RestrictedValue,
-    _encode_RestrictedValue,
-} from "../BasicAccessControl/RestrictedValue.ta.mjs";
-export {
-    Filter,
-    _decode_Filter,
-    _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeTypeAndValue,
-    _decode_AttributeTypeAndValue,
-    _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-export {
-    ContextAssertion,
-    _decode_ContextAssertion,
-    _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta.mjs";
-export {
-    Refinement,
-    _decode_Refinement,
-    _encode_Refinement,
-} from "../InformationFramework/Refinement.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ProtectedItems */
 /**
  * @summary ProtectedItems
@@ -554,9 +518,7 @@ export function _encode_ProtectedItems(
 ) {
     if (!_cached_encoder_for_ProtectedItems) {
         _cached_encoder_for_ProtectedItems = function (
-            value: ProtectedItems,
-            elGetter: $.ASN1Encoder<ProtectedItems>
-        ): _Element {
+            value: ProtectedItems        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

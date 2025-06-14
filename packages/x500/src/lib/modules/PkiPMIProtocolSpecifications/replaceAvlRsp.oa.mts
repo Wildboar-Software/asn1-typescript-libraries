@@ -6,14 +6,6 @@ import {
     _encode_ReplaceAvlRsp,
 } from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export { id_replaceAvlRsp } from "../PkiPMIProtocolSpecifications/id-replaceAvlRsp.va.mjs";
-export {
-    ReplaceAvlRsp,
-    _decode_ReplaceAvlRsp,
-    _encode_ReplaceAvlRsp,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp.ta.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION replaceAvlRsp */
 /**
  * @summary replaceAvlRsp

@@ -10,12 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RestrictedValue */
 /**
  * @summary RestrictedValue
@@ -184,9 +178,7 @@ export function _encode_RestrictedValue(
 ) {
     if (!_cached_encoder_for_RestrictedValue) {
         _cached_encoder_for_RestrictedValue = function (
-            value: RestrictedValue,
-            elGetter: $.ASN1Encoder<RestrictedValue>
-        ): _Element {
+            value: RestrictedValue        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

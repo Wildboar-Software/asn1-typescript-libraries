@@ -13,27 +13,6 @@ import {
     _encode_ModifyOperationalBindingResult,
 } from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta.mjs";
 import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_op_modifyOperationalBinding } from "../CommonProtocolSpecification/id-op-modifyOperationalBinding.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export {
-    ModifyOperationalBindingArgument,
-    _decode_ModifyOperationalBindingArgument,
-    _encode_ModifyOperationalBindingArgument,
-} from "../OperationalBindingManagement/ModifyOperationalBindingArgument.ta.mjs";
-export {
-    ModifyOperationalBindingResult,
-    _decode_ModifyOperationalBindingResult,
-    _encode_ModifyOperationalBindingResult,
-} from "../OperationalBindingManagement/ModifyOperationalBindingResult.ta.mjs";
-export { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION modifyOperationalBinding */
 /**
  * @summary modifyOperationalBinding

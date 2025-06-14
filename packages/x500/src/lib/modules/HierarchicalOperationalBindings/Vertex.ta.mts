@@ -25,27 +25,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    MasterAndShadowAccessPoints,
-    _decode_MasterAndShadowAccessPoints,
-    _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-export {
-    SubentryInfo,
-    _decode_SubentryInfo,
-    _encode_SubentryInfo,
-} from "../HierarchicalOperationalBindings/SubentryInfo.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Vertex */
 /**
  * @summary Vertex
@@ -272,9 +251,7 @@ let _cached_encoder_for_Vertex: $.ASN1Encoder<Vertex> | null = null;
 export function _encode_Vertex(value: Vertex, elGetter: $.ASN1Encoder<Vertex>) {
     if (!_cached_encoder_for_Vertex) {
         _cached_encoder_for_Vertex = function (
-            value: Vertex,
-            elGetter: $.ASN1Encoder<Vertex>
-        ): _Element {
+            value: Vertex        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

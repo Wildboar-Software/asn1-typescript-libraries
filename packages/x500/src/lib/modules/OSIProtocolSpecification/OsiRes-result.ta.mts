@@ -9,8 +9,6 @@ import {
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiRes_result */
 /**
  * @summary OsiRes_result
@@ -154,9 +152,7 @@ export function _encode_OsiRes_result(
 ) {
     if (!_cached_encoder_for_OsiRes_result) {
         _cached_encoder_for_OsiRes_result = function (
-            value: OsiRes_result,
-            elGetter: $.ASN1Encoder<OsiRes_result>
-        ): _Element {
+            value: OsiRes_result        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

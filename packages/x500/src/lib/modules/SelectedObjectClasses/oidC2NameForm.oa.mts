@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_nf_oidC2NameForm } from "../SelectedObjectClasses/id-nf-oidC2NameForm.va.mjs";
 import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-export { id_nf_oidC2NameForm } from "../SelectedObjectClasses/id-nf-oidC2NameForm.va.mjs";
-export { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION oidC2NameForm */
 /**
  * @summary oidC2NameForm

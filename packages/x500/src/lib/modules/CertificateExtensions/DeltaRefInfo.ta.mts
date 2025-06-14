@@ -11,12 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DeltaRefInfo */
 /**
  * @summary DeltaRefInfo
@@ -200,9 +194,7 @@ export function _encode_DeltaRefInfo(
 ) {
     if (!_cached_encoder_for_DeltaRefInfo) {
         _cached_encoder_for_DeltaRefInfo = function (
-            value: DeltaRefInfo,
-            elGetter: $.ASN1Encoder<DeltaRefInfo>
-        ): _Element {
+            value: DeltaRefInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -5,13 +5,6 @@ import {
     _encode_ExtendedNetworkAddress,
 } from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.mjs";
 import { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    ExtendedNetworkAddress,
-    _decode_ExtendedNetworkAddress,
-    _encode_ExtendedNetworkAddress,
-} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION extended_network_address */
 /**
  * @summary extended_network_address

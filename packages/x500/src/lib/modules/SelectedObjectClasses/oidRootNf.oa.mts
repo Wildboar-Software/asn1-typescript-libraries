@@ -5,15 +5,6 @@ import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
 import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
 import { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.mjs";
 import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
-export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
-export { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.mjs";
-export { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION oidRootNf */
 /**
  * @summary oidRootNf

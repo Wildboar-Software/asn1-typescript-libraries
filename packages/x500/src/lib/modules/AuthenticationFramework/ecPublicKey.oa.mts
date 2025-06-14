@@ -6,14 +6,6 @@ import {
     _decode_SupportedCurves,
     _encode_SupportedCurves,
 } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
-export {
-    SupportedCurves,
-    _decode_SupportedCurves,
-    _encode_SupportedCurves,
-} from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ecPublicKey */
 /**
  * @summary ecPublicKey

@@ -31,42 +31,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    InvokeId,
-    _decode_InvokeId,
-    _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-export {
-    AbandonProblem,
-    AbandonProblem_cannotAbandon /* IMPORTED_LONG_NAMED_INTEGER */,
-    AbandonProblem_noSuchOperation /* IMPORTED_LONG_NAMED_INTEGER */,
-    AbandonProblem_tooLate /* IMPORTED_LONG_NAMED_INTEGER */,
-    cannotAbandon /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noSuchOperation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    tooLate /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_AbandonProblem,
-    _encode_AbandonProblem,
-} from "../DirectoryAbstractService/AbandonProblem.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
     CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
@@ -335,9 +299,7 @@ export function _encode_AbandonFailedData(
 ) {
     if (!_cached_encoder_for_AbandonFailedData) {
         _cached_encoder_for_AbandonFailedData = function (
-            value: AbandonFailedData,
-            elGetter: $.ASN1Encoder<AbandonFailedData>
-        ): _Element {
+            value: AbandonFailedData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

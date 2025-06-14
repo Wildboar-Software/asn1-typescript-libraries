@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,29 +14,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ControlledTestRequestType,
     _enum_for_ControlledTestRequestType,
-    ControlledTestRequestType_independent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    independent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ControlledTestRequestType_related /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    related /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ControlledTestRequestType,
-    _encode_ControlledTestRequestType,
-} from '../Test-ASN1Module/ControlledTestRequestType.ta.mjs';
-export {
-    ControlledTestRequestType,
-    _enum_for_ControlledTestRequestType,
-    ControlledTestRequestType_independent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    independent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ControlledTestRequestType_related /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    related /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_ControlledTestRequestType,
     _encode_ControlledTestRequestType,
 } from '../Test-ASN1Module/ControlledTestRequestType.ta.mjs';
 import {
-    TestCategoryInformation,
-    _decode_TestCategoryInformation,
-    _encode_TestCategoryInformation,
-} from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
-export {
     TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
@@ -101,17 +27,7 @@ import {
     _decode_TestSessionId,
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
-export {
-    TestSessionId,
-    _decode_TestSessionId,
-    _encode_TestSessionId,
-} from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    ToBeTestedMORTs,
-    _decode_ToBeTestedMORTs,
-    _encode_ToBeTestedMORTs,
-} from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
-export {
     ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
@@ -121,17 +37,7 @@ import {
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
-export {
-    AssociatedObjects,
-    _decode_AssociatedObjects,
-    _encode_AssociatedObjects,
-} from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    TimeoutPeriod,
-    _decode_TimeoutPeriod,
-    _encode_TimeoutPeriod,
-} from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
-export {
     TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
@@ -141,12 +47,6 @@ import {
     _decode_TestObjectList,
     _encode_TestObjectList,
 } from '../Test-ASN1Module/TestObjectList.ta.mjs';
-export {
-    TestObjectList,
-    _decode_TestObjectList,
-    _encode_TestObjectList,
-} from '../Test-ASN1Module/TestObjectList.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TestRequestControlledInfo */
 /**
  * @summary TestRequestControlledInfo
@@ -439,9 +339,7 @@ export function _encode_TestRequestControlledInfo(
 ) {
     if (!_cached_encoder_for_TestRequestControlledInfo) {
         _cached_encoder_for_TestRequestControlledInfo = function (
-            value: TestRequestControlledInfo,
-            elGetter: $.ASN1Encoder<TestRequestControlledInfo>
-        ): _Element {
+            value: TestRequestControlledInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

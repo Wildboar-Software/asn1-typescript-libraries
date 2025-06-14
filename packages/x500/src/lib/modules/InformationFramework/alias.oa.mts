@@ -6,24 +6,6 @@ import {
     structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_oc_alias } from "../InformationFramework/id-oc-alias.va.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION alias */
 /**
  * @summary alias

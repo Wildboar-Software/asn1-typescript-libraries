@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,39 +12,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     AttributeProblem,
-    AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
-    invalid_attribute_value /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_unavailable_attribute_type /* IMPORTED_LONG_NAMED_INTEGER */,
-    unavailable_attribute_type /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_matching /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_matching /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_attribute_type_not_subscribed /* IMPORTED_LONG_NAMED_INTEGER */,
-    attribute_type_not_subscribed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_for_operation /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_for_operation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_modification /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_modification /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_single_valued_attribute /* IMPORTED_LONG_NAMED_INTEGER */,
-    single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_AttributeProblem,
-    _encode_AttributeProblem,
-} from '../MSAbstractService/AttributeProblem.ta.mjs';
-export {
-    AttributeProblem,
-    AttributeProblem_invalid_attribute_value /* IMPORTED_LONG_NAMED_INTEGER */,
-    invalid_attribute_value /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_unavailable_attribute_type /* IMPORTED_LONG_NAMED_INTEGER */,
-    unavailable_attribute_type /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_matching /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_matching /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_attribute_type_not_subscribed /* IMPORTED_LONG_NAMED_INTEGER */,
-    attribute_type_not_subscribed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_for_operation /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_for_operation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_inappropriate_modification /* IMPORTED_LONG_NAMED_INTEGER */,
-    inappropriate_modification /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem_single_valued_attribute /* IMPORTED_LONG_NAMED_INTEGER */,
-    single_valued_attribute /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
 } from '../MSAbstractService/AttributeProblem.ta.mjs';
@@ -109,12 +20,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from '../MSAbstractService/AttributeType.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AttributeError_problems_Item */
 /**
  * @summary AttributeError_problems_Item
@@ -287,9 +192,7 @@ export function _encode_AttributeError_problems_Item(
 ) {
     if (!_cached_encoder_for_AttributeError_problems_Item) {
         _cached_encoder_for_AttributeError_problems_Item = function (
-            value: AttributeError_problems_Item,
-            elGetter: $.ASN1Encoder<AttributeError_problems_Item>
-        ): _Element {
+            value: AttributeError_problems_Item        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,43 +16,12 @@ import {
     _decode_DataType,
     _encode_DataType,
 } from '../TestCategories-ASN1Module/DataType.ta.mjs';
-export {
-    DataType,
-    _decode_DataType,
-    _encode_DataType,
-} from '../TestCategories-ASN1Module/DataType.ta.mjs';
 import {
     DataCategory,
-    DataCategory_bits /* IMPORTED_LONG_NAMED_INTEGER */,
-    bits /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_octets /* IMPORTED_LONG_NAMED_INTEGER */,
-    octets /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_blocks /* IMPORTED_LONG_NAMED_INTEGER */,
-    blocks /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_packets /* IMPORTED_LONG_NAMED_INTEGER */,
-    packets /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_DataCategory,
-    _encode_DataCategory,
-} from '../TestCategories-ASN1Module/DataCategory.ta.mjs';
-export {
-    DataCategory,
-    DataCategory_bits /* IMPORTED_LONG_NAMED_INTEGER */,
-    bits /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_octets /* IMPORTED_LONG_NAMED_INTEGER */,
-    octets /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_blocks /* IMPORTED_LONG_NAMED_INTEGER */,
-    blocks /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DataCategory_packets /* IMPORTED_LONG_NAMED_INTEGER */,
-    packets /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DataCategory,
     _encode_DataCategory,
 } from '../TestCategories-ASN1Module/DataCategory.ta.mjs';
 import {
-    DataSize,
-    _decode_DataSize,
-    _encode_DataSize,
-} from '../TestCategories-ASN1Module/DataSize.ta.mjs';
-export {
     DataSize,
     _decode_DataSize,
     _encode_DataSize,
@@ -117,22 +31,11 @@ import {
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
-export {
-    UnitsTotal,
-    _decode_UnitsTotal,
-    _encode_UnitsTotal,
-} from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
 import {
     DataRate,
     _decode_DataRate,
     _encode_DataRate,
 } from '../TestCategories-ASN1Module/DataRate.ta.mjs';
-export {
-    DataRate,
-    _decode_DataRate,
-    _encode_DataRate,
-} from '../TestCategories-ASN1Module/DataRate.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DataUnits */
 /**
  * @summary DataUnits
@@ -373,9 +276,7 @@ export function _encode_DataUnits(
 ) {
     if (!_cached_encoder_for_DataUnits) {
         _cached_encoder_for_DataUnits = function (
-            value: DataUnits,
-            elGetter: $.ASN1Encoder<DataUnits>
-        ): _Element {
+            value: DataUnits        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

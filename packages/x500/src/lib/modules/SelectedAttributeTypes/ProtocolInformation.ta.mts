@@ -167,9 +167,7 @@ export function _encode_ProtocolInformation(
 ) {
     if (!_cached_encoder_for_ProtocolInformation) {
         _cached_encoder_for_ProtocolInformation = function (
-            value: ProtocolInformation,
-            elGetter: $.ASN1Encoder<ProtocolInformation>
-        ): _Element {
+            value: ProtocolInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

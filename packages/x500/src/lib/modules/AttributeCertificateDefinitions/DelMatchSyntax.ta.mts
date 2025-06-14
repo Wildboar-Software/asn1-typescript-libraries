@@ -15,17 +15,6 @@ import {
     _decode_Holder,
     _encode_Holder,
 } from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-export {
-    AttCertIssuer,
-    _decode_AttCertIssuer,
-    _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.mjs";
-export {
-    Holder,
-    _decode_Holder,
-    _encode_Holder,
-} from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DelMatchSyntax */
 /**
  * @summary DelMatchSyntax
@@ -198,9 +187,7 @@ export function _encode_DelMatchSyntax(
 ) {
     if (!_cached_encoder_for_DelMatchSyntax) {
         _cached_encoder_for_DelMatchSyntax = function (
-            value: DelMatchSyntax,
-            elGetter: $.ASN1Encoder<DelMatchSyntax>
-        ): _Element {
+            value: DelMatchSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

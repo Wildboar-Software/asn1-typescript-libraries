@@ -6,14 +6,6 @@ import {
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";
-export {
-    PreferredDeliveryMethod,
-    _decode_PreferredDeliveryMethod,
-    _encode_PreferredDeliveryMethod,
-} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION deliveryMethod */
 /**
  * @summary deliveryMethod

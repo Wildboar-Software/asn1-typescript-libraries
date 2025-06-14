@@ -20,22 +20,6 @@ import {
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-export {
-    AvlSerialNumber,
-    _decode_AvlSerialNumber,
-    _encode_AvlSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
-export {
-    CertAVL,
-    _decode_CertAVL,
-    _encode_CertAVL,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlReq */
 /**
  * @summary ReplaceAvlReq
@@ -239,9 +223,7 @@ export function _encode_ReplaceAvlReq(
 ) {
     if (!_cached_encoder_for_ReplaceAvlReq) {
         _cached_encoder_for_ReplaceAvlReq = function (
-            value: ReplaceAvlReq,
-            elGetter: $.ASN1Encoder<ReplaceAvlReq>
-        ): _Element {
+            value: ReplaceAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

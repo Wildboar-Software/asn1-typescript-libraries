@@ -6,14 +6,6 @@ import {
     _encode_ShakeOutputLen,
 } from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va.mjs";
-export {
-    ShakeOutputLen,
-    _decode_ShakeOutputLen,
-    _encode_ShakeOutputLen,
-} from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION shake128_len */
 /**
  * @summary shake128_len

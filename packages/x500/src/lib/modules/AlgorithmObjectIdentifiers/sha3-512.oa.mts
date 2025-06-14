@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { id_sha3_512 } from "../AlgorithmObjectIdentifiers/id-sha3-512.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_sha3_512 } from "../AlgorithmObjectIdentifiers/id-sha3-512.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sha3_512 */
 /**
  * @summary sha3_512

@@ -167,9 +167,7 @@ export function _encode_PwdHistory(
 ) {
     if (!_cached_encoder_for_PwdHistory) {
         _cached_encoder_for_PwdHistory = function (
-            value: PwdHistory,
-            elGetter: $.ASN1Encoder<PwdHistory>
-        ): _Element {
+            value: PwdHistory        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

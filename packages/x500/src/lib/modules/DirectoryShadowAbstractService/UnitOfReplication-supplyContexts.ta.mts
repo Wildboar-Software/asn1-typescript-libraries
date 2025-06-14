@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UnitOfReplication_supplyContexts */
 /**
  * @summary UnitOfReplication_supplyContexts

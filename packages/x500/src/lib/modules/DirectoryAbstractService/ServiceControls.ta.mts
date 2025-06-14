@@ -28,67 +28,6 @@ import {
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
 } from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.mjs";
-export {
-    allowWriteableCopy /* IMPORTED_SHORT_NAMED_BIT */,
-    chainingProhibited /* IMPORTED_SHORT_NAMED_BIT */,
-    copyShallDo /* IMPORTED_SHORT_NAMED_BIT */,
-    countFamily /* IMPORTED_SHORT_NAMED_BIT */,
-    dontDereferenceAliases /* IMPORTED_SHORT_NAMED_BIT */,
-    dontMatchFriends /* IMPORTED_SHORT_NAMED_BIT */,
-    dontSelectFriends /* IMPORTED_SHORT_NAMED_BIT */,
-    dontUseCopy /* IMPORTED_SHORT_NAMED_BIT */,
-    localScope /* IMPORTED_SHORT_NAMED_BIT */,
-    manageDSAIT /* IMPORTED_SHORT_NAMED_BIT */,
-    noSubtypeMatch /* IMPORTED_SHORT_NAMED_BIT */,
-    noSubtypeSelection /* IMPORTED_SHORT_NAMED_BIT */,
-    partialNameResolution /* IMPORTED_SHORT_NAMED_BIT */,
-    preferChaining /* IMPORTED_SHORT_NAMED_BIT */,
-    ServiceControlOptions,
-    ServiceControlOptions_allowWriteableCopy /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_chainingProhibited /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_copyShallDo /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_countFamily /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_dontDereferenceAliases /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_dontMatchFriends /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_dontSelectFriends /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_dontUseCopy /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_localScope /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_manageDSAIT /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_noSubtypeMatch /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_noSubtypeSelection /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_partialNameResolution /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_preferChaining /* IMPORTED_LONG_NAMED_BIT */,
-    ServiceControlOptions_subentries /* IMPORTED_LONG_NAMED_BIT */,
-    subentries /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ServiceControlOptions,
-    _encode_ServiceControlOptions,
-} from "../DirectoryAbstractService/ServiceControlOptions.ta.mjs";
-export {
-    ServiceControls_manageDSAITPlaneRef,
-    _decode_ServiceControls_manageDSAITPlaneRef,
-    _encode_ServiceControls_manageDSAITPlaneRef,
-} from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta.mjs";
-export {
-    high /* IMPORTED_SHORT_NAMED_INTEGER */,
-    low /* IMPORTED_SHORT_NAMED_INTEGER */,
-    medium /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ServiceControls_priority,
-    ServiceControls_priority_high /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceControls_priority_low /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceControls_priority_medium /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_ServiceControls_priority,
-    _encode_ServiceControls_priority,
-} from "../DirectoryAbstractService/ServiceControls-priority.ta.mjs";
-export {
-    country /* IMPORTED_SHORT_NAMED_INTEGER */,
-    dmd /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ServiceControls_scopeOfReferral,
-    ServiceControls_scopeOfReferral_country /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceControls_scopeOfReferral_dmd /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_ServiceControls_scopeOfReferral,
-    _encode_ServiceControls_scopeOfReferral,
-} from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ServiceControls */
 /**
  * @summary ServiceControls
@@ -454,9 +393,7 @@ export function _encode_ServiceControls(
 ) {
     if (!_cached_encoder_for_ServiceControls) {
         _cached_encoder_for_ServiceControls = function (
-            value: ServiceControls,
-            elGetter: $.ASN1Encoder<ServiceControls>
-        ): _Element {
+            value: ServiceControls        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

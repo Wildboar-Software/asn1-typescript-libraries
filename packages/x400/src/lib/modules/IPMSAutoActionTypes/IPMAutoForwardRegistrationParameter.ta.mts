@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
-export {
-    Filter,
-    _decode_Filter,
-    _encode_Filter,
-} from '../MSAbstractService/Filter.ta.mjs';
 import {
-    MessageSubmissionEnvelope,
-    _decode_MessageSubmissionEnvelope,
-    _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
-export {
     MessageSubmissionEnvelope,
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
@@ -91,17 +26,7 @@ import {
     _decode_Heading,
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
-export {
-    Heading,
-    _decode_Heading,
-    _encode_Heading,
-} from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    BodyPart,
-    _decode_BodyPart,
-    _encode_BodyPart,
-} from '../IPMSInformationObjects/BodyPart.ta.mjs';
-export {
     BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
@@ -111,56 +36,16 @@ import {
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
-export {
-    MSSubmissionOptions,
-    _decode_MSSubmissionOptions,
-    _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    AutoForwardComment,
-    _decode_AutoForwardComment,
-    _encode_AutoForwardComment,
-} from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';
-export {
     AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';
 import {
     IPMAutoForwardOptions,
-    IPMAutoForwardOptions_forward_all_object_types /* IMPORTED_LONG_NAMED_BIT */,
-    forward_all_object_types /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_include_returned_content /* IMPORTED_LONG_NAMED_BIT */,
-    include_returned_content /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_include_returned_ipm /* IMPORTED_LONG_NAMED_BIT */,
-    include_returned_ipm /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_forwarded_content_prohibited /* IMPORTED_LONG_NAMED_BIT */,
-    forwarded_content_prohibited /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_preserve_retrieval_status /* IMPORTED_LONG_NAMED_BIT */,
-    preserve_retrieval_status /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_delete_delivered_object /* IMPORTED_LONG_NAMED_BIT */,
-    delete_delivered_object /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_IPMAutoForwardOptions,
     _encode_IPMAutoForwardOptions,
 } from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.mjs';
-export {
-    IPMAutoForwardOptions,
-    IPMAutoForwardOptions_forward_all_object_types /* IMPORTED_LONG_NAMED_BIT */,
-    forward_all_object_types /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_include_returned_content /* IMPORTED_LONG_NAMED_BIT */,
-    include_returned_content /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_include_returned_ipm /* IMPORTED_LONG_NAMED_BIT */,
-    include_returned_ipm /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_forwarded_content_prohibited /* IMPORTED_LONG_NAMED_BIT */,
-    forwarded_content_prohibited /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_preserve_retrieval_status /* IMPORTED_LONG_NAMED_BIT */,
-    preserve_retrieval_status /* IMPORTED_SHORT_NAMED_BIT */,
-    IPMAutoForwardOptions_delete_delivered_object /* IMPORTED_LONG_NAMED_BIT */,
-    delete_delivered_object /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_IPMAutoForwardOptions,
-    _encode_IPMAutoForwardOptions,
-} from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION IPMAutoForwardRegistrationParameter */
 /**
  * @summary IPMAutoForwardRegistrationParameter
@@ -460,9 +345,7 @@ export function _encode_IPMAutoForwardRegistrationParameter(
 ) {
     if (!_cached_encoder_for_IPMAutoForwardRegistrationParameter) {
         _cached_encoder_for_IPMAutoForwardRegistrationParameter = function (
-            value: IPMAutoForwardRegistrationParameter,
-            elGetter: $.ASN1Encoder<IPMAutoForwardRegistrationParameter>
-        ): _Element {
+            value: IPMAutoForwardRegistrationParameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

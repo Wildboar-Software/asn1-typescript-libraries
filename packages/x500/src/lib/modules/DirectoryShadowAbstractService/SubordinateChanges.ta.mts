@@ -15,17 +15,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    IncrementalStepRefresh,
-    _decode_IncrementalStepRefresh,
-    _encode_IncrementalStepRefresh,
-} from "../DirectoryShadowAbstractService/IncrementalStepRefresh.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubordinateChanges */
 /**
  * @summary SubordinateChanges
@@ -198,9 +187,7 @@ export function _encode_SubordinateChanges(
 ) {
     if (!_cached_encoder_for_SubordinateChanges) {
         _cached_encoder_for_SubordinateChanges = function (
-            value: SubordinateChanges,
-            elGetter: $.ASN1Encoder<SubordinateChanges>
-        ): _Element {
+            value: SubordinateChanges        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -7,13 +7,6 @@ import {
     _encode_ModificationParameter,
 } from "../DirectoryShadowAbstractService/ModificationParameter.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-export {
-    ModificationParameter,
-    _decode_ModificationParameter,
-    _encode_ModificationParameter,
-} from "../DirectoryShadowAbstractService/ModificationParameter.ta.mjs";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION shadowOperationalBinding_roleB */
 /**
  * @summary shadowOperationalBinding_roleB

@@ -15,17 +15,6 @@ import {
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";
-export {
-    HASH,
-    _get_decoder_for_HASH,
-    _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta.mjs";
-export {
-    UserPwd,
-    _decode_UserPwd,
-    _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials_password */
 /**
  * @summary SimpleCredentials_password

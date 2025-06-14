@@ -6,18 +6,6 @@ import {
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
 } from "../DirectoryManagement/RequestAuthenticationPolicy.ta.mjs";
-export {
-    none /* IMPORTED_SHORT_NAMED_BIT */,
-    RequestAuthenticationPolicy,
-    RequestAuthenticationPolicy_none /* IMPORTED_LONG_NAMED_BIT */,
-    RequestAuthenticationPolicy_simpleName /* IMPORTED_LONG_NAMED_BIT */,
-    RequestAuthenticationPolicy_strong /* IMPORTED_LONG_NAMED_BIT */,
-    simpleName /* IMPORTED_SHORT_NAMED_BIT */,
-    strong /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_RequestAuthenticationPolicy,
-    _encode_RequestAuthenticationPolicy,
-} from "../DirectoryManagement/RequestAuthenticationPolicy.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ResultAuthenticationPolicy */
 /**
  * @summary ResultAuthenticationPolicy

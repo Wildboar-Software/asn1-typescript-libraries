@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
 import { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.mjs";
 import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
-export { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.mjs";
-export { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION urnCNameForm */
 /**
  * @summary urnCNameForm

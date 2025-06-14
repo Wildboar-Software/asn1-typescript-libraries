@@ -15,17 +15,6 @@ import {
     _decode_PolicyID,
     _encode_PolicyID,
 } from "../AuthenticationFramework/PolicyID.ta.mjs";
-export {
-    InfoSyntax,
-    _decode_InfoSyntax,
-    _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-export {
-    PolicyID,
-    _decode_PolicyID,
-    _encode_PolicyID,
-} from "../AuthenticationFramework/PolicyID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicySyntax */
 /**
  * @summary PolicySyntax
@@ -198,9 +187,7 @@ export function _encode_PolicySyntax(
 ) {
     if (!_cached_encoder_for_PolicySyntax) {
         _cached_encoder_for_PolicySyntax = function (
-            value: PolicySyntax,
-            elGetter: $.ASN1Encoder<PolicySyntax>
-        ): _Element {
+            value: PolicySyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

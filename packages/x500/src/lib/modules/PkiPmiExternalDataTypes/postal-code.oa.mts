@@ -5,13 +5,6 @@ import {
     _decode_PostalCode,
     _encode_PostalCode,
 } from "../PkiPmiExternalDataTypes/PostalCode.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PostalCode,
-    _decode_PostalCode,
-    _encode_PostalCode,
-} from "../PkiPmiExternalDataTypes/PostalCode.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION postal_code */
 /**
  * @summary postal_code

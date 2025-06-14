@@ -11,12 +11,6 @@ import {
     _decode_MRMapping,
     _encode_MRMapping,
 } from "../ServiceAdministration/MRMapping.ta.mjs";
-export {
-    MRMapping,
-    _decode_MRMapping,
-    _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RelaxationPolicy */
 /**
  * @summary RelaxationPolicy
@@ -291,9 +285,7 @@ export function _encode_RelaxationPolicy(
 ) {
     if (!_cached_encoder_for_RelaxationPolicy) {
         _cached_encoder_for_RelaxationPolicy = function (
-            value: RelaxationPolicy,
-            elGetter: $.ASN1Encoder<RelaxationPolicy>
-        ): _Element {
+            value: RelaxationPolicy        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -32,50 +32,6 @@ import {
     _decode_Result_list,
     _encode_Result_list,
 } from "../OSIProtocolSpecification/Result-list.ta.mjs";
-export {
-    OsiBindError_normal_mode_parameters_protocol_version,
-    OsiBindError_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
-    version_1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_OsiBindError_normal_mode_parameters_protocol_version,
-    _encode_OsiBindError_normal_mode_parameters_protocol_version,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta.mjs";
-export {
-    OsiBindError_normal_mode_parameters_user_data,
-    _decode_OsiBindError_normal_mode_parameters_user_data,
-    _encode_OsiBindError_normal_mode_parameters_user_data,
-} from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta.mjs";
-export {
-    Presentation_selector,
-    _decode_Presentation_selector,
-    _encode_Presentation_selector,
-} from "../OSIProtocolSpecification/Presentation-selector.ta.mjs";
-export {
-    called_presentation_address_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    default_context_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    local_limit_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    no_PSAP_available /* IMPORTED_SHORT_NAMED_INTEGER */,
-    protocol_version_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Provider_reason,
-    Provider_reason_called_presentation_address_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_default_context_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_local_limit_exceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_no_PSAP_available /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_protocol_version_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_temporary_congestion /* IMPORTED_LONG_NAMED_INTEGER */,
-    Provider_reason_user_data_not_readable /* IMPORTED_LONG_NAMED_INTEGER */,
-    reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    temporary_congestion /* IMPORTED_SHORT_NAMED_INTEGER */,
-    user_data_not_readable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Provider_reason,
-    _encode_Provider_reason,
-} from "../OSIProtocolSpecification/Provider-reason.ta.mjs";
-export {
-    Result_list,
-    _decode_Result_list,
-    _encode_Result_list,
-} from "../OSIProtocolSpecification/Result-list.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBindError_normal_mode_parameters */
 /**
  * @summary OsiBindError_normal_mode_parameters
@@ -328,9 +284,7 @@ export function _encode_OsiBindError_normal_mode_parameters(
 ) {
     if (!_cached_encoder_for_OsiBindError_normal_mode_parameters) {
         _cached_encoder_for_OsiBindError_normal_mode_parameters = function (
-            value: OsiBindError_normal_mode_parameters,
-            elGetter: $.ASN1Encoder<OsiBindError_normal_mode_parameters>
-        ): _Element {
+            value: OsiBindError_normal_mode_parameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

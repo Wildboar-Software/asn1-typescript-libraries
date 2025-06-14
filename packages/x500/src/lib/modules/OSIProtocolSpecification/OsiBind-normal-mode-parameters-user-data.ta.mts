@@ -6,12 +6,6 @@ import {
     _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
     _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-export {
-    OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
-    _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
-    _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data */
 /**
  * @summary OsiBind_normal_mode_parameters_user_data

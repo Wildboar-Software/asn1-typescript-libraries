@@ -40,42 +40,6 @@ import {
     _decode_ObjectClassDescription,
     _encode_ObjectClassDescription,
 } from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
-export {
-    AttributeTypeDescription,
-    _decode_AttributeTypeDescription,
-    _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta.mjs";
-export {
-    DITContentRuleDescription,
-    _decode_DITContentRuleDescription,
-    _encode_DITContentRuleDescription,
-} from "../SchemaAdministration/DITContentRuleDescription.ta.mjs";
-export {
-    DITStructureRuleDescription,
-    _decode_DITStructureRuleDescription,
-    _encode_DITStructureRuleDescription,
-} from "../SchemaAdministration/DITStructureRuleDescription.ta.mjs";
-export {
-    MatchingRuleDescription,
-    _decode_MatchingRuleDescription,
-    _encode_MatchingRuleDescription,
-} from "../SchemaAdministration/MatchingRuleDescription.ta.mjs";
-export {
-    MatchingRuleUseDescription,
-    _decode_MatchingRuleUseDescription,
-    _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta.mjs";
-export {
-    NameFormDescription,
-    _decode_NameFormDescription,
-    _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta.mjs";
-export {
-    ObjectClassDescription,
-    _decode_ObjectClassDescription,
-    _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item_subSchema */
 /**
  * @summary SubSchemaSyntax_Item_subSchema
@@ -384,9 +348,7 @@ export function _encode_SubSchemaSyntax_Item_subSchema(
 ) {
     if (!_cached_encoder_for_SubSchemaSyntax_Item_subSchema) {
         _cached_encoder_for_SubSchemaSyntax_Item_subSchema = function (
-            value: SubSchemaSyntax_Item_subSchema,
-            elGetter: $.ASN1Encoder<SubSchemaSyntax_Item_subSchema>
-        ): _Element {
+            value: SubSchemaSyntax_Item_subSchema        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

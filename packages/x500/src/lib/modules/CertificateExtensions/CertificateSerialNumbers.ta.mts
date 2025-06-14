@@ -6,12 +6,6 @@ import {
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateSerialNumbers */
 /**
  * @summary CertificateSerialNumbers

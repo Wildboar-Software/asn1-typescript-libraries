@@ -6,14 +6,6 @@ import {
     _encode_MultiplePublicKeyAlgo,
 } from "../CryptoTools/MultiplePublicKeyAlgo.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-export { id_algo_multiplePublicKeyAlgo } from "../CryptoTools/id-algo-multiplePublicKeyAlgo.va.mjs";
-export {
-    MultiplePublicKeyAlgo,
-    _decode_MultiplePublicKeyAlgo,
-    _encode_MultiplePublicKeyAlgo,
-} from "../CryptoTools/MultiplePublicKeyAlgo.ta.mjs";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION multiplePublicKeyAlgo */
 /**
  * @summary multiplePublicKeyAlgo

@@ -131,7 +131,7 @@ export function _encode_Priority(
         7,
         () => $._encodeEnumerated,
         $.BER,
-    )(value, $.BER);
+    )(value, elGetter);
 }
 
 /* END_OF_SYMBOL_DEFINITION _encode_Priority */

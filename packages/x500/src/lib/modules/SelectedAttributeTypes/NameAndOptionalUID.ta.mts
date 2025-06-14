@@ -15,17 +15,6 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NameAndOptionalUID */
 /**
  * @summary NameAndOptionalUID
@@ -209,9 +198,7 @@ export function _encode_NameAndOptionalUID(
 ) {
     if (!_cached_encoder_for_NameAndOptionalUID) {
         _cached_encoder_for_NameAndOptionalUID = function (
-            value: NameAndOptionalUID,
-            elGetter: $.ASN1Encoder<NameAndOptionalUID>
-        ): _Element {
+            value: NameAndOptionalUID        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

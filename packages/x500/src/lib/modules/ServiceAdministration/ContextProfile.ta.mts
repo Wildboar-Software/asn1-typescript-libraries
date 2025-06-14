@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { SupportedContexts } from "../InformationFramework/SupportedContexts.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContextProfile */
 /**
  * @summary ContextProfile
@@ -195,9 +192,7 @@ export function _encode_ContextProfile(
 ) {
     if (!_cached_encoder_for_ContextProfile) {
         _cached_encoder_for_ContextProfile = function (
-            value: ContextProfile,
-            elGetter: $.ASN1Encoder<ContextProfile>
-        ): _Element {
+            value: ContextProfile        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

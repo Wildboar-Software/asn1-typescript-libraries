@@ -6,12 +6,6 @@ import {
     _decode_CrossCertificates,
     _encode_CrossCertificates,
 } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
-export {
-    CrossCertificates,
-    _decode_CrossCertificates,
-    _encode_CrossCertificates,
-} from "../AuthenticationFramework/CrossCertificates.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ForwardCertificationPath */
 /**
  * @summary ForwardCertificationPath

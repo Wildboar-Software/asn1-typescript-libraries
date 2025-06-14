@@ -336,9 +336,7 @@ export function _encode_ModifyOperationalBindingResultData(
 ) {
     if (!_cached_encoder_for_ModifyOperationalBindingResultData) {
         _cached_encoder_for_ModifyOperationalBindingResultData = function (
-            value: ModifyOperationalBindingResultData,
-            elGetter: $.ASN1Encoder<ModifyOperationalBindingResultData>
-        ): _Element {
+            value: ModifyOperationalBindingResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

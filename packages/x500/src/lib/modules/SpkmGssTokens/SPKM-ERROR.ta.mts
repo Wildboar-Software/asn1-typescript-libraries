@@ -20,22 +20,6 @@ import {
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    ERROR_TOKEN,
-    _decode_ERROR_TOKEN,
-    _encode_ERROR_TOKEN,
-} from "../SpkmGssTokens/ERROR-TOKEN.ta.mjs";
-export {
-    Integrity,
-    _decode_Integrity,
-    _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_ERROR */
 /**
  * @summary SPKM_ERROR
@@ -209,9 +193,7 @@ export function _encode_SPKM_ERROR(
 ) {
     if (!_cached_encoder_for_SPKM_ERROR) {
         _cached_encoder_for_SPKM_ERROR = function (
-            value: SPKM_ERROR,
-            elGetter: $.ASN1Encoder<SPKM_ERROR>
-        ): _Element {
+            value: SPKM_ERROR        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

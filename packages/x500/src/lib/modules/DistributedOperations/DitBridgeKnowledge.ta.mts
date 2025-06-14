@@ -15,17 +15,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    MasterAndShadowAccessPoints,
-    _decode_MasterAndShadowAccessPoints,
-    _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DitBridgeKnowledge */
 /**
  * @summary DitBridgeKnowledge
@@ -215,9 +204,7 @@ export function _encode_DitBridgeKnowledge(
 ) {
     if (!_cached_encoder_for_DitBridgeKnowledge) {
         _cached_encoder_for_DitBridgeKnowledge = function (
-            value: DitBridgeKnowledge,
-            elGetter: $.ASN1Encoder<DitBridgeKnowledge>
-        ): _Element {
+            value: DitBridgeKnowledge        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

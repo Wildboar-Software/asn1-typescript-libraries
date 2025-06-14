@@ -349,9 +349,7 @@ export function _encode_EstablishOperationalBindingResultData(
 ) {
     if (!_cached_encoder_for_EstablishOperationalBindingResultData) {
         _cached_encoder_for_EstablishOperationalBindingResultData = function (
-            value: EstablishOperationalBindingResultData,
-            elGetter: $.ASN1Encoder<EstablishOperationalBindingResultData>
-        ): _Element {
+            value: EstablishOperationalBindingResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

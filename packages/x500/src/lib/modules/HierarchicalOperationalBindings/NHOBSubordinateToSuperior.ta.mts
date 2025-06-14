@@ -15,17 +15,6 @@ import {
     _decode_SubentryInfo,
     _encode_SubentryInfo,
 } from "../HierarchicalOperationalBindings/SubentryInfo.ta.mjs";
-export {
-    MasterAndShadowAccessPoints,
-    _decode_MasterAndShadowAccessPoints,
-    _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-export {
-    SubentryInfo,
-    _decode_SubentryInfo,
-    _encode_SubentryInfo,
-} from "../HierarchicalOperationalBindings/SubentryInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NHOBSubordinateToSuperior */
 /**
  * @summary NHOBSubordinateToSuperior
@@ -217,9 +206,7 @@ export function _encode_NHOBSubordinateToSuperior(
 ) {
     if (!_cached_encoder_for_NHOBSubordinateToSuperior) {
         _cached_encoder_for_NHOBSubordinateToSuperior = function (
-            value: NHOBSubordinateToSuperior,
-            elGetter: $.ASN1Encoder<NHOBSubordinateToSuperior>
-        ): _Element {
+            value: NHOBSubordinateToSuperior        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

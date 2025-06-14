@@ -3,13 +3,6 @@ import { cRLDistributionPoint } from "../AuthenticationFramework/cRLDistribution
 import { id_nf_cRLDistPtNameForm } from "../AuthenticationFramework/id-nf-cRLDistPtNameForm.va.mjs";
 import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { cRLDistributionPoint } from "../AuthenticationFramework/cRLDistributionPoint.oa.mjs";
-export { id_nf_cRLDistPtNameForm } from "../AuthenticationFramework/id-nf-cRLDistPtNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION cRLDistPtNameForm */
 /**
  * @summary cRLDistPtNameForm

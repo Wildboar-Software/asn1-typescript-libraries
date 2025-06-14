@@ -6,12 +6,6 @@ import {
     _decode_MRMapping,
     _encode_MRMapping,
 } from "../ServiceAdministration/MRMapping.ta.mjs";
-export {
-    MRMapping,
-    _decode_MRMapping,
-    _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MRMappings */
 /**
  * @summary MRMappings

@@ -11,17 +11,6 @@ import {
     _decode_SignedSecurityLabelContent,
     _encode_SignedSecurityLabelContent,
 } from "../EnhancedSecurity/SignedSecurityLabelContent.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    SignedSecurityLabelContent,
-    _decode_SignedSecurityLabelContent,
-    _encode_SignedSecurityLabelContent,
-} from "../EnhancedSecurity/SignedSecurityLabelContent.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignedSecurityLabel */
 /**
  * @summary SignedSecurityLabel

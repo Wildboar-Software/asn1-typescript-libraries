@@ -11,17 +11,6 @@ import {
     _decode_OsiBindResult_normal_mode_parameters,
     _encode_OsiBindResult_normal_mode_parameters,
 } from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta.mjs";
-export {
-    OsiBindResult_mode_selector,
-    _decode_OsiBindResult_mode_selector,
-    _encode_OsiBindResult_mode_selector,
-} from "../OSIProtocolSpecification/OsiBindResult-mode-selector.ta.mjs";
-export {
-    OsiBindResult_normal_mode_parameters,
-    _decode_OsiBindResult_normal_mode_parameters,
-    _encode_OsiBindResult_normal_mode_parameters,
-} from "../OSIProtocolSpecification/OsiBindResult-normal-mode-parameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBindResult */
 /**
  * @summary OsiBindResult
@@ -208,9 +197,7 @@ export function _encode_OsiBindResult(
 ) {
     if (!_cached_encoder_for_OsiBindResult) {
         _cached_encoder_for_OsiBindResult = function (
-            value: OsiBindResult,
-            elGetter: $.ASN1Encoder<OsiBindResult>
-        ): _Element {
+            value: OsiBindResult        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

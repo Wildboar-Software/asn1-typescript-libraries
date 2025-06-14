@@ -496,9 +496,7 @@ export function _encode_CompareArgumentData(
 ) {
     if (!_cached_encoder_for_CompareArgumentData) {
         _cached_encoder_for_CompareArgumentData = function (
-            value: CompareArgumentData,
-            elGetter: $.ASN1Encoder<CompareArgumentData>
-        ): _Element {
+            value: CompareArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

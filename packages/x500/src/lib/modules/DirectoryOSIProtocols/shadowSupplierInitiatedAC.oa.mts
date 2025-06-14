@@ -4,13 +4,6 @@ import { id_ac_shadowSupplierInitiatedAC } from "../DirectoryOSIProtocols/id-ac-
 import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.mjs";
 import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
-export { id_ac_shadowSupplierInitiatedAC } from "../DirectoryOSIProtocols/id-ac-shadowSupplierInitiatedAC.va.mjs";
-export { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.mjs";
-export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION shadowSupplierInitiatedAC */
 /**
  * @summary shadowSupplierInitiatedAC

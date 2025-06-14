@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_rosObject } from "../UsefulDefinitions/id-rosObject.va.mjs";
-export { id_rosObject } from "../UsefulDefinitions/id-rosObject.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_rosObject_directory */
 /**
  * @summary id_rosObject_directory

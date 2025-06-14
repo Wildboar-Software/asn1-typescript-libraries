@@ -212,9 +212,7 @@ export function _encode_NumberRange(
 ) {
     if (!_cached_encoder_for_NumberRange) {
         _cached_encoder_for_NumberRange = function (
-            value: NumberRange,
-            elGetter: $.ASN1Encoder<NumberRange>
-        ): _Element {
+            value: NumberRange        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

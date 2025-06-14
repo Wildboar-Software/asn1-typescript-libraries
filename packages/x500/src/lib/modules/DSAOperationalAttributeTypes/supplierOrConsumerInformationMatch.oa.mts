@@ -6,16 +6,6 @@ import {
     _encode_supplierOrConsumerInformationMatch_AssertionType,
 } from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { id_kmr_supplierConsumerMatch } from "../DSAOperationalAttributeTypes/id-kmr-supplierConsumerMatch.va.mjs";
-export {
-    supplierOrConsumerInformationMatch_AssertionType,
-    _decode_supplierOrConsumerInformationMatch_AssertionType,
-    _encode_supplierOrConsumerInformationMatch_AssertionType,
-} from "../DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch */
 /**
  * @summary supplierOrConsumerInformationMatch

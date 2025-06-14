@@ -5,13 +5,6 @@ import {
     _decode_ExtensionORAddressComponents,
     _encode_ExtensionORAddressComponents,
 } from "../PkiPmiExternalDataTypes/ExtensionORAddressComponents.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    ExtensionORAddressComponents,
-    _decode_ExtensionORAddressComponents,
-    _encode_ExtensionORAddressComponents,
-} from "../PkiPmiExternalDataTypes/ExtensionORAddressComponents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION extension_OR_address_components */
 /**
  * @summary extension_OR_address_components

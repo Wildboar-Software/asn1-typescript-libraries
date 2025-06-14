@@ -6,12 +6,6 @@ import {
     _decode_PolicyMappingsSyntax_Item,
     _encode_PolicyMappingsSyntax_Item,
 } from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta.mjs";
-export {
-    PolicyMappingsSyntax_Item,
-    _decode_PolicyMappingsSyntax_Item,
-    _encode_PolicyMappingsSyntax_Item,
-} from "../CertificateExtensions/PolicyMappingsSyntax-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicyMappingsSyntax */
 /**
  * @summary PolicyMappingsSyntax

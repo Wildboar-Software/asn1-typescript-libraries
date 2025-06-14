@@ -12,41 +12,6 @@ import {
     _encode_IdmReject_reason,
     _enum_for_IdmReject_reason,
 } from "../IDMProtocolSpecification/IdmReject-reason.ta.mjs";
-export {
-    duplicateInvokeIDRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IdmReject_reason,
-    IdmReject_reason_duplicateInvokeIDRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_invalidIdmVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_mistypedArgumentRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_mistypedParameterError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_mistypedPDU /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_mistypedResultRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_resourceLimitationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unknownError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unknownInvokeIDError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unknownInvokeIDResult /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unknownOperationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unsuitableIdmVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unsupportedIdmVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmReject_reason_unsupportedOperationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidIdmVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    mistypedArgumentRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    mistypedParameterError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    mistypedPDU /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    mistypedResultRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    resourceLimitationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownInvokeIDError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownInvokeIDResult /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownOperationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsuitableIdmVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedIdmVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedOperationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_IdmReject_reason,
-    _encode_IdmReject_reason,
-    _enum_for_IdmReject_reason,
-} from "../IDMProtocolSpecification/IdmReject-reason.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IdmReject */
 /**
  * @summary IdmReject
@@ -236,9 +201,7 @@ export function _encode_IdmReject(
 ) {
     if (!_cached_encoder_for_IdmReject) {
         _cached_encoder_for_IdmReject = function (
-            value: IdmReject,
-            elGetter: $.ASN1Encoder<IdmReject>
-        ): _Element {
+            value: IdmReject        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -4,12 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_integerOrderingMatch } from "../SelectedAttributeTypes/id-mr-integerOrderingMatch.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_integerOrderingMatch } from "../SelectedAttributeTypes/id-mr-integerOrderingMatch.va.mjs";
-export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION integerOrderingMatch */
 /**
  * @summary integerOrderingMatch

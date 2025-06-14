@@ -299,9 +299,7 @@ export function _encode_ReadResultData(
 ) {
     if (!_cached_encoder_for_ReadResultData) {
         _cached_encoder_for_ReadResultData = function (
-            value: ReadResultData,
-            elGetter: $.ASN1Encoder<ReadResultData>
-        ): _Element {
+            value: ReadResultData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

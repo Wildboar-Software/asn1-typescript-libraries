@@ -6,14 +6,6 @@ import {
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-export { id_ce_delegatedNameConstraints } from "../AttributeCertificateDefinitions/id-ce-delegatedNameConstraints.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    NameConstraintsSyntax,
-    _decode_NameConstraintsSyntax,
-    _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION delegatedNameConstraints */
 /**
  * @summary delegatedNameConstraints

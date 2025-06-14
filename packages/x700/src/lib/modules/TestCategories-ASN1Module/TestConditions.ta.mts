@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,45 +13,14 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestConditions_first,
-    TestConditions_first_testIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    testIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_first_rejectIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejectIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_first_waitIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    waitIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TestConditions_first,
-    _encode_TestConditions_first,
-} from '../TestCategories-ASN1Module/TestConditions-first.ta.mjs';
-export {
-    TestConditions_first,
-    TestConditions_first_testIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    testIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_first_rejectIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejectIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_first_waitIfBusy /* IMPORTED_LONG_NAMED_INTEGER */,
-    waitIfBusy /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_first,
     _encode_TestConditions_first,
 } from '../TestCategories-ASN1Module/TestConditions-first.ta.mjs';
 import {
     TestConditions_second,
-    TestConditions_second_customerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
-    customerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_second_noCustomerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
-    noCustomerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestConditions_second,
     _encode_TestConditions_second,
 } from '../TestCategories-ASN1Module/TestConditions-second.ta.mjs';
-export {
-    TestConditions_second,
-    TestConditions_second_customerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
-    customerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestConditions_second_noCustomerOverrideTest /* IMPORTED_LONG_NAMED_INTEGER */,
-    noCustomerOverrideTest /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TestConditions_second,
-    _encode_TestConditions_second,
-} from '../TestCategories-ASN1Module/TestConditions-second.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TestConditions */
 /**
  * @summary TestConditions
@@ -276,9 +190,7 @@ export function _encode_TestConditions(
 ) {
     if (!_cached_encoder_for_TestConditions) {
         _cached_encoder_for_TestConditions = function (
-            value: TestConditions,
-            elGetter: $.ASN1Encoder<TestConditions>
-        ): _Element {
+            value: TestConditions        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

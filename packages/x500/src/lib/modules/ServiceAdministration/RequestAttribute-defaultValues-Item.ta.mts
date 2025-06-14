@@ -6,10 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RequestAttribute_defaultValues_Item */
 /**
  * @summary RequestAttribute_defaultValues_Item
@@ -196,9 +192,7 @@ export function _encode_RequestAttribute_defaultValues_Item(
 ) {
     if (!_cached_encoder_for_RequestAttribute_defaultValues_Item) {
         _cached_encoder_for_RequestAttribute_defaultValues_Item = function (
-            value: RequestAttribute_defaultValues_Item,
-            elGetter: $.ASN1Encoder<RequestAttribute_defaultValues_Item>
-        ): _Element {
+            value: RequestAttribute_defaultValues_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

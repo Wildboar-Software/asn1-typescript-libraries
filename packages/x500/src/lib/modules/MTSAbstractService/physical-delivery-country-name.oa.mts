@@ -5,13 +5,6 @@ import {
     _decode_PhysicalDeliveryCountryName,
     _encode_PhysicalDeliveryCountryName,
 } from "../MTSAbstractService/PhysicalDeliveryCountryName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PhysicalDeliveryCountryName,
-    _decode_PhysicalDeliveryCountryName,
-    _encode_PhysicalDeliveryCountryName,
-} from "../MTSAbstractService/PhysicalDeliveryCountryName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION physical_delivery_country_name */
 /**
  * @summary physical_delivery_country_name

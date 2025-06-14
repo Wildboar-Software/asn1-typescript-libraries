@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_UserName,
     _encode_UserName,
 } from '../MTSAbstractService/UserName.ta.mjs';
-export {
-    UserName,
-    _decode_UserName,
-    _encode_UserName,
-} from '../MTSAbstractService/UserName.ta.mjs';
 import {
-    UserAddress,
-    _decode_UserAddress,
-    _encode_UserAddress,
-} from '../MTSAbstractService/UserAddress.ta.mjs';
-export {
     UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
@@ -91,17 +26,7 @@ import {
     _decode_DeliverableClass,
     _encode_DeliverableClass,
 } from '../MTSAbstractService/DeliverableClass.ta.mjs';
-export {
-    DeliverableClass,
-    _decode_DeliverableClass,
-    _encode_DeliverableClass,
-} from '../MTSAbstractService/DeliverableClass.ta.mjs';
 import {
-    DefaultDeliveryControls,
-    _decode_DefaultDeliveryControls,
-    _encode_DefaultDeliveryControls,
-} from '../MTSAbstractService/DefaultDeliveryControls.ta.mjs';
-export {
     DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
@@ -111,17 +36,7 @@ import {
     _decode_Redirections,
     _encode_Redirections,
 } from '../MTSAbstractService/Redirections.ta.mjs';
-export {
-    Redirections,
-    _decode_Redirections,
-    _encode_Redirections,
-} from '../MTSAbstractService/Redirections.ta.mjs';
 import {
-    RestrictedDelivery,
-    _decode_RestrictedDelivery,
-    _encode_RestrictedDelivery,
-} from '../MTSAbstractService/RestrictedDelivery.ta.mjs';
-export {
     RestrictedDelivery,
     _decode_RestrictedDelivery,
     _encode_RestrictedDelivery,
@@ -131,22 +46,11 @@ import {
     _decode_RegistrationTypes,
     _encode_RegistrationTypes,
 } from '../MTSAbstractService/RegistrationTypes.ta.mjs';
-export {
-    RegistrationTypes,
-    _decode_RegistrationTypes,
-    _encode_RegistrationTypes,
-} from '../MTSAbstractService/RegistrationTypes.ta.mjs';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RegisterArgument */
 /**
  * @summary RegisterArgument
@@ -468,9 +372,7 @@ export function _encode_RegisterArgument(
 ) {
     if (!_cached_encoder_for_RegisterArgument) {
         _cached_encoder_for_RegisterArgument = function (
-            value: RegisterArgument,
-            elGetter: $.ASN1Encoder<RegisterArgument>
-        ): _Element {
+            value: RegisterArgument        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

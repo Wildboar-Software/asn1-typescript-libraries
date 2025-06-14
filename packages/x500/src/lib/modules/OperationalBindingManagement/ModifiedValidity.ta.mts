@@ -15,17 +15,6 @@ import {
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
 } from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.mjs";
-export {
-    ModifiedValidity_validFrom,
-    _decode_ModifiedValidity_validFrom,
-    _encode_ModifiedValidity_validFrom,
-} from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta.mjs";
-export {
-    ModifiedValidity_validUntil,
-    _decode_ModifiedValidity_validUntil,
-    _encode_ModifiedValidity_validUntil,
-} from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModifiedValidity */
 /**
  * @summary ModifiedValidity
@@ -241,9 +230,7 @@ export function _encode_ModifiedValidity(
 ) {
     if (!_cached_encoder_for_ModifiedValidity) {
         _cached_encoder_for_ModifiedValidity = function (
-            value: ModifiedValidity,
-            elGetter: $.ASN1Encoder<ModifiedValidity>
-        ): _Element {
+            value: ModifiedValidity        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

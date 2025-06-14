@@ -5,13 +5,6 @@ import {
     _decode_PhysicalDeliveryOrganizationName,
     _encode_PhysicalDeliveryOrganizationName,
 } from "../PkiPmiExternalDataTypes/PhysicalDeliveryOrganizationName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PhysicalDeliveryOrganizationName,
-    _decode_PhysicalDeliveryOrganizationName,
-    _encode_PhysicalDeliveryOrganizationName,
-} from "../PkiPmiExternalDataTypes/PhysicalDeliveryOrganizationName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION physical_delivery_organization_name */
 /**
  * @summary physical_delivery_organization_name

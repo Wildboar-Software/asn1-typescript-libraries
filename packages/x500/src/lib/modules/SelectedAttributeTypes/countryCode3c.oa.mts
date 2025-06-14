@@ -11,32 +11,6 @@ import {
 import { countryString3c } from "../SelectedAttributeTypes/countryString3c.oa.mjs";
 import { id_at_countryCode3c } from "../SelectedAttributeTypes/id-at-countryCode3c.va.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CountryCode3c,
-    _decode_CountryCode3c,
-    _encode_CountryCode3c,
-} from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
-export { countryString3c } from "../SelectedAttributeTypes/countryString3c.oa.mjs";
-export { id_at_countryCode3c } from "../SelectedAttributeTypes/id-at-countryCode3c.va.mjs";
-export { name } from "../SelectedAttributeTypes/name.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION countryCode3c */
 /**
  * @summary countryCode3c

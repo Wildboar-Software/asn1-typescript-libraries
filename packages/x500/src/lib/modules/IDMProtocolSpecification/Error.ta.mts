@@ -179,9 +179,7 @@ let _cached_encoder_for_Error: $.ASN1Encoder<Error> | null = null;
 export function _encode_Error(value: Error, elGetter: $.ASN1Encoder<Error>) {
     if (!_cached_encoder_for_Error) {
         _cached_encoder_for_Error = function (
-            value: Error,
-            elGetter: $.ASN1Encoder<Error>
-        ): _Element {
+            value: Error        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

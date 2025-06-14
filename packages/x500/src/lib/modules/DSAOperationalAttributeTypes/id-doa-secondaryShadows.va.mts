@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
-export { id_doa } from "../UsefulDefinitions/id-doa.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_doa_secondaryShadows */
 /**
  * @summary id_doa_secondaryShadows

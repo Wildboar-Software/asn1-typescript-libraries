@@ -15,17 +15,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    TypeAndContextAssertion_contextAssertions,
-    _decode_TypeAndContextAssertion_contextAssertions,
-    _encode_TypeAndContextAssertion_contextAssertions,
-} from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TypeAndContextAssertion */
 /**
  * @summary TypeAndContextAssertion
@@ -207,9 +196,7 @@ export function _encode_TypeAndContextAssertion(
 ) {
     if (!_cached_encoder_for_TypeAndContextAssertion) {
         _cached_encoder_for_TypeAndContextAssertion = function (
-            value: TypeAndContextAssertion,
-            elGetter: $.ASN1Encoder<TypeAndContextAssertion>
-        ): _Element {
+            value: TypeAndContextAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

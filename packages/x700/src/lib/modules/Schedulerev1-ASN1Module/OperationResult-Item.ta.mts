@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_GetResult,
     _encode_GetResult,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta.mjs';
-export {
-    GetResult,
-    _decode_GetResult,
-    _encode_GetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetResult.ta.mjs';
 import {
-    GetListError,
-    _decode_GetListError,
-    _encode_GetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/GetListError.ta.mjs';
-export {
     GetListError,
     _decode_GetListError,
     _encode_GetListError,
@@ -91,17 +25,7 @@ import {
     _decode_SetResult,
     _encode_SetResult,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta.mjs';
-export {
-    SetResult,
-    _decode_SetResult,
-    _encode_SetResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetResult.ta.mjs';
 import {
-    SetListError,
-    _decode_SetListError,
-    _encode_SetListError,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/SetListError.ta.mjs';
-export {
     SetListError,
     _decode_SetListError,
     _encode_SetListError,
@@ -111,22 +35,11 @@ import {
     _decode_ActionResult,
     _encode_ActionResult,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta.mjs';
-export {
-    ActionResult,
-    _decode_ActionResult,
-    _encode_ActionResult,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ActionResult.ta.mjs';
 import {
     CommonError,
     _decode_CommonError,
     _encode_CommonError,
 } from '../Schedulerev1-ASN1Module/CommonError.ta.mjs';
-export {
-    CommonError,
-    _decode_CommonError,
-    _encode_CommonError,
-} from '../Schedulerev1-ASN1Module/CommonError.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION OperationResult_Item */
 /**
  * @summary OperationResult_Item

@@ -25,27 +25,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    ACIItem_itemOrUserFirst,
-    _decode_ACIItem_itemOrUserFirst,
-    _encode_ACIItem_itemOrUserFirst,
-} from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta.mjs";
-export {
-    AuthenticationLevel,
-    _decode_AuthenticationLevel,
-    _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
-export {
-    Precedence,
-    _decode_Precedence,
-    _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ACIItem */
 /**
  * @summary ACIItem
@@ -263,9 +242,7 @@ export function _encode_ACIItem(
 ) {
     if (!_cached_encoder_for_ACIItem) {
         _cached_encoder_for_ACIItem = function (
-            value: ACIItem,
-            elGetter: $.ASN1Encoder<ACIItem>
-        ): _Element {
+            value: ACIItem        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

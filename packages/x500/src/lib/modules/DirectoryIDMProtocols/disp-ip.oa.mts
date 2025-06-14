@@ -5,14 +5,6 @@ import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.o
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { id_idm_disp } from "../DirectoryIDMProtocols/id-idm-disp.va.mjs";
-export { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.mjs";
-export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
-export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION disp_ip */
 /**
  * @summary disp_ip

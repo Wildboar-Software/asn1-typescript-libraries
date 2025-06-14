@@ -10,12 +10,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DualStringSyntax */
 /**
  * @summary DualStringSyntax
@@ -188,9 +182,7 @@ export function _encode_DualStringSyntax(
 ) {
     if (!_cached_encoder_for_DualStringSyntax) {
         _cached_encoder_for_DualStringSyntax = function (
-            value: DualStringSyntax,
-            elGetter: $.ASN1Encoder<DualStringSyntax>
-        ): _Element {
+            value: DualStringSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

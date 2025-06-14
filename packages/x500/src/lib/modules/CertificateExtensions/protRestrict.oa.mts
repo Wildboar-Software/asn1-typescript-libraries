@@ -6,14 +6,6 @@ import {
     _decode_ProtRestriction,
     _encode_ProtRestriction,
 } from "../CertificateExtensions/ProtRestriction.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va.mjs";
-export {
-    ProtRestriction,
-    _decode_ProtRestriction,
-    _encode_ProtRestriction,
-} from "../CertificateExtensions/ProtRestriction.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION protRestrict */
 /**
  * @summary protRestrict

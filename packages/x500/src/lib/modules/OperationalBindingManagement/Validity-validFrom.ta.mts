@@ -10,12 +10,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../OperationalBindingManagement/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Validity_validFrom */
 /**
  * @summary Validity_validFrom

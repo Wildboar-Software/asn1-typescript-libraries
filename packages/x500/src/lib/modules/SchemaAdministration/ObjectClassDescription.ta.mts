@@ -17,18 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    ObjectClassInformation,
-    _decode_ObjectClassInformation,
-    _encode_ObjectClassInformation,
-} from "../SchemaAdministration/ObjectClassInformation.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ObjectClassDescription */
 /**
  * @summary ObjectClassDescription
@@ -293,9 +281,7 @@ export function _encode_ObjectClassDescription(
 ) {
     if (!_cached_encoder_for_ObjectClassDescription) {
         _cached_encoder_for_ObjectClassDescription = function (
-            value: ObjectClassDescription,
-            elGetter: $.ASN1Encoder<ObjectClassDescription>
-        ): _Element {
+            value: ObjectClassDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

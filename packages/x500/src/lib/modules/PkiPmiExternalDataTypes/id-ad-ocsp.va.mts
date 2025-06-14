@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ad } from "../PkiPmiExternalDataTypes/id-ad.va.mjs";
-export { id_ad } from "../PkiPmiExternalDataTypes/id-ad.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ad_ocsp */
 /**
  * @summary id_ad_ocsp

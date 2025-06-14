@@ -21,22 +21,6 @@ import {
     _decode_SeqNum,
     _encode_SeqNum,
 } from "../SpkmGssTokens/SeqNum.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    SeqNum,
-    _decode_SeqNum,
-    _encode_SeqNum,
-} from "../SpkmGssTokens/SeqNum.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Mic_Header */
 /**
  * @summary Mic_Header
@@ -246,9 +230,7 @@ export function _encode_Mic_Header(
 ) {
     if (!_cached_encoder_for_Mic_Header) {
         _cached_encoder_for_Mic_Header = function (
-            value: Mic_Header,
-            elGetter: $.ASN1Encoder<Mic_Header>
-        ): _Element {
+            value: Mic_Header        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

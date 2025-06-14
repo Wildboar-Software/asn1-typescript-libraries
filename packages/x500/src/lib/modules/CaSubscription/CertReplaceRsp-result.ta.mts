@@ -11,17 +11,6 @@ import {
     _decode_CertReplaceOK,
     _encode_CertReplaceOK,
 } from "../CaSubscription/CertReplaceOK.ta.mjs";
-export {
-    CertReplaceErr,
-    _decode_CertReplaceErr,
-    _encode_CertReplaceErr,
-} from "../CaSubscription/CertReplaceErr.ta.mjs";
-export {
-    CertReplaceOK,
-    _decode_CertReplaceOK,
-    _encode_CertReplaceOK,
-} from "../CaSubscription/CertReplaceOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReplaceRsp_result */
 /**
  * @summary CertReplaceRsp_result

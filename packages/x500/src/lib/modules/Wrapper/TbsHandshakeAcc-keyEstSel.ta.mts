@@ -6,12 +6,6 @@ import {
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-export {
-    AlgorithmWithInvoke,
-    _decode_AlgorithmWithInvoke,
-    _encode_AlgorithmWithInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeAcc_keyEstSel */
 /**
  * @summary TbsHandshakeAcc_keyEstSel

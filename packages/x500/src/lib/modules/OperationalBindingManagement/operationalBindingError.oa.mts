@@ -11,24 +11,6 @@ import {
     _decode_OpBindingErrorParam,
     _encode_OpBindingErrorParam,
 } from "../OperationalBindingManagement/OpBindingErrorParam.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va.mjs";
-export {
-    OPTIONALLY_PROTECTED_SEQ,
-    _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
-    _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-export {
-    OpBindingErrorParam,
-    _decode_OpBindingErrorParam,
-    _encode_OpBindingErrorParam,
-} from "../OperationalBindingManagement/OpBindingErrorParam.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION operationalBindingError */
 /**
  * @summary operationalBindingError

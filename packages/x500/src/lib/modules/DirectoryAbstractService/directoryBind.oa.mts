@@ -11,25 +11,6 @@ import {
     _decode_DirectoryBindResult,
     _encode_DirectoryBindResult,
 } from "../DirectoryAbstractService/DirectoryBindResult.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    DirectoryBindArgument,
-    _decode_DirectoryBindArgument,
-    _encode_DirectoryBindArgument,
-} from "../DirectoryAbstractService/DirectoryBindArgument.ta.mjs";
-export { directoryBindError } from "../DirectoryAbstractService/directoryBindError.oa.mjs";
-export {
-    DirectoryBindResult,
-    _decode_DirectoryBindResult,
-    _encode_DirectoryBindResult,
-} from "../DirectoryAbstractService/DirectoryBindResult.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION directoryBind */
 /**
  * @summary directoryBind

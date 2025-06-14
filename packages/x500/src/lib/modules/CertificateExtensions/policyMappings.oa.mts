@@ -6,14 +6,6 @@ import {
     _decode_PolicyMappingsSyntax,
     _encode_PolicyMappingsSyntax,
 } from "../CertificateExtensions/PolicyMappingsSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va.mjs";
-export {
-    PolicyMappingsSyntax,
-    _decode_PolicyMappingsSyntax,
-    _encode_PolicyMappingsSyntax,
-} from "../CertificateExtensions/PolicyMappingsSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION policyMappings */
 /**
  * @summary policyMappings

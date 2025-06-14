@@ -20,36 +20,6 @@ import {
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";
-export {
-    attributeOrValueAlreadyExists /* IMPORTED_SHORT_NAMED_INTEGER */,
-    AttributeProblem,
-    AttributeProblem_attributeOrValueAlreadyExists /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_constraintViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_contextViolation /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_inappropriateMatching /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_invalidAttributeSyntax /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_noSuchAttributeOrValue /* IMPORTED_LONG_NAMED_INTEGER */,
-    AttributeProblem_undefinedAttributeType /* IMPORTED_LONG_NAMED_INTEGER */,
-    constraintViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    contextViolation /* IMPORTED_SHORT_NAMED_INTEGER */,
-    inappropriateMatching /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidAttributeSyntax /* IMPORTED_SHORT_NAMED_INTEGER */,
-    noSuchAttributeOrValue /* IMPORTED_SHORT_NAMED_INTEGER */,
-    undefinedAttributeType /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_AttributeProblem,
-    _encode_AttributeProblem,
-} from "../DirectoryAbstractService/AttributeProblem.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeValue,
-    _decode_AttributeValue,
-    _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeErrorData_problems_Item */
 /**
  * @summary AttributeErrorData_problems_Item
@@ -259,9 +229,7 @@ export function _encode_AttributeErrorData_problems_Item(
 ) {
     if (!_cached_encoder_for_AttributeErrorData_problems_Item) {
         _cached_encoder_for_AttributeErrorData_problems_Item = function (
-            value: AttributeErrorData_problems_Item,
-            elGetter: $.ASN1Encoder<AttributeErrorData_problems_Item>
-        ): _Element {
+            value: AttributeErrorData_problems_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

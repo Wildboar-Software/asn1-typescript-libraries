@@ -6,14 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AcceptableCertPoliciesSyntax,
-    _decode_AcceptableCertPoliciesSyntax,
-    _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
-export { id_ce_acceptableCertPolicies } from "../AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION acceptableCertPolicies */
 /**
  * @summary acceptableCertPolicies

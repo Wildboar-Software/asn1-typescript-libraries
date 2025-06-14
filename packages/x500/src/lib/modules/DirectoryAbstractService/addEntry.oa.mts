@@ -17,31 +17,6 @@ import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    AddEntryArgument,
-    _decode_AddEntryArgument,
-    _encode_AddEntryArgument,
-} from "../DirectoryAbstractService/AddEntryArgument.ta.mjs";
-export {
-    AddEntryResult,
-    _decode_AddEntryResult,
-    _encode_AddEntryResult,
-} from "../DirectoryAbstractService/AddEntryResult.ta.mjs";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION addEntry */
 /**
  * @summary addEntry

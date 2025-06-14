@@ -11,32 +11,6 @@ import {
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";
 import { uriMatch } from "../SelectedAttributeTypes/uriMatch.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-export { id_at_uri } from "../SelectedAttributeTypes/id-at-uri.va.mjs";
-export {
-    URI,
-    _decode_URI,
-    _encode_URI,
-} from "../SelectedAttributeTypes/URI.ta.mjs";
-export { uriMatch } from "../SelectedAttributeTypes/uriMatch.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uri */
 /**
  * @summary uri

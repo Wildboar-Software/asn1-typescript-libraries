@@ -11,12 +11,6 @@ import {
     _decode_PeriodicStrategy,
     _encode_PeriodicStrategy,
 } from "../DirectoryShadowAbstractService/PeriodicStrategy.ta.mjs";
-export {
-    PeriodicStrategy,
-    _decode_PeriodicStrategy,
-    _encode_PeriodicStrategy,
-} from "../DirectoryShadowAbstractService/PeriodicStrategy.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SchedulingParameters */
 /**
  * @summary SchedulingParameters
@@ -212,9 +206,7 @@ export function _encode_SchedulingParameters(
 ) {
     if (!_cached_encoder_for_SchedulingParameters) {
         _cached_encoder_for_SchedulingParameters = function (
-            value: SchedulingParameters,
-            elGetter: $.ASN1Encoder<SchedulingParameters>
-        ): _Element {
+            value: SchedulingParameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

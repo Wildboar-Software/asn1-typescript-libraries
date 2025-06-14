@@ -6,12 +6,6 @@ import {
     _decode_OrganizationalUnitName,
     _encode_OrganizationalUnitName,
 } from "../MTSAbstractService/OrganizationalUnitName.ta.mjs";
-export {
-    OrganizationalUnitName,
-    _decode_OrganizationalUnitName,
-    _encode_OrganizationalUnitName,
-} from "../MTSAbstractService/OrganizationalUnitName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OrganizationalUnitNames */
 /**
  * @summary OrganizationalUnitNames

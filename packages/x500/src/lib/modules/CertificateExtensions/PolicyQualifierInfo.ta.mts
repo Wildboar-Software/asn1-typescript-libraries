@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CERT_POLICY_QUALIFIER } from "../CertificateExtensions/CERT-POLICY-QUALIFIER.oca.mjs";
-export { SupportedPolicyQualifiers } from "../CertificateExtensions/SupportedPolicyQualifiers.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicyQualifierInfo */
 /**
  * @summary PolicyQualifierInfo
@@ -187,9 +184,7 @@ export function _encode_PolicyQualifierInfo(
 ) {
     if (!_cached_encoder_for_PolicyQualifierInfo) {
         _cached_encoder_for_PolicyQualifierInfo = function (
-            value: PolicyQualifierInfo,
-            elGetter: $.ASN1Encoder<PolicyQualifierInfo>
-        ): _Element {
+            value: PolicyQualifierInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

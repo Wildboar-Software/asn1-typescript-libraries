@@ -15,17 +15,6 @@ import {
     _decode_SubordinateChanges,
     _encode_SubordinateChanges,
 } from "../DirectoryShadowAbstractService/SubordinateChanges.ta.mjs";
-export {
-    IncrementalStepRefresh_sDSEChanges,
-    _decode_IncrementalStepRefresh_sDSEChanges,
-    _encode_IncrementalStepRefresh_sDSEChanges,
-} from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta.mjs";
-export {
-    SubordinateChanges,
-    _decode_SubordinateChanges,
-    _encode_SubordinateChanges,
-} from "../DirectoryShadowAbstractService/SubordinateChanges.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IncrementalStepRefresh */
 /**
  * @summary IncrementalStepRefresh
@@ -199,9 +188,7 @@ export function _encode_IncrementalStepRefresh(
 ) {
     if (!_cached_encoder_for_IncrementalStepRefresh) {
         _cached_encoder_for_IncrementalStepRefresh = function (
-            value: IncrementalStepRefresh,
-            elGetter: $.ASN1Encoder<IncrementalStepRefresh>
-        ): _Element {
+            value: IncrementalStepRefresh        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

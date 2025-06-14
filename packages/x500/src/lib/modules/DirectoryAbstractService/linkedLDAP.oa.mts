@@ -11,25 +11,6 @@ import {
     _decode_LinkedResult,
     _encode_LinkedResult,
 } from "../DirectoryAbstractService/LinkedResult.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    LinkedArgument,
-    _decode_LinkedArgument,
-    _encode_LinkedArgument,
-} from "../DirectoryAbstractService/LinkedArgument.ta.mjs";
-export {
-    LinkedResult,
-    _decode_LinkedResult,
-    _encode_LinkedResult,
-} from "../DirectoryAbstractService/LinkedResult.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION linkedLDAP */
 /**
  * @summary linkedLDAP

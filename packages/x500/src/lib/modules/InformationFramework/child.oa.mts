@@ -4,22 +4,6 @@ import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import {
     auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_oc_child } from "../InformationFramework/id-oc-child.va.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION child */
 /**
  * @summary child

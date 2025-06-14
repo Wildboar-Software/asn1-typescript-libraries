@@ -17,18 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export {
-    ContextInformation,
-    _decode_ContextInformation,
-    _encode_ContextInformation,
-} from "../SchemaAdministration/ContextInformation.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContextDescription */
 /**
  * @summary ContextDescription
@@ -293,9 +281,7 @@ export function _encode_ContextDescription(
 ) {
     if (!_cached_encoder_for_ContextDescription) {
         _cached_encoder_for_ContextDescription = function (
-            value: ContextDescription,
-            elGetter: $.ASN1Encoder<ContextDescription>
-        ): _Element {
+            value: ContextDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

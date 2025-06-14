@@ -26,67 +26,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    administrativeLimitExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ambiguousKeyAttributes /* IMPORTED_SHORT_NAMED_INTEGER */,
-    busy /* IMPORTED_SHORT_NAMED_INTEGER */,
-    chainingRequired /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ditError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidQueryReference /* IMPORTED_SHORT_NAMED_INTEGER */,
-    invalidReference /* IMPORTED_SHORT_NAMED_INTEGER */,
-    loopDetected /* IMPORTED_SHORT_NAMED_INTEGER */,
-    notSupportedByLDAP /* IMPORTED_SHORT_NAMED_INTEGER */,
-    outOfScope /* IMPORTED_SHORT_NAMED_INTEGER */,
-    requestedServiceNotAvailable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    saslBindInProgress /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ServiceProblem,
-    ServiceProblem_administrativeLimitExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_ambiguousKeyAttributes /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_busy /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_chainingRequired /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_ditError /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_invalidQueryReference /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_invalidReference /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_loopDetected /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_notSupportedByLDAP /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_outOfScope /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_requestedServiceNotAvailable /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_saslBindInProgress /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_timeLimitExceeded /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_unableToProceed /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_unavailable /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_unavailableCriticalExtension /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_unsupportedMatchingUse /* IMPORTED_LONG_NAMED_INTEGER */,
-    ServiceProblem_unwillingToPerform /* IMPORTED_LONG_NAMED_INTEGER */,
-    timeLimitExceeded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unableToProceed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unavailable /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unavailableCriticalExtension /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unsupportedMatchingUse /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unwillingToPerform /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ServiceProblem,
-    _encode_ServiceProblem,
-} from "../DirectoryAbstractService/ServiceProblem.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
     CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
@@ -357,9 +296,7 @@ export function _encode_ServiceErrorData(
 ) {
     if (!_cached_encoder_for_ServiceErrorData) {
         _cached_encoder_for_ServiceErrorData = function (
-            value: ServiceErrorData,
-            elGetter: $.ASN1Encoder<ServiceErrorData>
-        ): _Element {
+            value: ServiceErrorData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

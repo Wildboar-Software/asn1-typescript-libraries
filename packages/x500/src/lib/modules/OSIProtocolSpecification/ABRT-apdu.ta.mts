@@ -10,16 +10,6 @@ import {
     _decode_ABRT_source,
     _encode_ABRT_source,
 } from "../OSIProtocolSpecification/ABRT-source.ta.mjs";
-export {
-    ABRT_source,
-    ABRT_source_acse_service_provider /* IMPORTED_LONG_NAMED_INTEGER */,
-    ABRT_source_acse_service_user /* IMPORTED_LONG_NAMED_INTEGER */,
-    acse_service_provider /* IMPORTED_SHORT_NAMED_INTEGER */,
-    acse_service_user /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ABRT_source,
-    _encode_ABRT_source,
-} from "../OSIProtocolSpecification/ABRT-source.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ABRT_apdu */
 /**
  * @summary ABRT_apdu
@@ -167,9 +157,7 @@ export function _encode_ABRT_apdu(
             4,
             () =>
                 function (
-                    value: ABRT_apdu,
-                    elGetter: $.ASN1Encoder<ABRT_apdu>
-                ): _Element {
+                    value: ABRT_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

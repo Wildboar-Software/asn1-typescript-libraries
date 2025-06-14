@@ -230,9 +230,7 @@ export function _encode_PersonalName(
 ) {
     if (!_cached_encoder_for_PersonalName) {
         _cached_encoder_for_PersonalName = function (
-            value: PersonalName,
-            elGetter: $.ASN1Encoder<PersonalName>
-        ): _Element {
+            value: PersonalName        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

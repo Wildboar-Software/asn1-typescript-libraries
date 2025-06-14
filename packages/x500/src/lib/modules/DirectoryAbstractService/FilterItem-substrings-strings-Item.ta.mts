@@ -6,14 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FilterItem_substrings_strings_Item */
 /**
  * @summary FilterItem_substrings_strings_Item

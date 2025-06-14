@@ -6,14 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp.ta.mjs";
 import { id_certUnsubscribeRsp } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeRsp.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export {
-    CertUnsubscribeRsp,
-    _decode_CertUnsubscribeRsp,
-    _encode_CertUnsubscribeRsp,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp.ta.mjs";
-export { id_certUnsubscribeRsp } from "../PkiPMIProtocolSpecifications/id-certUnsubscribeRsp.va.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certUnsubscribeRsp */
 /**
  * @summary certUnsubscribeRsp

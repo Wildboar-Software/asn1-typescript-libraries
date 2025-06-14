@@ -11,12 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AccessDescription */
 /**
  * @summary AccessDescription
@@ -174,9 +168,7 @@ export function _encode_AccessDescription(
 ) {
     if (!_cached_encoder_for_AccessDescription) {
         _cached_encoder_for_AccessDescription = function (
-            value: AccessDescription,
-            elGetter: $.ASN1Encoder<AccessDescription>
-        ): _Element {
+            value: AccessDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

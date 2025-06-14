@@ -6,14 +6,6 @@ import {
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_subjectKeyIdentifier } from "../CertificateExtensions/id-ce-subjectKeyIdentifier.va.mjs";
-export {
-    SubjectKeyIdentifier,
-    _decode_SubjectKeyIdentifier,
-    _encode_SubjectKeyIdentifier,
-} from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subjectKeyIdentifier */
 /**
  * @summary subjectKeyIdentifier

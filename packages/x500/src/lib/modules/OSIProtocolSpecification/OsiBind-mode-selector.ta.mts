@@ -156,9 +156,7 @@ export function _encode_OsiBind_mode_selector(
 ) {
     if (!_cached_encoder_for_OsiBind_mode_selector) {
         _cached_encoder_for_OsiBind_mode_selector = function (
-            value: OsiBind_mode_selector,
-            elGetter: $.ASN1Encoder<OsiBind_mode_selector>
-        ): _Element {
+            value: OsiBind_mode_selector        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

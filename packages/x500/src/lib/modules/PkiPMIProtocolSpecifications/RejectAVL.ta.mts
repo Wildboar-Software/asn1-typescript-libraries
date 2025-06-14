@@ -253,9 +253,7 @@ export function _encode_RejectAVL(
 ) {
     if (!_cached_encoder_for_RejectAVL) {
         _cached_encoder_for_RejectAVL = function (
-            value: RejectAVL,
-            elGetter: $.ASN1Encoder<RejectAVL>
-        ): _Element {
+            value: RejectAVL        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

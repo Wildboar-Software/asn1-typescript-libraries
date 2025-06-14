@@ -11,17 +11,6 @@ import {
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta.mjs";
-export {
-    CertUnsubscribeErr,
-    _decode_CertUnsubscribeErr,
-    _encode_CertUnsubscribeErr,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta.mjs";
-export {
-    CertUnsubscribeOK,
-    _decode_CertUnsubscribeOK,
-    _encode_CertUnsubscribeOK,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeRsp_result */
 /**
  * @summary CertUnsubscribeRsp_result

@@ -21,22 +21,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-export {
-    MasterAndShadowAccessPoints,
-    _decode_MasterAndShadowAccessPoints,
-    _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-export {
-    SubentryInfo,
-    _decode_SubentryInfo,
-    _encode_SubentryInfo,
-} from "../HierarchicalOperationalBindings/SubentryInfo.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubordinateToSuperior */
 /**
  * @summary SubordinateToSuperior
@@ -279,9 +263,7 @@ export function _encode_SubordinateToSuperior(
 ) {
     if (!_cached_encoder_for_SubordinateToSuperior) {
         _cached_encoder_for_SubordinateToSuperior = function (
-            value: SubordinateToSuperior,
-            elGetter: $.ASN1Encoder<SubordinateToSuperior>
-        ): _Element {
+            value: SubordinateToSuperior        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

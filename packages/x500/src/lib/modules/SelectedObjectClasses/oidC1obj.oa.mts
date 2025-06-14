@@ -6,24 +6,6 @@ import {
 import { top } from "../InformationFramework/top.oa.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_oc_oidC1obj } from "../SelectedObjectClasses/id-oc-oidC1obj.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-export { id_oc_oidC1obj } from "../SelectedObjectClasses/id-oc-oidC1obj.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION oidC1obj */
 /**
  * @summary oidC1obj

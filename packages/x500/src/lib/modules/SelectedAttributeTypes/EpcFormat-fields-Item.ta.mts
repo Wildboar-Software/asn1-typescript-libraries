@@ -18,24 +18,6 @@ import {
     _encode_EpcFormat_fields_Item_result,
     _enum_for_EpcFormat_fields_Item_result,
 } from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
-export {
-    EpcFormat_fields_Item_charField,
-    _decode_EpcFormat_fields_Item_charField,
-    _encode_EpcFormat_fields_Item_charField,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
-export {
-    alpha7bits /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    EpcFormat_fields_Item_result,
-    EpcFormat_fields_Item_result_alpha7bits /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    EpcFormat_fields_Item_result_numeric /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    numeric /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    numericPad /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_EpcFormat_fields_Item_result,
-    _encode_EpcFormat_fields_Item_result,
-    _enum_for_EpcFormat_fields_Item_result,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EpcFormat_fields_Item */
 /**
  * @summary EpcFormat_fields_Item
@@ -232,9 +214,7 @@ export function _encode_EpcFormat_fields_Item(
 ) {
     if (!_cached_encoder_for_EpcFormat_fields_Item) {
         _cached_encoder_for_EpcFormat_fields_Item = function (
-            value: EpcFormat_fields_Item,
-            elGetter: $.ASN1Encoder<EpcFormat_fields_Item>
-        ): _Element {
+            value: EpcFormat_fields_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

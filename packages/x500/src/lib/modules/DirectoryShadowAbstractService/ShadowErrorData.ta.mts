@@ -312,9 +312,7 @@ export function _encode_ShadowErrorData(
 ) {
     if (!_cached_encoder_for_ShadowErrorData) {
         _cached_encoder_for_ShadowErrorData = function (
-            value: ShadowErrorData,
-            elGetter: $.ASN1Encoder<ShadowErrorData>
-        ): _Element {
+            value: ShadowErrorData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

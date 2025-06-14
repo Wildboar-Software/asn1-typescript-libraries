@@ -6,14 +6,6 @@ import {
     _decode_SubjectInfoAccessSyntax,
     _encode_SubjectInfoAccessSyntax,
 } from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va.mjs";
-export {
-    SubjectInfoAccessSyntax,
-    _decode_SubjectInfoAccessSyntax,
-    _encode_SubjectInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subjectInfoAccess */
 /**
  * @summary subjectInfoAccess

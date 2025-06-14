@@ -3,17 +3,6 @@ import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_userPwdMatch } from "../PasswordPolicy/id-mr-userPwdMatch.va.mjs";
 import { _decode_UserPwd, _encode_UserPwd } from "../PasswordPolicy/UserPwd.ta.mjs";
 import { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_userPwdMatch } from "../PasswordPolicy/id-mr-userPwdMatch.va.mjs";
-export {
-    UserPwd,
-    _decode_UserPwd,
-    _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta.mjs";
-export { userPwdDescription } from "../PasswordPolicy/userPwdDescription.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION userPwdMatch */
 /**
  * @summary userPwdMatch

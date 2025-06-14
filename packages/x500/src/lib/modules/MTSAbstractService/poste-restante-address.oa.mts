@@ -5,13 +5,6 @@ import {
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
 } from "../MTSAbstractService/PosteRestanteAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PosteRestanteAddress,
-    _decode_PosteRestanteAddress,
-    _encode_PosteRestanteAddress,
-} from "../MTSAbstractService/PosteRestanteAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION poste_restante_address */
 /**
  * @summary poste_restante_address

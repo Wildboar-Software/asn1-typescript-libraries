@@ -21,22 +21,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CommonResultsSeq */
 /**
  * @summary CommonResultsSeq
@@ -280,9 +264,7 @@ export function _encode_CommonResultsSeq(
 ) {
     if (!_cached_encoder_for_CommonResultsSeq) {
         _cached_encoder_for_CommonResultsSeq = function (
-            value: CommonResultsSeq,
-            elGetter: $.ASN1Encoder<CommonResultsSeq>
-        ): _Element {
+            value: CommonResultsSeq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

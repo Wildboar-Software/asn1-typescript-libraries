@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +16,11 @@ import {
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
 } from '../EDIMSInformationObjects/EDIBodyPartType.ta.mjs';
-export {
-    EDIBodyPartType,
-    _decode_EDIBodyPartType,
-    _encode_EDIBodyPartType,
-} from '../EDIMSInformationObjects/EDIBodyPartType.ta.mjs';
 import {
     EDIProcessableDocument,
     _decode_EDIProcessableDocument,
     _encode_EDIProcessableDocument,
 } from '../EDIMUseOfDirectory/EDIProcessableDocument.ta.mjs';
-export {
-    EDIProcessableDocument,
-    _decode_EDIProcessableDocument,
-    _encode_EDIProcessableDocument,
-} from '../EDIMUseOfDirectory/EDIProcessableDocument.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION EDIUserCapability */
 /**
  * @summary EDIUserCapability
@@ -263,9 +197,7 @@ export function _encode_EDIUserCapability(
 ) {
     if (!_cached_encoder_for_EDIUserCapability) {
         _cached_encoder_for_EDIUserCapability = function (
-            value: EDIUserCapability,
-            elGetter: $.ASN1Encoder<EDIUserCapability>
-        ): _Element {
+            value: EDIUserCapability        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

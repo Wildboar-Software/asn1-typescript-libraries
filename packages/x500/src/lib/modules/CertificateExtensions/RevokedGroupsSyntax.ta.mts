@@ -6,12 +6,6 @@ import {
     _decode_RevokedGroup,
     _encode_RevokedGroup,
 } from "../CertificateExtensions/RevokedGroup.ta.mjs";
-export {
-    RevokedGroup,
-    _decode_RevokedGroup,
-    _encode_RevokedGroup,
-} from "../CertificateExtensions/RevokedGroup.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RevokedGroupsSyntax */
 /**
  * @summary RevokedGroupsSyntax

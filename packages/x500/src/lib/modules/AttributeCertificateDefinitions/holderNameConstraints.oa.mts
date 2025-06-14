@@ -6,14 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.mjs";
 import { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    HolderNameConstraintsSyntax,
-    _decode_HolderNameConstraintsSyntax,
-    _encode_HolderNameConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/HolderNameConstraintsSyntax.ta.mjs";
-export { id_ce_holderNameConstraints } from "../AttributeCertificateDefinitions/id-ce-holderNameConstraints.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION holderNameConstraints */
 /**
  * @summary holderNameConstraints

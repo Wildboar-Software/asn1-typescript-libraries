@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-export { ub_unformatted_address_length } from "../MTSAbstractService/ub-unformatted-address-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalUnformattedPostalAddress */
 /**
  * @summary UniversalUnformattedPostalAddress

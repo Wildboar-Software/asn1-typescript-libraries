@@ -15,17 +15,6 @@ import {
     _decode_NoticeReference,
     _encode_NoticeReference,
 } from "../AttributeCertificateDefinitions/NoticeReference.ta.mjs";
-export {
-    DisplayText,
-    _decode_DisplayText,
-    _encode_DisplayText,
-} from "../AttributeCertificateDefinitions/DisplayText.ta.mjs";
-export {
-    NoticeReference,
-    _decode_NoticeReference,
-    _encode_NoticeReference,
-} from "../AttributeCertificateDefinitions/NoticeReference.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UserNotice */
 /**
  * @summary UserNotice
@@ -196,9 +185,7 @@ export function _encode_UserNotice(
 ) {
     if (!_cached_encoder_for_UserNotice) {
         _cached_encoder_for_UserNotice = function (
-            value: UserNotice,
-            elGetter: $.ASN1Encoder<UserNotice>
-        ): _Element {
+            value: UserNotice        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

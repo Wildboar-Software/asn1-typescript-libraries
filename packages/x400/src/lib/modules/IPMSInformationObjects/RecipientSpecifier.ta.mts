@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,38 +17,8 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
-export {
-    ORDescriptor,
-    _decode_ORDescriptor,
-    _encode_ORDescriptor,
-} from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
 import {
     NotificationRequests,
-    NotificationRequests_rn /* IMPORTED_LONG_NAMED_BIT */,
-    rn /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_nrn /* IMPORTED_LONG_NAMED_BIT */,
-    nrn /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_ipm_return /* IMPORTED_LONG_NAMED_BIT */,
-    ipm_return /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_an_supported /* IMPORTED_LONG_NAMED_BIT */,
-    an_supported /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_suppress_an /* IMPORTED_LONG_NAMED_BIT */,
-    suppress_an /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_NotificationRequests,
-    _encode_NotificationRequests,
-} from '../IPMSInformationObjects/NotificationRequests.ta.mjs';
-export {
-    NotificationRequests,
-    NotificationRequests_rn /* IMPORTED_LONG_NAMED_BIT */,
-    rn /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_nrn /* IMPORTED_LONG_NAMED_BIT */,
-    nrn /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_ipm_return /* IMPORTED_LONG_NAMED_BIT */,
-    ipm_return /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_an_supported /* IMPORTED_LONG_NAMED_BIT */,
-    an_supported /* IMPORTED_SHORT_NAMED_BIT */,
-    NotificationRequests_suppress_an /* IMPORTED_LONG_NAMED_BIT */,
-    suppress_an /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_NotificationRequests,
     _encode_NotificationRequests,
 } from '../IPMSInformationObjects/NotificationRequests.ta.mjs';
@@ -111,12 +27,6 @@ import {
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
 } from '../IPMSInformationObjects/RecipientExtensionsField.ta.mjs';
-export {
-    RecipientExtensionsField,
-    _decode_RecipientExtensionsField,
-    _encode_RecipientExtensionsField,
-} from '../IPMSInformationObjects/RecipientExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RecipientSpecifier */
 /**
  * @summary RecipientSpecifier
@@ -358,9 +268,7 @@ export function _encode_RecipientSpecifier(
 ) {
     if (!_cached_encoder_for_RecipientSpecifier) {
         _cached_encoder_for_RecipientSpecifier = function (
-            value: RecipientSpecifier,
-            elGetter: $.ASN1Encoder<RecipientSpecifier>
-        ): _Element {
+            value: RecipientSpecifier        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -61,67 +61,6 @@ import {
     _decode_ReleaseRsp,
     _encode_ReleaseRsp,
 } from "../Wrapper/ReleaseRsp.ta.mjs";
-export {
-    ApplAbort,
-    _decode_ApplAbort,
-    _encode_ApplAbort,
-} from "../Wrapper/ApplAbort.ta.mjs";
-export {
-    DataTransferClient,
-    _decode_DataTransferClient,
-    _encode_DataTransferClient,
-} from "../Wrapper/DataTransferClient.ta.mjs";
-export {
-    DataTransferServer,
-    _decode_DataTransferServer,
-    _encode_DataTransferServer,
-} from "../Wrapper/DataTransferServer.ta.mjs";
-export {
-    DtSecAbort,
-    _decode_DtSecAbort,
-    _encode_DtSecAbort,
-} from "../Wrapper/DtSecAbort.ta.mjs";
-export {
-    HandshakeAcc,
-    _decode_HandshakeAcc,
-    _encode_HandshakeAcc,
-} from "../Wrapper/HandshakeAcc.ta.mjs";
-export {
-    HandshakeProAbort,
-    _decode_HandshakeProAbort,
-    _encode_HandshakeProAbort,
-} from "../Wrapper/HandshakeProAbort.ta.mjs";
-export {
-    HandshakeProRej,
-    _decode_HandshakeProRej,
-    _encode_HandshakeProRej,
-} from "../Wrapper/HandshakeProRej.ta.mjs";
-export {
-    HandshakeReq,
-    _decode_HandshakeReq,
-    _encode_HandshakeReq,
-} from "../Wrapper/HandshakeReq.ta.mjs";
-export {
-    HandshakeSecAbort,
-    _decode_HandshakeSecAbort,
-    _encode_HandshakeSecAbort,
-} from "../Wrapper/HandshakeSecAbort.ta.mjs";
-export {
-    HandshakeWrpRej,
-    _decode_HandshakeWrpRej,
-    _encode_HandshakeWrpRej,
-} from "../Wrapper/HandshakeWrpRej.ta.mjs";
-export {
-    ReleaseReq,
-    _decode_ReleaseReq,
-    _encode_ReleaseReq,
-} from "../Wrapper/ReleaseReq.ta.mjs";
-export {
-    ReleaseRsp,
-    _decode_ReleaseRsp,
-    _encode_ReleaseRsp,
-} from "../Wrapper/ReleaseRsp.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION WrapperPDU */
 /**
  * @summary WrapperPDU

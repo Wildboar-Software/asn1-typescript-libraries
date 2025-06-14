@@ -239,9 +239,7 @@ export function _encode_CertUnsubscribeReq(
 ) {
     if (!_cached_encoder_for_CertUnsubscribeReq) {
         _cached_encoder_for_CertUnsubscribeReq = function (
-            value: CertUnsubscribeReq,
-            elGetter: $.ASN1Encoder<CertUnsubscribeReq>
-        ): _Element {
+            value: CertUnsubscribeReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

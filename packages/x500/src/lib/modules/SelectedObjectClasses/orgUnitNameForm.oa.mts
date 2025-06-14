@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
 import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
-export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION orgUnitNameForm */
 /**
  * @summary orgUnitNameForm

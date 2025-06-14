@@ -49,52 +49,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmWithInvoke,
-    _decode_AlgorithmWithInvoke,
-    _encode_AlgorithmWithInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-export { SupportedProtSet } from "../ProtProtocols/SupportedProtSet.osa.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    DER_AttributeCertificate,
-    _decode_DER_AttributeCertificate,
-    _encode_DER_AttributeCertificate,
-} from "../Wrapper/DER-AttributeCertificate.ta.mjs";
-export {
-    DER_PkiPath,
-    _decode_DER_PkiPath,
-    _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta.mjs";
-export {
-    TbsHandshakeReq_encr_mode,
-    _decode_TbsHandshakeReq_encr_mode,
-    _encode_TbsHandshakeReq_encr_mode,
-} from "../Wrapper/TbsHandshakeReq-encr-mode.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_BIT */,
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_Version,
-    _encode_Version,
-} from "../Wrapper/Version.ta.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeReq */
 /**
  * @summary TbsHandshakeReq
@@ -502,9 +456,7 @@ export function _encode_TbsHandshakeReq(
 ) {
     if (!_cached_encoder_for_TbsHandshakeReq) {
         _cached_encoder_for_TbsHandshakeReq = function (
-            value: TbsHandshakeReq,
-            elGetter: $.ASN1Encoder<TbsHandshakeReq>
-        ): _Element {
+            value: TbsHandshakeReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

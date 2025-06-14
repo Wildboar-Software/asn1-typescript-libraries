@@ -16,17 +16,6 @@ import {
     _decode_TotalRefresh,
     _encode_TotalRefresh,
 } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
-export {
-    IncrementalRefresh,
-    _decode_IncrementalRefresh,
-    _encode_IncrementalRefresh,
-} from "../DirectoryShadowAbstractService/IncrementalRefresh.ta.mjs";
-export {
-    TotalRefresh,
-    _decode_TotalRefresh,
-    _encode_TotalRefresh,
-} from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RefreshInformation */
 /**
  * @summary RefreshInformation

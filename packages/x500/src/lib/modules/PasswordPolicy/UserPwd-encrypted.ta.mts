@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UserPwd_encrypted */
 /**
  * @summary UserPwd_encrypted
@@ -186,9 +180,7 @@ export function _encode_UserPwd_encrypted(
 ) {
     if (!_cached_encoder_for_UserPwd_encrypted) {
         _cached_encoder_for_UserPwd_encrypted = function (
-            value: UserPwd_encrypted,
-            elGetter: $.ASN1Encoder<UserPwd_encrypted>
-        ): _Element {
+            value: UserPwd_encrypted        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

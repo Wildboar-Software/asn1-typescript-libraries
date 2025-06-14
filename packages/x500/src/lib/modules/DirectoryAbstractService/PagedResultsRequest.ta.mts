@@ -10,12 +10,6 @@ import {
     _decode_PagedResultsRequest_newRequest,
     _encode_PagedResultsRequest_newRequest,
 } from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta.mjs";
-export {
-    PagedResultsRequest_newRequest,
-    _decode_PagedResultsRequest_newRequest,
-    _encode_PagedResultsRequest_newRequest,
-} from "../DirectoryAbstractService/PagedResultsRequest-newRequest.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PagedResultsRequest */
 /**
  * @summary PagedResultsRequest

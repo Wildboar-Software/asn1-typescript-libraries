@@ -6,14 +6,6 @@ import {
     _encode_DomainParameters,
 } from "../AlgorithmObjectIdentifiers/DomainParameters.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { dh_public_number } from "../AlgorithmObjectIdentifiers/dh-public-number.va.mjs";
-export {
-    DomainParameters,
-    _decode_DomainParameters,
-    _encode_DomainParameters,
-} from "../AlgorithmObjectIdentifiers/DomainParameters.ta.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dh_public_numberAlgorithm */
 /**
  * @summary dh_public_numberAlgorithm

@@ -6,14 +6,6 @@ import {
     _decode_SubjectAltPublicKeyInfo,
     _encode_SubjectAltPublicKeyInfo,
 } from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_subjectAltPublicKeyInfo } from "../CertificateExtensions/id-ce-subjectAltPublicKeyInfo.va.mjs";
-export {
-    SubjectAltPublicKeyInfo,
-    _decode_SubjectAltPublicKeyInfo,
-    _encode_SubjectAltPublicKeyInfo,
-} from "../CertificateExtensions/SubjectAltPublicKeyInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subjectAltPublicKeyInfo */
 /**
  * @summary subjectAltPublicKeyInfo

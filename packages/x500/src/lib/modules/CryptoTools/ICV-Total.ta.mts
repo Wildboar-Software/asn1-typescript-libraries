@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-export {
-    AlgorithmWithInvoke,
-    _decode_AlgorithmWithInvoke,
-    _encode_AlgorithmWithInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmWithInvoke.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ICV_Total */
 /**
  * @summary ICV_Total
@@ -251,9 +245,7 @@ export function _get_encoder_for_ICV_Total<ToBeProtected>(
     _encode_ToBeProtected: $.ASN1Encoder<ToBeProtected>
 ) {
     return function (
-        value: ICV_Total<ToBeProtected>,
-        elGetter: $.ASN1Encoder<ICV_Total<ToBeProtected>>
-    ): _Element {
+        value: ICV_Total<ToBeProtected>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

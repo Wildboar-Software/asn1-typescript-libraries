@@ -4,14 +4,6 @@ import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
 import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
 import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
-export { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
-export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION resPersonNameForm */
 /**
  * @summary resPersonNameForm

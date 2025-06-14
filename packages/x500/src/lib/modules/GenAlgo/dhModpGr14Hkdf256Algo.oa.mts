@@ -11,19 +11,6 @@ import {
     _encode_Payload14,
 } from "../GenAlgo/Payload14.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-export {
-    Group14,
-    _decode_Group14,
-    _encode_Group14,
-} from "../GenAlgo/Group14.ta.mjs";
-export { id_algo_dhModpGr14Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr14Hkdf256Algo.va.mjs";
-export {
-    Payload14,
-    _decode_Payload14,
-    _encode_Payload14,
-} from "../GenAlgo/Payload14.ta.mjs";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dhModpGr14Hkdf256Algo */
 /**
  * @summary dhModpGr14Hkdf256Algo

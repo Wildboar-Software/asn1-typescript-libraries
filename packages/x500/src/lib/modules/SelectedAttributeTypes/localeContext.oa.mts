@@ -7,14 +7,6 @@ import {
     _decode_LocaleContextSyntax,
     _encode_LocaleContextSyntax,
 } from "../SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.mjs";
-export {
-    LocaleContextSyntax,
-    _decode_LocaleContextSyntax,
-    _encode_LocaleContextSyntax,
-} from "../SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION localeContext */
 /**
  * @summary localeContext

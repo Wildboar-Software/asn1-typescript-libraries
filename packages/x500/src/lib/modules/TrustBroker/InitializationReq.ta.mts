@@ -10,14 +10,6 @@ import {
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_BIT */,
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_Version,
-    _encode_Version,
-} from "../Wrapper/Version.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InitializationReq */
 /**
  * @summary InitializationReq
@@ -168,9 +160,7 @@ export function _encode_InitializationReq(
 ) {
     if (!_cached_encoder_for_InitializationReq) {
         _cached_encoder_for_InitializationReq = function (
-            value: InitializationReq,
-            elGetter: $.ASN1Encoder<InitializationReq>
-        ): _Element {
+            value: InitializationReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

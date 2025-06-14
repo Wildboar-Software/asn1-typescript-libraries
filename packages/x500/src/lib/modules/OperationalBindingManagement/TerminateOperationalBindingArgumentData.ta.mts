@@ -26,29 +26,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    TerminateOperationalBindingArgumentData_initiator,
-    _decode_TerminateOperationalBindingArgumentData_initiator,
-    _encode_TerminateOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../OperationalBindingManagement/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TerminateOperationalBindingArgumentData */
 /**
  * @summary TerminateOperationalBindingArgumentData
@@ -317,9 +294,7 @@ export function _encode_TerminateOperationalBindingArgumentData(
 ) {
     if (!_cached_encoder_for_TerminateOperationalBindingArgumentData) {
         _cached_encoder_for_TerminateOperationalBindingArgumentData = function (
-            value: TerminateOperationalBindingArgumentData,
-            elGetter: $.ASN1Encoder<TerminateOperationalBindingArgumentData>
-        ): _Element {
+            value: TerminateOperationalBindingArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,14 +6,6 @@ import {
     _encode_AvlId,
 } from "../CertificateExtensions/AvlId.ta.mjs";
 import { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AvlId,
-    _decode_AvlId,
-    _encode_AvlId,
-} from "../CertificateExtensions/AvlId.ta.mjs";
-export { id_ce_authorizationValidation } from "../CertificateExtensions/id-ce-authorizationValidation.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION authorizationValidation */
 /**
  * @summary authorizationValidation

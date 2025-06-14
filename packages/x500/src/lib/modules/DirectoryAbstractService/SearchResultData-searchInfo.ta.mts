@@ -36,41 +36,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    EntryInformation,
-    _decode_EntryInformation,
-    _encode_EntryInformation,
-} from "../DirectoryAbstractService/EntryInformation.ta.mjs";
-export {
-    PartialOutcomeQualifier,
-    _decode_PartialOutcomeQualifier,
-    _encode_PartialOutcomeQualifier,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
 import {
     CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
@@ -390,9 +355,7 @@ export function _encode_SearchResultData_searchInfo(
 ) {
     if (!_cached_encoder_for_SearchResultData_searchInfo) {
         _cached_encoder_for_SearchResultData_searchInfo = function (
-            value: SearchResultData_searchInfo,
-            elGetter: $.ASN1Encoder<SearchResultData_searchInfo>
-        ): _Element {
+            value: SearchResultData_searchInfo        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

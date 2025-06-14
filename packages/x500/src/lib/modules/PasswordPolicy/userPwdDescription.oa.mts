@@ -6,14 +6,6 @@ import {
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_userPwdDescription } from "../PasswordPolicy/id-asx-userPwdDescription.va.mjs";
-export {
-    UserPwd,
-    _decode_UserPwd,
-    _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION userPwdDescription */
 /**
  * @summary userPwdDescription

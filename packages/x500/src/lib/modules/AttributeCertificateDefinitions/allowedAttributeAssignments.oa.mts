@@ -6,14 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.mjs";
 import { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AllowedAttributeAssignments,
-    _decode_AllowedAttributeAssignments,
-    _encode_AllowedAttributeAssignments,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.mjs";
-export { id_ce_allowedAttributeAssignments } from "../AttributeCertificateDefinitions/id-ce-allowedAttributeAssignments.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION allowedAttributeAssignments */
 /**
  * @summary allowedAttributeAssignments

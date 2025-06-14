@@ -9,24 +9,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    ContextCombination,
-    _decode_ContextCombination,
-    _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta.mjs";
-export {
-    ContextProfile,
-    _decode_ContextProfile,
-    _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta.mjs";
-export {
-    MatchingUse,
-    _decode_MatchingUse,
-    _encode_MatchingUse,
-} from "../ServiceAdministration/MatchingUse.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION REQUEST_ATTRIBUTE */
 /**
  * @summary REQUEST_ATTRIBUTE

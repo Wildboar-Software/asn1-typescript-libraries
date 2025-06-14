@@ -7,17 +7,6 @@ import {
 import { certPairAssertion } from "../CertificateExtensions/certPairAssertion.oa.mjs";
 import { id_mr_certificatePairMatch } from "../CertificateExtensions/id-mr-certificatePairMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    CertificatePairAssertion,
-    _decode_CertificatePairAssertion,
-    _encode_CertificatePairAssertion,
-} from "../CertificateExtensions/CertificatePairAssertion.ta.mjs";
-export { certPairAssertion } from "../CertificateExtensions/certPairAssertion.oa.mjs";
-export { id_mr_certificatePairMatch } from "../CertificateExtensions/id-mr-certificatePairMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certificatePairMatch */
 /**
  * @summary certificatePairMatch

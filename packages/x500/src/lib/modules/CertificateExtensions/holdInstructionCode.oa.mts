@@ -6,14 +6,6 @@ import {
     _encode_HoldInstruction,
 } from "../CertificateExtensions/HoldInstruction.ta.mjs";
 import { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    HoldInstruction,
-    _decode_HoldInstruction,
-    _encode_HoldInstruction,
-} from "../CertificateExtensions/HoldInstruction.ta.mjs";
-export { id_ce_holdInstructionCode } from "../CertificateExtensions/id-ce-holdInstructionCode.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION holdInstructionCode */
 /**
  * @summary holdInstructionCode

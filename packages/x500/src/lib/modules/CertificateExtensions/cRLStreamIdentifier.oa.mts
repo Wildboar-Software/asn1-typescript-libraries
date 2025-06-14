@@ -6,14 +6,6 @@ import {
     _encode_CRLStreamIdentifier,
 } from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";
 import { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    CRLStreamIdentifier,
-    _decode_CRLStreamIdentifier,
-    _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";
-export { id_ce_cRLStreamIdentifier } from "../CertificateExtensions/id-ce-cRLStreamIdentifier.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION cRLStreamIdentifier */
 /**
  * @summary cRLStreamIdentifier

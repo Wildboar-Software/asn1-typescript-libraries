@@ -5,13 +5,6 @@ import {
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
 } from "../MTSAbstractService/UniversalOrganizationalUnitNames.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalOrganizationalUnitNames,
-    _decode_UniversalOrganizationalUnitNames,
-    _encode_UniversalOrganizationalUnitNames,
-} from "../MTSAbstractService/UniversalOrganizationalUnitNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_organizational_unit_names */
 /**
  * @summary universal_organizational_unit_names

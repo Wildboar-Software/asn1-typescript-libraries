@@ -6,12 +6,6 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OPTIONALLY_PROTECTED */
 /**
  * @summary OPTIONALLY_PROTECTED

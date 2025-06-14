@@ -5,13 +5,6 @@ import {
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
 } from "../MTSAbstractService/PostOfficeBoxAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PostOfficeBoxAddress,
-    _decode_PostOfficeBoxAddress,
-    _encode_PostOfficeBoxAddress,
-} from "../MTSAbstractService/PostOfficeBoxAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION post_office_box_address */
 /**
  * @summary post_office_box_address

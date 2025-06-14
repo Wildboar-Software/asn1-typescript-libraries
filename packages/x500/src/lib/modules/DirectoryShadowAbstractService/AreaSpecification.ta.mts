@@ -15,17 +15,6 @@ import {
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
 } from "../InformationFramework/SubtreeSpecification.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    SubtreeSpecification,
-    _decode_SubtreeSpecification,
-    _encode_SubtreeSpecification,
-} from "../InformationFramework/SubtreeSpecification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AreaSpecification */
 /**
  * @summary AreaSpecification
@@ -198,9 +187,7 @@ export function _encode_AreaSpecification(
 ) {
     if (!_cached_encoder_for_AreaSpecification) {
         _cached_encoder_for_AreaSpecification = function (
-            value: AreaSpecification,
-            elGetter: $.ASN1Encoder<AreaSpecification>
-        ): _Element {
+            value: AreaSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

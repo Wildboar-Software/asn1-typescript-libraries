@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { country } from "../SelectedObjectClasses/country.oa.mjs";
 import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-export { country } from "../SelectedObjectClasses/country.oa.mjs";
-export { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION countryNameForm */
 /**
  * @summary countryNameForm

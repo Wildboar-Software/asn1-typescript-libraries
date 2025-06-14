@@ -9,12 +9,6 @@ import {
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
 } from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.mjs";
-export {
-    CertReplaceErr_code,
-    _decode_CertReplaceErr_code,
-    _encode_CertReplaceErr_code,
-} from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReplaceErr */
 /**
  * @summary CertReplaceErr
@@ -160,9 +154,7 @@ export function _encode_CertReplaceErr(
 ) {
     if (!_cached_encoder_for_CertReplaceErr) {
         _cached_encoder_for_CertReplaceErr = function (
-            value: CertReplaceErr,
-            elGetter: $.ASN1Encoder<CertReplaceErr>
-        ): _Element {
+            value: CertReplaceErr        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

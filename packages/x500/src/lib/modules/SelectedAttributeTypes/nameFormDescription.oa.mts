@@ -6,14 +6,6 @@ import {
     _encode_NameFormDescription,
 } from "../SchemaAdministration/NameFormDescription.ta.mjs";
 import { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    NameFormDescription,
-    _decode_NameFormDescription,
-    _encode_NameFormDescription,
-} from "../SchemaAdministration/NameFormDescription.ta.mjs";
-export { id_lsx_nameFormDescription } from "../SelectedAttributeTypes/id-lsx-nameFormDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION nameFormDescription */
 /**
  * @summary nameFormDescription

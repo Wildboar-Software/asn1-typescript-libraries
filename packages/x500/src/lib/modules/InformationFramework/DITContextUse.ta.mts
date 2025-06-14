@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DITContextUse */
 /**
  * @summary DITContextUse
@@ -222,9 +219,7 @@ export function _encode_DITContextUse(
 ) {
     if (!_cached_encoder_for_DITContextUse) {
         _cached_encoder_for_DITContextUse = function (
-            value: DITContextUse,
-            elGetter: $.ASN1Encoder<DITContextUse>
-        ): _Element {
+            value: DITContextUse        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

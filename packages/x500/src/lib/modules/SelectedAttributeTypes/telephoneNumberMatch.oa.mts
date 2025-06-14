@@ -7,17 +7,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.mjs";
-export { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.mjs";
-export {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-    _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION telephoneNumberMatch */
 /**
  * @summary telephoneNumberMatch

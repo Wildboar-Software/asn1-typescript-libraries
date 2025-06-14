@@ -14,32 +14,6 @@ import { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organiz
 import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
 import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
 import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
-export { roleOccupant } from "../SelectedAttributeTypes/roleOccupant.oa.mjs";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
-export { id_oc_organizationalRole } from "../SelectedObjectClasses/id-oc-organizationalRole.va.mjs";
-export { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
-export { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
-export { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION organizationalRole */
 /**
  * @summary organizationalRole

@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    AgreementID,
-    _decode_AgreementID,
-    _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ServiceControls_manageDSAITPlaneRef */
 /**
  * @summary ServiceControls_manageDSAITPlaneRef
@@ -193,9 +182,7 @@ export function _encode_ServiceControls_manageDSAITPlaneRef(
 ) {
     if (!_cached_encoder_for_ServiceControls_manageDSAITPlaneRef) {
         _cached_encoder_for_ServiceControls_manageDSAITPlaneRef = function (
-            value: ServiceControls_manageDSAITPlaneRef,
-            elGetter: $.ASN1Encoder<ServiceControls_manageDSAITPlaneRef>
-        ): _Element {
+            value: ServiceControls_manageDSAITPlaneRef        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

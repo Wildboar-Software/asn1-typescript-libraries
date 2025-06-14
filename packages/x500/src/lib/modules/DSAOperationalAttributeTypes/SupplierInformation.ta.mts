@@ -31,36 +31,6 @@ import {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    SupplierOrConsumer,
-    _decode_SupplierOrConsumer,
-    _encode_SupplierOrConsumer,
-} from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ProtocolInformation,
-    _decode_ProtocolInformation,
-    _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import {
     SupplierOrConsumer,
     _root_component_type_list_1_spec_for_SupplierOrConsumer,
@@ -334,9 +304,7 @@ export function _encode_SupplierInformation(
 ) {
     if (!_cached_encoder_for_SupplierInformation) {
         _cached_encoder_for_SupplierInformation = function (
-            value: SupplierInformation,
-            elGetter: $.ASN1Encoder<SupplierInformation>
-        ): _Element {
+            value: SupplierInformation        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

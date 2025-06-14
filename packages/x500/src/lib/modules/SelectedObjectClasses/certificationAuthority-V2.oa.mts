@@ -6,24 +6,6 @@ import {
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa.mjs";
 import { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va.mjs";
-export { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { certificationAuthority } from "../SelectedObjectClasses/certificationAuthority.oa.mjs";
-export { id_oc_certificationAuthority_V2 } from "../SelectedObjectClasses/id-oc-certificationAuthority-V2.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certificationAuthority_V2 */
 /**
  * @summary certificationAuthority_V2

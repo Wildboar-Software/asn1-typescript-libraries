@@ -5,13 +5,6 @@ import {
     _decode_PDSName,
     _encode_PDSName,
 } from "../MTSAbstractService/PDSName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PDSName,
-    _decode_PDSName,
-    _encode_PDSName,
-} from "../MTSAbstractService/PDSName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pds_name */
 /**
  * @summary pds_name

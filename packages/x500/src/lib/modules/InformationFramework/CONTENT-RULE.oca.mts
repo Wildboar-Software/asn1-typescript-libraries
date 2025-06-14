@@ -3,9 +3,6 @@ import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CONTENT_RULE */
 /**
  * @summary CONTENT_RULE

@@ -5,13 +5,6 @@ import {
     _decode_TeletexPersonalName,
     _encode_TeletexPersonalName,
 } from "../MTSAbstractService/TeletexPersonalName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    TeletexPersonalName,
-    _decode_TeletexPersonalName,
-    _encode_TeletexPersonalName,
-} from "../MTSAbstractService/TeletexPersonalName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletex_personal_name */
 /**
  * @summary teletex_personal_name

@@ -11,17 +11,6 @@ import {
     _decode_AddAvlOK,
     _encode_AddAvlOK,
 } from "../AVL-management/AddAvlOK.ta.mjs";
-export {
-    AddAvlErr,
-    _decode_AddAvlErr,
-    _encode_AddAvlErr,
-} from "../AVL-management/AddAvlErr.ta.mjs";
-export {
-    AddAvlOK,
-    _decode_AddAvlOK,
-    _encode_AddAvlOK,
-} from "../AVL-management/AddAvlOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AddAvlRsp_result */
 /**
  * @summary AddAvlRsp_result

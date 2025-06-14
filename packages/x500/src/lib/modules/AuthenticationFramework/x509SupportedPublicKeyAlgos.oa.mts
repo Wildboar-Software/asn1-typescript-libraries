@@ -6,14 +6,6 @@ import {
     _encode_SupportedPublicKeyAlgorithms,
 } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.mjs";
-export {
-    SupportedPublicKeyAlgorithms,
-    _decode_SupportedPublicKeyAlgorithms,
-    _encode_SupportedPublicKeyAlgorithms,
-} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x509SupportedPublicKeyAlgos */
 /**
  * @summary x509SupportedPublicKeyAlgos

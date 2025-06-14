@@ -21,22 +21,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    CRLScopeSyntax,
-    _decode_CRLScopeSyntax,
-    _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";
-export {
-    DeltaRefInfo,
-    _decode_DeltaRefInfo,
-    _encode_DeltaRefInfo,
-} from "../CertificateExtensions/DeltaRefInfo.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CRLReferral */
 /**
  * @summary CRLReferral
@@ -309,9 +293,7 @@ export function _encode_CRLReferral(
 ) {
     if (!_cached_encoder_for_CRLReferral) {
         _cached_encoder_for_CRLReferral = function (
-            value: CRLReferral,
-            elGetter: $.ASN1Encoder<CRLReferral>
-        ): _Element {
+            value: CRLReferral        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

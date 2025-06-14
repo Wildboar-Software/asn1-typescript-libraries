@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
 import { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
 import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
-export { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
-export { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dMDNameForm */
 /**
  * @summary dMDNameForm

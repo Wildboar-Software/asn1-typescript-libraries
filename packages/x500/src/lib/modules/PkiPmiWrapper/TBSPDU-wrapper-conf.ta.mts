@@ -11,17 +11,6 @@ import {
     _decode_WrappedPDUInfo,
     _encode_WrappedPDUInfo,
 } from "../PkiPmiWrapper/WrappedPDUInfo.ta.mjs";
-export {
-    EncryptedInfo,
-    _decode_EncryptedInfo,
-    _encode_EncryptedInfo,
-} from "../PkiPmiWrapper/EncryptedInfo.ta.mjs";
-export {
-    WrappedPDUInfo,
-    _decode_WrappedPDUInfo,
-    _encode_WrappedPDUInfo,
-} from "../PkiPmiWrapper/WrappedPDUInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper_conf */
 /**
  * @summary TBSPDU_wrapper_conf

@@ -360,9 +360,7 @@ export function _encode_OpBindingErrorParam(
 ) {
     if (!_cached_encoder_for_OpBindingErrorParam) {
         _cached_encoder_for_OpBindingErrorParam = function (
-            value: OpBindingErrorParam,
-            elGetter: $.ASN1Encoder<OpBindingErrorParam>
-        ): _Element {
+            value: OpBindingErrorParam        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

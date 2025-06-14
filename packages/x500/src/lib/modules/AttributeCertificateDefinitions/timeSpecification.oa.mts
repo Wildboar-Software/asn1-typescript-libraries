@@ -6,14 +6,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-export { id_ce_timeSpecification } from "../AttributeCertificateDefinitions/id-ce-timeSpecification.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    TimeSpecification,
-    _decode_TimeSpecification,
-    _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION timeSpecification */
 /**
  * @summary timeSpecification

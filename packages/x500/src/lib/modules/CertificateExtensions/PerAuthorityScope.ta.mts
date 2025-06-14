@@ -40,68 +40,6 @@ import {
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
-export {
-    BaseRevocationInfo,
-    _decode_BaseRevocationInfo,
-    _encode_BaseRevocationInfo,
-} from "../CertificateExtensions/BaseRevocationInfo.ta.mjs";
-export {
-    DistributionPointName,
-    _decode_DistributionPointName,
-    _encode_DistributionPointName,
-} from "../CertificateExtensions/DistributionPointName.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    NumberRange,
-    _decode_NumberRange,
-    _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta.mjs";
-export {
-    attribute /* IMPORTED_SHORT_NAMED_BIT */,
-    authority /* IMPORTED_SHORT_NAMED_BIT */,
-    OnlyCertificateTypes,
-    OnlyCertificateTypes_attribute /* IMPORTED_LONG_NAMED_BIT */,
-    OnlyCertificateTypes_authority /* IMPORTED_LONG_NAMED_BIT */,
-    OnlyCertificateTypes_user /* IMPORTED_LONG_NAMED_BIT */,
-    user /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_OnlyCertificateTypes,
-    _encode_OnlyCertificateTypes,
-} from "../CertificateExtensions/OnlyCertificateTypes.ta.mjs";
-export {
-    aACompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */,
-    cACompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    certificateHold /* IMPORTED_SHORT_NAMED_BIT */,
-    cessationOfOperation /* IMPORTED_SHORT_NAMED_BIT */,
-    keyCompromise /* IMPORTED_SHORT_NAMED_BIT */,
-    privilegeWithdrawn /* IMPORTED_SHORT_NAMED_BIT */,
-    ReasonFlags,
-    ReasonFlags_aACompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_affiliationChanged /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_cACompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_certificateHold /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_cessationOfOperation /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_keyCompromise /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_privilegeWithdrawn /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_superseded /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_unused /* IMPORTED_LONG_NAMED_BIT */,
-    ReasonFlags_weakAlgorithmOrKey /* IMPORTED_LONG_NAMED_BIT */,
-    superseded /* IMPORTED_SHORT_NAMED_BIT */,
-    unused /* IMPORTED_SHORT_NAMED_BIT */,
-    weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ReasonFlags,
-    _encode_ReasonFlags,
-} from "../CertificateExtensions/ReasonFlags.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PerAuthorityScope */
 /**
  * @summary PerAuthorityScope
@@ -421,9 +359,7 @@ export function _encode_PerAuthorityScope(
 ) {
     if (!_cached_encoder_for_PerAuthorityScope) {
         _cached_encoder_for_PerAuthorityScope = function (
-            value: PerAuthorityScope,
-            elGetter: $.ASN1Encoder<PerAuthorityScope>
-        ): _Element {
+            value: PerAuthorityScope        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

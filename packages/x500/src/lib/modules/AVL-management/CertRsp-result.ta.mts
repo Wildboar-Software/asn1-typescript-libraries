@@ -11,17 +11,6 @@ import {
     _decode_CertOK,
     _encode_CertOK,
 } from "../AVL-management/CertOK.ta.mjs";
-export {
-    CertErr,
-    _decode_CertErr,
-    _encode_CertErr,
-} from "../AVL-management/CertErr.ta.mjs";
-export {
-    CertOK,
-    _decode_CertOK,
-    _encode_CertOK,
-} from "../AVL-management/CertOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertRsp_result */
 /**
  * @summary CertRsp_result

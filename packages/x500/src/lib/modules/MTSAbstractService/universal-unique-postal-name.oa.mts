@@ -5,13 +5,6 @@ import {
     _decode_UniversalUniquePostalName,
     _encode_UniversalUniquePostalName,
 } from "../MTSAbstractService/UniversalUniquePostalName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalUniquePostalName,
-    _decode_UniversalUniquePostalName,
-    _encode_UniversalUniquePostalName,
-} from "../MTSAbstractService/UniversalUniquePostalName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_unique_postal_name */
 /**
  * @summary universal_unique_postal_name

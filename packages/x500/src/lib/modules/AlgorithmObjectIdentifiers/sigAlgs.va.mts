@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { nistAlgorithms } from "../AlgorithmObjectIdentifiers/nistAlgorithms.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { nistAlgorithms } from "../AlgorithmObjectIdentifiers/nistAlgorithms.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sigAlgs */
 /**
  * @summary sigAlgs

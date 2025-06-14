@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeReq_certs_Item */
 /**
  * @summary CertUnsubscribeReq_certs_Item
@@ -193,9 +182,7 @@ export function _encode_CertUnsubscribeReq_certs_Item(
 ) {
     if (!_cached_encoder_for_CertUnsubscribeReq_certs_Item) {
         _cached_encoder_for_CertUnsubscribeReq_certs_Item = function (
-            value: CertUnsubscribeReq_certs_Item,
-            elGetter: $.ASN1Encoder<CertUnsubscribeReq_certs_Item>
-        ): _Element {
+            value: CertUnsubscribeReq_certs_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

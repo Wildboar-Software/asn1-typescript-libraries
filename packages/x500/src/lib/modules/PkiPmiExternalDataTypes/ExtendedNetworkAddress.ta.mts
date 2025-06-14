@@ -11,17 +11,6 @@ import {
     _decode_PresentationAddress,
     _encode_PresentationAddress,
 } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ExtendedNetworkAddress_e163_4_address,
-    _decode_ExtendedNetworkAddress_e163_4_address,
-    _encode_ExtendedNetworkAddress_e163_4_address,
-} from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress-e163-4-address.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtendedNetworkAddress */
 /**
  * @summary ExtendedNetworkAddress

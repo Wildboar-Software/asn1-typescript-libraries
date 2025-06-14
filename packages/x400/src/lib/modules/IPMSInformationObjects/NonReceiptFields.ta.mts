@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,57 +14,16 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
-    NonReceiptReasonField_ipm_discarded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_discarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    NonReceiptReasonField_ipm_auto_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_auto_forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_NonReceiptReasonField,
-    _encode_NonReceiptReasonField,
-} from '../IPMSInformationObjects/NonReceiptReasonField.ta.mjs';
-export {
-    NonReceiptReasonField,
-    _enum_for_NonReceiptReasonField,
-    NonReceiptReasonField_ipm_discarded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_discarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    NonReceiptReasonField_ipm_auto_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_auto_forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
 } from '../IPMSInformationObjects/NonReceiptReasonField.ta.mjs';
 import {
     DiscardReasonField,
     _enum_for_DiscardReasonField,
-    DiscardReasonField_ipm_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_expired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_ipm_obsoleted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_obsoleted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_user_subscription_terminated /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    user_subscription_terminated /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_not_used /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    not_used /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_DiscardReasonField,
-    _encode_DiscardReasonField,
-} from '../IPMSInformationObjects/DiscardReasonField.ta.mjs';
-export {
-    DiscardReasonField,
-    _enum_for_DiscardReasonField,
-    DiscardReasonField_ipm_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_expired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_ipm_obsoleted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ipm_obsoleted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_user_subscription_terminated /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    user_subscription_terminated /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DiscardReasonField_not_used /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    not_used /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DiscardReasonField,
     _encode_DiscardReasonField,
 } from '../IPMSInformationObjects/DiscardReasonField.ta.mjs';
 import {
-    AutoForwardCommentField,
-    _decode_AutoForwardCommentField,
-    _encode_AutoForwardCommentField,
-} from '../IPMSInformationObjects/AutoForwardCommentField.ta.mjs';
-export {
     AutoForwardCommentField,
     _decode_AutoForwardCommentField,
     _encode_AutoForwardCommentField,
@@ -129,22 +33,11 @@ import {
     _decode_ReturnedIPMField,
     _encode_ReturnedIPMField,
 } from '../IPMSInformationObjects/ReturnedIPMField.ta.mjs';
-export {
-    ReturnedIPMField,
-    _decode_ReturnedIPMField,
-    _encode_ReturnedIPMField,
-} from '../IPMSInformationObjects/ReturnedIPMField.ta.mjs';
 import {
     NRNExtensionsField,
     _decode_NRNExtensionsField,
     _encode_NRNExtensionsField,
 } from '../IPMSInformationObjects/NRNExtensionsField.ta.mjs';
-export {
-    NRNExtensionsField,
-    _decode_NRNExtensionsField,
-    _encode_NRNExtensionsField,
-} from '../IPMSInformationObjects/NRNExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION NonReceiptFields */
 /**
  * @summary NonReceiptFields
@@ -402,9 +295,7 @@ export function _encode_NonReceiptFields(
 ) {
     if (!_cached_encoder_for_NonReceiptFields) {
         _cached_encoder_for_NonReceiptFields = function (
-            value: NonReceiptFields,
-            elGetter: $.ASN1Encoder<NonReceiptFields>
-        ): _Element {
+            value: NonReceiptFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

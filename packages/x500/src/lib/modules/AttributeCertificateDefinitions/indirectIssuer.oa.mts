@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_ce_indirectIssuer } from "../AttributeCertificateDefinitions/id-ce-indirectIssuer.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_indirectIssuer } from "../AttributeCertificateDefinitions/id-ce-indirectIssuer.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION indirectIssuer */
 /**
  * @summary indirectIssuer

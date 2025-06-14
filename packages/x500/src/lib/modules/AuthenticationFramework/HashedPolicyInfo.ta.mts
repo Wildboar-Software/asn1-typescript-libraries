@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { Policies } from "../AuthenticationFramework/Policies.osa.mjs";
-export { POLICY } from "../AuthenticationFramework/POLICY.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HashedPolicyInfo */
 /**
  * @summary HashedPolicyInfo

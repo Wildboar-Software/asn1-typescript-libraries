@@ -301,9 +301,7 @@ export function _encode_CoordinateShadowUpdateResultData(
             0,
             () =>
                 function (
-                    value: CoordinateShadowUpdateResultData,
-                    elGetter: $.ASN1Encoder<CoordinateShadowUpdateResultData>
-                ): _Element {
+                    value: CoordinateShadowUpdateResultData                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

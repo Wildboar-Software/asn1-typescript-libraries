@@ -31,38 +31,6 @@ import {
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
 } from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    PkiPath,
-    _decode_PkiPath,
-    _encode_PkiPath,
-} from "../AuthenticationFramework/PkiPath.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Version,
-    _encode_Version,
-} from "../AuthenticationFramework/Version.ta.mjs";
-export {
-    SignedAttributes,
-    _decode_SignedAttributes,
-    _encode_SignedAttributes,
-} from "../PkiPmiWrapper/SignedAttributes.ta.mjs";
-export {
-    TBSPDU_wrapper_conf,
-    _decode_TBSPDU_wrapper_conf,
-    _encode_TBSPDU_wrapper_conf,
-} from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBSPDU_wrapper */
 /**
  * @summary TBSPDU_wrapper
@@ -318,9 +286,7 @@ export function _encode_TBSPDU_wrapper(
 ) {
     if (!_cached_encoder_for_TBSPDU_wrapper) {
         _cached_encoder_for_TBSPDU_wrapper = function (
-            value: TBSPDU_wrapper,
-            elGetter: $.ASN1Encoder<TBSPDU_wrapper>
-        ): _Element {
+            value: TBSPDU_wrapper        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

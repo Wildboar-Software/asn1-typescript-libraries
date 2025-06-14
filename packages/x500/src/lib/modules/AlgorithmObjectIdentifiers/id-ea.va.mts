@@ -1,13 +1,6 @@
 /* eslint-disable */
 import { encryptionAlgorithm } from "../AlgorithmObjectIdentifiers/encryptionAlgorithm.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { encryptionAlgorithm } from "../AlgorithmObjectIdentifiers/encryptionAlgorithm.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ea */
 /**
  * @summary id_ea

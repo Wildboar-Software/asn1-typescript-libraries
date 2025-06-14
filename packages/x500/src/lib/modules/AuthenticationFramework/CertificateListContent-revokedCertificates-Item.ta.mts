@@ -20,22 +20,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from "../AuthenticationFramework/Extensions.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../AuthenticationFramework/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateListContent_revokedCertificates_Item */
 /**
  * @summary CertificateListContent_revokedCertificates_Item
@@ -243,9 +227,7 @@ export function _encode_CertificateListContent_revokedCertificates_Item(
 ) {
     if (!_cached_encoder_for_CertificateListContent_revokedCertificates_Item) {
         _cached_encoder_for_CertificateListContent_revokedCertificates_Item = function (
-            value: CertificateListContent_revokedCertificates_Item,
-            elGetter: $.ASN1Encoder<CertificateListContent_revokedCertificates_Item>
-        ): _Element {
+            value: CertificateListContent_revokedCertificates_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

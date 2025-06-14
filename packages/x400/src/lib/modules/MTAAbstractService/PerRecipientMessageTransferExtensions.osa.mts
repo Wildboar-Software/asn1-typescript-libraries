@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -65,44 +9,24 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
 import { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa.mjs';
-export { originator_requested_alternate_recipient } from '../MTAAbstractService/originator-requested-alternate-recipient.oa.mjs';
 import { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.mjs';
-export { requested_delivery_method } from '../MTSAbstractService/requested-delivery-method.oa.mjs';
 import { physical_forwarding_prohibited } from '../MTSAbstractService/physical-forwarding-prohibited.oa.mjs';
-export { physical_forwarding_prohibited } from '../MTSAbstractService/physical-forwarding-prohibited.oa.mjs';
 import { physical_forwarding_address_request } from '../MTSAbstractService/physical-forwarding-address-request.oa.mjs';
-export { physical_forwarding_address_request } from '../MTSAbstractService/physical-forwarding-address-request.oa.mjs';
 import { physical_delivery_modes } from '../MTSAbstractService/physical-delivery-modes.oa.mjs';
-export { physical_delivery_modes } from '../MTSAbstractService/physical-delivery-modes.oa.mjs';
 import { registered_mail_type } from '../MTSAbstractService/registered-mail-type.oa.mjs';
-export { registered_mail_type } from '../MTSAbstractService/registered-mail-type.oa.mjs';
 import { recipient_number_for_advice } from '../MTSAbstractService/recipient-number-for-advice.oa.mjs';
-export { recipient_number_for_advice } from '../MTSAbstractService/recipient-number-for-advice.oa.mjs';
 import { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.mjs';
-export { physical_rendition_attributes } from '../MTSAbstractService/physical-rendition-attributes.oa.mjs';
 import { physical_delivery_report_request } from '../MTSAbstractService/physical-delivery-report-request.oa.mjs';
-export { physical_delivery_report_request } from '../MTSAbstractService/physical-delivery-report-request.oa.mjs';
 import { message_token } from '../MTSAbstractService/message-token.oa.mjs';
-export { message_token } from '../MTSAbstractService/message-token.oa.mjs';
 import { content_integrity_check } from '../MTSAbstractService/content-integrity-check.oa.mjs';
-export { content_integrity_check } from '../MTSAbstractService/content-integrity-check.oa.mjs';
 import { proof_of_delivery_request } from '../MTSAbstractService/proof-of-delivery-request.oa.mjs';
-export { proof_of_delivery_request } from '../MTSAbstractService/proof-of-delivery-request.oa.mjs';
 import { certificate_selectors_override } from '../MTSAbstractService/certificate-selectors-override.oa.mjs';
-export { certificate_selectors_override } from '../MTSAbstractService/certificate-selectors-override.oa.mjs';
 import { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa.mjs';
-export { recipient_certificate } from '../MTSAbstractService/recipient-certificate.oa.mjs';
 import { redirection_history } from '../MTSAbstractService/redirection-history.oa.mjs';
-export { redirection_history } from '../MTSAbstractService/redirection-history.oa.mjs';
 import { IPMPerRecipientEnvelopeExtensions } from '../IPMSInformationObjects/IPMPerRecipientEnvelopeExtensions.osa.mjs';
-export { IPMPerRecipientEnvelopeExtensions } from '../IPMSInformationObjects/IPMPerRecipientEnvelopeExtensions.osa.mjs';
 import { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-export { PrivateExtensions } from '../MTSAbstractService/PrivateExtensions.osa.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PerRecipientMessageTransferExtensions */
 /**
  * @summary PerRecipientMessageTransferExtensions

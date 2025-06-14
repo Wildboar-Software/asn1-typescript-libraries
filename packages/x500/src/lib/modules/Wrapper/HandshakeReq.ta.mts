@@ -11,17 +11,6 @@ import {
     _decode_TbsHandshakeReq,
     _encode_TbsHandshakeReq,
 } from "../Wrapper/TbsHandshakeReq.ta.mjs";
-export {
-    Signed,
-    _get_decoder_for_Signed,
-    _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta.mjs";
-export {
-    TbsHandshakeReq,
-    _decode_TbsHandshakeReq,
-    _encode_TbsHandshakeReq,
-} from "../Wrapper/TbsHandshakeReq.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HandshakeReq */
 /**
  * @summary HandshakeReq

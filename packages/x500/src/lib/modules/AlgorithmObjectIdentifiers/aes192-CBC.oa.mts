@@ -6,14 +6,6 @@ import {
 } from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";
 import { id_aes192_CBC } from "../AlgorithmObjectIdentifiers/id-aes192-CBC.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export {
-    AES_InitializationVector,
-    _decode_AES_InitializationVector,
-    _encode_AES_InitializationVector,
-} from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";
-export { id_aes192_CBC } from "../AlgorithmObjectIdentifiers/id-aes192-CBC.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aes192_CBC */
 /**
  * @summary aes192_CBC

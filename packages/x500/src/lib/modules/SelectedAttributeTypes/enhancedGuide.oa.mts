@@ -6,14 +6,6 @@ import {
     _encode_EnhancedGuide,
 } from "../SelectedAttributeTypes/EnhancedGuide.ta.mjs";
 import { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    EnhancedGuide,
-    _decode_EnhancedGuide,
-    _encode_EnhancedGuide,
-} from "../SelectedAttributeTypes/EnhancedGuide.ta.mjs";
-export { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION enhancedGuide */
 /**
  * @summary enhancedGuide

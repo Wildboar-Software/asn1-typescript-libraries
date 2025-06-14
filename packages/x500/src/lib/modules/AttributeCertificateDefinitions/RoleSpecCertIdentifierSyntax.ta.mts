@@ -6,12 +6,6 @@ import {
     _decode_RoleSpecCertIdentifier,
     _encode_RoleSpecCertIdentifier,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
-export {
-    RoleSpecCertIdentifier,
-    _decode_RoleSpecCertIdentifier,
-    _encode_RoleSpecCertIdentifier,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifierSyntax */
 /**
  * @summary RoleSpecCertIdentifierSyntax

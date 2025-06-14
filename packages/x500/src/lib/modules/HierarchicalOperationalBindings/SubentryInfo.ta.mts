@@ -15,17 +15,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubentryInfo */
 /**
  * @summary SubentryInfo
@@ -198,9 +187,7 @@ export function _encode_SubentryInfo(
 ) {
     if (!_cached_encoder_for_SubentryInfo) {
         _cached_encoder_for_SubentryInfo = function (
-            value: SubentryInfo,
-            elGetter: $.ASN1Encoder<SubentryInfo>
-        ): _Element {
+            value: SubentryInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

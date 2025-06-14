@@ -6,12 +6,6 @@ import {
     _decode_MasterOrShadowAccessPoint,
     _encode_MasterOrShadowAccessPoint,
 } from "../DistributedOperations/MasterOrShadowAccessPoint.ta.mjs";
-export {
-    MasterOrShadowAccessPoint,
-    _decode_MasterOrShadowAccessPoint,
-    _encode_MasterOrShadowAccessPoint,
-} from "../DistributedOperations/MasterOrShadowAccessPoint.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MasterAndShadowAccessPoints */
 /**
  * @summary MasterAndShadowAccessPoints

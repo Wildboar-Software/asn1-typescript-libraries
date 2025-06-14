@@ -12,12 +12,6 @@ import {
     _decode_EpcFormat_fields_Item,
     _encode_EpcFormat_fields_Item,
 } from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.mjs";
-export {
-    EpcFormat_fields_Item,
-    _decode_EpcFormat_fields_Item,
-    _encode_EpcFormat_fields_Item,
-} from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EpcFormat */
 /**
  * @summary EpcFormat
@@ -241,9 +235,7 @@ export function _encode_EpcFormat(
 ) {
     if (!_cached_encoder_for_EpcFormat) {
         _cached_encoder_for_EpcFormat = function (
-            value: EpcFormat,
-            elGetter: $.ASN1Encoder<EpcFormat>
-        ): _Element {
+            value: EpcFormat        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

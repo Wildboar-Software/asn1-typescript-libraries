@@ -15,17 +15,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    AllowedAttributeAssignments_Item_attributes_Item,
-    _decode_AllowedAttributeAssignments_Item_attributes_Item,
-    _encode_AllowedAttributeAssignments_Item_attributes_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AllowedAttributeAssignments_Item */
 /**
  * @summary AllowedAttributeAssignments_Item
@@ -208,9 +197,7 @@ export function _encode_AllowedAttributeAssignments_Item(
 ) {
     if (!_cached_encoder_for_AllowedAttributeAssignments_Item) {
         _cached_encoder_for_AllowedAttributeAssignments_Item = function (
-            value: AllowedAttributeAssignments_Item,
-            elGetter: $.ASN1Encoder<AllowedAttributeAssignments_Item>
-        ): _Element {
+            value: AllowedAttributeAssignments_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

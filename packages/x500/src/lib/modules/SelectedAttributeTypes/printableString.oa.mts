@@ -3,9 +3,6 @@ import { PrintableString } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_printableString } from "../SelectedAttributeTypes/id-lsx-printableString.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_printableString } from "../SelectedAttributeTypes/id-lsx-printableString.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION printableString */
 /**
  * @summary printableString

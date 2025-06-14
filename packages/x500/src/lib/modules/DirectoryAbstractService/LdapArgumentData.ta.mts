@@ -509,9 +509,7 @@ export function _encode_LdapArgumentData(
 ) {
     if (!_cached_encoder_for_LdapArgumentData) {
         _cached_encoder_for_LdapArgumentData = function (
-            value: LdapArgumentData,
-            elGetter: $.ASN1Encoder<LdapArgumentData>
-        ): _Element {
+            value: LdapArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

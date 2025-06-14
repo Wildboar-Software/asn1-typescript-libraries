@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.mjs";
 import { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.mjs";
-export { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION applEntityNameForm */
 /**
  * @summary applEntityNameForm

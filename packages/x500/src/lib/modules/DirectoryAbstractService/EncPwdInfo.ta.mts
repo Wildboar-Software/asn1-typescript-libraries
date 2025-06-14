@@ -15,17 +15,6 @@ import {
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
 } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AttributeTypeAndValue,
-    _decode_AttributeTypeAndValue,
-    _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncPwdInfo */
 /**
  * @summary EncPwdInfo
@@ -218,9 +207,7 @@ export function _encode_EncPwdInfo(
 ) {
     if (!_cached_encoder_for_EncPwdInfo) {
         _cached_encoder_for_EncPwdInfo = function (
-            value: EncPwdInfo,
-            elGetter: $.ASN1Encoder<EncPwdInfo>
-        ): _Element {
+            value: EncPwdInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

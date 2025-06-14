@@ -21,22 +21,6 @@ import {
     _decode_RevokedCertificateGroup,
     _encode_RevokedCertificateGroup,
 } from "../CertificateExtensions/RevokedCertificateGroup.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    ReasonInfo,
-    _decode_ReasonInfo,
-    _encode_ReasonInfo,
-} from "../CertificateExtensions/ReasonInfo.ta.mjs";
-export {
-    RevokedCertificateGroup,
-    _decode_RevokedCertificateGroup,
-    _encode_RevokedCertificateGroup,
-} from "../CertificateExtensions/RevokedCertificateGroup.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RevokedGroup */
 /**
  * @summary RevokedGroup
@@ -268,9 +252,7 @@ export function _encode_RevokedGroup(
 ) {
     if (!_cached_encoder_for_RevokedGroup) {
         _cached_encoder_for_RevokedGroup = function (
-            value: RevokedGroup,
-            elGetter: $.ASN1Encoder<RevokedGroup>
-        ): _Element {
+            value: RevokedGroup        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

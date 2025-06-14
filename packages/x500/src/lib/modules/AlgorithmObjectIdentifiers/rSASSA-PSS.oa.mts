@@ -6,14 +6,6 @@ import {
     _encode_rSASSA_PSS_Type,
 } from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_RSASSA_PSS } from "../AlgorithmObjectIdentifiers/id-RSASSA-PSS.va.mjs";
-export {
-    rSASSA_PSS_Type,
-    _decode_rSASSA_PSS_Type,
-    _encode_rSASSA_PSS_Type,
-} from "../AlgorithmObjectIdentifiers/rSASSA-PSS-Type.ta.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION rSASSA_PSS */
 /**
  * @summary rSASSA_PSS

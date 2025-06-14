@@ -15,17 +15,6 @@ import {
     _decode_SDSEContent,
     _encode_SDSEContent,
 } from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
-export {
-    ContentChange,
-    _decode_ContentChange,
-    _encode_ContentChange,
-} from "../DirectoryShadowAbstractService/ContentChange.ta.mjs";
-export {
-    SDSEContent,
-    _decode_SDSEContent,
-    _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IncrementalStepRefresh_sDSEChanges */
 /**
  * @summary IncrementalStepRefresh_sDSEChanges

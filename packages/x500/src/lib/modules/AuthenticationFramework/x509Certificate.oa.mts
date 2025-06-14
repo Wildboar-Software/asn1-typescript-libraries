@@ -6,14 +6,6 @@ import {
 } from "../AuthenticationFramework/Certificate.ta.mjs";
 import { id_lsx_x509Certificate } from "../AuthenticationFramework/id-lsx-x509Certificate.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-export { id_lsx_x509Certificate } from "../AuthenticationFramework/id-lsx-x509Certificate.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x509Certificate */
 /**
  * @summary x509Certificate

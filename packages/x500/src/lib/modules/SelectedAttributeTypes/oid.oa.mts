@@ -3,9 +3,6 @@ import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_oid } from "../SelectedAttributeTypes/id-lsx-oid.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_oid } from "../SelectedAttributeTypes/id-lsx-oid.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION oid */
 /**
  * @summary oid

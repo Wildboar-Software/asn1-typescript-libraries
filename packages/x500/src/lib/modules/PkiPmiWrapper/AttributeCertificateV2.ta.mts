@@ -6,12 +6,6 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-export {
-    AttributeCertificate,
-    _decode_AttributeCertificate,
-    _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateV2 */
 /**
  * @summary AttributeCertificateV2

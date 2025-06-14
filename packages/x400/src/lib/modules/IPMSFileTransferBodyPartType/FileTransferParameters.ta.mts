@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -72,17 +17,7 @@ import {
     _decode_RelatedStoredFile,
     _encode_RelatedStoredFile,
 } from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta.mjs';
-export {
-    RelatedStoredFile,
-    _decode_RelatedStoredFile,
-    _encode_RelatedStoredFile,
-} from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta.mjs';
 import {
-    ContentsTypeParameter,
-    _decode_ContentsTypeParameter,
-    _encode_ContentsTypeParameter,
-} from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta.mjs';
-export {
     ContentsTypeParameter,
     _decode_ContentsTypeParameter,
     _encode_ContentsTypeParameter,
@@ -92,17 +27,7 @@ import {
     _decode_EnvironmentParameter,
     _encode_EnvironmentParameter,
 } from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta.mjs';
-export {
-    EnvironmentParameter,
-    _decode_EnvironmentParameter,
-    _encode_EnvironmentParameter,
-} from '../IPMSFileTransferBodyPartType/EnvironmentParameter.ta.mjs';
 import {
-    CompressionParameter,
-    _decode_CompressionParameter,
-    _encode_CompressionParameter,
-} from '../IPMSFileTransferBodyPartType/CompressionParameter.ta.mjs';
-export {
     CompressionParameter,
     _decode_CompressionParameter,
     _encode_CompressionParameter,
@@ -112,17 +37,7 @@ import {
     _decode_FileAttributes,
     _encode_FileAttributes,
 } from '../IPMSFileTransferBodyPartType/FileAttributes.ta.mjs';
-export {
-    FileAttributes,
-    _decode_FileAttributes,
-    _encode_FileAttributes,
-} from '../IPMSFileTransferBodyPartType/FileAttributes.ta.mjs';
 import {
-    ExtensionsField,
-    _decode_ExtensionsField,
-    _encode_ExtensionsField,
-} from '../IPMSInformationObjects/ExtensionsField.ta.mjs';
-export {
     ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
@@ -420,9 +335,7 @@ export function _encode_FileTransferParameters(
 ) {
     if (!_cached_encoder_for_FileTransferParameters) {
         _cached_encoder_for_FileTransferParameters = function (
-            value: FileTransferParameters,
-            elGetter: $.ASN1Encoder<FileTransferParameters>
-        ): _Element {
+            value: FileTransferParameters        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

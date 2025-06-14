@@ -6,12 +6,6 @@ import {
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
-export {
-    CRLNumber,
-    _decode_CRLNumber,
-    _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BaseCRLNumber */
 /**
  * @summary BaseCRLNumber

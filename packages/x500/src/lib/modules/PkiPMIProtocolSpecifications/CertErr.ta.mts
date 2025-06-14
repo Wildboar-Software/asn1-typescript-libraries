@@ -15,17 +15,6 @@ import {
     _decode_Notifications,
     _encode_Notifications,
 } from "../PkiPMIProtocolSpecifications/Notifications.ta.mjs";
-export {
-    CertErr_notOK,
-    _decode_CertErr_notOK,
-    _encode_CertErr_notOK,
-} from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta.mjs";
-export {
-    Notifications,
-    _decode_Notifications,
-    _encode_Notifications,
-} from "../PkiPMIProtocolSpecifications/Notifications.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertErr */
 /**
  * @summary CertErr
@@ -200,9 +189,7 @@ export function _encode_CertErr(
 ) {
     if (!_cached_encoder_for_CertErr) {
         _cached_encoder_for_CertErr = function (
-            value: CertErr,
-            elGetter: $.ASN1Encoder<CertErr>
-        ): _Element {
+            value: CertErr        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

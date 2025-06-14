@@ -202,9 +202,7 @@ export function _encode_BasicConstraintsSyntax(
 ) {
     if (!_cached_encoder_for_BasicConstraintsSyntax) {
         _cached_encoder_for_BasicConstraintsSyntax = function (
-            value: BasicConstraintsSyntax,
-            elGetter: $.ASN1Encoder<BasicConstraintsSyntax>
-        ): _Element {
+            value: BasicConstraintsSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,13 +6,6 @@ import {
     _decode_OSI_PDU,
     _encode_OSI_PDU,
 } from "../OSIProtocolSpecification/OSI-PDU.ta.mjs";
-export { directorySystemAC } from "../DirectoryOSIProtocols/directorySystemAC.oa.mjs";
-export {
-    OSI_PDU,
-    _decode_OSI_PDU,
-    _encode_OSI_PDU,
-} from "../OSIProtocolSpecification/OSI-PDU.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DSP_OSI_PDUs */
 /**
  * @summary DSP_OSI_PDUs

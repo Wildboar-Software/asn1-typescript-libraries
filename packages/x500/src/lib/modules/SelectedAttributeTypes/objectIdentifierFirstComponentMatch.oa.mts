@@ -4,12 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/id-mr-objectIdentifierFirstComponentMatch.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_objectIdentifierFirstComponentMatch } from "../SelectedAttributeTypes/id-mr-objectIdentifierFirstComponentMatch.va.mjs";
-export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION objectIdentifierFirstComponentMatch */
 /**
  * @summary objectIdentifierFirstComponentMatch

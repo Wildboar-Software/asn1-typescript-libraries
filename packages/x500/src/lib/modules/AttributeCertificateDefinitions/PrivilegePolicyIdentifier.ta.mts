@@ -15,17 +15,6 @@ import {
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-export {
-    PrivilegePolicy,
-    _decode_PrivilegePolicy,
-    _encode_PrivilegePolicy,
-} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
-export {
-    InfoSyntax,
-    _decode_InfoSyntax,
-    _encode_InfoSyntax,
-} from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PrivilegePolicyIdentifier */
 /**
  * @summary PrivilegePolicyIdentifier
@@ -202,9 +191,7 @@ export function _encode_PrivilegePolicyIdentifier(
 ) {
     if (!_cached_encoder_for_PrivilegePolicyIdentifier) {
         _cached_encoder_for_PrivilegePolicyIdentifier = function (
-            value: PrivilegePolicyIdentifier,
-            elGetter: $.ASN1Encoder<PrivilegePolicyIdentifier>
-        ): _Element {
+            value: PrivilegePolicyIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

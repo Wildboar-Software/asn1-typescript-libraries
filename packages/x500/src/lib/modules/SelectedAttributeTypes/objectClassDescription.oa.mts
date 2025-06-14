@@ -6,14 +6,6 @@ import {
     _encode_ObjectClassDescription,
 } from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
 import { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    ObjectClassDescription,
-    _decode_ObjectClassDescription,
-    _encode_ObjectClassDescription,
-} from "../SchemaAdministration/ObjectClassDescription.ta.mjs";
-export { id_lsx_objectClassDescription } from "../SelectedAttributeTypes/id-lsx-objectClassDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION objectClassDescription */
 /**
  * @summary objectClassDescription

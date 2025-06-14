@@ -12,13 +12,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MatchingRuleAssertion */
 /**
  * @summary MatchingRuleAssertion
@@ -265,9 +258,7 @@ export function _encode_MatchingRuleAssertion(
 ) {
     if (!_cached_encoder_for_MatchingRuleAssertion) {
         _cached_encoder_for_MatchingRuleAssertion = function (
-            value: MatchingRuleAssertion,
-            elGetter: $.ASN1Encoder<MatchingRuleAssertion>
-        ): _Element {
+            value: MatchingRuleAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,12 +6,6 @@ import {
     _decode_CertReplaceOK_Item,
     _encode_CertReplaceOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item.ta.mjs";
-export {
-    CertReplaceOK_Item,
-    _decode_CertReplaceOK_Item,
-    _encode_CertReplaceOK_Item,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReplaceOK */
 /**
  * @summary CertReplaceOK

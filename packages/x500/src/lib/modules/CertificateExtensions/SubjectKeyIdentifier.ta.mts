@@ -6,12 +6,6 @@ import {
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-export {
-    KeyIdentifier,
-    _decode_KeyIdentifier,
-    _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubjectKeyIdentifier */
 /**
  * @summary SubjectKeyIdentifier

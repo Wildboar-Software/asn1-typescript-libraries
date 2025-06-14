@@ -10,14 +10,6 @@ import {
     _decode_Context,
     _encode_Context,
 } from "../InformationFramework/Context.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    Context,
-    _decode_Context,
-    _encode_Context,
-} from "../InformationFramework/Context.ta.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Attribute_valuesWithContext_Item */
 /**
  * @summary Attribute_valuesWithContext_Item
@@ -187,9 +179,7 @@ export function _encode_Attribute_valuesWithContext_Item(
 ) {
     if (!_cached_encoder_for_Attribute_valuesWithContext_Item) {
         _cached_encoder_for_Attribute_valuesWithContext_Item = function (
-            value: Attribute_valuesWithContext_Item,
-            elGetter: $.ASN1Encoder<Attribute_valuesWithContext_Item>
-        ): _Element {
+            value: Attribute_valuesWithContext_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

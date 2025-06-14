@@ -17,31 +17,6 @@ import {
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_read } from "../CommonProtocolSpecification/id-opcode-read.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export {
-    ReadArgument,
-    _decode_ReadArgument,
-    _encode_ReadArgument,
-} from "../DirectoryAbstractService/ReadArgument.ta.mjs";
-export {
-    ReadResult,
-    _decode_ReadResult,
-    _encode_ReadResult,
-} from "../DirectoryAbstractService/ReadResult.ta.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION read */
 /**
  * @summary read

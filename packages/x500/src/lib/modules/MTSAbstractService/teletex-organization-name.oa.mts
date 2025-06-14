@@ -5,13 +5,6 @@ import {
     _decode_TeletexOrganizationName,
     _encode_TeletexOrganizationName,
 } from "../MTSAbstractService/TeletexOrganizationName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    TeletexOrganizationName,
-    _decode_TeletexOrganizationName,
-    _encode_TeletexOrganizationName,
-} from "../MTSAbstractService/TeletexOrganizationName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletex_organization_name */
 /**
  * @summary teletex_organization_name

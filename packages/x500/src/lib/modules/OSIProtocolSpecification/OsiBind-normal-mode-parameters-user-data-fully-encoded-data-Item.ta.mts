@@ -20,22 +20,6 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-export {
-    OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-    _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item-presentation-data-values.ta.mjs";
-export {
-    Presentation_context_identifier,
-    _decode_Presentation_context_identifier,
-    _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item */
 /**
  * @summary OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item
@@ -238,9 +222,7 @@ export function _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_d
         !_cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item
     ) {
         _cached_encoder_for_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item = function (
-            value: OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item,
-            elGetter: $.ASN1Encoder<OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item>
-        ): _Element {
+            value: OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

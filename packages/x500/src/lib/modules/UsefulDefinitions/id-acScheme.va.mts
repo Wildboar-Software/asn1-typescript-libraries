@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { accessControlSchemes } from "../UsefulDefinitions/accessControlSchemes.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { accessControlSchemes } from "../UsefulDefinitions/accessControlSchemes.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_acScheme */
 /**
  * @summary id_acScheme

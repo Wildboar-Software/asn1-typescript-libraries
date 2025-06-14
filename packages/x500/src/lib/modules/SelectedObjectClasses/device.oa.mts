@@ -13,31 +13,6 @@ import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-export { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
-export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
-export { id_oc_device } from "../SelectedObjectClasses/id-oc-device.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION device */
 /**
  * @summary device

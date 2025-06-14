@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-export { ub_pds_parameter_length } from "../MTSAbstractService/ub-pds-parameter-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 /**
  * @summary UniversalPDSParameter

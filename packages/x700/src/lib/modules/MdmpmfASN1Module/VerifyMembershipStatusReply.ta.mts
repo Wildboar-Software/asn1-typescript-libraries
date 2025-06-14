@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,36 +15,12 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     MembershipStatus,
     _enum_for_MembershipStatus,
-    MembershipStatus_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    MembershipStatus_member /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    MembershipStatus_non_member /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    non_member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_MembershipStatus,
     _encode_MembershipStatus,
 } from '../MdmpmfASN1Module/MembershipStatus.ta.mjs';
-export {
-    MembershipStatus,
-    _enum_for_MembershipStatus,
-    MembershipStatus_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    MembershipStatus_member /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    MembershipStatus_non_member /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    non_member /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_MembershipStatus,
-    _encode_MembershipStatus,
-} from '../MdmpmfASN1Module/MembershipStatus.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION VerifyMembershipStatusReply */
 /**
  * @summary VerifyMembershipStatusReply
@@ -269,9 +189,7 @@ export function _encode_VerifyMembershipStatusReply(
 ) {
     if (!_cached_encoder_for_VerifyMembershipStatusReply) {
         _cached_encoder_for_VerifyMembershipStatusReply = function (
-            value: VerifyMembershipStatusReply,
-            elGetter: $.ASN1Encoder<VerifyMembershipStatusReply>
-        ): _Element {
+            value: VerifyMembershipStatusReply        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

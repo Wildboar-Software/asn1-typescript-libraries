@@ -7,17 +7,6 @@ import {
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va.mjs";
-export { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.mjs";
-export {
-    NameAndOptionalUID,
-    _decode_NameAndOptionalUID,
-    _encode_NameAndOptionalUID,
-} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uniqueMemberMatch */
 /**
  * @summary uniqueMemberMatch

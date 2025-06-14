@@ -6,14 +6,6 @@ import {
     _encode_CRLScopeSyntax,
 } from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";
 import { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    CRLScopeSyntax,
-    _decode_CRLScopeSyntax,
-    _encode_CRLScopeSyntax,
-} from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";
-export { id_ce_cRLScope } from "../CertificateExtensions/id-ce-cRLScope.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION crlScope */
 /**
  * @summary crlScope

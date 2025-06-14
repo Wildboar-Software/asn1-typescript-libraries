@@ -6,14 +6,6 @@ import {
     _encode_AAIssuingDistPointSyntax,
 } from "../CertificateExtensions/AAIssuingDistPointSyntax.ta.mjs";
 import { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AAIssuingDistPointSyntax,
-    _decode_AAIssuingDistPointSyntax,
-    _encode_AAIssuingDistPointSyntax,
-} from "../CertificateExtensions/AAIssuingDistPointSyntax.ta.mjs";
-export { id_ce_aAissuingDistributionPoint } from "../CertificateExtensions/id-ce-aAissuingDistributionPoint.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION aAissuingDistributionPoint */
 /**
  * @summary aAissuingDistributionPoint

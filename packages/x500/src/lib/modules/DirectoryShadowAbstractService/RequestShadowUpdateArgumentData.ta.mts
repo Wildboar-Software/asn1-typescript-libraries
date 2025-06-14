@@ -25,27 +25,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    AgreementID,
-    _decode_AgreementID,
-    _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
-export {
-    RequestShadowUpdateArgumentData_requestedStrategy,
-    _decode_RequestShadowUpdateArgumentData_requestedStrategy,
-    _encode_RequestShadowUpdateArgumentData_requestedStrategy,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RequestShadowUpdateArgumentData */
 /**
  * @summary RequestShadowUpdateArgumentData
@@ -288,9 +267,7 @@ export function _encode_RequestShadowUpdateArgumentData(
             0,
             () =>
                 function (
-                    value: RequestShadowUpdateArgumentData,
-                    elGetter: $.ASN1Encoder<RequestShadowUpdateArgumentData>
-                ): _Element {
+                    value: RequestShadowUpdateArgumentData                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

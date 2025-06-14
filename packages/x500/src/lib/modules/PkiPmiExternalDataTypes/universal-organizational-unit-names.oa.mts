@@ -5,13 +5,6 @@ import {
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
 } from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalOrganizationalUnitNames,
-    _decode_UniversalOrganizationalUnitNames,
-    _encode_UniversalOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_organizational_unit_names */
 /**
  * @summary universal_organizational_unit_names

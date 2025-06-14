@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_acScheme } from "../UsefulDefinitions/id-acScheme.va.mjs";
-export { id_acScheme } from "../UsefulDefinitions/id-acScheme.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION rule_and_simple_access_control */
 /**
  * @summary rule_and_simple_access_control

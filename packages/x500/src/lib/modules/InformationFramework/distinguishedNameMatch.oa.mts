@@ -7,17 +7,6 @@ import {
 import { id_mr_distinguishedNameMatch } from "../InformationFramework/id-mr-distinguishedNameMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export { id_mr_distinguishedNameMatch } from "../InformationFramework/id-mr-distinguishedNameMatch.va.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION distinguishedNameMatch */
 /**
  * @summary distinguishedNameMatch

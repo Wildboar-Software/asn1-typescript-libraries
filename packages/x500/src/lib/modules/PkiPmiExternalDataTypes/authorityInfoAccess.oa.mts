@@ -6,14 +6,6 @@ import {
     _encode_AuthorityInfoAccessSyntax,
 } from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.mjs";
 import { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AuthorityInfoAccessSyntax,
-    _decode_AuthorityInfoAccessSyntax,
-    _encode_AuthorityInfoAccessSyntax,
-} from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.mjs";
-export { id_pe_authorityInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-authorityInfoAccess.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION authorityInfoAccess */
 /**
  * @summary authorityInfoAccess

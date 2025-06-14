@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
-export { id_pr } from "../UsefulDefinitions/id-pr.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_pr_searchValueNotAllowed */
 /**
  * @summary id_pr_searchValueNotAllowed

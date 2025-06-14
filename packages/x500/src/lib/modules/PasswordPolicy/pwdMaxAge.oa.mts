@@ -9,28 +9,6 @@ import { id_oa_pwdMaxAge } from "../PasswordPolicy/id-oa-pwdMaxAge.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_oa_pwdMaxAge } from "../PasswordPolicy/id-oa-pwdMaxAge.va.mjs";
-export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
-export { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdMaxAge */
 /**
  * @summary pwdMaxAge

@@ -6,14 +6,6 @@ import {
     _decode_ToBeRevokedSyntax,
     _encode_ToBeRevokedSyntax,
 } from "../CertificateExtensions/ToBeRevokedSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va.mjs";
-export {
-    ToBeRevokedSyntax,
-    _decode_ToBeRevokedSyntax,
-    _encode_ToBeRevokedSyntax,
-} from "../CertificateExtensions/ToBeRevokedSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION toBeRevoked */
 /**
  * @summary toBeRevoked

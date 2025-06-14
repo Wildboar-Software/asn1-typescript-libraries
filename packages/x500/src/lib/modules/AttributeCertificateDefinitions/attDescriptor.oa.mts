@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import { id_mr_attDescriptorMatch } from "../AttributeCertificateDefinitions/id-mr-attDescriptorMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    AttributeDescriptorSyntax,
-    _decode_AttributeDescriptorSyntax,
-    _encode_AttributeDescriptorSyntax,
-} from "../AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
-export { id_mr_attDescriptorMatch } from "../AttributeCertificateDefinitions/id-mr-attDescriptorMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION attDescriptor */
 /**
  * @summary attDescriptor

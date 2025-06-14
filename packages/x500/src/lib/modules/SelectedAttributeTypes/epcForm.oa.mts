@@ -6,14 +6,6 @@ import {
     _encode_EpcFormat,
 } from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
 import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    EpcFormat,
-    _decode_EpcFormat,
-    _encode_EpcFormat,
-} from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
-export { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION epcForm */
 /**
  * @summary epcForm

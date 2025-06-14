@@ -10,12 +10,6 @@ import {
     _decode_CertificateExactAssertion,
     _encode_CertificateExactAssertion,
 } from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
-export {
-    CertificateExactAssertion,
-    _decode_CertificateExactAssertion,
-    _encode_CertificateExactAssertion,
-} from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificatePairExactAssertion */
 /**
  * @summary CertificatePairExactAssertion
@@ -209,9 +203,7 @@ export function _encode_CertificatePairExactAssertion(
 ) {
     if (!_cached_encoder_for_CertificatePairExactAssertion) {
         _cached_encoder_for_CertificatePairExactAssertion = function (
-            value: CertificatePairExactAssertion,
-            elGetter: $.ASN1Encoder<CertificatePairExactAssertion>
-        ): _Element {
+            value: CertificatePairExactAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

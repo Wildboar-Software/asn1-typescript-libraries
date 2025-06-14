@@ -6,37 +6,6 @@ import {
     _encode_CRLReason,
 } from "../CertificateExtensions/CRLReason.ta.mjs";
 import { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    aACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    affiliationChanged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    cACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    certificateHold /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    cessationOfOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    CRLReason,
-    CRLReason_aACompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_affiliationChanged /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_cACompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_certificateHold /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_cessationOfOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_keyCompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_privilegeWithdrawn /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_removeFromCRL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_superseded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_unspecified /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_weakAlgorithmOrKey /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    keyCompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    privilegeWithdrawn /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    removeFromCRL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superseded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unspecified /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    weakAlgorithmOrKey /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CRLReason,
-    _encode_CRLReason,
-    _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta.mjs";
-export { id_ce_reasonCode } from "../CertificateExtensions/id-ce-reasonCode.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION reasonCode */
 /**
  * @summary reasonCode

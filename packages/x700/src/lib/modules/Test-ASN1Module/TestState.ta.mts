@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,29 +14,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     OperationalState,
     _enum_for_OperationalState,
-    OperationalState_disabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    disabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    OperationalState_enabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    enabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_OperationalState,
-    _encode_OperationalState,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.mjs';
-export {
-    OperationalState,
-    _enum_for_OperationalState,
-    OperationalState_disabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    disabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    OperationalState_enabled /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    enabled /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_OperationalState,
     _encode_OperationalState,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/OperationalState.ta.mjs';
 import {
-    ProceduralStatus,
-    _decode_ProceduralStatus,
-    _encode_ProceduralStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProceduralStatus.ta.mjs';
-export {
     ProceduralStatus,
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
@@ -101,22 +27,11 @@ import {
     _decode_ControlStatus,
     _encode_ControlStatus,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ControlStatus.ta.mjs';
-export {
-    ControlStatus,
-    _decode_ControlStatus,
-    _encode_ControlStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ControlStatus.ta.mjs';
 import {
     AvailabilityStatus,
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AvailabilityStatus.ta.mjs';
-export {
-    AvailabilityStatus,
-    _decode_AvailabilityStatus,
-    _encode_AvailabilityStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AvailabilityStatus.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TestState */
 /**
  * @summary TestState
@@ -339,9 +254,7 @@ export function _encode_TestState(
 ) {
     if (!_cached_encoder_for_TestState) {
         _cached_encoder_for_TestState = function (
-            value: TestState,
-            elGetter: $.ASN1Encoder<TestState>
-        ): _Element {
+            value: TestState        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

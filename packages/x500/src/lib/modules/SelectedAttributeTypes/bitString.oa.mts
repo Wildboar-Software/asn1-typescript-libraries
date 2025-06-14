@@ -3,9 +3,6 @@ import { BIT_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_bitString } from "../SelectedAttributeTypes/id-lsx-bitString.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_bitString } from "../SelectedAttributeTypes/id-lsx-bitString.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION bitString */
 /**
  * @summary bitString

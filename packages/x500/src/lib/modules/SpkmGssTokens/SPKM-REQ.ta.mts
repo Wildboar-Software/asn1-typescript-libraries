@@ -20,22 +20,6 @@ import {
     _decode_REQ_TOKEN,
     _encode_REQ_TOKEN,
 } from "../SpkmGssTokens/REQ-TOKEN.ta.mjs";
-export {
-    AuthorizationData,
-    _decode_AuthorizationData,
-    _encode_AuthorizationData,
-} from "../SpkmGssTokens/AuthorizationData.ta.mjs";
-export {
-    CertificationData,
-    _decode_CertificationData,
-    _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta.mjs";
-export {
-    REQ_TOKEN,
-    _decode_REQ_TOKEN,
-    _encode_REQ_TOKEN,
-} from "../SpkmGssTokens/REQ-TOKEN.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_REQ */
 /**
  * @summary SPKM_REQ
@@ -226,9 +210,7 @@ export function _encode_SPKM_REQ(
 ) {
     if (!_cached_encoder_for_SPKM_REQ) {
         _cached_encoder_for_SPKM_REQ = function (
-            value: SPKM_REQ,
-            elGetter: $.ASN1Encoder<SPKM_REQ>
-        ): _Element {
+            value: SPKM_REQ        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

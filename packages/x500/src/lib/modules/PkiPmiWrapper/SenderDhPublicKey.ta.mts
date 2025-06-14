@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SenderDhPublicKey */
 /**
  * @summary SenderDhPublicKey
@@ -189,9 +183,7 @@ export function _encode_SenderDhPublicKey(
 ) {
     if (!_cached_encoder_for_SenderDhPublicKey) {
         _cached_encoder_for_SenderDhPublicKey = function (
-            value: SenderDhPublicKey,
-            elGetter: $.ASN1Encoder<SenderDhPublicKey>
-        ): _Element {
+            value: SenderDhPublicKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

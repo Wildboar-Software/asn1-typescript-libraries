@@ -6,14 +6,6 @@ import {
     _decode_StatusReferrals,
     _encode_StatusReferrals,
 } from "../CertificateExtensions/StatusReferrals.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va.mjs";
-export {
-    StatusReferrals,
-    _decode_StatusReferrals,
-    _encode_StatusReferrals,
-} from "../CertificateExtensions/StatusReferrals.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION statusReferrals */
 /**
  * @summary statusReferrals

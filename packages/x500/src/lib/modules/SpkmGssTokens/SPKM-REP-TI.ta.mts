@@ -15,17 +15,6 @@ import {
     _decode_REP_TI_TOKEN,
     _encode_REP_TI_TOKEN,
 } from "../SpkmGssTokens/REP-TI-TOKEN.ta.mjs";
-export {
-    CertificationData,
-    _decode_CertificationData,
-    _encode_CertificationData,
-} from "../SpkmGssTokens/CertificationData.ta.mjs";
-export {
-    REP_TI_TOKEN,
-    _decode_REP_TI_TOKEN,
-    _encode_REP_TI_TOKEN,
-} from "../SpkmGssTokens/REP-TI-TOKEN.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_REP_TI */
 /**
  * @summary SPKM_REP_TI
@@ -194,9 +183,7 @@ export function _encode_SPKM_REP_TI(
 ) {
     if (!_cached_encoder_for_SPKM_REP_TI) {
         _cached_encoder_for_SPKM_REP_TI = function (
-            value: SPKM_REP_TI,
-            elGetter: $.ASN1Encoder<SPKM_REP_TI>
-        ): _Element {
+            value: SPKM_REP_TI        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

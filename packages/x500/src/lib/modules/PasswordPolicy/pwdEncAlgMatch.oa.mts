@@ -7,17 +7,6 @@ import {
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";
 import { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va.mjs";
-export {
-    PwdEncAlg,
-    _decode_PwdEncAlg,
-    _encode_PwdEncAlg,
-} from "../PasswordPolicy/PwdEncAlg.ta.mjs";
-export { pwdEncAlgDescription } from "../PasswordPolicy/pwdEncAlgDescription.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdEncAlgMatch */
 /**
  * @summary pwdEncAlgMatch

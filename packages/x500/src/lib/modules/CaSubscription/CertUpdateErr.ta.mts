@@ -11,31 +11,6 @@ import {
     _encode_CASP_error,
     _enum_for_CASP_error,
 } from "../CaSubscription/CASP-error.ta.mjs";
-export {
-    CASP_error,
-    CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_sequenceError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownContentType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownSubject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unsupportedWLMPversion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownContentType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownSubject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedWLMPversion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASP_error,
-    _encode_CASP_error,
-    _enum_for_CASP_error,
-} from "../CaSubscription/CASP-error.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateErr */
 /**
  * @summary CertUpdateErr
@@ -191,9 +166,7 @@ export function _encode_CertUpdateErr(
 ) {
     if (!_cached_encoder_for_CertUpdateErr) {
         _cached_encoder_for_CertUpdateErr = function (
-            value: CertUpdateErr,
-            elGetter: $.ASN1Encoder<CertUpdateErr>
-        ): _Element {
+            value: CertUpdateErr        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

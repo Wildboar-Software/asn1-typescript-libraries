@@ -6,12 +6,6 @@ import {
     _decode_Context_list_Item,
     _encode_Context_list_Item,
 } from "../OSIProtocolSpecification/Context-list-Item.ta.mjs";
-export {
-    Context_list_Item,
-    _decode_Context_list_Item,
-    _encode_Context_list_Item,
-} from "../OSIProtocolSpecification/Context-list-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Context_list */
 /**
  * @summary Context_list

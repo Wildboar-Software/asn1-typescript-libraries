@@ -64,77 +64,6 @@ import {
     _decode_ResultAttribute,
     _encode_ResultAttribute,
 } from "../ServiceAdministration/ResultAttribute.ta.mjs";
-export {
-    compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    FamilyGrouping,
-    FamilyGrouping_compoundEntry /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_multiStrand /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_strands /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    multiStrand /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    strands /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FamilyGrouping,
-    _encode_FamilyGrouping,
-    _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
-export {
-    FamilyReturn,
-    _decode_FamilyReturn,
-    _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AllowedSubset,
-    AllowedSubset_baseObject /* IMPORTED_LONG_NAMED_BIT */,
-    AllowedSubset_oneLevel /* IMPORTED_LONG_NAMED_BIT */,
-    AllowedSubset_wholeSubtree /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_AllowedSubset,
-    _encode_AllowedSubset,
-} from "../ServiceAdministration/AllowedSubset.ta.mjs";
-export {
-    AttributeCombination,
-    _decode_AttributeCombination,
-    _encode_AttributeCombination,
-} from "../ServiceAdministration/AttributeCombination.ta.mjs";
-export {
-    ControlOptions,
-    _decode_ControlOptions,
-    _encode_ControlOptions,
-} from "../ServiceAdministration/ControlOptions.ta.mjs";
-export {
-    EntryLimit,
-    _decode_EntryLimit,
-    _encode_EntryLimit,
-} from "../ServiceAdministration/EntryLimit.ta.mjs";
-export {
-    ImposedSubset,
-    ImposedSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ImposedSubset_oneLevel /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ImposedSubset_wholeSubtree /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    _decode_ImposedSubset,
-    _encode_ImposedSubset,
-    _enum_for_ImposedSubset,
-} from "../ServiceAdministration/ImposedSubset.ta.mjs";
-export {
-    RelaxationPolicy,
-    _decode_RelaxationPolicy,
-    _encode_RelaxationPolicy,
-} from "../ServiceAdministration/RelaxationPolicy.ta.mjs";
-export {
-    RequestAttribute,
-    _decode_RequestAttribute,
-    _encode_RequestAttribute,
-} from "../ServiceAdministration/RequestAttribute.ta.mjs";
-export {
-    ResultAttribute,
-    _decode_ResultAttribute,
-    _encode_ResultAttribute,
-} from "../ServiceAdministration/ResultAttribute.ta.mjs";
 import {
     SearchRuleId,
     _root_component_type_list_1_spec_for_SearchRuleId,
@@ -685,9 +614,7 @@ export function _encode_SearchRule(
 ) {
     if (!_cached_encoder_for_SearchRule) {
         _cached_encoder_for_SearchRule = function (
-            value: SearchRule,
-            elGetter: $.ASN1Encoder<SearchRule>
-        ): _Element {
+            value: SearchRule        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

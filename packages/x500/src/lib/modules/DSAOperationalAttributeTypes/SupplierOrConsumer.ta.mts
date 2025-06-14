@@ -253,9 +253,7 @@ export function _encode_SupplierOrConsumer(
 ) {
     if (!_cached_encoder_for_SupplierOrConsumer) {
         _cached_encoder_for_SupplierOrConsumer = function (
-            value: SupplierOrConsumer,
-            elGetter: $.ASN1Encoder<SupplierOrConsumer>
-        ): _Element {
+            value: SupplierOrConsumer        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -243,9 +243,7 @@ export function _encode_ChangePasswordResultData(
 ) {
     if (!_cached_encoder_for_ChangePasswordResultData) {
         _cached_encoder_for_ChangePasswordResultData = function (
-            value: ChangePasswordResultData,
-            elGetter: $.ASN1Encoder<ChangePasswordResultData>
-        ): _Element {
+            value: ChangePasswordResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

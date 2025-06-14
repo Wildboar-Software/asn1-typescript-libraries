@@ -6,12 +6,6 @@ import {
     _decode_OsiOperation_fully_encoded_data_Item,
     _encode_OsiOperation_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/OsiOperation-fully-encoded-data-Item.ta.mjs";
-export {
-    OsiOperation_fully_encoded_data_Item,
-    _decode_OsiOperation_fully_encoded_data_Item,
-    _encode_OsiOperation_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/OsiOperation-fully-encoded-data-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiOperation */
 /**
  * @summary OsiOperation

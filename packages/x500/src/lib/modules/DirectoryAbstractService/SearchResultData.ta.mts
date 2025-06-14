@@ -11,17 +11,6 @@ import {
     _decode_SearchResultData_searchInfo,
     _encode_SearchResultData_searchInfo,
 } from "../DirectoryAbstractService/SearchResultData-searchInfo.ta.mjs";
-export {
-    SearchResult,
-    _decode_SearchResult,
-    _encode_SearchResult,
-} from "../DirectoryAbstractService/SearchResult.ta.mjs";
-export {
-    SearchResultData_searchInfo,
-    _decode_SearchResultData_searchInfo,
-    _encode_SearchResultData_searchInfo,
-} from "../DirectoryAbstractService/SearchResultData-searchInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SearchResultData */
 /**
  * @summary SearchResultData

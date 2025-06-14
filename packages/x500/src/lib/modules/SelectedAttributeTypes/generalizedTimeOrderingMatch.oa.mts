@@ -4,12 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 import { id_mr_generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeOrderingMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
-export { id_mr_generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/id-mr-generalizedTimeOrderingMatch.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION generalizedTimeOrderingMatch */
 /**
  * @summary generalizedTimeOrderingMatch

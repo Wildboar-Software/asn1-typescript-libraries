@@ -15,17 +15,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RoleSyntax */
 /**
  * @summary RoleSyntax
@@ -211,9 +200,7 @@ export function _encode_RoleSyntax(
 ) {
     if (!_cached_encoder_for_RoleSyntax) {
         _cached_encoder_for_RoleSyntax = function (
-            value: RoleSyntax,
-            elGetter: $.ASN1Encoder<RoleSyntax>
-        ): _Element {
+            value: RoleSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,12 +6,6 @@ import {
     _decode_LocalName,
     _encode_LocalName,
 } from "../InformationFramework/LocalName.ta.mjs";
-export {
-    LocalName,
-    _decode_LocalName,
-    _encode_LocalName,
-} from "../InformationFramework/LocalName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChopSpecification_specificExclusions_Item */
 /**
  * @summary ChopSpecification_specificExclusions_Item

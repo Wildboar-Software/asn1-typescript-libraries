@@ -20,22 +20,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-export {
-    ObjectDigestInfo,
-    _decode_ObjectDigestInfo,
-    _encode_ObjectDigestInfo,
-} from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TargetCert */
 /**
  * @summary TargetCert
@@ -219,9 +203,7 @@ export function _encode_TargetCert(
 ) {
     if (!_cached_encoder_for_TargetCert) {
         _cached_encoder_for_TargetCert = function (
-            value: TargetCert,
-            elGetter: $.ASN1Encoder<TargetCert>
-        ): _Element {
+            value: TargetCert        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

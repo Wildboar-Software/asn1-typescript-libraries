@@ -6,12 +6,6 @@ import {
     _decode_UiiFilter,
     _encode_UiiFilter,
 } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
-export {
-    UiiFilter,
-    _decode_UiiFilter,
-    _encode_UiiFilter,
-} from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UiiFormat_next */
 /**
  * @summary UiiFormat_next

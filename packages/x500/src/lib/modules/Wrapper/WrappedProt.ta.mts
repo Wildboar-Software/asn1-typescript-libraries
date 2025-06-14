@@ -6,8 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION WrappedProt */
 /**
  * @summary WrappedProt
@@ -164,9 +162,7 @@ export function _encode_WrappedProt(
 ) {
     if (!_cached_encoder_for_WrappedProt) {
         _cached_encoder_for_WrappedProt = function (
-            value: WrappedProt,
-            elGetter: $.ASN1Encoder<WrappedProt>
-        ): _Element {
+            value: WrappedProt        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

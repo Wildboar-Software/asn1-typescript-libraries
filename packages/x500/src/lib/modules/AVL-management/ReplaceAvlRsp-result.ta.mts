@@ -11,17 +11,6 @@ import {
     _decode_RepAvlOK,
     _encode_RepAvlOK,
 } from "../AVL-management/RepAvlOK.ta.mjs";
-export {
-    RepAvlErr,
-    _decode_RepAvlErr,
-    _encode_RepAvlErr,
-} from "../AVL-management/RepAvlErr.ta.mjs";
-export {
-    RepAvlOK,
-    _decode_RepAvlOK,
-    _encode_RepAvlOK,
-} from "../AVL-management/RepAvlOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp_result */
 /**
  * @summary ReplaceAvlRsp_result

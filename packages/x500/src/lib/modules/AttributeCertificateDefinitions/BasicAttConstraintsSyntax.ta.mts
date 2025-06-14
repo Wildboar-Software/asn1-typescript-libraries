@@ -206,9 +206,7 @@ export function _encode_BasicAttConstraintsSyntax(
 ) {
     if (!_cached_encoder_for_BasicAttConstraintsSyntax) {
         _cached_encoder_for_BasicAttConstraintsSyntax = function (
-            value: BasicAttConstraintsSyntax,
-            elGetter: $.ASN1Encoder<BasicAttConstraintsSyntax>
-        ): _Element {
+            value: BasicAttConstraintsSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

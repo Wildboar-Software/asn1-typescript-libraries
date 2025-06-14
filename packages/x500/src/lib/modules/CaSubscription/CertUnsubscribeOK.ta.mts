@@ -6,12 +6,6 @@ import {
     _decode_CertUnsubscribeOK_Item,
     _encode_CertUnsubscribeOK_Item,
 } from "../CaSubscription/CertUnsubscribeOK-Item.ta.mjs";
-export {
-    CertUnsubscribeOK_Item,
-    _decode_CertUnsubscribeOK_Item,
-    _encode_CertUnsubscribeOK_Item,
-} from "../CaSubscription/CertUnsubscribeOK-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK */
 /**
  * @summary CertUnsubscribeOK

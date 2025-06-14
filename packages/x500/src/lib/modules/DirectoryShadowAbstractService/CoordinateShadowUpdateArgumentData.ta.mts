@@ -25,27 +25,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    AgreementID,
-    _decode_AgreementID,
-    _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
-export {
-    CoordinateShadowUpdateArgumentData_updateStrategy,
-    _decode_CoordinateShadowUpdateArgumentData_updateStrategy,
-    _encode_CoordinateShadowUpdateArgumentData_updateStrategy,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData */
 /**
  * @summary CoordinateShadowUpdateArgumentData
@@ -289,9 +268,7 @@ export function _encode_CoordinateShadowUpdateArgumentData(
             0,
             () =>
                 function (
-                    value: CoordinateShadowUpdateArgumentData,
-                    elGetter: $.ASN1Encoder<CoordinateShadowUpdateArgumentData>
-                ): _Element {
+                    value: CoordinateShadowUpdateArgumentData                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

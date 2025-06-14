@@ -326,9 +326,7 @@ export function _encode_SecurityErrorData(
 ) {
     if (!_cached_encoder_for_SecurityErrorData) {
         _cached_encoder_for_SecurityErrorData = function (
-            value: SecurityErrorData,
-            elGetter: $.ASN1Encoder<SecurityErrorData>
-        ): _Element {
+            value: SecurityErrorData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

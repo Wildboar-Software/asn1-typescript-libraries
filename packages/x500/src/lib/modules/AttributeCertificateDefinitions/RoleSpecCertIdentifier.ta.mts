@@ -20,22 +20,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RoleSpecCertIdentifier */
 /**
  * @summary RoleSpecCertIdentifier
@@ -267,9 +251,7 @@ export function _encode_RoleSpecCertIdentifier(
 ) {
     if (!_cached_encoder_for_RoleSpecCertIdentifier) {
         _cached_encoder_for_RoleSpecCertIdentifier = function (
-            value: RoleSpecCertIdentifier,
-            elGetter: $.ASN1Encoder<RoleSpecCertIdentifier>
-        ): _Element {
+            value: RoleSpecCertIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

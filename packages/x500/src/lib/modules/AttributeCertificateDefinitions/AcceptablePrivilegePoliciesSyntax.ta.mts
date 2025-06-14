@@ -6,12 +6,6 @@ import {
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
 } from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
-export {
-    PrivilegePolicy,
-    _decode_PrivilegePolicy,
-    _encode_PrivilegePolicy,
-} from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AcceptablePrivilegePoliciesSyntax */
 /**
  * @summary AcceptablePrivilegePoliciesSyntax

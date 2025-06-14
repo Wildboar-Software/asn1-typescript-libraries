@@ -5,13 +5,6 @@ import {
     _decode_ExtensionPhysicalDeliveryAddressComponents,
     _encode_ExtensionPhysicalDeliveryAddressComponents,
 } from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    ExtensionPhysicalDeliveryAddressComponents,
-    _decode_ExtensionPhysicalDeliveryAddressComponents,
-    _encode_ExtensionPhysicalDeliveryAddressComponents,
-} from "../PkiPmiExternalDataTypes/ExtensionPhysicalDeliveryAddressComponents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION extension_physical_delivery_address_components */
 /**
  * @summary extension_physical_delivery_address_components

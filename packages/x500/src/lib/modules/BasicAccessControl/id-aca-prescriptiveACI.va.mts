@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_aca } from "../UsefulDefinitions/id-aca.va.mjs";
-export { id_aca } from "../UsefulDefinitions/id-aca.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_aca_prescriptiveACI */
 /**
  * @summary id_aca_prescriptiveACI

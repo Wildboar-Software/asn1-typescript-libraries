@@ -11,37 +11,6 @@ import {
     _encode_AVMP_error,
     _enum_for_AVMP_error,
 } from "../AVL-management/AVMP-error.ta.mjs";
-export {
-    AVMP_error,
-    AVMP_error_constrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_duplicateAVL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_invalidAvlVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_maxAVLsExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_missingAvlComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_nonConstrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_notAllowedForConstrainedAVLEntity /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_protocolError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unknownAVL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unsupportedCriticalEntryExtenssion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unsupportedCriticalExtenssion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    constrainedRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    duplicateAVL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidAvlVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    maxAVLsExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingAvlComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonConstrainedRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    notAllowedForConstrainedAVLEntity /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    protocolError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownAVL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedCriticalEntryExtenssion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedCriticalExtenssion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AVMP_error,
-    _encode_AVMP_error,
-    _enum_for_AVMP_error,
-} from "../AVL-management/AVMP-error.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DelAvlErr */
 /**
  * @summary DelAvlErr
@@ -195,9 +164,7 @@ export function _encode_DelAvlErr(
 ) {
     if (!_cached_encoder_for_DelAvlErr) {
         _cached_encoder_for_DelAvlErr = function (
-            value: DelAvlErr,
-            elGetter: $.ASN1Encoder<DelAvlErr>
-        ): _Element {
+            value: DelAvlErr        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

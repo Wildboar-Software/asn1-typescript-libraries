@@ -11,17 +11,6 @@ import {
     _decode_DelAvlOK,
     _encode_DelAvlOK,
 } from "../AVL-management/DelAvlOK.ta.mjs";
-export {
-    DelAvlErr,
-    _decode_DelAvlErr,
-    _encode_DelAvlErr,
-} from "../AVL-management/DelAvlErr.ta.mjs";
-export {
-    DelAvlOK,
-    _decode_DelAvlOK,
-    _encode_DelAvlOK,
-} from "../AVL-management/DelAvlOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DeleteAvlRsp_result */
 /**
  * @summary DeleteAvlRsp_result

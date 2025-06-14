@@ -21,22 +21,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    SDSEType,
-    _decode_SDSEType,
-    _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SDSEContent */
 /**
  * @summary SDSEContent
@@ -307,9 +291,7 @@ export function _encode_SDSEContent(
 ) {
     if (!_cached_encoder_for_SDSEContent) {
         _cached_encoder_for_SDSEContent = function (
-            value: SDSEContent,
-            elGetter: $.ASN1Encoder<SDSEContent>
-        ): _Element {
+            value: SDSEContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

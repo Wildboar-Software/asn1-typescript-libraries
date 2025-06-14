@@ -294,9 +294,7 @@ export function _encode_DITStructureRuleDescription(
 ) {
     if (!_cached_encoder_for_DITStructureRuleDescription) {
         _cached_encoder_for_DITStructureRuleDescription = function (
-            value: DITStructureRuleDescription,
-            elGetter: $.ASN1Encoder<DITStructureRuleDescription>
-        ): _Element {
+            value: DITStructureRuleDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

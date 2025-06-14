@@ -243,9 +243,7 @@ export function _encode_AdministerPasswordResultData(
 ) {
     if (!_cached_encoder_for_AdministerPasswordResultData) {
         _cached_encoder_for_AdministerPasswordResultData = function (
-            value: AdministerPasswordResultData,
-            elGetter: $.ASN1Encoder<AdministerPasswordResultData>
-        ): _Element {
+            value: AdministerPasswordResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

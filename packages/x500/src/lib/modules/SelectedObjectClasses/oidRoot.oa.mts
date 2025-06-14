@@ -8,26 +8,6 @@ import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
 import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
 import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
-export { alias } from "../InformationFramework/alias.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
-export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
-export { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION oidRoot */
 /**
  * @summary oidRoot

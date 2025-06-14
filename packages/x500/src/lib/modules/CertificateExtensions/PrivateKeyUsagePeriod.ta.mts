@@ -196,9 +196,7 @@ export function _encode_PrivateKeyUsagePeriod(
 ) {
     if (!_cached_encoder_for_PrivateKeyUsagePeriod) {
         _cached_encoder_for_PrivateKeyUsagePeriod = function (
-            value: PrivateKeyUsagePeriod,
-            elGetter: $.ASN1Encoder<PrivateKeyUsagePeriod>
-        ): _Element {
+            value: PrivateKeyUsagePeriod        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

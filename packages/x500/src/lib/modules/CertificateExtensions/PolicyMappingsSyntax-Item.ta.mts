@@ -10,12 +10,6 @@ import {
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../CertificateExtensions/CertPolicyId.ta.mjs";
-export {
-    CertPolicyId,
-    _decode_CertPolicyId,
-    _encode_CertPolicyId,
-} from "../CertificateExtensions/CertPolicyId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicyMappingsSyntax_Item */
 /**
  * @summary PolicyMappingsSyntax_Item
@@ -189,9 +183,7 @@ export function _encode_PolicyMappingsSyntax_Item(
 ) {
     if (!_cached_encoder_for_PolicyMappingsSyntax_Item) {
         _cached_encoder_for_PolicyMappingsSyntax_Item = function (
-            value: PolicyMappingsSyntax_Item,
-            elGetter: $.ASN1Encoder<PolicyMappingsSyntax_Item>
-        ): _Element {
+            value: PolicyMappingsSyntax_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

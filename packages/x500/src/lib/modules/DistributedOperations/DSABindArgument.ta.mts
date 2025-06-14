@@ -17,21 +17,6 @@ import {
     _decode_DSACredentials,
     _encode_DSACredentials,
 } from "../DistributedOperations/DSACredentials.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_BIT */,
-    v2 /* IMPORTED_SHORT_NAMED_BIT */,
-    Versions,
-    Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
-    Versions_v2 /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_Versions,
-    _encode_Versions,
-} from "../DirectoryAbstractService/Versions.ta.mjs";
-export {
-    DSACredentials,
-    _decode_DSACredentials,
-    _encode_DSACredentials,
-} from "../DistributedOperations/DSACredentials.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DSABindArgument */
 /**
  * @summary DSABindArgument
@@ -234,9 +219,7 @@ export function _encode_DSABindArgument(
 ) {
     if (!_cached_encoder_for_DSABindArgument) {
         _cached_encoder_for_DSABindArgument = function (
-            value: DSABindArgument,
-            elGetter: $.ASN1Encoder<DSABindArgument>
-        ): _Element {
+            value: DSABindArgument        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

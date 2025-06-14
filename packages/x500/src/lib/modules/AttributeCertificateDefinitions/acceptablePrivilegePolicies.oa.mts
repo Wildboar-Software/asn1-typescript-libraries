@@ -6,14 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.mjs";
 import { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AcceptablePrivilegePoliciesSyntax,
-    _decode_AcceptablePrivilegePoliciesSyntax,
-    _encode_AcceptablePrivilegePoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.mjs";
-export { id_ce_acceptablePrivilegePolicies } from "../AttributeCertificateDefinitions/id-ce-acceptablePrivilegePolicies.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION acceptablePrivilegePolicies */
 /**
  * @summary acceptablePrivilegePolicies

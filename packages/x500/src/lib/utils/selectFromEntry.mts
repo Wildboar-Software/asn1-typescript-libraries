@@ -213,12 +213,12 @@ function selectFromEntry (
             if ("attributeType" in info) {
                 return [[ info.attributeType, undefined, [] ]];
             } else if ("attribute" in info) {
-                const attr = info.attribute;
+                const attr: Attribute = info.attribute;
                 return [
                     ...attr.values
-                        .map((value): ATVAC => [ attr.type_, value, [] ]),
+                        .map((value: ASN1Element): ATVAC => [ attr.type_, value, [] ]),
                     ...(attr.valuesWithContext ?? [])
-                        .map((vwc): ATVAC => [ attr.type_, vwc.value, vwc.contextList ]),
+                        .map((vwc: Attribute_valuesWithContext_Item): ATVAC => [ attr.type_, vwc.value, vwc.contextList ]),
                 ];
             } else {
                 return [];

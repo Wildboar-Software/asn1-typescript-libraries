@@ -11,17 +11,6 @@ import {
     _decode_CertOK,
     _encode_CertOK,
 } from "../PkiPMIProtocolSpecifications/CertOK.ta.mjs";
-export {
-    CertErr,
-    _decode_CertErr,
-    _encode_CertErr,
-} from "../PkiPMIProtocolSpecifications/CertErr.ta.mjs";
-export {
-    CertOK,
-    _decode_CertOK,
-    _encode_CertOK,
-} from "../PkiPMIProtocolSpecifications/CertOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertRsp_result */
 /**
  * @summary CertRsp_result

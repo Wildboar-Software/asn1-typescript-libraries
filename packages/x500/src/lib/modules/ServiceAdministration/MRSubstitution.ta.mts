@@ -11,13 +11,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MRSubstitution */
 /**
  * @summary MRSubstitution
@@ -225,9 +218,7 @@ export function _encode_MRSubstitution(
 ) {
     if (!_cached_encoder_for_MRSubstitution) {
         _cached_encoder_for_MRSubstitution = function (
-            value: MRSubstitution,
-            elGetter: $.ASN1Encoder<MRSubstitution>
-        ): _Element {
+            value: MRSubstitution        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

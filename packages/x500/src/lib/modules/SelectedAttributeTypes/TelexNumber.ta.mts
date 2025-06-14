@@ -196,9 +196,7 @@ export function _encode_TelexNumber(
 ) {
     if (!_cached_encoder_for_TelexNumber) {
         _cached_encoder_for_TelexNumber = function (
-            value: TelexNumber,
-            elGetter: $.ASN1Encoder<TelexNumber>
-        ): _Element {
+            value: TelexNumber        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

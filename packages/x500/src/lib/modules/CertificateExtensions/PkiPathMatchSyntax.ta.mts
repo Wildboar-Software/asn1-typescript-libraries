@@ -9,12 +9,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PkiPathMatchSyntax */
 /**
  * @summary PkiPathMatchSyntax
@@ -187,9 +181,7 @@ export function _encode_PkiPathMatchSyntax(
 ) {
     if (!_cached_encoder_for_PkiPathMatchSyntax) {
         _cached_encoder_for_PkiPathMatchSyntax = function (
-            value: PkiPathMatchSyntax,
-            elGetter: $.ASN1Encoder<PkiPathMatchSyntax>
-        ): _Element {
+            value: PkiPathMatchSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

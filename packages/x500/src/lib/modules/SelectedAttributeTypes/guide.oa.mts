@@ -6,14 +6,6 @@ import {
     _encode_Guide,
 } from "../SelectedAttributeTypes/Guide.ta.mjs";
 import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    Guide,
-    _decode_Guide,
-    _encode_Guide,
-} from "../SelectedAttributeTypes/Guide.ta.mjs";
-export { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION guide */
 /**
  * @summary guide

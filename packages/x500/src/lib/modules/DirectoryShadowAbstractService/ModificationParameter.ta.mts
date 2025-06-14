@@ -10,12 +10,6 @@ import {
     _decode_SupplierAndConsumers,
     _encode_SupplierAndConsumers,
 } from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-export {
-    SupplierAndConsumers,
-    _decode_SupplierAndConsumers,
-    _encode_SupplierAndConsumers,
-} from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModificationParameter */
 /**
  * @summary ModificationParameter
@@ -171,9 +165,7 @@ export function _encode_ModificationParameter(
 ) {
     if (!_cached_encoder_for_ModificationParameter) {
         _cached_encoder_for_ModificationParameter = function (
-            value: ModificationParameter,
-            elGetter: $.ASN1Encoder<ModificationParameter>
-        ): _Element {
+            value: ModificationParameter        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

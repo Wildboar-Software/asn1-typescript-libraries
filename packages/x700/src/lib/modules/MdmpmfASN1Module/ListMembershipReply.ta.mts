@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,24 +13,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Completeness,
     _enum_for_Completeness,
-    Completeness_completenessUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    completenessUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Completeness_knownComplete /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    knownComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Completeness_knownNotComplete /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    knownNotComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_Completeness,
-    _encode_Completeness,
-} from '../MdmpmfASN1Module/Completeness.ta.mjs';
-export {
-    Completeness,
-    _enum_for_Completeness,
-    Completeness_completenessUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    completenessUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Completeness_knownComplete /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    knownComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    Completeness_knownNotComplete /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    knownNotComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_Completeness,
     _encode_Completeness,
 } from '../MdmpmfASN1Module/Completeness.ta.mjs';
@@ -95,12 +21,6 @@ import {
     _decode_Membership,
     _encode_Membership,
 } from '../MdmpmfASN1Module/Membership.ta.mjs';
-export {
-    Membership,
-    _decode_Membership,
-    _encode_Membership,
-} from '../MdmpmfASN1Module/Membership.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ListMembershipReply */
 /**
  * @summary ListMembershipReply
@@ -267,9 +187,7 @@ export function _encode_ListMembershipReply(
 ) {
     if (!_cached_encoder_for_ListMembershipReply) {
         _cached_encoder_for_ListMembershipReply = function (
-            value: ListMembershipReply,
-            elGetter: $.ASN1Encoder<ListMembershipReply>
-        ): _Element {
+            value: ListMembershipReply        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

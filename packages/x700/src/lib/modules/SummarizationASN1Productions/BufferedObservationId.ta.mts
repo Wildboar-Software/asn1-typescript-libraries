@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
-    AttributeId,
-    _decode_AttributeId,
-    _encode_AttributeId,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/AttributeId.ta.mjs';
-export {
     AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
@@ -91,22 +26,11 @@ import {
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
-export {
-    NumericAttributeIdArray,
-    _decode_NumericAttributeIdArray,
-    _encode_NumericAttributeIdArray,
-} from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
 import {
     ReportTimeAttributeIdList,
     _decode_ReportTimeAttributeIdList,
     _encode_ReportTimeAttributeIdList,
 } from '../SummarizationASN1Productions/ReportTimeAttributeIdList.ta.mjs';
-export {
-    ReportTimeAttributeIdList,
-    _decode_ReportTimeAttributeIdList,
-    _encode_ReportTimeAttributeIdList,
-} from '../SummarizationASN1Productions/ReportTimeAttributeIdList.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BufferedObservationId */
 /**
  * @summary BufferedObservationId
@@ -328,9 +252,7 @@ export function _encode_BufferedObservationId(
 ) {
     if (!_cached_encoder_for_BufferedObservationId) {
         _cached_encoder_for_BufferedObservationId = function (
-            value: BufferedObservationId,
-            elGetter: $.ASN1Encoder<BufferedObservationId>
-        ): _Element {
+            value: BufferedObservationId        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -6,12 +6,6 @@ import {
     _decode_ARU_PPDU_normal_mode_parameters,
     _encode_ARU_PPDU_normal_mode_parameters,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta.mjs";
-export {
-    ARU_PPDU_normal_mode_parameters,
-    _decode_ARU_PPDU_normal_mode_parameters,
-    _encode_ARU_PPDU_normal_mode_parameters,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU */
 /**
  * @summary ARU_PPDU

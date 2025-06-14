@@ -6,12 +6,6 @@ import {
     _decode_SupplierOrConsumer,
     _encode_SupplierOrConsumer,
 } from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
-export {
-    SupplierOrConsumer,
-    _decode_SupplierOrConsumer,
-    _encode_SupplierOrConsumer,
-} from "../DSAOperationalAttributeTypes/SupplierOrConsumer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ConsumerInformation */
 /**
  * @summary ConsumerInformation

@@ -11,17 +11,6 @@ import {
     _decode_CertReplaceOK_Item_ok,
     _encode_CertReplaceOK_Item_ok,
 } from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta.mjs";
-export {
-    CertReplaceOK_Item_not_ok,
-    _decode_CertReplaceOK_Item_not_ok,
-    _encode_CertReplaceOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-not-ok.ta.mjs";
-export {
-    CertReplaceOK_Item_ok,
-    _decode_CertReplaceOK_Item_ok,
-    _encode_CertReplaceOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertReplaceOK-Item-ok.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReplaceOK_Item */
 /**
  * @summary CertReplaceOK_Item

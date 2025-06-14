@@ -6,14 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AttributeMappings.ta.mjs";
 import { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AttributeMappings,
-    _decode_AttributeMappings,
-    _encode_AttributeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings.ta.mjs";
-export { id_ce_attributeMappings } from "../AttributeCertificateDefinitions/id-ce-attributeMappings.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION attributeMappings */
 /**
  * @summary attributeMappings

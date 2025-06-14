@@ -7,17 +7,6 @@ import {
     _decode_Jid,
     _encode_Jid,
 } from "../SelectedAttributeTypes/Jid.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
-export { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.mjs";
-export {
-    Jid,
-    _decode_Jid,
-    _encode_Jid,
-} from "../SelectedAttributeTypes/Jid.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION jidMatch */
 /**
  * @summary jidMatch

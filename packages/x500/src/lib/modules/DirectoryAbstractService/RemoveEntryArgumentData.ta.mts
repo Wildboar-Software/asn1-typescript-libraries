@@ -474,9 +474,7 @@ export function _encode_RemoveEntryArgumentData(
 ) {
     if (!_cached_encoder_for_RemoveEntryArgumentData) {
         _cached_encoder_for_RemoveEntryArgumentData = function (
-            value: RemoveEntryArgumentData,
-            elGetter: $.ASN1Encoder<RemoveEntryArgumentData>
-        ): _Element {
+            value: RemoveEntryArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

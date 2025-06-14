@@ -5,8 +5,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Refinement */
 /**
  * @summary Refinement

@@ -13,22 +13,6 @@ import { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
 import { id_idm_dap } from "../DirectoryIDMProtocols/id-idm-dap.va.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { abandon } from "../DirectoryAbstractService/abandon.oa.mjs";
-export { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";
-export { administerPassword } from "../DirectoryAbstractService/administerPassword.oa.mjs";
-export { changePassword } from "../DirectoryAbstractService/changePassword.oa.mjs";
-export { compare } from "../DirectoryAbstractService/compare.oa.mjs";
-export { directoryBind } from "../DirectoryAbstractService/directoryBind.oa.mjs";
-export { list } from "../DirectoryAbstractService/list.oa.mjs";
-export { modifyDN } from "../DirectoryAbstractService/modifyDN.oa.mjs";
-export { modifyEntry } from "../DirectoryAbstractService/modifyEntry.oa.mjs";
-export { read } from "../DirectoryAbstractService/read.oa.mjs";
-export { removeEntry } from "../DirectoryAbstractService/removeEntry.oa.mjs";
-export { search } from "../DirectoryAbstractService/search.oa.mjs";
-export { id_idm_dap } from "../DirectoryIDMProtocols/id-idm-dap.va.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dap_ip */
 /**
  * @summary dap_ip

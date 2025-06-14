@@ -6,12 +6,6 @@ import {
     _decode_TraceItem,
     _encode_TraceItem,
 } from "../DistributedOperations/TraceItem.ta.mjs";
-export {
-    TraceItem,
-    _decode_TraceItem,
-    _encode_TraceItem,
-} from "../DistributedOperations/TraceItem.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TraceInformation */
 /**
  * @summary TraceInformation

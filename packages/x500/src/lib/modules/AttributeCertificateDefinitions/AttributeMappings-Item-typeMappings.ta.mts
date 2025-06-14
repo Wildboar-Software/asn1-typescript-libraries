@@ -10,12 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeMappings_Item_typeMappings */
 /**
  * @summary AttributeMappings_Item_typeMappings
@@ -193,9 +187,7 @@ export function _encode_AttributeMappings_Item_typeMappings(
 ) {
     if (!_cached_encoder_for_AttributeMappings_Item_typeMappings) {
         _cached_encoder_for_AttributeMappings_Item_typeMappings = function (
-            value: AttributeMappings_Item_typeMappings,
-            elGetter: $.ASN1Encoder<AttributeMappings_Item_typeMappings>
-        ): _Element {
+            value: AttributeMappings_Item_typeMappings        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

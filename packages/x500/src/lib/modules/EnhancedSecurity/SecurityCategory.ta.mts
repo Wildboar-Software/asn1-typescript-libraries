@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { SECURITY_CATEGORY } from "../EnhancedSecurity/SECURITY-CATEGORY.oca.mjs";
-export { SecurityCategoriesTable } from "../EnhancedSecurity/SecurityCategoriesTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityCategory */
 /**
  * @summary SecurityCategory
@@ -181,9 +178,7 @@ export function _encode_SecurityCategory(
 ) {
     if (!_cached_encoder_for_SecurityCategory) {
         _cached_encoder_for_SecurityCategory = function (
-            value: SecurityCategory,
-            elGetter: $.ASN1Encoder<SecurityCategory>
-        ): _Element {
+            value: SecurityCategory        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

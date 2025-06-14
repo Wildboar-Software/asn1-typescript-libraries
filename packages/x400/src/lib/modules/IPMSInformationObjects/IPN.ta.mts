@@ -276,9 +276,7 @@ let _cached_encoder_for_IPN: $.ASN1Encoder<IPN> | null = null;
 export function _encode_IPN(value: IPN, elGetter: $.ASN1Encoder<IPN>) {
     if (!_cached_encoder_for_IPN) {
         _cached_encoder_for_IPN = function (
-            value: IPN,
-            elGetter: $.ASN1Encoder<IPN>
-        ): _Element {
+            value: IPN        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

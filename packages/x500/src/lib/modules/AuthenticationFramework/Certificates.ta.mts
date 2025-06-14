@@ -15,17 +15,6 @@ import {
     _decode_ForwardCertificationPath,
     _encode_ForwardCertificationPath,
 } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-export {
-    ForwardCertificationPath,
-    _decode_ForwardCertificationPath,
-    _encode_ForwardCertificationPath,
-} from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Certificates */
 /**
  * @summary Certificates
@@ -209,9 +198,7 @@ export function _encode_Certificates(
 ) {
     if (!_cached_encoder_for_Certificates) {
         _cached_encoder_for_Certificates = function (
-            value: Certificates,
-            elGetter: $.ASN1Encoder<Certificates>
-        ): _Element {
+            value: Certificates        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,18 +11,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export {
-    ENCIPHERED,
-    _get_decoder_for_ENCIPHERED,
-    _get_encoder_for_ENCIPHERED,
-} from "../CryptoTools/ENCIPHERED.ta.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbpDataTransferServer_conf */
 /**
  * @summary TbpDataTransferServer_conf

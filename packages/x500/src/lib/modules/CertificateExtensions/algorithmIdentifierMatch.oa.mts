@@ -7,17 +7,6 @@ import {
 import { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.mjs";
 import { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export { algorithmIdentifier } from "../CertificateExtensions/algorithmIdentifier.oa.mjs";
-export { id_mr_algorithmIdentifierMatch } from "../CertificateExtensions/id-mr-algorithmIdentifierMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION algorithmIdentifierMatch */
 /**
  * @summary algorithmIdentifierMatch

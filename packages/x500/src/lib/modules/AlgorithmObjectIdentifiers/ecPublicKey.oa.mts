@@ -6,14 +6,6 @@ import {
     _encode_X509Curves,
 } from "../AlgorithmObjectIdentifiers/X509Curves.vsa.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { id_ecPublicKey } from "../AlgorithmObjectIdentifiers/id-ecPublicKey.va.mjs";
-export {
-    X509Curves,
-    _decode_X509Curves,
-    _encode_X509Curves,
-} from "../AlgorithmObjectIdentifiers/X509Curves.vsa.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ecPublicKey */
 /**
  * @summary ecPublicKey

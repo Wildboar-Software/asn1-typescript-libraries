@@ -12,13 +12,6 @@ import {
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-export { ub_saslMechanism } from "../DirectoryAbstractService/ub-saslMechanism.va.mjs";
-export {
-    DirectoryString,
-    _decode_DirectoryString,
-    _encode_DirectoryString,
-} from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SaslCredentials */
 /**
  * @summary SaslCredentials
@@ -239,9 +232,7 @@ export function _encode_SaslCredentials(
 ) {
     if (!_cached_encoder_for_SaslCredentials) {
         _cached_encoder_for_SaslCredentials = function (
-            value: SaslCredentials,
-            elGetter: $.ASN1Encoder<SaslCredentials>
-        ): _Element {
+            value: SaslCredentials        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

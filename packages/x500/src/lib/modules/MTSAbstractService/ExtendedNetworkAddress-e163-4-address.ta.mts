@@ -184,9 +184,7 @@ export function _encode_ExtendedNetworkAddress_e163_4_address(
 ) {
     if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) {
         _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (
-            value: ExtendedNetworkAddress_e163_4_address,
-            elGetter: $.ASN1Encoder<ExtendedNetworkAddress_e163_4_address>
-        ): _Element {
+            value: ExtendedNetworkAddress_e163_4_address        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

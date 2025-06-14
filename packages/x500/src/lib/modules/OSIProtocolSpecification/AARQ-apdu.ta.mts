@@ -47,49 +47,6 @@ import {
     _decode_Implementation_data,
     _encode_Implementation_data,
 } from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    AARQ_apdu_protocol_version,
-    AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_AARQ_apdu_protocol_version,
-    _encode_AARQ_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta.mjs";
-export {
-    AE_invocation_identifier,
-    _decode_AE_invocation_identifier,
-    _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.mjs";
-export {
-    AP_invocation_identifier,
-    _decode_AP_invocation_identifier,
-    _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.mjs";
-export {
-    Application_context_name,
-    _decode_Application_context_name,
-    _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta.mjs";
-export {
-    Association_informationBind,
-    _decode_Association_informationBind,
-    _encode_Association_informationBind,
-} from "../OSIProtocolSpecification/Association-informationBind.ta.mjs";
-export {
-    Implementation_data,
-    _decode_Implementation_data,
-    _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AARQ_apdu */
 /**
  * @summary AARQ_apdu
@@ -515,9 +472,7 @@ export function _encode_AARQ_apdu(
             0,
             () =>
                 function (
-                    value: AARQ_apdu,
-                    elGetter: $.ASN1Encoder<AARQ_apdu>
-                ): _Element {
+                    value: AARQ_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

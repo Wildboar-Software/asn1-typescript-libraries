@@ -11,13 +11,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IdmBind */
 /**
  * @summary IdmBind
@@ -246,9 +239,7 @@ export function _encode_IdmBind(
 ) {
     if (!_cached_encoder_for_IdmBind) {
         _cached_encoder_for_IdmBind = function (
-            value: IdmBind,
-            elGetter: $.ASN1Encoder<IdmBind>
-        ): _Element {
+            value: IdmBind        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

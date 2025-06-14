@@ -27,29 +27,6 @@ import {
     _decode_RequestAttribute_defaultValues_Item,
     _encode_RequestAttribute_defaultValues_Item,
 } from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-export {
-    ContextCombination,
-    _decode_ContextCombination,
-    _encode_ContextCombination,
-} from "../ServiceAdministration/ContextCombination.ta.mjs";
-export {
-    ContextProfile,
-    _decode_ContextProfile,
-    _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta.mjs";
-export {
-    MatchingUse,
-    _decode_MatchingUse,
-    _encode_MatchingUse,
-} from "../ServiceAdministration/MatchingUse.ta.mjs";
-export {
-    RequestAttribute_defaultValues_Item,
-    _decode_RequestAttribute_defaultValues_Item,
-    _encode_RequestAttribute_defaultValues_Item,
-} from "../ServiceAdministration/RequestAttribute-defaultValues-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RequestAttribute */
 /**
  * @summary RequestAttribute
@@ -379,9 +356,7 @@ export function _encode_RequestAttribute(
 ) {
     if (!_cached_encoder_for_RequestAttribute) {
         _cached_encoder_for_RequestAttribute = function (
-            value: RequestAttribute,
-            elGetter: $.ASN1Encoder<RequestAttribute>
-        ): _Element {
+            value: RequestAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

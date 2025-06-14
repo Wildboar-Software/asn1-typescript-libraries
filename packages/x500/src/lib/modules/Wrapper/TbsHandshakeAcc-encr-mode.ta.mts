@@ -11,17 +11,6 @@ import {
     _decode_TbsHandshakeAcc_encr_mode_non_aead,
     _encode_TbsHandshakeAcc_encr_mode_non_aead,
 } from "../Wrapper/TbsHandshakeAcc-encr-mode-non-aead.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export {
-    TbsHandshakeAcc_encr_mode_non_aead,
-    _decode_TbsHandshakeAcc_encr_mode_non_aead,
-    _encode_TbsHandshakeAcc_encr_mode_non_aead,
-} from "../Wrapper/TbsHandshakeAcc-encr-mode-non-aead.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeAcc_encr_mode */
 /**
  * @summary TbsHandshakeAcc_encr_mode

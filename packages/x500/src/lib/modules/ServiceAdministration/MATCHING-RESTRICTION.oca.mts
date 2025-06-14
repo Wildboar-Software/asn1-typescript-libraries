@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MATCHING_RESTRICTION */
 /**
  * @summary MATCHING_RESTRICTION

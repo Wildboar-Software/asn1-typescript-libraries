@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
-export { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_lsx_utcTime */
 /**
  * @summary id_lsx_utcTime

@@ -11,13 +11,6 @@ import {
     _decode_FamilyEntry,
     _encode_FamilyEntry,
 } from "../DirectoryAbstractService/FamilyEntry.ta.mjs";
-export {
-    FamilyEntry,
-    _decode_FamilyEntry,
-    _encode_FamilyEntry,
-} from "../DirectoryAbstractService/FamilyEntry.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FamilyEntries */
 /**
  * @summary FamilyEntries
@@ -192,9 +185,7 @@ export function _encode_FamilyEntries(
 ) {
     if (!_cached_encoder_for_FamilyEntries) {
         _cached_encoder_for_FamilyEntries = function (
-            value: FamilyEntries,
-            elGetter: $.ASN1Encoder<FamilyEntries>
-        ): _Element {
+            value: FamilyEntries        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

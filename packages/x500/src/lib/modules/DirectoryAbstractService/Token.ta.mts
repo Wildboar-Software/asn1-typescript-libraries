@@ -11,17 +11,6 @@ import {
     _decode_TokenContent,
     _encode_TokenContent,
 } from "../DirectoryAbstractService/TokenContent.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    TokenContent,
-    _decode_TokenContent,
-    _encode_TokenContent,
-} from "../DirectoryAbstractService/TokenContent.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Token */
 /**
  * @summary Token

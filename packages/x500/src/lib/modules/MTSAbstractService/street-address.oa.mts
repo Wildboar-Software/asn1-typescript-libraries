@@ -5,13 +5,6 @@ import {
     _decode_StreetAddress,
     _encode_StreetAddress,
 } from "../MTSAbstractService/StreetAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    StreetAddress,
-    _decode_StreetAddress,
-    _encode_StreetAddress,
-} from "../MTSAbstractService/StreetAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION street_address */
 /**
  * @summary street_address

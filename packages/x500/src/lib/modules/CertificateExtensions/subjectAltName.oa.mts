@@ -6,14 +6,6 @@ import {
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-export { id_ce_subjectAltName } from "../CertificateExtensions/id-ce-subjectAltName.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subjectAltName */
 /**
  * @summary subjectAltName

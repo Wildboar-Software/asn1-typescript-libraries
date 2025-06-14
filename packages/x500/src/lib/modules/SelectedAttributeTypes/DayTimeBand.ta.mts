@@ -10,12 +10,6 @@ import {
     _decode_DayTime,
     _encode_DayTime,
 } from "../SelectedAttributeTypes/DayTime.ta.mjs";
-export {
-    DayTime,
-    _decode_DayTime,
-    _encode_DayTime,
-} from "../SelectedAttributeTypes/DayTime.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DayTimeBand */
 /**
  * @summary DayTimeBand
@@ -222,9 +216,7 @@ export function _encode_DayTimeBand(
 ) {
     if (!_cached_encoder_for_DayTimeBand) {
         _cached_encoder_for_DayTimeBand = function (
-            value: DayTimeBand,
-            elGetter: $.ASN1Encoder<DayTimeBand>
-        ): _Element {
+            value: DayTimeBand        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

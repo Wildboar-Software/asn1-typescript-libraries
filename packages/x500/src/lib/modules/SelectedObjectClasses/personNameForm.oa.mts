@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va.mjs";
 import { person } from "../SelectedObjectClasses/person.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { id_nf_personNameForm } from "../SelectedObjectClasses/id-nf-personNameForm.va.mjs";
-export { person } from "../SelectedObjectClasses/person.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION personNameForm */
 /**
  * @summary personNameForm

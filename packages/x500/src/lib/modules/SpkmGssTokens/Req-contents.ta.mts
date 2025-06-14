@@ -34,32 +34,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    Validity,
-    _decode_Validity,
-    _encode_Validity,
-} from "../AuthenticationFramework/Validity.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    Context_Data,
-    _decode_Context_Data,
-    _encode_Context_Data,
-} from "../SpkmGssTokens/Context-Data.ta.mjs";
-export {
-    Key_Estb_Algs,
-    _decode_Key_Estb_Algs,
-    _encode_Key_Estb_Algs,
-} from "../SpkmGssTokens/Key-Estb-Algs.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Req_contents */
 /**
  * @summary Req_contents
@@ -440,9 +414,7 @@ export function _encode_Req_contents(
 ) {
     if (!_cached_encoder_for_Req_contents) {
         _cached_encoder_for_Req_contents = function (
-            value: Req_contents,
-            elGetter: $.ASN1Encoder<Req_contents>
-        ): _Element {
+            value: Req_contents        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

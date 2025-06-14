@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,58 +16,8 @@ import {
     _decode_DeliverId,
     _encode_DeliverId,
 } from '../SWMF/DeliverId.ta.mjs';
-export {
-    DeliverId,
-    _decode_DeliverId,
-    _encode_DeliverId,
-} from '../SWMF/DeliverId.ta.mjs';
 import {
     DeliverResult,
-    DeliverResult_pass /* IMPORTED_LONG_NAMED_INTEGER */,
-    pass /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_communicationError /* IMPORTED_LONG_NAMED_INTEGER */,
-    communicationError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_equipmentError /* IMPORTED_LONG_NAMED_INTEGER */,
-    equipmentError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_qosError /* IMPORTED_LONG_NAMED_INTEGER */,
-    qosError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_accessDenied /* IMPORTED_LONG_NAMED_INTEGER */,
-    accessDenied /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_notFound /* IMPORTED_LONG_NAMED_INTEGER */,
-    notFound /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_insufficientSpace /* IMPORTED_LONG_NAMED_INTEGER */,
-    insufficientSpace /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_alreadyDelivered /* IMPORTED_LONG_NAMED_INTEGER */,
-    alreadyDelivered /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_inProgress /* IMPORTED_LONG_NAMED_INTEGER */,
-    inProgress /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_DeliverResult,
-    _encode_DeliverResult,
-} from '../SWMF/DeliverResult.ta.mjs';
-export {
-    DeliverResult,
-    DeliverResult_pass /* IMPORTED_LONG_NAMED_INTEGER */,
-    pass /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_communicationError /* IMPORTED_LONG_NAMED_INTEGER */,
-    communicationError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_equipmentError /* IMPORTED_LONG_NAMED_INTEGER */,
-    equipmentError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_qosError /* IMPORTED_LONG_NAMED_INTEGER */,
-    qosError /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_accessDenied /* IMPORTED_LONG_NAMED_INTEGER */,
-    accessDenied /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_notFound /* IMPORTED_LONG_NAMED_INTEGER */,
-    notFound /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_insufficientSpace /* IMPORTED_LONG_NAMED_INTEGER */,
-    insufficientSpace /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_alreadyDelivered /* IMPORTED_LONG_NAMED_INTEGER */,
-    alreadyDelivered /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_inProgress /* IMPORTED_LONG_NAMED_INTEGER */,
-    inProgress /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliverResult_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliverResult,
     _encode_DeliverResult,
 } from '../SWMF/DeliverResult.ta.mjs';
@@ -131,12 +26,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-export {
-    ManagementExtension,
-    _decode_ManagementExtension,
-    _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DeliverResultInfo */
 /**
  * @summary DeliverResultInfo
@@ -335,9 +224,7 @@ export function _encode_DeliverResultInfo(
 ) {
     if (!_cached_encoder_for_DeliverResultInfo) {
         _cached_encoder_for_DeliverResultInfo = function (
-            value: DeliverResultInfo,
-            elGetter: $.ASN1Encoder<DeliverResultInfo>
-        ): _Element {
+            value: DeliverResultInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

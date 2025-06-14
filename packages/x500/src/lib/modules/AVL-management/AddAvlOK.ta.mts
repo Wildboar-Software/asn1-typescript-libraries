@@ -152,9 +152,7 @@ export function _encode_AddAvlOK(
 ) {
     if (!_cached_encoder_for_AddAvlOK) {
         _cached_encoder_for_AddAvlOK = function (
-            value: AddAvlOK,
-            elGetter: $.ASN1Encoder<AddAvlOK>
-        ): _Element {
+            value: AddAvlOK        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

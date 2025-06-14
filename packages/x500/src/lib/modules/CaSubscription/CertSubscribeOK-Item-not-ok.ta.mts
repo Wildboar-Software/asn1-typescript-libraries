@@ -11,17 +11,6 @@ import {
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
 } from "../CaSubscription/CASP-CertStatusCode.ta.mjs";
-export {
-    CASP_CertStatusCode,
-    CASP_CertStatusCode_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_CertStatusCode_unknownCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASP_CertStatusCode,
-    _encode_CASP_CertStatusCode,
-    _enum_for_CASP_CertStatusCode,
-} from "../CaSubscription/CASP-CertStatusCode.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_not_ok */
 /**
  * @summary CertSubscribeOK_Item_not_ok
@@ -182,9 +171,7 @@ export function _encode_CertSubscribeOK_Item_not_ok(
 ) {
     if (!_cached_encoder_for_CertSubscribeOK_Item_not_ok) {
         _cached_encoder_for_CertSubscribeOK_Item_not_ok = function (
-            value: CertSubscribeOK_Item_not_ok,
-            elGetter: $.ASN1Encoder<CertSubscribeOK_Item_not_ok>
-        ): _Element {
+            value: CertSubscribeOK_Item_not_ok        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

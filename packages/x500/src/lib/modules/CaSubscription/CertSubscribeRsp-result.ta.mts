@@ -11,17 +11,6 @@ import {
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
 } from "../CaSubscription/CertSubscribeOK.ta.mjs";
-export {
-    CertSubscribeErr,
-    _decode_CertSubscribeErr,
-    _encode_CertSubscribeErr,
-} from "../CaSubscription/CertSubscribeErr.ta.mjs";
-export {
-    CertSubscribeOK,
-    _decode_CertSubscribeOK,
-    _encode_CertSubscribeOK,
-} from "../CaSubscription/CertSubscribeOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeRsp_result */
 /**
  * @summary CertSubscribeRsp_result

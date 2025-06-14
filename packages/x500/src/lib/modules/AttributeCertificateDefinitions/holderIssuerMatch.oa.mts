@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta.mjs";
 import { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    HolderIssuerAssertion,
-    _decode_HolderIssuerAssertion,
-    _encode_HolderIssuerAssertion,
-} from "../AttributeCertificateDefinitions/HolderIssuerAssertion.ta.mjs";
-export { id_mr_holderIssuerMatch } from "../AttributeCertificateDefinitions/id-mr-holderIssuerMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION holderIssuerMatch */
 /**
  * @summary holderIssuerMatch

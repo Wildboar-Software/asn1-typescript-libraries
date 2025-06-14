@@ -6,12 +6,6 @@ import {
     _decode_ContextAssertion,
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
-export {
-    ContextAssertion,
-    _decode_ContextAssertion,
-    _encode_ContextAssertion,
-} from "../InformationFramework/ContextAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TypeAndContextAssertion_contextAssertions */
 /**
  * @summary TypeAndContextAssertion_contextAssertions

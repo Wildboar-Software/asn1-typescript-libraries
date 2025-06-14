@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    DualStringSyntax,
-    _decode_DualStringSyntax,
-    _encode_DualStringSyntax,
-} from "../AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
-export { id_mr_dualStringMatch } from "../AttributeCertificateDefinitions/id-mr-dualStringMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dualStringMatch */
 /**
  * @summary dualStringMatch

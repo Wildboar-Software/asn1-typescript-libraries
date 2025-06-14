@@ -12,12 +12,6 @@ import {
     _decode_SortKey,
     _encode_SortKey,
 } from "../DirectoryAbstractService/SortKey.ta.mjs";
-export {
-    SortKey,
-    _decode_SortKey,
-    _encode_SortKey,
-} from "../DirectoryAbstractService/SortKey.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PagedResultsRequest_newRequest */
 /**
  * @summary PagedResultsRequest_newRequest
@@ -288,9 +282,7 @@ export function _encode_PagedResultsRequest_newRequest(
 ) {
     if (!_cached_encoder_for_PagedResultsRequest_newRequest) {
         _cached_encoder_for_PagedResultsRequest_newRequest = function (
-            value: PagedResultsRequest_newRequest,
-            elGetter: $.ASN1Encoder<PagedResultsRequest_newRequest>
-        ): _Element {
+            value: PagedResultsRequest_newRequest        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

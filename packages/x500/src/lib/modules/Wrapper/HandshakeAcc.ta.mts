@@ -11,17 +11,6 @@ import {
     _decode_TbsHandshakeAcc,
     _encode_TbsHandshakeAcc,
 } from "../Wrapper/TbsHandshakeAcc.ta.mjs";
-export {
-    Signed,
-    _get_decoder_for_Signed,
-    _get_encoder_for_Signed,
-} from "../CryptoTools/Signed.ta.mjs";
-export {
-    TbsHandshakeAcc,
-    _decode_TbsHandshakeAcc,
-    _encode_TbsHandshakeAcc,
-} from "../Wrapper/TbsHandshakeAcc.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HandshakeAcc */
 /**
  * @summary HandshakeAcc

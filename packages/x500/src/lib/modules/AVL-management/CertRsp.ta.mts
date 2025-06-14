@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
-export {
-    CertRsp_result,
-    _decode_CertRsp_result,
-    _encode_CertRsp_result,
-} from "../AVL-management/CertRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertRsp */
 /**
  * @summary CertRsp
@@ -189,9 +178,7 @@ export function _encode_CertRsp(
 ) {
     if (!_cached_encoder_for_CertRsp) {
         _cached_encoder_for_CertRsp = function (
-            value: CertRsp,
-            elGetter: $.ASN1Encoder<CertRsp>
-        ): _Element {
+            value: CertRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

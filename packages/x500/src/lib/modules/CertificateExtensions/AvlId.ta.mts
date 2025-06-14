@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    AvlSerialNumber,
-    _decode_AvlSerialNumber,
-    _encode_AvlSerialNumber,
-} from "../AuthenticationFramework/AvlSerialNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AvlId */
 /**
  * @summary AvlId
@@ -196,9 +185,7 @@ let _cached_encoder_for_AvlId: $.ASN1Encoder<AvlId> | null = null;
 export function _encode_AvlId(value: AvlId, elGetter: $.ASN1Encoder<AvlId>) {
     if (!_cached_encoder_for_AvlId) {
         _cached_encoder_for_AvlId = function (
-            value: AvlId,
-            elGetter: $.ASN1Encoder<AvlId>
-        ): _Element {
+            value: AvlId        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

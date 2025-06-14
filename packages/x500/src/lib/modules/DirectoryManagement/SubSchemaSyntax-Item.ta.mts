@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    SubSchemaSyntax_Item_subSchema,
-    _decode_SubSchemaSyntax_Item_subSchema,
-    _encode_SubSchemaSyntax_Item_subSchema,
-} from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax_Item */
 /**
  * @summary SubSchemaSyntax_Item
@@ -183,9 +172,7 @@ export function _encode_SubSchemaSyntax_Item(
 ) {
     if (!_cached_encoder_for_SubSchemaSyntax_Item) {
         _cached_encoder_for_SubSchemaSyntax_Item = function (
-            value: SubSchemaSyntax_Item,
-            elGetter: $.ASN1Encoder<SubSchemaSyntax_Item>
-        ): _Element {
+            value: SubSchemaSyntax_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

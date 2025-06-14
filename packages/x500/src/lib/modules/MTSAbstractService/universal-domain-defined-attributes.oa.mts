@@ -5,13 +5,6 @@ import {
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
 } from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalDomainDefinedAttributes,
-    _decode_UniversalDomainDefinedAttributes,
-    _encode_UniversalDomainDefinedAttributes,
-} from "../MTSAbstractService/UniversalDomainDefinedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_domain_defined_attributes */
 /**
  * @summary universal_domain_defined_attributes

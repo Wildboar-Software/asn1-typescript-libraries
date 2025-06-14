@@ -189,9 +189,7 @@ export function _get_encoder_for_Signed<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
 ) {
     return function (
-        value: Signed<ToBeSigned>,
-        elGetter: $.ASN1Encoder<Signed<ToBeSigned>>
-    ): _Element {
+        value: Signed<ToBeSigned>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

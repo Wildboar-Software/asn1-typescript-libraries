@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,33 +14,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SourceIndicator,
     _enum_for_SourceIndicator,
-    SourceIndicator_resourceOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    resourceOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SourceIndicator_managementOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    managementOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SourceIndicator_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SourceIndicator,
-    _encode_SourceIndicator,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SourceIndicator.ta.mjs';
-export {
-    SourceIndicator,
-    _enum_for_SourceIndicator,
-    SourceIndicator_resourceOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    resourceOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SourceIndicator_managementOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    managementOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SourceIndicator_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SourceIndicator,
     _encode_SourceIndicator,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SourceIndicator.ta.mjs';
 import {
-    AttributeIdentifierList,
-    _decode_AttributeIdentifierList,
-    _encode_AttributeIdentifierList,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeIdentifierList.ta.mjs';
-export {
     AttributeIdentifierList,
     _decode_AttributeIdentifierList,
     _encode_AttributeIdentifierList,
@@ -105,17 +27,7 @@ import {
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.mjs';
-export {
-    AttributeValueChangeDefinition,
-    _decode_AttributeValueChangeDefinition,
-    _encode_AttributeValueChangeDefinition,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.mjs';
 import {
-    NotificationIdentifier,
-    _decode_NotificationIdentifier,
-    _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
-export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
@@ -125,17 +37,7 @@ import {
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
-export {
-    CorrelatedNotifications,
-    _decode_CorrelatedNotifications,
-    _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
 import {
-    AdditionalText,
-    _decode_AdditionalText,
-    _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
-export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
@@ -145,12 +47,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION StateChangeInfo */
 /**
  * @summary StateChangeInfo
@@ -441,9 +337,7 @@ export function _encode_StateChangeInfo(
 ) {
     if (!_cached_encoder_for_StateChangeInfo) {
         _cached_encoder_for_StateChangeInfo = function (
-            value: StateChangeInfo,
-            elGetter: $.ASN1Encoder<StateChangeInfo>
-        ): _Element {
+            value: StateChangeInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

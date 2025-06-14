@@ -22,33 +22,6 @@ import {
     _decode_CertReplaceRsp_result,
     _encode_CertReplaceRsp_result,
 } from "../PkiPMIProtocolSpecifications/CertReplaceRsp-result.ta.mjs";
-export {
-    CASPcommonComponents,
-    _decode_CASPcommonComponents,
-    _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
-export {
-    CASPsequence,
-    _decode_CASPsequence,
-    _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
-export {
-    CASPversion,
-    CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASPversion,
-    _encode_CASPversion,
-    _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
-export {
-    CertReplaceRsp_result,
-    _decode_CertReplaceRsp_result,
-    _encode_CertReplaceRsp_result,
-} from "../PkiPMIProtocolSpecifications/CertReplaceRsp-result.ta.mjs";
 import {
     CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
@@ -258,9 +231,7 @@ export function _encode_CertReplaceRsp(
 ) {
     if (!_cached_encoder_for_CertReplaceRsp) {
         _cached_encoder_for_CertReplaceRsp = function (
-            value: CertReplaceRsp,
-            elGetter: $.ASN1Encoder<CertReplaceRsp>
-        ): _Element {
+            value: CertReplaceRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

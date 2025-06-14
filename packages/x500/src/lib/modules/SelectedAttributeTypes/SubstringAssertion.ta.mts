@@ -6,12 +6,6 @@ import {
     _decode_SubstringAssertion_Item,
     _encode_SubstringAssertion_Item,
 } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
-export {
-    SubstringAssertion_Item,
-    _decode_SubstringAssertion_Item,
-    _encode_SubstringAssertion_Item,
-} from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubstringAssertion */
 /**
  * @summary SubstringAssertion

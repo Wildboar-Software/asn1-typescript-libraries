@@ -6,12 +6,6 @@ import {
     _decode_Result_list_Item,
     _encode_Result_list_Item,
 } from "../OSIProtocolSpecification/Result-list-Item.ta.mjs";
-export {
-    Result_list_Item,
-    _decode_Result_list_Item,
-    _encode_Result_list_Item,
-} from "../OSIProtocolSpecification/Result-list-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Result_list */
 /**
  * @summary Result_list

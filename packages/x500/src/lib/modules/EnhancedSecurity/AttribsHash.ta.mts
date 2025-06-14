@@ -11,17 +11,6 @@ import {
     _decode_HashedAttributes,
     _encode_HashedAttributes,
 } from "../EnhancedSecurity/HashedAttributes.ta.mjs";
-export {
-    HASH,
-    _get_decoder_for_HASH,
-    _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta.mjs";
-export {
-    HashedAttributes,
-    _decode_HashedAttributes,
-    _encode_HashedAttributes,
-} from "../EnhancedSecurity/HashedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttribsHash */
 /**
  * @summary AttribsHash

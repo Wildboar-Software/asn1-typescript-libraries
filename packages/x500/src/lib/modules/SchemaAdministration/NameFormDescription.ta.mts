@@ -17,18 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export {
-    NameFormInformation,
-    _decode_NameFormInformation,
-    _encode_NameFormInformation,
-} from "../SchemaAdministration/NameFormInformation.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NameFormDescription */
 /**
  * @summary NameFormDescription
@@ -293,9 +281,7 @@ export function _encode_NameFormDescription(
 ) {
     if (!_cached_encoder_for_NameFormDescription) {
         _cached_encoder_for_NameFormDescription = function (
-            value: NameFormDescription,
-            elGetter: $.ASN1Encoder<NameFormDescription>
-        ): _Element {
+            value: NameFormDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

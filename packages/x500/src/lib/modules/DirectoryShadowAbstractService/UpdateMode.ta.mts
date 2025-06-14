@@ -11,17 +11,6 @@ import {
     _decode_SupplierUpdateMode,
     _encode_SupplierUpdateMode,
 } from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.mjs";
-export {
-    ConsumerUpdateMode,
-    _decode_ConsumerUpdateMode,
-    _encode_ConsumerUpdateMode,
-} from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta.mjs";
-export {
-    SupplierUpdateMode,
-    _decode_SupplierUpdateMode,
-    _encode_SupplierUpdateMode,
-} from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UpdateMode */
 /**
  * @summary UpdateMode

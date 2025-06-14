@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,40 +17,12 @@ import {
     _decode_SignalReceived,
     _encode_SignalReceived,
 } from '../TestCategories-ASN1Module/SignalReceived.ta.mjs';
-export {
-    SignalReceived,
-    _decode_SignalReceived,
-    _encode_SignalReceived,
-} from '../TestCategories-ASN1Module/SignalReceived.ta.mjs';
 import {
     IntermediateResourceBoundaryTestOutcome,
     _enum_for_IntermediateResourceBoundaryTestOutcome,
-    IntermediateResourceBoundaryTestOutcome_passed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    passed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_unexpected /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unexpected /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_wrongSignalReceived /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    wrongSignalReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    waitDurationTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_IntermediateResourceBoundaryTestOutcome,
     _encode_IntermediateResourceBoundaryTestOutcome,
 } from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta.mjs';
-export {
-    IntermediateResourceBoundaryTestOutcome,
-    _enum_for_IntermediateResourceBoundaryTestOutcome,
-    IntermediateResourceBoundaryTestOutcome_passed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    passed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_unexpected /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unexpected /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_wrongSignalReceived /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    wrongSignalReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    waitDurationTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_IntermediateResourceBoundaryTestOutcome,
-    _encode_IntermediateResourceBoundaryTestOutcome,
-} from '../TestCategories-ASN1Module/IntermediateResourceBoundaryTestOutcome.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ResourceBoundaryTestResults */
 /**
  * @summary ResourceBoundaryTestResults
@@ -316,9 +234,7 @@ export function _encode_ResourceBoundaryTestResults(
 ) {
     if (!_cached_encoder_for_ResourceBoundaryTestResults) {
         _cached_encoder_for_ResourceBoundaryTestResults = function (
-            value: ResourceBoundaryTestResults,
-            elGetter: $.ASN1Encoder<ResourceBoundaryTestResults>
-        ): _Element {
+            value: ResourceBoundaryTestResults        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

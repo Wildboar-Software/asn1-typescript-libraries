@@ -245,9 +245,7 @@ export function _encode_AddAvlReq(
 ) {
     if (!_cached_encoder_for_AddAvlReq) {
         _cached_encoder_for_AddAvlReq = function (
-            value: AddAvlReq,
-            elGetter: $.ASN1Encoder<AddAvlReq>
-        ): _Element {
+            value: AddAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

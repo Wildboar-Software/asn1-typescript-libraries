@@ -5,13 +5,6 @@ import {
     _decode_TeletexCommonName,
     _encode_TeletexCommonName,
 } from "../MTSAbstractService/TeletexCommonName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    TeletexCommonName,
-    _decode_TeletexCommonName,
-    _encode_TeletexCommonName,
-} from "../MTSAbstractService/TeletexCommonName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletex_common_name */
 /**
  * @summary teletex_common_name

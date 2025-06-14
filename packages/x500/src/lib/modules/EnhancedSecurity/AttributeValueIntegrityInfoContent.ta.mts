@@ -15,17 +15,6 @@ import {
     _decode_Signer,
     _encode_Signer,
 } from "../EnhancedSecurity/Signer.ta.mjs";
-export {
-    AVIHash,
-    _decode_AVIHash,
-    _encode_AVIHash,
-} from "../EnhancedSecurity/AVIHash.ta.mjs";
-export {
-    Signer,
-    _decode_Signer,
-    _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeValueIntegrityInfoContent */
 /**
  * @summary AttributeValueIntegrityInfoContent
@@ -207,9 +196,7 @@ export function _encode_AttributeValueIntegrityInfoContent(
 ) {
     if (!_cached_encoder_for_AttributeValueIntegrityInfoContent) {
         _cached_encoder_for_AttributeValueIntegrityInfoContent = function (
-            value: AttributeValueIntegrityInfoContent,
-            elGetter: $.ASN1Encoder<AttributeValueIntegrityInfoContent>
-        ): _Element {
+            value: AttributeValueIntegrityInfoContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

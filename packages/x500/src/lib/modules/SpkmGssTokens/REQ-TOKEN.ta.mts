@@ -20,22 +20,6 @@ import {
     _decode_Req_contents,
     _encode_Req_contents,
 } from "../SpkmGssTokens/Req-contents.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Integrity,
-    _decode_Integrity,
-    _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta.mjs";
-export {
-    Req_contents,
-    _decode_Req_contents,
-    _encode_Req_contents,
-} from "../SpkmGssTokens/Req-contents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION REQ_TOKEN */
 /**
  * @summary REQ_TOKEN
@@ -209,9 +193,7 @@ export function _encode_REQ_TOKEN(
 ) {
     if (!_cached_encoder_for_REQ_TOKEN) {
         _cached_encoder_for_REQ_TOKEN = function (
-            value: REQ_TOKEN,
-            elGetter: $.ASN1Encoder<REQ_TOKEN>
-        ): _Element {
+            value: REQ_TOKEN        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

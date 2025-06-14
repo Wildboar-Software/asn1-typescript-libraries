@@ -6,12 +6,6 @@ import {
     _decode_AuthAttId,
     _encode_AuthAttId,
 } from "../AttributeCertificateDefinitions/AuthAttId.ta.mjs";
-export {
-    AuthAttId,
-    _decode_AuthAttId,
-    _encode_AuthAttId,
-} from "../AttributeCertificateDefinitions/AuthAttId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthorityAttributeIdentifierSyntax */
 /**
  * @summary AuthorityAttributeIdentifierSyntax

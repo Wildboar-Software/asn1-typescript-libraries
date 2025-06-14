@@ -11,12 +11,6 @@ import {
     _decode_ClassAttributes,
     _encode_ClassAttributes,
 } from "../DirectoryShadowAbstractService/ClassAttributes.ta.mjs";
-export {
-    ClassAttributes,
-    _decode_ClassAttributes,
-    _encode_ClassAttributes,
-} from "../DirectoryShadowAbstractService/ClassAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ClassAttributeSelection */
 /**
  * @summary ClassAttributeSelection
@@ -200,9 +194,7 @@ export function _encode_ClassAttributeSelection(
 ) {
     if (!_cached_encoder_for_ClassAttributeSelection) {
         _cached_encoder_for_ClassAttributeSelection = function (
-            value: ClassAttributeSelection,
-            elGetter: $.ASN1Encoder<ClassAttributeSelection>
-        ): _Element {
+            value: ClassAttributeSelection        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

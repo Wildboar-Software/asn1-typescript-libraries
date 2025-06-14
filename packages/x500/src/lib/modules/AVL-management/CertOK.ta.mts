@@ -10,12 +10,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Certificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertOK */
 /**
  * @summary CertOK
@@ -158,9 +152,7 @@ let _cached_encoder_for_CertOK: $.ASN1Encoder<CertOK> | null = null;
 export function _encode_CertOK(value: CertOK, elGetter: $.ASN1Encoder<CertOK>) {
     if (!_cached_encoder_for_CertOK) {
         _cached_encoder_for_CertOK = function (
-            value: CertOK,
-            elGetter: $.ASN1Encoder<CertOK>
-        ): _Element {
+            value: CertOK        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

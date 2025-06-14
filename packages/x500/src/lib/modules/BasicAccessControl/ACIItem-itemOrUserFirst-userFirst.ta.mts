@@ -15,17 +15,6 @@ import {
     _decode_UserPermission,
     _encode_UserPermission,
 } from "../BasicAccessControl/UserPermission.ta.mjs";
-export {
-    UserClasses,
-    _decode_UserClasses,
-    _encode_UserClasses,
-} from "../BasicAccessControl/UserClasses.ta.mjs";
-export {
-    UserPermission,
-    _decode_UserPermission,
-    _encode_UserPermission,
-} from "../BasicAccessControl/UserPermission.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst_userFirst */
 /**
  * @summary ACIItem_itemOrUserFirst_userFirst
@@ -201,9 +190,7 @@ export function _encode_ACIItem_itemOrUserFirst_userFirst(
 ) {
     if (!_cached_encoder_for_ACIItem_itemOrUserFirst_userFirst) {
         _cached_encoder_for_ACIItem_itemOrUserFirst_userFirst = function (
-            value: ACIItem_itemOrUserFirst_userFirst,
-            elGetter: $.ASN1Encoder<ACIItem_itemOrUserFirst_userFirst>
-        ): _Element {
+            value: ACIItem_itemOrUserFirst_userFirst        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -17,31 +17,6 @@ import {
 } from "../DirectoryAbstractService/SearchResult.ta.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_search } from "../CommonProtocolSpecification/id-opcode-search.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export {
-    SearchArgument,
-    _decode_SearchArgument,
-    _encode_SearchArgument,
-} from "../DirectoryAbstractService/SearchArgument.ta.mjs";
-export {
-    SearchResult,
-    _decode_SearchResult,
-    _encode_SearchResult,
-} from "../DirectoryAbstractService/SearchResult.ta.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION search */
 /**
  * @summary search

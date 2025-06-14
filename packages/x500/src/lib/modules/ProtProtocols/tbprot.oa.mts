@@ -6,14 +6,6 @@ import {
     _encode_TBprot,
 } from "../TrustBroker/TBprot.ta.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export { id_tbprot } from "../ProtProtocols/id-tbprot.va.mjs";
-export {
-    TBprot,
-    _decode_TBprot,
-    _encode_TBprot,
-} from "../TrustBroker/TBprot.ta.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION tbprot */
 /**
  * @summary tbprot

@@ -5,13 +5,6 @@ import {
     _decode_PhysicalDeliveryPersonalName,
     _encode_PhysicalDeliveryPersonalName,
 } from "../MTSAbstractService/PhysicalDeliveryPersonalName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    PhysicalDeliveryPersonalName,
-    _decode_PhysicalDeliveryPersonalName,
-    _encode_PhysicalDeliveryPersonalName,
-} from "../MTSAbstractService/PhysicalDeliveryPersonalName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION physical_delivery_personal_name */
 /**
  * @summary physical_delivery_personal_name

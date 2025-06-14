@@ -3,9 +3,6 @@ import { BOOLEAN } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_boolean } from "../SelectedAttributeTypes/id-lsx-boolean.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_boolean } from "../SelectedAttributeTypes/id-lsx-boolean.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION boolean_ */
 /**
  * @summary boolean_

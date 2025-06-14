@@ -242,9 +242,7 @@ export function _encode_CertRsp(
 ) {
     if (!_cached_encoder_for_CertRsp) {
         _cached_encoder_for_CertRsp = function (
-            value: CertRsp,
-            elGetter: $.ASN1Encoder<CertRsp>
-        ): _Element {
+            value: CertRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

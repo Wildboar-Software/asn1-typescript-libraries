@@ -7,17 +7,6 @@ import {
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListSubstringsMatch.va.mjs";
-export { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.mjs";
-export {
-    SubstringAssertion,
-    _decode_SubstringAssertion,
-    _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION caseIgnoreListSubstringsMatch */
 /**
  * @summary caseIgnoreListSubstringsMatch

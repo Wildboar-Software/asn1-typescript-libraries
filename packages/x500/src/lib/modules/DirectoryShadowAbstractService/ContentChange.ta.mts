@@ -26,27 +26,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    ContentChange_attributeChanges,
-    _decode_ContentChange_attributeChanges,
-    _encode_ContentChange_attributeChanges,
-} from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta.mjs";
-export {
-    ContentChange_rename,
-    _decode_ContentChange_rename,
-    _encode_ContentChange_rename,
-} from "../DirectoryShadowAbstractService/ContentChange-rename.ta.mjs";
-export {
-    SDSEType,
-    _decode_SDSEType,
-    _encode_SDSEType,
-} from "../DirectoryShadowAbstractService/SDSEType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentChange */
 /**
  * @summary ContentChange
@@ -349,9 +328,7 @@ export function _encode_ContentChange(
 ) {
     if (!_cached_encoder_for_ContentChange) {
         _cached_encoder_for_ContentChange = function (
-            value: ContentChange,
-            elGetter: $.ASN1Encoder<ContentChange>
-        ): _Element {
+            value: ContentChange        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

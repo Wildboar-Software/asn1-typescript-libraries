@@ -15,17 +15,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DITcontext,
-    _decode_DITcontext,
-    _encode_DITcontext,
-} from "../HierarchicalOperationalBindings/DITcontext.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SuperiorToSubordinate */
 /**
  * @summary SuperiorToSubordinate
@@ -237,9 +226,7 @@ export function _encode_SuperiorToSubordinate(
 ) {
     if (!_cached_encoder_for_SuperiorToSubordinate) {
         _cached_encoder_for_SuperiorToSubordinate = function (
-            value: SuperiorToSubordinate,
-            elGetter: $.ASN1Encoder<SuperiorToSubordinate>
-        ): _Element {
+            value: SuperiorToSubordinate        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

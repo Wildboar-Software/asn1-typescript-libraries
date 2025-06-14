@@ -1,12 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION us_joint */
 /**
  * @summary us_joint

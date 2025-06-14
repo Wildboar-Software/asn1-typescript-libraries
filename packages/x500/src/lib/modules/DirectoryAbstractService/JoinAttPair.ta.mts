@@ -15,17 +15,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    JoinContextType,
-    _decode_JoinContextType,
-    _encode_JoinContextType,
-} from "../DirectoryAbstractService/JoinContextType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION JoinAttPair */
 /**
  * @summary JoinAttPair
@@ -229,9 +218,7 @@ export function _encode_JoinAttPair(
 ) {
     if (!_cached_encoder_for_JoinAttPair) {
         _cached_encoder_for_JoinAttPair = function (
-            value: JoinAttPair,
-            elGetter: $.ASN1Encoder<JoinAttPair>
-        ): _Element {
+            value: JoinAttPair        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

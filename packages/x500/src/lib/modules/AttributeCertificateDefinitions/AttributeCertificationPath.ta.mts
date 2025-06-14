@@ -15,17 +15,6 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-export {
-    ACPathData,
-    _decode_ACPathData,
-    _encode_ACPathData,
-} from "../AttributeCertificateDefinitions/ACPathData.ta.mjs";
-export {
-    AttributeCertificate,
-    _decode_AttributeCertificate,
-    _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificationPath */
 /**
  * @summary AttributeCertificationPath
@@ -215,9 +204,7 @@ export function _encode_AttributeCertificationPath(
 ) {
     if (!_cached_encoder_for_AttributeCertificationPath) {
         _cached_encoder_for_AttributeCertificationPath = function (
-            value: AttributeCertificationPath,
-            elGetter: $.ASN1Encoder<AttributeCertificationPath>
-        ): _Element {
+            value: AttributeCertificationPath        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

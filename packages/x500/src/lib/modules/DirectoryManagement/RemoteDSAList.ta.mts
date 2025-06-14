@@ -6,12 +6,6 @@ import {
     _decode_AccessPoint,
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RemoteDSAList */
 /**
  * @summary RemoteDSAList

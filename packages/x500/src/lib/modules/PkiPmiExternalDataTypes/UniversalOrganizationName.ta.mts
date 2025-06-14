@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-export { ub_organization_name_length } from "../PkiPmiExternalDataTypes/ub-organization-name-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalOrganizationName */
 /**
  * @summary UniversalOrganizationName

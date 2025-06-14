@@ -10,12 +10,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertReq */
 /**
  * @summary CertReq
@@ -161,9 +155,7 @@ export function _encode_CertReq(
 ) {
     if (!_cached_encoder_for_CertReq) {
         _cached_encoder_for_CertReq = function (
-            value: CertReq,
-            elGetter: $.ASN1Encoder<CertReq>
-        ): _Element {
+            value: CertReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

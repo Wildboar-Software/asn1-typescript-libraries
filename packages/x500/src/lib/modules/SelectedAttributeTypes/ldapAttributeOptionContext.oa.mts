@@ -7,14 +7,6 @@ import {
     _encode_AttributeOptionList,
 } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
 import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export {
-    AttributeOptionList,
-    _decode_AttributeOptionList,
-    _encode_AttributeOptionList,
-} from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
-export { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ldapAttributeOptionContext */
 /**
  * @summary ldapAttributeOptionContext

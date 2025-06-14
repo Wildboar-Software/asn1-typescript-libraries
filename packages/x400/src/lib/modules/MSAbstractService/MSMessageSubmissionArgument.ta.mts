@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_MessageSubmissionArgument,
     _encode_MessageSubmissionArgument,
 } from '../MTSAbstractService/MessageSubmissionArgument.ta.mjs';
-export {
-    MessageSubmissionArgument,
-    _decode_MessageSubmissionArgument,
-    _encode_MessageSubmissionArgument,
-} from '../MTSAbstractService/MessageSubmissionArgument.ta.mjs';
 import {
-    MSSubmissionOptions,
-    _decode_MSSubmissionOptions,
-    _encode_MSSubmissionOptions,
-} from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
-export {
     MSSubmissionOptions,
     _decode_MSSubmissionOptions,
     _encode_MSSubmissionOptions,
@@ -91,17 +26,7 @@ import {
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
-export {
-    MessageSubmissionEnvelope,
-    _decode_MessageSubmissionEnvelope,
-    _encode_MessageSubmissionEnvelope,
-} from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
 import {
-    Content,
-    _decode_Content,
-    _encode_Content,
-} from '../MTSAbstractService/Content.ta.mjs';
-export {
     Content,
     _decode_Content,
     _encode_Content,
@@ -294,9 +219,7 @@ export function _encode_MSMessageSubmissionArgument(
 ) {
     if (!_cached_encoder_for_MSMessageSubmissionArgument) {
         _cached_encoder_for_MSMessageSubmissionArgument = function (
-            value: MSMessageSubmissionArgument,
-            elGetter: $.ASN1Encoder<MSMessageSubmissionArgument>
-        ): _Element {
+            value: MSMessageSubmissionArgument        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

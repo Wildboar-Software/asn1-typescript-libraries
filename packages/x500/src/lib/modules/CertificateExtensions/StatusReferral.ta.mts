@@ -10,13 +10,6 @@ import {
     _decode_CRLReferral,
     _encode_CRLReferral,
 } from "../CertificateExtensions/CRLReferral.ta.mjs";
-export {
-    CRLReferral,
-    _decode_CRLReferral,
-    _encode_CRLReferral,
-} from "../CertificateExtensions/CRLReferral.ta.mjs";
-export { OTHER_REFERRAL } from "../CertificateExtensions/OTHER-REFERRAL.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION StatusReferral */
 /**
  * @summary StatusReferral

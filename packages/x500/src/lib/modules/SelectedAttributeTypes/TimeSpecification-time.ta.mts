@@ -11,17 +11,6 @@ import {
     _decode_TimeSpecification_time_absolute,
     _encode_TimeSpecification_time_absolute,
 } from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
-export {
-    Period,
-    _decode_Period,
-    _encode_Period,
-} from "../SelectedAttributeTypes/Period.ta.mjs";
-export {
-    TimeSpecification_time_absolute,
-    _decode_TimeSpecification_time_absolute,
-    _encode_TimeSpecification_time_absolute,
-} from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TimeSpecification_time */
 /**
  * @summary TimeSpecification_time

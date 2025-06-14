@@ -15,17 +15,6 @@ import {
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
-export {
-    OsiUnbindResult_fully_encoded_data_Item_presentation_data_values,
-    _decode_OsiUnbindResult_fully_encoded_data_Item_presentation_data_values,
-    _encode_OsiUnbindResult_fully_encoded_data_Item_presentation_data_values,
-} from "../OSIProtocolSpecification/OsiUnbindResult-fully-encoded-data-Item-presentation-data-values.ta.mjs";
-export {
-    Presentation_context_identifier,
-    _decode_Presentation_context_identifier,
-    _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiUnbindResult_fully_encoded_data_Item */
 /**
  * @summary OsiUnbindResult_fully_encoded_data_Item
@@ -193,9 +182,7 @@ export function _encode_OsiUnbindResult_fully_encoded_data_Item(
 ) {
     if (!_cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item) {
         _cached_encoder_for_OsiUnbindResult_fully_encoded_data_Item = function (
-            value: OsiUnbindResult_fully_encoded_data_Item,
-            elGetter: $.ASN1Encoder<OsiUnbindResult_fully_encoded_data_Item>
-        ): _Element {
+            value: OsiUnbindResult_fully_encoded_data_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

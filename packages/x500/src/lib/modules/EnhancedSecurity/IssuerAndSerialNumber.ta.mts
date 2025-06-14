@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IssuerAndSerialNumber */
 /**
  * @summary IssuerAndSerialNumber
@@ -188,9 +177,7 @@ export function _encode_IssuerAndSerialNumber(
 ) {
     if (!_cached_encoder_for_IssuerAndSerialNumber) {
         _cached_encoder_for_IssuerAndSerialNumber = function (
-            value: IssuerAndSerialNumber,
-            elGetter: $.ASN1Encoder<IssuerAndSerialNumber>
-        ): _Element {
+            value: IssuerAndSerialNumber        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

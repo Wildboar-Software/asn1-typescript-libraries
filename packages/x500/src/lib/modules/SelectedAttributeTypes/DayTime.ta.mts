@@ -256,9 +256,7 @@ export function _encode_DayTime(
 ) {
     if (!_cached_encoder_for_DayTime) {
         _cached_encoder_for_DayTime = function (
-            value: DayTime,
-            elGetter: $.ASN1Encoder<DayTime>
-        ): _Element {
+            value: DayTime        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

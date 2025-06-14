@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_ExecutionType,
     _encode_ExecutionType,
 } from '../CSModule/ExecutionType.ta.mjs';
-export {
-    ExecutionType,
-    _decode_ExecutionType,
-    _encode_ExecutionType,
-} from '../CSModule/ExecutionType.ta.mjs';
 import {
-    ErrorCode,
-    _decode_ErrorCode,
-    _encode_ErrorCode,
-} from '../CSModule/ErrorCode.ta.mjs';
-export {
     ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
@@ -91,22 +25,11 @@ import {
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
 } from '../CSModule/ExecutionResultType.ta.mjs';
-export {
-    ExecutionResultType,
-    _decode_ExecutionResultType,
-    _encode_ExecutionResultType,
-} from '../CSModule/ExecutionResultType.ta.mjs';
 import {
     Attribute,
     _decode_Attribute,
     _encode_Attribute,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/Attribute.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ResultInfoFromThread */
 /**
  * @summary ResultInfoFromThread
@@ -311,9 +234,7 @@ export function _encode_ResultInfoFromThread(
 ) {
     if (!_cached_encoder_for_ResultInfoFromThread) {
         _cached_encoder_for_ResultInfoFromThread = function (
-            value: ResultInfoFromThread,
-            elGetter: $.ASN1Encoder<ResultInfoFromThread>
-        ): _Element {
+            value: ResultInfoFromThread        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

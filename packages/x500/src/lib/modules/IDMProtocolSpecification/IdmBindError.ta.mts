@@ -17,23 +17,6 @@ import {
     _encode_IdmBindError_aETitleError,
     _enum_for_IdmBindError_aETitleError,
 } from "../IDMProtocolSpecification/IdmBindError-aETitleError.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-export {
-    calledAETitleNotRecognized /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    callingAETitleNotAccepted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    IdmBindError_aETitleError,
-    IdmBindError_aETitleError_calledAETitleNotRecognized /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    IdmBindError_aETitleError_callingAETitleNotAccepted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    _decode_IdmBindError_aETitleError,
-    _encode_IdmBindError_aETitleError,
-    _enum_for_IdmBindError_aETitleError,
-} from "../IDMProtocolSpecification/IdmBindError-aETitleError.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IdmBindError */
 /**
  * @summary IdmBindError
@@ -274,9 +257,7 @@ export function _encode_IdmBindError(
 ) {
     if (!_cached_encoder_for_IdmBindError) {
         _cached_encoder_for_IdmBindError = function (
-            value: IdmBindError,
-            elGetter: $.ASN1Encoder<IdmBindError>
-        ): _Element {
+            value: IdmBindError        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

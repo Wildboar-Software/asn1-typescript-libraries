@@ -15,17 +15,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
-export {
-    AttributeCertificate,
-    _decode_AttributeCertificate,
-    _encode_AttributeCertificate,
-} from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ACPathData */
 /**
  * @summary ACPathData
@@ -211,9 +200,7 @@ export function _encode_ACPathData(
 ) {
     if (!_cached_encoder_for_ACPathData) {
         _cached_encoder_for_ACPathData = function (
-            value: ACPathData,
-            elGetter: $.ASN1Encoder<ACPathData>
-        ): _Element {
+            value: ACPathData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

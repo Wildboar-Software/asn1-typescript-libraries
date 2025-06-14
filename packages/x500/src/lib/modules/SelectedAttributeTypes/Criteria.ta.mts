@@ -6,12 +6,6 @@ import {
     _decode_CriteriaItem,
     _encode_CriteriaItem,
 } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
-export {
-    CriteriaItem,
-    _decode_CriteriaItem,
-    _encode_CriteriaItem,
-} from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Criteria */
 /**
  * @summary Criteria

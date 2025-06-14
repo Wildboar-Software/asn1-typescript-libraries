@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,33 +14,10 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ModifyOperator,
-    ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
     replace /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_addValues /* IMPORTED_LONG_NAMED_INTEGER */,
-    addValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_removeValues /* IMPORTED_LONG_NAMED_INTEGER */,
-    removeValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_setToDefault /* IMPORTED_LONG_NAMED_INTEGER */,
-    setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.mjs';
-export {
-    ModifyOperator,
-    ModifyOperator_replace /* IMPORTED_LONG_NAMED_INTEGER */,
-    replace /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_addValues /* IMPORTED_LONG_NAMED_INTEGER */,
-    addValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_removeValues /* IMPORTED_LONG_NAMED_INTEGER */,
-    removeValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ModifyOperator_setToDefault /* IMPORTED_LONG_NAMED_INTEGER */,
-    setToDefault /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_ModifyOperator,
-    _encode_ModifyOperator,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ModifyOperator.ta.mjs';
-import { ModificationLists } from '../CSModule/ModificationLists.osa.mjs';
-export { ModificationLists } from '../CSModule/ModificationLists.osa.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ModificationList_Item */
 /**
  * @summary ModificationList_Item
@@ -296,9 +219,7 @@ export function _encode_ModificationList_Item(
 ) {
     if (!_cached_encoder_for_ModificationList_Item) {
         _cached_encoder_for_ModificationList_Item = function (
-            value: ModificationList_Item,
-            elGetter: $.ASN1Encoder<ModificationList_Item>
-        ): _Element {
+            value: ModificationList_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

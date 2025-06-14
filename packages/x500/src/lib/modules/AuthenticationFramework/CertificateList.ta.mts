@@ -11,17 +11,6 @@ import {
     _get_decoder_for_SIGNED,
     _get_encoder_for_SIGNED,
 } from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    CertificateListContent,
-    _decode_CertificateListContent,
-    _encode_CertificateListContent,
-} from "../AuthenticationFramework/CertificateListContent.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateList */
 /**
  * @summary CertificateList

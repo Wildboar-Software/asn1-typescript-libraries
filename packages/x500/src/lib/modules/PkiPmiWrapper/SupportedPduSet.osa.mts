@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedPduSet */
 /**
  * @summary SupportedPduSet

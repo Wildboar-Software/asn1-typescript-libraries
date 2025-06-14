@@ -16,42 +16,6 @@ import {
     _decode_Notifications,
     _encode_Notifications,
 } from "../AVL-management/Notifications.ta.mjs";
-export {
-    AVMP_error,
-    AVMP_error_constrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_duplicateAVL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_invalidAvlVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_maxAVLsExceeded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_missingAvlComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_nonConstrainedRequired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_notAllowedForConstrainedAVLEntity /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_protocolError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unknownAVL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unsupportedCriticalEntryExtenssion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMP_error_unsupportedCriticalExtenssion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    constrainedRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    duplicateAVL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidAvlVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    maxAVLsExceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingAvlComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonConstrainedRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    notAllowedForConstrainedAVLEntity /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    protocolError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownAVL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedCriticalEntryExtenssion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedCriticalExtenssion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AVMP_error,
-    _encode_AVMP_error,
-    _enum_for_AVMP_error,
-} from "../AVL-management/AVMP-error.ta.mjs";
-export {
-    Notifications,
-    _decode_Notifications,
-    _encode_Notifications,
-} from "../AVL-management/Notifications.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertErr */
 /**
  * @summary CertErr
@@ -237,9 +201,7 @@ export function _encode_CertErr(
 ) {
     if (!_cached_encoder_for_CertErr) {
         _cached_encoder_for_CertErr = function (
-            value: CertErr,
-            elGetter: $.ASN1Encoder<CertErr>
-        ): _Element {
+            value: CertErr        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

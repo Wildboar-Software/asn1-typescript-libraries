@@ -10,14 +10,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-export { ub_domain_defined_attribute_type_length } from "../MTSAbstractService/ub-domain-defined-attribute-type-length.va.mjs";
-export { ub_domain_defined_attribute_value_length } from "../MTSAbstractService/ub-domain-defined-attribute-value-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttribute */
 /**
  * @summary UniversalDomainDefinedAttribute
@@ -180,9 +172,7 @@ export function _encode_UniversalDomainDefinedAttribute(
 ) {
     if (!_cached_encoder_for_UniversalDomainDefinedAttribute) {
         _cached_encoder_for_UniversalDomainDefinedAttribute = function (
-            value: UniversalDomainDefinedAttribute,
-            elGetter: $.ASN1Encoder<UniversalDomainDefinedAttribute>
-        ): _Element {
+            value: UniversalDomainDefinedAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

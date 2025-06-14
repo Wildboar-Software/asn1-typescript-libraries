@@ -12,19 +12,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
-export {
-    TimeAssertion,
-    _decode_TimeAssertion,
-    _encode_TimeAssertion,
-} from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
-export {
-    TimeSpecification,
-    _decode_TimeSpecification,
-    _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION temporalContext */
 /**
  * @summary temporalContext

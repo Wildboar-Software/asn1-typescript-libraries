@@ -334,9 +334,7 @@ export function _encode_DeliveryControls88(
 ) {
     if (!_cached_encoder_for_DeliveryControls88) {
         _cached_encoder_for_DeliveryControls88 = function (
-            value: DeliveryControls88,
-            elGetter: $.ASN1Encoder<DeliveryControls88>
-        ): _Element {
+            value: DeliveryControls88        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

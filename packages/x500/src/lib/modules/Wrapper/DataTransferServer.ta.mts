@@ -11,17 +11,6 @@ import {
     _decode_DataTransferServerNEA,
     _encode_DataTransferServerNEA,
 } from "../Wrapper/DataTransferServerNEA.ta.mjs";
-export {
-    DataTransferServerAE,
-    _decode_DataTransferServerAE,
-    _encode_DataTransferServerAE,
-} from "../Wrapper/DataTransferServerAE.ta.mjs";
-export {
-    DataTransferServerNEA,
-    _decode_DataTransferServerNEA,
-    _encode_DataTransferServerNEA,
-} from "../Wrapper/DataTransferServerNEA.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataTransferServer */
 /**
  * @summary DataTransferServer

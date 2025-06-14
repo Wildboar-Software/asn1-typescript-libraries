@@ -69,86 +69,6 @@ import {
     _decode_SearchRuleId,
     _encode_SearchRuleId,
 } from "../ServiceAdministration/SearchRuleId.ta.mjs";
-export {
-    AuthenticationLevel,
-    _decode_AuthenticationLevel,
-    _encode_AuthenticationLevel,
-} from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    DomainInfo,
-    _decode_DomainInfo,
-    _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta.mjs";
-export {
-    Exclusions,
-    _decode_Exclusions,
-    _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta.mjs";
-export {
-    OperationProgress,
-    _decode_OperationProgress,
-    _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta.mjs";
-export {
-    cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    immediateSuperior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonSpecificSubordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReferenceType,
-    ReferenceType_cross /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_ditBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_immediateSuperior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_nonSpecificSubordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_self /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_subordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_supplier /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    self /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    subordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    supplier /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReferenceType,
-    _encode_ReferenceType,
-    _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DistributedOperations/Time.ta.mjs";
-export {
-    TraceInformation,
-    _decode_TraceInformation,
-    _encode_TraceInformation,
-} from "../DistributedOperations/TraceInformation.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    UniqueIdentifier,
-    _decode_UniqueIdentifier,
-    _encode_UniqueIdentifier,
-} from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-export {
-    MRMapping,
-    _decode_MRMapping,
-    _encode_MRMapping,
-} from "../ServiceAdministration/MRMapping.ta.mjs";
-export {
-    SearchRuleId,
-    _decode_SearchRuleId,
-    _encode_SearchRuleId,
-} from "../ServiceAdministration/SearchRuleId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChainingArguments */
 /**
  * @summary ChainingArguments
@@ -912,9 +832,7 @@ export function _encode_ChainingArguments(
 ) {
     if (!_cached_encoder_for_ChainingArguments) {
         _cached_encoder_for_ChainingArguments = function (
-            value: ChainingArguments,
-            elGetter: $.ASN1Encoder<ChainingArguments>
-        ): _Element {
+            value: ChainingArguments        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

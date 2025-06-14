@@ -26,27 +26,6 @@ import {
     _decode_SeqNum,
     _encode_SeqNum,
 } from "../SpkmGssTokens/SeqNum.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Conf_Alg,
-    _decode_Conf_Alg,
-    _encode_Conf_Alg,
-} from "../SpkmGssTokens/Conf-Alg.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    SeqNum,
-    _decode_SeqNum,
-    _encode_SeqNum,
-} from "../SpkmGssTokens/SeqNum.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Wrap_Header */
 /**
  * @summary Wrap_Header
@@ -283,9 +262,7 @@ export function _encode_Wrap_Header(
 ) {
     if (!_cached_encoder_for_Wrap_Header) {
         _cached_encoder_for_Wrap_Header = function (
-            value: Wrap_Header,
-            elGetter: $.ASN1Encoder<Wrap_Header>
-        ): _Element {
+            value: Wrap_Header        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

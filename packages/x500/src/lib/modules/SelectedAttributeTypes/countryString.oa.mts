@@ -6,14 +6,6 @@ import {
     _encode_CountryName,
 } from "../SelectedAttributeTypes/CountryName.ta.mjs";
 import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CountryName,
-    _decode_CountryName,
-    _encode_CountryName,
-} from "../SelectedAttributeTypes/CountryName.ta.mjs";
-export { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION countryString */
 /**
  * @summary countryString

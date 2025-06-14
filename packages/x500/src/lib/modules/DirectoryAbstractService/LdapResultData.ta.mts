@@ -297,9 +297,7 @@ export function _encode_LdapResultData(
 ) {
     if (!_cached_encoder_for_LdapResultData) {
         _cached_encoder_for_LdapResultData = function (
-            value: LdapResultData,
-            elGetter: $.ASN1Encoder<LdapResultData>
-        ): _Element {
+            value: LdapResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

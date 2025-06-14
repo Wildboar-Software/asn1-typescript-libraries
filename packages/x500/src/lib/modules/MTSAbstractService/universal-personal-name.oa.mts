@@ -5,13 +5,6 @@ import {
     _decode_UniversalPersonalName,
     _encode_UniversalPersonalName,
 } from "../MTSAbstractService/UniversalPersonalName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalPersonalName,
-    _decode_UniversalPersonalName,
-    _encode_UniversalPersonalName,
-} from "../MTSAbstractService/UniversalPersonalName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_personal_name */
 /**
  * @summary universal_personal_name

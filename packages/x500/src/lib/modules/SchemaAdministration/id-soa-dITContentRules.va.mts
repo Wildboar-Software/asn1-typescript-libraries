@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_soa } from "../UsefulDefinitions/id-soa.va.mjs";
-export { id_soa } from "../UsefulDefinitions/id-soa.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_soa_dITContentRules */
 /**
  * @summary id_soa_dITContentRules

@@ -6,16 +6,6 @@ import {
     _encode_PkiPathMatchSyntax,
 } from "../CertificateExtensions/PkiPathMatchSyntax.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { id_mr_pkiPathMatch } from "../CertificateExtensions/id-mr-pkiPathMatch.va.mjs";
-export {
-    PkiPathMatchSyntax,
-    _decode_PkiPathMatchSyntax,
-    _encode_PkiPathMatchSyntax,
-} from "../CertificateExtensions/PkiPathMatchSyntax.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pkiPathMatch */
 /**
  * @summary pkiPathMatch

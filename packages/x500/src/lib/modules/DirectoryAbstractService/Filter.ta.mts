@@ -6,12 +6,6 @@ import {
     _decode_FilterItem,
     _encode_FilterItem,
 } from "../DirectoryAbstractService/FilterItem.ta.mjs";
-export {
-    FilterItem,
-    _decode_FilterItem,
-    _encode_FilterItem,
-} from "../DirectoryAbstractService/FilterItem.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Filter */
 /**
  * @summary Filter

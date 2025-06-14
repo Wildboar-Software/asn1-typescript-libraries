@@ -11,17 +11,6 @@ import {
     _decode_NumberRange,
     _encode_NumberRange,
 } from "../CertificateExtensions/NumberRange.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    NumberRange,
-    _decode_NumberRange,
-    _encode_NumberRange,
-} from "../CertificateExtensions/NumberRange.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RevokedCertificateGroup */
 /**
  * @summary RevokedCertificateGroup

@@ -25,39 +25,6 @@ import {
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
 } from "../EnhancedSecurity/SecurityPolicyIdentifier.ta.mjs";
-export {
-    PrivacyMark,
-    _decode_PrivacyMark,
-    _encode_PrivacyMark,
-} from "../EnhancedSecurity/PrivacyMark.ta.mjs";
-export {
-    SecurityCategories,
-    _decode_SecurityCategories,
-    _encode_SecurityCategories,
-} from "../EnhancedSecurity/SecurityCategories.ta.mjs";
-export {
-    confidential /* IMPORTED_SHORT_NAMED_INTEGER */,
-    restricted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    secret /* IMPORTED_SHORT_NAMED_INTEGER */,
-    SecurityClassification,
-    SecurityClassification_confidential /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityClassification_restricted /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityClassification_secret /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityClassification_top_secret /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityClassification_unclassified /* IMPORTED_LONG_NAMED_INTEGER */,
-    SecurityClassification_unmarked /* IMPORTED_LONG_NAMED_INTEGER */,
-    top_secret /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unclassified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unmarked /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_SecurityClassification,
-    _encode_SecurityClassification,
-} from "../EnhancedSecurity/SecurityClassification.ta.mjs";
-export {
-    SecurityPolicyIdentifier,
-    _decode_SecurityPolicyIdentifier,
-    _encode_SecurityPolicyIdentifier,
-} from "../EnhancedSecurity/SecurityPolicyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityLabel */
 /**
  * @summary SecurityLabel
@@ -286,9 +253,7 @@ export function _encode_SecurityLabel(
 ) {
     if (!_cached_encoder_for_SecurityLabel) {
         _cached_encoder_for_SecurityLabel = function (
-            value: SecurityLabel,
-            elGetter: $.ASN1Encoder<SecurityLabel>
-        ): _Element {
+            value: SecurityLabel        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

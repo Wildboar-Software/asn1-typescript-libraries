@@ -6,12 +6,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CrossCertificates */
 /**
  * @summary CrossCertificates

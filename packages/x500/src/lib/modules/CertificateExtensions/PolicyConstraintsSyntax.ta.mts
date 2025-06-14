@@ -10,12 +10,6 @@ import {
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";
-export {
-    SkipCerts,
-    _decode_SkipCerts,
-    _encode_SkipCerts,
-} from "../CertificateExtensions/SkipCerts.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicyConstraintsSyntax */
 /**
  * @summary PolicyConstraintsSyntax
@@ -209,9 +203,7 @@ export function _encode_PolicyConstraintsSyntax(
 ) {
     if (!_cached_encoder_for_PolicyConstraintsSyntax) {
         _cached_encoder_for_PolicyConstraintsSyntax = function (
-            value: PolicyConstraintsSyntax,
-            elGetter: $.ASN1Encoder<PolicyConstraintsSyntax>
-        ): _Element {
+            value: PolicyConstraintsSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

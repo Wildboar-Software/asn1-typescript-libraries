@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta.mjs';
 import {
     TemplateLabel,
     _decode_TemplateLabel,
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-export {
-    TemplateLabel,
-    _decode_TemplateLabel,
-    _encode_TemplateLabel,
-} from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AndAttributeIds_Item */
 /**
  * @summary AndAttributeIds_Item
@@ -242,9 +175,7 @@ export function _encode_AndAttributeIds_Item(
 ) {
     if (!_cached_encoder_for_AndAttributeIds_Item) {
         _cached_encoder_for_AndAttributeIds_Item = function (
-            value: AndAttributeIds_Item,
-            elGetter: $.ASN1Encoder<AndAttributeIds_Item>
-        ): _Element {
+            value: AndAttributeIds_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

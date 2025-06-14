@@ -13,27 +13,6 @@ import {
 } from "../DirectoryAbstractService/ChangePasswordResult.ta.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    ChangePasswordArgument,
-    _decode_ChangePasswordArgument,
-    _encode_ChangePasswordArgument,
-} from "../DirectoryAbstractService/ChangePasswordArgument.ta.mjs";
-export {
-    ChangePasswordResult,
-    _decode_ChangePasswordResult,
-    _encode_ChangePasswordResult,
-} from "../DirectoryAbstractService/ChangePasswordResult.ta.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION changePassword */
 /**
  * @summary changePassword

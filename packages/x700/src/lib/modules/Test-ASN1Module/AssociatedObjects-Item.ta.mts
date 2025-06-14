@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     AssociatedObjects_Item_associatedObjectInfo,
     _decode_AssociatedObjects_Item_associatedObjectInfo,
     _encode_AssociatedObjects_Item_associatedObjectInfo,
 } from '../Test-ASN1Module/AssociatedObjects-Item-associatedObjectInfo.ta.mjs';
-export {
-    AssociatedObjects_Item_associatedObjectInfo,
-    _decode_AssociatedObjects_Item_associatedObjectInfo,
-    _encode_AssociatedObjects_Item_associatedObjectInfo,
-} from '../Test-ASN1Module/AssociatedObjects-Item-associatedObjectInfo.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AssociatedObjects_Item */
 /**
  * @summary AssociatedObjects_Item
@@ -250,9 +183,7 @@ export function _encode_AssociatedObjects_Item(
 ) {
     if (!_cached_encoder_for_AssociatedObjects_Item) {
         _cached_encoder_for_AssociatedObjects_Item = function (
-            value: AssociatedObjects_Item,
-            elGetter: $.ASN1Encoder<AssociatedObjects_Item>
-        ): _Element {
+            value: AssociatedObjects_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

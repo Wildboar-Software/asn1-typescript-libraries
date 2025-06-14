@@ -943,9 +943,7 @@ export function _encode_SearchArgumentData(
 ) {
     if (!_cached_encoder_for_SearchArgumentData) {
         _cached_encoder_for_SearchArgumentData = function (
-            value: SearchArgumentData,
-            elGetter: $.ASN1Encoder<SearchArgumentData>
-        ): _Element {
+            value: SearchArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

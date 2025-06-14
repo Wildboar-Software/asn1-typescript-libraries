@@ -6,29 +6,6 @@ import {
     _decode_AltNameType_builtinNameForm,
     _encode_AltNameType_builtinNameForm,
 } from "../CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
-export {
-    AltNameType_builtinNameForm,
-    AltNameType_builtinNameForm_directoryName /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_dNSName /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_ediPartyName /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_iPAddress /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_registeredId /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_rfc822Name /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_uniformResourceIdentifier /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AltNameType_builtinNameForm_x400Address /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryName /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dNSName /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ediPartyName /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    iPAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    registeredId /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    rfc822Name /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    uniformResourceIdentifier /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    x400Address /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AltNameType_builtinNameForm,
-    _encode_AltNameType_builtinNameForm,
-    _enum_for_AltNameType_builtinNameForm,
-} from "../CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AltNameType */
 /**
  * @summary AltNameType

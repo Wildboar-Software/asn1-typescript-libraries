@@ -11,17 +11,6 @@ import {
     _decode_SPKM_REQ,
     _encode_SPKM_REQ,
 } from "../SpkmGssTokens/SPKM-REQ.ta.mjs";
-export {
-    SPKM_REP_TI,
-    _decode_SPKM_REP_TI,
-    _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta.mjs";
-export {
-    SPKM_REQ,
-    _decode_SPKM_REQ,
-    _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SpkmCredentials */
 /**
  * @summary SpkmCredentials

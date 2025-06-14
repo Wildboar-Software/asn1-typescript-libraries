@@ -298,9 +298,7 @@ export function _encode_RequestShadowUpdateResultData(
             0,
             () =>
                 function (
-                    value: RequestShadowUpdateResultData,
-                    elGetter: $.ASN1Encoder<RequestShadowUpdateResultData>
-                ): _Element {
+                    value: RequestShadowUpdateResultData                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

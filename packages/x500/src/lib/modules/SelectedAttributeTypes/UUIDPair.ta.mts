@@ -10,12 +10,6 @@ import {
     _decode_UUID,
     _encode_UUID,
 } from "../SelectedAttributeTypes/UUID.ta.mjs";
-export {
-    UUID,
-    _decode_UUID,
-    _encode_UUID,
-} from "../SelectedAttributeTypes/UUID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UUIDPair */
 /**
  * @summary UUIDPair
@@ -182,9 +176,7 @@ export function _encode_UUIDPair(
 ) {
     if (!_cached_encoder_for_UUIDPair) {
         _cached_encoder_for_UUIDPair = function (
-            value: UUIDPair,
-            elGetter: $.ASN1Encoder<UUIDPair>
-        ): _Element {
+            value: UUIDPair        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

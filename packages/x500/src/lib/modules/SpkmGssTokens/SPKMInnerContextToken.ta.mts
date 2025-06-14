@@ -36,42 +36,6 @@ import {
     _decode_SPKM_WRAP,
     _encode_SPKM_WRAP,
 } from "../SpkmGssTokens/SPKM-WRAP.ta.mjs";
-export {
-    SPKM_DEL,
-    _decode_SPKM_DEL,
-    _encode_SPKM_DEL,
-} from "../SpkmGssTokens/SPKM-DEL.ta.mjs";
-export {
-    SPKM_ERROR,
-    _decode_SPKM_ERROR,
-    _encode_SPKM_ERROR,
-} from "../SpkmGssTokens/SPKM-ERROR.ta.mjs";
-export {
-    SPKM_MIC,
-    _decode_SPKM_MIC,
-    _encode_SPKM_MIC,
-} from "../SpkmGssTokens/SPKM-MIC.ta.mjs";
-export {
-    SPKM_REP_IT,
-    _decode_SPKM_REP_IT,
-    _encode_SPKM_REP_IT,
-} from "../SpkmGssTokens/SPKM-REP-IT.ta.mjs";
-export {
-    SPKM_REP_TI,
-    _decode_SPKM_REP_TI,
-    _encode_SPKM_REP_TI,
-} from "../SpkmGssTokens/SPKM-REP-TI.ta.mjs";
-export {
-    SPKM_REQ,
-    _decode_SPKM_REQ,
-    _encode_SPKM_REQ,
-} from "../SpkmGssTokens/SPKM-REQ.ta.mjs";
-export {
-    SPKM_WRAP,
-    _decode_SPKM_WRAP,
-    _encode_SPKM_WRAP,
-} from "../SpkmGssTokens/SPKM-WRAP.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKMInnerContextToken */
 /**
  * @summary SPKMInnerContextToken

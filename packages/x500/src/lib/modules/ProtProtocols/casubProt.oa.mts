@@ -6,14 +6,6 @@ import {
 } from "../CaSubscription/CasubProt.ta.mjs";
 import { id_casubprot } from "../ProtProtocols/id-casubprot.va.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export {
-    CasubProt,
-    _decode_CasubProt,
-    _encode_CasubProt,
-} from "../CaSubscription/CasubProt.ta.mjs";
-export { id_casubprot } from "../ProtProtocols/id-casubprot.va.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION casubProt */
 /**
  * @summary casubProt

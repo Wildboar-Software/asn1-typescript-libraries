@@ -6,12 +6,6 @@ import {
     _decode_TypeAndContextAssertion,
     _encode_TypeAndContextAssertion,
 } from "../DirectoryAbstractService/TypeAndContextAssertion.ta.mjs";
-export {
-    TypeAndContextAssertion,
-    _decode_TypeAndContextAssertion,
-    _encode_TypeAndContextAssertion,
-} from "../DirectoryAbstractService/TypeAndContextAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContextSelection */
 /**
  * @summary ContextSelection

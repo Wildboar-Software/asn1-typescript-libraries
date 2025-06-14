@@ -6,12 +6,6 @@ import {
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
 } from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AgreementID */
 /**
  * @summary AgreementID

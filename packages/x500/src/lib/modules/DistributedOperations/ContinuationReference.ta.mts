@@ -33,51 +33,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    AccessPointInformation,
-    _decode_AccessPointInformation,
-    _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta.mjs";
-export {
-    Exclusions,
-    _decode_Exclusions,
-    _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta.mjs";
-export {
-    OperationProgress,
-    _decode_OperationProgress,
-    _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta.mjs";
-export {
-    cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    immediateSuperior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonSpecificSubordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReferenceType,
-    ReferenceType_cross /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_ditBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_immediateSuperior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_nonSpecificSubordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_self /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_subordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_supplier /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    self /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    subordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    supplier /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReferenceType,
-    _encode_ReferenceType,
-    _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContinuationReference */
 /**
  * @summary ContinuationReference
@@ -482,9 +437,7 @@ export function _encode_ContinuationReference(
 ) {
     if (!_cached_encoder_for_ContinuationReference) {
         _cached_encoder_for_ContinuationReference = function (
-            value: ContinuationReference,
-            elGetter: $.ASN1Encoder<ContinuationReference>
-        ): _Element {
+            value: ContinuationReference        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

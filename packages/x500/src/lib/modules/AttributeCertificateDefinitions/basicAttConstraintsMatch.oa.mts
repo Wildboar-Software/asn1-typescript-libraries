@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
 import { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    BasicAttConstraintsSyntax,
-    _decode_BasicAttConstraintsSyntax,
-    _encode_BasicAttConstraintsSyntax,
-} from "../AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
-export { id_mr_basicAttConstraintsMatch } from "../AttributeCertificateDefinitions/id-mr-basicAttConstraintsMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION basicAttConstraintsMatch */
 /**
  * @summary basicAttConstraintsMatch

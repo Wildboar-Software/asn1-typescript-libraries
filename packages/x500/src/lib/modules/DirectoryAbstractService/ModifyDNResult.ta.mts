@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-export {
-    ModifyDNResultData,
-    _decode_ModifyDNResultData,
-    _encode_ModifyDNResultData,
-} from "../DirectoryAbstractService/ModifyDNResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED_SEQ,
-    _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
-    _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModifyDNResult */
 /**
  * @summary ModifyDNResult

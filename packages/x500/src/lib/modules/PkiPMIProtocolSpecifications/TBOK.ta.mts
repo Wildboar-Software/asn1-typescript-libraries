@@ -231,9 +231,7 @@ let _cached_encoder_for_TBOK: $.ASN1Encoder<TBOK> | null = null;
 export function _encode_TBOK(value: TBOK, elGetter: $.ASN1Encoder<TBOK>) {
     if (!_cached_encoder_for_TBOK) {
         _cached_encoder_for_TBOK = function (
-            value: TBOK,
-            elGetter: $.ASN1Encoder<TBOK>
-        ): _Element {
+            value: TBOK        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

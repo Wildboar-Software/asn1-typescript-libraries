@@ -6,12 +6,6 @@ import {
     _decode_OsiUnbind_fully_encoded_data_Item,
     _encode_OsiUnbind_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item.ta.mjs";
-export {
-    OsiUnbind_fully_encoded_data_Item,
-    _decode_OsiUnbind_fully_encoded_data_Item,
-    _encode_OsiUnbind_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiUnbind */
 /**
  * @summary OsiUnbind

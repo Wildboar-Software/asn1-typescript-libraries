@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
 import { id_mr_authAttIdMatch } from "../AttributeCertificateDefinitions/id-mr-authAttIdMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    AuthorityAttributeIdentifierSyntax,
-    _decode_AuthorityAttributeIdentifierSyntax,
-    _encode_AuthorityAttributeIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
-export { id_mr_authAttIdMatch } from "../AttributeCertificateDefinitions/id-mr-authAttIdMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION authAttIdMatch */
 /**
  * @summary authAttIdMatch

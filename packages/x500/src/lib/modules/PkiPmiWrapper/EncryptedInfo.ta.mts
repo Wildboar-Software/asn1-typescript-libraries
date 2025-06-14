@@ -15,17 +15,6 @@ import {
     _decode_KeyAgreement,
     _encode_KeyAgreement,
 } from "../PkiPmiWrapper/KeyAgreement.ta.mjs";
-export {
-    EncryptedPduInfo,
-    _decode_EncryptedPduInfo,
-    _encode_EncryptedPduInfo,
-} from "../PkiPmiWrapper/EncryptedPduInfo.ta.mjs";
-export {
-    KeyAgreement,
-    _decode_KeyAgreement,
-    _encode_KeyAgreement,
-} from "../PkiPmiWrapper/KeyAgreement.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedInfo */
 /**
  * @summary EncryptedInfo
@@ -198,9 +187,7 @@ export function _encode_EncryptedInfo(
 ) {
     if (!_cached_encoder_for_EncryptedInfo) {
         _cached_encoder_for_EncryptedInfo = function (
-            value: EncryptedInfo,
-            elGetter: $.ASN1Encoder<EncryptedInfo>
-        ): _Element {
+            value: EncryptedInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

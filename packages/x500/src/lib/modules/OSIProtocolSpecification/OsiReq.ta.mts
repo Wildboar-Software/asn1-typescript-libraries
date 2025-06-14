@@ -15,13 +15,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-export {
-    InvokeId,
-    _decode_InvokeId,
-    _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiReq */
 /**
  * @summary OsiReq
@@ -180,9 +173,7 @@ export function _encode_OsiReq(value: OsiReq, elGetter: $.ASN1Encoder<OsiReq>) {
             1,
             () =>
                 function (
-                    value: OsiReq,
-                    elGetter: $.ASN1Encoder<OsiReq>
-                ): _Element {
+                    value: OsiReq                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

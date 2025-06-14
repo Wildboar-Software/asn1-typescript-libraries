@@ -10,12 +10,6 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UpdateWindow */
 /**
  * @summary UpdateWindow
@@ -184,9 +178,7 @@ export function _encode_UpdateWindow(
 ) {
     if (!_cached_encoder_for_UpdateWindow) {
         _cached_encoder_for_UpdateWindow = function (
-            value: UpdateWindow,
-            elGetter: $.ASN1Encoder<UpdateWindow>
-        ): _Element {
+            value: UpdateWindow        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

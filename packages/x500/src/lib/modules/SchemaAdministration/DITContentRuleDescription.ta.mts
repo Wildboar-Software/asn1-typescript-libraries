@@ -337,9 +337,7 @@ export function _encode_DITContentRuleDescription(
 ) {
     if (!_cached_encoder_for_DITContentRuleDescription) {
         _cached_encoder_for_DITContentRuleDescription = function (
-            value: DITContentRuleDescription,
-            elGetter: $.ASN1Encoder<DITContentRuleDescription>
-        ): _Element {
+            value: DITContentRuleDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

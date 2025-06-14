@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SIGNATURE */
 /**
  * @summary SIGNATURE
@@ -187,9 +181,7 @@ export function _encode_SIGNATURE(
 ) {
     if (!_cached_encoder_for_SIGNATURE) {
         _cached_encoder_for_SIGNATURE = function (
-            value: SIGNATURE,
-            elGetter: $.ASN1Encoder<SIGNATURE>
-        ): _Element {
+            value: SIGNATURE        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

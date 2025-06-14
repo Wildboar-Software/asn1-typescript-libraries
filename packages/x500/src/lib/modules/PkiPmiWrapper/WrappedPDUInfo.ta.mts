@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { SupportedPduSet } from "../PkiPmiWrapper/SupportedPduSet.osa.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION WrappedPDUInfo */
 /**
  * @summary WrappedPDUInfo
@@ -171,9 +168,7 @@ export function _encode_WrappedPDUInfo(
 ) {
     if (!_cached_encoder_for_WrappedPDUInfo) {
         _cached_encoder_for_WrappedPDUInfo = function (
-            value: WrappedPDUInfo,
-            elGetter: $.ASN1Encoder<WrappedPDUInfo>
-        ): _Element {
+            value: WrappedPDUInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

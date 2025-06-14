@@ -12,13 +12,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FriendsDescription */
 /**
  * @summary FriendsDescription
@@ -285,9 +278,7 @@ export function _encode_FriendsDescription(
 ) {
     if (!_cached_encoder_for_FriendsDescription) {
         _cached_encoder_for_FriendsDescription = function (
-            value: FriendsDescription,
-            elGetter: $.ASN1Encoder<FriendsDescription>
-        ): _Element {
+            value: FriendsDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

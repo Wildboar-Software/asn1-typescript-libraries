@@ -529,9 +529,7 @@ export function _encode_ListArgumentData(
 ) {
     if (!_cached_encoder_for_ListArgumentData) {
         _cached_encoder_for_ListArgumentData = function (
-            value: ListArgumentData,
-            elGetter: $.ASN1Encoder<ListArgumentData>
-        ): _Element {
+            value: ListArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

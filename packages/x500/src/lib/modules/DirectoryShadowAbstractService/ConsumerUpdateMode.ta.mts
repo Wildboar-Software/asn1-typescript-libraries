@@ -6,12 +6,6 @@ import {
     _decode_SchedulingParameters,
     _encode_SchedulingParameters,
 } from "../DirectoryShadowAbstractService/SchedulingParameters.ta.mjs";
-export {
-    SchedulingParameters,
-    _decode_SchedulingParameters,
-    _encode_SchedulingParameters,
-} from "../DirectoryShadowAbstractService/SchedulingParameters.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ConsumerUpdateMode */
 /**
  * @summary ConsumerUpdateMode

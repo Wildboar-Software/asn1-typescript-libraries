@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { teletrust } from "../AlgorithmObjectIdentifiers/teletrust.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { teletrust } from "../AlgorithmObjectIdentifiers/teletrust.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ecStdCurvesAndGen */
 /**
  * @summary ecStdCurvesAndGen

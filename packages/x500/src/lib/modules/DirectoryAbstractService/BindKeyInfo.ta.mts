@@ -6,12 +6,6 @@ import {
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../AuthenticationFramework/ENCRYPTED.ta.mjs";
-export {
-    ENCRYPTED,
-    _get_decoder_for_ENCRYPTED,
-    _get_encoder_for_ENCRYPTED,
-} from "../AuthenticationFramework/ENCRYPTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BindKeyInfo */
 /**
  * @summary BindKeyInfo

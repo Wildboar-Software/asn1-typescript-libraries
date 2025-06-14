@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { iso_organization } from "../AlgorithmObjectIdentifiers/iso-organization.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletrust */
 /**
  * @summary teletrust

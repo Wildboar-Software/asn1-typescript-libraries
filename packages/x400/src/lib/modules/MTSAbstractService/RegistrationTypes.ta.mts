@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,42 +13,9 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegistrationTypes_standard_parameters,
-    RegistrationTypes_standard_parameters_user_name /* IMPORTED_LONG_NAMED_BIT */,
-    user_name /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_user_address /* IMPORTED_LONG_NAMED_BIT */,
-    user_address /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_deliverable_class /* IMPORTED_LONG_NAMED_BIT */,
-    deliverable_class /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_default_delivery_controls /* IMPORTED_LONG_NAMED_BIT */,
-    default_delivery_controls /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_redirections /* IMPORTED_LONG_NAMED_BIT */,
-    redirections /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_restricted_delivery /* IMPORTED_LONG_NAMED_BIT */,
-    restricted_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_standard_parameters,
     _encode_RegistrationTypes_standard_parameters,
 } from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.mjs';
-export {
-    RegistrationTypes_standard_parameters,
-    RegistrationTypes_standard_parameters_user_name /* IMPORTED_LONG_NAMED_BIT */,
-    user_name /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_user_address /* IMPORTED_LONG_NAMED_BIT */,
-    user_address /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_deliverable_class /* IMPORTED_LONG_NAMED_BIT */,
-    deliverable_class /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_default_delivery_controls /* IMPORTED_LONG_NAMED_BIT */,
-    default_delivery_controls /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_redirections /* IMPORTED_LONG_NAMED_BIT */,
-    redirections /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_standard_parameters_restricted_delivery /* IMPORTED_LONG_NAMED_BIT */,
-    restricted_delivery /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_RegistrationTypes_standard_parameters,
-    _encode_RegistrationTypes_standard_parameters,
-} from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.mjs';
-import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-import { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa.mjs';
-export { RegisterExtensions } from '../MTSAbstractService/RegisterExtensions.osa.mjs';
 import {
     ExtensionType,
     _decode_ExtensionType,
@@ -289,9 +201,7 @@ export function _encode_RegistrationTypes(
 ) {
     if (!_cached_encoder_for_RegistrationTypes) {
         _cached_encoder_for_RegistrationTypes = function (
-            value: RegistrationTypes,
-            elGetter: $.ASN1Encoder<RegistrationTypes>
-        ): _Element {
+            value: RegistrationTypes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -15,25 +15,6 @@ import {
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
 } from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.mjs";
-export {
-    ModifyRights_Item_item,
-    _decode_ModifyRights_Item_item,
-    _encode_ModifyRights_Item_item,
-} from "../DirectoryAbstractService/ModifyRights-Item-item.ta.mjs";
-export {
-    add /* IMPORTED_SHORT_NAMED_BIT */,
-    ModifyRights_Item_permission,
-    ModifyRights_Item_permission_add /* IMPORTED_LONG_NAMED_BIT */,
-    ModifyRights_Item_permission_move /* IMPORTED_LONG_NAMED_BIT */,
-    ModifyRights_Item_permission_remove /* IMPORTED_LONG_NAMED_BIT */,
-    ModifyRights_Item_permission_rename /* IMPORTED_LONG_NAMED_BIT */,
-    move /* IMPORTED_SHORT_NAMED_BIT */,
-    remove /* IMPORTED_SHORT_NAMED_BIT */,
-    rename /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ModifyRights_Item_permission,
-    _encode_ModifyRights_Item_permission,
-} from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModifyRights_Item */
 /**
  * @summary ModifyRights_Item
@@ -195,9 +176,7 @@ export function _encode_ModifyRights_Item(
 ) {
     if (!_cached_encoder_for_ModifyRights_Item) {
         _cached_encoder_for_ModifyRights_Item = function (
-            value: ModifyRights_Item,
-            elGetter: $.ASN1Encoder<ModifyRights_Item>
-        ): _Element {
+            value: ModifyRights_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

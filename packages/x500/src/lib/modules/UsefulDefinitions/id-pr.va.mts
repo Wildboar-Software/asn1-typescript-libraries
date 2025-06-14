@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { problem } from "../UsefulDefinitions/problem.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { problem } from "../UsefulDefinitions/problem.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_pr */
 /**
  * @summary id_pr

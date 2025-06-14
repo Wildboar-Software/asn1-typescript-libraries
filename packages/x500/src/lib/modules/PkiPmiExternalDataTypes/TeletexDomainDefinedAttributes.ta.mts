@@ -6,12 +6,6 @@ import {
     _decode_TeletexDomainDefinedAttribute,
     _encode_TeletexDomainDefinedAttribute,
 } from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttribute.ta.mjs";
-export {
-    TeletexDomainDefinedAttribute,
-    _decode_TeletexDomainDefinedAttribute,
-    _encode_TeletexDomainDefinedAttribute,
-} from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TeletexDomainDefinedAttributes */
 /**
  * @summary TeletexDomainDefinedAttributes

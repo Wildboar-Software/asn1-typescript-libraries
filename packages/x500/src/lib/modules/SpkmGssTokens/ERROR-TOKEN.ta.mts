@@ -11,12 +11,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ERROR_TOKEN */
 /**
  * @summary ERROR_TOKEN
@@ -173,9 +167,7 @@ export function _encode_ERROR_TOKEN(
 ) {
     if (!_cached_encoder_for_ERROR_TOKEN) {
         _cached_encoder_for_ERROR_TOKEN = function (
-            value: ERROR_TOKEN,
-            elGetter: $.ASN1Encoder<ERROR_TOKEN>
-        ): _Element {
+            value: ERROR_TOKEN        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,17 +11,6 @@ import {
     _encode_InitializationAbort_diag,
     _enum_for_InitializationAbort_diag,
 } from "../AVL-management/InitializationAbort-diag.ta.mjs";
-export {
-    InitializationAbort_diag,
-    InitializationAbort_diag_onlySingleVersionAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    InitializationAbort_diag_unsupportedVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    onlySingleVersionAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_InitializationAbort_diag,
-    _encode_InitializationAbort_diag,
-    _enum_for_InitializationAbort_diag,
-} from "../AVL-management/InitializationAbort-diag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InitializationAbort */
 /**
  * @summary InitializationAbort
@@ -180,9 +169,7 @@ export function _encode_InitializationAbort(
 ) {
     if (!_cached_encoder_for_InitializationAbort) {
         _cached_encoder_for_InitializationAbort = function (
-            value: InitializationAbort,
-            elGetter: $.ASN1Encoder<InitializationAbort>
-        ): _Element {
+            value: InitializationAbort        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

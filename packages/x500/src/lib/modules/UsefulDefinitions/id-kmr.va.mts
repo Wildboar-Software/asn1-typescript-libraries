@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { knowledgeMatchingRule } from "../UsefulDefinitions/knowledgeMatchingRule.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { knowledgeMatchingRule } from "../UsefulDefinitions/knowledgeMatchingRule.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_kmr */
 /**
  * @summary id_kmr

@@ -323,9 +323,7 @@ export function _encode_PerMessageAutoForwardFields(
 ) {
     if (!_cached_encoder_for_PerMessageAutoForwardFields) {
         _cached_encoder_for_PerMessageAutoForwardFields = function (
-            value: PerMessageAutoForwardFields,
-            elGetter: $.ASN1Encoder<PerMessageAutoForwardFields>
-        ): _Element {
+            value: PerMessageAutoForwardFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

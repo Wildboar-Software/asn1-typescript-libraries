@@ -6,14 +6,6 @@ import {
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dn */
 /**
  * @summary dn

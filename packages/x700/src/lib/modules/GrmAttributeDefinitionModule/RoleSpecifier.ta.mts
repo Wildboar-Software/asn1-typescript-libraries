@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta.mjs';
 import {
-    TemplateLabel,
-    _decode_TemplateLabel,
-    _encode_TemplateLabel,
-} from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
-export {
     TemplateLabel,
     _decode_TemplateLabel,
     _encode_TemplateLabel,
@@ -91,17 +26,7 @@ import {
     _decode_DefinedType,
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
-export {
-    DefinedType,
-    _decode_DefinedType,
-    _encode_DefinedType,
-} from '../DefinitionASN1Module/DefinedType.ta.mjs';
 import {
-    OptionalIdentifier,
-    _decode_OptionalIdentifier,
-    _encode_OptionalIdentifier,
-} from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';
-export {
     OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
@@ -111,12 +36,6 @@ import {
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
-export {
-    OptionallyRegisteredAs,
-    _decode_OptionallyRegisteredAs,
-    _encode_OptionallyRegisteredAs,
-} from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RoleSpecifier */
 /**
  * @summary RoleSpecifier
@@ -421,9 +340,7 @@ export function _encode_RoleSpecifier(
 ) {
     if (!_cached_encoder_for_RoleSpecifier) {
         _cached_encoder_for_RoleSpecifier = function (
-            value: RoleSpecifier,
-            elGetter: $.ASN1Encoder<RoleSpecifier>
-        ): _Element {
+            value: RoleSpecifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

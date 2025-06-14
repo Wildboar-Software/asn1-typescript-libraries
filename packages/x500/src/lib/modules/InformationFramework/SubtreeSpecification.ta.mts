@@ -291,9 +291,7 @@ export function _encode_SubtreeSpecification(
 ) {
     if (!_cached_encoder_for_SubtreeSpecification) {
         _cached_encoder_for_SubtreeSpecification = function (
-            value: SubtreeSpecification,
-            elGetter: $.ASN1Encoder<SubtreeSpecification>
-        ): _Element {
+            value: SubtreeSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

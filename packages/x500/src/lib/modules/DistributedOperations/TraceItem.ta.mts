@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    OperationProgress,
-    _decode_OperationProgress,
-    _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TraceItem */
 /**
  * @summary TraceItem
@@ -231,9 +220,7 @@ export function _encode_TraceItem(
 ) {
     if (!_cached_encoder_for_TraceItem) {
         _cached_encoder_for_TraceItem = function (
-            value: TraceItem,
-            elGetter: $.ASN1Encoder<TraceItem>
-        ): _Element {
+            value: TraceItem        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

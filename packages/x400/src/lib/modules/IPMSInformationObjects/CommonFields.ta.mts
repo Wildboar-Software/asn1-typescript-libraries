@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
 } from '../IPMSInformationObjects/SubjectIPMField.ta.mjs';
-export {
-    SubjectIPMField,
-    _decode_SubjectIPMField,
-    _encode_SubjectIPMField,
-} from '../IPMSInformationObjects/SubjectIPMField.ta.mjs';
 import {
-    IPNOriginatorField,
-    _decode_IPNOriginatorField,
-    _encode_IPNOriginatorField,
-} from '../IPMSInformationObjects/IPNOriginatorField.ta.mjs';
-export {
     IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
@@ -91,17 +26,7 @@ import {
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
 } from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.mjs';
-export {
-    IPMIntendedRecipientField,
-    _decode_IPMIntendedRecipientField,
-    _encode_IPMIntendedRecipientField,
-} from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.mjs';
 import {
-    ConversionEITsField,
-    _decode_ConversionEITsField,
-    _encode_ConversionEITsField,
-} from '../IPMSInformationObjects/ConversionEITsField.ta.mjs';
-export {
     ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
@@ -111,12 +36,6 @@ import {
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
-export {
-    NotificationExtensionsField,
-    _decode_NotificationExtensionsField,
-    _encode_NotificationExtensionsField,
-} from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION CommonFields */
 /**
  * @summary CommonFields
@@ -355,9 +274,7 @@ export function _encode_CommonFields(
 ) {
     if (!_cached_encoder_for_CommonFields) {
         _cached_encoder_for_CommonFields = function (
-            value: CommonFields,
-            elGetter: $.ASN1Encoder<CommonFields>
-        ): _Element {
+            value: CommonFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -8,26 +8,6 @@ import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
 import { id_oc_country } from "../SelectedObjectClasses/id-oc-country.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-export { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
-export { id_oc_country } from "../SelectedObjectClasses/id-oc-country.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION country */
 /**
  * @summary country

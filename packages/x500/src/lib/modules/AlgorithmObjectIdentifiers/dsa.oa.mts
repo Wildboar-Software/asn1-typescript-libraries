@@ -6,14 +6,6 @@ import {
 } from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.mjs";
 import { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export {
-    DSS_Parms,
-    _decode_DSS_Parms,
-    _encode_DSS_Parms,
-} from "../AlgorithmObjectIdentifiers/DSS-Parms.ta.mjs";
-export { id_dsa } from "../AlgorithmObjectIdentifiers/id-dsa.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dsa */
 /**
  * @summary dsa

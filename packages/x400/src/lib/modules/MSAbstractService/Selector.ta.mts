@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,44 +18,16 @@ import {
     _decode_Range,
     _encode_Range,
 } from '../MSAbstractService/Range.ta.mjs';
-export {
-    Range,
-    _decode_Range,
-    _encode_Range,
-} from '../MSAbstractService/Range.ta.mjs';
 import {
-    Filter,
-    _decode_Filter,
-    _encode_Filter,
-} from '../MSAbstractService/Filter.ta.mjs';
-export {
     Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
 import {
     OverrideRestrictions,
-    OverrideRestrictions_override_content_types_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_content_types_restriction /* IMPORTED_SHORT_NAMED_BIT */,
-    OverrideRestrictions_override_EITs_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_EITs_restriction /* IMPORTED_SHORT_NAMED_BIT */,
-    OverrideRestrictions_override_attribute_length_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_attribute_length_restriction /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OverrideRestrictions,
     _encode_OverrideRestrictions,
 } from '../MSAbstractService/OverrideRestrictions.ta.mjs';
-export {
-    OverrideRestrictions,
-    OverrideRestrictions_override_content_types_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_content_types_restriction /* IMPORTED_SHORT_NAMED_BIT */,
-    OverrideRestrictions_override_EITs_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_EITs_restriction /* IMPORTED_SHORT_NAMED_BIT */,
-    OverrideRestrictions_override_attribute_length_restriction /* IMPORTED_LONG_NAMED_BIT */,
-    override_attribute_length_restriction /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_OverrideRestrictions,
-    _encode_OverrideRestrictions,
-} from '../MSAbstractService/OverrideRestrictions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION Selector */
 /**
  * @summary Selector
@@ -361,9 +280,7 @@ export function _encode_Selector(
 ) {
     if (!_cached_encoder_for_Selector) {
         _cached_encoder_for_Selector = function (
-            value: Selector,
-            elGetter: $.ASN1Encoder<Selector>
-        ): _Element {
+            value: Selector        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

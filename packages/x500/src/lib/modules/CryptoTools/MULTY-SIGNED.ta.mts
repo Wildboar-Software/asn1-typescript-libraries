@@ -11,14 +11,6 @@ import {
     _get_decoder_for_MULTY_SIGNED_parmeters_sign,
     _get_encoder_for_MULTY_SIGNED_parmeters_sign,
 } from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta.mjs";
-export { multipleSignaturesAlgo } from "../CryptoTools/multipleSignaturesAlgo.oa.mjs";
-export {
-    MULTY_SIGNED_parmeters_sign,
-    _get_decoder_for_MULTY_SIGNED_parmeters_sign,
-    _get_encoder_for_MULTY_SIGNED_parmeters_sign,
-} from "../CryptoTools/MULTY-SIGNED-parmeters-sign.ta.mjs";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MULTY_SIGNED */
 /**
  * @summary MULTY_SIGNED
@@ -199,9 +191,7 @@ export function _get_encoder_for_MULTY_SIGNED<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
 ) {
     return function (
-        value: MULTY_SIGNED<ToBeSigned>,
-        elGetter: $.ASN1Encoder<MULTY_SIGNED<ToBeSigned>>
-    ): _Element {
+        value: MULTY_SIGNED<ToBeSigned>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

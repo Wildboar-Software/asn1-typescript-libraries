@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
 import { id_nf_gONNameForm } from "../SelectedObjectClasses/id-nf-gONNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
-export { id_nf_gONNameForm } from "../SelectedObjectClasses/id-nf-gONNameForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION gONNameForm */
 /**
  * @summary gONNameForm

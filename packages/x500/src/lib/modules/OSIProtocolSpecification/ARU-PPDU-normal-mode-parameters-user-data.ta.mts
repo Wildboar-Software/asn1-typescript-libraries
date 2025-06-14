@@ -6,12 +6,6 @@ import {
     _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
     _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-export {
-    ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
-    _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
-    _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item,
-} from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ARU_PPDU_normal_mode_parameters_user_data */
 /**
  * @summary ARU_PPDU_normal_mode_parameters_user_data

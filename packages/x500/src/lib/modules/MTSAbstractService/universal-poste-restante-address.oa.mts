@@ -5,13 +5,6 @@ import {
     _decode_UniversalPosteRestanteAddress,
     _encode_UniversalPosteRestanteAddress,
 } from "../MTSAbstractService/UniversalPosteRestanteAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalPosteRestanteAddress,
-    _decode_UniversalPosteRestanteAddress,
-    _encode_UniversalPosteRestanteAddress,
-} from "../MTSAbstractService/UniversalPosteRestanteAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_poste_restante_address */
 /**
  * @summary universal_poste_restante_address

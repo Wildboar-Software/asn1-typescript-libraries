@@ -3,9 +3,6 @@ import { IA5String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ia5String */
 /**
  * @summary ia5String

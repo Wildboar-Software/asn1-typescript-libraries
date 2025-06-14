@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,20 +16,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from '../MTSAbstractService/UniversalOrBMPString.ta.mjs';
-import { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va.mjs';
-export { ub_universal_surname_length } from '../MTSUpperBounds/ub-universal-surname-length.va.mjs';
-import { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va.mjs';
-export { ub_universal_given_name_length } from '../MTSUpperBounds/ub-universal-given-name-length.va.mjs';
-import { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va.mjs';
-export { ub_universal_initials_length } from '../MTSUpperBounds/ub-universal-initials-length.va.mjs';
-import { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va.mjs';
-export { ub_universal_generation_qualifier_length } from '../MTSUpperBounds/ub-universal-generation-qualifier-length.va.mjs';
-
 /* START_OF_SYMBOL_DEFINITION UniversalPersonalName */
 /**
  * @summary UniversalPersonalName
@@ -311,9 +242,7 @@ export function _encode_UniversalPersonalName(
 ) {
     if (!_cached_encoder_for_UniversalPersonalName) {
         _cached_encoder_for_UniversalPersonalName = function (
-            value: UniversalPersonalName,
-            elGetter: $.ASN1Encoder<UniversalPersonalName>
-        ): _Element {
+            value: UniversalPersonalName        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

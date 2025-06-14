@@ -11,12 +11,6 @@ import {
     _decode_Mic_Header,
     _encode_Mic_Header,
 } from "../SpkmGssTokens/Mic-Header.ta.mjs";
-export {
-    Mic_Header,
-    _decode_Mic_Header,
-    _encode_Mic_Header,
-} from "../SpkmGssTokens/Mic-Header.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_MIC */
 /**
  * @summary SPKM_MIC
@@ -172,9 +166,7 @@ export function _encode_SPKM_MIC(
 ) {
     if (!_cached_encoder_for_SPKM_MIC) {
         _cached_encoder_for_SPKM_MIC = function (
-            value: SPKM_MIC,
-            elGetter: $.ASN1Encoder<SPKM_MIC>
-        ): _Element {
+            value: SPKM_MIC        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

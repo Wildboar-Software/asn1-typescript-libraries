@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    AcceptableCertPoliciesSyntax,
-    _decode_AcceptableCertPoliciesSyntax,
-    _encode_AcceptableCertPoliciesSyntax,
-} from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
-export { id_mr_acceptableCertPoliciesMatch } from "../AttributeCertificateDefinitions/id-mr-acceptableCertPoliciesMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION acceptableCertPoliciesMatch */
 /**
  * @summary acceptableCertPoliciesMatch

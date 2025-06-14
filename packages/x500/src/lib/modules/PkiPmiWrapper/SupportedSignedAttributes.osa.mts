@@ -2,10 +2,6 @@
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { contentType } from "../PkiPmiWrapper/contentType.oa.mjs";
 import { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { contentType } from "../PkiPmiWrapper/contentType.oa.mjs";
-export { messageDigest } from "../PkiPmiWrapper/messageDigest.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedSignedAttributes */
 /**
  * @summary SupportedSignedAttributes

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_x509 } from "../UsefulDefinitions/ldap-x509.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { ldap_x509 } from "../UsefulDefinitions/ldap-x509.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ldx */
 /**
  * @summary id_ldx

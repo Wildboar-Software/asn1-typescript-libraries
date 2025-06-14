@@ -11,32 +11,6 @@ import {
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 import { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa.mjs";
 import { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va.mjs";
-export {
-    IntEmail,
-    _decode_IntEmail,
-    _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-export { intEmailMatch } from "../SelectedAttributeTypes/intEmailMatch.oa.mjs";
-export { intEmailString } from "../SelectedAttributeTypes/intEmailString.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION intEmail */
 /**
  * @summary intEmail

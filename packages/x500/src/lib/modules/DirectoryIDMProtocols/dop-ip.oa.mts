@@ -5,14 +5,6 @@ import { dSAOperationalBindingManagementBind } from "../OperationalBindingManage
 import { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.mjs";
 import { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.mjs";
 import { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { id_idm_dop } from "../DirectoryIDMProtocols/id-idm-dop.va.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-export { dSAOperationalBindingManagementBind } from "../OperationalBindingManagement/dSAOperationalBindingManagementBind.oa.mjs";
-export { establishOperationalBinding } from "../OperationalBindingManagement/establishOperationalBinding.oa.mjs";
-export { modifyOperationalBinding } from "../OperationalBindingManagement/modifyOperationalBinding.oa.mjs";
-export { terminateOperationalBinding } from "../OperationalBindingManagement/terminateOperationalBinding.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dop_ip */
 /**
  * @summary dop_ip

@@ -6,12 +6,6 @@ import {
     _decode_AuthorizationData_Item,
     _encode_AuthorizationData_Item,
 } from "../SpkmGssTokens/AuthorizationData-Item.ta.mjs";
-export {
-    AuthorizationData_Item,
-    _decode_AuthorizationData_Item,
-    _encode_AuthorizationData_Item,
-} from "../SpkmGssTokens/AuthorizationData-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthorizationData */
 /**
  * @summary AuthorizationData

@@ -6,14 +6,6 @@ import {
     _decode_PrivateKeyUsagePeriod,
     _encode_PrivateKeyUsagePeriod,
 } from "../CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_privateKeyUsagePeriod } from "../CertificateExtensions/id-ce-privateKeyUsagePeriod.va.mjs";
-export {
-    PrivateKeyUsagePeriod,
-    _decode_PrivateKeyUsagePeriod,
-    _encode_PrivateKeyUsagePeriod,
-} from "../CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION privateKeyUsagePeriod */
 /**
  * @summary privateKeyUsagePeriod

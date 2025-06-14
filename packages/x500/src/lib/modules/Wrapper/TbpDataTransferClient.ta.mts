@@ -286,9 +286,7 @@ export function _encode_TbpDataTransferClient(
 ) {
     if (!_cached_encoder_for_TbpDataTransferClient) {
         _cached_encoder_for_TbpDataTransferClient = function (
-            value: TbpDataTransferClient,
-            elGetter: $.ASN1Encoder<TbpDataTransferClient>
-        ): _Element {
+            value: TbpDataTransferClient        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

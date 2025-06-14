@@ -11,32 +11,6 @@ import {
     _decode_NamedDay_intNamedDays,
     _encode_NamedDay_intNamedDays,
 } from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
-export {
-    NamedDay_bitNamedDays,
-    NamedDay_bitNamedDays_friday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_monday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_saturday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_sunday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_thursday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_tuesday /* IMPORTED_LONG_NAMED_BIT */,
-    NamedDay_bitNamedDays_wednesday /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_NamedDay_bitNamedDays,
-    _encode_NamedDay_bitNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta.mjs";
-export {
-    NamedDay_intNamedDays,
-    NamedDay_intNamedDays_friday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_monday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_saturday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_sunday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_thursday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_tuesday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    NamedDay_intNamedDays_wednesday /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    _decode_NamedDay_intNamedDays,
-    _encode_NamedDay_intNamedDays,
-    _enum_for_NamedDay_intNamedDays,
-} from "../SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NamedDay */
 /**
  * @summary NamedDay

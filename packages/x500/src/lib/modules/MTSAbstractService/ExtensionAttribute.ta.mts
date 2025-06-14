@@ -6,9 +6,6 @@ import {
     INTEGER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export { ExtensionAttributeTable } from "../MTSAbstractService/ExtensionAttributeTable.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttribute */
 /**
  * @summary ExtensionAttribute
@@ -180,9 +177,7 @@ export function _encode_ExtensionAttribute(
 ) {
     if (!_cached_encoder_for_ExtensionAttribute) {
         _cached_encoder_for_ExtensionAttribute = function (
-            value: ExtensionAttribute,
-            elGetter: $.ASN1Encoder<ExtensionAttribute>
-        ): _Element {
+            value: ExtensionAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

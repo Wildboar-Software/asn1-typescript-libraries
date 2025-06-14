@@ -5,13 +5,6 @@ import {
     _decode_UnformattedPostalAddress,
     _encode_UnformattedPostalAddress,
 } from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UnformattedPostalAddress,
-    _decode_UnformattedPostalAddress,
-    _encode_UnformattedPostalAddress,
-} from "../PkiPmiExternalDataTypes/UnformattedPostalAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION unformatted_postal_address */
 /**
  * @summary unformatted_postal_address

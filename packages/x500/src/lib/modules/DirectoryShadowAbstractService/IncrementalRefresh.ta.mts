@@ -6,12 +6,6 @@ import {
     _decode_IncrementalStepRefresh,
     _encode_IncrementalStepRefresh,
 } from "../DirectoryShadowAbstractService/IncrementalStepRefresh.ta.mjs";
-export {
-    IncrementalStepRefresh,
-    _decode_IncrementalStepRefresh,
-    _encode_IncrementalStepRefresh,
-} from "../DirectoryShadowAbstractService/IncrementalStepRefresh.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION IncrementalRefresh */
 /**
  * @summary IncrementalRefresh

@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { SupportedKeyEncryptionAlgorithm } from "../PkiPmiWrapper/SupportedKeyEncryptionAlgorithm.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreement_keyEncryptionAlgorithm */
 /**
  * @summary KeyAgreement_keyEncryptionAlgorithm
@@ -176,9 +173,7 @@ export function _encode_KeyAgreement_keyEncryptionAlgorithm(
 ) {
     if (!_cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm) {
         _cached_encoder_for_KeyAgreement_keyEncryptionAlgorithm = function (
-            value: KeyAgreement_keyEncryptionAlgorithm,
-            elGetter: $.ASN1Encoder<KeyAgreement_keyEncryptionAlgorithm>
-        ): _Element {
+            value: KeyAgreement_keyEncryptionAlgorithm        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,15 +11,6 @@ import {
     _encode_InitializationRej_diag,
     _enum_for_InitializationRej_diag,
 } from "../AVL-management/InitializationRej-diag.ta.mjs";
-export {
-    InitializationRej_diag,
-    InitializationRej_diag_unsupportedVersion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    unsupportedVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_InitializationRej_diag,
-    _encode_InitializationRej_diag,
-    _enum_for_InitializationRej_diag,
-} from "../AVL-management/InitializationRej-diag.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InitializationRej */
 /**
  * @summary InitializationRej
@@ -177,9 +168,7 @@ export function _encode_InitializationRej(
 ) {
     if (!_cached_encoder_for_InitializationRej) {
         _cached_encoder_for_InitializationRej = function (
-            value: InitializationRej,
-            elGetter: $.ASN1Encoder<InitializationRej>
-        ): _Element {
+            value: InitializationRej        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

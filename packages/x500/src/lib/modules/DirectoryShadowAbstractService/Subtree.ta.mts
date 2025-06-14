@@ -206,9 +206,7 @@ export function _encode_Subtree(
 ) {
     if (!_cached_encoder_for_Subtree) {
         _cached_encoder_for_Subtree = function (
-            value: Subtree,
-            elGetter: $.ASN1Encoder<Subtree>
-        ): _Element {
+            value: Subtree        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

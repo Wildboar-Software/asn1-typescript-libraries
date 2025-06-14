@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { SymmetricEncryptionAlgorithms } from "../PkiPmiWrapper/SymmetricEncryptionAlgorithms.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EncryptedPduInfo_pduEncryptionAlgorithm */
 /**
  * @summary EncryptedPduInfo_pduEncryptionAlgorithm
@@ -168,9 +165,7 @@ export function _encode_EncryptedPduInfo_pduEncryptionAlgorithm(
 ) {
     if (!_cached_encoder_for_EncryptedPduInfo_pduEncryptionAlgorithm) {
         _cached_encoder_for_EncryptedPduInfo_pduEncryptionAlgorithm = function (
-            value: EncryptedPduInfo_pduEncryptionAlgorithm,
-            elGetter: $.ASN1Encoder<EncryptedPduInfo_pduEncryptionAlgorithm>
-        ): _Element {
+            value: EncryptedPduInfo_pduEncryptionAlgorithm        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

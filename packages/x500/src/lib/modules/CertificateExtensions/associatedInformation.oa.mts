@@ -6,14 +6,6 @@ import {
     _encode_AttributesSyntax,
 } from "../CertificateExtensions/AttributesSyntax.ta.mjs";
 import { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AttributesSyntax,
-    _decode_AttributesSyntax,
-    _encode_AttributesSyntax,
-} from "../CertificateExtensions/AttributesSyntax.ta.mjs";
-export { id_ce_associatedInformation } from "../CertificateExtensions/id-ce-associatedInformation.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION associatedInformation */
 /**
  * @summary associatedInformation

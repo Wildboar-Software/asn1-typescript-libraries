@@ -6,14 +6,6 @@ import {
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_pwdEncAlgDescription } from "../PasswordPolicy/id-asx-pwdEncAlgDescription.va.mjs";
-export {
-    PwdEncAlg,
-    _decode_PwdEncAlg,
-    _encode_PwdEncAlg,
-} from "../PasswordPolicy/PwdEncAlg.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdEncAlgDescription */
 /**
  * @summary pwdEncAlgDescription

@@ -222,9 +222,7 @@ export function _encode_TimeAssertion_between(
 ) {
     if (!_cached_encoder_for_TimeAssertion_between) {
         _cached_encoder_for_TimeAssertion_between = function (
-            value: TimeAssertion_between,
-            elGetter: $.ASN1Encoder<TimeAssertion_between>
-        ): _Element {
+            value: TimeAssertion_between        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

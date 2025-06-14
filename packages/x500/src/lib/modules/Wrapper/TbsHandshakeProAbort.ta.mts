@@ -26,28 +26,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    DER_PkiPath,
-    _decode_DER_PkiPath,
-    _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeProAbort */
 /**
  * @summary TbsHandshakeProAbort
@@ -277,9 +255,7 @@ export function _encode_TbsHandshakeProAbort(
 ) {
     if (!_cached_encoder_for_TbsHandshakeProAbort) {
         _cached_encoder_for_TbsHandshakeProAbort = function (
-            value: TbsHandshakeProAbort,
-            elGetter: $.ASN1Encoder<TbsHandshakeProAbort>
-        ): _Element {
+            value: TbsHandshakeProAbort        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

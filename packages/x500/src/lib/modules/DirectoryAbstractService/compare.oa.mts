@@ -17,31 +17,6 @@ import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_compare } from "../CommonProtocolSpecification/id-opcode-compare.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
-export { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
-export {
-    CompareArgument,
-    _decode_CompareArgument,
-    _encode_CompareArgument,
-} from "../DirectoryAbstractService/CompareArgument.ta.mjs";
-export {
-    CompareResult,
-    _decode_CompareResult,
-    _encode_CompareResult,
-} from "../DirectoryAbstractService/CompareResult.ta.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION compare */
 /**
  * @summary compare

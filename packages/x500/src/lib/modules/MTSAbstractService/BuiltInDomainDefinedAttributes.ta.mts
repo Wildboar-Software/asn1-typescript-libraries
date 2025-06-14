@@ -6,12 +6,6 @@ import {
     _decode_BuiltInDomainDefinedAttribute,
     _encode_BuiltInDomainDefinedAttribute,
 } from "../MTSAbstractService/BuiltInDomainDefinedAttribute.ta.mjs";
-export {
-    BuiltInDomainDefinedAttribute,
-    _decode_BuiltInDomainDefinedAttribute,
-    _encode_BuiltInDomainDefinedAttribute,
-} from "../MTSAbstractService/BuiltInDomainDefinedAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BuiltInDomainDefinedAttributes */
 /**
  * @summary BuiltInDomainDefinedAttributes

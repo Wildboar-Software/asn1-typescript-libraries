@@ -11,17 +11,6 @@ import {
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
 } from "../CaSubscription/CertUpdateOK.ta.mjs";
-export {
-    CertUpdateErr,
-    _decode_CertUpdateErr,
-    _encode_CertUpdateErr,
-} from "../CaSubscription/CertUpdateErr.ta.mjs";
-export {
-    CertUpdateOK,
-    _decode_CertUpdateOK,
-    _encode_CertUpdateOK,
-} from "../CaSubscription/CertUpdateOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateRsp_result */
 /**
  * @summary CertUpdateRsp_result

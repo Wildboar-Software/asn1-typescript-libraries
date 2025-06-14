@@ -20,22 +20,6 @@ import {
     _decode_Rep_ti_contents,
     _encode_Rep_ti_contents,
 } from "../SpkmGssTokens/Rep-ti-contents.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    Integrity,
-    _decode_Integrity,
-    _encode_Integrity,
-} from "../SpkmGssTokens/Integrity.ta.mjs";
-export {
-    Rep_ti_contents,
-    _decode_Rep_ti_contents,
-    _encode_Rep_ti_contents,
-} from "../SpkmGssTokens/Rep-ti-contents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION REP_TI_TOKEN */
 /**
  * @summary REP_TI_TOKEN
@@ -211,9 +195,7 @@ export function _encode_REP_TI_TOKEN(
 ) {
     if (!_cached_encoder_for_REP_TI_TOKEN) {
         _cached_encoder_for_REP_TI_TOKEN = function (
-            value: REP_TI_TOKEN,
-            elGetter: $.ASN1Encoder<REP_TI_TOKEN>
-        ): _Element {
+            value: REP_TI_TOKEN        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -5,13 +5,6 @@ import {
     _decode_UniversalLocalPostalAttributes,
     _encode_UniversalLocalPostalAttributes,
 } from "../MTSAbstractService/UniversalLocalPostalAttributes.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalLocalPostalAttributes,
-    _decode_UniversalLocalPostalAttributes,
-    _encode_UniversalLocalPostalAttributes,
-} from "../MTSAbstractService/UniversalLocalPostalAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_local_postal_attributes */
 /**
  * @summary universal_local_postal_attributes

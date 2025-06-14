@@ -6,14 +6,6 @@ import {
     _encode_RejectAVL,
 } from "../PkiPMIProtocolSpecifications/RejectAVL.ta.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export { id_rejectAVL } from "../PkiPMIProtocolSpecifications/id-rejectAVL.va.mjs";
-export {
-    RejectAVL,
-    _decode_RejectAVL,
-    _encode_RejectAVL,
-} from "../PkiPMIProtocolSpecifications/RejectAVL.ta.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION rejectAVL */
 /**
  * @summary rejectAVL

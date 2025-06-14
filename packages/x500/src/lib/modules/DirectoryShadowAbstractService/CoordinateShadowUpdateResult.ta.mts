@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    CoordinateShadowUpdateResultData,
-    _decode_CoordinateShadowUpdateResultData,
-    _encode_CoordinateShadowUpdateResultData,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateResult */
 /**
  * @summary CoordinateShadowUpdateResult

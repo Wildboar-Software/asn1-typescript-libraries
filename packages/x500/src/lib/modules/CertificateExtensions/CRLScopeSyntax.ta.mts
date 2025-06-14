@@ -6,12 +6,6 @@ import {
     _decode_PerAuthorityScope,
     _encode_PerAuthorityScope,
 } from "../CertificateExtensions/PerAuthorityScope.ta.mjs";
-export {
-    PerAuthorityScope,
-    _decode_PerAuthorityScope,
-    _encode_PerAuthorityScope,
-} from "../CertificateExtensions/PerAuthorityScope.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CRLScopeSyntax */
 /**
  * @summary CRLScopeSyntax

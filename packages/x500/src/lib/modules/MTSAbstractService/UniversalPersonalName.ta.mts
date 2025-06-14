@@ -10,16 +10,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-export { ub_universal_generation_qualifier_length } from "../MTSAbstractService/ub-universal-generation-qualifier-length.va.mjs";
-export { ub_universal_given_name_length } from "../MTSAbstractService/ub-universal-given-name-length.va.mjs";
-export { ub_universal_initials_length } from "../MTSAbstractService/ub-universal-initials-length.va.mjs";
-export { ub_universal_surname_length } from "../MTSAbstractService/ub-universal-surname-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalPersonalName */
 /**
  * @summary UniversalPersonalName
@@ -246,9 +236,7 @@ export function _encode_UniversalPersonalName(
 ) {
     if (!_cached_encoder_for_UniversalPersonalName) {
         _cached_encoder_for_UniversalPersonalName = function (
-            value: UniversalPersonalName,
-            elGetter: $.ASN1Encoder<UniversalPersonalName>
-        ): _Element {
+            value: UniversalPersonalName        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

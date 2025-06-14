@@ -31,34 +31,6 @@ import {
     _decode_Validity,
     _encode_Validity,
 } from "../OperationalBindingManagement/Validity.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    EstablishOperationalBindingArgumentData_initiator,
-    _decode_EstablishOperationalBindingArgumentData_initiator,
-    _encode_EstablishOperationalBindingArgumentData_initiator,
-} from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    Validity,
-    _decode_Validity,
-    _encode_Validity,
-} from "../OperationalBindingManagement/Validity.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingArgumentData */
 /**
  * @summary EstablishOperationalBindingArgumentData
@@ -373,9 +345,7 @@ export function _encode_EstablishOperationalBindingArgumentData(
 ) {
     if (!_cached_encoder_for_EstablishOperationalBindingArgumentData) {
         _cached_encoder_for_EstablishOperationalBindingArgumentData = function (
-            value: EstablishOperationalBindingArgumentData,
-            elGetter: $.ASN1Encoder<EstablishOperationalBindingArgumentData>
-        ): _Element {
+            value: EstablishOperationalBindingArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

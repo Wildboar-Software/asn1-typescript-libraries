@@ -239,9 +239,7 @@ export function _encode_AddEntryResultData(
 ) {
     if (!_cached_encoder_for_AddEntryResultData) {
         _cached_encoder_for_AddEntryResultData = function (
-            value: AddEntryResultData,
-            elGetter: $.ASN1Encoder<AddEntryResultData>
-        ): _Element {
+            value: AddEntryResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

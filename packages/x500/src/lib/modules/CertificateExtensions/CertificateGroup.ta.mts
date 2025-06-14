@@ -16,22 +16,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    CertificateGroupNumberRange,
-    _decode_CertificateGroupNumberRange,
-    _encode_CertificateGroupNumberRange,
-} from "../CertificateExtensions/CertificateGroupNumberRange.ta.mjs";
-export {
-    CertificateSerialNumbers,
-    _decode_CertificateSerialNumbers,
-    _encode_CertificateSerialNumbers,
-} from "../CertificateExtensions/CertificateSerialNumbers.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateGroup */
 /**
  * @summary CertificateGroup

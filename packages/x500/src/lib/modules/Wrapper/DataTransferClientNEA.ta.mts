@@ -11,17 +11,6 @@ import {
     _decode_TbpDataTransferClient,
     _encode_TbpDataTransferClient,
 } from "../Wrapper/TbpDataTransferClient.ta.mjs";
-export {
-    ICV_Invoke,
-    _get_decoder_for_ICV_Invoke,
-    _get_encoder_for_ICV_Invoke,
-} from "../CryptoTools/ICV-Invoke.ta.mjs";
-export {
-    TbpDataTransferClient,
-    _decode_TbpDataTransferClient,
-    _encode_TbpDataTransferClient,
-} from "../Wrapper/TbpDataTransferClient.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DataTransferClientNEA */
 /**
  * @summary DataTransferClientNEA

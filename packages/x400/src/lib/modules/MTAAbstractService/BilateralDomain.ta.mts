@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_CountryName,
     _encode_CountryName,
 } from '../MTSAbstractService/CountryName.ta.mjs';
-export {
-    CountryName,
-    _decode_CountryName,
-    _encode_CountryName,
-} from '../MTSAbstractService/CountryName.ta.mjs';
 import {
     BilateralDomain_domain,
     _decode_BilateralDomain_domain,
     _encode_BilateralDomain_domain,
 } from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';
-export {
-    BilateralDomain_domain,
-    _decode_BilateralDomain_domain,
-    _encode_BilateralDomain_domain,
-} from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BilateralDomain */
 /**
  * @summary BilateralDomain
@@ -245,9 +178,7 @@ export function _encode_BilateralDomain(
 ) {
     if (!_cached_encoder_for_BilateralDomain) {
         _cached_encoder_for_BilateralDomain = function (
-            value: BilateralDomain,
-            elGetter: $.ASN1Encoder<BilateralDomain>
-        ): _Element {
+            value: BilateralDomain        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

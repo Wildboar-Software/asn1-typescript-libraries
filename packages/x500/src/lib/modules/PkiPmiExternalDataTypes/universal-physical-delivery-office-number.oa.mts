@@ -5,13 +5,6 @@ import {
     _decode_UniversalPhysicalDeliveryOfficeNumber,
     _encode_UniversalPhysicalDeliveryOfficeNumber,
 } from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalPhysicalDeliveryOfficeNumber,
-    _decode_UniversalPhysicalDeliveryOfficeNumber,
-    _encode_UniversalPhysicalDeliveryOfficeNumber,
-} from "../PkiPmiExternalDataTypes/UniversalPhysicalDeliveryOfficeNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_physical_delivery_office_number */
 /**
  * @summary universal_physical_delivery_office_number

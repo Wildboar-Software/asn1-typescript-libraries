@@ -6,14 +6,6 @@ import {
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
-export {
-    IntEmail,
-    _decode_IntEmail,
-    _encode_IntEmail,
-} from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION intEmailString */
 /**
  * @summary intEmailString

@@ -272,9 +272,7 @@ export function _encode_ReplaceAvlReq(
 ) {
     if (!_cached_encoder_for_ReplaceAvlReq) {
         _cached_encoder_for_ReplaceAvlReq = function (
-            value: ReplaceAvlReq,
-            elGetter: $.ASN1Encoder<ReplaceAvlReq>
-        ): _Element {
+            value: ReplaceAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { passwordQuality } from "../UsefulDefinitions/passwordQuality.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_pq */
 /**
  * @summary id_pq

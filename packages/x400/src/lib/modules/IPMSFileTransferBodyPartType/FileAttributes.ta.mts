@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,79 +16,12 @@ import {
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
 } from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.mjs';
-export {
-    Pathname_Attribute,
-    _decode_Pathname_Attribute,
-    _encode_Pathname_Attribute,
-} from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.mjs';
 import {
     Permitted_Actions_Attribute,
-    Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_insert /* IMPORTED_LONG_NAMED_BIT */,
-    insert /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_replace /* IMPORTED_LONG_NAMED_BIT */,
-    replace /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_extend /* IMPORTED_LONG_NAMED_BIT */,
-    extend /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_erase /* IMPORTED_LONG_NAMED_BIT */,
-    erase /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_read_attribute /* IMPORTED_LONG_NAMED_BIT */,
-    read_attribute /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_change_attribute /* IMPORTED_LONG_NAMED_BIT */,
-    change_attribute /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_delete_Object /* IMPORTED_LONG_NAMED_BIT */,
-    delete_Object /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_pass /* IMPORTED_LONG_NAMED_BIT */,
-    pass /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_link /* IMPORTED_LONG_NAMED_BIT */,
-    link /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_traversal /* IMPORTED_LONG_NAMED_BIT */,
-    traversal /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_reverse_traversal /* IMPORTED_LONG_NAMED_BIT */,
-    reverse_traversal /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_random_Order /* IMPORTED_LONG_NAMED_BIT */,
-    random_Order /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Permitted_Actions_Attribute,
-    _encode_Permitted_Actions_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta.mjs';
-export {
-    Permitted_Actions_Attribute,
-    Permitted_Actions_Attribute_read /* IMPORTED_LONG_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_insert /* IMPORTED_LONG_NAMED_BIT */,
-    insert /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_replace /* IMPORTED_LONG_NAMED_BIT */,
-    replace /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_extend /* IMPORTED_LONG_NAMED_BIT */,
-    extend /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_erase /* IMPORTED_LONG_NAMED_BIT */,
-    erase /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_read_attribute /* IMPORTED_LONG_NAMED_BIT */,
-    read_attribute /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_change_attribute /* IMPORTED_LONG_NAMED_BIT */,
-    change_attribute /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_delete_Object /* IMPORTED_LONG_NAMED_BIT */,
-    delete_Object /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_pass /* IMPORTED_LONG_NAMED_BIT */,
-    pass /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_link /* IMPORTED_LONG_NAMED_BIT */,
-    link /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_traversal /* IMPORTED_LONG_NAMED_BIT */,
-    traversal /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_reverse_traversal /* IMPORTED_LONG_NAMED_BIT */,
-    reverse_traversal /* IMPORTED_SHORT_NAMED_BIT */,
-    Permitted_Actions_Attribute_random_Order /* IMPORTED_LONG_NAMED_BIT */,
-    random_Order /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Permitted_Actions_Attribute,
     _encode_Permitted_Actions_Attribute,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Permitted-Actions-Attribute.ta.mjs';
 import {
-    Account_Attribute,
-    _decode_Account_Attribute,
-    _encode_Account_Attribute,
-} from '../IPMSFileTransferBodyPartType/Account-Attribute.ta.mjs';
-export {
     Account_Attribute,
     _decode_Account_Attribute,
     _encode_Account_Attribute,
@@ -153,17 +31,7 @@ import {
     _decode_Date_and_Time_Attribute,
     _encode_Date_and_Time_Attribute,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta.mjs';
-export {
-    Date_and_Time_Attribute,
-    _decode_Date_and_Time_Attribute,
-    _encode_Date_and_Time_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Date-and-Time-Attribute.ta.mjs';
 import {
-    User_Identity_Attribute,
-    _decode_User_Identity_Attribute,
-    _encode_User_Identity_Attribute,
-} from '../IPMSFileTransferBodyPartType/User-Identity-Attribute.ta.mjs';
-export {
     User_Identity_Attribute,
     _decode_User_Identity_Attribute,
     _encode_User_Identity_Attribute,
@@ -173,17 +41,7 @@ import {
     _decode_Object_Availability_Attribute,
     _encode_Object_Availability_Attribute,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
-export {
-    Object_Availability_Attribute,
-    _decode_Object_Availability_Attribute,
-    _encode_Object_Availability_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
 import {
-    Object_Size_Attribute,
-    _decode_Object_Size_Attribute,
-    _encode_Object_Size_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
-export {
     Object_Size_Attribute,
     _decode_Object_Size_Attribute,
     _encode_Object_Size_Attribute,
@@ -193,17 +51,7 @@ import {
     _decode_Access_Control_Attribute,
     _encode_Access_Control_Attribute,
 } from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta.mjs';
-export {
-    Access_Control_Attribute,
-    _decode_Access_Control_Attribute,
-    _encode_Access_Control_Attribute,
-} from '../IPMSFileTransferBodyPartType/Access-Control-Attribute.ta.mjs';
 import {
-    Legal_Qualification_Attribute,
-    _decode_Legal_Qualification_Attribute,
-    _encode_Legal_Qualification_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
-export {
     Legal_Qualification_Attribute,
     _decode_Legal_Qualification_Attribute,
     _encode_Legal_Qualification_Attribute,
@@ -213,22 +61,11 @@ import {
     _decode_Private_Use_Attribute,
     _encode_Private_Use_Attribute,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
-export {
-    Private_Use_Attribute,
-    _decode_Private_Use_Attribute,
-    _encode_Private_Use_Attribute,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
 import {
     Attribute_Extensions,
     _decode_Attribute_Extensions,
     _encode_Attribute_Extensions,
 } from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-export {
-    Attribute_Extensions,
-    _decode_Attribute_Extensions,
-    _encode_Attribute_Extensions,
-} from '@wildboar/ftam/src/lib/modules/ISO8571-FTAM/Attribute-Extensions.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FileAttributes */
 /**
  * @summary FileAttributes
@@ -769,9 +606,7 @@ export function _encode_FileAttributes(
 ) {
     if (!_cached_encoder_for_FileAttributes) {
         _cached_encoder_for_FileAttributes = function (
-            value: FileAttributes,
-            elGetter: $.ASN1Encoder<FileAttributes>
-        ): _Element {
+            value: FileAttributes        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

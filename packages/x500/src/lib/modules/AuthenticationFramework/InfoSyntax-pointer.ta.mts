@@ -20,22 +20,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    HASH,
-    _get_decoder_for_HASH,
-    _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta.mjs";
-export {
-    HashedPolicyInfo,
-    _decode_HashedPolicyInfo,
-    _encode_HashedPolicyInfo,
-} from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InfoSyntax_pointer */
 /**
  * @summary InfoSyntax_pointer
@@ -218,9 +202,7 @@ export function _encode_InfoSyntax_pointer(
 ) {
     if (!_cached_encoder_for_InfoSyntax_pointer) {
         _cached_encoder_for_InfoSyntax_pointer = function (
-            value: InfoSyntax_pointer,
-            elGetter: $.ASN1Encoder<InfoSyntax_pointer>
-        ): _Element {
+            value: InfoSyntax_pointer        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

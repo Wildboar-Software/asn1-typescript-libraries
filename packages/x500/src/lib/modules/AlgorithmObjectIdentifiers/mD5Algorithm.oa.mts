@@ -2,8 +2,6 @@
 import { NULL, ObjectIdentifier as _OID } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION mD5Algorithm */
 /**
  * @summary mD5Algorithm

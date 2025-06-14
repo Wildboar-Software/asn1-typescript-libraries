@@ -20,22 +20,6 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-export {
-    Abstract_syntax_name,
-    _decode_Abstract_syntax_name,
-    _encode_Abstract_syntax_name,
-} from "../OSIProtocolSpecification/Abstract-syntax-name.ta.mjs";
-export {
-    Presentation_context_identifier,
-    _decode_Presentation_context_identifier,
-    _encode_Presentation_context_identifier,
-} from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Context_list_Item */
 /**
  * @summary Context_list_Item
@@ -219,9 +203,7 @@ export function _encode_Context_list_Item(
 ) {
     if (!_cached_encoder_for_Context_list_Item) {
         _cached_encoder_for_Context_list_Item = function (
-            value: Context_list_Item,
-            elGetter: $.ASN1Encoder<Context_list_Item>
-        ): _Element {
+            value: Context_list_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

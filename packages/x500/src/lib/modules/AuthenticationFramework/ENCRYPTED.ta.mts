@@ -15,7 +15,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *    -- to the BER-encoded octets of a value of -- ToBeEnciphered } )
  * ```
  */
-export type ENCRYPTED<ToBeEnciphered> = BIT_STRING;
+export type ENCRYPTED<_ToBeEnciphered> = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION ENCRYPTED */
 
 /* START_OF_SYMBOL_DEFINITION _get_decoder_for_ENCRYPTED */

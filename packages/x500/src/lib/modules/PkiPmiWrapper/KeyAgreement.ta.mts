@@ -15,17 +15,6 @@ import {
     _decode_SenderDhInfo,
     _encode_SenderDhInfo,
 } from "../PkiPmiWrapper/SenderDhInfo.ta.mjs";
-export {
-    KeyAgreement_keyEncryptionAlgorithm,
-    _decode_KeyAgreement_keyEncryptionAlgorithm,
-    _encode_KeyAgreement_keyEncryptionAlgorithm,
-} from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta.mjs";
-export {
-    SenderDhInfo,
-    _decode_SenderDhInfo,
-    _encode_SenderDhInfo,
-} from "../PkiPmiWrapper/SenderDhInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION KeyAgreement */
 /**
  * @summary KeyAgreement
@@ -205,9 +194,7 @@ export function _encode_KeyAgreement(
 ) {
     if (!_cached_encoder_for_KeyAgreement) {
         _cached_encoder_for_KeyAgreement = function (
-            value: KeyAgreement,
-            elGetter: $.ASN1Encoder<KeyAgreement>
-        ): _Element {
+            value: KeyAgreement        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

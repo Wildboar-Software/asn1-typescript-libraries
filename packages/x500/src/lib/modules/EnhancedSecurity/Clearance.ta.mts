@@ -18,29 +18,6 @@ import {
     _decode_SecurityCategory,
     _encode_SecurityCategory,
 } from "../EnhancedSecurity/SecurityCategory.ta.mjs";
-export {
-    ClassList,
-    ClassList_confidential /* IMPORTED_LONG_NAMED_BIT */,
-    ClassList_restricted /* IMPORTED_LONG_NAMED_BIT */,
-    ClassList_secret /* IMPORTED_LONG_NAMED_BIT */,
-    ClassList_topSecret /* IMPORTED_LONG_NAMED_BIT */,
-    ClassList_unclassified /* IMPORTED_LONG_NAMED_BIT */,
-    ClassList_unmarked /* IMPORTED_LONG_NAMED_BIT */,
-    confidential /* IMPORTED_SHORT_NAMED_BIT */,
-    restricted /* IMPORTED_SHORT_NAMED_BIT */,
-    secret /* IMPORTED_SHORT_NAMED_BIT */,
-    topSecret /* IMPORTED_SHORT_NAMED_BIT */,
-    unclassified /* IMPORTED_SHORT_NAMED_BIT */,
-    unmarked /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_ClassList,
-    _encode_ClassList,
-} from "../EnhancedSecurity/ClassList.ta.mjs";
-export {
-    SecurityCategory,
-    _decode_SecurityCategory,
-    _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Clearance */
 /**
  * @summary Clearance
@@ -259,9 +236,7 @@ export function _encode_Clearance(
 ) {
     if (!_cached_encoder_for_Clearance) {
         _cached_encoder_for_Clearance = function (
-            value: Clearance,
-            elGetter: $.ASN1Encoder<Clearance>
-        ): _Element {
+            value: Clearance        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

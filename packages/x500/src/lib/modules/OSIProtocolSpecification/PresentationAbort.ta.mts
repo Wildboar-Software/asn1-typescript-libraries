@@ -11,17 +11,6 @@ import {
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
 } from "../OSIProtocolSpecification/ARU-PPDU.ta.mjs";
-export {
-    ARP_PPDU,
-    _decode_ARP_PPDU,
-    _encode_ARP_PPDU,
-} from "../OSIProtocolSpecification/ARP-PPDU.ta.mjs";
-export {
-    ARU_PPDU,
-    _decode_ARU_PPDU,
-    _encode_ARU_PPDU,
-} from "../OSIProtocolSpecification/ARU-PPDU.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PresentationAbort */
 /**
  * @summary PresentationAbort

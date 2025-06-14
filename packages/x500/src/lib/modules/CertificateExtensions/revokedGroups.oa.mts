@@ -6,14 +6,6 @@ import {
     _decode_RevokedGroupsSyntax,
     _encode_RevokedGroupsSyntax,
 } from "../CertificateExtensions/RevokedGroupsSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va.mjs";
-export {
-    RevokedGroupsSyntax,
-    _decode_RevokedGroupsSyntax,
-    _encode_RevokedGroupsSyntax,
-} from "../CertificateExtensions/RevokedGroupsSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION revokedGroups */
 /**
  * @summary revokedGroups

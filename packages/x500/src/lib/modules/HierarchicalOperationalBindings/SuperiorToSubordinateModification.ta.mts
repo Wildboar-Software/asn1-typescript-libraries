@@ -6,12 +6,6 @@ import {
     _decode_SuperiorToSubordinate,
     _encode_SuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
-export {
-    SuperiorToSubordinate,
-    _decode_SuperiorToSubordinate,
-    _encode_SuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SuperiorToSubordinateModification */
 /**
  * @summary SuperiorToSubordinateModification

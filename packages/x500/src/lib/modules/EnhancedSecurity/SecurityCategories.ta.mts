@@ -6,12 +6,6 @@ import {
     _decode_SecurityCategory,
     _encode_SecurityCategory,
 } from "../EnhancedSecurity/SecurityCategory.ta.mjs";
-export {
-    SecurityCategory,
-    _decode_SecurityCategory,
-    _encode_SecurityCategory,
-} from "../EnhancedSecurity/SecurityCategory.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityCategories */
 /**
  * @summary SecurityCategories

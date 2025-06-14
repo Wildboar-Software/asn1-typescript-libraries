@@ -15,17 +15,6 @@ import {
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-export {
-    CertAVL,
-    _decode_CertAVL,
-    _encode_CertAVL,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertAVL.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AddAvlReq */
 /**
  * @summary AddAvlReq
@@ -192,9 +181,7 @@ export function _encode_AddAvlReq(
 ) {
     if (!_cached_encoder_for_AddAvlReq) {
         _cached_encoder_for_AddAvlReq = function (
-            value: AddAvlReq,
-            elGetter: $.ASN1Encoder<AddAvlReq>
-        ): _Element {
+            value: AddAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

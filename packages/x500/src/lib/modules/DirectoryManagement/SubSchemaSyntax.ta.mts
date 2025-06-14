@@ -6,12 +6,6 @@ import {
     _decode_SubSchemaSyntax_Item,
     _encode_SubSchemaSyntax_Item,
 } from "../DirectoryManagement/SubSchemaSyntax-Item.ta.mjs";
-export {
-    SubSchemaSyntax_Item,
-    _decode_SubSchemaSyntax_Item,
-    _encode_SubSchemaSyntax_Item,
-} from "../DirectoryManagement/SubSchemaSyntax-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubSchemaSyntax */
 /**
  * @summary SubSchemaSyntax

@@ -7,14 +7,6 @@ import {
     _decode_KeyPurposeId,
     _encode_KeyPurposeId,
 } from "../CertificateExtensions/KeyPurposeId.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_extKeyUsage } from "../CertificateExtensions/id-ce-extKeyUsage.va.mjs";
-export {
-    KeyPurposeId,
-    _decode_KeyPurposeId,
-    _encode_KeyPurposeId,
-} from "../CertificateExtensions/KeyPurposeId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION extKeyUsage */
 /**
  * @summary extKeyUsage

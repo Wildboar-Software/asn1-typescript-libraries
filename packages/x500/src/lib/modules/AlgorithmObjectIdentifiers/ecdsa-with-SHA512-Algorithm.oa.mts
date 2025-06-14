@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ecdsa_with_SHA512 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA512.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { ecdsa_with_SHA512 } from "../AlgorithmObjectIdentifiers/ecdsa-with-SHA512.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ecdsa_with_SHA512_Algorithm */
 /**
  * @summary ecdsa_with_SHA512_Algorithm

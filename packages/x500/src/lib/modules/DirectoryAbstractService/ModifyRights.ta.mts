@@ -6,12 +6,6 @@ import {
     _decode_ModifyRights_Item,
     _encode_ModifyRights_Item,
 } from "../DirectoryAbstractService/ModifyRights-Item.ta.mjs";
-export {
-    ModifyRights_Item,
-    _decode_ModifyRights_Item,
-    _encode_ModifyRights_Item,
-} from "../DirectoryAbstractService/ModifyRights-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ModifyRights */
 /**
  * @summary ModifyRights

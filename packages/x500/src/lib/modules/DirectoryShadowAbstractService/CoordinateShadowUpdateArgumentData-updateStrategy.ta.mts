@@ -6,19 +6,6 @@ import {
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.mjs";
-export {
-    CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-    CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CoordinateShadowUpdateArgumentData_updateStrategy_standard_total /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    incremental /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noChanges /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    total /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-    _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-    _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CoordinateShadowUpdateArgumentData_updateStrategy */
 /**
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy

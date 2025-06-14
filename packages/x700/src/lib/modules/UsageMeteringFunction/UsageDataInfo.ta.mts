@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
-    NotificationCause,
-    _decode_NotificationCause,
-    _encode_NotificationCause,
-} from '../UsageMeteringFunction/NotificationCause.ta.mjs';
-export {
     NotificationCause,
     _decode_NotificationCause,
     _encode_NotificationCause,
@@ -91,17 +26,7 @@ import {
     _decode_UsageInfo,
     _encode_UsageInfo,
 } from '../UsageMeteringDataInfo/UsageInfo.ta.mjs';
-export {
-    UsageInfo,
-    _decode_UsageInfo,
-    _encode_UsageInfo,
-} from '../UsageMeteringDataInfo/UsageInfo.ta.mjs';
 import {
-    AuditInfo,
-    _decode_AuditInfo,
-    _encode_AuditInfo,
-} from '../UsageMeteringFunction/AuditInfo.ta.mjs';
-export {
     AuditInfo,
     _decode_AuditInfo,
     _encode_AuditInfo,
@@ -111,17 +36,7 @@ import {
     _decode_DataErrors,
     _encode_DataErrors,
 } from '../UsageMeteringFunction/DataErrors.ta.mjs';
-export {
-    DataErrors,
-    _decode_DataErrors,
-    _encode_DataErrors,
-} from '../UsageMeteringFunction/DataErrors.ta.mjs';
 import {
-    ProviderId,
-    _decode_ProviderId,
-    _encode_ProviderId,
-} from '../UsageMeteringFunction/ProviderId.ta.mjs';
-export {
     ProviderId,
     _decode_ProviderId,
     _encode_ProviderId,
@@ -131,12 +46,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-export {
-    ManagementExtension,
-    _decode_ManagementExtension,
-    _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION UsageDataInfo */
 /**
  * @summary UsageDataInfo
@@ -427,9 +336,7 @@ export function _encode_UsageDataInfo(
 ) {
     if (!_cached_encoder_for_UsageDataInfo) {
         _cached_encoder_for_UsageDataInfo = function (
-            value: UsageDataInfo,
-            elGetter: $.ASN1Encoder<UsageDataInfo>
-        ): _Element {
+            value: UsageDataInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

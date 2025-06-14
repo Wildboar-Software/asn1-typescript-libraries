@@ -6,12 +6,6 @@ import {
     _decode_TimeAssertion_between,
     _encode_TimeAssertion_between,
 } from "../SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
-export {
-    TimeAssertion_between,
-    _decode_TimeAssertion_between,
-    _encode_TimeAssertion_between,
-} from "../SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TimeAssertion */
 /**
  * @summary TimeAssertion

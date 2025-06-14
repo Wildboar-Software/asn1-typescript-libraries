@@ -173,9 +173,7 @@ export function _encode_Payload14(
 ) {
     if (!_cached_encoder_for_Payload14) {
         _cached_encoder_for_Payload14 = function (
-            value: Payload14,
-            elGetter: $.ASN1Encoder<Payload14>
-        ): _Element {
+            value: Payload14        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

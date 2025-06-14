@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTSAbstractService/OriginatorName.ta.mjs';
-export {
-    OriginatorName,
-    _decode_OriginatorName,
-    _encode_OriginatorName,
-} from '../MTSAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
-    _decode_OriginalEncodedInformationTypes,
-    _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
-export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
@@ -91,17 +26,7 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta.mjs';
-export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
@@ -112,17 +37,7 @@ import {
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
-export {
-    Priority,
-    _decode_Priority,
-    _encode_Priority,
-} from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    PerMessageIndicators,
-    _decode_PerMessageIndicators,
-    _encode_PerMessageIndicators,
-} from '../MTSAbstractService/PerMessageIndicators.ta.mjs';
-export {
     PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
@@ -132,22 +47,11 @@ import {
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
-export {
-    DeferredDeliveryTime,
-    _decode_DeferredDeliveryTime,
-    _encode_DeferredDeliveryTime,
-} from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
 import {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION PerMessageSubmissionFields */
 /**
  * @summary PerMessageSubmissionFields
@@ -482,9 +386,7 @@ export function _encode_PerMessageSubmissionFields(
 ) {
     if (!_cached_encoder_for_PerMessageSubmissionFields) {
         _cached_encoder_for_PerMessageSubmissionFields = function (
-            value: PerMessageSubmissionFields,
-            elGetter: $.ASN1Encoder<PerMessageSubmissionFields>
-        ): _Element {
+            value: PerMessageSubmissionFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

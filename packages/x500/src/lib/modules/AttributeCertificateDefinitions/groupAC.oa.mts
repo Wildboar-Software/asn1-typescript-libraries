@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_groupAC } from "../AttributeCertificateDefinitions/id-ce-groupAC.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION groupAC */
 /**
  * @summary groupAC

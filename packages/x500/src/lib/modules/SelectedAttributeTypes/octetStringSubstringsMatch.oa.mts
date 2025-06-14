@@ -6,16 +6,6 @@ import {
     _decode_OctetSubstringAssertion,
     _encode_OctetSubstringAssertion,
 } from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va.mjs";
-export {
-    OctetSubstringAssertion,
-    _decode_OctetSubstringAssertion,
-    _encode_OctetSubstringAssertion,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION octetStringSubstringsMatch */
 /**
  * @summary octetStringSubstringsMatch

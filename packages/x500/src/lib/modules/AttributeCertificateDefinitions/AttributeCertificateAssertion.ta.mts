@@ -21,22 +21,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeCertificateAssertion_holder,
-    _decode_AttributeCertificateAssertion_holder,
-    _encode_AttributeCertificateAssertion_holder,
-} from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateAssertion */
 /**
  * @summary AttributeCertificateAssertion
@@ -277,9 +261,7 @@ export function _encode_AttributeCertificateAssertion(
 ) {
     if (!_cached_encoder_for_AttributeCertificateAssertion) {
         _cached_encoder_for_AttributeCertificateAssertion = function (
-            value: AttributeCertificateAssertion,
-            elGetter: $.ASN1Encoder<AttributeCertificateAssertion>
-        ): _Element {
+            value: AttributeCertificateAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

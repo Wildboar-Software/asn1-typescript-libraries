@@ -6,14 +6,6 @@ import {
     _encode_AttributeTypeDescription,
 } from "../SchemaAdministration/AttributeTypeDescription.ta.mjs";
 import { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    AttributeTypeDescription,
-    _decode_AttributeTypeDescription,
-    _encode_AttributeTypeDescription,
-} from "../SchemaAdministration/AttributeTypeDescription.ta.mjs";
-export { id_lsx_attributeTypeDescription } from "../SelectedAttributeTypes/id-lsx-attributeTypeDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION attributeTypeDescription */
 /**
  * @summary attributeTypeDescription

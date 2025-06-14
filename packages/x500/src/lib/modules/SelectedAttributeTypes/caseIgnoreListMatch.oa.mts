@@ -7,17 +7,6 @@ import {
 } from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
 import { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.mjs";
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CaseIgnoreList,
-    _decode_CaseIgnoreList,
-    _encode_CaseIgnoreList,
-} from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
-export { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.mjs";
-export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION caseIgnoreListMatch */
 /**
  * @summary caseIgnoreListMatch

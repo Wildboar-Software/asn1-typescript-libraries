@@ -6,12 +6,6 @@ import {
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../CertificateExtensions/CertPolicyId.ta.mjs";
-export {
-    CertPolicyId,
-    _decode_CertPolicyId,
-    _encode_CertPolicyId,
-} from "../CertificateExtensions/CertPolicyId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertPolicySet */
 /**
  * @summary CertPolicySet

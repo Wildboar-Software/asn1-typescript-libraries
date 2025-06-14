@@ -31,32 +31,6 @@ import {
     _decode_UnitOfReplication_supplyContexts,
     _encode_UnitOfReplication_supplyContexts,
 } from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta.mjs";
-export {
-    ContextSelection,
-    _decode_ContextSelection,
-    _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta.mjs";
-export {
-    AreaSpecification,
-    _decode_AreaSpecification,
-    _encode_AreaSpecification,
-} from "../DirectoryShadowAbstractService/AreaSpecification.ta.mjs";
-export {
-    AttributeSelection,
-    _decode_AttributeSelection,
-    _encode_AttributeSelection,
-} from "../DirectoryShadowAbstractService/AttributeSelection.ta.mjs";
-export {
-    Knowledge,
-    _decode_Knowledge,
-    _encode_Knowledge,
-} from "../DirectoryShadowAbstractService/Knowledge.ta.mjs";
-export {
-    UnitOfReplication_supplyContexts,
-    _decode_UnitOfReplication_supplyContexts,
-    _encode_UnitOfReplication_supplyContexts,
-} from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UnitOfReplication */
 /**
  * @summary UnitOfReplication
@@ -327,9 +301,7 @@ export function _encode_UnitOfReplication(
 ) {
     if (!_cached_encoder_for_UnitOfReplication) {
         _cached_encoder_for_UnitOfReplication = function (
-            value: UnitOfReplication,
-            elGetter: $.ASN1Encoder<UnitOfReplication>
-        ): _Element {
+            value: UnitOfReplication        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

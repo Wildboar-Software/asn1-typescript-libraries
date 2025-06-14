@@ -5,13 +5,6 @@ import {
     _decode_UniversalOrganizationName,
     _encode_UniversalOrganizationName,
 } from "../PkiPmiExternalDataTypes/UniversalOrganizationName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalOrganizationName,
-    _decode_UniversalOrganizationName,
-    _encode_UniversalOrganizationName,
-} from "../PkiPmiExternalDataTypes/UniversalOrganizationName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_organization_name */
 /**
  * @summary universal_organization_name

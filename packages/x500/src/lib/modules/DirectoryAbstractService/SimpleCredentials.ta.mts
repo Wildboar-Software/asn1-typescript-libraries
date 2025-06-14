@@ -20,22 +20,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    SimpleCredentials_password,
-    _decode_SimpleCredentials_password,
-    _encode_SimpleCredentials_password,
-} from "../DirectoryAbstractService/SimpleCredentials-password.ta.mjs";
-export {
-    SimpleCredentials_validity,
-    _decode_SimpleCredentials_validity,
-    _encode_SimpleCredentials_validity,
-} from "../DirectoryAbstractService/SimpleCredentials-validity.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials */
 /**
  * @summary SimpleCredentials
@@ -241,9 +225,7 @@ export function _encode_SimpleCredentials(
 ) {
     if (!_cached_encoder_for_SimpleCredentials) {
         _cached_encoder_for_SimpleCredentials = function (
-            value: SimpleCredentials,
-            elGetter: $.ASN1Encoder<SimpleCredentials>
-        ): _Element {
+            value: SimpleCredentials        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

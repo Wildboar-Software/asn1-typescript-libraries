@@ -15,17 +15,6 @@ import {
     _decode_Wrap_Header,
     _encode_Wrap_Header,
 } from "../SpkmGssTokens/Wrap-Header.ta.mjs";
-export {
-    Wrap_Body,
-    _decode_Wrap_Body,
-    _encode_Wrap_Body,
-} from "../SpkmGssTokens/Wrap-Body.ta.mjs";
-export {
-    Wrap_Header,
-    _decode_Wrap_Header,
-    _encode_Wrap_Header,
-} from "../SpkmGssTokens/Wrap-Header.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_WRAP */
 /**
  * @summary SPKM_WRAP
@@ -181,9 +170,7 @@ export function _encode_SPKM_WRAP(
 ) {
     if (!_cached_encoder_for_SPKM_WRAP) {
         _cached_encoder_for_SPKM_WRAP = function (
-            value: SPKM_WRAP,
-            elGetter: $.ASN1Encoder<SPKM_WRAP>
-        ): _Element {
+            value: SPKM_WRAP        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

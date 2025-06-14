@@ -6,16 +6,6 @@ import {
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va.mjs";
-export {
-    RoleSpecCertIdentifierSyntax,
-    _decode_RoleSpecCertIdentifierSyntax,
-    _encode_RoleSpecCertIdentifierSyntax,
-} from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION roleSpecCertIdMatch */
 /**
  * @summary roleSpecCertIdMatch

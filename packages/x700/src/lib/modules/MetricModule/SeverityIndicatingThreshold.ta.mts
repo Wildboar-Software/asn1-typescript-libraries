@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,48 +17,12 @@ import {
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
-export {
-    ObservedValue,
-    _decode_ObservedValue,
-    _encode_ObservedValue,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ObservedValue.ta.mjs';
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
-    PerceivedSeverity_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
-export {
-    PerceivedSeverity,
-    _enum_for_PerceivedSeverity,
-    PerceivedSeverity_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_PerceivedSeverity,
-    _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION SeverityIndicatingThreshold */
 /**
  * @summary SeverityIndicatingThreshold
@@ -309,9 +219,7 @@ export function _encode_SeverityIndicatingThreshold(
 ) {
     if (!_cached_encoder_for_SeverityIndicatingThreshold) {
         _cached_encoder_for_SeverityIndicatingThreshold = function (
-            value: SeverityIndicatingThreshold,
-            elGetter: $.ASN1Encoder<SeverityIndicatingThreshold>
-        ): _Element {
+            value: SeverityIndicatingThreshold        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

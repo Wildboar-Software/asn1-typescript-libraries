@@ -35,43 +35,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    CertificateListContent_revokedCertificates_Item,
-    _decode_CertificateListContent_revokedCertificates_Item,
-    _encode_CertificateListContent_revokedCertificates_Item,
-} from "../AuthenticationFramework/CertificateListContent-revokedCertificates-Item.ta.mjs";
-export {
-    Extensions,
-    _decode_Extensions,
-    _encode_Extensions,
-} from "../AuthenticationFramework/Extensions.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../AuthenticationFramework/Time.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Version,
-    _encode_Version,
-} from "../AuthenticationFramework/Version.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateListContent */
 /**
  * @summary CertificateListContent
@@ -371,9 +334,7 @@ export function _encode_CertificateListContent(
 ) {
     if (!_cached_encoder_for_CertificateListContent) {
         _cached_encoder_for_CertificateListContent = function (
-            value: CertificateListContent,
-            elGetter: $.ASN1Encoder<CertificateListContent>
-        ): _Element {
+            value: CertificateListContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

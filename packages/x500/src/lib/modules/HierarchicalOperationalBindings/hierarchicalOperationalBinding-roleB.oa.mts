@@ -5,13 +5,6 @@ import {
     _encode_SubordinateToSuperior,
 } from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-export {
-    SubordinateToSuperior,
-    _decode_SubordinateToSuperior,
-    _encode_SubordinateToSuperior,
-} from "../HierarchicalOperationalBindings/SubordinateToSuperior.ta.mjs";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleB */
 /**
  * @summary hierarchicalOperationalBinding_roleB

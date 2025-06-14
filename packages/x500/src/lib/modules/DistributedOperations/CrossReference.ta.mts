@@ -11,17 +11,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    AccessPointInformation,
-    _decode_AccessPointInformation,
-    _encode_AccessPointInformation,
-} from "../DistributedOperations/AccessPointInformation.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CrossReference */
 /**
  * @summary CrossReference
@@ -209,9 +198,7 @@ export function _encode_CrossReference(
 ) {
     if (!_cached_encoder_for_CrossReference) {
         _cached_encoder_for_CrossReference = function (
-            value: CrossReference,
-            elGetter: $.ASN1Encoder<CrossReference>
-        ): _Element {
+            value: CrossReference        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

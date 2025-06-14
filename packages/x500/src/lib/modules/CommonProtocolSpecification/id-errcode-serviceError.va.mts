@@ -1,11 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_errcode_serviceError */
 /**
  * @summary id_errcode_serviceError

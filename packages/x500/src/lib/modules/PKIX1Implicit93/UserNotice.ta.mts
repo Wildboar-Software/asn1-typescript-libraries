@@ -15,17 +15,6 @@ import {
     _decode_NoticeReference,
     _encode_NoticeReference,
 } from "../PKIX1Implicit93/NoticeReference.ta.mjs";
-export {
-    DisplayText,
-    _decode_DisplayText,
-    _encode_DisplayText,
-} from "../PKIX1Implicit93/DisplayText.ta.mjs";
-export {
-    NoticeReference,
-    _decode_NoticeReference,
-    _encode_NoticeReference,
-} from "../PKIX1Implicit93/NoticeReference.ta.mjs";
-
 // FIXME: Deduplicate this whole module.
 
 /* START_OF_SYMBOL_DEFINITION UserNotice */
@@ -199,9 +188,7 @@ export function _encode_UserNotice(
 ) {
     if (!_cached_encoder_for_UserNotice) {
         _cached_encoder_for_UserNotice = function (
-            value: UserNotice,
-            elGetter: $.ASN1Encoder<UserNotice>
-        ): _Element {
+            value: UserNotice        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

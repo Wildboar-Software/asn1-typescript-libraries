@@ -11,32 +11,6 @@ import {
 } from "../SelectedAttributeTypes/CommunicationsService.ta.mjs";
 import { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CommunicationsService,
-    _decode_CommunicationsService,
-    _encode_CommunicationsService,
-} from "../SelectedAttributeTypes/CommunicationsService.ta.mjs";
-export { id_at_communicationsService } from "../SelectedAttributeTypes/id-at-communicationsService.va.mjs";
-export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION communicationsService */
 /**
  * @summary communicationsService

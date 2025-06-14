@@ -6,12 +6,6 @@ import {
     _decode_Presentation_context_identifier_list_Item,
     _encode_Presentation_context_identifier_list_Item,
 } from "../OSIProtocolSpecification/Presentation-context-identifier-list-Item.ta.mjs";
-export {
-    Presentation_context_identifier_list_Item,
-    _decode_Presentation_context_identifier_list_Item,
-    _encode_Presentation_context_identifier_list_Item,
-} from "../OSIProtocolSpecification/Presentation-context-identifier-list-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Presentation_context_identifier_list */
 /**
  * @summary Presentation_context_identifier_list

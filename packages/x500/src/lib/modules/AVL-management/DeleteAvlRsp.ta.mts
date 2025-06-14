@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
-export {
-    DeleteAvlRsp_result,
-    _decode_DeleteAvlRsp_result,
-    _encode_DeleteAvlRsp_result,
-} from "../AVL-management/DeleteAvlRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DeleteAvlRsp */
 /**
  * @summary DeleteAvlRsp
@@ -191,9 +180,7 @@ export function _encode_DeleteAvlRsp(
 ) {
     if (!_cached_encoder_for_DeleteAvlRsp) {
         _cached_encoder_for_DeleteAvlRsp = function (
-            value: DeleteAvlRsp,
-            elGetter: $.ASN1Encoder<DeleteAvlRsp>
-        ): _Element {
+            value: DeleteAvlRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

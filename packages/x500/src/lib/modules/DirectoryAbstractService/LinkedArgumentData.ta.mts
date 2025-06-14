@@ -539,9 +539,7 @@ export function _encode_LinkedArgumentData(
 ) {
     if (!_cached_encoder_for_LinkedArgumentData) {
         _cached_encoder_for_LinkedArgumentData = function (
-            value: LinkedArgumentData,
-            elGetter: $.ASN1Encoder<LinkedArgumentData>
-        ): _Element {
+            value: LinkedArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

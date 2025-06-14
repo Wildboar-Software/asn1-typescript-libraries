@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_ldapSyntaxDescription } from "../SelectedAttributeTypes/id-lsx-ldapSyntaxDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_ldapSyntaxDescription } from "../SelectedAttributeTypes/id-lsx-ldapSyntaxDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ldapSyntaxDescription */
 /**
  * @summary ldapSyntaxDescription

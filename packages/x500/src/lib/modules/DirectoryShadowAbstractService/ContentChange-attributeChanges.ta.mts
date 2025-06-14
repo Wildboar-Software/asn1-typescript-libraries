@@ -11,17 +11,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
-export {
-    EntryModification,
-    _decode_EntryModification,
-    _encode_EntryModification,
-} from "../DirectoryAbstractService/EntryModification.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContentChange_attributeChanges */
 /**
  * @summary ContentChange_attributeChanges

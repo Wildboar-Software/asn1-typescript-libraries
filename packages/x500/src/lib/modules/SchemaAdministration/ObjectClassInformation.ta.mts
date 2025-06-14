@@ -13,21 +13,6 @@ import {
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
 } from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ObjectClassInformation */
 /**
  * @summary ObjectClassInformation
@@ -279,9 +264,7 @@ export function _encode_ObjectClassInformation(
 ) {
     if (!_cached_encoder_for_ObjectClassInformation) {
         _cached_encoder_for_ObjectClassInformation = function (
-            value: ObjectClassInformation,
-            elGetter: $.ASN1Encoder<ObjectClassInformation>
-        ): _Element {
+            value: ObjectClassInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

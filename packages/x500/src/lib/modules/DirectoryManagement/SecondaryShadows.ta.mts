@@ -6,12 +6,6 @@ import {
     _decode_SupplierAndConsumers,
     _encode_SupplierAndConsumers,
 } from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-export {
-    SupplierAndConsumers,
-    _decode_SupplierAndConsumers,
-    _encode_SupplierAndConsumers,
-} from "../DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecondaryShadows */
 /**
  * @summary SecondaryShadows

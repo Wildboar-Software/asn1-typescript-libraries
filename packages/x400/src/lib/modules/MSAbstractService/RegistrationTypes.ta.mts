@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,51 +14,14 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     RegistrationTypes_registrations,
-    RegistrationTypes_registrations_auto_action_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    auto_action_registrations /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_list_attribute_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    list_attribute_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_fetch_attribute_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    fetch_attribute_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_ua_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    ua_registrations /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_submission_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    submission_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_message_group_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    message_group_registrations /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RegistrationTypes_registrations,
     _encode_RegistrationTypes_registrations,
 } from '../MSAbstractService/RegistrationTypes-registrations.ta.mjs';
-export {
-    RegistrationTypes_registrations,
-    RegistrationTypes_registrations_auto_action_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    auto_action_registrations /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_list_attribute_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    list_attribute_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_fetch_attribute_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    fetch_attribute_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_ua_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    ua_registrations /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_submission_defaults /* IMPORTED_LONG_NAMED_BIT */,
-    submission_defaults /* IMPORTED_SHORT_NAMED_BIT */,
-    RegistrationTypes_registrations_message_group_registrations /* IMPORTED_LONG_NAMED_BIT */,
-    message_group_registrations /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_RegistrationTypes_registrations,
-    _encode_RegistrationTypes_registrations,
-} from '../MSAbstractService/RegistrationTypes-registrations.ta.mjs';
-import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
 import {
     MessageGroupsRestriction,
     _decode_MessageGroupsRestriction,
     _encode_MessageGroupsRestriction,
 } from '../MSAbstractService/MessageGroupsRestriction.ta.mjs';
-export {
-    MessageGroupsRestriction,
-    _decode_MessageGroupsRestriction,
-    _encode_MessageGroupsRestriction,
-} from '../MSAbstractService/MessageGroupsRestriction.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RegistrationTypes */
 /**
  * @summary RegistrationTypes
@@ -319,9 +228,7 @@ export function _encode_RegistrationTypes(
 ) {
     if (!_cached_encoder_for_RegistrationTypes) {
         _cached_encoder_for_RegistrationTypes = function (
-            value: RegistrationTypes,
-            elGetter: $.ASN1Encoder<RegistrationTypes>
-        ): _Element {
+            value: RegistrationTypes        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

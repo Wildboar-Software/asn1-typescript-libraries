@@ -5,13 +5,6 @@ import {
     _encode_NHOBSuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-export {
-    NHOBSuperiorToSubordinate,
-    _decode_NHOBSuperiorToSubordinate,
-    _encode_NHOBSuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.mjs";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION nonSpecificHierarchicalOperationalBinding_roleA */
 /**
  * @summary nonSpecificHierarchicalOperationalBinding_roleA

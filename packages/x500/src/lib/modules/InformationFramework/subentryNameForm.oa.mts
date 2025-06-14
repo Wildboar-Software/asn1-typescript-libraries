@@ -3,13 +3,6 @@ import { id_nf_subentryNameForm } from "../InformationFramework/id-nf-subentryNa
 import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { subentry } from "../InformationFramework/subentry.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_nf_subentryNameForm } from "../InformationFramework/id-nf-subentryNameForm.va.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { subentry } from "../InformationFramework/subentry.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subentryNameForm */
 /**
  * @summary subentryNameForm

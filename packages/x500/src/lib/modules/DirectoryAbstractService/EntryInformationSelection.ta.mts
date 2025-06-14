@@ -32,36 +32,6 @@ import {
     _decode_FamilyReturn,
     _encode_FamilyReturn,
 } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
-export {
-    ContextSelection,
-    _decode_ContextSelection,
-    _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta.mjs";
-export {
-    EntryInformationSelection_attributes,
-    _decode_EntryInformationSelection_attributes,
-    _encode_EntryInformationSelection_attributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta.mjs";
-export {
-    EntryInformationSelection_extraAttributes,
-    _decode_EntryInformationSelection_extraAttributes,
-    _encode_EntryInformationSelection_extraAttributes,
-} from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta.mjs";
-export {
-    attributeTypesAndValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    attributeTypesOnly /* IMPORTED_SHORT_NAMED_INTEGER */,
-    EntryInformationSelection_infoTypes,
-    EntryInformationSelection_infoTypes_attributeTypesAndValues /* IMPORTED_LONG_NAMED_INTEGER */,
-    EntryInformationSelection_infoTypes_attributeTypesOnly /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_EntryInformationSelection_infoTypes,
-    _encode_EntryInformationSelection_infoTypes,
-} from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.mjs";
-export {
-    FamilyReturn,
-    _decode_FamilyReturn,
-    _encode_FamilyReturn,
-} from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EntryInformationSelection */
 /**
  * @summary EntryInformationSelection
@@ -380,9 +350,7 @@ export function _encode_EntryInformationSelection(
 ) {
     if (!_cached_encoder_for_EntryInformationSelection) {
         _cached_encoder_for_EntryInformationSelection = function (
-            value: EntryInformationSelection,
-            elGetter: $.ASN1Encoder<EntryInformationSelection>
-        ): _Element {
+            value: EntryInformationSelection        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -16,7 +16,7 @@ import * as $ from "asn1-ts/dist/functional.mjs";
  *   -- to those octets -- } )
  * ```
  */
-export type ENCRYPTED_HASH<ToBeSigned> = BIT_STRING;
+export type ENCRYPTED_HASH = BIT_STRING;
 /* END_OF_SYMBOL_DEFINITION ENCRYPTED_HASH */
 
 /* START_OF_SYMBOL_DEFINITION _get_decoder_for_ENCRYPTED_HASH */

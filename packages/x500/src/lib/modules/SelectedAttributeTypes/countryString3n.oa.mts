@@ -6,14 +6,6 @@ import {
     _encode_CountryCode3n,
 } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
 import { id_asx_countryString3n } from "../SelectedAttributeTypes/id-asx-countryString3n.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CountryCode3n,
-    _decode_CountryCode3n,
-    _encode_CountryCode3n,
-} from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
-export { id_asx_countryString3n } from "../SelectedAttributeTypes/id-asx-countryString3n.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION countryString3n */
 /**
  * @summary countryString3n

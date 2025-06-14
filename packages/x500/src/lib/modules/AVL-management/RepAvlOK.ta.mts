@@ -152,9 +152,7 @@ export function _encode_RepAvlOK(
 ) {
     if (!_cached_encoder_for_RepAvlOK) {
         _cached_encoder_for_RepAvlOK = function (
-            value: RepAvlOK,
-            elGetter: $.ASN1Encoder<RepAvlOK>
-        ): _Element {
+            value: RepAvlOK        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

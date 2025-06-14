@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_algo_kea } from "../GenAlgo/id-algo-kea.va.mjs";
-export { id_algo_kea } from "../GenAlgo/id-algo-kea.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_algo_dhModpGr23Hkdf256Algo */
 /**
  * @summary id_algo_dhModpGr23Hkdf256Algo

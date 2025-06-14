@@ -15,17 +15,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateExactAssertion */
 /**
  * @summary CertificateExactAssertion
@@ -196,9 +185,7 @@ export function _encode_CertificateExactAssertion(
 ) {
     if (!_cached_encoder_for_CertificateExactAssertion) {
         _cached_encoder_for_CertificateExactAssertion = function (
-            value: CertificateExactAssertion,
-            elGetter: $.ASN1Encoder<CertificateExactAssertion>
-        ): _Element {
+            value: CertificateExactAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

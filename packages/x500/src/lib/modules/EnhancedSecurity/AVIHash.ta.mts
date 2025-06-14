@@ -11,17 +11,6 @@ import {
     _decode_AttributeTypeValueContexts,
     _encode_AttributeTypeValueContexts,
 } from "../EnhancedSecurity/AttributeTypeValueContexts.ta.mjs";
-export {
-    HASH,
-    _get_decoder_for_HASH,
-    _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta.mjs";
-export {
-    AttributeTypeValueContexts,
-    _decode_AttributeTypeValueContexts,
-    _encode_AttributeTypeValueContexts,
-} from "../EnhancedSecurity/AttributeTypeValueContexts.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AVIHash */
 /**
  * @summary AVIHash

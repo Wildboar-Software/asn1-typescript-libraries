@@ -189,9 +189,7 @@ export function _encode_UnformattedPostalAddress(
 ) {
     if (!_cached_encoder_for_UnformattedPostalAddress) {
         _cached_encoder_for_UnformattedPostalAddress = function (
-            value: UnformattedPostalAddress,
-            elGetter: $.ASN1Encoder<UnformattedPostalAddress>
-        ): _Element {
+            value: UnformattedPostalAddress        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -57,65 +57,6 @@ import {
     _decode_Implementation_data,
     _encode_Implementation_data,
 } from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    AAREerr_apdu_protocol_version,
-    AAREerr_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
-    version1 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_AAREerr_apdu_protocol_version,
-    _encode_AAREerr_apdu_protocol_version,
-} from "../OSIProtocolSpecification/AAREerr-apdu-protocol-version.ta.mjs";
-export {
-    AE_invocation_identifier,
-    _decode_AE_invocation_identifier,
-    _encode_AE_invocation_identifier,
-} from "../OSIProtocolSpecification/AE-invocation-identifier.ta.mjs";
-export {
-    AP_invocation_identifier,
-    _decode_AP_invocation_identifier,
-    _encode_AP_invocation_identifier,
-} from "../OSIProtocolSpecification/AP-invocation-identifier.ta.mjs";
-export {
-    Application_context_name,
-    _decode_Application_context_name,
-    _encode_Application_context_name,
-} from "../OSIProtocolSpecification/Application-context-name.ta.mjs";
-export {
-    accepted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Associate_result,
-    Associate_result_accepted /* IMPORTED_LONG_NAMED_INTEGER */,
-    Associate_result_rejected_permanent /* IMPORTED_LONG_NAMED_INTEGER */,
-    Associate_result_rejected_transient /* IMPORTED_LONG_NAMED_INTEGER */,
-    rejected_permanent /* IMPORTED_SHORT_NAMED_INTEGER */,
-    rejected_transient /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Associate_result,
-    _encode_Associate_result,
-} from "../OSIProtocolSpecification/Associate-result.ta.mjs";
-export {
-    Associate_source_diagnostic,
-    _decode_Associate_source_diagnostic,
-    _encode_Associate_source_diagnostic,
-} from "../OSIProtocolSpecification/Associate-source-diagnostic.ta.mjs";
-export {
-    Association_informationBindErr,
-    _decode_Association_informationBindErr,
-    _encode_Association_informationBindErr,
-} from "../OSIProtocolSpecification/Association-informationBindErr.ta.mjs";
-export {
-    Implementation_data,
-    _decode_Implementation_data,
-    _encode_Implementation_data,
-} from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AAREerr_apdu */
 /**
  * @summary AAREerr_apdu
@@ -494,9 +435,7 @@ export function _encode_AAREerr_apdu(
             1,
             () =>
                 function (
-                    value: AAREerr_apdu,
-                    elGetter: $.ASN1Encoder<AAREerr_apdu>
-                ): _Element {
+                    value: AAREerr_apdu                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

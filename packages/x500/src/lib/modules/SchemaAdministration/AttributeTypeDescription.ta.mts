@@ -17,18 +17,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeTypeInformation,
-    _decode_AttributeTypeInformation,
-    _encode_AttributeTypeInformation,
-} from "../SchemaAdministration/AttributeTypeInformation.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeTypeDescription */
 /**
  * @summary AttributeTypeDescription
@@ -297,9 +285,7 @@ export function _encode_AttributeTypeDescription(
 ) {
     if (!_cached_encoder_for_AttributeTypeDescription) {
         _cached_encoder_for_AttributeTypeDescription = function (
-            value: AttributeTypeDescription,
-            elGetter: $.ASN1Encoder<AttributeTypeDescription>
-        ): _Element {
+            value: AttributeTypeDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

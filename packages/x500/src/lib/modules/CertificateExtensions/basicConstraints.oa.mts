@@ -6,14 +6,6 @@ import {
     _encode_BasicConstraintsSyntax,
 } from "../CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
 import { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    BasicConstraintsSyntax,
-    _decode_BasicConstraintsSyntax,
-    _encode_BasicConstraintsSyntax,
-} from "../CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
-export { id_ce_basicConstraints } from "../CertificateExtensions/id-ce-basicConstraints.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION basicConstraints */
 /**
  * @summary basicConstraints

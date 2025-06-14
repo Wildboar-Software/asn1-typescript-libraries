@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { ansi_x9_42 } from "../AlgorithmObjectIdentifiers/ansi-x9-42.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dh_public_number */
 /**
  * @summary dh_public_number

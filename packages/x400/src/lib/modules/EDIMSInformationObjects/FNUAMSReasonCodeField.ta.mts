@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,49 +13,11 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     FNUAMSBasicCodeField,
-    FNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
-    unspecified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_onward_routing /* IMPORTED_LONG_NAMED_INTEGER */,
-    onward_routing /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_edim_recipient_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    edim_recipient_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_edim_originator_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    edim_originator_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_forwarded_by_edi_ms /* IMPORTED_LONG_NAMED_INTEGER */,
-    forwarded_by_edi_ms /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_FNUAMSBasicCodeField,
-    _encode_FNUAMSBasicCodeField,
-} from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.mjs';
-export {
-    FNUAMSBasicCodeField,
-    FNUAMSBasicCodeField_unspecified /* IMPORTED_LONG_NAMED_INTEGER */,
-    unspecified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_onward_routing /* IMPORTED_LONG_NAMED_INTEGER */,
-    onward_routing /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_edim_recipient_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    edim_recipient_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_edim_originator_unknown /* IMPORTED_LONG_NAMED_INTEGER */,
-    edim_originator_unknown /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSBasicCodeField_forwarded_by_edi_ms /* IMPORTED_LONG_NAMED_INTEGER */,
-    forwarded_by_edi_ms /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSBasicCodeField,
     _encode_FNUAMSBasicCodeField,
 } from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.mjs';
 import {
     FNUAMSDiagnosticField,
-    FNUAMSDiagnosticField_recipient_name_changed /* IMPORTED_LONG_NAMED_INTEGER */,
-    recipient_name_changed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSDiagnosticField_recipient_name_deleted /* IMPORTED_LONG_NAMED_INTEGER */,
-    recipient_name_deleted /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_FNUAMSDiagnosticField,
-    _encode_FNUAMSDiagnosticField,
-} from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.mjs';
-export {
-    FNUAMSDiagnosticField,
-    FNUAMSDiagnosticField_recipient_name_changed /* IMPORTED_LONG_NAMED_INTEGER */,
-    recipient_name_changed /* IMPORTED_SHORT_NAMED_INTEGER */,
-    FNUAMSDiagnosticField_recipient_name_deleted /* IMPORTED_LONG_NAMED_INTEGER */,
-    recipient_name_deleted /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_FNUAMSDiagnosticField,
     _encode_FNUAMSDiagnosticField,
 } from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.mjs';
@@ -119,12 +26,6 @@ import {
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
 } from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.mjs';
-export {
-    FNUAMSSecurityCheckField,
-    _decode_FNUAMSSecurityCheckField,
-    _encode_FNUAMSSecurityCheckField,
-} from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FNUAMSReasonCodeField */
 /**
  * @summary FNUAMSReasonCodeField
@@ -334,9 +235,7 @@ export function _encode_FNUAMSReasonCodeField(
 ) {
     if (!_cached_encoder_for_FNUAMSReasonCodeField) {
         _cached_encoder_for_FNUAMSReasonCodeField = function (
-            value: FNUAMSReasonCodeField,
-            elGetter: $.ASN1Encoder<FNUAMSReasonCodeField>
-        ): _Element {
+            value: FNUAMSReasonCodeField        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

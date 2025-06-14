@@ -10,12 +10,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NonSpecificHierarchicalAgreement */
 /**
  * @summary NonSpecificHierarchicalAgreement
@@ -175,9 +169,7 @@ export function _encode_NonSpecificHierarchicalAgreement(
 ) {
     if (!_cached_encoder_for_NonSpecificHierarchicalAgreement) {
         _cached_encoder_for_NonSpecificHierarchicalAgreement = function (
-            value: NonSpecificHierarchicalAgreement,
-            elGetter: $.ASN1Encoder<NonSpecificHierarchicalAgreement>
-        ): _Element {
+            value: NonSpecificHierarchicalAgreement        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

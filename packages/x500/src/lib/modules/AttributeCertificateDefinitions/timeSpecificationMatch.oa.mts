@@ -6,16 +6,6 @@ import {
     _decode_TimeSpecification,
     _encode_TimeSpecification,
 } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-export { id_mr_timeSpecMatch } from "../AttributeCertificateDefinitions/id-mr-timeSpecMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    TimeSpecification,
-    _decode_TimeSpecification,
-    _encode_TimeSpecification,
-} from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION timeSpecificationMatch */
 /**
  * @summary timeSpecificationMatch

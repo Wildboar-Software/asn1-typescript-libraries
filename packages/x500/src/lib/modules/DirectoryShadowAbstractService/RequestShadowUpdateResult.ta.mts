@@ -11,17 +11,6 @@ import {
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-export {
-    RequestShadowUpdateResultData,
-    _decode_RequestShadowUpdateResultData,
-    _encode_RequestShadowUpdateResultData,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResultData.ta.mjs";
-export {
-    OPTIONALLY_PROTECTED,
-    _get_decoder_for_OPTIONALLY_PROTECTED,
-    _get_encoder_for_OPTIONALLY_PROTECTED,
-} from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION RequestShadowUpdateResult */
 /**
  * @summary RequestShadowUpdateResult

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_IA5TextBodyPart,
     _encode_IA5TextBodyPart,
 } from '../IPMSInformationObjects/IA5TextBodyPart.ta.mjs';
-export {
-    IA5TextBodyPart,
-    _decode_IA5TextBodyPart,
-    _encode_IA5TextBodyPart,
-} from '../IPMSInformationObjects/IA5TextBodyPart.ta.mjs';
 import {
-    G3FacsimileBodyPart,
-    _decode_G3FacsimileBodyPart,
-    _encode_G3FacsimileBodyPart,
-} from '../IPMSInformationObjects/G3FacsimileBodyPart.ta.mjs';
-export {
     G3FacsimileBodyPart,
     _decode_G3FacsimileBodyPart,
     _encode_G3FacsimileBodyPart,
@@ -91,17 +25,7 @@ import {
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
 } from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';
-export {
-    G4Class1BodyPart,
-    _decode_G4Class1BodyPart,
-    _encode_G4Class1BodyPart,
-} from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';
 import {
-    TeletexBodyPart,
-    _decode_TeletexBodyPart,
-    _encode_TeletexBodyPart,
-} from '../IPMSInformationObjects/TeletexBodyPart.ta.mjs';
-export {
     TeletexBodyPart,
     _decode_TeletexBodyPart,
     _encode_TeletexBodyPart,
@@ -111,17 +35,7 @@ import {
     _decode_VideotexBodyPart,
     _encode_VideotexBodyPart,
 } from '../IPMSInformationObjects/VideotexBodyPart.ta.mjs';
-export {
-    VideotexBodyPart,
-    _decode_VideotexBodyPart,
-    _encode_VideotexBodyPart,
-} from '../IPMSInformationObjects/VideotexBodyPart.ta.mjs';
 import {
-    EncryptedBodyPart,
-    _decode_EncryptedBodyPart,
-    _encode_EncryptedBodyPart,
-} from '../IPMSInformationObjects/EncryptedBodyPart.ta.mjs';
-export {
     EncryptedBodyPart,
     _decode_EncryptedBodyPart,
     _encode_EncryptedBodyPart,
@@ -131,17 +45,7 @@ import {
     _decode_MessageBodyPart,
     _encode_MessageBodyPart,
 } from '../IPMSInformationObjects/MessageBodyPart.ta.mjs';
-export {
-    MessageBodyPart,
-    _decode_MessageBodyPart,
-    _encode_MessageBodyPart,
-} from '../IPMSInformationObjects/MessageBodyPart.ta.mjs';
 import {
-    MixedModeBodyPart,
-    _decode_MixedModeBodyPart,
-    _encode_MixedModeBodyPart,
-} from '../IPMSInformationObjects/MixedModeBodyPart.ta.mjs';
-export {
     MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
@@ -151,22 +55,11 @@ import {
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
 } from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';
-export {
-    BilaterallyDefinedBodyPart,
-    _decode_BilaterallyDefinedBodyPart,
-    _encode_BilaterallyDefinedBodyPart,
-} from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';
 import {
     NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
 } from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';
-export {
-    NationallyDefinedBodyPart,
-    _decode_NationallyDefinedBodyPart,
-    _encode_NationallyDefinedBodyPart,
-} from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BodyPart_basic */
 /**
  * @summary BodyPart_basic

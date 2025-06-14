@@ -229,9 +229,7 @@ export function _encode_TeletexPersonalName(
 ) {
     if (!_cached_encoder_for_TeletexPersonalName) {
         _cached_encoder_for_TeletexPersonalName = function (
-            value: TeletexPersonalName,
-            elGetter: $.ASN1Encoder<TeletexPersonalName>
-        ): _Element {
+            value: TeletexPersonalName        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

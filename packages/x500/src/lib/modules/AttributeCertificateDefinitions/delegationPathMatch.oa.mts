@@ -6,16 +6,6 @@ import {
 } from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.mjs";
 import { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export {
-    DelMatchSyntax,
-    _decode_DelMatchSyntax,
-    _encode_DelMatchSyntax,
-} from "../AttributeCertificateDefinitions/DelMatchSyntax.ta.mjs";
-export { id_mr_delegationPathMatch } from "../AttributeCertificateDefinitions/id-mr-delegationPathMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION delegationPathMatch */
 /**
  * @summary delegationPathMatch

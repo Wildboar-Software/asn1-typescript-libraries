@@ -15,17 +15,6 @@ import {
     _decode_Validity_validUntil,
     _encode_Validity_validUntil,
 } from "../OperationalBindingManagement/Validity-validUntil.ta.mjs";
-export {
-    Validity_validFrom,
-    _decode_Validity_validFrom,
-    _encode_Validity_validFrom,
-} from "../OperationalBindingManagement/Validity-validFrom.ta.mjs";
-export {
-    Validity_validUntil,
-    _decode_Validity_validUntil,
-    _encode_Validity_validUntil,
-} from "../OperationalBindingManagement/Validity-validUntil.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Validity */
 /**
  * @summary Validity
@@ -238,9 +227,7 @@ export function _encode_Validity(
 ) {
     if (!_cached_encoder_for_Validity) {
         _cached_encoder_for_Validity = function (
-            value: Validity,
-            elGetter: $.ASN1Encoder<Validity>
-        ): _Element {
+            value: Validity        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

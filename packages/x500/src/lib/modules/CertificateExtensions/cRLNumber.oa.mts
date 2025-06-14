@@ -6,14 +6,6 @@ import {
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    CRLNumber,
-    _decode_CRLNumber,
-    _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta.mjs";
-export { id_ce_cRLNumber } from "../CertificateExtensions/id-ce-cRLNumber.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION cRLNumber */
 /**
  * @summary cRLNumber

@@ -7,8 +7,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UiiItem */
 /**
  * @summary UiiItem
@@ -172,9 +170,7 @@ export function _encode_UiiItem(
 ) {
     if (!_cached_encoder_for_UiiItem) {
         _cached_encoder_for_UiiItem = function (
-            value: UiiItem,
-            elGetter: $.ASN1Encoder<UiiItem>
-        ): _Element {
+            value: UiiItem        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

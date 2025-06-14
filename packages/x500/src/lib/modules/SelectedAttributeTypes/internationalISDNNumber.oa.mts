@@ -12,33 +12,6 @@ import {
 import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
 import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
 import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_at_internationalISDNNumber } from "../SelectedAttributeTypes/id-at-internationalISDNNumber.va.mjs";
-export {
-    InternationalISDNNumber,
-    _decode_InternationalISDNNumber,
-    _encode_InternationalISDNNumber,
-} from "../SelectedAttributeTypes/InternationalISDNNumber.ta.mjs";
-export { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
-export { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
-export { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION internationalISDNNumber */
 /**
  * @summary internationalISDNNumber

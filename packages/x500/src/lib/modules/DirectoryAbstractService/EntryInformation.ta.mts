@@ -16,17 +16,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    EntryInformation_information_Item,
-    _decode_EntryInformation_information_Item,
-    _encode_EntryInformation_information_Item,
-} from "../DirectoryAbstractService/EntryInformation-information-Item.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EntryInformation */
 /**
  * @summary EntryInformation
@@ -336,9 +325,7 @@ export function _encode_EntryInformation(
 ) {
     if (!_cached_encoder_for_EntryInformation) {
         _cached_encoder_for_EntryInformation = function (
-            value: EntryInformation,
-            elGetter: $.ASN1Encoder<EntryInformation>
-        ): _Element {
+            value: EntryInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

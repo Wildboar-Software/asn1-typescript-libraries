@@ -272,9 +272,7 @@ export function _encode_ReferralData(
 ) {
     if (!_cached_encoder_for_ReferralData) {
         _cached_encoder_for_ReferralData = function (
-            value: ReferralData,
-            elGetter: $.ASN1Encoder<ReferralData>
-        ): _Element {
+            value: ReferralData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -3,11 +3,6 @@ import { avlProt } from "../ProtProtocols/avlProt.oa.mjs";
 import { casubProt } from "../ProtProtocols/casubProt.oa.mjs";
 import { tbprot } from "../ProtProtocols/tbprot.oa.mjs";
 import { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-export { avlProt } from "../ProtProtocols/avlProt.oa.mjs";
-export { casubProt } from "../ProtProtocols/casubProt.oa.mjs";
-export { tbprot } from "../ProtProtocols/tbprot.oa.mjs";
-export { WRAPPED_PROT } from "../Wrapper/WRAPPED-PROT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedProtSet */
 /**
  * @summary SupportedProtSet

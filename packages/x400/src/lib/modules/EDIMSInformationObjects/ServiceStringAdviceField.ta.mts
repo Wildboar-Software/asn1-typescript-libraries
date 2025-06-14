@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ComponentDataElementSeparator,
     _encode_ComponentDataElementSeparator,
 } from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.mjs';
-export {
-    ComponentDataElementSeparator,
-    _decode_ComponentDataElementSeparator,
-    _encode_ComponentDataElementSeparator,
-} from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.mjs';
 import {
-    DataElementSeparator,
-    _decode_DataElementSeparator,
-    _encode_DataElementSeparator,
-} from '../EDIMSInformationObjects/DataElementSeparator.ta.mjs';
-export {
     DataElementSeparator,
     _decode_DataElementSeparator,
     _encode_DataElementSeparator,
@@ -91,17 +26,7 @@ import {
     _decode_DecimalNotation,
     _encode_DecimalNotation,
 } from '../EDIMSInformationObjects/DecimalNotation.ta.mjs';
-export {
-    DecimalNotation,
-    _decode_DecimalNotation,
-    _encode_DecimalNotation,
-} from '../EDIMSInformationObjects/DecimalNotation.ta.mjs';
 import {
-    ReleaseIndicator,
-    _decode_ReleaseIndicator,
-    _encode_ReleaseIndicator,
-} from '../EDIMSInformationObjects/ReleaseIndicator.ta.mjs';
-export {
     ReleaseIndicator,
     _decode_ReleaseIndicator,
     _encode_ReleaseIndicator,
@@ -111,22 +36,11 @@ import {
     _decode_Reserved,
     _encode_Reserved,
 } from '../EDIMSInformationObjects/Reserved.ta.mjs';
-export {
-    Reserved,
-    _decode_Reserved,
-    _encode_Reserved,
-} from '../EDIMSInformationObjects/Reserved.ta.mjs';
 import {
     SegmentTerminator,
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
 } from '../EDIMSInformationObjects/SegmentTerminator.ta.mjs';
-export {
-    SegmentTerminator,
-    _decode_SegmentTerminator,
-    _encode_SegmentTerminator,
-} from '../EDIMSInformationObjects/SegmentTerminator.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ServiceStringAdviceField */
 /**
  * @summary ServiceStringAdviceField
@@ -393,9 +307,7 @@ export function _encode_ServiceStringAdviceField(
 ) {
     if (!_cached_encoder_for_ServiceStringAdviceField) {
         _cached_encoder_for_ServiceStringAdviceField = function (
-            value: ServiceStringAdviceField,
-            elGetter: $.ASN1Encoder<ServiceStringAdviceField>
-        ): _Element {
+            value: ServiceStringAdviceField        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

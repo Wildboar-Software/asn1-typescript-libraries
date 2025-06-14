@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,12 +15,6 @@ import {
     _decode_fetch_restriction_error_ParameterType_problems_Item,
     _encode_fetch_restriction_error_ParameterType_problems_Item,
 } from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item.ta.mjs';
-export {
-    fetch_restriction_error_ParameterType_problems_Item,
-    _decode_fetch_restriction_error_ParameterType_problems_Item,
-    _encode_fetch_restriction_error_ParameterType_problems_Item,
-} from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION fetch_restriction_error_ParameterType */
 /**
  * @summary fetch_restriction_error_ParameterType
@@ -234,9 +172,7 @@ export function _encode_fetch_restriction_error_ParameterType(
 ) {
     if (!_cached_encoder_for_fetch_restriction_error_ParameterType) {
         _cached_encoder_for_fetch_restriction_error_ParameterType = function (
-            value: fetch_restriction_error_ParameterType,
-            elGetter: $.ASN1Encoder<fetch_restriction_error_ParameterType>
-        ): _Element {
+            value: fetch_restriction_error_ParameterType        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

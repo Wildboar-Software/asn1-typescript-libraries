@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
-export { id_asx } from "../UsefulDefinitions/id-asx.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_asx_userPwdDescription */
 /**
  * @summary id_asx_userPwdDescription

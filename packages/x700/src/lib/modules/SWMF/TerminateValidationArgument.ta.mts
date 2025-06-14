@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,20 +14,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TerminateValidationInfo,
     _enum_for_TerminateValidationInfo,
-    TerminateValidationInfo_cancel /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cancel /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateValidationInfo_truncate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    truncate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TerminateValidationInfo,
-    _encode_TerminateValidationInfo,
-} from '../SWMF/TerminateValidationInfo.ta.mjs';
-export {
-    TerminateValidationInfo,
-    _enum_for_TerminateValidationInfo,
-    TerminateValidationInfo_cancel /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cancel /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TerminateValidationInfo_truncate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    truncate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TerminateValidationInfo,
     _encode_TerminateValidationInfo,
 } from '../SWMF/TerminateValidationInfo.ta.mjs';
@@ -91,12 +22,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-export {
-    ManagementExtension,
-    _decode_ManagementExtension,
-    _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TerminateValidationArgument */
 /**
  * @summary TerminateValidationArgument
@@ -286,9 +211,7 @@ export function _encode_TerminateValidationArgument(
 ) {
     if (!_cached_encoder_for_TerminateValidationArgument) {
         _cached_encoder_for_TerminateValidationArgument = function (
-            value: TerminateValidationArgument,
-            elGetter: $.ASN1Encoder<TerminateValidationArgument>
-        ): _Element {
+            value: TerminateValidationArgument        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

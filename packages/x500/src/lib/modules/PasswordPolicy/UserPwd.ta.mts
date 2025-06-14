@@ -6,12 +6,6 @@ import {
     _decode_UserPwd_encrypted,
     _encode_UserPwd_encrypted,
 } from "../PasswordPolicy/UserPwd-encrypted.ta.mjs";
-export {
-    UserPwd_encrypted,
-    _decode_UserPwd_encrypted,
-    _encode_UserPwd_encrypted,
-} from "../PasswordPolicy/UserPwd-encrypted.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UserPwd */
 /**
  * @summary UserPwd

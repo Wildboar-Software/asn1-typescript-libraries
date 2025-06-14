@@ -6,14 +6,6 @@ import {
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
 } from "../PasswordPolicy/PwdAlphabet.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_pwdAlphabetDescription } from "../PasswordPolicy/id-asx-pwdAlphabetDescription.va.mjs";
-export {
-    PwdAlphabet,
-    _decode_PwdAlphabet,
-    _encode_PwdAlphabet,
-} from "../PasswordPolicy/PwdAlphabet.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdAlphabetDescription */
 /**
  * @summary pwdAlphabetDescription

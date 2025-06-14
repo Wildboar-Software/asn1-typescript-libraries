@@ -173,9 +173,7 @@ export function _encode_EntryLimit(
 ) {
     if (!_cached_encoder_for_EntryLimit) {
         _cached_encoder_for_EntryLimit = function (
-            value: EntryLimit,
-            elGetter: $.ASN1Encoder<EntryLimit>
-        ): _Element {
+            value: EntryLimit        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

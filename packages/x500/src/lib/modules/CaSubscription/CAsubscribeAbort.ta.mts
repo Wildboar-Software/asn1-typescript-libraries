@@ -16,36 +16,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-export {
-    CASP_error,
-    CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_sequenceError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownContentType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownSubject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unsupportedWLMPversion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownContentType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownSubject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedWLMPversion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASP_error,
-    _encode_CASP_error,
-    _enum_for_CASP_error,
-} from "../CaSubscription/CASP-error.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CAsubscribeAbort */
 /**
  * @summary CAsubscribeAbort
@@ -222,9 +192,7 @@ export function _encode_CAsubscribeAbort(
 ) {
     if (!_cached_encoder_for_CAsubscribeAbort) {
         _cached_encoder_for_CAsubscribeAbort = function (
-            value: CAsubscribeAbort,
-            elGetter: $.ASN1Encoder<CAsubscribeAbort>
-        ): _Element {
+            value: CAsubscribeAbort        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,17 +11,6 @@ import {
     _decode_CertUnsubscribeOK_Item_ok,
     _encode_CertUnsubscribeOK_Item_ok,
 } from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta.mjs";
-export {
-    CertUnsubscribeOK_Item_not_ok,
-    _decode_CertUnsubscribeOK_Item_not_ok,
-    _encode_CertUnsubscribeOK_Item_not_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-not-ok.ta.mjs";
-export {
-    CertUnsubscribeOK_Item_ok,
-    _decode_CertUnsubscribeOK_Item_ok,
-    _encode_CertUnsubscribeOK_Item_ok,
-} from "../CaSubscription/CertUnsubscribeOK-Item-ok.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeOK_Item */
 /**
  * @summary CertUnsubscribeOK_Item

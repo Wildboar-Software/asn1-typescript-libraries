@@ -10,12 +10,6 @@ import {
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
-export {
-    GeneralSubtrees,
-    _decode_GeneralSubtrees,
-    _encode_GeneralSubtrees,
-} from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NameConstraintsSyntax */
 /**
  * @summary NameConstraintsSyntax
@@ -205,9 +199,7 @@ export function _encode_NameConstraintsSyntax(
 ) {
     if (!_cached_encoder_for_NameConstraintsSyntax) {
         _cached_encoder_for_NameConstraintsSyntax = function (
-            value: NameConstraintsSyntax,
-            elGetter: $.ASN1Encoder<NameConstraintsSyntax>
-        ): _Element {
+            value: NameConstraintsSyntax        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

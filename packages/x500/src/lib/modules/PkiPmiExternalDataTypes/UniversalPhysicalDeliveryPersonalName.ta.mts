@@ -6,12 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";
-export {
-    UniversalPDSParameter,
-    _decode_UniversalPDSParameter,
-    _encode_UniversalPDSParameter,
-} from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalPhysicalDeliveryPersonalName */
 /**
  * @summary UniversalPhysicalDeliveryPersonalName

@@ -12,26 +12,6 @@ import {
     _encode_CoordinateShadowUpdateResult,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    CoordinateShadowUpdateArgument,
-    _decode_CoordinateShadowUpdateArgument,
-    _encode_CoordinateShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.mjs";
-export {
-    CoordinateShadowUpdateResult,
-    _decode_CoordinateShadowUpdateResult,
-    _encode_CoordinateShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.mjs";
-export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION coordinateShadowUpdate */
 /**
  * @summary coordinateShadowUpdate

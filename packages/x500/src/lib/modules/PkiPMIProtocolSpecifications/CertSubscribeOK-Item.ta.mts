@@ -11,17 +11,6 @@ import {
     _decode_CertSubscribeOK_Item_ok,
     _encode_CertSubscribeOK_Item_ok,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta.mjs";
-export {
-    CertSubscribeOK_Item_not_ok,
-    _decode_CertSubscribeOK_Item_not_ok,
-    _encode_CertSubscribeOK_Item_not_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-not-ok.ta.mjs";
-export {
-    CertSubscribeOK_Item_ok,
-    _decode_CertSubscribeOK_Item_ok,
-    _encode_CertSubscribeOK_Item_ok,
-} from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item-ok.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item */
 /**
  * @summary CertSubscribeOK_Item

@@ -15,47 +15,6 @@ import {
     _decode_Event_identifier,
     _encode_Event_identifier,
 } from "../OSIProtocolSpecification/Event-identifier.ta.mjs";
-export {
-    Abort_reason,
-    Abort_reason_invalid_ppdu_parameter_value /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_reason_not_specified /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_unexpected_ppdu /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_unexpected_ppdu_parameter /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_unexpected_session_service_primitive /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_unrecognized_ppdu /* IMPORTED_LONG_NAMED_INTEGER */,
-    Abort_reason_unrecognized_ppdu_parameter /* IMPORTED_LONG_NAMED_INTEGER */,
-    invalid_ppdu_parameter_value /* IMPORTED_SHORT_NAMED_INTEGER */,
-    reason_not_specified /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unexpected_ppdu /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unexpected_ppdu_parameter /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unexpected_session_service_primitive /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unrecognized_ppdu /* IMPORTED_SHORT_NAMED_INTEGER */,
-    unrecognized_ppdu_parameter /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Abort_reason,
-    _encode_Abort_reason,
-} from "../OSIProtocolSpecification/Abort-reason.ta.mjs";
-export {
-    arp_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    aru_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    cpa_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    cpr_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    cp_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Event_identifier,
-    Event_identifier_arp_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_aru_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_cpa_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_cpr_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_cp_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_s_release_confirm /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_s_release_indication /* IMPORTED_LONG_NAMED_INTEGER */,
-    Event_identifier_td_PPDU /* IMPORTED_LONG_NAMED_INTEGER */,
-    s_release_confirm /* IMPORTED_SHORT_NAMED_INTEGER */,
-    s_release_indication /* IMPORTED_SHORT_NAMED_INTEGER */,
-    td_PPDU /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Event_identifier,
-    _encode_Event_identifier,
-} from "../OSIProtocolSpecification/Event-identifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ARP_PPDU */
 /**
  * @summary ARP_PPDU
@@ -226,9 +185,7 @@ export function _encode_ARP_PPDU(
 ) {
     if (!_cached_encoder_for_ARP_PPDU) {
         _cached_encoder_for_ARP_PPDU = function (
-            value: ARP_PPDU,
-            elGetter: $.ASN1Encoder<ARP_PPDU>
-        ): _Element {
+            value: ARP_PPDU        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

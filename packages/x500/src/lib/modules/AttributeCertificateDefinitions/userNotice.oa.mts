@@ -7,14 +7,6 @@ import {
     _encode_UserNotice,
 } from "../AttributeCertificateDefinitions/UserNotice.ta.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_userNotice } from "../AttributeCertificateDefinitions/id-ce-userNotice.va.mjs";
-export {
-    UserNotice,
-    _decode_UserNotice,
-    _encode_UserNotice,
-} from "../AttributeCertificateDefinitions/UserNotice.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION userNotice */
 /**
  * @summary userNotice

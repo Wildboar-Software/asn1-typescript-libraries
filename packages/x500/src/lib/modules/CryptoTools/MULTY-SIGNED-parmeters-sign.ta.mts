@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MULTY_SIGNED_parmeters_sign */
 /**
  * @summary MULTY_SIGNED_parmeters_sign
@@ -30,7 +24,7 @@ export {
  *
  * @class
  */
-export class MULTY_SIGNED_parmeters_sign<ToBeSigned> {
+export class MULTY_SIGNED_parmeters_sign<_ToBeSigned> {
     constructor(
         /**
          * @summary `algo`.
@@ -177,9 +171,7 @@ export function _get_encoder_for_MULTY_SIGNED_parmeters_sign<ToBeSigned>(
     _encode_ToBeSigned: $.ASN1Encoder<ToBeSigned>
 ) {
     return function (
-        value: MULTY_SIGNED_parmeters_sign<ToBeSigned>,
-        elGetter: $.ASN1Encoder<MULTY_SIGNED_parmeters_sign<ToBeSigned>>
-    ): _Element {
+        value: MULTY_SIGNED_parmeters_sign<ToBeSigned>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

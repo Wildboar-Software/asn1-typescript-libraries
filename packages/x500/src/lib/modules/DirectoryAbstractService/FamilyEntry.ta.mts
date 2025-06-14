@@ -20,22 +20,6 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-export {
-    FamilyEntries,
-    _decode_FamilyEntries,
-    _encode_FamilyEntries,
-} from "../DirectoryAbstractService/FamilyEntries.ta.mjs";
-export {
-    FamilyEntry_information_Item,
-    _decode_FamilyEntry_information_Item,
-    _encode_FamilyEntry_information_Item,
-} from "../DirectoryAbstractService/FamilyEntry-information-Item.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FamilyEntry */
 /**
  * @summary FamilyEntry
@@ -244,9 +228,7 @@ export function _encode_FamilyEntry(
 ) {
     if (!_cached_encoder_for_FamilyEntry) {
         _cached_encoder_for_FamilyEntry = function (
-            value: FamilyEntry,
-            elGetter: $.ASN1Encoder<FamilyEntry>
-        ): _Element {
+            value: FamilyEntry        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

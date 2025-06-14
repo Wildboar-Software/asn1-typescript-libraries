@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_ldx } from "../UsefulDefinitions/id-ldx.va.mjs";
-export { id_ldx } from "../UsefulDefinitions/id-ldx.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_ldx_certExactAssertion */
 /**
  * @summary id_ldx_certExactAssertion

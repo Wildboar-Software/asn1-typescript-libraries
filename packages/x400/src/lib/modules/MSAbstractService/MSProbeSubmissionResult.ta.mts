@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ProbeSubmissionResult,
     _encode_ProbeSubmissionResult,
 } from '../MTSAbstractService/ProbeSubmissionResult.ta.mjs';
-export {
-    ProbeSubmissionResult,
-    _decode_ProbeSubmissionResult,
-    _encode_ProbeSubmissionResult,
-} from '../MTSAbstractService/ProbeSubmissionResult.ta.mjs';
 import {
-    CommonSubmissionResults,
-    _decode_CommonSubmissionResults,
-    _encode_CommonSubmissionResults,
-} from '../MSAbstractService/CommonSubmissionResults.ta.mjs';
-export {
     CommonSubmissionResults,
     _decode_CommonSubmissionResults,
     _encode_CommonSubmissionResults,
@@ -91,17 +26,7 @@ import {
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
 } from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.mjs';
-export {
-    ProbeSubmissionIdentifier,
-    _decode_ProbeSubmissionIdentifier,
-    _encode_ProbeSubmissionIdentifier,
-} from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.mjs';
 import {
-    ProbeSubmissionTime,
-    _decode_ProbeSubmissionTime,
-    _encode_ProbeSubmissionTime,
-} from '../MTSAbstractService/ProbeSubmissionTime.ta.mjs';
-export {
     ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
@@ -111,17 +36,7 @@ import {
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
-export {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
@@ -365,9 +280,7 @@ export function _encode_MSProbeSubmissionResult(
 ) {
     if (!_cached_encoder_for_MSProbeSubmissionResult) {
         _cached_encoder_for_MSProbeSubmissionResult = function (
-            value: MSProbeSubmissionResult,
-            elGetter: $.ASN1Encoder<MSProbeSubmissionResult>
-        ): _Element {
+            value: MSProbeSubmissionResult        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

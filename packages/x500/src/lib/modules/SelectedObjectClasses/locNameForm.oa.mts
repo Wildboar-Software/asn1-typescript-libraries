@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.mjs";
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
-export { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.mjs";
-export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION locNameForm */
 /**
  * @summary locNameForm

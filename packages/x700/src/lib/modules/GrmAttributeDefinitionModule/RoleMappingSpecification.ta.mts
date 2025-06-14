@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
-export {
-    Identifier,
-    _decode_Identifier,
-    _encode_Identifier,
-} from '../DefinitionASN1Module/Identifier.ta.mjs';
 import {
-    TemplateList,
-    _decode_TemplateList,
-    _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta.mjs';
-export {
     TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
@@ -91,12 +26,6 @@ import {
     _decode_Representation,
     _encode_Representation,
 } from '../GrmAttributeDefinitionModule/Representation.ta.mjs';
-export {
-    Representation,
-    _decode_Representation,
-    _encode_Representation,
-} from '../GrmAttributeDefinitionModule/Representation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION RoleMappingSpecification */
 /**
  * @summary RoleMappingSpecification
@@ -315,9 +244,7 @@ export function _encode_RoleMappingSpecification(
 ) {
     if (!_cached_encoder_for_RoleMappingSpecification) {
         _cached_encoder_for_RoleMappingSpecification = function (
-            value: RoleMappingSpecification,
-            elGetter: $.ASN1Encoder<RoleMappingSpecification>
-        ): _Element {
+            value: RoleMappingSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

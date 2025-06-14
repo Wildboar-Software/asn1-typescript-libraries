@@ -11,13 +11,6 @@ import {
     _decode_RuleIdentifier,
     _encode_RuleIdentifier,
 } from "../InformationFramework/RuleIdentifier.ta.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export {
-    RuleIdentifier,
-    _decode_RuleIdentifier,
-    _encode_RuleIdentifier,
-} from "../InformationFramework/RuleIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DITStructureRule */
 /**
  * @summary DITStructureRule
@@ -224,9 +217,7 @@ export function _encode_DITStructureRule(
 ) {
     if (!_cached_encoder_for_DITStructureRule) {
         _cached_encoder_for_DITStructureRule = function (
-            value: DITStructureRule,
-            elGetter: $.ASN1Encoder<DITStructureRule>
-        ): _Element {
+            value: DITStructureRule        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

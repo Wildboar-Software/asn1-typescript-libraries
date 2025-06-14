@@ -15,17 +15,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SpecificallyIdentified */
 /**
  * @summary SpecificallyIdentified
@@ -203,9 +192,7 @@ export function _encode_SpecificallyIdentified(
 ) {
     if (!_cached_encoder_for_SpecificallyIdentified) {
         _cached_encoder_for_SpecificallyIdentified = function (
-            value: SpecificallyIdentified,
-            elGetter: $.ASN1Encoder<SpecificallyIdentified>
-        ): _Element {
+            value: SpecificallyIdentified        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

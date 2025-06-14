@@ -16,22 +16,6 @@ import {
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
 } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeTypeAndValue,
-    _decode_AttributeTypeAndValue,
-    _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EntryModification */
 /**
  * @summary EntryModification

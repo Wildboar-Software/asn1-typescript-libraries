@@ -6,12 +6,6 @@ import {
     _decode_AttributeMappings_Item,
     _encode_AttributeMappings_Item,
 } from "../AttributeCertificateDefinitions/AttributeMappings-Item.ta.mjs";
-export {
-    AttributeMappings_Item,
-    _decode_AttributeMappings_Item,
-    _encode_AttributeMappings_Item,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeMappings */
 /**
  * @summary AttributeMappings

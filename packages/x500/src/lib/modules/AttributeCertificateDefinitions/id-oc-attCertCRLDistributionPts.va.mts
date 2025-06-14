@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
-export { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_oc_attCertCRLDistributionPts */
 /**
  * @summary id_oc_attCertCRLDistributionPts

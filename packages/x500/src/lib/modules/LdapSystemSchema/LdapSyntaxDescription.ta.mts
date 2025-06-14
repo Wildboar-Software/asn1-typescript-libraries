@@ -11,13 +11,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION LdapSyntaxDescription */
 /**
  * @summary LdapSyntaxDescription
@@ -207,9 +200,7 @@ export function _encode_LdapSyntaxDescription(
 ) {
     if (!_cached_encoder_for_LdapSyntaxDescription) {
         _cached_encoder_for_LdapSyntaxDescription = function (
-            value: LdapSyntaxDescription,
-            elGetter: $.ASN1Encoder<LdapSyntaxDescription>
-        ): _Element {
+            value: LdapSyntaxDescription        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

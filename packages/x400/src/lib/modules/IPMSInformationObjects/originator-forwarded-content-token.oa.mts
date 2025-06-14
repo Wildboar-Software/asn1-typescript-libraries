@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -65,22 +9,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     ForwardedContentToken,
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
-export {
-    ForwardedContentToken,
-    _decode_ForwardedContentToken,
-    _encode_ForwardedContentToken,
-} from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';
 import { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va.mjs';
-export { id_mst_originator_forwarded_content_token } from '../IPMSObjectIdentifiers/id-mst-originator-forwarded-content-token.va.mjs';
 import { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-export { MS_EXTENSION } from '../MSAbstractService/MS-EXTENSION.oca.mjs';
-
 /* START_OF_SYMBOL_DEFINITION originator_forwarded_content_token */
 /**
  * @summary originator_forwarded_content_token

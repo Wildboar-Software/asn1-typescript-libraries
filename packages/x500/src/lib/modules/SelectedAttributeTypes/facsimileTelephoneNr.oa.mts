@@ -6,14 +6,6 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    FacsimileTelephoneNumber,
-    _decode_FacsimileTelephoneNumber,
-    _encode_FacsimileTelephoneNumber,
-} from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
-export { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION facsimileTelephoneNr */
 /**
  * @summary facsimileTelephoneNr

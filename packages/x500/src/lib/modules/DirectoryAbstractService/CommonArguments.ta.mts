@@ -51,75 +51,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    ContextSelection,
-    _decode_ContextSelection,
-    _encode_ContextSelection,
-} from "../DirectoryAbstractService/ContextSelection.ta.mjs";
-export {
-    compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    FamilyGrouping,
-    FamilyGrouping_compoundEntry /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_multiStrand /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    FamilyGrouping_strands /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    multiStrand /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    strands /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_FamilyGrouping,
-    _encode_FamilyGrouping,
-    _enum_for_FamilyGrouping,
-} from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    ServiceControls,
-    _decode_ServiceControls,
-    _encode_ServiceControls,
-} from "../DirectoryAbstractService/ServiceControls.ta.mjs";
-export {
-    Exclusions,
-    _decode_Exclusions,
-    _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta.mjs";
-export {
-    OperationProgress,
-    _decode_OperationProgress,
-    _encode_OperationProgress,
-} from "../DistributedOperations/OperationProgress.ta.mjs";
-export {
-    cross /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ditBridge /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    immediateSuperior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    nonSpecificSubordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ReferenceType,
-    ReferenceType_cross /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_ditBridge /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_immediateSuperior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_nonSpecificSubordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_self /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_subordinate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ReferenceType_supplier /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    self /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    subordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superior /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    supplier /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ReferenceType,
-    _encode_ReferenceType,
-    _enum_for_ReferenceType,
-} from "../DistributedOperations/ReferenceType.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CommonArguments */
 /**
  * @summary CommonArguments
@@ -596,9 +527,7 @@ export function _encode_CommonArguments(
 ) {
     if (!_cached_encoder_for_CommonArguments) {
         _cached_encoder_for_CommonArguments = function (
-            value: CommonArguments,
-            elGetter: $.ASN1Encoder<CommonArguments>
-        ): _Element {
+            value: CommonArguments        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

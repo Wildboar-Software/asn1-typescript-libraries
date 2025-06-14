@@ -11,19 +11,6 @@ import {
     _encode_Payload28,
 } from "../GenAlgo/Payload28.ta.mjs";
 import { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-export {
-    Group28,
-    _decode_Group28,
-    _encode_Group28,
-} from "../GenAlgo/Group28.ta.mjs";
-export { id_algo_dhModpGr28Hkdf256Algo } from "../GenAlgo/id-algo-dhModpGr28Hkdf256Algo.va.mjs";
-export {
-    Payload28,
-    _decode_Payload28,
-    _encode_Payload28,
-} from "../GenAlgo/Payload28.ta.mjs";
-export { ALGORITHM } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dhModpGr28Hkdf256Algo */
 /**
  * @summary dhModpGr28Hkdf256Algo

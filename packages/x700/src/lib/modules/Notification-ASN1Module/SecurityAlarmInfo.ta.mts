@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta.mjs';
-export {
-    SecurityAlarmCause,
-    _decode_SecurityAlarmCause,
-    _encode_SecurityAlarmCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmCause.ta.mjs';
 import {
-    SecurityAlarmSeverity,
-    _decode_SecurityAlarmSeverity,
-    _encode_SecurityAlarmSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmSeverity.ta.mjs';
-export {
     SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
@@ -91,17 +26,7 @@ import {
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta.mjs';
-export {
-    SecurityAlarmDetector,
-    _decode_SecurityAlarmDetector,
-    _encode_SecurityAlarmDetector,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SecurityAlarmDetector.ta.mjs';
 import {
-    ServiceUser,
-    _decode_ServiceUser,
-    _encode_ServiceUser,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceUser.ta.mjs';
-export {
     ServiceUser,
     _decode_ServiceUser,
     _encode_ServiceUser,
@@ -111,17 +36,7 @@ import {
     _decode_ServiceProvider,
     _encode_ServiceProvider,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta.mjs';
-export {
-    ServiceProvider,
-    _decode_ServiceProvider,
-    _encode_ServiceProvider,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ServiceProvider.ta.mjs';
 import {
-    NotificationIdentifier,
-    _decode_NotificationIdentifier,
-    _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
-export {
     NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
@@ -131,27 +46,12 @@ import {
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
-export {
-    CorrelatedNotifications,
-    _decode_CorrelatedNotifications,
-    _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
 import {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
-export {
-    AdditionalText,
-    _decode_AdditionalText,
-    _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
 import {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
     AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
@@ -486,9 +386,7 @@ export function _encode_SecurityAlarmInfo(
 ) {
     if (!_cached_encoder_for_SecurityAlarmInfo) {
         _cached_encoder_for_SecurityAlarmInfo = function (
-            value: SecurityAlarmInfo,
-            elGetter: $.ASN1Encoder<SecurityAlarmInfo>
-        ): _Element {
+            value: SecurityAlarmInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -6,12 +6,6 @@ import {
     _decode_Target,
     _encode_Target,
 } from "../AttributeCertificateDefinitions/Target.ta.mjs";
-export {
-    Target,
-    _decode_Target,
-    _encode_Target,
-} from "../AttributeCertificateDefinitions/Target.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Targets */
 /**
  * @summary Targets

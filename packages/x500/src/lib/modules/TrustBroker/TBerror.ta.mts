@@ -12,31 +12,6 @@ import {
     _encode_TBerror_code,
     _enum_for_TBerror_code,
 } from "../TrustBroker/TBerror-code.ta.mjs";
-export {
-    caCertInvalid /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    contractExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    incorrectCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    other /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    pathValidationFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    subjectCertRevoked /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TBerror_code,
-    TBerror_code_caCertInvalid /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_contractExpired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_incorrectCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_other /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_pathValidationFailed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_subjectCertRevoked /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_timeOut /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_unknownCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    TBerror_code_unknownCertStatus /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    timeOut /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCertStatus /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TBerror_code,
-    _encode_TBerror_code,
-    _enum_for_TBerror_code,
-} from "../TrustBroker/TBerror-code.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBerror */
 /**
  * @summary TBerror
@@ -236,9 +211,7 @@ export function _encode_TBerror(
 ) {
     if (!_cached_encoder_for_TBerror) {
         _cached_encoder_for_TBerror = function (
-            value: TBerror,
-            elGetter: $.ASN1Encoder<TBerror>
-        ): _Element {
+            value: TBerror        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

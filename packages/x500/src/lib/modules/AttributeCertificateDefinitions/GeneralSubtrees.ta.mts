@@ -6,12 +6,6 @@ import {
     _decode_GeneralSubtree,
     _encode_GeneralSubtree,
 } from "../AttributeCertificateDefinitions/GeneralSubtree.ta.mjs";
-export {
-    GeneralSubtree,
-    _decode_GeneralSubtree,
-    _encode_GeneralSubtree,
-} from "../AttributeCertificateDefinitions/GeneralSubtree.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION GeneralSubtrees */
 /**
  * @summary GeneralSubtrees

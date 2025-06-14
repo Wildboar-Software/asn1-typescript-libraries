@@ -11,12 +11,6 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SubjectAltPublicKeyInfo */
 /**
  * @summary SubjectAltPublicKeyInfo
@@ -181,9 +175,7 @@ export function _encode_SubjectAltPublicKeyInfo(
 ) {
     if (!_cached_encoder_for_SubjectAltPublicKeyInfo) {
         _cached_encoder_for_SubjectAltPublicKeyInfo = function (
-            value: SubjectAltPublicKeyInfo,
-            elGetter: $.ASN1Encoder<SubjectAltPublicKeyInfo>
-        ): _Element {
+            value: SubjectAltPublicKeyInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

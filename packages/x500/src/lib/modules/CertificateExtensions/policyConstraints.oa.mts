@@ -6,14 +6,6 @@ import {
     _decode_PolicyConstraintsSyntax,
     _encode_PolicyConstraintsSyntax,
 } from "../CertificateExtensions/PolicyConstraintsSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_policyConstraints } from "../CertificateExtensions/id-ce-policyConstraints.va.mjs";
-export {
-    PolicyConstraintsSyntax,
-    _decode_PolicyConstraintsSyntax,
-    _encode_PolicyConstraintsSyntax,
-} from "../CertificateExtensions/PolicyConstraintsSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION policyConstraints */
 /**
  * @summary policyConstraints

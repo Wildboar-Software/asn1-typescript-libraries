@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { MATCHING_RESTRICTION } from "../ServiceAdministration/MATCHING-RESTRICTION.oca.mjs";
-export { SupportedMatchingRestrictions } from "../ServiceAdministration/SupportedMatchingRestrictions.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MatchingUse */
 /**
  * @summary MatchingUse
@@ -180,9 +177,7 @@ export function _encode_MatchingUse(
 ) {
     if (!_cached_encoder_for_MatchingUse) {
         _cached_encoder_for_MatchingUse = function (
-            value: MatchingUse,
-            elGetter: $.ASN1Encoder<MatchingUse>
-        ): _Element {
+            value: MatchingUse        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

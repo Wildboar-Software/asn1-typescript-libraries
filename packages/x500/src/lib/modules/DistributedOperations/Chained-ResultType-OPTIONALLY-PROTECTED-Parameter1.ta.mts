@@ -6,12 +6,6 @@ import {
     _decode_ChainingResults,
     _encode_ChainingResults,
 } from "../DistributedOperations/ChainingResults.ta.mjs";
-export {
-    ChainingResults,
-    _decode_ChainingResults,
-    _encode_ChainingResults,
-} from "../DistributedOperations/ChainingResults.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 */
 /**
  * @summary Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1
@@ -197,9 +191,7 @@ export function _encode_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1(
         !_cached_encoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1
     ) {
         _cached_encoder_for_Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1 = function (
-            value: Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1,
-            elGetter: $.ASN1Encoder<Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1>
-        ): _Element {
+            value: Chained_ResultType_OPTIONALLY_PROTECTED_Parameter1        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

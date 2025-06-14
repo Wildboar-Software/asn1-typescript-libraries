@@ -12,33 +12,6 @@ import {
     _decode_X121Address,
     _encode_X121Address,
 } from "../SelectedAttributeTypes/X121Address.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_at_x121Address } from "../SelectedAttributeTypes/id-at-x121Address.va.mjs";
-export { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
-export { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
-export { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
-export {
-    X121Address,
-    _decode_X121Address,
-    _encode_X121Address,
-} from "../SelectedAttributeTypes/X121Address.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x121Address */
 /**
  * @summary x121Address

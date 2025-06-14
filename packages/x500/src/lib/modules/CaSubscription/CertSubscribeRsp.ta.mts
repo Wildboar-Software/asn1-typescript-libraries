@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-export {
-    CertSubscribeRsp_result,
-    _decode_CertSubscribeRsp_result,
-    _encode_CertSubscribeRsp_result,
-} from "../CaSubscription/CertSubscribeRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeRsp */
 /**
  * @summary CertSubscribeRsp
@@ -191,9 +180,7 @@ export function _encode_CertSubscribeRsp(
 ) {
     if (!_cached_encoder_for_CertSubscribeRsp) {
         _cached_encoder_for_CertSubscribeRsp = function (
-            value: CertSubscribeRsp,
-            elGetter: $.ASN1Encoder<CertSubscribeRsp>
-        ): _Element {
+            value: CertSubscribeRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

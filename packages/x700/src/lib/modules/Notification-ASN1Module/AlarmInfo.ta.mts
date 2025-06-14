@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
-export {
-    ProbableCause,
-    _decode_ProbableCause,
-    _encode_ProbableCause,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProbableCause.ta.mjs';
 import {
-    SpecificProblems,
-    _decode_SpecificProblems,
-    _encode_SpecificProblems,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/SpecificProblems.ta.mjs';
-export {
     SpecificProblems,
     _decode_SpecificProblems,
     _encode_SpecificProblems,
@@ -89,45 +24,10 @@ export {
 import {
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
-    PerceivedSeverity_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_PerceivedSeverity,
-    _encode_PerceivedSeverity,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
-export {
-    PerceivedSeverity,
-    _enum_for_PerceivedSeverity,
-    PerceivedSeverity_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_critical /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    critical /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_major /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    major /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_minor /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    minor /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_warning /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    warning /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PerceivedSeverity_cleared /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    cleared /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_PerceivedSeverity,
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/PerceivedSeverity.ta.mjs';
 import {
-    BackedUpStatus,
-    _decode_BackedUpStatus,
-    _encode_BackedUpStatus,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/BackedUpStatus.ta.mjs';
-export {
     BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
@@ -137,41 +37,13 @@ import {
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
 import {
     TrendIndication,
     _enum_for_TrendIndication,
-    TrendIndication_lessSevere /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    lessSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TrendIndication_noChange /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    noChange /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TrendIndication_moreSevere /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    moreSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_TrendIndication,
-    _encode_TrendIndication,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta.mjs';
-export {
-    TrendIndication,
-    _enum_for_TrendIndication,
-    TrendIndication_lessSevere /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    lessSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TrendIndication_noChange /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    noChange /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    TrendIndication_moreSevere /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    moreSevere /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_TrendIndication,
     _encode_TrendIndication,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/TrendIndication.ta.mjs';
 import {
-    ThresholdInfo,
-    _decode_ThresholdInfo,
-    _encode_ThresholdInfo,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ThresholdInfo.ta.mjs';
-export {
     ThresholdInfo,
     _decode_ThresholdInfo,
     _encode_ThresholdInfo,
@@ -181,17 +53,7 @@ import {
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
-export {
-    NotificationIdentifier,
-    _decode_NotificationIdentifier,
-    _encode_NotificationIdentifier,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/NotificationIdentifier.ta.mjs';
 import {
-    CorrelatedNotifications,
-    _decode_CorrelatedNotifications,
-    _encode_CorrelatedNotifications,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/CorrelatedNotifications.ta.mjs';
-export {
     CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
@@ -201,17 +63,7 @@ import {
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.mjs';
-export {
-    AttributeValueChangeDefinition,
-    _decode_AttributeValueChangeDefinition,
-    _encode_AttributeValueChangeDefinition,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AttributeValueChangeDefinition.ta.mjs';
 import {
-    MonitoredAttributes,
-    _decode_MonitoredAttributes,
-    _encode_MonitoredAttributes,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/MonitoredAttributes.ta.mjs';
-export {
     MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
@@ -221,17 +73,7 @@ import {
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.mjs';
-export {
-    ProposedRepairActions,
-    _decode_ProposedRepairActions,
-    _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.mjs';
 import {
-    AdditionalText,
-    _decode_AdditionalText,
-    _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
-export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
@@ -241,12 +83,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION AlarmInfo */
 /**
  * @summary AlarmInfo
@@ -692,9 +528,7 @@ export function _encode_AlarmInfo(
 ) {
     if (!_cached_encoder_for_AlarmInfo) {
         _cached_encoder_for_AlarmInfo = function (
-            value: AlarmInfo,
-            elGetter: $.ASN1Encoder<AlarmInfo>
-        ): _Element {
+            value: AlarmInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

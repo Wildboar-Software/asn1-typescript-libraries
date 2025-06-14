@@ -244,9 +244,7 @@ export function _encode_ReplaceAvlRsp(
 ) {
     if (!_cached_encoder_for_ReplaceAvlRsp) {
         _cached_encoder_for_ReplaceAvlRsp = function (
-            value: ReplaceAvlRsp,
-            elGetter: $.ASN1Encoder<ReplaceAvlRsp>
-        ): _Element {
+            value: ReplaceAvlRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

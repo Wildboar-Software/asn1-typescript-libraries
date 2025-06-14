@@ -40,48 +40,6 @@ import { universal_poste_restante_address } from "../MTSAbstractService/universa
 import { universal_street_address } from "../MTSAbstractService/universal-street-address.oa.mjs";
 import { universal_unformatted_postal_address } from "../MTSAbstractService/universal-unformatted-postal-address.oa.mjs";
 import { universal_unique_postal_name } from "../MTSAbstractService/universal-unique-postal-name.oa.mjs";
-export { common_name } from "../MTSAbstractService/common-name.oa.mjs";
-export { extended_network_address } from "../MTSAbstractService/extended-network-address.oa.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export { extension_OR_address_components } from "../MTSAbstractService/extension-OR-address-components.oa.mjs";
-export { extension_physical_delivery_address_components } from "../MTSAbstractService/extension-physical-delivery-address-components.oa.mjs";
-export { local_postal_attributes } from "../MTSAbstractService/local-postal-attributes.oa.mjs";
-export { pds_name } from "../MTSAbstractService/pds-name.oa.mjs";
-export { physical_delivery_country_name } from "../MTSAbstractService/physical-delivery-country-name.oa.mjs";
-export { physical_delivery_office_name } from "../MTSAbstractService/physical-delivery-office-name.oa.mjs";
-export { physical_delivery_office_number } from "../MTSAbstractService/physical-delivery-office-number.oa.mjs";
-export { physical_delivery_organization_name } from "../MTSAbstractService/physical-delivery-organization-name.oa.mjs";
-export { physical_delivery_personal_name } from "../MTSAbstractService/physical-delivery-personal-name.oa.mjs";
-export { post_office_box_address } from "../MTSAbstractService/post-office-box-address.oa.mjs";
-export { postal_code } from "../MTSAbstractService/postal-code.oa.mjs";
-export { poste_restante_address } from "../MTSAbstractService/poste-restante-address.oa.mjs";
-export { street_address } from "../MTSAbstractService/street-address.oa.mjs";
-export { teletex_common_name } from "../MTSAbstractService/teletex-common-name.oa.mjs";
-export { teletex_domain_defined_attributes } from "../MTSAbstractService/teletex-domain-defined-attributes.oa.mjs";
-export { teletex_organization_name } from "../MTSAbstractService/teletex-organization-name.oa.mjs";
-export { teletex_organizational_unit_names } from "../MTSAbstractService/teletex-organizational-unit-names.oa.mjs";
-export { teletex_personal_name } from "../MTSAbstractService/teletex-personal-name.oa.mjs";
-export { terminal_type } from "../MTSAbstractService/terminal-type.oa.mjs";
-export { unformatted_postal_address } from "../MTSAbstractService/unformatted-postal-address.oa.mjs";
-export { unique_postal_name } from "../MTSAbstractService/unique-postal-name.oa.mjs";
-export { universal_common_name } from "../MTSAbstractService/universal-common-name.oa.mjs";
-export { universal_domain_defined_attributes } from "../MTSAbstractService/universal-domain-defined-attributes.oa.mjs";
-export { universal_extension_OR_address_components } from "../MTSAbstractService/universal-extension-OR-address-components.oa.mjs";
-export { universal_extension_physical_delivery_address_components } from "../MTSAbstractService/universal-extension-physical-delivery-address-components.oa.mjs";
-export { universal_local_postal_attributes } from "../MTSAbstractService/universal-local-postal-attributes.oa.mjs";
-export { universal_organization_name } from "../MTSAbstractService/universal-organization-name.oa.mjs";
-export { universal_organizational_unit_names } from "../MTSAbstractService/universal-organizational-unit-names.oa.mjs";
-export { universal_personal_name } from "../MTSAbstractService/universal-personal-name.oa.mjs";
-export { universal_physical_delivery_office_name } from "../MTSAbstractService/universal-physical-delivery-office-name.oa.mjs";
-export { universal_physical_delivery_office_number } from "../MTSAbstractService/universal-physical-delivery-office-number.oa.mjs";
-export { universal_physical_delivery_organization_name } from "../MTSAbstractService/universal-physical-delivery-organization-name.oa.mjs";
-export { universal_physical_delivery_personal_name } from "../MTSAbstractService/universal-physical-delivery-personal-name.oa.mjs";
-export { universal_post_office_box_address } from "../MTSAbstractService/universal-post-office-box-address.oa.mjs";
-export { universal_poste_restante_address } from "../MTSAbstractService/universal-poste-restante-address.oa.mjs";
-export { universal_street_address } from "../MTSAbstractService/universal-street-address.oa.mjs";
-export { universal_unformatted_postal_address } from "../MTSAbstractService/universal-unformatted-postal-address.oa.mjs";
-export { universal_unique_postal_name } from "../MTSAbstractService/universal-unique-postal-name.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttributeTable */
 /**
  * @summary ExtensionAttributeTable

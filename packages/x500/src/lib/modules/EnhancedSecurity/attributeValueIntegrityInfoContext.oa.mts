@@ -7,14 +7,6 @@ import {
 } from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.mjs";
 import { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export {
-    AttributeValueIntegrityInfo,
-    _decode_AttributeValueIntegrityInfo,
-    _encode_AttributeValueIntegrityInfo,
-} from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.mjs";
-export { id_avc_attributeValueIntegrityInfoContext } from "../EnhancedSecurity/id-avc-attributeValueIntegrityInfoContext.va.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION attributeValueIntegrityInfoContext */
 /**
  * @summary attributeValueIntegrityInfoContext

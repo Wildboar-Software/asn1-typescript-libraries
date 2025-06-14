@@ -36,41 +36,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    CertificationPath,
-    _decode_CertificationPath,
-    _encode_CertificationPath,
-} from "../AuthenticationFramework/CertificationPath.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export {
-    ErrorProtectionRequest,
-    ErrorProtectionRequest_none /* IMPORTED_LONG_NAMED_INTEGER */,
-    ErrorProtectionRequest_signed /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_ErrorProtectionRequest,
-    _encode_ErrorProtectionRequest,
-} from "../DirectoryAbstractService/ErrorProtectionRequest.ta.mjs";
-export {
-    ProtectionRequest,
-    ProtectionRequest_none /* IMPORTED_LONG_NAMED_INTEGER */,
-    ProtectionRequest_signed /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_ProtectionRequest,
-    _encode_ProtectionRequest,
-} from "../DirectoryAbstractService/ProtectionRequest.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryAbstractService/Time.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SecurityParameters */
 /**
  * @summary SecurityParameters
@@ -392,9 +357,7 @@ export function _encode_SecurityParameters(
 ) {
     if (!_cached_encoder_for_SecurityParameters) {
         _cached_encoder_for_SecurityParameters = function (
-            value: SecurityParameters,
-            elGetter: $.ASN1Encoder<SecurityParameters>
-        ): _Element {
+            value: SecurityParameters        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

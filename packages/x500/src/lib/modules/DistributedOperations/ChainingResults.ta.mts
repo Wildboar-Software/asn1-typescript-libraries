@@ -25,27 +25,6 @@ import {
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    CrossReference,
-    _decode_CrossReference,
-    _encode_CrossReference,
-} from "../DistributedOperations/CrossReference.ta.mjs";
-export {
-    DomainInfo,
-    _decode_DomainInfo,
-    _encode_DomainInfo,
-} from "../DistributedOperations/DomainInfo.ta.mjs";
-export {
-    Exclusions,
-    _decode_Exclusions,
-    _encode_Exclusions,
-} from "../DistributedOperations/Exclusions.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChainingResults */
 /**
  * @summary ChainingResults
@@ -290,9 +269,7 @@ export function _encode_ChainingResults(
 ) {
     if (!_cached_encoder_for_ChainingResults) {
         _cached_encoder_for_ChainingResults = function (
-            value: ChainingResults,
-            elGetter: $.ASN1Encoder<ChainingResults>
-        ): _Element {
+            value: ChainingResults        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

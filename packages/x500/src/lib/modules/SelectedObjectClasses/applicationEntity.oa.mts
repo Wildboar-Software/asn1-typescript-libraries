@@ -13,31 +13,6 @@ import { presentationAddress } from "../SelectedAttributeTypes/presentationAddre
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { supportedApplicationContext } from "../SelectedAttributeTypes/supportedApplicationContext.oa.mjs";
 import { id_oc_applicationEntity } from "../SelectedObjectClasses/id-oc-applicationEntity.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-export { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-export { presentationAddress } from "../SelectedAttributeTypes/presentationAddress.oa.mjs";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
-export { supportedApplicationContext } from "../SelectedAttributeTypes/supportedApplicationContext.oa.mjs";
-export { id_oc_applicationEntity } from "../SelectedObjectClasses/id-oc-applicationEntity.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION applicationEntity */
 /**
  * @summary applicationEntity

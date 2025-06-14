@@ -22,29 +22,6 @@ import {
     _decode_URI,
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";
-export {
-    UiiFormat_next,
-    _decode_UiiFormat_next,
-    _encode_UiiFormat_next,
-} from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
-export {
-    baseObject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    oneLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    UiiFormat_subset,
-    UiiFormat_subset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    UiiFormat_subset_oneLevel /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    UiiFormat_subset_wholeSubtree /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    wholeSubtree /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_UiiFormat_subset,
-    _encode_UiiFormat_subset,
-    _enum_for_UiiFormat_subset,
-} from "../SelectedAttributeTypes/UiiFormat-subset.ta.mjs";
-export {
-    URI,
-    _decode_URI,
-    _encode_URI,
-} from "../SelectedAttributeTypes/URI.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UiiFormat */
 /**
  * @summary UiiFormat
@@ -247,9 +224,7 @@ export function _encode_UiiFormat(
 ) {
     if (!_cached_encoder_for_UiiFormat) {
         _cached_encoder_for_UiiFormat = function (
-            value: UiiFormat,
-            elGetter: $.ASN1Encoder<UiiFormat>
-        ): _Element {
+            value: UiiFormat        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

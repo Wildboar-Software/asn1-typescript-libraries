@@ -6,14 +6,6 @@ import {
 } from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
 import { id_ldx_certExactAssertion } from "../CertificateExtensions/id-ldx-certExactAssertion.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CertificateExactAssertion,
-    _decode_CertificateExactAssertion,
-    _encode_CertificateExactAssertion,
-} from "../CertificateExtensions/CertificateExactAssertion.ta.mjs";
-export { id_ldx_certExactAssertion } from "../CertificateExtensions/id-ldx-certExactAssertion.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certExactAssertion */
 /**
  * @summary certExactAssertion

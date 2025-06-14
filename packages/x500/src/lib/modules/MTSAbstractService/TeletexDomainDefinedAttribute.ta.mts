@@ -169,9 +169,7 @@ export function _encode_TeletexDomainDefinedAttribute(
 ) {
     if (!_cached_encoder_for_TeletexDomainDefinedAttribute) {
         _cached_encoder_for_TeletexDomainDefinedAttribute = function (
-            value: TeletexDomainDefinedAttribute,
-            elGetter: $.ASN1Encoder<TeletexDomainDefinedAttribute>
-        ): _Element {
+            value: TeletexDomainDefinedAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

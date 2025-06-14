@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_mgt } from "../UsefulDefinitions/id-mgt.va.mjs";
-export { id_mgt } from "../UsefulDefinitions/id-mgt.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_mac */
 /**
  * @summary id_mac

@@ -6,12 +6,6 @@ import {
     _decode_OctetSubstringAssertion_Item,
     _encode_OctetSubstringAssertion_Item,
 } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
-export {
-    OctetSubstringAssertion_Item,
-    _decode_OctetSubstringAssertion_Item,
-    _encode_OctetSubstringAssertion_Item,
-} from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OctetSubstringAssertion */
 /**
  * @summary OctetSubstringAssertion

@@ -262,9 +262,7 @@ export function _encode_ModifyDNResultData(
 ) {
     if (!_cached_encoder_for_ModifyDNResultData) {
         _cached_encoder_for_ModifyDNResultData = function (
-            value: ModifyDNResultData,
-            elGetter: $.ASN1Encoder<ModifyDNResultData>
-        ): _Element {
+            value: ModifyDNResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

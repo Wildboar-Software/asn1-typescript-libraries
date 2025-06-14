@@ -6,14 +6,6 @@ import {
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-export { id_ldx_algorithmIdentifier } from "../CertificateExtensions/id-ldx-algorithmIdentifier.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION algorithmIdentifier */
 /**
  * @summary algorithmIdentifier

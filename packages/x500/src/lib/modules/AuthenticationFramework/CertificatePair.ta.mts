@@ -10,12 +10,6 @@ import {
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificatePair */
 /**
  * @summary CertificatePair
@@ -205,9 +199,7 @@ export function _encode_CertificatePair(
 ) {
     if (!_cached_encoder_for_CertificatePair) {
         _cached_encoder_for_CertificatePair = function (
-            value: CertificatePair,
-            elGetter: $.ASN1Encoder<CertificatePair>
-        ): _Element {
+            value: CertificatePair        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

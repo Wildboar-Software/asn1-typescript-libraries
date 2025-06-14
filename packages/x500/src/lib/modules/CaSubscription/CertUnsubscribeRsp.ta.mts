@@ -15,17 +15,6 @@ import {
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
-export {
-    CertUnsubscribeRsp_result,
-    _decode_CertUnsubscribeRsp_result,
-    _encode_CertUnsubscribeRsp_result,
-} from "../CaSubscription/CertUnsubscribeRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../CaSubscription/InvokeID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUnsubscribeRsp */
 /**
  * @summary CertUnsubscribeRsp
@@ -191,9 +180,7 @@ export function _encode_CertUnsubscribeRsp(
 ) {
     if (!_cached_encoder_for_CertUnsubscribeRsp) {
         _cached_encoder_for_CertUnsubscribeRsp = function (
-            value: CertUnsubscribeRsp,
-            elGetter: $.ASN1Encoder<CertUnsubscribeRsp>
-        ): _Element {
+            value: CertUnsubscribeRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

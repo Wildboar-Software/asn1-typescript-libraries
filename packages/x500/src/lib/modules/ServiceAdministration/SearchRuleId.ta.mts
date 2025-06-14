@@ -167,9 +167,7 @@ export function _encode_SearchRuleId(
 ) {
     if (!_cached_encoder_for_SearchRuleId) {
         _cached_encoder_for_SearchRuleId = function (
-            value: SearchRuleId,
-            elGetter: $.ASN1Encoder<SearchRuleId>
-        ): _Element {
+            value: SearchRuleId        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

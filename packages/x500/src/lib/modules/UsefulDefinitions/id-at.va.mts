@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { attributeType } from "../UsefulDefinitions/attributeType.va.mjs";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { attributeType } from "../UsefulDefinitions/attributeType.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_at */
 /**
  * @summary id_at

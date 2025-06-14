@@ -11,13 +11,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SortKey */
 /**
  * @summary SortKey
@@ -199,9 +192,7 @@ export function _encode_SortKey(
 ) {
     if (!_cached_encoder_for_SortKey) {
         _cached_encoder_for_SortKey = function (
-            value: SortKey,
-            elGetter: $.ASN1Encoder<SortKey>
-        ): _Element {
+            value: SortKey        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

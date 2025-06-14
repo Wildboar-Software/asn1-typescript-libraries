@@ -3,11 +3,6 @@ import { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shad
 import { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.mjs";
 import { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.mjs";
 import { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export { shadowOperationalBinding } from "../DirectoryShadowAbstractService/shadowOperationalBinding.oa.mjs";
-export { hierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/hierarchicalOperationalBinding.oa.mjs";
-export { nonSpecificHierarchicalOperationalBinding } from "../HierarchicalOperationalBindings/nonSpecificHierarchicalOperationalBinding.oa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OpBindingSet */
 /**
  * @summary OpBindingSet

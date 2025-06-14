@@ -7,13 +7,6 @@ import {
     _encode_TBerror,
 } from "../TrustBroker/TBerror.ta.mjs";
 import { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta.mjs";
-export {
-    TBerror,
-    _decode_TBerror,
-    _encode_TBerror,
-} from "../TrustBroker/TBerror.ta.mjs";
-export { TBOK, _decode_TBOK, _encode_TBOK } from "../TrustBroker/TBOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBresponse */
 /**
  * @summary TBresponse

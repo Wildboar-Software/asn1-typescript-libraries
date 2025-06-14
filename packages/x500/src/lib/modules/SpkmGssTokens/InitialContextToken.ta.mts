@@ -15,17 +15,6 @@ import {
     _decode_SPKMInnerContextToken,
     _encode_SPKMInnerContextToken,
 } from "../SpkmGssTokens/SPKMInnerContextToken.ta.mjs";
-export {
-    MechType,
-    _decode_MechType,
-    _encode_MechType,
-} from "../SpkmGssTokens/MechType.ta.mjs";
-export {
-    SPKMInnerContextToken,
-    _decode_SPKMInnerContextToken,
-    _encode_SPKMInnerContextToken,
-} from "../SpkmGssTokens/SPKMInnerContextToken.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InitialContextToken */
 /**
  * @summary InitialContextToken
@@ -191,9 +180,7 @@ export function _encode_InitialContextToken(
             0,
             () =>
                 function (
-                    value: InitialContextToken,
-                    elGetter: $.ASN1Encoder<InitialContextToken>
-                ): _Element {
+                    value: InitialContextToken                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

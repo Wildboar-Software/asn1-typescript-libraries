@@ -7,14 +7,6 @@ import {
     _encode_SignedSecurityLabel,
 } from "../EnhancedSecurity/SignedSecurityLabel.ta.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va.mjs";
-export {
-    SignedSecurityLabel,
-    _decode_SignedSecurityLabel,
-    _encode_SignedSecurityLabel,
-} from "../EnhancedSecurity/SignedSecurityLabel.ta.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION attributeValueSecurityLabelContext */
 /**
  * @summary attributeValueSecurityLabelContext

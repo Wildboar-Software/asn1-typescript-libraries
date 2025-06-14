@@ -22,54 +22,6 @@ import {
     _encode_CertStatus,
     _enum_for_CertStatus,
 } from "../PkiPMIProtocolSpecifications/CertStatus.ta.mjs";
-export {
-    Certificate,
-    _decode_Certificate,
-    _encode_Certificate,
-} from "../AuthenticationFramework/Certificate.ta.mjs";
-export {
-    aACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    affiliationChanged /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    cACompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    certificateHold /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    cessationOfOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    CRLReason,
-    CRLReason_aACompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_affiliationChanged /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_cACompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_certificateHold /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_cessationOfOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_keyCompromise /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_privilegeWithdrawn /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_removeFromCRL /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_superseded /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_unspecified /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CRLReason_weakAlgorithmOrKey /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    keyCompromise /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    privilegeWithdrawn /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    removeFromCRL /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    superseded /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unspecified /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    weakAlgorithmOrKey /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CRLReason,
-    _encode_CRLReason,
-    _enum_for_CRLReason,
-} from "../CertificateExtensions/CRLReason.ta.mjs";
-export {
-    CertStatus,
-    CertStatus_expired /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CertStatus_good /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CertStatus_on_hold /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CertStatus_revoked /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    expired /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    good /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    on_hold /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    revoked /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CertStatus,
-    _encode_CertStatus,
-    _enum_for_CertStatus,
-} from "../PkiPMIProtocolSpecifications/CertStatus.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertSubscribeOK_Item_ok */
 /**
  * @summary CertSubscribeOK_Item_ok
@@ -288,9 +240,7 @@ export function _encode_CertSubscribeOK_Item_ok(
 ) {
     if (!_cached_encoder_for_CertSubscribeOK_Item_ok) {
         _cached_encoder_for_CertSubscribeOK_Item_ok = function (
-            value: CertSubscribeOK_Item_ok,
-            elGetter: $.ASN1Encoder<CertSubscribeOK_Item_ok>
-        ): _Element {
+            value: CertSubscribeOK_Item_ok        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

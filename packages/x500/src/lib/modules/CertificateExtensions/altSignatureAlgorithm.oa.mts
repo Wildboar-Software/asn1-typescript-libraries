@@ -6,14 +6,6 @@ import {
     _encode_AltSignatureAlgorithm,
 } from "../CertificateExtensions/AltSignatureAlgorithm.ta.mjs";
 import { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    AltSignatureAlgorithm,
-    _decode_AltSignatureAlgorithm,
-    _encode_AltSignatureAlgorithm,
-} from "../CertificateExtensions/AltSignatureAlgorithm.ta.mjs";
-export { id_ce_altSignatureAlgorithm } from "../CertificateExtensions/id-ce-altSignatureAlgorithm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION altSignatureAlgorithm */
 /**
  * @summary altSignatureAlgorithm

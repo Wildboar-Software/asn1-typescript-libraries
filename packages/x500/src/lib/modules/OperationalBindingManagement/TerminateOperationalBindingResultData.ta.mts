@@ -311,9 +311,7 @@ export function _encode_TerminateOperationalBindingResultData(
 ) {
     if (!_cached_encoder_for_TerminateOperationalBindingResultData) {
         _cached_encoder_for_TerminateOperationalBindingResultData = function (
-            value: TerminateOperationalBindingResultData,
-            elGetter: $.ASN1Encoder<TerminateOperationalBindingResultData>
-        ): _Element {
+            value: TerminateOperationalBindingResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

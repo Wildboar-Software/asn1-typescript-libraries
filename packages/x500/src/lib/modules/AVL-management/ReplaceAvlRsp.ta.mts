@@ -15,17 +15,6 @@ import {
     _decode_ReplaceAvlRsp_result,
     _encode_ReplaceAvlRsp_result,
 } from "../AVL-management/ReplaceAvlRsp-result.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-export {
-    ReplaceAvlRsp_result,
-    _decode_ReplaceAvlRsp_result,
-    _encode_ReplaceAvlRsp_result,
-} from "../AVL-management/ReplaceAvlRsp-result.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ReplaceAvlRsp */
 /**
  * @summary ReplaceAvlRsp
@@ -191,9 +180,7 @@ export function _encode_ReplaceAvlRsp(
 ) {
     if (!_cached_encoder_for_ReplaceAvlRsp) {
         _cached_encoder_for_ReplaceAvlRsp = function (
-            value: ReplaceAvlRsp,
-            elGetter: $.ASN1Encoder<ReplaceAvlRsp>
-        ): _Element {
+            value: ReplaceAvlRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

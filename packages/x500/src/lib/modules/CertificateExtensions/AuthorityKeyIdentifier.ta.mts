@@ -20,22 +20,6 @@ import {
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    KeyIdentifier,
-    _decode_KeyIdentifier,
-    _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthorityKeyIdentifier */
 /**
  * @summary AuthorityKeyIdentifier
@@ -249,9 +233,7 @@ export function _encode_AuthorityKeyIdentifier(
 ) {
     if (!_cached_encoder_for_AuthorityKeyIdentifier) {
         _cached_encoder_for_AuthorityKeyIdentifier = function (
-            value: AuthorityKeyIdentifier,
-            elGetter: $.ASN1Encoder<AuthorityKeyIdentifier>
-        ): _Element {
+            value: AuthorityKeyIdentifier        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,14 +6,6 @@ import {
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
-export {
-    SubstringAssertion,
-    _decode_SubstringAssertion,
-    _encode_SubstringAssertion,
-} from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION substringAssertion */
 /**
  * @summary substringAssertion

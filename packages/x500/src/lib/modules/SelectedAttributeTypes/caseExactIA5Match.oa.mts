@@ -4,12 +4,6 @@ import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
-export { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION caseExactIA5Match */
 /**
  * @summary caseExactIA5Match

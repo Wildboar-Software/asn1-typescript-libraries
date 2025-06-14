@@ -6,12 +6,6 @@ import {
     _decode_ClassAttributeSelection,
     _encode_ClassAttributeSelection,
 } from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta.mjs";
-export {
-    ClassAttributeSelection,
-    _decode_ClassAttributeSelection,
-    _encode_ClassAttributeSelection,
-} from "../DirectoryShadowAbstractService/ClassAttributeSelection.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeSelection */
 /**
  * @summary AttributeSelection

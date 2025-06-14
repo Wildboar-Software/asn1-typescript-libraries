@@ -6,14 +6,6 @@ import {
     _encode_RejectCAsubscribe,
 } from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export { id_rejectCAsubscribe } from "../PkiPMIProtocolSpecifications/id-rejectCAsubscribe.va.mjs";
-export {
-    RejectCAsubscribe,
-    _decode_RejectCAsubscribe,
-    _encode_RejectCAsubscribe,
-} from "../PkiPMIProtocolSpecifications/RejectCAsubscribe.ta.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION rejectCAsubscribe */
 /**
  * @summary rejectCAsubscribe

@@ -11,12 +11,6 @@ import {
     _decode_Del_Header,
     _encode_Del_Header,
 } from "../SpkmGssTokens/Del-Header.ta.mjs";
-export {
-    Del_Header,
-    _decode_Del_Header,
-    _encode_Del_Header,
-} from "../SpkmGssTokens/Del-Header.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SPKM_DEL */
 /**
  * @summary SPKM_DEL
@@ -172,9 +166,7 @@ export function _encode_SPKM_DEL(
 ) {
     if (!_cached_encoder_for_SPKM_DEL) {
         _cached_encoder_for_SPKM_DEL = function (
-            value: SPKM_DEL,
-            elGetter: $.ASN1Encoder<SPKM_DEL>
-        ): _Element {
+            value: SPKM_DEL        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

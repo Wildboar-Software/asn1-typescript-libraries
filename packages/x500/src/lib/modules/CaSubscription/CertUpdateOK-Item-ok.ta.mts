@@ -11,13 +11,6 @@ import {
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/CertificateSerialNumber.ta.mjs";
-export { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateOK_Item_ok */
 /**
  * @summary CertUpdateOK_Item_ok
@@ -181,9 +174,7 @@ export function _encode_CertUpdateOK_Item_ok(
 ) {
     if (!_cached_encoder_for_CertUpdateOK_Item_ok) {
         _cached_encoder_for_CertUpdateOK_Item_ok = function (
-            value: CertUpdateOK_Item_ok,
-            elGetter: $.ASN1Encoder<CertUpdateOK_Item_ok>
-        ): _Element {
+            value: CertUpdateOK_Item_ok        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

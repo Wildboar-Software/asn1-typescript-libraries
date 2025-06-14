@@ -1,13 +1,6 @@
 /* eslint-disable */
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_sa */
 /**
  * @summary id_sa

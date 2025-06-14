@@ -6,12 +6,6 @@ import {
     _decode_CertUpdateOK_Item,
     _encode_CertUpdateOK_Item,
 } from "../CaSubscription/CertUpdateOK-Item.ta.mjs";
-export {
-    CertUpdateOK_Item,
-    _decode_CertUpdateOK_Item,
-    _encode_CertUpdateOK_Item,
-} from "../CaSubscription/CertUpdateOK-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateOK */
 /**
  * @summary CertUpdateOK

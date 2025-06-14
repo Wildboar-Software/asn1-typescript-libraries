@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DITContentRule */
 /**
  * @summary DITContentRule
@@ -266,9 +263,7 @@ export function _encode_DITContentRule(
 ) {
     if (!_cached_encoder_for_DITContentRule) {
         _cached_encoder_for_DITContentRule = function (
-            value: DITContentRule,
-            elGetter: $.ASN1Encoder<DITContentRule>
-        ): _Element {
+            value: DITContentRule        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -37,44 +37,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    DomainLocalID,
-    _decode_DomainLocalID,
-    _encode_DomainLocalID,
-} from "../DirectoryAbstractService/DomainLocalID.ta.mjs";
-export {
-    EntryInformationSelection,
-    _decode_EntryInformationSelection,
-    _encode_EntryInformationSelection,
-} from "../DirectoryAbstractService/EntryInformationSelection.ta.mjs";
-export {
-    Filter,
-    _decode_Filter,
-    _encode_Filter,
-} from "../DirectoryAbstractService/Filter.ta.mjs";
-export {
-    baseObject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    JoinArgument_joinSubset,
-    JoinArgument_joinSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    JoinArgument_joinSubset_oneLevel /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    JoinArgument_joinSubset_wholeSubtree /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    oneLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    wholeSubtree /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_JoinArgument_joinSubset,
-    _encode_JoinArgument_joinSubset,
-    _enum_for_JoinArgument_joinSubset,
-} from "../DirectoryAbstractService/JoinArgument-joinSubset.ta.mjs";
-export {
-    JoinAttPair,
-    _decode_JoinAttPair,
-    _encode_JoinAttPair,
-} from "../DirectoryAbstractService/JoinAttPair.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION JoinArgument */
 /**
  * @summary JoinArgument
@@ -374,9 +336,7 @@ export function _encode_JoinArgument(
 ) {
     if (!_cached_encoder_for_JoinArgument) {
         _cached_encoder_for_JoinArgument = function (
-            value: JoinArgument,
-            elGetter: $.ASN1Encoder<JoinArgument>
-        ): _Element {
+            value: JoinArgument        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-export { ub_common_name_length } from "../PkiPmiExternalDataTypes/ub-common-name-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalCommonName */
 /**
  * @summary UniversalCommonName

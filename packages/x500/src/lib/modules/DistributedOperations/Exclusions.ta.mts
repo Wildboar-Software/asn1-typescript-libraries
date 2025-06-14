@@ -6,12 +6,6 @@ import {
     _decode_RDNSequence,
     _encode_RDNSequence,
 } from "../InformationFramework/RDNSequence.ta.mjs";
-export {
-    RDNSequence,
-    _decode_RDNSequence,
-    _encode_RDNSequence,
-} from "../InformationFramework/RDNSequence.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Exclusions */
 /**
  * @summary Exclusions

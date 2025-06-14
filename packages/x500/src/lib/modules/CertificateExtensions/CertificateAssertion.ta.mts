@@ -52,70 +52,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../AuthenticationFramework/Time.ta.mjs";
-export {
-    AltNameType,
-    _decode_AltNameType,
-    _encode_AltNameType,
-} from "../CertificateExtensions/AltNameType.ta.mjs";
-export {
-    AuthorityKeyIdentifier,
-    _decode_AuthorityKeyIdentifier,
-    _encode_AuthorityKeyIdentifier,
-} from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
-export {
-    CertPolicySet,
-    _decode_CertPolicySet,
-    _encode_CertPolicySet,
-} from "../CertificateExtensions/CertPolicySet.ta.mjs";
-export {
-    contentCommitment /* IMPORTED_SHORT_NAMED_BIT */,
-    cRLSign /* IMPORTED_SHORT_NAMED_BIT */,
-    dataEncipherment /* IMPORTED_SHORT_NAMED_BIT */,
-    decipherOnly /* IMPORTED_SHORT_NAMED_BIT */,
-    digitalSignature /* IMPORTED_SHORT_NAMED_BIT */,
-    encipherOnly /* IMPORTED_SHORT_NAMED_BIT */,
-    keyAgreement /* IMPORTED_SHORT_NAMED_BIT */,
-    keyCertSign /* IMPORTED_SHORT_NAMED_BIT */,
-    keyEncipherment /* IMPORTED_SHORT_NAMED_BIT */,
-    KeyUsage,
-    KeyUsage_contentCommitment /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_cRLSign /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_dataEncipherment /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_decipherOnly /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_digitalSignature /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_encipherOnly /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_keyAgreement /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_keyCertSign /* IMPORTED_LONG_NAMED_BIT */,
-    KeyUsage_keyEncipherment /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_KeyUsage,
-    _encode_KeyUsage,
-} from "../CertificateExtensions/KeyUsage.ta.mjs";
-export {
-    NameConstraintsSyntax,
-    _decode_NameConstraintsSyntax,
-    _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-export {
-    SubjectKeyIdentifier,
-    _decode_SubjectKeyIdentifier,
-    _encode_SubjectKeyIdentifier,
-} from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertificateAssertion */
 /**
  * @summary CertificateAssertion
@@ -541,9 +477,7 @@ export function _encode_CertificateAssertion(
 ) {
     if (!_cached_encoder_for_CertificateAssertion) {
         _cached_encoder_for_CertificateAssertion = function (
-            value: CertificateAssertion,
-            elGetter: $.ASN1Encoder<CertificateAssertion>
-        ): _Element {
+            value: CertificateAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

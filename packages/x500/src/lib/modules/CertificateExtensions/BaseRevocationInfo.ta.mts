@@ -16,17 +16,6 @@ import {
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
 } from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";
-export {
-    CRLNumber,
-    _decode_CRLNumber,
-    _encode_CRLNumber,
-} from "../CertificateExtensions/CRLNumber.ta.mjs";
-export {
-    CRLStreamIdentifier,
-    _decode_CRLStreamIdentifier,
-    _encode_CRLStreamIdentifier,
-} from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION BaseRevocationInfo */
 /**
  * @summary BaseRevocationInfo
@@ -236,9 +225,7 @@ export function _encode_BaseRevocationInfo(
 ) {
     if (!_cached_encoder_for_BaseRevocationInfo) {
         _cached_encoder_for_BaseRevocationInfo = function (
-            value: BaseRevocationInfo,
-            elGetter: $.ASN1Encoder<BaseRevocationInfo>
-        ): _Element {
+            value: BaseRevocationInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

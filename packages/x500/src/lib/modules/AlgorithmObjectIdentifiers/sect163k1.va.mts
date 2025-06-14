@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { certicom_curve } from "../AlgorithmObjectIdentifiers/certicom-curve.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sect163k1 */
 /**
  * @summary sect163k1

@@ -15,17 +15,6 @@ import {
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../AVL-management/InvokeID.ta.mjs";
-export {
-    AvlSerialNumber,
-    _decode_AvlSerialNumber,
-    _encode_AvlSerialNumber,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AvlSerialNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DeleteAvlReq */
 /**
  * @summary DeleteAvlReq
@@ -209,9 +198,7 @@ export function _encode_DeleteAvlReq(
 ) {
     if (!_cached_encoder_for_DeleteAvlReq) {
         _cached_encoder_for_DeleteAvlReq = function (
-            value: DeleteAvlReq,
-            elGetter: $.ASN1Encoder<DeleteAvlReq>
-        ): _Element {
+            value: DeleteAvlReq        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -11,17 +11,6 @@ import {
     _decode_AttributeMappings_Item_typeValueMappings,
     _encode_AttributeMappings_Item_typeValueMappings,
 } from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta.mjs";
-export {
-    AttributeMappings_Item_typeMappings,
-    _decode_AttributeMappings_Item_typeMappings,
-    _encode_AttributeMappings_Item_typeMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeMappings.ta.mjs";
-export {
-    AttributeMappings_Item_typeValueMappings,
-    _decode_AttributeMappings_Item_typeValueMappings,
-    _encode_AttributeMappings_Item_typeValueMappings,
-} from "../AttributeCertificateDefinitions/AttributeMappings-Item-typeValueMappings.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeMappings_Item */
 /**
  * @summary AttributeMappings_Item

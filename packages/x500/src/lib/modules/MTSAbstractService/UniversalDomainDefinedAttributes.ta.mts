@@ -6,12 +6,6 @@ import {
     _decode_UniversalDomainDefinedAttribute,
     _encode_UniversalDomainDefinedAttribute,
 } from "../MTSAbstractService/UniversalDomainDefinedAttribute.ta.mjs";
-export {
-    UniversalDomainDefinedAttribute,
-    _decode_UniversalDomainDefinedAttribute,
-    _encode_UniversalDomainDefinedAttribute,
-} from "../MTSAbstractService/UniversalDomainDefinedAttribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalDomainDefinedAttributes */
 /**
  * @summary UniversalDomainDefinedAttributes

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_PerReportTransferFields,
     _encode_PerReportTransferFields,
 } from '../MTAAbstractService/PerReportTransferFields.ta.mjs';
-export {
-    PerReportTransferFields,
-    _decode_PerReportTransferFields,
-    _encode_PerReportTransferFields,
-} from '../MTAAbstractService/PerReportTransferFields.ta.mjs';
 import {
-    PerRecipientReportTransferFields,
-    _decode_PerRecipientReportTransferFields,
-    _encode_PerRecipientReportTransferFields,
-} from '../MTAAbstractService/PerRecipientReportTransferFields.ta.mjs';
-export {
     PerRecipientReportTransferFields,
     _decode_PerRecipientReportTransferFields,
     _encode_PerRecipientReportTransferFields,
@@ -91,17 +26,7 @@ import {
     _decode_SubjectIdentifier,
     _encode_SubjectIdentifier,
 } from '../MTAAbstractService/SubjectIdentifier.ta.mjs';
-export {
-    SubjectIdentifier,
-    _decode_SubjectIdentifier,
-    _encode_SubjectIdentifier,
-} from '../MTAAbstractService/SubjectIdentifier.ta.mjs';
 import {
-    SubjectIntermediateTraceInformation,
-    _decode_SubjectIntermediateTraceInformation,
-    _encode_SubjectIntermediateTraceInformation,
-} from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta.mjs';
-export {
     SubjectIntermediateTraceInformation,
     _decode_SubjectIntermediateTraceInformation,
     _encode_SubjectIntermediateTraceInformation,
@@ -111,17 +36,7 @@ import {
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
-export {
-    OriginalEncodedInformationTypes,
-    _decode_OriginalEncodedInformationTypes,
-    _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta.mjs';
-export {
     ContentType,
     _decode_ContentType,
     _encode_ContentType,
@@ -131,17 +46,7 @@ import {
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
-export {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Content,
-    _decode_Content,
-    _encode_Content,
-} from '../MTSAbstractService/Content.ta.mjs';
-export {
     Content,
     _decode_Content,
     _encode_Content,
@@ -151,17 +56,7 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '../MTAAbstractService/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '../MTAAbstractService/AdditionalInformation.ta.mjs';
 import {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
     ExtensionField,
     _decode_ExtensionField,
     _encode_ExtensionField,
@@ -460,9 +355,7 @@ export function _encode_ReportTransferContent(
 ) {
     if (!_cached_encoder_for_ReportTransferContent) {
         _cached_encoder_for_ReportTransferContent = function (
-            value: ReportTransferContent,
-            elGetter: $.ASN1Encoder<ReportTransferContent>
-        ): _Element {
+            value: ReportTransferContent        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

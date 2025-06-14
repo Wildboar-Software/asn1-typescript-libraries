@@ -6,12 +6,6 @@ import {
     _decode_DSABindArgument,
     _encode_DSABindArgument,
 } from "../DistributedOperations/DSABindArgument.ta.mjs";
-export {
-    DSABindArgument,
-    _decode_DSABindArgument,
-    _encode_DSABindArgument,
-} from "../DistributedOperations/DSABindArgument.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DSABindResult */
 /**
  * @summary DSABindResult

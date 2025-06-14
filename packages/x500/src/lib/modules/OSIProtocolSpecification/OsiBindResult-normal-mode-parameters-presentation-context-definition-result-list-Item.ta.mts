@@ -15,23 +15,6 @@ import {
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-export {
-    acceptance /* IMPORTED_SHORT_NAMED_INTEGER */,
-    provider_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Result,
-    Result_acceptance /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_provider_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-    Result_user_rejection /* IMPORTED_LONG_NAMED_INTEGER */,
-    user_rejection /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Result,
-    _encode_Result,
-} from "../OSIProtocolSpecification/Result.ta.mjs";
-export {
-    Transfer_syntax_name,
-    _decode_Transfer_syntax_name,
-    _encode_Transfer_syntax_name,
-} from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item */
 /**
  * @summary OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item
@@ -207,9 +190,7 @@ export function _encode_OsiBindResult_normal_mode_parameters_presentation_contex
         !_cached_encoder_for_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item
     ) {
         _cached_encoder_for_OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item = function (
-            value: OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item,
-            elGetter: $.ASN1Encoder<OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item>
-        ): _Element {
+            value: OsiBindResult_normal_mode_parameters_presentation_context_definition_result_list_Item        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

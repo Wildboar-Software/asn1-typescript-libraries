@@ -6,12 +6,6 @@ import {
     _decode_AllowedAttributeAssignments_Item,
     _encode_AllowedAttributeAssignments_Item,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta.mjs";
-export {
-    AllowedAttributeAssignments_Item,
-    _decode_AllowedAttributeAssignments_Item,
-    _encode_AllowedAttributeAssignments_Item,
-} from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AllowedAttributeAssignments */
 /**
  * @summary AllowedAttributeAssignments

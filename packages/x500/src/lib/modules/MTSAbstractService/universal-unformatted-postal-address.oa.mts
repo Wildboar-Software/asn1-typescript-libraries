@@ -5,13 +5,6 @@ import {
     _decode_UniversalUnformattedPostalAddress,
     _encode_UniversalUnformattedPostalAddress,
 } from "../MTSAbstractService/UniversalUnformattedPostalAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalUnformattedPostalAddress,
-    _decode_UniversalUnformattedPostalAddress,
-    _encode_UniversalUnformattedPostalAddress,
-} from "../MTSAbstractService/UniversalUnformattedPostalAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_unformatted_postal_address */
 /**
  * @summary universal_unformatted_postal_address

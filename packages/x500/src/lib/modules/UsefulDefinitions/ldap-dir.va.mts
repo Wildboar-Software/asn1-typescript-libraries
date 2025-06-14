@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { internet } from "../UsefulDefinitions/internet.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { internet } from "../UsefulDefinitions/internet.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ldap_dir */
 /**
  * @summary ldap_dir

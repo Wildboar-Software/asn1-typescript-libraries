@@ -7,25 +7,6 @@ import {
 import { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { subtreeSpecification } from "../InformationFramework/subtreeSpecification.oa.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION subentry */
 /**
  * @summary subentry

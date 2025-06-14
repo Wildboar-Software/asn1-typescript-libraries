@@ -16,7 +16,7 @@ import {
 //   ID                      id}
 
 export function pwdHistory(
-    passwordAttribute: ATTRIBUTE,
+    _passwordAttribute: ATTRIBUTE,
     historyMatch: MATCHING_RULE,
     id: OBJECT_IDENTIFIER
 ): ATTRIBUTE {

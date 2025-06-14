@@ -16,19 +16,6 @@ import {
     _decode_ResultAttribute_outputValues,
     _encode_ResultAttribute_outputValues,
 } from "../ServiceAdministration/ResultAttribute-outputValues.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-export {
-    ContextProfile,
-    _decode_ContextProfile,
-    _encode_ContextProfile,
-} from "../ServiceAdministration/ContextProfile.ta.mjs";
-export {
-    ResultAttribute_outputValues,
-    _decode_ResultAttribute_outputValues,
-    _encode_ResultAttribute_outputValues,
-} from "../ServiceAdministration/ResultAttribute-outputValues.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ResultAttribute */
 /**
  * @summary ResultAttribute
@@ -242,9 +229,7 @@ export function _encode_ResultAttribute(
 ) {
     if (!_cached_encoder_for_ResultAttribute) {
         _cached_encoder_for_ResultAttribute = function (
-            value: ResultAttribute,
-            elGetter: $.ASN1Encoder<ResultAttribute>
-        ): _Element {
+            value: ResultAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

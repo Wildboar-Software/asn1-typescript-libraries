@@ -20,22 +20,6 @@ import {
     _decode_Signer,
     _encode_Signer,
 } from "../EnhancedSecurity/Signer.ta.mjs";
-export {
-    AttribsHash,
-    _decode_AttribsHash,
-    _encode_AttribsHash,
-} from "../EnhancedSecurity/AttribsHash.ta.mjs";
-export {
-    Scope,
-    _decode_Scope,
-    _encode_Scope,
-} from "../EnhancedSecurity/Scope.ta.mjs";
-export {
-    Signer,
-    _decode_Signer,
-    _encode_Signer,
-} from "../EnhancedSecurity/Signer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeIntegrityInfoContent */
 /**
  * @summary AttributeIntegrityInfoContent
@@ -231,9 +215,7 @@ export function _encode_AttributeIntegrityInfoContent(
 ) {
     if (!_cached_encoder_for_AttributeIntegrityInfoContent) {
         _cached_encoder_for_AttributeIntegrityInfoContent = function (
-            value: AttributeIntegrityInfoContent,
-            elGetter: $.ASN1Encoder<AttributeIntegrityInfoContent>
-        ): _Element {
+            value: AttributeIntegrityInfoContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

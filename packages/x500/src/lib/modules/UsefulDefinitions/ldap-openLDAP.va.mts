@@ -2,9 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_enterprise } from "../UsefulDefinitions/ldap-enterprise.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { ldap_enterprise } from "../UsefulDefinitions/ldap-enterprise.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ldap_openLDAP */
 /**
  * @summary ldap_openLDAP

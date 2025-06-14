@@ -327,9 +327,7 @@ export function _encode_ListResultData_listInfo(
 ) {
     if (!_cached_encoder_for_ListResultData_listInfo) {
         _cached_encoder_for_ListResultData_listInfo = function (
-            value: ListResultData_listInfo,
-            elGetter: $.ASN1Encoder<ListResultData_listInfo>
-        ): _Element {
+            value: ListResultData_listInfo        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

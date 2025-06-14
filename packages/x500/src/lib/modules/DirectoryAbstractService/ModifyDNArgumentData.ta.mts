@@ -547,9 +547,7 @@ export function _encode_ModifyDNArgumentData(
 ) {
     if (!_cached_encoder_for_ModifyDNArgumentData) {
         _cached_encoder_for_ModifyDNArgumentData = function (
-            value: ModifyDNArgumentData,
-            elGetter: $.ASN1Encoder<ModifyDNArgumentData>
-        ): _Element {
+            value: ModifyDNArgumentData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

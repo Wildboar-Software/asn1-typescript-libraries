@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ResultAttribute_outputValues */
 /**
  * @summary ResultAttribute_outputValues

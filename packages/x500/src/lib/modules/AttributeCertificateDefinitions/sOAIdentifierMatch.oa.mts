@@ -3,11 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { id_mr_sOAIdentifierMatch } from "../AttributeCertificateDefinitions/id-mr-sOAIdentifierMatch.va.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { id_mr_sOAIdentifierMatch } from "../AttributeCertificateDefinitions/id-mr-sOAIdentifierMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sOAIdentifierMatch */
 /**
  * @summary sOAIdentifierMatch

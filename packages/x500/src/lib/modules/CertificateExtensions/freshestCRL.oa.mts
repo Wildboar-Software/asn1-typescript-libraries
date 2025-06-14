@@ -6,14 +6,6 @@ import {
     _encode_CRLDistPointsSyntax,
 } from "../CertificateExtensions/CRLDistPointsSyntax.ta.mjs";
 import { id_ce_freshestCRL } from "../CertificateExtensions/id-ce-freshestCRL.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    CRLDistPointsSyntax,
-    _decode_CRLDistPointsSyntax,
-    _encode_CRLDistPointsSyntax,
-} from "../CertificateExtensions/CRLDistPointsSyntax.ta.mjs";
-export { id_ce_freshestCRL } from "../CertificateExtensions/id-ce-freshestCRL.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION freshestCRL */
 /**
  * @summary freshestCRL

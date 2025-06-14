@@ -15,17 +15,6 @@ import {
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    AttCertIssuer,
-    _decode_AttCertIssuer,
-    _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateExactAssertion */
 /**
  * @summary AttributeCertificateExactAssertion
@@ -202,9 +191,7 @@ export function _encode_AttributeCertificateExactAssertion(
 ) {
     if (!_cached_encoder_for_AttributeCertificateExactAssertion) {
         _cached_encoder_for_AttributeCertificateExactAssertion = function (
-            value: AttributeCertificateExactAssertion,
-            elGetter: $.ASN1Encoder<AttributeCertificateExactAssertion>
-        ): _Element {
+            value: AttributeCertificateExactAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

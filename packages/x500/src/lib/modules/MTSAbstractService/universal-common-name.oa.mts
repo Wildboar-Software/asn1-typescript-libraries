@@ -5,13 +5,6 @@ import {
     _decode_UniversalCommonName,
     _encode_UniversalCommonName,
 } from "../MTSAbstractService/UniversalCommonName.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalCommonName,
-    _decode_UniversalCommonName,
-    _encode_UniversalCommonName,
-} from "../MTSAbstractService/UniversalCommonName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_common_name */
 /**
  * @summary universal_common_name

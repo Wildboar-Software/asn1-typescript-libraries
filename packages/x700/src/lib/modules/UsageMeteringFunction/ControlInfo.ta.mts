@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_ActionResponse,
     _encode_ActionResponse,
 } from '../UsageMeteringFunction/ActionResponse.ta.mjs';
-export {
-    ActionResponse,
-    _decode_ActionResponse,
-    _encode_ActionResponse,
-} from '../UsageMeteringFunction/ActionResponse.ta.mjs';
 import {
-    ReportingTriggers,
-    _decode_ReportingTriggers,
-    _encode_ReportingTriggers,
-} from '../UsageMeteringFunction/ReportingTriggers.ta.mjs';
-export {
     ReportingTriggers,
     _decode_ReportingTriggers,
     _encode_ReportingTriggers,
@@ -91,17 +26,7 @@ import {
     _decode_AccountableObjectsReferenceList,
     _encode_AccountableObjectsReferenceList,
 } from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.mjs';
-export {
-    AccountableObjectsReferenceList,
-    _decode_AccountableObjectsReferenceList,
-    _encode_AccountableObjectsReferenceList,
-} from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.mjs';
 import {
-    DataObjectsReferenceList,
-    _decode_DataObjectsReferenceList,
-    _encode_DataObjectsReferenceList,
-} from '../UsageMeteringFunction/DataObjectsReferenceList.ta.mjs';
-export {
     DataObjectsReferenceList,
     _decode_DataObjectsReferenceList,
     _encode_DataObjectsReferenceList,
@@ -111,12 +36,6 @@ import {
     _decode_ManagementExtension,
     _encode_ManagementExtension,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-export {
-    ManagementExtension,
-    _decode_ManagementExtension,
-    _encode_ManagementExtension,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ManagementExtension.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ControlInfo */
 /**
  * @summary ControlInfo
@@ -360,9 +279,7 @@ export function _encode_ControlInfo(
 ) {
     if (!_cached_encoder_for_ControlInfo) {
         _cached_encoder_for_ControlInfo = function (
-            value: ControlInfo,
-            elGetter: $.ASN1Encoder<ControlInfo>
-        ): _Element {
+            value: ControlInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

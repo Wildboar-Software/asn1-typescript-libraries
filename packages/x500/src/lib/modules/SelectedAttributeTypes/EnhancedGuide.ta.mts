@@ -17,24 +17,6 @@ import {
     _decode_EnhancedGuide_subset,
     _encode_EnhancedGuide_subset,
 } from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    Criteria,
-    _decode_Criteria,
-    _encode_Criteria,
-} from "../SelectedAttributeTypes/Criteria.ta.mjs";
-export {
-    baseObject /* IMPORTED_SHORT_NAMED_INTEGER */,
-    EnhancedGuide_subset,
-    EnhancedGuide_subset_baseObject /* IMPORTED_LONG_NAMED_INTEGER */,
-    EnhancedGuide_subset_oneLevel /* IMPORTED_LONG_NAMED_INTEGER */,
-    EnhancedGuide_subset_wholeSubtree /* IMPORTED_LONG_NAMED_INTEGER */,
-    oneLevel /* IMPORTED_SHORT_NAMED_INTEGER */,
-    wholeSubtree /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_EnhancedGuide_subset,
-    _encode_EnhancedGuide_subset,
-} from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EnhancedGuide */
 /**
  * @summary EnhancedGuide
@@ -258,9 +240,7 @@ export function _encode_EnhancedGuide(
 ) {
     if (!_cached_encoder_for_EnhancedGuide) {
         _cached_encoder_for_EnhancedGuide = function (
-            value: EnhancedGuide,
-            elGetter: $.ASN1Encoder<EnhancedGuide>
-        ): _Element {
+            value: EnhancedGuide        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

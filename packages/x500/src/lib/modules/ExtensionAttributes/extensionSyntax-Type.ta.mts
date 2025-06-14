@@ -231,9 +231,7 @@ export function _encode_extensionSyntax_Type(
 ) {
     if (!_cached_encoder_for_extensionSyntax_Type) {
         _cached_encoder_for_extensionSyntax_Type = function (
-            value: extensionSyntax_Type,
-            elGetter: $.ASN1Encoder<extensionSyntax_Type>
-        ): _Element {
+            value: extensionSyntax_Type        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -6,14 +6,6 @@ import {
     _decode_PresentationAddress,
     _encode_PresentationAddress,
 } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION presentationAddr */
 /**
  * @summary presentationAddr

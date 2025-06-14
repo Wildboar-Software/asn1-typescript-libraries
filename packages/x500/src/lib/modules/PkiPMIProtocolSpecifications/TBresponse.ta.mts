@@ -11,17 +11,6 @@ import {
     _decode_TBOK,
     _encode_TBOK,
 } from "../PkiPMIProtocolSpecifications/TBOK.ta.mjs";
-export {
-    TBerror,
-    _decode_TBerror,
-    _encode_TBerror,
-} from "../PkiPMIProtocolSpecifications/TBerror.ta.mjs";
-export {
-    TBOK,
-    _decode_TBOK,
-    _encode_TBOK,
-} from "../PkiPMIProtocolSpecifications/TBOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TBresponse */
 /**
  * @summary TBresponse

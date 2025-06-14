@@ -31,33 +31,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export {
-    AlgorithmIdentifier,
-    _decode_AlgorithmIdentifier,
-    _encode_AlgorithmIdentifier,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgorithmIdentifier.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    DER_PkiPath,
-    _decode_DER_PkiPath,
-    _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta.mjs";
-export {
-    SequenceNumber,
-    _decode_SequenceNumber,
-    _encode_SequenceNumber,
-} from "../Wrapper/SequenceNumber.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsApplAbort */
 /**
  * @summary TbsApplAbort
@@ -306,9 +279,7 @@ export function _encode_TbsApplAbort(
 ) {
     if (!_cached_encoder_for_TbsApplAbort) {
         _cached_encoder_for_TbsApplAbort = function (
-            value: TbsApplAbort,
-            elGetter: $.ASN1Encoder<TbsApplAbort>
-        ): _Element {
+            value: TbsApplAbort        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

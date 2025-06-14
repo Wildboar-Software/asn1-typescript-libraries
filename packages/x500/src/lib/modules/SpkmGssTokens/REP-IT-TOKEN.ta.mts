@@ -17,17 +17,6 @@ import {
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    Random_Integer,
-    _decode_Random_Integer,
-    _encode_Random_Integer,
-} from "../SpkmGssTokens/Random-Integer.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION REP_IT_TOKEN */
 /**
  * @summary REP_IT_TOKEN
@@ -294,9 +283,7 @@ export function _encode_REP_IT_TOKEN(
 ) {
     if (!_cached_encoder_for_REP_IT_TOKEN) {
         _cached_encoder_for_REP_IT_TOKEN = function (
-            value: REP_IT_TOKEN,
-            elGetter: $.ASN1Encoder<REP_IT_TOKEN>
-        ): _Element {
+            value: REP_IT_TOKEN        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

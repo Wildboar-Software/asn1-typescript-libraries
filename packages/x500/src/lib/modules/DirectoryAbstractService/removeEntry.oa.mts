@@ -16,30 +16,6 @@ import {
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_removeEntry } from "../CommonProtocolSpecification/id-opcode-removeEntry.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
-export { referral } from "../DirectoryAbstractService/referral.oa.mjs";
-export {
-    RemoveEntryArgument,
-    _decode_RemoveEntryArgument,
-    _encode_RemoveEntryArgument,
-} from "../DirectoryAbstractService/RemoveEntryArgument.ta.mjs";
-export {
-    RemoveEntryResult,
-    _decode_RemoveEntryResult,
-    _encode_RemoveEntryResult,
-} from "../DirectoryAbstractService/RemoveEntryResult.ta.mjs";
-export { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
-export { serviceError } from "../DirectoryAbstractService/serviceError.oa.mjs";
-export { updateError } from "../DirectoryAbstractService/updateError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION removeEntry */
 /**
  * @summary removeEntry

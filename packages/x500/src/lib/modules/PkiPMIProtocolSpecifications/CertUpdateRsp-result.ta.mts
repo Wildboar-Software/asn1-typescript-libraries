@@ -11,17 +11,6 @@ import {
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
 } from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta.mjs";
-export {
-    CertUpdateErr,
-    _decode_CertUpdateErr,
-    _encode_CertUpdateErr,
-} from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta.mjs";
-export {
-    CertUpdateOK,
-    _decode_CertUpdateOK,
-    _encode_CertUpdateOK,
-} from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CertUpdateRsp_result */
 /**
  * @summary CertUpdateRsp_result

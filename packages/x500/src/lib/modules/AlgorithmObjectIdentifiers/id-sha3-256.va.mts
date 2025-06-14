@@ -2,13 +2,6 @@
 import { ObjectIdentifier as _OID } from "asn1-ts";
 import { hashAlgs } from "../AlgorithmObjectIdentifiers/hashAlgs.va.mjs";
 import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-export { hashAlgs } from "../AlgorithmObjectIdentifiers/hashAlgs.va.mjs";
-export {
-    ID,
-    _decode_ID,
-    _encode_ID,
-} from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_sha3_256 */
 /**
  * @summary id_sha3_256

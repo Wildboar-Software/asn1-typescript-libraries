@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
-export {
-    MessageDeliveryTime,
-    _decode_MessageDeliveryTime,
-    _encode_MessageDeliveryTime,
-} from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
 import {
-    OtherMessageDeliveryFields,
-    _decode_OtherMessageDeliveryFields,
-    _encode_OtherMessageDeliveryFields,
-} from '../MTSAbstractService/OtherMessageDeliveryFields.ta.mjs';
-export {
     OtherMessageDeliveryFields,
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
@@ -91,22 +26,11 @@ import {
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
 } from '../MTSAbstractService/MessageDeliveryIdentifier.ta.mjs';
-export {
-    MessageDeliveryIdentifier,
-    _decode_MessageDeliveryIdentifier,
-    _encode_MessageDeliveryIdentifier,
-} from '../MTSAbstractService/MessageDeliveryIdentifier.ta.mjs';
 import {
     SubmissionProof,
     _decode_SubmissionProof,
     _encode_SubmissionProof,
 } from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta.mjs';
-export {
-    SubmissionProof,
-    _decode_SubmissionProof,
-    _encode_SubmissionProof,
-} from '../IPMSForwardedContentBodyPartType/SubmissionProof.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ForwardedContentParameters */
 /**
  * @summary ForwardedContentParameters
@@ -329,9 +253,7 @@ export function _encode_ForwardedContentParameters(
 ) {
     if (!_cached_encoder_for_ForwardedContentParameters) {
         _cached_encoder_for_ForwardedContentParameters = function (
-            value: ForwardedContentParameters,
-            elGetter: $.ASN1Encoder<ForwardedContentParameters>
-        ): _Element {
+            value: ForwardedContentParameters        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -11,17 +11,6 @@ import {
     _decode_AttributeValueIntegrityInfoContent,
     _encode_AttributeValueIntegrityInfoContent,
 } from "../EnhancedSecurity/AttributeValueIntegrityInfoContent.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    AttributeValueIntegrityInfoContent,
-    _decode_AttributeValueIntegrityInfoContent,
-    _encode_AttributeValueIntegrityInfoContent,
-} from "../EnhancedSecurity/AttributeValueIntegrityInfoContent.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeValueIntegrityInfo */
 /**
  * @summary AttributeValueIntegrityInfo

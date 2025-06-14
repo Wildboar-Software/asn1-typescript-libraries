@@ -3,9 +3,6 @@ import { NULL } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { sha512WithRSAEncryption } from "../AlgorithmObjectIdentifiers/sha512WithRSAEncryption.va.mjs";
 import { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-export { sha512WithRSAEncryption } from "../AlgorithmObjectIdentifiers/sha512WithRSAEncryption.va.mjs";
-export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sha512WithRSAEncryptionAlgorithm */
 /**
  * @summary sha512WithRSAEncryptionAlgorithm

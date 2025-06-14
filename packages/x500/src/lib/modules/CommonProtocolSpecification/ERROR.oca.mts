@@ -1,12 +1,6 @@
 /* eslint-disable */
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ERROR */
 /**
  * @summary ERROR

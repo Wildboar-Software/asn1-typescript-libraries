@@ -187,9 +187,7 @@ export function _encode_CertificateGroupNumberRange(
 ) {
     if (!_cached_encoder_for_CertificateGroupNumberRange) {
         _cached_encoder_for_CertificateGroupNumberRange = function (
-            value: CertificateGroupNumberRange,
-            elGetter: $.ASN1Encoder<CertificateGroupNumberRange>
-        ): _Element {
+            value: CertificateGroupNumberRange        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

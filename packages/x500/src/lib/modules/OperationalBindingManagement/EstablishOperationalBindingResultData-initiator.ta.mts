@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingResultData_initiator */
 /**
  * @summary EstablishOperationalBindingResultData_initiator

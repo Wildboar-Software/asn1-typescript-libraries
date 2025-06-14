@@ -21,22 +21,6 @@ import {
     _decode_AccessPoint,
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    UnitOfReplication,
-    _decode_UnitOfReplication,
-    _encode_UnitOfReplication,
-} from "../DirectoryShadowAbstractService/UnitOfReplication.ta.mjs";
-export {
-    UpdateMode,
-    _decode_UpdateMode,
-    _encode_UpdateMode,
-} from "../DirectoryShadowAbstractService/UpdateMode.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ShadowingAgreementInfo */
 /**
  * @summary ShadowingAgreementInfo
@@ -265,9 +249,7 @@ export function _encode_ShadowingAgreementInfo(
 ) {
     if (!_cached_encoder_for_ShadowingAgreementInfo) {
         _cached_encoder_for_ShadowingAgreementInfo = function (
-            value: ShadowingAgreementInfo,
-            elGetter: $.ASN1Encoder<ShadowingAgreementInfo>
-        ): _Element {
+            value: ShadowingAgreementInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

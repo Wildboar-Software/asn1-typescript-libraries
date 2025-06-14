@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { device } from "../SelectedObjectClasses/device.oa.mjs";
 import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { device } from "../SelectedObjectClasses/device.oa.mjs";
-export { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION deviceNameForm */
 /**
  * @summary deviceNameForm

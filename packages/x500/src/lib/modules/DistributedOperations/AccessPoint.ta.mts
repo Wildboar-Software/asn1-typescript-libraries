@@ -20,22 +20,6 @@ import {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ProtocolInformation,
-    _decode_ProtocolInformation,
-    _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AccessPoint */
 /**
  * @summary AccessPoint
@@ -248,9 +232,7 @@ export function _encode_AccessPoint(
 ) {
     if (!_cached_encoder_for_AccessPoint) {
         _cached_encoder_for_AccessPoint = function (
-            value: AccessPoint,
-            elGetter: $.ASN1Encoder<AccessPoint>
-        ): _Element {
+            value: AccessPoint        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

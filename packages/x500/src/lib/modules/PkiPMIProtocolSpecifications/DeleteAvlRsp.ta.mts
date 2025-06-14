@@ -244,9 +244,7 @@ export function _encode_DeleteAvlRsp(
 ) {
     if (!_cached_encoder_for_DeleteAvlRsp) {
         _cached_encoder_for_DeleteAvlRsp = function (
-            value: DeleteAvlRsp,
-            elGetter: $.ASN1Encoder<DeleteAvlRsp>
-        ): _Element {
+            value: DeleteAvlRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

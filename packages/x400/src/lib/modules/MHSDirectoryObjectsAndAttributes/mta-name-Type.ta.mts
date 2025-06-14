@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +15,11 @@ import {
     _decode_GlobalDomainIdentifier,
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
-export {
-    GlobalDomainIdentifier,
-    _decode_GlobalDomainIdentifier,
-    _encode_GlobalDomainIdentifier,
-} from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
     MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
-export {
-    MTAName,
-    _decode_MTAName,
-    _encode_MTAName,
-} from '../MTSAbstractService/MTAName.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION mta_name_Type */
 /**
  * @summary mta_name_Type
@@ -242,9 +175,7 @@ export function _encode_mta_name_Type(
 ) {
     if (!_cached_encoder_for_mta_name_Type) {
         _cached_encoder_for_mta_name_Type = function (
-            value: mta_name_Type,
-            elGetter: $.ASN1Encoder<mta_name_Type>
-        ): _Element {
+            value: mta_name_Type        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

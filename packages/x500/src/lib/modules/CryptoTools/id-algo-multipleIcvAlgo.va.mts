@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_algo_mca } from "../GenAlgo/id-algo-mca.va.mjs";
-export { id_algo_mca } from "../GenAlgo/id-algo-mca.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_algo_multipleIcvAlgo */
 /**
  * @summary id_algo_multipleIcvAlgo

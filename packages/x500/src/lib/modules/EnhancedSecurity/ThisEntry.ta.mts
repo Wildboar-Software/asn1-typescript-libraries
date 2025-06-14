@@ -6,12 +6,6 @@ import {
     _decode_IssuerAndSerialNumber,
     _encode_IssuerAndSerialNumber,
 } from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
-export {
-    IssuerAndSerialNumber,
-    _decode_IssuerAndSerialNumber,
-    _encode_IssuerAndSerialNumber,
-} from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ThisEntry */
 /**
  * @summary ThisEntry

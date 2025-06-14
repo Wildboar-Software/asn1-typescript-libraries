@@ -11,17 +11,6 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
-export {
-    IssuerSerial,
-    _decode_IssuerSerial,
-    _encode_IssuerSerial,
-} from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
-export {
-    GeneralNames,
-    _decode_GeneralNames,
-    _encode_GeneralNames,
-} from "../CertificateExtensions/GeneralNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeCertificateAssertion_holder */
 /**
  * @summary AttributeCertificateAssertion_holder

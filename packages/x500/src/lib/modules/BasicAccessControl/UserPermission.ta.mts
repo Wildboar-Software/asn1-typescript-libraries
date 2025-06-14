@@ -20,74 +20,6 @@ import {
     _decode_ProtectedItems,
     _encode_ProtectedItems,
 } from "../BasicAccessControl/ProtectedItems.ta.mjs";
-export {
-    denyAdd /* IMPORTED_SHORT_NAMED_BIT */,
-    denyBrowse /* IMPORTED_SHORT_NAMED_BIT */,
-    denyCompare /* IMPORTED_SHORT_NAMED_BIT */,
-    denyDiscloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
-    denyExport /* IMPORTED_SHORT_NAMED_BIT */,
-    denyFilterMatch /* IMPORTED_SHORT_NAMED_BIT */,
-    denyImport /* IMPORTED_SHORT_NAMED_BIT */,
-    denyInvoke /* IMPORTED_SHORT_NAMED_BIT */,
-    denyModify /* IMPORTED_SHORT_NAMED_BIT */,
-    denyRead /* IMPORTED_SHORT_NAMED_BIT */,
-    denyRemove /* IMPORTED_SHORT_NAMED_BIT */,
-    denyRename /* IMPORTED_SHORT_NAMED_BIT */,
-    denyReturnDN /* IMPORTED_SHORT_NAMED_BIT */,
-    grantAdd /* IMPORTED_SHORT_NAMED_BIT */,
-    grantBrowse /* IMPORTED_SHORT_NAMED_BIT */,
-    grantCompare /* IMPORTED_SHORT_NAMED_BIT */,
-    grantDiscloseOnError /* IMPORTED_SHORT_NAMED_BIT */,
-    grantExport /* IMPORTED_SHORT_NAMED_BIT */,
-    grantFilterMatch /* IMPORTED_SHORT_NAMED_BIT */,
-    grantImport /* IMPORTED_SHORT_NAMED_BIT */,
-    grantInvoke /* IMPORTED_SHORT_NAMED_BIT */,
-    grantModify /* IMPORTED_SHORT_NAMED_BIT */,
-    grantRead /* IMPORTED_SHORT_NAMED_BIT */,
-    grantRemove /* IMPORTED_SHORT_NAMED_BIT */,
-    grantRename /* IMPORTED_SHORT_NAMED_BIT */,
-    grantReturnDN /* IMPORTED_SHORT_NAMED_BIT */,
-    GrantsAndDenials,
-    GrantsAndDenials_denyAdd /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyBrowse /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyCompare /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyDiscloseOnError /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyExport /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyFilterMatch /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyImport /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyInvoke /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyModify /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyRead /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyRemove /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyRename /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_denyReturnDN /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantAdd /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantBrowse /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantCompare /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantDiscloseOnError /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantExport /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantFilterMatch /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantImport /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantInvoke /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantModify /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantRead /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantRemove /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantRename /* IMPORTED_LONG_NAMED_BIT */,
-    GrantsAndDenials_grantReturnDN /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_GrantsAndDenials,
-    _encode_GrantsAndDenials,
-} from "../BasicAccessControl/GrantsAndDenials.ta.mjs";
-export {
-    Precedence,
-    _decode_Precedence,
-    _encode_Precedence,
-} from "../BasicAccessControl/Precedence.ta.mjs";
-export {
-    ProtectedItems,
-    _decode_ProtectedItems,
-    _encode_ProtectedItems,
-} from "../BasicAccessControl/ProtectedItems.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UserPermission */
 /**
  * @summary UserPermission
@@ -292,9 +224,7 @@ export function _encode_UserPermission(
 ) {
     if (!_cached_encoder_for_UserPermission) {
         _cached_encoder_for_UserPermission = function (
-            value: UserPermission,
-            elGetter: $.ASN1Encoder<UserPermission>
-        ): _Element {
+            value: UserPermission        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

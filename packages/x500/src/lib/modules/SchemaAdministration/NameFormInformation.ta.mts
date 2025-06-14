@@ -6,9 +6,6 @@ import {
     OPTIONAL,
 } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NameFormInformation */
 /**
  * @summary NameFormInformation
@@ -216,9 +213,7 @@ export function _encode_NameFormInformation(
 ) {
     if (!_cached_encoder_for_NameFormInformation) {
         _cached_encoder_for_NameFormInformation = function (
-            value: NameFormInformation,
-            elGetter: $.ASN1Encoder<NameFormInformation>
-        ): _Element {
+            value: NameFormInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

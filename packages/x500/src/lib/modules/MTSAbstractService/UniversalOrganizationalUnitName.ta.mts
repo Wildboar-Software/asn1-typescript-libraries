@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-export { ub_organizational_unit_name_length } from "../MTSAbstractService/ub-organizational-unit-name-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../MTSAbstractService/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalOrganizationalUnitName */
 /**
  * @summary UniversalOrganizationalUnitName

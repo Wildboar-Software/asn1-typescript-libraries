@@ -3,9 +3,6 @@ import { GeneralizedTime } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_baseUpdateTime } from "../CertificateExtensions/id-ce-baseUpdateTime.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION baseUpdateTime */
 /**
  * @summary baseUpdateTime

@@ -3,20 +3,6 @@ import { OBJECT_IDENTIFIER, UTF8String } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OBJECT_CLASS */
 /**
  * @summary OBJECT_CLASS

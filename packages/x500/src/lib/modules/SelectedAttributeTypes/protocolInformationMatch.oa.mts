@@ -3,11 +3,6 @@ import { OCTET_STRING } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_protocolInformationMatch } from "../SelectedAttributeTypes/id-mr-protocolInformationMatch.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_protocolInformationMatch } from "../SelectedAttributeTypes/id-mr-protocolInformationMatch.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION protocolInformationMatch */
 /**
  * @summary protocolInformationMatch

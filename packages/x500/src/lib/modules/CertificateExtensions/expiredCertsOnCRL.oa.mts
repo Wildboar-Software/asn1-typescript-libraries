@@ -6,14 +6,6 @@ import {
     _encode_ExpiredCertsOnCRL,
 } from "../CertificateExtensions/ExpiredCertsOnCRL.ta.mjs";
 import { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    ExpiredCertsOnCRL,
-    _decode_ExpiredCertsOnCRL,
-    _encode_ExpiredCertsOnCRL,
-} from "../CertificateExtensions/ExpiredCertsOnCRL.ta.mjs";
-export { id_ce_expiredCertsOnCRL } from "../CertificateExtensions/id-ce-expiredCertsOnCRL.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION expiredCertsOnCRL */
 /**
  * @summary expiredCertsOnCRL

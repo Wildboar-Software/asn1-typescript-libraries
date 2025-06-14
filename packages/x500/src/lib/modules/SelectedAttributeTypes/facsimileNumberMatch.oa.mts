@@ -6,16 +6,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_facsimileNumberMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberMatch.va.mjs";
-export {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-    _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION facsimileNumberMatch */
 /**
  * @summary facsimileNumberMatch

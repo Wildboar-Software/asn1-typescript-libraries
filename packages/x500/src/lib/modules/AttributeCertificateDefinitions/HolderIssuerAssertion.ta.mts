@@ -15,17 +15,6 @@ import {
     _decode_Holder,
     _encode_Holder,
 } from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-export {
-    AttCertIssuer,
-    _decode_AttCertIssuer,
-    _encode_AttCertIssuer,
-} from "../AttributeCertificateDefinitions/AttCertIssuer.ta.mjs";
-export {
-    Holder,
-    _decode_Holder,
-    _encode_Holder,
-} from "../AttributeCertificateDefinitions/Holder.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION HolderIssuerAssertion */
 /**
  * @summary HolderIssuerAssertion
@@ -213,9 +202,7 @@ export function _encode_HolderIssuerAssertion(
 ) {
     if (!_cached_encoder_for_HolderIssuerAssertion) {
         _cached_encoder_for_HolderIssuerAssertion = function (
-            value: HolderIssuerAssertion,
-            elGetter: $.ASN1Encoder<HolderIssuerAssertion>
-        ): _Element {
+            value: HolderIssuerAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

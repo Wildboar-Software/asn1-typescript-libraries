@@ -26,28 +26,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    DER_PkiPath,
-    _decode_DER_PkiPath,
-    _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta.mjs";
-export {
-    TbsHandshakeProRej_sigSel,
-    _decode_TbsHandshakeProRej_sigSel,
-    _encode_TbsHandshakeProRej_sigSel,
-} from "../Wrapper/TbsHandshakeProRej-sigSel.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeProRej */
 /**
  * @summary TbsHandshakeProRej
@@ -273,9 +251,7 @@ export function _encode_TbsHandshakeProRej(
 ) {
     if (!_cached_encoder_for_TbsHandshakeProRej) {
         _cached_encoder_for_TbsHandshakeProRej = function (
-            value: TbsHandshakeProRej,
-            elGetter: $.ASN1Encoder<TbsHandshakeProRej>
-        ): _Element {
+            value: TbsHandshakeProRej        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

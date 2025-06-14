@@ -11,38 +11,6 @@ import {
 } from "../PasswordPolicy/PwdVocabulary.ta.mjs";
 import { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va.mjs";
-export {
-    noDictionaryWords /* IMPORTED_SHORT_NAMED_BIT */,
-    noGeographicalNames /* IMPORTED_SHORT_NAMED_BIT */,
-    noPersonNames /* IMPORTED_SHORT_NAMED_BIT */,
-    PwdVocabulary,
-    PwdVocabulary_noDictionaryWords /* IMPORTED_LONG_NAMED_BIT */,
-    PwdVocabulary_noGeographicalNames /* IMPORTED_LONG_NAMED_BIT */,
-    PwdVocabulary_noPersonNames /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_PwdVocabulary,
-    _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta.mjs";
-export { pwdVocabularyDescription } from "../PasswordPolicy/pwdVocabularyDescription.oa.mjs";
-export { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdVocabulary */
 /**
  * @summary pwdVocabulary

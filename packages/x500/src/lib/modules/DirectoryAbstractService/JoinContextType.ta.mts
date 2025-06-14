@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { SupportedContexts } from "../InformationFramework/SupportedContexts.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION JoinContextType */
 /**
  * @summary JoinContextType

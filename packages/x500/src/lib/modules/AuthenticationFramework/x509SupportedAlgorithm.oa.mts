@@ -6,14 +6,6 @@ import {
     _encode_SupportedAlgorithm,
 } from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va.mjs";
-export {
-    SupportedAlgorithm,
-    _decode_SupportedAlgorithm,
-    _encode_SupportedAlgorithm,
-} from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION x509SupportedAlgorithm */
 /**
  * @summary x509SupportedAlgorithm

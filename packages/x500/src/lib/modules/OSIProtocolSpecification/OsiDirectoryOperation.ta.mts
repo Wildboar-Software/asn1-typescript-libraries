@@ -21,27 +21,6 @@ import {
     _decode_OsiRes,
     _encode_OsiRes,
 } from "../OSIProtocolSpecification/OsiRes.ta.mjs";
-export {
-    OsiErr,
-    _decode_OsiErr,
-    _encode_OsiErr,
-} from "../OSIProtocolSpecification/OsiErr.ta.mjs";
-export {
-    OsiRej,
-    _decode_OsiRej,
-    _encode_OsiRej,
-} from "../OSIProtocolSpecification/OsiRej.ta.mjs";
-export {
-    OsiReq,
-    _decode_OsiReq,
-    _encode_OsiReq,
-} from "../OSIProtocolSpecification/OsiReq.ta.mjs";
-export {
-    OsiRes,
-    _decode_OsiRes,
-    _encode_OsiRes,
-} from "../OSIProtocolSpecification/OsiRes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiDirectoryOperation */
 /**
  * @summary OsiDirectoryOperation

@@ -6,14 +6,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";
-export {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-    _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION telephoneNr */
 /**
  * @summary telephoneNr

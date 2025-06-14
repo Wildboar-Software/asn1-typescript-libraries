@@ -5,13 +5,6 @@ import {
     _decode_UniversalExtensionORAddressComponents,
     _encode_UniversalExtensionORAddressComponents,
 } from "../MTSAbstractService/UniversalExtensionORAddressComponents.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../MTSAbstractService/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalExtensionORAddressComponents,
-    _decode_UniversalExtensionORAddressComponents,
-    _encode_UniversalExtensionORAddressComponents,
-} from "../MTSAbstractService/UniversalExtensionORAddressComponents.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_extension_OR_address_components */
 /**
  * @summary universal_extension_OR_address_components

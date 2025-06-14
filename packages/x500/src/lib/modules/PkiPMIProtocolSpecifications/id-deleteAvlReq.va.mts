@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
-export { id_cmsct } from "../UsefulDefinitions/id-cmsct.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_deleteAvlReq */
 /**
  * @summary id_deleteAvlReq

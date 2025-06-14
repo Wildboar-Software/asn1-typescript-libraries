@@ -4,13 +4,6 @@ import { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProt
 import { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 import { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
-export { id_ac_shadowConsumerInitiatedAsynchronousAC } from "../DirectoryOSIProtocols/id-ac-shadowConsumerInitiatedAsynchronousAC.va.mjs";
-export { dSAShadowBind } from "../DirectoryShadowAbstractService/dSAShadowBind.oa.mjs";
-export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
-export { updateShadow } from "../DirectoryShadowAbstractService/updateShadow.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION shadowConsumerInitiatedAsynchronousAC */
 /**
  * @summary shadowConsumerInitiatedAsynchronousAC

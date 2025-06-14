@@ -186,9 +186,7 @@ export function _encode_DSS_Parms(
 ) {
     if (!_cached_encoder_for_DSS_Parms) {
         _cached_encoder_for_DSS_Parms = function (
-            value: DSS_Parms,
-            elGetter: $.ASN1Encoder<DSS_Parms>
-        ): _Element {
+            value: DSS_Parms        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -33,43 +33,6 @@ import {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-export {
-    MasterAndShadowAccessPoints,
-    _decode_MasterAndShadowAccessPoints,
-    _encode_MasterAndShadowAccessPoints,
-} from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-export {
-    master /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    MasterOrShadowAccessPoint_category,
-    MasterOrShadowAccessPoint_category_master /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    MasterOrShadowAccessPoint_category_shadow /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    MasterOrShadowAccessPoint_category_writeableCopy /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    shadow /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    writeableCopy /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_MasterOrShadowAccessPoint_category,
-    _encode_MasterOrShadowAccessPoint_category,
-    _enum_for_MasterOrShadowAccessPoint_category,
-} from "../DistributedOperations/MasterOrShadowAccessPoint-category.ta.mjs";
-export {
-    MasterOrShadowAccessPoint,
-    _decode_MasterOrShadowAccessPoint,
-    _encode_MasterOrShadowAccessPoint,
-} from "../DistributedOperations/MasterOrShadowAccessPoint.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ProtocolInformation,
-    _decode_ProtocolInformation,
-    _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import {
     MasterOrShadowAccessPoint,
     _root_component_type_list_1_spec_for_MasterOrShadowAccessPoint,
@@ -352,9 +315,7 @@ export function _encode_AccessPointInformation(
 ) {
     if (!_cached_encoder_for_AccessPointInformation) {
         _cached_encoder_for_AccessPointInformation = function (
-            value: AccessPointInformation,
-            elGetter: $.ASN1Encoder<AccessPointInformation>
-        ): _Element {
+            value: AccessPointInformation        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

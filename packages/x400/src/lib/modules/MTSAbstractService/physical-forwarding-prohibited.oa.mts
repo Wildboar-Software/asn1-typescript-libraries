@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -65,60 +10,23 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from 'asn1-ts';
-import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
-    ExtensionType,
-    _decode_ExtensionType,
-    _encode_ExtensionType,
-} from '../MTSAbstractService/ExtensionType.ta.mjs';
-export {
-    ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from '../MTSAbstractService/ExtensionType.ta.mjs';
 import {
-    Criticality,
-    Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
-    for_submission /* IMPORTED_SHORT_NAMED_BIT */,
-    Criticality_for_transfer /* IMPORTED_LONG_NAMED_BIT */,
-    for_transfer /* IMPORTED_SHORT_NAMED_BIT */,
     Criticality_for_delivery /* IMPORTED_LONG_NAMED_BIT */,
-    for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Criticality,
-    _encode_Criticality,
-} from '../MTSAbstractService/Criticality.ta.mjs';
-export {
-    Criticality,
-    Criticality_for_submission /* IMPORTED_LONG_NAMED_BIT */,
-    for_submission /* IMPORTED_SHORT_NAMED_BIT */,
-    Criticality_for_transfer /* IMPORTED_LONG_NAMED_BIT */,
-    for_transfer /* IMPORTED_SHORT_NAMED_BIT */,
-    Criticality_for_delivery /* IMPORTED_LONG_NAMED_BIT */,
-    for_delivery /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_Criticality,
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
     PhysicalForwardingProhibited,
     _enum_for_PhysicalForwardingProhibited,
-    PhysicalForwardingProhibited_physical_forwarding_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
     physical_forwarding_allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PhysicalForwardingProhibited_physical_forwarding_prohibited /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    _decode_PhysicalForwardingProhibited,
-    _encode_PhysicalForwardingProhibited,
-} from '../MTSAbstractService/PhysicalForwardingProhibited.ta.mjs';
-export {
-    PhysicalForwardingProhibited,
-    _enum_for_PhysicalForwardingProhibited,
-    PhysicalForwardingProhibited_physical_forwarding_allowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    physical_forwarding_allowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    PhysicalForwardingProhibited_physical_forwarding_prohibited /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_PhysicalForwardingProhibited,
     _encode_PhysicalForwardingProhibited,
 } from '../MTSAbstractService/PhysicalForwardingProhibited.ta.mjs';
 import { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-export { EXTENSION } from '../MTSAbstractService/EXTENSION.oca.mjs';
-
 /* START_OF_SYMBOL_DEFINITION physical_forwarding_prohibited */
 /**
  * @summary physical_forwarding_prohibited

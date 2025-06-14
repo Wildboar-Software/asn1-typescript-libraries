@@ -11,13 +11,6 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-export {
-    AttributeValueAssertion,
-    _decode_AttributeValueAssertion,
-    _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MultipleMatchingLocalities */
 /**
  * @summary MultipleMatchingLocalities
@@ -207,9 +200,7 @@ export function _encode_MultipleMatchingLocalities(
 ) {
     if (!_cached_encoder_for_MultipleMatchingLocalities) {
         _cached_encoder_for_MultipleMatchingLocalities = function (
-            value: MultipleMatchingLocalities,
-            elGetter: $.ASN1Encoder<MultipleMatchingLocalities>
-        ): _Element {
+            value: MultipleMatchingLocalities        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

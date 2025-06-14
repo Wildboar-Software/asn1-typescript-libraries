@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va.mjs";
-export { ID, _decode_ID, _encode_ID } from "../UsefulDefinitions/ID.ta.mjs";
-export { operationalAttributeType } from "../UsefulDefinitions/operationalAttributeType.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_oa */
 /**
  * @summary id_oa

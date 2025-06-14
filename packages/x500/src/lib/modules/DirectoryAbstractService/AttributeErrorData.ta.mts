@@ -305,9 +305,7 @@ export function _encode_AttributeErrorData(
 ) {
     if (!_cached_encoder_for_AttributeErrorData) {
         _cached_encoder_for_AttributeErrorData = function (
-            value: AttributeErrorData,
-            elGetter: $.ASN1Encoder<AttributeErrorData>
-        ): _Element {
+            value: AttributeErrorData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,37 +16,14 @@ import {
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
 } from '../IPMSInformationObjects/ReceiptTimeField.ta.mjs';
-export {
-    ReceiptTimeField,
-    _decode_ReceiptTimeField,
-    _encode_ReceiptTimeField,
-} from '../IPMSInformationObjects/ReceiptTimeField.ta.mjs';
 import {
     AcknowledgmentModeField,
     _enum_for_AcknowledgmentModeField,
     AcknowledgmentModeField_manual /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    manual /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AcknowledgmentModeField_automatic /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    automatic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AcknowledgmentModeField,
-    _encode_AcknowledgmentModeField,
-} from '../IPMSInformationObjects/AcknowledgmentModeField.ta.mjs';
-export {
-    AcknowledgmentModeField,
-    _enum_for_AcknowledgmentModeField,
-    AcknowledgmentModeField_manual /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    manual /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    AcknowledgmentModeField_automatic /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    automatic /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_AcknowledgmentModeField,
     _encode_AcknowledgmentModeField,
 } from '../IPMSInformationObjects/AcknowledgmentModeField.ta.mjs';
 import {
-    SupplReceiptInfoField,
-    _decode_SupplReceiptInfoField,
-    _encode_SupplReceiptInfoField,
-} from '../IPMSInformationObjects/SupplReceiptInfoField.ta.mjs';
-export {
     SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
@@ -111,12 +33,6 @@ import {
     _decode_RNExtensionsField,
     _encode_RNExtensionsField,
 } from '../IPMSInformationObjects/RNExtensionsField.ta.mjs';
-export {
-    RNExtensionsField,
-    _decode_RNExtensionsField,
-    _encode_RNExtensionsField,
-} from '../IPMSInformationObjects/RNExtensionsField.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION ReceiptFields */
 /**
  * @summary ReceiptFields
@@ -355,9 +271,7 @@ export function _encode_ReceiptFields(
 ) {
     if (!_cached_encoder_for_ReceiptFields) {
         _cached_encoder_for_ReceiptFields = function (
-            value: ReceiptFields,
-            elGetter: $.ASN1Encoder<ReceiptFields>
-        ): _Element {
+            value: ReceiptFields        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

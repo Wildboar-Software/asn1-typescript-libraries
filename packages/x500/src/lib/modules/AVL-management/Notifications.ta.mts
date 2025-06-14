@@ -6,12 +6,6 @@ import {
     _decode_Attribute,
     _encode_Attribute,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/Attribute.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Notifications */
 /**
  * @summary Notifications

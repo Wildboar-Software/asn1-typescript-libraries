@@ -25,26 +25,6 @@ import {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ProtocolInformation,
-    _decode_ProtocolInformation,
-    _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import {
     _root_component_type_list_1_spec_for_AccessPoint,
     _root_component_type_list_2_spec_for_AccessPoint,
@@ -270,9 +250,7 @@ export function _encode_SupplierAndConsumers(
 ) {
     if (!_cached_encoder_for_SupplierAndConsumers) {
         _cached_encoder_for_SupplierAndConsumers = function (
-            value: SupplierAndConsumers,
-            elGetter: $.ASN1Encoder<SupplierAndConsumers>
-        ): _Element {
+            value: SupplierAndConsumers        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

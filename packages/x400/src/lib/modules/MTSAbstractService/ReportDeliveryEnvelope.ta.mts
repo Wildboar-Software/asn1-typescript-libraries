@@ -290,9 +290,7 @@ export function _encode_ReportDeliveryEnvelope(
 ) {
     if (!_cached_encoder_for_ReportDeliveryEnvelope) {
         _cached_encoder_for_ReportDeliveryEnvelope = function (
-            value: ReportDeliveryEnvelope,
-            elGetter: $.ASN1Encoder<ReportDeliveryEnvelope>
-        ): _Element {
+            value: ReportDeliveryEnvelope        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

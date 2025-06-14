@@ -13,31 +13,6 @@ import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.
 import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.va.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    ObjectClassKind,
-    ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    structural /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_ObjectClassKind,
-    _encode_ObjectClassKind,
-    _enum_for_ObjectClassKind,
-} from "../InformationFramework/ObjectClassKind.ta.mjs";
-export { top } from "../InformationFramework/top.oa.mjs";
-export { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
-export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-export { member } from "../SelectedAttributeTypes/member.oa.mjs";
-export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-export { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
-export { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
-export { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION groupOfNames */
 /**
  * @summary groupOfNames

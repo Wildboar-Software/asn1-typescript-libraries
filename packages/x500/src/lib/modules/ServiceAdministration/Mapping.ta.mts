@@ -200,9 +200,7 @@ export function _encode_Mapping(
 ) {
     if (!_cached_encoder_for_Mapping) {
         _cached_encoder_for_Mapping = function (
-            value: Mapping,
-            elGetter: $.ASN1Encoder<Mapping>
-        ): _Element {
+            value: Mapping        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

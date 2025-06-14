@@ -6,16 +6,6 @@ import {
     _decode_PresentationAddress,
     _encode_PresentationAddress,
 } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION presentationAddressMatch */
 /**
  * @summary presentationAddressMatch

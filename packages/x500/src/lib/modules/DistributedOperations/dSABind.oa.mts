@@ -8,24 +8,6 @@ import {
     _decode_DSABindResult,
     _encode_DSABindResult,
 } from "../DistributedOperations/DSABindResult.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    DSABindArgument,
-    _decode_DSABindArgument,
-    _encode_DSABindArgument,
-} from "../DistributedOperations/DSABindArgument.ta.mjs";
-export {
-    DSABindResult,
-    _decode_DSABindResult,
-    _encode_DSABindResult,
-} from "../DistributedOperations/DSABindResult.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dSABind */
 /**
  * @summary dSABind

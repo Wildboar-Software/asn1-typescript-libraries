@@ -20,40 +20,6 @@ import {
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";
-export {
-    abandon /* IMPORTED_SHORT_NAMED_BIT */,
-    addEntry /* IMPORTED_SHORT_NAMED_BIT */,
-    compare /* IMPORTED_SHORT_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType,
-    DirectoryInformationServiceElement_operationType_abandon /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_addEntry /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_compare /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_list /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_modifyDN /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_modifyEntry /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_read /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_removeEntry /* IMPORTED_LONG_NAMED_BIT */,
-    DirectoryInformationServiceElement_operationType_search /* IMPORTED_LONG_NAMED_BIT */,
-    list /* IMPORTED_SHORT_NAMED_BIT */,
-    modifyDN /* IMPORTED_SHORT_NAMED_BIT */,
-    modifyEntry /* IMPORTED_SHORT_NAMED_BIT */,
-    read /* IMPORTED_SHORT_NAMED_BIT */,
-    removeEntry /* IMPORTED_SHORT_NAMED_BIT */,
-    search /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_DirectoryInformationServiceElement_operationType,
-    _encode_DirectoryInformationServiceElement_operationType,
-} from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeValue,
-    _decode_AttributeValue,
-    _encode_AttributeValue,
-} from "../InformationFramework/AttributeValue.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DirectoryInformationServiceElement */
 /**
  * @summary DirectoryInformationServiceElement
@@ -257,9 +223,7 @@ export function _encode_DirectoryInformationServiceElement(
 ) {
     if (!_cached_encoder_for_DirectoryInformationServiceElement) {
         _cached_encoder_for_DirectoryInformationServiceElement = function (
-            value: DirectoryInformationServiceElement,
-            elGetter: $.ASN1Encoder<DirectoryInformationServiceElement>
-        ): _Element {
+            value: DirectoryInformationServiceElement        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

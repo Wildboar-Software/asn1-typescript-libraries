@@ -6,12 +6,6 @@ import {
     _decode_StatusReferral,
     _encode_StatusReferral,
 } from "../CertificateExtensions/StatusReferral.ta.mjs";
-export {
-    StatusReferral,
-    _decode_StatusReferral,
-    _encode_StatusReferral,
-} from "../CertificateExtensions/StatusReferral.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION StatusReferrals */
 /**
  * @summary StatusReferrals

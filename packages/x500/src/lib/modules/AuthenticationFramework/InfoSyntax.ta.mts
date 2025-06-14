@@ -11,17 +11,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    InfoSyntax_pointer,
-    _decode_InfoSyntax_pointer,
-    _encode_InfoSyntax_pointer,
-} from "../AuthenticationFramework/InfoSyntax-pointer.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION InfoSyntax */
 /**
  * @summary InfoSyntax

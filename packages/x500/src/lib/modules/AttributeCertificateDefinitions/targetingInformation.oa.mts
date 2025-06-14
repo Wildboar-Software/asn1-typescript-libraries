@@ -7,14 +7,6 @@ import {
     _encode_Targets,
 } from "../AttributeCertificateDefinitions/Targets.ta.mjs";
 import { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_targetingInformation } from "../AttributeCertificateDefinitions/id-ce-targetingInformation.va.mjs";
-export {
-    Targets,
-    _decode_Targets,
-    _encode_Targets,
-} from "../AttributeCertificateDefinitions/Targets.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION targetingInformation */
 /**
  * @summary targetingInformation

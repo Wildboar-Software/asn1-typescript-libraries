@@ -3,13 +3,6 @@ import { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
 import { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
-export { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
-export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sOPNameForm */
 /**
  * @summary sOPNameForm

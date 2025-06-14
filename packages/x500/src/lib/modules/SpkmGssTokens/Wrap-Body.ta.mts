@@ -162,9 +162,7 @@ export function _encode_Wrap_Body(
 ) {
     if (!_cached_encoder_for_Wrap_Body) {
         _cached_encoder_for_Wrap_Body = function (
-            value: Wrap_Body,
-            elGetter: $.ASN1Encoder<Wrap_Body>
-        ): _Element {
+            value: Wrap_Body        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

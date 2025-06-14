@@ -23,23 +23,6 @@ import {
     _decode_ORAddress,
     _encode_ORAddress,
 } from "../PkiPmiExternalDataTypes/ORAddress.ta.mjs";
-export {
-    EDIPartyName,
-    _decode_EDIPartyName,
-    _encode_EDIPartyName,
-} from "../CertificateExtensions/EDIPartyName.ta.mjs";
-export { OTHER_NAME } from "../CertificateExtensions/OTHER-NAME.oca.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    ORAddress,
-    _decode_ORAddress,
-    _encode_ORAddress,
-} from "../PkiPmiExternalDataTypes/ORAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION GeneralName */
 /**
  * @summary GeneralName

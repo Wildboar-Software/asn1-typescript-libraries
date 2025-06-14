@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,37 +16,13 @@ import {
     _decode_ArrivalTime,
     _encode_ArrivalTime,
 } from '../MTAAbstractService/ArrivalTime.ta.mjs';
-export {
-    ArrivalTime,
-    _decode_ArrivalTime,
-    _encode_ArrivalTime,
-} from '../MTAAbstractService/ArrivalTime.ta.mjs';
 import {
     RoutingAction,
     _enum_for_RoutingAction,
-    RoutingAction_relayed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    relayed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RoutingAction_rerouted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rerouted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_RoutingAction,
-    _encode_RoutingAction,
-} from '../MTAAbstractService/RoutingAction.ta.mjs';
-export {
-    RoutingAction,
-    _enum_for_RoutingAction,
-    RoutingAction_relayed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    relayed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    RoutingAction_rerouted /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    rerouted /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_RoutingAction,
     _encode_RoutingAction,
 } from '../MTAAbstractService/RoutingAction.ta.mjs';
 import {
-    GlobalDomainIdentifier,
-    _decode_GlobalDomainIdentifier,
-    _encode_GlobalDomainIdentifier,
-} from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
-export {
     GlobalDomainIdentifier,
     _decode_GlobalDomainIdentifier,
     _encode_GlobalDomainIdentifier,
@@ -111,17 +32,7 @@ import {
     _decode_AdditionalActions,
     _encode_AdditionalActions,
 } from '../MTAAbstractService/AdditionalActions.ta.mjs';
-export {
-    AdditionalActions,
-    _decode_AdditionalActions,
-    _encode_AdditionalActions,
-} from '../MTAAbstractService/AdditionalActions.ta.mjs';
 import {
-    DeferredTime,
-    _decode_DeferredTime,
-    _encode_DeferredTime,
-} from '../MTAAbstractService/DeferredTime.ta.mjs';
-export {
     DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
@@ -131,26 +42,8 @@ import {
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
-export {
-    ConvertedEncodedInformationTypes,
-    _decode_ConvertedEncodedInformationTypes,
-    _encode_ConvertedEncodedInformationTypes,
-} from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
     OtherActions,
-    OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
-    redirected /* IMPORTED_SHORT_NAMED_BIT */,
-    OtherActions_dl_operation /* IMPORTED_LONG_NAMED_BIT */,
-    dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_OtherActions,
-    _encode_OtherActions,
-} from '../MTAAbstractService/OtherActions.ta.mjs';
-export {
-    OtherActions,
-    OtherActions_redirected /* IMPORTED_LONG_NAMED_BIT */,
-    redirected /* IMPORTED_SHORT_NAMED_BIT */,
-    OtherActions_dl_operation /* IMPORTED_LONG_NAMED_BIT */,
-    dl_operation /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_OtherActions,
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';
@@ -426,9 +319,7 @@ export function _encode_DomainSuppliedInformation(
 ) {
     if (!_cached_encoder_for_DomainSuppliedInformation) {
         _cached_encoder_for_DomainSuppliedInformation = function (
-            value: DomainSuppliedInformation,
-            elGetter: $.ASN1Encoder<DomainSuppliedInformation>
-        ): _Element {
+            value: DomainSuppliedInformation        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

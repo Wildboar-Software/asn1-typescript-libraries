@@ -6,20 +6,6 @@ import {
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
 } from "../PasswordPolicy/PwdVocabulary.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_pwdVocabularyDescription } from "../PasswordPolicy/id-asx-pwdVocabularyDescription.va.mjs";
-export {
-    noDictionaryWords /* IMPORTED_SHORT_NAMED_BIT */,
-    noGeographicalNames /* IMPORTED_SHORT_NAMED_BIT */,
-    noPersonNames /* IMPORTED_SHORT_NAMED_BIT */,
-    PwdVocabulary,
-    PwdVocabulary_noDictionaryWords /* IMPORTED_LONG_NAMED_BIT */,
-    PwdVocabulary_noGeographicalNames /* IMPORTED_LONG_NAMED_BIT */,
-    PwdVocabulary_noPersonNames /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_PwdVocabulary,
-    _encode_PwdVocabulary,
-} from "../PasswordPolicy/PwdVocabulary.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION pwdVocabularyDescription */
 /**
  * @summary pwdVocabularyDescription

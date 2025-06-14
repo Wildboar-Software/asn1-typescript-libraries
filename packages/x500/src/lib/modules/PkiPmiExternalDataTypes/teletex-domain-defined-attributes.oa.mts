@@ -5,13 +5,6 @@ import {
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
 } from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttributes.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    TeletexDomainDefinedAttributes,
-    _decode_TeletexDomainDefinedAttributes,
-    _encode_TeletexDomainDefinedAttributes,
-} from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttributes.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletex_domain_defined_attributes */
 /**
  * @summary teletex_domain_defined_attributes

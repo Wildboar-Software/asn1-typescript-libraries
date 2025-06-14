@@ -6,12 +6,6 @@ import {
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-export {
-    UniversalPDSParameter,
-    _decode_UniversalPDSParameter,
-    _encode_UniversalPDSParameter,
-} from "../MTSAbstractService/UniversalPDSParameter.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalLocalPostalAttributes */
 /**
  * @summary UniversalLocalPostalAttributes

@@ -6,12 +6,6 @@ import {
     _decode_AuthenticationLevel_basicLevels,
     _encode_AuthenticationLevel_basicLevels,
 } from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.mjs";
-export {
-    AuthenticationLevel_basicLevels,
-    _decode_AuthenticationLevel_basicLevels,
-    _encode_AuthenticationLevel_basicLevels,
-} from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AuthenticationLevel */
 /**
  * @summary AuthenticationLevel

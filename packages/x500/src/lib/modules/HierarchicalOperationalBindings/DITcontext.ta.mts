@@ -6,12 +6,6 @@ import {
     _decode_Vertex,
     _encode_Vertex,
 } from "../HierarchicalOperationalBindings/Vertex.ta.mjs";
-export {
-    Vertex,
-    _decode_Vertex,
-    _encode_Vertex,
-} from "../HierarchicalOperationalBindings/Vertex.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DITcontext */
 /**
  * @summary DITcontext

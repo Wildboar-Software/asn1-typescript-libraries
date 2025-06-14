@@ -9,43 +9,6 @@ import {
     _decode_SequenceMatchType,
     _encode_SequenceMatchType,
 } from "../SelectedAttributeTypes/SequenceMatchType.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeUsage,
-    AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AttributeUsage,
-    _encode_AttributeUsage,
-    _enum_for_AttributeUsage,
-} from "../InformationFramework/AttributeUsage.ta.mjs";
-export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va.mjs";
-export {
-    sequenceDeletion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceExact /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SequenceMatchType,
-    SequenceMatchType_sequenceDeletion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    SequenceMatchType_sequenceExact /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    SequenceMatchType_sequencePermutation /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    SequenceMatchType_sequencePermutationAndDeletion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    SequenceMatchType_sequenceProviderDefined /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    SequenceMatchType_sequenceRestrictedDeletion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sequencePermutation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequencePermutationAndDeletion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceProviderDefined /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceRestrictedDeletion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SequenceMatchType,
-    _encode_SequenceMatchType,
-    _enum_for_SequenceMatchType,
-} from "../SelectedAttributeTypes/SequenceMatchType.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION sequenceMatchType */
 /**
  * @summary sequenceMatchType

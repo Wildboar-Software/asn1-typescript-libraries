@@ -11,17 +11,6 @@ import {
     _decode_ThisEntry,
     _encode_ThisEntry,
 } from "../EnhancedSecurity/ThisEntry.ta.mjs";
-export {
-    SpecificallyIdentified,
-    _decode_SpecificallyIdentified,
-    _encode_SpecificallyIdentified,
-} from "../EnhancedSecurity/SpecificallyIdentified.ta.mjs";
-export {
-    ThisEntry,
-    _decode_ThisEntry,
-    _encode_ThisEntry,
-} from "../EnhancedSecurity/ThisEntry.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Signer */
 /**
  * @summary Signer

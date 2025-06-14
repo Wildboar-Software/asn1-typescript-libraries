@@ -20,22 +20,6 @@ import {
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../PkiPmiWrapper/UserKeyingMaterial.ta.mjs";
-export {
-    CertificateSerialNumber,
-    _decode_CertificateSerialNumber,
-    _encode_CertificateSerialNumber,
-} from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    UserKeyingMaterial,
-    _decode_UserKeyingMaterial,
-    _encode_UserKeyingMaterial,
-} from "../PkiPmiWrapper/UserKeyingMaterial.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SenderStaticInfo */
 /**
  * @summary SenderStaticInfo
@@ -221,9 +205,7 @@ export function _encode_SenderStaticInfo(
 ) {
     if (!_cached_encoder_for_SenderStaticInfo) {
         _cached_encoder_for_SenderStaticInfo = function (
-            value: SenderStaticInfo,
-            elGetter: $.ASN1Encoder<SenderStaticInfo>
-        ): _Element {
+            value: SenderStaticInfo        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

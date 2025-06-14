@@ -6,14 +6,6 @@ import {
     _encode_MatchingRuleUseDescription,
 } from "../SchemaAdministration/MatchingRuleUseDescription.ta.mjs";
 import { id_lsx_matchingRuleUseDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleUseDescription.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    MatchingRuleUseDescription,
-    _decode_MatchingRuleUseDescription,
-    _encode_MatchingRuleUseDescription,
-} from "../SchemaAdministration/MatchingRuleUseDescription.ta.mjs";
-export { id_lsx_matchingRuleUseDescription } from "../SelectedAttributeTypes/id-lsx-matchingRuleUseDescription.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION matchingRuleUseDescription */
 /**
  * @summary matchingRuleUseDescription

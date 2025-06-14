@@ -242,9 +242,7 @@ export function _encode_RejectCAsubscribe(
 ) {
     if (!_cached_encoder_for_RejectCAsubscribe) {
         _cached_encoder_for_RejectCAsubscribe = function (
-            value: RejectCAsubscribe,
-            elGetter: $.ASN1Encoder<RejectCAsubscribe>
-        ): _Element {
+            value: RejectCAsubscribe        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

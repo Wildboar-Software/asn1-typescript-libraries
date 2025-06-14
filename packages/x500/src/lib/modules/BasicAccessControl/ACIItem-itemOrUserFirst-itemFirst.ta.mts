@@ -15,17 +15,6 @@ import {
     _decode_ProtectedItems,
     _encode_ProtectedItems,
 } from "../BasicAccessControl/ProtectedItems.ta.mjs";
-export {
-    ItemPermission,
-    _decode_ItemPermission,
-    _encode_ItemPermission,
-} from "../BasicAccessControl/ItemPermission.ta.mjs";
-export {
-    ProtectedItems,
-    _decode_ProtectedItems,
-    _encode_ProtectedItems,
-} from "../BasicAccessControl/ProtectedItems.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ACIItem_itemOrUserFirst_itemFirst */
 /**
  * @summary ACIItem_itemOrUserFirst_itemFirst
@@ -201,9 +190,7 @@ export function _encode_ACIItem_itemOrUserFirst_itemFirst(
 ) {
     if (!_cached_encoder_for_ACIItem_itemOrUserFirst_itemFirst) {
         _cached_encoder_for_ACIItem_itemOrUserFirst_itemFirst = function (
-            value: ACIItem_itemOrUserFirst_itemFirst,
-            elGetter: $.ASN1Encoder<ACIItem_itemOrUserFirst_itemFirst>
-        ): _Element {
+            value: ACIItem_itemOrUserFirst_itemFirst        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

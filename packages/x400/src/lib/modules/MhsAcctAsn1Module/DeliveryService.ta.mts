@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,56 +13,10 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeliveryServiceType,
-    DeliveryServiceType_mhs_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    mhs_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_physical_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    physical_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_telex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    telex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_teletex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    teletex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_g3_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    g3_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_g4_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    g4_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_videotex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    videotex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_telephone_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    telephone_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_other_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    other_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_DeliveryServiceType,
-    _encode_DeliveryServiceType,
-} from '../MhsAcctAsn1Module/DeliveryServiceType.ta.mjs';
-export {
-    DeliveryServiceType,
-    DeliveryServiceType_mhs_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    mhs_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_physical_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    physical_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_telex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    telex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_teletex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    teletex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_g3_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    g3_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_g4_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    g4_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_videotex_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    videotex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_telephone_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    telephone_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
-    DeliveryServiceType_other_delivery /* IMPORTED_LONG_NAMED_INTEGER */,
-    other_delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DeliveryServiceType,
     _encode_DeliveryServiceType,
 } from '../MhsAcctAsn1Module/DeliveryServiceType.ta.mjs';
 import {
-    PerMessageComponentRate,
-    _decode_PerMessageComponentRate,
-    _encode_PerMessageComponentRate,
-} from '../MhsAcctAsn1Module/PerMessageComponentRate.ta.mjs';
-export {
     PerMessageComponentRate,
     _decode_PerMessageComponentRate,
     _encode_PerMessageComponentRate,
@@ -127,12 +26,6 @@ import {
     _decode_PerOctetComponentRate,
     _encode_PerOctetComponentRate,
 } from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.mjs';
-export {
-    PerOctetComponentRate,
-    _decode_PerOctetComponentRate,
-    _encode_PerOctetComponentRate,
-} from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DeliveryService */
 /**
  * @summary DeliveryService
@@ -329,9 +222,7 @@ export function _encode_DeliveryService(
 ) {
     if (!_cached_encoder_for_DeliveryService) {
         _cached_encoder_for_DeliveryService = function (
-            value: DeliveryService,
-            elGetter: $.ASN1Encoder<DeliveryService>
-        ): _Element {
+            value: DeliveryService        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

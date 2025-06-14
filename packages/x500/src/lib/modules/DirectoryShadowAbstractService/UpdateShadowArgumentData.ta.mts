@@ -30,32 +30,6 @@ import {
     _decode_UpdateWindow,
     _encode_UpdateWindow,
 } from "../DirectoryShadowAbstractService/UpdateWindow.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    AgreementID,
-    _decode_AgreementID,
-    _encode_AgreementID,
-} from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
-export {
-    RefreshInformation,
-    _decode_RefreshInformation,
-    _encode_RefreshInformation,
-} from "../DirectoryShadowAbstractService/RefreshInformation.ta.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../DirectoryShadowAbstractService/Time.ta.mjs";
-export {
-    UpdateWindow,
-    _decode_UpdateWindow,
-    _encode_UpdateWindow,
-} from "../DirectoryShadowAbstractService/UpdateWindow.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UpdateShadowArgumentData */
 /**
  * @summary UpdateShadowArgumentData
@@ -310,9 +284,7 @@ export function _encode_UpdateShadowArgumentData(
             0,
             () =>
                 function (
-                    value: UpdateShadowArgumentData,
-                    elGetter: $.ASN1Encoder<UpdateShadowArgumentData>
-                ): _Element {
+                    value: UpdateShadowArgumentData                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat(

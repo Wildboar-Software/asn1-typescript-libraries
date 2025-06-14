@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
-export { APPLICATION_CONTEXT } from "../DirectoryOSIProtocols/APPLICATION-CONTEXT.oca.mjs";
-
 // Manually modified!
 
 /* START_OF_SYMBOL_DEFINITION TheOsiBindErr */

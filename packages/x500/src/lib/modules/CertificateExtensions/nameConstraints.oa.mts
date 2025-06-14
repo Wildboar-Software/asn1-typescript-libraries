@@ -6,14 +6,6 @@ import {
     _decode_NameConstraintsSyntax,
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export { id_ce_nameConstraints } from "../CertificateExtensions/id-ce-nameConstraints.va.mjs";
-export {
-    NameConstraintsSyntax,
-    _decode_NameConstraintsSyntax,
-    _encode_NameConstraintsSyntax,
-} from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION nameConstraints */
 /**
  * @summary nameConstraints

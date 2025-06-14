@@ -11,17 +11,6 @@ import {
     _decode_TBSPDU_wrapper,
     _encode_TBSPDU_wrapper,
 } from "../PkiPmiWrapper/TBSPDU-wrapper.ta.mjs";
-export {
-    SIGNED,
-    _get_decoder_for_SIGNED,
-    _get_encoder_for_SIGNED,
-} from "../AuthenticationFramework/SIGNED.ta.mjs";
-export {
-    TBSPDU_wrapper,
-    _decode_TBSPDU_wrapper,
-    _encode_TBSPDU_wrapper,
-} from "../PkiPmiWrapper/TBSPDU-wrapper.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PDU_wrapper */
 /**
  * @summary PDU_wrapper

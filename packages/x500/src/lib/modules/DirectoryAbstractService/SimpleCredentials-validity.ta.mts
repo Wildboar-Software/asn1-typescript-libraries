@@ -16,17 +16,6 @@ import {
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.mjs";
-export {
-    SimpleCredentials_validity_time1,
-    _decode_SimpleCredentials_validity_time1,
-    _encode_SimpleCredentials_validity_time1,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta.mjs";
-export {
-    SimpleCredentials_validity_time2,
-    _decode_SimpleCredentials_validity_time2,
-    _encode_SimpleCredentials_validity_time2,
-} from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SimpleCredentials_validity */
 /**
  * @summary SimpleCredentials_validity
@@ -246,9 +235,7 @@ export function _encode_SimpleCredentials_validity(
 ) {
     if (!_cached_encoder_for_SimpleCredentials_validity) {
         _cached_encoder_for_SimpleCredentials_validity = function (
-            value: SimpleCredentials_validity,
-            elGetter: $.ASN1Encoder<SimpleCredentials_validity>
-        ): _Element {
+            value: SimpleCredentials_validity        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -297,9 +297,7 @@ export function _encode_NameErrorData(
 ) {
     if (!_cached_encoder_for_NameErrorData) {
         _cached_encoder_for_NameErrorData = function (
-            value: NameErrorData,
-            elGetter: $.ASN1Encoder<NameErrorData>
-        ): _Element {
+            value: NameErrorData        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

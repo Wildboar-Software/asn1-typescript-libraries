@@ -5,13 +5,6 @@ import {
     _decode_UniversalStreetAddress,
     _encode_UniversalStreetAddress,
 } from "../PkiPmiExternalDataTypes/UniversalStreetAddress.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    UniversalStreetAddress,
-    _decode_UniversalStreetAddress,
-    _encode_UniversalStreetAddress,
-} from "../PkiPmiExternalDataTypes/UniversalStreetAddress.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION universal_street_address */
 /**
  * @summary universal_street_address

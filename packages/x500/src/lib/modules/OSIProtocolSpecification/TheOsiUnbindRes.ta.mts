@@ -10,14 +10,6 @@ import {
     _decode_Release_response_reason,
     _encode_Release_response_reason,
 } from "../OSIProtocolSpecification/Release-response-reason.ta.mjs";
-export {
-    normal /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Release_response_reason,
-    Release_response_reason_normal /* IMPORTED_LONG_NAMED_INTEGER */,
-    _decode_Release_response_reason,
-    _encode_Release_response_reason,
-} from "../OSIProtocolSpecification/Release-response-reason.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TheOsiUnbindRes */
 /**
  * @summary TheOsiUnbindRes
@@ -174,9 +166,7 @@ export function _encode_TheOsiUnbindRes(
             3,
             () =>
                 function (
-                    value: TheOsiUnbindRes,
-                    elGetter: $.ASN1Encoder<TheOsiUnbindRes>
-                ): _Element {
+                    value: TheOsiUnbindRes                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

@@ -11,13 +11,6 @@ import {
     _decode_Criteria,
     _encode_Criteria,
 } from "../SelectedAttributeTypes/Criteria.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    Criteria,
-    _decode_Criteria,
-    _encode_Criteria,
-} from "../SelectedAttributeTypes/Criteria.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Guide */
 /**
  * @summary Guide
@@ -198,9 +191,7 @@ let _cached_encoder_for_Guide: $.ASN1Encoder<Guide> | null = null;
 export function _encode_Guide(value: Guide, elGetter: $.ASN1Encoder<Guide>) {
     if (!_cached_encoder_for_Guide) {
         _cached_encoder_for_Guide = function (
-            value: Guide,
-            elGetter: $.ASN1Encoder<Guide>
-        ): _Element {
+            value: Guide        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat(

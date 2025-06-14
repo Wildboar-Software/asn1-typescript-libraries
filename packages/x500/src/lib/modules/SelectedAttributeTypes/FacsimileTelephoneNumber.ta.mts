@@ -15,65 +15,6 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-export {
-    a3_width /* IMPORTED_SHORT_NAMED_BIT */,
-    b4_length /* IMPORTED_SHORT_NAMED_BIT */,
-    b4_width /* IMPORTED_SHORT_NAMED_BIT */,
-    bft /* IMPORTED_SHORT_NAMED_BIT */,
-    character_mode /* IMPORTED_SHORT_NAMED_BIT */,
-    dtm /* IMPORTED_SHORT_NAMED_BIT */,
-    edi /* IMPORTED_SHORT_NAMED_BIT */,
-    fine_resolution /* IMPORTED_SHORT_NAMED_BIT */,
-    full_colour /* IMPORTED_SHORT_NAMED_BIT */,
-    G3FacsimileNonBasicParameters,
-    G3FacsimileNonBasicParameters_a3_width /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_b4_length /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_b4_width /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_bft /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_character_mode /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_dtm /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_edi /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_fine_resolution /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_full_colour /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_jpeg /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_mixed_mode /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_preferred_huffmann /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_processable_mode_26 /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_resolution_300x300 /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_resolution_400x400 /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_resolution_8x15 /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_resolution_type /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_t6_coding /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_twelve_bits /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_two_dimensional /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_uncompressed /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_unlimited_length /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_width_middle_1216_of_1728 /* IMPORTED_LONG_NAMED_BIT */,
-    G3FacsimileNonBasicParameters_width_middle_864_of_1728 /* IMPORTED_LONG_NAMED_BIT */,
-    jpeg /* IMPORTED_SHORT_NAMED_BIT */,
-    mixed_mode /* IMPORTED_SHORT_NAMED_BIT */,
-    preferred_huffmann /* IMPORTED_SHORT_NAMED_BIT */,
-    processable_mode_26 /* IMPORTED_SHORT_NAMED_BIT */,
-    resolution_300x300 /* IMPORTED_SHORT_NAMED_BIT */,
-    resolution_400x400 /* IMPORTED_SHORT_NAMED_BIT */,
-    resolution_8x15 /* IMPORTED_SHORT_NAMED_BIT */,
-    resolution_type /* IMPORTED_SHORT_NAMED_BIT */,
-    t6_coding /* IMPORTED_SHORT_NAMED_BIT */,
-    twelve_bits /* IMPORTED_SHORT_NAMED_BIT */,
-    two_dimensional /* IMPORTED_SHORT_NAMED_BIT */,
-    uncompressed /* IMPORTED_SHORT_NAMED_BIT */,
-    unlimited_length /* IMPORTED_SHORT_NAMED_BIT */,
-    width_middle_1216_of_1728 /* IMPORTED_SHORT_NAMED_BIT */,
-    width_middle_864_of_1728 /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_G3FacsimileNonBasicParameters,
-    _encode_G3FacsimileNonBasicParameters,
-} from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.mjs";
-export {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-    _encode_TelephoneNumber,
-} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FacsimileTelephoneNumber */
 /**
  * @summary FacsimileTelephoneNumber
@@ -261,9 +202,7 @@ export function _encode_FacsimileTelephoneNumber(
 ) {
     if (!_cached_encoder_for_FacsimileTelephoneNumber) {
         _cached_encoder_for_FacsimileTelephoneNumber = function (
-            value: FacsimileTelephoneNumber,
-            elGetter: $.ASN1Encoder<FacsimileTelephoneNumber>
-        ): _Element {
+            value: FacsimileTelephoneNumber        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

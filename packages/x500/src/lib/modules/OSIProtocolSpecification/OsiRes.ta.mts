@@ -15,17 +15,6 @@ import {
     _decode_OsiRes_result,
     _encode_OsiRes_result,
 } from "../OSIProtocolSpecification/OsiRes-result.ta.mjs";
-export {
-    InvokeId,
-    _decode_InvokeId,
-    _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-export {
-    OsiRes_result,
-    _decode_OsiRes_result,
-    _encode_OsiRes_result,
-} from "../OSIProtocolSpecification/OsiRes-result.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION OsiRes */
 /**
  * @summary OsiRes
@@ -181,9 +170,7 @@ export function _encode_OsiRes(value: OsiRes, elGetter: $.ASN1Encoder<OsiRes>) {
             2,
             () =>
                 function (
-                    value: OsiRes,
-                    elGetter: $.ASN1Encoder<OsiRes>
-                ): _Element {
+                    value: OsiRes                ): _Element {
                     return $._encodeSequence(
                         ([] as (_Element | undefined)[])
                             .concat([

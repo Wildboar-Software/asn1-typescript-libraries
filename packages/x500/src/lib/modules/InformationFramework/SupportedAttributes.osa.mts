@@ -2,10 +2,6 @@
 import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
 import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SupportedAttributes */
 /**
  * @summary SupportedAttributes

@@ -15,17 +15,6 @@ import {
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    UserPwd,
-    _decode_UserPwd,
-    _encode_UserPwd,
-} from "../PasswordPolicy/UserPwd.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChangePasswordArgumentData */
 /**
  * @summary ChangePasswordArgumentData
@@ -227,9 +216,7 @@ export function _encode_ChangePasswordArgumentData(
 ) {
     if (!_cached_encoder_for_ChangePasswordArgumentData) {
         _cached_encoder_for_ChangePasswordArgumentData = function (
-            value: ChangePasswordArgumentData,
-            elGetter: $.ASN1Encoder<ChangePasswordArgumentData>
-        ): _Element {
+            value: ChangePasswordArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

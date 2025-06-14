@@ -6,14 +6,6 @@ import {
     _decode_UiiFormat,
     _encode_UiiFormat,
 } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.mjs";
-export {
-    UiiFormat,
-    _decode_UiiFormat,
-    _encode_UiiFormat,
-} from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION uiiForm */
 /**
  * @summary uiiForm

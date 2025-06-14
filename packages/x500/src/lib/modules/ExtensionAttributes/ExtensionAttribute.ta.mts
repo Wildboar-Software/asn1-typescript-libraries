@@ -11,13 +11,6 @@ import {
     _decode_ExtensionAttribute_value_Item,
     _encode_ExtensionAttribute_value_Item,
 } from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta.mjs";
-export {
-    ExtensionAttribute_value_Item,
-    _decode_ExtensionAttribute_value_Item,
-    _encode_ExtensionAttribute_value_Item,
-} from "../ExtensionAttributes/ExtensionAttribute-value-Item.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ExtensionAttribute */
 /**
  * @summary ExtensionAttribute
@@ -192,9 +185,7 @@ export function _encode_ExtensionAttribute(
 ) {
     if (!_cached_encoder_for_ExtensionAttribute) {
         _cached_encoder_for_ExtensionAttribute = function (
-            value: ExtensionAttribute,
-            elGetter: $.ASN1Encoder<ExtensionAttribute>
-        ): _Element {
+            value: ExtensionAttribute        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

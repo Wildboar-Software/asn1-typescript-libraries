@@ -10,12 +10,6 @@ import {
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-export {
-    InvokeId,
-    _decode_InvokeId,
-    _encode_InvokeId,
-} from "../CommonProtocolSpecification/InvokeId.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AbandonArgumentData */
 /**
  * @summary AbandonArgumentData
@@ -168,9 +162,7 @@ export function _encode_AbandonArgumentData(
 ) {
     if (!_cached_encoder_for_AbandonArgumentData) {
         _cached_encoder_for_AbandonArgumentData = function (
-            value: AbandonArgumentData,
-            elGetter: $.ASN1Encoder<AbandonArgumentData>
-        ): _Element {
+            value: AbandonArgumentData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

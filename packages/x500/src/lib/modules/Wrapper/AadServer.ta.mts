@@ -22,23 +22,6 @@ import {
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../Wrapper/InvokeID.ta.mjs";
-export {
-    SequenceNumber,
-    _decode_SequenceNumber,
-    _encode_SequenceNumber,
-} from "../Wrapper/SequenceNumber.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AadServer */
 /**
  * @summary AadServer
@@ -315,9 +298,7 @@ export function _encode_AadServer(
 ) {
     if (!_cached_encoder_for_AadServer) {
         _cached_encoder_for_AadServer = function (
-            value: AadServer,
-            elGetter: $.ASN1Encoder<AadServer>
-        ): _Element {
+            value: AadServer        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

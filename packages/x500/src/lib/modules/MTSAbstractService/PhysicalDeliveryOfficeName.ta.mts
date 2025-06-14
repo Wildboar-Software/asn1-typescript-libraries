@@ -6,12 +6,6 @@ import {
     _decode_PDSParameter,
     _encode_PDSParameter,
 } from "../MTSAbstractService/PDSParameter.ta.mjs";
-export {
-    PDSParameter,
-    _decode_PDSParameter,
-    _encode_PDSParameter,
-} from "../MTSAbstractService/PDSParameter.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PhysicalDeliveryOfficeName */
 /**
  * @summary PhysicalDeliveryOfficeName

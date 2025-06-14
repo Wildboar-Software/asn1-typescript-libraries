@@ -22,33 +22,6 @@ import {
     _decode_CertUnsubscribeRsp_result,
     _encode_CertUnsubscribeRsp_result,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp-result.ta.mjs";
-export {
-    CASPcommonComponents,
-    _decode_CASPcommonComponents,
-    _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
-export {
-    CASPsequence,
-    _decode_CASPsequence,
-    _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
-export {
-    CASPversion,
-    CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASPversion,
-    _encode_CASPversion,
-    _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
-export {
-    CertUnsubscribeRsp_result,
-    _decode_CertUnsubscribeRsp_result,
-    _encode_CertUnsubscribeRsp_result,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp-result.ta.mjs";
 import {
     CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
@@ -258,9 +231,7 @@ export function _encode_CertUnsubscribeRsp(
 ) {
     if (!_cached_encoder_for_CertUnsubscribeRsp) {
         _cached_encoder_for_CertUnsubscribeRsp = function (
-            value: CertUnsubscribeRsp,
-            elGetter: $.ASN1Encoder<CertUnsubscribeRsp>
-        ): _Element {
+            value: CertUnsubscribeRsp        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

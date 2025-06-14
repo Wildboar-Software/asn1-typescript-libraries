@@ -259,9 +259,7 @@ export function _encode_AbandonResultData(
 ) {
     if (!_cached_encoder_for_AbandonResultData) {
         _cached_encoder_for_AbandonResultData = function (
-            value: AbandonResultData,
-            elGetter: $.ASN1Encoder<AbandonResultData>
-        ): _Element {
+            value: AbandonResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

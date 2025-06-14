@@ -15,17 +15,6 @@ import {
     _decode_PolicyQualifierInfo,
     _encode_PolicyQualifierInfo,
 } from "../CertificateExtensions/PolicyQualifierInfo.ta.mjs";
-export {
-    CertPolicyId,
-    _decode_CertPolicyId,
-    _encode_CertPolicyId,
-} from "../CertificateExtensions/CertPolicyId.ta.mjs";
-export {
-    PolicyQualifierInfo,
-    _decode_PolicyQualifierInfo,
-    _encode_PolicyQualifierInfo,
-} from "../CertificateExtensions/PolicyQualifierInfo.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION PolicyInformation */
 /**
  * @summary PolicyInformation
@@ -211,9 +200,7 @@ export function _encode_PolicyInformation(
 ) {
     if (!_cached_encoder_for_PolicyInformation) {
         _cached_encoder_for_PolicyInformation = function (
-            value: PolicyInformation,
-            elGetter: $.ASN1Encoder<PolicyInformation>
-        ): _Element {
+            value: PolicyInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

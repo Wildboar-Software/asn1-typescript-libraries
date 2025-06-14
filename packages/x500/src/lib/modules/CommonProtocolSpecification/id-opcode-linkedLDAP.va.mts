@@ -1,11 +1,5 @@
 /* eslint-disable */
 import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_opcode_linkedLDAP */
 /**
  * @summary id_opcode_linkedLDAP

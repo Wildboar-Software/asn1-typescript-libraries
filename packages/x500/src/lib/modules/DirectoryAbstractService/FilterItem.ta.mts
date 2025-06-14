@@ -26,32 +26,6 @@ import {
     _decode_AttributeValueAssertion,
     _encode_AttributeValueAssertion,
 } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-export {
-    FilterItem_substrings,
-    _decode_FilterItem_substrings,
-    _encode_FilterItem_substrings,
-} from "../DirectoryAbstractService/FilterItem-substrings.ta.mjs";
-export {
-    MatchingRuleAssertion,
-    _decode_MatchingRuleAssertion,
-    _encode_MatchingRuleAssertion,
-} from "../DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
-export {
-    AttributeType,
-    _decode_AttributeType,
-    _encode_AttributeType,
-} from "../InformationFramework/AttributeType.ta.mjs";
-export {
-    AttributeTypeAssertion,
-    _decode_AttributeTypeAssertion,
-    _encode_AttributeTypeAssertion,
-} from "../InformationFramework/AttributeTypeAssertion.ta.mjs";
-export {
-    AttributeValueAssertion,
-    _decode_AttributeValueAssertion,
-    _encode_AttributeValueAssertion,
-} from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION FilterItem */
 /**
  * @summary FilterItem

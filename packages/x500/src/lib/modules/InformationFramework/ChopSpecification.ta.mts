@@ -15,17 +15,6 @@ import {
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
 } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-export {
-    BaseDistance,
-    _decode_BaseDistance,
-    _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta.mjs";
-export {
-    ChopSpecification_specificExclusions_Item,
-    _decode_ChopSpecification_specificExclusions_Item,
-    _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ChopSpecification */
 /**
  * @summary ChopSpecification
@@ -255,9 +244,7 @@ export function _encode_ChopSpecification(
 ) {
     if (!_cached_encoder_for_ChopSpecification) {
         _cached_encoder_for_ChopSpecification = function (
-            value: ChopSpecification,
-            elGetter: $.ASN1Encoder<ChopSpecification>
-        ): _Element {
+            value: ChopSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

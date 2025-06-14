@@ -6,12 +6,6 @@ import {
     _decode_ChainingArguments,
     _encode_ChainingArguments,
 } from "../DistributedOperations/ChainingArguments.ta.mjs";
-export {
-    ChainingArguments,
-    _decode_ChainingArguments,
-    _encode_ChainingArguments,
-} from "../DistributedOperations/ChainingArguments.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 */
 /**
  * @summary Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1
@@ -197,9 +191,7 @@ export function _encode_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1(
         !_cached_encoder_for_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1
     ) {
         _cached_encoder_for_Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 = function (
-            value: Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1,
-            elGetter: $.ASN1Encoder<Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1>
-        ): _Element {
+            value: Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

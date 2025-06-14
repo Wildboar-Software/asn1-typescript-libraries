@@ -12,26 +12,6 @@ import {
     _encode_RequestShadowUpdateResult,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
-export {
-    Code,
-    _decode_Code,
-    _encode_Code,
-} from "../CommonProtocolSpecification/Code.ta.mjs";
-export { ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
-export { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export {
-    RequestShadowUpdateArgument,
-    _decode_RequestShadowUpdateArgument,
-    _encode_RequestShadowUpdateArgument,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta.mjs";
-export {
-    RequestShadowUpdateResult,
-    _decode_RequestShadowUpdateResult,
-    _encode_RequestShadowUpdateResult,
-} from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";
-export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION requestShadowUpdate */
 /**
  * @summary requestShadowUpdate

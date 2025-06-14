@@ -6,14 +6,6 @@ import {
     _decode_TelexNumber,
     _encode_TelexNumber,
 } from "../SelectedAttributeTypes/TelexNumber.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va.mjs";
-export {
-    TelexNumber,
-    _decode_TelexNumber,
-    _encode_TelexNumber,
-} from "../SelectedAttributeTypes/TelexNumber.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION telexNr */
 /**
  * @summary telexNr

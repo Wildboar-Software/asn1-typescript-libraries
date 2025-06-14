@@ -6,14 +6,6 @@ import {
 } from "../CertificateExtensions/CertificateListAssertion.ta.mjs";
 import { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va.mjs";
 import { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export {
-    CertificateListAssertion,
-    _decode_CertificateListAssertion,
-    _encode_CertificateListAssertion,
-} from "../CertificateExtensions/CertificateListAssertion.ta.mjs";
-export { id_ldx_certListAssertion } from "../CertificateExtensions/id-ldx-certListAssertion.va.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certListAssertion */
 /**
  * @summary certListAssertion

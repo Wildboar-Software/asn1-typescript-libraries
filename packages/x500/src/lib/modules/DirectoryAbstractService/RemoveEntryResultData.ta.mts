@@ -21,26 +21,6 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
 import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION RemoveEntryResultData */
@@ -256,9 +236,7 @@ export function _encode_RemoveEntryResultData(
 ) {
     if (!_cached_encoder_for_RemoveEntryResultData) {
         _cached_encoder_for_RemoveEntryResultData = function (
-            value: RemoveEntryResultData,
-            elGetter: $.ASN1Encoder<RemoveEntryResultData>
-        ): _Element {
+            value: RemoveEntryResultData        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

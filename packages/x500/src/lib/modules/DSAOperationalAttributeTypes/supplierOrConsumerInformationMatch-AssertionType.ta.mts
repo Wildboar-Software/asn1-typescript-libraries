@@ -10,12 +10,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION supplierOrConsumerInformationMatch_AssertionType */
 /**
  * @summary supplierOrConsumerInformationMatch_AssertionType
@@ -197,9 +191,7 @@ export function _encode_supplierOrConsumerInformationMatch_AssertionType(
 ) {
     if (!_cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType) {
         _cached_encoder_for_supplierOrConsumerInformationMatch_AssertionType = function (
-            value: supplierOrConsumerInformationMatch_AssertionType,
-            elGetter: $.ASN1Encoder<supplierOrConsumerInformationMatch_AssertionType>
-        ): _Element {
+            value: supplierOrConsumerInformationMatch_AssertionType        ): _Element {
             return $._encodeSet(
                 ([] as (_Element | undefined)[])
                     .concat([

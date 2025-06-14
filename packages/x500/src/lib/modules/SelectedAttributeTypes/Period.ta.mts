@@ -26,26 +26,6 @@ import {
     _decode_Period_weeks,
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
-export {
-    DayTimeBand,
-    _decode_DayTimeBand,
-    _encode_DayTimeBand,
-} from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
-export {
-    Period_days,
-    _decode_Period_days,
-    _encode_Period_days,
-} from "../SelectedAttributeTypes/Period-days.ta.mjs";
-export {
-    Period_months,
-    _decode_Period_months,
-    _encode_Period_months,
-} from "../SelectedAttributeTypes/Period-months.ta.mjs";
-export {
-    Period_weeks,
-    _decode_Period_weeks,
-    _encode_Period_weeks,
-} from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 import isPositionalInt from "../../utils/isPositionalInt.mjs";
 
 /* START_OF_SYMBOL_DEFINITION Period */
@@ -418,9 +398,7 @@ let _cached_encoder_for_Period: $.ASN1Encoder<Period> | null = null;
 export function _encode_Period(value: Period, elGetter: $.ASN1Encoder<Period>) {
     if (!_cached_encoder_for_Period) {
         _cached_encoder_for_Period = function (
-            value: Period,
-            elGetter: $.ASN1Encoder<Period>
-        ): _Element {
+            value: Period        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

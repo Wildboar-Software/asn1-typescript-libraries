@@ -11,12 +11,6 @@ import {
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
 } from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.mjs";
-export {
-    AlgoInvoke,
-    _decode_AlgoInvoke,
-    _encode_AlgoInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ICV_Invoke */
 /**
  * @summary ICV_Invoke
@@ -207,9 +201,7 @@ export function _get_encoder_for_ICV_Invoke<ToBeProtected>(
     _encode_ToBeProtected: $.ASN1Encoder<ToBeProtected>
 ) {
     return function (
-        value: ICV_Invoke<ToBeProtected>,
-        elGetter: $.ASN1Encoder<ICV_Invoke<ToBeProtected>>
-    ): _Element {
+        value: ICV_Invoke<ToBeProtected>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat(

@@ -6,14 +6,6 @@ import {
 } from "../PkiPMIProtocolSpecifications/CertReq.ta.mjs";
 import { id_certReq } from "../PkiPMIProtocolSpecifications/id-certReq.va.mjs";
 import { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-export {
-    CertReq,
-    _decode_CertReq,
-    _encode_CertReq,
-} from "../PkiPMIProtocolSpecifications/CertReq.ta.mjs";
-export { id_certReq } from "../PkiPMIProtocolSpecifications/id-certReq.va.mjs";
-export { WRAPPED_PDU } from "../PkiPmiWrapper/WRAPPED-PDU.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION certReq */
 /**
  * @summary certReq

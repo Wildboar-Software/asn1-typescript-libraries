@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,20 +14,6 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     DeleteSpecification_deleteModifier,
     _enum_for_DeleteSpecification_deleteModifier,
-    DeleteSpecification_deleteModifier_onlyIfNoContainedObjects /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    onlyIfNoContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DeleteSpecification_deleteModifier_deletesContainedObjects /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    deletesContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_DeleteSpecification_deleteModifier,
-    _encode_DeleteSpecification_deleteModifier,
-} from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.mjs';
-export {
-    DeleteSpecification_deleteModifier,
-    _enum_for_DeleteSpecification_deleteModifier,
-    DeleteSpecification_deleteModifier_onlyIfNoContainedObjects /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    onlyIfNoContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    DeleteSpecification_deleteModifier_deletesContainedObjects /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    deletesContainedObjects /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_DeleteSpecification_deleteModifier,
     _encode_DeleteSpecification_deleteModifier,
 } from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.mjs';
@@ -91,12 +22,6 @@ import {
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
-export {
-    TemplateList,
-    _decode_TemplateList,
-    _encode_TemplateList,
-} from '../DefinitionASN1Module/TemplateList.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION DeleteSpecification */
 /**
  * @summary DeleteSpecification
@@ -278,9 +203,7 @@ export function _encode_DeleteSpecification(
 ) {
     if (!_cached_encoder_for_DeleteSpecification) {
         _cached_encoder_for_DeleteSpecification = function (
-            value: DeleteSpecification,
-            elGetter: $.ASN1Encoder<DeleteSpecification>
-        ): _Element {
+            value: DeleteSpecification        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

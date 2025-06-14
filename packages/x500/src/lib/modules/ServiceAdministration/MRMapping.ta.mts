@@ -15,17 +15,6 @@ import {
     _decode_MRSubstitution,
     _encode_MRSubstitution,
 } from "../ServiceAdministration/MRSubstitution.ta.mjs";
-export {
-    Mapping,
-    _decode_Mapping,
-    _encode_Mapping,
-} from "../ServiceAdministration/Mapping.ta.mjs";
-export {
-    MRSubstitution,
-    _decode_MRSubstitution,
-    _encode_MRSubstitution,
-} from "../ServiceAdministration/MRSubstitution.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION MRMapping */
 /**
  * @summary MRMapping
@@ -213,9 +202,7 @@ export function _encode_MRMapping(
 ) {
     if (!_cached_encoder_for_MRMapping) {
         _cached_encoder_for_MRMapping = function (
-            value: MRMapping,
-            elGetter: $.ASN1Encoder<MRMapping>
-        ): _Element {
+            value: MRMapping        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

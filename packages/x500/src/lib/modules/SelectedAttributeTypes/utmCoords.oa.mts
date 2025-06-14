@@ -6,14 +6,6 @@ import {
     _decode_UtmCoordinates,
     _encode_UtmCoordinates,
 } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
-export { SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-export { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.mjs";
-export {
-    UtmCoordinates,
-    _decode_UtmCoordinates,
-    _encode_UtmCoordinates,
-} from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION utmCoords */
 /**
  * @summary utmCoords

@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "asn1-ts";
 import { id } from "../UsefulDefinitions/id.va.mjs";
-export { id } from "../UsefulDefinitions/id.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION id_oidC2 */
 /**
  * @summary id_oidC2

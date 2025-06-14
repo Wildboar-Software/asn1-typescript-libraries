@@ -2,9 +2,6 @@
 import { OBJECT_IDENTIFIER } from "asn1-ts";
 import * as $ from "asn1-ts/dist/functional.mjs";
 import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION DIT_CONTEXT_USE_RULE */
 /**
  * @summary DIT_CONTEXT_USE_RULE

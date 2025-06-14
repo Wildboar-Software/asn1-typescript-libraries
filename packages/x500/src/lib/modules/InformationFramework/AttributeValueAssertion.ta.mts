@@ -11,14 +11,6 @@ import {
     _decode_AttributeValueAssertion_assertedContexts,
     _encode_AttributeValueAssertion_assertedContexts,
 } from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    AttributeValueAssertion_assertedContexts,
-    _decode_AttributeValueAssertion_assertedContexts,
-    _encode_AttributeValueAssertion_assertedContexts,
-} from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";
-export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 /* START_OF_SYMBOL_DEFINITION AttributeValueAssertion */
 /**
  * @summary AttributeValueAssertion
@@ -228,9 +220,7 @@ export function _encode_AttributeValueAssertion(
 ) {
     if (!_cached_encoder_for_AttributeValueAssertion) {
         _cached_encoder_for_AttributeValueAssertion = function (
-            value: AttributeValueAssertion,
-            elGetter: $.ASN1Encoder<AttributeValueAssertion>
-        ): _Element {
+            value: AttributeValueAssertion        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

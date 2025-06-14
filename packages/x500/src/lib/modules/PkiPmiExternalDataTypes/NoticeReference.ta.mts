@@ -11,12 +11,6 @@ import {
     _decode_DisplayText,
     _encode_DisplayText,
 } from "../PkiPmiExternalDataTypes/DisplayText.ta.mjs";
-export {
-    DisplayText,
-    _decode_DisplayText,
-    _encode_DisplayText,
-} from "../PkiPmiExternalDataTypes/DisplayText.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION NoticeReference */
 /**
  * @summary NoticeReference
@@ -176,9 +170,7 @@ export function _encode_NoticeReference(
 ) {
     if (!_cached_encoder_for_NoticeReference) {
         _cached_encoder_for_NoticeReference = function (
-            value: NoticeReference,
-            elGetter: $.ASN1Encoder<NoticeReference>
-        ): _Element {
+            value: NoticeReference        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

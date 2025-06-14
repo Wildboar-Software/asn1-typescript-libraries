@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_Epochs,
     _encode_Epochs,
 } from '../TimeRepresentation/Epochs.ta.mjs';
-export {
-    Epochs,
-    _decode_Epochs,
-    _encode_Epochs,
-} from '../TimeRepresentation/Epochs.ta.mjs';
 import {
-    Seconds,
-    _decode_Seconds,
-    _encode_Seconds,
-} from '../TimeRepresentation/Seconds.ta.mjs';
-export {
     Seconds,
     _decode_Seconds,
     _encode_Seconds,
@@ -91,12 +25,6 @@ import {
     _decode_Nanoseconds,
     _encode_Nanoseconds,
 } from '../TimeRepresentation/Nanoseconds.ta.mjs';
-export {
-    Nanoseconds,
-    _decode_Nanoseconds,
-    _encode_Nanoseconds,
-} from '../TimeRepresentation/Nanoseconds.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TimeInterval */
 /**
  * @summary TimeInterval
@@ -272,9 +200,7 @@ export function _encode_TimeInterval(
 ) {
     if (!_cached_encoder_for_TimeInterval) {
         _cached_encoder_for_TimeInterval = function (
-            value: TimeInterval,
-            elGetter: $.ASN1Encoder<TimeInterval>
-        ): _Element {
+            value: TimeInterval        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

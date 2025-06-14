@@ -6,14 +6,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-export { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    GeneralName,
-    _decode_GeneralName,
-    _encode_GeneralName,
-} from "../CertificateExtensions/GeneralName.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION issuedOnBehalfOf */
 /**
  * @summary issuedOnBehalfOf

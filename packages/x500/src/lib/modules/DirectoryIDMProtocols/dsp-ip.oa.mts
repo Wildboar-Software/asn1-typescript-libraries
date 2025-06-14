@@ -15,24 +15,6 @@ import { chainedRemoveEntry } from "../DistributedOperations/chainedRemoveEntry.
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 import { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
 import { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-export { OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
-export { id_idm_dsp } from "../DirectoryIDMProtocols/id-idm-dsp.va.mjs";
-export { chainedAbandon } from "../DistributedOperations/chainedAbandon.oa.mjs";
-export { chainedAddEntry } from "../DistributedOperations/chainedAddEntry.oa.mjs";
-export { chainedAdministerPassword } from "../DistributedOperations/chainedAdministerPassword.oa.mjs";
-export { chainedChangePassword } from "../DistributedOperations/chainedChangePassword.oa.mjs";
-export { chainedCompare } from "../DistributedOperations/chainedCompare.oa.mjs";
-export { chainedLdapTransport } from "../DistributedOperations/chainedLdapTransport.oa.mjs";
-export { chainedLinkedLDAP } from "../DistributedOperations/chainedLinkedLDAP.oa.mjs";
-export { chainedList } from "../DistributedOperations/chainedList.oa.mjs";
-export { chainedModifyDN } from "../DistributedOperations/chainedModifyDN.oa.mjs";
-export { chainedModifyEntry } from "../DistributedOperations/chainedModifyEntry.oa.mjs";
-export { chainedRead } from "../DistributedOperations/chainedRead.oa.mjs";
-export { chainedRemoveEntry } from "../DistributedOperations/chainedRemoveEntry.oa.mjs";
-export { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
-export { dSABind } from "../DistributedOperations/dSABind.oa.mjs";
-export { IDM_PROTOCOL } from "../IDMProtocolSpecification/IDM-PROTOCOL.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION dsp_ip */
 /**
  * @summary dsp_ip

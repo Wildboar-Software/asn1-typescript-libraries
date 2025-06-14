@@ -10,18 +10,6 @@ import {
     _encode_SuperiorToSubordinateModification,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.mjs";
 import { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-export {
-    SuperiorToSubordinate,
-    _decode_SuperiorToSubordinate,
-    _encode_SuperiorToSubordinate,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
-export {
-    SuperiorToSubordinateModification,
-    _decode_SuperiorToSubordinateModification,
-    _encode_SuperiorToSubordinateModification,
-} from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.mjs";
-export { OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
-
 /* START_OF_SYMBOL_DEFINITION hierarchicalOperationalBinding_roleA */
 /**
  * @summary hierarchicalOperationalBinding_roleA

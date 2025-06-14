@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,40 +13,10 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     TestOutcome,
-    TestOutcome_inconclusive /* IMPORTED_LONG_NAMED_INTEGER */,
-    inconclusive /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_pass /* IMPORTED_LONG_NAMED_INTEGER */,
-    pass /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_fail /* IMPORTED_LONG_NAMED_INTEGER */,
-    fail /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_timed_out /* IMPORTED_LONG_NAMED_INTEGER */,
-    timed_out /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_premature_termination /* IMPORTED_LONG_NAMED_INTEGER */,
-    premature_termination /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_TestOutcome,
-    _encode_TestOutcome,
-} from '../Test-ASN1Module/TestOutcome.ta.mjs';
-export {
-    TestOutcome,
-    TestOutcome_inconclusive /* IMPORTED_LONG_NAMED_INTEGER */,
-    inconclusive /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_pass /* IMPORTED_LONG_NAMED_INTEGER */,
-    pass /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_fail /* IMPORTED_LONG_NAMED_INTEGER */,
-    fail /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_timed_out /* IMPORTED_LONG_NAMED_INTEGER */,
-    timed_out /* IMPORTED_SHORT_NAMED_INTEGER */,
-    TestOutcome_premature_termination /* IMPORTED_LONG_NAMED_INTEGER */,
-    premature_termination /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TestOutcome,
     _encode_TestOutcome,
 } from '../Test-ASN1Module/TestOutcome.ta.mjs';
 import {
-    ObjectInstance,
-    _decode_ObjectInstance,
-    _encode_ObjectInstance,
-} from '@wildboar/cmip/src/lib/modules/CMIP-1/ObjectInstance.ta.mjs';
-export {
     ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
@@ -111,17 +26,7 @@ import {
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.mjs';
-export {
-    ProposedRepairActions,
-    _decode_ProposedRepairActions,
-    _encode_ProposedRepairActions,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/ProposedRepairActions.ta.mjs';
 import {
-    AdditionalText,
-    _decode_AdditionalText,
-    _encode_AdditionalText,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalText.ta.mjs';
-export {
     AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
@@ -131,12 +36,6 @@ import {
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-export {
-    AdditionalInformation,
-    _decode_AdditionalInformation,
-    _encode_AdditionalInformation,
-} from '@wildboar/attribute-asn1module/src/lib/modules/Attribute-ASN1Module/AdditionalInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION TestRequestUncontrolledResult */
 /**
  * @summary TestRequestUncontrolledResult
@@ -383,9 +282,7 @@ export function _encode_TestRequestUncontrolledResult(
 ) {
     if (!_cached_encoder_for_TestRequestUncontrolledResult) {
         _cached_encoder_for_TestRequestUncontrolledResult = function (
-            value: TestRequestUncontrolledResult,
-            elGetter: $.ASN1Encoder<TestRequestUncontrolledResult>
-        ): _Element {
+            value: TestRequestUncontrolledResult        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

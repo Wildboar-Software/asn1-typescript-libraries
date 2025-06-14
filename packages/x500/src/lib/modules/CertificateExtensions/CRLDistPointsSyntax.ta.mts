@@ -6,12 +6,6 @@ import {
     _decode_DistributionPoint,
     _encode_DistributionPoint,
 } from "../CertificateExtensions/DistributionPoint.ta.mjs";
-export {
-    DistributionPoint,
-    _decode_DistributionPoint,
-    _encode_DistributionPoint,
-} from "../CertificateExtensions/DistributionPoint.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION CRLDistPointsSyntax */
 /**
  * @summary CRLDistPointsSyntax

@@ -6,13 +6,6 @@ import {
     _decode_UniversalOrBMPString,
     _encode_UniversalOrBMPString,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-export { ub_pds_parameter_length } from "../PkiPmiExternalDataTypes/ub-pds-parameter-length.va.mjs";
-export {
-    UniversalOrBMPString,
-    _decode_UniversalOrBMPString,
-    _encode_UniversalOrBMPString,
-} from "../PkiPmiExternalDataTypes/UniversalOrBMPString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION UniversalPDSParameter */
 /**
  * @summary UniversalPDSParameter

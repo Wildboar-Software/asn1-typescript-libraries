@@ -6,14 +6,6 @@ import {
     _encode_BaseCRLNumber,
 } from "../CertificateExtensions/BaseCRLNumber.ta.mjs";
 import { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    BaseCRLNumber,
-    _decode_BaseCRLNumber,
-    _encode_BaseCRLNumber,
-} from "../CertificateExtensions/BaseCRLNumber.ta.mjs";
-export { id_ce_deltaCRLIndicator } from "../CertificateExtensions/id-ce-deltaCRLIndicator.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION deltaCRLIndicator */
 /**
  * @summary deltaCRLIndicator

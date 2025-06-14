@@ -6,14 +6,6 @@ import {
     _encode_DeltaInformation,
 } from "../CertificateExtensions/DeltaInformation.ta.mjs";
 import { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va.mjs";
-export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-export {
-    DeltaInformation,
-    _decode_DeltaInformation,
-    _encode_DeltaInformation,
-} from "../CertificateExtensions/DeltaInformation.ta.mjs";
-export { id_ce_deltaInfo } from "../CertificateExtensions/id-ce-deltaInfo.va.mjs";
-
 /* START_OF_SYMBOL_DEFINITION deltaInfo */
 /**
  * @summary deltaInfo

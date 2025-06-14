@@ -30,32 +30,6 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    HASH,
-    _get_decoder_for_HASH,
-    _get_encoder_for_HASH,
-} from "../AuthenticationFramework/HASH.ta.mjs";
-export {
-    KeyIdentifier,
-    _decode_KeyIdentifier,
-    _encode_KeyIdentifier,
-} from "../CertificateExtensions/KeyIdentifier.ta.mjs";
-export {
-    SecurityLabel,
-    _decode_SecurityLabel,
-    _encode_SecurityLabel,
-} from "../EnhancedSecurity/SecurityLabel.ta.mjs";
-export {
-    AttributeTypeAndValue,
-    _decode_AttributeTypeAndValue,
-    _encode_AttributeTypeAndValue,
-} from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION SignedSecurityLabelContent */
 /**
  * @summary SignedSecurityLabelContent
@@ -285,9 +259,7 @@ export function _encode_SignedSecurityLabelContent(
 ) {
     if (!_cached_encoder_for_SignedSecurityLabelContent) {
         _cached_encoder_for_SignedSecurityLabelContent = function (
-            value: SignedSecurityLabelContent,
-            elGetter: $.ASN1Encoder<SignedSecurityLabelContent>
-        ): _Element {
+            value: SignedSecurityLabelContent        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

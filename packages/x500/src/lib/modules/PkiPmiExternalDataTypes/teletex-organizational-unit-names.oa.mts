@@ -5,13 +5,6 @@ import {
     _decode_TeletexOrganizationalUnitNames,
     _encode_TeletexOrganizationalUnitNames,
 } from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta.mjs";
-export { EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
-export {
-    TeletexOrganizationalUnitNames,
-    _decode_TeletexOrganizationalUnitNames,
-    _encode_TeletexOrganizationalUnitNames,
-} from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitNames.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION teletex_organizational_unit_names */
 /**
  * @summary teletex_organizational_unit_names

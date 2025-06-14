@@ -6,12 +6,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION ContextInformation */
 /**
  * @summary ContextInformation
@@ -195,9 +189,7 @@ export function _encode_ContextInformation(
 ) {
     if (!_cached_encoder_for_ContextInformation) {
         _cached_encoder_for_ContextInformation = function (
-            value: ContextInformation,
-            elGetter: $.ASN1Encoder<ContextInformation>
-        ): _Element {
+            value: ContextInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

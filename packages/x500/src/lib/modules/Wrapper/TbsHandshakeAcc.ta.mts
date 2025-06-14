@@ -48,50 +48,6 @@ import {
     _decode_WrappedProt,
     _encode_WrappedProt,
 } from "../Wrapper/WrappedProt.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    DER_AttributeCertificate,
-    _decode_DER_AttributeCertificate,
-    _encode_DER_AttributeCertificate,
-} from "../Wrapper/DER-AttributeCertificate.ta.mjs";
-export {
-    DER_PkiPath,
-    _decode_DER_PkiPath,
-    _encode_DER_PkiPath,
-} from "../Wrapper/DER-PkiPath.ta.mjs";
-export {
-    TbsHandshakeAcc_encr_mode,
-    _decode_TbsHandshakeAcc_encr_mode,
-    _encode_TbsHandshakeAcc_encr_mode,
-} from "../Wrapper/TbsHandshakeAcc-encr-mode.ta.mjs";
-export {
-    TbsHandshakeAcc_keyEstSel,
-    _decode_TbsHandshakeAcc_keyEstSel,
-    _encode_TbsHandshakeAcc_keyEstSel,
-} from "../Wrapper/TbsHandshakeAcc-keyEstSel.ta.mjs";
-export {
-    TbsHandshakeAcc_sigSel,
-    _decode_TbsHandshakeAcc_sigSel,
-    _encode_TbsHandshakeAcc_sigSel,
-} from "../Wrapper/TbsHandshakeAcc-sigSel.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    v1 /* IMPORTED_SHORT_NAMED_BIT */,
-    Version,
-    Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
-    _decode_Version,
-    _encode_Version,
-} from "../Wrapper/Version.ta.mjs";
-export {
-    WrappedProt,
-    _decode_WrappedProt,
-    _encode_WrappedProt,
-} from "../Wrapper/WrappedProt.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION TbsHandshakeAcc */
 /**
  * @summary TbsHandshakeAcc
@@ -423,9 +379,7 @@ export function _encode_TbsHandshakeAcc(
 ) {
     if (!_cached_encoder_for_TbsHandshakeAcc) {
         _cached_encoder_for_TbsHandshakeAcc = function (
-            value: TbsHandshakeAcc,
-            elGetter: $.ASN1Encoder<TbsHandshakeAcc>
-        ): _Element {
+            value: TbsHandshakeAcc        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat(

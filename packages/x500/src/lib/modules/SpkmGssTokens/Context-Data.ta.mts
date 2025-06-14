@@ -31,46 +31,6 @@ import {
     _decode_OWF_Algs,
     _encode_OWF_Algs,
 } from "../SpkmGssTokens/OWF-Algs.ta.mjs";
-export {
-    ChannelId,
-    _decode_ChannelId,
-    _encode_ChannelId,
-} from "../SpkmGssTokens/ChannelId.ta.mjs";
-export {
-    Conf_Algs,
-    _decode_Conf_Algs,
-    _encode_Conf_Algs,
-} from "../SpkmGssTokens/Conf-Algs.ta.mjs";
-export {
-    Intg_Algs,
-    _decode_Intg_Algs,
-    _encode_Intg_Algs,
-} from "../SpkmGssTokens/Intg-Algs.ta.mjs";
-export {
-    conf_avail /* IMPORTED_SHORT_NAMED_BIT */,
-    delegation_state /* IMPORTED_SHORT_NAMED_BIT */,
-    integ_avail /* IMPORTED_SHORT_NAMED_BIT */,
-    mutual_state /* IMPORTED_SHORT_NAMED_BIT */,
-    Options,
-    Options_conf_avail /* IMPORTED_LONG_NAMED_BIT */,
-    Options_delegation_state /* IMPORTED_LONG_NAMED_BIT */,
-    Options_integ_avail /* IMPORTED_LONG_NAMED_BIT */,
-    Options_mutual_state /* IMPORTED_LONG_NAMED_BIT */,
-    Options_replay_det_state /* IMPORTED_LONG_NAMED_BIT */,
-    Options_sequence_state /* IMPORTED_LONG_NAMED_BIT */,
-    Options_target_certif_data_required /* IMPORTED_LONG_NAMED_BIT */,
-    replay_det_state /* IMPORTED_SHORT_NAMED_BIT */,
-    sequence_state /* IMPORTED_SHORT_NAMED_BIT */,
-    target_certif_data_required /* IMPORTED_SHORT_NAMED_BIT */,
-    _decode_Options,
-    _encode_Options,
-} from "../SpkmGssTokens/Options.ta.mjs";
-export {
-    OWF_Algs,
-    _decode_OWF_Algs,
-    _encode_OWF_Algs,
-} from "../SpkmGssTokens/OWF-Algs.ta.mjs";
-
 /* START_OF_SYMBOL_DEFINITION Context_Data */
 /**
  * @summary Context_Data
@@ -317,9 +277,7 @@ export function _encode_Context_Data(
 ) {
     if (!_cached_encoder_for_Context_Data) {
         _cached_encoder_for_Context_Data = function (
-            value: Context_Data,
-            elGetter: $.ASN1Encoder<Context_Data>
-        ): _Element {
+            value: Context_Data        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
