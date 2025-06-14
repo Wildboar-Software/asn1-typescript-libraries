@@ -170,7 +170,7 @@ import {
  *
  * @class
  */
-export class AutoForwardArguments {
+export class AutoForwardArguments implements PerMessageAutoForwardFields {
     constructor(
         /**
          * @summary `originator_name`.

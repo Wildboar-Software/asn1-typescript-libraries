@@ -26,7 +26,7 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
+import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq } from "./CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ModifyEntryResultData */
 /**
@@ -45,7 +45,7 @@ import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../Direct
  *
  * @class
  */
-export class ModifyEntryResultData {
+export class ModifyEntryResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `entry`.

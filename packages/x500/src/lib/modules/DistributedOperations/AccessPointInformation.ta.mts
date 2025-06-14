@@ -93,26 +93,26 @@ import {
  *
  * @class
  */
-export class AccessPointInformation extends MasterOrShadowAccessPoint {
+export class AccessPointInformation implements MasterOrShadowAccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
          * @public
          * @readonly
          */
-        override readonly ae_title: Name /* REPLICATED_COMPONENT */,
+        readonly ae_title: Name /* REPLICATED_COMPONENT */,
         /**
          * @summary `address`.
          * @public
          * @readonly
          */
-        override readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
+        readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
         /**
          * @summary `protocolInformation`.
          * @public
          * @readonly
          */
-        override readonly protocolInformation?: OPTIONAL<
+        readonly protocolInformation?: OPTIONAL<
             ProtocolInformation[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -120,13 +120,13 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
          * @public
          * @readonly
          */
-        override readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category> /* REPLICATED_COMPONENT */,
+        readonly category?: OPTIONAL<MasterOrShadowAccessPoint_category> /* REPLICATED_COMPONENT */,
         /**
          * @summary `chainingRequired`.
          * @public
          * @readonly
          */
-        override readonly chainingRequired?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly chainingRequired?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `additionalPoints`.
          * @public
@@ -138,16 +138,8 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
          * @public
          * @readonly
          */
-        override readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {
-        super(
-            ae_title,
-            address,
-            protocolInformation,
-            category,
-            chainingRequired,
-        );
-    }
+        readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {}
 
     /**
      * @summary Restructures an object into a AccessPointInformation
@@ -161,7 +153,7 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
      * @param {Object} _o An object having all of the keys and values of a `AccessPointInformation`.
      * @returns {AccessPointInformation}
      */
-    public static override _from_object(
+    public static _from_object(
         _o: { [_K in keyof AccessPointInformation]: AccessPointInformation[_K] }
     ): AccessPointInformation {
         return new AccessPointInformation(
@@ -181,7 +173,7 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
      * @static
      * @method
      */
-    public static override get _default_value_for_category() {
+    public static get _default_value_for_category() {
         return MasterOrShadowAccessPoint_category_master;
     }
     /**
@@ -190,7 +182,7 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
      * @static
      * @method
      */
-    public static override get _default_value_for_chainingRequired() {
+    public static get _default_value_for_chainingRequired() {
         return false;
     }
     /**
@@ -199,7 +191,7 @@ export class AccessPointInformation extends MasterOrShadowAccessPoint {
      * @static
      */
 
-    public static override _enum_for_category = _enum_for_MasterOrShadowAccessPoint_category;
+    public static _enum_for_category = _enum_for_MasterOrShadowAccessPoint_category;
 }
 /* END_OF_SYMBOL_DEFINITION AccessPointInformation */
 

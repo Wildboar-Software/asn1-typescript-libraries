@@ -65,6 +65,7 @@ import {
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
+    CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION CompareResultData */
@@ -87,7 +88,7 @@ import {
  *
  * @class
  */
-export class CompareResultData {
+export class CompareResultData implements CommonResults {
     constructor(
         /**
          * @summary `name`.

@@ -145,7 +145,7 @@ import {
  *
  * @class
  */
-export class MSMessageSubmissionResult_mts_result {
+export class MSMessageSubmissionResult_mts_result implements MessageSubmissionResult {
     constructor(
         /**
          * @summary `message_submission_identifier`.

@@ -136,6 +136,7 @@ export {
     _encode_ResultAttribute,
 } from "../ServiceAdministration/ResultAttribute.ta.mjs";
 import {
+    SearchRuleId,
     _root_component_type_list_1_spec_for_SearchRuleId,
 } from "../ServiceAdministration/SearchRuleId.ta.mjs";
 
@@ -169,7 +170,7 @@ import {
  *
  * @class
  */
-export class SearchRule {
+export class SearchRule implements SearchRuleId {
     constructor(
         /**
          * @summary `id`.

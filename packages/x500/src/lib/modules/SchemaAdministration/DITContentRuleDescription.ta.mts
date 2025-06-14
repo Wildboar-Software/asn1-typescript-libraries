@@ -12,18 +12,6 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-export {
-    DITContentRule,
-    _decode_DITContentRule,
-    _encode_DITContentRule,
-} from "../InformationFramework/DITContentRule.ta.mjs";
-export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import {
     DITContentRule,
     _root_component_type_list_1_spec_for_DITContentRule,

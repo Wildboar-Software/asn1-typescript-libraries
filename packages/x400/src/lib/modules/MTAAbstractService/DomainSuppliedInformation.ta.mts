@@ -172,13 +172,13 @@ import {
  *   arrival-time      [0]  ArrivalTime,
  *   routing-action    [2]  RoutingAction,
  *   attempted-domain  GlobalDomainIdentifier OPTIONAL,
- *   -- additional-actions --COMPONENTS OF AdditionalActions
+ *   COMPONENTS OF AdditionalActions
  * }
  * ```
  *
  * @class
  */
-export class DomainSuppliedInformation {
+export class DomainSuppliedInformation implements AdditionalActions {
     constructor(
         /**
          * @summary `arrival_time`.

@@ -190,7 +190,7 @@ import {
  *
  * @class
  */
-export class MSProbeSubmissionArgument {
+export class MSProbeSubmissionArgument implements ProbeSubmissionArgument {
     constructor(
         /**
          * @summary `originator_name`.

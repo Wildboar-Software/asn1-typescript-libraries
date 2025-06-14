@@ -165,7 +165,7 @@ import {
  *
  * @class
  */
-export class DeleteArgument {
+export class DeleteArgument implements BaseManagedObjectId {
   constructor(
     /**
      * @summary `baseManagedObjectClass`.

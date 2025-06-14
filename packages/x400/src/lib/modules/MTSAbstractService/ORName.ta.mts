@@ -131,14 +131,14 @@ import {
  *
  * ```asn1
  * ORName ::= [APPLICATION 0]  SEQUENCE {
- *   -- address --COMPONENTS OF ORAddress,
+ *   COMPONENTS OF ORAddress,
  *   directory-name  [0]  Name OPTIONAL
  * }
  * ```
  *
  * @class
  */
-export class ORName {
+export class ORName implements ORAddress {
     constructor(
         /**
          * @summary `built_in_standard_attributes`.

@@ -23,53 +23,8 @@ import {
     _encode_CASPversion,
     _enum_for_CASPversion,
 } from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
-export {
-    CASP_error,
-    CASP_error_invalidContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_missingContentComponent /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_noReason /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_sequenceError /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownCert /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownContentType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unknownSubject /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASP_error_unsupportedWLMPversion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    invalidContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    missingContentComponent /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    noReason /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    sequenceError /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownCert /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownContentType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unknownSubject /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedWLMPversion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASP_error,
-    _encode_CASP_error,
-    _enum_for_CASP_error,
-} from "../PkiPMIProtocolSpecifications/CASP-error.ta.mjs";
-export {
-    CASPcommonComponents,
-    _decode_CASPcommonComponents,
-    _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
-export {
-    CASPsequence,
-    _decode_CASPsequence,
-    _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
-export {
-    CASPversion,
-    CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASPversion,
-    _encode_CASPversion,
-    _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
 import {
+    CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
@@ -89,7 +44,7 @@ import {
  *
  * @class
  */
-export class RejectCAsubscribe {
+export class RejectCAsubscribe implements CASPcommonComponents {
     constructor(
         /**
          * @summary `version`.

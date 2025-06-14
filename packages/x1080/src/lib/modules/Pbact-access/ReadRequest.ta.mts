@@ -122,7 +122,7 @@ import {
  *
  * @class
  */
-export class ReadRequest {
+export class ReadRequest implements CommonReqComp {
     constructor(
         /**
          * @summary `attrCerts`.

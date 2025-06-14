@@ -25,32 +25,8 @@ import {
     _decode_ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    PresentationAddress,
-    _decode_PresentationAddress,
-    _encode_PresentationAddress,
-} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-export {
-    ProtocolInformation,
-    _decode_ProtocolInformation,
-    _encode_ProtocolInformation,
-} from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import {
+    AccessPoint,
     _root_component_type_list_1_spec_for_AccessPoint,
     _root_component_type_list_2_spec_for_AccessPoint,
     _extension_additions_list_spec_for_AccessPoint,
@@ -72,26 +48,26 @@ import {
  *
  * @class
  */
-export class SupplierOrConsumer {
+export class SupplierOrConsumer extends AccessPoint {
     constructor(
         /**
          * @summary `ae_title`.
          * @public
          * @readonly
          */
-        readonly ae_title: Name /* REPLICATED_COMPONENT */,
+        override readonly ae_title: Name /* REPLICATED_COMPONENT */,
         /**
          * @summary `address`.
          * @public
          * @readonly
          */
-        readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
+        override readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
         /**
          * @summary `protocolInformation`.
          * @public
          * @readonly
          */
-        readonly protocolInformation: OPTIONAL<
+        override readonly protocolInformation: OPTIONAL<
             ProtocolInformation[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -105,8 +81,10 @@ export class SupplierOrConsumer {
          * @public
          * @readonly
          */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        override readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        super(ae_title, address, protocolInformation);
+    }
 
     /**
      * @summary Restructures an object into a SupplierOrConsumer
@@ -120,7 +98,7 @@ export class SupplierOrConsumer {
      * @param {Object} _o An object having all of the keys and values of a `SupplierOrConsumer`.
      * @returns {SupplierOrConsumer}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: { [_K in keyof SupplierOrConsumer]: SupplierOrConsumer[_K] }
     ): SupplierOrConsumer {
         return new SupplierOrConsumer(

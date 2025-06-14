@@ -22,34 +22,8 @@ import {
     _decode_CertUnsubscribeReq_certs_Item,
     _encode_CertUnsubscribeReq_certs_Item,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq-certs-Item.ta.mjs";
-export {
-    CASPcommonComponents,
-    _decode_CASPcommonComponents,
-    _encode_CASPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
-export {
-    CASPsequence,
-    _decode_CASPsequence,
-    _encode_CASPsequence,
-} from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
-export {
-    CASPversion,
-    CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    CASPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_CASPversion,
-    _encode_CASPversion,
-    _enum_for_CASPversion,
-} from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
-export {
-    CertUnsubscribeReq_certs_Item,
-    _decode_CertUnsubscribeReq_certs_Item,
-    _encode_CertUnsubscribeReq_certs_Item,
-} from "../PkiPMIProtocolSpecifications/CertUnsubscribeReq-certs-Item.ta.mjs";
 import {
+    CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
@@ -72,7 +46,7 @@ import {
  *
  * @class
  */
-export class CertUnsubscribeReq {
+export class CertUnsubscribeReq implements CASPcommonComponents {
     constructor(
         /**
          * @summary `version`.

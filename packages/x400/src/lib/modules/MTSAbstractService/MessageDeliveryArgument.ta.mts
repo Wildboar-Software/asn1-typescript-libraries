@@ -138,7 +138,7 @@ import {
  *
  * @class
  */
-export class MessageDeliveryArgument {
+export class MessageDeliveryArgument implements MessageDeliveryEnvelope {
     constructor(
         /**
          * @summary `message_delivery_identifier`.

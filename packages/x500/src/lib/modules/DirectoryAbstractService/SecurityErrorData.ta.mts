@@ -37,6 +37,7 @@ import {
     _encode_SPKM_ERROR,
 } from "../SpkmGssTokens/SPKM-ERROR.ta.mjs";
 import {
+    CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
@@ -61,7 +62,7 @@ import {
  *
  * @class
  */
-export class SecurityErrorData {
+export class SecurityErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.

@@ -85,7 +85,7 @@ import {
  *
  * @class
  */
-export class LdapArgumentData extends CommonArgumentsSeq {
+export class LdapArgumentData implements CommonArgumentsSeq {
     constructor(
         /**
          * @summary `object`.
@@ -110,95 +110,80 @@ export class LdapArgumentData extends CommonArgumentsSeq {
          * @public
          * @readonly
          */
-        override readonly _unrecognizedExtensionsList: _Element[] = [],
+        readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `serviceControls`.
          * @public
          * @readonly
          */
-        override readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
+        readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
         /**
          * @summary `securityParameters`.
          * @public
          * @readonly
          */
-        override readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
         /**
          * @summary `requestor`.
          * @public
          * @readonly
          */
-        override readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationProgress`.
          * @public
          * @readonly
          */
-        override readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
+        readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
         /**
          * @summary `aliasedRDNs`.
          * @public
          * @readonly
          */
-        override readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
+        readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
         /**
          * @summary `criticalExtensions`.
          * @public
          * @readonly
          */
-        override readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
+        readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
         /**
          * @summary `referenceType`.
          * @public
          * @readonly
          */
-        override readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
+        readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entryOnly`.
          * @public
          * @readonly
          */
-        override readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `exclusions`.
          * @public
          * @readonly
          */
-        override readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
+        readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
         /**
          * @summary `nameResolveOnMaster`.
          * @public
          * @readonly
          */
-        override readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `operationContexts`.
          * @public
          * @readonly
          */
-        override readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
+        readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `familyGrouping`.
          * @public
          * @readonly
          */
-        override readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {
-        super(
-            serviceControls,
-            securityParameters,
-            requestor,
-            operationProgress,
-            aliasedRDNs,
-            criticalExtensions,
-            referenceType,
-            entryOnly,
-            exclusions,
-            nameResolveOnMaster,
-            operationContexts,
-            familyGrouping,
-        );
-    }
+        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
+    ) {}
 
     /**
      * @summary Restructures an object into a LdapArgumentData
@@ -212,7 +197,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @param {Object} _o An object having all of the keys and values of a `LdapArgumentData`.
      * @returns {LdapArgumentData}
      */
-    public static override _from_object(
+    public static _from_object(
         _o: { [_K in keyof LdapArgumentData]: LdapArgumentData[_K] }
     ): LdapArgumentData {
         return new LdapArgumentData(
@@ -241,7 +226,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static override get _default_value_for_serviceControls() {
+    public static get _default_value_for_serviceControls() {
         return ServiceControls._from_object({});
     }
     /**
@@ -250,7 +235,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static override get _default_value_for_operationProgress() {
+    public static get _default_value_for_operationProgress() {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
@@ -262,7 +247,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static override get _default_value_for_entryOnly() {
+    public static get _default_value_for_entryOnly() {
         return false;
     }
     /**
@@ -271,7 +256,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static override get _default_value_for_nameResolveOnMaster() {
+    public static get _default_value_for_nameResolveOnMaster() {
         return false;
     }
     /**
@@ -280,7 +265,7 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      * @method
      */
-    public static override get _default_value_for_familyGrouping() {
+    public static get _default_value_for_familyGrouping() {
         return FamilyGrouping_entryOnly;
     }
     /**
@@ -289,14 +274,14 @@ export class LdapArgumentData extends CommonArgumentsSeq {
      * @static
      */
 
-    public static override _enum_for_referenceType = _enum_for_ReferenceType;
+    public static _enum_for_referenceType = _enum_for_ReferenceType;
     /**
      * @summary The enum used as the type of the component `familyGrouping`
      * @public
      * @static
      */
 
-    public static override _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
 }
 /* END_OF_SYMBOL_DEFINITION LdapArgumentData */
 

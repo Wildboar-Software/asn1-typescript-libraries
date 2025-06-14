@@ -62,6 +62,7 @@ export {
     _encode_ProtocolInformation,
 } from "../SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import {
+    SupplierOrConsumer,
     _root_component_type_list_1_spec_for_SupplierOrConsumer,
     _root_component_type_list_2_spec_for_SupplierOrConsumer,
     _extension_additions_list_spec_for_SupplierOrConsumer,
@@ -84,7 +85,7 @@ import {
  *
  * @class
  */
-export class SupplierInformation {
+export class SupplierInformation implements SupplierOrConsumer {
     constructor(
         /**
          * @summary `ae_title`.

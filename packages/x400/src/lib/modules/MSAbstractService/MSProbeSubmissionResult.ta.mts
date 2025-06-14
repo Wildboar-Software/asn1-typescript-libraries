@@ -150,7 +150,7 @@ import {
  *
  * @class
  */
-export class MSProbeSubmissionResult {
+export class MSProbeSubmissionResult implements ProbeSubmissionResult {
     constructor(
         /**
          * @summary `probe_submission_identifier`.

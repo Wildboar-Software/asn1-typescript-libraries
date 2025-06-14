@@ -220,7 +220,7 @@ import {
  *
  * @class
  */
-export class MessageTransferEnvelope {
+export class MessageTransferEnvelope implements PerMessageTransferFields {
     constructor(
         /**
          * @summary `message_identifier`.

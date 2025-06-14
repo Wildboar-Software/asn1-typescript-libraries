@@ -54,6 +54,7 @@ export {
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
+    AadServer,
     _root_component_type_list_1_spec_for_AadServer,
 } from "../Wrapper/AadServer.ta.mjs";
 
@@ -73,44 +74,44 @@ import {
  *
  * @class
  */
-export class AadServerAE {
+export class AadServerAE extends AadServer {
     constructor(
         /**
          * @summary `invokeID`.
          * @public
          * @readonly
          */
-        readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
+        override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
          * @public
          * @readonly
          */
-        readonly assoID: AssoID /* REPLICATED_COMPONENT */,
+        override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
          * @public
          * @readonly
          */
-        readonly time: TimeStamp /* REPLICATED_COMPONENT */,
+        override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
          * @public
          * @readonly
          */
-        readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
+        override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `reqRekey`.
          * @public
          * @readonly
          */
-        readonly reqRekey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        override readonly reqRekey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `changedKey`.
          * @public
          * @readonly
          */
-        readonly changedKey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        override readonly changedKey: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
          * @public
@@ -123,7 +124,9 @@ export class AadServerAE {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(invokeID, assoID, time, seq, reqRekey, changedKey);
+    }
 
     /**
      * @summary Restructures an object into a AadServerAE
@@ -137,7 +140,7 @@ export class AadServerAE {
      * @param {Object} _o An object having all of the keys and values of a `AadServerAE`.
      * @returns {AadServerAE}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: { [_K in keyof AadServerAE]: AadServerAE[_K] }
     ): AadServerAE {
         return new AadServerAE(
@@ -158,7 +161,7 @@ export class AadServerAE {
      * @static
      * @method
      */
-    public static get _default_value_for_reqRekey() {
+    public static override get _default_value_for_reqRekey() {
         return false;
     }
     /**
@@ -167,7 +170,7 @@ export class AadServerAE {
      * @static
      * @method
      */
-    public static get _default_value_for_changedKey() {
+    public static override get _default_value_for_changedKey() {
         return false;
     }
 }

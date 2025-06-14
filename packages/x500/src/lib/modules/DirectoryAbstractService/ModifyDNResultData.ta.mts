@@ -26,7 +26,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
+import { CommonResultsSeq, _root_component_type_list_1_spec_for_CommonResultsSeq } from "./CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ModifyDNResultData */
 /**
@@ -45,7 +45,7 @@ import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../Direct
  *
  * @class
  */
-export class ModifyDNResultData {
+export class ModifyDNResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `newRDN`.

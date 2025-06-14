@@ -26,33 +26,9 @@ import {
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";
 import {
+    ChopSpecification,
     _root_component_type_list_1_spec_for_ChopSpecification,
 } from "../InformationFramework/ChopSpecification.ta.mjs";
-export {
-    BaseDistance,
-    _decode_BaseDistance,
-    _encode_BaseDistance,
-} from "../InformationFramework/BaseDistance.ta.mjs";
-export {
-    ChopSpecification_specificExclusions_Item,
-    _decode_ChopSpecification_specificExclusions_Item,
-    _encode_ChopSpecification_specificExclusions_Item,
-} from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-export {
-    ChopSpecification,
-    _decode_ChopSpecification,
-    _encode_ChopSpecification,
-} from "../InformationFramework/ChopSpecification.ta.mjs";
-export {
-    LocalName,
-    _decode_LocalName,
-    _encode_LocalName,
-} from "../InformationFramework/LocalName.ta.mjs";
-export {
-    Refinement,
-    _decode_Refinement,
-    _encode_Refinement,
-} from "../InformationFramework/Refinement.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION SubtreeSpecification */
 /**
@@ -71,7 +47,7 @@ export {
  *
  * @class
  */
-export class SubtreeSpecification {
+export class SubtreeSpecification implements ChopSpecification {
     constructor(
         /**
          * @summary `base`.

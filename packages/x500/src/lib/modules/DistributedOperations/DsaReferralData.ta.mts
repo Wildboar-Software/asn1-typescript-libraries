@@ -52,6 +52,7 @@ export {
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
+    CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
@@ -75,7 +76,7 @@ import {
  *
  * @class
  */
-export class DsaReferralData {
+export class DsaReferralData implements CommonResults {
     constructor(
         /**
          * @summary `reference`.

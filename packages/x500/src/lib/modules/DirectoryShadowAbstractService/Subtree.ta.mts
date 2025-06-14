@@ -15,22 +15,7 @@ import {
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-import { _root_component_type_list_1_spec_for_TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
-export {
-    SDSEContent,
-    _decode_SDSEContent,
-    _encode_SDSEContent,
-} from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
-export {
-    TotalRefresh,
-    _decode_TotalRefresh,
-    _encode_TotalRefresh,
-} from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
-export {
-    RelativeDistinguishedName,
-    _decode_RelativeDistinguishedName,
-    _encode_RelativeDistinguishedName,
-} from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
+import { TotalRefresh, _root_component_type_list_1_spec_for_TotalRefresh } from "../DirectoryShadowAbstractService/TotalRefresh.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION Subtree */
 /**
@@ -48,7 +33,7 @@ export {
  *
  * @class
  */
-export class Subtree {
+export class Subtree implements TotalRefresh {
     constructor(
         /**
          * @summary `rdn`.

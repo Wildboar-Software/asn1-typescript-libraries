@@ -24,35 +24,9 @@ import {
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
 import {
+    AVMPcommonComponents,
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
-export {
-    CertAVL,
-    _decode_CertAVL,
-    _encode_CertAVL,
-} from "../AuthenticationFramework/CertAVL.ta.mjs";
-export {
-    AVMPcommonComponents,
-    _decode_AVMPcommonComponents,
-    _encode_AVMPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
-export {
-    AVMPsequence,
-    _decode_AVMPsequence,
-    _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.mjs";
-export {
-    AVMPversion,
-    AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AVMPversion,
-    _encode_AVMPversion,
-    _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION AddAvlReq */
 /**
@@ -70,7 +44,7 @@ export {
  *
  * @class
  */
-export class AddAvlReq {
+export class AddAvlReq implements AVMPcommonComponents {
     constructor(
         /**
          * @summary `version`.

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +16,7 @@ import {
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
 } from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.mjs';
-export {
-    SubjectSubmissionIdentifier,
-    _decode_SubjectSubmissionIdentifier,
-    _encode_SubjectSubmissionIdentifier,
-} from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.mjs';
 import {
-    ContentIdentifier,
-    _decode_ContentIdentifier,
-    _encode_ContentIdentifier,
-} from '../MTSAbstractService/ContentIdentifier.ta.mjs';
-export {
     ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
@@ -91,17 +26,7 @@ import {
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
-export {
-    ContentType,
-    _decode_ContentType,
-    _encode_ContentType,
-} from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
-    _decode_OriginalEncodedInformationTypes,
-    _encode_OriginalEncodedInformationTypes,
-} from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
-export {
     OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
@@ -111,22 +36,13 @@ import {
     _decode_ExtensionField,
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
-export {
-    ExtensionField,
-    _decode_ExtensionField,
-    _encode_ExtensionField,
-} from '../MTSAbstractService/ExtensionField.ta.mjs';
 import {
     PerRecipientReportDeliveryFields,
     _decode_PerRecipientReportDeliveryFields,
     _encode_PerRecipientReportDeliveryFields,
 } from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.mjs';
-export {
-    PerRecipientReportDeliveryFields,
-    _decode_PerRecipientReportDeliveryFields,
-    _encode_PerRecipientReportDeliveryFields,
-} from '../MTSAbstractService/PerRecipientReportDeliveryFields.ta.mjs';
 import {
+    PerReportDeliveryFields,
     _root_component_type_list_1_spec_for_PerReportDeliveryFields,
     _root_component_type_list_2_spec_for_PerReportDeliveryFields,
     _extension_additions_list_spec_for_PerReportDeliveryFields,
@@ -149,7 +65,7 @@ import {
  *
  * @class
  */
-export class ReportDeliveryEnvelope {
+export class ReportDeliveryEnvelope implements PerReportDeliveryFields {
     constructor(
         /**
          * @summary `subject_submission_identifier`.

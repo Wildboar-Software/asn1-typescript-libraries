@@ -128,7 +128,7 @@ import {
  *
  * @class
  */
-export class MSMessageSubmissionArgument {
+export class MSMessageSubmissionArgument implements MessageSubmissionArgument {
     constructor(
         /**
          * @summary `envelope`.

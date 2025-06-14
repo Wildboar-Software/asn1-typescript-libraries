@@ -31,38 +31,8 @@ import {
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
-export {
-    AlgoInvoke,
-    _decode_AlgoInvoke,
-    _encode_AlgoInvoke,
-} from "@wildboar/pki-stub/src/lib/modules/PKI-Stub/AlgoInvoke.ta.mjs";
-export {
-    AadClient,
-    _decode_AadClient,
-    _encode_AadClient,
-} from "../Wrapper/AadClient.ta.mjs";
-export { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
-export {
-    InvokeID,
-    _decode_InvokeID,
-    _encode_InvokeID,
-} from "../Wrapper/InvokeID.ta.mjs";
-export {
-    SequenceNumber,
-    _decode_SequenceNumber,
-    _encode_SequenceNumber,
-} from "../Wrapper/SequenceNumber.ta.mjs";
-export {
-    TbpDataTransferClient_conf,
-    _decode_TbpDataTransferClient_conf,
-    _encode_TbpDataTransferClient_conf,
-} from "../Wrapper/TbpDataTransferClient-conf.ta.mjs";
-export {
-    TimeStamp,
-    _decode_TimeStamp,
-    _encode_TimeStamp,
-} from "../Wrapper/TimeStamp.ta.mjs";
 import {
+    AadClient,
     _root_component_type_list_1_spec_for_AadClient,
 } from "../Wrapper/AadClient.ta.mjs";
 
@@ -86,38 +56,38 @@ import {
  *
  * @class
  */
-export class TbpDataTransferClient {
+export class TbpDataTransferClient extends AadClient {
     constructor(
         /**
          * @summary `invokeID`.
          * @public
          * @readonly
          */
-        readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
+        override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
          * @public
          * @readonly
          */
-        readonly assoID: AssoID /* REPLICATED_COMPONENT */,
+        override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
          * @public
          * @readonly
          */
-        readonly time: TimeStamp /* REPLICATED_COMPONENT */,
+        override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
          * @public
          * @readonly
          */
-        readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
+        override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `keyEst`.
          * @public
          * @readonly
          */
-        readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
+        override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encEnvoke`.
          * @public
@@ -136,7 +106,9 @@ export class TbpDataTransferClient {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(invokeID, assoID, time, seq, keyEst);
+    }
 
     /**
      * @summary Restructures an object into a TbpDataTransferClient
@@ -150,7 +122,7 @@ export class TbpDataTransferClient {
      * @param {Object} _o An object having all of the keys and values of a `TbpDataTransferClient`.
      * @returns {TbpDataTransferClient}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: { [_K in keyof TbpDataTransferClient]: TbpDataTransferClient[_K] }
     ): TbpDataTransferClient {
         return new TbpDataTransferClient(

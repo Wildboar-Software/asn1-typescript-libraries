@@ -11,16 +11,6 @@ import {
     _decode_ListResultData_listInfo,
     _encode_ListResultData_listInfo,
 } from "../DirectoryAbstractService/ListResultData-listInfo.ta.mjs";
-export {
-    ListResult,
-    _decode_ListResult,
-    _encode_ListResult,
-} from "../DirectoryAbstractService/ListResult.ta.mjs";
-export {
-    ListResultData_listInfo,
-    _decode_ListResultData_listInfo,
-    _encode_ListResultData_listInfo,
-} from "../DirectoryAbstractService/ListResultData-listInfo.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ListResultData */
 /**

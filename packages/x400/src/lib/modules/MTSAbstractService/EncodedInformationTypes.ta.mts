@@ -260,7 +260,7 @@ import {
  * ```asn1
  * EncodedInformationTypes ::= [APPLICATION 5]  SET {
  *   built-in-encoded-information-types  [0]  BuiltInEncodedInformationTypes,
- *   -- non-basic-parameters --COMPONENTS OF NonBasicParameters,
+ *   COMPONENTS OF NonBasicParameters,
  *   extended-encoded-information-types
  *     [4]  ExtendedEncodedInformationTypes OPTIONAL
  * }
@@ -268,7 +268,7 @@ import {
  *
  * @class
  */
-export class EncodedInformationTypes {
+export class EncodedInformationTypes implements NonBasicParameters {
     constructor(
         /**
          * @summary `built_in_encoded_information_types`.

@@ -50,6 +50,7 @@ export {
     _encode_CertReplaceReq_certs_Item,
 } from "../PkiPMIProtocolSpecifications/CertReplaceReq-certs-Item.ta.mjs";
 import {
+    CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
@@ -72,7 +73,7 @@ import {
  *
  * @class
  */
-export class CertReplaceReq {
+export class CertReplaceReq implements CASPcommonComponents {
     constructor(
         /**
          * @summary `version`.

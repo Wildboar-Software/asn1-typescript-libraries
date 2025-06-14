@@ -26,7 +26,10 @@ import {
     _decode_LDAPMessage,
     _encode_LDAPMessage,
 } from "@wildboar/ldap/src/lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPMessage.ta.mjs";
-import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
+import {
+    CommonResultsSeq,
+    _root_component_type_list_1_spec_for_CommonResultsSeq,
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION LdapResultData */
 /**
@@ -46,7 +49,7 @@ import { _root_component_type_list_1_spec_for_CommonResultsSeq } from "../Direct
  *
  * @class
  */
-export class LdapResultData {
+export class LdapResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `ldapMessages`.

@@ -191,7 +191,7 @@ import {
  *
  * @class
  */
-export class MessageSubmissionEnvelope {
+export class MessageSubmissionEnvelope implements PerMessageSubmissionFields {
     constructor(
         /**
          * @summary `originator_name`.

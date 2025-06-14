@@ -176,7 +176,7 @@ import {
  *
  * @class
  */
-export class GetArgument {
+export class GetArgument implements BaseManagedObjectId {
   constructor(
     /**
      * @summary `baseManagedObjectClass`.

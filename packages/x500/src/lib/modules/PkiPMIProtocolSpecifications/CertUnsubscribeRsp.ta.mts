@@ -50,6 +50,7 @@ export {
     _encode_CertUnsubscribeRsp_result,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp-result.ta.mjs";
 import {
+    CASPcommonComponents,
     _root_component_type_list_1_spec_for_CASPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/CASPcommonComponents.ta.mjs";
 
@@ -72,7 +73,7 @@ import {
  *
  * @class
  */
-export class CertUnsubscribeRsp {
+export class CertUnsubscribeRsp implements CASPcommonComponents {
     constructor(
         /**
          * @summary `version`.

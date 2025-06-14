@@ -138,7 +138,7 @@ import {
  *
  * @class
  */
-export class PerDomainBilateralInformation {
+export class PerDomainBilateralInformation implements BilateralDomain {
     constructor(
         /**
          * @summary `country_name`.

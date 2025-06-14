@@ -155,6 +155,7 @@ export {
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';
 import {
+    AdditionalActions,
     _root_component_type_list_1_spec_for_AdditionalActions,
     _root_component_type_list_2_spec_for_AdditionalActions,
     _extension_additions_list_spec_for_AdditionalActions,
@@ -173,13 +174,15 @@ import {
  *   routing-action  [2]  RoutingAction,
  *   attempted       CHOICE {mta     MTAName,
  *                           domain  GlobalDomainIdentifier} OPTIONAL,
- *   -- additional-actions --COMPONENTS OF InternalAdditionalActions
+ *   COMPONENTS OF InternalAdditionalActions
  * }
+ * 
+ * InternalAdditionalActions ::= AdditionalActions
  * ```
  *
  * @class
  */
-export class MTASuppliedInformation {
+export class MTASuppliedInformation implements AdditionalActions {
     constructor(
         /**
          * @summary `arrival_time`.

@@ -117,7 +117,7 @@ import {
  *
  * @class
  */
-export class RenameRequest {
+export class RenameRequest implements CommonReqComp {
     constructor(
         /**
          * @summary `attrCerts`.

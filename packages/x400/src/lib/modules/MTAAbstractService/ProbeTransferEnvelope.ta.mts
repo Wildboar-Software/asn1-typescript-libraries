@@ -209,7 +209,7 @@ import {
  *
  * @class
  */
-export class ProbeTransferEnvelope {
+export class ProbeTransferEnvelope implements PerProbeTransferFields {
     constructor(
         /**
          * @summary `probe_identifier`.

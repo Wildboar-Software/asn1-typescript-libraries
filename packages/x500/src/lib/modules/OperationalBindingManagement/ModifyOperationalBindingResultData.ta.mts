@@ -32,41 +32,10 @@ import {
     _decode_Validity,
     _encode_Validity,
 } from "../OperationalBindingManagement/Validity.ta.mjs";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    Validity,
-    _decode_Validity,
-    _encode_Validity,
-} from "../OperationalBindingManagement/Validity.ta.mjs";
 import {
-    _root_component_type_list_1_spec_for_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
+    CommonResultsSeq,
+    _root_component_type_list_1_spec_for_CommonResultsSeq,
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION ModifyOperationalBindingResultData */
 /**
@@ -89,7 +58,7 @@ import {
  *
  * @class
  */
-export class ModifyOperationalBindingResultData {
+export class ModifyOperationalBindingResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `newBindingID`.
@@ -242,7 +211,7 @@ export const _root_component_type_list_1_spec_for_ModifyOperationalBindingResult
  * @constant
  */
 export const _root_component_type_list_2_spec_for_ModifyOperationalBindingResultData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_ModifyOperationalBindingResultData */
 

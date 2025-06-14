@@ -37,46 +37,10 @@ import {
     _decode_OperationalBindingID,
     _encode_OperationalBindingID,
 } from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    AccessPoint,
-    _decode_AccessPoint,
-    _encode_AccessPoint,
-} from "../DistributedOperations/AccessPoint.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    EstablishOperationalBindingResultData_initiator,
-    _decode_EstablishOperationalBindingResultData_initiator,
-    _encode_EstablishOperationalBindingResultData_initiator,
-} from "../OperationalBindingManagement/EstablishOperationalBindingResultData-initiator.ta.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export {
-    OperationalBindingID,
-    _decode_OperationalBindingID,
-    _encode_OperationalBindingID,
-} from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
 import {
-    _root_component_type_list_1_spec_for_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
+    CommonResultsSeq,
+    _root_component_type_list_1_spec_for_CommonResultsSeq,
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION EstablishOperationalBindingResultData */
 /**
@@ -105,7 +69,7 @@ import {
  *
  * @class
  */
-export class EstablishOperationalBindingResultData {
+export class EstablishOperationalBindingResultData implements CommonResultsSeq {
     constructor(
         /**
          * @summary `bindingType`.
@@ -252,7 +216,7 @@ export const _root_component_type_list_1_spec_for_EstablishOperationalBindingRes
  * @constant
  */
 export const _root_component_type_list_2_spec_for_EstablishOperationalBindingResultData: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_EstablishOperationalBindingResultData */
 

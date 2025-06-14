@@ -186,7 +186,7 @@ import {
  *
  * @class
  */
-export class SetArgument {
+export class SetArgument implements BaseManagedObjectId {
   constructor(
     /**
      * @summary `baseManagedObjectClass`.

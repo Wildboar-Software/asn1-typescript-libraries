@@ -305,7 +305,7 @@ import {
  *
  * @class
  */
-export class ExtendedResponse {
+export class ExtendedResponse implements LDAPResult {
   constructor(
     /**
      * @summary `resultCode`.

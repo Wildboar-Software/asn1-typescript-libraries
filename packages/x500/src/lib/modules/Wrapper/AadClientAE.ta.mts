@@ -53,6 +53,7 @@ export {
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
+    AadClient,
     _root_component_type_list_1_spec_for_AadClient,
 } from "../Wrapper/AadClient.ta.mjs";
 
@@ -72,38 +73,38 @@ import {
  *
  * @class
  */
-export class AadClientAE {
+export class AadClientAE extends AadClient {
     constructor(
         /**
          * @summary `invokeID`.
          * @public
          * @readonly
          */
-        readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
+        override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
         /**
          * @summary `assoID`.
          * @public
          * @readonly
          */
-        readonly assoID: AssoID /* REPLICATED_COMPONENT */,
+        override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
         /**
          * @summary `time`.
          * @public
          * @readonly
          */
-        readonly time: TimeStamp /* REPLICATED_COMPONENT */,
+        override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
         /**
          * @summary `seq`.
          * @public
          * @readonly
          */
-        readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
+        override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
         /**
          * @summary `keyEst`.
          * @public
          * @readonly
          */
-        readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
+        override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
          * @public
@@ -116,7 +117,9 @@ export class AadClientAE {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        super(invokeID, assoID, time, seq, keyEst);
+    }
 
     /**
      * @summary Restructures an object into a AadClientAE
@@ -130,7 +133,7 @@ export class AadClientAE {
      * @param {Object} _o An object having all of the keys and values of a `AadClientAE`.
      * @returns {AadClientAE}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: { [_K in keyof AadClientAE]: AadClientAE[_K] }
     ): AadClientAE {
         return new AadClientAE(

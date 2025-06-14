@@ -177,7 +177,7 @@ import {
  *
  * @class
  */
-export class DeliveryControlArgument {
+export class DeliveryControlArgument implements DeliveryControls {
     constructor(
         /**
          * @summary `restrict`.

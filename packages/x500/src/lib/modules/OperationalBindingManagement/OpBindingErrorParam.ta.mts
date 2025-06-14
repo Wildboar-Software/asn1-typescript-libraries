@@ -33,68 +33,10 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
-export {
-    CommonResultsSeq,
-    _decode_CommonResultsSeq,
-    _encode_CommonResultsSeq,
-} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    currentlyNotDecidable /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    duplicateID /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidAgreement /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidBindingType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidEndTime /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidID /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidNewID /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    invalidStartTime /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    modificationNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    notAllowedForRole /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem,
-    OpBindingErrorParam_problem_currentlyNotDecidable /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_duplicateID /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidAgreement /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidBindingType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidEndTime /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidID /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidNewID /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_invalidStartTime /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_modificationNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_notAllowedForRole /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_parametersMissing /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_roleAssignment /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    OpBindingErrorParam_problem_unsupportedBindingType /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    parametersMissing /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    roleAssignment /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    unsupportedBindingType /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_OpBindingErrorParam_problem,
-    _encode_OpBindingErrorParam_problem,
-    _enum_for_OpBindingErrorParam_problem,
-} from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta.mjs";
-export { OpBindingSet } from "../OperationalBindingManagement/OpBindingSet.osa.mjs";
-export { OPERATIONAL_BINDING } from "../OperationalBindingManagement/OPERATIONAL-BINDING.oca.mjs";
-export {
-    Time,
-    _decode_Time,
-    _encode_Time,
-} from "../OperationalBindingManagement/Time.ta.mjs";
 import {
-    _root_component_type_list_1_spec_for_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
+    CommonResultsSeq,
+    _root_component_type_list_1_spec_for_CommonResultsSeq,
+} from "../DirectoryAbstractService/CommonResultsSeq.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION OpBindingErrorParam */
 /**
@@ -131,7 +73,7 @@ import {
  *
  * @class
  */
-export class OpBindingErrorParam {
+export class OpBindingErrorParam implements CommonResultsSeq {
     constructor(
         /**
          * @summary `problem`.
@@ -287,7 +229,7 @@ export const _root_component_type_list_1_spec_for_OpBindingErrorParam: $.Compone
  * @constant
  */
 export const _root_component_type_list_2_spec_for_OpBindingErrorParam: $.ComponentSpec[] = [
-    ..._root_component_type_list_1_spec_for_CommonResults,
+    ..._root_component_type_list_1_spec_for_CommonResultsSeq,
 ];
 /* END_OF_SYMBOL_DEFINITION _root_component_type_list_2_spec_for_OpBindingErrorParam */
 

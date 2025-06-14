@@ -138,7 +138,7 @@ import {
  *
  * @class
  */
-export class ModifyRequest {
+export class ModifyRequest implements CommonReqComp {
     constructor(
         /**
          * @summary `attrCerts`.

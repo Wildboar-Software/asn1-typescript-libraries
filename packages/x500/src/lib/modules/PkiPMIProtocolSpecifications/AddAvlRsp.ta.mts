@@ -51,6 +51,7 @@ export {
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
 import {
+    AVMPcommonComponents,
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
@@ -73,7 +74,7 @@ import {
  *
  * @class
  */
-export class AddAvlRsp {
+export class AddAvlRsp implements AVMPcommonComponents {
     constructor(
         /**
          * @summary `version`.

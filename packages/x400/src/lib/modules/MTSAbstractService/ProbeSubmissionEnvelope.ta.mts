@@ -179,7 +179,7 @@ import {
  *
  * @class
  */
-export class ProbeSubmissionEnvelope {
+export class ProbeSubmissionEnvelope implements PerProbeSubmissionFields {
     constructor(
         /**
          * @summary `originator_name`.

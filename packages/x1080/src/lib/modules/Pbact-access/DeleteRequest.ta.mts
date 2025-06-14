@@ -116,7 +116,7 @@ import {
  *
  * @class
  */
-export class DeleteRequest {
+export class DeleteRequest implements CommonReqComp {
     constructor(
         /**
          * @summary `attrCerts`.

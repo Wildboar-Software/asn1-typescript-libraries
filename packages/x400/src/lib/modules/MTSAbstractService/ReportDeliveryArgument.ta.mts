@@ -168,7 +168,7 @@ import {
  *
  * @class
  */
-export class ReportDeliveryArgument {
+export class ReportDeliveryArgument implements ReportDeliveryEnvelope {
     constructor(
         /**
          * @summary `subject_submission_identifier`.

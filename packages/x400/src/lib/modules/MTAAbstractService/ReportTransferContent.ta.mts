@@ -189,7 +189,7 @@ import {
  *
  * @class
  */
-export class ReportTransferContent {
+export class ReportTransferContent implements PerReportTransferFields {
     constructor(
         /**
          * @summary `subject_identifier`.

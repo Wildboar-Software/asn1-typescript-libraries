@@ -36,42 +36,8 @@ import {
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    ListResultData_listInfo_subordinates_Item,
-    _decode_ListResultData_listInfo_subordinates_Item,
-    _encode_ListResultData_listInfo_subordinates_Item,
-} from "../DirectoryAbstractService/ListResultData-listInfo-subordinates-Item.ta.mjs";
-export {
-    PartialOutcomeQualifier,
-    _decode_PartialOutcomeQualifier,
-    _encode_PartialOutcomeQualifier,
-} from "../DirectoryAbstractService/PartialOutcomeQualifier.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    Name,
-    _decode_Name,
-    _encode_Name,
-} from "../InformationFramework/Name.ta.mjs";
 import {
+    CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
@@ -90,7 +56,7 @@ import {
  *
  * @class
  */
-export class ListResultData_listInfo {
+export class ListResultData_listInfo implements CommonResults {
     constructor(
         /**
          * @summary `name`.

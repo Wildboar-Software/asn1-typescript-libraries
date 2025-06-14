@@ -67,7 +67,7 @@ import {
  *
  * @class
  */
-export class SupplierAndConsumers {
+export class SupplierAndConsumers implements AccessPoint {
     constructor(
         /**
          * @summary `ae_title`.

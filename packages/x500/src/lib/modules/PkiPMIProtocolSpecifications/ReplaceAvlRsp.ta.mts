@@ -23,34 +23,8 @@ import {
     _decode_ReplaceAvlRsp_result,
     _encode_ReplaceAvlRsp_result,
 } from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp-result.ta.mjs";
-export {
-    AVMPcommonComponents,
-    _decode_AVMPcommonComponents,
-    _encode_AVMPcommonComponents,
-} from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
-export {
-    AVMPsequence,
-    _decode_AVMPsequence,
-    _encode_AVMPsequence,
-} from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.mjs";
-export {
-    AVMPversion,
-    AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMPversion_v2 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    AVMPversion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    v1 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v2 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_AVMPversion,
-    _encode_AVMPversion,
-    _enum_for_AVMPversion,
-} from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
-export {
-    ReplaceAvlRsp_result,
-    _decode_ReplaceAvlRsp_result,
-    _encode_ReplaceAvlRsp_result,
-} from "../PkiPMIProtocolSpecifications/ReplaceAvlRsp-result.ta.mjs";
 import {
+    AVMPcommonComponents,
     _root_component_type_list_1_spec_for_AVMPcommonComponents,
 } from "../PkiPMIProtocolSpecifications/AVMPcommonComponents.ta.mjs";
 
@@ -73,7 +47,7 @@ import {
  *
  * @class
  */
-export class ReplaceAvlRsp {
+export class ReplaceAvlRsp implements AVMPcommonComponents {
     constructor(
         /**
          * @summary `version`.

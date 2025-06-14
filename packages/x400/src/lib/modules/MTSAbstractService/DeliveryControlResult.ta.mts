@@ -169,7 +169,7 @@ import {
  *
  * @class
  */
-export class DeliveryControlResult {
+export class DeliveryControlResult implements Waiting {
     constructor(
         /**
          * @summary `waiting_operations`.

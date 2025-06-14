@@ -176,7 +176,7 @@ import {
  *
  * @class
  */
-export class ActionArgument {
+export class ActionArgument implements BaseManagedObjectId {
   constructor(
     /**
      * @summary `baseManagedObjectClass`.

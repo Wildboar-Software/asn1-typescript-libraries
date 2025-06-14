@@ -17,23 +17,8 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-export {
-    DITStructureRule,
-    _decode_DITStructureRule,
-    _encode_DITStructureRule,
-} from "../InformationFramework/DITStructureRule.ta.mjs";
-export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-export {
-    RuleIdentifier,
-    _decode_RuleIdentifier,
-    _encode_RuleIdentifier,
-} from "../InformationFramework/RuleIdentifier.ta.mjs";
-export {
-    UnboundedDirectoryString,
-    _decode_UnboundedDirectoryString,
-    _encode_UnboundedDirectoryString,
-} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import {
+    DITStructureRule,
     _root_component_type_list_1_spec_for_DITStructureRule,
 } from "../InformationFramework/DITStructureRule.ta.mjs";
 
@@ -55,26 +40,26 @@ import {
  *
  * @class
  */
-export class DITStructureRuleDescription {
+export class DITStructureRuleDescription extends DITStructureRule {
     constructor(
         /**
          * @summary `ruleIdentifier`.
          * @public
          * @readonly
          */
-        readonly ruleIdentifier: RuleIdentifier /* REPLICATED_COMPONENT */,
+        override readonly ruleIdentifier: RuleIdentifier /* REPLICATED_COMPONENT */,
         /**
          * @summary `nameForm`.
          * @public
          * @readonly
          */
-        readonly nameForm: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
+        override readonly nameForm: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
         /**
          * @summary `superiorStructureRules`.
          * @public
          * @readonly
          */
-        readonly superiorStructureRules?: OPTIONAL<
+        override readonly superiorStructureRules?: OPTIONAL<
             RuleIdentifier[]
         > /* REPLICATED_COMPONENT */,
         /**
@@ -100,8 +85,10 @@ export class DITStructureRuleDescription {
          * @public
          * @readonly
          */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        override readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        super(ruleIdentifier, nameForm, superiorStructureRules);
+    }
 
     /**
      * @summary Restructures an object into a DITStructureRuleDescription
@@ -115,7 +102,7 @@ export class DITStructureRuleDescription {
      * @param {Object} _o An object having all of the keys and values of a `DITStructureRuleDescription`.
      * @returns {DITStructureRuleDescription}
      */
-    public static _from_object(
+    public static override _from_object(
         _o: Partial<
             {
                 [_K in keyof DITStructureRuleDescription]: DITStructureRuleDescription[_K];

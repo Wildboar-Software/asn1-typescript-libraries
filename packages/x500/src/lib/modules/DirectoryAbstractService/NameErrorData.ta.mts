@@ -35,6 +35,7 @@ import {
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
+    CommonResults,
 } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 
 /* START_OF_SYMBOL_DEFINITION NameErrorData */
@@ -55,7 +56,7 @@ import {
  *
  * @class
  */
-export class NameErrorData {
+export class NameErrorData implements CommonResults {
     constructor(
         /**
          * @summary `problem`.

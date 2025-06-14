@@ -26,32 +26,8 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
-export {
-    CommonResults,
-    _decode_CommonResults,
-    _encode_CommonResults,
-} from "../DirectoryAbstractService/CommonResults.ta.mjs";
-export {
-    SecurityParameters,
-    _decode_SecurityParameters,
-    _encode_SecurityParameters,
-} from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-export {
-    ContinuationReference,
-    _decode_ContinuationReference,
-    _encode_ContinuationReference,
-} from "../DistributedOperations/ContinuationReference.ta.mjs";
-export {
-    Attribute,
-    _decode_Attribute,
-    _encode_Attribute,
-} from "../InformationFramework/Attribute.ta.mjs";
-export {
-    DistinguishedName,
-    _decode_DistinguishedName,
-    _encode_DistinguishedName,
-} from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
+    CommonResults,
     _root_component_type_list_1_spec_for_CommonResults,
     _root_component_type_list_2_spec_for_CommonResults,
     _extension_additions_list_spec_for_CommonResults,
@@ -74,7 +50,7 @@ import {
  *
  * @class
  */
-export class ReferralData {
+export class ReferralData implements CommonResults {
     constructor(
         /**
          * @summary `candidate`.
