@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -69,61 +15,10 @@ import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     SubprocessName,
     _enum_for_SubprocessName,
-    SubprocessName_data_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    data_capture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_intermediate_signal_processing /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    intermediate_signal_processing /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_final_signal_processing /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    final_signal_processing /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_storage /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    storage /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_comparison /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    comparison /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_decision /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    decision /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_sample_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sample_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_feature_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    feature_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_score_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    score_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_decision_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    decision_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    _decode_SubprocessName,
-    _encode_SubprocessName,
-} from '../AuthenticationContextForBiometrics/SubprocessName.ta.mjs';
-export {
-    SubprocessName,
-    _enum_for_SubprocessName,
-    SubprocessName_data_capture /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    data_capture /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_intermediate_signal_processing /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    intermediate_signal_processing /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_final_signal_processing /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    final_signal_processing /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_storage /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    storage /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_comparison /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    comparison /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_decision /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    decision /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_sample_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    sample_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_feature_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    feature_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_score_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    score_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
-    SubprocessName_decision_fusion /* IMPORTED_LONG_ENUMERATION_ITEM */,
-    decision_fusion /* IMPORTED_SHORT_ENUMERATION_ITEM */,
     _decode_SubprocessName,
     _encode_SubprocessName,
 } from '../AuthenticationContextForBiometrics/SubprocessName.ta.mjs';
 import {
-    SubprocessIndex,
-    _decode_SubprocessIndex,
-    _encode_SubprocessIndex,
-} from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.mjs';
-export {
     SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
@@ -133,12 +28,6 @@ import {
     _decode_IOIndex,
     _encode_IOIndex,
 } from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';
-export {
-    IOIndex,
-    _decode_IOIndex,
-    _encode_IOIndex,
-} from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION FunctionDefinition */
 /**
  * @summary FunctionDefinition
@@ -398,9 +287,7 @@ export function _encode_FunctionDefinition(
 ) {
     if (!_cached_encoder_for_FunctionDefinition) {
         _cached_encoder_for_FunctionDefinition = function (
-            value: FunctionDefinition,
-            elGetter: $.ASN1Encoder<FunctionDefinition>
-        ): _Element {
+            value: FunctionDefinition        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,44 +13,10 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_CMSVersion,
-    _encode_CMSVersion,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.mjs';
-export {
-    CMSVersion,
-    CMSVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v2 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v2 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v3 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v3 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v4 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v4 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    CMSVersion_v5 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v5 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/CMSVersion.ta.mjs';
 import {
-    OriginatorInfo,
-    _decode_OriginatorInfo,
-    _encode_OriginatorInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs';
-export {
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
@@ -115,17 +26,7 @@ import {
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs';
-export {
-    RecipientInfos,
-    _decode_RecipientInfos,
-    _encode_RecipientInfos,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs';
 import {
-    MessageAuthenticationCodeAlgorithm,
-    _decode_MessageAuthenticationCodeAlgorithm,
-    _encode_MessageAuthenticationCodeAlgorithm,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs';
-export {
     MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
@@ -135,17 +36,7 @@ import {
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs';
-export {
-    DigestAlgorithmIdentifier,
-    _decode_DigestAlgorithmIdentifier,
-    _encode_DigestAlgorithmIdentifier,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs';
 import {
-    AuthAttributes,
-    _decode_AuthAttributes,
-    _encode_AuthAttributes,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/AuthAttributes.ta.mjs';
-export {
     AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
@@ -155,24 +46,11 @@ import {
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.mjs';
-export {
-    MessageAuthenticationCode,
-    _decode_MessageAuthenticationCode,
-    _encode_MessageAuthenticationCode,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.mjs';
 import {
     UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs';
-export {
-    UnauthAttributes,
-    _decode_UnauthAttributes,
-    _encode_UnauthAttributes,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs';
-import type {
-    EncapsulatedContentInfo,
-} from '@wildboar/cms/src/lib/modules/CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.mjs';
 
 /* START_OF_SYMBOL_DEFINITION AUTHENTICATEDDATA */
 /**
@@ -373,9 +251,6 @@ export const _extension_additions_list_spec_for_AUTHENTICATEDDATA: $.ComponentSp
 /* END_OF_SYMBOL_DEFINITION _extension_additions_list_spec_for_AUTHENTICATEDDATA */
 
 /* START_OF_SYMBOL_DEFINITION _cached_decoder_for_AUTHENTICATEDDATA */
-let _cached_decoder_for_AUTHENTICATEDDATA: $.ASN1Decoder<
-    AUTHENTICATEDDATA<EncapsulatedContentInfo>
-> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_decoder_for_AUTHENTICATEDDATA */
 
 /* START_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHENTICATEDDATA */
@@ -463,9 +338,6 @@ export function _get_decoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
 /* END_OF_SYMBOL_DEFINITION _get_decoder_for_AUTHENTICATEDDATA */
 
 /* START_OF_SYMBOL_DEFINITION _cached_encoder_for_AUTHENTICATEDDATA */
-let _cached_encoder_for_AUTHENTICATEDDATA: $.ASN1Encoder<
-    AUTHENTICATEDDATA<EncapsulatedContentInfo>
-> | null = null;
 /* END_OF_SYMBOL_DEFINITION _cached_encoder_for_AUTHENTICATEDDATA */
 
 /* START_OF_SYMBOL_DEFINITION _get_encoder_for_AUTHENTICATEDDATA */
@@ -478,9 +350,7 @@ export function _get_encoder_for_AUTHENTICATEDDATA<EncapsulatedContentInfo>(
     _encode_EncapsulatedContentInfo: $.ASN1Encoder<EncapsulatedContentInfo>
 ) {
     return function (
-        value: AUTHENTICATEDDATA<EncapsulatedContentInfo>,
-        elGetter: $.ASN1Encoder<AUTHENTICATEDDATA<EncapsulatedContentInfo>>
-    ): _Element {
+        value: AUTHENTICATEDDATA<EncapsulatedContentInfo>    ): _Element {
         return $._encodeSequence(
             ([] as (_Element | undefined)[])
                 .concat([

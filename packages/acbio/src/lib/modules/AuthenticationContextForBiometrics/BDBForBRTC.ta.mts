@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,14 +14,6 @@ import {
 import * as $ from 'asn1-ts/dist/functional.mjs';
 import {
     Version,
-    Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
-    v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Version,
-    _encode_Version,
-} from '../AuthenticationContextForBiometrics/Version.ta.mjs';
-export {
-    Version,
-    Version_v0 /* IMPORTED_LONG_NAMED_INTEGER */,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
@@ -85,17 +23,7 @@ import {
     _decode_HashList,
     _encode_HashList,
 } from '../AuthenticationContextForBiometrics/HashList.ta.mjs';
-export {
-    HashList,
-    _decode_HashList,
-    _encode_HashList,
-} from '../AuthenticationContextForBiometrics/HashList.ta.mjs';
 import {
-    URI,
-    _decode_URI,
-    _encode_URI,
-} from '../AuthenticationContextForBiometrics/URI.ta.mjs';
-export {
     URI,
     _decode_URI,
     _encode_URI,
@@ -105,17 +33,7 @@ import {
     _decode_PatronFormat,
     _encode_PatronFormat,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta.mjs';
-export {
-    PatronFormat,
-    _decode_PatronFormat,
-    _encode_PatronFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/PatronFormat.ta.mjs';
 import {
-    UserInformation,
-    _decode_UserInformation,
-    _encode_UserInformation,
-} from '../AuthenticationContextForBiometrics/UserInformation.ta.mjs';
-export {
     UserInformation,
     _decode_UserInformation,
     _encode_UserInformation,
@@ -125,22 +43,11 @@ import {
     _decode_PKICertificateInformation,
     _encode_PKICertificateInformation,
 } from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.mjs';
-export {
-    PKICertificateInformation,
-    _decode_PKICertificateInformation,
-    _encode_PKICertificateInformation,
-} from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.mjs';
 import {
     SequenceOfACBioInstances,
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
 } from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.mjs';
-export {
-    SequenceOfACBioInstances,
-    _decode_SequenceOfACBioInstances,
-    _encode_SequenceOfACBioInstances,
-} from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BDBForBRTC */
 /**
  * @summary BDBForBRTC
@@ -445,9 +352,7 @@ export function _encode_BDBForBRTC(
 ) {
     if (!_cached_encoder_for_BDBForBRTC) {
         _cached_encoder_for_BDBForBRTC = function (
-            value: BDBForBRTC,
-            elGetter: $.ASN1Encoder<BDBForBRTC>
-        ): _Element {
+            value: BDBForBRTC        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

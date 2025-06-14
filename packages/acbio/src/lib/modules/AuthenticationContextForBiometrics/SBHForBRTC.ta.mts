@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,17 +15,7 @@ import {
     _decode_CBEFFVersion,
     _encode_CBEFFVersion,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta.mjs';
-export {
-    CBEFFVersion,
-    _decode_CBEFFVersion,
-    _encode_CBEFFVersion,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/CBEFFVersion.ta.mjs';
 import {
-    BIRIndex,
-    _decode_BIRIndex,
-    _encode_BIRIndex,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs';
-export {
     BIRIndex,
     _decode_BIRIndex,
     _encode_BIRIndex,
@@ -91,39 +25,12 @@ import {
     _decode_BDBValidityPeriod,
     _encode_BDBValidityPeriod,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs';
-export {
-    BDBValidityPeriod,
-    _decode_BDBValidityPeriod,
-    _encode_BDBValidityPeriod,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs';
 import {
     Quality,
-    Quality_no_value_available /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_value_available /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Quality_quality_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    quality_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Quality_quality_not_recorded /* IMPORTED_LONG_NAMED_INTEGER */,
-    quality_not_recorded /* IMPORTED_SHORT_NAMED_INTEGER */,
-    _decode_Quality,
-    _encode_Quality,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta.mjs';
-export {
-    Quality,
-    Quality_no_value_available /* IMPORTED_LONG_NAMED_INTEGER */,
-    no_value_available /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Quality_quality_not_supported /* IMPORTED_LONG_NAMED_INTEGER */,
-    quality_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Quality_quality_not_recorded /* IMPORTED_LONG_NAMED_INTEGER */,
-    quality_not_recorded /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Quality,
     _encode_Quality,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/Quality.ta.mjs';
 import {
-    EncryptionOptions,
-    _decode_EncryptionOptions,
-    _encode_EncryptionOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs';
-export {
     EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
@@ -133,22 +40,11 @@ import {
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs';
-export {
-    IntegrityOptions,
-    _decode_IntegrityOptions,
-    _encode_IntegrityOptions,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs';
 import {
     BDBFormat,
     _decode_BDBFormat,
     _encode_BDBFormat,
 } from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs';
-export {
-    BDBFormat,
-    _decode_BDBFormat,
-    _encode_BDBFormat,
-} from '@wildboar/cbeff/src/lib/modules/CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION SBHForBRTC */
 /**
  * @summary SBHForBRTC
@@ -405,9 +301,7 @@ export function _encode_SBHForBRTC(
 ) {
     if (!_cached_encoder_for_SBHForBRTC) {
         _cached_encoder_for_SBHForBRTC = function (
-            value: SBHForBRTC,
-            elGetter: $.ASN1Encoder<SBHForBRTC>
-        ): _Element {
+            value: SBHForBRTC        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([

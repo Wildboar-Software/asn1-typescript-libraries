@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -71,22 +16,11 @@ import {
     _decode_BPUCertificateReferrerInformation,
     _encode_BPUCertificateReferrerInformation,
 } from '../AuthenticationContextForBiometrics/BPUCertificateReferrerInformation.ta.mjs';
-export {
-    BPUCertificateReferrerInformation,
-    _decode_BPUCertificateReferrerInformation,
-    _encode_BPUCertificateReferrerInformation,
-} from '../AuthenticationContextForBiometrics/BPUCertificateReferrerInformation.ta.mjs';
 import {
     BPUReportInformation,
     _decode_BPUReportInformation,
     _encode_BPUReportInformation,
 } from '../AuthenticationContextForBiometrics/BPUReportInformation.ta.mjs';
-export {
-    BPUReportInformation,
-    _decode_BPUReportInformation,
-    _encode_BPUReportInformation,
-} from '../AuthenticationContextForBiometrics/BPUReportInformation.ta.mjs';
-
 /* START_OF_SYMBOL_DEFINITION BPUInformation */
 /**
  * @summary BPUInformation
@@ -260,9 +194,7 @@ export function _encode_BPUInformation(
 ) {
     if (!_cached_encoder_for_BPUInformation) {
         _cached_encoder_for_BPUInformation = function (
-            value: BPUInformation,
-            elGetter: $.ASN1Encoder<BPUInformation>
-        ): _Element {
+            value: BPUInformation        ): _Element {
             return $._encodeSequence(
                 ([] as (_Element | undefined)[])
                     .concat([
